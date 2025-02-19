@@ -1537,7 +1537,7 @@
     </div> -->
     <!-- <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet"
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && show_refsheet"
         style="width: 100%">
         <br />
         <div class="card card-large"
@@ -1554,7 +1554,7 @@
     </div> -->
     <div *ngFor="let prob of exam_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp" style="display: flex; flex-direction: column; width: 100%">
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && show_supplements" style="display: flex; flex-direction: column; width: 100%">
         <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -1679,11 +1679,11 @@
             <!-- <section *ngIf="dumpService.exam_attribute_dump[key].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_refsheet}}">
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="!show_refsheet" class="toggle-button-on"> <b> Show
                     Reference Sheet </b>
                 </button>
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off"> <b> Hide
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="show_refsheet" class="toggle-button-off"> <b> Hide
                     Reference Sheet </b>
                 </button>
               </label>
@@ -1691,11 +1691,11 @@
             <section *ngIf="exam_dump[problem_number].SuppContent != undefined && exam_dump[problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_supplements}}">
+                <button (click)="show_supplements = !show_supplements" *ngIf="!show_supplements" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
-                <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                <button (click)="show_supplements = !show_supplements" *ngIf="show_supplements" class="toggle-button-off"> <b> Hide
                     Supplement(s) </b>
                 </button>
               </label>

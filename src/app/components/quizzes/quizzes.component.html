@@ -73,6 +73,12 @@
     height: 0px;
   }
 
+  #protractorCanvas {
+    position: absolute;
+    cursor: move;
+    z-index: 50;
+  }
+
   .content-menu {
     display: flex;
     margin: 0 auto 32px;
@@ -644,6 +650,9 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confettiCanvas"></canvas>
+  <div style="width: fit-content; height: fit-content" id="protractorCanvas">
+    <img *ngIf="show_protractor && (exam_dump[problem_number].SuppTools.includes('Protractor') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor'))" src="./assets/media/tools/protractor.png" style="width: auto; max-width: min(800px, 70vmin); height: auto; max-height: min(500px, 70vmin); opacity: 0.5">
+  </div>
   <div *ngIf="file_source != '' && !assign_q" class="content-menu" role="menu"
     style="margin-bottom: 0px; align-items: center">
     <div style="align-items: left; width: min(1075px, 92%)">
@@ -2219,7 +2228,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
         <div
-          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet"
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && show_refsheet"
           style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -2261,7 +2270,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
         <div
-          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')) && expand_calc"
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')) && show_calculator"
           style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -2272,7 +2281,7 @@
       </div>
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
-        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp"
+        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && show_supplements"
           style="display: flex; flex-direction: column; width: 100%">
           <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
             <div class="card card-large"
@@ -2399,12 +2408,12 @@
               <span *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
                 style="height: auto; width: auto; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                  <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on">
+                  <input type="checkbox" style="margin: 0px" value="{{show_refsheet}}">
+                  <button (click)="show_refsheet = !show_refsheet" *ngIf="!show_refsheet" class="toggle-button-on">
                     <b> Show
                       Reference Sheet </b>
                   </button>
-                  <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off">
+                  <button (click)="show_refsheet = !show_refsheet" *ngIf="show_refsheet" class="toggle-button-off">
                     <b> Hide
                       Reference Sheet </b>
                   </button>
@@ -2413,35 +2422,47 @@
               <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')"
                 style="height: auto; width: auto; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" style="margin: 0px" value="{{expand_calc}}">
-                  <button (click)="expand_calc = !expand_calc; render_calc_st('')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
+                  <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                  <button (click)="show_calculator = !show_calculator; render_calc_st('')" *ngIf="!show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc; render_calc_st('sci')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
+                  <button (click)="show_calculator = !show_calculator; render_calc_st('sci')" *ngIf="!show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc; render_calc_st('graph')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
+                  <button (click)="show_calculator = !show_calculator; render_calc_st('graph')" *ngIf="!show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
+                  </button>
+                </label>
+              </span>
+              <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor')"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                  <button (click)="show_protractor = !show_protractor; render_protractor()" *ngIf="!show_protractor" class="toggle-button-on"> <b> Show
+                      Protractor </b>
+                  </button>
+                  <button (click)="show_protractor = !show_protractor" *ngIf="show_protractor" class="toggle-button-off"> <b> Hide
+                    Protractor </b>
                   </button>
                 </label>
               </span>
               <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
                 style="height: auto; width: auto; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                  <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                  <input type="checkbox" style="margin: 0px" value="{{show_supplements}}">
+                  <button (click)="show_supplements = !show_supplements" *ngIf="!show_supplements" class="toggle-button-on"> <b> Show
                       Supplement(s) </b>
                   </button>
-                  <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_supplements = !show_supplements" *ngIf="show_supplements" class="toggle-button-off"> <b> Hide
                       Supplement(s) </b>
                   </button>
                 </label>
@@ -4828,7 +4849,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" class="content" role="main"
       style="margin-bottom: 0px; align-items: center; width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet"
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && show_refsheet"
         style="width: 100%">
         <div class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4870,7 +4891,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" class="content" role="main"
       style="margin-bottom: 0px; align-items: center; width: 100%">
       <div
-        *ngIf="problem_number == +prob.key && selected_subtopic == '' && (exam_dump[problem_number].SuppTools.includes('Calculator') || exam_dump[problem_number].SuppTools.includes('Calculator-S') || exam_dump[problem_number].SuppTools.includes('Calculator-G')) && expand_calc"
+        *ngIf="problem_number == +prob.key && selected_subtopic == '' && (exam_dump[problem_number].SuppTools.includes('Calculator') || exam_dump[problem_number].SuppTools.includes('Calculator-S') || exam_dump[problem_number].SuppTools.includes('Calculator-G')) && show_calculator"
         style="width: 100%">
         <div class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4881,7 +4902,7 @@
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp"
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && show_supplements"
         style="display: flex; flex-direction: column; width: 100%">
         <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
           <div class="card card-large"
@@ -5008,12 +5029,12 @@
             <span *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on">
+                <input type="checkbox" style="margin: 0px" value="{{show_refsheet}}">
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="!show_refsheet" class="toggle-button-on">
                   <b> Show
                     Reference Sheet </b>
                 </button>
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off">
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="show_refsheet" class="toggle-button-off">
                   <b> Hide
                     Reference Sheet </b>
                 </button>
@@ -5022,35 +5043,47 @@
             <span *ngIf="exam_dump[problem_number].SuppTools.includes('Calculator') || exam_dump[problem_number].SuppTools.includes('Calculator-S') || exam_dump[problem_number].SuppTools.includes('Calculator-G')"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_calc}}">
-                <button (click)="expand_calc = !expand_calc; render_calc('')" *ngIf="!expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                <button (click)="show_calculator = !show_calculator; render_calc('')" *ngIf="!show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
+                <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc; render_calc('sci')" *ngIf="!expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
+                <button (click)="show_calculator = !show_calculator; render_calc('sci')" *ngIf="!show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
+                <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc; render_calc('graph')" *ngIf="!expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
+                <button (click)="show_calculator = !show_calculator; render_calc('graph')" *ngIf="!show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
+                <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
                     Calculator </b>
                 </button>
               </label>
             </span>
+              <span *ngIf="exam_dump[sproblem_number].SuppTools.includes('Protractor')"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                  <button (click)="show_protractor = !show_protractor; render_protractor()" *ngIf="!show_protractor" class="toggle-button-on"> <b> Show
+                      Protractor </b>
+                  </button>
+                  <button (click)="show_protractor = !show_protractor" *ngIf="show_protractor" class="toggle-button-off"> <b> Hide
+                    Protractor </b>
+                  </button>
+                </label>
+              </span>
             <span *ngIf="exam_dump[problem_number].SuppContent.length > 0"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_supplements}}">
+                <button (click)="show_supplements = !show_supplements" *ngIf="!show_supplements" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
-                <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                <button (click)="show_supplements = !show_supplements" *ngIf="show_supplements" class="toggle-button-off"> <b> Hide
                     Supplement(s) </b>
                 </button>
               </label>
@@ -8634,9 +8667,9 @@
             <input *ngIf="enable_standards" type="checkbox" style="height: 18px" checked />
             <input *ngIf="!enable_standards" type="checkbox" style="height: 18px" unchecked />
             <div *ngIf="enable_standards"
-              style="margin-left: 5px; font-size: 20px; line-height: 22px; font-weight: 600"> Enable Problem Standards
+              style="margin-left: 5px; font-size: 20px; line-height: 22px; font-weight: 600"> Enable Standards
             </div>
-            <div *ngIf="!enable_standards" style="margin-left: 5px; font-size: 20px; line-height: 22px"> Enable Problem
+            <div *ngIf="!enable_standards" style="margin-left: 5px; font-size: 20px; line-height: 22px"> Enable
               Standards </div>
           </div>
         </div>
@@ -8656,7 +8689,7 @@
           </div>
         </div>
         <div class="card-container" style="max-width: 100%; margin-top: 20px">
-          <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto">
+          <div style="display: flex; flex-direction: column; align-items: center; margin: 7px 15px; height: auto">
             <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600; width: 130px"> Default
               Type:
             </div>
@@ -8724,25 +8757,6 @@
               (click)="delete_problem(num)" src="/assets/media/icons/delete.png" style="height: 30px; width: 30px" />
           </span>
         </section>
-        <br />
-        <hr style="width: 90%; margin: 10px auto" />
-        <div *ngIf="enable_standards" class="card-container"
-          style="max-width: 100%; margin-top: 10px; margin-bottom: 10px">
-          <div
-            style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto; width: 90%">
-            <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Standard: </div>
-            <select
-              value="{{(get_topic_subs(selected_topic) | keys)[(get_topic_subs(selected_topic) | values).indexOf(exam_dump[num].SubTopics[0])] + ': ' + exam_dump[num].SubTopics[0]}}"
-              (change)="change_prob_standard(num)"
-              style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; min-width: 250px; width: auto; height: 40px; font-size: 16px; font-weight: 500; text-align: center"
-              id="standardInput{{num}}">
-              <option *ngIf="default_standard[0] == '' && default_standard[1] == ''" selected value> -- No standard
-                selected -- </option>
-              <option *ngFor="let standard of (get_topic_subs(selected_topic) | keyvalue)"> {{standard.key}}:
-                {{standard.value}} </option>
-            </select>
-          </div>
-        </div>
         <div class="card-container" style="max-width: 100%; margin-top: 10px">
           <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto">
             <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Problem Type: </div>
@@ -8766,24 +8780,41 @@
               style="width: 230px" id="choicesSlider{{num}}" />
           </div>
         </div>
-        <hr style="width: 70%; margin: 10px auto" />
-        <div
-          style="min-height: 20px; height: auto; width: 90%; padding: 10px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: column">
-          <div *ngFor="let blob of get_content_keys(exam_dump[num].Content)" class="card container"
+        <div *ngIf="enable_standards" class="card-container"
+          style="max-width: 100%; margin-top: 10px; margin-bottom: 10px">
+          <div
+            style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto; width: 90%">
+            <div style="margin-right: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> Standard: </div>
+            <select
+              value="{{(get_topic_subs(selected_topic) | keys)[(get_topic_subs(selected_topic) | values).indexOf(exam_dump[num].SubTopics[0])] + ': ' + exam_dump[num].SubTopics[0]}}"
+              (change)="change_prob_standard(num)"
+              style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; min-width: 250px; width: auto; height: 40px; font-size: 16px; font-weight: 500; text-align: center"
+              id="standardInput{{num}}">
+              <option *ngIf="default_standard[0] == '' && default_standard[1] == ''" selected value> -- No standard
+                selected -- </option>
+              <option *ngFor="let standard of (get_topic_subs(selected_topic) | keyvalue)"> {{standard.key}}:
+                {{standard.value}} </option>
+            </select>
+          </div>
+        </div>
+        <hr style="width: 95%; margin: 10px auto" />
+        <div class="card-container"
+          style="min-height: 20px; height: auto; width: 100%; padding: 0px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: row">
+          <div *ngFor="let blob of get_content_keys(exam_dump[num].Content)" class="card"
             (mouseenter)="hover_card(num, 'content', blob, true)" (mouseleave)="hover_card(num, 'content', blob, false)"
-            style="min-height: 20px; height: auto; width: 100%; padding: 10px; margin: 2px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
+            style="min-height: 20px; height: auto; width: 100%; padding: 5px; margin: 2px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
+            <textarea *ngIf="!is_image(exam_dump[num].Content[blob])"
+              (change)="exam_dump[num].Content[blob]=this.inputProbContent.value; check_content_complete(num)"
+              rows="{{get_text_rows(this, exam_dump[num].Content[blob])}}" maxlength="500"
+              value="{{exam_dump[num].Content[blob]}}" placeholder="Your Question Here"
+              style="margin: 0px; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+              #inputProbContent></textarea>
             <select value="{{is_image(exam_dump[num].Content[blob]) ? 'Image' : 'Text'}}"
               (change)="set_content_type(num, blob, get_contenttype_sel(num, blob)); exam_dump[num].Content[blob]=''; check_content_complete(num)"
               style="margin: 0px 10px 0px 3px; padding: 5px 0px 5px 3px; width: 70px; height: 100%; font-size: 16px; font-weight: 500; text-align: center; border: none"
               id="contenttypeInput{{num}}-{{blob}}">
               <option *ngFor="let type of content_types"> {{type}} </option>
             </select>
-            <textarea *ngIf="!is_image(exam_dump[num].Content[blob])"
-              (change)="exam_dump[num].Content[blob]=this.inputProbContent.value; check_content_complete(num)"
-              rows="{{get_text_rows(this, exam_dump[num].Content[blob])}}" maxlength="500"
-              value="{{exam_dump[num].Content[blob]}}" placeholder="Your Question Here"
-              style="margin: 0px auto; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-              #inputProbContent></textarea>
             <div *ngIf="is_image(exam_dump[num].Content[blob])"
               style="margin: 0px auto; padding: 5px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
               #probImage> <a disabled>{{exam_dump[num].Content[blob]}}</a> </div>
@@ -8794,7 +8825,7 @@
             </span>
           </div>
         </div>
-        <div class="card-container" style="max-width: 100%; margin: 0px auto 10px">
+        <div class="card-container" style="max-width: 100%; margin-top: 10px">
           <!-- <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto"></div> -->
           <div style="font-size: 18px; line-height: 18px; font-weight: 600"> <a
               (click)="add_text(num); check_content_complete(num)">Add Content</a>
@@ -8823,25 +8854,25 @@
         </div>
         <hr *ngIf="(exam_dump[num].AnswerChoices | keys).length > 0 && ['MC', 'MS'].includes(exam_dump[num].Type)"
           style="width: 70%; margin: 10px auto" />
-        <div *ngIf="(exam_dump[num].AnswerChoices | keys).length > 0 && ['MC', 'MS'].includes(exam_dump[num].Type)"
-          style="min-height: 20px; height: auto; width: 90%; padding: 10px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: column">
-          <div *ngFor="let choice of (exam_dump[num].AnswerChoices | keyvalue)" class="card container"
+        <div *ngIf="screenWidth > 950 && (exam_dump[num].AnswerChoices | keys).length > 0 && ['MC', 'MS'].includes(exam_dump[num].Type)" class="card-container"
+          style="min-height: 20px; height: auto; width: 100%; padding: 0px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: row">
+          <div *ngFor="let choice of (exam_dump[num].AnswerChoices | keyvalue)" class="card"
             (mouseenter)="hover_card(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key), true)"
             (mouseleave)="hover_card(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key), false)"
-            style="min-height: 20px; height: auto; width: 100%; padding: 10px; margin: 2px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
-            <h2 style="margin: auto 20px auto 10px"> {{choice.key}} </h2>
-            <select value="{{is_image(choice.value.Choice) ? 'Image' : 'Text'}}"
-              (change)="set_choice_type(num, choice.key, get_choicetype_sel(num, choice.key)); exam_dump[num].AnswerChoices[choice.key].Choice=''; check_content_complete(num)"
-              style="margin: 0px 10px 0px 3px; padding: 5px 0px 5px 3px; width: 70px; height: 100%; font-size: 16px; font-weight: 500; text-align: center; border: none"
-              id="choicetypeInput{{num}}-{{choice.key}}">
-              <option *ngFor="let type of content_types"> {{type}} </option>
-            </select>
+            style="min-height: 20px; height: auto; width: 48%; padding: 5px; margin: 1px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
+            <h2 style="margin: auto 5px"> {{choice.key}} </h2>
             <textarea *ngIf="!is_image(choice.value.Choice)"
               (change)="exam_dump[num].AnswerChoices[choice.key].Choice=this.inputChoiceContent.value; check_content_complete(num)"
               rows="{{get_text_rows(this, choice.value.Choice)}}" maxlength="200" value="{{choice.value.Choice}}"
               placeholder="Your Choice Here"
               style="margin: 0px; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
               #inputChoiceContent></textarea>
+            <select value="{{is_image(choice.value.Choice) ? 'Image' : 'Text'}}"
+              (change)="set_choice_type(num, choice.key, get_choicetype_sel(num, choice.key)); exam_dump[num].AnswerChoices[choice.key].Choice=''; check_content_complete(num)"
+              style="margin: 0px 10px 0px 3px; padding: 5px 0px 5px 3px; width: 70px; height: 100%; font-size: 16px; font-weight: 500; text-align: center; border: none"
+              id="choicetypeInput{{num}}-{{choice.key}}">
+              <option *ngFor="let type of content_types"> {{type}} </option>
+            </select>
             <div *ngIf="is_image(choice.value.Choice)"
               style="margin: 0px; padding: 5px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
               #probImage> <a disabled> {{choice.value.Choice}} </a> </div>
@@ -8852,12 +8883,41 @@
               <img src="/assets/media/icons/delete.png" style="height: 30px; width: 30px" />
             </span>
           </div>
-          <div *ngIf="exam_dump[num].NumChoices < 10" class="card-container"
-            style="max-width: 100%; margin-top: 0px auto">
-            <!-- <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto"></div> -->
-            <div style="font-size: 18px; line-height: 18px; font-weight: 600"> <a
-                (click)="add_choice(num); check_content_complete(num)">Add Choice</a>
-            </div>
+        </div>
+        <div *ngIf="screenWidth <= 950 && (exam_dump[num].AnswerChoices | keys).length > 0 && ['MC', 'MS'].includes(exam_dump[num].Type)" class="card-container"
+          style="min-height: 20px; height: auto; width: 100%; padding: 0px; margin: 0px; margin-top: 10px; align-items: center; display: flex; flex-direction: row">
+          <div *ngFor="let choice of (exam_dump[num].AnswerChoices | keyvalue)" class="card"
+            (mouseenter)="hover_card(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key), true)"
+            (mouseleave)="hover_card(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key), false)"
+            style="min-height: 20px; height: auto; width: 100%; padding: 5px; margin: 2px; align-items: center; display: flex; flex-direction: row; border: 1px solid rgb(118, 118, 118)">
+            <h2 style="margin: auto 5px"> {{choice.key}} </h2>
+            <textarea *ngIf="!is_image(choice.value.Choice)"
+              (change)="exam_dump[num].AnswerChoices[choice.key].Choice=this.inputChoiceContent.value; check_content_complete(num)"
+              rows="{{get_text_rows(this, choice.value.Choice)}}" maxlength="200" value="{{choice.value.Choice}}"
+              placeholder="Your Choice Here"
+              style="margin: 0px; padding: 10px 0 10px 10px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+              #inputChoiceContent></textarea>
+            <select value="{{is_image(choice.value.Choice) ? 'Image' : 'Text'}}"
+              (change)="set_choice_type(num, choice.key, get_choicetype_sel(num, choice.key)); exam_dump[num].AnswerChoices[choice.key].Choice=''; check_content_complete(num)"
+              style="margin: 0px 10px 0px 3px; padding: 5px 0px 5px 3px; width: 70px; height: 100%; font-size: 16px; font-weight: 500; text-align: center; border: none"
+              id="choicetypeInput{{num}}-{{choice.key}}">
+              <option *ngFor="let type of content_types"> {{type}} </option>
+            </select>
+            <div *ngIf="is_image(choice.value.Choice)"
+              style="margin: 0px; padding: 5px; width: min(90%, 1000px); height: auto; font-size: 16px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+              #probImage> <a disabled> {{choice.value.Choice}} </a> </div>
+            <span
+              *ngIf="exam_dump[num].NumChoices > 2 && hover_delete(num, 'choices', get_choice_keys(exam_dump[num].AnswerChoices).indexOf(choice.key))"
+              (click)="delete_choice(num, choice.key); check_content_complete(num)" class="deleteChoice"
+              style="margin: auto 0px auto 10px; font-size: 32px; font-weight: 800; color:rgba(0, 0, 0, 0)">
+              <img src="/assets/media/icons/delete.png" style="height: 30px; width: 30px" />
+            </span>
+          </div>
+        </div>
+        <div *ngIf="exam_dump[num].NumChoices < 10" class="card-container" style="max-width: 100%; margin-top: 10px">
+          <!-- <div style="display: flex; flex-direction: row; align-items: center; margin: 7px 15px; height: auto"></div> -->
+          <div style="font-size: 18px; line-height: 18px; font-weight: 600"> <a
+              (click)="add_choice(num); check_content_complete(num)">Add Choice</a>
           </div>
         </div>
       </div>
@@ -9345,7 +9405,7 @@
     </div> -->
     <!-- <div *ngFor="let prob of exam_dump | keyvalue" style="width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && expand_refsheet"
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && refsheet_source != '../../' && show_refsheet"
         style="width: 100%">
         <br />
         <div class="card card-large"
@@ -9362,7 +9422,7 @@
     </div> -->
     <div *ngFor="let prob of exam_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
       <div
-        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && expand_supp"
+        *ngIf="((length_mode == 'number' && problem_number <= quiz_length) || (length_mode == 'timer' && et_counter > 0)) && problem_number == +prob.key && selected_subtopic == '' && show_supplements"
         style="display: flex; flex-direction: column; width: 100%">
         <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
           <div class="card card-large"
@@ -9489,11 +9549,11 @@
             <!-- <section *ngIf="dumpService.exam_attribute_dump[key].RefSheet != ''"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_refsheet}}">
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="!show_refsheet" class="toggle-button-on"> <b> Show
                     Reference Sheet </b>
                 </button>
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off"> <b> Hide
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="show_refsheet" class="toggle-button-off"> <b> Hide
                     Reference Sheet </b>
                 </button>
               </label>
@@ -9501,11 +9561,11 @@
             <section *ngIf="exam_dump[problem_number].SuppContent.length > 0"
               style="height: auto; width: 100%; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_supplements}}">
+                <button (click)="show_supplements = !show_supplements" *ngIf="!show_supplements" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
-                <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                <button (click)="show_supplements = !show_supplements" *ngIf="show_supplements" class="toggle-button-off"> <b> Hide
                     Supplement(s) </b>
                 </button>
               </label>

@@ -73,6 +73,12 @@
     height: 0px;
   }
 
+  #protractorCanvas {
+    position: absolute;
+    cursor: move;
+    z-index: 50;
+  }
+
   .content-menu {
     display: flex;
     margin: 0 auto 32px;
@@ -636,6 +642,9 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confettiCanvas"></canvas>
+  <div style="width: fit-content; height: fit-content" id="protractorCanvas">
+    <img *ngIf="show_protractor && (exam_dump[problem_number].SuppTools.includes('Protractor') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor'))" src="./assets/media/tools/protractor.png" style="width: auto; max-width: min(800px, 70vmin); height: auto; max-height: min(500px, 70vmin); opacity: 0.5">
+  </div>
   <div *ngIf="data_loaded" class="content-menu" style="margin-bottom: 0; align-items: center">
     <div *ngIf="signup || login" style="align-items: left; width: min(1075px, 92%)">
       <section>
@@ -1914,7 +1923,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
         <div
-          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && expand_refsheet"
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && st_refsheet_source != '../../' && show_refsheet"
           style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -1956,7 +1965,7 @@
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
         <div
-          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')) && expand_calc"
+          *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')) && show_calculator"
           style="width: 100%">
           <div class="card card-large"
             style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -1967,7 +1976,7 @@
       </div>
       <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
         style="margin-bottom: 0px; align-items: center; width: 100%">
-        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && expand_supp"
+        <div *ngIf="subtopic_problem_number == +prob.key && selected_subtopic != '' && show_supplements"
           style="display: flex; flex-direction: column; width: 100%">
           <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
             <div class="card card-large"
@@ -2094,12 +2103,12 @@
               <span *ngIf="dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != ''"
                 style="height: auto; width: auto; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                  <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on">
+                  <input type="checkbox" style="margin: 0px" value="{{show_refsheet}}">
+                  <button (click)="show_refsheet = !show_refsheet" *ngIf="!show_refsheet" class="toggle-button-on">
                     <b> Show
                       Reference Sheet </b>
                   </button>
-                  <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off">
+                  <button (click)="show_refsheet = !show_refsheet" *ngIf="show_refsheet" class="toggle-button-off">
                     <b> Hide
                       Reference Sheet </b>
                   </button>
@@ -2108,35 +2117,47 @@
               <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')"
                 style="height: auto; width: auto; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" style="margin: 0px" value="{{expand_calc}}">
-                  <button (click)="expand_calc = !expand_calc; render_calc_st('')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
+                  <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                  <button (click)="show_calculator = !show_calculator; render_calc_st('')" *ngIf="!show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc; render_calc_st('sci')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
+                  <button (click)="show_calculator = !show_calculator; render_calc_st('sci')" *ngIf="!show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc; render_calc_st('graph')" *ngIf="!expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
+                  <button (click)="show_calculator = !show_calculator; render_calc_st('graph')" *ngIf="!show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
                       Calculator </b>
                   </button>
-                  <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
+                  </button>
+                </label>
+              </span>
+              <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor')"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                  <button (click)="show_protractor = !show_protractor; render_protractor()" *ngIf="!show_protractor" class="toggle-button-on"> <b> Show
+                      Protractor </b>
+                  </button>
+                  <button (click)="show_protractor = !show_protractor" *ngIf="show_protractor" class="toggle-button-off"> <b> Hide
+                    Protractor </b>
                   </button>
                 </label>
               </span>
               <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0"
                 style="height: auto; width: auto; display: flex; justify-content: center">
                 <label class="switch" style="padding: 0 10px">
-                  <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                  <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                  <input type="checkbox" style="margin: 0px" value="{{show_supplements}}">
+                  <button (click)="show_supplements = !show_supplements" *ngIf="!show_supplements" class="toggle-button-on"> <b> Show
                       Supplement(s) </b>
                   </button>
-                  <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                  <button (click)="show_supplements = !show_supplements" *ngIf="show_supplements" class="toggle-button-off"> <b> Hide
                       Supplement(s) </b>
                   </button>
                 </label>
@@ -4612,7 +4633,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" class="content" role="main"
       style="margin-bottom: 0px; align-items: center; width: 100%">
       <div
-        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && dumpService.exam_attribute_dump[key].RefSheet != '' && problem_number == +prob.key && expand_refsheet"
+        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && dumpService.exam_attribute_dump[key].RefSheet != '' && problem_number == +prob.key && show_refsheet"
         style="width: 100%">
         <div class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4654,7 +4675,7 @@
     <div *ngFor="let prob of exam_dump | keyvalue" class="content" role="main"
       style="margin-bottom: 0px; align-items: center; width: 100%">
       <div
-        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key && selected_subtopic == '' && expand_calc"
+        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key && selected_subtopic == '' && show_calculator"
         style="width: 100%">
         <div class="card card-large"
           style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column"
@@ -4665,7 +4686,7 @@
     </div>
     <div *ngFor="let prob of exam_dump | keyvalue" style="display: flex; flex-direction: column; width: 100%">
       <div
-        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key && expand_supp"
+        *ngIf="selected_subtopic == '' && ((exam_timer > 0 && et_counter > 0) || exam_timer == 0) && problem_number == +prob.key && show_supplements"
         style="display: flex; flex-direction: column; width: 100%">
         <div *ngFor="let supp of prob.value.SuppContent" style="display: flex; flex-direction: column; width: 100%">
           <div class="card card-large"
@@ -4792,12 +4813,12 @@
             <span *ngIf="dumpService.exam_attribute_dump[key].RefSheet != ''"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_refsheet}}">
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="!expand_refsheet" class="toggle-button-on">
+                <input type="checkbox" style="margin: 0px" value="{{show_refsheet}}">
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="!show_refsheet" class="toggle-button-on">
                   <b> Show
                     Reference Sheet </b>
                 </button>
-                <button (click)="expand_refsheet = !expand_refsheet" *ngIf="expand_refsheet" class="toggle-button-off">
+                <button (click)="show_refsheet = !show_refsheet" *ngIf="show_refsheet" class="toggle-button-off">
                   <b> Hide
                     Reference Sheet </b>
                 </button>
@@ -4806,35 +4827,47 @@
             <span *ngIf="exam_dump[problem_number].SuppTools.includes('Calculator') || exam_dump[problem_number].SuppTools.includes('Calculator-S') || exam_dump[problem_number].SuppTools.includes('Calculator-G')"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_calc}}">
-                <button (click)="expand_calc = !expand_calc; render_calc('')" *ngIf="!expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                <button (click)="show_calculator = !show_calculator; render_calc('')" *ngIf="!show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-on"> <b> Show
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
+                <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator')" class="toggle-button-off"> <b> Hide
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc; render_calc('sci')" *ngIf="!expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
+                <button (click)="show_calculator = !show_calculator; render_calc('sci')" *ngIf="!show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-on"> <b> Show
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
+                <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-S')" class="toggle-button-off"> <b> Hide
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc; render_calc('graph')" *ngIf="!expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
+                <button (click)="show_calculator = !show_calculator; render_calc('graph')" *ngIf="!show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-on"> <b> Show
                     Calculator </b>
                 </button>
-                <button (click)="expand_calc = !expand_calc" *ngIf="expand_calc && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
+                <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && exam_dump[problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
                     Calculator </b>
                 </button>
               </label>
             </span>
+              <span *ngIf="exam_dump[problem_number].SuppTools.includes('Protractor')"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{show_calculator}}">
+                  <button (click)="show_protractor = !show_protractor; render_protractor()" *ngIf="!show_protractor" class="toggle-button-on"> <b> Show
+                      Protractor </b>
+                  </button>
+                  <button (click)="show_protractor = !show_protractor" *ngIf="show_protractor" class="toggle-button-off"> <b> Hide
+                    Protractor </b>
+                  </button>
+                </label>
+              </span>
             <span *ngIf="exam_dump[problem_number].SuppContent.length > 0"
               style="height: auto; width: auto; display: flex; justify-content: center">
               <label class="switch" style="padding: 0 10px">
-                <input type="checkbox" style="margin: 0px" value="{{expand_supp}}">
-                <button (click)="expand_supp = !expand_supp" *ngIf="!expand_supp" class="toggle-button-on"> <b> Show
+                <input type="checkbox" style="margin: 0px" value="{{show_supplements}}">
+                <button (click)="show_supplements = !show_supplements" *ngIf="!show_supplements" class="toggle-button-on"> <b> Show
                     Supplement(s) </b>
                 </button>
-                <button (click)="expand_supp = !expand_supp" *ngIf="expand_supp" class="toggle-button-off"> <b> Hide
+                <button (click)="show_supplements = !show_supplements" *ngIf="show_supplements" class="toggle-button-off"> <b> Hide
                     Supplement(s) </b>
                 </button>
               </label>

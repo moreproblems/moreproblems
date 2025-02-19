@@ -74,9 +74,10 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
   subject_filters: string[] = [];
   topic_filters: string[] = [];
   // sub_topic = false;
-  expand_refsheet = false;
-  expand_calc = false;
-  expand_supp = true;
+  show_refsheet = false;
+  show_calculator = false;
+  show_protractor = false;
+  show_supplements = true;
   expand_overview = true;
   expand_topics = true;
   show_correct = false;
@@ -345,6 +346,50 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
               const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
           }
       }, 100);
+  }
+
+  render_protractor() {
+      this.dragElement(document.getElementById("protractorCanvas") as HTMLElement);
+  }
+
+  dragElement(elmnt: HTMLElement) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown;
+    elmnt.ontouchstart = dragMouseDown;
+  
+    function dragMouseDown(e: any) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      document.ontouchend = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+      document.ontouchmove = elementDrag;
+    }
+  
+    function elementDrag(e: any) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+  
+    function closeDragElement() {
+      // stop moving when mouse button is released:
+      document.onmouseup = null;
+      document.ontouchend = null;
+      document.onmousemove = null;
+      document.ontouchmove = null;
+    }
   }
 
   read_supp_json(path: string) {
@@ -1043,13 +1088,13 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
     if (this.quiz_config.problems == undefined) {
       this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
     }
-    if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+    if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
       this.render_calc('');
     }
-    else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+    else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
       this.render_calc('sci');
     }
-    else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+    else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
       this.render_calc('graph');
     }
     for (let supp of this.exam_dump[this.problem_number].SuppContent) {
@@ -4876,13 +4921,13 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       if (this.quiz_config.problems == undefined) {
         this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
       }
-      if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+      if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
         this.render_calc('');
       }
-      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
         this.render_calc('sci');
       }
-      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
         this.render_calc('graph');
       }
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
@@ -4920,13 +4965,13 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       if (this.quiz_config.problems == undefined) {
         this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
       }
-      if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+      if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
         this.render_calc('');
       }
-      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
         this.render_calc('sci');
       }
-      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
         this.render_calc('graph');
       }
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
@@ -5056,13 +5101,13 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
         }
       }
       this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-      if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+      if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
         this.render_calc_st('');
       }
-      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
         this.render_calc_st('sci');
       }
-      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
         this.render_calc_st('graph');
       }
       for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
@@ -5493,13 +5538,13 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       if (this.quiz_config.problems == undefined) {
         this.refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.exam_dump[this.problem_number].Number).substring(0, (this.exam_dump[this.problem_number].Number).indexOf('-'))].RefSheet;
       }
-      if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+      if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
         this.render_calc('');
       }
-      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
         this.render_calc('sci');
       }
-      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+      else if (this.exam_dump[this.problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
         this.render_calc('graph');
       }
       for (let supp of this.exam_dump[this.problem_number].SuppContent) {
@@ -7450,13 +7495,13 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
         }
       }
       this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-      if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.expand_calc) {
+      if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
         this.render_calc_st('');
       }
-      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.expand_calc) {
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
         this.render_calc_st('sci');
       }
-      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.expand_calc) {
+      else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
         this.render_calc_st('graph');
       }
       for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
