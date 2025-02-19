@@ -2232,7 +2232,7 @@
                 </label>
               </span>
             </div>
-            <hr *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0 || dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != '' || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-S') || subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" style="width: 100%; margin: 20px auto; border-width: 2px" />
+            <hr *ngIf="subtopic_search_dump[subtopic_problem_number].SuppContent.length > 0 || dumpService.exam_attribute_dump[prob.value.Number.substring(0, prob.value.Number.indexOf('-'))].RefSheet != '' || subtopic_search_dump[subtopic_problem_number].SuppTools.length > 0" style="width: 100%; margin: 20px auto; border-width: 2px" />
             <div class="content" style="margin: auto; align-items: center">
               <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
                 style="margin-bottom: 0px; align-items: center; width: 100%">
