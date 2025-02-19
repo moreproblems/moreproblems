@@ -413,7 +413,7 @@ export class TemplateEditQuizComponent implements OnInit {
       document.ontouchend = closeDragElement;
       // call a function whenever the cursor moves:
       document.onmousemove = elementDrag;
-      document.ontouchmove = elementDrag;
+      document.ontouchmove = elementDragT;
     }
   
     function elementDrag(e: any) {
@@ -427,6 +427,21 @@ export class TemplateEditQuizComponent implements OnInit {
       // set the element's new position:
       elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
       elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+  
+    function elementDragT(e: any) {
+      e = e || window.event;
+      e.preventDefault();
+      for (let target of e.targetTouches) {
+          // calculate the new cursor position:
+          pos1 = pos3 - target.clientX;
+          pos2 = pos4 - target.clientY;
+          pos3 = target.clientX;
+          pos4 = target.clientY;
+          // set the element's new position:
+          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+      }
     }
   
     function closeDragElement() {
