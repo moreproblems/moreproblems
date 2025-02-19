@@ -348,6 +348,10 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
       }, 100);
   }
 
+  render_protractor() {
+      this.dragElement(document.getElementById("protractorCanvas") as HTMLElement);
+  }
+
   dragElement(elmnt: HTMLElement) {
     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     elmnt.onmousedown = dragMouseDown;
