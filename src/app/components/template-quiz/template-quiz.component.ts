@@ -411,8 +411,8 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
               pos3 = target.clientX;
               pos4 = target.clientY;
               // set the element's new position:
-              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+              (target as HTMLElement).style.top = ((target as HTMLElement).offsetTop - pos2) + "px";
+              (target as HTMLElement).style.left = ((target as HTMLElement).offsetLeft - pos1) + "px";
           }
       }
 
