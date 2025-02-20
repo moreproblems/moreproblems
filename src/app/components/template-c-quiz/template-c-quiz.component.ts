@@ -397,12 +397,12 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       function elementDragT(e: any) {
           e = e || window.event;
           e.preventDefault();
-          for (let target of e.targetTouches) {
+          for (let targ of e.targetTouches) {
               // calculate the new cursor position:
-              pos1 = pos3 - target.clientX;
-              pos2 = pos4 - target.clientY;
-              pos3 = target.clientX;
-              pos4 = target.clientY;
+              pos1 = pos3 - targ.clientX;
+              pos2 = pos4 - targ.clientY;
+              pos3 = targ.clientX;
+              pos4 = targ.clientY;
               // set the element's new position:
               (target as HTMLElement).style.top = ((target as HTMLElement).offsetTop - pos2) + "px";
               (target as HTMLElement).style.left = ((target as HTMLElement).offsetLeft - pos1) + "px";
@@ -460,7 +460,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
       function elementRotateT(e: any) {
           e = e || window.event;
           e.preventDefault();
-          for (let target of e.targetTouches) {
+          for (let targ of e.targetTouches) {
               // calculate the new cursor position:
               const angle = getDraggableAngle(e);
               // set the element's new position:
