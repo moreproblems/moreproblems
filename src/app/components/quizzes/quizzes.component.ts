@@ -562,7 +562,7 @@ export class QuizzesComponent implements OnInit {
           e.preventDefault();
           for (let targ of e.targetTouches) {
               // calculate the new cursor position:
-              const angle = getDraggableAngle(e);
+              const angle = getDraggableAngle(targ);
               // set the element's new position:
               (target as HTMLElement).style.transform = `rotate(${angle}rad)`;
           }

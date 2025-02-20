@@ -681,7 +681,7 @@
   <div style="width: fit-content; height: fit-content" id="rulerCanvas">
     <div *ngIf="show_ruler && ((selected_subtopic == '' && (exam_dump | keys).includes(''+problem_number) && exam_dump[problem_number].SuppTools.includes('Ruler')) || (selected_subtopic != '' && (subtopic_search_dump | keys).includes(''+subtopic_problem_number) && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Ruler')))" style="display: flex; flex-direction: row" id="handles">
       <div id="virtualRect"></div>
-      <img src="./assets/media/tools/ruler.png" style="width: auto; max-width: min(1150px, 90vmax); height: auto; opacity: 0.5" id="rulerImage">
+      <img src="./assets/media/tools/ruler.png" style="width: auto; max-width: min(1150px, 90vmax); height: auto; opacity: 0.6" id="rulerImage">
       <div style="margin: auto; width: fit-content; height: fit-content" id="rulerRotate">
         <img
           draggable="false"
@@ -694,7 +694,7 @@
   <div style="width: fit-content; height: fit-content" id="protractorCanvas">
     <div *ngIf="show_protractor && ((selected_subtopic == '' && (exam_dump | keys).includes(''+problem_number) && exam_dump[problem_number].SuppTools.includes('Protractor')) || (selected_subtopic != '' && (subtopic_search_dump | keys).includes(''+subtopic_problem_number) && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor')))" id="handles">
       <div id="virtualRect"></div>
-      <img src="./assets/media/tools/protractor.png" style="width: auto; max-width: min(800px, 70vmin); height: auto; max-height: min(500px, 70vmin); opacity: 0.5" id="protractorImage">
+      <img src="./assets/media/tools/protractor.png" style="width: auto; max-width: min(800px, 70vmin); height: auto; max-height: min(500px, 70vmin); opacity: 0.6" id="protractorImage">
       <div style="margin: auto; width: fit-content; height: fit-content" id="protractorRotate">
         <img
           draggable="false"
