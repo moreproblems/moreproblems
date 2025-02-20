@@ -74,9 +74,37 @@
   }
 
   #protractorCanvas {
-    position: absolute;
-    cursor: move;
-    z-index: 50;
+  position: absolute;
+  z-index: 50;
+  }
+
+  #protractorImage {
+  position: relative;
+  cursor: move;
+  z-index: 60;
+  }
+
+  #protractorRotate {
+  position: relative;
+  cursor: move;
+  z-index: 60;
+  }
+
+  #rulerCanvas {
+  position: absolute;
+  z-index: 50;
+  }
+
+  #rulerImage {
+  position: relative;
+  cursor: move;
+  z-index: 60;
+  }
+
+  #rulerRotate {
+  position: relative;
+  cursor: move;
+  z-index: 60;
   }
 
   .content-menu {
@@ -640,8 +668,31 @@
 <div class="content" role="main" (window:resize)="width_change2()"
   style="min-height: 100%; height: auto; min-width: 100%; width: auto; text-align: center; background: url('./assets/media/hands.jpeg') no-repeat center; background-color: rgba(255, 255, 255, 0.7); background-blend-mode: lighten; background-size: auto 105%; background-attachment: fixed">
   <canvas id="confettiCanvas"></canvas>
+  <div style="width: fit-content; height: fit-content" id="rulerCanvas">
+    <div *ngIf="show_ruler && (selected_subtopic != '' && (subtopic_search_dump | keys).includes(''+subtopic_problem_number) && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Ruler'))" style="display: flex; flex-direction: row" id="handles">
+      <div id="virtualRect"></div>
+      <img src="./assets/media/tools/ruler.png" style="width: auto; max-width: min(1150px, 90vmax); height: auto; opacity: 0.5" id="rulerImage">
+      <div style="margin: auto; width: fit-content; height: fit-content" id="rulerRotate">
+        <img
+          draggable="false"
+          src="./assets/media/icons/rotate.png"
+          style="height: min(35px, 5vmin); width: min(35px, 5vmin)"
+        />
+      </div>
+    </div>
+  </div>
   <div style="width: fit-content; height: fit-content" id="protractorCanvas">
-    <img *ngIf="show_protractor && (subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor'))" src="./assets/media/tools/protractor.png" style="width: auto; max-width: min(800px, 70vmin); height: auto; max-height: min(500px, 70vmin); opacity: 0.5">
+    <div *ngIf="show_protractor && (selected_subtopic != '' && (subtopic_search_dump | keys).includes(''+subtopic_problem_number) && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Protractor'))" id="handles">
+      <div id="virtualRect"></div>
+      <img src="./assets/media/tools/protractor.png" style="width: auto; max-width: min(800px, 70vmin); height: auto; max-height: min(500px, 70vmin); opacity: 0.5" id="protractorImage">
+      <div style="margin: auto; width: fit-content; height: fit-content" id="protractorRotate">
+        <img
+          draggable="false"
+          src="./assets/media/icons/rotate.png"
+          style="height: min(35px, 5vmin); width: min(35px, 5vmin)"
+        />
+      </div>
+    </div>
   </div>
   <div class="content-menu" role="menu" style="margin-bottom: 0px; align-items: center">
     <div *ngIf="signup || login" style="align-items: left; width: min(1075px, 92%)">
@@ -2134,6 +2185,18 @@
                   </button>
                   <button (click)="show_calculator = !show_calculator" *ngIf="show_calculator && subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Calculator-G')" class="toggle-button-off"> <b> Hide
                       Calculator </b>
+                  </button>
+                </label>
+              </span>
+              <span *ngIf="subtopic_search_dump[subtopic_problem_number].SuppTools.includes('Ruler')"
+                style="height: auto; width: auto; display: flex; justify-content: center">
+                <label class="switch" style="padding: 0 10px">
+                  <input type="checkbox" style="margin: 0px" value="{{show_ruler}}">
+                  <button (click)="show_ruler = !show_ruler; render_ruler()" *ngIf="!show_ruler" class="toggle-button-on"> <b> Show
+                      Ruler </b>
+                  </button>
+                  <button (click)="show_ruler = !show_ruler" *ngIf="show_ruler" class="toggle-button-off"> <b> Hide
+                    Ruler </b>
                   </button>
                 </label>
               </span>

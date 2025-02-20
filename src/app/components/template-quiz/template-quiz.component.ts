@@ -77,6 +77,7 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
   show_refsheet = false;
   show_calculator = false;
   show_protractor = false;
+  show_ruler = false;
   show_supplements = true;
   expand_overview = true;
   expand_topics = true;
@@ -349,62 +350,147 @@ export class TemplateQuizComponent implements OnInit, AfterViewInit {
   }
 
   render_protractor() {
-      this.dragElement(document.getElementById("protractorCanvas") as HTMLElement);
+      setTimeout(() => {
+          this.dragElement(document.getElementById("protractorImage") as HTMLElement, 'protractor');
+          this.rotateElement(document.getElementById("protractorRotate") as HTMLElement, 'protractor');
+      }, 100);
   }
 
-  dragElement(elmnt: HTMLElement) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-    elmnt.onmousedown = dragMouseDown;
-    elmnt.ontouchstart = dragMouseDown;
-  
-    function dragMouseDown(e: any) {
-      e = e || window.event;
-      e.preventDefault();
-      // get the mouse cursor position at startup:
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      document.onmouseup = closeDragElement;
-      document.ontouchend = closeDragElement;
-      // call a function whenever the cursor moves:
-      document.onmousemove = elementDrag;
-      document.ontouchmove = elementDragT;
-    }
-  
-    function elementDrag(e: any) {
-      e = e || window.event;
-      e.preventDefault();
-      // calculate the new cursor position:
-      pos1 = pos3 - e.clientX;
-      pos2 = pos4 - e.clientY;
-      pos3 = e.clientX;
-      pos4 = e.clientY;
-      // set the element's new position:
-      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-  
-    function elementDragT(e: any) {
-      e = e || window.event;
-      e.preventDefault();
-      for (let target of e.targetTouches) {
-          // calculate the new cursor position:
-          pos1 = pos3 - target.clientX;
-          pos2 = pos4 - target.clientY;
-          pos3 = target.clientX;
-          pos4 = target.clientY;
-          // set the element's new position:
-          elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-          elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  render_ruler() {
+      setTimeout(() => {
+          this.dragElement(document.getElementById("rulerImage") as HTMLElement, 'ruler');
+          this.rotateElement(document.getElementById("rulerRotate") as HTMLElement, 'ruler');
+      }, 100);
+  }
+
+  dragElement(elmnt: HTMLElement, tool: string) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+      var target: any = null;
+      if (tool == 'protractor') {
+          target = document.getElementById("protractorCanvas");
       }
-    }
-  
-    function closeDragElement() {
-      // stop moving when mouse button is released:
-      document.onmouseup = null;
-      document.ontouchend = null;
-      document.onmousemove = null;
-      document.ontouchmove = null;
-    }
+      else if (tool == 'ruler') {
+          target = document.getElementById("rulerCanvas");
+      }
+      elmnt.onmousedown = dragMouseDown;
+      elmnt.ontouchstart = dragMouseDown;
+
+      function dragMouseDown(e: any) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          document.onmouseup = closeDragElement;
+          document.ontouchend = closeDragElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementDrag;
+          document.ontouchmove = elementDragT;
+      }
+
+      function elementDrag(e: any) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          // set the element's new position:
+          (target as HTMLElement).style.top = ((target as HTMLElement).offsetTop - pos2) + "px";
+          (target as HTMLElement).style.left = ((target as HTMLElement).offsetLeft - pos1) + "px";
+      }
+
+      function elementDragT(e: any) {
+          e = e || window.event;
+          e.preventDefault();
+          for (let target of e.targetTouches) {
+              // calculate the new cursor position:
+              pos1 = pos3 - target.clientX;
+              pos2 = pos4 - target.clientY;
+              pos3 = target.clientX;
+              pos4 = target.clientY;
+              // set the element's new position:
+              elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+              elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+          }
+      }
+
+      function closeDragElement() {
+          // stop moving when mouse button is released:
+          document.onmouseup = null;
+          document.ontouchend = null;
+          document.onmousemove = null;
+          document.ontouchmove = null;
+      }
+  }
+
+  rotateElement(elmnt: HTMLElement, tool: string) {
+      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, rotationCenterX = 0, rotationCenterY = 0, currentAngle = 0;
+      var target: any = null;
+      if (tool == 'protractor') {
+          target = document.getElementById("protractorCanvas");
+      }
+      else if (tool == 'ruler') {
+          target = document.getElementById("rulerCanvas");
+      }
+      elmnt.onmousedown = rotateMouseDown;
+      elmnt.ontouchstart = rotateMouseDown;
+
+      function rotateMouseDown(e: any) {
+          e = e || window.event;
+          e.preventDefault();
+          // get the mouse cursor position at startup:
+          pos1 = pos3 - e.clientX;
+          pos2 = pos4 - e.clientY;
+          pos3 = e.clientX;
+          pos4 = e.clientY;
+          rotationCenterX = (target as HTMLElement).offsetLeft + (target as HTMLElement).offsetWidth / 2;
+          rotationCenterY = (target as HTMLElement).offsetTop + (target as HTMLElement).offsetHeight / 2;
+          currentAngle = getDraggableAngle(e);
+          document.onmouseup = closeRotateElement;
+          document.ontouchend = closeRotateElement;
+          // call a function whenever the cursor moves:
+          document.onmousemove = elementRotate;
+          document.ontouchmove = elementRotateT;
+      }
+
+      function elementRotate(e: any) {
+          e = e || window.event;
+          e.preventDefault();
+          // calculate the new cursor position:
+          const angle = getDraggableAngle(e);
+          // set the element's new position:
+          (target as HTMLElement).style.transform = `rotate(${angle}rad)`;
+      }
+
+      function elementRotateT(e: any) {
+          e = e || window.event;
+          e.preventDefault();
+          for (let target of e.targetTouches) {
+              // calculate the new cursor position:
+              const angle = getDraggableAngle(e);
+              // set the element's new position:
+              (target as HTMLElement).style.transform = `rotate(${angle}rad)`;
+          }
+      }
+
+      function getDraggableAngle(event: any) {
+          const angle = Math.atan2(
+              event.clientY - rotationCenterY,
+              event.clientX - rotationCenterX
+          );
+          console.log(angle - currentAngle);
+          return angle - currentAngle;
+      }
+
+      function closeRotateElement() {
+          // stop moving when mouse button is released:
+          document.onmouseup = null;
+          document.ontouchend = null;
+          document.onmousemove = null;
+          document.ontouchmove = null;
+      }
   }
 
   read_supp_json(path: string) {

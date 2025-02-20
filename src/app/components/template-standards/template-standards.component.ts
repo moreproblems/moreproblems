@@ -65,6 +65,8 @@ export class TemplateStandardsComponent implements OnInit {
     show_refsheet = false;
     show_calculator = false;
     show_protractor = false;
+    show_ruler = false;
+    rotate_protractor = false;
     show_supplements = true;
 
     problem_number = 1;
@@ -214,78 +216,163 @@ export class TemplateStandardsComponent implements OnInit {
             var calculatorCanvas = document.getElementById('calculatorCanvas');
             if (this.screenWidth > 600) {
                 if (type == '') {
-                    const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                    const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, { projectorMode: true, settingsMenu: false });
                 }
                 else if (type == 'sci') {
-                    const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                    const calculator: any = Desmos.ScientificCalculator(calculatorCanvas, { projectorMode: true, settingsMenu: false });
                 }
                 else if (type == 'graph') {
-                    const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                    const calculator: any = Desmos.GraphingCalculator(calculatorCanvas, { projectorMode: true, settingsMenu: false });
                 }
             }
             else {
-                const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, {projectorMode: true, settingsMenu: false});
+                const calculator: any = Desmos.FourFunctionCalculator(calculatorCanvas, { projectorMode: true, settingsMenu: false });
             }
         }, 100);
     }
 
     render_protractor() {
-        this.dragElement(document.getElementById("protractorCanvas") as HTMLElement);
+        setTimeout(() => {
+            this.dragElement(document.getElementById("protractorImage") as HTMLElement, 'protractor');
+            this.rotateElement(document.getElementById("protractorRotate") as HTMLElement, 'protractor');
+        }, 100);
     }
 
-    dragElement(elmnt: HTMLElement) {
-      var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-      elmnt.onmousedown = dragMouseDown;
-      elmnt.ontouchstart = dragMouseDown;
-    
-      function dragMouseDown(e: any) {
-        e = e || window.event;
-        e.preventDefault();
-        // get the mouse cursor position at startup:
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
-        document.ontouchend = closeDragElement;
-        // call a function whenever the cursor moves:
-        document.onmousemove = elementDrag;
-        document.ontouchmove = elementDragT;
-      }
-    
-      function elementDrag(e: any) {
-        e = e || window.event;
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-      }
-    
-      function elementDragT(e: any) {
-        e = e || window.event;
-        e.preventDefault();
-        for (let target of e.targetTouches) {
-            // calculate the new cursor position:
-            pos1 = pos3 - target.clientX;
-            pos2 = pos4 - target.clientY;
-            pos3 = target.clientX;
-            pos4 = target.clientY;
-            // set the element's new position:
-            elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-            elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    render_ruler() {
+        setTimeout(() => {
+            this.dragElement(document.getElementById("rulerImage") as HTMLElement, 'ruler');
+            this.rotateElement(document.getElementById("rulerRotate") as HTMLElement, 'ruler');
+        }, 100);
+    }
+
+    dragElement(elmnt: HTMLElement, tool: string) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+        var target: any = null;
+        if (tool == 'protractor') {
+            target = document.getElementById("protractorCanvas");
         }
-      }
-    
-      function closeDragElement() {
-        // stop moving when mouse button is released:
-        document.onmouseup = null;
-        document.ontouchend = null;
-        document.onmousemove = null;
-        document.ontouchmove = null;
-      }
+        else if (tool == 'ruler') {
+            target = document.getElementById("rulerCanvas");
+        }
+        elmnt.onmousedown = dragMouseDown;
+        elmnt.ontouchstart = dragMouseDown;
+
+        function dragMouseDown(e: any) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            document.onmouseup = closeDragElement;
+            document.ontouchend = closeDragElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementDrag;
+            document.ontouchmove = elementDragT;
+        }
+
+        function elementDrag(e: any) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            // set the element's new position:
+            (target as HTMLElement).style.top = ((target as HTMLElement).offsetTop - pos2) + "px";
+            (target as HTMLElement).style.left = ((target as HTMLElement).offsetLeft - pos1) + "px";
+        }
+
+        function elementDragT(e: any) {
+            e = e || window.event;
+            e.preventDefault();
+            for (let target of e.targetTouches) {
+                // calculate the new cursor position:
+                pos1 = pos3 - target.clientX;
+                pos2 = pos4 - target.clientY;
+                pos3 = target.clientX;
+                pos4 = target.clientY;
+                // set the element's new position:
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+        }
+
+        function closeDragElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.ontouchend = null;
+            document.onmousemove = null;
+            document.ontouchmove = null;
+        }
+    }
+
+    rotateElement(elmnt: HTMLElement, tool: string) {
+        var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0, rotationCenterX = 0, rotationCenterY = 0, currentAngle = 0;
+        var target: any = null;
+        if (tool == 'protractor') {
+            target = document.getElementById("protractorCanvas");
+        }
+        else if (tool == 'ruler') {
+            target = document.getElementById("rulerCanvas");
+        }
+        elmnt.onmousedown = rotateMouseDown;
+        elmnt.ontouchstart = rotateMouseDown;
+
+        function rotateMouseDown(e: any) {
+            e = e || window.event;
+            e.preventDefault();
+            // get the mouse cursor position at startup:
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            rotationCenterX = (target as HTMLElement).offsetLeft + (target as HTMLElement).offsetWidth / 2;
+            rotationCenterY = (target as HTMLElement).offsetTop + (target as HTMLElement).offsetHeight / 2;
+            currentAngle = getDraggableAngle(e);
+            document.onmouseup = closeRotateElement;
+            document.ontouchend = closeRotateElement;
+            // call a function whenever the cursor moves:
+            document.onmousemove = elementRotate;
+            document.ontouchmove = elementRotateT;
+        }
+
+        function elementRotate(e: any) {
+            e = e || window.event;
+            e.preventDefault();
+            // calculate the new cursor position:
+            const angle = getDraggableAngle(e);
+            // set the element's new position:
+            (target as HTMLElement).style.transform = `rotate(${angle}rad)`;
+        }
+
+        function elementRotateT(e: any) {
+            e = e || window.event;
+            e.preventDefault();
+            for (let target of e.targetTouches) {
+                // calculate the new cursor position:
+                const angle = getDraggableAngle(e);
+                // set the element's new position:
+                (target as HTMLElement).style.transform = `rotate(${angle}rad)`;
+            }
+        }
+
+        function getDraggableAngle(event: any) {
+            const angle = Math.atan2(
+                event.clientY - rotationCenterY,
+                event.clientX - rotationCenterX
+            );
+            console.log(angle - currentAngle);
+            return angle - currentAngle;
+        }
+
+        function closeRotateElement() {
+            // stop moving when mouse button is released:
+            document.onmouseup = null;
+            document.ontouchend = null;
+            document.onmousemove = null;
+            document.ontouchmove = null;
+        }
     }
 
     read_supp_st_json(path: string) {
@@ -1819,7 +1906,7 @@ export class TemplateStandardsComponent implements OnInit {
         console.log(this.subtopic_problem_selection);
         console.log(this.subtopic_attempt_explanation);
     }
-  
+
     remove_m_choice_st(ch: string, part: string) {
         var part_num = 0;
         if (part != '') {
@@ -1830,7 +1917,7 @@ export class TemplateStandardsComponent implements OnInit {
         this.subtopic_attempt_explanation[part_num][+ch - 1] = '';
         this.select_m_choice_st('', 1, part)
     }
-  
+
     is_matched_st(ch: string, p: number, part: string) {
         var part_num = 0;
         if (part != '') {
@@ -1864,7 +1951,7 @@ export class TemplateStandardsComponent implements OnInit {
             return false
         }
     }
-  
+
     select_c_choice_st(ch: string, p: number, part: string) {
         var part_num = 0;
         if (part != '') {
@@ -1893,7 +1980,7 @@ export class TemplateStandardsComponent implements OnInit {
         console.log(this.m_selection);
         console.log(this.c_submission);
     }
-  
+
     remove_c_choice_st(ch: string, part: string) {
         var part_num = 0;
         if (part != '') {
@@ -1924,7 +2011,7 @@ export class TemplateStandardsComponent implements OnInit {
         this.is_c_correct_st(part, true);
         this.select_c_choice_st('', 1, part);
     }
-  
+
     remove_g_choice_st(ch: string, cat: string, part: string) {
         var part_num = 0;
         if (part != '') {
@@ -1951,7 +2038,7 @@ export class TemplateStandardsComponent implements OnInit {
         this.is_g_correct_st(part, true);
         this.select_c_choice_st('', 1, part);
     }
-  
+
     is_idd_correct_st(part: string) {
         var part_num = 0;
         if (part != '') {
@@ -1966,7 +2053,7 @@ export class TemplateStandardsComponent implements OnInit {
         }
         return true;
     }
-  
+
     is_m_correct_st(part: string, fetti: boolean) {
         var part_num = 0;
         var correct: boolean = true;
@@ -2033,7 +2120,7 @@ export class TemplateStandardsComponent implements OnInit {
         }
         return correct;
     }
-  
+
     is_c_correct_st(part: string, fetti: boolean) {
         var part_num = 0;
         var correct: boolean = true;
@@ -2102,7 +2189,7 @@ export class TemplateStandardsComponent implements OnInit {
         }
         return correct;
     }
-  
+
     is_g_correct_st(part: string, fetti: boolean) {
         var part_num = 0;
         var correct: boolean = true;
@@ -2432,13 +2519,13 @@ export class TemplateStandardsComponent implements OnInit {
             }
             this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
             if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
-              this.render_calc_st('');
+                this.render_calc_st('');
             }
             else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
-              this.render_calc_st('sci');
+                this.render_calc_st('sci');
             }
             else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
-              this.render_calc_st('graph');
+                this.render_calc_st('graph');
             }
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
                 setTimeout(() => {
@@ -2566,13 +2653,13 @@ export class TemplateStandardsComponent implements OnInit {
             }
             this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
             if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
-              this.render_calc_st('');
+                this.render_calc_st('');
             }
             else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
-              this.render_calc_st('sci');
+                this.render_calc_st('sci');
             }
             else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
-              this.render_calc_st('graph');
+                this.render_calc_st('graph');
             }
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
                 setTimeout(() => {
