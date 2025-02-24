@@ -512,17 +512,17 @@
     </div> -->
     <div *ngIf="this.screenWidth <= this.mobileWidth" style="width: fit-content; display: flex; flex-direction: row">
       <div style="display: flex; align-items: center; margin-right: 10px; float: right">
-        <!-- <button *ngIf="!authService.userData && this.screenWidth >= 570" class="grade-button-s" routerLink="/signup"
+        <button *ngIf="!authService.userData && this.screenWidth >= 400" class="grade-button-s" routerLink="/signup"
           routerLinkActive="active"
           style="font-size: 16px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 5px; border-radius: 7px">
-          Sign Up </button> -->
-        <button *ngIf="!authService.userData && this.screenWidth >= 475" class="grade-button-l" routerLink="/login"
+          Sign Up </button>
+        <button *ngIf="!authService.userData && this.screenWidth >= 460" class="grade-button-l" routerLink="/login"
           routerLinkActive="active"
           style="font-size: 16px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 5px; border-radius: 7px">
           Log In </button>
-        <button *ngIf="this.screenWidth >= 450" class="grade-button-c" routerLink="/join" routerLinkActive="active"
+        <!-- <button *ngIf="this.screenWidth >= 450" class="grade-button-c" routerLink="/join" routerLinkActive="active"
           style="font-size: 16px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 5px; border-radius: 7px">
-          Enter Code </button>
+          Enter Code </button> -->
         <img *ngIf="this.screenWidth >= 350 && authService.userData as user"
           src="{{(authService.pp_url) ? authService.pp_url : (user.photoURL) ? user.photoURL : '/assets/media/icons/user/user.png'}}"
           routerLink="/profile" routerLinkActive="active"
@@ -573,19 +573,19 @@
         &nbsp;<a routerLink="/quizzes" routerLinkActive="active"
           style="padding: 5px 11px; font-size: 15px; font-weight: 300"> <u>Quizzes</u> </a>&nbsp;
       </div>
-      <div *ngIf="!authService.userData && this.screenWidth <= this.mobileWidth" class="flex-item"
+      <div *ngIf="!authService.userData && this.screenWidth < 400" class="flex-item"
         style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-s" routerLink="/signup" routerLinkActive="active"
           style="margin: 5px 10.5px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
           Sign Up </button>&nbsp;
       </div>
-      <div *ngIf="!authService.userData && this.screenWidth < 475" class="flex-item"
+      <div *ngIf="!authService.userData && this.screenWidth < 460" class="flex-item"
         style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-l" routerLink="/login" routerLinkActive="active"
           style="margin: 5px 11px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
           Log In </button>&nbsp;
       </div>
-      <div *ngIf="this.screenWidth < 450" class="flex-item" style="margin: 0px; display: inline-block">
+      <div *ngIf="this.screenWidth <= this.mobileWidth" class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-c" routerLink="/join" routerLinkActive="active"
           style="margin: 5px 11px; font-size: 15px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
           Enter Code </button>&nbsp;
@@ -622,7 +622,7 @@
       <div *ngIf="this.screenWidth >= 320" class="flex-item" style="margin: 0px; display: inline-block">
         &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
-      <div *ngIf="!authService.userData && this.screenWidth >= 319" class="flex-item"
+      <div *ngIf="!authService.userData" class="flex-item"
         style="margin: 0px; display: inline-block">
         &nbsp;<button class="grade-button-s" routerLink="/signup" routerLinkActive="active"
           style="margin: 5px 7px; font-size: 13px; letter-spacing: 0px; line-height: 20px; font-weight: 600; padding: 3px 5px; border-radius: 7px">
