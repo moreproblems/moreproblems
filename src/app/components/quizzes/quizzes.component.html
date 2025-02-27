@@ -7918,13 +7918,13 @@
             <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York')"
               class="toggle-button-off" tabindex="0"> <b>New York</b> </button>
           </label>
-          <!-- <label class="switch">
+          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NC">
             <button *ngIf="state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
               class="toggle-button-on" tabindex="0"> <b>North Carolina</b> </button>
             <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
               class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
-          </label> -->
+          </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="PA">
             <button *ngIf="state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
@@ -8159,13 +8159,13 @@
             <div *ngIf="!state_filters.includes('New York')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> New York </div>
           </div>
-          <!-- <div (click)="toggle_button('North Carolina')"
+          <div (click)="toggle_button('North Carolina')"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('North Carolina')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('North Carolina')" type="checkbox" unchecked />
             <div *ngIf="state_filters.includes('North Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> North Carolina </div>
             <div *ngIf="!state_filters.includes('North Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> North Carolina </div>
-          </div> -->
+          </div>
           <div (click)="toggle_button('Pennsylvania')"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Pennsylvania')" type="checkbox" checked />
