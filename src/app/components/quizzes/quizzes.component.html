@@ -7921,7 +7921,15 @@
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="NC">
             <button *ngIf="state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
-              class="toggle-button-on" tabindex="0"> <b>North Carolina</b> </button>
+              class="toggle-button-on" tabindex="0"
+              style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
+              <div style="margin: 0 3px">
+                <img src="./assets/media/flags/NC.png" style="padding: 5px 0 0; height: 20px">
+              </div>
+              <div style="margin: 0 5px; text-align: center; font-size: 17px">
+                <b> North Carolina </b>
+              </div>
+            </button>
             <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
               class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
           </label>
