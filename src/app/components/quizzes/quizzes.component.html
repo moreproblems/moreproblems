@@ -7604,52 +7604,59 @@
         <input type="hidden" value="All Grades" #state>
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch">
+            <input type="checkbox" style="margin: 0px" value="G2">
+            <button *ngIf="grade_filters.includes('Grade 2')" (click)="toggle_button('Grade 2')"
+              class="toggle-button-on" tabindex="0"> Grade <b>2</b> </button>
+            <button *ngIf="!grade_filters.includes('Grade 2')" (click)="toggle_button('Grade 2'); scroll(chooseSubject)"
+              class="toggle-button-off" tabindex="0"> Grade <b>2</b> </button>
+          </label>
+          <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G3">
             <button *ngIf="grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')"
               class="toggle-button-on" tabindex="0"> Grade <b>3</b> </button>
-            <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3')"
+            <button *ngIf="!grade_filters.includes('Grade 3')" (click)="toggle_button('Grade 3'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> Grade <b>3</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G4">
             <button *ngIf="grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')"
               class="toggle-button-on" tabindex="0"> Grade <b>4</b> </button>
-            <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4')"
+            <button *ngIf="!grade_filters.includes('Grade 4')" (click)="toggle_button('Grade 4'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> Grade <b>4</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G5">
             <button *ngIf="grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')"
               class="toggle-button-on" tabindex="0"> Grade <b>5</b> </button>
-            <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5')"
+            <button *ngIf="!grade_filters.includes('Grade 5')" (click)="toggle_button('Grade 5'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> Grade <b>5</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G6">
             <button *ngIf="grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')"
               class="toggle-button-on" tabindex="0"> Grade <b>6</b> </button>
-            <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6')"
+            <button *ngIf="!grade_filters.includes('Grade 6')" (click)="toggle_button('Grade 6'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> Grade <b>6</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G7">
             <button *ngIf="grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')"
               class="toggle-button-on" tabindex="0"> Grade <b>7</b> </button>
-            <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7')"
+            <button *ngIf="!grade_filters.includes('Grade 7')" (click)="toggle_button('Grade 7'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> Grade <b>7</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="G8">
             <button *ngIf="grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')"
               class="toggle-button-on" tabindex="0"> Grade <b>8</b> </button>
-            <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8')"
+            <button *ngIf="!grade_filters.includes('Grade 8')" (click)="toggle_button('Grade 8'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> Grade <b>8</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="HS">
             <button *ngIf="grade_filters.includes('High School')" (click)="toggle_button('High School')"
               class="toggle-button-on" tabindex="0"> <b>H</b>igh <b>S</b>chool </button>
-            <button *ngIf="!grade_filters.includes('High School')" (click)="toggle_button('High School')"
+            <button *ngIf="!grade_filters.includes('High School')" (click)="toggle_button('High School'); scroll(chooseSubject)"
               class="toggle-button-off" tabindex="0"> <b>H</b>igh <b>S</b>chool </button>
           </label>
         </div>
@@ -7667,35 +7674,35 @@
               (click)="toggle_button('English Language Arts')" class="toggle-button-on" tabindex="0"> <b>English
                 Language Arts</b> </button>
             <button *ngIf="!subject_filters.includes('English Language Arts')"
-              (click)="toggle_button('English Language Arts')" class="toggle-button-off" tabindex="0"> <b>English
+              (click)="toggle_button('English Language Arts'); scroll(chooseState)" class="toggle-button-off" tabindex="0"> <b>English
                 Language Arts</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="M">
             <button *ngIf="subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
               class="toggle-button-on" tabindex="0"> <b>Mathematics</b> </button>
-            <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics')"
+            <button *ngIf="!subject_filters.includes('Mathematics')" (click)="toggle_button('Mathematics'); scroll(chooseState)"
               class="toggle-button-off" tabindex="0"> <b>Mathematics</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="S">
             <button *ngIf="subject_filters.includes('Sciences')" (click)="toggle_button('Sciences')"
               class="toggle-button-on" tabindex="0"> <b>Sciences</b> </button>
-            <button *ngIf="!subject_filters.includes('Sciences')" (click)="toggle_button('Sciences')"
+            <button *ngIf="!subject_filters.includes('Sciences')" (click)="toggle_button('Sciences'); scroll(chooseState)"
               class="toggle-button-off" tabindex="0"> <b>Sciences</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="SS">
             <button *ngIf="subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies')"
               class="toggle-button-on" tabindex="0"> <b>Social Studies</b> </button>
-            <button *ngIf="!subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies')"
+            <button *ngIf="!subject_filters.includes('Social Studies')" (click)="toggle_button('Social Studies'); scroll(chooseState)"
               class="toggle-button-off" tabindex="0"> <b>Social Studies</b> </button>
           </label>
           <label class="switch">
             <input type="checkbox" style="margin: 0px" value="RW">
             <button *ngIf="subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing')"
               class="toggle-button-on" tabindex="0"> <b>Reading & Writing</b> </button>
-            <button *ngIf="!subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing')"
+            <button *ngIf="!subject_filters.includes('Reading & Writing')" (click)="toggle_button('Reading & Writing'); scroll(chooseState)"
               class="toggle-button-off" tabindex="0"> <b>Reading & Writing</b> </button>
           </label>
         </div>
@@ -7714,13 +7721,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/CO.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/CO.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Colorado </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Colorado')" (click)="toggle_button('Colorado')"
+            <button *ngIf="!state_filters.includes('Colorado')" (click)="toggle_button('Colorado'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Colorado</b> </button>
           </label>
           <label class="switch">
@@ -7729,13 +7736,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/DE.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/DE.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Delaware </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Delaware')" (click)="toggle_button('Delaware')"
+            <button *ngIf="!state_filters.includes('Delaware')" (click)="toggle_button('Delaware'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Delaware</b> </button>
           </label>
           <label class="switch">
@@ -7744,13 +7751,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; height: 24px">
+                <img src="./assets/media/flags/FL.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Florida </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Florida')" (click)="toggle_button('Florida')"
+            <button *ngIf="!state_filters.includes('Florida')" (click)="toggle_button('Florida'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Florida</b> </button>
           </label>
           <label class="switch">
@@ -7759,13 +7766,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/IL.png" style="padding: 5px 0 0; height: 24px">
+                <img src="./assets/media/flags/IL.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Illinois </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Illinois')" (click)="toggle_button('Illinois')"
+            <button *ngIf="!state_filters.includes('Illinois')" (click)="toggle_button('Illinois'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Illinois</b> </button>
           </label>
           <label class="switch">
@@ -7774,13 +7781,13 @@
               tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/ME.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/ME.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Maine </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Maine')" (click)="toggle_button('Maine')" class="toggle-button-off"
+            <button *ngIf="!state_filters.includes('Maine')" (click)="toggle_button('Maine'); scroll(chooseTopic)" class="toggle-button-off"
               tabindex="0"> <b>Maine</b> </button>
           </label>
           <label class="switch">
@@ -7789,13 +7796,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/MD.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/MD.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Maryland </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Maryland')" (click)="toggle_button('Maryland')"
+            <button *ngIf="!state_filters.includes('Maryland')" (click)="toggle_button('Maryland'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Maryland</b> </button>
           </label>
           <label class="switch">
@@ -7804,13 +7811,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/MA.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/MA.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Massachusetts </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts')"
+            <button *ngIf="!state_filters.includes('Massachusetts')" (click)="toggle_button('Massachusetts'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Massachusetts</b> </button>
           </label>
           <label class="switch">
@@ -7819,13 +7826,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/MN.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/MN.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Minnesota </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota')"
+            <button *ngIf="!state_filters.includes('Minnesota')" (click)="toggle_button('Minnesota'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Minnesota</b> </button>
           </label>
           <label class="switch">
@@ -7834,13 +7841,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/MS.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/MS.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Mississippi </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Mississippi')" (click)="toggle_button('Mississippi')"
+            <button *ngIf="!state_filters.includes('Mississippi')" (click)="toggle_button('Mississippi'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Mississippi</b> </button>
           </label>
           <label class="switch">
@@ -7849,13 +7856,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/MO.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/MO.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Missouri </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Missouri')" (click)="toggle_button('Missouri')"
+            <button *ngIf="!state_filters.includes('Missouri')" (click)="toggle_button('Missouri'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Missouri</b> </button>
           </label>
           <label class="switch">
@@ -7864,13 +7871,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/NE.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/NE.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Nebraska </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Nebraska')" (click)="toggle_button('Nebraska')"
+            <button *ngIf="!state_filters.includes('Nebraska')" (click)="toggle_button('Nebraska'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Nebraska</b> </button>
           </label>
           <label class="switch">
@@ -7879,13 +7886,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; height: 24px">
+                <img src="./assets/media/flags/NJ.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> New Jersey </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey')"
+            <button *ngIf="!state_filters.includes('New Jersey')" (click)="toggle_button('New Jersey'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>New Jersey</b> </button>
           </label>
           <label class="switch">
@@ -7894,13 +7901,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/NM.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/NM.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> New Mexico </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('New Mexico')" (click)="toggle_button('New Mexico')"
+            <button *ngIf="!state_filters.includes('New Mexico')" (click)="toggle_button('New Mexico'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>New Mexico</b> </button>
           </label>
           <label class="switch">
@@ -7909,13 +7916,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/NY.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> New York </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York')"
+            <button *ngIf="!state_filters.includes('New York')" (click)="toggle_button('New York'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>New York</b> </button>
           </label>
           <label class="switch">
@@ -7924,13 +7931,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/NC.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/NC.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> North Carolina </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina')"
+            <button *ngIf="!state_filters.includes('North Carolina')" (click)="toggle_button('North Carolina'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>North Carolina</b> </button>
           </label>
           <label class="switch">
@@ -7939,13 +7946,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; height: 16px">
+                <img src="./assets/media/flags/PA.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Pennsylvania </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania')"
+            <button *ngIf="!state_filters.includes('Pennsylvania')" (click)="toggle_button('Pennsylvania'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Pennsylvania</b> </button>
           </label>
           <label class="switch">
@@ -7954,13 +7961,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/RI.svg" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/RI.svg" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Rhode Island </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Rhode Island')" (click)="toggle_button('Rhode Island')"
+            <button *ngIf="!state_filters.includes('Rhode Island')" (click)="toggle_button('Rhode Island'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Rhode Island</b> </button>
           </label>
           <label class="switch">
@@ -7969,13 +7976,13 @@
               tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/SAT.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> SAT </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT')" class="toggle-button-off"
+            <button *ngIf="!state_filters.includes('SAT')" (click)="toggle_button('SAT'); scroll(chooseTopic)" class="toggle-button-off"
               tabindex="0"> <b>The SAT Suite</b> </button>
           </label>
           <label class="switch">
@@ -7984,13 +7991,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/SC.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> South Carolina </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('South Carolina')" (click)="toggle_button('South Carolina')"
+            <button *ngIf="!state_filters.includes('South Carolina')" (click)="toggle_button('South Carolina'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>South Carolina</b> </button>
           </label>
           <label class="switch">
@@ -7999,13 +8006,13 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; height: 8px">
+                <img src="./assets/media/flags/TN.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Tennessee </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee')"
+            <button *ngIf="!state_filters.includes('Tennessee')" (click)="toggle_button('Tennessee'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Tennessee</b> </button>
           </label>
           <label class="switch">
@@ -8014,13 +8021,13 @@
               tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/TX.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/TX.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Texas </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Texas')" (click)="toggle_button('Texas')" class="toggle-button-off"
+            <button *ngIf="!state_filters.includes('Texas')" (click)="toggle_button('Texas'); scroll(chooseTopic)" class="toggle-button-off"
               tabindex="0"> <b>Texas</b> </button>
           </label>
           <label class="switch">
@@ -8029,19 +8036,19 @@
               class="toggle-button-on" tabindex="0"
               style="padding: 5px; line-height: 22px; display: flex; flex-direction: row; align-items: center; max-width: 320px; width: auto">
               <div style="margin: 0 3px">
-                <img src="./assets/media/flags/WI.png" style="padding: 5px 0 0; height: 20px">
+                <img src="./assets/media/flags/WI.png" style="padding: 5px 0 0; max-height: 21px; max-width: 28px">
               </div>
               <div style="margin: 0 5px; text-align: center; font-size: 17px">
                 <b> Wisconsin </b>
               </div>
             </button>
-            <button *ngIf="!state_filters.includes('Wisconsin')" (click)="toggle_button('Wisconsin')"
+            <button *ngIf="!state_filters.includes('Wisconsin')" (click)="toggle_button('Wisconsin'); scroll(chooseTopic)"
               class="toggle-button-off" tabindex="0"> <b>Wisconsin</b> </button>
           </label>
         </div>
         <div *ngIf="this.screenWidth <= this.mobileWidth" class="card-container"
           style="max-width: 100%; margin-top: 0px">
-          <div (click)="toggle_button('Colorado')"
+          <div (click)="toggle_button('Colorado'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Colorado')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Colorado')" type="checkbox" unchecked />
@@ -8050,7 +8057,7 @@
             <div *ngIf="!state_filters.includes('Colorado')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Colorado </div>
           </div>
-          <div (click)="toggle_button('Delaware')"
+          <div (click)="toggle_button('Delaware'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Delaware')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Delaware')" type="checkbox" unchecked />
@@ -8059,7 +8066,7 @@
             <div *ngIf="!state_filters.includes('Delaware')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Delaware </div>
           </div>
-          <div (click)="toggle_button('Florida')"
+          <div (click)="toggle_button('Florida'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Florida')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Florida')" type="checkbox" unchecked />
@@ -8068,7 +8075,7 @@
             <div *ngIf="!state_filters.includes('Florida')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Florida </div>
           </div>
-          <div (click)="toggle_button('Illinois')"
+          <div (click)="toggle_button('Illinois'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Illinois')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Illinois')" type="checkbox" unchecked />
@@ -8077,7 +8084,7 @@
             <div *ngIf="!state_filters.includes('Illinois')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Illinois </div>
           </div>
-          <div (click)="toggle_button('Maine')"
+          <div (click)="toggle_button('Maine'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Maine')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Maine')" type="checkbox" unchecked />
@@ -8086,7 +8093,7 @@
             <div *ngIf="!state_filters.includes('Maine')" style="margin-left: 5px; font-size: 18px; line-height: 18px">
               Maine </div>
           </div>
-          <div (click)="toggle_button('Maryland')"
+          <div (click)="toggle_button('Maryland'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Maryland')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Maryland')" type="checkbox" unchecked />
@@ -8095,7 +8102,7 @@
             <div *ngIf="!state_filters.includes('Maryland')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Maryland </div>
           </div>
-          <div (click)="toggle_button('Massachusetts')"
+          <div (click)="toggle_button('Massachusetts'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Massachusetts')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Massachusetts')" type="checkbox" unchecked />
@@ -8104,7 +8111,7 @@
             <div *ngIf="!state_filters.includes('Massachusetts')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Massachusetts </div>
           </div>
-          <div (click)="toggle_button('Minnesota')"
+          <div (click)="toggle_button('Minnesota'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Minnesota')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Minnesota')" type="checkbox" unchecked />
@@ -8113,7 +8120,7 @@
             <div *ngIf="!state_filters.includes('Minnesota')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Minnesota </div>
           </div>
-          <div (click)="toggle_button('Mississippi')"
+          <div (click)="toggle_button('Mississippi'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Mississippi')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Mississippi')" type="checkbox" unchecked />
@@ -8122,7 +8129,7 @@
             <div *ngIf="!state_filters.includes('Mississippi')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Mississippi </div>
           </div>
-          <div (click)="toggle_button('Missouri')"
+          <div (click)="toggle_button('Missouri'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Missouri')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Missouri')" type="checkbox" unchecked />
@@ -8131,7 +8138,7 @@
             <div *ngIf="!state_filters.includes('Missouri')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Missouri </div>
           </div>
-          <div (click)="toggle_button('Nebraska')"
+          <div (click)="toggle_button('Nebraska'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Nebraska')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Nebraska')" type="checkbox" unchecked />
@@ -8140,7 +8147,7 @@
             <div *ngIf="!state_filters.includes('Nebraska')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Nebraska </div>
           </div>
-          <div (click)="toggle_button('New Jersey')"
+          <div (click)="toggle_button('New Jersey'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('New Jersey')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('New Jersey')" type="checkbox" unchecked />
@@ -8149,7 +8156,7 @@
             <div *ngIf="!state_filters.includes('New Jersey')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> New Jersey </div>
           </div>
-          <div (click)="toggle_button('New Mexico')"
+          <div (click)="toggle_button('New Mexico'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('New Mexico')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('New Mexico')" type="checkbox" unchecked />
@@ -8158,7 +8165,7 @@
             <div *ngIf="!state_filters.includes('New Mexico')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> New Mexico </div>
           </div>
-          <div (click)="toggle_button('New York')"
+          <div (click)="toggle_button('New York'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('New York')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('New York')" type="checkbox" unchecked />
@@ -8167,14 +8174,14 @@
             <div *ngIf="!state_filters.includes('New York')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> New York </div>
           </div>
-          <div (click)="toggle_button('North Carolina')"
+          <div (click)="toggle_button('North Carolina'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('North Carolina')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('North Carolina')" type="checkbox" unchecked />
             <div *ngIf="state_filters.includes('North Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px; font-weight: 600"> North Carolina </div>
             <div *ngIf="!state_filters.includes('North Carolina')" style="margin-left: 5px; font-size: 18px; line-height: 18px"> North Carolina </div>
           </div>
-          <div (click)="toggle_button('Pennsylvania')"
+          <div (click)="toggle_button('Pennsylvania'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Pennsylvania')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Pennsylvania')" type="checkbox" unchecked />
@@ -8183,7 +8190,7 @@
             <div *ngIf="!state_filters.includes('Pennsylvania')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Pennsylvania </div>
           </div>
-          <div (click)="toggle_button('Rhode Island')"
+          <div (click)="toggle_button('Rhode Island'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Rhode Island')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Rhode Island')" type="checkbox" unchecked />
@@ -8192,7 +8199,7 @@
             <div *ngIf="!state_filters.includes('Rhode Island')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Rhode Island </div>
           </div>
-          <div (click)="toggle_button('SAT')"
+          <div (click)="toggle_button('SAT'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('SAT')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('SAT')" type="checkbox" unchecked />
@@ -8201,7 +8208,7 @@
             <div *ngIf="!state_filters.includes('SAT')" style="margin-left: 5px; font-size: 18px; line-height: 18px">
               The SAT Suite </div>
           </div>
-          <div (click)="toggle_button('South Carolina')"
+          <div (click)="toggle_button('South Carolina'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('South Carolina')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('South Carolina')" type="checkbox" unchecked />
@@ -8210,7 +8217,7 @@
             <div *ngIf="!state_filters.includes('South Carolina')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> South Carolina </div>
           </div>
-          <div (click)="toggle_button('Tennessee')"
+          <div (click)="toggle_button('Tennessee'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Tennessee')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Tennessee')" type="checkbox" unchecked />
@@ -8219,7 +8226,7 @@
             <div *ngIf="!state_filters.includes('Tennessee')"
               style="margin-left: 5px; font-size: 18px; line-height: 18px"> Tennessee </div>
           </div>
-          <div (click)="toggle_button('Texas')"
+          <div (click)="toggle_button('Texas'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Texas')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Texas')" type="checkbox" unchecked />
@@ -8228,7 +8235,7 @@
             <div *ngIf="!state_filters.includes('Texas')" style="margin-left: 5px; font-size: 18px; line-height: 18px">
               Texas </div>
           </div>
-          <div (click)="toggle_button('Wisconsin')"
+          <div (click)="toggle_button('Wisconsin'); scroll(chooseTopic)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="state_filters.includes('Wisconsin')" type="checkbox" checked />
             <input *ngIf="!state_filters.includes('Wisconsin')" type="checkbox" unchecked />
@@ -8245,17 +8252,18 @@
       <h3 *ngIf="filtered_set.length == 0" style="color: red; text-align: center"> {{generate_message}} </h3>
       <br />
     </div>
+    <div #chooseTopic ></div>
     <div
       *ngIf="quiz_page == 'default' && (grade_filters.length != 0 || subject_filters.length != 0) && topics.sort().length > 0"
       class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
-      <br #chooseTopic />
+      <br />
       <div class="card card-medium"
         style="margin: auto; display: block; text-align: center; width: min(90%, 1000px); height: auto; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
         <h2 style="margin-bottom: 0px">Select Your Topic(s)</h2>
         <br />
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
-          <div *ngFor="let topic of topics.sort()" (click)="toggle_topic(topic)"
+          <div *ngFor="let topic of topics.sort()" (click)="toggle_topic(topic); scroll(chooseSettings)"
             style="display: flex; flex-direction: row; align-items: start; margin: 5px 10px; height: auto">
             <input *ngIf="topic_filters.includes(topic)" type="checkbox" checked />
             <input *ngIf="!topic_filters.includes(topic)" type="checkbox" unchecked />
@@ -8270,6 +8278,7 @@
       </div>
       <br />
     </div>
+    <div #chooseSettings ></div>
     <div *ngIf="quiz_page == 'default'" class="card card-large"
       style="height: auto; margin: 10px auto; padding: 0 2.5%; border: 3px solid black; border-radius: 20px; text-align: center; width: min(1075px, 92%); display: flex; flex-direction: column">
       <br />
@@ -8510,9 +8519,9 @@
         own quiz with custom questions and contribute to our library of standardized test items. </h2>
       <br />
       <!-- <h3 *ngIf="screenWidth > mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 20px"><a>
-          Don't see your state? Click here to Select Your Grade and subject instead. </a></h3>
+          Don't see your state? Click here to select your grade and subject instead. </a></h3>
       <h3 *ngIf="screenWidth <= mobileWidth" (click)="scroll(chooseGrade)" style="font-weight: 600; font-size: 16px"><a>
-          Don't see your state? Click here to Select Your Grade and subject instead. </a></h3>
+          Don't see your state? Click here to select your grade and subject instead. </a></h3>
       <br /> -->
     </div>
     <div *ngIf="quiz_page == 'custom' && cquiz_page == 'pretext'" class="card card-large"

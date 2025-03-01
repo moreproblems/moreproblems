@@ -1758,7 +1758,7 @@ export class QuizzesComponent implements OnInit {
         }
       }
     }
-    else if (['Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'High School'].includes(val)) {
+    else if (['Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'High School'].includes(val)) {
       if (['High School'].includes(val)) {
         for (let subval of ['High School', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12']) {
           if (!this.grade_filters.includes(subval)) {
