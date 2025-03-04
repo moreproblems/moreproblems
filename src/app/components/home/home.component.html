@@ -645,6 +645,19 @@
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
   }
 
+  .flashing-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    animation: blink 1s infinite alternate;
+  }
+
+  @keyframes blink {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
   /* Responsive Styles */
   @media screen and (max-width: 700px) {
 
@@ -4944,7 +4957,7 @@
       <h1 *ngIf="screenWidth <= mobileWidth" style="font-size: 22px" #myBookmarks> My Bookmarks </h1>
       <br />
       <input type="hidden" #selection>
-      <div style="overflow: auto; padding: 10px">
+      <div style="overflow: auto; padding: 10px; margin: auto; width: min(900px, 95%)">
         <table style="border: 1px solid black; margin: auto; width: auto; max-width: 95%; background-color: #eee"
           #studentTableL>
           <thead>
@@ -4965,57 +4978,46 @@
                           </th> -->
             </tr>
             <tr style="border: 3px solid black; background-color: grey; font-size: 16px">
-              <th style="padding-left: 5px; padding-right: 5px" colspan="3"> Exam Description <b
-                  style="font-weight: 500">(Problems)</b> </th>
-              <!-- <th style="padding-left: 5px; padding-right: 5px">Problems</th> -->
-              <th *ngIf="screenWidth > 850" style="padding-left: 5px; padding-right: 5px">Downloads</th>
+                <th style="padding-left: 5px; padding-right: 5px" colspan="3"> Exam Description <b style="font-weight: 500"></b> </th>
+                <th *ngIf="screenWidth > 850" style="padding-left: 5px; padding-right: 5px; font-size: 14px; font-weight: 500">Downloads</th>
             </tr>
           </thead>
           <tbody *ngFor="let exam of authService.userData.exams.favorites.slice(1)"
             style="border: 5px solid black; font-size: 18px; background-color: #eee">
             <tr>
               <!-- <td *ngIf="results_hover == stud.uid"
-              style="border-top: 1px solid #ddd; min-width: 60px; width: 60px; text-align: center">
-              <label for="studentActions-{{stud.uid}}"
-                style="display: flex; width: 50px; height: 30px; border: 1px solid black; border-radius: 5px; margin-left: 5px">
-                <select (change)="student_action(this.studentActions.value, stud.uid)"
-                  style="margin: auto 10px auto 0; padding-left: 10px; height: 25px; width: 20px; font-size: 16px; font-weight: 400; text-align: left; border: 0 none; margin-right: 0px"
-                  id="studentActions-{{stud.uid}}" #studentActions>
-                  <option disabled selected value> -- Student Actions -- </option>
-                  <option value="results">View Results</option>
-                  <option value="edit">Edit Profile</option>
-                  <option value="unlink">Unlink Student</option>
-                </select>
-                <i class="fa-solid fa-bars" style="margin: auto; padding-right: 5px; font-size: 20px"></i>
-              </label>
-            </td> -->
-              <td *ngIf="screenWidth > 600" style="border-top: 1px solid #ddd; min-width: 40px; width: 40px">
-                <div style="display: flex; flex-direction: row; align-items: center; margin: auto 5px">
-                  <i style="margin: auto; font-size: 22px; font-weight: 800;  color: #4db7fd"
-                    class="fas fa-bookmark"></i>
+                style="border-top: 1px solid #ddd; min-width: 60px; width: 60px; text-align: center">
+                <label for="studentActions-{{stud.uid}}"
+                  style="display: flex; width: 50px; height: 30px; border: 1px solid black; border-radius: 5px; margin-left: 5px">
+                  <select (change)="student_action(this.studentActions.value, stud.uid)"
+                    style="margin: auto 10px auto 0; padding-left: 10px; height: 25px; width: 20px; font-size: 16px; font-weight: 400; text-align: left; border: 0 none; margin-right: 0px"
+                    id="studentActions-{{stud.uid}}" #studentActions>
+                    <option disabled selected value> -- Student Actions -- </option>
+                    <option value="results">View Results</option>
+                    <option value="edit">Edit Profile</option>
+                    <option value="unlink">Unlink Student</option>
+                  </select>
+                  <i class="fa-solid fa-bars" style="margin: auto; padding-right: 5px; font-size: 20px"></i>
+                </label>
+              </td> -->
+              <td style="border-top: 1px solid #ddd; min-width: 20px; width: 20px">
+                <div style="display: flex; flex-direction: row; align-items: center; margin: auto 5px auto 0px">
+                  <img *ngIf="screenWidth > 660" src="./assets/media/{{dumpService.state_flags[exam.substring(0,2)]}}" style="margin: auto; padding: 0px 5px 0px 10px; max-height: 30px; max-width: 40px">
+                  <div style="width: 20px; margin-left: 5px">
+                    <div *ngIf="dumpService.exam_set.includes(exam)" class="flashing-dot" style="margin: auto 0px auto 10px"></div>
+                  </div>
                 </div>
               </td>
-              <td *ngIf="screenWidth > 600" colspan="1"
-                style="border-top: 1px solid #ddd; min-width: 300px; width: auto; text-align: left; padding-left: 10px; padding-right: 10px">
-                <div style="margin-left: 10px; margin-right: 10px; width: max-content">
-                  <a (click)="select_exam(exam)"><b style="font-weight: 400">{{dumpService.exam_names[exam]}}</b></a>
+              <td colspan="2"
+                style="border-top: 1px solid #ddd; width: auto; text-align: left">
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: space-between; margin: auto 5px">
+                  <span><a (click)="select_exam(exam)"><b style="font-weight: 400">{{dumpService.exam_names[exam]}}</b></a> <b style="font-weight: 500; white-space: nowrap"> ({{dumpService.exam_attribute_dump[exam].NumProblems}} {{dumpService.exam_attribute_dump[exam].NumProblems == 1 ? 'problem' : 'problems'}})</b></span>
+                  <div style="width: 18px; margin-left: 5px">
+                    <i style="margin: auto; width: 18px; font-size: 22px; font-weight: 800;  color: #4db7fd" class="fas fa-bookmark"></i>
+                  </div>
                 </div>
               </td>
-              <td *ngIf="screenWidth <= 600" colspan="2"
-                style="border-top: 1px solid #ddd; width: auto; text-align: left; padding-left: 10px; padding-right: 10px">
-                <div style="margin-left: 10px; margin-right: 10px; width: auto">
-                  <a (click)="select_exam(exam)"><b style="font-weight: 400">{{dumpService.exam_names[exam]}}</b></a>
-                </div>
-              </td>
-              <!-- <td *ngIf="results_hover == stud.uid"
-              style="border-top: 1px solid #ddd; min-width: 210px; width: 210px; text-align: left">
-              <b>{{dumpService.exam_names[exam]}}</b>
-            </td> -->
-              <td style="border-top: 1px solid #ddd; min-width: 30px"> <b
-                  style="font-size: 15px; font-weight: 600">({{dumpService.exam_attribute_dump[exam].NumProblems}})</b>
-              </td>
-              <td *ngIf="screenWidth > 850" style="border-top: 1px solid #ddd; min-width: 50px"> <b
-                  style="font-size: 15px; font-weight: 600">{{authService.searchExamId(exam).downloads}}</b> </td>
+              <td *ngIf="screenWidth > 850" style="border-top: 1px solid #ddd; min-width: 50px"> <b style="font-size: 15px; font-weight: 600">{{authService.searchExamId(exam).downloads == 0 ? '--' : authService.searchExamId(exam).downloads}}</b> </td>
             </tr>
           </tbody>
         </table>
