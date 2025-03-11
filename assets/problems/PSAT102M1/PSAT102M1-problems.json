@@ -1,0 +1,746 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is an equivalent form of the expression 15x + 24ax?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "39ax²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For x = 1 and a = 0, the value of the given expression is 15 and the value of the expression 39ax² is 0.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "39(a + 2x)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For x = 1 and a = 0, the value of the given expression is 15 and the value of the expression 39(a + 2x) is 78.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(5 + 8a)x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For x = 1 and a = 0, the value of the given expression is 15 and the value of the expression (5 + 8a)x is 5.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(15 + 24a)x",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The expression 15x + 24ax contains two terms with common factors. One of the common factors is x. Factoring x from the expression gives x(15 + 24a), which can also be written as (15 + 24a)x.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The formula d = rt is used to calculate the distance an object travels over a period of time, t, at a constant rate, r. Based on this formula, what is the rate, r, in terms of d and t?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "r = d/t",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Dividing each side of the equation d = rt by t results in an equation that expresses r in terms of the other variables: r = d/t.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "r = dt",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "r = t/d",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "r = d − t",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following ordered pairs (x, y) satisfies both equations y = x² + 3x − 4 and x = y − 4?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(0, −4)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This ordered pair satisfies the quadratic equation but not the linear equation.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "(2, 6)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The equation x = y − 4 can be rewritten as y = x + 4. Substituting x + 4 for y in the other equation gives x + 4 = x² + 3x − 4, which can be rewritten as x² + 2x − 8 = 0. Since −4 and 2 are the two numbers whose sum is −2 and whose product is −8, they are the solutions to the equation x² + 2x − 8 = 0. From the equation y = x + 4, it follows that the solutions of the system are (−4, 0) and (2, 6). Therefore, of the given choices, (2, 6) is the correct answer.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(3, 14)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This ordered pair satisfies the quadratic equation but not the linear equation.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(5, 9)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This ordered pair satisfies the linear equation but not the quadratic equation.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is a solution to the equation 2x² + 4x = 3 + 3x²?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This value does not satisfy the given equation.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "0",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This value does not satisfy the given equation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The given equation can be rewritten as x² − 4x + 3 = 0. Since 1 and 3 are two numbers whose sum is 4 and whose product is 3, it follows that they are the solutions to the equation x² − 4x + 3 = 0. Therefore, of the choices given, only 3 can be a solution to the original equation.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This value does not satisfy the given equation.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:−3x − 4y = 20\nx − 10y = 16",
+            "If (x, y) is the solution to the system of equations above, what is the value of x?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−14",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting −14 for x in the second equation gives y = −3. But the pair (−14, −3) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "−12",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting −12 for x in the second equation gives y = −2.8. But the pair (−12, −2.8) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "−4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Multiplying each side of the second equation by 3 and then adding the equations eliminates x, as follows: {−3x − 4y = 20} + {3x − 30y = 48} = {0  34y = 68}\nSolving the obtained equation for y gives y = −2.\nSubstituting −2 for y in the second equation of the system gives x − 10(−2) = 16, which simplifies to x + 20 = 16, or x = −4.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "16",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting 16 for x in the second equation gives y = 0. But the pair (16, 0) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The equation y = 36 + 18x models the relationship between the height y, in inches, of a typical golden delicious apple tree and the number of years, x, after it was planted. If the equation is graphed in the xy-plane, what is indicated by the y-intercept of the graph?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The age, in years, of a typical apple tree when it is planted",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may be the result of confusing the age of the tree with its height.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The height, in inches, of a typical apple tree when it is planted",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "If the equation y = 36 + 18x is graphed in the xy-plane, the y-intercept is at (0, 36). Since y represents the height, in inches, of a typical apple tree and x represents the number of years after it was planted, it follows that the number 36 represents the height, in inches, of a typical apple tree when x = 0; that is, the height, in inches, at the time the apple tree is planted.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The number of years it takes a typical apple tree to grow",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The equation provided does not indicate when a typical apple tree will stop growing.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The number of inches a typical apple tree grows each year",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may be the result of confusing the y-intercept with the slope of the line y = 36 + 18x.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Giovanni wants to buy shirts that cost $19.40 each and sweaters that cost $24.80 each. An 8% sales tax will be applied to the entire purchase. If Giovanni buys 2 shirts, which equation relates the number of sweaters purchased, p, and the total cost in dollars, y?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1.08(38.80 + 24.80p) = y",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The cost, in dollars, of Giovanni's 2 shirts is 19.40 × 2 = 38.80, and the cost, in dollars, of his p sweaters is 24.80 × p = 24.80p. Additionally, he paid an 8% sales tax. To include the sales tax in the total cost, the combined cost of shirts and sweaters should be multiplied by 1.08. Therefore, the total cost, in dollars, of Giovanni's purchases, y, can be expressed as 1.08(38.80 + 24.80p).",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "38.80 + 24.80p = 0.92y",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from using the factor 1 − 0.08 = 0.92, instead of 1 + 0.08 = 1.08, to calculate the sales tax and from multiplying by this factor on the wrong side of the equation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "38.80 + 24.80p = 1.08y",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from multiplying by the sales tax factor on the wrong side of the equation.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "0.92(38.80 + 24.80p) = y",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from using the factor 1 − 0.08 = 0.92 instead of 1 + 0.08 = 1.08 to calculate the sales tax.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A line is graphed in the xy-plane. If the line has a positive slope and a negative y-intercept, which of the following points cannot lie on the line?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(−3, −3)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = x/3 − 2 has a positive slope (1/3)and a negative y-intercept (−2) but passes through the point (−3, −3).",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "(−3, 3)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Any line that passes through the point (−3, 3) and has a positive slope will intersect the y-axis at a point (0, b) with b > 3; that is, such a line will have a y-intercept greater than 3. Therefore, a line that has a positive slope and a negative y-intercept cannot pass through the point (−3, 3).",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(3, −3)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = x/3 − 4 has a positive slope (1/3) and a negative y-intercept (−4) but passes through the point (3, −3).",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(3, 3)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = 3x − 6 has a positive slope (3) and a negative y-intercept (−6) but passes through the point (3, 3).",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A parachute design uses 18 separate pieces of rope. Each piece of rope must be at least 270 centimeters and no more than 280 centimeters long. What inequality represents all possible values of the total length of rope x, in centimeters, needed for the parachute?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "270 ≤ x ≤ 280",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from mistakenly using x for the length, in centimeters, of one piece of rope instead of the total length of rope.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "4,860 ≤ x ≤ 4,870",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from multiplying the single-piece lower limit for length by 18 and then adding 10 to create the total upper limit, instead of multiplying both the single- piece lower and upper limits by 18.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "4,860 ≤ x ≤ 5,040",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "If the length, in centimeters, of one piece of rope is represented by q, and each piece of rope must be at least 270 centimeters and no more than 280 centimeters long, then it follows that 270 ≤ q ≤ 280. In turn, the total length x, in centimeters, of rope needed for the parachute is 18q because 18 pieces are needed. So, since x = 18q, multiplying all the terms of the inequality 270 ≤ q ≤ 280 by 18 gives (270 × 18) ≤ 18q ≤ (280 × 18), or 4,860 ≤ x ≤ 5,040.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "5,030 ≤ x ≤ 5,040",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from multiplying the single-piece upper limit for length by 18 and then subtracting 10 to create the total lower limit, instead of multiplying both the single-piece lower and upper limits by 18.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A carpenter has $60 with which to buy supplies. The arpenter needs to buy both nails and screws. Nails cost $12.99 per box, and screws cost $14.99 per box. If n represents the number of boxes of nails and s represents the number of boxes of screws, which of the following systems of inequalities models this situation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "12.99n + 14.99s ≥ 60\nn + s ≤ 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The first inequality allows the total cost of nails and screws to exceed the carpenter's budget of $60, and the second inequality incorrectly expresses the constraint on the number of boxes that the carpenter can buy. That number must be greater than 1, since the carpenter must buy at least one box of nails AND one box of screws.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "12.99n + 14.99s ≤ 60\nn + s ≤ 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The second equation incorrectly expresses the constraint on the number of boxes that the carpenter can buy. That number must be greater than 1, since the carpenter must buy at least one box of nails AND one box of screws.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "12.99n + 14.99s ≥ 60\nn ≥ 1\ns ≥ 1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The first inequality allows for the total cost to exceed the carpenter's budget of $60.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "12.99n + 14.99s ≤ 60\nn ≥ 1\ns ≥ 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Since the carpenter needs to buy both nails and screws, at least one box of each needs to be purchased. This can be expressed by the pair of inequalities n ≥ 1 and s ≥ 1. However, the number of boxes the carpenter can buy is limited by a budget of $60. The amount, in dollars, the carpenter spends on nails or screws can be expressed as the price of each box multiplied by the number of each type of box, which is 12.99n for nails and 14.99s for screws. And since this total cannot exceed $60, it follows that 12.99n + 14.99s ≤ 60.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/PSAT102M1/media/11a.jpg",
+            "In the figure above, which of the following ratios has the same value as AB/BC?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "BD/DC",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "In the figure, triangles ABC and BDC are similar because each has an angle that measures 28°, and they share angle C. Thus their corresponding sides are in proportion. The sides AB in triangle ABC and BD in triangle BDC correspond to each other because they are opposite the same angle in both triangles (angle C), and the sides BC in triangle ABC and DC in triangle BDC correspond to each other because they are opposite the congruent angles with measure 28° in the corresponding triangles. Therefore, AB/BC = BD/DC.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "BC/AC",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is a ratio that does not have the same value as AB/BC and is likely the result of misunderstanding which triangles are similar or which sides of the triangles are corresponding sides.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "AD/BD",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is a ratio that does not have the same value as AB/BC and is likely the result of misunderstanding which triangles are similar or which sides of the triangles are corresponding sides.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "DC/BC",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is a ratio that does not have the same value as AB/BC and is likely the result of misunderstanding which triangles are similar or which sides of the triangles are corresponding sides.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:(x²y³)¹/²(x²y³)¹/³ = xᵃ/³yᵃ/²",
+            "If the equation above, where a is a constant, is true for all positive values of x and y, what is the value of a?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors when applying the rules of exponents to the given expression.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors when applying the rules of exponents to the given expression.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "After distributing the outside exponents to each expression within the parentheses by the rules of exponents, the left side of the equation can be rewritten as (x²y³)¹/²(x²y³)¹/³ = (x⁽²⁾⁽¹/²⁾y⁽³⁾⁽¹/²⁾)(x⁽²⁾⁽¹/³⁾y⁽³⁾⁽¹/³⁾) = (xy³/²)(x²/³y).\nMultiplying the expressions within the parentheses and applying the exponent rules yields x⁵/³y⁵/² = x¹⁺²/³y³/²⁺¹, which means the equation x⁵/³y⁵/² = xᵃ/³yᵃ/² is true for all positive values of x and y. It follows that the corresponding exponents of x and y on both sides of the equation must be equal, which yields a = 5.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors when applying the rules of exponents to the given expression.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If the equation y = (x − 6)(x + 12) is graphed in the xy-plane, what is the x-coordinate of the parabola's vertex?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misunderstanding the relationship between the given equation and the x-intercepts of the parabola as well as the relationship between the x-intercepts of the parabola and the x-coordinate of the parabola's vertex.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "−3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The graph of y = (x − 6)(x + 12) is a parabola that opens upward and has a vertical axis of symmetry. The vertex of the parabola lies on this axis of symmetry, and the x-intercepts of the parabola are equidistant from the axis of symmetry. Since the equation y = (x − 6)(x + 12) is in factored form, the x-intercepts of its graph are (6, 0) and (−12, 0). Therefore, the axis of symmetry is the line x = (6 + (−12))/2, or x = −3. Because the vertex lies on the line x = −3, the x-coordinate of the vertex must also be x = −3.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misunderstanding the relationship between the given equation and the x-intercepts of the parabola as well as the relationship between the x-intercepts of the parabola and the x-coordinate of the parabola's vertex.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misunderstanding the relationship between the given equation and the x-intercepts of the parabola as well as the relationship between the x-intercepts of the parabola and the x-coordinate of the parabola's vertex.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:21x + 14 = 7(3 + a)",
+            "In the equation above, a is a constant. For what value of a does the equation have an infinite number of solutions?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "If a linear equation is written in the form mx + n = px + r, where m = p and n = r, then the linear equation is satisfied by any value of x and will have infinitely many solutions. Distributing 7 on the right-hand side of the given equation yields 21x + 14 = 21x + 7a. Therefore, the equation will have infinitely many solutions if 14 = 7a; that is, if a = 2.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Juliene practiced her dance routine for twice as many minutes on Monday as she did on Tuesday. She practiced her routine those two days for a total of 2 hours and 15 minutes. For how many minutes did Juliene practice her dance routine on Monday?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "90",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Juliene practiced twice as long on Monday as she did on Tuesday. Therefore, if x is the number of minutes Juliene practiced on Tuesday, then 2x is the number of minutes she practiced on Monday. The total amount of time Juliene practiced on the two days is 2 hours and 15 minutes, which is equal to 135 minutes. Thus, the equation x + 2x = 135 must be true. This simplifies to 3x = 135, and so x = 45. The number of minutes Juliene practiced on Monday is 2x, which is equal to 2x = 2(45) = 90.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the expression below, a is an integer.",
+            ":ibox:12x² + ax − 20",
+            "If 3x + 4 is a factor of the expression above, what is the value of a?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It is given that one factor of the quadratic expression is 3x + 4. Thus, 12x² + ax − 20 = (3x + 4)(mx + p), where a, m, and p are integers. Multiplying out the right-hand side of the equation gives 12x² + ax − 20 = 3mx² + (3p + 4m)x + 4p. It follows that 12 = 3m, a = 3p + 4m, and −20 = 4p. Dividing both sides of the equation 12 = 3m by 3 gives m = 4. Dividing both sides of the equation −20 = 4p by 4 gives p = −5. Finally, substituting m = 4 and p = −5 in the equation a = 3p + 4m gives a = 3(−5) + 4(4) = 1.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:(ax + by)(cx − dy)",
+            "In the expression above, a, b, c, and d are non-zero constants and ad = bc. If ac = 18 and bd = 50, what is the value of the coefficient of the xy term when the expression is multiplied out and the like terms are collected?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "0",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Multiplying out the given expression yields (ax + by)(cx dy)= acx² + (bc − ad)xy − bdy². Since ad = bc, the coefficient of the xy term, bc − ad, is 0.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}
