@@ -4154,22 +4154,22 @@
               class="card card-small" style="height: 75px; width: 250px; align-items: center; padding-top: 0">
               <div class="avatar-container"
                 style="position: relative; height: 50px; width: 50px; border-radius: 50%; padding: 0">
-                <img *ngIf="['RW1', 'RW2'].includes(part.substring(part.indexOf('SAT') + 4))"
+                <img *ngIf="['RW1', 'RW2'].includes(part.substring(part.length - 3))"
                   src="/assets/media/icons/ela.png" class="select-avatar" style="width:100%; height: 100%">
-                <img *ngIf="['M1', 'M2'].includes(part.substring(part.indexOf('SAT') + 4))"
+                <img *ngIf="['M1', 'M2'].includes(part.substring(part.length - 2))"
                   src="/assets/media/icons/math.png" class="select-avatar" style="width:100%; height: 100%">
                 <div class="middle">
                   <div style="color: white; background-color: #1976d2; border-radius: 10px">Select
                   </div>
                 </div>
               </div>
-              <h3 *ngIf="part.substring(part.indexOf('SAT') + 4) == 'RW1'"
+              <h3 *ngIf="part.substring(part.length - 3) == 'RW1'"
                 style="font-size: 18px; padding-left: 5px; width: 190px"> Reading & Writing, Module 1 </h3>
-              <h3 *ngIf="part.substring(part.indexOf('SAT') + 4) == 'RW2'"
+              <h3 *ngIf="part.substring(part.length - 3) == 'RW2'"
                 style="font-size: 18px; padding-left: 5px; width: 190px"> Reading & Writing, Module 2 </h3>
-              <h3 *ngIf="part.substring(part.indexOf('SAT') + 4) == 'M1'"
+              <h3 *ngIf="part.substring(part.length - 2) == 'M1'"
                 style="font-size: 18px; padding-left: 5px; width: 190px"> Math, Module 1 </h3>
-              <h3 *ngIf="part.substring(part.indexOf('SAT') + 4) == 'M2'"
+              <h3 *ngIf="part.substring(part.length - 2) == 'M2'"
                 style="font-size: 18px; padding-left: 5px; width: 190px"> Math, Module 2 </h3>
             </div>
           </div>
