@@ -1,0 +1,1774 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A helicopter, initially hovering 40 feet above the ground, begins to gain altitude at a rate of 21 feet per second. Which of the following functions represents the helicopter's altitude above the ground y, in feet, t seconds after the helicopter begins to gain altitude?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = 40 + 21",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the helicopter's altitude above the ground 1 second after it began to gain altitude, not t seconds after it began to gain altitude.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "y = 40 + 21t",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that the helicopter's initial height is 40 feet above the ground and that when the helicopter's altitude begins to increase, it increases at a rate of 21 feet per second. Therefore, the altitude gain t seconds after the helicopter begins rising is represented by the expression 21t. Adding this expression to the helicopter's initial height gives the helicopter's altitude above the ground y, in feet, t seconds after the helicopter begins to gain altitude: y = 40 + 21t.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "y = 40t – 21",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Adding the expression −21t makes this function represent a decrease in altitude.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "y = 40t + 21",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is the result of using the initial height of 40 feet as the rate at which the helicopter's altitude increases per second and the rate of 21 feet per second as the initial height.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A text messaging plan charges a flat fee of $5 per month for up to 100 text messages sent plus $0.25 for each additional text message sent that month. Which of the following graphs represents the cost, y, of sending x texts in a month?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/SAT10M2/media/2a.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The text messaging plan charges a flat fee of $5 per month for up to 100 text messages. This is represented graphically with a constant value of y = 5 for 0 ≤ x ≤ 100. After 100 messages, each additional message sent costs $0.25. This is represented graphically with an increase of 0.25 on the y-axis for every increase of 1 on the x-axis. This choice matches these descriptions.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/SAT10M2/media/2b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice shows a linear decrease after x = 100, indicating the price of the plan would decrease, rather than increase, after 100 text messages.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/SAT10M2/media/2c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice don't represents a constant value of y = 5 for 0 ≤ x ≤ 100, which is needed to represent the $5 per month for the first 100 text messages.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/SAT10M2/media/2d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice don't represents a constant value of y = 5 for 0 ≤ x ≤ 100, which is needed to represent the $5 per month for the first 100 text messages.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Jake buys a bag of popcorn at a movie theater. He eats half of the popcorn during the 15 minutes of previews. After eating half of the popcorn, he stops eating for the next 30 minutes. Then he gradually eats the popcorn until he accidentally spills all of the remaining popcorn. Which of the following graphs could represent the situation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/SAT10M2/media/3a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "At no point during this period of time did Jake buy more popcorn. This graph represents an increase in the amount of popcorn in Jake's bag at some point during this period of time.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/SAT10M2/media/3b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "During the first 15 minutes Jake is in the theater, or from 0 to 15 minutes, Jake's popcorn amount decreases by half. This is represented graphically by a linear decrease. From 15 to 45 minutes, Jake stops eating popcorn. This is represented graphically by a constant y-value. From 45 to 90 minutes, Jake eats more popcorn. This is represented graphically by another linear decrease as the amount of popcorn in the bag gradually goes down. At 90 minutes, Jake spills all of his remaining popcorn. This is represented graphically by a vertical drop in the y-value to 0. This choice matches these representations.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/SAT10M2/media/3c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "At no point during this period of time did Jake buy more popcorn. This graph represents an increase in the amount of popcorn in Jake's bag at some point during this period of time.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/SAT10M2/media/3d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "At no point during this period of time did Jake buy more popcorn. This graph represents an increase in the amount of popcorn in Jake's bag at some point during this period of time.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If 20 − x = 15, what is the value of 3x ?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the value of x, not the value of 3x.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": " If 3x = 35, then it follows that x = 10/3. Substituting 10/3 for x in the given equation yields 50/3 = 15, which is a false statement. Since 3x = 10 leads to a false statement, then 3x can't be equivalent to 10.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "15",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Subtracting 20 from both sides of the given equation yields −x = −5. Dividing both sides of the equation −x = −5 by −1 yields x = 5. Lastly, substituting 5 for x in 3x yields the value of 3x, or 3(5) = 15.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "35",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": " If 3x = 10 , then it follows that x = 35/3. Substituting 35/3 for x in the given equation yields 25/3 = 15, which is a false statement. Since 3x = 35 leads to a false statement, then 3x can't be equivalent to 35.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:f(x) = (x + 3)/2",
+            "For the function f defined above, what is the value of f(−1)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from miscalculating the value of (−1 + 3(/2 as −4/2 , or −2.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "−1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misinterpreting the value of x as the value of f(−1).",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The value of f(−1) can be found by substituting −1 for x in the given function f(x) = (x + 3)/2 , which yiel ds f(−1) = (−1 + 3)/2Rewriting the numerator by adding −1 and 3 yields 2/2, which equals 1. Therefore, f(−1) = 1.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from adding the expression −1 + 3 in the numerator.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is equivalent to 2x(x² − 3x) ?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−4x²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly applying the laws of exponents or from various computation errors when rewriting the expression.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "3x³ − x²",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly applying the laws of exponents or from various computation errors when rewriting the expression.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "2x³ − 3x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly applying the laws of exponents or from various computation errors when rewriting the expression.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "2x³ − 6x²",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "To determine which option is equivalent to the given expression, the expression can be rewritten using the distributive property by multiplying each term of the binomial (x² − 3x) by 2x, which gives 2x³ − 6x².",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A retail company has 50 large stores located in different areas throughout a state. A researcher for the company believes that employee job satisfaction varies greatly from store to store. Which of the following sampling methods is most appropriate to estimate the proportion of all employees of the company who are satisfied with their job?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Selecting one of the 50 stores at random and then surveying each employee at that store",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Surveying employees at a single store location will only provide an accurate representation of employees at that location, not at all 50 store locations.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Selecting 10 employees from each store at random and then surveying each employee selected",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Selecting employees from each store at random is most appropriate because it's most likely to ensure that the group surveyed will accurately represent each store location and all employees.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Surveying the 25 highest-paid employees and the 25 lowest-paid employees",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Surveying the highest- and lowest-paid employees will not give an accurate representation of employees across all pay grades at the company.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Creating a website on which employees can express their opinions and then using the first 50 responses",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Collecting only the first 50 responses mimics the results of a self-selected survey. For example, the first 50 employees to respond to the survey could be motivated by an overwhelming positive or negative experience and thus will not accurately represent all employees.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/8a.jpg",
+            "The two graphs above show the total amounts of money that Ian and Jeremy each have deposited into their savings accounts for the first seven weeks after opening their accounts. After they made their initial deposits, how much more did Ian deposit each week than Jeremy?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "$200",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the difference between the initial deposits in the savings accounts.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "$100",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the amount Ian deposited each week.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "$50",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The graph for Ian shows that the initial deposit was $100 and that each week the total amount deposited increased by $100. Therefore, Ian deposited $100 each week. The graph for Jeremy shows that the initial deposit was $300 and that each week the total amount deposited increased by $50. Therefore, Jeremy deposited $50 each week. Thus, Ian deposited $50 more than Jeremy did each week.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "$25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is half the amount that Jeremy deposited each week.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:h(x) = 2ˣ",
+            "The function h is defined above. What is h(5) − h(3)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the value of 5 − 3, not of h(5) − h(3).",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the value of h(5 − 3), or h(2), not of h(5) − h(3).",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "24",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The value of the expression h(5) − h(3) can be found by substituting 5 and 3 for x in the given function. Substituting 5 for x in the function yields h(5) = 2⁵, which can be rewritten as h(5) = 32. Substituting 3 for x in the function yields h(3) = 2³, which can be rewritten as h(3) = 8. Substituting these values into the expression h(5) − h(3) produces 32 − 8 = 24.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "28",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from calculation errors.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A researcher surveyed a random sample of students from a large university about how often they see movies. Using the sample data, the researcher estimated that 23% of the students in the population saw a movie at least once per month. The margin of error for this estimation is 4%. Which of the following is the most appropriate conclusion about all students at the university, based on the given estimate and margin of error?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "It is unlikely that less than 23% of the students see a movie at least once per month.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from interpreting the estimate of 23% as the minimum number of students in the population who see a movie at least once per month.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "At least 23%, but no more than 25%, of the students see a movie at least once per month.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from interpreting the estimate of 23% as the minimum number of students in the population who see a movie at least once per month and adding half of the margin of error to conclude that it isn't possible that more than 25% of students in the population see a movie at least once per month.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The researcher is between 19% and 27% sure that most students see a movie at least once per month.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from interpreting the sample statistic as the researcher's level of confidence in the survey results and applying the margin of error to the level of confidence.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "It is plausible that the percentage of students who see a movie at least once per month is between 19% and 27%.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The margin of error is applied to the sample statistic to create an interval in which the population statistic most likely falls. An estimate of 23% with a margin of error of 4% creates an interval of 23% ± 4%, or between 19% and 27%. Thus, it's plausible that the percentage of students in the population who see a movie at least once a month is between 19% and 27%.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/11a.jpg",
+            "The table above shows two lists of numbers. Which of the following is a true statement comparing list A and list B?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The means are the same, and the standard deviations are different.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The mean number of each list is found by dividing the sum of all the numbers in each list by the count of the numbers in each list. The mean of list A is (1 + 2 + 3 + 4 + 5 + 6)/6 = 3.5 , and the mean of list B is (2 + 3 + 3 + 4 + 4 + 5)/6 = 3.5 . Thus, the means are the same. The standard deviations can be compared by inspecting the distances of the numbers in each list from the mean. List A contains two numbers that are 0.5 from the mean, two numbers that are 1.5 from the mean, and two numbers that are 2.5 from the mean. List B contains four numbers that are 0.5 from the mean and two numbers that are 1.5 from the mean. Overall, list B contains numbers that are closer to the mean than are the numbers in list A, so the standard deviations of the lists are different.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The means are the same, and the standard deviations are the same.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from assuming that two data sets with the same mean must also have the same standard deviation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The means are different, and the standard deviations are different.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculating the means.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The means are different, and the standard deviations are the same.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculating the means.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A book was on sale for 40% off its original price. If the sale price of the book was $18.00, what was the original price of the book? (Assume there is no sales tax.)"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "$7.20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from computing 40% of the sale price.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "$10.80",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from computing 40% off the sale price instead of the original price.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "$30.00",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Let x represent the original price of the book. Then, 40% off of x is (1 − 0.40)x, or 0.60x. Since the sale price is $18.00, then 0.60x = 18. Dividing both sides of this equation by 0.60 yields x = 30. Therefore, the original price of the book was $30.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "$45.00",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from computing the original price of a book whose sale price is $18 when the sale is for 60% off the original price.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/SAT10M2/supps/SAT10M2-S1.json"
+        ],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following colonies showed a decrease in size every two weeks after the initial treatment with pesticide?",
+            ":ibox:I. Colony A\nII. Colony B\nIII. Colony C"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "I only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Colony B also showed a decrease in size every two weeks.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "III only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Colony C showed an increase in size between weeks 0 and 2.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "I and II only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "According to the bar graph, the number of insects in colony A at week 0 was approximately 80, and this number decreased over each respective two-week period to approximately 50, 32, 25, and 18. Similarly, the graph shows that the number of insects in colony B at week 0 was approximately 64, and this number also decreased over each respective two-week period to approximately 60, 40, 38, and 10. Finally, the graph shows that the number of insects in colony C at week 0 was approximately 58; however, the number of insects increased in week 2, to approximately 140. Therefore, only colony A and colony B showed a decrease in size every two weeks after the initial treatment.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "I, II, and III",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Colony C showed an increase in size between weeks 0 and 2.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/SAT10M2/supps/SAT10M2-S1.json"
+        ],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Of the following, which is closest to the ratio of the total number of insects in all three colonies in week 8 to the total number of insects at the time of initial treatment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2 to 5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "According to the bar graph, the total number of insects in all three colonies in week 8 was approximately 20 + 10 + 50 = 80, and the total number of insects at the time of initial treatment (week 0) was approximately 80 + 65 + 55 = 200. The ratio of these approximations is 80 to 200, which is equivalent to 2 to 5. Therefore, the ratio 2 to 5 is closest to the ratio of the total number of insects in all three colonies in week 8 to the total number of insects at the time of initial treatment.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "1 to 4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from setting up ratios using weeks other than week 8 and week 0 or from calculation errors.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "3 to 5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from setting up ratios using weeks other than week 8 and week 0 or from calculation errors.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "1 to 2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from setting up ratios using weeks other than week 8 and week 0 or from calculation errors.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A right circular cone has a volume of 24π cubic inches. If the height of the cone is 2 inches, what is the radius, in inches, of the base of the cone?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2√3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice ay result from using the formula for the volume of a right circular cylinder instead of a right circular cone.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The formula for the volume V of a right circular cone is V = πr²h/3, where r is the radius of the base and h is the height of the cone. It's given that the cone's volume is 24π cubic inches and its height is 2 inches. Substituting 24π for V and 2 for h yields 24π = πr²(2)/3. Rewriting the right-hand side of this equation yields 24π = (2π/3)r², which is equivalent to 36 = r². Taking the square root of both sides of this equation gives r = ±6. Since the radius is a measure of length, it can't be negative. Therefore, the radius of the base of the cone is 6 inches.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "12",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the diameter of the cone.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "36",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from not taking the square root when solving for the radius.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In 2015 the populations of City X and City Y were equal. From 2010 to 2015, the population of City X increased by 20% and the population of City Y decreased by 10%. If the population of City X was 120,000 in 2010, what was the population of City Y in 2010?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "60,000",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "If the population of City Y in 2010 was 60,000, then the population of City Y in 2015 would have been 60,000(0.90) = 54,000, which is not equal to the City X population in 2015 of 144,000.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "90,000",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "90,000(0.90) = 81,000, which is not equal to the City X population in 2015 of 144,000.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "160,000",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that the population of City X was 120,000 in 2010, and that it increased by 20% from 2010 to 2015. Therefore, the population of City X in 2015 was 120,000 (1 + 0.20) = 144,000. It's also given that the population of City Y decreased by 10% from 2010 to 2015. If y represents the population of City Y in 2010, then y(1 − 0.10) = 144,000. Solving this equation for y yields y = 144,000/(1 − 0.10). Simplifying the denominator yields 144,000/0.90 , or 160,000.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "240,000",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "240,000(0.90) = 216,000, which is not equal to the City X population in 2015 of 144,000.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The volume of a sphere is given by the formula V = 4πr³/3 , where r is the radius of the sphere. Which of the following gives the radius of the sphere in terms of the volume of the sphere?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "4π/3V",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This expression is equivalent to the reciprocal of r³.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "3V/4π",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This expression is equivalent to r³.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "∛(4π/3V)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This expression is equivalent to the reciprocal of r.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "∛(3V/4π)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Dividing both sides of the equation V = 4πr³/3 by 4π/3 results in 3V/4π = r³. Taking the cube root of both sides produces ∛(3V/4π) = r. Therefore, ∛(3V/4π) gives the radius of the sphere in terms of the volume of the sphere.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/18a.jpg",
+            "The table above shows the results of a survey in which tablet users were asked how often they would watch video advertisements in order to access streaming content for free. Based on the table, which of the following is closest to the probability that a tablet user answered “Always,” given that the tablet user did not answer “Never”?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.31",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This reflects the tablet users in the survey who answered “Always.”",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "0.38",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This reflects all tablet users who did not answer “Never” or “Always.”",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "0.45",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that the tablet user did not answer “Never,” so the tablet user could have answered only “Rarely,” “Often,” or “Always.” These answers make up 24.3% + 13.5% + 30.9% = 68.7% of the answers the tablet users gave in the survey. The answer “Always” makes up 30.9% of the answers tablet users gave in the survey. Thus, the probability is 30.9%/68.7% , or 0.309/0.687 = 0.44978 , which rounds up to 0.45.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "0.69",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This reflects all tablet users in the survey who did not answer “Never.”",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:y (x – 3)² + a ",
+            "In the equation above, a is a constant. The graph of the equation in the xy-plane is a parabola. Which of the following is true about the parabola?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Its minimum occurs at (−3, a).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from interpreting the given equation as representing a parabola in which the vertex is a minimum, not a maximum, and from misidentifying the value of h in the given equation as −3, not 3.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Its minimum occurs at (3, a).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from interpreting the given equation as representing a parabola in which the vertex is a minimum, not a maximum.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Its maximum occurs at (−3, a).",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misidentifying the value of h in the given equation as −3, not 3.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Its maximum occurs at (3, a).",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The vertex form of a quadratic equation is y = n(x − h)² + k, where (h, k) gives the coordinates of the vertex of the parabola in the xy-plane and the sign of the constant n determines whether the parabola opens upward or downward. If n is negative, the parabola opens downward and the vertex is the maximum. The given equation has the values h = 3, k = a, and n = −1. Therefore, the vertex of the parabola is (3, a) and the parabola opens downward. Thus, the parabola's maximum occurs at (3, a).",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The maximum value of a data set consisting of 25 positive integers is 84. A new data set consisting of 26 positive integers is created by including 96 in the original data set. Which of the following measures must be 12 greater for the new data set than for the original data set?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The mean",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Only the maximum value of the original data set is known, so the amount that the mean of the new data set differ from those of the original data set can't be determined.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The median",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Only the maximum value of the original data set is known, so the amount that the median of the new data set differ from those of the original data set can't be determined.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The range",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Let m be the minimum value of the original data set. The range of a data set is the difference between the maximum value and the minimum value. The range of the original data set is therefore 84 − m. The new data set consists of the original set and the positive integer 96. Thus, the new data set has the same minimum m and a maximum of 96. Therefore, the range of the new data set is 96 − m. The difference in the two ranges can be found by subtracting the ranges: (96 − m) − (84 − m). Using the distributive property, this can be rewritten as 96 − m − 84 + m, which is equal to 12. Therefore, the range of the new data set must be 12 greater than the range of the original data set.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The standard deviation",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Only the maximum value of the original data set is known, so the amount that the standard deviation of the new data set differ from those of the original data set can't be determined.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "21": {
+        "Number": 21,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:0.10x + 0.20y = 0.18(x + y)",
+            "Clayton will mix x milliliters of a 10% by mass saline solution with y milliliters of a 20% by mass saline solution in order to create an 18% by mass saline solution. The equation above represents this situation. If Clayton uses 100 milliliters of the 20% by mass saline solution, how many milliliters of the 10% by mass saline solution must he use?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from calculation errors.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "'s given that Clayton uses 100 milliliters of the 20% by mass solution, so y = 100. Substituting 100 for y in the given equation yields 0.10x + 0.20(100) = 0.18(x + 100), which can be rewritten as 0.10x + 20 = 0.18x + 18. Subtracting x 0.10 and 18 from both sides of the equation gives 2 = 0.08x. Dividing both sides of this equation by 0.08 gives x = 25. Thus, Clayton uses 25 milliliters of the 10% by mass saline solution.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "50",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from calculation errors.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "100",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from calculation errors.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "22": {
+        "Number": 22,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The first year Eleanor organized a fund-raising event, she invited 30 people. For each of the next 5 years, she invited double the number of people she had invited the previous year. If f(n) is the number of people invited to the fund-raiser n years after Eleanor began organizing the event, which of the following statements best describes the function f?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The function f is a decreasing linear function.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Linear functions increase or decrease by a constant number over equal intervals, and exponential functions increase or decrease by a constant factor over equal intervals. Since the number of people invited increases by a constant factor each year, the function f is exponential rather than linear.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The function f is an increasing linear function.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Linear functions increase or decrease by a constant number over equal intervals, and exponential functions increase or decrease by a constant factor over equal intervals. Since the number of people invited increases by a constant factor each year, the function f is exponential rather than linear.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The function f is a decreasing exponential function.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The value of f(n) increases as n increases, so the function f is increasing rather than decreasing.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The function f is an increasing exponential function.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that the number of people Eleanor invited the first year was 30 and that the number of people invited doubles each of the following years, which is the same as increasing by a constant factor of 2. Therefore, the function f can be defined by f(n) = 30(2)n, where n is the number of years after Eleanor began organizing the event. This is an increasing exponential function.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "23": {
+        "Number": 23,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/23a.jpg",
+            "Some values of x and their corresponding values of y are shown in the table above, where a is a constant. If there is a linear relationship between x and y, which of the following equations represents the relationship?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "x + 2y = a",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The slope-intercept form of a linear equation in the xy-plane is y = mx + b, where m is the slope of the graph of the equation and b is the y-coordinate of the y-intercept of the graph. Any two ordered pairs (x₁, y₁) and (x₂, y₂) that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula m = (y₂ − y₁)/(x₂ − x₁). Substituting t he two pairs (a, 0) and (3a, −a) from the table into the formula gives m = (−a − 0)/(3a − a), which can be rewritten as −a/2a , or −1/2. Substituting t his value for m in the slope-intercept form of the equation produces y = −x/2 + b. Substituting values from the ordered pair (a, 0) in the table into this equation produces 0 = (−1/2)(a) + b, which simplifies to b = a/2. Substituting t his value for b in the slope-intercept form of the equation produces y = −x/2 + a/2 . Rewriting this equation in standard form by adding x/2 to both sides and then multiplying both sides by 2 gives the equation x + 2y = a.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "x + 2y = 5a",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from a calculation error when determining the y-intercept of the graph of the equation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "x – 2y = –5a",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculation when determining the slope of the graph of the equation.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "x – 2y = 7a",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculation when determining the slope of the graph of the equation.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "24": {
+        "Number": 24,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/24a.jpg",
+            "The scatterplot above shows the number of registered voters, x, and the number of people who voted in the last election, y, for seven districts in a town. A line of best fit for the data is also shown. Which of the following could be the equation of the line of best fit?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "y = −0.5x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculation when determining the slope of the line of best fit.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "y = 0.5x",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The slope-intercept form of a linear equation is y = mx + b, where m is the slope of the graph of the equation and b is the y-coordinate of the y-intercept of the graph. Any two ordered pairs (x₁, y₁) and (x₂, y₂) that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula m = (y₂ − y₁)/(x₂ − x₁). Substituting the coordinates of (120, 60) and (160, 80), which lie on the line of best fit, into this formula gives m = (80 − 60)/(160 − 120), which simplifies to 20/40 , or 0.5. Substituting this value for m in the slope-intercept form of the equation produces y = 0.5x + b. Substituting values from the ordered pair (120, 60) into this equation produces 60 = 0.5(120) + b, so b = 0. Substituting this value for b in the slope-intercept form of the equation produces y = 0.5x + 0, or y = 0.5x.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "y = −2x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculation when determining the slope of the line of best fit.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "y = 2x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from an error in calculation when determining the slope of the line of best fit.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "25": {
+        "Number": 25,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:2.4x − 1.5y = 0.3\n1.6x + 0.5y = −1.3",
+            "The system of equations above is graphed in the xy-plane. What is the x-coordinate of the intersection point (x, y) of the system?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−0.5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The intersection point (x, y) of the two graphs can be found by multiplying the second equation in the system 1.6x + 0.5y = −1.3 by 3, which gives 4.8x + 1.5y = −3.9. The y-terms in the equation 4.8x + 1.5y = −3.9 and the first equation in the system 2.4x − 1.5y = 0.3 have coefficients that are opposites. Adding the left- and right-hand sides of the equations 4.8x + 1.5y = −3.9 and 2.4x − 1.5y = 0.3 produces 7.2x + 0.0y = −3.6, which is equivalent to 7.2x = −3.6. Dividing both sides of the equation by 7.2 gives x = −0.5. Therefore, the x-coordinate of the intersection point (x, y) of the system is −0.5.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "−0.25",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "An x-value of −0.25 produces y-values of −0.6 and −1.8 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "0.8",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "An x-value of 0.8 produces y-values of 1.08 and −5.16 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "1.75",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "An x-value of 1.75 produces y-values of 2.6 and −8.2 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "26": {
+        "Number": 26,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Keith modeled the growth over several hundred years of a tree population by estimating the number of the trees' pollen grains per square centimeter that were deposited each year within layers of a lake's sediment. He estimated there were 310 pollen grains per square centimeter the first year the grains were deposited, with a 1% annual increase in the number of grains per square centimeter thereafter. Which of the following functions models P(t), the number of pollen grains per square centimeter t years after the first year the grains were deposited?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "P(t) = 310ᵗ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors made when setting up an exponential function.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "P(t) = (310ᵗ)^1.01",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors made when setting up an exponential function.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "P(t) = 310(0.99)ᵗ",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors made when setting up an exponential function.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "P(t) = 310(1.01)ᵗ",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "A model for a quantity that increases by r % per time period is an exponential function of the form P(t) = 310(1 + r/100)ᵗ, where I is the initial value at time t = 0 and each increase of t by 1 represents 1 time period. It's given that P(t) is the number of pollen grains per square centimeter and t is the number of years after the first year the grains were deposited. There were 310 pollen grains at time t = 0, so I = 310. This number increased 1% per year after year t = 0, so r = 1. Substituting these values into the form of the exponential function gives P(t) = 310(1 + 1/100)ᵗ, which can be rewritten as P(t) = 310(1.01)ᵗ.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "27": {
+        "Number": 27,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:(2/3)(9x − 6) − 4 = 9x − 6",
+            "Based on the equation above, what is the value of 3x − 2?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "−4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Subtracting (2/3)(9x − 6) from both sides of the given equation yields −4 = (1/3)(9x − 6), which can be rewritten as −4 = 3x − 2.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "−4/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors made when manipulating the equation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "−2/3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This is the value of x.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors made when manipulating the equation.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "28": {
+        "Number": 28,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:f(x) = (x + 3)(x – k)",
+            "The function f is defined above. If k is a positive integer, which of the following could represent the graph of y = f(x) in the xy-plane?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/SAT10M2/media/28a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This graph opens downward rather than upward.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/SAT10M2/media/28b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This graph opens downward rather than upward.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/SAT10M2/media/28c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The graph doesn't pass through the point (−3, 0).",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/SAT10M2/media/28d.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The graph of a quadratic function in the form f(x) = a(x − b)(x − c) intersects the x-axis at (b, 0) and (c, 0). The graph will be a parabola that opens upward if a is positive and downward if a is negative. For the function f, a = 1, b = −3, and c = k. Therefore, the graph of the function f opens upward and intersects the x-axis at (−3, 0) and (k, 0). Since k is a positive integer, the intersection point (k, 0) will have an x-coordinate that is a positive integer. The only graph that opens upward, passes through the point (−3, 0), and has another x-intercept with a positive integer as the x-coordinate is this choice.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "29": {
+        "Number": 29,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:H = 1.88L + 32.01",
+            "The formula above can be used to approximate the height H, in inches, of an adult male based on the length L, in inches, of his femur. What is the meaning of 1.88 in this context?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The approximate femur length, in inches, for a man with a height of 32.01 inches",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misinterpreting the context and the values the variables are representing.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The approximate increase in a man's femur length, in inches, for each increase of 32.01 inches in his height",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misinterpreting the context and the values the variables are representing.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The approximate increase in a man's femur length, in inches, for each one-inch increase in his height",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from misinterpreting the context and the values the variables are representing.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The approximate increase in a man's height, in inches, for each one-inch increase in his femur length",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that L is the femur length, in inches, and H is the height, in inches, of an adult male. Because L is multiplied by 1.88 in the equation, for every increase in L by 1, the value of H increases by 1.88. Therefore, the meaning of 1.88 in this context is that a man's height increases by approximately 1.88 inches for each one- inch increase in his femur length.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "30": {
+        "Number": 30,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/30a.jpg",
+            "In quadrilateral ABCD above, AD || BC and CD = AB/2. What is the measure of angle B?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "150°",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "A segment can be drawn inside of quadrilateral ABCD from point B to point F (not shown) on segment AD such that segment BF is perpendicular to segment AD. This will create rectangle FBCD such that FB = CD. This will also create right triangle ABF such that FB = AB/2. An acute angle in a right triangle has measure 30° if and only if the side opposite this angle is half the length of the hypotenuse. (Such a triangle is called a 30°-60°-90° triangle.) Since AB is the hypotenuse of right triangle ABF and FB = AB/2, triangle ABF must be a 30°-60°-90° triangle and angle ABF must measure 60°. The measure of angle ABC equals the sum of the measures of angles ABF and FBC. Because angle FBC is in rectangle FBCD, it has a measure of 90°. Therefore, the measure of angle ABC, or angle B shown in the original figure, is 60° + 90° = 150°.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "135°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from identifying triangle ABF as a 45°-45°-90° triangle and the measure of angle ABF as 45°.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "120°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from adding the measures of angles BAF and FBC rather than angles ABF and FBC.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "90°",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from finding the measure of angle D rather than angle B.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "31": {
+        "Number": 31,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Lynne has $8.00 to spend on apples and oranges. Apples cost $0.65 each, and oranges cost $0.75 each. If there is no tax on this purchase and she buys 5 apples, what is the maximum number of whole oranges she can buy?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that apples cost $0.65 each and oranges cost $0.75 each. If x is the number of apples, the cost for buying x apples is 0.65x dollars. If y is the number of oranges, the cost for buying y oranges is 0.75y dollars. Lynne has $8.00 to spend; therefore, the inequality for the number of apples and oranges Lynne can buy is 0.65x + 0.75y ≤ 8.00. Since Lynne bought 5 apples, x = 5. Substituting 5 for x yields 0.65(5) + 0.75y ≤ 8.00, which can be rewritten as 3.25 + 0.75y ≤ 8.00. Subtracting 3.25 from both sides of the inequality yields 0.75y ≤ 4.75. Dividing both sides of this inequality by 0.75 yields y ≤ 6.33. Therefore, the maximum number of whole oranges Lynne can buy is 6.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "32": {
+        "Number": 32,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT10M2/media/32a.jpg",
+            "In the triangle above, a = 34. What is the value of b + c?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "146",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "According to the triangle sum theorem, the sum of the measures of the three angles of a triangle is 180°. This triangle is made up of angles with measures of a°, b°, and c°. Therefore, a + b + c = 180. Substituting 34 for a yields 34 + b + c = 180. Subtracting 34 from each side of the equation yields b + c = 146.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "33": {
+        "Number": 33,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:700, 1200, 1600, 2000, x",
+            "If the mean of the five numbers above is 1600, what is the value of x?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "2500",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The mean number of the list is found by dividing the sum of all the numbers in the list by the count of numbers in the list. It's given that the mean of the five numbers in this list is 1600; therefore, (700 + 1200 + 1600 + 2000 + x)/5 = 1600. Multiplying both sides of this equation by 5 gives 700 + 1200 + 1600 + 2000 + x = 8000. The left-hand side of this equation can be rewritten as 5500 + x = 8000. Subtracting 5500 from both sides of this equation gives x = 2500.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "34": {
+        "Number": 34,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The relationship between x and y can be written as y = mx, where m is a constant. If y = 17 when x = a, what is the value of y when x = 2a?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "34",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Substituting the values y = 17 and x = a into the equation y = mx yields 17 = ma. Solving for a gives a = 17/m . This can be substituted for a in x = 2a, which yields x = 2 (17/m) , or x = 34.m . Substituting x = 34/m into the equation y = mx yields y = m (34/m).This equation can be rewritten as y = 34.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "35": {
+        "Number": 35,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:a(x + b) = 4 + 10",
+            "In the equation above, a and b are constants. If the equation has infinitely many solutions for x, what is the value of b ?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "5/2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Applying the distributive property of multiplication on the left-hand side of a(x + b) = 4x + 10 yields ax + ab = 4x + 10. If a(x + b) = 4x + 10 has infinitely many solutions, then ax + ab = 4x + 10 must be true for all values of x. It follows that ax = 4x and ab = 10. Since ax = 4x, it follows that a = 4. Substituting 4 for a in ab = 10 yields 4b = 10. Dividing both sides of 4b = 10 by 10 4 yields b = 10/4 which simplifies to 5/2.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "36": {
+        "Number": 36,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the xy-plane, a line that has the equation y = c for some constant c intersects a parabola at exactly one point. If the parabola has the equation y = –x² + 5x what is the value of c?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "25/4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "If a line intersects a parabola at a point, the coordinates of the intersection point must satisfy the equation of the line and the equation of the parabola. Since the equation of the line is y = c, where c is a constant, the y-coordinate of the intersection point must be c. It follows then that substituting c for y in the equation for the parabola will result in another true equation: c = −x² + 5x. Subtracting c from both sides of c = −x² + 5x and then dividing both sides by −1 yields 0 = x² − 5x + c. The solution to this quadratic equation would give the x-coordinate(s) of the point(s) of intersection. Since it's given that the line and parabola intersect at exactly one point, the equation 0 = x² − 5x + c has exactly one solution. A quadratic equation in the form 0 = ax² + bx + c has exactly one solution when its discriminant b² − 4ac is equal to 0. In the equation 0 = x² − 5x + c, a = 1, b = −5, and c = c. Therefore, (−5)² − 4(1)(c) = 0, or 25 − 4c = 0. Subtracting 25 from both sides of 25 − 4c = 0 and then dividing both sides by −4 yields c = 25/4 . Ther efore, if the line y = c intersects the parabola defined by y = −x 2 + 5x at exactly one point, then c = 25/4.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "37": {
+        "Number": 37,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/SAT10M2/supps/SAT10M2-S2.json"
+        ],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "What is a peregrine falcon's maximum speed while diving to catch prey, in feet per second? (Round your answer to the nearest whole number. 1 mile = 5280 feet)"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "293",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "It's given that a peregrine falcon's maximum speed while diving is 200 miles per hour and that 1 mile = 5280 feet. Therefore, a peregrine falcon's maximum speed while diving is (200 miles/1 hour)(5280 feet/1 mile) = 1,056,000 feet per hour. There are 60 minutes in 1 hour and 60 seconds in each minute, so there are (60)(60) = 3600 seconds in 1 hour. A peregrine falcon's maximum speed while diving is therefore (1,056,000 feet/1 hour)(1 hour/3600 seconds) , which is approximately 293.33 feet per second. To the nearest whole number, this is 293 feet per second.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "38": {
+        "Number": 38,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/SAT10M2/supps/SAT10M2-S2.json"
+        ],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If a peregrine falcon dove at its maximum speed for half a mile to catch prey, how many seconds would the dive take? (Round your answer to the nearest second.)"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "If x is the number of hours it will take the falcon to dive 0.5 mile, then the speed of 200 miles per hour can be used to create the proportion (200 miles)/(1 hour) = (0.5 mile)/(x hours). This proportion can be rewritten as x hours = (0.5 mile)/(200 miles/hour), which gives x = 0.0025. There are 60 minutes in 1 hour and 60 seconds in each minute, so there are (60)(60) = 3600 seconds in one hour. Therefore, 0.0025 hour is equivalent to (0.0025 hour)(3600 seconds/1 hour) = 9 seconds.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}
