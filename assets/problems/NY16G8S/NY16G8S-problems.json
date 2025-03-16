@@ -2251,8 +2251,8 @@
     },
     "46": {
         "Number": 46,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "C",
+        "NumChoices": 2,
         "Topics": [],
         "SubTopics": [],
         "SuppContent": [],
@@ -2260,13 +2260,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below represents a tree, rain, and a rain gauge as viewed by a student looking out of a classroom window. A magnified view of the rain gauge is shown.",
             "problems/NY16G8S/media/46a.jpg",
-            ""
+            "Identify each statement made by the student as either an observation or an inference."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "1:In two more hours, a total of 3.0 inches of rain will have fallen.": {
+                "Choice": "2:Inference",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:The rain is falling on the tree and the ground.": {
+                "Choice": "1:Observation",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:The rain gauge shows 2.0 inches.": {
+                "Choice": "1:Observation",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "4:The air temperature is above freezing": {
+                "Choice": "2:Inference",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2282,18 +2306,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/47a.jpg",
-            ""
+            "Identify the dependent (responding) variable measured in this experiment."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "time",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2305,29 +2329,20 @@
     },
     "48": {
         "Number": 48,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/48a.jpg",
-            ""
+            "Predict the amount of time necessary for a pendulum with a string length of 70 cm to complete one swing. [1]the pendulum."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "49": {
@@ -2336,18 +2351,26 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/49a.jpg",
-            ""
+            "Predict the amount of time (in seconds) necessary for a pendulum with a string length of 70 cm to complete one swing."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "1.6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "1.8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2359,24 +2382,56 @@
     },
     "50": {
         "Number": 50,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 5,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S5.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/50a.jpg",
-            ""
+            "Identify the letter where the stream would have the greatest potential energy."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "Letter A",
                 "Key": {
                     "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Letter B",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Letter C",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Letter D",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Letter E",
+                "Key": {
+                    "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -2386,18 +2441,19 @@
     },
     "51": {
         "Number": 51,
-        "Type": "FR",
+        "Type": "T",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S5.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/51a.jpg",
-            ""
+            "Complete the data table below, using data from the graph. Fill in the distance from the beginning of the stream to each lettered location along the stream.",
+            "TABLE"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2417,18 +2473,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S6.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/52a.jpg",
-            ""
+            "Calculate the number of Calories used by a 60-kg person while watching television for TWO hours."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "132",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2440,22 +2496,54 @@
     },
     "53": {
         "Number": 53,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S6.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/53a.jpg",
-            ""
+            "Describe one health benefit that comes from regular participation in activities that provide physical exercise."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "build muscles",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "lose weight",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "live longer",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "immune system",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY5": {
+                "Choice": "physical fitness",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2467,7 +2555,7 @@
     },
     "54": {
         "Number": 54,
-        "Type": "FR",
+        "Type": "MFR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -2476,13 +2564,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/54a.jpg",
-            ""
+            "An experiment is described below.",
+            ":ibox:\tA student was interested in comparing sunblock lotions, which contain chemicals that protect the skin from sunburn. The student purchased three different brands of lotion at three different prices and performed an experiment to see which one best protected the skin. The lotions cost $3, $5, and $7 for an 8-ounce bottle. The sun protection factor (SPF) was 30 for all three lotions. The student applied equal amounts of each lotion next to each other on one of her arms. The three areas covered by the lotions were the same size. The student observed the three areas for color change after two hours of Sun exposure.",
+            "Identify TWO conditions that were held constant in this experiment.",
+            ":FR: and :FR:"
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "amount of lotion",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "amount of time",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "same arm",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "same SPF",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2498,18 +2611,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S7.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/55a.jpg",
-            ""
+            "How many sugar maple trees were in the community in 1990?"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "40",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2525,18 +2638,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S7.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/56a.jpg",
-            ""
+            "How many populations are represented in the 2010 diagram?"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2552,18 +2665,50 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S8.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/57a.jpg",
-            ""
+            "Identify one type of electromagnetic energy that has a shorter wavelength than green light."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "gamma rays",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "x-rays",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "ultraviolet",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "blue light",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY5": {
+                "Choice": "violet light",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2579,18 +2724,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S8.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/58a.jpg",
-            ""
+            "Which type of electromagnetic energy reflected by the Moon is most easily seen by a person on Earth?"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "light",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2602,7 +2747,7 @@
     },
     "59": {
         "Number": 59,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -2611,25 +2756,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/59a.jpg",
-            ""
+            "The human body has specialized cells, such as white blood cells, to help protect it from many diseases. Describe what these specialized cells do to protect the body from the disease."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "60": {
         "Number": 60,
-        "Type": "FR",
+        "Type": "MR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -2638,36 +2772,31 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagrams below represent reproduction in two different types of organisms, amebas and birds.",
             "problems/NY16G8S/media/60a.jpg",
-            ""
+            "problems/NY16G8S/media/60b.jpg",
+            "Explain why the bird offspring will differ from its parents more than the ameba offspring will differ from its parent."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "61": {
         "Number": 61,
-        "Type": "FR",
+        "Type": "T",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S9.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The Punnet square below shows the results of a cross between a plant with red flowers and a plant with white flowers.",
             "problems/NY16G8S/media/61a.jpg",
-            ""
+            "Based on the results, record the percentages of each color offspring from this cross in the table below.",
+            "TABLE"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2683,18 +2812,18 @@
     },
     "62": {
         "Number": 62,
-        "Type": "FR",
+        "Type": "PS",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S9.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/62a.jpg",
-            ""
+            "Complete the Punnet square below by showing the genetic makeup of the parent plants of the cross shown. Be sure to show both genes for each parent."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2710,24 +2839,96 @@
     },
     "63": {
         "Number": 63,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MS",
+        "NumChoices": 10,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S10.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/63a.jpg",
-            ""
+            "Identify the TWO animals in this food web that obtain nutrients directly from producers."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "Caterpillars",
                 "Key": {
                     "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Frogs",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Snakes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Grasses",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Trout",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "Hawks",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "G": {
+                "Choice": "Rabbits",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "H": {
+                "Choice": "Plants",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "I": {
+                "Choice": "Decomposers",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "J": {
+                "Choice": "Foxes",
+                "Key": {
+                    "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -2737,78 +2938,92 @@
     },
     "64": {
         "Number": 64,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S10.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/64a.jpg",
-            ""
+            "Explain why the population of trout might increase if the population of frogs DECREASED."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "65": {
         "Number": 65,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S10.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/65a.jpg",
-            ""
+            "Identify one function of the decomposers in this food web."
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "66": {
+        "Number": 66,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S11.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Between which two consecutive stages did fertilization occur?"
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "Stage A and Stage B",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
-            }
-        },
-        "Parts": {}
-    },
-    "66": {
-        "Number": 66,
-        "Type": "FR",
-        "NumChoices": 0,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NY16G8S/media/66a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            },
+            "B": {
+                "Choice": "Stage B and Stage C",
                 "Key": {
-                    "Correct": true,
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Stage C and Stage D",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Stage D and Stage E",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Stage E and Stage F",
+                "Key": {
+                    "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -2818,24 +3033,32 @@
     },
     "67": {
         "Number": 67,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 2,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S11.json"
+        ],
         "SuppTools": [],
         "Points": 1,
-        "Explain": false,
+        "Explain": true,
         "Content": [
-            "",
-            "problems/NY16G8S/media/67a.jpg",
-            ""
+            "Do sea urchins reproduce sexually or asexually? Give one piece of evidence to support your answer."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "sexually",
                 "Key": {
                     "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "asexually",
+                "Key": {
+                    "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -2849,18 +3072,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S11.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/68a.jpg",
-            ""
+            "How many cells will the developing sea urchin have at stage F?"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "16",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2872,83 +3095,56 @@
     },
     "69": {
         "Number": 69,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S12.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/69a.jpg",
-            ""
+            "Describe one change in the diet of penguins when the number of whales present increased."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "70": {
         "Number": 70,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S12.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/70a.jpg",
-            ""
+            "Based on the information on the graphs, give one possible explanation as to why the penguins' diet changed when the number of whales increased."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "71": {
         "Number": 71,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S12.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/71a.jpg",
-            ""
+            "Explain why the penguins of this species are considered carnivores."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "72": {
@@ -2957,18 +3153,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S13.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/72a.jpg",
-            ""
+            "Which gas produced by the tree does the giraffe need to survive?"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "oxygen",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2984,18 +3180,26 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S13.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/73a.jpg",
-            ""
+            "Identify one material the giraffe provides that helps the tree survive."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "carbon dioxide",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "fertilizer",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3011,18 +3215,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S14.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/74a.jpg",
-            ""
+            "Identify the layer of the atmosphere where the summit (top) of Mount Everest is found."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "troposphere",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3034,34 +3238,25 @@
     },
     "75": {
         "Number": 75,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S14.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/75a.jpg",
-            ""
+            "State the general relationship between the elevation of the camps and air pressure."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "76": {
         "Number": 76,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -3070,25 +3265,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below represents a closed system using a flask with a balloon attached. In the flask, a chemical reaction between solid baking soda and hydrochloric acid is occurring. The balloon has inflated as products have formed from the reaction.",
             "problems/NY16G8S/media/76a.jpg",
-            ""
+            "Which evidence in the diagram indicates that a gas was produced as a result of the reaction?"
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "77": {
         "Number": 77,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -3097,25 +3283,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below represents a closed container with a hinged divider separating the container into two sections. One side of the container holds more oxygen gas molecules than the other side. The symbol represents one oxygen gas molecule.",
             "problems/NY16G8S/media/77a.jpg",
-            ""
+            "Describe how the location of the oxygen molecules will change after the divider swings open."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "78": {
         "Number": 78,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -3124,36 +3301,28 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below represents a bar magnet. When iron filings were placed near the magnet, they moved to form the pattern shown.",
             "problems/NY16G8S/media/78a.jpg",
-            ""
+            "Explain why more iron filings are located at the ends of the magnet than at the center of the magnet."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "79": {
         "Number": 79,
-        "Type": "FR",
+        "Type": "FD",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/79a.jpg",
-            ""
+            "On the cross section below, place an X at one location on the cold frontal boundary.",
+            "problems/NY16G8S/media/S15a.jpg"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3173,18 +3342,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/80a.jpg",
-            ""
+            "Identify the process in the water cycle that changed water vapor into liquid water droplets that formed the thunderstorm cloud."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "condensation",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3196,56 +3365,38 @@
     },
     "81": {
         "Number": 81,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/81a.jpg",
-            ""
+            "Describe one piece of evidence shown in the diagram that suggests this cold front is associated with a low-pressure system."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "82": {
         "Number": 82,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/82a.jpg",
-            ""
+            "A person who is walking outdoors hears thunder and sees lightning from the approaching storm. Describe one action the person should take to stay safe."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "83": {
@@ -3254,18 +3405,50 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S16.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/83a.jpg",
-            ""
+            "Identify one force acting on the cart."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "gravity",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "friction",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "weight",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "normal",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY5": {
+                "Choice": "pulling",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3277,34 +3460,25 @@
     },
     "84": {
         "Number": 84,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY16G8S/supps/NY16G8S-S16.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/84a.jpg",
-            ""
+            "Explain why the box may continue to move forward if the cart suddenly stops moving."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "85": {
         "Number": 85,
-        "Type": "FR",
+        "Type": "T",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -3313,9 +3487,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY16G8S/media/85a.jpg",
-            ""
+            "The data table below shows the sunrise and sunset times for the first day of each season at a location in New York State. The times for the first day of fall are shown. Complete the table by identifying the season that matches the remaining sunrise and sunset times.",
+            "TABLE"
         ],
         "AnswerChoices": {
             "KEY": {
