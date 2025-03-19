@@ -2254,13 +2254,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below represents a graduated cylinder containing 20 mL of water. Four identical marbles are next to the cylinder.",
             "problems/NY18G8S/media/46a.jpg",
-            ""
+            "After two of the marbles are added to the cylinder, the water level reads 24 mL.",
+            "What is the water level after the other two marbles are added?"
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "28",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2272,22 +2273,62 @@
     },
     "47": {
         "Number": 47,
-        "Type": "FR",
+        "Type": "MGP",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/47a.jpg",
-            ""
+            "Plot the extension of the spring for each mass shown in the data table."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "(0,0)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:KEY": {
+                "Choice": "(100,0.5)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:KEY": {
+                "Choice": "(200,0.7)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "4:KEY": {
+                "Choice": "(300,0.8)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "5:KEY": {
+                "Choice": "(400,1.5)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "6:KEY": {
+                "Choice": "(500,2.5)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2299,29 +2340,20 @@
     },
     "48": {
         "Number": 48,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/48a.jpg",
-            ""
+            "Describe the general relationship between the mass applied and the extension on the spring."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "49": {
@@ -2330,18 +2362,26 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/49a.jpg",
-            ""
+            "Based on the data, estimate the extension of the spring when a 250-gram mass is applied."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "0.6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "0.8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2357,18 +2397,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/50a.jpg",
-            ""
+            "Identify the force acting on the mass that causes the spring to extend."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "gravity",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2384,18 +2424,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/51a.jpg",
-            ""
+            "Based on the pattern in the data table, predict the number of bacteria B at 6 hours."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "64",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2407,29 +2447,20 @@
     },
     "52": {
         "Number": 52,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/52a.jpg",
-            ""
+            "Describe how the reproductive rates for bacteria A and bacteria B differ."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "53": {
@@ -2438,18 +2469,42 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S5.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/53a.jpg",
-            ""
+            "Identify one factor represented in the diagram that is used to classify the ten types of clouds."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "altitude",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "height",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "cloud shape",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "temperature",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2465,18 +2520,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S5.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/54a.jpg",
-            ""
+            "Identify the water cycle process that forms clouds when moist air cools as it rises."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "condensation",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2488,8 +2543,26 @@
     },
     "55": {
         "Number": 55,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S5.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Explain why less sunlight reaches Earth’s surface when cumulonimbus clouds are over a location than when cirrus clouds are over the same location."
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "56": {
+        "Number": 56,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [],
         "SubTopics": [],
         "SuppContent": [],
@@ -2497,40 +2570,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/55a.jpg",
-            ""
+            "The diagram below represents the electromagnetic spectrum.",
+            "problems/NY18G8S/media/56a.jpg",
+            "List the following three types of electromagnetic energy in order from shortest wavelength to longest wavelength: infrared, x rays, red visible light."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A:infrared": {
+                "Choice": "3:Longest",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
-            }
-        },
-        "Parts": {}
-    },
-    "56": {
-        "Number": 56,
-        "Type": "FR",
-        "NumChoices": 0,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NY18G8S/media/56a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            },
+            "B:x rays": {
+                "Choice": "1:Shortest",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:red visible light": {
+                "Choice": "2:",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2542,7 +2604,7 @@
     },
     "57": {
         "Number": 57,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
@@ -2551,47 +2613,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below shows a beaker of ice placed over an open flame.",
             "problems/NY18G8S/media/57a.jpg",
-            ""
+            "Describe what happens to the molecules in the ice as the temperature of the ice increases."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "58": {
         "Number": 58,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S6.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/58a.jpg",
-            ""
+            "State one reason why all of the ultraviolet radiation coming toward Earth does NOT reach Earth’s surface."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "59": {
@@ -2600,18 +2644,42 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S6.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/59a.jpg",
-            ""
+            "Describe one action a person can take to avoid overexposure to UV radiation."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "stay inside",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "sunscreen",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "hat",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "umbrella",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2627,18 +2695,19 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S7.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/60a.jpg",
-            ""
+            "Using the equation below, calculate the acceleration of the cart in meters per second squared (m/s²).",
+            ":box:Force = Mass × Acceleration"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2654,18 +2723,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S7.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/61a.jpg",
-            ""
+            "Identify the force between the wheels of the cart and the ground surface that opposes forward motion of the cart."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "friction",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2681,18 +2750,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S8.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/62a.jpg",
-            ""
+            "Based on the data table, describe the effect of exercising for 10 minutes on the heart rates of the four students."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "increase heart rate",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2704,76 +2773,70 @@
     },
     "63": {
         "Number": 63,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S8.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/63a.jpg",
-            ""
+            "Describe one way to determine a person’s heart rate."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "64": {
         "Number": 64,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S9.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram below represents an ear of corn with both red and yellow kernels.",
             "problems/NY18G8S/media/64a.jpg",
-            ""
+            "problems/NY18G8S/media/64b.jpg",
+            "Explain why the number of red and yellow kernels on this ear of corn represents the results of the cross that is observed in the Punnett square."
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "65": {
+        "Number": 65,
+        "Type": "MFR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S9.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Identify the two genes of each parent that would always produce an ear of corn which has all yellow kernels.",
+            ":FR-1: × :FR-2:"
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "rr",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
-            }
-        },
-        "Parts": {}
-    },
-    "65": {
-        "Number": 65,
-        "Type": "FR",
-        "NumChoices": 0,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NY18G8S/media/65a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            },
+            "2:KEY": {
+                "Choice": "rr",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2785,49 +2848,56 @@
     },
     "66": {
         "Number": 66,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S10.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/66a.jpg",
-            ""
+            "Explain why the trilobite fossils found in rock layer A are considered to be younger than the trilobite fossils in rock layer D."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "67": {
         "Number": 67,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 3,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S10.json"
+        ],
         "SuppTools": [],
         "Points": 1,
-        "Explain": false,
+        "Explain": true,
         "Content": [
-            "",
-            "problems/NY18G8S/media/67a.jpg",
-            ""
+            "Select the class (type) of rock below that most likely includes rock layers A, B, C, and D, and give evidence to support your choice."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "igneous",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "metamorphic",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "sedimentary",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2839,49 +2909,56 @@
     },
     "68": {
         "Number": 68,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S10.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/68a.jpg",
-            ""
+            "Explain how studying fossils supports the theory of evolution."
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "69": {
+        "Number": 69,
+        "Type": "SR",
+        "NumChoices": 0,
+        "Topics": [],
+        "SubTopics": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S11.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Explain why the Canada lynx is classified as a carnivore."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "eats meat",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
-            }
-        },
-        "Parts": {}
-    },
-    "69": {
-        "Number": 69,
-        "Type": "FR",
-        "NumChoices": 0,
-        "Topics": [],
-        "SubTopics": [],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NY18G8S/media/69a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            },
+            "KEY2": {
+                "Choice": "eats hares",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "eats animals",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2893,22 +2970,54 @@
     },
     "70": {
         "Number": 70,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 5,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S11.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/70a.jpg",
-            ""
+            "Choose one characteristic from the list that helps the Canada lynx carry out the life process of locomotion."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "Found in the colder climates of Canada and Alaska",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Thick, dense fur",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Preys on small animals, such as the snowshoe hare",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Large spaces between teeth so that bite enters prey as deeply as possible",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Wide feet to walk better over snow and ice",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2920,29 +3029,20 @@
     },
     "71": {
         "Number": 71,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S11.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/71a.jpg",
-            ""
+            "Explain why the population of the Canada lynx in one area may decrease if the population of snowshoe hares decreased in that same area."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "72": {
@@ -2951,18 +3051,18 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S12.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/72a.jpg",
-            ""
+            "Identify the body system in the fish that is most likely producing the hormone somatostatin."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "endocrine",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2974,29 +3074,20 @@
     },
     "73": {
         "Number": 73,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S12.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/73a.jpg",
-            ""
+            "Explain how limiting growth is advantageous for the goldfish’s survival in a home aquarium."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "74": {
@@ -3010,13 +3101,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagrams below represent human body cells that have divided normally and human body cells that have divided ABNORMALLY.",
             "problems/NY18G8S/media/74a.jpg",
-            ""
+            "problems/NY18G8S/media/74b.jpg",
+            "What disease results from abnormal cell division?"
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "",
+                "Choice": "cancer",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3028,24 +3120,80 @@
     },
     "75": {
         "Number": 75,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MS",
+        "NumChoices": 8,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S13.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/75a.jpg",
-            ""
+            "Identify THREE organisms in the food web that compete for the mouse as food."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "A": {
+                "Choice": "Deer",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Grass",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Grasshopper",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Snake",
                 "Key": {
                     "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Coyote",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "Green plant",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "G": {
+                "Choice": "Hawk",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "H": {
+                "Choice": "Butterfly",
+                "Key": {
+                    "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -3059,18 +3207,34 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S13.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/76a.jpg",
-            ""
+            "Fungi and bacteria are not shown in this food web but play a role in this ecosystem. Describe the role of fungi and bacteria in this food web."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "decomposer",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "break down dead",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "recycle nutrients",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3082,22 +3246,32 @@
     },
     "77": {
         "Number": 77,
-        "Type": "FR",
+        "Type": "MFR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S14.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/77a.jpg",
-            ""
+            "Determine the number of hours and minutes of daylight for Virginia Beach and New York City on December 13.",
+            "\n\nVirigia Beach: :FR-1:",
+            "\n\nNew York City: :FR-2:"
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "9:40",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:KEY": {
+                "Choice": "9:18",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3109,29 +3283,20 @@
     },
     "78": {
         "Number": 78,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S14.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/78a.jpg",
-            ""
+            "Describe the general relationship between the latitude of a location in the United States and the length of daylight in December for that location."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "79": {
@@ -3140,18 +3305,34 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/79a.jpg",
-            ""
+            "Identify one Earth layer in which earthquakes may occur."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "crust",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "lithosphere",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "mantle",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3163,56 +3344,38 @@
     },
     "80": {
         "Number": 80,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/80a.jpg",
-            ""
+            "Explain how the properties of P-waves and S-waves have been used to determine that Earth’s outer core is liquid."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "81": {
         "Number": 81,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S15.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/81a.jpg",
-            ""
+            "Other than moving to a new area, describe two actions people should take in order to prepare for the possibility of strong earthquakes."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "82": {
@@ -3221,18 +3384,42 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S16.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/82a.jpg",
-            ""
+            "Describe one way to make the sugar cube dissolve faster in the 100 mL of water."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "stir",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "shake",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "heat",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "crush",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3248,18 +3435,34 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S16.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/83a.jpg",
-            ""
+            "Describe one way that the dissolved sugar at C could be separated from the water."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "boil",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "evaporate",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "heat",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3275,18 +3478,26 @@
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S17.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/84a.jpg",
-            ""
+            "Predict how many paperclips the electromagnet would have picked up if the students had wrapped the wire around the nail only five times."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "0",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "3",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3298,29 +3509,20 @@
     },
     "85": {
         "Number": 85,
-        "Type": "FR",
+        "Type": "SR",
         "NumChoices": 0,
         "Topics": [],
         "SubTopics": [],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NY18G8S/supps/NY18G8S-S17.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NY18G8S/media/85a.jpg",
-            ""
+            "When the wires were disconnected from the battery, all of the paper clips fell off the nail. Explain why the battery is needed to pick up the paperclips."
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     }
 }
