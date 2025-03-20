@@ -1418,7 +1418,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "6",
+                "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Since the vertex of the graph of the quadratic function is at (4, 19), the equation of the parabola is of the form y = a(x – 4)² + 19. It is also given that the parabola passes through point (0, 3). This means that 3 = a(0 – 4)² + 19, and so a = –1. So the graph of the parabola is y = –(x – 4)² + 19.\nSince the line passes through the points (0, –9) and (2, –1), one can calculate the slope of the line ((-1 - (-9))/(2 - 0) = 4) that passes through these points and write the equation of the line in the slope-intercept form as y = 4x – 9.\nThe coordinates of the intersection points of the line and the parabola satisfy both the equation of the parabola and the equation of the line. Therefore, these coordinates are the solutions to the following system of  equations: {y = 4x − 9; y = −(x − 4)² + 19}\nSubstituting 4x – 9 for y into the second equation gives 4x – 9 = –(x – 4)² + 19, which is equivalent to x² – 4x – 12 = 0. After factoring, this equation can be rewritten as (x – 6)(x + 2) = 0, and so x = 6 or x = –2. Since point (v, w) is on the right side of the y-axis, it follows that v cannot be –2. Therefore, v = 6.",
@@ -1445,7 +1445,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "9",
+                "Choice": "equal:9",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Let x be the number of sections that will be studied by 2 students and y be the number of sections that will be studied by 4 students. Since there are 24 sections that will be studied by 78 students, it follows that x + y = 24 and 2x + 4y = 78. Solving this system gives x = 9 and y = 15. Therefore, 9 of the sections will be studied by a group of 2 students.\n\nAlternatively, if all 24 sections were studied by a group of 4 students, then the total number of students required would be 24 × 4 = 96. Since the actual number of students is 78, the difference 96 – 78 = 18 represents the number of “missing” students, and each pair of these “missing” students represents one of the sections that will be studied by 2 students. Hence, the number of sections that will be studied by 2 students is equal to the number of pairs that 18 students can form, which is 18/2 = 9.",
@@ -1474,7 +1474,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "510",
+                "Choice": "equal:510",
                 "Key": {
                     "Correct": true,
                     "Rationale": "As the arrow moves upward, its speed decreases continuously and it becomes 0 when the arrow reaches its maximum height. Using the position-speed equation and the fact that v = 0 when h is maximum gives 0 = 100² − 2gh. Solving for h gives h = 100²/2(9.8) meters, which to the nearest meter is 510.\n\nAlternatively, the maximum height can be found using the position-time equation. Substituting 100 for v₀ and 9.8 for g into this equation gives h = 100t – (1/2)(9.8)t². Completing the square gives the equivalent equation h = 4.9(t  100/9.8)² + 4.9(100/9.8)². Therefore, the maximum height from the ground the arrow will rise is 4.9(100/9.8)² meters, which to the nearest meter is 510.",
@@ -1503,7 +1503,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "10.2",
+                "Choice": "equal:10.2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "As the arrow moves upward, its speed decreases continuously, and it becomes 0 when the arrow reaches its maximum height. Using the speed-time equation and the fact that v = 0 when h is maximum, we get 0 = 100 – 9.8t.\nSolving this equation for t gives t = 100/9.8 = 10.2041 seconds, which to the nearest tenth of a second is 10.2.",

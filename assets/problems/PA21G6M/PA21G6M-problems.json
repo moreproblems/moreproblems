@@ -420,7 +420,7 @@
                 "Choice": "14",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Writes the expression as 6 + x • (4 – 3), switching the x and the 4, and then substitutes 8 in for x to get 6 + 8 • (4 – 3) = 6 + 8 • 1 = 6 + 8 = 14.",
+                    "Rationale": "Writes the expression as 6 + x(4 – 3), switching the x and the 4, and then substitutes 8 in for x to get 6 + 8 • (4 – 3) = 6 + 8 • 1 = 6 + 8 = 14.",
                     "Percent": 13
                 }
             },
@@ -428,7 +428,7 @@
                 "Choice": "26",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Writes the expression as 6 + 4 • (x – 3) and then substitutes 8 in for x to get 6 + 4 • (8 – 3) = 6 + 4 • 5 = 6 + 20 = 26.",
+                    "Rationale": "Writes the expression as 6 + 4(x – 3) and then substitutes 8 in for x to get 6 + 4 (8 – 3) = 6 + 4 • 5 = 6 + 20 = 26.",
                     "Percent": 61
                 }
             },
@@ -436,7 +436,7 @@
                 "Choice": "35",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Writes the expression as 6 + 4 • x – 3, omitting the grouping symbols, and then substitutes 8 in for x to get 6 + 4 • 8 – 3 = 6 + 32 – 3 = 38 – 3 = 35.",
+                    "Rationale": "Writes the expression as 6 + 4x – 3, omitting the grouping symbols, and then substitutes 8 in for x to get 6 + 4 • 8 – 3 = 6 + 32 – 3 = 38 – 3 = 35.",
                     "Percent": 18
                 }
             },
@@ -444,7 +444,7 @@
                 "Choice": "50",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Writes the expression as 6 + 4 • (x – 3), substitutes 8 in for x, subtracts 3 from 8 first to get 6 + 4 • 5, but then adds 6 and 4 before multiplying by 5.",
+                    "Rationale": "Writes the expression as 6 + 4(x – 3), substitutes 8 in for x, subtracts 3 from 8 first to get 6 + 4 • 5, but then adds 6 and 4 before multiplying by 5.",
                     "Percent": 8
                 }
             }
@@ -941,7 +941,7 @@
                 ],
                 "AnswerChoices": {
                     "KEY": {
-                        "Choice": "21/2",
+                        "Choice": "equal:21/2",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -961,7 +961,7 @@
                 ],
                 "AnswerChoices": {
                     "KEY": {
-                        "Choice": "10",
+                        "Choice": "equal:10",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",

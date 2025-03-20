@@ -471,7 +471,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "5",
+                "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the value of the exponent when a number is written in scientific notation, the student should have moved the decimal point 5 places to the left to create a number between 1 and 10 and used the number of places moved to the left as the power for 10, resulting in 4.631 × 105. The value of the exponent is 5.",
@@ -981,7 +981,7 @@
                 }
             },
             "J": {
-                "Choice": "The radius of a circle with a diameter of x units can be represented by y = 1/2 • x.",
+                "Choice": "The radius of a circle with a diameter of x units can be represented by y = x/2.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely determined a non-proportional relationship is represented by an equation with a fraction as a coefficient and a line that goes through the origin. The student needs to focus on understanding the definition of a proportional relationship.",
@@ -1240,7 +1240,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "0.60",
+                "Choice": "equal:0.60",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the cost of 1 hot wing, the student could have set up the equation 8x + 4 = 10x + 2.80, where x is the cost of 1 hot wing. To solve the equation, the student could have first subtracted 8x from both sides of the equation, resulting in 4 = 2x + 2.80. The student then could have subtracted 2.80 from both sides of the equation, resulting in 1.20 = 2x. Finally, the student could have divided both sides of the equation by 2, resulting in x = 0.60. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
@@ -1385,7 +1385,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(3/7 • x, 3/7 • y)",
+                "Choice": "(3x/7, 3y/7)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the reciprocal of the scale factor. The student needs to focus on recognizing how a dilation with a positive scale factor affects the location of a point.",
@@ -1409,10 +1409,10 @@
                 }
             },
             "J": {
-                "Choice": "(7/3 • x, 7/3 • y)",
+                "Choice": "(7x/3, 7y/3)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the location of a corresponding point on pentagon A'B'C'D'E', the student could have recognized that if (x, y) represents the location of any point on pentagon ABCDE and is dilated with the origin as the center, the coordinates for the corresponding point on pentagon A'B'C'D'E' is multiplied by the scale factor of 7/3, resulting in (7/3 • x, 7/3 • y).",
+                    "Rationale": "To determine the location of a corresponding point on pentagon A'B'C'D'E', the student could have recognized that if (x, y) represents the location of any point on pentagon ABCDE and is dilated with the origin as the center, the coordinates for the corresponding point on pentagon A'B'C'D'E' is multiplied by the scale factor of 7/3, resulting in (7x/3, 7y/3).",
                     "Percent": 49
                 }
             }
@@ -1836,7 +1836,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "6",
+                "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the height of the refrigerator, the student could have used the formula for the surface area of a rectangular prism, S = Ph + 2B, with S representing the surface area, P representing the perimeter of the base, h representing the height of the prism, and B representing the area of the base of the prism. The perimeter of the base is 2(4) + 2(5) = 18. The area of the base is 4(5) = 20. Substituting into the formula results in 148 = 18h + 2(20). Solving for h results in h = 6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
@@ -1981,10 +1981,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(3/2 • x, 3/2 • y)",
+                "Choice": "(3x/2, 3y/2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the location of a corresponding point on triangle X'Y'Z', the student could have recognized that, if (x, y) represents the location of any point on triangle XYZ and the point is dilated with the origin as the center, the coordinates of (x, y) are multiplied by the scale factor of 3/2, resulting in the point (3/2 • x, 3/2 • y) on triangle X'Y'Z'.",
+                    "Rationale": "To determine the location of a corresponding point on triangle X'Y'Z', the student could have recognized that, if (x, y) represents the location of any point on triangle XYZ and the point is dilated with the origin as the center, the coordinates of (x, y) are multiplied by the scale factor of 3/2, resulting in the point (3x/2, 3y/2) on triangle X'Y'Z'.",
                     "Percent": 17
                 }
             },
@@ -1997,7 +1997,7 @@
                 }
             },
             "C": {
-                "Choice": "(2/3 • x, 2/3 • y)",
+                "Choice": "(2x/3, 2y/3)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the reciprocal of the scale factor. The student needs to focus on recognizing the effect of a dilation with a positive scale factor on the location of a point.",
@@ -2038,7 +2038,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "1698.84",
+                "Choice": "equal:1698.84",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the balance in the savings account at the end of 8 years, the student should have used the formula for simple interest, I = prt, with p representing the principal (initial amount), r representing the interest rate, and t representing the time in years. The student should have substituted the values p = 1,287, r = 0.04, and t = 8 into the formula, resulting in I = (1,287)(0.04)(8) = 411.84. The student then should have added the interest, $411.84, to the principal, $1,287, for a result of $1,698.84.",

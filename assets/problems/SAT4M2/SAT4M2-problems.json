@@ -299,7 +299,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "15",
+                "Choice": "equal:15",
                 "Key": {
                     "Correct": true,
                     "Rationale": "By the definition of absolute value, if |x - 5| = 10, then x - 5 = 10 or x - 5 = -10. Adding 5 to both sides of the first equation yields x = 15. Adding 5 to both sides of the second equation yields x = -5. Thus, the given equation has two possible solutions, 15 and -5. Note that 15 and –5 are examples of ways to enter a correct answer.",
@@ -307,7 +307,7 @@
                 }
             },
             "KEY2": {
-                "Choice": "-5",
+                "Choice": "equal:-5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "By the definition of absolute value, if |x - 5| = 10, then x - 5 = 10 or x - 5 = -10. Adding 5 to both sides of the first equation yields x = 15. Adding 5 to both sides of the second equation yields x = -5. Thus, the given equation has two possible solutions, 15 and -5. Note that 15 and –5 are examples of ways to enter a correct answer.",
@@ -339,7 +339,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "50",
+                "Choice": "equal:50",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that the function f gives the total number of people on a company retreat with x managers. It's also given that 7 managers are on the company retreat. Substituting 7 for x in the given function yields f(7) = 7(7) + 1, or f(7) = 50. Therefore, there are a total of 50 people on a company retreat with 7 managers.",
@@ -649,7 +649,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "3/10",
+                "Choice": "equal:3/10",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that there are a total of 100 tiles of equal area, which is the total number of possible outcomes. According to the table, there are a total of 30 red tiles. The probability of an event occurring is the ratio of the number of favorable outcomes to the total number of possible outcomes. By definition, the probability of selecting a red tile is given by 30/100, or 3/10. Note that 3/10 and 0.3 are examples of ways to enter a correct answer.",
@@ -681,7 +681,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "2",
+                "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that function f is defined by f(x) = 2x + 3. Therefore, the equation representing the graph of y = f(x) in the xy-plane is y = 2x + 3, and the graph is a line. For a linear equation in the form y = mx + b, m represents the slope of the line. Since the value of m in the equation y = 2x + 3 is 2, the slope of the line defined by function f is 2. It's given that line j is parallel to the line defined by function f. The slopes of parallel lines are equal. Therefore, the slope of line j is also 2.",
@@ -990,7 +990,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "15/17",
+                "Choice": "equal:15/17",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that angle J is the right angle in triangle JKL. Therefore, the acute angles of triangle JKL are angle K and angle L. The hypotenuse of a right triangle is the side opposite its right angle. Therefore, the hypotenuse of triangle JKL is side KL. The cosine of an acute angle in a right triangle is the ratio of the length of the side adjacent to the angle to the length of the hypotenuse. It's given that cos(K) = 24/51. This can be written as cos(K) = 8/17. Since the cosine of angle K is a ratio, it follows that the length of the side adjacent to angle K is 8n and the length of the hypotenuse is 17n, where n is a constant. Therefore, JK = 8n and KL = 17n. The Pythagorean theorem states that in a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the other two sides. For triangle JKL, it follows that (JK)² + (JL)² = (KL)². Substituting 8n for JK and 17n for KL yields (8n)² + (JL)² = (17n)². This is equivalent to 64n² + (JL)² = 289n². Subtracting 64n² from each side of this equation yields (JL)² = 225n². Taking the square root of each side of this equation yields JL = 15n. Since cos(L) = JL/KL, it follows that cos(L) = 15n/17n, which can be rewritten as cos(L) = 15/17. Note that 15/17, 0.8824, 0.8823, and 0.882 are examples of ways to enter a correct answer.",
@@ -1022,7 +1022,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "51",
+                "Choice": "equal:51",
                 "Key": {
                     "Correct": true,
                     "Rationale": "A quadratic equation of the form ax² + bx + c = 0, where a, b, and c are constants, has no real solution if and only if its discriminant, -4ac + b², is negative. In the given equation, a = -1 and c = -676. Substituting -1 for a and -676 for c in this expression yields a discriminant of b² - 4(-1)(676) < 0, or b² - 2,704. Since this value must be negative, b² - 2,704 < 0, or b² < 2,704. Taking the positive square root of each side of this inequality yields b < 52. Since b is a positive integer, and the greatest integer less than 52 is 51, the greatest possible value of b is 51.",
@@ -1331,7 +1331,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "600",
+                "Choice": "equal:600",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that 210 is p% greater than 30. It follows that 210 = (1 + p/100)(30). Dividing both sides of this equation by 30 yields 7 = 1 + p/100. Subtracting 1 from both sides of this equation yields 6 = p/100. Multiplying both sides of this equation by 100 yields p = 600. Therefore, the value of p is 600.",

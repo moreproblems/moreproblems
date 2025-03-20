@@ -503,7 +503,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "55",
+                "Choice": "equal:55",
                 "Key": {
                     "Correct": true,
                     "Rationale": "180° - (75° + 50°) = 55°.",
@@ -798,38 +798,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to y • 48?"
+            "Which expression is equivalent to y × 48?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(y • 40) + 8",
+                "Choice": "(y × 40) + 8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(y • 40) + 8 = 40 • y + 8, not y • 48.",
+                    "Rationale": "(y × 40) + 8 = 40 × y + 8, not y × 48.",
                     "Percent": 38
                 }
             },
             "G": {
-                "Choice": "(y • 4) • 8",
+                "Choice": "(y × 4) × 8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(y • 4) • 8 = y • 32, not y • 48.",
+                    "Rationale": "(y × 4) × 8 = y × 32, not y × 48.",
                     "Percent": 6
                 }
             },
             "H": {
-                "Choice": "(y • 40) + (y • 8)",
+                "Choice": "(y × 40) + (y × 8)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "(y • 40) + (y • 8) = y • 48.",
+                    "Rationale": "(y × 40) + (y × 8) = y × 48.",
                     "Percent": 46
                 }
             },
             "J": {
-                "Choice": "(y • 4) + 8",
+                "Choice": "(y × 4) + 8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(y • 4) + 8 = 4 • y + 8, not y • 48.",
+                    "Rationale": "(y × 4) + 8 = 4 × y + 8, not y × 48.",
                     "Percent": 10
                 }
             }
@@ -1075,7 +1075,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "5",
+                "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "90 = 2 • 3² • 5.",
@@ -1487,7 +1487,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "320",
+                "Choice": "equal:320",
                 "Key": {
                     "Correct": true,
                     "Rationale": "If 8 bats ate 40 grams, then each bat ate 8 grams, multiply 8 by 64 bats equals 320.",
@@ -1677,7 +1677,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "444",
+                "Choice": "equal:444",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The largest number is 961 and the smallest number is 517 and 961 - 517 = 444.",
