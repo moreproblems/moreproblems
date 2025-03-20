@@ -503,7 +503,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "-1",
+                "Choice": "equal:-1",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the value of the expression, the student should have used the order of operations, or PEMDAS. The student should have completed the operations in this order: 1. Operations contained in Parentheses or brackets, 2. Exponents (numbers raised to a power), 3. Multiplication/Division from left to right, and 4. Addition/Subtraction from left to right. First, the student should have determined that 52 = 25. Then the student should have subtracted (24 – 25 = –1).",
@@ -1080,7 +1080,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "16.8",
+                "Choice": "equal:16.8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the volume of (amount of three-dimensional space taken up by) the rectangular prism in cubic centimeters, the student should have substituted the given values into the formula for the volume of a rectangular prism from the Volume section of the STAAR Grade 6 Mathematics Reference Materials within the student's test booklet (V = Bh, where V represents the volume, B represents the area of (amount of space covered by) the base, and h represents the height (vertical distance from top to bottom)). To determine B, the area of the base, the student should have multiplied 1.4 cm by 4 cm, resulting in 5.6 cm². Then the student should have substituted the values of B = 5.6 and h = 3 into the volume formula (V = 5.6 × 3), resulting in a volume of 16.8 cm³.",
@@ -1158,11 +1158,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Regina writes the expression y + 9 • 3. Which expression is equivalent to the one Regina 4 writes?"
+            "Regina writes the expression y + 9 × 3. Which expression is equivalent to the one Regina 4 writes?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(9 • 3 ÷ 4) + y",
+                "Choice": "(9 × 3 ÷ 4) + y",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine which expression is equivalent to y + 9 • 3/4, the student should have grouped 9 • 3/4 by using parentheses, converted 3/4 to 3 ÷ 4, and applied the commutative property. The commutative property is a property of addition (+) and multiplication (•) that allows for the order of terms in expressions to change without affecting the result. In the original expression, 9 • 3/4 is the rightmost term in the expression and y is the leftmost term, but in the answer choice, the terms have switched positions. Because the operation (addition) is the same in both expressions, y + 9 • 3/4 and (9 • 3 ÷ 4) + y, the order of the terms does not matter and the expressions are equivalent.",
@@ -1170,7 +1170,7 @@
                 }
             },
             "B": {
-                "Choice": "9 + y • (3 ÷ 4)",
+                "Choice": "9 + y × (3 ÷ 4)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely applied ideas from the commutative property by moving the first two values, 9 and y, but did not understand that the operations (+, –, •, ÷) must be the same for the commutative property to be applied. The student needs to focus on understanding how to apply the commutative property to find equivalent expressions.",
@@ -1189,7 +1189,7 @@
                 "Choice": "None of these",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The correct answer ((9 • 3 ÷ 4) + y) was presented in one of the other answer options.",
+                    "Rationale": "The correct answer ((9 × 3 ÷ 4) + y) was presented in one of the other answer options.",
                     "Percent": 0
                 }
             }
@@ -1492,7 +1492,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "180",
+                "Choice": "equal:180",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the number of customers who made additional purchases, the student could have multiplied 72% (0.72) by 250, resulting in 180. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
@@ -1685,7 +1685,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "535.25",
+                "Choice": "equal:535.25",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the balance of Raúl's checking account after the transaction on April 13 in dollars and cents, the student should have used the starting balance ($539.50), subtracted the amount of each withdrawal from the balance, and added the amount of the deposit to the balance ($539.50 – $35.50 – $23.75 + $55.00 = $535.25), resulting in a balance of $535.25 after the transaction on April 13. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",

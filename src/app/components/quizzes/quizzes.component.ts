@@ -4590,114 +4590,186 @@ export class QuizzesComponent implements OnInit {
   }
 
   attempt_fr_problem(choice: string, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
-    }
-    if (choice != this.problem_selection[part_num][0]) {
-      this.problem_attempts[part_num] += 1;
-      this.attempt_path[part_num].push([choice]);
-      this.problem_selection[part_num] = [choice];
-      for (const [num, prob] of Object.entries(this.exam_dump)) {
-        if (this.problem_number == +num) {
-          if (part == '') {
-            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-              if (choice == key.Choice) {
-                this.attempt_explanation[part_num][0] = key.Key.Rationale;
-                if (this.problem_attempts[part_num] == 1) {
-                  this.streak_count += 1;
-                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
-                }
-                else {
-                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
-                }
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
-              }
-              else {
-                this.streak_count = 0;
-                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
-              }
-            }
-          }
-          else {
-            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
-              if (choice == key.Choice) {
-                this.attempt_explanation[part_num][0] = key.Key.Rationale;
-                if (this.problem_attempts[part_num] == 1) {
-                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
-                }
-                else {
-                  this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' tries.';
-                }
-                if (this.mode == 'explain') {
-                  this.confetti_light(this.problem_attempts[part_num]);
-                }
-              }
-              else {
-                this.streak_count = 0;
-                this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
-              }
-            }
-          }
-        }
+      var part_num = 0;
+      if (part != '') {
+          var part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
       }
-    }
+      if (choice != this.problem_selection[part_num][0]) {
+          this.attempt_path[part_num].push([choice]);
+          this.problem_selection[part_num] = [choice];
+          for (const [num, prob] of Object.entries(this.exam_dump)) {
+              if (this.problem_number == +num) {
+                  if (part == '') {
+                      var correct = false;
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (key.Choice.startsWith('equal:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.problem_attempts[part_num] + 1 == 1) {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.problem_attempts[part_num] += 1;
+                                  this.confetti_light(this.problem_attempts[part_num]);
+                              }
+                          }
+                          else if (key.Choice.startsWith('match:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.problem_attempts[part_num] + 1 == 1) {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.problem_attempts[part_num] += 1;
+                                  this.confetti_light(this.problem_attempts[part_num]);
+                              }
+                          }
+                      }
+                      if (!correct) {
+                          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          this.problem_attempts[part_num] += 1;
+                      }
+                  }
+                  else {
+                      var correct = false;
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (key.Choice.startsWith('equal:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.problem_attempts[part_num]+1 == 1) {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.problem_attempts[part_num] += 1;
+                                  this.confetti_light(this.problem_attempts[part_num]);
+                              }
+                          }
+                          else if (key.Choice.startsWith('match:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.problem_attempts[part_num]+1 == 1) {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.problem_attempts[part_num] += 1;
+                                  this.confetti_light(this.problem_attempts[part_num]);
+                              }
+                          }
+                      }
+                      if (!correct) {
+                          this.attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          this.problem_attempts[part_num] += 1;
+                      }
+                  }
+              }
+          }
+      }
   }
 
   attempt_fr_st_problem(choice: string, part: string) {
-    var part_num = 0;
-    if (part != '') {
-      var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
-    }
-    if (choice != this.subtopic_problem_selection[part_num][0]) {
-      this.subtopic_problem_attempts[part_num] += 1;
-      this.subtopic_attempt_path[part_num].push(choice);
-      this.subtopic_problem_selection[part_num] = [choice];
-      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
-        if (part == '') {
-          if (this.subtopic_problem_number == +num) {
-            for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-              if (choice == key.Choice) {
-                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
-                if (this.subtopic_problem_attempts[part_num] == 1) {
-                  this.subtopic_streak_count += 1;
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
-                }
-                else {
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
-                }
-                this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
-              }
-              else {
-                this.subtopic_streak_count = 0;
-                this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
-              }
-            }
-          }
-        }
-        else {
-          if (this.subtopic_problem_number == +num) {
-            for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
-              if (choice == key.Choice) {
-                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
-                if (this.subtopic_problem_attempts[part_num] == 1) {
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
-                }
-                else {
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
-                }
-                this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
-              }
-              else {
-                this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
-              }
-            }
-          }
-        }
+      var part_num = 0;
+      if (part != '') {
+          var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
       }
-    }
+      if (choice != this.subtopic_problem_selection[part_num][0]) {
+          this.subtopic_attempt_path[part_num].push(choice);
+          this.subtopic_problem_selection[part_num] = [choice];
+          for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+              if (part == '') {
+                  if (this.subtopic_problem_number == +num) {
+                      var correct = false;
+                      for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                          if (key.Choice.startsWith('equal:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
+                                      this.subtopic_streak_count += 1;
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.subtopic_problem_attempts[part_num] += 1;
+                                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+                              }
+                          }
+                          else if (key.Choice.startsWith('match:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
+                                      this.subtopic_streak_count += 1;
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.subtopic_problem_attempts[part_num] += 1;
+                                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+                              }
+                          }
+                      }
+                      if (!correct) {
+                          this.subtopic_streak_count = 0;
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          this.subtopic_problem_attempts[part_num] += 1;
+                      }
+                  } 
+              }
+              else {
+                  if (this.subtopic_problem_number == +num) {
+                      var correct = false;
+                      for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
+                          if (key.Choice.startsWith('equal:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.subtopic_problem_attempts[part_num] += 1;
+                                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+                              }
+                          }
+                          else if (key.Choice.startsWith('match:')) {
+                              if (choice == key.Choice.slice(6)) {
+                                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                                  if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
+                                  }
+                                  else {
+                                      this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' tries.';
+                                  }
+                                  correct = true;
+                                  this.subtopic_problem_attempts[part_num] += 1;
+                                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+                              }
+                          }
+                      }
+                      if (!correct) {
+                          this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                          this.subtopic_problem_attempts[part_num] += 1;
+                      }
+                  }
+              }
+          }
+      }
   }
 
   attempt_mfr_problem(choice: string, inum: string, part: string) {

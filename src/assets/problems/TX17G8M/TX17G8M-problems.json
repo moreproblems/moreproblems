@@ -471,7 +471,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "32.5",
+                "Choice": "equal:32.5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Using the Pythagorean Theorem, a² + b² = c² gives, 262 + 19.52 = 1056.25 and the square root of 1056.25 is 32.5.",
@@ -1020,7 +1020,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 1/5 • x",
+                "Choice": "y = x/5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The graph shows the cost of 5 dollars for every pound of pecan, which is represented by the function y = 5x, not y = 1/5 x.",
@@ -1036,7 +1036,7 @@
                 }
             },
             "D": {
-                "Choice": "y = 1/2 • x",
+                "Choice": "y = x/2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The graph shows the cost of 5 dollars for every pound of pecan, which is represented by the function y = 5x, not y = 1/2x.",
@@ -1063,7 +1063,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Pentagon MNPQR is shown on the coordinate grid. Pentagon MNPQR is dilated with the origin as the center of dilation using the rule (x, y) ⇒ (1/4 • x, 1/4 • y) to create pentagon M'N'P'Q'R'.",
+            "Pentagon MNPQR is shown on the coordinate grid. Pentagon MNPQR is dilated with the origin as the center of dilation using the rule (x, y) ⇒ (x/4, y/4) to create pentagon M'N'P'Q'R'.",
             "problems/TX17G8M/media/20a.jpg",
             "Which statement is true?"
         ],
@@ -1072,7 +1072,7 @@
                 "Choice": "Pentagon M'N'P'Q'R' is larger than pentagon MNPQR, because the scale factor is greater than 1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule (1/4 • x, 1/4 • y) creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The 1/4 scale factor is less than 1, not greater than 1.",
+                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The 1/4 scale factor is less than 1, not greater than 1.",
                     "Percent": 12
                 }
             },
@@ -1080,7 +1080,7 @@
                 "Choice": "Pentagon M'N'P'Q'R' is smaller than pentagon MNPQR, because the scale factor is less than 1.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The dilation rule (1/4 • x, 1/4 • y) creates a pentagon that is smaller than the original pentagon. The 1/4 scale factor is less than 1.",
+                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon. The 1/4 scale factor is less than 1.",
                     "Percent": 70
                 }
             },
@@ -1088,7 +1088,7 @@
                 "Choice": "Pentagon M'N'P'Q'R' is smaller than pentagon MNPQR, because the scale factor is greater than 1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule (1/4 • x, 1/4 • y) creates a pentagon that is smaller than the original pentagon. The 1/4 scale factor is less than 1, not greater than 1.",
+                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon. The 1/4 scale factor is less than 1, not greater than 1.",
                     "Percent": 10
                 }
             },
@@ -1096,7 +1096,7 @@
                 "Choice": "Pentagon M'N'P'Q'R' is larger than pentagon MNPQR, because the scale factor is less than 1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule (1/4 • x, 1/4 • y) creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The 1/4 scale factor is less than 1.",
+                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The 1/4 scale factor is less than 1.",
                     "Percent": 7
                 }
             }
@@ -1236,7 +1236,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "6",
+                "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
                     "Rationale": "If the perimeter is equal to the area then 2l + 2w = lw, so 2l + 2(3) = l(3), which simplifies to 6 = l.",
@@ -1829,7 +1829,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "40",
+                "Choice": "equal:40",
                 "Key": {
                     "Correct": true,
                     "Rationale": "If Nicki can make 4 baskets in 1/2 hour, she can make 40 baskets in 8 hours.",
@@ -1919,10 +1919,10 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x, y) ⇒ (5/7 • x, 5/7 • y)",
+                "Choice": "(x, y) ⇒ (5x/7, 5y/7)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The coordinates of F'G'H'J' are found by multiplying the coordinates of FGHJ by 1/4 which is described by the dilation rule (x, y) ⇒ (1.4x, 1.4y), not (x, y) ⇒ (5/7 • x, 5/7 • y).",
+                    "Rationale": "The coordinates of F'G'H'J' are found by multiplying the coordinates of FGHJ by 1/4 which is described by the dilation rule (x, y) ⇒ (1.4x, 1.4y), not (x, y) ⇒ (5x/7, 5y/7).",
                     "Percent": 15
                 }
             },
@@ -2032,7 +2032,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "237.5",
+                "Choice": "equal:237.5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The formula for the total surface area of a rectangular prism is S = Ph + 2B which is 25(6.5) + 2(37.5) = 237.5.",

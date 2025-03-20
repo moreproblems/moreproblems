@@ -762,7 +762,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "2200",
+                "Choice": "equal:2200",
                 "Key": {
                     "Correct": true,
                     "Rationale": "If the total shipping cost was $47,000, then T = 47,000. If 3000 units were shipped to the farther location, then f = 3000. Substituting 47,000 for T and 3000 for f in the equation T = 5c + 12f yields 47,000 = 5c + 12(3000). Multiplying 12 by 3000 yields 47,000 = 5c + 36,000. Subtracting 36,000 from both sides of the equation yields 11,000 = 5c. Dividing both sides by 5 yields c = 2200. Therefore, 2200 units were shipped to the closer location.",
@@ -788,7 +788,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "5",
+                "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "By definition of absolute value, if | 2x + 1 | = 5, then 2x + 1 = 5 or −(2x + 1) = 5, which can be rewritten as 2x + 1 = −5. Subtracting 1 from both sides of 2x + 1 = 5 and 2x + 1 = −5 yields 2x = 4 and 2x = −6, respectively. Dividing both sides of 2x = 4 and 2x = −6 by 2 yields x = 2 and x = −3, respectively. If a and b are the solutions to the given equation, then a = 2 and b = −3. It follows then that |a − b| = |2 − (−3)| = |5| , which is 5. Similarly, if a = −3 and b = 2, it follows that |a − b| = |−3 − 2| = |−5|, which is also 5.",
@@ -813,7 +813,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "1.21",
+                "Choice": "equal:1.21",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that each year, the value of the antique is estimated to increase by 10% over its value the previous year. Increasing a quantity by 10% is equivalent to the quantity increasing to 110% of its original value or multiplying the original quantity by 1.1. Therefore, 1 year after the purchase, the estimated value of the antique is 200(1.1) dollars. Then, 2 years after purchase, the estimated value of the antique is 200(1.1)(1.1), or 200(1.21) dollars. It's given that the estimated value of the antique after 2 years is 200a dollars. Therefore, 200(1.21) = 200a. It follows that a = 1.21.",
@@ -839,7 +839,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "2500",
+                "Choice": "equal:2500",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Adding the given equations yields (2x + 3y) + (3x + 2y) = (1200 + 1300). Combining like terms yields 5x + 5y = 2500. Therefore, the value of 5x + 5y is 2500.",
@@ -864,7 +864,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "20",
+                "Choice": "equal:20",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Factoring the expression u² − t² yields (u − t)(u + t). Therefore, the expression (u − t)(u² − t²) can be rewritten as (u − t)(u − t)(u + t). Substituting 5 for u + t and 2 for u − t in this expression yields (2)(2)(5), which is equal to 20.",

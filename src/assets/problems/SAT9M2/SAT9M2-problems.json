@@ -1570,7 +1570,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "6",
+                "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Circles are symmetric with respect to any given diameter through the center (h, k). One diameter of the circle is perpendicular to the x-axis. Therefore, the value of h is the mean of the x-coordinates of the circle's two x-intercepts: h = (20 + 4)/2 = 12. The radius of the circle is given as 10, so the point (h, k) must be a distance of 10 units from any point on the circle. The equation of any circle can be written as (x − h)² + (y − k)² = r², where (h, k) is the center of the circle and r is the length of the radius of the circle. Substituting 12 for h and 10 for r into this equation gives (x − 12)² + (y − k)² = 10². Substituting the x-coordinate and y-coordinate of a point on the circle, (4, 0), gives (4 − 12)² + (0 − k)² = 10², or 64 + k² = 100. Subtracting 64 from both sides of this equation yields k² = 36. Therefore, k = ±√36. Since the graph shows the point (h, k) in the first quadrant, k must be the positive square root of 36, so k = 6.",
@@ -1597,7 +1597,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "2",
+                "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that line l is perpendicular to the line with equation y = −2x/3. Since the equation y = −2x/3 is written in slope-intercept form, the slope of the line is −2/3. The slope of line l must be the negative reciprocal of −2/3, which is 3/2. It' s also given that the y-coordinate of the y-intercept of line l is −13, so the equation of line l in slope-intercept form is y = 3x/2 − 13. If y = b when x = 10, b = (3/2)(10) − 13, which is equivalent to b = 15 − 13, or b = 2.",
@@ -1625,7 +1625,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "8",
+                "Choice": "equal:8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "In this group, 1/9th of the people who are rhesus negative have blood type B. The total number of people who are rhesus negative in the group is 7 + 2 + 1 + x, and there are 2 people who are rhesus negative with blood type B. Therefore, 2/(7 + 2 + 1 + x) = 1/9. Combining like terms on the left-hand side of the equation yields 2/(10 + x) = 1/9. Multipl ying both sides of this equation by 9 yields 18/(10 + x) = 1, and multiplying both sides of this equation by (10 + x) yields 18 = 10 + x. Subtracting 10 from both sides of this equation yields 8 = x.",
@@ -1653,7 +1653,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "9",
+                "Choice": "equal:9",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The median number of goals scored is found by ordering the number of goals scored from least to greatest and then determining the middle value in the list. If the number of goals scored in each of the 29 games were listed in order from least to greatest, the median would be the fifteenth number of goals. The graph shows there were 8 games with 1 goal scored and 9 games with 2 goals scored. Therefore, the fifteenth number, or the median number, of goals scored must be 2. According to the graph, the soccer team scored 2 goals in 9 of the games played.",
@@ -1680,7 +1680,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "15",
+                "Choice": "equal:15",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that the deductions reduce the original amount of taxes owed by $2,325.00. Since the deductions reduce the original amount of taxes owed by d%, the equation 2,325/15,500 = d/100 can be used to find this percent decrease, d. Multiplying both sides of this equation by 100 yields 232,500/15,500 = d , or 15 = d. Thus, the tax deductions reduce the original amount of taxes owed by 15%.",
@@ -1708,7 +1708,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "1.5",
+                "Choice": "equal:1.5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that the system of linear equations has no solutions. Therefore, the lines represented by the two equations are parallel. Each of the equations can be written in slope-intercept form, or y = mx + b, where m is the slope of the line and b is the y-coordinate of the line's y-intercept. Subtracting 3x/4 from both sides of 3x/4 − y/2 = 12 yields −y/2 = −3x/4 + 12 . Dividing both sides of this equation by −1/2 yields y = (−3/4)/(−/12)x + 12/(−1/2), or y = 3x/2 − 24. Therefore, the slope of the line represented by the first equation in the system is 3/2. The second equation in the system can be put into slope-intercept form by first subtracting ax from both sides of ax − by = 9, then dividing both sides of the equation by −b, which yields y = ax/b − 9/b . Therefore, the slope of the line represented by the second equation in the system is a/b. Parallel lines have equal slopes. Therefore, a/b = 3/2.",
@@ -1737,7 +1737,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "1.3",
+                "Choice": "equal:1.3",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The median number of tourists is found by ordering the number of tourists from least to greatest and determining the middle value from this list. When the number of tourists in 2012 is ordered from least to greatest, the middle value, or the fifth number, is 46.4 million. When the number of tourists in 2013 is ordered from least to greatest, the middle value, or the fifth number, is 47.7 million. The difference between these two medians is 47.7 million − 46.4 million = 1.3 million.",
@@ -1766,7 +1766,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "3",
+                "Choice": "equal:3",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The correct answer is 3. Let y be the number of international tourist arrivals in Russia in 2012, and let x be the number of these arrivals in 2011. It's given that y is 13.5% greater than x, or y = 1.135x. The table gives that y = 24.7, so 24.7 = 1.135x. Dividing both sides of this equation by 1.135 yields 24.7/1.135 = x , or x ≈ 21.8 million arrivals. The difference in the number of tourist arrivals between these two years is 24.7 million − 21.8 million = 2.9 million. Therefore, the value of k is 3 when rounded to the nearest integer.",
