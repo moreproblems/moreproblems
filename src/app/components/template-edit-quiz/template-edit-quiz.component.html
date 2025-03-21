@@ -1708,22 +1708,32 @@
                     <img *ngIf="is_image(block) && prob_images[block].length != 2" [src]="prob_images[block]" style="max-width: min(750px, 90%); max-height: 750px">
                     <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                       <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_dump[block.slice(7)].Title}}</h3>
-                      <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
+                      <table
+                        style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
                         <thead>
-                          <tr style="border: 3px solid black; background-color: grey">
-                            <th *ngFor="let header of supp_dump[block.slice(7)].Headers" style="width: fit-content">{{header}}</th>
+                          <tr style="border: 3px solid black; background-color: #aaa">
+                            <th *ngFor="let header of supp_dump[block.slice(7)].Headers" style="width: fit-content; padding: 10px">
+                              {{header}}</th>
                           </tr>
                         </thead>
                         <tbody style="border: 5px solid black">
-                          <tr *ngFor="let row of supp_dump[block.slice(7)].Rows" style="background-color: rgb(236, 236, 236)">
-                            <td *ngFor="let cell of row" style="border-top: 1px solid #ddd">
-                              <span *ngIf="!cell.startsWith(':T-')"><b>{{cell}}</b></span>
-                              <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; flex-wrap: wrap; margin: 0px">
-                                <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px auto; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT--{{cell[3]}}"></textarea>
-                                <button class="grade-button" (click)="attempt_t_problem(get_T(cell[3], ''), cell[3], ''); scroll_bottom()"
-                                  style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: 40px; margin: auto; padding: 5px; align-items: center">
-                                  <b style="display: flex; margin: 0px; height: 20px; align-items: center"> Submit </b>
-                                </button>
+                          <tr *ngFor="let row of supp_dump[block.slice(7)].Rows"
+                            style="background-color: rgb(236, 236, 236)">
+                            <td *ngFor="let cell of row" style="padding: 5px 10px; border-top: 1px solid #ddd">
+                              <span *ngFor="let word of cell.split(' ')">
+                                <span *ngIf="!word.startsWith(':T-')"><b>{{word}} </b></span>
+                                <span *ngIf="word.startsWith(':T-')"
+                                  style="display: inline-flex; flex-wrap: wrap; margin: 0px">
+                                  <textarea *ngIf="problem_selection[0][+word[3] - 1] == ''" (change)="attempt_t_problem(get_T(word[3], ''), word[3], ''); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
+                                    style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                    id="inputT--{{word[3]}}"></textarea>
+                                  <textarea *ngIf="problem_selection[0][+word[3] - 1] != '' && problem_selection[0][+word[3] - 1] == prob.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_problem(get_T(word[3], ''), word[3], ''); scroll_bottom()" rows="1" maxlength="20" value="{{problem_selection[0][+word[3] - 1]}}" placeholder="Answer"
+                                    style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                    id="inputT--{{word[3]}}"></textarea>
+                                  <textarea *ngIf="problem_selection[0][+word[3] - 1] != '' && problem_selection[0][+word[3] - 1] != prob.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_problem(get_T(word[3], ''), word[3], ''); scroll_bottom()" rows="1" maxlength="20" value="{{problem_selection[0][+word[3] - 1]}}" placeholder="Answer"
+                                    style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                    id="inputT--{{word[3]}}"></textarea>
+                                </span>
                               </span>
                             </td>
                           </tr>
@@ -2405,14 +2415,18 @@
                     </button>
                   </div>
                   <div *ngIf="prob.value.Type == 'T'">
-                    <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <h3
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                      <br /> <br /> <p *ngFor="let selec of problem_selection[0]"> <b>{{'\nExplanation '  + ''+(problem_selection[0].indexOf(selec)+1)}}</b>: {{(attempt_explanation[0][problem_selection[0].indexOf(selec)] != '') ? attempt_explanation[0][problem_selection[0].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                      <br /> <br />
+                      <p *ngFor="let selec of problem_selection[0]; let i = index"> <b>{{'\nExplanation ' +
+                          ''+(i+1)}} ({{problem_selection[0][i]}})</b>:
+                        {{(attempt_explanation[0][i] != '') ?
+                        attempt_explanation[0][i] : 'No explanation or rationale is
+                        available.'}}</p>
                     </h3>
-                    <br
-                      *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
-                    <button
-                      *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                    <br *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                    <button *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                       class="grade-button" (click)="next_problem(); scroll_top()"
                       style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                       <b> Next Problem </b>
@@ -2547,22 +2561,32 @@
                 <img *ngIf="is_image(block)" src="./assets/{{block}}" style="max-width: min(750px, 90%); max-height: 750px">
                 <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                   <h3 style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">{{supp_dump[block.slice(7)].Title}}</h3>
-                  <table style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
+                  <table
+                    style="border: 1px solid black; margin: auto; margin-top: 10px; width: auto; max-width: 80vw; font-size: 18px; background-color: white">
                     <thead>
-                      <tr style="border: 3px solid black; background-color: grey">
-                        <th *ngFor="let header of supp_dump[block.slice(7)].Headers" style="width: fit-content">{{header}}</th>
+                      <tr style="border: 3px solid black; background-color: #aaa">
+                        <th *ngFor="let header of supp_dump[block.slice(7)].Headers" style="width: fit-content; padding: 10px">
+                          {{header}}</th>
                       </tr>
                     </thead>
                     <tbody style="border: 5px solid black">
-                      <tr *ngFor="let row of supp_dump[block.slice(7)].Rows" style="background-color: rgb(236, 236, 236)">
-                        <td *ngFor="let cell of row" style="border-top: 1px solid #ddd">
-                          <span *ngIf="!cell.startsWith(':T-')"><b>{{cell}}</b></span>
-                          <span *ngIf="cell.startsWith(':T-')" style="display: inline-flex; flex-wrap: wrap; margin: 0px">
-                            <textarea rows="1" maxlength="10" placeholder="Answer" style="margin: 10px auto; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" id="inputT-{{part.key}}-{{cell[3]}}"></textarea>
-                            <button class="grade-button" (click)="attempt_t_problem(get_T(cell[3], part.key), cell[3], part.key); scroll_bottom()"
-                              style="display: flex; flex-direction: column; max-width: 150px; max-height: 150px; height: 40px; margin: auto; padding: 5px; align-items: center">
-                              <b style="display: flex; margin: 0px; height: 20px; align-items: center"> Submit </b>
-                            </button>
+                      <tr *ngFor="let row of supp_dump[block.slice(7)].Rows"
+                        style="background-color: rgb(236, 236, 236)">
+                        <td *ngFor="let cell of row" style="padding: 5px 10px; border-top: 1px solid #ddd">
+                          <span *ngFor="let word of cell.split(' ')">
+                            <span *ngIf="!word.startsWith(':T-')"><b>{{word}} </b></span>
+                            <span *ngIf="word.startsWith(':T-')"
+                              style="display: inline-flex; flex-wrap: wrap; margin: 0px">
+                              <textarea *ngIf="problem_selection[get_part_num(part.key)][+word[3] - 1] == ''" (change)="attempt_t_problem(get_T(word[3], part.key), word[3], part.key); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
+                                style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                id="inputT-{{part.key}}-{{word[3]}}"></textarea>
+                              <textarea *ngIf="problem_selection[get_part_num(part.key)][+word[3] - 1] != '' && problem_selection[get_part_num(part.key)][+word[3] - 1] == part.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_problem(get_T(word[3], part.key), word[3], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{problem_selection[get_part_num(part.key)][+word[3] - 1]}}" placeholder="Answer"
+                                style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                id="inputT-{{part.key}}-{{word[3]}}"></textarea>
+                              <textarea *ngIf="problem_selection[get_part_num(part.key)][+word[3] - 1] != '' && problem_selection[get_part_num(part.key)][+word[3] - 1] != part.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_problem(get_T(word[3], part.key), word[3], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{problem_selection[get_part_num(part.key)][+word[3] - 1]}}" placeholder="Answer"
+                                style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                                id="inputT-{{part.key}}-{{word[3]}}"></textarea>
+                            </span>
                           </span>
                         </td>
                       </tr>
@@ -3149,9 +3173,15 @@
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'T'">
-                  <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                  <h3
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                     <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                    <br /> <br /> <p *ngFor="let selec of problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"> <b>{{'\nExplanation '  + ''+(problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)+1)}}</b>: {{(attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] != '') ? attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}</p>
+                    <br /> <br />
+                    <p *ngFor="let selec of problem_selection[(prob.value.Parts | keys).indexOf(part.key)]; let i = index"> <b>{{'\nExplanation ' +
+                        ''+(i+1)}} ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][i]}})</b>:
+                      {{(attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][i] != '') ?
+                      attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][i] : 'No explanation or rationale is
+                      available.'}}</p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'LR'">

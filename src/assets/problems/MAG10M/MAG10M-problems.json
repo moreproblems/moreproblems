@@ -1554,18 +1554,18 @@
                 }
             },
             "D": {
-                "Type": "MFR",
+                "Type": "FR",
                 "NumChoices": 0,
                 "Points": 1,
                 "Explain": false,
                 "Content": [
                     "Consider this incomplete equation.",
-                    ":box:cos(∠G) = cos( :FR-1: )",
+                    ":box:cos(∠G) = cos(___)",
                     "Complete the equation so that it represents cos(∠G) in terms of 𝜃."
                 ],
                 "AnswerChoices": {
-                    "1:KEY": {
-                        "Choice": "90-𝜃",
+                    "KEY": {
+                        "Choice": "equal:90-𝜃",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
