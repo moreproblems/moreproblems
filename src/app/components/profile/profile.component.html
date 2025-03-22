@@ -2330,13 +2330,13 @@
                                   style="display: inline-flex; flex-wrap: wrap; margin: 0px">
                                   <textarea *ngIf="subtopic_problem_selection[0][+word[3] - 1] == ''" (change)="attempt_t_st_problem(get_T_st(word[3], ''), word[3], ''); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
                                     style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                                    id="inputT--{{word[3]}}"></textarea>
+                                    id="inputTST--{{word[3]}}"></textarea>
                                   <textarea *ngIf="subtopic_problem_selection[0][+word[3] - 1] != '' && subtopic_problem_selection[0][+word[3] - 1] == prob.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_st_problem(get_T_st(word[3], ''), word[3], ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][+word[3] - 1]}}" placeholder="Answer"
                                     style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                                    id="inputT--{{word[3]}}"></textarea>
+                                    id="inputTST--{{word[3]}}"></textarea>
                                   <textarea *ngIf="subtopic_problem_selection[0][+word[3] - 1] != '' && subtopic_problem_selection[0][+word[3] - 1] != prob.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_st_problem(get_T_st(word[3], ''), word[3], ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][+word[3] - 1]}}" placeholder="Answer"
                                     style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                                    id="inputT--{{word[3]}}"></textarea>
+                                    id="inputTST--{{word[3]}}"></textarea>
                                 </span>
                               </span>
                             </td>
@@ -2447,14 +2447,15 @@
                           </select>
                           <div *ngIf="word.startsWith(':FR-')" class="card card-medium"
                             style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
-                            <textarea rows="1" maxlength="20" placeholder="Answer"
-                              style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                              id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
-                            <button class="grade-button"
-                              (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
-                              style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                              <b> Submit </b>
-                            </button>
+                            <textarea *ngIf="subtopic_problem_selection[0][+word[4] - 1] == ''" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
+                              style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                              id="inputMFRST--{{word[4]}}"></textarea>
+                            <textarea *ngIf="subtopic_problem_selection[0][+word[4] - 1] != '' && subtopic_problem_selection[0][+word[4] - 1] == prob.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][+word[4] - 1]}}" placeholder="Answer"
+                              style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                              id="inputMFRST--{{word[4]}}"></textarea>
+                            <textarea *ngIf="subtopic_problem_selection[0][+word[4] - 1] != '' && subtopic_problem_selection[0][+word[4] - 1] != prob.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][+word[4] - 1]}}" placeholder="Answer"
+                              style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                              id="inputMFRST--{{word[4]}}"></textarea>
                           </div>
                           <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(this.DDInput.value, '')"
                               style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; width: 50px; height: 40px; font-size: 20px; font-weight: 800; text-align: left" #probNumInput>
@@ -2572,14 +2573,15 @@
                         </select>
                         <div *ngIf="word.startsWith(':FR-')" class="card card-medium"
                           style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
-                          <textarea rows="1" maxlength="20" placeholder="Answer"
-                            style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                            id="inputMFR--{{word[4]}}" #inputMFRST></textarea>
-                          <button class="grade-button"
-                            (click)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()"
-                            style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                            <b> Submit </b>
-                          </button>
+                          <textarea *ngIf="subtopic_problem_selection[0][+word[4] - 1] == ''" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
+                            style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                            id="inputMFRST--{{word[4]}}"></textarea>
+                          <textarea *ngIf="subtopic_problem_selection[0][+word[4] - 1] != '' && subtopic_problem_selection[0][+word[4] - 1] == prob.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][+word[4] - 1]}}" placeholder="Answer"
+                            style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                            id="inputMFRST--{{word[4]}}"></textarea>
+                          <textarea *ngIf="subtopic_problem_selection[0][+word[4] - 1] != '' && subtopic_problem_selection[0][+word[4] - 1] != prob.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], ''), word[4], ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][+word[4] - 1]}}" placeholder="Answer"
+                            style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                            id="inputMFRST--{{word[4]}}"></textarea>
                         </div>
                         <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')"
                             style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; width: 50px; height: 40px; font-size: 20px; font-weight: 800; text-align: left" #probNumInput>
@@ -3427,14 +3429,14 @@
                   <div *ngIf="prob.value.Type == 'MFR'">
                     <h3
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}}
+                      <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} 
                         {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
                       <br /> <br />
-                      <p *ngFor="let selec of subtopic_problem_selection[0]"> <b>{{'\nExplanation ' +
-                          ''+(subtopic_problem_selection[0].indexOf(selec)+1)}}</b>:
-                        {{(subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] != '') ?
-                        subtopic_attempt_explanation[0][subtopic_problem_selection[0].indexOf(selec)] : 'No explanation
-                        or rationale is available.'}}</p>
+                      <p *ngFor="let selec of subtopic_problem_selection[0]; let i = index"> <b>{{'\nExplanation ' +
+                          ''+(i+1)}} ({{subtopic_problem_selection[0][i]}})</b>:
+                        {{(subtopic_attempt_explanation[0][i] != '') ?
+                        subtopic_attempt_explanation[0][i] : 'No explanation or rationale is
+                        available.'}}</p>
                     </h3>
                     <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                     <button *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
@@ -3500,13 +3502,13 @@
                               style="display: inline-flex; flex-wrap: wrap; margin: 0px">
                               <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1] == ''" (change)="attempt_t_st_problem(get_T_st(word[3], part.key), word[3], part.key); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
                                 style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                                id="inputT-{{part.key}}-{{word[3]}}"></textarea>
+                                id="inputTST-{{part.key}}-{{word[3]}}"></textarea>
                               <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1] != '' && subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1] == part.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_st_problem(get_T_st(word[3], part.key), word[3], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1]}}" placeholder="Answer"
                                 style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                                id="inputT-{{part.key}}-{{word[3]}}"></textarea>
+                                id="inputTST-{{part.key}}-{{word[3]}}"></textarea>
                               <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1] != '' && subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1] != part.value.AnswerChoices[word[3] + ':KEY'].Choice" (change)="attempt_t_st_problem(get_T_st(word[3], part.key), word[3], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[3] - 1]}}" placeholder="Answer"
                                 style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                                id="inputT-{{part.key}}-{{word[3]}}"></textarea>
+                                id="inputTST-{{part.key}}-{{word[3]}}"></textarea>
                             </span>
                           </span>
                         </td>
@@ -3613,15 +3615,16 @@
                           value="{{choice.key}}"> {{choice.value}} </option>
                       </select>
                       <div *ngIf="word.startsWith(':FR-')" class="card card-medium"
-                        style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
-                        <textarea rows="1" maxlength="20" placeholder="Answer"
-                          style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                          id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
-                        <button class="grade-button"
-                          (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
-                          style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                          <b> Submit </b>
-                        </button>
+                        style="height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 5px; margin: auto 5px; align-items: center; display: inline-flex; flex-direction: row">
+                          <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] == ''" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
+                            style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                            id="inputMFRST-{{part.key}}-{{word[4]}}"></textarea>
+                          <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] != '' && subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] == part.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1]}}" placeholder="Answer"
+                            style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                            id="inputMFRST--{{word[4]}}"></textarea>
+                          <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] != '' && subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] != part.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1]}}" placeholder="Answer"
+                            style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                            id="inputMFRST-{{part.key}}-{{word[4]}}"></textarea>
                       </div>
                       <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(this.DDInput.value, '')"
                           style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; width: 50px; height: 40px; font-size: 20px; font-weight: 800; text-align: left" #probNumInput>
@@ -3737,15 +3740,16 @@
                         value="{{choice.key}}"> {{choice.value}} </option>
                     </select>
                     <div *ngIf="word.startsWith(':FR-')" class="card card-medium"
-                      style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: inline-flex; flex-direction: row">
-                      <textarea rows="1" maxlength="20" placeholder="Answer"
-                        style="margin: 10px; padding: 10px 3px; width: 100px; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                        id="inputMFR-{{part.key}}-{{word[4]}}" #inputMFRST></textarea>
-                      <button class="grade-button"
-                        (click)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()"
-                        style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                        <b> Submit </b>
-                      </button>
+                      style="height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 5px; margin: auto 5px; align-items: center; display: inline-flex; flex-direction: row">
+                        <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] == ''" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()" rows="1" maxlength="20" placeholder="Answer"
+                          style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                          id="inputMFRST-{{part.key}}-{{word[4]}}"></textarea>
+                        <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] != '' && subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] == part.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1]}}" placeholder="Answer"
+                          style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                          id="inputMFRST--{{word[4]}}"></textarea>
+                        <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] != '' && subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1] != part.value.AnswerChoices[word[4] + ':KEY'].Choice" (change)="attempt_mfr_st_problem(get_MFR_st(word[4], part.key), word[4], part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][+word[4] - 1]}}" placeholder="Answer"
+                          style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                          id="inputMFRST-{{part.key}}-{{word[4]}}"></textarea>
                     </div>
                     <!-- <select value="{{problem_number}}" (change)="attempt_idd_problem(word[4], this.DDInput.value, '')"
                         style="margin: auto 0px auto 3px; padding: 5px 0px 5px 3px; width: 50px; height: 40px; font-size: 20px; font-weight: 800; text-align: left" #probNumInput>
@@ -4205,19 +4209,15 @@
                 <div *ngIf="part.value.Type == 'MFR'">
                   <h3
                     style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts |
+                    <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | 
                       keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count +
                       ')' : ''}} </b>
                     <br /> <br />
-                    <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]">
-                      <b>{{'\nExplanation ' + ''+(subtopic_problem_selection[(prob.value.Parts |
-                        keys).indexOf(part.key)].indexOf(selec)+1)}}</b>:
-                      {{(subtopic_attempt_explanation[(prob.value.Parts |
-                      keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] != '') ? subtopic_attempt_explanation[(prob.value.Parts |
-                      keys).indexOf(part.key)][subtopic_problem_selection[(prob.value.Parts |
-                      keys).indexOf(part.key)].indexOf(selec)] : 'No explanation or rationale is available.'}}
-                    </p>
+                    <p *ngFor="let selec of subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)]; let i = index"> <b>{{'\nExplanation ' +
+                        ''+(i+1)}} ({{subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][i]}})</b>:
+                      {{(subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][i] != '') ?
+                      subtopic_attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][i] : 'No explanation or rationale is
+                      available.'}}</p>
                   </h3>
                 </div>
               </div>
