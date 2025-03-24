@@ -2870,13 +2870,15 @@
               <div *ngIf="prob.value.Type == 'FR'" style="width: 90%">
                 <div class="card card-medium"
                   style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
-                  <textarea rows="1" maxlength="20" placeholder="Final Answer"
-                    style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                  <textarea *ngIf="subtopic_problem_selection[0][0] == ''" (change)="attempt_fr_st_problem(this.inputFRST.value, ''); scroll_bottom()" rows="1" maxlength="20" placeholder="Final Answer"
+                    style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                     #inputFRST></textarea>
-                  <button class="grade-button"
-                    (click)="attempt_fr_st_problem(this.inputFRST.value, ''); scroll_bottom()"
-                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                    <b> Submit </b> </button>
+                  <textarea *ngIf="subtopic_problem_selection[0][0] != '' && subtopic_attempt_response[0].startsWith('Correct')" (change)="attempt_fr_st_problem(this.inputFRST.value, ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][0]}}" placeholder="Final Answer"
+                    style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                    #inputFRST></textarea>
+                  <textarea *ngIf="subtopic_problem_selection[0][0] != '' && !subtopic_attempt_response[0].startsWith('Correct')" (change)="attempt_fr_st_problem(this.inputFRST.value, ''); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[0][0]}}" placeholder="Final Answer"
+                    style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                    #inputFRST></textarea>
                 </div>
               </div>
               <div *ngIf="prob.value.Type == 'SR'" style="width: 90%">
@@ -3780,13 +3782,15 @@
               <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
                 <div class="card card-medium"
                   style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
-                  <textarea rows="1" maxlength="20" placeholder="Final Answer"
-                    style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                  <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][0] == ''" (change)="attempt_fr_st_problem(this.inputFRST.value, part.key); scroll_bottom()" rows="1" maxlength="20" placeholder="Final Answer"
+                    style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                     #inputFRST></textarea>
-                  <button class="grade-button"
-                    (click)="attempt_fr_st_problem(this.inputFRST.value, part.key); scroll_bottom()"
-                    style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                    <b> Submit </b> </button>
+                  <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][0] != '' && subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" (change)="attempt_fr_st_problem(this.inputFRST.value, part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][0]}}" placeholder="Final Answer"
+                    style="background: rgba(66, 156, 10, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                    #inputFRST></textarea>
+                  <textarea *ngIf="subtopic_problem_selection[get_part_num_st(part.key)][0] != '' && !subtopic_attempt_response[get_part_num_st(part.key)].startsWith('Correct')" (change)="attempt_fr_st_problem(this.inputFRST.value, part.key); scroll_bottom()" rows="1" maxlength="20" value="{{subtopic_problem_selection[get_part_num_st(part.key)][0]}}" placeholder="Final Answer"
+                    style="background: rgba(245, 77, 77, 0.75); margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                    #inputFRST></textarea>
                 </div>
               </div>
               <div *ngIf="part.value.Type == 'SR'" style="width: 90%">
@@ -5470,12 +5474,9 @@
             <div *ngIf="prob.value.Type == 'FR' && (prob.value.Parts | keys).length == 0" style="width: 90%">
               <div class="card card-medium"
                 style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
-                <textarea rows="1" maxlength="20" placeholder="Final Answer"
-                  style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                  #inputFR></textarea>
-                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value, ''); scroll_bottom()"
-                  style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                  <b> Submit </b> </button>
+                  <textarea (change)="attempt_fr_problem(this.inputFR.value, ''); scroll_bottom()" rows="1" maxlength="20" placeholder="Final Answer"
+                    style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                   #inputFR></textarea>
               </div>
             </div>
             <div *ngIf="prob.value.Type == 'SR' && (prob.value.Parts | keys).length == 0" style="width: 90%">
@@ -6138,12 +6139,9 @@
             <div *ngIf="part.value.Type == 'FR'" style="width: 90%">
               <div class="card card-medium"
                 style="min-height: 50px; height: auto; max-height: 100px; width: auto; max-width: 350px; padding: 10px; margin: auto; align-items: center; display: flex; flex-direction: row">
-                <textarea rows="1" maxlength="20" placeholder="Final Answer"
-                  style="margin: 10px auto; padding: 10px; width: min(80%, 200px); height: auto; font-size: 20px; line-height: 24px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
-                  #inputFR></textarea>
-                <button class="grade-button" (click)="attempt_fr_problem(this.inputFR.value, part.key); scroll_bottom()"
-                  style="display: block; max-width: 150px; max-height: 150px; margin: 0px 10px 0px 10px">
-                  <b> Submit </b> </button>
+                  <textarea (change)="attempt_fr_problem(this.inputFR.value, part.key); scroll_bottom()" rows="1" maxlength="20" placeholder="Final Answer"
+                    style="margin: auto; padding: 10px 3px; min-width: 100px; width: 80%; height: 20px; font-size: 18px; line-height: 20px; font-weight: 400; text-align: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+                   #inputFR></textarea>
               </div>
             </div>
             <div *ngIf="part.value.Type == 'SR'" style="width: 90%">
