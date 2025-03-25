@@ -3194,7 +3194,7 @@
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}}
                           {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
-                        <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                        <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
                       </h3>
                     </div>
                     <br *ngIf="subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" /> <br
@@ -3294,7 +3294,7 @@
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}}
                           {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
-                        <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                        <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
                       </h3>
                     </div>
                     <br
@@ -3322,7 +3322,7 @@
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}}
                           {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count + ')' : ''}} </b>
-                        <br /> <br /> <b>Explanation ({{subtopic_problem_selection[0][0]}}):</b> No rationale provided. The response submitted was correct.
+                        <br /> <br /> <b>Explanation ({{subtopic_problem_selection[0][0]}}):</b> No rationale available. The response submitted was correct.
                       </h3>
                       <br *ngIf="['equal:' + ''+subtopic_problem_selection[0][0], 'match:' + ''+subtopic_problem_selection[0][0]].includes(choice.value.Choice) && subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
                       <button *ngIf="['equal:' + ''+subtopic_problem_selection[0][0], 'match:' + ''+subtopic_problem_selection[0][0]].includes(choice.value.Choice) && subtopic_attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
@@ -3335,7 +3335,7 @@
                       <h3
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[0]}} </b>
-                        <br /> <br /> <b>Explanation ({{subtopic_problem_selection[0][0]}}):</b> No rationale provided. The response submitted was not correct.
+                        <br /> <br /> <b>Explanation ({{subtopic_problem_selection[0][0]}}):</b> No rationale available. The response submitted was not correct.
                       </h3>
                       <br *ngIf="screenWidth <= mobileWidth" />
                       <button *ngIf="screenWidth <= mobileWidth"
@@ -4020,7 +4020,7 @@
                       <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts |
                         keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count +
                         ')' : ''}} </b>
-                      <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                      <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
                     </h3>
                   </div>
                 </div>
@@ -4097,7 +4097,7 @@
                       <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts |
                         keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count +
                         ')' : ''}} </b>
-                      <br /> <br /> <b>Explanation:</b> No rationale provided. The number submitted was not right.
+                      <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
                     </h3>
                   </div>
                 </div>
@@ -4116,14 +4116,14 @@
                       <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts |
                         keys).indexOf(part.key)]}} {{(subtopic_streak_count > 1) ? '(🔥 ×' + ''+subtopic_streak_count +
                         ')' : ''}} </b>
-                      <br /> <br /> <b>Explanation ({{subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale provided. The response submitted was correct.
+                      <br /> <br /> <b>Explanation ({{subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was correct.
                     </h3>
                   </div>
                   <div *ngIf="!subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')">
                     <h3
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                      <br /> <br /> <b>Explanation ({{subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale provided. The response submitted was not correct.
+                      <br /> <br /> <b>Explanation ({{subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was not correct.
                     </h3>
                   </div>
                 </div>

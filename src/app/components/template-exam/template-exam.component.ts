@@ -4748,7 +4748,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                     }
                     else {
                       sub.Correct = [this.exam_key[Object.keys(this.exam_dump).indexOf("" + this.problem_number)][0]];
-                      // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                      // sub.Rationale = [['No explanation available. The number submitted was not right']];
                     }
                   }
                 }
@@ -4858,7 +4858,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                       }
                       else {
                         sub.Correct.push(this.exam_key[Object.keys(this.exam_dump).indexOf("" + this.problem_number)][Object.keys(prob.Parts).indexOf(name)]);
-                        // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                        // sub.Rationale.push(['No explanation available. The number submitted was not right']);
                       }
                     }
                   }
@@ -5237,7 +5237,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                         }
                         else {
                           sub.Correct = [this.exam_key[Object.keys(this.exam_dump).indexOf("" + this.problem_number)][0]];
-                          // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                          // sub.Rationale = [['No explanation available. The number submitted was not right']];
                         }
                       }
                     }
@@ -5347,7 +5347,7 @@ export class TemplateExamComponent implements OnInit, AfterViewInit {
                             }
                             else {
                               sub.Correct.push(this.exam_key[Object.keys(this.exam_dump).indexOf("" + this.problem_number)][Object.keys(prob.Parts).indexOf(name)]);
-                              // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                              // sub.Rationale.push(['No explanation available. The number submitted was not right']);
                             }
                           }
                         }

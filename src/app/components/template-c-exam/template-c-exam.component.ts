@@ -4761,7 +4761,7 @@ export class TemplateCExamComponent implements OnInit {
                                         }
                                         else {
                                             sub.Correct = [this.exam_key[Object.keys(this.exam_dump).indexOf("" + this.problem_number)][0]];
-                                            // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                                            // sub.Rationale = [['No explanation available. The number submitted was not right']];
                                         }
                                     }
                                 }
@@ -4871,7 +4871,7 @@ export class TemplateCExamComponent implements OnInit {
                                             }
                                             else {
                                                 sub.Correct.push(this.exam_key[Object.keys(this.exam_dump).indexOf("" + this.problem_number)][Object.keys(prob.Parts).indexOf(name)]);
-                                                // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                                                // sub.Rationale.push(['No explanation available. The number submitted was not right']);
                                             }
                                         }
                                     }
@@ -5250,7 +5250,7 @@ export class TemplateCExamComponent implements OnInit {
                                                 }
                                                 else {
                                                     sub.Correct = [this.exam_key[this.problem_number - 1][0]];
-                                                    // sub.Rationale = [['No rationale provided. The number submitted was not right']];
+                                                    // sub.Rationale = [['No explanation available. The number submitted was not right']];
                                                 }
                                             }
                                         }
@@ -5360,7 +5360,7 @@ export class TemplateCExamComponent implements OnInit {
                                                         }
                                                         else {
                                                             sub.Correct.push(this.exam_key[this.problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
-                                                            // sub.Rationale.push(['No rationale provided. The number submitted was not right']);
+                                                            // sub.Rationale.push(['No explanation available. The number submitted was not right']);
                                                         }
                                                     }
                                                 }
