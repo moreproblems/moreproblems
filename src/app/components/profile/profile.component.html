@@ -4368,7 +4368,7 @@
           </thead>
           <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
             <tr style="background-color: lightgrey">
-              <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
+              <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
               <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
                   (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
                   <b *ngIf="topic.value.Correct == topic.value.Total"
@@ -4416,30 +4416,31 @@
           </thead>
           <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
             <tr style="background-color: lightgrey">
-              <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-              <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
-                  (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
-                  <b *ngIf="topic.value.Correct == topic.value.Total"
-                    style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
-              </td>
-              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
-                style="border-top: 1px solid #ddd"> <b> -- </b> </td>
-              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
-                style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
-                  {{topic.value.Incorrect}} </b> </td>
+              <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
+            <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                <b *ngIf="topic.value.Correct == topic.value.Total"
+                  style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+            </td>
+            <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+              style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+            <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+              style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                {{topic.value.Incorrect}} </b> </td>
               <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
             </tr>
             <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
               <td colspan="2"
                 style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                <a (click)="search_subtopic([topic.key], subtopic.key)" style="font-weight: 500"> <i>
+                <a *ngIf="subtopic.key != ''" (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                     {{subtopic.key}} </i> </a>
+                <span *ngIf="subtopic.key == ''"> No subtopics available. </span>
               </td>
-              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect == 0"
-                style="border-top: 1px solid #ddd"> <b> -- </b> </td>
-              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect > 0"
-                style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
-                  {{subtopic.value.Incorrect}} </b> </td>
+            <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect == 0"
+              style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+            <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect > 0"
+              style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                {{subtopic.value.Incorrect}} </b> </td>
               <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
             </tr>
           </tbody>
@@ -4482,20 +4483,19 @@
                 [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
               <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                 [attr.rowspan]="sub.Correct.length">
-                <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
               </td>
               <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                 [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
               <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
               </td>
-              <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                  sub.Choice[sub.Correct.indexOf(part)]}} </b>
+              <td style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Correct.indexOf(part)] == '') ? '⏩' : (part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
               </td>
               <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}} </h4>
+                <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
+                </h4>
               </td>
-              <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{(sub.Path !=
-                undefined) ? sub.Path[sub.Correct.indexOf(part)] : ''}}) </td>
+              <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Correct.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Correct.indexOf(part)] + ' (' + sub.Path[sub.Correct.indexOf(part)] + ')'}} </td>
             </tr>
           </tbody>
         </table>
@@ -4537,20 +4537,19 @@
                 [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
               <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                 [attr.rowspan]="sub.Correct.length">
-                <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
               </td>
               <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                 [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
               <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
               </td>
-              <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                  sub.Choice[sub.Correct.indexOf(part)]}} </b>
+              <td style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Correct.indexOf(part)] == '') ? '⏩' : (part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
               </td>
               <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}} </h4>
+                <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
+                </h4>
               </td>
-              <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{(sub.Path !=
-                undefined) ? sub.Path[sub.Correct.indexOf(part)] : ''}}) </td>
+              <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Correct.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Correct.indexOf(part)] + ' (' + sub.Path[sub.Correct.indexOf(part)] + ')'}} </td>
             </tr>
           </tbody>
         </table>

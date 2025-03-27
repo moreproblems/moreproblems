@@ -67,6 +67,7 @@ export class TemplateEditQuizComponent implements OnInit {
   expand_overview = true;
   expand_topics = true;
   show_correct = false;
+  reviewed = false;
   shuffle = false;
   public = false;
   mode = 'assess';
@@ -6332,6 +6333,7 @@ export class TemplateEditQuizComponent implements OnInit {
       }
       // this.authService.UpdateUserData({ 'problems': this.exam_submission });
     }
+    this.reviewed = true;
   }
 
   toggle_favorite_std() {

@@ -4476,11 +4476,11 @@
       #problemSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
-        <h2 *ngIf="mode == 'assess' && reviewed && length_mode == 'number' && problem_number > quiz_length"> With {{number_correct}}
+        <h2 *ngIf="reviewed && mode == 'assess' && length_mode == 'number' && problem_number > quiz_length"> With {{number_correct}}
           out of
           {{quiz_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
-        <h2 *ngIf="mode == 'assess' && reviewed && length_mode == 'timer' && et_counter <= 0"> With {{number_correct}} out of
+        <h2 *ngIf="reviewed && mode == 'assess' && length_mode == 'timer' && et_counter <= 0"> With {{number_correct}} out of
           {{max_problem_number - 1}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{et_counter%60}}s</h2>
         <div
@@ -4531,7 +4531,7 @@
           <h4 *ngIf="mode == 'assess' && get_flag_count() != 0 && !expand_overview"
             style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b
               style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b>
-            <b>>{{get_flag_count()}} Flagged</b> {{(get_flag_count() == 1) ? 'Problem' : 'Problems'}}
+            <b>{{get_flag_count()}} Flagged</b> {{(get_flag_count() == 1) ? 'Problem' : 'Problems'}}
           </h4>
           <h4 *ngIf="mode == 'assess' && get_skip_count() != 0 && !expand_overview"
             style="margin-top: 5px; font-size: 17px; font-weight: 500"> ⏩ <b>{{get_skip_count()}} Skipped</b> {{(get_skip_count() == 1) ? 'Problem' : 'Problems'}}
@@ -4682,7 +4682,7 @@
         </div>
       </div>
       <div
-        *ngIf="mode == 'assess' && !reviewed && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))"
+        *ngIf="!reviewed && mode == 'assess' && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))"
         style="width: 100%;">
         <div class="card card-medium"
           style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: 20px auto; padding: min(20px, 3%)">
@@ -4719,63 +4719,34 @@
           <div class="card-container"
             style="height: auto; max-height: 650px; width: 100%; margin: 20px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch"
-              style="padding: 0px; margin: 0px 3px; height: 45px; width: 60px">
+              style="padding: 0px; margin: 0px 3px; height: 45px; width: 90px">
               <input type="checkbox" style="margin: 0px" value="{{sub}}">
               <button
                 *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0)  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                 class="toggle-button-off"
-                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
-                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span style="font-size: 25px; font-weight: 1200; width: 30px; text-align: right;">
-                  <b style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
-                </span>
+                style="margin: 0px; height: 40px; width: 90px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> ({{exam_submission[sub].Choice[0]}}) </span>
               </button>
               <button
                 *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0) && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                 class="toggle-button-off"
-                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
-                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                style="margin: 0px; height: 40px; width: 90px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
                 <span
-                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;">
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10"
-                    style="padding-left: 7px"> &#9873; </b>
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10"
+                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 40px; text-align: right;">
+                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                     style="padding-left: 3px"> &#9873; </b>
                 </span>
+                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> ({{exam_submission[sub].Choice[0]}}) </span>
               </button>
               <button
                 *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] == 0)"
                 class="toggle-button-off"
-                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
-                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                style="margin: 0px; height: 40px; width: 90px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
                 <span *ngIf="sub < max_problem_number"
-                  style="font-size: 16px; font-weight: 1200; width: 30px; text-align: right;">
-                  <b *ngIf="sub < 10" style="padding-left: 7px"> ⏩ </b>
-                  <b *ngIf="sub >=10" style="padding-left: 3px"> ⏩ </b>
+                  style="font-size: 16px; font-weight: 1200; width: 45px; text-align: right;">
+                  <b style="padding-left: 3px"> ⏩ </b>
                 </span>
-              </button>
-              <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Attempts[0] == 0"
-                class="toggle-button-disabled"
-                style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span
-                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right;">
-                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
-                    style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
-                </span>
-              </button>
-              <button *ngIf="sub == problem_number" class="toggle-button-on"
-                style="margin: 0px; height: 40px; width: 60px; font-size: 18px; padding: 0px">
-                <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
-                <span
-                  style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 30px; text-align: right">
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub < 10"
-                    style="padding-left: 7px"> &#9873; </b>
-                  <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1] && sub >=10"
-                    style="padding-left: 3px"> &#9873; </b>
-                  <b *ngIf="!exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
-                    style="color:rgba(255, 255, 255, 0); padding-left: 3px"> &#9873; </b>
-                </span>
               </button>
             </label>
           </div>
@@ -4787,7 +4758,7 @@
         </div>
       </div>
       <div
-        *ngIf="mode == 'assess' && reviewed && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))"
+        *ngIf="reviewed && mode == 'assess' && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))"
         style="width: 100%;">
         <button class="grade-button" (click)="resetExam();"
           style="display: block; max-width: 150px; max-height: 150px; margin: auto">
@@ -4866,10 +4837,16 @@
             <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
               <tr style="background-color: lightgrey">
                 <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                    ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
-                    {{(topic.value.Incorrect == 0) ? '--' : topic.value.Incorrect}} </b> </td>
+                <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                    (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                    <b *ngIf="topic.value.Correct == topic.value.Total"
+                      style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+                </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+                  style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+                  style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                    {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
               </tr>
             </tbody>
@@ -4906,10 +4883,16 @@
             <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
               <tr style="background-color: lightgrey">
                 <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                    ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
-                    {{(topic.value.Incorrect == 0) ? '--' : topic.value.Incorrect}} </b> </td>
+              <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                  (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                  <b *ngIf="topic.value.Correct == topic.value.Total"
+                    style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+              </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+                style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+                style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                  {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
               </tr>
               <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
@@ -4917,10 +4900,13 @@
                   style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
                   <a *ngIf="subtopic.key != ''" (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                       {{subtopic.key}} </i> </a>
-                  <span *ngIf="subtopic.key == ''"> -- </span>
+                  <span *ngIf="subtopic.key == ''">  No subtopics available. </span>
                 </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
-                  style="border-top: 1px solid #ddd"> {{(subtopic.value.Incorrect == 0) ? '--' : subtopic.value.Incorrect}} </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect == 0"
+                style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect > 0"
+                style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                  {{subtopic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
               </tr>
             </tbody>
@@ -5973,7 +5959,7 @@
                         style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                     </button>
                     <button (click)="remove_g_choice(selection, choice[0], '')"
-                      *ngIf="mode == 'assess' && selection != '' && (prob.value.AnswerChoices | keys).includes(selection + ':' + choice[0])"
+                      *ngIf="mode == 'assess' && selection != ''"
                       class="toggle-button-off"
                       style="display: flex; flex-direction: row; align-items: center; width: fit-content">
                       <div style="margin: 0 20px 0 0"> <b>{{selection[0]}}</b> </div>
@@ -8533,19 +8519,19 @@
         <div class="card-container" style="max-width: 100%; margin-top: 0px">
           <label class="switch" style="max-height: 200px; max-width: 350px; width: min(80%, 300px)">
             <input type="checkbox" style="margin: 0px" value="number">
-            <button *ngIf="length_mode == 'number'" (click)="length_mode='number'" class="toggle-button-on" tabindex="0"
+            <button *ngIf="length_mode == 'number'" class="toggle-button-on" tabindex="0"
               style="font-size: 16px"> <b style="font-size: 20px">Total Questions</b> <br /> Set a total number of
               questions and take as much time as needed </button>
-            <button *ngIf="length_mode != 'number'" (click)="length_mode='number'" class="toggle-button-off"
+            <button *ngIf="length_mode != 'number'" (click)="toggle_length_mode()" class="toggle-button-off"
               tabindex="0" style="font-size: 16px"> <b style="font-size: 20px">Total Questions</b> <br /> Set a total
               number of questions and take as much time as needed </button>
           </label>
           <label class="switch" style="max-height: 200px; max-width: 350px; width: min(80%, 300px)">
             <input type="checkbox" style="margin: 0px" value="timer">
-            <button *ngIf="length_mode == 'timer'" (click)="length_mode='timer'" class="toggle-button-on" tabindex="0"
+            <button *ngIf="length_mode == 'timer'" class="toggle-button-on" tabindex="0"
               style="font-size: 16px"> <b style="font-size: 20px">Duration of Time</b> <br /> Set a length of time and
               answer as many questions as possible</button>
-            <button *ngIf="length_mode != 'timer'" (click)="length_mode='timer'" class="toggle-button-off" tabindex="0"
+            <button *ngIf="length_mode != 'timer'" (click)="toggle_length_mode()" class="toggle-button-off" tabindex="0"
               style="font-size: 16px"> <b style="font-size: 20px">Duration of Time</b> <br /> Set a length of time and
               answer as many questions as possible </button>
           </label>
@@ -9540,10 +9526,16 @@
             </thead>
             <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
               <tr style="background-color: lightgrey">
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                    ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
+                <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                    (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                    <b *ngIf="topic.value.Correct == topic.value.Total"
+                      style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+                </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+                  style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+                  style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
                     {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
               </tr>
@@ -9580,21 +9572,31 @@
             </thead>
             <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
               <tr style="background-color: lightgrey">
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                    ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
-                    {{topic.value.Incorrect}} </b> </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
+              <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                  (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                  <b *ngIf="topic.value.Correct == topic.value.Total"
+                    style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+              </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+                style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+                style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                  {{topic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
               </tr>
               <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
                 <td colspan="2"
                   style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                  <a (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
+                  <a *ngIf="subtopic.key != ''" (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                       {{subtopic.key}} </i> </a>
+                  <span *ngIf="subtopic.key == ''">  No subtopics available. </span>
                 </td>
-                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
-                  style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect == 0"
+                style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+              <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect > 0"
+                style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                  {{subtopic.value.Incorrect}} </b> </td>
                 <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
               </tr>
             </tbody>
@@ -9638,21 +9640,19 @@
                   [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
                 <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                   [attr.rowspan]="sub.Correct.length">
-                  <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                  <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                 </td>
                 <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                   [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
                 <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
                 </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                    sub.Choice[sub.Correct.indexOf(part)]}} </b>
+                <td style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Correct.indexOf(part)] == '') ? '⏩' : (part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
                 </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}}
+                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                   </h4>
                 </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}}
-                  ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
+                <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Correct.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Correct.indexOf(part)] + ' (' + sub.Path[sub.Correct.indexOf(part)] + ')'}} </td>
               </tr>
             </tbody>
           </table>
@@ -9694,21 +9694,19 @@
                   [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
                 <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                   [attr.rowspan]="sub.Correct.length">
-                  <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                  <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                 </td>
                 <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                   [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
                 <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
                 </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                    sub.Choice[sub.Correct.indexOf(part)]}} </b>
+                <td style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Correct.indexOf(part)] == '') ? '⏩' : (part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
                 </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}}
+                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                   </h4>
                 </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}}
-                  ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
+                <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Correct.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Correct.indexOf(part)] + ' (' + sub.Path[sub.Correct.indexOf(part)] + ')'}} </td>
               </tr>
             </tbody>
           </table>

@@ -117,7 +117,7 @@ export class QuizzesComponent implements OnInit {
   // exam_name = 'STAAR';
   // exam_year = '2021';
   quiz_length = 10;
-  exam_timer = 10;
+  exam_timer = 0;
 
   favorite_set: string[] = [];
 
@@ -1833,10 +1833,16 @@ export class QuizzesComponent implements OnInit {
 
   toggle_length_mode() {
     if (this.length_mode == 'timer') {
+      const num: number = +this.exam_timer;
+      this.set_problem_num(num);
       this.length_mode = 'number';
+      this.exam_timer = 0;
     }
     else if (this.length_mode == 'number') {
+      const num: number = +this.quiz_length;
+      this.set_timer(num);
       this.length_mode = 'timer';
+      this.quiz_length = 0;
     }
   }
 
@@ -1975,7 +1981,8 @@ export class QuizzesComponent implements OnInit {
               }
               else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
                 if (val2.Choice.startsWith('equal:') || val2.Choice.startsWith('match:')) {
-                  this.exam_key[this.exam_key.length - 1][0].push(val2.Choice.slice(6));}
+                  this.exam_key[this.exam_key.length - 1][0].push(val2.Choice.slice(6));
+                }
                 else {
                   this.exam_key[this.exam_key.length - 1][0].push(val2.Choice);
                 }
@@ -7086,7 +7093,7 @@ export class QuizzesComponent implements OnInit {
                         }
                         else if (prob.Type == 'FR') {
                           if (sub.Attempts[0] > 0) {
-                            if (sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                            if ('equal:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
                               sub.Correct = [['✅']];
                               this.number_correct += 1;
                               // sub.Rationale = [[key.Key.Rationale]];

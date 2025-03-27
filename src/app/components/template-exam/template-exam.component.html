@@ -4171,7 +4171,7 @@
       #problemSummaryCard>
       <br />
       <div class="content" style="margin: auto; align-items: center">
-        <h2 *ngIf="problem_number > 0" style="padding-bottom: 20px; color: darkslategrey"> {{exam_state}} {{exam_name}}
+        <h2 *ngIf="reviewed && problem_number > 0" style="padding-bottom: 20px; color: darkslategrey"> {{exam_state}} {{exam_name}}
           {{exam_year}} {{exam_type}} {{exam_grade}} {{exam_subject}} Exam </h2>
         <div
           *ngIf="((exam_timer == 0 && order_numbers()[exam_length-1] >= problem_number) || (exam_timer > 0 && et_counter > 0)) && problem_number > 0"
@@ -4219,10 +4219,10 @@
           <div *ngIf="expand_overview" class="card-container"
             style="height: auto; max-height: 650px; width: 100%; margin-top: 15px; display: flex; flex-direction: row; align-items: center; justify-content: center">
             <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch"
-              style="padding: 0px; margin: 0px; height: 45px; width: 60px">
+              style="padding: 0px; margin: 0px 3px; height: 45px; width: 60px">
               <input type="checkbox" style="margin: 0px" value="{{sub}}">
               <button
-                *ngIf="sub != problem_number && sub <= max_problem_number && (this.exam_submission[sub].Attempts[0] != 0) && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0)  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                 class="toggle-button-off"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -4231,7 +4231,7 @@
                 </span>
               </button>
               <button
-                *ngIf="sub != problem_number && sub <= max_problem_number && (this.exam_submission[sub].Attempts[0] != 0) && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0) && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
                 class="toggle-button-off"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -4244,7 +4244,7 @@
                 </span>
               </button>
               <button
-                *ngIf="sub != problem_number && sub <= max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)"
+                *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] == 0)"
                 class="toggle-button-off"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -4254,8 +4254,7 @@
                   <b *ngIf="sub >=10" style="padding-left: 3px"> ⏩ </b>
                 </span>
               </button>
-              <button
-                *ngIf="sub != problem_number && sub > max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)"
+              <button *ngIf="sub != problem_number && sub > max_problem_number && exam_submission[sub].Attempts[0] == 0"
                 class="toggle-button-disabled"
                 style="margin: 0px; height: 40px; width: 60px; font-size: 16px; padding: 0px">
                 <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
@@ -4279,27 +4278,101 @@
                 </span>
               </button>
             </label>
+            <label *ngIf="max_problem_number > +(exam_dump | keys)[(exam_dump | keys).length - 1]" (click)="go_to_prob(max_problem_number)" class="switch"
+              style="padding: 0px; margin: 0px 3px; height: 45px; width: 80px">
+              <input type="checkbox" style="margin: 0px" value="{{sub}}">
+              <button class="toggle-button-off"
+                style="margin: 0px; height: 40px; width: 80px; font-size: 16px; padding: 0px; border: 3px solid #1976d2">
+                <span style="width: 30px; text-align: left"> <b> Review </b> </span>
+              </button>
+            </label>
           </div>
         </div>
-        <h2 *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0))"> With
+        <div
+          *ngIf="!reviewed && problem_number > exam_length"
+          style="width: 100%;">
+          <div class="card card-medium"
+            style="display: block; text-align: center; width: fit-content; max-width: min(100%, 900px); color: darkslategrey; margin: 20px auto; padding: min(20px, 3%)">
+            <section style="height: auto; max-height: 100px; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: center">
+              <div style="display: flex; flex-direction: row; align-items: center">
+                <div style="margin: auto; text-align: right">
+                  <h3 style="margin: 10px 0px 10px 15px; color: darkslategrey; font-size: 20px">
+                    Review Your Final Answers Before Submission </h3>
+                </div>
+              </div>
+            </section>
+            <br />
+            <h4 style="margin: auto 30px; font-size: 16px; font-weight: 500"> Quiz Progress:
+              <b>{{""+(max_problem_number-1)}}/{{""+exam_length}} ({{et_minutes}}m {{et_counter%60}}s)</b>
+            </h4>
+            <h4 *ngIf="get_flag_count() != 0"
+              style="margin-top: 5px; font-size: 17px; font-weight: 500"> <b
+                style="font-size: 27px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); padding-right: 5px">&#9873;</b>
+              <b>{{get_flag_count()}} Flagged</b> {{(get_flag_count() == 1) ? 'Problem' : 'Problems'}}
+            </h4>
+            <h4 *ngIf="get_skip_count() != 0"
+              style="margin-top: 5px; font-size: 17px; font-weight: 500"> ⏩ <b>{{get_skip_count()}} Skipped</b> {{(get_skip_count() == 1) ? 'Problem' : 'Problems'}}
+            </h4>
+            <div class="card-container"
+              style="height: auto; max-height: 650px; width: 100%; margin: 20px auto; display: flex; flex-direction: row; align-items: center; justify-content: center">
+              <label *ngFor="let sub of order_numbers()" (click)="go_to_prob(sub)" class="switch"
+                style="padding: 0px; margin: 0px 3px; height: 45px; width: 90px">
+                <input type="checkbox" style="margin: 0px" value="{{sub}}">
+                <button
+                  *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0)  && !exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                  class="toggle-button-off"
+                  style="margin: 0px; height: 40px; width: 90px; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
+                  <span style="width: 30px; text-align: left"> <b> {{sub}} </b> ({{exam_submission[sub].Choice[0]}}) </span>
+                </button>
+                <button
+                  *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] != 0) && exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                  class="toggle-button-off"
+                  style="margin: 0px; height: 40px; width: 90px; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
+                  <span
+                    style="font-size: 25px; font-weight: 1200; color:rgba(235, 67, 38, 0.757); width: 40px; text-align: right;">
+                    <b *ngIf="exam_submission[sub].Flags[exam_submission[sub].Flags.length-1]"
+                      style="padding-left: 3px"> &#9873; </b>
+                  </span>
+                  <span style="width: 30px; text-align: left"> <b> {{sub}} </b> ({{exam_submission[sub].Choice[0]}}) </span>
+                </button>
+                <button
+                  *ngIf="sub != problem_number && sub <= max_problem_number && (exam_submission[sub].Attempts[0] == 0)"
+                  class="toggle-button-off"
+                  style="margin: 0px; height: 40px; width: 90px; font-size: 16px; padding: 0px; border: 3px solid rgb(245, 77, 77)">
+                  <span *ngIf="sub < max_problem_number"
+                    style="font-size: 16px; font-weight: 1200; width: 45px; text-align: right;">
+                    <b style="padding-left: 3px"> ⏩ </b>
+                  </span>
+                  <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                </button>
+              </label>
+            </div>
+            <br />
+            <button class="grade-button" (click)="completeExam()"
+              style="display: block; max-width: 150px; max-height: 150px; margin: auto">
+              <b> Submit Quiz </b>
+            </button>
+          </div>
+        </div>
+        <h2 *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0))"> With
           {{number_correct}} out of
           {{exam_length}} problems
           correct, you scored {{correct_percent}}% in {{et_minutes}}m {{total_seconds%60}}s</h2>
         <h2
-          *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Masters Grade Level Performance'"
+          *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Masters Grade Level Performance'"
           style="color: green"> {{performance_level}} </h2>
         <h2
-          *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Approaches Grade Level Performance'"
+          *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Approaches Grade Level Performance'"
           style="color: blue"> {{performance_level}} </h2>
         <h2
-          *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Meets Grade Level Performance'"
+          *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Meets Grade Level Performance'"
           style="color: magenta"> {{performance_level}} </h2>
         <h2
-          *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Does Not Meet Grade Level Performance'"
+          *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0)) && performance_level == 'Does Not Meet Grade Level Performance'"
           style="color: red"> {{performance_level}} </h2>
-        <br *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0))" />
-        <div *ngIf="(problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0))"
-          style="width: 100%">
+        <br *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0))" />
+        <div *ngIf="reviewed && (problem_number > order_numbers()[exam_length-1] || (exam_timer > 0 && et_counter <= 0))"
+          style="margin: auto; width: 100%">
           <!-- <div class="card card-small" style="height: auto; width: auto; max-width: 500px; padding: 10px; margin: auto">
                           <button *ngIf="sub_form == ''" (click)="sub_form = 'adult'" class="grade-button"> <b> Share Your Results With An Adult </b> </button>
                           <button *ngIf="sub_form == ''" (click)="sub_form = 'friend'" class="grade-button"> <b> Invite A Friend To Beat Your Results </b> </button>
@@ -4372,10 +4445,16 @@
               </thead>
               <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
                 <tr style="background-color: lightgrey">
-                  <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                      ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
+                  <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                      (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                      <b *ngIf="topic.value.Correct == topic.value.Total"
+                        style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+                  </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+                    style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+                  <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+                    style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
                       {{topic.value.Incorrect}} </b> </td>
                   <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
                 </tr>
@@ -4413,21 +4492,31 @@
               </thead>
               <tbody *ngFor="let topic of topic_breakdown | keyvalue" style="border: 5px solid black">
                 <tr style="background-color: lightgrey">
-                  <td style="border-top: 1px solid #ddd"> <b> {{topic.key}} </b> </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Percent}}%
-                      ({{topic.value.Correct}}/{{topic.value.Total}}) </b> </td>
-                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"> <b>
-                      {{topic.value.Incorrect}} </b> </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(topic.key == 0) ? '--' : topic.key}} </b> </td>
+                <td style="border-top: 1px solid #ddd; min-width: 95px"> <b> {{topic.value.Percent}}%
+                    (<b *ngIf="topic.value.Correct < topic.value.Total">{{topic.value.Correct}}/{{topic.value.Total}}</b>
+                    <b *ngIf="topic.value.Correct == topic.value.Total"
+                      style="color: rgb(66, 156, 10)">{{topic.value.Correct}}/{{topic.value.Total}}</b>) </b>
+                </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect == 0"
+                  style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && topic.value.Incorrect > 0"
+                  style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                    {{topic.value.Incorrect}} </b> </td>
                   <td style="border-top: 1px solid #ddd"> <b> {{topic.value.Time}} </b> </td>
                 </tr>
                 <tr *ngFor="let subtopic of topic.value.Subs | keyvalue">
                   <td colspan="2"
                     style="border-top: 1px solid #ddd; ; text-align: left; padding-left: 20px; padding-right: 20px">
-                    <a (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
+                    <a *ngIf="subtopic.key != ''" (click)="search_subtopic(topic.key, subtopic.key)" style="font-weight: 500"> <i>
                         {{subtopic.key}} </i> </a>
+                    <span *ngIf="subtopic.key == ''">  No subtopics available. </span>
                   </td>
-                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd"
-                    style="border-top: 1px solid #ddd"> {{subtopic.value.Incorrect}} </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect == 0"
+                  style="border-top: 1px solid #ddd"> <b> -- </b> </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth && subtopic.value.Incorrect > 0"
+                  style="border-top: 1px solid #ddd; color: rgb(245, 77, 77)"> <b>
+                    {{subtopic.value.Incorrect}} </b> </td>
                   <td style="border-top: 1px solid #ddd"> {{subtopic.value.Time}} </td>
                 </tr>
               </tbody>
@@ -4471,21 +4560,19 @@
                     [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
                   <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Correct.length">
-                    <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+                    <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                   </td>
                   <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] :
-                    part}} </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                      sub.Choice[sub.Correct.indexOf(part)]}} </b>
+                  <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
+                  </td>
+                  <td style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Correct.indexOf(part)] == '') ? '⏩' : (part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
                   </td>
                   <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}}
+                    <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                     </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}} ({{(sub.Path !=
-                    undefined) ? sub.Path[sub.Correct.indexOf(part)] : ''}}) </td>
+                  <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Correct.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Correct.indexOf(part)] + ' (' + sub.Path[sub.Correct.indexOf(part)] + ')'}} </td>
                 </tr>
               </tbody>
             </table>
@@ -4521,35 +4608,33 @@
                   <th style="padding-left: 10px; padding-right: 10px"> Attempts </th>
                 </tr>
               </thead>
-              <tbody *ngFor="let sub of exam_submission_list">
-                <tr *ngFor="let part of sub.Correct">
-                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                    [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
-                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                    [attr.rowspan]="sub.Correct.length">
-                    <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
-                  </td>
-                  <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                    [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
-                  <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] :
-                    part}} </td>
-                  <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                      sub.Choice[sub.Correct.indexOf(part)]}} </b>
-                  </td>
-                  <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}}
-                    </h4>
-                  </td>
-                  <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}}
-                    ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
-                </tr>
-              </tbody>
+            <tbody *ngFor="let sub of exam_submission_list">
+              <tr *ngFor="let part of sub.Correct">
+                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
+                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Correct.length">
+                  <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
+                </td>
+                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
+                <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
+                </td>
+                <td style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Correct.indexOf(part)] == '') ? '⏩' : (part == '✅') ? part : sub.Choice[sub.Correct.indexOf(part)]}} </b>
+                </td>
+                <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
+                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
+                  </h4>
+                </td>
+                <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Correct.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Correct.indexOf(part)] + ' (' + sub.Path[sub.Correct.indexOf(part)] + ')'}} </td>
+              </tr>
+            </tbody>
             </table>
           </div>
           <br />
         </div>
         <div *ngIf="dumpService.exam_attribute_dump[key].Parts.length > 0"
-          style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+          style="margin: auto; height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
           <h2 style="padding: 20px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}} {{exam_grade}}
             {{exam_subject}} Exam
           </h2>
@@ -4596,7 +4681,7 @@
           </div>
         </div>
         <div *ngIf="dumpService.exam_attribute_dump[key].Parts.length == 0 && problem_number == 0"
-          style="height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
+          style="margin: auto; height: auto; width: auto; max-width: 750px; display: flex; flex-direction: column; align-items: center">
           <h2 style="padding: auto 10px; margin-bottom: 15px"> {{exam_state}} {{exam_name}} {{exam_year}} {{exam_type}}
             {{exam_grade}}
             {{exam_subject}} Exam
