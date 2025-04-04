@@ -1884,6 +1884,20 @@ export class TemplateCExamComponent implements OnInit {
         }
     }
 
+    choice_attempted_st(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+        part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+      }
+      var attempt = false;
+      for (let i = 0; i < this.subtopic_attempt_path[part_num].length; i++) {
+        if (this.subtopic_attempt_path[part_num][i][0] == choice) {
+          attempt = true;
+        }
+      }
+      return (attempt);
+    }
+
     attempt_imc_problem(choice: string, part: string) {
         var part_num = 0;
         if (part != '') {
@@ -5191,7 +5205,7 @@ export class TemplateCExamComponent implements OnInit {
 
     go_to_prob(num: number) {
       if (num <= this.max_problem_number) {
-        if (this.max_problem_number <= this.exam_length) {
+        if (this.problem_number <= this.exam_length) {
           this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
           this.exam_submission[this.problem_number].Seconds = this.pt_counter;
           this.exam_submission[this.problem_number].Number = this.problem_number;

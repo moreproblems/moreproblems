@@ -5046,6 +5046,32 @@ export class DumpService {
     "SAT Suite": ["The SAT Suite"]
   }
 
+  topic_map: { [key: string]: string[] } = {
+    "Reading Information - Craft & Structure": ["Reading Information - Craft & Structure"],
+    "Reading Information - Key Ideas & Details": ["Reading Information - Key Ideas & Details"],
+    "Reading Information - Integration Of Knowledge & Ideas": ["Reading Information - Integration Of Knowledge & Ideas"],
+    "Reading Literature - Craft & Structure": ["Reading Literature - Craft & Structure"],
+    "Reading Literature - Key Ideas & Details": ["Reading Literature - Key Ideas & Details"],
+    "Reading Literature - Integration Of Knowledge & Ideas": ["Reading Literature - Integration Of Knowledge & Ideas"],
+    "Conventions Of Standard English": ["Conventions Of Standard English"],
+    "Knowledge Of Language": ["Knowledge Of Language"],
+    "Text Types & Purposes": ["Text Types & Purposes"],
+    "Vocabulary Acquisition & Use": ["Vocabulary Acquisition & Use"],
+    "Geometry": ["Geometry"],
+    "Measurement & Data": ["Measurement & Data"],
+    "Number & Operations - Fractions": ["Number & Operations - Fractions"],
+    "Number & Operations In Base Ten": ["Number & Operations In Base Ten"],
+    "Operations & Algebraic Thinking": ["Operations & Algebraic Thinking"],
+    "Expressions & Equations": ["Expressions & Equations"],
+    "Ratios & Proportional Relationships": ["Ratios & Proportional Relationships"],
+    "Statistics & Probability": ["Statistics & Probability"],
+    "The Number System": ["The Number System"],
+    "Functions": ["Functions"],
+    "Earth & Space Sciences": ["Earth & Space Sciences"],
+    "Life Sciences": ["Life Sciences"],
+    "Physical Sciences": ["Physical Sciences"]
+  }
+
   constructor() {}
 
 //   // Set data on localStorage

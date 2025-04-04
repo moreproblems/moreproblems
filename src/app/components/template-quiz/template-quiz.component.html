@@ -631,7 +631,7 @@
 
   button.toggle-button-off:hover {
     background-color: #0a1e33;
-    border-color: #0a1e33;
+    border: 3px solid #0a1e33;
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
@@ -639,7 +639,7 @@
 
   input:hover+.toggle-button-off {
     background-color: #0a1e33;
-    border-color: #0a1e33;
+    border: 3px solid #0a1e33;
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
@@ -3356,15 +3356,22 @@
                     <label class="switch" style="padding: 0 10px">
                       <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
                       <button
+                        *ngIf="subtopic_problem_selection[0][0]==choice.key && subtopic_attempt_response[0].startsWith('Correct')"
+                        class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                      </button>
+                      <button
                         *ngIf="subtopic_problem_selection[0][0]==choice.key && !subtopic_attempt_response[0].startsWith('Correct')"
                         class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                       </button>
                       <button
-                        *ngIf="subtopic_problem_selection[0][0]==choice.key && subtopic_attempt_response[0].startsWith('Correct')"
-                        class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                        *ngIf="subtopic_problem_selection[0][0]!=choice.key && !choice_attempted_st(choice.key, '')"
+                        class="toggle-button-off"> <b> {{choice.key}} </b>
                       </button>
-                      <button *ngIf="subtopic_problem_selection[0][0]!=choice.key" class="toggle-button-off"> <b>
-                          {{choice.key}} </b>
+                      <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && choice_attempted_st(choice.key, '') && choice.value.Key.Correct"
+                        class="toggle-button-off" style="background-color: rgba(66, 156, 100, 0.25); color: black"> <b> {{choice.key}} </b>
+                      </button>
+                      <button *ngIf="subtopic_problem_selection[0][0]!=choice.key && choice_attempted_st(choice.key, '') && !choice.value.Key.Correct"
+                        class="toggle-button-disabled" style="background-color: rgba(245, 77, 77, 0.25); color: black"> <b> {{choice.key}} </b>
                       </button>
                     </label>
                     <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
@@ -4271,18 +4278,24 @@
                     style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                     <label class="switch" style="padding: 0 10px">
                       <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
-                      <button
-                        *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
-                        class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
-                      </button>
-                      <button
-                        *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
-                        class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
-                      </button>
-                      <button
-                        *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key"
-                        class="toggle-button-off"> <b> {{choice.key}} </b>
-                      </button>
+                    <button
+                      *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button
+                      *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !subtopic_attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button
+                      *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && !choice_attempted_st(choice.key, part.key)"
+                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && choice_attempted_st(choice.key, part.key) && choice.value.Key.Correct"
+                      class="toggle-button-off" style="background-color: rgba(66, 156, 100, 0.25); color: black"> <b> {{choice.key}} </b>
+                    </button>
+                    <button *ngIf="subtopic_problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && choice_attempted_st(choice.key, part.key) && !choice.value.Key.Correct"
+                      class="toggle-button-disabled" style="background-color: rgba(245, 77, 77, 0.25); color: black"> <b> {{choice.key}} </b>
+                    </button>
                     </label>
                     <h3 *ngIf="!is_image(choice.value.Choice)"
                       style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
@@ -6208,30 +6221,27 @@
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
-                    <button *ngIf="problem_selection[0][0]==choice.key && mode == 'assess'" class="toggle-button-on">
-                      <b> {{choice.key}} </b>
+                    <button *ngIf="mode == 'assess' && problem_selection[0][0]==choice.key" class="toggle-button-on"> <b>
+                        {{choice.key}} </b>
                     </button>
                     <button
-                      *ngIf="problem_selection[0][0]==choice.key && mode == 'explain' && !attempt_response[0].startsWith('Correct')"
+                      *ngIf="mode == 'explain' && problem_selection[0][0]==choice.key && attempt_response[0].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button
+                      *ngIf="mode == 'explain' && problem_selection[0][0]==choice.key && !attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
                     <button
-                      *ngIf="problem_selection[0][0]==choice.key && mode == 'explain' && attempt_response[0].startsWith('Correct')"
-                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
-                    </button>
-                    <button *ngIf="problem_selection[0][0]!=choice.key" class="toggle-button-off"> <b> {{choice.key}}
-                      </b>
-                    </button>
-                    <!-- <button
-                      *ngIf="problem_selection[0][0]!=choice.key && (mode == 'assess' || !attempt_path[0].includes(choice.key))"
+                      *ngIf="problem_selection[0][0]!=choice.key && (mode == 'assess' || !choice_attempted(choice.key, ''))"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[0][0]!=choice.key && mode == 'explain' && attempt_path[0].includes(choice.key) && !prob.value.AnswerChoices[choice.key].Key.Correct"
-                      class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    <button *ngIf="problem_selection[0][0]!=choice.key && mode == 'explain' && choice_attempted(choice.key, '') && choice.value.Key.Correct"
+                      class="toggle-button-off" style="background-color: rgba(66, 156, 100, 0.25); color: black"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[0][0]!=choice.key && mode == 'explain' && attempt_path[0].includes(choice.key) && prob.value.AnswerChoices[choice.key].Key.Correct"
-                      class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
-                    </button> -->
+                    <button *ngIf="problem_selection[0][0]!=choice.key && mode == 'explain' && choice_attempted(choice.key, '') && !choice.value.Key.Correct"
+                      class="toggle-button-disabled" style="background-color: rgba(245, 77, 77, 0.25); color: black"> <b> {{choice.key}} </b>
+                    </button>
                   </label>
                   <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
                     style="display: block; margin: 0px 20px 0px 20px; margin: auto; white-space: pre-wrap">
@@ -7394,31 +7404,27 @@
                   style="min-height: 50px; min-width: 40%; max-height: 500px; max-width: 90%; padding: 10px; display: inline-flex; margin: 10px; height: auto; width: auto; align-items: center">
                   <label class="switch" style="padding: 0 10px">
                     <input type="checkbox" style="margin: 0px" value="{{choice.key}}">
-                    <button
-                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && mode == 'assess'"
-                      class="toggle-button-on"> <b> {{choice.key}} </b>
+                    <button *ngIf="mode == 'assess' && problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key" class="toggle-button-on"> <b>
+                        {{choice.key}} </b>
                     </button>
                     <button
-                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && mode == 'explain' && !attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      *ngIf="mode == 'explain' && problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
+                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
+                    </button>
+                    <button
+                      *ngIf="mode == 'explain' && problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && !attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
                     <button
-                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && mode == 'explain' && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
-                      class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
-                    </button>
-                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key"
+                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && (mode == 'assess' || !choice_attempted(choice.key, ''))"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
-                    <!-- <button
-                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && (mode == 'assess' || !attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key))"
-                      class="toggle-button-off"> <b> {{choice.key}} </b>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && mode == 'explain' && choice_attempted(choice.key, part.key) && choice.value.Key.Correct"
+                      class="toggle-button-off" style="background-color: rgba(66, 156, 100, 0.25); color: black"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && mode == 'explain' && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && !part.value.AnswerChoices[choice.key].Key.Correct"
-                      class="toggle-button-off" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
+                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && mode == 'explain' && choice_attempted(choice.key, part.key) && !choice.value.Key.Correct"
+                      class="toggle-button-disabled" style="background-color: rgba(245, 77, 77, 0.25); color: black"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && mode == 'explain' && attempt_path[(prob.value.Parts | keys).indexOf(part.key)].includes(choice.key) && part.value.AnswerChoices[choice.key].Key.Correct"
-                      class="toggle-button-off" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
-                    </button> -->
                   </label>
                   <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
                     style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">

@@ -1829,6 +1829,20 @@ export class ExamsComponent implements OnInit {
     }
   }
 
+  choice_attempted_st(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    }
+    var attempt = false;
+    for (let i = 0; i < this.subtopic_attempt_path[part_num].length; i++) {
+      if (this.subtopic_attempt_path[part_num][i][0] == choice) {
+        attempt = true;
+      }
+    }
+    return (attempt);
+  }
+
   attempt_imc_st_problem(choice: string, part: string) {
     var part_num = 0;
     if (part != '') {

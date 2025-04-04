@@ -1789,6 +1789,34 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
     }
   }
 
+  choice_attempted(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+    }
+    var attempt = false;
+    for (let i = 0; i < this.attempt_path[part_num].length; i++) {
+      if (this.attempt_path[part_num][i][0] == choice) {
+        attempt = true;
+      }
+    }
+    return (attempt);
+  }
+
+  choice_attempted_st(choice: string, part: string) {
+    var part_num = 0;
+    if (part != '') {
+      part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
+    }
+    var attempt = false;
+    for (let i = 0; i < this.subtopic_attempt_path[part_num].length; i++) {
+      if (this.subtopic_attempt_path[part_num][i][0] == choice) {
+        attempt = true;
+      }
+    }
+    return (attempt);
+  }
+
   attempt_imc_problem(choice: string, part: string) {
     var part_num = 0;
     if (part != '') {
@@ -5431,7 +5459,7 @@ export class TemplateCQuizComponent implements OnInit, AfterViewInit {
 
   go_to_prob(num: number) {
     if (num <= this.max_problem_number) {
-      if (this.max_problem_number <= this.quiz_length) {
+      if (this.problem_number <= this.quiz_length) {
         if (this.mode == 'assess') {
           this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
           this.exam_submission[this.problem_number].Seconds = this.pt_counter;
