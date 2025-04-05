@@ -7416,7 +7416,7 @@
                       class="toggle-button-on" style="background-color: rgb(245, 77, 77)"> <b> {{choice.key}} </b>
                     </button>
                     <button
-                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && (mode == 'assess' || !choice_attempted(choice.key, ''))"
+                      *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && (mode == 'assess' || !choice_attempted(choice.key, part.key))"
                       class="toggle-button-off"> <b> {{choice.key}} </b>
                     </button>
                     <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && mode == 'explain' && choice_attempted(choice.key, part.key) && choice.value.Key.Correct"

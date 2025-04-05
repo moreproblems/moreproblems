@@ -178,6 +178,7 @@ export class QuizzesComponent implements OnInit {
   standard_fav = false;
   includes_standard = false;
   streak_count = 0;
+  max_streak_count = 0;
   subtopic_streak_count = 0;
   subtopic_problem_count = 0;
   subtopic_new_problem_count = 0;
@@ -1726,7 +1727,17 @@ export class QuizzesComponent implements OnInit {
   get_skip_count() {
     var count = 0;
     for (let sub of this.order_numbers()) {
-      if (sub < this.max_problem_number && (this.exam_submission[sub].Attempts[0] == 0)) {
+      if (sub < this.max_problem_number && ((this.exam_submission[sub].Attempts[0] == 0 && this.mode == 'assess') || (this.exam_submission[sub].Correct[0][0] != '✅' && this.mode == 'explain'))) {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  get_first_try_count() {
+    var count = 0;
+    for (let sub of this.order_numbers()) {
+      if (sub < this.max_problem_number && this.exam_submission[sub].Attempts[0] == 1 && this.exam_submission[sub].Correct[0][0] == '✅') {
         count += 1;
       }
     }
@@ -3184,7 +3195,7 @@ export class QuizzesComponent implements OnInit {
 
   toggle_filters() {
     this.expand_filters = !this.expand_filters;
-    if (this.mode == 'assess') {
+    if (this.mode == 'assess' || this.mode == 'explain') {
       for (let num of Object.keys(this.exam_dump)) {
         this.exam_submission[+num] = {
           'Number': +num,
@@ -3214,6 +3225,7 @@ export class QuizzesComponent implements OnInit {
     this.toggleExamTimer();
     this.toggleProblemTimer();
     this.streak_count = 0;
+    this.max_streak_count = 0;
     this.problem_number = 1;
     this.max_problem_number = 1;
     this.attempt_path = [];
@@ -3371,6 +3383,9 @@ export class QuizzesComponent implements OnInit {
                 if (key.Key.Correct == true) {
                   if (this.problem_attempts[part_num] == 1) {
                     this.streak_count += 1;
+                    if (this.streak_count > this.max_streak_count) {
+                      this.max_streak_count = this.streak_count;
+                    }
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
@@ -3517,6 +3532,9 @@ export class QuizzesComponent implements OnInit {
                 if (key.Key.Correct == true) {
                   if (this.problem_attempts[part_num] == 1) {
                     this.streak_count += 1;
+                    if (this.streak_count > this.max_streak_count) {
+                      this.max_streak_count = this.streak_count;
+                    }
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
@@ -3963,6 +3981,9 @@ export class QuizzesComponent implements OnInit {
             if (correct_attempt) {
               if (this.problem_attempts[part_num] == 1) {
                 this.streak_count += 1;
+                if (this.streak_count > this.max_streak_count) {
+                  this.max_streak_count = this.streak_count;
+                }
                 this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
               }
               else {
@@ -5916,6 +5937,9 @@ export class QuizzesComponent implements OnInit {
       }
       if (correct && this.problem_attempts[part_num] == 1) {
           this.streak_count += 1;
+          if (this.streak_count > this.max_streak_count) {
+            this.max_streak_count = this.streak_count;
+          }
           this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
       }
       else if (correct) {
@@ -6072,6 +6096,9 @@ export class QuizzesComponent implements OnInit {
       }
       if (correct && this.problem_attempts[part_num] == 1) {
           this.streak_count += 1;
+          if (this.streak_count > this.max_streak_count) {
+            this.max_streak_count = this.streak_count;
+          }
           this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
       }
       else if (correct) {
@@ -6435,7 +6462,7 @@ export class QuizzesComponent implements OnInit {
   }
 
   next_problem() {
-    if (this.mode == 'assess') {
+    if (this.mode == 'assess' || this.mode == 'explain') {
       this.exam_submission[this.problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
       this.exam_submission[this.problem_number].Seconds = this.pt_counter;
       this.exam_submission[this.problem_number].Number = this.problem_number;
@@ -7356,7 +7383,7 @@ export class QuizzesComponent implements OnInit {
     this.toggleProblemTimer();
     this.confetti_fireworks();
     if (this.mode == 'explain') {
-      this.resetExam();
+      // this.resetExam();
     }
     else if (this.mode == 'assess') {
       var length_num = 0;
@@ -7440,7 +7467,9 @@ export class QuizzesComponent implements OnInit {
       }
       // this.authService.UpdateUserData({ 'problems': this.exam_submission });
     }
-    this.reviewed = true;
+    if (this.mode == 'assess') {
+      this.reviewed = true;
+    }
   }
 
   toggle_favorite_std() {
