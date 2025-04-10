@@ -68,6 +68,7 @@ export class TemplateStandardsComponent implements OnInit {
     show_ruler = false;
     rotate_protractor = false;
     show_supplements = true;
+    reviewed_st = false;
 
     problem_number = 1;
     problem_selection: any[] = [];
@@ -88,6 +89,27 @@ export class TemplateStandardsComponent implements OnInit {
     random_index = 0
     random_list: string[] = [];
 
+    et_counter: number = 0;
+    et_minutes: number = 0;
+    et_timer: any;
+    et_running: boolean = false;
+    pt_counter: number = 0;
+    pt_minutes: number = 0;
+    pt_timer: any;
+    pt_running: boolean = false;
+
+    et_counter_st: number = 0;
+    et_minutes_st: number = 0;
+    et_timer_st: any;
+    et_running_st: boolean = false;
+    pt_counter_st: number = 0;
+    pt_minutes_st: number = 0;
+    pt_timer_st: any;
+    pt_running_st: boolean = false;
+  
+    number_correct = 0;
+    correct_percent = 0;
+
     subtopic_search_dump: { [key: number]: { 'Number': any, 'Type': string, 'NumChoices': number, 'Topics': string[], 'SubTopics': string[], 'SuppContent': string[], 'SuppTools': string[], 'Points': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } }, 'Parts': { [key: string]: { 'Type': string, 'NumChoices': number, 'Explain': boolean, 'Content': string[], 'AnswerChoices': { [key: string]: { 'Choice': string, 'Key': { 'Correct': boolean, 'Rationale': string, 'Percent': number } } } } } } } = {};
     pdf_dump: any = { content: [], styles: { tableExample: { margin: [0, 5, 0, 15] } }, defaultStyle: { columnGap: 20, fontSize: 15 }, images: {} };
 
@@ -100,6 +122,7 @@ export class TemplateStandardsComponent implements OnInit {
     includes_standard = false;
     streak_count = 0;
     subtopic_streak_count = 0;
+    subtopic_max_streak_count = 0;
     subtopic_problem_count = 0;
     subtopic_new_problem_count = 0;
     subtopic_correct_problem_count = 0;
@@ -178,6 +201,10 @@ export class TemplateStandardsComponent implements OnInit {
 
     max(num1: number, num2: number) {
         return (Math.max(num1, num2));
+    }
+
+    round(num: number) {
+      return (Math.round(num));
     }
 
     width_change2() {
@@ -608,112 +635,167 @@ export class TemplateStandardsComponent implements OnInit {
         // return (['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
         return (['.jpg', '.jpeg', '.png', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
     }
+  
+    get_skip_count_st() {
+      var count = 0;
+      for (let sub of this.order_numbers_st()) {
+        if (this.subtopic_submission[sub].Correct[0][0] != '✅') {
+          count += 1;
+        }
+      }
+      return (count)
+    }
+  
+    get_first_try_count_st() {
+      var count = 0;
+      for (let sub of this.order_numbers_st()) {
+        if (this.subtopic_submission[sub].Attempts[0] == 1 && this.subtopic_submission[sub].Correct[0][0] == '✅') {
+          count += 1;
+        }
+      }
+      return (count)
+    }
+  
+    order_numbers_st() {
+      return (Array.from({ length: Object.keys(this.subtopic_search_dump).length }, (_, i) => i + 1));
+    }
 
     select_student_st(id: string) {
-        //   this.exam_inprogress = false;
-        //   this.progress_number = 0;
-        if (id != this.selected_student_st) {
-            console.log(this.subtopic_search_dump);
-            this.selected_student_st = '';
-            this.selected_student_data = this.my_students_data[id];
-            const exam_history = this.my_students_data[id].exams.history;
-            this.subtopic_problem_count = 0;
-            this.subtopic_search_dump = {};
-            for (const [ex, dump] of Object.entries(this.dumpService.e_dump_dict)) {
-                if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-                    for (const [num, prob] of Object.entries(dump)) {
-                        if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
-                            if (prob.SubTopics.includes(this.selected_subtopic)) {
-                                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                    this.subtopic_problem_count += 1;
-                                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                        this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                                    }
-                                }
-                            }
-                        }
+      //   this.exam_inprogress = false;
+      //   this.progress_number = 0;
+      if (id != this.selected_student_st) {
+        console.log(this.subtopic_search_dump);
+        this.selected_student_st = '';
+        this.selected_student_data = this.my_students_data[id];
+        const exam_history = this.my_students_data[id].exams.history;
+        this.subtopic_problem_count = 0;
+        this.subtopic_search_dump = {};
+        for (const [ex, dump] of Object.entries(this.dumpService.e_dump_dict)) {
+          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+            for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
+                if (prob.SubTopics.includes(this.selected_subtopic)) {
+                  if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                    this.subtopic_problem_count += 1;
+                    this.subtopic_submission[this.subtopic_problem_count] = {
+                      'Number': this.subtopic_problem_count,
+                      'Topics': [],
+                      'SubTopics': [],
+                      'Choice': [],
+                      'Correct': [],
+                      'Rationale': [],
+                      'Attempts': [],
+                      'Path': [],
+                      'Seconds': 0,
+                      'Time': '',
+                      'Flags': [false]
+                    };
+                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                      this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
                     }
+                  }
                 }
+              }
             }
-            Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(id, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(id, valueB.Number)).timestamp);
-            console.log(this.subtopic_search_dump);
-            this.subtopic_streak_count = 0;
-            var nums: string[] = [];
-            var subs: any[] = [];
-            for (let i = 0; i < Object.keys(this.subtopic_search_dump).length; i++) {
-                nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number);
-                subs.push(this.authService.getStudExamSubmission2(id, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number).indexOf('-'))));
+          }
+        }
+        Object.entries(this.subtopic_search_dump).sort(([, valueA], [, valueB]) => (this.authService.getStudProbSubmission2(id, valueA.Number)).timestamp - (this.authService.getStudProbSubmission2(id, valueB.Number)).timestamp);
+        console.log(this.subtopic_search_dump);
+        this.subtopic_streak_count = 0;
+        var nums: string[] = [];
+        var subs: any[] = [];
+        for (let i = 0; i < Object.keys(this.subtopic_search_dump).length; i++) {
+          nums.push(this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number);
+          subs.push(this.authService.getStudExamSubmission2(id, this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number.substring(0, (this.subtopic_search_dump[Object.keys(this.subtopic_search_dump)[i] as any].Number).indexOf('-'))));
+        }
+        console.log(nums);
+        console.log(subs);
+        setTimeout(() => {
+          for (let i = 1; i <= subs.length; i++) {
+            this.subtopic_submission[i] = subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)];
+            this.subtopic_submission[i].Number = i;
+            if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
+              this.subtopic_streak_count += 1;
+              if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                this.subtopic_max_streak_count = this.subtopic_streak_count;
+              }
             }
-            console.log(nums);
-            console.log(subs);
+            else {
+              this.subtopic_streak_count = 0;
+            }
+          }
+        }, 100);
+        for (const [ex, dump] of Object.entries(this.dumpService.e_dump_dict)) {
+          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+            for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
+                if (prob.SubTopics.includes(this.selected_subtopic)) {
+                  if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                    this.subtopic_problem_count += 1;
+                    // this.subtopic_submission[this.subtopic_problem_count] = {
+                    //   'Number': +Object.keys(this.subtopic_submission).length,
+                    //   'Topics': [],
+                    //   'SubTopics': [],
+                    //   'Choice': [],
+                    //   'Correct': [],
+                    //   'Rationale': [],
+                    //   'Attempts': [],
+                    //   'Path': [],
+                    //   'Seconds': 0,
+                    //   'Time': '',
+                    //   'Flags': [false]
+                    // };
+                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
+                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
+                      this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        this.subtopic_new_problem_count = 0;
+        this.subtopic_correct_problem_count = 0;
+        for (const [ex, dump] of Object.entries(this.dumpService.e_dump_dict)) {
+          if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
+            for (const [num, prob] of Object.entries(dump)) {
+              if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
+                if (prob.SubTopics.includes(this.selected_subtopic)) {
+                  if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                    this.subtopic_new_problem_count += 1;
+                  }
+                }
+              }
+            }
+          }
+          if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
+            const exam_sub = this.authService.getStudExamSubmission2(id, ex);
             setTimeout(() => {
-                for (let i = 1; i <= subs.length; i++) {
-                    this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
-                    if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
-                        this.subtopic_streak_count += 1;
+              for (const [num, prob] of Object.entries(dump)) {
+                if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
+                  if (prob.SubTopics.includes(this.selected_subtopic)) {
+                    if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
+                      if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
+                        this.subtopic_correct_problem_count += 1;
+                      }
                     }
-                    else {
-                        this.subtopic_streak_count = 0;
-                    }
+                  }
                 }
+              }
             }, 100);
-            for (const [ex, dump] of Object.entries(this.dumpService.e_dump_dict)) {
-                if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-                    for (const [num, prob] of Object.entries(dump)) {
-                        if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
-                            if (prob.SubTopics.includes(this.selected_subtopic)) {
-                                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                    this.subtopic_problem_count += 1;
-                                    this.subtopic_search_dump[this.subtopic_problem_count] = prob;
-                                    if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
-                                        this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-            this.subtopic_new_problem_count = 0;
-            this.subtopic_correct_problem_count = 0;
-            for (const [ex, dump] of Object.entries(this.dumpService.e_dump_dict)) {
-                if (!Object.keys(exam_history).includes(ex) || (exam_history[ex] as any).status != "Completed") {
-                    for (const [num, prob] of Object.entries(dump)) {
-                        if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
-                            if (prob.SubTopics.includes(this.selected_subtopic)) {
-                                if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                    this.subtopic_new_problem_count += 1;
-                                }
-                            }
-                        }
-                    }
-                }
-                if (Object.keys(exam_history).includes(ex) && (exam_history[ex] as any).status == "Completed") {
-                    const exam_sub = this.authService.getStudExamSubmission2(id, ex);
-                    setTimeout(() => {
-                        for (const [num, prob] of Object.entries(dump)) {
-                            if (typeof prob.SubTopics != 'undefined' && !this.dumpService.exam_attribute_dump[ex].HideTopics) {
-                                if (prob.SubTopics.includes(this.selected_subtopic)) {
-                                    if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
-                                        if (((exam_sub.problems as any)[num].Correct.length == 1 && (exam_sub.problems as any)[num].Correct[0][0] == '✅') || ((exam_sub.problems as any)[num].Correct.length > 1 && this.is_MP_correct((exam_sub.problems as any)[num].Correct))) {
-                                            this.subtopic_correct_problem_count += 1;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }, 100);
-                }
-            }
-            console.log(this.subtopic_search_dump);
-            setTimeout(() => {
-                this.selected_student_st = id;
-            }, 250);
+          }
         }
-        else {
-            this.selected_student_st = '';
-        }
+        console.log(this.subtopic_search_dump);
+        console.log(this.subtopic_submission);
+        setTimeout(() => {
+          this.selected_student_st = id;
+        }, 250);
+      }
+      else {
+        this.selected_student_st = '';
+      }
     }
 
     sort_subtopic_problems() {
@@ -859,6 +941,9 @@ export class TemplateStandardsComponent implements OnInit {
                         this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
                         if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
                             this.subtopic_streak_count += 1;
+                            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                              this.subtopic_max_streak_count = this.subtopic_streak_count;
+                            }
                         }
                         else {
                             this.subtopic_streak_count = 0;
@@ -990,6 +1075,9 @@ export class TemplateStandardsComponent implements OnInit {
                                 if (key.Key.Correct == true) {
                                     if (this.subtopic_problem_attempts[part_num] == 1) {
                                         this.subtopic_streak_count += 1;
+                                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                        }
                                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                     }
                                     else {
@@ -1027,7 +1115,7 @@ export class TemplateStandardsComponent implements OnInit {
             }
         }
     }
-
+  
     choice_attempted_st(choice: string, part: string) {
       var part_num = 0;
       if (part != '') {
@@ -1035,7 +1123,10 @@ export class TemplateStandardsComponent implements OnInit {
       }
       var attempt = false;
       for (let i = 0; i < this.subtopic_attempt_path[part_num].length; i++) {
-        if (this.subtopic_attempt_path[part_num][i][0] == choice) {
+        if ((this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MC' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'MC')) && this.subtopic_attempt_path[part_num][i][0] == choice) {
+          attempt = true;
+        }
+        if ((this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MS' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'MS'))  && this.subtopic_attempt_path[part_num][i].includes(choice)) {
           attempt = true;
         }
       }
@@ -1061,6 +1152,9 @@ export class TemplateStandardsComponent implements OnInit {
                                 if (key.Key.Correct == true) {
                                     if (this.subtopic_problem_attempts[part_num] == 1) {
                                         this.subtopic_streak_count += 1;
+                                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                        }
                                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                     }
                                     else {
@@ -1157,6 +1251,9 @@ export class TemplateStandardsComponent implements OnInit {
                 if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                     if (this.subtopic_problem_attempts[part_num] == 1) {
                         this.subtopic_streak_count += 1;
+                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                        }
                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                     }
                     else {
@@ -1230,6 +1327,9 @@ export class TemplateStandardsComponent implements OnInit {
                 if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                     if (this.subtopic_problem_attempts[part_num] == 1) {
                         this.subtopic_streak_count += 1;
+                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                        }
                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                     }
                     else {
@@ -1294,6 +1394,9 @@ export class TemplateStandardsComponent implements OnInit {
                         if (correct_attempt) {
                             if (this.subtopic_problem_attempts[part_num] == 1) {
                                 this.subtopic_streak_count += 1;
+                                if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                  this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                }
                                 this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                             }
                             else {
@@ -1343,6 +1446,9 @@ export class TemplateStandardsComponent implements OnInit {
                                 if (key.Key.Correct == true) {
                                     if (this.subtopic_problem_attempts[part_num] == 1) {
                                         this.subtopic_streak_count += 1;
+                                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                        }
                                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                     }
                                     else {
@@ -1399,6 +1505,9 @@ export class TemplateStandardsComponent implements OnInit {
                                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                 if (this.subtopic_problem_attempts[part_num] == 1) {
                                     this.subtopic_streak_count += 1;
+                                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                    }
                                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                 }
                                 else {
@@ -1530,6 +1639,9 @@ export class TemplateStandardsComponent implements OnInit {
                 if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                     if (this.subtopic_problem_attempts[part_num] == 1) {
                         this.subtopic_streak_count += 1;
+                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                        }
                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                     }
                     else {
@@ -1608,6 +1720,9 @@ export class TemplateStandardsComponent implements OnInit {
                     if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                         if (this.subtopic_problem_attempts[part_num] == 1) {
                             this.subtopic_streak_count += 1;
+                            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                              this.subtopic_max_streak_count = this.subtopic_streak_count;
+                            }
                             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                         }
                         else {
@@ -1638,6 +1753,9 @@ export class TemplateStandardsComponent implements OnInit {
                                     this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                     if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
                                         this.subtopic_streak_count += 1;
+                                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                        }
                                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
                                     }
                                     else {
@@ -1653,6 +1771,9 @@ export class TemplateStandardsComponent implements OnInit {
                                     this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                     if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
                                         this.subtopic_streak_count += 1;
+                                        if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                          this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                        }
                                         this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
                                     }
                                     else {
@@ -1774,6 +1895,9 @@ export class TemplateStandardsComponent implements OnInit {
                     if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                         if (this.subtopic_problem_attempts[part_num] == 1) {
                             this.subtopic_streak_count += 1;
+                            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                              this.subtopic_max_streak_count = this.subtopic_streak_count;
+                            }
                             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                         }
                         else {
@@ -1803,6 +1927,9 @@ export class TemplateStandardsComponent implements OnInit {
                                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                 if (this.subtopic_problem_attempts[part_num] == 1) {
                                     this.subtopic_streak_count += 1;
+                                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                    }
                                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                                 }
                                 else {
@@ -2197,6 +2324,9 @@ export class TemplateStandardsComponent implements OnInit {
         }
         if (correct && this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
         }
         else if (correct) {
@@ -2267,6 +2397,9 @@ export class TemplateStandardsComponent implements OnInit {
         }
         if (correct && this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
         }
         else if (correct) {
@@ -2354,6 +2487,9 @@ export class TemplateStandardsComponent implements OnInit {
         }
         if (correct && this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
         }
         else if (correct) {
@@ -2502,6 +2638,44 @@ export class TemplateStandardsComponent implements OnInit {
         return dropdown.value;
     }
 
+    toggle_exam_timer_st() {
+      this.et_running_st = !this.et_running_st;
+      if (this.et_running_st) {
+        const startTime = Date.now() - (this.et_counter_st || 0);
+        this.et_timer_st = setInterval(() => {
+          this.et_counter_st = Math.round((Date.now() - startTime) / 1000);
+          this.et_minutes_st = Math.floor(this.et_counter_st / 60);
+        });
+      } else {
+        clearInterval(this.et_timer_st);
+      }
+    }
+  
+    clear_exam_timer_st() {
+      this.et_running_st = false;
+      this.et_counter_st = 0;
+      clearInterval(this.et_timer_st);
+    }
+  
+    toggle_problem_timer_st() {
+      this.pt_running_st = !this.pt_running_st;
+      if (this.pt_running_st) {
+        const startTime = Date.now() - (this.pt_counter_st || 0);
+        this.pt_timer_st = setInterval(() => {
+          this.pt_counter_st = Math.round((Date.now() - startTime) / 1000);
+          this.pt_minutes_st = Math.floor(this.pt_counter_st / 60);
+        });
+      } else {
+        clearInterval(this.pt_timer);
+      }
+    }
+  
+    clear_problem_timer_st() {
+      this.pt_running_st = false;
+      this.pt_counter_st = 0;
+      clearInterval(this.pt_timer_st);
+    }
+
     begin_practice_st() {
         console.log(this.subtopic_problem_count);
         console.log(this.subtopic_new_problem_count);
@@ -2605,176 +2779,442 @@ export class TemplateStandardsComponent implements OnInit {
                     }
                 }
             }
+            this.toggle_exam_timer_st();
+            this.toggle_problem_timer_st();
             this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
             if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
-                this.render_calc_st('');
+              this.render_calc_st('');
             }
             else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
-                this.render_calc_st('sci');
+              this.render_calc_st('sci');
             }
             else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
-                this.render_calc_st('graph');
+              this.render_calc_st('graph');
             }
             for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
-                setTimeout(() => {
-                    this.read_supp_st_json(supp);
-                }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+              setTimeout(() => {
+                this.read_supp_st_json(supp);
+              }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
             }
             if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-                for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                    for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
-                        if (block.startsWith(':table:')) {
-                            setTimeout(() => {
-                                this.read_table_st(block.slice(7));
-                            }, 100);
-                        }
-                    }
+              for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+                for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+                  if (block.startsWith(':table:')) {
+                    setTimeout(() => {
+                      this.read_table_st(block.slice(7));
+                    }, 100);
+                  }
                 }
+              }
             }
             if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-                for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
-                    if (block.startsWith(':table:')) {
-                        setTimeout(() => {
-                            this.read_table_st(block.slice(7));
-                        }, 100);
-                    }
+              for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+                if (block.startsWith(':table:')) {
+                  setTimeout(() => {
+                    this.read_table_st(block.slice(7));
+                  }, 100);
                 }
+              }
             }
+          }
         }
-    }
 
     next_problem_st() {
-        this.subtopic_problem_number += 1;
-        if (this.subtopic_problem_number > this.subtopic_problem_count) {
-            this.selected_subtopic = '';
-            this.standard_id = '';
+      this.subtopic_submission[this.subtopic_problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+      this.subtopic_submission[this.subtopic_problem_number].Seconds = this.pt_counter;
+      this.subtopic_submission[this.subtopic_problem_number].Number = this.subtopic_problem_number;
+      this.subtopic_submission[this.subtopic_problem_number].Topics = this.subtopic_search_dump[this.subtopic_problem_number].Topics;
+      this.subtopic_submission[this.subtopic_problem_number].SubTopics = this.subtopic_search_dump[this.subtopic_problem_number].SubTopics;
+      this.subtopic_submission[this.subtopic_problem_number].Choice = this.subtopic_problem_selection;
+      this.subtopic_submission[this.subtopic_problem_number].Attempts = this.subtopic_problem_attempts;
+      this.subtopic_submission[this.subtopic_problem_number].Path = this.subtopic_attempt_path;
+      // this.subtopic_submission[this.subtopic_problem_number].Correct = this.exam_key[this.subtopic_problem_number - 1];
+      this.subtopic_submission[this.subtopic_problem_number].Rationale = this.subtopic_attempt_explanation;
+      for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+        if (this.subtopic_problem_number == +num) {
+          for (const [num2, sub] of Object.entries(this.subtopic_submission)) {
+            if (this.subtopic_problem_number == +num2) {
+              console.log(sub.Choice);
+              // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+              // sub.Seconds = this.pt_counter;
+              // sub.Number = this.problem_number;
+              // sub.Topics = prob.Topics;
+              // sub.SubTopics = prob.SubTopics;
+              // sub.Attempts = this.problem_attempts;
+              // sub.Path = this.attempt_path;
+              if (Object.keys(prob.Parts).length == 0 && sub.Attempts[0] > 0) {
+                // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+                var ms_correct = true;
+                var mp_correct = true;
+                if (['O', 'C', 'G'].includes(prob.Type)) {
+                  if ((prob.Type == 'O' && this.is_m_correct_st('', false)) || (prob.Type == 'C' && this.is_c_correct_st('', false)) || (prob.Type == 'G' && this.is_g_correct_st('', false))) {
+                    sub.Correct = [['✅']];
+                    this.number_correct += 1;
+                  }
+                  else {
+                    // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                  }
+                  // sub.Rationale = this.attempt_explanation;
+                }
+                else if (['MR', 'LR'].includes(prob.Type)) {
+                  sub.Correct = [['👀']];
+                  if (this.subtopic_problem_selection[0] == '') {
+                    sub.Choice = [['No Student Response Given']];
+                  }
+                  else {
+                    this.number_correct += 1;
+                  }
+                }
+                else {
+                  for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                    if (['MC', 'IMC'].includes(prob.Type)) {
+                      if (sub.Attempts[0] > 0) {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
+                          if (key.Key.Correct == true) {
+                            sub.Correct = [['✅']];
+                            this.number_correct += 1;
+                          }
+                          else {
+                            // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                          }
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                      }
+                    }
+                    else if (['LP'].includes(prob.Type)) {
+                      if (sub.Attempts[0] > 0) {
+                        if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
+                          if (key.Key.Correct == true) {
+                            sub.Correct = [['✅']];
+                            this.number_correct += 1;
+                          }
+                          else {
+                            // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                          }
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                      }
+                    }
+                    else if (['MS', 'IMS'].includes(prob.Type)) {
+                      if (sub.Path[0].length > 0 && key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                        ms_correct = false;
+                      }
+                      else if (sub.Path[0].length > 0 && !key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                        ms_correct = false;
+                      }
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                      if (prob.Type == 'MFR') {
+                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                          mp_correct = false;
+                        }
+                      }
+                      if (prob.Type == 'T') {
+                        if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                          mp_correct = false;
+                        }
+                      }
+                      if (prob.Type == 'IDD') {
+                        if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                          mp_correct = false;
+                        }
+                        else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                          mp_correct = false;
+                        }
+                      }
+                    }
+                    else if (prob.Type == 'FR') {
+                      if (sub.Attempts[0] > 0) {
+                        if ('equal:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                          sub.Correct = [['✅']];
+                          this.number_correct += 1;
+                          // sub.Rationale = [[key.Key.Rationale]];
+                        }
+                        else {
+                          // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                          // sub.Rationale = [['No explanation available. The number submitted was not right']];
+                        }
+                      }
+                    }
+                  }
+                }
+                if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else if (['MS', 'IMS'].includes(prob.Type)) {
+                  // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                }
+                else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct_st(''))) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                  // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                }
+              }
+              else if (Object.keys(prob.Parts).length > 0) {
+                console.log(sub.Attempts.reduce((sum: any, current: any) => sum + current, 0));
+                if (sub.Attempts.reduce((sum: any, current: any) => sum + current, 0) > 0) {
+                  sub.Correct = [];
+                }
+                // sub.Rationale = [];
+                // sub.Rationale = this.attempt_explanation;
+                for (const [name, part] of Object.entries(prob.Parts)) {
+                  if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                    // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                    var ms_correct = true;
+                    var mp_correct = true;
+                    if (['O', 'C', 'G'].includes(part.Type)) {
+                      if ((part.Type == 'O' && this.is_m_correct_st(name, false)) || (part.Type == 'C' && this.is_c_correct_st(name, false)) || (part.Type == 'G' && this.is_g_correct_st(name, false))) {
+                        sub.Correct.push(['✅']);
+                        this.number_correct += 1;
+                      }
+                      else {
+                        // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                      }
+                      // sub.Rationale.push(this.attempt_explanation);
+                    }
+                    else if (['LR'].includes(part.Type)) {
+                      sub.Correct.push(['👀']);
+                      if (this.subtopic_problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                        sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                      }
+                      else {
+                        this.number_correct += 1;
+                      }
+                    }
+                    else {
+                      for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                        if (['MC', 'IMC'].includes(part.Type)) {
+                          if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                              if (key.Key.Correct == true) {
+                                sub.Correct.push(['✅']);
+                                this.number_correct += 1;
+                              }
+                              else {
+                                // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                              }
+                              // sub.Rationale.push([key.Key.Rationale]);
+                            }
+                          }
+                        }
+                        else if (['LP'].includes(part.Type)) {
+                          if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
+                              if (key.Key.Correct == true) {
+                                sub.Correct = [['✅']];
+                                this.number_correct += 1;
+                              }
+                              else {
+                                // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                              }
+                              // sub.Rationale = [[key.Key.Rationale]];
+                            }
+                          }
+                        }
+                        if (['MS', 'IMS'].includes(part.Type)) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                            ms_correct = false;
+                          }
+                          else if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && !key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                            ms_correct = false;
+                          }
+                        }
+                        else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                          if (part.Type == 'T') {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                              mp_correct = false;
+                            }
+                          }
+                          if (part.Type == 'MFR') {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                              mp_correct = false;
+                            }
+                          }
+                          if (part.Type == 'IDD') {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                              mp_correct = false;
+                            }
+                            else if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && !key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                              mp_correct = false;
+                            }
+                          }
+                        }
+                        else if (part.Type == 'FR') {
+                          if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ('equal:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
+                              sub.Correct.push(['✅']);
+                              this.number_correct += 1;
+                              // sub.Rationale.push([key.Key.Rationale]);
+                            }
+                            else {
+                              // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                              // sub.Rationale.push(['No explanation available. The number submitted was not right']);
+                            }
+                          }
+                        }
+                      }
+                    }
+                    if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                      sub.Correct.push(['✅']);
+                      this.number_correct += 1;
+                    }
+                    else if (['MS', 'IMS'].includes(part.Type)) {
+                      // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct_st(name))) {
+                      sub.Correct.push(['✅']);
+                      this.number_correct += 1;
+                    }
+                    else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                      // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    }
+                  }
+                }
+              }
+              console.log(sub.Choice);
+            }
+          }
+        }
+      }
+      this.subtopic_problem_number += 1;
+      if (this.subtopic_problem_number > this.subtopic_problem_count) {
+        // this.selected_subtopic = '';
+        // this.standard_id = '';
+        this.toggle_exam_timer_st();
+        this.toggle_problem_timer_st();
+        this.confetti_fireworks();
+      }
+      else {
+        this.subtopic_attempt_path = [];
+        this.subtopic_attempt_response = [];
+        this.subtopic_attempt_explanation = [];
+        this.subtopic_problem_selection = [];
+        this.m_shuffled = false;
+        this.m_selection = [];
+        this.m_submission = [];
+        this.c_submission = [];
+        this.shuffle_choices_st = {};
+        this.unique_choices_st = [];
+        if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
+          this.subtopic_problem_attempts = [0];
+          this.subtopic_attempt_path = [[]];
+          this.subtopic_attempt_response = [''];
+          this.subtopic_attempt_explanation = [[]];
+          this.m_selection = [["", ""]];
+          this.m_submission = [{}];
+          this.c_submission = [{}];
+          if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            this.subtopic_problem_selection = [['']];
+            if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+              setTimeout(() => {
+                this.plot_graph_gp('', true);
+              }, 500);
+            }
+          }
+          else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            this.subtopic_problem_selection = [[]];
+            if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+              this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
+            }
+            if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+              setTimeout(() => {
+                this.plot_graph_mgp('', true);
+              }, 500);
+            }
+          }
+          else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
+            var msp_nums: string[] = [];
+            this.subtopic_problem_selection.push([]);
+            for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
+              if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                this.subtopic_problem_selection[0].push('');
+                msp_nums.push(choice[0]);
+              }
+            }
+          }
         }
         else {
-            this.subtopic_attempt_path = [];
-            this.subtopic_attempt_response = [];
-            this.subtopic_attempt_explanation = [];
-            this.subtopic_problem_selection = [];
-            this.m_shuffled = false;
-            this.m_selection = [];
-            this.m_submission = [];
-            this.c_submission = [];
-            this.shuffle_choices_st = {};
-            this.unique_choices_st = [];
-            if (Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).length == 0) {
-                this.subtopic_problem_attempts = [0];
-                this.subtopic_attempt_path = [[]];
-                this.subtopic_attempt_response = [''];
-                this.subtopic_attempt_explanation = [[]];
-                this.m_selection = [["", ""]];
-                this.m_submission = [{}];
-                this.c_submission = [{}];
-                if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                    this.subtopic_problem_selection = [['']];
-                    if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                        setTimeout(() => {
-                            this.plot_graph_gp('', true);
-                        }, 500);
-                    }
-                }
-                else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                    this.subtopic_problem_selection = [[]];
-                    if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                        this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices, '');
-                    }
-                    if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                        setTimeout(() => {
-                            this.plot_graph_mgp('', true);
-                        }, 500);
-                    }
-                }
-                else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Type)) {
-                    var msp_nums: string[] = [];
-                    this.subtopic_problem_selection.push([]);
-                    for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].AnswerChoices)) {
-                        if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                            this.subtopic_problem_selection[0].push('');
-                            msp_nums.push(choice[0]);
-                        }
-                    }
-                }
-            }
-            else {
-                this.subtopic_problem_attempts = [];
-                for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                    this.subtopic_problem_attempts.push(0);
-                    this.subtopic_attempt_path.push([]);
-                    this.subtopic_attempt_response.push('');
-                    this.subtopic_attempt_explanation.push([]);
-                    this.m_selection.push(["", ""]);
-                    this.m_submission.push({});
-                    this.c_submission.push({});
-                    if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                        this.subtopic_problem_selection.push(['']);
-                        if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                            setTimeout(() => {
-                                this.plot_graph_gp(part, true);
-                            }, 500);
-                        }
-                    }
-                    else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                        this.subtopic_problem_selection.push([]);
-                        if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                            this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
-                        }
-                        if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                            setTimeout(() => {
-                                this.plot_graph_mgp(part, true);
-                            }, 500);
-                        }
-                    }
-                    else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
-                        var msp_nums: string[] = [];
-                        this.subtopic_problem_selection.push([]);
-                        for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
-                            if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
-                                this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
-                                msp_nums.push(choice[0]);
-                            }
-                        }
-                    }
-                }
-            }
-            this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
-            if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
-                this.render_calc_st('');
-            }
-            else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
-                this.render_calc_st('sci');
-            }
-            else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
-                this.render_calc_st('graph');
-            }
-            for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+          this.subtopic_problem_attempts = [];
+          for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+            this.subtopic_problem_attempts.push(0);
+            this.subtopic_attempt_path.push([]);
+            this.subtopic_attempt_response.push('');
+            this.subtopic_attempt_explanation.push([]);
+            this.m_selection.push(["", ""]);
+            this.m_submission.push({});
+            this.c_submission.push({});
+            if (['MC', 'FR', 'SR', 'MR', 'LR', 'IMC', 'LP', 'GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              this.subtopic_problem_selection.push(['']);
+              if (['GP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
                 setTimeout(() => {
-                    this.read_supp_st_json(supp);
-                }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+                  this.plot_graph_gp(part, true);
+                }, 500);
+              }
             }
-            if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
-                for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
-                    for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
-                        if (block.startsWith(':table:')) {
-                            setTimeout(() => {
-                                this.read_table_st(block.slice(7));
-                            }, 100);
-                        }
-                    }
+            else if (['MS', 'O', 'C', 'G', 'IM', 'IMS', 'MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              this.subtopic_problem_selection.push([]);
+              if (['O', 'C', 'G'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                this.unique_m_st(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices, part);
+              }
+              if (['MGP'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+                setTimeout(() => {
+                  this.plot_graph_mgp(part, true);
+                }, 500);
+              }
+            }
+            else if (['MFR', 'IDD', 'T'].includes(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type)) {
+              var msp_nums: string[] = [];
+              this.subtopic_problem_selection.push([]);
+              for (let choice of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].AnswerChoices)) {
+                if (choice.length > 1 && choice[1] == ':' && !msp_nums.includes(choice[0])) {
+                  this.subtopic_problem_selection[Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part)].push('');
+                  msp_nums.push(choice[0]);
                 }
+              }
             }
-            if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
-                for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
-                    if (block.startsWith(':table:')) {
-                        setTimeout(() => {
-                            this.read_table_st(block.slice(7));
-                        }, 100);
-                    }
-                }
-            }
+          }
         }
+        this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
+        if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
+          this.render_calc_st('');
+        }
+        else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-S') && this.show_calculator) {
+          this.render_calc_st('sci');
+        }
+        else if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator-G') && this.show_calculator) {
+          this.render_calc_st('graph');
+        }
+        for (let supp of this.subtopic_search_dump[this.subtopic_problem_number].SuppContent) {
+          setTimeout(() => {
+            this.read_supp_st_json(supp);
+          }, 100 * (1 + this.subtopic_search_dump[this.subtopic_problem_number].SuppContent.indexOf(supp)));
+        }
+        if (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP') {
+          for (let part of Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts)) {
+            for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Content) {
+              if (block.startsWith(':table:')) {
+                setTimeout(() => {
+                  this.read_table_st(block.slice(7));
+                }, 100);
+              }
+            }
+          }
+        }
+        if (this.subtopic_search_dump[this.subtopic_problem_number].Type != 'MP') {
+          for (let block of this.subtopic_search_dump[this.subtopic_problem_number].Content) {
+            if (block.startsWith(':table:')) {
+              setTimeout(() => {
+                this.read_table_st(block.slice(7));
+              }, 100);
+            }
+          }
+        }
+      }
+      this.clear_problem_timer_st();
+      this.toggle_problem_timer_st();
     }
 
     toDataURL(url: string) {
@@ -3135,6 +3575,53 @@ export class TemplateStandardsComponent implements OnInit {
 
     zoom_in_r() {
         this.ref_zoom = Math.min(125, this.ref_zoom + 5);
+    }
+
+    confetti_fireworks() {
+      const duration = 5 * 1000;
+      const animationEnd = Date.now() + duration;
+      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.15 };
+  
+      const randomInRange = (min: number, max: number) =>
+        Math.random() * (max - min) + min;
+  
+      const interval = window.setInterval(() => {
+        const timeLeft = animationEnd - Date.now();
+  
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
+  
+        const particleCount = 100 * (timeLeft / duration);
+        confetti({
+          ...defaults,
+          particleCount,
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        });
+        confetti({
+          ...defaults,
+          particleCount,
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        });
+        // if (this.screenWidth > this.mobileWidth) {
+        confetti({
+          ...defaults,
+          particleCount: particleCount / 5,
+          scalar: 1.5,
+          shapes: ['star'],
+          colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+        });
+        confetti({
+          ...defaults,
+          particleCount: particleCount / 5,
+          scalar: 1.5,
+          shapes: ['star'],
+          colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+        });
+        // }
+      }, 250);
     }
 
     confetti_light(attempts: number) {

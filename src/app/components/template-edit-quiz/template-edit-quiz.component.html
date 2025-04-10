@@ -1325,7 +1325,7 @@
       <div
         *ngIf="mode == 'assess' && ((length_mode == 'number' && problem_number > quiz_length) || (length_mode == 'timer' && et_counter <= 0))"
         style="width: 100%;">
-        <button class="grade-button" (click)="resetExam();"
+        <button class="grade-button" (click)="reset_exam();"
           style="display: block; max-width: 150px; max-height: 150px; margin: auto">
           <b> Reset Test </b> </button>
         <br />

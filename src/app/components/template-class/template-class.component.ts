@@ -63,6 +63,7 @@ export class TemplateClassComponent implements OnInit {
   expand_overview = true;
   expand_topics = true;
   show_correct = false;
+  reviewed_st = false;
   mode = 'assess';
   shuffle = false;
   public = false;
@@ -130,6 +131,24 @@ export class TemplateClassComponent implements OnInit {
   class_exam_metadata: any[] = [];
   class_quiz_metadata: any[] = [];
 
+  et_counter: number = 0;
+  et_minutes: number = 0;
+  et_timer: any;
+  et_running: boolean = false;
+  pt_counter: number = 0;
+  pt_minutes: number = 0;
+  pt_timer: any;
+  pt_running: boolean = false;
+
+  et_counter_st: number = 0;
+  et_minutes_st: number = 0;
+  et_timer_st: any;
+  et_running_st: boolean = false;
+  pt_counter_st: number = 0;
+  pt_minutes_st: number = 0;
+  pt_timer_st: any;
+  pt_running_st: boolean = false;
+
   // selected_students: string[] = [];
 
   assign_title = "Assignments For This Class";
@@ -195,6 +214,7 @@ export class TemplateClassComponent implements OnInit {
   includes_standard = false;
   streak_count = 0;
   subtopic_streak_count = 0;
+  subtopic_max_streak_count = 0;
   subtopic_problem_count = 0;
   subtopic_new_problem_count = 0;
   subtopic_correct_problem_count = 0;
@@ -299,6 +319,10 @@ export class TemplateClassComponent implements OnInit {
 
   max(num1: number, num2: number) {
     return (Math.max(num1, num2));
+  }
+
+  round(num: number) {
+    return (Math.round(num));
   }
 
   width_change() {
@@ -3661,6 +3685,19 @@ export class TemplateClassComponent implements OnInit {
               this.selected_topic = topic;
               // this.standard_id = standardID;
               this.subtopic_problem_count += 1;
+              this.subtopic_submission[this.subtopic_problem_count] = {
+                'Number': this.subtopic_problem_count,
+                'Topics': [],
+                'SubTopics': [],
+                'Choice': [],
+                'Correct': [],
+                'Rationale': [],
+                'Attempts': [],
+                'Path': [],
+                'Seconds': 0,
+                'Time': '',
+                'Flags': [false]
+              };
               this.subtopic_search_dump[this.subtopic_problem_count] = prob;
               if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
                 this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
@@ -3704,9 +3741,12 @@ export class TemplateClassComponent implements OnInit {
       setTimeout(() => {
         for (let i = 1; i <= Object.keys(this.subtopic_search_dump).length; i++) {
           if (subs[i - 1] != undefined) {
-            this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+            this.subtopic_submission[Object.keys(this.subtopic_submission).length+1] = subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)];
             if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
               this.subtopic_streak_count += 1;
+              if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                this.subtopic_max_streak_count = this.subtopic_streak_count;
+              }
             }
             else {
               this.subtopic_streak_count = 0;
@@ -3746,6 +3786,8 @@ export class TemplateClassComponent implements OnInit {
         }
       }
     }
+    console.log(this.subtopic_submission);
+    console.log(this.subtopic_search_dump);
     // }, 500);
   }
 
@@ -3850,6 +3892,8 @@ export class TemplateClassComponent implements OnInit {
           }
         }
       }
+      this.toggle_exam_timer_st();
+      this.toggle_problem_timer_st();
       this.st_refsheet_source = '../../' + this.dumpService.exam_attribute_dump[(this.subtopic_search_dump[this.subtopic_problem_number].Number).substring(0, (this.subtopic_search_dump[this.subtopic_problem_number].Number).indexOf('-'))].RefSheet;
       if (this.subtopic_search_dump[this.subtopic_problem_number].SuppTools.includes('Calculator') && this.show_calculator) {
         this.render_calc_st('');
@@ -3905,6 +3949,19 @@ export class TemplateClassComponent implements OnInit {
               if (prob.SubTopics.includes(this.selected_subtopic)) {
                 if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
                   this.subtopic_problem_count += 1;
+                  this.subtopic_submission[this.subtopic_problem_count] = {
+                    'Number': this.subtopic_problem_count,
+                    'Topics': [],
+                    'SubTopics': [],
+                    'Choice': [],
+                    'Correct': [],
+                    'Rationale': [],
+                    'Attempts': [],
+                    'Path': [],
+                    'Seconds': 0,
+                    'Time': '',
+                    'Flags': [false]
+                  };
                   this.subtopic_search_dump[this.subtopic_problem_count] = prob;
                   if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
                     this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
@@ -3928,9 +3985,13 @@ export class TemplateClassComponent implements OnInit {
       console.log(subs);
       setTimeout(() => {
         for (let i = 1; i <= subs.length; i++) {
-          this.subtopic_submission.push(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)]);
+          this.subtopic_submission[i] = subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)];
+          this.subtopic_submission[i].Number = i;
           if (((subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length == 1 && subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct[0][0] == '✅') || (subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct.length > 1 && this.is_MP_correct(subs[i - 1].problems[+nums[i - 1].substring(nums[i - 1].indexOf('-') + 1)].Correct)))) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
           }
           else {
             this.subtopic_streak_count = 0;
@@ -3944,6 +4005,19 @@ export class TemplateClassComponent implements OnInit {
               if (prob.SubTopics.includes(this.selected_subtopic)) {
                 if (prob.Topics[prob.SubTopics.indexOf(this.selected_subtopic)].includes(this.selected_topic)) {
                   this.subtopic_problem_count += 1;
+                  // this.subtopic_submission[this.subtopic_problem_count] = {
+                  //   'Number': +Object.keys(this.subtopic_submission).length,
+                  //   'Topics': [],
+                  //   'SubTopics': [],
+                  //   'Choice': [],
+                  //   'Correct': [],
+                  //   'Rationale': [],
+                  //   'Attempts': [],
+                  //   'Path': [],
+                  //   'Seconds': 0,
+                  //   'Time': '',
+                  //   'Flags': [false]
+                  // };
                   this.subtopic_search_dump[this.subtopic_problem_count] = prob;
                   if (!('' + this.subtopic_search_dump[this.subtopic_problem_count].Number).includes('-')) {
                     this.subtopic_search_dump[this.subtopic_problem_count].Number = ex + '-' + '' + this.subtopic_search_dump[this.subtopic_problem_count].Number;
@@ -3986,6 +4060,7 @@ export class TemplateClassComponent implements OnInit {
         }
       }
       console.log(this.subtopic_search_dump);
+      console.log(this.subtopic_submission);
       setTimeout(() => {
         this.selected_student_st = id;
       }, 250);
@@ -4033,6 +4108,9 @@ export class TemplateClassComponent implements OnInit {
                 if (key.Key.Correct == true) {
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_streak_count += 1;
+                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                    }
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
@@ -4078,7 +4156,10 @@ export class TemplateClassComponent implements OnInit {
     }
     var attempt = false;
     for (let i = 0; i < this.subtopic_attempt_path[part_num].length; i++) {
-      if (this.subtopic_attempt_path[part_num][i][0] == choice) {
+      if ((this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MC' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'MC')) && this.subtopic_attempt_path[part_num][i][0] == choice) {
+        attempt = true;
+      }
+      if ((this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MS' || (this.subtopic_search_dump[this.subtopic_problem_number].Type == 'MP' && this.subtopic_search_dump[this.subtopic_problem_number].Parts[part].Type == 'MS'))  && this.subtopic_attempt_path[part_num][i].includes(choice)) {
         attempt = true;
       }
     }
@@ -4104,6 +4185,9 @@ export class TemplateClassComponent implements OnInit {
                 if (key.Key.Correct == true) {
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_streak_count += 1;
+                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                    }
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
@@ -4200,6 +4284,9 @@ export class TemplateClassComponent implements OnInit {
         if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
           if (this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
           }
           else {
@@ -4273,6 +4360,9 @@ export class TemplateClassComponent implements OnInit {
         if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
           if (this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
           }
           else {
@@ -4337,6 +4427,9 @@ export class TemplateClassComponent implements OnInit {
             if (correct_attempt) {
               if (this.subtopic_problem_attempts[part_num] == 1) {
                 this.subtopic_streak_count += 1;
+                if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                  this.subtopic_max_streak_count = this.subtopic_streak_count;
+                }
                 this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
               }
               else {
@@ -4386,6 +4479,9 @@ export class TemplateClassComponent implements OnInit {
                 if (key.Key.Correct == true) {
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_streak_count += 1;
+                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                    }
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
                   else {
@@ -4442,6 +4538,9 @@ export class TemplateClassComponent implements OnInit {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_streak_count += 1;
+                  if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                    this.subtopic_max_streak_count = this.subtopic_streak_count;
+                  }
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
@@ -4573,6 +4672,9 @@ export class TemplateClassComponent implements OnInit {
         if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
           if (this.subtopic_problem_attempts[part_num] == 1) {
             this.subtopic_streak_count += 1;
+            if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+              this.subtopic_max_streak_count = this.subtopic_streak_count;
+            }
             this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
           }
           else {
@@ -4651,6 +4753,9 @@ export class TemplateClassComponent implements OnInit {
                   if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                       if (this.subtopic_problem_attempts[part_num] == 1) {
                           this.subtopic_streak_count += 1;
+                          if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                            this.subtopic_max_streak_count = this.subtopic_streak_count;
+                          }
                           this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                       }
                       else {
@@ -4681,6 +4786,9 @@ export class TemplateClassComponent implements OnInit {
                                   this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                   if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
                                       this.subtopic_streak_count += 1;
+                                      if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                        this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                      }
                                       this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
                                   }
                                   else {
@@ -4696,6 +4804,9 @@ export class TemplateClassComponent implements OnInit {
                                   this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                   if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
                                       this.subtopic_streak_count += 1;
+                                      if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                                        this.subtopic_max_streak_count = this.subtopic_streak_count;
+                                      }
                                       this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
                                   }
                                   else {
@@ -4817,6 +4928,9 @@ export class TemplateClassComponent implements OnInit {
                   if (!this.subtopic_attempt_response[part_num].startsWith('That is not the correct answer')) {
                       if (this.subtopic_problem_attempts[part_num] == 1) {
                           this.subtopic_streak_count += 1;
+                          if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                            this.subtopic_max_streak_count = this.subtopic_streak_count;
+                          }
                           this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                       }
                       else {
@@ -4846,6 +4960,9 @@ export class TemplateClassComponent implements OnInit {
                 this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                 if (this.subtopic_problem_attempts[part_num] == 1) {
                   this.subtopic_streak_count += 1;
+                  if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                    this.subtopic_max_streak_count = this.subtopic_streak_count;
+                  }
                   this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                 }
                 else {
@@ -5240,6 +5357,9 @@ export class TemplateClassComponent implements OnInit {
       }
       if (correct && this.subtopic_problem_attempts[part_num] == 1) {
           this.subtopic_streak_count += 1;
+          if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+            this.subtopic_max_streak_count = this.subtopic_streak_count;
+          }
           this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
       }
       else if (correct) {
@@ -5310,6 +5430,9 @@ export class TemplateClassComponent implements OnInit {
       }
       if (correct && this.subtopic_problem_attempts[part_num] == 1) {
           this.subtopic_streak_count += 1;
+          if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+            this.subtopic_max_streak_count = this.subtopic_streak_count;
+          }
           this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
       }
       else if (correct) {
@@ -5397,6 +5520,9 @@ export class TemplateClassComponent implements OnInit {
       }
       if (correct && this.subtopic_problem_attempts[part_num] == 1) {
           this.subtopic_streak_count += 1;
+          if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+            this.subtopic_max_streak_count = this.subtopic_streak_count;
+          }
           this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
       }
       else if (correct) {
@@ -5568,11 +5694,311 @@ export class TemplateClassComponent implements OnInit {
     return dropdown.value;
   }
 
+  toggle_exam_timer_st() {
+    this.et_running_st = !this.et_running_st;
+    if (this.et_running_st) {
+      const startTime = Date.now() - (this.et_counter_st || 0);
+      this.et_timer_st = setInterval(() => {
+        this.et_counter_st = Math.round((Date.now() - startTime) / 1000);
+        this.et_minutes_st = Math.floor(this.et_counter_st / 60);
+      });
+    } else {
+      clearInterval(this.et_timer_st);
+    }
+  }
+
+  clear_exam_timer_st() {
+    this.et_running_st = false;
+    this.et_counter_st = 0;
+    clearInterval(this.et_timer_st);
+  }
+
+  toggle_problem_timer_st() {
+    this.pt_running_st = !this.pt_running_st;
+    if (this.pt_running_st) {
+      const startTime = Date.now() - (this.pt_counter_st || 0);
+      this.pt_timer_st = setInterval(() => {
+        this.pt_counter_st = Math.round((Date.now() - startTime) / 1000);
+        this.pt_minutes_st = Math.floor(this.pt_counter_st / 60);
+      });
+    } else {
+      clearInterval(this.pt_timer);
+    }
+  }
+
+  clear_problem_timer_st() {
+    this.pt_running_st = false;
+    this.pt_counter_st = 0;
+    clearInterval(this.pt_timer_st);
+  }
+
   next_problem_st() {
+    this.subtopic_submission[this.subtopic_problem_number].Time = (this.pt_minutes).toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+    this.subtopic_submission[this.subtopic_problem_number].Seconds = this.pt_counter;
+    this.subtopic_submission[this.subtopic_problem_number].Number = this.subtopic_problem_number;
+    this.subtopic_submission[this.subtopic_problem_number].Topics = this.subtopic_search_dump[this.subtopic_problem_number].Topics;
+    this.subtopic_submission[this.subtopic_problem_number].SubTopics = this.subtopic_search_dump[this.subtopic_problem_number].SubTopics;
+    this.subtopic_submission[this.subtopic_problem_number].Choice = this.subtopic_problem_selection;
+    this.subtopic_submission[this.subtopic_problem_number].Attempts = this.subtopic_problem_attempts;
+    this.subtopic_submission[this.subtopic_problem_number].Path = this.subtopic_attempt_path;
+    // this.subtopic_submission[this.subtopic_problem_number].Correct = this.exam_key[this.subtopic_problem_number - 1];
+    this.subtopic_submission[this.subtopic_problem_number].Rationale = this.subtopic_attempt_explanation;
+    for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
+      if (this.subtopic_problem_number == +num) {
+        for (const [num2, sub] of Object.entries(this.subtopic_submission)) {
+          if (this.subtopic_problem_number == +num2) {
+            console.log(sub.Choice);
+            // sub.Time = this.pt_minutes.toString() + 'm ' + (this.pt_counter % 60).toString() + 's';
+            // sub.Seconds = this.pt_counter;
+            // sub.Number = this.problem_number;
+            // sub.Topics = prob.Topics;
+            // sub.SubTopics = prob.SubTopics;
+            // sub.Attempts = this.problem_attempts;
+            // sub.Path = this.attempt_path;
+            if (Object.keys(prob.Parts).length == 0 && sub.Attempts[0] > 0) {
+              // sub.Choice.push(sub.Path[0][sub.Path[0].length - 1]);
+              var ms_correct = true;
+              var mp_correct = true;
+              if (['O', 'C', 'G'].includes(prob.Type)) {
+                if ((prob.Type == 'O' && this.is_m_correct_st('', false)) || (prob.Type == 'C' && this.is_c_correct_st('', false)) || (prob.Type == 'G' && this.is_g_correct_st('', false))) {
+                  sub.Correct = [['✅']];
+                  this.number_correct += 1;
+                }
+                else {
+                  // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                }
+                // sub.Rationale = this.attempt_explanation;
+              }
+              else if (['MR', 'LR'].includes(prob.Type)) {
+                sub.Correct = [['👀']];
+                if (this.subtopic_problem_selection[0] == '') {
+                  sub.Choice = [['No Student Response Given']];
+                }
+                else {
+                  this.number_correct += 1;
+                }
+              }
+              else {
+                for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
+                  if (['MC', 'IMC'].includes(prob.Type)) {
+                    if (sub.Attempts[0] > 0) {
+                      if (sub.Path[0][sub.Path[0].length - 1][0] == ch) {
+                        if (key.Key.Correct == true) {
+                          sub.Correct = [['✅']];
+                          this.number_correct += 1;
+                        }
+                        else {
+                          // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                        }
+                        // sub.Rationale = [[key.Key.Rationale]];
+                      }
+                    }
+                  }
+                  else if (['LP'].includes(prob.Type)) {
+                    if (sub.Attempts[0] > 0) {
+                      if (sub.Path[0][sub.Path[0].length - 1][0] == ch[0]) {
+                        if (key.Key.Correct == true) {
+                          sub.Correct = [['✅']];
+                          this.number_correct += 1;
+                        }
+                        else {
+                          // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                        }
+                        // sub.Rationale = [[key.Key.Rationale]];
+                      }
+                    }
+                  }
+                  else if (['MS', 'IMS'].includes(prob.Type)) {
+                    if (sub.Path[0].length > 0 && key.Key.Correct && !sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                      ms_correct = false;
+                    }
+                    else if (sub.Path[0].length > 0 && !key.Key.Correct && sub.Path[0][sub.Path[0].length - 1].includes(ch)) {
+                      ms_correct = false;
+                    }
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                    if (prob.Type == 'MFR') {
+                      if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                        mp_correct = false;
+                      }
+                    }
+                    if (prob.Type == 'T') {
+                      if (key.Key.Correct && ch.includes('KEY') && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != key.Choice) {
+                        mp_correct = false;
+                      }
+                    }
+                    if (prob.Type == 'IDD') {
+                      if (key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] != ch[2]) {
+                        mp_correct = false;
+                      }
+                      else if (!key.Key.Correct && sub.Path[0][sub.Path[0].length - 1][+ch[0] - 1] == ch[2]) {
+                        mp_correct = false;
+                      }
+                    }
+                  }
+                  else if (prob.Type == 'FR') {
+                    if (sub.Attempts[0] > 0) {
+                      if ('equal:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                        sub.Correct = [['✅']];
+                        this.number_correct += 1;
+                        // sub.Rationale = [[key.Key.Rationale]];
+                      }
+                      else {
+                        // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                        // sub.Rationale = [['No explanation available. The number submitted was not right']];
+                      }
+                    }
+                  }
+                }
+              }
+              if (['MS', 'IMS'].includes(prob.Type) && ms_correct) {
+                sub.Correct = [['✅']];
+                this.number_correct += 1;
+              }
+              else if (['MS', 'IMS'].includes(prob.Type)) {
+                // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+              }
+              else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct_st(''))) {
+                sub.Correct = [['✅']];
+                this.number_correct += 1;
+              }
+              else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
+                // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+              }
+            }
+            else if (Object.keys(prob.Parts).length > 0) {
+              console.log(sub.Attempts.reduce((sum: any, current: any) => sum + current, 0));
+              if (sub.Attempts.reduce((sum: any, current: any) => sum + current, 0) > 0) {
+                sub.Correct = [];
+              }
+              // sub.Rationale = [];
+              // sub.Rationale = this.attempt_explanation;
+              for (const [name, part] of Object.entries(prob.Parts)) {
+                if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                  // sub.Choice.push(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1]);
+                  var ms_correct = true;
+                  var mp_correct = true;
+                  if (['O', 'C', 'G'].includes(part.Type)) {
+                    if ((part.Type == 'O' && this.is_m_correct_st(name, false)) || (part.Type == 'C' && this.is_c_correct_st(name, false)) || (part.Type == 'G' && this.is_g_correct_st(name, false))) {
+                      sub.Correct.push(['✅']);
+                      this.number_correct += 1;
+                    }
+                    else {
+                      // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    }
+                    // sub.Rationale.push(this.attempt_explanation);
+                  }
+                  else if (['LR'].includes(part.Type)) {
+                    sub.Correct.push(['👀']);
+                    if (this.subtopic_problem_selection[Object.keys(prob.Parts).indexOf(name)] == '') {
+                      sub.Choice[Object.keys(prob.Parts).indexOf(name)] = ['No Student Response Given'];
+                    }
+                    else {
+                      this.number_correct += 1;
+                    }
+                  }
+                  else {
+                    for (const [ch, key] of Object.entries(part.AnswerChoices)) {
+                      if (['MC', 'IMC'].includes(part.Type)) {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct.push(['✅']);
+                              this.number_correct += 1;
+                            }
+                            else {
+                              // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                            }
+                            // sub.Rationale.push([key.Key.Rationale]);
+                          }
+                        }
+                      }
+                      else if (['LP'].includes(part.Type)) {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == ch[0]) {
+                            if (key.Key.Correct == true) {
+                              sub.Correct = [['✅']];
+                              this.number_correct += 1;
+                            }
+                            else {
+                              // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                            }
+                            // sub.Rationale = [[key.Key.Rationale]];
+                          }
+                        }
+                      }
+                      if (['MS', 'IMS'].includes(part.Type)) {
+                        if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && !sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                        else if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && !key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1].includes(ch)) {
+                          ms_correct = false;
+                        }
+                      }
+                      else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                        if (part.Type == 'T') {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (part.Type == 'MFR') {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && ch.includes('KEY') && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != key.Choice) {
+                            mp_correct = false;
+                          }
+                        }
+                        if (part.Type == 'IDD') {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] != ch[2]) {
+                            mp_correct = false;
+                          }
+                          else if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && !key.Key.Correct && sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][+ch[0] - 1] == ch[2]) {
+                            mp_correct = false;
+                          }
+                        }
+                      }
+                      else if (part.Type == 'FR') {
+                        if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ('equal:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
+                            sub.Correct.push(['✅']);
+                            this.number_correct += 1;
+                            // sub.Rationale.push([key.Key.Rationale]);
+                          }
+                          else {
+                            // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                            // sub.Rationale.push(['No explanation available. The number submitted was not right']);
+                          }
+                        }
+                      }
+                    }
+                  }
+                  if (['MS', 'IMS'].includes(part.Type) && ms_correct) {
+                    sub.Correct.push(['✅']);
+                    this.number_correct += 1;
+                  }
+                  else if (['MS', 'IMS'].includes(part.Type)) {
+                    // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct_st(name))) {
+                    sub.Correct.push(['✅']);
+                    this.number_correct += 1;
+                  }
+                  else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
+                    // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                  }
+                }
+              }
+            }
+            console.log(sub.Choice);
+          }
+        }
+      }
+    }
     this.subtopic_problem_number += 1;
     if (this.subtopic_problem_number > this.subtopic_problem_count) {
-      this.selected_subtopic = '';
-      this.standard_id = '';
+      // this.selected_subtopic = '';
+      // this.standard_id = '';
+      this.toggle_exam_timer_st();
+      this.toggle_problem_timer_st();
+      this.confetti_fireworks();
     }
     else {
       this.subtopic_attempt_path = [];
@@ -5700,6 +6126,8 @@ export class TemplateClassComponent implements OnInit {
         }
       }
     }
+    this.clear_problem_timer_st();
+    this.toggle_problem_timer_st();
   }
 
   render_calc_st(type: string) {
@@ -6113,6 +6541,30 @@ export class TemplateClassComponent implements OnInit {
     return (['.jpg', '.jpeg', '.png', '.bmp', '.svg', '.webp', '.tiff', '.ico'].some(ext => blob.toLowerCase().endsWith(ext)));
   }
 
+  get_skip_count_st() {
+    var count = 0;
+    for (let sub of this.order_numbers_st()) {
+      if (this.subtopic_submission[sub].Correct[0][0] != '✅') {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  get_first_try_count_st() {
+    var count = 0;
+    for (let sub of this.order_numbers_st()) {
+      if (this.subtopic_submission[sub].Attempts[0] == 1 && this.subtopic_submission[sub].Correct[0][0] == '✅') {
+        count += 1;
+      }
+    }
+    return (count)
+  }
+
+  order_numbers_st() {
+    return (Array.from({ length: Object.keys(this.subtopic_search_dump).length }, (_, i) => i + 1));
+  }
+
   toggle_favorite_std() {
     this.favorite_std_set = [];
     for (let std of this.authService.userData.standards.favorites) {
@@ -6159,6 +6611,53 @@ export class TemplateClassComponent implements OnInit {
     this.authService.UpdateUserData({ 'standards/favorites': {} });
     this.authService.UpdateUserData({ 'standards/favorites': this.favorite_std_set });
     this.standard_fav = true;
+  }
+
+  confetti_fireworks() {
+    const duration = 5 * 1000;
+    const animationEnd = Date.now() + duration;
+    const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0, scalar: 1.15 };
+
+    const randomInRange = (min: number, max: number) =>
+      Math.random() * (max - min) + min;
+
+    const interval = window.setInterval(() => {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      const particleCount = 100 * (timeLeft / duration);
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+      // if (this.screenWidth > this.mobileWidth) {
+      confetti({
+        ...defaults,
+        particleCount: particleCount / 5,
+        scalar: 1.5,
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      });
+      confetti({
+        ...defaults,
+        particleCount: particleCount / 5,
+        scalar: 1.5,
+        shapes: ['star'],
+        colors: ['FFE400', 'FFBD00', 'E89400', 'FFCA6C', 'FDFFB8'],
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      });
+      // }
+    }, 250);
   }
 
   confetti_light(attempts: number) {
