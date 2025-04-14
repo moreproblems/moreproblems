@@ -1976,7 +1976,7 @@
               <div style="display: flex; flex-direction: row; align-items: center">
                 <div style="margin: auto; text-align: right">
                   <h3 style="margin: 10px auto; color: darkslategrey; font-size: 20px">
-                    Review Your Quiz Results Below </h3>
+                    View Your Quiz Results Below </h3>
                 </div>
               </div>
             </section>
@@ -2040,14 +2040,14 @@
                 <button
                   *ngIf="subtopic_submission[sub].Correct[0][0] == '✅'"
                   class="toggle-button-disabled"
-                  style="display: flex; margin: 0px; padding: 5px; height: 40px; min-width: 60px; width: fit-content; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
-                  <span style="min-width: 60px; max-width: 240px; width: fit-content; height: 25px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: auto 5px; text-align: center"> <b> {{sub}} </b> ({{subtopic_submission[sub].Choice[0]}}) <b *ngIf="subtopic_submission[sub].Attempts[0] == 1 || (selected_student_st != '' && (my_students_data[selected_student_st].exams.history | keys).includes(subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))) && my_students_data[selected_student_st].exams.history[subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))].status == 'Completed') || (authService.userData.role == 'Student' && (authService.userData.exams.history | keys).includes(subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))) && authService.userData.exams.history[subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))].status == 'Completed')"> 🔥 </b> </span>
+                  style="display: flex; margin: 0px; height: 40px; min-width: 60px; width: fit-content; font-size: 16px; padding: 0px; border: 3px solid rgb(66, 156, 10)">
+                  <span style="min-width: 60px; max-width: 240px; width: fit-content; height: 25px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: auto 5px; text-align: center"> <b> {{sub}} </b> ({{subtopic_submission[sub].Choice}}) <b *ngIf="subtopic_submission[sub].Attempts[0] == 1 || (selected_student_st != '' && (my_students_data[selected_student_st].exams.history | keys).includes(subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))) && my_students_data[selected_student_st].exams.history[subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))].status == 'Completed') || (authService.userData.role == 'Student' && (authService.userData.exams.history | keys).includes(subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))) && authService.userData.exams.history[subtopic_search_dump[sub].Number.substring(0, subtopic_search_dump[sub].Number.indexOf('-'))].status == 'Completed')"> 🔥 </b> </span>
                 </button>
                 <button
                   *ngIf="subtopic_submission[sub].Correct[0][0] != '✅'"
                   class="toggle-button-disabled"
-                  style="display: flex; margin: 0px; padding: 5px; height: 40px; min-width: 60px; width: fit-content; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
-                  <span style="width: 30px; text-align: left"> <b> {{sub}} </b> </span>
+                  style="display: flex; margin: 0px; height: 40px; min-width: 60px; width: fit-content; font-size: 16px; padding: 0px; border: 3px solid rgb(214, 141, 14)">
+                  <span style="min-width: 30px; max-width: 245px; height: 25px; overflow: hidden; margin: auto 5px; text-align: center"> <b> {{sub}} </b> </span>
                   <span style="margin: auto; font-size: 16px; font-weight: 1200; width: 30px; text-align: center">
                     <b style="padding: auto 3px; margin: auto"> ⏩ </b>
                   </span>

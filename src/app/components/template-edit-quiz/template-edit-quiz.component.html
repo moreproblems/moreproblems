@@ -1452,26 +1452,30 @@
               </tr>
             </thead>
             <tbody *ngFor="let sub of wrong_submission_list">
-              <tr *ngFor="let part of sub.Correct">
-                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                  [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
-                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                  [attr.rowspan]="sub.Correct.length">
-                  <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+              <tr *ngFor="let part of sub.Attempts">
+                <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Attempts.length"> <b> {{sub.Number}} </b> </td>
+                <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Attempts.length">
+                  <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                 </td>
-                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                  [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
+                <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Attempts.length"> {{sub.Time}} </td>
+                <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> {{(sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Choice[sub.Attempts.indexOf(part)] : sub.Correct[sub.Attempts.indexOf(part)]}}
                 </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                    sub.Choice[sub.Correct.indexOf(part)]}} </b>
+                <td *ngIf="sub.Correct == undefined || sub.Choice == undefined" style="border-top: 1px solid #ddd"> --
+                </td>
+                <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] == '') ? '⏩' : (sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Correct[sub.Attempts.indexOf(part)] : sub.Choice[sub.Attempts.indexOf(part)]}} </b>
+                </td>
+                <td *ngIf="sub.Correct == undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] != '') ? sub.Choice[sub.Attempts.indexOf(part)] : '--'}} </b>
+                </td>
+                <td *ngIf="sub.Choice == undefined" style="border-top: 1px solid #ddd"> <b> -- </b>
                 </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}}
+                  <h4 *ngFor="let rat of sub.Rationale[sub.Attempts.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                   </h4>
                 </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}}
-                  ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
+                <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Attempts.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Attempts.indexOf(part)] + ' (' + sub.Path[sub.Attempts.indexOf(part)] + ')'}} </td>
               </tr>
             </tbody>
           </table>
@@ -1508,26 +1512,30 @@
               </tr>
             </thead>
             <tbody *ngFor="let sub of exam_submission_list">
-              <tr *ngFor="let part of sub.Correct">
-                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                  [attr.rowspan]="sub.Correct.length"> <b> {{sub.Number}} </b> </td>
-                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                  [attr.rowspan]="sub.Correct.length">
-                  <h4 *ngFor="let top of sub.Topics"> {{top}} </h4>
+              <tr *ngFor="let part of sub.Attempts">
+                <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Attempts.length"> <b> {{sub.Number}} </b> </td>
+                <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Attempts.length">
+                  <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                 </td>
-                <td *ngIf="sub.Correct.indexOf(part) == 0" style="border-top: 1px solid #ddd"
-                  [attr.rowspan]="sub.Correct.length"> {{sub.Time}} </td>
-                <td style="border-top: 1px solid #ddd"> {{(part == '✅') ? sub.Choice[sub.Correct.indexOf(part)] : part}}
+                <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  [attr.rowspan]="sub.Attempts.length"> {{sub.Time}} </td>
+                <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> {{(sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Choice[sub.Attempts.indexOf(part)] : sub.Correct[sub.Attempts.indexOf(part)]}}
                 </td>
-                <td style="border-top: 1px solid #ddd"> <b> {{(part == '✅') ? part :
-                    sub.Choice[sub.Correct.indexOf(part)]}} </b>
+                <td *ngIf="sub.Correct == undefined || sub.Choice == undefined" style="border-top: 1px solid #ddd"> --
+                </td>
+                <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] == '') ? '⏩' : (sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Correct[sub.Attempts.indexOf(part)] : sub.Choice[sub.Attempts.indexOf(part)]}} </b>
+                </td>
+                <td *ngIf="sub.Correct == undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] != '') ? sub.Choice[sub.Attempts.indexOf(part)] : '--'}} </b>
+                </td>
+                <td *ngIf="sub.Choice == undefined" style="border-top: 1px solid #ddd"> <b> -- </b>
                 </td>
                 <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                  <h4 *ngFor="let rat of sub.Rationale[sub.Correct.indexOf(part)]" style="font-weight: 500"> {{rat}}
+                  <h4 *ngFor="let rat of sub.Rationale[sub.Attempts.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                   </h4>
                 </td>
-                <td style="border-top: 1px solid #ddd"> {{sub.Attempts[sub.Correct.indexOf(part)]}}
-                  ({{sub.Path[sub.Correct.indexOf(part)]}}) </td>
+                <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Attempts.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Attempts.indexOf(part)] + ' (' + sub.Path[sub.Attempts.indexOf(part)] + ')'}} </td>
               </tr>
             </tbody>
           </table>

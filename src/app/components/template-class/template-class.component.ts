@@ -73,6 +73,8 @@ export class TemplateClassComponent implements OnInit {
   timer_hours = 0;
   timer_minutes = 0;
 
+  exam_key_st: any[] = [];
+
   favorite_std_set: string[][] = [];
 
   exam_id: string = "";
@@ -2739,6 +2741,7 @@ export class TemplateClassComponent implements OnInit {
         this.wrong_submission_list.push(this.exam_submission[+Object.keys(this.exam_submission)[i]]);
       }
     }
+    console.log(this.exam_submission_list);
     // setTimeout(() => {
     //   for (let i: number = 1; i <= this.exam_length; i++) {
     //     this.exam_submission_list.push(this.exam_submission[i]);
@@ -3775,6 +3778,100 @@ export class TemplateClassComponent implements OnInit {
     else {
       this.subtopic_new_problem_count = this.subtopic_problem_count;
     }
+    this.exam_key_st = [];
+    for (const [num, val] of Object.entries(this.subtopic_search_dump)) {
+        this.exam_key_st.push([]);
+        if (Object.keys(val.Parts).length == 0) {
+            this.exam_key_st[this.exam_key_st.length - 1].push([]);
+            if (Object.keys(val.AnswerChoices).length == 0) {
+                this.exam_key_st[this.exam_key_st.length - 1][0].push('');
+            }
+            else if (['O'].includes(val.Type)) {
+                this.exam_key_st[this.exam_key_st.length - 1][0] = this.get_o_key(val.AnswerChoices);
+            }
+            else if (['C'].includes(val.Type)) {
+                this.exam_key_st[this.exam_key_st.length - 1][0] = this.get_c_key(val.AnswerChoices);
+            }
+            else if (['G'].includes(val.Type)) {
+                this.exam_key_st[this.exam_key_st.length - 1][0] = this.get_g_key(val.AnswerChoices);
+            }
+            else {
+                if (Object.keys(val.AnswerChoices).length > 0) {
+                    for (const [ch, val2] of Object.entries(val.AnswerChoices)) {
+                        if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Type) && val2.Key.Correct) {
+                            this.exam_key_st[this.exam_key_st.length - 1][0].push(ch);
+                        }
+                        else if (['IDD'].includes(val.Type) && val2.Key.Correct) {
+                            this.exam_key_st[this.exam_key_st.length - 1][0].push([ch[2]]);
+                        }
+                        else if (['FR'].includes(val.Type) && ch.includes('KEY')) {
+                            if (val2.Choice.startsWith('equal:') || val2.Choice.startsWith('match:')) {
+                                this.exam_key_st[this.exam_key_st.length - 1][0].push(val2.Choice.slice(6));
+                            }
+                            else {
+                                this.exam_key_st[this.exam_key_st.length - 1][0].push(val2.Choice);
+                            }
+                        }
+                        else if (['MFR'].includes(val.Type) && ch.includes('KEY')) {
+                            this.exam_key_st[this.exam_key_st.length - 1][0].push([val2.Choice]);
+                        }
+                        else if (['T'].includes(val.Type) && ch.includes('KEY')) {
+                            this.exam_key_st[this.exam_key_st.length - 1][0].push([val2.Choice]);
+                        }
+                    }
+                }
+                else {
+                    this.exam_key_st[this.exam_key_st.length - 1][0].push('');
+                }
+            }
+        }
+        else {
+            for (let part of Object.keys(val.Parts)) {
+                this.exam_key_st[this.exam_key_st.length - 1].push([]);
+                if (Object.keys(val.Parts[part].AnswerChoices).length == 0) {
+                    this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
+                }
+                else if (['O'].includes(val.Parts[part].Type)) {
+                    this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_o_key(val.Parts[part].AnswerChoices);
+                }
+                else if (['C'].includes(val.Parts[part].Type)) {
+                    this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_c_key(val.Parts[part].AnswerChoices);
+                }
+                else if (['G'].includes(val.Parts[part].Type)) {
+                    this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)] = this.get_g_key(val.Parts[part].AnswerChoices);
+                }
+                else {
+                    if (Object.keys(val.Parts[part].AnswerChoices).length > 0) {
+                        for (const [ch, val2] of Object.entries(val.Parts[part].AnswerChoices)) {
+                            if (['MC', 'IMC', 'MS', 'IMS'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                                this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push(ch);
+                            }
+                            else if (['IDD'].includes(val.Parts[part].Type) && val2.Key.Correct) {
+                                this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push([ch[2]]);
+                            }
+                            else if (['FR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                                if (val2.Choice.startsWith('equal:') || val2.Choice.startsWith('match:')) {
+                                    this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice.slice(6));
+                                }
+                                else {
+                                    this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push(val2.Choice);
+                                }
+                            }
+                            else if (['MFR'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                                this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
+                            }
+                            else if (['T'].includes(val.Parts[part].Type) && ch.includes('KEY')) {
+                                this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push([val2.Choice]);
+                            }
+                        }
+                    }
+                    else {
+                        this.exam_key_st[this.exam_key_st.length - 1][Object.keys(val.Parts).indexOf(part)].push('');
+                    }
+                }
+            }
+        }
+    }
     // setTimeout(() => {
     this.selected_subtopic = subtopic;
     this.subtopic_problem_number = 0;
@@ -4097,7 +4194,7 @@ export class TemplateClassComponent implements OnInit {
     }
     if (choice != this.subtopic_problem_selection[part_num][0]) {
       this.subtopic_problem_attempts[part_num] += 1;
-      this.subtopic_attempt_path[part_num].push(choice);
+      this.subtopic_attempt_path[part_num].push([choice]);
       this.subtopic_problem_selection[part_num] = [choice];
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (this.subtopic_problem_number == +num) {
@@ -4173,7 +4270,7 @@ export class TemplateClassComponent implements OnInit {
     }
     if (choice != this.subtopic_problem_selection[part_num][0]) {
       this.subtopic_problem_attempts[part_num] += 1;
-      this.subtopic_attempt_path[part_num].push(choice);
+      this.subtopic_attempt_path[part_num].push([choice]);
       this.subtopic_problem_selection[part_num] = [choice];
       console.log(this.subtopic_problem_selection);
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
@@ -4297,7 +4394,11 @@ export class TemplateClassComponent implements OnInit {
       }
     }
     this.subtopic_problem_attempts[part_num] += 1;
-    this.subtopic_attempt_path.push(this.subtopic_problem_selection[part_num]);
+    var current_selection = [];
+    for (let sel of this.subtopic_problem_selection[part_num]) {
+      current_selection.push(sel);
+    }
+    this.subtopic_attempt_path[part_num].push(current_selection);
   }
 
   attempt_ims_st_problem(choice: string, part: string) {
@@ -4774,7 +4875,7 @@ export class TemplateClassComponent implements OnInit {
           var part_num = Object.keys(this.subtopic_search_dump[this.subtopic_problem_number].Parts).indexOf(part);
       }
       if (choice != this.subtopic_problem_selection[part_num][0]) {
-          this.subtopic_attempt_path[part_num].push(choice);
+          this.subtopic_attempt_path[part_num].push([choice]);
           this.subtopic_problem_selection[part_num] = [choice];
           for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
               if (part == '') {
@@ -4950,7 +5051,7 @@ export class TemplateClassComponent implements OnInit {
     }
     if (choice != this.subtopic_problem_selection[part_num][0]) {
       this.subtopic_problem_attempts[part_num] += 1;
-      this.subtopic_attempt_path[part_num].push(choice);
+      this.subtopic_attempt_path[part_num].push([choice]);
       this.subtopic_problem_selection[part_num] = [choice];
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (part == '') {
@@ -5741,7 +5842,7 @@ export class TemplateClassComponent implements OnInit {
     this.subtopic_submission[this.subtopic_problem_number].Choice = this.subtopic_problem_selection;
     this.subtopic_submission[this.subtopic_problem_number].Attempts = this.subtopic_problem_attempts;
     this.subtopic_submission[this.subtopic_problem_number].Path = this.subtopic_attempt_path;
-    // this.subtopic_submission[this.subtopic_problem_number].Correct = this.exam_key[this.subtopic_problem_number - 1];
+    this.subtopic_submission[this.subtopic_problem_number].Correct = this.exam_key_st[this.subtopic_problem_number - 1];
     this.subtopic_submission[this.subtopic_problem_number].Rationale = this.subtopic_attempt_explanation;
     for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
       if (this.subtopic_problem_number == +num) {
@@ -5765,7 +5866,7 @@ export class TemplateClassComponent implements OnInit {
                   this.number_correct += 1;
                 }
                 else {
-                  // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                  sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][0]];
                 }
                 // sub.Rationale = this.attempt_explanation;
               }
@@ -5788,7 +5889,7 @@ export class TemplateClassComponent implements OnInit {
                           this.number_correct += 1;
                         }
                         else {
-                          // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                          sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][0]];
                         }
                         // sub.Rationale = [[key.Key.Rationale]];
                       }
@@ -5802,7 +5903,7 @@ export class TemplateClassComponent implements OnInit {
                           this.number_correct += 1;
                         }
                         else {
-                          // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                          sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][0]];
                         }
                         // sub.Rationale = [[key.Key.Rationale]];
                       }
@@ -5844,7 +5945,7 @@ export class TemplateClassComponent implements OnInit {
                         // sub.Rationale = [[key.Key.Rationale]];
                       }
                       else {
-                        // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                        sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][0]];
                         // sub.Rationale = [['No explanation available. The number submitted was not right']];
                       }
                     }
@@ -5856,14 +5957,14 @@ export class TemplateClassComponent implements OnInit {
                 this.number_correct += 1;
               }
               else if (['MS', 'IMS'].includes(prob.Type)) {
-                // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][0]];
               }
               else if (['MFR', 'IDD', 'T'].includes(prob.Type) && (mp_correct || this.is_idd_correct_st(''))) {
                 sub.Correct = [['✅']];
                 this.number_correct += 1;
               }
               else if (['MFR', 'IDD', 'T'].includes(prob.Type)) {
-                // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][0]];
+                sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][0]];
               }
             }
             else if (Object.keys(prob.Parts).length > 0) {
@@ -5884,7 +5985,7 @@ export class TemplateClassComponent implements OnInit {
                       this.number_correct += 1;
                     }
                     else {
-                      // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                      sub.Correct.push(this.exam_key_st[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                     }
                     // sub.Rationale.push(this.attempt_explanation);
                   }
@@ -5907,7 +6008,7 @@ export class TemplateClassComponent implements OnInit {
                               this.number_correct += 1;
                             }
                             else {
-                              // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                              sub.Correct.push(this.exam_key_st[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                             }
                             // sub.Rationale.push([key.Key.Rationale]);
                           }
@@ -5921,7 +6022,7 @@ export class TemplateClassComponent implements OnInit {
                               this.number_correct += 1;
                             }
                             else {
-                              // sub.Correct = [this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
+                              sub.Correct = [this.exam_key_st[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]];
                             }
                             // sub.Rationale = [[key.Key.Rationale]];
                           }
@@ -5963,7 +6064,7 @@ export class TemplateClassComponent implements OnInit {
                             // sub.Rationale.push([key.Key.Rationale]);
                           }
                           else {
-                            // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                            sub.Correct.push(this.exam_key_st[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                             // sub.Rationale.push(['No explanation available. The number submitted was not right']);
                           }
                         }
@@ -5975,14 +6076,14 @@ export class TemplateClassComponent implements OnInit {
                     this.number_correct += 1;
                   }
                   else if (['MS', 'IMS'].includes(part.Type)) {
-                    // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    sub.Correct.push(this.exam_key_st[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                   }
                   else if (['MFR', 'IDD', 'T'].includes(part.Type) && (mp_correct || this.is_idd_correct_st(name))) {
                     sub.Correct.push(['✅']);
                     this.number_correct += 1;
                   }
                   else if (['MFR', 'IDD', 'T'].includes(part.Type)) {
-                    // sub.Correct.push(this.exam_key[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
+                    sub.Correct.push(this.exam_key_st[this.subtopic_problem_number - 1][Object.keys(prob.Parts).indexOf(name)]);
                   }
                 }
               }
