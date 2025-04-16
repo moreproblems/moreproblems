@@ -3647,44 +3647,104 @@ export class HomeComponent implements OnInit {
       for (const [num, prob] of Object.entries(this.subtopic_search_dump)) {
         if (part == '') {
           if (this.subtopic_problem_number == +num) {
+            var correct = false;
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
-              if (choice == key.Choice) {
-                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
-                if (this.subtopic_problem_attempts[part_num] == 1) {
-                  this.subtopic_streak_count += 1;
-                  if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
-                    this.subtopic_max_streak_count = this.subtopic_streak_count;
+              if (key.Choice.startsWith('equal:')) {
+                if (choice == key.Choice.slice(6)) {
+                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                    this.subtopic_streak_count += 1;
+                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                    }
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
                   }
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                  else {
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  correct = true;
+                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
                 }
-                else {
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+              }
+              else if (key.Choice.startsWith('match:')) {
+                if (choice == key.Choice.slice(6)) {
+                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                    this.subtopic_streak_count += 1;
+                    if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                      this.subtopic_max_streak_count = this.subtopic_streak_count;
+                    }
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  correct = true;
+                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
                 }
-                this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+              }
+            }
+            if (Object.keys(prob.AnswerChoices).length == 0) {
+              if (this.subtopic_problem_attempts[part_num] == 1) {
+                this.subtopic_streak_count += 1;
+                if (this.subtopic_streak_count > this.subtopic_max_streak_count) {
+                  this.subtopic_max_streak_count = this.subtopic_streak_count;
+                }
+                this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
               }
               else {
-                this.subtopic_streak_count = 0;
-                this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
               }
+              this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+            }
+            else if (!correct) {
+              this.subtopic_streak_count = 0;
+              this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
             }
           }
         }
         else {
           if (this.subtopic_problem_number == +num) {
+            var correct = false;
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
-              if (choice == key.Choice) {
-                this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
-                if (this.subtopic_problem_attempts[part_num] == 1) {
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+              if (key.Choice.startsWith('equal:')) {
+                if (choice == key.Choice.slice(6)) {
+                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  correct = true;
+                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
                 }
-                else {
-                  this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+              }
+              else if (key.Choice.startsWith('match:')) {
+                if (choice == key.Choice.slice(6)) {
+                  this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
+                  if (this.subtopic_problem_attempts[part_num] == 1) {
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
+                  }
+                  else {
+                    this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
+                  }
+                  correct = true;
+                  this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
                 }
-                this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+              }
+            }
+            if (Object.keys(prob.Parts[part].AnswerChoices).length == 0) {
+              if (this.subtopic_problem_attempts[part_num] == 1) {
+                this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
               }
               else {
-                this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
+                this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' tries.';
               }
+              this.confetti_light_st(this.subtopic_problem_attempts[part_num]);
+            }
+            else if (!correct) {
+              this.subtopic_attempt_response[part_num] = 'That is not the correct answer - review the question again and submit a different response.';
             }
           }
         }

@@ -2483,29 +2483,33 @@
                   <div *ngIf="prob.value.Type == 'SR'">
                     <h3 *ngIf="(prob.value.AnswerChoices | keys).length == 0 && problem_attempts[0] > 0"
                       style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
-                      <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
-                      <!-- wrong data format, extra KEY -->
+                      <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your
+                      response.
                     </h3>
                     <div *ngFor="let choice of prob.value.AnswerChoices | keyvalue">
-                      <h3 *ngIf="attempt_response[0].startsWith('Correct') && attempt_explanation[0][0] != ''"
+                      <h3 *ngIf="['equal:' + ''+problem_selection[0][0], 'match:' + ''+problem_selection[0][0]].includes(choice.value.Choice) && attempt_response[0].startsWith('Correct') && attempt_explanation[0][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                        <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation:</b> {{attempt_explanation[0]}}
                       </h3>
-                      <h3 *ngIf="!attempt_response[0].startsWith('Correct') || attempt_explanation[0][0] == ''"
+                      <h3 *ngIf="['equal:' + ''+problem_selection[0][0], 'match:' + ''+problem_selection[0][0]].includes(choice.value.Choice) && attempt_response[0].startsWith('Correct') && attempt_explanation[0][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                        <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
+                        <br /> <br /> <b>Explanation:</b> No rationale available. The response submitted was correct.
                       </h3>
-                      <br
-                        *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
-                      <button
-                        *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
+                      <br *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
+                      <button *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth"
                         class="grade-button" (click)="next_problem(); scroll_top()"
                         style="display: block; max-width: 150px; max-height: 100px; margin: auto">
                         <b> Next Problem </b>
                       </button>
+                    </div>
+                    <div *ngIf="!attempt_response[0].startsWith('Correct')">
+                      <h3
+                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
+                        <br /> <br /> <b>Explanation ({{problem_selection[0][0]}}):</b> No rationale available. The response submitted was not correct.
+                      </h3>
                     </div>
                   </div>
                   <div *ngIf="prob.value.Type == 'FR'">
@@ -2513,7 +2517,6 @@
                       <h3 *ngIf="['equal:' + ''+problem_selection[0][0], 'match:' + ''+problem_selection[0][0]].includes(choice.value.Choice) && attempt_response[0].startsWith('Correct') && attempt_explanation[0][0] != ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                        <!-- wrong data format, extra KEY -->
                         <br /> <br /> <b>Explanation ({{problem_selection[0][0]}}):</b> {{attempt_explanation[0]}}
                       </h3>
                       <h3 *ngIf="['equal:' + ''+problem_selection[0][0], 'match:' + ''+problem_selection[0][0]].includes(choice.value.Choice) && attempt_response[0].startsWith('Correct') && attempt_explanation[0][0] == ''"
@@ -2534,12 +2537,6 @@
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
                         <br /> <br /> <b>Explanation ({{problem_selection[0][0]}}):</b> No rationale available. The response submitted was not correct.
                       </h3>
-                      <br *ngIf="screenWidth <= mobileWidth" />
-                      <button *ngIf="screenWidth <= mobileWidth"
-                        class="grade-button" (click)="next_problem(); scroll_top()" 
-                        style="display: block; max-width: 150px; max-height: 100px; margin: auto">
-                        <b> Next Problem </b>
-                      </button>
                     </div>
                   </div>
                   <div *ngIf="prob.value.Type == 'MFR'">
@@ -3231,46 +3228,57 @@
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'SR'">
-                  <h3 *ngIf="(part.value.AnswerChoices | keys).length == 0 && problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"
+                  <h3
+                    *ngIf="(part.value.AnswerChoices | keys).length == 0 && problem_attempts[(prob.value.Parts | keys).indexOf(part.key)] > 0"
                     style="display: block; margin: 0px 20px 0px 20px; font-weight: 400; white-space: pre-wrap; font-size: 20px; color: #1976d2">
-                    <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your response.
-                    <!-- wrong data format, extra KEY -->
+                    <b>No explanation or rationale is available.</b> Please ask a parent or teacher to review your
+                    response.
                   </h3>
                   <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
-                    <h3 *ngIf="attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
+                    <h3
+                      *ngIf="['equal:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0], 'match:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]].includes(choice.value.Choice) && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                      <!-- wrong data format, extra KEY -->
-                      <br /> <br /> <b>Explanation:</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts |
+                        keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation:</b> {{attempt_explanation[(prob.value.Parts |
+                      keys).indexOf(part.key)]}}
                     </h3>
-                    <h3 *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
+                    <h3
+                      *ngIf="['equal:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0], 'match:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]].includes(choice.value.Choice) && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts |
+                        keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation:</b> No rationale available. The response submitted was correct.
+                    </h3>
+                  </div>
+                  <div *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')">
+                    <h3
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                      <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
+                      <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was not correct.
                     </h3>
                   </div>
                 </div>
                 <div *ngIf="part.value.Type == 'FR'">
-                    <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
-                      <h3 *ngIf="['equal:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0], 'match:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]].includes(choice.value.Choice) && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                        <!-- wrong data format, extra KEY -->
-                        <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
-                      </h3>
-                      <h3 *ngIf="['equal:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0], 'match:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]].includes(choice.value.Choice) && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                        <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was correct.
-                      </h3>
-                    </div>
-                    <div *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')">
-                      <h3
-                        style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
-                        <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                        <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was not correct.
-                      </h3>
-                    </div>
+                  <div *ngFor="let choice of part.value.AnswerChoices | keyvalue">
+                    <h3 *ngIf="['equal:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0], 'match:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]].includes(choice.value.Choice) && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] != ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> {{attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)]}}
+                    </h3>
+                    <h3 *ngIf="['equal:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0], 'match:' + ''+problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]].includes(choice.value.Choice) && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') && attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was correct.
+                    </h3>
+                  </div>
+                  <div *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')">
+                    <h3
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                      <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
+                      <br /> <br /> <b>Explanation ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]}}):</b> No rationale available. The response submitted was not correct.
+                    </h3>
+                  </div>
                 </div>
                 <div *ngIf="part.value.Type == 'MFR'">
                   <h3
