@@ -2262,10 +2262,15 @@
                     </button>
                   </div>
                   <div *ngIf="prob.value.Type == 'IDD'">
-                    <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                    <h3
+                      style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                      <!-- replace choice iteration with counter -->
-                      <br /> <br /> <p *ngFor="let choice of problem_selection[0]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(problem_selection[0].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(attempt_explanation[0][problem_selection[0].indexOf(choice)] != '') ? attempt_explanation[0][problem_selection[0].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                      <br /> <br />
+                      <p *ngFor="let selec of problem_selection[0]; let i = index"> <b>{{'\nExplanation ' +
+                          ''+(i+1)}} ({{problem_selection[0][i]}})</b>:
+                        {{(attempt_explanation[0][i] != '') ?
+                        attempt_explanation[0][i] : 'No explanation or rationale is
+                        available.'}}</p>
                     </h3>
                     <br
                       *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
@@ -2406,7 +2411,7 @@
                       <h3 *ngIf="!attempt_response[0].startsWith('Correct') || attempt_explanation[0][0] == ''"
                         style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                         <b style="font-size: 20px; color: #1976d2"> {{attempt_response[0]}} </b>
-                        <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
+                        <br /> <br /> <b>Explanation:</b> No rationale available. The response submitted was not correct.
                       </h3>
                       <br
                         *ngIf="attempt_response[0].startsWith('Correct') && screenWidth <= mobileWidth" />
@@ -3115,9 +3120,15 @@
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'IDD'">
-                  <h3 style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
+                  <h3
+                    style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                     <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                    <br /> <br /> <p *ngFor="let choice of problem_selection[(prob.value.Parts | keys).indexOf(part.key)]"><span *ngIf="choice != ''"> <b>{{'\nExplanation '  + ''+(problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)+1) + ' (' + choice + ')'}}</b>: {{(attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] != '') ? attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][problem_selection[(prob.value.Parts | keys).indexOf(part.key)].indexOf(choice)] : 'No explanation or rationale is available.'}}</span></p>
+                    <br /> <br />
+                    <p *ngFor="let selec of problem_selection[(prob.value.Parts | keys).indexOf(part.key)]; let i = index"> <b>{{'\nExplanation ' +
+                        ''+(i+1)}} ({{problem_selection[(prob.value.Parts | keys).indexOf(part.key)][i]}})</b>:
+                      {{(attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][i] != '') ?
+                      attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][i] : 'No explanation or rationale is
+                      available.'}}</p>
                   </h3>
                 </div>
                 <div *ngIf="part.value.Type == 'IMC'">
@@ -3191,7 +3202,7 @@
                     <h3 *ngIf="!attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct') || attempt_explanation[(prob.value.Parts | keys).indexOf(part.key)][0] == ''"
                       style="display: block; margin: 0px 20px 0px 20px; color: black; font-weight: 400; white-space: pre-wrap">
                       <b style="font-size: 20px; color: #1976d2"> {{attempt_response[(prob.value.Parts | keys).indexOf(part.key)]}} </b>
-                      <br /> <br /> <b>Explanation:</b> No rationale available. The number submitted was not right.
+                      <br /> <br /> <b>Explanation:</b> No rationale available. The response submitted was not correct.
                     </h3>
                   </div>
                 </div>
