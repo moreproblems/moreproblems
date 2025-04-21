@@ -966,6 +966,23 @@ export class TemplateKeyComponent implements OnInit {
             }
         }
     }
+
+    choice_attempted(choice: string, part: string) {
+      var part_num = 0;
+      if (part != '') {
+        part_num = Object.keys(this.exam_dump[this.problem_number].Parts).indexOf(part);
+      }
+      var attempt = false;
+      for (let i = 0; i < this.attempt_path[part_num].length; i++) {
+        if ((this.exam_dump[this.problem_number].Type == 'MC' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'MC')) && this.attempt_path[part_num][i][0] == choice) {
+          attempt = true;
+        }
+        if ((this.exam_dump[this.problem_number].Type == 'MS' || (this.exam_dump[this.problem_number].Type == 'MP' && this.exam_dump[this.problem_number].Parts[part].Type == 'MS'))  && this.attempt_path[part_num][i].includes(choice)) {
+          attempt = true;
+        }
+      }
+      return (attempt);
+    }
   
     choice_attempted_st(choice: string, part: string) {
       var part_num = 0;

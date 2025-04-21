@@ -14,41 +14,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/SAT8M1/media/1a.jpg",
-            ""
+            ":ibox:3x + x + x + x – 3 – 2 = 7 + x + x",
+            "In the equation above, what is the value of x ?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "–5/7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Substituting those values into the equation 3x + x + x + x − 3 − 2 = 7 + x + x will result in a false statement. In this choice, substituting –5/7 for x in the equation would give 3(–5/7) – 5/7 – 5/7 – 5/7 – 3 – 2 = 7 – 5/7 – 5/7, which yields the false statement –65/7 = 39/7; therefore, x cannot equal –5/7.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Substituting those values into the equation 3x + x + x + x − 3 − 2 = 7 + x + x will result in a false statement. In this choice, substituting 1 for x in the equation would give 3(1) + 1 + 1 + 1 – 3 – 2 = 7 + 1 + 1, which yields the false statement 1 = 9; therefore, x cannot equal 1.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "12/7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Substituting those values into the equation 3x + x + x + x − 3 − 2 = 7 + x + x will result in a false statement. In this choice, substituting 12/7 for x in the equation would give 3(12/7) + 12/7 + 12/7 + 12/7 – 3 – 2 = 7 + 12/7 + 12/7, which yields the false statement 37/7 = 73/7; therefore, x cannot equal 12/7.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "3",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Combining like terms on each side of the given equation yields 6x − 5 = 7 + 2x. Adding 5 to both sides of 6x − 5 = 7 + 2x and subtracting 2x from both sides yields 4x = 12. Dividing both sides of 4x = 12 by 4 yields x = 3.",
                     "Percent": 0
                 }
             }
@@ -70,40 +68,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT8M1/media/2a.jpg",
-            ""
+            "The graph above shows the distance traveled d, in feet, by a product on a conveyor belt m minutes after the product is placed on the belt. Which of the following equations correctly relates d and m ?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "d = 2m",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The line passes through the origin. Therefore, this is a relationship of the form d = km, where k is a constant representing the slope of the graph. To find the value of k, choose a point (m, d) on the graph of the line other than the origin and substitute the values of m and d into the equation. For example, if the point (2, 4) is chosen, then 4 = k(2), and k = 2. Therefore, the equation of the line is d = 2m.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "d = m/2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from calculating the slope of the line as the change in time over the change in distance traveled instead of the change in distance traveled over the change in time.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "d = m + 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This graph represents a line with a d-intercept of 2. However, the graph shows a line with a d-intercept of 0.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "d = 2m + 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This graph represents a line with a d-intercept of 2. However, the graph shows a line with a d-intercept of 0.",
                     "Percent": 0
                 }
             }
@@ -125,40 +122,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/3a.jpg",
-            ""
+            "The formula below is often used by project managers to compute E,the estimated time to complete a job, where O is the shortest completion time, P is the longest completion time,and M is the most likely completion time.",
+            ":ibox:E = (O + 4M + P)/6",
+            "Which of the following correctly gives P in terms of E, O,and M ?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "P = 6E – O – 4M",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Multiplying both sides of the equation by 6 results in 6E = O + 4M + P. Then, subtracting O + 4M from both sides of 6E = O + 4M + P gives P = 6E − O – 4M.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "P = –6E + O + 4M",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from solving for −P instead of for P.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "P = (O + 4M + E)/6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from transposing P with E in the given equation rather than solving for P.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "P = (O + 4M – E)/6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from transposing P with E and changing the sign of E rather than solving for P.",
                     "Percent": 0
                 }
             }
@@ -180,40 +177,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT8M1/media/4a.jpg",
-            ""
+            "In the figure above, RT = TU. What is the value of x?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "72",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from a calculation error.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "66",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the measure of ∠STR, but ∠STR is not congruent to ∠SVR.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "64",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Since RT = TU, it follows that ∆RTU is an isosceles triangle with base RU. Therefore, ∠TRU and ∠TUR are the base angles of an isosceles triangle and are congruent. Let the measures of both ∠TRU and ∠TUR be t°. According to the triangle sum theorem, the sum of the measures of the three angles of a triangle is 180°. Therefore, 114° + 2t° = 180°, so t = 33.\nNote that ∠TUR is the same angle as ∠SUV. Thus, the measure of ∠SUV is 33°. According to the triangle exterior angle theorem, an external angle of a triangle is equal to the sum of the opposite interior angles. Therefore, x° is equal to the sum of the measures of ∠VSU and ∠SUV; that is, 31° + 33° = 64°. Thus, the value of x is 64.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "58",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from a calculation error.",
                     "Percent": 0
                 }
             }
@@ -235,40 +231,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/5a.jpg",
-            ""
+            "The width of a rectangular dance floor is w feet. The length of the floor is 6 feet longer than its width. Which of the following expresses the perimeter, in feet, of the dance floor in terms of w?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "2w + 6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the sum of one length and one width, which is only half the perimeter.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "4w + 12",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It is given that the width of the dance floor is w feet. The length is 6 feet longer than the width; therefore, the length of the dance floor is w + 6. So the perimeter is w + w + (w + 6) + (w + 6) = 4w + 12.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "w² + 6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from using the formula for the area instead of the formula for the perimeter and making a calculation error.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "w² + 6w",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the area, not the perimeter, of the dance floor.",
                     "Percent": 0
                 }
             }
@@ -290,40 +284,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/6a.jpg",
-            ""
+            ":ibox:y > 2x − 1\n2x > 5",
+            "Which of the following consists of the y-coordinates of all the points that satisfy the system of inequalities above?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "y > 6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are points with a y-coordinate less than 6 that satisfy the given system of inequalities. For example, (3, 5.5) satisfies both inequalities.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "y > 4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Subtracting the same number from each side of an inequality gives an equivalent inequality. Hence, subtracting 1 from each side of the inequality 2x > 5 gives 2x − 1 > 4. So the given system of inequalities is equivalent to the system of inequalities y > 2x − 1 and 2x − 1 > 4, which can be rewritten as y > 2x − 1 > 4. Using the transitive property of inequalities, it follows that y > 4.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "y > 5/2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from solving the inequality 2x > 5 for x, then replacing x with y.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "y > 3/2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This inequality allows y-values that are not the y-coordinate of any point that satisfies both inequalities. For example, y = 2 is contained in the set y > 3/2 ; however, if 2 is substituted into the first inequality for y, the result is x < 3/2 . This cannot be true because the second inequality gives x > 5/2.",
                     "Percent": 0
                 }
             }
@@ -345,40 +338,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/7a.jpg",
-            ""
+            ":ibox:√(2x + 6) + 4 = x + 3",
+            "What is the solution set of the equation above?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "{–1}",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when –1 is substituted for x into the given equation, the result is √(2(–1) + 6) + 4 = (–1) + 3, or √4 + 4 = 2. This is not a true statement, so –1 is not a solution to the given equation.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "{5}",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Subtracting 4 from both sides of √(2x + 6) + 4 = x + 3 isolates the radical expression on the left side of the equation as follows: √(2x + 6) = x – 1. Squaring both sides of √(2x + 6) = x – 1 yields 2x + 6 = x² − 2x + 1. This equation can be rewritten as a quadratic equation in standard form: x² – 4x – 5 = 0. One way to solve this quadratic equation is to factor the expression x² − 4x – 5 by identifying two numbers with a sum of –4 and a product of –5. These numbers are –5 and 1. So the quadratic equation can be factored as (x – 5)(x + 1) = 0. It follows that 5 and –1 are the solutions to the quadratic equation. However, the solutions must be verified by checking whether 5 and –1 satisfy the original equation, √(2x + 6) + 4 = x + 3. When x = –1, the original equation gives √(2(−1) + 6) + 4 = (−1) + 3, or 6 = 2, which is false. Therefore, –1 does not satisfy the original equation. When x = 5, the original equation gives √(2(5) + 6) + 4 = 5 + 3, or 8 = 8, which is true. Therefore, x = 5 is the only solution to the original equation, and so the solution set is {5}.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "{–1, 5}",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when –1 is substituted for x into the given equation, the result is √(2(–1) + 6) + 4 = (–1) + 3, or √4 + 4 = 2. This is not a true statement, so –1 is not a solution to the given equation.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "{0, –1, 5}",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when 0 is substituted for x into the given equation, the result is √(2(0) + 6) + 4 = (0) + 3, or √6 + 4 = 3. This is not a true statement, so 0 is not a solution to the given equation.",
                     "Percent": 0
                 }
             }
@@ -400,40 +392,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/8a.jpg",
-            ""
+            ":ibox:f(x) = x³ – 9x\ng(x) = x² – 2x – 3",
+            "Which of the following expressions is equivalent to f(x)/g(x), for x > 3?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "1/(x + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression 1/(x + 1) is not equivalent to f(x)/g(x) because at x = 0, 1/(x + 1) as a value of 1 and f(x)/g(x) has a value of 0.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "(x + 3)/(x + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice results from omitting the factor x in the factorization of f(x).",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "x(x – 3)/(x + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from incorrectly factoring g (x) as (x + 1)(x + 3) instead of (x +1)(x – 3).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "x(x + 3)/(x + 1)",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Since x³ – 9x = x (x + 3)(x − 3) and x² – 2x – 3 = (x + 1)(x – 3), the fraction f(x)/g(x) can be written as (x(x + 3)(x − 3))/((x + 1)(x − 3)). It is given that x > 3, so the common factor x – 3 is not equal to 0. Therefore, the fraction can be further simplified to x(x + 3)/(x + 1).",
                     "Percent": 0
                 }
             }
@@ -455,40 +446,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/9a.jpg",
-            ""
+            ":ibox:(x – 6)² + (y + 5)² = 16",
+            "In the xy-plane, the graph of the equation above is a circle. Point P is on the circle and has coordinates (10, −5). If PQ is a diameter of the circle, what are the coordinates of point Q?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "(2, −5)",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The standard form for the equation of a circle is (x – h)² + (y – k)² = r², where (h, k) are the coordinates of the center and r is the length of the radius. According to the given equation, the center of the circle is (6, –5). Let (x₁, y₁) represent the coordinates of point Q. Since point P (10, –5) and point Q (x₁, y₁) are the endpoints of a diameter of the circle, the center (6, –5) lies on the diameter, halfway between P and Q. Therefore, the following relationships hold: (x₁ + 10)/2 = 6 and (y₁ + (−5))/2 = −5. Solving the equations for x₁ and y₁, respectively, yields x₁ = 2 and y₁ = −5. Therefore, the coordinates of point Q are (2, –5).\nAlternate approach: Since point P (10, −5) on the circle and the center of the circle (6, −5) have the same y-coordinate, it follows that the radius of the circle is 10 – 6 = 4. In addition, the opposite end of the diameter PQ must have the same y-coordinate as P and be 4 units away from the center. Hence, the coordinates of point Q must be (2, –5).",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "(6, −1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The point given in this choice lie on a diameter that is perpendicular to the diameter PQ . If this point was point Q, then PQ would not be the diameter of the circle.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "(6, −5)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "(6, −5) is the center of the circle and does not lie on the circle.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "(6, −9)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The point given in this choice lie on a diameter that is perpendicular to the diameter PQ . If this point was point Q, then PQ would not be the diameter of the circle.",
                     "Percent": 0
                 }
             }
@@ -510,40 +500,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/10a.jpg",
-            ""
+            "A group of 202 people went on an overnight camping trip, taking 60 tents with them. Some of the tents held 2 people each, and the rest held 4 people each. Assuming all the tents were filled to capacity and every person got to sleep in a tent, exactly how many of the tents were 2-person tents?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "30",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from assuming exactly half of the tents hold 2 people. If that were true, then the total number of people who slept in tents would be 2(30) + 4(30) = 180; however, the total number of people who slept in tents was 202, not 180.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "20",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If 20 tents were 2-person tents, then the remaining 40 tents would be 4-person tents. Since all the tents were filled to capacity, the total number of people who slept in tents would be 2(20) + 4(40) = 40 + 160 = 200; however, the total number of people who slept in tents was 202, not 200.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "19",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Let x represent the number of 2-person tents and let y represent the number of 4-person tents. It is given that the total number of tents was 60 and the total number of people in the group was 202. This situation can be expressed as a system of two equations, x + y = 60 and 2x + 4y = 202. The first equation can be rewritten as y = −x + 60. Substituting −x + 60 for y in the equation 2x + 4y = 202 yields 2x + 4(−x + 60) = 202. Distributing and combining like terms gives −2x + 240 = 202. Subtracting 240 from both sides of −2x + 240 = 202 and then dividing both sides by −2 gives x = 19. Therefore, the number of 2-person tents is 19.\nAlternate approach: If each of the 60 tents held 4 people, the total number of people that could be accommodated in tents would be 240. However, the actual number of people who slept in tents was 202. The difference of 38 accounts for the 2-person tents. Since each of these tents holds 2 people fewer than a 4-person tent, 38/2 = 19 gives the number of 2-person tents.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If 18 tents were 2-person tents, then the remaining 42 tents would be 4-person tents. Since all the tents were filled to capacity, the total number of people who slept in tents would be 2(18) + 4(42) = 36 + 168 = 204; however, the total number of people who slept in tents was 202, not 204.",
                     "Percent": 0
                 }
             }
@@ -565,40 +553,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT8M1/media/11a.jpg",
-            ""
+            "Which of the following could be the equation of the graph above?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "y = x(x – 2)(x + 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of the equation in this answer choice has the correct factors. However, at x = 0 the graph of the equation in this choice crosses the x-axis; the graph shown touches the x-axis but doesn’t cross it.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "y = x²(x – 2)(x + 3)",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The x-coordinates of the x-intercepts of the graph are –3, 0, and 2. This means that if y = f(x) is the equation of the graph, where f is a polynomial function, then (x + 3), x, and (x − 2) are factors of f. In this choice, x is raised to the second power. At x = 0, the graph touches the x-axis but doesn’t cross it. This means that x, as a factor of f, is raised to an even power. In this choice, f is a fourth-degree polynomial. The y-coordinates of points on the graph become large and positive as x becomes large and negative; this is consistent with a fourth-degree polynomial. Therefore, of the choices given, only this choice could be the equation of the graph.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "y = x(x + 2)(x – 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is likely the result of misinterpreting the relationship between the x-intercepts of a graph of a polynomial function and the factors of the polynomial expression.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "y = x²(x + 2)(x – 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is likely the result of misinterpreting the relationship between the x-intercepts of a graph of a polynomial function and the factors of the polynomial expression.",
                     "Percent": 0
                 }
             }
@@ -620,40 +607,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/12a.jpg",
-            ""
+            "If 2ab = 1/2, what is the value of b/a?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "1/8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the value of a/2b , not b/a.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "1/4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the value of a/b , not b/a.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the value of b/2a , not b/a.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Dividing both sides of equation 2a/b = 1/2 by 2 gives a/b = 1/4 . Taking the reciprocal of both sides yields b/a = 4.",
                     "Percent": 0
                 }
             }
@@ -675,40 +660,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/13a.jpg",
-            ""
+            "Oil and gas production in a certain area dropped from 4 million barrels in 2000 to 1.9 million barrels in 2013. Assuming that the oil and gas production decreased at a constant rate, which of the following linear unctions f best models the production, in millions of barrels, t years after the year 2000?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "f(t) = 21t/130 + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This function has a positive rate of change. Since the oil and gas production decreased over time, the rate of change must be negative.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "f(t) = 19t/130 + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This function has a positive rate of change. Since the oil and gas production decreased over time, the rate of change must be negative.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "f(t) = –21t/130 + 4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It is assumed that the oil and gas production decreased at a constant rate. Therefore, the function f that best models the production t years after the year 2000 can be written as a linear function, f(t) = mt + b, where m is the rate of change of the oil and gas production and b is the oil and gas production, in millions of barrels, in the year 2000. Since there were 4 million barrels of oil and gas produced in 2000, b = 4. The rate of change, m, can be calculated as (4 − 1.9)/(0 − 13) = −2.1/13 , which is equivalent to −21/130 , the rate of change in this choice.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "f(t) = –19t/130 + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This model may result from misinterpreting 1.9 million barrels as the amount by which the production decreased.",
                     "Percent": 0
                 }
             }
@@ -730,40 +713,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/14a.jpg",
-            ""
+            ":ibox:y = x² + 3x – 7\ny – 5x + 8 = 0",
+            "How many solutions are there to the system of equations above?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "There are exactly 4 solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In the xy-plane, a parabola and a line can intersect at no more than two points. Since the graph of the first equation is a parabola and the graph of the second equation is a line, the system cannot have more than 2 solutions.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "There are exactly 2 solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There is a single ordered pair (x, y) that satisfies both equations of the system.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "There is exactly 1 solution.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The second equation of the system can be rewritten as y = 5x − 8. Substituting 5x − 8 for y in the first equation gives 5x − 8 = x² + 3x − 7. This equation can be solved as shown below:\nx² + 3x − 7 − 5x + 8 = 0\nx² − 2x + 1 = 0\n(x − 1)² = 0\nx = 1\nSubstituting 1 for x in the equation y = 5x − 8 gives y = −3. Therefore, (1, −3) is the only solution to the system of equations.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "There are no solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The ordered pair (1, −3) satisfies both equations of the system.",
                     "Percent": 0
                 }
             }
@@ -785,40 +767,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/15a.jpg",
-            ""
+            ":ibox:g(x) = 2x – 1\nh(x) = 1 – g(x)",
+            "The functions g and h are defined above. What is the valueof h(0)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "–2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from an arithmetic error.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from incorrectly evaluating g(0) to be 1.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from evaluating 1 − 0 instead of 1 − g(0).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "2",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Since h(x) = 1 − g(x), substituting 0 for x yields h(0) = 1 − g(0). Evaluating g(0) gives g(0) = 2(0) − 1 = −1. Therefore, h(0) = 1 − (−1) = 2.",
                     "Percent": 0
                 }
             }
@@ -827,62 +808,7 @@
     },
     "16": {
         "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/SAT8M1/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
-        "Type": "MP",
+        "Type": "FR",
         "NumChoices": 0,
         "Topics": [
             ""
@@ -895,80 +821,25 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/SAT8M1/media/17a.jpg",
-            ""
+            ":ibox:x² + x – 12 = 0",
+            "If a is a solution of the equation above and a > 0, what is the value of a ?"
         ],
-        "AnswerChoices": {},
-        "Parts": {
-            "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            },
-            "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The solution to the given equation can be found by factoring the quadratic expression. The factors can be determined by finding two numbers with a sum of 1 and a product of −12. The two numbers that meet these constraints are 4 and –3. Therefore, the given equation can be rewritten as (x + 4)(x − 3) = 0. It follows that the solutions to the equation are x = −4 or x = 3. Since it is given that a > 0, a must equal 3.",
+                    "Percent": 0
                 }
             }
-        }
+        },
+        "Parts": {}
     },
-    "18": {
-        "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
+    "17": {
+        "Number": 17,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -980,40 +851,44 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/18a.jpg",
-            ""
+            "The sum of −2x² + x + 31 and 3x² + 7x − 8 can be written in the form ax² + bx + c, where a, b, and c are constants. What is the value of a + b + c?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:32",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The sum of the given expressions is (−2x² + x + 31) + (3x² + 7x − 8). Combining like terms yields x² + 8x + 23. Based on the form of the given equation, a = 1, b = 8, and c = 23. Therefore, a + b + c = 32.\nAlternate approach: Because a + b + c is the value of ax² + bx + c when x = 1, it is possible to first make that substitution into each polynomial before adding them. When x = 1, the first polynomial is equal to −2 + 1 + 31 = 30 and the second polynomial is equal to 3 + 7 − 8 = 2. The sum of 30 and 2 is 32.",
                     "Percent": 0
                 }
-            },
-            "B": {
-                "Choice": "",
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:–x + y = –3.5\nx + 3y = 9.5",
+            "If (x, y) satisfies the system of equations above, what is the value of y?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:3/2",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "One method for solving the system of equations for y is to add corresponding sides of the two equations. Adding the left-hand sides gives (−x + y) + (x + 3y), or 4y. Adding the right-hand sides yields −3.5 + 9.5 = 6. It follows that 4y = 6. Finally, dividing both sides of 4y = 6 by 4 yields y = 6/4 or 3/2.",
                     "Percent": 0
                 }
             }
@@ -1022,8 +897,8 @@
     },
     "19": {
         "Number": 19,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -1035,40 +910,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT8M1/media/19a.jpg",
-            ""
+            "A start-up company opened with 8 employees. The company’s growth plan assumes that 2 new employees will be hired each quarter (every 3 months) for the first 5 years. If an equation is written in the form y = ax + b to represent the number of employees, y, employed by the company x quarters after the company opened, what is the value of b?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:8",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The number of employees, y, expected to be employed by the company x quarters after the company opened can be modeled by the equation y = ax + b, where a represents the constant rate of change in the number of employees each quarter and b represents the number of employees with which the company opened. The company’s growth plan assumes that 2 employees will be hired each quarter, so a = 2. The number of employees the company opened with was 8, so b = 8.",
                     "Percent": 0
                 }
             }
@@ -1077,8 +926,8 @@
     },
     "20": {
         "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -1090,40 +939,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT8M1/media/20a.jpg",
-            ""
+            "In the circle above, point A is the center and the length of arc BC is 2/5 of the circumference of the circle. What is the value of x?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:144",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "In a circle, the ratio of the length of a given arc to the circle’s circumference is equal to the ratio of the measure of the arc, in degrees, to 360°. The ratio between the arc length and the circle’s circumference is given as 2/5. It follows that 2/5 = x/360. Solving this proportion for x gives x = 144.",
                     "Percent": 0
                 }
             }

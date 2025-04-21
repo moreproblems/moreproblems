@@ -5454,9 +5454,20 @@
                     <button *ngIf="problem_selection[0][0]==choice.key && attempt_response[0].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[0][0]!=choice.key" class="toggle-button-off"> <b> {{choice.key}}
-                      </b>
-                    </button>
+                  <button
+                    *ngIf="problem_selection[0][0]!=choice.key && !choice_attempted(choice.key, '')"
+                    class="toggle-button-off"> <b> {{choice.key}} </b>
+                  </button>
+                  <button
+                    *ngIf="problem_selection[0][0]!=choice.key && choice_attempted(choice.key, '') && choice.value.Key.Correct"
+                    class="toggle-button-off" style="background-color: rgba(66, 156, 100, 0.25); color: black"> <b>
+                      {{choice.key}} </b>
+                  </button>
+                  <button
+                    *ngIf="problem_selection[0][0]!=choice.key && choice_attempted(choice.key, '') && !choice.value.Key.Correct"
+                    class="toggle-button-disabled" style="background-color: rgba(245, 77, 77, 0.25); color: black"> <b>
+                      {{choice.key}} </b>
+                  </button>
                   </label>
                   <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
                     style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
@@ -6634,9 +6645,20 @@
                       *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]==choice.key && attempt_response[(prob.value.Parts | keys).indexOf(part.key)].startsWith('Correct')"
                       class="toggle-button-on" style="background-color: rgb(66, 156, 10)"> <b> {{choice.key}} </b>
                     </button>
-                    <button *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key"
-                      class="toggle-button-off"> <b> {{choice.key}} </b>
-                    </button>
+                  <button
+                    *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && !choice_attempted(choice.key, part.key)"
+                    class="toggle-button-off"> <b> {{choice.key}} </b>
+                  </button>
+                  <button
+                    *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && choice_attempted(choice.key, part.key) && choice.value.Key.Correct"
+                    class="toggle-button-off" style="background-color: rgba(66, 156, 100, 0.25); color: black"> <b>
+                      {{choice.key}} </b>
+                  </button>
+                  <button
+                    *ngIf="problem_selection[(prob.value.Parts | keys).indexOf(part.key)][0]!=choice.key && choice_attempted(choice.key, part.key) && !choice.value.Key.Correct"
+                    class="toggle-button-disabled" style="background-color: rgba(245, 77, 77, 0.25); color: black"> <b>
+                      {{choice.key}} </b>
+                  </button>
                   </label>
                   <h3 *ngIf="!is_image(choice.value.Choice) && !choice.value.Choice.startsWith(':box:')"
                     style="display: block; margin: auto; white-space: pre-wrap; font-size: 18px">
