@@ -1,0 +1,980 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Salim wants to purchase tickets from a vendor to watch a tennis match. The vendor charges a one-time service fee for processing the purchase of the tickets. The equation T = 15n + 12 represents the total amount T, in dollars, Salim will pay for n tickets. What does 12 represent in the equation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The price of one ticket, in dollars",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "Since n represents the total number of tickets that Salim purchases, it follows that 15n represents the price, in dollars, of n tickets, excluding the service fee. Therefore, 15, not 12, must represent the price of 1 ticket.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The amount of the service fee, in dollars",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The total amount T, in dollars, Salim will pay for n tickets is given by T = 15n + 12, which consists of both a per-ticket charge and a one-time service fee. Since n represents the number of tickets that Salim purchases, it follows that 15n represents the price, in dollars, of n tickets. Therefore, 15 must represent the per-ticket charge. At the same time, no matter how many tickets Salim purchases, he will be charged the $12 fee only once. Therefore, 12 must represent the amount of the service fee, in dollars.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The total amount, in dollars, Salim will pay for one ticket",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "If Salim purchases only 1 ticket, the total amount, in dollars, Salim will pay can be found by substituting n = 1 into the equation for T. If n = 1, T = 15(1) + 12 = 27. Therefore, the total amount Salim will pay for one ticket is $27, not $12.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The total amount, in dollars, Salim will pay for any number of tickets",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The total amount, in dollars, Salim will pay for n tickets is given by 15n + 12. The value 12 represents only a portion of this total amount. Therefore, the value 12 does not represent the total amount, in dollars, for any number of tickets.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A gardener buys two kinds of fertilizer. Fertilizer A contains 60% filler materials by weight and Fertilizer B contains 40% filler materials by weight. Together, the fertilizers bought by the gardener contain a total of 240 pounds of filler materials. Which equation models this relationship, where x is the number of pounds of Fertilizer A and y is the number of pounds of Fertilizer B?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "0.4x + 0.6y = 240",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice transposes the percentages of filler materials for Fertilizer A and Fertilizer B. Fertilizer A consists of 0.6x pounds of filler materials and Fertilizer B consists of 0.4y pounds of filler materials. Therefore, 0.6x + 0.4y is equal to 240, not 0.4x + 0.6y.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "0.6x + 0.4y = 240",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Since Fertilizer A contains 60% filler materials by weight, it follows that x pounds of Fertilizer A consists of 0.6x pounds of filler materials. Similarly, y pounds of Fertilizer B consists of 0.4y pounds of filler materials. When x pounds of Fertilizer A and y pounds of Fertilizer B are combined, the result is 240 pounds of filler materials. Therefore, the total amount, in pounds, of filler materials in a mixture of x pounds of Fertilizer A and y pounds of Fertilizer B can be expressed as 0.6x + 0.4y = 240.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "40x + 60y = 240",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice incorrectly represents how to take the percentage of a value mathematically. Fertilizer A consists of 0.6x pounds of filler materials, not 60x pounds of filler materials, and Fertilizer B consists of 0.4y pounds of filler materials, not 40y pounds of filler materials.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "60x + 40y = 240",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice transposes the percentages of filler materials for Fertilizer A and Fertilizer B and incorrectly represents how to take the percentage of a value mathematically.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "What is the sum of the complex numbers 2 + 3i and 4 + 8i, where i = √−1?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "17",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is the result of disregarding i and adding all parts of the two complex numbers together, 2 + 3 + 4 + 8 = 17.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "17i",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is the result of adding all parts of the two complex numbers together and multiplying the sum by i.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "6 + 11i",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "For a complex number written in the form a + bi, a is called the real part of the complex number and b is called the imaginary part. The sum of two complex numbers, a + bi and c + di, is found by adding real parts and imaginary parts, respectively; that is, (a + bi) + (c + di) = (a + c) + (b + d)i. Therefore, the sum of 2 + 3i and 4 + 8i is (2 + 4) + (3 + 8)i = 6 + 11i.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "8 + 24i",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice is the result of multiplying the real parts and imaginary parts of the two complex numbers, (2)(4) = 8 and (3)(8) = 24, instead of adding those parts together.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:4x² – 9 = (px + t)(px – t)",
+            "In the equation above, p and t are constants. Which of the following could be the value of p?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The right side of the equation can be multiplied using the distributive property: (px + t)(px − t) = p²x² − ptx + ptx − t². Combining like terms gives p²x² − t². Substituting this expression for the right side of the equation gives 4x² − 9 = p²x² − t², where p and t are constants. This equation is true for all values of x only when 4 = p² and 9 = t². If 4 = p², then p = 2 or p = −2. Therefore, of the given answer choices, only 2 could be the value of p.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "For the equation to be true for all values of x, the coefficients of x² on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 3.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "For the equation to be true for all values of x, the coefficients of x² on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 4.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "For the equation to be true for all values of x, the coefficients of x² on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 9.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is the graph of the equation y = 2x − 5 in the xy-plane?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/SAT16M1/media/5a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The graph of y = 2x − 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, −5). This graph crosses the y-axis at the point (0, 2.5), not (0, −5), and it has a slope of 1/2, not 2.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/SAT16M1/media/5b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The graph of y = 2x − 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, −5). This choice crosses the y-axis at (0, −5); however, the slope of this line is −2, not 2.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/SAT16M1/media/5c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The graph of y = 2x − 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, −5). This choice has a slope of 2; however, the graph crosses the y-axis at (0, 5), not (0, −5).",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/SAT16M1/media/5d.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "In the xy-plane, the graph of the equation y = mx + b, where m and b are constants, is a line with slope m and y-intercept (0, b). Therefore, the graph of y = 2x − 5 in the xy-plane is a line with slope 2 and a y-intercept (0, −5). Having a slope of 2 means that for each increase in x by 1, the value of y increases by 2. Only the graph in this choice has a slope of 2 and crosses the y-axis at (0, −5). Therefore, the graph shown in this choice must be the correct answer.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If x = 2y/3 and y = 18, what is the value of 2x − 3?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "21",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Substituting the given value of y = 18 into the equation x = 2y/3 yields x = (2/3)(18), or x = 12. The value of the expression 2x − 3 when x = 12 is 2(12) − 3 = 21.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "15",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "If 2x − 3 = 15, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 9. Substituting 9 for x and 18 for y into the equation x = 2y/3 yields 9 = (2/3)18 = 12, which is false. Therefore, the value of 2x − 3 cannot be 15.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "12",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "If 2x − 3 = 12, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 7.5. Substituting 7.5 for x and 18 for y into the equation x = 2y/3 yields 7.5 = (2/3)18 = 12, which is false. Therefore, the value of 2x − 3 cannot be 12.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "10",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "If 2x − 3 = 10, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 6.5. Substituting 6.5 for x and 18 for y into the equation x = 2y/3 yields 6.5 = (2/3)18 = 12, which is false. Therefore, the value of 2x − 3 cannot be 10.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A bricklayer uses the formula n = 7lh to estimate the number of bricks, n, needed to build a wall that is l feet long and h feet high. Which of the following correctly expresses l in terms of n and h?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "l = 7/nh",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "l = h/7n",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "l = n/7h",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "By properties of multiplication, the formula n = 7lh can be rewritten as n = (7h)l. To solve for lin terms of n and h, divide both sides of the equation by the factor 7h. Solving this equation for gives l = n/7h.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "l = n/(7 + h)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT16M1/media/8a.jpg",
+            "The table above shows some values of the functions w and t. For which value of x is w(x) + t(x) = x?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "When x = 1, the equation w(x) + t(x) = x is not true. According to the table, w(1) = −1 and t(1) = −3. Substituting the values of each term when x = 1 gives −1 + (−3) = 1, an equation that is not true.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "This question can be answered by making a connection between the table and the algebraic equation. Each row of the table gives a value of x and its corresponding values in both w(x) and t(x). For instance, the first row gives x = 1 and the corresponding values w(1) = −1 and t(1) = −3. The row in the table where x = 2 is the only row that has the property x = w(x) + t(x): 2 = 3 + (−1). Therefore, this choice is the correct answer.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "When x = 3, the equation w(x) + t(x) = x is not true. According to the table, w(3) = 4 and t(3) = 1. Substituting the values of each term when x = 3 gives 4 + 1 = 3, an equation that is not true.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "When x = 4, the equation w(x) + t(x) = x is not true. According to the table, w(4) = 3 and t(4) = 3. Substituting the values of each term when x = 4 gives 3 + 3 = 4, an equation that is not true.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If √x + √9 = √64 , what is the value of x?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "√5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from a misconception about how to square both sides of x = 5 to determine the value of x.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The value of x , not x, is 5.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "25",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The two numerical expressions in the given equation can be simplified as √9 = 3 and √64 = 8, so the equation can be rewritten as √x + 3 = 8, or √x = 5. Squaring both sides of the equation gives x = 25.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "55",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice represents a misconception about the properties of radicals. While it is true that 55 + 9 = 64, it is not true that √55 + √9 = √64.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Jaime is preparing for a bicycle race. His goal is to bicycle an average of at least 280 miles per week for 4 weeks. He bicycled 240 miles the first week, 310 miles the second week, and 320 miles the third week. Which inequality can be used to represent the number of miles, x, Jaime could bicycle on the 4th week to meet his goal?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "(240 + 310 + 320)/3 + x ≥ 280",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice does not correctly capture the relationships between the total number of miles Jaime will ride his bicycle (240 + 310 + 320 + x) and the minimum number of miles he is attempting to bicycle for the four weeks (280 + 280 + 280 + 280).",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "240 + 310 + 320 ≥ x(280)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice does not correctly capture the relationships between the total number of miles Jaime will ride his bicycle (240 + 310 + 320 + x) and the minimum number of miles he is attempting to bicycle for the four weeks (280 + 280 + 280 + 280).",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "240/4 + 310/4 + 320/4 + x ≥ 280",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice does not correctly capture the relationships between the total number of miles Jaime will ride his bicycle (240 + 310 + 320 + x) and the minimum number of miles he is attempting to bicycle for the four weeks (280 + 280 + 280 + 280).",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "240 + 310 + 320 + x ≥ 4(280)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Jaime's goal is to average at least 280 miles per week for 4 weeks. If T is the total number of miles Jamie will bicycle for 4 weeks, then his goal can be represented symbolically by the inequality: T/4 ≥ 280, or equivalently T ≥ 4(280). The total number of miles Jamie will bicycle during this time is the sum of the distances he has completed and has yet to complete. Thus T = 240 + 310 + 320 + x. Substituting this expression into the inequality T ≥ 4(280) gives 240 + 310 + 320 + x ≥ 4(280).",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT16M1/media/11a.jpg",
+            "The vertex of the parabola in the xy-plane above is (0, c). Which of the following is true about the parabola with the equation y = −a(x − b)² + c?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The vertex is (b, c) and the graph opens upward.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The coefficient of x² in the equation y = −a(x − b)² + c is negative. Therefore, the parabola with this equation opens downward, not upward.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The vertex is (b, c) and the graph opens downward.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Since the shown parabola opens upward, the coefficient of x² in the equation y = ax² + c must be positive. Given that a is positive, –a is negative, and therefore the graph of the equation y = −a(x − b)² + c will be a parabola that opens downward. The vertex of this parabola is (b, c), because the maximum value of y, c, is reached when x = b.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The vertex is (–b, c) and the graph opens upward.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The coefficient of x² in the equation y = −a(x − b)² + c is negative. Therefore, the parabola with this equation opens downward, not upward.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The vertex is (–b, c) and the graph opens downward.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The vertex of this parabola is (b, c), not (−b, c), because the maximum value of y, c, is reached when x = b.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is equivalent to (4x² + 6x)/(4x + 2)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "x",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly factoring the numerator and denominator of the expression (4x² + 6x)/(4x + 2) and then incorrectly identifying common factors in the two factored expressions.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "x + 4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from incorrectly factoring the numerator and denominator of the expression (4x² + 6x)/(4x + 2) and then incorrectly identifying common factors in the two factored expressions.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "x – 2/(4x + 2)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from a variety of mistakes made when performing long division.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "x + 1 – 2/(4x + 2)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Dividing 4x² + 6x by 4x + 2 gives with x + 1 with a remainder of –2. Therefore, the expression (4x² + 6x)/(4x + 2) is equivalent to x + 1 – 2/(4x + 2).",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:2x² – 4x = t",
+            "In the equation above, t is a constant. If the equation has no real solutions, which of the following could be the value of t?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "–3",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The number of solutions to any quadratic equation in the form ax² + bx + c = 0, where a, b, and c are constants, can be found by evaluating the expression b² − 4ac, which is called the discriminant. If the value of b² − 4ac is a positive number, then there will be exactly two real solutions to the equation. If the value of b² − 4ac is zero, then there will be exactly one real solution to the equation. Finally, if the value of b² − 4ac is negative, then there will be no real solutions to the equation.\nThe given equation 2x² − 4x = t is a quadratic equation in one variable, where t is a constant. Subtracting t from both sides of the equation gives 2x² − 4x − t = 0. In this form, a = 2, b = −4, and c = −t. The values of t for which the equation has no real solutions are the same values of t for which the discriminant of this equation is a negative value. The discriminant is equal to (−4)² − 4(2)(−t); therefore, (−4)² − 4(2)(−t) < 0. Simplifying the left side of the inequality gives 16 + 8t < 0. Subtracting 16 from both sides of the inequality and then dividing both sides by 8 gives t < −2. Of the values given in the options, −3 is the only value that is less than −2.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "–1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice results from a misconception about how to use the discriminant to determine the number of solutions of a quadratic equation in one variable.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "1",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice results from a misconception about how to use the discriminant to determine the number of solutions of a quadratic equation in one variable.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "3",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice results from a misconception about how to use the discriminant to determine the number of solutions of a quadratic equation in one variable.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A laundry service is buying detergent and fabric softener from its supplier. The supplier will deliver no more than 300 pounds in a shipment. Each container of detergent weighs 7.35 pounds, and each container of fabric softener weighs 6.2 pounds. The service wants to buy at least twice as many containers of detergent as containers of fabric softener. Let d represent the number of containers of detergent, and let s represent the number of containers of fabric softener, where d and s are nonnegative integers. Which of the following systems of inequalities best represents this situation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "7.35d + 6.2s ≤ 300\nd ≥ 2s",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The number of containers in a shipment must have a weight less than 300 pounds. The total weight, in pounds, of detergent and fabric softener that the supplier delivers can be expressed as the weight of each container multiplied by the number of each type of container, which is 7.35d for detergent and 6.2s for fabric softener. Since this total cannot exceed 300 pounds, it follows that 7.35d + 6.2s ≤ 300. Also, since the laundry service wants to buy at least twice as many containers of detergent as containers of fabric softener, the number of containers of detergent should be greater than or equal to two times the number of containers of fabric softener. This can be expressed by the inequality d ≥ 2s.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "7.35d + 6.2s ≤ 300\n2d ≥ s",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice misrepresents the relationship between the numbers of each container that the laundry service wants to buy.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "14.7d + 6.2s ≤ 300\nd ≥ 2s",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "The first inequality of the system incorrectly doubles the weight per container of detergent. The weight of each container of detergent is 7.35, not 14.7 pounds.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "14.7d + 6.2s ≤ 300\n2d ≥ s",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice doubles the weight per container of detergent and transposes the relationship between the numbers of containers.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is equivalent to (a + b/2)²?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "a² + b²/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors using the distributive property on the given expression or combining like terms.",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "a² + b²/4",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors using the distributive property on the given expression or combining like terms.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "a² + ab/2 + b²/2",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from errors using the distributive property on the given expression or combining like terms.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "a² + ab +  b²/4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The expression can be rewritten as (a + b/2)(a + b/2). Using the distributive property, the expression yields (a + b/2)(a + b/2) = a² + ab/2 + ab/2 + b²/2. Combining like terms gives a² + ab +  b²/4.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "If aᵇ/⁴ = 16 for positive integers a and b, what is one possible value of b?"
+        ],
+        "AnswerChoices": {
+            "KEY1": {
+                "Choice": "equal:1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: (16⁴)¹/⁴. Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 1/4. So the value of b can be 1.",
+                    "Percent": 0
+                }
+            },
+            "KEY2": {
+                "Choice": "equal:2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: (16²)¹/². Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 1/2. So the value of b can be 2.",
+                    "Percent": 0
+                }
+            },
+            "KEY3": {
+                "Choice": "equal:4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: 16¹. Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 1. So the value of b can be 4.",
+                    "Percent": 0
+                }
+            },
+            "KEY4": {
+                "Choice": "equal:8",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: 4². Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 2. So the value of b can be 8.",
+                    "Percent": 0
+                }
+            },
+            "KEY5": {
+                "Choice": "equal:16",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: 2⁴. Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 4. So the value of b can be 16.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            ":ibox:2t/3 = 5/2",
+            "What value of t is the solution of the equation above?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:15/4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "Multiplying both sides of the equation 2t/3 = 5/2 by 3/2 results in t = 15./4, or t = 3.75.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/SAT16M1/media/18a.jpg",
+            "In the figure above, BD is parallel to AE. What is the length of CE?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:30",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "In the figure given, since BD is parallel to AE and both segments are intersected by CE, then angle BDC and angle AEC are corresponding angles and therefore congruent. Angle BCD and angle ACE are also congruent because they are the same angle. Triangle BCD and triangle ACE are similar because if two angles of one triangle are congruent to two angles of another triangle, the triangles are similar. Since triangle BCD and triangle ACE are similar, their corresponding sides are proportional. So in triangle BCD and triangle ACE, BD corresponds to AE and CD corresponds to CE. Therefore, BD/CD = AE/CE. Since triangle BCD is a right triangle, the Pythagorean theorem can be used to give the value of CD: 6² + 8² = CD². Taking the square root of each side gives CD = 10. Substituting the values in the proportion BD/CD = AE/CE yields 67/10 = 18/CE. Multiplying each side by CE, and then multiplying by 10/6 yields CE = 30. Therefore, the length of CE is 30.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "How many liters of a 25% saline solution must be added to 3 liters of a 10% saline solution to obtain a 15% saline solution?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:1.5",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The total amount, in liters, of a saline solution can be expressed as the liters of each type of saline solution multiplied by the percent of the saline solution. This gives 3(0.10), x(0.25), and (x + 3)(0.15), where x is the amount, in liters, of a 25% saline solution and 10%, 15%, and 25% are represented as 0.10, 0.15, and 0.25, respectively. Thus, the equation 3(0.10) + 0.25x = 0.15(x + 3) must be true. Multiplying 3 by 0.10 and distributing 0.15 to (x + 3) yields 0.30 + 0.25x = 0.15x + 0.45. Subtracting 0.15x and 0.30 from each side of the equation gives 0.10x = 0.15. Dividing each side of the equation by 0.10 yields x = 1.5, or x = 3/2.",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Points A and B lie on a circle with radius 1, and arc AB has length π/3. What fraction of the circumference of the circle is the length of arc AB?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:1/6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}
