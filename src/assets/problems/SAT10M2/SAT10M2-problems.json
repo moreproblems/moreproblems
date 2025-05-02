@@ -16,41 +16,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/SAT10M2/media/1a.jpg",
-            ""
+            "An object’s speed is 64 yards per second. What is the object’s speed, in FEET per second? (1 yard = 3 feet)"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "61",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A speed of 61 feet per second is equivalent to 61/3, not 64, yards per second.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "67",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A speed of 67 feet per second is equivalent to 67/3, not 64, yards per second.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "94",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A speed of 94 feet per second is equivalent to 94/3, not 64, yards per second.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "192",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Since 1 yard is equal to 3 feet, 64 yards is equal to 64 yards(3 feet)/(1 yard), or 192 feet. It follows that 64 yards per second is equivalent to 192 feet per second. Therefore, the object’s speed is 192 feet per second.",
                     "Percent": 0
                 }
             }
@@ -74,40 +71,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown.",
             "problems/SAT10M2/media/2a.jpg",
-            ""
+            "Which of the following equations best represents the line of best fit shown?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "y = x + 3.4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The line of best fit shown has a positive slope and intersects the y-axis at a positive y-value. The graph of an equation of the form y = mx + b, where m and b are constants, has a slope of m and intersects the y-axis at a y-value of b. Of the given choices, only y = x + 3.4 represents a line that has a positive slope, 1 , and intersects the y-axis at a positive y-value, 3.4.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "y = x – 3.4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This equation represents a line that intersects the y-axis at a negative y-value, not a positive y-value.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "y = –x + 3.4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This equation represents a line that has a negative slope, not a positive slope.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "y = –x – 3.4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This equation represents a line that has a negative slope, not a positive slope, and intersects the y-axis at a negative y-value, not a positive y-value.",
                     "Percent": 0
                 }
             }
@@ -131,40 +128,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT10M2/media/3a.jpg",
-            ""
+            "The graph shows the linear relationship between x and y. Which table gives three values of x and their corresponding values of y for this relationship?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/SAT10M2/media/3b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This table represents a relationship between x and y such that the graph passes through the points (0, 0), (1, -7), and (2, -9).",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/SAT10M2/media/3c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This table represents a relationship between x and y such that the graph passes through the points (0, 0), (1, -3), and (2, -1).",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/SAT10M2/media/3d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This table represents a relationship between x and y such that the graph passes through the points (0, -5), (1, -7), and (2, -9).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/SAT10M2/media/3e.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It’s given that the graph shows the linear relationship between x and y. The given graph passes through the points (0, -5), , (1, -3), and (2, -1). It follows that when x = 0, the corresponding value of y is -5, when x = 1, the corresponding value of y is -3, and when x = 2, the corresponding value of y is -1. Of the given choices, only the table in this choice gives these three values of x and their corresponding values of y for the relationship shown in the graph.",
                     "Percent": 0
                 }
             }
@@ -188,40 +184,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/4a.jpg",
-            ""
+            "What is the perimeter, in inches, of a rectangle with a length of 4 inches and a width of 9 inches?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "13",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the sum, in inches, of the length and the width of the rectangle.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "17",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the sum, in inches, of the two lengths and the width of the rectangle.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "22",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the sum, in inches, of the length and the two widths of the rectangle.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "26",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The perimeter of a figure is equal to the sum of the measurements of the sides of the figure. It’s given that the rectangle has a length of 4 inches and a width of 9 inches. Since a rectangle has 4 sides, of which opposite sides are parallel and equal, it follows that the rectangle has two sides with a length of 4 inches and two sides with a width of 9 inches. Therefore, the perimeter of this rectangle is 4 + 4 + 9 + 9, or 26 inches.",
                     "Percent": 0
                 }
             }
@@ -245,40 +239,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/5a.jpg",
-            ""
+            ":ibox:7m = 2(n + p)",
+            "The given equation relates the positive numbers m, n, and p. Which equation correctly gives m in terms of n and p ?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "m = 2(n + p)/7",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Dividing each side of the given equation by 7 yields m = 2(n + p)/7.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "m = 2(n + p)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "m = 2(n + p) – 7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This equation is equivalent to 7 + m = 2(n + p), not 7m = 2(n + p).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "m = 2 – n – p – 7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             }
@@ -287,8 +280,8 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -302,40 +295,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/6a.jpg",
-            ""
+            ":ibox:73, 74, 75, 77, 79, 82, 84, 85, 91",
+            "What is the median of the data shown?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:79",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The median of a data set with an odd number of values is the middle value of the set when the values are ordered from least to greatest. Because the given data set consists of nine values that are ordered from least to greatest, the median is the fifth value in the data set. Therefore, the median of the data shown is 79.",
                     "Percent": 0
                 }
             }
@@ -344,8 +312,8 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -359,40 +327,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/7a.jpg",
-            ""
+            "The function f is defined by f(x) = 4x. For what value of x does f(x) = 8?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:2",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Substituting 8 for f(x) in the given equation yields 8 = 4x. Dividing the left- and right-hand sides of this equation by 4 yields x = 2. Therefore, the value of x is 2 when f(x) = 8.",
                     "Percent": 0
                 }
             }
@@ -416,40 +358,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/8a.jpg",
-            ""
+            "Of 300,000 paper clips, 234,000 are size large. What percentage of the paper clips are size large?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "22%",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the percentage of the paper clips that are not size large.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "33%",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "66%",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "78%",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The proportion of the paper clips that are size large can be written as (234,000/300,000), or 0.78. Therefore, the percentage of the paper clips that are size large is 0.78(100), or 78%.",
                     "Percent": 0
                 }
             }
@@ -473,40 +413,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/9a.jpg",
-            ""
+            ":ibox:f(x) = 8x + 4",
+            "The function f gives the estimated height, in feet, of a willow tree x years after its height was first measured. Which statement is the best interpretation of 4 in this context?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The tree will be measured each year for 4 years.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual errors. ",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The tree is estimated to grow to a maximum height of 4 feet.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual errors. ",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The estimated height of the tree increased by 4 feet each year.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual errors. ",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The estimated height of the tree was 4 feet when it was first measured.",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It’s given that the function f(x) = 8x + 4 gives the estimated height, in feet, of a willow tree x years after its height was first measured. For a function defined by an equation of the form f(x) = mx + b, where m and b are constants, b represents the value of f(x) when x = 0. It follows that in the given function, 4 represents the value of f(x) when x = 0. Therefore, the best interpretation of 4 in this context is that the estimated height of the tree was 4 feet when it was first measured.",
                     "Percent": 0
                 }
             }
@@ -530,40 +469,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/10a.jpg",
-            ""
+            "y = 76\ny = x² – 5",
+            "The graphs of the given equations in the xy-plane intersect at the point (x, y). What is a possible value of x?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "–76/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "–9",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Since the point (x, y) is an intersection point of the graphs of the given equations in the xy-plane, the pair (x, y) should satisfy both equations, and thus is a solution of the given system. According to the first equation, y = 76. Substituting 76 in place of y in the second equation yields x² - 5 = 76. Adding 5 to both sides of this equation yields x² = 81. Taking the square root of both sides of this equation yields two solutions: x = 9 and x = -9. Of these two solutions, only -9 is given as a choice.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "76",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the value of coordinate y, rather than x, of the intersection point (x, y).",
                     "Percent": 0
                 }
             }
@@ -587,40 +525,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/11a.jpg",
-            ""
+            "Each side of equilateral triangle S is multiplied by a scale factor of k to create equilateral triangle T. The length of each side of triangle T is greater than the length of each side of triangle S. Which of the following could be the value of k?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "29/28",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": " It’s given that each side of equilateral triangle S is multiplied by a scale factor of k to create equilateral triangle T. Since the length of each side of triangle T is greater than the length of each side of triangle S, the scale factor of k must be greater than 1. Of the given choices, only 29/28 is greater than 1 .",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If each side of equilateral triangle S is multiplied by a scale factor of 1 , the length of each side of triangle T would be equal to the length of each side of triangle S.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "28/29",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If each side of equilateral triangle S is multiplied by a scale factor of 28/29, the length of each side of triangle T would be less than the length of each side of triangle S.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             }
@@ -644,40 +580,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/12a.jpg",
-            ""
+            ":ibox:66x = 66x",
+            "How many solutions does the given equation have?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Exactly one",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Exactly two",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Infinitely many",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "If the two sides of a linear equation are equivalent, then the equation is true for any value. If an equation is true for any value, it has infinitely many solutions. Since the two sides of the given linear equation 66x = 66x are equivalent, the given equation has infinitely many solutions.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Zero",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             }
@@ -686,8 +621,8 @@
     },
     "13": {
         "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -701,40 +636,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/13a.jpg",
-            ""
+            "Vivian bought party hats and cupcakes for $71. Each package of party hats cost $3, and each cupcake cost $1. If Vivian bought 10 packages of party hats, how many cupcakes did she buy?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:41",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The number of cupcakes Vivian bought can be found by first finding the amount Vivian spent on cupcakes. The amount Vivian spent on cupcakes can be found by subtracting the amount Vivian spent on party hats from the total amount Vivian spent. The amount Vivian spent on party hats can be found by multiplying the cost per package of party hats by the number of packages of party hats, which yields $3 • 10, or $30. Subtracting the amount Vivian spent on party hats, $30, from the total amount Vivian spent, $71, yields $71 - $71, or $41 . Since the amount Vivian spent on cupcakes was $41 and each cupcake cost $1 , it follows that Vivian bought 41 cupcakes.",
                     "Percent": 0
                 }
             }
@@ -743,8 +652,8 @@
     },
     "14": {
         "Number": 14,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -758,40 +667,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/14a.jpg",
-            ""
+            "The exponential function g is defined by g(x) = 19 • aˣ, where a is a positive constant. If g(3) = 2,375, what is the value of g(4)?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:11875",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It’s given that the exponential function g is defined by g(x) = 19 • aˣ, where a is a positive constant, and g(3) = 2,375. It follows that when x = 3, g(x) = 2,375. Substituting 3 for x and 2,375 for g(x) in the given equation yields 2,375 = 19 • a³. Dividing each side of this equation by 19 yields 125 = a³. Taking the cube root of both sides of this equation gives a = 5. Substituting 4 for x and 5 for a in the equation g(x) = 19 • aˣ yields g(x) = 19 • 5⁴, or g(4) = 11,875. Therefore, the value of g(4) is 11,875.",
                     "Percent": 0
                 }
             }
@@ -815,40 +698,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/15a.jpg",
-            ""
+            "In right triangle RST, the sum of the measures of angle R and angle S is 90 degrees. The value of sin(R) is √15/4. What is the value of cos(S)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "√15/15",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the value of tan(S).",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "√15/4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The sine of any acute angle is equal to the cosine of its complement. It’s given that in right triangle RST, the sum of the measures of angle R and angle S is 90 degrees. Therefore, angle R and angle S are complementary, and the value of sin(R) is equal to the value of cos(S). It’s given that the value of sin(R) is √15/4, so the value of cos(S) is also √15/4.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "4√15/15",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the value of 1/cos(S).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "√15",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the value of 1/tan(S).",
                     "Percent": 0
                 }
             }
@@ -872,40 +753,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT10M2/media/16a.jpg",
-            ""
+            "The graph shows the relationship between the number of shares of stock from Company A, x, and the number of shares of stock from Company B, y, that Simone can purchase. Which equation could represent this relationship?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "y = 8x + 12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The point (0, 40) is not on the graph of this equation, since 40 = 8(0) + 12, or 40 = 12, is not true. ",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "8x + 12y = 480",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The graph shown is a line passing through the points (0, 40) and (60, 0). Since the relationship between x and y is linear, if two points on the graph make a linear equation true, then the equation represents the relationship. Substituting 0 for x and 40 for y in the equation in this choice, 8x + 12y = 480 yields 8(0) + 12(40) = 480, or 480 = 480, which is true. Substituting 60 for x and 0 for y in the equation 8x + 12y = 480 yields 8(60) + 12(0) = 480 , or 480 = 480, which is true. Therefore, the equation 8x + 12y = 480 represents the relationship between x and y.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "y = 12x + 8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The point (0, 40) is not on the graph of this equation, since 40 = 12(0) + 8, or 40 = 8, is not true. ",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "12x + 8y = 480",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The point (0, 40) is not on the graph of this equation, since 12(0) + 8(40) = 480, or 320 = 480, is not true. ",
                     "Percent": 0
                 }
             }
@@ -914,8 +794,8 @@
     },
     "17": {
         "Number": 17,
-        "Type": "MP",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 4,
         "Topics": [
             ""
         ],
@@ -929,75 +809,43 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/SAT10M2/media/17a.jpg",
-            ""
+            "Which expression is equivalent to (8x(x – 7) – 3(x – 7))/(2x – 14), where x > 7?"
         ],
-        "AnswerChoices": {},
-        "Parts": {
+        "AnswerChoices": {
             "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
+                "Choice": "(x – 7)/5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
+                    "Percent": 0
                 }
             },
             "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
+                "Choice": "(8x – 3)/2",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The given expression has a common factor of 2 in the denominator, so the expression can be rewritten as (8x(x - 7) – 3(x - 7))/(2(x - 7)). The three terms in this expression have a common factor of (x - 7). Since it’s given that x > 7, x can’t be equal to 7, which means (x - 7) can’t be equal to 0. Therefore, each term in the expression, (8x(x - 7) – 3(x - 7))/(2(x - 7)), can be divided by (x - 7), which gives (8x – 3)/2.",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "(8x² – 3x – 14)/(2x – 14)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "(8x² – 3x – 77)/(2x – 14)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
+                    "Percent": 0
                 }
             }
-        }
+        },
+        "Parts": {}
     },
     "18": {
         "Number": 18,
@@ -1016,40 +864,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/18a.jpg",
-            ""
+            "The function f is defined by f(x) = (−8)(2)ˣ + 22. What is the y-intercept of the graph of y = f(x) in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "(0, 14)",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The y-intercept of the graph of y = f(x) in the xy-plane occurs at the point on the graph where x = 0. In other words, when x = 0, the corresponding value of f(x) is the y-coordinate of the y-intercept. Substituting 0 for x in the given equation yields f(0) = (−8)(2)⁰ + 22, which is equivalent to f(0) = (−8)(1) + 22, or f(0) = 14. Thus, when x = 0, the corresponding value of f(x) is 14. Therefore, the y-intercept of the graph of y = f(x) in the xy-plane is (0, 14).",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "(0, 2)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "(0, 22)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "(0, −8)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice could be the y-intercept for f(x) = (−8)(2)ˣ, not f(x) = (−8)(2)ˣ + 22.",
                     "Percent": 0
                 }
             }
@@ -1073,40 +919,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/19a.jpg",
-            ""
+            "Keenan made 32 cups of vegetable broth. Keenan then filled x small jars and y large jars with all the vegetable broth he made. The equation 3x + 5y = 32 represents this situation. Which is the best interpretation of 5y in this context?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The number of large jars Keenan filled",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of large jars Keenan filled is represented by y, not 5y.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The number of small jars Keenan filled",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of small jars Keenan filled is represented by x, not 5y.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The total number of cups of vegetable broth in the large jars",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It’s given that the equation 3x + 5y = 32 represents the situation where Keenan filled x small jars and y large jars with all the vegetable broth he made, which was 32 cups. Therefore, 3x represents the total number of cups of vegetable broth in the small jars and 5y represents the total number of cups of vegetable broth in the large jars.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The total number of cups of vegetable broth in the small jars",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The total number of cups of vegetable broth in the small jars is represented by 3x, not 5y.",
                     "Percent": 0
                 }
             }
@@ -1115,8 +959,8 @@
     },
     "20": {
         "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -1130,40 +974,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/20a.jpg",
-            ""
+            "A circle in the xy-plane has a diameter with endpoints (2, 4) and (2, 14). An equation of this circle is (x − 2)² + (y − 9)² = r², where r is a positive constant. What is the value of r?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:5",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The standard form of an equation of a circle in the xy-plane is (x - h)² + (y - k)² = r², where h, k, and r are constants, the coordinates of the center of the circle are (h, k), and the length of the radius of the circle is r. It′s given that an equation of the circle is (x - 2)² + (y - 9)² = r². Therefore, the center of this circle is (2, 9). It’s given that the endpoints of a diameter of the circle are (2, 4) and , (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x₁ - x₂)² + (y₁ - y₂)²). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 - 2)² + (9 - 4)²), or  √(0² + 5²), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
                     "Percent": 0
                 }
             }
@@ -1172,8 +990,8 @@
     },
     "21": {
         "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -1187,40 +1005,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/21a.jpg",
-            ""
+            "Line l is defined by 3y + 12x = 5. Line n is perpendicular to line l in the xy-plane. What is the slope of line n?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:1/4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "For an equation in slope-intercept form y = mx + b, m represents the slope of the line in the xy-plane defined by this equation. It’s given that line l is defined by 3y + 12x = 5. Subtracting 12x from both sides of this equation yields 3y = -12x + 5. Dividing both sides of this equation by 3 yields y = -12x/3 + 5/3, or y = -4x + 5/3. Thus, the slope of line l in the xy-plane is -4. Since line n is perpendicular to line l in the xy-plane, the slope of line n is the negative reciprocal of the slope of line l. The negative reciprocal of -4 is -1/(-4) = 1/4.",
                     "Percent": 0
                 }
             }
@@ -1244,40 +1036,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/22a.jpg",
-            ""
+            ":ibox:|–5x + 13| = 73",
+            "What is the sum of the solutions to the given equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "–146/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "–12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is a solution, not the sum of the solutions, to the given equation.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "26/5",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "By the definition of absolute value, if |-5x + 13| = 73, then -5x + 13 = 73 or -5x + 13 = -73. Subtracting 13 from both sides of the equation -5x + 13 = 73 yields -5x = 60. Dividing both sides of this equation by -5 yields x = -12. Subtracting 13 from both sides of the equation -5x + 13 = -73 yields -5x = -86. Dividing both sides of this equation by -5 yields x = 86/5. Therefore, the solutions to the given equation are -12 and 86/5, and it follows that the sum of the solutions to the given equation is -12 + 86/5, or 26/5.",
                     "Percent": 0
                 }
             }
@@ -1301,40 +1092,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/23a.jpg",
-            ""
+            "For the exponential function f, the value of f(1) is k, where k is a constant. Which of the following equivalent forms of the function f shows the value of k as the coefficient or the base?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "f(x) = 50(1.6)ˣ⁺¹",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "f(x) = 80(1.6)ˣ",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "f(x) = 128(1.6)ˣ⁻¹",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "For the form of the function in this choice, f(x) = 128(1.6)ˣ⁻¹,the value of f(1) can be found as f(x) = 128(1.6)¹⁻¹, which is equivalent to 128(1.6)⁰, or 128. Therefore, k = 128, which is shown in f(x) = 128(1.6)ˣ⁻¹ as the coefficient.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "f(x) = 204.8(1.6)ˣ⁻²",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice may result from conceptual or calculation errors.",
                     "Percent": 0
                 }
             }
@@ -1358,40 +1147,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/24a.jpg",
-            ""
+            ":ibox:–9x² + 30x + c = 0",
+            "In the given equation, c is a constant. The equation has exactly one solution. What is the value of c?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the value of c is 3, this would yield a discriminant that is greater than zero. Therefore, the given equation would have two solutions, rather than exactly one solution.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the value of c is 0, this would yield a discriminant that is greater than zero. Therefore, the given equation would have two solutions, rather than exactly one solution.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "–25",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "It’s given that the equation –9x² + 30x + c = 0 has exactly one solution. A quadratic equation of the form ax² + bx + c = 0 has exactly one solution if and only if its discriminant,  -4ac + b², is equal to zero. It follows that for the given equation, a = -9 and b = 30. Substituting -9 for a and 30 for b into b² - 4ac yields 30² - 4(-9)c, or 900 + 36c. Since the discriminant must equal zero, 900 + 36c = 0. Subtracting 36c from both sides of this equation yields 900 = -36c. Dividing each side of this equation by -36 yields -25 = c. Therefore, the value of c is -25.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "–53",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the value of c is -53, this would yield a discriminant that is less than zero. Therefore, the given equation would have no real solutions, rather than exactly one solution.",
                     "Percent": 0
                 }
             }
@@ -1415,40 +1203,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/25a.jpg",
-            ""
+            "Which of the following expressions has a factor of x + 2b, where b is a positive integer constant?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "3x² + 7x + 14b",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If this expression has a factor of x + 2b, then the value of b is 0, which isn’t positive.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "3x² + 28x + 14b",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If this expression has a factor of x + 2b, then the value of b is 21/6, which isn’t an integer.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "3x² + 42x + 14b",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If this expression has a factor of x + 2b, then the value of b is 35/6, which isn’t an integer.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "3x² + 49x + 14b",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "Since each choice has a term of 3x², which can be written as (3x)(x), and each choice has a term of 14b, which can be written as (7)(2b), the expression that has a factor of x + 2b, where b is a positive integer constant, can be represented as (3x + 7)(x + 2b). Using the distributive property of multiplication, this expression is equivalent to 3x(x + 2b) + 7(x + 2b), or 3x² + 6xb + 7x + 14b. Combining the x-terms in this expression yields 3x² + (7 + 6b)x + 14b. It follows that the coefficient of the x-term is equal to 7 + 6b. Thus, from the given choices, 7 + 6b must be equal to 7, 28, 42, or 49. Therefore, b 6 must be equal to 0, 21 , 35, or 42, respectively, and b must be equal to 0/6, 21/6, 35/6, or 42/6, respectively. Of these four values of b, only 42/6, or 7, is a positive integer. It follows that 7 + 6b must be equal to 49 because this is the only choice for which the value of b is a positive integer constant. Therefore, the expression that has a factor of x + 2b is 3x² + 49x + 14b.",
                     "Percent": 0
                 }
             }
@@ -1472,40 +1258,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
             "problems/SAT10M2/media/26a.jpg",
-            ""
+            "problems/SAT10M2/media/26b.jpg",
+            "Two data sets of 23 integers each are summarized in the histograms shown. For each of the histograms, the first interval represents the frequency of integers greater than or equal to 10, but less than 20. The second interval represents the frequency of integers greater than or equal to 20, but less than 30, and so on. What is the smallest possible difference between the mean of data set A and the mean of data set B?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the smallest possible difference between the ranges, not the means, of the data sets. ",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "1",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The histograms shown have the same shape, but data set A contains values between 20 and 60 and data set B contains values between 10 and 50. Thus, the mean of data set A is greater than the mean of data set B. Therefore, the smallest possible difference between the mean of data set A and the mean of data set B is the difference between the smallest possible mean of data set A and the greatest possible mean of data set B. In data set A, since there are 3 integers in the interval greater than or equal to 20 but less than 30, 4 integers greater than or equal to 30 but less than 40, 7 integers greater than or equal to 40 but less than 50, and 9 integers greater than or equal to 50 but less than 60, the smallest possible mean for data set A is ((3 • 20) + (4 • 30) + (7 • 40) + (9 • 50))/23. In data set B, since there are 3 integers greater than or equal to 10 but less than 20, 4 integers greater than or equal to 20 but less than 30, 7 integers greater than or equal to 30 but less than 40, and 9 integers greater than or equal to 40 but less than 50, the largest possible mean for data set B is ((3 • 19) + (4 • 29) + (7 • 39) + (9 • 49))/23. Therefore, the smallest possible difference between the mean of data set A and the mean of data set B is ((3 • 20) + (4 • 30) + (7 • 40) + (9 • 50))/23 - ((3 • 19) + (4 • 29) + (7 • 39) + (9 • 49))/23, which is equivalent to ((3 • 20) - (3 • 19) + (4 • 30) - (4 • 29) + (7 • 40) - (7 • 39) + (9 • 50) - (9 • 49))/23. This expression can be rewritten as (3(20 - 19) + 4(30 - 29) + 7(40 - 39) + 9(50 - 49))/23, or 23/23, which is equal to 1 . Therefore, the smallest possible difference between the mean of data set A and the mean of data set B is 1 .",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the difference between the greatest possible mean, not the smallest possible mean, of data set A and the greatest possible mean of data set B.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "23",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This choice is the smallest possible difference between the sum of the values in data set A and the sum of the values in data set B, not the smallest possible difference between the means.",
                     "Percent": 0
                 }
             }
@@ -1514,8 +1300,8 @@
     },
     "27": {
         "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -1529,40 +1315,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/SAT10M2/media/27a.jpg",
-            ""
+            "The perimeter of an equilateral triangle is 624 centimeters. The height of this triangle is k√3 centimeters, where k is a constant. What is the value of k?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:104",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "An equilateral triangle is a triangle in which all three sides have the same length and all three angles have a measure of 60°. The height of the triangle, k√3, is the length of the altitude from one vertex. The altitude divides the equilateral triangle into two congruent 30-60-90 right triangles, where the altitude is the side across from the 60° angle in each 30-60-90 right triangle. Since the altitude has a length of k√3, it follows from the properties of 30-60-90 right triangles that the side across from each 30° angle has a length of k and each hypotenuse has a length of 2k. In this case, the hypotenuse of each 30-60-90 right triangle is a side of the equilateral triangle; therefore, each side length of the equilateral triangle is 2k. The perimeter of a triangle is the sum of the lengths of each side. It’s given that the perimeter of the equilateral triangle is 624; therefore, 2k + 2k + 2k = 624, or 6k = 624. Dividing both sides of this equation by 6 yields k = 104.",
                     "Percent": 0
                 }
             }
