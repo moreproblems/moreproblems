@@ -2166,12 +2166,12 @@
                             {{block2[0]}}</h3>
                           <div *ngIf="block2[1].startsWith(':box:')"
                             style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                               {{block2[1].slice(5)}}</h3>
                           </div>
                           <div *ngIf="block2[1].startsWith(':ibox:')"
                             style="border: none; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                            <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                               {{block2[1].slice(6)}}</h3>
                           </div>
                           <h3
@@ -2190,12 +2190,12 @@
                     </div>
                     <div *ngIf="block[1].startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: 10px auto; padding: 15px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{block[1].slice(5)}}</h3>
                     </div>
                     <div *ngIf="block[1].startsWith(':ibox:')"
                       style="width: fit-content; max-width: 500px; margin: 10px auto; padding: 15px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{block[1].slice(6)}}</h3>
                     </div>
                     <h3
@@ -2325,9 +2325,9 @@
               <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
                 style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div *ngIf="subtopic_problem_number == +prob.key">
-                  <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+                  <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center; margin: 16px auto">
                     <img *ngIf="is_image(block)" src="./assets/{{block}}"
-                      style="max-width: min(750px, 90%); max-height: 750px">
+                      style="max-width: min(750px, 90%); max-height: min(600px, 70%)">
                     <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                       <h3
                         style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">
@@ -2367,7 +2367,7 @@
                     <div
                       *ngIf="block.startsWith(':box:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         <span *ngFor="let word of block.slice(5).split(' ')"
                           style="width: fit-content; height: fit-content">
                           <img *ngIf="is_image(word)" src="./assets/{{word}}"
@@ -2486,12 +2486,12 @@
                     <div
                       *ngIf="block.startsWith(':box:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(prob.value.Type)"
                       style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{block.slice(5)}}</h3>
                     </div>
                     <div *ngIf="block.startsWith(':ibox:')"
                       style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{block.slice(6)}}</h3>
                     </div>
                     <h3
@@ -2614,14 +2614,14 @@
                   </div>
                 </div>
               </div>
-              <br />
+              <br *ngIf="prob.value.Explain" />
               <div *ngIf="prob.value.Explain" class="card card-medium"
                 style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
                 <textarea rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
                   style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                   #inputE></textarea>
               </div>
-              <br *ngIf="prob.value.Explain" />
+              <br *ngIf="subtopic_problem_number <= subtopic_problem_count && prob.value.Type != 'MP'" />
               <input type="hidden" #selection>
               <div *ngIf="prob.value.Type == 'IM'">
                 <div class="card card-medium"
@@ -2748,7 +2748,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                       <div *ngIf="choice.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{choice.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -2762,7 +2762,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                       <div *ngIf="choice.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{choice.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -2797,7 +2797,7 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{selection.slice(7)}}</h3>
                         </div>
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -2812,7 +2812,7 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{selection.slice(7)}}</h3>
                         </div>
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -2827,7 +2827,7 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{selection.slice(7)}}</h3>
                         </div>
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -2854,7 +2854,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                       <div *ngIf="choice.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{choice.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -2868,7 +2868,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                       <div *ngIf="choice.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{choice.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -2901,7 +2901,7 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{selection.slice(7)}}</h3>
                         </div>
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -2916,7 +2916,7 @@
                           style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                         <div *ngIf="selection.slice(2).startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{selection.slice(7)}}</h3>
                         </div>
                         <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -3102,7 +3102,7 @@
                   </h3>
                   <div *ngIf="choice.value.Choice.startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       {{choice.value.Choice.slice(5)}}</h3>
                   </div>
                   <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
@@ -3138,14 +3138,14 @@
                   </h3>
                   <div *ngIf="choice.value.Choice.startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       {{choice.value.Choice.slice(5)}}</h3>
                   </div>
                   <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
                     style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
                 </div>
               </div>
-              <br />
+              <br *ngIf="subtopic_problem_number <= subtopic_problem_count && prob.value.Type != 'MP'" />
               <div *ngFor="let prob of subtopic_search_dump | keyvalue" class="content" role="main"
                 style="margin-bottom: 0px; align-items: center; width: 100%">
                 <div
@@ -3529,7 +3529,7 @@
             <div class="content" style="margin: auto; align-items: center">
               <div *ngFor="let block of part.value.Content" style="align-items: center; text-align: center">
                 <img *ngIf="is_image(block)" src="./assets/{{block}}"
-                  style="max-width: min(750px, 90%); max-height: 750px">
+                  style="max-width: min(750px, 90%); max-height: min(600px, 70%)">
                 <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                   <h3
                     style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">
@@ -3568,7 +3568,7 @@
                 </div>
                 <div *ngIf="block.startsWith(':box:') && ['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     <span *ngFor="let word of block.slice(5).split(' ')"
                       style="width: fit-content; height: fit-content">
                       <img *ngIf="is_image(word)" src="./assets/{{word}}"
@@ -3684,12 +3684,12 @@
                 </div>
                 <div *ngIf="block.startsWith(':box:') && !['IDD', 'IM', 'IMC', 'IMS', 'MFR'].includes(part.value.Type)"
                   style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     {{block.slice(5)}}</h3>
                 </div>
                 <div *ngIf="block.startsWith(':ibox:')"
                   style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     {{block.slice(6)}}</h3>
                 </div>
                 <h3
@@ -5063,12 +5063,12 @@
                           {{block2[0]}}</h3>
                         <div *ngIf="block2[1].startsWith(':box:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{block2[1].slice(5)}}</h3>
                         </div>
                         <div *ngIf="block2[1].startsWith(':ibox:')"
                           style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                          <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                             {{block2[1].slice(6)}}</h3>
                         </div>
                         <h3
@@ -5087,12 +5087,12 @@
                   </div>
                   <div *ngIf="block[1].startsWith(':box:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: 10px auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       {{block[1].slice(5)}}</h3>
                   </div>
                   <div *ngIf="block[1].startsWith(':ibox:')"
                     style="border: 1px solid black; width: fit-content; max-width: 500px; margin: 10px auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       {{block[1].slice(6)}}</h3>
                   </div>
                   <h3
@@ -5223,9 +5223,9 @@
           <div class="content" style="margin: auto; align-items: center; max-width: 100%">
             <div *ngFor="let prob of exam_dump | keyvalue">
               <div *ngIf="problem_number == +prob.key">
-                <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center">
+                <div *ngFor="let block of prob.value.Content" style="align-items: center; text-align: center; margin: 16px auto">
                   <img *ngIf="is_image(block)" src="./assets/{{block}}"
-                    style="max-width: min(750px, 90%); max-height: 750px">
+                    style="max-width: min(750px, 90%); max-height: min(600px, 70%)">
                   <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                     <h3
                       style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">
@@ -5258,7 +5258,7 @@
                   </div>
                   <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(prob.value.Type)"
                     style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       <span *ngFor="let word of block.slice(5).split(' ')"
                         style="width: fit-content; height: fit-content">
                         <img *ngIf="is_image(word)" src="./assets/{{word}}"
@@ -5330,12 +5330,12 @@
                   <div
                     *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(prob.value.Type)"
                     style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       {{block.slice(5)}}</h3>
                   </div>
                   <div *ngIf="block.startsWith(':ibox:')"
                     style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                    <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                       {{block.slice(6)}}</h3>
                   </div>
                   <h3
@@ -5409,14 +5409,14 @@
                 </div>
               </div>
             </div>
-            <br />
+            <br *ngIf="prob.value.Explain" />
             <div *ngIf="prob.value.Explain" class="card card-medium"
               style="min-height: 100px; width: min(750px, 90%); padding: 10px; margin: auto; align-items: center; flex-direction: column;">
               <textarea rows="2" maxlength="400" placeholder="Show your work or explain your answer here"
                 style="margin: auto; padding-top: 10px; padding-left: 10px; width: 90%; height: 75px; font-size: 18px; line-height: 22px; font-weight: 400; text-align: left; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
                 #inputE></textarea>
             </div>
-            <br *ngIf="prob.value.Explain" />
+            <br *ngIf="subtopic_problem_number <= subtopic_problem_count && prob.value.Type != 'MP'" />
             <input type="hidden" #selection>
             <div *ngIf="prob.value.Type == 'IM'">
               <div class="card card-medium"
@@ -5530,7 +5530,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -5544,7 +5544,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -5578,7 +5578,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                       <div *ngIf="selection.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{selection.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -5591,7 +5591,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                       <div *ngIf="selection.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{selection.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -5618,7 +5618,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -5632,7 +5632,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -5665,7 +5665,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                       <div *ngIf="selection.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{selection.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(selection.slice(2))" src="./assets/{{selection.slice(2)}}"
@@ -5822,7 +5822,7 @@
                 </h3>
                 <div *ngIf="choice.value.Choice.startsWith(':box:')"
                   style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     {{choice.value.Choice.slice(5)}}</h3>
                 </div>
                 <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
@@ -5848,14 +5848,14 @@
                 </h3>
                 <div *ngIf="choice.value.Choice.startsWith(':box:')"
                   style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     {{choice.value.Choice.slice(5)}}</h3>
                 </div>
                 <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
                   style="min-height: 75px; margin: auto; max-width: 80%; max-height: 175px; height: auto">
               </div>
             </div>
-            <br />
+            <br *ngIf="problem_number <= exam_length && prob.value.Type != 'MP'" />
             <div *ngIf="problem_attempts[0] > 0" [ngSwitch]="selection.value" class="card highlight-card card-small"
               style="height: auto; min-height: 100px; width: fit-content; padding: 0px; margin: 0px auto 20px auto; align-items: center; justify-content: center; display: inline-flex; background-color: transparent">
               <label class="switch" style="padding: 0px; margin: 5px">
@@ -5899,7 +5899,7 @@
           <div class="content" style="margin: auto; align-items: center">
             <div *ngFor="let block of part.value.Content" style="align-items: center; text-align: center">
               <img *ngIf="is_image(block)" src="./assets/{{block}}"
-                style="max-width: min(750px, 90%); max-height: 750px">
+                style="max-width: min(750px, 90%); max-height: min(600px, 70%)">
               <div *ngIf="block.startsWith(':table:')" style="max-width: 80vw; overflow: auto">
                 <h3
                   style="margin: auto; margin-top: 10px; display: block; white-space: pre-wrap; font-size: 20px; text-align: center">
@@ -5932,7 +5932,7 @@
               </div>
               <div *ngIf="block.startsWith(':box:') && ['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(part.value.Type)"
                 style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                   <span *ngFor="let word of block.slice(5).split(' ')" style="width: fit-content; height: fit-content">
                     <img *ngIf="is_image(word)" src="./assets/{{word}}"
                       style="vertical-align: middle; max-width: min(500px, 70%); max-height: 500px">
@@ -6002,12 +6002,12 @@
               </div>
               <div *ngIf="block.startsWith(':box:') && !['IDD', 'IMC', 'IM', 'IMS', 'MFR'].includes(part.value.Type)"
                 style="border: 1px solid black; width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(5)}}
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">{{block.slice(5)}}
                 </h3>
               </div>
               <div *ngIf="block.startsWith(':ibox:')"
                 style="width: fit-content; max-width: 600px; margin: 10px auto; padding: 15px">
-                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">{{block.slice(6)}}
+                <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">{{block.slice(6)}}
                 </h3>
               </div>
               <h3
@@ -6194,7 +6194,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6209,7 +6209,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6243,7 +6243,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                       <div *ngIf="selection.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{selection.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(selection.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6256,7 +6256,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                       <div *ngIf="selection.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{selection.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(selection.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6283,7 +6283,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6297,7 +6297,7 @@
                       style="margin: 0 5px; text-align: center; font-size: 18px"> {{choice.slice(2)}} </div>
                     <div *ngIf="choice.slice(2).startsWith(':box:')"
                       style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                      <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                         {{choice.slice(7)}}</h3>
                     </div>
                     <img *ngIf="is_image(choice.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6330,7 +6330,7 @@
                         style="margin: 0 5px; text-align: center; font-size: 18px"> {{selection.slice(2)}} </div>
                       <div *ngIf="selection.slice(2).startsWith(':box:')"
                         style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 5px">
-                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                        <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                           {{selection.slice(7)}}</h3>
                       </div>
                       <img *ngIf="is_image(selection.slice(2))" src="./assets/{{choice.slice(2)}}"
@@ -6489,7 +6489,7 @@
                 </h3>
                 <div *ngIf="choice.value.Choice.startsWith(':box:')"
                   style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     {{choice.value.Choice.slice(5)}}</h3>
                 </div>
                 <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"
@@ -6515,7 +6515,7 @@
                 </h3>
                 <div *ngIf="choice.value.Choice.startsWith(':box:')"
                   style="border: 1px solid black; width: fit-content; max-width: 500px; margin: auto; padding: 15px">
-                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; text-align: left">
+                  <h3 style="display: block; white-space: pre-wrap; font-size: 18px; font-weight: 500; text-align: left">
                     {{choice.value.Choice.slice(5)}}</h3>
                 </div>
                 <img *ngIf="is_image(choice.value.Choice)" src="./assets/{{choice.value.Choice}}"

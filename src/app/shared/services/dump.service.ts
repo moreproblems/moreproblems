@@ -5300,7 +5300,7 @@ export class DumpService {
     "Mathematics": ["Mathematics", "Algebra I", "Algebra II", 'Geometry'],
     "Sciences": ["Sciences", "Science", "Biology", "Physics"],
     "Social Studies": ["Social Studies", "U.S. History"],
-    "Reading & Writing": ["Reading & Writing", "English Reading", "English Writing", "Writing & Language"],
+    "Reading & Writing": ["Reading & Writing", "Reading", "English Reading", "English Writing", "Writing & Language"],
   };
 
   subject_map: { [key: string]: string[] } = {
