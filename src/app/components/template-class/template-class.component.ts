@@ -327,6 +327,10 @@ export class TemplateClassComponent implements OnInit {
     return (Math.round(num));
   }
 
+  eval(exp: string) {
+    return (eval(exp));
+  }
+
   width_change() {
     this.screenWidth = window.innerWidth;
     // this.viewerWidth = Math.round(window.innerWidth*.99).toString() + "px";
@@ -4883,7 +4887,7 @@ export class TemplateClassComponent implements OnInit {
                       var correct = false;
                       for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
                           if (key.Choice.startsWith('equal:')) {
-                              if (choice == key.Choice.slice(6)) {
+                            if (eval(choice) == eval(key.Choice.slice(6)) || choice == key.Choice.slice(6)) {
                                   this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                   if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
                                       this.subtopic_streak_count += 1;
@@ -4931,7 +4935,7 @@ export class TemplateClassComponent implements OnInit {
                       var correct = false;
                       for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
                           if (key.Choice.startsWith('equal:')) {
-                              if (choice == key.Choice.slice(6)) {
+                            if (eval(choice) == eval(key.Choice.slice(6)) || choice == key.Choice.slice(6)) {
                                   this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                                   if (this.subtopic_problem_attempts[part_num] + 1 == 1) {
                                       this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + (this.subtopic_problem_attempts[part_num] + 1).toString() + ' try.';
