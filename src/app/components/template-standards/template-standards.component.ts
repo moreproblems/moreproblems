@@ -3222,7 +3222,7 @@ export class TemplateStandardsComponent implements OnInit {
                                             }
                                             else if (part.Type == 'FR') {
                                                 if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
-                                                    if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ('equal:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
+                                                    if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ((key.Choice.startsWith('equal:') && (eval(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice.slice(6)))  || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
                                                         sub.Correct.push(['✅']);
                                                         this.number_correct += 1;
                                                         // sub.Rationale.push([key.Key.Rationale]);

@@ -5140,7 +5140,7 @@ export class QuizzesComponent implements OnInit {
             var correct = false;
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (key.Choice.startsWith('equal:')) {
-                if (choice == key.Choice.slice(6)) {
+                if (eval(choice) == eval(key.Choice.slice(6)) || choice == key.Choice.slice(6)) {
                   this.attempt_explanation[part_num][0] = key.Key.Rationale;
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -5189,7 +5189,7 @@ export class QuizzesComponent implements OnInit {
             var correct = false;
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (key.Choice.startsWith('equal:')) {
-                if (choice == key.Choice.slice(6)) {
+                if (eval(choice) == eval(key.Choice.slice(6)) || choice == key.Choice.slice(6)) {
                   this.attempt_explanation[part_num][0] = key.Key.Rationale;
                   if (this.problem_attempts[part_num] == 1) {
                     this.attempt_response[part_num] = 'Correct! You got the right answer in ' + this.problem_attempts[part_num].toString() + ' try.';
@@ -5254,7 +5254,7 @@ export class QuizzesComponent implements OnInit {
             var correct = false;
             for (const [ch, key] of Object.entries(prob.AnswerChoices)) {
               if (key.Choice.startsWith('equal:')) {
-                if (choice == key.Choice.slice(6)) {
+                if (eval(choice) == eval(key.Choice.slice(6)) || choice == key.Choice.slice(6)) {
                   this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_streak_count += 1;
@@ -5312,7 +5312,7 @@ export class QuizzesComponent implements OnInit {
             var correct = false;
             for (const [ch, key] of Object.entries(prob.Parts[part].AnswerChoices)) {
               if (key.Choice.startsWith('equal:')) {
-                if (choice == key.Choice.slice(6)) {
+                if (eval(choice) == eval(key.Choice.slice(6)) || choice == key.Choice.slice(6)) {
                   this.subtopic_attempt_explanation[part_num][0] = key.Key.Rationale;
                   if (this.subtopic_problem_attempts[part_num] == 1) {
                     this.subtopic_attempt_response[part_num] = 'Correct! You got the right answer in ' + this.subtopic_problem_attempts[part_num].toString() + ' try.';
@@ -6834,7 +6834,7 @@ export class QuizzesComponent implements OnInit {
                     }
                     else if (prob.Type == 'FR') {
                       if (sub.Attempts[0] > 0) {
-                        if ('equal:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                        if ((key.Choice.startsWith('equal:') && (eval(sub.Path[0][sub.Path[0].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[0][sub.Path[0].length - 1][0] == key.Choice.slice(6))) || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
                           sub.Correct = [['✅']];
                           this.number_correct += 1;
                           // sub.Rationale = [[key.Key.Rationale]];
@@ -6953,7 +6953,7 @@ export class QuizzesComponent implements OnInit {
                         }
                         else if (part.Type == 'FR') {
                           if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
-                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ('equal:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
+                            if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ((key.Choice.startsWith('equal:') && (eval(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice.slice(6)))  || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
                               sub.Correct.push(['✅']);
                               this.number_correct += 1;
                               // sub.Rationale.push([key.Key.Rationale]);
@@ -7277,7 +7277,7 @@ export class QuizzesComponent implements OnInit {
                   }
                   else if (prob.Type == 'FR') {
                     if (sub.Attempts[0] > 0) {
-                      if ('equal:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                      if ((key.Choice.startsWith('equal:') && (eval(sub.Path[0][sub.Path[0].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[0][sub.Path[0].length - 1][0] == key.Choice.slice(6)))  || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
                         sub.Correct = [['✅']];
                         this.number_correct += 1;
                         // sub.Rationale = [[key.Key.Rationale]];
@@ -7396,7 +7396,7 @@ export class QuizzesComponent implements OnInit {
                       }
                       else if (part.Type == 'FR') {
                         if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
-                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ('equal:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
+                          if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ((key.Choice.startsWith('equal:') && (eval(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice.slice(6)))  || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
                             sub.Correct.push(['✅']);
                             this.number_correct += 1;
                             // sub.Rationale.push([key.Key.Rationale]);
@@ -7679,7 +7679,7 @@ export class QuizzesComponent implements OnInit {
                         }
                         else if (prob.Type == 'FR') {
                           if (sub.Attempts[0] > 0) {
-                            if ('equal:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
+                            if ((key.Choice.startsWith('equal:') && (eval(sub.Path[0][sub.Path[0].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[0][sub.Path[0].length - 1][0] == key.Choice.slice(6))) || 'match:' + ''+sub.Path[0][sub.Path[0].length - 1][0] == key.Choice) {
                               sub.Correct = [['✅']];
                               this.number_correct += 1;
                               // sub.Rationale = [[key.Key.Rationale]];
@@ -7795,7 +7795,7 @@ export class QuizzesComponent implements OnInit {
                             }
                             else if (part.Type == 'FR') {
                               if (sub.Attempts[Object.keys(prob.Parts).indexOf(name)] > 0) {
-                                if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ('equal:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
+                                if (sub.Path[Object.keys(prob.Parts).indexOf(name)].length > 0 && ((key.Choice.startsWith('equal:') && (eval(sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0]) == eval(key.Choice.slice(6)) || sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice.slice(6)))  || 'match:' + ''+sub.Path[Object.keys(prob.Parts).indexOf(name)][sub.Path[Object.keys(prob.Parts).indexOf(name)].length - 1][0] == key.Choice)) {
                                   sub.Correct.push(['✅']);
                                   this.number_correct += 1;
                                   // sub.Rationale.push([key.Key.Rationale]);

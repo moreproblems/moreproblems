@@ -909,7 +909,7 @@
               style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: auto; margin-bottom: 0px; border-radius: 0px 0px 17px 17px; text-align: center">
               <div style="margin-left: 10px; padding: 10px; font-weight: 1200">
                 <h3>Learners ❤️ MoreProblems</h3>
-                <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,200+ students &
+                <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,500+ students &
                     educators</b>!</h4>
               </div>
             </div>
@@ -1119,7 +1119,7 @@
             style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: 120px; margin-bottom: 0px; border-radius: 0px 0px 17px; text-align: center">
             <div style="margin-left: 10px; margin-right: 10px; padding-top: 15px; font-weight: 1200">
               <h3>Learners ❤️ MoreProblems</h3>
-              <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,200+ students &
+              <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,500+ students &
                   educators</b>!</h4>
             </div>
           </div>
@@ -1283,7 +1283,7 @@
               style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: auto; margin-bottom: 0px; border-radius: 0px 0px 17px 17px; text-align: center">
               <div style="margin-left: 10px; padding: 10px; font-weight: 1200">
                 <h3>Learners ❤️ MoreProblems</h3>
-                <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,200+ students &
+                <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,500+ students &
                     educators</b>!</h4>
               </div>
             </div>
@@ -1450,7 +1450,7 @@
             style="color: white; background-color: rgba(47, 79, 79, 0.5); backdrop-filter: blur(5px); height: 120px; margin-bottom: 0px; border-radius: 0px 0px 17px; text-align: center">
             <div style="margin-left: 10px; margin-right: 10px; padding-top: 15px; font-weight: 1200">
               <h3>Learners ❤️ MoreProblems</h3>
-              <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,200+ students &
+              <h4 style="line-height: 20px; font-weight: 400">Join our growing community of <b>2,500+ students &
                   educators</b>!</h4>
             </div>
           </div>
@@ -4710,30 +4710,30 @@
                 </tr>
               </thead>
               <tbody *ngFor="let sub of wrong_submission_list">
-                <tr *ngFor="let part of sub.Attempts">
-                  <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                <tr *ngFor="let part of sub.Attempts | keyvalue">
+                  <td *ngIf="part.key == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Attempts.length"> <b> {{sub.Number}} </b> </td>
-                  <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  <td *ngIf="part.key == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Attempts.length">
                     <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                   </td>
-                  <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  <td *ngIf="part.key == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Attempts.length"> {{sub.Time}} </td>
-                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> {{(sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Choice[sub.Attempts.indexOf(part)] : sub.Correct[sub.Attempts.indexOf(part)]}}
+                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> {{(sub.Correct[part.key] == '✅') ? sub.Choice[part.key] : sub.Correct[part.key]}}
                   </td>
                   <td *ngIf="sub.Correct == undefined || sub.Choice == undefined" style="border-top: 1px solid #ddd"> --
                   </td>
-                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] == '') ? '⏩' : (sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Correct[sub.Attempts.indexOf(part)] : sub.Choice[sub.Attempts.indexOf(part)]}} </b>
+                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[part.key] == '') ? '⏩' : (sub.Correct[part.key] == '✅') ? sub.Correct[part.key] : sub.Choice[part.key]}} </b>
                   </td>
-                  <td *ngIf="sub.Correct == undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] != '') ? sub.Choice[sub.Attempts.indexOf(part)] : '--'}} </b>
+                  <td *ngIf="sub.Correct == undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[part.key] != '') ? sub.Choice[part.key] : '--'}} </b>
                   </td>
                   <td *ngIf="sub.Choice == undefined" style="border-top: 1px solid #ddd"> <b> -- </b>
                   </td>
                   <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    <h4 *ngFor="let rat of sub.Rationale[sub.Attempts.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
+                    <h4 *ngFor="let rat of sub.Rationale[part.key]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                     </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Attempts.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Attempts.indexOf(part)] + ' (' + sub.Path[sub.Attempts.indexOf(part)] + ')'}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[part.key] == 0) ? '--' : ''+sub.Attempts[part.key] + ' (' + sub.Path[part.key] + ')'}} </td>
                 </tr>
               </tbody>
             </table>
@@ -4770,30 +4770,30 @@
                 </tr>
               </thead>
               <tbody *ngFor="let sub of exam_submission_list">
-                <tr *ngFor="let part of sub.Attempts">
-                  <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                <tr *ngFor="let part of sub.Attempts | keyvalue">
+                  <td *ngIf="part.key == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Attempts.length"> <b> {{sub.Number}} </b> </td>
-                  <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  <td *ngIf="part.key == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Attempts.length">
                     <h4 *ngFor="let top of sub.Topics"> {{(top == '') ? '--' : top}} </h4>
                   </td>
-                  <td *ngIf="sub.Attempts.indexOf(part) == 0" style="border-top: 1px solid #ddd"
+                  <td *ngIf="part.key == 0" style="border-top: 1px solid #ddd"
                     [attr.rowspan]="sub.Attempts.length"> {{sub.Time}} </td>
-                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> {{(sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Choice[sub.Attempts.indexOf(part)] : sub.Correct[sub.Attempts.indexOf(part)]}}
+                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> {{(sub.Correct[part.key] == '✅') ? sub.Choice[part.key] : sub.Correct[part.key]}}
                   </td>
                   <td *ngIf="sub.Correct == undefined || sub.Choice == undefined" style="border-top: 1px solid #ddd"> --
                   </td>
-                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] == '') ? '⏩' : (sub.Correct[sub.Attempts.indexOf(part)] == '✅') ? sub.Correct[sub.Attempts.indexOf(part)] : sub.Choice[sub.Attempts.indexOf(part)]}} </b>
+                  <td *ngIf="sub.Correct != undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[part.key] == '') ? '⏩' : (sub.Correct[part.key] == '✅') ? sub.Correct[part.key] : sub.Choice[part.key]}} </b>
                   </td>
-                  <td *ngIf="sub.Correct == undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[sub.Attempts.indexOf(part)] != '') ? sub.Choice[sub.Attempts.indexOf(part)] : '--'}} </b>
+                  <td *ngIf="sub.Correct == undefined && sub.Choice != undefined" style="border-top: 1px solid #ddd"> <b> {{(sub.Choice[part.key] != '') ? sub.Choice[part.key] : '--'}} </b>
                   </td>
                   <td *ngIf="sub.Choice == undefined" style="border-top: 1px solid #ddd"> <b> -- </b>
                   </td>
                   <td *ngIf="this.screenWidth > this.mobileWidth" style="border-top: 1px solid #ddd; max-width: 750px">
-                    <h4 *ngFor="let rat of sub.Rationale[sub.Attempts.indexOf(part)]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
+                    <h4 *ngFor="let rat of sub.Rationale[part.key]" style="font-weight: 500"> {{(rat == '') ? 'No explanation available.' : rat}}
                     </h4>
                   </td>
-                  <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[sub.Attempts.indexOf(part)] == 0) ? '--' : ''+sub.Attempts[sub.Attempts.indexOf(part)] + ' (' + sub.Path[sub.Attempts.indexOf(part)] + ')'}} </td>
+                  <td style="border-top: 1px solid #ddd"> {{(sub.Attempts[part.key] == 0) ? '--' : ''+sub.Attempts[part.key] + ' (' + sub.Path[part.key] + ')'}} </td>
                 </tr>
               </tbody>
             </table>
