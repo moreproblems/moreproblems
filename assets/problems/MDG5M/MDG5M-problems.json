@@ -704,8 +704,8 @@
     },
     "15": {
         "Number": 15,
-        "Type": "FR",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 2,
         "Topics": [
             "Number & Operations In Base Ten"
         ],
@@ -717,7 +717,7 @@
             "Calculator-S"
         ],
         "Points": 1,
-        "Explain": false,
+        "Explain": true,
         "Content": [
             "A student performed the division problems shown.",
             ":box:1875 ÷ 15 = 125\n\n3825 ÷ 15 = 255",
@@ -725,8 +725,16 @@
             "Determine whether the student's claim is correct or incorrect. If the claim is correct, explain why it is correct. If the claim is incorrect, give two examples that prove that it is incorrect."
         ],
         "AnswerChoices": {
-            "KEY": {
-                "Choice": "equal:847/3",
+            "A": {
+                "Choice": "Correct",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Incorrect",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
