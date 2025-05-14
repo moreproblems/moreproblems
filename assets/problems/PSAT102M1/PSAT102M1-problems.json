@@ -95,7 +95,7 @@
                 }
             },
             "D": {
-                "Choice": "r = d − t",
+                "Choice": "r = d – t",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from algebraic errors when rewriting the given equation.",
@@ -120,11 +120,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following ordered pairs (x, y) satisfies both equations y = x² + 3x − 4 and x = y − 4?"
+            "Which of the following ordered pairs (x, y) satisfies both equations y = x² + 3x – 4 and x = y – 4?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, −4)",
+                "Choice": "(0, –4)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This ordered pair satisfies the quadratic equation but not the linear equation.",
@@ -135,7 +135,7 @@
                 "Choice": "(2, 6)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation x = y − 4 can be rewritten as y = x + 4. Substituting x + 4 for y in the other equation gives x + 4 = x² + 3x − 4, which can be rewritten as x² + 2x − 8 = 0. Since −4 and 2 are the two numbers whose sum is −2 and whose product is −8, they are the solutions to the equation x² + 2x − 8 = 0. From the equation y = x + 4, it follows that the solutions of the system are (−4, 0) and (2, 6). Therefore, of the given choices, (2, 6) is the correct answer.",
+                    "Rationale": "The equation x = y – 4 can be rewritten as y = x + 4. Substituting x + 4 for y in the other equation gives x + 4 = x² + 3x – 4, which can be rewritten as x² + 2x – 8 = 0. Since –4 and 2 are the two numbers whose sum is –2 and whose product is –8, they are the solutions to the equation x² + 2x – 8 = 0. From the equation y = x + 4, it follows that the solutions of the system are (–4, 0) and (2, 6). Therefore, of the given choices, (2, 6) is the correct answer.",
                     "Percent": 0
                 }
             },
@@ -177,7 +177,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "−1",
+                "Choice": "–1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This value does not satisfy the given equation.",
@@ -196,7 +196,7 @@
                 "Choice": "3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation can be rewritten as x² − 4x + 3 = 0. Since 1 and 3 are two numbers whose sum is 4 and whose product is 3, it follows that they are the solutions to the equation x² − 4x + 3 = 0. Therefore, of the choices given, only 3 can be a solution to the original equation.",
+                    "Rationale": "The given equation can be rewritten as x² – 4x + 3 = 0. Since 1 and 3 are two numbers whose sum is 4 and whose product is 3, it follows that they are the solutions to the equation x² – 4x + 3 = 0. Therefore, of the choices given, only 3 can be a solution to the original equation.",
                     "Percent": 0
                 }
             },
@@ -226,31 +226,31 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:−3x − 4y = 20\nx − 10y = 16",
+            ":ibox:–3x – 4y = 20\nx – 10y = 16",
             "If (x, y) is the solution to the system of equations above, what is the value of x?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "−14",
+                "Choice": "–14",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting −14 for x in the second equation gives y = −3. But the pair (−14, −3) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
+                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting –14 for x in the second equation gives y = –3. But the pair (–14, –3) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "−12",
+                "Choice": "–12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting −12 for x in the second equation gives y = −2.8. But the pair (−12, −2.8) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
+                    "Rationale": "There is no solution to the system for which the x-coordinate is one of the numbers given in these choices. Substituting –12 for x in the second equation gives y = –2.8. But the pair (–12, –2.8) does not satisfy the first equation, and it is therefore not a solution to the system of equations.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "−4",
+                "Choice": "–4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying each side of the second equation by 3 and then adding the equations eliminates x, as follows: {−3x − 4y = 20} + {3x − 30y = 48} = {0  34y = 68}\nSolving the obtained equation for y gives y = −2.\nSubstituting −2 for y in the second equation of the system gives x − 10(−2) = 16, which simplifies to x + 20 = 16, or x = −4.",
+                    "Rationale": "Multiplying each side of the second equation by 3 and then adding the equations eliminates x, as follows: {–3x – 4y = 20} + {3x – 30y = 48} = {0  34y = 68}\nSolving the obtained equation for y gives y = –2.\nSubstituting –2 for y in the second equation of the system gives x – 10(–2) = 16, which simplifies to x + 20 = 16, or x = –4.",
                     "Percent": 0
                 }
             },
@@ -348,7 +348,7 @@
                 "Choice": "38.80 + 24.80p = 0.92y",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the factor 1 − 0.08 = 0.92, instead of 1 + 0.08 = 1.08, to calculate the sales tax and from multiplying by this factor on the wrong side of the equation.",
+                    "Rationale": "This choice may result from using the factor 1 – 0.08 = 0.92, instead of 1 + 0.08 = 1.08, to calculate the sales tax and from multiplying by this factor on the wrong side of the equation.",
                     "Percent": 0
                 }
             },
@@ -364,7 +364,7 @@
                 "Choice": "0.92(38.80 + 24.80p) = y",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the factor 1 − 0.08 = 0.92 instead of 1 + 0.08 = 1.08 to calculate the sales tax.",
+                    "Rationale": "This choice may result from using the factor 1 – 0.08 = 0.92 instead of 1 + 0.08 = 1.08 to calculate the sales tax.",
                     "Percent": 0
                 }
             }
@@ -390,26 +390,26 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(−3, −3)",
+                "Choice": "(–3, –3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = x/3 − 2 has a positive slope (1/3)and a negative y-intercept (−2) but passes through the point (−3, −3).",
+                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = x/3 – 2 has a positive slope (1/3)and a negative y-intercept (–2) but passes through the point (–3, –3).",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "(−3, 3)",
+                "Choice": "(–3, 3)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Any line that passes through the point (−3, 3) and has a positive slope will intersect the y-axis at a point (0, b) with b > 3; that is, such a line will have a y-intercept greater than 3. Therefore, a line that has a positive slope and a negative y-intercept cannot pass through the point (−3, 3).",
+                    "Rationale": "Any line that passes through the point (–3, 3) and has a positive slope will intersect the y-axis at a point (0, b) with b > 3; that is, such a line will have a y-intercept greater than 3. Therefore, a line that has a positive slope and a negative y-intercept cannot pass through the point (–3, 3).",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "(3, −3)",
+                "Choice": "(3, –3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = x/3 − 4 has a positive slope (1/3) and a negative y-intercept (−4) but passes through the point (3, −3).",
+                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = x/3 – 4 has a positive slope (1/3) and a negative y-intercept (–4) but passes through the point (3, –3).",
                     "Percent": 0
                 }
             },
@@ -417,7 +417,7 @@
                 "Choice": "(3, 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = 3x − 6 has a positive slope (3) and a negative y-intercept (−6) but passes through the point (3, 3).",
+                    "Rationale": "This choice is a point that a line with a positive slope and a negative y-intercept could pass through. The line with equation y = 3x – 6 has a positive slope (3) and a negative y-intercept (–6) but passes through the point (3, 3).",
                     "Percent": 0
                 }
             }
@@ -653,11 +653,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If the equation y = (x − 6)(x + 12) is graphed in the xy-plane, what is the x-coordinate of the parabola's vertex?"
+            "If the equation y = (x – 6)(x + 12) is graphed in the xy-plane, what is the x-coordinate of the parabola's vertex?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "−6",
+                "Choice": "–6",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from misunderstanding the relationship between the given equation and the x-intercepts of the parabola as well as the relationship between the x-intercepts of the parabola and the x-coordinate of the parabola's vertex.",
@@ -665,10 +665,10 @@
                 }
             },
             "B": {
-                "Choice": "−3",
+                "Choice": "–3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of y = (x − 6)(x + 12) is a parabola that opens upward and has a vertical axis of symmetry. The vertex of the parabola lies on this axis of symmetry, and the x-intercepts of the parabola are equidistant from the axis of symmetry. Since the equation y = (x − 6)(x + 12) is in factored form, the x-intercepts of its graph are (6, 0) and (−12, 0). Therefore, the axis of symmetry is the line x = (6 + (−12))/2, or x = −3. Because the vertex lies on the line x = −3, the x-coordinate of the vertex must also be x = −3.",
+                    "Rationale": "The graph of y = (x – 6)(x + 12) is a parabola that opens upward and has a vertical axis of symmetry. The vertex of the parabola lies on this axis of symmetry, and the x-intercepts of the parabola are equidistant from the axis of symmetry. Since the equation y = (x – 6)(x + 12) is in factored form, the x-intercepts of its graph are (6, 0) and (–12, 0). Therefore, the axis of symmetry is the line x = (6 + (–12))/2, or x = –3. Because the vertex lies on the line x = –3, the x-coordinate of the vertex must also be x = –3.",
                     "Percent": 0
                 }
             },
@@ -766,7 +766,7 @@
         "Explain": false,
         "Content": [
             "In the expression below, a is an integer.",
-            ":ibox:12x² + ax − 20",
+            ":ibox:12x² + ax – 20",
             "If 3x + 4 is a factor of the expression above, what is the value of a?"
         ],
         "AnswerChoices": {
@@ -774,7 +774,7 @@
                 "Choice": "equal:1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It is given that one factor of the quadratic expression is 3x + 4. Thus, 12x² + ax − 20 = (3x + 4)(mx + p), where a, m, and p are integers. Multiplying out the right-hand side of the equation gives 12x² + ax − 20 = 3mx² + (3p + 4m)x + 4p. It follows that 12 = 3m, a = 3p + 4m, and −20 = 4p. Dividing both sides of the equation 12 = 3m by 3 gives m = 4. Dividing both sides of the equation −20 = 4p by 4 gives p = −5. Finally, substituting m = 4 and p = −5 in the equation a = 3p + 4m gives a = 3(−5) + 4(4) = 1.",
+                    "Rationale": "It is given that one factor of the quadratic expression is 3x + 4. Thus, 12x² + ax – 20 = (3x + 4)(mx + p), where a, m, and p are integers. Multiplying out the right-hand side of the equation gives 12x² + ax – 20 = 3mx² + (3p + 4m)x + 4p. It follows that 12 = 3m, a = 3p + 4m, and –20 = 4p. Dividing both sides of the equation 12 = 3m by 3 gives m = 4. Dividing both sides of the equation –20 = 4p by 4 gives p = –5. Finally, substituting m = 4 and p = –5 in the equation a = 3p + 4m gives a = 3(–5) + 4(4) = 1.",
                     "Percent": 0
                 }
             }
@@ -796,7 +796,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(ax + by)(cx − dy)",
+            ":ibox:(ax + by)(cx – dy)",
             "In the expression above, a, b, c, and d are non-zero constants and ad = bc. If ac = 18 and bd = 50, what is the value of the coefficient of the xy term when the expression is multiplied out and the like terms are collected?"
         ],
         "AnswerChoices": {
@@ -804,7 +804,7 @@
                 "Choice": "equal:0",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying out the given expression yields (ax + by)(cx dy)= acx² + (bc − ad)xy − bdy². Since ad = bc, the coefficient of the xy term, bc − ad, is 0.",
+                    "Rationale": "Multiplying out the given expression yields (ax + by)(cx dy)= acx² + (bc – ad)xy – bdy². Since ad = bc, the coefficient of the xy term, bc – ad, is 0.",
                     "Percent": 0
                 }
             }
