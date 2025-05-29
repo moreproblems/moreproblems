@@ -66,7 +66,16 @@
 
   <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
   <script id="mathjax" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=AM_CHTML"></script>
-  <!-- <script src="src/assets/scripts/ASCIIMathML.js"></script> -->
+  <!-- <script type="text/javascript">
+    if (window.MathJax) {
+      window.addEventListener('click', function() {
+        MathJax.Hub.Queue(
+          ["Typeset",MathJax.Hub]
+        );
+      })
+    }
+  </script> -->
+  <script type="text/javascript" src="assets/scripts/ASCIIMathML.js"></script>
 
   <!-- <script type="module">
   // Import the functions you need from the SDKs you need
@@ -141,6 +150,6 @@
     }, auth);
   </script>
   <app-root style="width:100%; padding: 0px; margin: 0px"></app-root>
-<script src="runtime.d05ce115144f918a.js" type="module"></script><script src="polyfills.116afa5baafe55ad.js" type="module"></script><script src="main.0e086fd649e36c0b.js" type="module"></script>
+<script src="runtime.d05ce115144f918a.js" type="module"></script><script src="polyfills.116afa5baafe55ad.js" type="module"></script><script src="main.dd9f0c3d35610e32.js" type="module"></script>
 
 </body></html>

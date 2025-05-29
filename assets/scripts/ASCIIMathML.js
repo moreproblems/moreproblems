@@ -37,8 +37,8 @@ THE SOFTWARE.
 var asciimath = {};
 
 (function(){
-var mathcolor = "blue";        // change it to "" (to inherit) or another color
-var mathfontsize = "1em";      // change to e.g. 1.2em for larger math
+var mathcolor = "black";        // change it to "" (to inherit) or another color
+var mathfontsize = "1.1em";      // change to e.g. 1.2em for larger math
 var mathfontfamily = "serif";  // change to "" to inherit (works in IE)
                                // or another family (e.g. "arial")
 var automathrecognize = false; // writing "amath" on page makes this true
@@ -284,6 +284,8 @@ var AMsymbols = [
 {input:"nnn", tag:"mo", output:"\u22C2", tex:"bigcap", ttype:UNDEROVER},
 {input:"uu",  tag:"mo", output:"\u222A", tex:"cup", ttype:CONST},
 {input:"uuu", tag:"mo", output:"\u22C3", tex:"bigcup", ttype:UNDEROVER},
+{input:"dag", tag:"mo", output:"\u2020", tex:"dagger", ttype:CONST},
+{input:"ddag", tag:"mo", output:"\u2021", tex:"ddagger", ttype:CONST},
 
 //binary relation symbols
 {input:"!=",  tag:"mo", output:"\u2260", tex:"ne", ttype:CONST},
@@ -451,6 +453,7 @@ var AMsymbols = [
 {input:"harr", tag:"mo", output:"\u2194", tex:"leftrightarrow", ttype:CONST},
 {input:"rArr", tag:"mo", output:"\u21D2", tex:"Rightarrow", ttype:CONST},
 {input:"lArr", tag:"mo", output:"\u21D0", tex:"Leftarrow", ttype:CONST},
+{input:"dArr", tag:"mo", output:"\u21D3", tex:"Downarrow", ttype:CONST},
 {input:"hArr", tag:"mo", output:"\u21D4", tex:"Leftrightarrow", ttype:CONST},
 //commands with argument
 {input:"sqrt", tag:"msqrt", output:"sqrt", tex:null, ttype:UNARY},
@@ -1066,6 +1069,7 @@ function AMautomathrec(str) {
   var arr = str.split(AMdelimiter1);
   var re1 = new RegExp("(^|\\s)([b-zB-HJ-Z+*<>]|"+texcommand+ambigAMtoken+simpleAMtoken+")(\\s|\\n|$)","g");
   var re2 = new RegExp("(^|\\s)([a-z]|"+texcommand+ambigAMtoken+simpleAMtoken+")([,.])","g"); // removed |\d+ for now
+  var i;
   for (i=0; i<arr.length; i++)   //single nonenglish tokens
     if (i%2==0) {
       arr[i] = arr[i].replace(re1," `$2`$3");
