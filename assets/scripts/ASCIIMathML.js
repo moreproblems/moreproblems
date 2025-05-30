@@ -1174,6 +1174,7 @@ if(typeof window.addEventListener != 'undefined'){
 else if(typeof document.addEventListener != 'undefined'){
   //.. opera 7
   document.addEventListener('load', generic, false);
+  // document.addEventListener('DOMContentLoaded', generic, false);
 }
 else if(typeof window.attachEvent != 'undefined'){
   //.. win/ie

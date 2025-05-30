@@ -65,7 +65,7 @@
     },
     "2": {
         "Number": 2,
-        "Type": "?",
+        "Type": "O",
         "NumChoices": 0,
         "Topics": [
             ""
@@ -82,10 +82,11 @@
         "Content": [
             "Use the information in Source 1a to help you answer this question.",
             "The scientists want you to model the flow of energy through the ecosystem as fish larvae eat the algae. This diagram shows the Sun, fish larvae, algae, and three empty boxes.",
-            "Identify the TWO empty boxes that need arrows to model the flow of energy. Write the letter of the arrow that should be placed into EACH empty box you identified. Each arrow should point in the direction that energy flows. Write only ONE letter in each box. Not all letters will be used."
+            "Identify the TWO empty boxes that need arrows to model the flow of energy. Write the letter of the arrow that should be placed into EACH empty box you identified. Each arrow should point in the direction that energy flows. Write only ONE letter in each box. Not all letters will be used.",
+            "problems/DEG5S/media/2a.jpg"
         ],
         "AnswerChoices": {
-            "A": {
+            "A:problems/DEG5S/media/2b.jpg": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -93,7 +94,23 @@
                     "Percent": 0
                 }
             },
-            "B": {
+            "B:problems/DEG5S/media/2c.jpg": {
+                "Choice": "1:Box A",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C:problems/DEG5S/media/2d.jpg": {
+                "Choice": "2:Box B",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D:problems/DEG5S/media/2e.jpg": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -101,15 +118,15 @@
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "E:problems/DEG5S/media/2f.jpg": {
+                "Choice": "3:Box C",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
+            "F:problems/DEG5S/media/2g.jpg": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -122,7 +139,7 @@
     },
     "3": {
         "Number": 3,
-        "Type": "?",
+        "Type": "C",
         "NumChoices": 0,
         "Topics": [
             ""
@@ -139,35 +156,36 @@
         "Content": [
             "Use the information in Source 1a to help you answer this question.",
             "The scientists add both air and water to the diagram. They add arrows to show the directions in which matter and energy flow among the different parts in the diagram.",
-            "Write the letter of the correct label into EACH box to show if the arrow represents only the flow of energy, only the flow of matter, or the flow of both energy and matter."
+            "Write the letter of the correct label into EACH box to show if the arrow represents only the flow of energy, only the flow of matter, or the flow of both energy and matter.",
+            "problems/DEG5S/media/3a.jpg"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:Box A": {
+                "Choice": "1:Energy Only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:Box B": {
+                "Choice": "2:Matter Only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:Box C": {
+                "Choice": "2:Matter Only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "D:Box D": {
+                "Choice": "3:Both Energy and Matter",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -247,7 +265,7 @@
             "problems/DEG5S/supps/DEG5S-S3.json"
         ],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
             "Use the information in Source 1c to help you answer this question.",
@@ -366,7 +384,7 @@
             "problems/DEG5S/supps/DEG5S-S4.json"
         ],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 4,
         "Explain": false,
         "Content": [
             "Use the information in Source 1c and Source 1d to help you answer this question.",
