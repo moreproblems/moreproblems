@@ -18,7 +18,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–8",
+                "Choice": "-8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -26,7 +26,7 @@
                 }
             },
             "B": {
-                "Choice": "–1/8",
+                "Choice": "-1/8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -122,7 +122,7 @@
             "Expressions & Equations"
         ],
         "SubTopics": [
-            "Use square root and cube root symbols to represent solutions to equations of the form x² = p and x³ = p, where p is a positive rational number. Evaluate square roots of small perfect squares and cube roots of small perfect cubes. Know that √2 is irrational."
+            "Use square root and cube root symbols to represent solutions to equations of the form x^2= p and x³ = p, where p is a positive rational number. Evaluate square roots of small perfect squares and cube roots of small perfect cubes. Know that √2 is irrational."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -130,7 +130,7 @@
         "Explain": false,
         "Content": [
             "Consider the following equation.",
-            ":ibox:x² = 49/16",
+            ":ibox:x^2= 49/16",
             "Which values are the solutions to the equation?"
         ],
         "AnswerChoices": {
@@ -264,7 +264,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which fraction is the best estimate for the value of √(65/122)?"
+            "Which fraction is the best estimate for the value of `sqrt(65/122)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -317,7 +317,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What value of x satisfies the equation 5(x – 6) – 2(x + 3) = 12?"
+            "What value of x satisfies the equation 5(x - 6) - 2(x + 3) = 12?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -351,7 +351,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–72",
+                "Choice": "`-72`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -359,7 +359,7 @@
                 }
             },
             "B": {
-                "Choice": "4/5",
+                "Choice": "`4/5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -367,7 +367,7 @@
                 }
             },
             "C": {
-                "Choice": "√6",
+                "Choice": "`sqrt(6)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -375,7 +375,7 @@
                 }
             },
             "D": {
-                "Choice": "√(5/16)",
+                "Choice": "`sqrt(5/16)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -408,7 +408,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The equation x + 3y = –3 represents a linear function.",
+            "The equation x + 3y = -3 represents a linear function.",
             "Which graph represents the function?"
         ],
         "AnswerChoices": {
@@ -492,7 +492,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line segment PQ is the result of reflecting line segment AB across the x–axis. P has coordinates of (2, –2) and Q has coordinates (8, –2).",
+            "Line segment PQ is the result of reflecting line segment AB across the x-axis. P has coordinates of (2, -2) and Q has coordinates (8, -2).",
             "What is the length of line segment AB?"
         ],
         "AnswerChoices": {
@@ -576,7 +576,7 @@
                 }
             },
             "D": {
-                "Choice": "The solution is (–1.5, –5) because the solution to the system must represent the x-intercepts of both equations.",
+                "Choice": "The solution is (-1.5, -5) because the solution to the system must represent the x-intercepts of both equations.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -800,7 +800,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider the function defined by y = 2x – 5.",
+            "Consider the function defined by y = 2x - 5.",
             "Which statements can be used to justify that the function is linear?",
             "Select ALL that apply."
         ],
@@ -822,7 +822,7 @@
                 }
             },
             "C": {
-                "Choice": "The function has a negative y–intercept.",
+                "Choice": "The function has a negative y-intercept.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1372,12 +1372,12 @@
         "Content": [
             "A drama club is selling tickets to a play. The cost of each adult ticket is $8 and the cost of each student ticket is $4. One customer purchased 8 tickets and spent a total of $56.",
             "The system of equations shown can be used to model this situation.",
-            ":ibox:y = 8 – x\n\n8x + 4y = 56",
+            ":ibox:y = 8 - x\n\n8x + 4y = 56",
             "Which equation can be used to find x, the number of adult tickets the customer purchased?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8x + 4(8 – x) = 56",
+                "Choice": "8x + 4(8 - x) = 56",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1385,7 +1385,7 @@
                 }
             },
             "B": {
-                "Choice": "8(8 – x) + 4y = 56",
+                "Choice": "8(8 - x) + 4y = 56",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1393,7 +1393,7 @@
                 }
             },
             "C": {
-                "Choice": "8x + 4y – 56 = 8 – x",
+                "Choice": "8x + 4y - 56 = 8 - x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1401,7 +1401,7 @@
                 }
             },
             "D": {
-                "Choice": "8x + 4y = 56 + 8 – x",
+                "Choice": "8x + 4y = 56 + 8 - x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1429,7 +1429,7 @@
         "Explain": false,
         "Content": [
             "Consider the following system of two equations.",
-            ":ibox:3x – 4y = –24\n\n3x + 2y = –6",
+            ":ibox:3x - 4y = -24\n\n3x + 2y = -6",
             "What is the value of the expression 3x + 4y?"
         ],
         "AnswerChoices": {
@@ -1609,7 +1609,7 @@
                 }
             },
             "D": {
-                "Choice": "The claim is correct because m∠S = 180° – (40° + 60°) = 80°, and since ∠R and ∠S are alternate interior angles, m∠R = 80°.",
+                "Choice": "The claim is correct because m∠S = 180° - (40° + 60°) = 80°, and since ∠R and ∠S are alternate interior angles, m∠R = 80°.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1723,7 +1723,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The equation of the line is y = –7x – 2/7 because the slope of the line is –2/7, and the y-intercept is –7. The coordinates of the ordered pairs on the line always satisfy the equation.",
+                "Choice": "The equation of the line is y = -7x - 2/7 because the slope of the line is -2/7, and the y-intercept is -7. The coordinates of the ordered pairs on the line always satisfy the equation.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1731,7 +1731,7 @@
                 }
             },
             "B": {
-                "Choice": "The equation of the line is y = –7x – 7/2 because the slope of the line is –7, and the y-intercept is –7/2. The coordinates of the ordered pairs on the line never satisfy the equation.",
+                "Choice": "The equation of the line is y = -7x - 7/2 because the slope of the line is -7, and the y-intercept is -7/2. The coordinates of the ordered pairs on the line never satisfy the equation.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1739,7 +1739,7 @@
                 }
             },
             "C": {
-                "Choice": "The equation of the line is y = –7x/2 + 7 because the slope of the line is –7/2, and the y-intercept is 7. The coordinates of the ordered pairs on the line always satisfy the equation.",
+                "Choice": "The equation of the line is y = -7x/2 + 7 because the slope of the line is -7/2, and the y-intercept is 7. The coordinates of the ordered pairs on the line always satisfy the equation.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1747,7 +1747,7 @@
                 }
             },
             "D": {
-                "Choice": "The equation of the line is y = –2x/7 + 7 because the slope of the line is 7, and the y-intercept is –2/7. The coordinates of the ordered pairs on the line never satisfy the equation.",
+                "Choice": "The equation of the line is y = -2x/7 + 7 because the slope of the line is 7, and the y-intercept is -2/7. The coordinates of the ordered pairs on the line never satisfy the equation.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

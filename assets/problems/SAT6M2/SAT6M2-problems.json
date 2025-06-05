@@ -243,7 +243,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, –1)",
+                "Choice": "(0, -1)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -251,7 +251,7 @@
                 }
             },
             "B": {
-                "Choice": "(0, –4)",
+                "Choice": "(0, -4)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The y-intercept of a graph is the point where the graph intersects the y-axis. The graph of function f shown intersects the y-axis at the point (0, -4). Therefore, the y-intercept of the graph is (0, -4).",
@@ -357,38 +357,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 5x⁵ – 6x⁴ + 8x³?"
+            "Which expression is equivalent to 5x⁵ - 6x⁴ + 8x³?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x⁴(5x – 6)",
+                "Choice": "x⁴(5x - 6)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 5x⁵ – 6x⁴.",
+                    "Rationale": "This expression is equivalent to 5x⁵ - 6x⁴.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "x³(5x² – 6x + 8)",
+                "Choice": "x³(5x^2- 6x + 8)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since x3 is a common factor of each term in the given expression, the expression can be rewritten as x³(5x² – 6x + 8).",
+                    "Rationale": "Since x3 is a common factor of each term in the given expression, the expression can be rewritten as x³(5x^2- 6x + 8).",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "8x³(5x² – 6x + 1)",
+                "Choice": "8x³(5x^2- 6x + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 40x⁵ – 48x⁴ + 8x³.",
+                    "Rationale": "This expression is equivalent to 40x⁵ - 48x⁴ + 8x³.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "6x⁵(–6x⁴ – 8x³ + 1)",
+                "Choice": "6x⁵(-6x⁴ - 8x³ + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to –36x⁹ + 48x⁸ + 6x⁵.",
+                    "Rationale": "This expression is equivalent to -36x⁹ + 48x⁸ + 6x⁵.",
                     "Percent": 0
                 }
             }
@@ -467,39 +467,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:7(2x – 3) = 63",
+            ":ibox:7(2x - 3) = 63",
             "Which equation has the same solution as the given equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2x – 3 = 9",
+                "Choice": "2x - 3 = 9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Dividing each side of the given equation by 7 yields 7(2x – 3)/7 = 63/7, or 2x - 3 = 9. Therefore, the equation 2x - 3 = 9 is equivalent to the given equation and has the same solution.",
+                    "Rationale": "Dividing each side of the given equation by 7 yields 7(2x - 3)/7 = 63/7, or 2x - 3 = 9. Therefore, the equation 2x - 3 = 9 is equivalent to the given equation and has the same solution.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "2x – 3 = 56",
+                "Choice": "2x - 3 = 56",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation is equivalent to 7(2x – 3)/7 = 392, not 7(2x – 3)/7 = 63.",
+                    "Rationale": "This equation is equivalent to 7(2x - 3)/7 = 392, not 7(2x - 3)/7 = 63.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "2x – 21 = 63",
+                "Choice": "2x - 21 = 63",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Distributing 7 on the left-hand side of the given equation yields 14x – 21 = 63, not 2x – 21 = 63.",
+                    "Rationale": "Distributing 7 on the left-hand side of the given equation yields 14x - 21 = 63, not 2x - 21 = 63.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "2x – 21 = 70",
+                "Choice": "2x - 21 = 70",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Distributing 7 on the left-hand side of the given equation yields 14x – 21 = 63, not 2x – 21 = 70.",
+                    "Rationale": "Distributing 7 on the left-hand side of the given equation yields 14x - 21 = 63, not 2x - 21 = 70.",
                     "Percent": 0
                 }
             }
@@ -578,7 +578,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(x + 2)(x – 5)(x + 9) = 0",
+            ":ibox:(x + 2)(x - 5)(x + 9) = 0",
             "What is a positive solution to the given equation?"
         ],
         "AnswerChoices": {
@@ -672,7 +672,7 @@
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let x represent the width, in inches, of the rectangle. It's given that the length of the rectangle is 4 inches less than 7 times its width, or 7x – 4 inches. The area of a rectangle is equal to its width multiplied by its length. Multiplying the width, x inches, by the length, 7x – 4 inches, yields x(7x – 4) square inches. It's given that the rectangle has an area of 155 square inches, so it follows that x(7x – 4) = 155, or 7x² – 4x = 155. Subtracting 155 from both sides of this equation yields 7x² – 4x – 155 = 0. Factoring the left-hand side of this equation yields (7x + 31)(x - 5). Applying the zero product property to this equation yields two solutions: x = -31/7 and x = 5. Since x is the rectangle's width, in inches, which must be positive, the value of x is 5. Therefore, the width of the rectangle, in inches, is 5.",
+                    "Rationale": "Let x represent the width, in inches, of the rectangle. It's given that the length of the rectangle is 4 inches less than 7 times its width, or 7x - 4 inches. The area of a rectangle is equal to its width multiplied by its length. Multiplying the width, x inches, by the length, 7x - 4 inches, yields x(7x - 4) square inches. It's given that the rectangle has an area of 155 square inches, so it follows that x(7x - 4) = 155, or 7x^2- 4x = 155. Subtracting 155 from both sides of this equation yields 7x^2- 4x - 155 = 0. Factoring the left-hand side of this equation yields (7x + 31)(x - 5). Applying the zero product property to this equation yields two solutions: x = -31/7 and x = 5. Since x is the rectangle's width, in inches, which must be positive, the value of x is 5. Therefore, the width of the rectangle, in inches, is 5.",
                     "Percent": 0
                 }
             }
@@ -807,7 +807,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x² = –841",
+            ":ibox:x^2= -841",
             "How many distinct real solutions does the given equation have?"
         ],
         "AnswerChoices": {
@@ -867,7 +867,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–8",
+                "Choice": "-8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the opposite reciprocal of the y-coordinate of the y-intercept, not the slope, of line k.",
@@ -875,10 +875,10 @@
                 }
             },
             "B": {
-                "Choice": "–1/7",
+                "Choice": "-1/7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that line k is defined by y = 7x + 1/8. For an equation in slope-intercept form y = mx + b, m represents the slope of the line defined by this equation in the xy-plane and b represents the y-coordinate of the y-intercept of this line. Therefore, the slope of line k is 7. It's also given that line j is perpendicular to line k in the xy-plane. Therefore, the slope of line j is the opposite reciprocal of the slope of line k. The opposite reciprocal of 7 is –1/7. Therefore, the slope of line j is –1/7.",
+                    "Rationale": "It's given that line k is defined by y = 7x + 1/8. For an equation in slope-intercept form y = mx + b, m represents the slope of the line defined by this equation in the xy-plane and b represents the y-coordinate of the y-intercept of this line. Therefore, the slope of line k is 7. It's also given that line j is perpendicular to line k in the xy-plane. Therefore, the slope of line j is the opposite reciprocal of the slope of line k. The opposite reciprocal of 7 is -1/7. Therefore, the slope of line j is -1/7.",
                     "Percent": 0
                 }
             },
@@ -923,7 +923,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "55c – p = –9",
+                "Choice": "55c - p = -9",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that there is a linear relationship between the number of cars, c, on a commuter train and the maximum number of passengers and crew, p, that the train can carry. It follows that this relationship can be represented by an equation of the form p = mc + b, where m is the rate of change of p in this relationship and b is a constant. The rate of change of p in this relationship can be calculated by dividing the difference in any two values of p by the difference in the corresponding values of c. Using two pairs of values given in the table, the rate of change of p in this relationship is (284 - 174)/(5 - 3), or 55. Substituting 55 for m in the equation p = mc + b yields p = 55c + b. The value of b can be found by substituting any value of c and its corresponding value of p for c and p, respectively, in this equation. Substituting 10 for c and 559 for p yields 559 = 55(10) + b, or 559 = 550 + b. Subtracting 550 from both sides of this equation yields 9 = b. Substituting 9 for b in the equation p = 55c + b yields p = 55c + 9. Subtracting 9 from both sides of this equation yields p - 9 = 55c. Subtracting p from both sides of this equation yields -9 = 55c - p, or 55c - p = -9.",
@@ -931,7 +931,7 @@
                 }
             },
             "B": {
-                "Choice": "55c – p = 9",
+                "Choice": "55c - p = 9",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -939,7 +939,7 @@
                 }
             },
             "C": {
-                "Choice": "55p – c = –9",
+                "Choice": "55p - c = -9",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -947,7 +947,7 @@
                 }
             },
             "D": {
-                "Choice": "55p – c = 9",
+                "Choice": "55p - c = 9",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1005,15 +1005,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(x – 2) – 4(y + 7) = 117\n(x – 2) + 4(y + 7) = 442",
-            "The solution to the given system of equations is (x, y). What is the value of 6(x – 2)?"
+            ":ibox:(x - 2) - 4(y + 7) = 117\n(x - 2) + 4(y + 7) = 442",
+            "The solution to the given system of equations is (x, y). What is the value of 6(x - 2)?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1677",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Adding the first equation to the second equation in the given system yields (x – 2)) + (x – 2)) + (–4)(y + 7) + 4(y + 7) = 117 + 442, or 2(x - 2) = 559. Multiplying both sides of this equation by 3 yields 6(x - 2) = 1,677. Therefore, the value of 6(x - 2) is 1,677.",
+                    "Rationale": "Adding the first equation to the second equation in the given system yields (x - 2)) + (x - 2)) + (-4)(y + 7) + 4(y + 7) = 117 + 442, or 2(x - 2) = 559. Multiplying both sides of this equation by 3 yields 6(x - 2) = 1,677. Therefore, the value of 6(x - 2) is 1,677.",
                     "Percent": 0
                 }
             }
@@ -1044,7 +1044,7 @@
                 "Choice": "14√37",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the result of solving the equation c = 24√37 - 10√37, not c² = (10√37)² + (24√37)².",
+                    "Rationale": "This is the result of solving the equation c = 24√37 - 10√37, not c² = (10√37)^2 + (24√37)^2.",
                     "Percent": 0
                 }
             },
@@ -1052,7 +1052,7 @@
                 "Choice": "26√37",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The Pythagorean theorem states that for a right triangle, c² = a² + b², where c represents the length of the hypotenuse and a and b represent the lengths of the legs. It's given that in triangle ABC, angle B is a right angle. Therefore, triangle ABC is a right triangle, where the hypotenuse is side AC and the legs are sides AB and BC. It's given that the lengths of sides AB and BC are 10√37 and 24√37, respectively. Substituting these values for a and b in the formula c² = a² + b² yields c² = (10√37)² + (24√37)², which is equivalent to c² = 100(37) + 576(37), or c² = 676(37). Taking the square root of both sides of this equation yields c = ±26√37. Since c represents the length of the hypotenuse, side AC, c must be positive. Therefore, the length of side AC is 26√37.",
+                    "Rationale": "The Pythagorean theorem states that for a right triangle, c² = a² + b², where c represents the length of the hypotenuse and a and b represent the lengths of the legs. It's given that in triangle ABC, angle B is a right angle. Therefore, triangle ABC is a right triangle, where the hypotenuse is side AC and the legs are sides AB and BC. It's given that the lengths of sides AB and BC are 10√37 and 24√37, respectively. Substituting these values for a and b in the formula c² = a² + b² yields c² = (10√37)^2 + (24√37)^2, which is equivalent to c² = 100(37) + 576(37), or c² = 676(37). Taking the square root of both sides of this equation yields c = ±26√37. Since c represents the length of the hypotenuse, side AC, c must be positive. Therefore, the length of side AC is 26√37.",
                     "Percent": 0
                 }
             },
@@ -1060,7 +1060,7 @@
                 "Choice": "34√37",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the result of solving the equation c = 10√37 + 24√37, not c² = (10√37)² + (24√37)².",
+                    "Rationale": "This is the result of solving the equation c = 10√37 + 24√37, not c² = (10√37)^2 + (24√37)^2.",
                     "Percent": 0
                 }
             },
@@ -1148,7 +1148,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = a√(x + b), where a and b are constants. In the xy-plane, the graph of y = f(x) passes through the point (–24, 0), and f(24) < 0. Which of the following must be true?"
+            "The function f is defined by f(x) = a√(x + b), where a and b are constants. In the xy-plane, the graph of y = f(x) passes through the point (-24, 0), and f(24) < 0. Which of the following must be true?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1160,7 +1160,7 @@
                 }
             },
             "B": {
-                "Choice": "f(0) = –24",
+                "Choice": "f(0) = -24",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The value of f(0) is a√b, which could be -24, but doesn't have to be.",
@@ -1210,7 +1210,7 @@
                 "Choice": "√206",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "'s given that points A and B lie on the circle with center C. Therefore, AC and BC are both radii of the circle. Since all radii of a circle are congruent, AC is congruent to BC. The length of AC, or the distance from point A to point C, can be found using the distance formula, which gives the distance between two points, (x₁, y₁) and (x₂, y₂), as √((x₁ - x₂)² + (y₁ - y₂)²). Substituting the given coordinates of point A, (h + 1, k + √102) for (x₁, y₁) and the given coordinates of point C, (h, k), for (x₂, y₂) in the distance formula yields √((h + 1 - h)² + (k + √102 - k)²), or √(1² + (√102)²), which is equivalent to √(1 + 102), or √103. Therefore, the length of AC is √103 and the length of BC is √103. It's given that angle ACB is a right angle. Therefore, triangle ACB is a right triangle with legs AC and BC and hypotenuse AB. By the Pythagorean theorem, if a right triangle has a hypotenuse with length c and legs with lengths a and b, then a² + b² = c². Substituting √103 for a and b in this equation yields (√103)² + (√103)² = c², or 103 + 103 = c², which is equivalent to 206 = c². Taking the positive square root of both sides of this equation yields √206 = c. Therefore, the length of AB is √206.",
+                    "Rationale": "'s given that points A and B lie on the circle with center C. Therefore, AC and BC are both radii of the circle. Since all radii of a circle are congruent, AC is congruent to BC. The length of AC, or the distance from point A to point C, can be found using the distance formula, which gives the distance between two points, (x₁, y₁) and (x₂, y₂), as √((x₁ - x₂)^2 + (y₁ - y₂)^2). Substituting the given coordinates of point A, (h + 1, k + √102) for (x₁, y₁) and the given coordinates of point C, (h, k), for (x₂, y₂) in the distance formula yields √((h + 1 - h)^2 + (k + √102 - k)^2), or √(1^2 + (√102)^2), which is equivalent to √(1 + 102), or √103. Therefore, the length of AC is √103 and the length of BC is √103. It's given that angle ACB is a right angle. Therefore, triangle ACB is a right triangle with legs AC and BC and hypotenuse AB. By the Pythagorean theorem, if a right triangle has a hypotenuse with length c and legs with lengths a and b, then `a^2+b^2=c^2`. Substituting √103 for a and b in this equation yields (√103)^2 + (√103)^2 = c², or 103 + 103 = c², which is equivalent to 206 = c². Taking the positive square root of both sides of this equation yields √206 = c. Therefore, the length of AB is √206.",
                     "Percent": 0
                 }
             },
@@ -1259,7 +1259,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M2/media/26a.jpg",
-            "The scatterplot shows the relationship between two variables, x and y, for data set E. A line of best fit is shown. Data set F is created by multiplying the y-coordinate of each data point from data set E by 3.9. Which of the following could be an equation of a line of best fit for data set F?"
+            "The scatterplot shows the relationship between two variables, `x` and `y`, for data set E. A line of best fit is shown. Data set F is created by multiplying the y-coordinate of each data point from data set E by 3.9. Which of the following could be an equation of a line of best fit for data set F?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1314,7 +1314,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:48x – 64y = 48y + 24\nry = 1/8 – 12x",
+            ":ibox:48x - 64y = 48y + 24\nry = 1/8 - 12x",
             "In the given system of equations, r is a constant. If the system has no solution, what is the value of r?"
         ],
         "AnswerChoices": {
@@ -1322,7 +1322,7 @@
                 "Choice": "equal:-28",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A system of two linear equations in two variables, x and y, has no solution if the lines represented by the equations in the xy-plane are distinct and parallel. The graphs of two lines in the xy-plane represented by equations in the form Ax + By = C, where A, B, and C are constants, are parallel if the coefficients for x and y in one equation are proportional to the corresponding coefficients for x and y in the other equation. The first equation in the given system, 48x - 64y = 48y + 24, can be written in the form Ax + By = C by subtracting 48y from both sides of the equation to yield 48x - 112y = 24. The second equation in the given system, ry = 1/8 - 12x, can be written in the form Ax + By = C by adding 12s to both sides of the equation to yield 12x + ry = 1/8. The coefficient of x in the second equation is 1/4 times the coefficient of x in the first equation. That is, 48(1/4) = 12. For the lines to be parallel, the coefficient of y in the second equation must also be 1/4 times the coefficient of y in the first equation. Therefore, -112(1/4) = r, or -28 = r. Thus, if the given system has no solution, the value of r is -28.",
+                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the xy-plane are distinct and parallel. The graphs of two lines in the xy-plane represented by equations in the form Ax + By = C, where A, B, and C are constants, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients for `x` and `y` in the other equation. The first equation in the given system, 48x - 64y = 48y + 24, can be written in the form Ax + By = C by subtracting 48y from both sides of the equation to yield 48x - 112y = 24. The second equation in the given system, ry = 1/8 - 12x, can be written in the form Ax + By = C by adding 12s to both sides of the equation to yield 12x + ry = 1/8. The coefficient of x in the second equation is 1/4 times the coefficient of x in the first equation. That is, 48(1/4) = 12. For the lines to be parallel, the coefficient of y in the second equation must also be 1/4 times the coefficient of y in the first equation. Therefore, -112(1/4) = r, or -28 = r. Thus, if the given system has no solution, the value of r is -28.",
                     "Percent": 0
                 }
             }

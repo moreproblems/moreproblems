@@ -14,12 +14,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:2x – y = 8\nx + 2y = 4",
+            ":ibox:2x - y = 8\nx + 2y = 4",
             "For the system of equations above, what is the value of x + y?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–1",
+                "Choice": "-1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from various computation errors.",
@@ -30,7 +30,7 @@
                 "Choice": "4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying both sides of the first equation in the system by 2 yields 4x – 2y = 16. Adding 4x – 2y = 16 to the second equation in the system yields 5x = 20. Dividing both sides of 5x = 20 by 5 yields x = 4. Substituting 4 for x in x + 2y = 4 yields 4 + 2y = 4. Subtracting 4 from both sides of 4 + 2y = 4 yields 2y = 0. Dividing both sides of this equation by 2 yields y = 0. Substituting 4 for x and 0 for y in the expression x + y yields 4 + 0 = 4.",
+                    "Rationale": "Multiplying both sides of the first equation in the system by 2 yields 4x - 2y = 16. Adding 4x - 2y = 16 to the second equation in the system yields 5x = 20. Dividing both sides of 5x = 20 by 5 yields x = 4. Substituting 4 for x in x + 2y = 4 yields 4 + 2y = 4. Subtracting 4 from both sides of 4 + 2y = 4 yields 2y = 0. Dividing both sides of this equation by 2 yields y = 0. Substituting 4 for x and 0 for y in the expression x + y yields 4 + 0 = 4.",
                     "Percent": 0
                 }
             },
@@ -68,19 +68,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is equivalent to 2(x² + x) + 3(x² – x)?"
+            "Which of the following is equivalent to 2(x^2+ x) + 3(x^2- x)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5x² – 5x",
+                "Choice": "5x^2- 5x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since (x² – x) is a common term in the original expression, like terms can be added: 2(x² – x) + 3(x² – x) = 5(x² – x). Distributing the constant term 5 yields 5x² – 5x.",
+                    "Rationale": "Since (x^2- x) is a common term in the original expression, like terms can be added: 2(x^2- x) + 3(x^2- x) = 5(x^2- x). Distributing the constant term 5 yields 5x^2- 5x.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "5x² + 5x",
+                "Choice": "5x^2+ 5x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from not distributing the negative signs in the expressions within the parentheses.",
@@ -91,12 +91,12 @@
                 "Choice": "5x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from not distributing the negative signs in the expressions within the parentheses and from incorrectly eliminating the x²-term.",
+                    "Rationale": "This choice may result from not distributing the negative signs in the expressions within the parentheses and from incorrectly eliminating the x^2-term.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "5x²",
+                "Choice": "5x^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from incorrectly eliminating the x-term.",
@@ -121,7 +121,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following statements is true about the graph of the equation 2y – 3x = –4 in the xy-plane?"
+            "Which of the following statements is true about the graph of the equation 2y - 3x = -4 in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -152,7 +152,7 @@
                 "Choice": "It has a positive slope and a negative y-intercept.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To find the slope and y-intercept, the given equation can be rewritten in slope-intercept form y = mx + b, where m represents the slope of the line and b represents the y-intercept. The given equation 2y – 3x = –4 can be rewritten in slope-intercept form by first adding 3x to both sides of the equation, which yields 2y = 3x – 4. Then, dividing both sides of the equation by 2 results in the equation y = 3x/2 – 2. The coefficient of x, 3//2, is the slope of the graph and is positive, and the constant term, –2, is the y-intercept of the graph and is negative. Thus, the graph of the equation 2y – 3x = –4 has a positive slope and a negative y-intercept.",
+                    "Rationale": "To find the slope and y-intercept, the given equation can be rewritten in slope-intercept form y = mx + b, where m represents the slope of the line and b represents the y-intercept. The given equation 2y - 3x = -4 can be rewritten in slope-intercept form by first adding 3x to both sides of the equation, which yields 2y = 3x - 4. Then, dividing both sides of the equation by 2 results in the equation y = 3x/2 - 2. The coefficient of x, 3//2, is the slope of the graph and is positive, and the constant term, -2, is the y-intercept of the graph and is negative. Thus, the graph of the equation 2y - 3x = -4 has a positive slope and a negative y-intercept.",
                     "Percent": 0
                 }
             }
@@ -251,7 +251,7 @@
                 "Choice": "$150",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the variable h represents the number of hours a job took, the coefficient of h, 75, represents the electrician's charge per hour, in dollars, after an initial fixed charge of $125. It's given that the electrician worked 2 hours longer on Ms. Sanchez's job than on Mr. Roland's job; therefore, the additional charge for Ms. Sanchez's job is $75 × 2 = $150.\nAlternate approach: The amounts the electrician charged for Mr. Roland's job and Ms. Sanchez's job can be expressed in terms of t. If Mr. Roland's job took t hours, then it cost 75t + 125 dollars. Ms. Sanchez's job must then have taken t + 2 hours, so it cost 75(t + 2) + 125 = 75t + 275 dollars. The difference between the two costs is (75t + 275) – (75t + 125) = $150.",
+                    "Rationale": "Since the variable h represents the number of hours a job took, the coefficient of h, 75, represents the electrician's charge per hour, in dollars, after an initial fixed charge of $125. It's given that the electrician worked 2 hours longer on Ms. Sanchez's job than on Mr. Roland's job; therefore, the additional charge for Ms. Sanchez's job is $75 × 2 = $150.\nAlternate approach: The amounts the electrician charged for Mr. Roland's job and Ms. Sanchez's job can be expressed in terms of t. If Mr. Roland's job took t hours, then it cost 75t + 125 dollars. Ms. Sanchez's job must then have taken t + 2 hours, so it cost 75(t + 2) + 125 = 75t + 275 dollars. The difference between the two costs is (75t + 275) - (75t + 125) = $150.",
                     "Percent": 0
                 }
             },
@@ -297,7 +297,7 @@
                 "Choice": "13π",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The ratio of the lengths of two arcs of a circle is equal to the ratio of the measures of the central angles that subtend the arcs. It's given that arc ADC is subtended by a central angle with measure 100°. Since the sum of the measures of the angles about a point is 360°, it follows that arc ABC is subtended by a central angle with measure 360° – 100° = 260°. If s is the length of arc ABC, then s must satisfy the ratio s/5π = 260/100. Reducing the fraction 260/100 to its simplest form gives 13/5. Therefore, s/5π = 13/5. Multipl ying both sides of s/5π = 13/5 by 5π yields s = 13π.",
+                    "Rationale": "The ratio of the lengths of two arcs of a circle is equal to the ratio of the measures of the central angles that subtend the arcs. It's given that arc ADC is subtended by a central angle with measure 100°. Since the sum of the measures of the angles about a point is 360°, it follows that arc ABC is subtended by a central angle with measure 360° - 100° = 260°. If s is the length of arc ABC, then s must satisfy the ratio s/5π = 260/100. Reducing the fraction 260/100 to its simplest form gives 13/5. Therefore, s/5π = 13/5. Multipl ying both sides of s/5π = 13/5 by 5π yields s = 13π.",
                     "Percent": 0
                 }
             },
@@ -388,7 +388,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:2ax – 15 = 3(x + 5) + 5(x – 1)",
+            ":ibox:2ax - 15 = 3(x + 5) + 5(x - 1)",
             "In the equation above, a is a constant. If no value of x satisfies the equation, what is the value of a?"
         ],
         "AnswerChoices": {
@@ -396,7 +396,7 @@
                 "Choice": "1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If a = 1, then the given equation could be written as 2x – 15 = 8x + 10. Since 2 ≠ 8, this equation has exactly one solution.",
+                    "Rationale": "If a = 1, then the given equation could be written as 2x - 15 = 8x + 10. Since 2 ≠ 8, this equation has exactly one solution.",
                     "Percent": 0
                 }
             },
@@ -404,7 +404,7 @@
                 "Choice": "2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If a = 2, then the given equation could be written as 4x – 15 = 8x + 10. Since 4 ≠ 8, this equation has exactly one solution.",
+                    "Rationale": "If a = 2, then the given equation could be written as 4x - 15 = 8x + 10. Since 4 ≠ 8, this equation has exactly one solution.",
                     "Percent": 0
                 }
             },
@@ -412,7 +412,7 @@
                 "Choice": "4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applying the distributive property of multiplication to the right-hand side of the given equation gives (3x + 15) + (5x – 5), or 8x + 10. An equation in the form cx + d = rx + s will have no solutions if c = r and d ≠ s. Therefore, it follows that the equation 2ax – 15 = 8x + 10 will have no solutions if 2a = 8, or a = 4.",
+                    "Rationale": "Applying the distributive property of multiplication to the right-hand side of the given equation gives (3x + 15) + (5x - 5), or 8x + 10. An equation in the form cx + d = rx + s will have no solutions if c = r and d ≠ s. Therefore, it follows that the equation 2ax - 15 = 8x + 10 will have no solutions if 2a = 8, or a = 4.",
                     "Percent": 0
                 }
             },
@@ -420,7 +420,7 @@
                 "Choice": "8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If a = 8, then the given equation could be written as 16x – 15 = 8x + 10. Since 16 ≠ 8, this equation has exactly one solution.",
+                    "Rationale": "If a = 8, then the given equation could be written as 16x - 15 = 8x + 10. Since 16 ≠ 8, this equation has exactly one solution.",
                     "Percent": 0
                 }
             }
@@ -450,7 +450,7 @@
                 "Choice": "None",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A system of equations has no solutions when there is no point at which all the graphs intersect. Because the graphs of all three equations intersect at the point (–1, 3), there is a solution.",
+                    "Rationale": "A system of equations has no solutions when there is no point at which all the graphs intersect. Because the graphs of all three equations intersect at the point (-1, 3), there is a solution.",
                     "Percent": 0
                 }
             },
@@ -458,7 +458,7 @@
                 "Choice": "One",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A solution to the system of three equations is any ordered pair (x, y) that is a solution to each of the three equations. Such an ordered pair (x, y) must lie on the graph of each equation in the xy-plane; in other words, it must be a point where all three graphs intersect. The graphs of all three equations intersect at exactly one point, (–1, 3). Therefore, the system of equations has one solution.",
+                    "Rationale": "A solution to the system of three equations is any ordered pair (x, y) that is a solution to each of the three equations. Such an ordered pair (x, y) must lie on the graph of each equation in the xy-plane; in other words, it must be a point where all three graphs intersect. The graphs of all three equations intersect at exactly one point, (-1, 3). Therefore, the system of equations has one solution.",
                     "Percent": 0
                 }
             },
@@ -466,7 +466,7 @@
                 "Choice": "Two",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graphs of all three equations intersect at only one point, (–1, 3). Since there is no other such point, there cannot be two solutions.",
+                    "Rationale": "The graphs of all three equations intersect at only one point, (-1, 3). Since there is no other such point, there cannot be two solutions.",
                     "Percent": 0
                 }
             },
@@ -496,7 +496,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(ax + 3)(5x² – bx + 4) = 20x³ – 9x² – 2x + 12",
+            ":ibox:(ax + 3)(5x^2- bx + 4) = 20x³ - 9x^2- 2x + 12",
             "The equation above is true for all x, where a and b are constants. What is the value of ab?"
         ],
         "AnswerChoices": {
@@ -504,7 +504,7 @@
                 "Choice": "18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If ab = 18, then the coefficient of x² on the left-hand side of the equation would be –18 + 15 = –3, which doesn't equal the coefficient of x², –9, on the right-hand side.",
+                    "Rationale": "If ab = 18, then the coefficient of x^2on the left-hand side of the equation would be -18 + 15 = -3, which doesn't equal the coefficient of x^2, -9, on the right-hand side.",
                     "Percent": 0
                 }
             },
@@ -512,7 +512,7 @@
                 "Choice": "20",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If ab = 20, then the coefficient of x² on the left-hand side of the equation would be –20 + 15 = –5, which doesn't equal the coefficient of x², –9, on the right-hand side.",
+                    "Rationale": "If ab = 20, then the coefficient of x^2on the left-hand side of the equation would be -20 + 15 = -5, which doesn't equal the coefficient of x^2, -9, on the right-hand side.",
                     "Percent": 0
                 }
             },
@@ -520,7 +520,7 @@
                 "Choice": "24",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the equation is true for all x, then the expressions on both sides of the equation will be equivalent. Multiplying the polynomials on the left-hand side of the equation gives 5ax³ – abx² + 4ax + 15x² – 3bx + 12. On the right-hand side of the equation, the only x 2-term is –9x 2. Since the expressions on both sides of the equation are equivalent, it follows that –abx² + 15x² = –9x², which can be rewritten as (–ab + 15)x² = –9x². Therefore, –ab + 15 = –9, which gives ab = 24.",
+                    "Rationale": "If the equation is true for all x, then the expressions on both sides of the equation will be equivalent. Multiplying the polynomials on the left-hand side of the equation gives 5ax³ - abx^2+ 4ax + 15x^2- 3bx + 12. On the right-hand side of the equation, the only x 2-term is -9x 2. Since the expressions on both sides of the equation are equivalent, it follows that -abx^2+ 15x^2= -9x^2, which can be rewritten as (-ab + 15)x^2= -9x^2. Therefore, -ab + 15 = -9, which gives ab = 24.",
                     "Percent": 0
                 }
             },
@@ -528,7 +528,7 @@
                 "Choice": "40",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If ab = 40, then the coefficient of x² on the left-hand side of the equation would be –40 + 15 = –25, which doesn't equal the coefficient of x², –9, on the right-hand side.",
+                    "Rationale": "If ab = 40, then the coefficient of x^2on the left-hand side of the equation would be -40 + 15 = -25, which doesn't equal the coefficient of x^2, -9, on the right-hand side.",
                     "Percent": 0
                 }
             }
@@ -550,7 +550,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x/(x – 3) = 2x/2",
+            ":ibox:x/(x - 3) = 2x/2",
             "Which of the following represents all the possible values of x that satisfy the equation above?"
         ],
         "AnswerChoices": {
@@ -566,12 +566,12 @@
                 "Choice": "0 and 4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The right-hand side of the given equation, 2x/2, can be rewritten as x. Multiplying both sides of the equation x/(x – 3) = x by x – 3 yields x = x(x – 3). Applying the distributive property of multiplication to the right-hand side of the equation x = x(x – 3) yields x = x² – 3x. Subtracting x from both sides of this equation yields 0 = x² – 4x. Factoring x from both terms of x² – 4x yields 0 = x(x – 4). By the zero product property, the solutions to the equation 0 = x(x – 4) are x = 0 and x – 4 = 0, or x = 4. Substituting 0 and 4 for x in the given equation yields 0 = 0 and 4 = 4, respectively. Since both are true statements, both 0 and 4 are solutions to the given equation.",
+                    "Rationale": "The right-hand side of the given equation, 2x/2, can be rewritten as x. Multiplying both sides of the equation x/(x - 3) = x by x - 3 yields x = x(x - 3). Applying the distributive property of multiplication to the right-hand side of the equation x = x(x - 3) yields x = x^2- 3x. Subtracting x from both sides of this equation yields 0 = x^2- 4x. Factoring x from both terms of x^2- 4x yields 0 = x(x - 4). By the zero product property, the solutions to the equation 0 = x(x - 4) are x = 0 and x - 4 = 0, or x = 4. Substituting 0 and 4 for x in the given equation yields 0 = 0 and 4 = 4, respectively. Since both are true statements, both 0 and 4 are solutions to the given equation.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "–4 and 4",
+                "Choice": "-4 and 4",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from an error in factoring.",
@@ -663,15 +663,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "f(x) = 4(x – 3)² + 1",
+                "Choice": "f(x) = 4(x - 3)^2 + 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a parabola in vertex form is f(x) = a(x – h)² + k, where the point (h, k) is the vertex of the parabola and a is a constant. The graph shows that the coordinates of the vertex are (3, 1), so h = 3 and k = 1. Therefore, an equation that defines f can be written as f(x) = a(x – 3)² + 1. To find a, substitute a value for x and its corresponding value for y, or f(x). For example, (4, 5) is a point on the graph of f. So a must satisfy the equation 5 = a(4 – 3)² + 1, which can be rewritten as 4 = a(1)², or a = 4. An equation that defines f is therefore f(x) = 4(x – 3)² + 1.",
+                    "Rationale": "The equation of a parabola in vertex form is `f(x)=a(x-h)^2+k`, where the point (h, k) is the vertex of the parabola and a is a constant. The graph shows that the coordinates of the vertex are (3, 1), so h = 3 and k = 1. Therefore, an equation that defines f can be written as f(x) = a(x - 3)^2 + 1. To find a, substitute a value for x and its corresponding value for y, or f(x). For example, (4, 5) is a point on the graph of f. So a must satisfy the equation 5 = a(4 - 3)^2 + 1, which can be rewritten as 4 = a(1)^2, or a = 4. An equation that defines f is therefore f(x) = 4(x - 3)^2 + 1.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "f(x) = 4(x + 3)² + 1",
+                "Choice": "f(x) = 4(x + 3)^2 + 1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from a sign error when writing the equation of the parabola in vertex form.",
@@ -679,7 +679,7 @@
                 }
             },
             "C": {
-                "Choice": "f(x) = (x – 3)² + 1",
+                "Choice": "f(x) = (x - 3)^2 + 1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from omitting the constant a from the vertex form of the equation of the parabola.",
@@ -687,7 +687,7 @@
                 }
             },
             "D": {
-                "Choice": "f(x) = 3(x + 3)² + 1",
+                "Choice": "f(x) = 3(x + 3)^2 + 1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from a sign error when writing the equation of the parabola in vertex form as well as by miscalculating the value of a.",
@@ -728,7 +728,7 @@
                 "Choice": "problems/SAT19M1/media/14b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The solutions of the first inequality, y ≥ x + 2, lie on or above the line y = x + 2, which is the line that passes through (–2, 0) and (0, 2). The second inequality can be rewritten in slope-intercept form by dividing the second inequality, 2x + 3y ≤ 6, by 3 on both sides, which yields 2x/3 + y ≤ 2, and then subtracting 2x/3 from both sides, which yields y ≤ –2x/3 + 2. The solutions to this inequality lie on or below the line y = –2x/3 + 2, which is the line that passes through (0, 2) and (3, 0). The only graph in which the shaded region meets these criteria is this choice.",
+                    "Rationale": "The solutions of the first inequality, y ≥ x + 2, lie on or above the line y = x + 2, which is the line that passes through (-2, 0) and (0, 2). The second inequality can be rewritten in slope-intercept form by dividing the second inequality, 2x + 3y ≤ 6, by 3 on both sides, which yields 2x/3 + y ≤ 2, and then subtracting 2x/3 from both sides, which yields y ≤ -2x/3 + 2. The solutions to this inequality lie on or below the line y = -2x/3 + 2, which is the line that passes through (0, 2) and (3, 0). The only graph in which the shaded region meets these criteria is this choice.",
                     "Percent": 0
                 }
             },
@@ -766,22 +766,22 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the set of all solutions to the equation √(x + 2) = –x?"
+            "What is the set of all solutions to the equation √(x + 2) = -x?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "{–1, 2}",
+                "Choice": "{-1, 2}",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The square root symbol represents the principal, or nonnegative, square root. Therefore, in the equation √x + 2 = –x, the value of –x must be zero or positive. If x = 2, then –x = –2, which is negative, so 2 can't be in the set of solutions.",
+                    "Rationale": "The square root symbol represents the principal, or nonnegative, square root. Therefore, in the equation √x + 2 = -x, the value of -x must be zero or positive. If x = 2, then -x = -2, which is negative, so 2 can't be in the set of solutions.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "{–1}",
+                "Choice": "{-1}",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Squaring both sides of the given equation yields x + 2 = x². Subtracting x and 2 from both sides of x + 2 = x² yields x² – x – 2 = 0. Factoring the left-hand side of this equation yields (x – 2)(x + 1) = 0. Applying the zero product property, the solutions to (x – 2)(x + 1) = 0 are x – 2 = 0, or x = 2 and x + 1 = 0, or x = –1. Substituting x = 2 in the given equation gives √4 = –2, which is false because √4 = 2 by the definition of a principal square root. So, x = 2 isn't a solution. Substituting x = –1 into the given equation gives √1 = –(–1), which is true because –(–1) = 1. So x = –1 is the only solution.",
+                    "Rationale": "Squaring both sides of the given equation yields x + 2 = x^2. Subtracting x and 2 from both sides of x + 2 = x^2yields x^2- x - 2 = 0. Factoring the left-hand side of this equation yields (x - 2)(x + 1) = 0. Applying the zero product property, the solutions to (x - 2)(x + 1) = 0 are x - 2 = 0, or x = 2 and x + 1 = 0, or x = -1. Substituting x = 2 in the given equation gives √4 = -2, which is false because √4 = 2 by the definition of a principal square root. So, x = 2 isn't a solution. Substituting x = -1 into the given equation gives √1 = -(-1), which is true because -(-1) = 1. So x = -1 is the only solution.",
                     "Percent": 0
                 }
             },
@@ -789,7 +789,7 @@
                 "Choice": "{2}",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The square root symbol represents the principal, or nonnegative, square root. Therefore, in the equation √x + 2 = –x, the value of –x must be zero or positive. If x = 2, then –x = –2, which is negative, so 2 can't be in the set of solutions.",
+                    "Rationale": "The square root symbol represents the principal, or nonnegative, square root. Therefore, in the equation √x + 2 = -x, the value of -x must be zero or positive. If x = 2, then -x = -2, which is negative, so 2 can't be in the set of solutions.",
                     "Percent": 0
                 }
             },
@@ -797,7 +797,7 @@
                 "Choice": "There are no solutions to the given equation.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly reasoning that –x always has a negative value and therefore can't be equal to a value of a principal square root, which cannot be negative.",
+                    "Rationale": "This choice may result from incorrectly reasoning that -x always has a negative value and therefore can't be equal to a value of a principal square root, which cannot be negative.",
                     "Percent": 0
                 }
             }
@@ -915,7 +915,7 @@
                 "Choice": "equal:3/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "By definition of the sine ratio, since sin(R) = 4/5,PQ/PR = 4/5. Therefore, if PQ = 4n, then PR = 5n, where n is a positive constant. Then QR = kn, where k is another positive constant. Applying the Pythagorean theorem, the following relationship holds: (kn)² + (4n)² = (5n)², or k²n² + 16n² = 25n². Subtracting 16n² from both sides of this equation yields k²n² = 9n². Taking the square root of both sides of k²n² = 9n² yields kn = 3n. It follows that k = 3. Therefore, if PQ = 4n and PR = 5n, then QR = 3n, and by definition of the tangent ratio, tan(P) = 3n/4n, or 3/4.",
+                    "Rationale": "By definition of the sine ratio, since sin(R) = 4/5,PQ/PR = 4/5. Therefore, if PQ = 4n, then PR = 5n, where n is a positive constant. Then QR = kn, where k is another positive constant. Applying the Pythagorean theorem, the following relationship holds: (kn)^2 + (4n)^2 = (5n)^2, or k²n² + 16n² = 25n². Subtracting 16n² from both sides of this equation yields k²n² = 9n². Taking the square root of both sides of k²n² = 9n² yields kn = 3n. It follows that k = 3. Therefore, if PQ = 4n and PR = 5n, then QR = 3n, and by definition of the tangent ratio, tan(P) = 3n/4n, or 3/4.",
                     "Percent": 0
                 }
             }
@@ -945,7 +945,7 @@
                 "Choice": "equal:2.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of the linear function f passes through the points (0, 3) and (1, 1). The slope of the graph of the function f is therefore (1 – 3)/(1 – 0) = –2. It's given that the graph of the linear function g is perpendicular to the graph of the function f. Therefore, the slope of the graph of the function g is the negative reciprocal of –2, which is (–1)/(–2) = 1/2, and an equation that defines the function g is g(x) = (1/2)x + b, where b is a constant. Since it's given that the graph of the function g passes through the point (1, 3), the value of b can be found using the equation 3 = (1/2)(1) + b. Solving this equation for b yields b = 5/2, so an equation that defines the function g is g(x) = 1/2 x + 5/2. Finding the value of g(0) by substituting 0 for x into this equation yields g(0) = (1/2)(0) + 5/2, or 5/2.",
+                    "Rationale": "The graph of the linear function f passes through the points (0, 3) and (1, 1). The slope of the graph of the function f is therefore (1 - 3)/(1 - 0) = -2. It's given that the graph of the linear function g is perpendicular to the graph of the function f. Therefore, the slope of the graph of the function g is the negative reciprocal of -2, which is (-1)/(-2) = 1/2, and an equation that defines the function g is g(x) = (1/2)x + b, where b is a constant. Since it's given that the graph of the function g passes through the point (1, 3), the value of b can be found using the equation 3 = (1/2)(1) + b. Solving this equation for b yields b = 5/2, so an equation that defines the function g is g(x) = 1/2 x + 5/2. Finding the value of g(0) by substituting 0 for x into this equation yields g(0) = (1/2)(0) + 5/2, or 5/2.",
                     "Percent": 0
                 }
             }

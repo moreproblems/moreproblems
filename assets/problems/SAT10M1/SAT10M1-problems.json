@@ -78,10 +78,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(4, –5)",
+                "Choice": "(4, -5)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The solution to this system of linear equations is represented by the point that lies on both lines shown, or the point of intersection of the two lines. According to the graph, the point of intersection occurs when x = 4 and y = -5, or at the point (4, –5). Therefore, the solution (x, y) to the system is (4, –5).",
+                    "Rationale": "The solution to this system of linear equations is represented by the point that lies on both lines shown, or the point of intersection of the two lines. According to the graph, the point of intersection occurs when x = 4 and y = -5, or at the point (4, -5). Therefore, the solution (x, y) to the system is (4, -5).",
                     "Percent": 0
                 }
             },
@@ -94,7 +94,7 @@
                 }
             },
             "C": {
-                "Choice": "(0, –2)",
+                "Choice": "(0, -2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -102,7 +102,7 @@
                 }
             },
             "D": {
-                "Choice": "(–2, 3)",
+                "Choice": "(-2, 3)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -296,14 +296,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = x² + x + 71. What is the value of f(2)?"
+            "The function f is defined by f(x) = x^2+ x + 71. What is the value of f(2)?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:77",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function f is defined by f(x) = x² + x + 71. Substituting 2 for x in function f yields f(x) = (2)² + 2 + 71 which is equivalent to f(2) = 4 + 2 + 71, or f(2) = 77. Therefore, the value of f(2) is 77.",
+                    "Rationale": "It's given that the function f is defined by f(x) = x^2+ x + 71. Substituting 2 for x in function f yields f(x) = (2)^2 + 2 + 71 which is equivalent to f(2) = 4 + 2 + 71, or f(2) = 77. Therefore, the value of f(2) is 77.",
                     "Percent": 0
                 }
             }
@@ -667,14 +667,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = (x – 6)(x – 2)(x + 6). In the xy-plane, the graph of y = g(x) is the result of translating the graph of y = f(x) up 4 units. What is the value of g(0)?"
+            "The function f is defined by f(x) = (x - 6)(x - 2)(x + 6). In the xy-plane, the graph of y = g(x) is the result of translating the graph of y = f(x) up 4 units. What is the value of g(0)?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:76",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph of y = g(x) is the result of translating the graph of y = f(x) up 4 units in the xy-plane. It follows that the graph of y = g(x) is the same as the graph of y = f(x) + 4. Substituting g(x) for y in the equation y = f(x) + 4 yields g(x) = f(x) + 4. It's given that f(x) = (x – 6)(x – 2)(x + 6). Substituting (x – 6)(x – 2)(x + 6) for f(x) in the equation g(x) = f(x) + 4 yields g(x) = (x – 6)(x – 2)(x + 6) + 4. Substituting 0 for x in this equation yields g(0) = (0 – 6)(0 – 2)(0 + 6) + 4, or g(0) = 76. Thus, the value of g(0) is 76.",
+                    "Rationale": "It's given that the graph of y = g(x) is the result of translating the graph of y = f(x) up 4 units in the xy-plane. It follows that the graph of y = g(x) is the same as the graph of y = f(x) + 4. Substituting g(x) for y in the equation y = f(x) + 4 yields g(x) = f(x) + 4. It's given that f(x) = (x - 6)(x - 2)(x + 6). Substituting (x - 6)(x - 2)(x + 6) for f(x) in the equation g(x) = f(x) + 4 yields g(x) = (x - 6)(x - 2)(x + 6) + 4. Substituting 0 for x in this equation yields g(0) = (0 - 6)(0 - 2)(0 + 6) + 4, or g(0) = 76. Thus, the value of g(0) is 76.",
                     "Percent": 0
                 }
             }
@@ -975,15 +975,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y = 4x + 1\n4y = 15x – 8",
-            "The solution to the given system of equations is (x, y). What is the value of x – y?"
+            ":ibox:y = 4x + 1\n4y = 15x - 8",
+            "The solution to the given system of equations is (x, y). What is the value of x - y?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:35",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The first equation in the given system of equations defines y as 4x + 1. Substituting 4x + 1 for y in the second equation in the given system of equations yields 4(4x + 1) = 15x – 8. Applying the distributive property on the left-hand side of this equation yields 16x + 4 = 15x – 8. Subtracting 15x from each side of this equation yields x + 4 = –8. Subtracting 4 from each side of this equation yields x = -12. Substituting -12 for x in the first equation of the given system of equations yields y = 4(-12) + 1, or y = -47. Substituting -12 for x and -47 for y into the expression x - y yields -12 - (-47), or 35.",
+                    "Rationale": "The first equation in the given system of equations defines y as 4x + 1. Substituting 4x + 1 for y in the second equation in the given system of equations yields 4(4x + 1) = 15x - 8. Applying the distributive property on the left-hand side of this equation yields 16x + 4 = 15x - 8. Subtracting 15x from each side of this equation yields x + 4 = -8. Subtracting 4 from each side of this equation yields x = -12. Substituting -12 for x in the first equation of the given system of equations yields y = 4(-12) + 1, or y = -47. Substituting -12 for x and -47 for y into the expression x - y yields -12 - (-47), or 35.",
                     "Percent": 0
                 }
             }
@@ -1014,7 +1014,7 @@
                 "Choice": "equal:113",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the legs of a right triangle have lengths 24 centimeters and 21 centimeters. In a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the two legs. It follows that if h represents the length, in centimeters, of the hypotenuse of the right triangle, h² = 24² + 21². This equation is equivalent to h² = 1,017. Taking the square root of each side of this equation yields h = √1,017. This equation can be rewritten as h = √(9 • 113), or h = √9 • √113. This equation is equivalent to h = 3√113. It's given that the length of the triangle's hypotenuse, in centimeters, can be written in the form 3√d. It follows that the value of d is 113.",
+                    "Rationale": "It's given that the legs of a right triangle have lengths 24 centimeters and 21 centimeters. In a right triangle, the square of the length of the hypotenuse is equal to the sum of the squares of the lengths of the two legs. It follows that if h represents the length, in centimeters, of the hypotenuse of the right triangle, h² = 24^2 + 21^2. This equation is equivalent to h² = 1,017. Taking the square root of each side of this equation yields h = √1,017. This equation can be rewritten as h = √(9 • 113), or h = √9 • √113. This equation is equivalent to h = 3√113. It's given that the length of the triangle's hypotenuse, in centimeters, can be written in the form 3√d. It follows that the value of d is 113.",
                     "Percent": 0
                 }
             }
@@ -1045,7 +1045,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the length of each side of a scale model is 1/10 times the length of the corresponding side of the actual floor of a ballroom. Therefore, the area of the scale model is (1/10)², or 1001/100, times the area of the actual floor of the ballroom. It's given that the area of the floor of the ballroom is 600 square meters. Therefore, the area, in square meters, of the scale model is (1/100)(600), or 6.",
+                    "Rationale": "It's given that the length of each side of a scale model is 1/10 times the length of the corresponding side of the actual floor of a ballroom. Therefore, the area of the scale model is (1/10)^2, or 1001/100, times the area of the actual floor of the ballroom. It's given that the area of the floor of the ballroom is 600 square meters. Therefore, the area, in square meters, of the scale model is (1/100)(600), or 6.",
                     "Percent": 0
                 }
             },
@@ -1097,7 +1097,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x – 8)² + (y – 8)² = 16",
+                "Choice": "(x - 8)^2 + (y - 8)^2 = 16",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the equation of a circle that does not intersect the y-axis at any point.",
@@ -1105,7 +1105,7 @@
                 }
             },
             "B": {
-                "Choice": "(x – 8)² + (y – 4)² = 16",
+                "Choice": "(x - 8)^2 + (y - 4)^2 = 16",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is an equation of a circle that intersects the x-axis, not the y-axis, at exactly one point.",
@@ -1113,15 +1113,15 @@
                 }
             },
             "C": {
-                "Choice": "(x – 4)² + (y – 9)² = 16",
+                "Choice": "(x - 4)^2 + (y - 9)^2 = 16",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of the equation (x - h)² + (y - k)² = r² in the xy-plane is a circle with center (h, k) and a radius of length r. The radius of a circle is the distance from the center of the circle to any point on the circle. If a circle in the xy-plane intersects the y-axis at exactly one point, then the perpendicular distance from the center of the circle to this point on the y-axis must be equal to the length of the circle's radius. It follows that the x-coordinate of the circle's center must be equivalent to the length of the circle's radius. In other words, if the graph of (x - h)² + (y - k)² = r² is a circle that intersects the y-axis at exactly one point, then r h= must be true. The equation in this choice is (x - 4)² + (y - 9)² = 16, or (x - 4)² + (y - 9)² = 4². This equation is in the form (x - h)² + (y - k)² = r², where h = 4, k = 9, and r = 4, and represents a circle in the xy-plane with center (4, 9) and radius of length 4. Substituting 4 for r and 4 for h in the equation r = |h| yields 4 = |4|, or 4 = 4, which is true. Therefore, the equation in this choice represents a circle in the xy-plane that intersects the y-axis at exactly one point.",
+                    "Rationale": "The graph of the equation (x - h)^2 + (y - k)^2 = r² in the xy-plane is a circle with center (h, k) and a radius of length r. The radius of a circle is the distance from the center of the circle to any point on the circle. If a circle in the xy-plane intersects the y-axis at exactly one point, then the perpendicular distance from the center of the circle to this point on the y-axis must be equal to the length of the circle's radius. It follows that the x-coordinate of the circle's center must be equivalent to the length of the circle's radius. In other words, if the graph of (x - h)^2 + (y - k)^2 = r² is a circle that intersects the y-axis at exactly one point, then r h= must be true. The equation in this choice is (x - 4)^2 + (y - 9)^2 = 16, or (x - 4)^2 + (y - 9)^2 = 4^2. This equation is in the form (x - h)^2 + (y - k)^2 = r², where h = 4, k = 9, and r = 4, and represents a circle in the xy-plane with center (4, 9) and radius of length 4. Substituting 4 for r and 4 for h in the equation r = |h| yields 4 = |4|, or 4 = 4, which is true. Therefore, the equation in this choice represents a circle in the xy-plane that intersects the y-axis at exactly one point.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "x² + (y – 9)² = 16",
+                "Choice": "x^2+ (y - 9)^2 = 16",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the equation of a circle with the center located on the y-axis and thus intersects the y-axis at exactly two points, not exactly one point.",
@@ -1313,7 +1313,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x(x + 1) – 56 = 4x(x – 7)",
+            ":ibox:x(x + 1) - 56 = 4x(x - 7)",
             "What is the sum of the solutions to the given equation?"
         ],
         "AnswerChoices": {
@@ -1321,7 +1321,7 @@
                 "Choice": "equal:29/3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applying the distributive property to the left-hand side of the given equation, x(x + 1) – 56, yields x² + x – 56. Applying the distributive property to the right-hand side of the given equation, 4x(x – 7), yields 4x² – 28x. Thus, the equation becomes x² + x – 56 = 4x² – 28x. Combining like terms on the left- and right-hand sides of this equation yields 0 = (4x² – x²) + (–28x – x) + 56, or 3x² – 29x + 56 = 0. For a quadratic equation in the form ax² + bx + c = 0, where a, b, and c are constants, the quadratic formula gives the solutions to the equation in the form x = (-b ± √(b² - 4ac))/2a. Substituting 3 for a, -29 for b, and 56 for c from the equation 3x² – 29x + 56 = 0 into the quadratic formula yields x = (29 ± √((-29)² - 4(3)(56)))/2(3), or x = 629/6 ± 13/6. It follows that the solutions to the given equation are 629/6 + 13/6 and 29/6 - 13/6.. Adding these two solutions gives the sum of the solutions: 29/6 + 13/6 + 29/6 - 13/6, which is equivalent to 29/6 + 29/6, or 29/3.",
+                    "Rationale": "Applying the distributive property to the left-hand side of the given equation, x(x + 1) - 56, yields x^2+ x - 56. Applying the distributive property to the right-hand side of the given equation, 4x(x - 7), yields 4x^2- 28x. Thus, the equation becomes x^2+ x - 56 = 4x^2- 28x. Combining like terms on the left- and right-hand sides of this equation yields 0 = (4x^2- x^2) + (-28x - x) + 56, or 3x^2- 29x + 56 = 0. For a quadratic equation in the form ax^2+ bx + c = 0, where a, b, and c are constants, the quadratic formula gives the solutions to the equation in the form `x=(-b±sqrt(b^2-4ac))/(2a)`. Substituting 3 for a, -29 for b, and 56 for c from the equation 3x^2- 29x + 56 = 0 into the quadratic formula yields x = (29 ± √((-29)^2 - 4(3)(56)))/2(3), or x = 629/6 ± 13/6. It follows that the solutions to the given equation are 629/6 + 13/6 and 29/6 - 13/6.. Adding these two solutions gives the sum of the solutions: 29/6 + 13/6 + 29/6 - 13/6, which is equivalent to 29/6 + 29/6, or 29/3.",
                     "Percent": 0
                 }
             }

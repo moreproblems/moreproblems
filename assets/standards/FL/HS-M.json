@@ -255,8 +255,8 @@
                             "Key": "FL.M9-12.AR.1.7",
                             "Label": "Rewrite a polynomial expression as a product of polynomials over the real number system.",
                             "Examples": [
-                                "The expression 4x³y – 3x²y⁴ is equivalent to the factored form x²y(4x – 3y³).",
-                                "The expression 16x² – 9y² is equivalent to the factored form (4x – 3y)(4x + 3y)."
+                                "The expression 4x³y - 3x^2y⁴ is equivalent to the factored form x^2y(4x - 3y³).",
+                                "The expression 16x^2- 9y^2is equivalent to the factored form (4x - 3y)(4x + 3y)."
                             ],
                             "Subs": []
                         },
@@ -327,7 +327,7 @@
                             "Key": "FL.M9-12.AR.2.6",
                             "Label": "Given a mathematical or real-world context, write and solve one-variable linear inequalities, including compound inequalities. Represent solutions algebraically or graphically.",
                             "Examples": [
-                                "(Algebra 1) The compound inequality 2x ≤ 5x + 1 < 4 is equivalent to –1 ≤ 3x and 5x < 3, which is equivalent to –1/3 ≤ x < 3/5."
+                                "(Algebra 1) The compound inequality 2x ≤ 5x + 1 < 4 is equivalent to -1 ≤ 3x and 5x < 3, which is equivalent to -1/3 ≤ x < 3/5."
                             ],
                             "Subs": []
                         },
@@ -399,7 +399,7 @@
                             "Key": "FL.M9-12.AR.3.8",
                             "Label": "Solve and graph mathematical and real-world problems that are modeled with quadratic functions. Interpret key features and determine constraints in terms of the context.",
                             "Examples": [
-                                "(Algebra 1) The value of a classic car produced in 1972 can be modeled by the function V(t) = 19.25t² – 440t + 3500, where t is the number of years since 1972. In what year does the car's value start to increase?"
+                                "(Algebra 1) The value of a classic car produced in 1972 can be modeled by the function V(t) = 19.25t² - 440t + 3500, where t is the number of years since 1972. In what year does the car's value start to increase?"
                             ],
                             "Subs": []
                         },
@@ -751,7 +751,7 @@
                             "Key": "FL.M9-12.F.1.2",
                             "Label": "Given a function represented in function notation, evaluate the function for an input in its domain. For a real-world context, interpret the output.",
                             "Examples": [
-                                "(Algebra 1) The function f(x) = x/7 – 8 models Alicia's position in miles 7 relative to a water stand x minutes into a marathon. Evaluate and interpret for a quarter of an hour into the race."
+                                "(Algebra 1) The function f(x) = x/7 - 8 models Alicia's position in miles 7 relative to a water stand x minutes into a marathon. Evaluate and interpret for a quarter of an hour into the race."
                             ],
                             "Subs": []
                         },
@@ -845,7 +845,7 @@
                             "Key": "FL.M9-12.F.3.1",
                             "Label": "Given a mathematical or real-world context, combine two functions, limited to linear and quadratic, using arithmetic operations. When appropriate, include domain restrictions for the new function.",
                             "Examples": [
-                                "The quotient of the functions f(x) = 3x² – 7x + 3 and g(x) = 6x – 1 can be expressed as h(x) = (3x² – 7x + 3)/(6x – 1), where the domain of h(x) is –∞ ≤ x < 1/6 and 1/6 < x ≤ ∞."
+                                "The quotient of the functions f(x) = 3x^2- 7x + 3 and g(x) = 6x - 1 can be expressed as h(x) = (3x^2- 7x + 3)/(6x - 1), where the domain of h(x) is -∞ ≤ x < 1/6 and 1/6 < x ≤ ∞."
                             ],
                             "Subs": []
                         },
@@ -1182,7 +1182,7 @@
                             "Key": "FL.M9-12.GR.2.1",
                             "Label": "Given a preimage and image, describe the transformation and represent the transformation algebraically using coordinates.",
                             "Examples": [
-                                "Given a triangle whose vertices have the coordinates (–3, 4), (2, 1.7) and (–0.4, –3). If this triangle is reflected across the y-axis the transformation can be described using coordinates as (x, y) → (–x, y) resulting in the image whose vertices have the coordinates (3, 4), (–2, 1.7) and (0.4, –3)."
+                                "Given a triangle whose vertices have the coordinates (-3, 4), (2, 1.7) and (-0.4, -3). If this triangle is reflected across the y-axis the transformation can be described using coordinates as (x, y) → (-x, y) resulting in the image whose vertices have the coordinates (3, 4), (-2, 1.7) and (0.4, -3)."
                             ],
                             "Subs": []
                         },
@@ -1251,8 +1251,8 @@
                             "Key": "FL.M9-12.GR.3.2",
                             "Label": "Given a mathematical context, use coordinate geometry to classify or justify definitions, properties and theorems involving circles, triangles or quadrilaterals.",
                             "Examples": [
-                                "Given Triangle ABC has vertices located at (–2, 2), (3, 3) and (1, –3), respectively, classify the type of triangle ABC is based on its angle measures and side lengths.",
-                                "If a square has a diagonal with vertices (–1, 1) and (–4, –3), find the coordinate values of the vertices of the other diagonal and show that the two diagonals are perpendicular."
+                                "Given Triangle ABC has vertices located at (-2, 2), (3, 3) and (1, -3), respectively, classify the type of triangle ABC is based on its angle measures and side lengths.",
+                                "If a square has a diagonal with vertices (-1, 1) and (-4, -3), find the coordinate values of the vertices of the other diagonal and show that the two diagonals are perpendicular."
                             ],
                             "Subs": []
                         },
@@ -1260,8 +1260,8 @@
                             "Key": "FL.M9-12.GR.3.3",
                             "Label": "Use coordinate geometry to solve mathematical and real-world geometric problems involving lines, circles, triangles and quadrilaterals.",
                             "Examples": [
-                                "The line x + 2y = 10 is tangent to a circle whose center is located at (2, –1). Find the tangent point and a second tangent point of a line with the same slope as the given line.",
-                                "Given M(–4, 7) and N(12, –1),find the coordinates of point P on MN so that P partitions MN in the ratio 2:3."
+                                "The line x + 2y = 10 is tangent to a circle whose center is located at (2, -1). Find the tangent point and a second tangent point of a line with the same slope as the given line.",
+                                "Given M(-4, 7) and N(12, -1),find the coordinates of point P on MN so that P partitions MN in the ratio 2:3."
                             ],
                             "Subs": []
                         },
@@ -1546,7 +1546,7 @@
                         },
                         {
                             "Key": "FL.M9-12.T.2.4",
-                            "Label": "Use the unit circle to express the values of sine, cosine and tangent for π – x, π + x and 2π – x in terms of their values for x, where x is any real number.",
+                            "Label": "Use the unit circle to express the values of sine, cosine and tangent for π - x, π + x and 2π - x in terms of their values for x, where x is any real number.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -2225,7 +2225,7 @@
                             "Key": "FL.M9-12.C.1.1",
                             "Label": "Demonstrate understanding of the concept of a limit and estimate limits from graphs and tables of values.",
                             "Examples": [
-                                "For f(x) = (x² + 2x – 8)/(x – 2), estimate lim(x→2) (x² + 2x – 8)/(x – 2) by calculating the function's values for x = 2.1, 2.01, 2.001 and for x = 1.9, 1.99, 1.999. Explain your answer."
+                                "For f(x) = (x^2+ 2x - 8)/(x - 2), estimate lim(x→2) (x^2+ 2x - 8)/(x - 2) by calculating the function's values for x = 2.1, 2.01, 2.001 and for x = 1.9, 1.99, 1.999. Explain your answer."
                             ],
                             "Subs": []
                         },
@@ -2249,7 +2249,7 @@
                             "Key": "FL.M9-12.C.1.4",
                             "Label": "Find one-sided limits.",
                             "Examples": [
-                                "Find lim(x→4⁻) –√(4 – x)."
+                                "Find lim(x→4⁻) -√(4 - x)."
                             ],
                             "Subs": []
                         },
@@ -2257,7 +2257,7 @@
                             "Key": "FL.M9-12.C.1.5",
                             "Label": "Find limits at infinity.",
                             "Examples": [
-                                "Find lim(x→∞) 2x³ – 500x²."
+                                "Find lim(x→∞) 2x³ - 500x^2."
                             ],
                             "Subs": []
                         },
@@ -2265,7 +2265,7 @@
                             "Key": "FL.M9-12.C.1.6",
                             "Label": "Decide when a limit is infinite and use limits involving infinity to describe asymptotic behavior.",
                             "Examples": [
-                                "Where does the function, f(x) = 1/(x² – 7x + 10), have asymptote(s)?"
+                                "Where does the function, f(x) = 1/(x^2- 7x + 10), have asymptote(s)?"
                             ],
                             "Subs": []
                         },
@@ -2301,8 +2301,8 @@
                             "Key": "FL.M9-12.C.1.11",
                             "Label": "Apply the Intermediate Value Theorem and the Extreme Value Theorem.",
                             "Examples": [
-                                "Use the Intermediate Value Theorem to show that g(x) = x³ + 3x² – 9x – 2 has a zero between x = 0 and x = 3.",
-                                "Use the Extreme Value Theorem to decide whether f(x) = tan(x) has a minimum and maximum on the interval [–π/4, π/4]. What about on the  interval [–π, π]?"
+                                "Use the Intermediate Value Theorem to show that g(x) = x³ + 3x^2- 9x - 2 has a zero between x = 0 and x = 3.",
+                                "Use the Extreme Value Theorem to decide whether f(x) = tan(x) has a minimum and maximum on the interval [-π/4, π/4]. What about on the  interval [-π, π]?"
                             ],
                             "Subs": []
                         }
@@ -2317,7 +2317,7 @@
                             "Key": "FL.M9-12.C.2.1",
                             "Label": "State, understand and apply the definition of derivative. Apply and interpret derivatives geometrically and numerically.",
                             "Examples": [
-                                "Find lim(h→0) ((5 + h)² – 5²)/h. What does the result tell you? Use the limit to determine the derivative function for f(x) = x²."
+                                "Find lim(h→0) ((5 + h)^2 - 5^2)/h. What does the result tell you? Use the limit to determine the derivative function for f(x) = x^2."
                             ],
                             "Subs": []
                         },
@@ -2339,7 +2339,7 @@
                             "Examples": [
                                 "Find dy/dx for the function y = ln(x).",
                                 "Show that the derivative of f(x) = tan(x) is f'(x) = sec²x using the quotient rule for derivatives.",
-                                "Find f'(x) for f(x) = (x² + 2)¹/²."
+                                "Find f'(x) for f(x) = (x^2+ 2)¹/²."
                             ],
                             "Subs": []
                         },
@@ -2347,7 +2347,7 @@
                             "Key": "FL.M9-12.C.2.5",
                             "Label": "Find the derivatives of implicitly defined functions.",
                             "Examples": [
-                                "For the equation xy – x²y² = 5, find dy/dx at the point (2, 3)."
+                                "For the equation xy - x^2y^2= 5, find dy/dx at the point (2, 3)."
                             ],
                             "Subs": []
                         },
@@ -2371,7 +2371,7 @@
                             "Key": "FL.M9-12.C.2.8",
                             "Label": "Find derivatives using logarithmic differentiation.",
                             "Examples": [
-                                "Find the derivative of f(x) = (3x² + 5)ˣ."
+                                "Find the derivative of f(x) = (3x^2+ 5)ˣ."
                             ],
                             "Subs": []
                         },
@@ -2387,7 +2387,7 @@
                             "Key": "FL.M9-12.C.2.10",
                             "Label": "Apply the Mean Value Theorem.",
                             "Examples": [
-                                "At a car race, two cars join the race at the same point at the same time. They finish the race in a tie. Prove that sometime during the race, the two cars had exactly the same speed. (Hint: Define f(t), g(t), and h(t), where f(t) is the distance that Car A has traveled at time t; g(t) is the distance that Car B has travelled at time t; and h(t) = f(t) – g(t).)"
+                                "At a car race, two cars join the race at the same point at the same time. They finish the race in a tie. Prove that sometime during the race, the two cars had exactly the same speed. (Hint: Define f(t), g(t), and h(t), where f(t) is the distance that Car A has traveled at time t; g(t) is the distance that Car B has travelled at time t; and h(t) = f(t) - g(t).)"
                             ],
                             "Subs": []
                         }
@@ -2402,7 +2402,7 @@
                             "Key": "FL.M9-12.C.3.1",
                             "Label": "Find the slope of a curve at a point, including points at which there are vertical tangent lines.",
                             "Examples": [
-                                "Find the slope of the line tangent to the graph of f(x) = ∛(1 – x) at x = 1."
+                                "Find the slope of the line tangent to the graph of f(x) = ∛(1 - x) at x = 1."
                             ],
                             "Subs": []
                         },
@@ -2418,7 +2418,7 @@
                             "Key": "FL.M9-12.C.3.3",
                             "Label": "Determine where a function is decreasing and increasing using its derivative.",
                             "Examples": [
-                                "For what values of x is the function f(x) = x/(x² + 1) decreasing?"
+                                "For what values of x is the function f(x) = x/(x^2+ 1) decreasing?"
                             ],
                             "Subs": []
                         },
@@ -2426,7 +2426,7 @@
                             "Key": "FL.M9-12.C.3.4",
                             "Label": "Find local and absolute maximum and minimum points of a function.",
                             "Examples": [
-                                "For the graph of the function f(x) = x³ – 3x, find the local maximum and local minimum points of f(x) on [–2, 3]."
+                                "For the graph of the function f(x) = x³ - 3x, find the local maximum and local minimum points of f(x) on [-2, 3]."
                             ],
                             "Subs": []
                         },
@@ -2434,7 +2434,7 @@
                             "Key": "FL.M9-12.C.3.5",
                             "Label": "Determine the concavity and points of inflection of a function using its second derivative.",
                             "Examples": [
-                                "For the graph of the function f(x) = x³ – 3x, find the points of inflection of f(x) and determine where f(x) is concave upward and concave downward."
+                                "For the graph of the function f(x) = x³ - 3x, find the points of inflection of f(x) and determine where f(x) is concave upward and concave downward."
                             ],
                             "Subs": []
                         },
@@ -2442,7 +2442,7 @@
                             "Key": "FL.M9-12.C.3.6",
                             "Label": "Sketch graphs by using first and second derivatives. Compare the corresponding characteristics of the graphs of f, f' and f“.",
                             "Examples": [
-                                "Sketch the graph of f(x) = x⁴ + 3x² – 2x + 1 using information from the first and second derivatives."
+                                "Sketch the graph of f(x) = x⁴ + 3x^2- 2x + 1 using information from the first and second derivatives."
                             ],
                             "Subs": []
                         },
@@ -2459,7 +2459,7 @@
                             "Key": "FL.M9-12.C.3.8",
                             "Label": "Find average and instantaneous rates of change. Explain the instantaneous rate of change as the limit of the average rate of change. Interpret a derivative as a rate of change in applications, including velocity, speed and acceleration.",
                             "Examples": [
-                                "The vertical distance traveled by an object within the earth's gravitational field, neglecting air resistance, is given by the equation x = 0.5gt² + vₒt + xₒ, where g is the force on the object due to earth's gravity, vₒ is the initial velocity, x₀ is the initial height above the ground, t is the time in seconds and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = –10 m/s²."
+                                "The vertical distance traveled by an object within the earth's gravitational field, neglecting air resistance, is given by the equation x = 0.5gt² + vₒt + xₒ, where g is the force on the object due to earth's gravity, vₒ is the initial velocity, x₀ is the initial height above the ground, t is the time in seconds and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = -10 m/s²."
                             ],
                             "Subs": []
                         },
@@ -2467,7 +2467,7 @@
                             "Key": "FL.M9-12.C.3.9",
                             "Label": "Find the velocity and acceleration of a particle moving in a straight line.",
                             "Examples": [
-                                "A bead on a wire moves so that, after t seconds, its distance s cm. from the midpoint of the wire is given by s = 5sin(t – π/4). Find its maximum velocity and where along the wire this occurs."
+                                "A bead on a wire moves so that, after t seconds, its distance s cm. from the midpoint of the wire is given by s = 5sin(t - π/4). Find its maximum velocity and where along the wire this occurs."
                             ],
                             "Subs": []
                         },
@@ -2492,7 +2492,7 @@
                             "Examples": [
                                 "Find the values of the Riemann sums over the interval [0, 1] using 12 and 24 subintervals of equal width for f(x) = eˣ evaluated at the midpoint of each subinterval. Write an expression for the Riemann sums using n intervals of equal width. Find the limit of this Riemann Sums as n goes to infinity.",
                                 "Estimate ∫(0,π) sin(x)dx using a Riemann midpoint sum with 4 subintervals.",
-                                "Find an approximate value for ∫(0,3) x²dx using 6 rectangles of equal width 0 under the graph of f(x) = x² between x = 0 and x = 3. How did you form your rectangles? Compute this approximation three times using at least three different methods to form the rectangles."
+                                "Find an approximate value for ∫(0,3) x^2dx using 6 rectangles of equal width 0 under the graph of f(x) = x^2between x = 0 and x = 3. How did you form your rectangles? Compute this approximation three times using at least three different methods to form the rectangles."
                             ],
                             "Subs": []
                         },
@@ -2500,8 +2500,8 @@
                             "Key": "FL.M9-12.C.4.2",
                             "Label": "Apply Riemann sums, the Trapezoidal Rule and technology to approximate definite integrals of functions represented algebraically, geometrically and by tables of values.",
                             "Examples": [
-                                "Approximate the value of ∫(0,3) x²dx using the Trapezoidal Rule with 6 0 subintervals over [0, 3] for f(x) = x².",
-                                "Find an approximation to ∫(0,3) √(9 – x²)dx."
+                                "Approximate the value of ∫(0,3) x^2dx using the Trapezoidal Rule with 6 0 subintervals over [0, 3] for f(x) = x^2.",
+                                "Find an approximation to ∫(0,3) √(9 - x^2)dx."
                             ],
                             "Subs": []
                         },
@@ -2509,7 +2509,7 @@
                             "Key": "FL.M9-12.C.4.3",
                             "Label": "Interpret a definite integral of the rate of change of a quantity over an interval as the change of the quantity over the interval.",
                             "Examples": [
-                                "Explain why ∫(4,5) 2xdx = 5² – 4²."
+                                "Explain why ∫(4,5) 2xdx = 5^2 - 4^2."
                             ],
                             "Subs": []
                         },
@@ -2537,7 +2537,7 @@
                             "Key": "FL.M9-12.C.4.7",
                             "Label": "Evaluate definite and indefinite integrals by using integration by substitution.",
                             "Examples": [
-                                "Find ∫ x²(x³ + 1)⁴dx."
+                                "Find ∫ x^2(x³ + 1)⁴dx."
                             ],
                             "Subs": []
                         }
@@ -2576,7 +2576,7 @@
                             "Key": "FL.M9-12.C.5.4",
                             "Label": "Display a graphic representation of the solution to a differential equation by using slope fields, and locate particular solutions to the equation.",
                             "Examples": [
-                                "Draw a slope field for dy/dx = x² and graph the particular solution that passes through the point (2, 4)."
+                                "Draw a slope field for dy/dx = x^2and graph the particular solution that passes through the point (2, 4)."
                             ],
                             "Subs": []
                         },
@@ -2601,7 +2601,7 @@
                             "Label": "Find the volume of a figure with known cross-sectional area, including figures of revolution, by using definite integrals.",
                             "Examples": [
                                 "A cone with its vertex at the origin lies symmetrically along the x-axis. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
-                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x² for 0 ≤ x ≤ 1 is revolved around the y-axis?"
+                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x^2for 0 ≤ x ≤ 1 is revolved around the y-axis?"
                             ],
                             "Subs": []
                         }

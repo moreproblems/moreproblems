@@ -189,7 +189,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–8, 0)",
+                "Choice": "(-8, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -197,7 +197,7 @@
                 }
             },
             "B": {
-                "Choice": "(–6, 0)",
+                "Choice": "(-6, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -263,7 +263,7 @@
                 "Choice": "$15,400",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that f(x) is the total cost, in dollars, to lease a car from this dealership with a monthly payment of x dollars. Therefore, the total cost, in dollars, to lease the car when the monthly payment is $400 is represented by the value of f(x) when x = 400. Substituting 400 for x in the equation f(x) = 36x + 1,000 yields f(400) = 36(400) + 1,000, or f(400) = 15,400. Thus, when the monthly payment is $400, the total cost to lease a car is $15,400.",
+                    "Rationale": "It's given that f(x) is the total cost, in dollars, to lease a car from this dealership with a monthly payment of x dollars. Therefore, the total cost, in dollars, to lease the car when the monthly payment is $400 is represented by the value of `f(x)` when x = 400. Substituting 400 for x in the equation f(x) = 36x + 1,000 yields f(400) = 36(400) + 1,000, or f(400) = 15,400. Thus, when the monthly payment is $400, the total cost to lease a car is $15,400.",
                     "Percent": 0
                 }
             },
@@ -334,7 +334,7 @@
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying both sides of the given equation by x + 6 results in 55 = x(x + 6). Applying the distributive property of multiplication to the right-hand side of this equation results in 55 = x² + 6x. Subtracting 55 from both sides of this equation results in 0 = x² + 6x - 55. The right-hand side of this equation can be rewritten by factoring. The two values that multiply to -55 and add to 6 are 11 and -5. It follows that the equation 0 = x² + 6x - 55 can be rewritten as 0 = (x + 11)(x - 5). Setting each factor equal to 0 yields two equations: x + 11 = 0 and x - 5 = 0. Subtracting 11 from both sides of the equation x + 11= 0 results in x = -11. Adding 5 to both sides of the equation x - 5 = 0 results in x = 5. Therefore, the positive solution to the given equation is 5.",
+                    "Rationale": "Multiplying both sides of the given equation by x + 6 results in 55 = x(x + 6). Applying the distributive property of multiplication to the right-hand side of this equation results in 55 = x^2+ 6x. Subtracting 55 from both sides of this equation results in 0 = x^2+ 6x - 55. The right-hand side of this equation can be rewritten by factoring. The two values that multiply to -55 and add to 6 are 11 and -5. It follows that the equation 0 = x^2+ 6x - 55 can be rewritten as 0 = (x + 11)(x - 5). Setting each factor equal to 0 yields two equations: x + 11 = 0 and x - 5 = 0. Subtracting 11 from both sides of the equation x + 11= 0 results in x = -11. Adding 5 to both sides of the equation x - 5 = 0 results in x = 5. Therefore, the positive solution to the given equation is 5.",
                     "Percent": 0
                 }
             }
@@ -579,7 +579,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An object is kicked from a platform. The equation h = –4.9t² + 7t + 9 represents this situation, where h is the height of the object above the ground, in meters, t seconds after it is kicked. Which number represents the height, in meters, from which the object was kicked?"
+            "An object is kicked from a platform. The equation h = -4.9t² + 7t + 9 represents this situation, where h is the height of the object above the ground, in meters, t seconds after it is kicked. Which number represents the height, in meters, from which the object was kicked?"
         ],
         "AnswerChoices": {
             "A": {
@@ -610,7 +610,7 @@
                 "Choice": "9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation h = -4.9t² + 7t + 9 represents this situation, where h is the height, in meters, of the object t seconds after it is kicked. It follows that the height, in meters, from which the object was kicked is the value of h when t = 0. Substituting 0 for t in the equation h = -4.9t² 7t + 9 yields h = -4.9(0)² 7(0) + 9, or h = 9. Therefore, the object was kicked from a height of 9 meters.",
+                    "Rationale": "It's given that the equation h = -4.9t² + 7t + 9 represents this situation, where h is the height, in meters, of the object t seconds after it is kicked. It follows that the height, in meters, from which the object was kicked is the value of h when t = 0. Substituting 0 for t in the equation h = -4.9t² 7t + 9 yields h = -4.9(0)^2 7(0) + 9, or h = 9. Therefore, the object was kicked from a height of 9 meters.",
                     "Percent": 0
                 }
             }
@@ -634,7 +634,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:f(x) = 4x² – 50x + 126",
+            ":box:f(x) = 4x^2- 50x + 126",
             "The given equation defines the function f. For what value of x does f(x) reach its minimum?"
         ],
         "AnswerChoices": {
@@ -642,7 +642,7 @@
                 "Choice": "equal:25/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation can be rewritten in the form f(x) = a(x - h)², where a, h, and k are constants. When a > 0, h is the value of x for which f(x) reaches its minimum. The given equation can be rewritten as f(x) = 4(x² - (50/4)x) + 126, which is equivalent to f(x) = 4(x² - (50/4)x + (50/8)² - (50/8)²) + 126. This equation can be rewritten as f(x) = 4((x - 50/8)² - (50/8)²) + 126, or f(x) = 4(x - 50/8)² - 4(50/8)² + 126, which is equivalent to f(x) = 4(x - 25/4)² = -121/4. Therefore, h = 25/4, so the value of x for which f(x) reaches its minimum is 25/4. Note that 25/4 and 6.25 are examples of ways to enter a correct answer.",
+                    "Rationale": "The given equation can be rewritten in the form f(x) = a(x - h)^2, where a, h, and k are constants. When a > 0, h is the value of x for which f(x) reaches its minimum. The given equation can be rewritten as f(x) = 4(x^2- (50/4)x) + 126, which is equivalent to f(x) = 4(x^2- (50/4)x + (50/8)^2 - (50/8)^2) + 126. This equation can be rewritten as f(x) = 4((x - 50/8)^2 - (50/8)^2) + 126, or f(x) = 4(x - 50/8)^2 - 4(50/8)^2 + 126, which is equivalent to f(x) = 4(x - 25/4)^2 = -121/4. Therefore, h = 25/4, so the value of x for which f(x) reaches its minimum is 25/4. Note that 25/4 and 6.25 are examples of ways to enter a correct answer.",
                     "Percent": 0
                 }
             }
@@ -973,14 +973,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "One of the factors of 2x³ + 42x² + 208x is x + b, where b is a positive constant. What is the smallest possible value of b?"
+            "One of the factors of 2x³ + 42x^2+ 208x is x + b, where b is a positive constant. What is the smallest possible value of b?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since each term of the given expression, 2x³ + 42x² + 208x, has a factor of 2x, the expression can be rewritten as 2x(x²) + 2x(21x) + 2x(104), or (x² + 21x + 104). Since the values 8 and 13 have a sum of 21 and a product of 104, the expression x² + 21x + 104 can be factored as (x + 8)(x + 13). Therefore, the given expression can be factored as 2x(x + 8)(x + 13). It follows that the factors of the given expression are 2, x, x + 8, and x + 13. Of these factors, only x + 8 and x + 13 are of the form x + b, where b is a positive constant. Therefore, the possible values of b are 8 and 13. Thus, the smallest possible value of b is 8.",
+                    "Rationale": "Since each term of the given expression, 2x³ + 42x^2+ 208x, has a factor of 2x, the expression can be rewritten as 2x(x^2) + 2x(21x) + 2x(104), or (x^2+ 21x + 104). Since the values 8 and 13 have a sum of 21 and a product of 104, the expression x^2+ 21x + 104 can be factored as (x + 8)(x + 13). Therefore, the given expression can be factored as 2x(x + 8)(x + 13). It follows that the factors of the given expression are 2, x, x + 8, and x + 13. Of these factors, only x + 8 and x + 13 are of the form x + b, where b is a positive constant. Therefore, the possible values of b are 8 and 13. Thus, the smallest possible value of b is 8.",
                     "Percent": 0
                 }
             }
@@ -1004,7 +1004,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:y = –1.5\n\ny = x² + 8x + a",
+            ":box:y = -1.5\n\ny = x^2+ 8x + a",
             "In the given system of equations, a is a positive constant. The system has exactly one distinct real solution. What is the value of a?"
         ],
         "AnswerChoices": {
@@ -1012,7 +1012,7 @@
                 "Choice": "equal:29/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the first equation in the given system, the value of y is -1.5. Substituting -1.5 for y in the second equation in the given system yields -1.5 = x² + 8x + a. Adding 1.5 to both sides of this equation yields 0 = x² + 8x + a + 1.5. If the given system has exactly one distinct real solution, it follows that 0 = x² + 8x + a + 1.5 has exactly one distinct real solution. A quadratic equation in the form 0 = px² + qx + r, where p, q, and r are constants, has exactly one distinct real solution if and only if the discriminant, q² - 4pr, is equal to 0. The equation 0 = x² + 8x + a + 1.5 is in this form, where p = 1, q = 8, and r = a + 1.5. Therefore, the discriminant of the equation 0 = x² + 8x + a + 1.5 is (8)² - 4(1)(a + 1.5), or 58 - 4a. Setting the discriminant equal to 0 to solve for a yields 58 - 4a = 0. Adding 4a to both sides of this equation yields 58 = 4a. Dividing both sides of this equation by 4 yields 58/4 = a, or 29/2 = a. Therefore, if the given system of equations has exactly one distinct real solution, the value of a is 29/2. Note that 29/2 and 14.5 are examples of ways to enter a correct answer.",
+                    "Rationale": "According to the first equation in the given system, the value of y is -1.5. Substituting -1.5 for y in the second equation in the given system yields -1.5 = x^2+ 8x + a. Adding 1.5 to both sides of this equation yields 0 = x^2+ 8x + a + 1.5. If the given system has exactly one distinct real solution, it follows that 0 = x^2+ 8x + a + 1.5 has exactly one distinct real solution. A quadratic equation in the form 0 = px^2+ qx + r, where p, q, and r are constants, has exactly one distinct real solution if and only if the discriminant, q² - 4pr, is equal to 0. The equation 0 = x^2+ 8x + a + 1.5 is in this form, where p = 1, q = 8, and r = a + 1.5. Therefore, the discriminant of the equation 0 = x^2+ 8x + a + 1.5 is (8)^2 - 4(1)(a + 1.5), or 58 - 4a. Setting the discriminant equal to 0 to solve for a yields 58 - 4a = 0. Adding 4a to both sides of this equation yields 58 = 4a. Dividing both sides of this equation by 4 yields 58/4 = a, or 29/2 = a. Therefore, if the given system of equations has exactly one distinct real solution, the value of a is 29/2. Note that 29/2 and 14.5 are examples of ways to enter a correct answer.",
                     "Percent": 0
                 }
             }
@@ -1036,8 +1036,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:f(x)= (x + 6)(x + 5)(x – 4)",
-            "The function f is given. Which table of values represents y = f(x) – 3?"
+            ":box:f(x)= (x + 6)(x + 5)(x - 4)",
+            "The function f is given. Which table of values represents y = f(x) - 3?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1152,7 +1152,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "f(x) = (–1/4)x – 12",
+                "Choice": "f(x) = (-1/4)x - 12",
                 "Key": {
                     "Correct": true,
                     "Rationale": "An equation for the graph shown can be written in slope- intercept form y = mx + b, where m is the slope of the graph and its y-intercept is (0, b). Since the y-intercept of the graph shown is (0, 2), the value of b is 2. Since the graph also passes through the point (4, 1), the slope can be calculated as (1 - 2)/(4 - 0), or -1/4. Therefore, the value of m is -1/4. Substituting -1/4 for m and 2 for b in the equation y = mx + b yields y = (-1/4)x + 2. It's given that an equation for the graph shown is y = f(x) + 14. Substituting f(x) + 14 for y in the equation y = (-1/4)x + 2 yields f(x) + 14 = (-1/4)x + 2. Subtracting 14 from both sides of this equation yields f(x) = (-1/4)x - 12.",
@@ -1160,7 +1160,7 @@
                 }
             },
             "B": {
-                "Choice": "f(x) = (–1/4)x + 16",
+                "Choice": "f(x) = (-1/4)x + 16",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1168,7 +1168,7 @@
                 }
             },
             "C": {
-                "Choice": "f(x) = (–1/4)x + 2",
+                "Choice": "f(x) = (-1/4)x + 2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1176,7 +1176,7 @@
                 }
             },
             "D": {
-                "Choice": "f(x) = (–1/4)x – 14",
+                "Choice": "f(x) = (-1/4)x - 14",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",

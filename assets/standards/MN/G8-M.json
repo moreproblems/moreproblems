@@ -17,7 +17,7 @@
                             "Key": "MN.M8.1.1.1",
                             "Label": "Classify real numbers as rational or irrational. Know that when a square root of a positive integer is not an integer, then it is irrational. Know that the sum of a rational number and an irrational number is irrational, and the product of a non-zero rational number and an irrational number is irrational.",
                             "Examples": [
-                                "For example, classify the following numbers as whole numbers, integers, rational numbers, irrational numbers, recognizing that some numbers belong in more than one category: 6/3, 3/6, 3.666..., π/2, –√4, √10, –6.7."
+                                "For example, classify the following numbers as whole numbers, integers, rational numbers, irrational numbers, recognizing that some numbers belong in more than one category: 6/3, 3/6, 3.666..., π/2, -√4, √10, -6.7."
                             ],
                             "Subs": []
                         },
@@ -25,7 +25,7 @@
                             "Key": "MN.M8.1.1.2",
                             "Label": "Compare real numbers; locate real numbers on a number line. Identify the square root of a positive integer as an integer, or if it is not an integer, locate it as a real number between two consecutive positive integers.",
                             "Examples": [
-                                "For example, put the following numbers in order from smallest to largest: 2, √3, –4, –6.8, –√37.",
+                                "For example, put the following numbers in order from smallest to largest: 2, √3, -4, -6.8, -√37.",
                                 "For example, √68 is an irrational number between 8 and 9."
                             ],
                             "Subs": []
@@ -35,7 +35,7 @@
                             "Label": "Determine rational approximations for solutions to problems involving real numbers.",
                             "Examples": [
                                 "For example, a calculator can be used to determine that 7 is approximately 2.65.",
-                                "For example, to check that 1 5/12 is slightly bigger than √2, do the calculation (1 5/12)² = (17/12)² = 289/144 = 2 1/144.",
+                                "For example, to check that 1 5/12 is slightly bigger than √2, do the calculation (1 5/12)^2 = (17/12)^2 = 289/144 = 2 1/144.",
                                 "For example, knowing that 10 is between 3 and 4, try squaring numbers like 3.5, 3.3, 3.1 to determine that 3.1 is a reasonable rational approximation of √10."
                             ],
                             "Subs": []
@@ -44,7 +44,7 @@
                             "Key": "MN.M8.1.1.4",
                             "Label": "Know and apply the properties of positive and negative integer exponents to generate equivalent numerical expressions.",
                             "Examples": [
-                                "For example, 3² × 3⁽⁻⁵⁾ = 3⁽⁻³⁾ = (1/3)³ = 1/27."
+                                "For example, 3^2 × 3⁽⁻⁵⁾ = 3⁽⁻³⁾ = (1/3)³ = 1/27."
                             ],
                             "Subs": []
                         },
@@ -74,7 +74,7 @@
                             "Key": "MN.M8.2.1.1",
                             "Label": "Understand that a function is a relationship between an independent variable and a dependent variable in which the value of the independent variable determines the value of the dependent variable. Use functional notation, such as f(x), to represent such relationships.",
                             "Examples": [
-                                "For example, the relationship between the area of a square and the side length can be expressed as f(x) = x². In this case, f(5) = 25, which represents the fact that a square of side length 5 units has area 25 units squared."
+                                "For example, the relationship between the area of a square and the side length can be expressed as f(x) = x^2. In this case, f(5) = 25, which represents the fact that a square of side length 5 units has area 25 units squared."
                             ],
                             "Subs": []
                         },
@@ -90,7 +90,7 @@
                             "Key": "MN.M8.2.1.3",
                             "Label": "Understand that a function is linear if it can be expressed in the form or if its graph is a straight line.",
                             "Examples": [
-                                "For example, the function f(x) = x² is not a linear function because its graph contains the points (1,1), (-1,1) and (0,0), which are not on a straight line."
+                                "For example, the function f(x) = x^2is not a linear function because its graph contains the points (1,1), (-1,1) and (0,0), which are not on a straight line."
                             ],
                             "Subs": []
                         },
@@ -162,7 +162,7 @@
                             "Key": "MN.M8.2.3.1",
                             "Label": "Evaluate algebraic expressions, including expressions containing radicals and absolute values, at specified values of their variables.",
                             "Examples": [
-                                "For example, evaluate 2πrh when r = 3 and h = 0.5, and then use an approximation of π to obtain an approximate answer."
+                                "For example, evaluate 2πrh when r = 3 and h = 0.5, and then use an approximation of `pi` to obtain an approximate answer."
                             ],
                             "Subs": []
                         },
@@ -183,7 +183,7 @@
                             "Key": "MN.M8.2.4.1",
                             "Label": "Use linear equations to represent situations involving a constant rate of change, including proportional and non-proportional relationships.",
                             "Examples": [
-                                "For example, for a cylinder with fixed radius of length 5, the surface area A = 2π(5)h + 2π(5)² = 10πh + 50π, is a linear function of the height h, but it is not proportional to the height."
+                                "For example, for a cylinder with fixed radius of length 5, the surface area A = 2π(5)h + 2π(5)^2 = 10πh + 50π, is a linear function of the height h, but it is not proportional to the height."
                             ],
                             "Subs": []
                         },
@@ -191,7 +191,7 @@
                             "Key": "MN.M8.2.4.2",
                             "Label": "Solve multi-step equations in one variable. Solve for one variable in a multi-variable equation in terms of the other variables. Justify the steps by identifying the properties of equalities used.",
                             "Examples": [
-                                "For example, the equation 10x + 17 = 3x can be changed to 7x + 17 = 0, and then to 7x = –17 by adding/subtracting the same quantities to both sides. These changes do not change the solution of the equation.",
+                                "For example, the equation 10x + 17 = 3x can be changed to 7x + 17 = 0, and then to 7x = -17 by adding/subtracting the same quantities to both sides. These changes do not change the solution of the equation.",
                                 "For example, using the formula for the perimeter of a rectangle, solve for the base in terms of the height and perimeter."
                             ],
                             "Subs": []
@@ -200,7 +200,7 @@
                             "Key": "MN.M8.2.4.3",
                             "Label": "Express linear equations in slope-intercept, point-slope and standard forms, and convert between these forms. Given sufficient information, find an equation of a line.",
                             "Examples": [
-                                "For example, determine an equation of the line through the points (–1, 6) and (2/3, –3/4)."
+                                "For example, determine an equation of the line through the points (-1, 6) and (2/3, -3/4)."
                             ],
                             "Subs": []
                         },
@@ -216,7 +216,7 @@
                             "Key": "MN.M8.2.4.5",
                             "Label": "Solve linear inequalities using properties of inequalities. Graph the solutions on a number line.",
                             "Examples": [
-                                "For example, the inequality –3x < 6 is equivalent to x > –2, which can be represented on the number line by shading in the interval to the right of –2."
+                                "For example, the inequality -3x < 6 is equivalent to x > -2, which can be represented on the number line by shading in the interval to the right of -2."
                             ],
                             "Subs": []
                         },
@@ -224,7 +224,7 @@
                             "Key": "MN.M8.2.4.6",
                             "Label": "Represent relationships in various contexts with equations and inequalities involving the absolute value of a linear expression. Solve such equations and inequalities and graph the solutions on a number line.",
                             "Examples": [
-                                "For example, a cylindrical machine part is manufactured with a radius of 2.1 cm, with a tolerance of 1/100 cm. The radius r satisfies the inequality |r – 2.1| ≤ .01."
+                                "For example, a cylindrical machine part is manufactured with a radius of 2.1 cm, with a tolerance of 1/100 cm. The radius r satisfies the inequality |r - 2.1| ≤ .01."
                             ],
                             "Subs": []
                         },
@@ -246,7 +246,7 @@
                             "Key": "MN.M8.2.4.9",
                             "Label": "Use the relationship between square roots and squares of a number to solve problems.",
                             "Examples": [
-                                "For example, if πx2 = 5, then |x| = √(5/π), or equivalently, x = √(5/π) or x = –√(5/π). If x is understood as the radius of a circle in this example, then the negative solution should be discarded and x = √(5/π)."
+                                "For example, if πx2 = 5, then |x| = √(5/π), or equivalently, x = √(5/π) or x = -√(5/π). If x is understood as the radius of a circle in this example, then the negative solution should be discarded and x = √(5/π)."
                             ],
                             "Subs": []
                         }

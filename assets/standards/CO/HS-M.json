@@ -93,13 +93,13 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.N-CN.A.1",
-                                    "Label": "Define complex number i such that i² =– 1, and show that every complex number has the form a + bi where a and b are real numbers.",
+                                    "Label": "Define complex number i such that i² =- 1, and show that every complex number has the form a + bi where a and b are real numbers.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CO.M9-12.N-CN.A.2",
-                                    "Label": "Use the relation i² =– 1 and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
+                                    "Label": "Use the relation i² =- 1 and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -126,7 +126,7 @@
                                     "Key": "CO.M9-12.N-CN.B.5",
                                     "Label": "Represent addition, subtraction, multiplication, and conjugation of complex numbers geometrically on the complex plane; use properties of this representation for computation.",
                                     "Examples": [
-                                        "For example, (–1 + √(3i))³ = 8 because (–1 + √(3i)) has modulus 2 and argument 120∘."
+                                        "For example, (-1 + √(3i))³ = 8 because (-1 + √(3i)) has modulus 2 and argument 120∘."
                                     ],
                                     "Subs": []
                                 },
@@ -153,7 +153,7 @@
                                     "Key": "CO.M9-12.N-CN.C.8",
                                     "Label": "Extend polynomial identities to the complex numbers.",
                                     "Examples": [
-                                        "For example, rewrite as x² + 4 as (x + 2i)(x – 2i)."
+                                        "For example, rewrite as x^2+ 4 as (x + 2i)(x - 2i)."
                                     ],
                                     "Subs": []
                                 },
@@ -221,7 +221,7 @@
                                         },
                                         {
                                             "Key": "CO.M9-12.N-VM.B.4.c",
-                                            "Label": "Understand vector subtraction 𝘃 – 𝘄 as 𝘃 + (–𝘄), where –𝘄 is the additive inverse of 𝘄, with the same magnitude as 𝘄 and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
+                                            "Label": "Understand vector subtraction 𝘃 - 𝘄 as 𝘃 + (-𝘄), where -𝘄 is the additive inverse of 𝘄, with the same magnitude as 𝘄 and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -341,7 +341,7 @@
                                     "Key": "CO.M9-12.A-SSE.A.2",
                                     "Label": "Use the structure of an expression to identify ways to rewrite it.",
                                     "Examples": [
-                                        "For example, see x⁴ – y⁴ as (x²)² – (y²)², thus recognizing it as a difference of squares that can be factored as (x² – y²)(x² + y²)."
+                                        "For example, see x⁴ - y⁴ as (x^2)^2 - (y^2)^2, thus recognizing it as a difference of squares that can be factored as (x^2- y^2)(x^2+ y^2)."
                                     ],
                                     "Subs": []
                                 }
@@ -423,7 +423,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.A-APR.B.2",
-                                    "Label": "Know and apply the Remainder Theorem. For a polynomial p(x) and a number a, the remainder on division by x – a is p(a), so p(a) = 0 if and only if (x – a) is a factor of p(x).",
+                                    "Label": "Know and apply the Remainder Theorem. For a polynomial p(x) and a number a, the remainder on division by x - a is p(a), so p(a) = 0 if and only if (x - a) is a factor of p(x).",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -444,13 +444,13 @@
                                     "Key": "CO.M9-12.A-APR.C.4",
                                     "Label": "Prove polynomial identities and use them to describe numerical relationships.",
                                     "Examples": [
-                                        "For example, the polynomial identity (x² + y²)² = (x² – y²)² + (2xy)² can be used to generate Pythagorean triples."
+                                        "For example, the polynomial identity (x^2+ y^2)^2 = (x^2- y^2)^2 + (2xy)^2 can be used to generate Pythagorean triples."
                                     ],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CO.M9-12.A-APR.C.5",
-                                    "Label": "Know and apply the Binomial Theorem for the expansion of in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle.",
+                                    "Label": "Know and apply the Binomial Theorem for the expansion of in powers of `x` and `y` for a positive integer n, where `x` and `y` are any numbers, with coefficients determined for example by Pascal's Triangle.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -561,7 +561,7 @@
                                     "Subs": [
                                         {
                                             "Key": "CO.M9-12.A-REI.B.4.a",
-                                            "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x – p)² = q that has the same solutions. Derive the quadratic formula from this form.",
+                                            "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)^2 = q that has the same solutions. Derive the quadratic formula from this form.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -596,7 +596,7 @@
                                     "Key": "CO.M9-12.A-REI.C.7",
                                     "Label": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
                                     "Examples": [
-                                        "For example, find the points of intersection between the line y = –3x and the circle x² + y² = 3."
+                                        "For example, find the points of intersection between the line y = -3x and the circle x^2+ y^2= 3."
                                     ],
                                     "Subs": []
                                 },
@@ -667,7 +667,7 @@
                                     "Key": "CO.M9-12.F-IF.A.3",
                                     "Label": "Demonstrate that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers.",
                                     "Examples": [
-                                        "For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n + 1) = f(n) + f(n – 1) for n ≥ 1."
+                                        "For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n + 1) = f(n) + f(n - 1) for n ≥ 1."
                                     ],
                                     "Subs": []
                                 }
@@ -842,7 +842,7 @@
                                             "Key": "CO.M9-12.F-BF.B.4.a",
                                             "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
                                             "Examples": [
-                                                "For example, f(x) = 2x³ or f(x) = (x + 1)/(x – 1) for x ≠ 1."
+                                                "For example, f(x) = 2x³ or f(x) = (x + 1)/(x - 1) for x ≠ 1."
                                             ],
                                             "Subs": []
                                         },
@@ -970,7 +970,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.F-TF.A.3",
-                                    "Label": "Use special triangles to determine geometrically the values to sine, cosine, tangent for π/3, π/4, and π/6 and use the unit circle to express the values sine, cosine, and tangent for x, π + x, and 2π – x and in terms of their values for x where x is any real number.",
+                                    "Label": "Use special triangles to determine geometrically the values to sine, cosine, tangent for π/3, π/4, and π/6 and use the unit circle to express the values sine, cosine, and tangent for x, π + x, and 2π - x and in terms of their values for x where x is any real number.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1254,7 +1254,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.S-CP.B.7",
-                                    "Label": "Apply the Addition Rule, P(A or B) = P(A) + P(B) – P(A and B), and interpret the answer in terms of the model.",
+                                    "Label": "Apply the Addition Rule, P(A or B) = P(A) + P(B) - P(A and B), and interpret the answer in terms of the model.",
                                     "Examples": [],
                                     "Subs": []
                                 },

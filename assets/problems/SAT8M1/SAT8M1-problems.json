@@ -131,7 +131,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–8, 0)",
+                "Choice": "(-8, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -139,7 +139,7 @@
                 }
             },
             "B": {
-                "Choice": "(–6, 0)",
+                "Choice": "(-6, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -182,11 +182,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (2x² + x – 9) + (x² + 6x + 1)?"
+            "Which expression is equivalent to (2x^2+ x - 9) + (x^2+ 6x + 1)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2x² + 7x + 10",
+                "Choice": "2x^2+ 7x + 10",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -194,7 +194,7 @@
                 }
             },
             "B": {
-                "Choice": "2x² + 6x – 8",
+                "Choice": "2x^2+ 6x - 8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -202,7 +202,7 @@
                 }
             },
             "C": {
-                "Choice": "3x² + 7x – 10",
+                "Choice": "3x^2+ 7x - 10",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -210,10 +210,10 @@
                 }
             },
             "D": {
-                "Choice": "3x² + 7x – 8",
+                "Choice": "3x^2+ 7x - 8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given expression is equivalent to (2x² + x + (-9)) + (x² + 6x + 1) + (-9 + 1), which can be rewritten as (2x² + x²) + (x + 6x) + (-9 + 1). Adding like terms in this expression yields 3x² + 7x + (–8), or 3x² + 7x – 8",
+                    "Rationale": "The given expression is equivalent to (2x^2+ x + (-9)) + (x^2+ 6x + 1) + (-9 + 1), which can be rewritten as (2x^2+ x^2) + (x + 6x) + (-9 + 1). Adding like terms in this expression yields 3x^2+ 7x + (-8), or 3x^2+ 7x - 8",
                     "Percent": 0
                 }
             }
@@ -526,7 +526,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = –1.9x – 10.1",
+                "Choice": "y = -1.9x - 10.1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The graph of this model has a y-intercept with a negative y-coordinate, not a positive y-coordinate.",
@@ -534,15 +534,15 @@
                 }
             },
             "B": {
-                "Choice": "y = –1.9x + 10.1",
+                "Choice": "y = -1.9x + 10.1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation representing a linear model can be written in the form y = a + bx, or y = bx + a, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = –1.9x + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
+                    "Rationale": "The equation representing a linear model can be written in the form y = a + bx, or y = bx + a, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = -1.9x + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "y = 1.9x – 10.1",
+                "Choice": "y = 1.9x - 10.1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The graph of this model has a positive slope, not a negative slope, and a y-intercept with a negative y-coordinate, not a positive y-coordinate. ",
@@ -608,7 +608,7 @@
                 "Choice": "p = 15,000(1.04)ˣ",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a model predicts the population of Bergen in 2005 was 15,000. The model also predicts that each year for the next 5 years, the population increased by 4% of the previous year's population. The predicted population in one of these years can be found by multiplying the predicted population from the previous year by 1.04. Since the predicted population in 2005 was 15,000, the predicted population 1 year later is 15,000(1.04). The predicted population 2 years later is this value times 1.04, which is 15,000(1.04)(1.04), or 15,000(1.04)². The predicted population 3 years later is this value times 1.04, or 15,000(1.04)³. More generally, the predicted population, p, x years after 2005 is represented by the equation p = 15,000(1.04)ˣ.",
+                    "Rationale": "It's given that a model predicts the population of Bergen in 2005 was 15,000. The model also predicts that each year for the next 5 years, the population increased by 4% of the previous year's population. The predicted population in one of these years can be found by multiplying the predicted population from the previous year by 1.04. Since the predicted population in 2005 was 15,000, the predicted population 1 year later is 15,000(1.04). The predicted population 2 years later is this value times 1.04, which is 15,000(1.04)(1.04), or 15,000(1.04)^2. The predicted population 3 years later is this value times 1.04, or 15,000(1.04)³. More generally, the predicted population, p, x years after 2005 is represented by the equation p = 15,000(1.04)ˣ.",
                     "Percent": 0
                 }
             }
@@ -664,14 +664,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The expression 90y⁵ – 54y⁴ is equivalent to ry⁴(15y – 9), where r is a constant. What is the value of r?"
+            "The expression 90y⁵ - 54y⁴ is equivalent to ry⁴(15y - 9), where r is a constant. What is the value of r?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applying the distributive property to the expression ry⁴(15y – 9) yields 15ry⁵ – 9ry⁴. Since 90y⁵ – 54y⁴ is equivalent to ry⁴(15y – 9), it follows that 90y⁵ – 54y⁴ is also equivalent to 15ry⁵ – 9ry⁴. Since these expressions are equivalent, it follows that corresponding coefficients are equivalent. Therefore, 90 = 15r and -54 = -9r. Solving either of these equations for r will yield the value of r. Dividing both sides of 90 = 15r by 15 yields 6 = r. Therefore, the value of r is 6.",
+                    "Rationale": "Applying the distributive property to the expression ry⁴(15y - 9) yields 15ry⁵ - 9ry⁴. Since 90y⁵ - 54y⁴ is equivalent to ry⁴(15y - 9), it follows that 90y⁵ - 54y⁴ is also equivalent to 15ry⁵ - 9ry⁴. Since these expressions are equivalent, it follows that corresponding coefficients are equivalent. Therefore, 90 = 15r and -54 = -9r. Solving either of these equations for r will yield the value of r. Dividing both sides of 90 = 15r by 15 yields 6 = r. Therefore, the value of r is 6.",
                     "Percent": 0
                 }
             }
@@ -696,7 +696,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT8M1/media/15a.jpg",
-            "The graph of y = f(x) is shown, where the function f is defined by f(x) = ax³ + bx² + cx + d and a, b, c, and d are constants. For how many values of x does f(x) = 0?"
+            "The graph of y = f(x) is shown, where the function f is defined by f(x) = ax³ + bx^2+ cx + d and a, b, c, and d are constants. For how many values of x does f(x) = 0?"
         ],
         "AnswerChoices": {
             "A": {
@@ -827,7 +827,7 @@
                 }
             },
             "C": {
-                "Choice": "4j + 9 = k – p",
+                "Choice": "4j + 9 = k - p",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation is equivalent to p = k - 4j - 9.",
@@ -893,7 +893,7 @@
                 "Choice": "1,849",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The area of a circle can be found by using the formula A = πr², where A is the area and r is the radius of the circle. It's given that the radius of circle A is n 3. Substituting this value for r into the formula A = πr² gives A = π(3n)², or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula A = πr² gives A = π(129)², or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
+                    "Rationale": "The area of a circle can be found by using the formula A = πr², where A is the area and r is the radius of the circle. It's given that the radius of circle A is n 3. Substituting this value for r into the formula A = πr² gives A = π(3n)^2, or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula A = πr² gives A = π(129)^2, or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
                     "Percent": 0
                 }
             }
@@ -972,15 +972,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y = x² – 14x + 22",
-            "The given equation relates the variables x and y. For what value of x does the value of y reach its minimum?"
+            ":ibox:y = x^2- 14x + 22",
+            "The given equation relates the variables `x` and `y`. For what value of x does the value of y reach its minimum?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "When an equation is of the form y = ax² + bx + c, where a, b, and c are constants, the value of y reaches its minimum when x = -b/(2a). Since the given equation is of the form y = ax² + bx + c, it follows that a = 1, b = -14, and c = 22. Therefore, the value of y reaches its minimum when x = -(-14)/(2(1)), or x = 7.",
+                    "Rationale": "When an equation is of the form y = ax^2+ bx + c, where a, b, and c are constants, the value of y reaches its minimum when x = -b/(2a). Since the given equation is of the form y = ax^2+ bx + c, it follows that a = 1, b = -14, and c = 22. Therefore, the value of y reaches its minimum when x = -(-14)/(2(1)), or x = 7.",
                     "Percent": 0
                 }
             }
@@ -1035,12 +1035,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y ≤ x + 7\ny ≥ –2x – 1",
+            ":ibox:y ≤ x + 7\ny ≥ -2x - 1",
             "Which point (x, y) is a solution to the given system of inequalities in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–14, 0)",
+                "Choice": "(-14, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Substituting -14 for x and 0 for y in the inequality y ≤ x + 7 yields 0 ≤ 14 + 7, or  ≤ -7, which is not true.",
@@ -1048,10 +1048,10 @@
                 }
             },
             "B": {
-                "Choice": "(0, –14)",
+                "Choice": "(0, -14)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 0 for x and 14- for y in the inequality y ≥ –2x – 1 yields -14 ≥ –2(0) – 1, or -14 ≥ –1, which is not true.",
+                    "Rationale": "Substituting 0 for x and 14- for y in the inequality y ≥ -2x - 1 yields -14 ≥ -2(0) - 1, or -14 ≥ -1, which is not true.",
                     "Percent": 0
                 }
             },
@@ -1067,7 +1067,7 @@
                 "Choice": "(14, 0)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A point (x, y) is a solution to a system of inequalities in the xy-plane if substituting the x-coordinate and the y-coordinate of the point for x and y, respectively, in each inequality makes both of the inequalities true. Substituting the x-coordinate and the y-coordinate of this choice, 14 and 0, for x and y, respectively, in the first inequality in the given system, y ≤ x + 7, yields 0 ≤ 14 + 7, or 0 ≤ 21, which is true. Substituting 14 for x and 0 for y in the second inequality in the given system, 0 ≥ -2x - 1, yields 0 ≥ -2(14) - 1, or 0 ≥ -29, which is true. Therefore, the point (14, 0) is a solution to the given system of inequalities in the xy-plane.",
+                    "Rationale": "A point (x, y) is a solution to a system of inequalities in the xy-plane if substituting the x-coordinate and the y-coordinate of the point for `x` and `y`, respectively, in each inequality makes both of the inequalities true. Substituting the x-coordinate and the y-coordinate of this choice, 14 and 0, for `x` and `y`, respectively, in the first inequality in the given system, y ≤ x + 7, yields 0 ≤ 14 + 7, or 0 ≤ 21, which is true. Substituting 14 for x and 0 for y in the second inequality in the given system, 0 ≥ -2x - 1, yields 0 ≥ -2(14) - 1, or 0 ≥ -29, which is true. Therefore, the point (14, 0) is a solution to the given system of inequalities in the xy-plane.",
                     "Percent": 0
                 }
             }
@@ -1147,7 +1147,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "x – 29 = (x – a)(x – 29)",
+            "x - 29 = (x - a)(x - 29)",
             "Which of the following are solutions to the given equation, where a is a constant and a > 30?",
             ":ibox:I. a\nII. a + 1\nII. 29"
         ],
@@ -1172,7 +1172,7 @@
                 "Choice": "II and III only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Subtracting the expression (x – 29) from both sides of the given equation yields 0  = (x – a)(x – 29) - (x – 29), which can be rewritten as 0  = (x – a)(x – 29) + (-1)(x – 29). Since the two terms on the right-hand side of this equation have a common factor of (x – 29), it can be rewritten as 0  = (x – 29)(x – a + (-1)), or 0  = (x – 29)(x – a - 1). Since x - a - 1 is equivalent to x - (a + 1), the equation 0  = (x – 29)(x – a - 1) can be rewritten as 0 = (x - 29)(x - (a + 1)). By the zero product property, it follows that x - 29 = 0 or x - (a + 1) = 0. Adding 29 to both sides of the equation x - 29 = 0 yields x = 29. Adding a + 1 to both sides of the equation x - (a + 1) = 0h yields x = a + 1. Therefore, the two solutions to the given equation are 29 and a + 1. Thus, only a + 1 and 29, not a, are solutions to the given equation.",
+                    "Rationale": "Subtracting the expression (x - 29) from both sides of the given equation yields 0  = (x - a)(x - 29) - (x - 29), which can be rewritten as 0  = (x - a)(x - 29) + (-1)(x - 29). Since the two terms on the right-hand side of this equation have a common factor of (x - 29), it can be rewritten as 0  = (x - 29)(x - a + (-1)), or 0  = (x - 29)(x - a - 1). Since x - a - 1 is equivalent to x - (a + 1), the equation 0  = (x - 29)(x - a - 1) can be rewritten as 0 = (x - 29)(x - (a + 1)). By the zero product property, it follows that x - 29 = 0 or x - (a + 1) = 0. Adding 29 to both sides of the equation x - 29 = 0 yields x = 29. Adding a + 1 to both sides of the equation x - (a + 1) = 0h yields x = a + 1. Therefore, the two solutions to the given equation are 29 and a + 1. Thus, only a + 1 and 29, not a, are solutions to the given equation.",
                     "Percent": 0
                 }
             },
@@ -1204,11 +1204,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the xy-plane, the graph of the equation y = –x² + 9x – 100 intersects the line y = c at exactly one point. What is the value of c?"
+            "In the xy-plane, the graph of the equation y = -x^2+ 9x - 100 intersects the line y = c at exactly one point. What is the value of c?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–481/4",
+                "Choice": "-481/4",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1216,7 +1216,7 @@
                 }
             },
             "B": {
-                "Choice": "–100",
+                "Choice": "-100",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1224,15 +1224,15 @@
                 }
             },
             "C": {
-                "Choice": "–319/4",
+                "Choice": "-319/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = –x² + 9x – 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)² + k, the vertex of its graph in the xy-plane is (h, k). The given quadratic equation, y = –x² + 9x – 100, can be rewritten as y = (x² - 2(9/2)x + (9/2)²) + (9/2)² - 100, or y = -(x - 9/2)² + (-319/4). Thus, the value of c is equal to -319/4.",
+                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = -x^2+ 9x - 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)^2 + k, the vertex of its graph in the xy-plane is (h, k). The given quadratic equation, y = -x^2+ 9x - 100, can be rewritten as y = (x^2- 2(9/2)x + (9/2)^2) + (9/2)^2 - 100, or y = -(x - 9/2)^2 + (-319/4). Thus, the value of c is equal to -319/4.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "–9/2",
+                "Choice": "-9/2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",

@@ -7,7 +7,7 @@
             "Expressions & Equations"
         ],
         "SubTopics": [
-            "Use square root and cube root symbols to represent solutions to equations of the form x² = p and x³ = p, where p is a positive rational number. Evaluate square roots of perfect squares (up to and including 12²) and cube roots of perfect cubes (up to and including 5³) without a calculator."
+            "Use square root and cube root symbols to represent solutions to equations of the form x^2= p and x³ = p, where p is a positive rational number. Evaluate square roots of perfect squares (up to and including 12^2) and cube roots of perfect cubes (up to and including 5³) without a calculator."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -45,7 +45,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice computes as 8 – 3.",
+                    "Rationale": "This choice computes as 8 - 3.",
                     "Percent": 12
                 }
             }
@@ -76,7 +76,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice divides 3 by 5 but then multiplies the quotient (0.6) by 10 rather than by 10².",
+                    "Rationale": "This choice divides 3 by 5 but then multiplies the quotient (0.6) by 10 rather than by 10^2.",
                     "Percent": 18
                 }
             },
@@ -84,7 +84,7 @@
                 "Choice": "17",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice divides 5 by 3 and then multiplies the quotient (5/3) by 10 rather than by 10².",
+                    "Rationale": "This choice divides 5 by 3 and then multiplies the quotient (5/3) by 10 rather than by 10^2.",
                     "Percent": 14
                 }
             },
@@ -92,7 +92,7 @@
                 "Choice": "60",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes 3 × 10⁵ as the larger value, divides the coefficients as 3/5 = 0.6 and the powers of 10 as 10⁵/10³ = 10⁵⁻³ = 10², and then solves 0.6 × 10² = 60.",
+                    "Rationale": "This choice recognizes 3 × 10⁵ as the larger value, divides the coefficients as 3/5 = 0.6 and the powers of 10 as 10⁵/10³ = 10⁵⁻³ = 10^2, and then solves 0.6 × 10^2 = 60.",
                     "Percent": 53
                 }
             },
@@ -100,7 +100,7 @@
                 "Choice": "167",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice divides 5 by 3 and then multiplies the quotient (5/3) by 10².",
+                    "Rationale": "This choice divides 5 by 3 and then multiplies the quotient (5/3) by 10^2.",
                     "Percent": 15
                 }
             }
@@ -182,7 +182,7 @@
         "Explain": false,
         "Content": [
             "One number in the list below is a rational number.",
-            ":box:√2/2\t√6/2\t√27/15\t√36/15",
+            ":box:`sqrt(2)/2`\t`sqrt(6)/2`\t`sqrt(27)/15`\t`sqrt(36)/15`",
             "Which number line shows point N located at the value of the rational number?"
         ],
         "AnswerChoices": {
@@ -190,7 +190,7 @@
                 "Choice": "problems/PA23G8M/media/4a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that √36/15 is equal to 6/15, which is equivalent to 0.4.",
+                    "Rationale": "This choice recognizes that `sqrt(36)/15` is equal to `6/15`, which is equivalent to `0.4`.",
                     "Percent": 39
                 }
             },
@@ -198,7 +198,7 @@
                 "Choice": "problems/PA23G8M/media/4b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice evaluates √2/2 as √(2/2) = √1 = 1.",
+                    "Rationale": "This choice evaluates `sqrt(2)/2` as `sqrt(2/2)=sqrt(1)=1`.",
                     "Percent": 34
                 }
             },
@@ -206,7 +206,7 @@
                 "Choice": "problems/PA23G8M/media/4c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice evaluates √6/2 as (6 ÷ 2)/2 = 3/2 = 1.5 (i.e., considers the square root symbol to mean “divide by 2”).",
+                    "Rationale": "This choice evaluates `sqrt(6)/2` as `(6÷2)/2=3/2=1.5` (i.e., considers the square root symbol to mean “divide by `2`”).",
                     "Percent": 14
                 }
             },
@@ -214,7 +214,7 @@
                 "Choice": "problems/PA23G8M/media/4d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice evaluates √27/15 as 27/15 = 1.8 (i.e., does not consider the square root symbol).",
+                    "Rationale": "This choice evaluates `sqrt(27)/15` as `27/15=1.8` (i.e., does not consider the square root symbol).",
                     "Percent": 13
                 }
             }
@@ -238,14 +238,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Solve for x: 7² = x² – 3²"
+            "Solve for x: `7^2=x^2-3^2`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "√10",
+                "Choice": "`sqrt(10)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice calculates √(7 + 3).",
+                    "Rationale": "This choice calculates `sqrt(7+3)`.",
                     "Percent": 18
                 }
             },
@@ -253,7 +253,7 @@
                 "Choice": "√20",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses 7² = 14 and 3² = 6 to calculate √(14 + 6).",
+                    "Rationale": "This choice uses `7^2=14` and `3^2=6` to calculate `sqrt(14+6)`.",
                     "Percent": 15
                 }
             },
@@ -261,7 +261,7 @@
                 "Choice": "√42",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice calculates √(7 • 3 • 2).",
+                    "Rationale": "This choice calculates `sqrt(7*3*2)`.",
                     "Percent": 21
                 }
             },
@@ -269,7 +269,7 @@
                 "Choice": "√58",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice solves as 7² = x² – 3² → 49 = x² – 9 → 58 = x² → √58 = x.",
+                    "Rationale": "This choice solves as `7^2=x^2-3^2->49=x^2-9->58=x^2->sqrt(58)=x`.",
                     "Percent": 46
                 }
             }
@@ -313,7 +313,7 @@
                 }
             },
             "C": {
-                "Choice": "Kevin is not correct because the exponents are subtracted when multiplying powers with the same base, and 5 – 4 = 1.",
+                "Choice": "Kevin is not correct because the exponents are subtracted when multiplying powers with the same base, and 5 - 4 = 1.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice subtracts the exponents.",
@@ -420,7 +420,7 @@
                 "Choice": "problems/PA23G8M/media/8b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice determines the unit rate is 5 since 9 – 4 = 5.",
+                    "Rationale": "This choice determines the unit rate is 5 since 9 - 4 = 5.",
                     "Percent": 7
                 }
             },
@@ -466,7 +466,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The slope of the line is –3/2, and the length of the hypotenuse of triangle B is 3/2 times the length of the hypotenuse of triangle A.",
+                "Choice": "The slope of the line is -3/2, and the length of the hypotenuse of triangle B is 3/2 times the length of the hypotenuse of triangle A.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice either determines the change in x-coordinates from right to left rather than from left to right OR calculates the slope using the change in x-coordinates divided by the change in y-coordinates (i.e., uses “run over rise” rather than “rise over run”) and uses this ratio as the ratio between the side lengths of the similar triangles.",
@@ -474,7 +474,7 @@
                 }
             },
             "B": {
-                "Choice": "The slope of the line is –3/2, and the length of the hypotenuse of triangle B is 2 times the length of the hypotenuse of triangle A.",
+                "Choice": "The slope of the line is -3/2, and the length of the hypotenuse of triangle B is 2 times the length of the hypotenuse of triangle A.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice recognizes that the side lengths of triangle B are twice the side lengths of triangle A, but calculates the slope using the change in x-coordinates divided by the change in y-coordinates (i.e., uses “run over rise” instead of “rise over run”).",
@@ -482,18 +482,18 @@
                 }
             },
             "C": {
-                "Choice": "The slope of the line is –2/3, and the length of the hypotenuse of triangle B is 3/2 times the length of the hypotenuse of triangle A.",
+                "Choice": "The slope of the line is -2/3, and the length of the hypotenuse of triangle B is 3/2 times the length of the hypotenuse of triangle A.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice calculates the slope using the change in y-coordinates divided by the change in x-coordinates (i.e., uses “rise over run”), resulting in –2/3, but then uses the ratio between the lengths of the sides within similar triangles as the ratio (i.e., one leg in triangle B is 3/2 the length of the other leg).",
+                    "Rationale": "This choice calculates the slope using the change in y-coordinates divided by the change in x-coordinates (i.e., uses “rise over run”), resulting in -2/3, but then uses the ratio between the lengths of the sides within similar triangles as the ratio (i.e., one leg in triangle B is 3/2 the length of the other leg).",
                     "Percent": 19
                 }
             },
             "D": {
-                "Choice": "The slope of the line is –2/3, and the length of the hypotenuse of triangle B is 2 times the length of the hypotenuse of triangle A.",
+                "Choice": "The slope of the line is -2/3, and the length of the hypotenuse of triangle B is 2 times the length of the hypotenuse of triangle A.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice calculates the slope of the line using the change in y-coordinates divided by the change in x-coordinates (i.e., uses “rise over run”), resulting in a slope of –2/3, and recognizes that the side lengths of triangle B are twice the lengths of the corresponding sides in triangle A.",
+                    "Rationale": "This choice calculates the slope of the line using the change in y-coordinates divided by the change in x-coordinates (i.e., uses “rise over run”), resulting in a slope of -2/3, and recognizes that the side lengths of triangle B are twice the lengths of the corresponding sides in triangle A.",
                     "Percent": 48
                 }
             }
@@ -574,14 +574,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Solve: 3x + 8 = 2(x – 5) + x"
+            "Solve: 3x + 8 = 2(x - 5) + x"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x = –18",
+                "Choice": "x = -18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice distributes the 2 to (x – 5) but omits the “+ x” and then solves the equation 3x + 8 = 2x – 10.",
+                    "Rationale": "This choice distributes the 2 to (x - 5) but omits the “+ x” and then solves the equation 3x + 8 = 2x - 10.",
                     "Percent": 14
                 }
             },
@@ -589,7 +589,7 @@
                 "Choice": "x = 18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice distributes the 2 to (x – 5) and to the “+ x” and then solves the equation 3x + 8 = 2x – 10 + 2x.",
+                    "Rationale": "This choice distributes the 2 to (x - 5) and to the “+ x” and then solves the equation 3x + 8 = 2x - 10 + 2x.",
                     "Percent": 16
                 }
             },
@@ -597,7 +597,7 @@
                 "Choice": "no solutions",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice distributes the 2 to (x – 5), resulting in 2x – 10 + x; combines like terms to simplify the expression to 3x – 10; solves the equation 3x + 8 = 3x – 10 by subtracting 3x from each side, resulting in 8 = – 10; recognizes that 8 = – 10 is a false statement, which means that the equation has no solutions.",
+                    "Rationale": "This choice distributes the 2 to (x - 5), resulting in 2x - 10 + x; combines like terms to simplify the expression to 3x - 10; solves the equation 3x + 8 = 3x - 10 by subtracting 3x from each side, resulting in 8 = - 10; recognizes that 8 = - 10 is a false statement, which means that the equation has no solutions.",
                     "Percent": 56
                 }
             },
@@ -605,7 +605,7 @@
                 "Choice": "infinitely many solutions",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice solves the equation, resulting in 8 = – 10, recognizes that 8 = – 10 is a false statement, but interprets the false statement to mean that the equation has infinitely many solutions rather than no solutions.",
+                    "Rationale": "This choice solves the equation, resulting in 8 = - 10, recognizes that 8 = - 10 is a false statement, but interprets the false statement to mean that the equation has infinitely many solutions rather than no solutions.",
                     "Percent": 14
                 }
             }
@@ -639,7 +639,7 @@
                 "Choice": "The rate for function 1 is greater because 3/2 > 2/3.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice calculates the rate of change for function 1 by using the change in y-coordinates divided by the change in x-coordinates (i.e., “rise over run”), resulting in 3/2, calculates the rate of change for function 2 by using the change in y-coordinates divided by the change in x-coordinates, resulting in (2 – 0)/(0 – (–3)) = 2/3, and then compares the two rates of change.",
+                    "Rationale": "This choice calculates the rate of change for function 1 by using the change in y-coordinates divided by the change in x-coordinates (i.e., “rise over run”), resulting in 3/2, calculates the rate of change for function 2 by using the change in y-coordinates divided by the change in x-coordinates, resulting in (2 - 0)/(0 - (-3)) = 2/3, and then compares the two rates of change.",
                     "Percent": 45
                 }
             },
@@ -663,7 +663,7 @@
                 "Choice": "The rate for function 2 is greater because it has a greater x-intercept.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses the x-intercept of each function as the rate of change, comparing – 2 to – 3, and considers – 3 to be greater since it is farther from 0 (i.e., compares the absolute values of the x-intercepts).",
+                    "Rationale": "This choice uses the x-intercept of each function as the rate of change, comparing - 2 to - 3, and considers - 3 to be greater since it is farther from 0 (i.e., compares the absolute values of the x-intercepts).",
                     "Percent": 12
                 }
             }
@@ -696,7 +696,7 @@
                 "Choice": "The function is increasing, has a y-intercept of 5, and has a slope of 1.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice determines that the function is increasing since the y-values increase as the x-values increase, calculates the slope using the change in y-coordinates divided by the change in x-coordinates, resulting in (8 – 6)/(3 – 1) = 2/2 = 1, and then uses the slope to determine that the line would pass through the point (0, 5), making the y-intercept 5.",
+                    "Rationale": "This choice determines that the function is increasing since the y-values increase as the x-values increase, calculates the slope using the change in y-coordinates divided by the change in x-coordinates, resulting in (8 - 6)/(3 - 1) = 2/2 = 1, and then uses the slope to determine that the line would pass through the point (0, 5), making the y-intercept 5.",
                     "Percent": 51
                 }
             },
@@ -709,7 +709,7 @@
                 }
             },
             "C": {
-                "Choice": "The function is increasing, has a y-intercept of –5, and has a slope of –1.",
+                "Choice": "The function is increasing, has a y-intercept of -5, and has a slope of -1.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice uses the x-intercept as the y-intercept and switches either the x-values or the y-values when determining the slope.",
@@ -717,7 +717,7 @@
                 }
             },
             "D": {
-                "Choice": "The function is decreasing, has a y-intercept of –5, and has a slope of –1.",
+                "Choice": "The function is decreasing, has a y-intercept of -5, and has a slope of -1.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice sees the negative x-values and thinks this means the function is decreasing, uses the x-intercept as the y-intercept, and switches either the x-values or the y-values when determining the slope.",
@@ -753,7 +753,7 @@
                 "Choice": "between 3 and 4 hours",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects the interval with the only increase (+6) after a decrease (–2).",
+                    "Rationale": "This choice selects the interval with the only increase (+6) after a decrease (-2).",
                     "Percent": 5
                 }
             },

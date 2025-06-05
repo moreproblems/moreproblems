@@ -147,7 +147,7 @@
                             "Key": "ME.M9-12.CN.C.8",
                             "Label": "Extend polynomial identities to the complex numbers.",
                             "Examples": [
-                                "For example, rewrite x² + 4 as (x + 2i)(x - 2i)."
+                                "For example, rewrite x^2+ 4 as (x + 2i)(x - 2i)."
                             ],
                             "Subs": []
                         },
@@ -328,7 +328,7 @@
                             "Key": "ME.M9-12.SSE.A.2",
                             "Label": "Use the structure of an expression to identify ways to rewrite it.",
                             "Examples": [
-                                "For example, see x⁴ - y⁴ as (x²)² - (y²)², allowing for it to be recognized as a difference of squares that can be factored as (x² - y²)(x² + y²)."
+                                "For example, see x⁴ - y⁴ as (x^2)^2 - (y^2)^2, allowing for it to be recognized as a difference of squares that can be factored as (x^2- y^2)(x^2+ y^2)."
                             ],
                             "Subs": []
                         }
@@ -418,7 +418,7 @@
                             "Key": "ME.M9-12.APR.B.2",
                             "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x - a is p(a), so p(a) = 0 if and only if (x - a) is a factor of p(x).",
                             "Examples": [
-                                "For example, consider the polynomial function P(x) = x⁴ – 2x³ + ax² + 8x + 12, where a is an unknown real number. If (x-3) is a factor of this polynomial, what is the value of a?"
+                                "For example, consider the polynomial function P(x) = x⁴ - 2x³ + ax^2+ 8x + 12, where a is an unknown real number. If (x-3) is a factor of this polynomial, what is the value of a?"
                             ],
                             "Subs": []
                         },
@@ -439,13 +439,13 @@
                             "Key": "ME.M9-12.APR.C.4",
                             "Label": "Prove polynomial identities and use them to describe numerical relationships.",
                             "Examples": [
-                                "For example, the polynomial identity (x² + y²)² = (x² – y²)² + (2xy)² can be used to generate Pythagorean triples."
+                                "For example, the polynomial identity (x^2+ y^2)^2 = (x^2- y^2)^2 + (2xy)^2 can be used to generate Pythagorean triples."
                             ],
                             "Subs": []
                         },
                         {
                             "Key": "ME.M9-12.APR.C.5",
-                            "Label": "Know and apply the Binomial Theorem for the expansion of (x + y)n in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle.",
+                            "Label": "Know and apply the Binomial Theorem for the expansion of (x + y)n in powers of `x` and `y` for a positive integer n, where `x` and `y` are any numbers, with coefficients determined for example by Pascal's Triangle.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -556,13 +556,13 @@
                             "Subs": [
                                 {
                                     "Key": "ME.M9-12.REI.B.4.a",
-                                    "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)² = q that has the same solutions. Derive the quadratic formula from this form.",
+                                    "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)^2 = q that has the same solutions. Derive the quadratic formula from this form.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "ME.M9-12.REI.B.4.bi",
-                                    "Label": "Solve quadratic equations by inspection (e.g., for x² = 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation.",
+                                    "Label": "Solve quadratic equations by inspection (e.g., for x^2= 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -597,7 +597,7 @@
                             "Key": "ME.M9-12.REI.C.7",
                             "Label": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
                             "Examples": [
-                                "For example, find the point(s) of intersection between the line y = -3x and the circle x² + y² = 3."
+                                "For example, find the point(s) of intersection between the line y = -3x and the circle x^2+ y^2= 3."
                             ],
                             "Subs": []
                         },

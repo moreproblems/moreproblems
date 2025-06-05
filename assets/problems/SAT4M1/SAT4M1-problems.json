@@ -127,7 +127,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:x²/25 = 36",
+            ":box:x^2/25 = 36",
             "What is a solution to the given equation?"
         ],
         "AnswerChoices": {
@@ -135,7 +135,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is a solution to the equation x² = 36.",
+                    "Rationale": "This is a solution to the equation x^2= 36.",
                     "Percent": 0
                 }
             },
@@ -143,7 +143,7 @@
                 "Choice": "30",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying the left- and right-hand sides of the given equation by 25 yields x² = 900. Taking the square root of the left- and right-hand sides of this equation yields x = 30 or x = -30. Of these two solutions, only 30 is given as a choice.",
+                    "Rationale": "Multiplying the left- and right-hand sides of the given equation by 25 yields x^2= 900. Taking the square root of the left- and right-hand sides of this equation yields x = 30 or x = -30. Of these two solutions, only 30 is given as a choice.",
                     "Percent": 0
                 }
             },
@@ -467,7 +467,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The scatterplot shows the relationship between two variables, x and y.",
+            "The scatterplot shows the relationship between two variables, `x` and `y`.",
             "problems/SAT4M1/media/10a.jpg",
             "Which of the following equations is the most appropriate linear model for the data shown?"
         ],
@@ -481,7 +481,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 0.9 – 9.4x",
+                "Choice": "y = 0.9 - 9.4x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The graph of this equation has a y-intercept with a y-coordinate less than 1, not greater than 9.",
@@ -497,7 +497,7 @@
                 }
             },
             "D": {
-                "Choice": "y = 9.4 – 0.9x",
+                "Choice": "y = 9.4 - 0.9x",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The data points suggest that as the variable x increases, the variable y decreases, which implies that an appropriate linear model for the data has a negative slope. The data points also show that when x is close to 0, y is greater than 9. Therefore, the y-intercept of the graph of an appropriate linear model has a y-coordinate greater than 9. The graph of an equation of the form y = a + bx, where a and b are constants, has a y-intercept with a y-coordinate of a and has a slope of b. Of the given choices, only this choice represents a graph that has a negative slope, -0.9, and a y-intercept with a y-coordinate greater than 9, 9.4.",
@@ -585,7 +585,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = –2x – 8",
+                "Choice": "y = -2x - 8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is an equation of a line with a slope of -2, not -1.",
@@ -593,7 +593,7 @@
                 }
             },
             "B": {
-                "Choice": "y = x – 8",
+                "Choice": "y = x - 8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is an equation of a line with a slope of 1, not -1.",
@@ -601,7 +601,7 @@
                 }
             },
             "C": {
-                "Choice": "y = –x – 8",
+                "Choice": "y = -x - 8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "An equation of a line can be written in the form y = mx + b = +, where m is the slope of the line and (0, b) is the y-intercept of the line. The line shown passes through the point (0, -8), so b = -8. The line shown also passes through the point (-8, 0). The slope, m, of a line passing through two points (x₁, y₁) and (x₂, y₂) can be calculated using the equation m = (y₂ - y₁)/(x₂ - x₁). For the points (0, -8) and (-8, 0), this gives m = ((-8) - 0)/(0 - (-8)), or m = -1. Substituting -8 for b and -1 for m in y = mx + b yields y = (-1)x + (-8), or y = -x - 8. Therefore, an equation of the graph shown is y = -x - 8.",
@@ -609,7 +609,7 @@
                 }
             },
             "D": {
-                "Choice": "y = 2x – 8",
+                "Choice": "y = 2x - 8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is an equation of a line with a slope of 2, not -1.",
@@ -699,11 +699,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line t in the xy-plane has a slope of –1/3 and passes through the point (9, 10). Which equation defines line t?"
+            "Line t in the xy-plane has a slope of -1/3 and passes through the point (9, 10). Which equation defines line t?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 13x – 1/3",
+                "Choice": "y = 13x - 1/3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -719,7 +719,7 @@
                 }
             },
             "C": {
-                "Choice": "y = –x/3 + 10",
+                "Choice": "y = -x/3 + 10",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation defines a line that passes through the point (0, 10), not (9, 10).",
@@ -727,7 +727,7 @@
                 }
             },
             "D": {
-                "Choice": "y = –x/3 + 13",
+                "Choice": "y = -x/3 + 13",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The equation that defines line t in the xy-plane can be written in slope-intercept form y = mx + b, where m is the slope of line t and (0, b) is its y-intercept. It's given that line t has a slope of -1/3. Therefore, m = -1/3. Substituting -1/3 for m in the equation y = mx + b yields y = -1/3 + b, or y = -x/3 + b. It's also given that line t passes through the point (9, 10). Substituting 9 for x and 10 for y in the equation y = -x/3 + b yields 10 = -9/3 + b, or 10 = -3 + b. Adding 3 to both sides of this equation yields 13 = b. Substituting 13 for b in the equation y = -x/3 + b yields y = -x/3 + 13.",
@@ -769,7 +769,7 @@
                 "Choice": "The value of the bank account is estimated to be approximately 243 dollars in 1962.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function f(x) = 206(1.034)ˣ models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where x is the number of years after 1957. It follows that f(x) represents the estimated value, in dollars, of the bank account x years after 1957. Since the value of f(5) is the value of f(x) when x = 5, it follows that “f(5)is approximately equal to 243” means that f(x) is approximately equal to 243 when x = 5. In the given context, this means that the value of the bank account is estimated to be approximately 243 dollars 5 years after 1957. Therefore, the best interpretation of the statement “f(5) is approximately equal to 243” in this context is the value of the bank account is estimated to be approximately 243 dollars in 1962.",
+                    "Rationale": "It's given that the function f(x) = 206(1.034)ˣ models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where x is the number of years after 1957. It follows that f(x) represents the estimated value, in dollars, of the bank account x years after 1957. Since the value of f(5) is the value of `f(x)` when x = 5, it follows that “f(5)is approximately equal to 243” means that f(x) is approximately equal to 243 when x = 5. In the given context, this means that the value of the bank account is estimated to be approximately 243 dollars 5 years after 1957. Therefore, the best interpretation of the statement “f(5) is approximately equal to 243” in this context is the value of the bank account is estimated to be approximately 243 dollars in 1962.",
                     "Percent": 0
                 }
             },
@@ -868,15 +868,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "f(x) = (x + 44)²",
+                "Choice": "f(x) = (x + 44)^2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let x represent the side length, in inches, of square P. It follows that the perimeter of square P is 4x inches. It's given that square Q has a perimeter that is 176 inches greater than the perimeter of square P. Thus, the perimeter of square Q is 176 inches greater than 4x inches, or 4x + 176 inches. Since the perimeter of a square is 4 times the side length of the square, each side length of Q is (4x + 176)/4, or x + 44 inches. Since the area of a square is calculated by multiplying the length of two sides, the area of square Q is (x + 44)(x + 44), or (x + 44)² square inches. It follows that function f is defined by f(x) = (x + 44)².",
+                    "Rationale": "Let x represent the side length, in inches, of square P. It follows that the perimeter of square P is 4x inches. It's given that square Q has a perimeter that is 176 inches greater than the perimeter of square P. Thus, the perimeter of square Q is 176 inches greater than 4x inches, or 4x + 176 inches. Since the perimeter of a square is 4 times the side length of the square, each side length of Q is (4x + 176)/4, or x + 44 inches. Since the area of a square is calculated by multiplying the length of two sides, the area of square Q is (x + 44)(x + 44), or (x + 44)^2 square inches. It follows that function f is defined by f(x) = (x + 44)^2.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "f(x) = (x + 176)²",
+                "Choice": "f(x) = (x + 176)^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This function represents a square with side lengths (x + 176) inches.",
@@ -884,7 +884,7 @@
                 }
             },
             "C": {
-                "Choice": "f(x) = (176x + 44)²",
+                "Choice": "f(x) = (176x + 44)^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This function represents a square with side lengths (176x + 44) inches.",
@@ -892,7 +892,7 @@
                 }
             },
             "D": {
-                "Choice": "f(x) = (176x + 176)²",
+                "Choice": "f(x) = (176x + 176)^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This function represents a square with side lengths (176x + 176) inches.",
@@ -920,11 +920,11 @@
         "Explain": false,
         "Content": [
             ":box:14x/7y = 2√(w + 19)",
-            "The given equation relates the distinct positive real numbers w, x, and y. Which equation correctly expresses w in terms of x and y?"
+            "The given equation relates the distinct positive real numbers w, x, and y. Which equation correctly expresses w in terms of `x` and `y`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "w = √(x/y) – 19",
+                "Choice": "w = √(x/y) - 19",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation isn't equivalent to the given equation.",
@@ -932,7 +932,7 @@
                 }
             },
             "B": {
-                "Choice": "w = √(28x/19y) – 19",
+                "Choice": "w = √(28x/19y) - 19",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation isn't equivalent to the given equation.",
@@ -940,15 +940,15 @@
                 }
             },
             "C": {
-                "Choice": "w = (x/y)² – 19",
+                "Choice": "w = (x/y)^2 - 19",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Dividing each side of the given equation by 2 yields 14x/14y = (2√(w + 19))/2, or x/y = √(w + 19). Because it's given that each of the variables is positive, squaring each side of this equation yields the equivalent equation (x/y)² = w + 19. Subtracting 19 from each side of this equation yields (x/y)² – 19 = w, or w = (x/y)² – 19.",
+                    "Rationale": "Dividing each side of the given equation by 2 yields 14x/14y = (2√(w + 19))/2, or x/y = √(w + 19). Because it's given that each of the variables is positive, squaring each side of this equation yields the equivalent equation (x/y)^2 = w + 19. Subtracting 19 from each side of this equation yields (x/y)^2 - 19 = w, or w = (x/y)^2 - 19.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "w = (28x/19y)² – 19",
+                "Choice": "w = (28x/19y)^2 - 19",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation isn't equivalent to the given equation.",
@@ -1092,7 +1092,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The expression 4x² + bx – 45, where b is a constant, can be rewritten as (hx + k)(x + j), where h, k, and j are integer constants. Which of the following must be an integer?"
+            "The expression 4x^2+ bx - 45, where b is a constant, can be rewritten as (hx + k)(x + j), where h, k, and j are integer constants. Which of the following must be an integer?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1123,7 +1123,7 @@
                 "Choice": "45/k",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that 4x² + bx - 45 can be rewritten as (hx + k)(x + j). The expression (hx + k)(x + j) can be rewritten as hx² + jhx + kx + kj, or hx² + (jh + k)x + kj. Therefore, hx² + (jh + k)x + kj is equivalent to 4x² + bx - 45. It follows that kj = -45. Dividing each side of this equation by k yields j = -45/k. Since j is an integer, -45/k must be an integer. Therefore, 45/k must also be an integer.",
+                    "Rationale": "It's given that 4x^2+ bx - 45 can be rewritten as (hx + k)(x + j). The expression (hx + k)(x + j) can be rewritten as hx^2+ jhx + kx + kj, or hx^2+ (jh + k)x + kj. Therefore, hx^2+ (jh + k)x + kj is equivalent to 4x^2+ bx - 45. It follows that kj = -45. Dividing each side of this equation by k yields j = -45/k. Since j is an integer, -45/k must be an integer. Therefore, 45/k must also be an integer.",
                     "Percent": 0
                 }
             }
@@ -1147,12 +1147,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:y = 2x² – 21x + 64\n\ny = 3x + a",
+            ":box:y = 2x^2- 21x + 64\n\ny = 3x + a",
             "In the given system of equations, a is a constant. The graphs of the equations in the given system intersect at exactly one point, (x, y),in the xy-plane. What is the value of x?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–8",
+                "Choice": "-8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the value of a, not x.",
@@ -1160,7 +1160,7 @@
                 }
             },
             "B": {
-                "Choice": "–6",
+                "Choice": "-6",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1171,7 +1171,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graphs of the equations in the given system intersect at exactly one point, (x, y), in the xy-plane. Therefore, (x, y) is the only solution to the given system of equations. The given system of equations can be solved by subtracting the second equation, y = 3x + a, from the first equation, y = 2x² - 21x + 64. This yields y - y = (2x² - 21x + 64) - (3x + a), or 0 = 2x² - 24x - a. Since the given system has only one solution, this equation has only one solution. A quadratic equation in the form rx² + sx + t = 0, where r, s, and t are constants, has one solution if and only if the discriminant, s² - 4rt, is equal to zero. Substituting 2 for r, -24 for s, and -a + 64 for t in the expression s² - 4rt yields (-24)² - (4)(2)(64 - a). Setting this expression equal to zero yields (-24)² - (4)(2)(64 - a), or 8a + 64 = 0. Subtracting 64 from both sides of this equation yields 8a = -64. Dividing both sides of this equation by 8 yields a = -8. Substituting -8 for a in the equation 0 = 2x² - 24x + 64 - a yields 0 = 2x² - 24x + 64 + 8, or 0 = 2x² - 24x + 72. Factoring 2 from the right-hand side of this equation yields 0 = 2(x² - 12x + 36). Dividing both sides of this equation by 2 yields 0 = x² - 12x + 36, which is equivalent to 0 = (x - 6)(x - 6), or 0 = (x - 6)². Taking the square root of both sides of this equation yields 0 = x - 6. Adding 6 to both sides of this equation yields x = 6.",
+                    "Rationale": "It's given that the graphs of the equations in the given system intersect at exactly one point, (x, y), in the xy-plane. Therefore, (x, y) is the only solution to the given system of equations. The given system of equations can be solved by subtracting the second equation, y = 3x + a, from the first equation, y = 2x^2- 21x + 64. This yields y - y = (2x^2- 21x + 64) - (3x + a), or 0 = 2x^2- 24x - a. Since the given system has only one solution, this equation has only one solution. A quadratic equation in the form rx^2+ sx + t = 0, where r, s, and t are constants, has one solution if and only if the discriminant, s² - 4rt, is equal to zero. Substituting 2 for r, -24 for s, and -a + 64 for t in the expression s² - 4rt yields (-24)^2 - (4)(2)(64 - a). Setting this expression equal to zero yields (-24)^2 - (4)(2)(64 - a), or 8a + 64 = 0. Subtracting 64 from both sides of this equation yields 8a = -64. Dividing both sides of this equation by 8 yields a = -8. Substituting -8 for a in the equation 0 = 2x^2- 24x + 64 - a yields 0 = 2x^2- 24x + 64 + 8, or 0 = 2x^2- 24x + 72. Factoring 2 from the right-hand side of this equation yields 0 = 2(x^2- 12x + 36). Dividing both sides of this equation by 2 yields 0 = x^2- 12x + 36, which is equivalent to 0 = (x - 6)(x - 6), or 0 = (x - 6)^2. Taking the square root of both sides of this equation yields 0 = x - 6. Adding 6 to both sides of this equation yields x = 6.",
                     "Percent": 0
                 }
             },
@@ -1226,7 +1226,7 @@
                 "Choice": "58 + 58√2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the triangle is an isosceles right triangle, the two sides that form the right angle must be the same length. Let x be the length, in inches, of each of those sides. The Pythagorean theorem states that in a right triangle, a² + b² = c², where c is the length of the hypotenuse and a and b are the lengths of the other two sides. Substituting x for a, x for b, and 58 for c in this equation yields x² + x² = 58², or 2x² = 58². Dividing each side of this equation by 2 yields x² = 58²/2, or x² = (2 • 58²)/4. Taking the square root of each side of this equation yields two solutions: x = (58√2)/2 and x = -(58√2)/2. The value of x must be positive because it represents a side length. Therefore, x = (58√2)/2, or x = 29√2. The perimeter, in inches, of the triangle is 58 + x + x, or 58 + 2x. Substituting 29√2 for x in this expression gives a perimeter, in inches, of 58 + 2(29√2), or 58 + 58√2.",
+                    "Rationale": "Since the triangle is an isosceles right triangle, the two sides that form the right angle must be the same length. Let x be the length, in inches, of each of those sides. The Pythagorean theorem states that in a right triangle, `a^2+b^2=c^2`, where c is the length of the hypotenuse and a and b are the lengths of the other two sides. Substituting x for a, x for b, and 58 for c in this equation yields x^2+ x^2= 58^2, or 2x^2= 58^2. Dividing each side of this equation by 2 yields x^2= 58^2/2, or x^2= (2 • 58^2)/4. Taking the square root of each side of this equation yields two solutions: x = (58√2)/2 and x = -(58√2)/2. The value of x must be positive because it represents a side length. Therefore, x = (58√2)/2, or x = 29√2. The perimeter, in inches, of the triangle is 58 + x + x, or 58 + 2x. Substituting 29√2 for x in this expression gives a perimeter, in inches, of 58 + 2(29√2), or 58 + 58√2.",
                     "Percent": 0
                 }
             },
@@ -1258,38 +1258,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the xy-plane, a parabola has vertex (9, –14) and intersects the x-axis at two points. If the equation of the parabola is written in the form y = ax² + bx + c, where a, b, and c are constants, which of the following could be the value of a + b + c?"
+            "In the xy-plane, a parabola has vertex (9, -14) and intersects the x-axis at two points. If the equation of the parabola is written in the form y = ax^2+ bx + c, where a, b, and c are constants, which of the following could be the value of a + b + c?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–23",
+                "Choice": "-23",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax² + bx + c, where a, b, and c are constants and a + b + c = -23, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the x-axis at zero points, not two points.",
+                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax^2+ bx + c, where a, b, and c are constants and a + b + c = -23, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the x-axis at zero points, not two points.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "–19",
+                "Choice": "-19",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax² + bx + c, where a, b, and c are constants and a + b + c = -19, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the x-axis at zero points, not two points.",
+                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax^2+ bx + c, where a, b, and c are constants and a + b + c = -19, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the x-axis at zero points, not two points.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "–14",
+                "Choice": "-14",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax² + bx + c, where a, b, and c are constants and a + b + c = -14, then the value of a will be 0, which is inconsistent with the equation of a parabola.",
+                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax^2+ bx + c, where a, b, and c are constants and a + b + c = -14, then the value of a will be 0, which is inconsistent with the equation of a parabola.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "–12",
+                "Choice": "-12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a parabola in the xy-plane can be written in the form y = a(x - h)² + k, where a is a constant and (h, k) is the vertex of the parabola. If a is positive, the parabola will open upward, and if a is negative, the parabola will open downward. It's given that the parabola has vertex (9, -14). Substituting 9 for h and 14- for k in the equation y = a(x - h)² + k gives y = a(x - 9)² - 14, which can be rewritten as y = a(x - 9)(x - 9) - 14, or y = a(x² - 18x + 81) - 14. Distributing the factor of a on the right-hand side of this equation yields y = ax² - 18ax + 81a - 14. Therefore, the equation of the parabola, y = ax² - 18ax + 81a - 14, can be written in the form y = ax² + bx + c, where a = a, b = -18a, and c = 81a - 14. Substituting -18a for b and 81a - 14 for c in the expression a + b + c yields (a) + (-18a) + (81a - 14), or 64a - 14. Since the vertex of the parabola, (9, -14), is below the x-axis, and it's given that the parabola intersects the x-axis at two points, the parabola must open upward. Therefore, the constant a must have a positive value. Setting the expression 64a - 14 equal to the value in this choice yields 64a - 14 = -12. Adding 14 to both sides of this equation yields 64a = 2. Dividing both sides of this equation by 64 yields a = 2/64, which is a positive value. Therefore, if the equation of the parabola is written in the form y = ax² + bx + c, where a, b, and c are constants, the value of a + b + c could be -12.",
+                    "Rationale": "The equation of a parabola in the xy-plane can be written in the form y = a(x - h)^2 + k, where a is a constant and (h, k) is the vertex of the parabola. If a is positive, the parabola will open upward, and if a is negative, the parabola will open downward. It's given that the parabola has vertex (9, -14). Substituting 9 for h and 14- for k in the equation y = a(x - h)^2 + k gives y = a(x - 9)^2 - 14, which can be rewritten as y = a(x - 9)(x - 9) - 14, or y = a(x^2- 18x + 81) - 14. Distributing the factor of a on the right-hand side of this equation yields y = ax^2- 18ax + 81a - 14. Therefore, the equation of the parabola, y = ax^2- 18ax + 81a - 14, can be written in the form y = ax^2+ bx + c, where a = a, b = -18a, and c = 81a - 14. Substituting -18a for b and 81a - 14 for c in the expression a + b + c yields (a) + (-18a) + (81a - 14), or 64a - 14. Since the vertex of the parabola, (9, -14), is below the x-axis, and it's given that the parabola intersects the x-axis at two points, the parabola must open upward. Therefore, the constant a must have a positive value. Setting the expression 64a - 14 equal to the value in this choice yields 64a - 14 = -12. Adding 14 to both sides of this equation yields 64a = 2. Dividing both sides of this equation by 64 yields a = 2/64, which is a positive value. Therefore, if the equation of the parabola is written in the form y = ax^2+ bx + c, where a, b, and c are constants, the value of a + b + c could be -12.",
                     "Percent": 0
                 }
             }
@@ -1313,7 +1313,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Function f is defined by f(x) = –aˣ + b, where a and b are constants. In the xy-plane, the graph of y = f(x) – 15 has a y-intercept at (0, –99/7). The product of a and b is 65/7. What is the value of a?"
+            "Function f is defined by f(x) = -aˣ + b, where a and b are constants. In the xy-plane, the graph of y = f(x) - 15 has a y-intercept at (0, -99/7). The product of a and b is 65/7. What is the value of a?"
         ],
         "AnswerChoices": {
             "KEY": {

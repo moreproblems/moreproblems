@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "An expression is shown below.",
-            "5 • (–7)² ÷ –7",
+            "5 • (-7)^2 ÷ -7",
             "What is the value of the expression?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–35",
+                "Choice": "-35",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -28,10 +28,10 @@
                 }
             },
             "B": {
-                "Choice": "–10",
+                "Choice": "-10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses –7(2) instead of (–7)² and makes sign error.",
+                    "Rationale": "Uses -7(2) instead of (-7)^2 and makes sign error.",
                     "Percent": 14
                 }
             },
@@ -39,7 +39,7 @@
                 "Choice": "10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses –7(2) instead of (–7)².",
+                    "Rationale": "Uses -7(2) instead of (-7)^2.",
                     "Percent": 12
                 }
             },
@@ -129,7 +129,7 @@
         "Explain": false,
         "Content": [
             "A tank contains 2,450 gallons of fuel. The changes in the number of gallons of fuel in the tank over three days are listed below.",
-            "–1,208\t+790\t–514",
+            "-1,208\t+790\t-514",
             "How many gallons of fuel are in the tank at the end of the three days?"
         ],
         "AnswerChoices": {
@@ -137,7 +137,7 @@
                 "Choice": "62",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts all 3 values, resulting in –62; makes the answer positive, realizing the tank could not hold a negative quantity.",
+                    "Rationale": "Subtracts all 3 values, resulting in -62; makes the answer positive, realizing the tank could not hold a negative quantity.",
                     "Percent": 8
                 }
             },
@@ -161,7 +161,7 @@
                 "Choice": "3,382",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "uses the opposite operation of what each sign indicates, finding 2,450 + 1,208 – 790 + 514.",
+                    "Rationale": "uses the opposite operation of what each sign indicates, finding 2,450 + 1,208 - 790 + 514.",
                     "Percent": 8
                 }
             }
@@ -191,15 +191,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–5.75 + 4",
+                "Choice": "-5.75 + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses +4 since the arrow stops at –4, but knows addition moves to the right.",
+                    "Rationale": "Uses +4 since the arrow stops at -4, but knows addition moves to the right.",
                     "Percent": 13
                 }
             },
             "B": {
-                "Choice": "–5.75 + 1.75",
+                "Choice": "-5.75 + 1.75",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -207,15 +207,15 @@
                 }
             },
             "C": {
-                "Choice": "–5.75 + (–4)",
+                "Choice": "-5.75 + (-4)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses –4 since that is where the arrow stops.",
+                    "Rationale": "Uses -4 since that is where the arrow stops.",
                     "Percent": 129
                 }
             },
             "D": {
-                "Choice": "–5.75 + (–1.75)",
+                "Choice": "-5.75 + (-1.75)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reasons that 1.75 is negative since the arrows are to the left of 0.",
@@ -420,7 +420,7 @@
                 "Choice": "$10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (75 – 45) ÷ 3.",
+                    "Rationale": "Calculates (75 - 45) ÷ 3.",
                     "Percent": 4
                 }
             },
@@ -428,7 +428,7 @@
                 "Choice": "$12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (225 – 45) ÷ 15.",
+                    "Rationale": "Calculates (225 - 45) ÷ 15.",
                     "Percent": 3
                 }
             },
@@ -436,7 +436,7 @@
                 "Choice": "$14",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (45 – 3) ÷ 3.",
+                    "Rationale": "Calculates (45 - 3) ÷ 3.",
                     "Percent": 4
                 }
             },
@@ -578,7 +578,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Simplify: 4x – 5.2y + 6y + 7.9x – 8x"
+            "Simplify: 4x - 5.2y + 6y + 7.9x - 8x"
         ],
         "AnswerChoices": {
             "A": {
@@ -590,7 +590,7 @@
                 }
             },
             "B": {
-                "Choice": "–1.3x + 6y",
+                "Choice": "-1.3x + 6y",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts 5.2 from the coefficient of the x-terms instead of subtracting it from the coefficients of the y-term.",

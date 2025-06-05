@@ -21,7 +21,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–5, 0)",
+                "Choice": "(-5, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -268,10 +268,10 @@
                 }
             },
             "D": {
-                "Choice": "√(4² + 5²)",
+                "Choice": "√(4^2 + 5^2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "By the Pythagorean theorem, if a right triangle has a hypotenuse with length c and legs with lengths a and b, then c² = a² + b². In the right triangle shown, the hypotenuse has length c and the legs have lengths a and b. It's given that a = 4 and b = 5. Substituting 4 for a and 5 for b in the Pythagorean theorem yields c² = 4² + 5². Taking the square root of both sides of this equation yields c = ±√(4² + 5²). Since the length of a side of a triangle must be positive, the value of c is √(4² + 5²).",
+                    "Rationale": "By the Pythagorean theorem, if a right triangle has a hypotenuse with length c and legs with lengths a and b, then c² = a² + b². In the right triangle shown, the hypotenuse has length c and the legs have lengths a and b. It's given that a = 4 and b = 5. Substituting 4 for a and 5 for b in the Pythagorean theorem yields c² = 4^2 + 5^2. Taking the square root of both sides of this equation yields c = ±√(4^2 + 5^2). Since the length of a side of a triangle must be positive, the value of c is √(4^2 + 5^2).",
                     "Percent": 0
                 }
             }
@@ -357,11 +357,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = x/10 – 2. What is the y-intercept of the graph of y = f(x) in the xy-plane?"
+            "The function f is defined by f(x) = x/10 - 2. What is the y-intercept of the graph of `y=f(x)` in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–2, 0)",
+                "Choice": "(-2, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -369,10 +369,10 @@
                 }
             },
             "B": {
-                "Choice": "(0, –2)",
+                "Choice": "(0, -2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of the graph of a function in the xy-plane is the point on the graph where x = 0. It's given that f(x) = x/10 - 2. Substituting 0 for x in this equation yields f(0) = (0)/10 - 2, or f(0) = -2. Since it's given that y = f(x), it follows that y = -2 when x = 0. Therefore, the y-intercept of the graph of y = f(x) in the xy-plane is (0, –2).",
+                    "Rationale": "The y-intercept of the graph of a function in the xy-plane is the point on the graph where x = 0. It's given that f(x) = x/10 - 2. Substituting 0 for x in this equation yields f(0) = (0)/10 - 2, or f(0) = -2. Since it's given that y = f(x), it follows that y = -2 when x = 0. Therefore, the y-intercept of the graph of `y=f(x)` in the xy-plane is (0, -2).",
                     "Percent": 0
                 }
             },
@@ -495,10 +495,10 @@
                 }
             },
             "D": {
-                "Choice": "g(x) = 7x³ – 2",
+                "Choice": "g(x) = 7x³ - 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the graph of y = g(x) is the result of shifting the graph of y = f(x) down k units in the xy-plane, the function g can be defined by an equation of the form g(x) = f(x) - k. It's given that f(x) = 7x³ and the graph of y = g(x) is the result of shifting the graph of y = f(x) down 2 units. Substituting 7x³ for f(x) and 2 for k in the equation g(x) = f(x) yields g(x) = 7x³ – 2.",
+                    "Rationale": "If the graph of y = g(x) is the result of shifting the graph of y = f(x) down k units in the xy-plane, the function g can be defined by an equation of the form g(x) = f(x) - k. It's given that f(x) = 7x³ and the graph of y = g(x) is the result of shifting the graph of y = f(x) down 2 units. Substituting 7x³ for f(x) and 2 for k in the equation g(x) = f(x) yields g(x) = 7x³ - 2.",
                     "Percent": 0
                 }
             }
@@ -522,7 +522,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y = –3x\n4x + y = 15",
+            ":ibox:y = -3x\n4x + y = 15",
             "The solution to the given system of equations is (x, y). What is the value of x?"
         ],
         "AnswerChoices": {
@@ -751,11 +751,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If 9(4 – 3x) + 2 = 8(4 – 3x) + 18, what is the value of 4 – 3x?"
+            "If 9(4 - 3x) + 2 = 8(4 - 3x) + 18, what is the value of 4 - 3x?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–16",
+                "Choice": "-16",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -763,7 +763,7 @@
                 }
             },
             "B": {
-                "Choice": "–4",
+                "Choice": "-4",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the value of x, not x 4 - 3x.",
@@ -1097,34 +1097,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–6x + y = 18",
+                "Choice": "-6x + y = 18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The equation –6x + y = 18 and the given equation represent the same line in the xy-plane. Therefore, a system of these linear equations would have infinitely many solutions, rather than no solution.",
+                    "Rationale": "The equation -6x + y = 18 and the given equation represent the same line in the xy-plane. Therefore, a system of these linear equations would have infinitely many solutions, rather than no solution.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "–6x + y = 22",
+                "Choice": "-6x + y = 22",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A system of two linear equations in two variables, x and y, has no solution if the lines represented by the equations in the xy-plane are parallel and distinct. Lines represented by equations in standard form, Ax + By = C and Dx + Ey = F, are parallel if the coefficients for x and y in one equation are proportional to the corresponding coefficients in the other equation, meaning D/A = E/B; and the lines are distinct if the constants are not proportional, meaning F/C is not equal to D/A or E/B. The given equation, y = 6x + 18, can be written in standard form by subtracting 6x from both sides of the equation to yield –6x + y = 18. Therefore, the given equation can be written in the form Ax + By = C, where A = -,6 B = 1, and C = 18. The equation in this choice, –6x + y = 22, is written in the form Dx + Ey = F, where D = -6, E = 1, and F = 22. Therefore, D/A = (-6)/(-6), which can be rewritten as D/A = 1; E/B = 1/1, which can be rewritten as E/B = 1; and F/C = 22/18, which can be rewritten as F/C = 11/9. Since D/A = 1, E/B = 1, and F/C is not equal to 1, it follows that the given equation and the equation –6x + y = 22 are parallel and distinct. Therefore, a system of two linear equations consisting of the given equation and the equation –6x + y = 22 has no solution. Thus, the equation in this choice could be the second equation in the system.",
+                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the xy-plane are parallel and distinct. Lines represented by equations in standard form, Ax + By = C and Dx + Ey = F, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients in the other equation, meaning D/A = E/B; and the lines are distinct if the constants are not proportional, meaning F/C is not equal to D/A or E/B. The given equation, y = 6x + 18, can be written in standard form by subtracting 6x from both sides of the equation to yield -6x + y = 18. Therefore, the given equation can be written in the form Ax + By = C, where A = -,6 B = 1, and C = 18. The equation in this choice, -6x + y = 22, is written in the form Dx + Ey = F, where D = -6, E = 1, and F = 22. Therefore, D/A = (-6)/(-6), which can be rewritten as D/A = 1; E/B = 1/1, which can be rewritten as E/B = 1; and F/C = 22/18, which can be rewritten as F/C = 11/9. Since D/A = 1, E/B = 1, and F/C is not equal to 1, it follows that the given equation and the equation -6x + y = 22 are parallel and distinct. Therefore, a system of two linear equations consisting of the given equation and the equation -6x + y = 22 has no solution. Thus, the equation in this choice could be the second equation in the system.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "–12x + y = 36",
+                "Choice": "-12x + y = 36",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The equation –12x + y = 36 and the given equation represent lines in the xy-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution. ",
+                    "Rationale": "The equation -12x + y = 36 and the given equation represent lines in the xy-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution. ",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "–12x + y = 18",
+                "Choice": "-12x + y = 18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The equation –12x + y = 18 and the given equation represent lines in the xy-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution.",
+                    "Rationale": "The equation -12x + y = 18 and the given equation represent lines in the xy-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution.",
                     "Percent": 0
                 }
             }
@@ -1152,7 +1152,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(90 – (t – k))°",
+                "Choice": "(90 - (t - k))°",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1160,7 +1160,7 @@
                 }
             },
             "B": {
-                "Choice": "(90 – (t + k))°",
+                "Choice": "(90 - (t + k))°",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1168,10 +1168,10 @@
                 }
             },
             "C": {
-                "Choice": "(90 – t)°",
+                "Choice": "(90 - t)°",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since P = (4, 5) and Q = (4, 7), side PQ is parallel to the y-axis and has a length of 2. Since P = (4, 5) and R = (6, 5), side PR is parallel to the x-axis and has a length of 2. Therefore, triangle PQR is a right isosceles triangle, where ∠P has measure 90° and ∠Q and ∠R each have measure 45°. It follows that if the measure of ∠Q is t°, then t = 45. Since L = (4, 5) and M = (4, 7 + k), side LM is parallel to the y-axis and has a length of k + 2. Since L = (4, 5) and N = (6 + k, 5), side LN is parallel to the x-axis and has a length of k + 2. Therefore, triangle LMN is a right isosceles triangle, where ∠L has measure 90° and ∠M and ∠N each have measure 45°. Of the given choices, only (90 – t)° is equal to 45°, so the measure of ∠N + is (90 – t)°.",
+                    "Rationale": "Since P = (4, 5) and Q = (4, 7), side PQ is parallel to the y-axis and has a length of 2. Since P = (4, 5) and R = (6, 5), side PR is parallel to the x-axis and has a length of 2. Therefore, triangle PQR is a right isosceles triangle, where ∠P has measure 90° and ∠Q and ∠R each have measure 45°. It follows that if the measure of ∠Q is t°, then t = 45. Since L = (4, 5) and M = (4, 7 + k), side LM is parallel to the y-axis and has a length of k + 2. Since L = (4, 5) and N = (6 + k, 5), side LN is parallel to the x-axis and has a length of k + 2. Therefore, triangle LMN is a right isosceles triangle, where ∠L has measure 90° and ∠M and ∠N each have measure 45°. Of the given choices, only (90 - t)° is equal to 45°, so the measure of ∠N + is (90 - t)°.",
                     "Percent": 0
                 }
             },
@@ -1208,7 +1208,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(r/5 + 7, –r/5 + 35)",
+                "Choice": "(r/5 + 7, -r/5 + 35)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1216,10 +1216,10 @@
                 }
             },
             "B": {
-                "Choice": "(–3r/2 + 7/2, r)",
+                "Choice": "(-3r/2 + 7/2, r)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point (x, y) lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, –3r/2 + 7/2 and r, for x and y, respectively, in the first equation yields 2(–3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (–3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
+                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point (x, y) lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, -3r/2 + 7/2 and r, for `x` and `y`, respectively, in the first equation yields 2(-3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (-3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
                     "Percent": 0
                 }
             },
@@ -1232,7 +1232,7 @@
                 }
             },
             "D": {
-                "Choice": "(r, –3r/2 + 7/2)",
+                "Choice": "(r, -3r/2 + 7/2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1259,12 +1259,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "x²/√(x² – c²) = c²/√(x² – c²) + 39",
+            "x^2/√(x^2- c²) = c²/√(x^2- c²) + 39",
             "In the given equation, c is a positive constant. Which of the following is one of the solutions to the given equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–c",
+                "Choice": "-c",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1272,7 +1272,7 @@
                 }
             },
             "B": {
-                "Choice": "–c² – 39²",
+                "Choice": "-c² - 39^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1280,7 +1280,7 @@
                 }
             },
             "C": {
-                "Choice": "–√(39² – c²)",
+                "Choice": "-√(39^2 - c²)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1288,10 +1288,10 @@
                 }
             },
             "D": {
-                "Choice": "–√(c² + 39²)",
+                "Choice": "-√(c² + 39^2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If x² – c² ≤ 0, then neither side of the given equation is defined and there can be no solution. Therefore, x² – c² > 0. Subtracting c²/√(x² – c²) from both sides of the given equation yields x²/√(x² – c²) - c²/√(x² – c²) = 39, or (x² - c²)/√(x² – c²) = 39. Squaring both sides of this equation yields  ((x² - c²)/√(x² – c²))² = 39², or (x² - c²)(x² - c²)/(x² – c²) = 39². Since x² – c² is positive and, therefore, nonzero, the expression (x² - c²)/(x² – c²) is defined and equivalent to 1. It follows that the equation (x² - c²)(x² - c²)/(x² – c²) = 39² can be rewritten as ((x² - c²)/(x² – c²))(x² - c²) = 39², or (1)(x² - c²) = 39², which is equivalent to x² - c² = 39². Adding c² to both sides of this equation yields x² = c² + 39². Taking the square root of both sides of this equation yields two solutions: x = √(c² + 39²) and x = -√(c² + 39²). Therefore, of the given choices, -√(c² + 39²) is one of the solutions to the given equation.",
+                    "Rationale": "If x^2- c² ≤ 0, then neither side of the given equation is defined and there can be no solution. Therefore, x^2- c² > 0. Subtracting c²/√(x^2- c²) from both sides of the given equation yields x^2/√(x^2- c²) - c²/√(x^2- c²) = 39, or (x^2- c²)/√(x^2- c²) = 39. Squaring both sides of this equation yields  ((x^2- c²)/√(x^2- c²))^2 = 39^2, or (x^2- c²)(x^2- c²)/(x^2- c²) = 39^2. Since x^2- c² is positive and, therefore, nonzero, the expression (x^2- c²)/(x^2- c²) is defined and equivalent to 1. It follows that the equation (x^2- c²)(x^2- c²)/(x^2- c²) = 39^2 can be rewritten as ((x^2- c²)/(x^2- c²))(x^2- c²) = 39^2, or (1)(x^2- c²) = 39^2, which is equivalent to x^2- c² = 39^2. Adding c² to both sides of this equation yields x^2= c² + 39^2. Taking the square root of both sides of this equation yields two solutions: x = √(c² + 39^2) and x = -√(c² + 39^2). Therefore, of the given choices, -√(c² + 39^2) is one of the solutions to the given equation.",
                     "Percent": 0
                 }
             }
@@ -1322,7 +1322,7 @@
                 "Choice": "equal:168",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The quadratic function g gives the estimated depth of the seal, g(t), in meters, t minutes after the seal enters the water. It's given that function g estimates that the seal reached its maximum depth of 302.4 meters 6 minutes after it entered the water. Therefore, function g can be expressed in vertex form as g(t) = a(t - 6)² + 302.4, where a is a constant. Since it's also given that the seal reached the surface of the water after 12 minutes, g(12) = 0. Substituting 12 for t and 0 for g(t) in g(t) = a(t - 6)² + 302.4 yields 0 = a(12 - 6)² + 302.4, or 36a = -302.4. Dividing both sides of this equation by 36 gives a = -8.4. Substituting -8.4 for a in g(t) = a(t - 6)² + 302.4 gives g(t) = -8.4(t - 6)² + 302.4. Substituting 10 for t in g(t) gives g(10) = -8.4(10 - 6)² + 302.4, which is equivalent to g(10) = -8.4(4)² + 302.4, or g(10) = 168. Therefore, the estimated depth, to the nearest meter, of the seal 10 minutes after it entered the water was 168 meters.",
+                    "Rationale": "The quadratic function g gives the estimated depth of the seal, g(t), in meters, t minutes after the seal enters the water. It's given that function g estimates that the seal reached its maximum depth of 302.4 meters 6 minutes after it entered the water. Therefore, function g can be expressed in vertex form as g(t) = a(t - 6)^2 + 302.4, where a is a constant. Since it's also given that the seal reached the surface of the water after 12 minutes, g(12) = 0. Substituting 12 for t and 0 for g(t) in g(t) = a(t - 6)^2 + 302.4 yields 0 = a(12 - 6)^2 + 302.4, or 36a = -302.4. Dividing both sides of this equation by 36 gives a = -8.4. Substituting -8.4 for a in g(t) = a(t - 6)^2 + 302.4 gives g(t) = -8.4(t - 6)^2 + 302.4. Substituting 10 for t in g(t) gives g(10) = -8.4(10 - 6)^2 + 302.4, which is equivalent to g(10) = -8.4(4)^2 + 302.4, or g(10) = 168. Therefore, the estimated depth, to the nearest meter, of the seal 10 minutes after it entered the water was 168 meters.",
                     "Percent": 0
                 }
             }

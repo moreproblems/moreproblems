@@ -258,7 +258,7 @@
                 "Choice": "1.9 mi",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that because the diagram represents a right triangle (a closed figure with three sides and one 90 degree angle) with legs of 1.7 miles and 0.9 mile, the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides, a² + b² = c²) can be used to calculate this distance. The distance in miles is equal to √(1.7² + 0.9²). When the two values under the radical symbol are squared, the result is √(2.89 + 0.81), and when the squares are added, the result is √3.7. The value of √3.7 is approximately 1.9, which means the approximate distance from Natasha's house to the library is 1.9 miles.",
+                    "Rationale": "The student should have determined that because the diagram represents a right triangle (a closed figure with three sides and one 90 degree angle) with legs of 1.7 miles and 0.9 mile, the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides, `a^2+b^2=c^2`) can be used to calculate this distance. The distance in miles is equal to √(1.7^2 + 0.9^2). When the two values under the radical symbol are squared, the result is √(2.89 + 0.81), and when the squares are added, the result is √3.7. The value of √3.7 is approximately 1.9, which means the approximate distance from Natasha's house to the library is 1.9 miles.",
                     "Percent": 75
                 }
             },
@@ -298,7 +298,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A relation contains the points (1, 2), (2, –1), (3, 0), (4, 1), and (5, –1). Which statement accurately describes this relation?"
+            "A relation contains the points (1, 2), (2, -1), (3, 0), (4, 1), and (5, -1). Which statement accurately describes this relation?"
         ],
         "AnswerChoices": {
             "F": {
@@ -357,23 +357,23 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "V = π(6)² • h",
+                "Choice": "V = π(6)^2 • h",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student used the formula V = πr²h, where V represents the volume of the cylinder in cubic units, r represents the radius (distance from the center to the circumference of a circle) of the cylinder in units, and h represents the height (vertical distance from top to bottom) of the cylinder in units. Because the length of the diameter (a straight line going through the center of a circle connecting two points on the circumference) of the cylinder is 12 feet, the radius of the cylinder would be half of 12 feet, or 6 feet. Substituting 6 for r in the formula results in V = π(6)² • h.",
+                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student used the formula V = πr²h, where V represents the volume of the cylinder in cubic units, r represents the radius (distance from the center to the circumference of a circle) of the cylinder in units, and h represents the height (vertical distance from top to bottom) of the cylinder in units. Because the length of the diameter (a straight line going through the center of a circle connecting two points on the circumference) of the cylinder is 12 feet, the radius of the cylinder would be half of 12 feet, or 6 feet. Substituting 6 for r in the formula results in V = π(6)^2 • h.",
                     "Percent": 75
                 }
             },
             "B": {
-                "Choice": "V = π(6h)²",
+                "Choice": "V = π(6h)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely multiplied π by the square of the product (answer) of the radius and the height in the formula. The student needs to focus on understanding the formula for determining the volume of a cylinder, V = πr²h.",
+                    "Rationale": "The student likely multiplied `pi` by the square of the product (answer) of the radius and the height in the formula. The student needs to focus on understanding the formula for determining the volume of a cylinder, V = πr²h.",
                     "Percent": 8
                 }
             },
             "C": {
-                "Choice": "V = π(12)² • h",
+                "Choice": "V = π(12)^2 • h",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the length of the diameter in place of the length of the radius in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, V = πr²h.",
@@ -381,10 +381,10 @@
                 }
             },
             "D": {
-                "Choice": "V = π(12h)²",
+                "Choice": "V = π(12h)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the length of the diameter in place of the length of the radius, resulting in π multiplied by the square of the product (answer) of the diameter and the height in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, V = πr²h.",
+                    "Rationale": "The student likely used the length of the diameter in place of the length of the radius, resulting in `pi` multiplied by the square of the product (answer) of the diameter and the height in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, V = πr²h.",
                     "Percent": 5
                 }
             }
@@ -416,7 +416,7 @@
                 "Choice": "18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely wrote the equation 20 + x = 35 – 2x and solved it incorrectly by adding 20 to both sides of the equation, dividing both sides of the equation by 3, and rounding the answer to the nearest whole number. The student needs to focus on writing equations from a verbal situation and using the proper steps to solve the equation.",
+                    "Rationale": "The student likely wrote the equation 20 + x = 35 - 2x and solved it incorrectly by adding 20 to both sides of the equation, dividing both sides of the equation by 3, and rounding the answer to the nearest whole number. The student needs to focus on writing equations from a verbal situation and using the proper steps to solve the equation.",
                     "Percent": 5
                 }
             },
@@ -424,7 +424,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely wrote and correctly solved the equation 20 + x = 35 – 2x. The student needs to focus on writing equations from a verbal situation.",
+                    "Rationale": "The student likely wrote and correctly solved the equation 20 + x = 35 - 2x. The student needs to focus on writing equations from a verbal situation.",
                     "Percent": 13
                 }
             },
@@ -432,7 +432,7 @@
                 "Choice": "15",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student likely determined that the problem can be solved using an equation where x represents the number of pieces Julie gave away. Because Conrad gave away twice as many pieces of gum as Julie did, the expression 2x represents the number of pieces of gum Conrad gave away. The expression 20 – x represents the number of pieces of gum Julie has left, and the expression 35 – 2x represents the number of pieces of gum Conrad has left. The equation 20 – x = 35 – 2x represents that Julie and Conrad have the same number of pieces of gum left. To solve the equation, 2x can be added to both sides of the equation and 20 can be subtracted from both sides of the equation, which results in x = 15. This means that Julie gave away 15 pieces of gum.",
+                    "Rationale": "The student likely determined that the problem can be solved using an equation where x represents the number of pieces Julie gave away. Because Conrad gave away twice as many pieces of gum as Julie did, the expression 2x represents the number of pieces of gum Conrad gave away. The expression 20 - x represents the number of pieces of gum Julie has left, and the expression 35 - 2x represents the number of pieces of gum Conrad has left. The equation 20 - x = 35 - 2x represents that Julie and Conrad have the same number of pieces of gum left. To solve the equation, 2x can be added to both sides of the equation and 20 can be subtracted from both sides of the equation, which results in x = 15. This means that Julie gave away 15 pieces of gum.",
                     "Percent": 75
                 }
             },
@@ -440,7 +440,7 @@
                 "Choice": "8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely wrote and correctly solved the equation 20 + x = 35 – x and rounded the answer to the nearest whole number. The student needs to focus on writing equations from a verbal situation.",
+                    "Rationale": "The student likely wrote and correctly solved the equation 20 + x = 35 - x and rounded the answer to the nearest whole number. The student needs to focus on writing equations from a verbal situation.",
                     "Percent": 6
                 }
             }
@@ -567,15 +567,15 @@
                 }
             },
             "B": {
-                "Choice": "y = x/4 – 2",
+                "Choice": "y = x/4 - 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student likely determined that because the line appears to intersect (cross over) the y-axis (vertical) at (0, – 2), the value of b (represents the y-intercept (value where a line crosses the y-axis) in the equation y = mx + b) would be –2. The graph also appears to pass through the point at (4, –1), and the slope (steepness of a straight line when graphed on a coordinate grid; m = (y₂ – y₁)/(x₂ – x₁)) between this point and the point at (0, –2) would be represented by the expression (–1 – (–2))/(4 – 0), which has a value of 1/4. This means that the value of m (represents the slope in the equation y = mx + b) is 1/4. Therefore, the equation that best represents the line shown on the graph is y = x/4 – 2.",
+                    "Rationale": "The student likely determined that because the line appears to intersect (cross over) the y-axis (vertical) at (0, - 2), the value of b (represents the y-intercept (value where a line crosses the y-axis) in the equation y = mx + b) would be -2. The graph also appears to pass through the point at (4, -1), and the slope (steepness of a straight line when graphed on a coordinate grid; m = (y₂ - y₁)/(x₂ - x₁)) between this point and the point at (0, -2) would be represented by the expression (-1 - (-2))/(4 - 0), which has a value of 1/4. This means that the value of m (represents the slope in the equation y = mx + b) is 1/4. Therefore, the equation that best represents the line shown on the graph is y = x/4 - 2.",
                     "Percent": 69
                 }
             },
             "C": {
-                "Choice": "y = 4x – 2",
+                "Choice": "y = 4x - 2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the value of m by dividing the difference between the x-coordinates (horizontal position from 0) by the difference between the y-coordinates (vertical position from 0). The student needs to focus on determining the function (equation) of a line graphed on a coordinate grid by finding the slope and y-intercept of the line.",
@@ -617,7 +617,7 @@
                 "Choice": "$229.09",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used 0.009 to represent 9% (calculated the value of 5,000 – 5,000 • 1.009⁵). The student needs to focus on using the given information in the compound interest formula, A = p(1 + r)ᵗ, to determine the interest earned.",
+                    "Rationale": "The student likely used 0.009 to represent 9% (calculated the value of 5,000 - 5,000 • 1.009⁵). The student needs to focus on using the given information in the compound interest formula, A = p(1 + r)ᵗ, to determine the interest earned.",
                     "Percent": 3
                 }
             },
@@ -642,7 +642,7 @@
                 "Choice": "$2,693.12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the expression 5,000(1 + 0.09)⁵ can be used to calculate the total value of the retirement account after 5 years. Because the value of this expression, rounded to the nearest hundredth, is 7,693.12, and the initial (beginning) value of the retirement account was $5,000.00, the difference in these values represents the total amount of interest the employee will have earned at the end of 5 years, which is $7,693.12 – $5,000.00, or $2,693.12.",
+                    "Rationale": "The student should have determined that the expression 5,000(1 + 0.09)⁵ can be used to calculate the total value of the retirement account after 5 years. Because the value of this expression, rounded to the nearest hundredth, is 7,693.12, and the initial (beginning) value of the retirement account was $5,000.00, the difference in these values represents the total amount of interest the employee will have earned at the end of 5 years, which is $7,693.12 - $5,000.00, or $2,693.12.",
                     "Percent": 50
                 }
             }
@@ -740,7 +740,7 @@
                 "Choice": "problems/TX18G8M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the difference in the given values for x and y and identified a table where each y-value was 15 more than the corresponding x-value. The student needs to focus on finding the initial (beginning) value and the rate of change (constant increase or decrease) from a verbal situation and identifying the table of values with the same relationship.",
+                    "Rationale": "The student likely used the difference in the given values for `x` and `y` and identified a table where each y-value was 15 more than the corresponding x-value. The student needs to focus on finding the initial (beginning) value and the rate of change (constant increase or decrease) from a verbal situation and identifying the table of values with the same relationship.",
                     "Percent": 9
                 }
             },
@@ -896,7 +896,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x, y) ⇒ (x + 6, y – 3)",
+                "Choice": "(x, y) ⇒ (x + 6, y - 3)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the rule for a translation (movement without rotation, reflection, or dilation) and only verified that the mapping works for point L and point L'. The student needs to focus on the effect a dilation has on a figure and finding the ratio of the side lengths of the corresponding sides of the similar figures to determine the scale factor. The student then needs to use the scale factor to find the rule explaining the effect on the figure.",
@@ -923,7 +923,7 @@
                 "Choice": "(x, y) ⇒ (7x/4, 7y/4)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that in a dilation (transformation that makes a figure larger or smaller) with the origin (point where the x-axis (horizontal) and y-axis (vertical) on a coordinate grid intersect; also the point represented by the ordered pair (0, 0)) as the center of dilation, each coordinate (a set of values that shows the position of a point on the coordinate grid in relation to the origin) of each point on the figure is multiplied by a scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). The coordinates of point J appear to be (–2, 4), and the coordinates of point J' appear to be (–3.5, 7). Because 7 is equal to 4 multiplied by 7/4, and – 3.5 is equal to – 2 multiplied by 7/4, this means that each coordinate of each point in the original figure is multiplied by 7/4 to result in the coordinates of the corresponding point in the dilated figure.",
+                    "Rationale": "The student should have determined that in a dilation (transformation that makes a figure larger or smaller) with the origin (point where the x-axis (horizontal) and y-axis (vertical) on a coordinate grid intersect; also the point represented by the ordered pair (0, 0)) as the center of dilation, each coordinate (a set of values that shows the position of a point on the coordinate grid in relation to the origin) of each point on the figure is multiplied by a scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). The coordinates of point J appear to be (-2, 4), and the coordinates of point J' appear to be (-3.5, 7). Because 7 is equal to 4 multiplied by 7/4, and - 3.5 is equal to - 2 multiplied by 7/4, this means that each coordinate of each point in the original figure is multiplied by 7/4 to result in the coordinates of the corresponding point in the dilated figure.",
                     "Percent": 49
                 }
             }
@@ -956,7 +956,7 @@
                 "Choice": "The additional fee per yoga class is $3.75.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that because the total cost of 6 yoga classes plus the membership fee is $67.50 and the total cost of 8 yoga classes plus the membership fee is $75.00, the value of (75.00 – 67.50)/(8 – 6) represents the rate of change, or the additional fee per yoga class in dollars. Because (75.00 – 67.50)/(8 – 6) can be simplified to 7.50/2, which has a value of 3.75, this means that the additional fee per yoga class is $3.75.",
+                    "Rationale": "The student should have determined that because the total cost of 6 yoga classes plus the membership fee is $67.50 and the total cost of 8 yoga classes plus the membership fee is $75.00, the value of (75.00 - 67.50)/(8 - 6) represents the rate of change, or the additional fee per yoga class in dollars. Because (75.00 - 67.50)/(8 - 6) can be simplified to 7.50/2, which has a value of 3.75, this means that the additional fee per yoga class is $3.75.",
                     "Percent": 58
                 }
             },
@@ -1029,7 +1029,7 @@
                 "Choice": "4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the mean (average of a set of numbers found by adding the numbers in the set and dividing the sum (total) by how many numbers are in the set) of the set of heights is equal to the sum of the heights divided by the number of heights, which is represented by the expression (63 + 70 + 68 + 73 + 58 + 67)/6 and has a value of 66.5. The absolute deviations (absolute value (how far a number is from zero) of the difference between each number in a set of numbers and the mean of the set of numbers) of the heights are represented by the expressions |63 – 66.5|, |70 – 66.5|, |68 – 66.5|, |73 – 66.5|, |58 – 66.5|, and |67 – 66.5|. These expressions can be  simplified to |–3.5|, |3.5|, |1.5|, |6.5|, |–8.5|, and |0.5|. The values of these expressions are 3.5, 3.5, 1.5, 6.5, 8.5, and 0.5. The mean of these absolute deviations is represented by the expression (3.5 + 3.5 + 1.5 + 6.5 + 8.5 + 0.5)/6 and has a value of 4. The mean absolute deviation for the set of heights is 4.",
+                    "Rationale": "The student should have determined that the mean (average of a set of numbers found by adding the numbers in the set and dividing the sum (total) by how many numbers are in the set) of the set of heights is equal to the sum of the heights divided by the number of heights, which is represented by the expression (63 + 70 + 68 + 73 + 58 + 67)/6 and has a value of 66.5. The absolute deviations (absolute value (how far a number is from zero) of the difference between each number in a set of numbers and the mean of the set of numbers) of the heights are represented by the expressions |63 - 66.5|, |70 - 66.5|, |68 - 66.5|, |73 - 66.5|, |58 - 66.5|, and |67 - 66.5|. These expressions can be  simplified to |-3.5|, |3.5|, |1.5|, |6.5|, |-8.5|, and |0.5|. The values of these expressions are 3.5, 3.5, 1.5, 6.5, 8.5, and 0.5. The mean of these absolute deviations is represented by the expression (3.5 + 3.5 + 1.5 + 6.5 + 8.5 + 0.5)/6 and has a value of 4. The mean absolute deviation for the set of heights is 4.",
                     "Percent": 46
                 }
             },
@@ -1076,7 +1076,7 @@
                 "Choice": "problems/TX18G8M/media/20b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that a rate of 6 miles in 48 minutes is equivalent to 6/48 or 1/8 mile per minute. The graph appears to have a slope (steepness of a straight line when graphed on a coordinate grid, m = (y₂ – y₁)/(x₂ – x₁)) equivalent to 1/8 mile per minute, because for each increase of 1 mile, the number of minutes appears to increase by 8. Therefore the graph best represents Joseph's average rate of speed during the race.",
+                    "Rationale": "The student should have determined that a rate of 6 miles in 48 minutes is equivalent to 6/48 or 1/8 mile per minute. The graph appears to have a slope (steepness of a straight line when graphed on a coordinate grid, m = (y₂ - y₁)/(x₂ - x₁)) equivalent to 1/8 mile per minute, because for each increase of 1 mile, the number of minutes appears to increase by 8. Therefore the graph best represents Joseph's average rate of speed during the race.",
                     "Percent": 58
                 }
             },
@@ -1122,10 +1122,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x, y) ⇒ (x, –y)",
+                "Choice": "(x, y) ⇒ (x, -y)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that when a point is reflected (flipped) across the x-axis (horizontal), the y-coordinate (vertical position from 0) is multiplied by –1. Therefore, the rule (x, y) ⇒ (x, –y) describes the transformation (to change a shape using a rotation (a circular movement), reflection (flip), translation (slide), or dilation (resize)).",
+                    "Rationale": "The student should have determined that when a point is reflected (flipped) across the x-axis (horizontal), the y-coordinate (vertical position from 0) is multiplied by -1. Therefore, the rule (x, y) ⇒ (x, -y) describes the transformation (to change a shape using a rotation (a circular movement), reflection (flip), translation (slide), or dilation (resize)).",
                     "Percent": 52
                 }
             },
@@ -1138,7 +1138,7 @@
                 }
             },
             "C": {
-                "Choice": "(x, y) ⇒ (–y, x)",
+                "Choice": "(x, y) ⇒ (-y, x)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely understood that the y-coordinate of the reflection would be negative but assumed the values of the coordinates would be reversed. The student needs to focus on the effect a reflection has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
@@ -1146,7 +1146,7 @@
                 }
             },
             "D": {
-                "Choice": "(x, y) ⇒ (–x, y)",
+                "Choice": "(x, y) ⇒ (-x, y)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely identified the rule for a reflection across the y-axis (vertical). The student needs to focus on the effect a reflection has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
@@ -1174,11 +1174,11 @@
         "Explain": false,
         "Content": [
             "Which list shows these numbers in order from least to greatest?",
-            "37/6, –5.17, √33, –26/5"
+            "37/6, -5.17, √33, -26/5"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "–26/5, –5.17, 37/6, √33",
+                "Choice": "-26/5, -5.17, 37/6, √33",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely thought that the value of √33 was the same as the value of 33/2. The student needs to focus on determining the value of any type of number (negative, positive, fraction, square root (a value that, when multiplied by itself, is equal to the number under the √), etc.) and ordering the numbers by value.",
@@ -1186,7 +1186,7 @@
                 }
             },
             "G": {
-                "Choice": "–5.17, –26/5, 37/6, √33",
+                "Choice": "-5.17, -26/5, 37/6, √33",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely misunderstood the correct way to order the two negative numbers and thought that the value of √33 was the same as the value of 33/2. The student needs to focus on determining the value of any type of number (negative, positive, fraction, square root (a value that, when multiplied by itself, is equal to the number under the √), etc.) and ordering the numbers by value.",
@@ -1194,15 +1194,15 @@
                 }
             },
             "H": {
-                "Choice": "–26/5, –5.17, √33, 37/6",
+                "Choice": "-26/5, -5.17, √33, 37/6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the approximate value of 37/6 is 6.17. The approximate value of √33 is 5.74. The value of –26/5 is –5.2. The decimal values, listed in order from least (smallest) to greatest (largest), would be –5.2, –5.17, 5.74, 6.17, which means that the correct order of the given values from least to greatest would be –26/5, –5.17, √33, 37/6.",
+                    "Rationale": "The student should have determined that the approximate value of 37/6 is 6.17. The approximate value of √33 is 5.74. The value of -26/5 is -5.2. The decimal values, listed in order from least (smallest) to greatest (largest), would be -5.2, -5.17, 5.74, 6.17, which means that the correct order of the given values from least to greatest would be -26/5, -5.17, √33, 37/6.",
                     "Percent": 58
                 }
             },
             "J": {
-                "Choice": "–5.17, –26/5, √33, 37/6",
+                "Choice": "-5.17, -26/5, √33, 37/6",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely misunderstood the correct way to order the two negative numbers. The student needs to focus on determining the value of any type of number (negative, positive, fraction, square root (a value that, when multiplied by itself, is equal to the number under the √), etc.) and ordering the numbers by value.",
@@ -1237,7 +1237,7 @@
                 "Choice": "equal:-7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that to combine the x terms, x should be subtracted from both sides of the equation. This step results in the equation x + 3 = –4. Next, to solve for x, 3 should be subtracted from both sides of the equation. This step results in the solution to the equation, which is x = –7.",
+                    "Rationale": "The student should have determined that to combine the x terms, x should be subtracted from both sides of the equation. This step results in the equation x + 3 = -4. Next, to solve for x, 3 should be subtracted from both sides of the equation. This step results in the solution to the equation, which is x = -7.",
                     "Percent": 53
                 }
             }
@@ -1341,7 +1341,7 @@
                 "Choice": "The volume of the cylinder is about 25 cubic inches greater than the volume of the cone.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the volume (amount of three-dimensional space taken up) in cubic inches of the cone is represented by the formula V = 1/3 • πr²h, which is represented by the expression 1/3 • π(4)² • (12) and has a value of approximately 201. The volume in cubic inches of the cylinder is represented by the formula V = πr²h, which is represented by the expression π(3)² • 8 and has a value of approximately 226. The difference in the volumes would be represented by, which means that the volume of the cylinder is about 25 cubic inches greater than the volume of the cone.",
+                    "Rationale": "The student should have determined that the volume (amount of three-dimensional space taken up) in cubic inches of the cone is represented by the formula V = 1/3 • πr²h, which is represented by the expression 1/3 • π(4)^2 • (12) and has a value of approximately 201. The volume in cubic inches of the cylinder is represented by the formula V = πr²h, which is represented by the expression π(3)^2 • 8 and has a value of approximately 226. The difference in the volumes would be represented by, which means that the volume of the cylinder is about 25 cubic inches greater than the volume of the cone.",
                     "Percent": 68
                 }
             },
@@ -1438,7 +1438,7 @@
                 "Choice": "5.8 units",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the line segment represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one 90 degree angle). The lengths in units of the two legs of the right triangle can be represented by subtracting the x-coordinates (horizontal position from 0) of the two endpoints of the line segment (the part of a line connecting two endpoints) and by subtracting the y-coordinates (vertical position from 0) of the two endpoints of the line segment. This means that the lengths in units of the legs are 8 – 5 = 3 and 7 – 2 = 5. Using the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides; a² + b² = c²), the length in units of line segment QR can be represented by the expression √(3² + 5²), or √34, and has a value of approximately 5.8. Therefore, the approximate length of line segment QR is 5.8 units.",
+                    "Rationale": "The student should have determined that the line segment represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one 90 degree angle). The lengths in units of the two legs of the right triangle can be represented by subtracting the x-coordinates (horizontal position from 0) of the two endpoints of the line segment (the part of a line connecting two endpoints) and by subtracting the y-coordinates (vertical position from 0) of the two endpoints of the line segment. This means that the lengths in units of the legs are 8 - 5 = 3 and 7 - 2 = 5. Using the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`), the length in units of line segment QR can be represented by the expression √(3^2 + 5^2), or √34, and has a value of approximately 5.8. Therefore, the approximate length of line segment QR is 5.8 units.",
                     "Percent": 57
                 }
             },
@@ -1508,7 +1508,7 @@
                 }
             },
             "H": {
-                "Choice": "y = –3,000x+ 12,000",
+                "Choice": "y = -3,000x+ 12,000",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the correct rate of change but assumed that the first y-value listed in the table was the initial number of tickets. The student needs to focus on determining the rate of change and initial value based on the information given in the table and using it to find the equation representing the situation.",
@@ -1516,10 +1516,10 @@
                 }
             },
             "J": {
-                "Choice": "y = –3,000x + 15,000",
+                "Choice": "y = -3,000x + 15,000",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the rate of change (constant increase or decrease) for the relationship can be calculated using the expression (9,000 – 12,000)/(2 – 1), which results in a rate of change of –3,000 tickets per hour. Because there were 12,000 tickets remaining 1 hour after 4:00 P.M. and the number of tickets decreased by 3,000 during that hour, the initial (beginning) number of tickets would be 12,000 + 3,000 = 15,000. Therefore, the function y = –3,000x + 15,000 can be used to find y, the number of tickets remaining x hours since 4:00 P.M.",
+                    "Rationale": "The student should have determined that the rate of change (constant increase or decrease) for the relationship can be calculated using the expression (9,000 - 12,000)/(2 - 1), which results in a rate of change of -3,000 tickets per hour. Because there were 12,000 tickets remaining 1 hour after 4:00 P.M. and the number of tickets decreased by 3,000 during that hour, the initial (beginning) number of tickets would be 12,000 + 3,000 = 15,000. Therefore, the function y = -3,000x + 15,000 can be used to find y, the number of tickets remaining x hours since 4:00 P.M.",
                     "Percent": 43
                 }
             }
@@ -1660,23 +1660,23 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x, y) ⇒ (6x, –4y)",
+                "Choice": "(x, y) ⇒ (6x, -4y)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used a rule that multiplied 6 and –4 by the x- and y-coordinates. The student needs to focus on the effect a translation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
+                    "Rationale": "The student likely used a rule that multiplied 6 and -4 by the x- and y-coordinates. The student needs to focus on the effect a translation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "(x, y) ⇒ (–6x, 4y)",
+                "Choice": "(x, y) ⇒ (-6x, 4y)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used a rule that multiplied –6 and 4 by the x- and y-coordinates. The student needs to focus on the effect a translation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
+                    "Rationale": "The student likely used a rule that multiplied -6 and 4 by the x- and y-coordinates. The student needs to focus on the effect a translation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
                     "Percent": 22
                 }
             },
             "C": {
-                "Choice": "(x, y) ⇒ (x + 6, y – 4)",
+                "Choice": "(x, y) ⇒ (x + 6, y - 4)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely recognized the correct format for the rule that represents a translation, but thought that the number being added to each coordinate should represent the opposite direction of each translation. The student needs to focus on the effect a translation has on a figure and the rule that can be used to explain the effect on the figure when graphed on a coordinate grid.",
@@ -1684,10 +1684,10 @@
                 }
             },
             "D": {
-                "Choice": "(x, y) ⇒ (x – 6, y + 4)",
+                "Choice": "(x, y) ⇒ (x - 6, y + 4)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that when a shape is translated (a slide; moving a shape without rotating, resizing, or flipping it) 6 units to the left, each x-coordinate (horizontal position from 0) is decreased by 6 units, which is represented by the expression x – 6. When a shape is translated 4 units up, each y-coordinate (vertical position from 0) is increased by 4 units, which is represented by the expression y + 4. Therefore, the rule (x, y) ⇒ (x – 6, y + 4) represents the translation of a shape 6 units to the left and 4 units up.",
+                    "Rationale": "The student should have determined that when a shape is translated (a slide; moving a shape without rotating, resizing, or flipping it) 6 units to the left, each x-coordinate (horizontal position from 0) is decreased by 6 units, which is represented by the expression x - 6. When a shape is translated 4 units up, each y-coordinate (vertical position from 0) is increased by 4 units, which is represented by the expression y + 4. Therefore, the rule (x, y) ⇒ (x - 6, y + 4) represents the translation of a shape 6 units to the left and 4 units up.",
                     "Percent": 58
                 }
             }
@@ -1775,7 +1775,7 @@
                 "Choice": "6.24 in.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; a² + b² = c²) should be used but multiplied each dimension by 2 before adding the results and calculating the square root of the sum (√(8.5 •2 + 11 •2) = √(17 + 22) = √39 ≈ 6.24). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
+                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`) should be used but multiplied each dimension by 2 before adding the results and calculating the square root of the sum (√(8.5 •2 + 11 •2) = √(17 + 22) = √39 ≈ 6.24). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
                     "Percent": 13
                 }
             },
@@ -1783,7 +1783,7 @@
                 "Choice": "19.5 in.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely added the two given dimensions (8.5 + 11 = 19.5) to find the approximate length of the diagonal. The student needs to focus on recognizing when the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; a² + b² = c²) needs to be used and how to properly apply it with the given information.",
+                    "Rationale": "The student likely added the two given dimensions (8.5 + 11 = 19.5) to find the approximate length of the diagonal. The student needs to focus on recognizing when the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`) needs to be used and how to properly apply it with the given information.",
                     "Percent": 24
                 }
             },
@@ -1791,7 +1791,7 @@
                 "Choice": "6.98 in.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; a² + b62 = c²) should be used but subtracted the squares of the two lengths and then calculated the square root of the sum (√(11² – 8.5²) = √(121 – 72.25) = √48.75 ≈ 6.98). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
+                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; a² + b62 = c²) should be used but subtracted the squares of the two lengths and then calculated the square root of the sum (√(11^2 - 8.5^2) = √(121 - 72.25) = √48.75 ≈ 6.98). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
                     "Percent": 13
                 }
             },
@@ -1799,7 +1799,7 @@
                 "Choice": "13.9 in.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the diagonal (line segment that goes from one corner of a figure to another but is not an edge) represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one 90 degree angle) with legs of length 8.5 inches and 11 inches. The length of the diagonal can be found using the Pythagorean theorem and is represented by the expression √(8.5² + 11²), which has a value of 13.9. Therefore, the approximate length of the diagonal of the piece of paper is 13.9 inches.",
+                    "Rationale": "The student should have determined that the diagonal (line segment that goes from one corner of a figure to another but is not an edge) represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one 90 degree angle) with legs of length 8.5 inches and 11 inches. The length of the diagonal can be found using the Pythagorean theorem and is represented by the expression √(8.5^2 + 11^2), which has a value of 13.9. Therefore, the approximate length of the diagonal of the piece of paper is 13.9 inches.",
                     "Percent": 50
                 }
             }
@@ -1976,7 +1976,7 @@
                 "Choice": "$404.17",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that because the grandparents will pay half the total cost of $19,700 the remaining amount in dollars that will need to be paid is 1/2 • 19,700, which is $9,850. Because the scholarship will pay an additional $5,000 of the remaining cost, the amount in dollars that needs to be saved over the entire 12 months would be 9,850 – 5,000, which is $4,850. When this amount is divided by 12, the result is $404.16 which would be $404.17 rounded to the nearest cent.",
+                    "Rationale": "The student should have determined that because the grandparents will pay half the total cost of $19,700 the remaining amount in dollars that will need to be paid is 1/2 • 19,700, which is $9,850. Because the scholarship will pay an additional $5,000 of the remaining cost, the amount in dollars that needs to be saved over the entire 12 months would be 9,850 - 5,000, which is $4,850. When this amount is divided by 12, the result is $404.16 which would be $404.17 rounded to the nearest cent.",
                     "Percent": 68
                 }
             },
@@ -2033,7 +2033,7 @@
                 "Choice": "equal:-5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the slope (steepness of a straight line when graphed on a coordinate grid, m = (y₂ – y₁)/(x₂ – x₁)), the difference in a pair of y-values (values in the second column of the table) should be divided by the difference in the corresponding pair of x-values (values in the first column of the table). Using the first two pairs of values in the table, the expression (60 – 65)/(2 – 1) represents the slope, and when the numerator (top number) and denominator (bottom number) are simplified, the result is –5/1, the value of which is –5.",
+                    "Rationale": "To determine the slope (steepness of a straight line when graphed on a coordinate grid, m = (y₂ - y₁)/(x₂ - x₁)), the difference in a pair of y-values (values in the second column of the table) should be divided by the difference in the corresponding pair of x-values (values in the first column of the table). Using the first two pairs of values in the table, the expression (60 - 65)/(2 - 1) represents the slope, and when the numerator (top number) and denominator (bottom number) are simplified, the result is -5/1, the value of which is -5.",
                     "Percent": 41
                 }
             }
@@ -2082,7 +2082,7 @@
                 "Choice": "339.29 in²",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the total surface area (total area of the surfaces of a three-dimensional figure) in square inches of a cylinder can be calculated using the formula S = 2πr² + 2πrh. Based on the diagram, the radius (distance from the center to the circumference of a circle) of the cylinder is 3 inches, the height of the cylinder is 15 inches, and substituting these values into the formula results in S = 2π(3)² + 2π(3)(15). Simplifying both parts of the right side of the equation results in S = 18π + 90π, and combining the two expressions on the right side of the equation results in S = 108π. Based on the value of π, the approximate surface area in square inches of the cylindrical container is 339.29 square inches.",
+                    "Rationale": "The student should have determined that the total surface area (total area of the surfaces of a three-dimensional figure) in square inches of a cylinder can be calculated using the formula S = 2πr² + 2πrh. Based on the diagram, the radius (distance from the center to the circumference of a circle) of the cylinder is 3 inches, the height of the cylinder is 15 inches, and substituting these values into the formula results in S = 2π(3)^2 + 2π(3)(15). Simplifying both parts of the right side of the equation results in S = 18π + 90π, and combining the two expressions on the right side of the equation results in S = 108π. Based on the value of π, the approximate surface area in square inches of the cylindrical container is 339.29 square inches.",
                     "Percent": 73
                 }
             },
@@ -2114,7 +2114,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which scatterplot does NOT suggest a linear relationship between x and y?"
+            "Which scatterplot does NOT suggest a linear relationship between `x` and `y`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -2145,7 +2145,7 @@
                 "Choice": "problems/TX18G8M/media/40d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the points on the scatterplot (graph of plotted points that show the relationship between two sets of data) first suggest a slightly decreasing linear relationship (an equation that, when graphed, gives a straight line) until the value of x is 7, after which the points on the scatterplot suggest a vertical linear relationship. Therefore, the points on this graph do not suggest a linear relationship between x and y.",
+                    "Rationale": "The student should have determined that the points on the scatterplot (graph of plotted points that show the relationship between two sets of data) first suggest a slightly decreasing linear relationship (an equation that, when graphed, gives a straight line) until the value of x is 7, after which the points on the scatterplot suggest a vertical linear relationship. Therefore, the points on this graph do not suggest a linear relationship between `x` and `y`.",
                     "Percent": 78
                 }
             }
@@ -2233,7 +2233,7 @@
                 "Choice": "problems/TX18G8M/media/42a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified a graph with a slope that is equivalent to the opposite of the change in time, or –2. The student needs to focus on determining the slope from a verbal situation and identifying the graph that represents the situation.",
+                    "Rationale": "The student likely identified a graph with a slope that is equivalent to the opposite of the change in time, or -2. The student needs to focus on determining the slope from a verbal situation and identifying the graph that represents the situation.",
                     "Percent": 15
                 }
             },
@@ -2241,7 +2241,7 @@
                 "Choice": "problems/TX18G8M/media/42b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified a graph with a slope that is equivalent to the change in depth, or –7. The student needs to focus on determining the slope from a verbal situation and identifying the graph that represents the situation.",
+                    "Rationale": "The student likely identified a graph with a slope that is equivalent to the change in depth, or -7. The student needs to focus on determining the slope from a verbal situation and identifying the graph that represents the situation.",
                     "Percent": 13
                 }
             },
@@ -2249,7 +2249,7 @@
                 "Choice": "problems/TX18G8M/media/42c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the graph appears to pass through the points located at (0, 0) and (10, –35), and the slope (steepness of a straight line when graphed on a coordinate grid; m = (y₂ – y₁)/(x₂ – x₁)) between these points is represented by the expression (–35 – 0)/(10 – 0), which has a simplified value of –7/2. Based on the context of the graph, this slope represents a change in depth of 7 feet every 2 hours.",
+                    "Rationale": "The student should have determined that the graph appears to pass through the points located at (0, 0) and (10, -35), and the slope (steepness of a straight line when graphed on a coordinate grid; m = (y₂ - y₁)/(x₂ - x₁)) between these points is represented by the expression (-35 - 0)/(10 - 0), which has a simplified value of -7/2. Based on the context of the graph, this slope represents a change in depth of 7 feet every 2 hours.",
                     "Percent": 69
                 }
             },

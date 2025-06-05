@@ -17,7 +17,7 @@
                             "Key": "MN.M9-11.2.1.1",
                             "Label": "Understand the definition of a function. Use functional notation and evaluate a function at a given point in its domain.",
                             "Examples": [
-                                "For example, if f(x) = 1/(x² – 3), find f(-4)."
+                                "For example, if f(x) = 1/(x^2- 3), find f(-4)."
                             ],
                             "Subs": []
                         },
@@ -31,7 +31,7 @@
                             "Key": "MN.M9-11.2.1.3",
                             "Label": "Find the domain of a function defined symbolically, graphically or in a real-world context.",
                             "Examples": [
-                                "For example, the formula f(x) = πx² can represent a function whose domain is all real numbers, but in the context of the area of a circle, the domain would be restricted to positive x."
+                                "For example, the formula f(x) = πx^2can represent a function whose domain is all real numbers, but in the context of the area of a circle, the domain would be restricted to positive x."
                             ],
                             "Subs": []
                         },
@@ -45,7 +45,7 @@
                         },
                         {
                             "Key": "MN.M9-11.2.1.5",
-                            "Label": "Identify the vertex, line of symmetry and intercepts of the parabola corresponding to a quadratic function, using symbolic and graphical methods, when the function is expressed in the form f(x) = ax² + bx + c, in the form f(x) = a(x – h)² + k, or in factored form.",
+                            "Label": "Identify the vertex, line of symmetry and intercepts of the parabola corresponding to a quadratic function, using symbolic and graphical methods, when the function is expressed in the form f(x) = ax^2+ bx + c, in the form `f(x)=a(x-h)^2+k`, or in factored form.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -73,7 +73,7 @@
                             "Key": "MN.M9-11.2.1.9",
                             "Label": "Determine how translations affect the symbolic and graphical forms of a function. Know how to use graphing technology to examine translations.",
                             "Examples": [
-                                "For example, determine how the graph of f(x) = |x – h| + k changes as h and k change."
+                                "For example, determine how the graph of f(x) = |x - h| + k changes as h and k change."
                             ],
                             "Subs": []
                         }
@@ -121,7 +121,7 @@
                         },
                         {
                             "Key": "MN.M9-11.2.2.6",
-                            "Label": "Sketch the graphs of common non-linear functions such as f(x) = √x, f(x) = |x|, f(x) = 1/x, f(x) = x³, and translations of these functions, such as f(x) = √(x – 2) + 4. Know how to use graphing technology to graph these functions.",
+                            "Label": "Sketch the graphs of common non-linear functions such as f(x) = √x, f(x) = |x|, f(x) = 1/x, f(x) = x³, and translations of these functions, such as f(x) = √(x - 2) + 4. Know how to use graphing technology to graph these functions.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -148,7 +148,7 @@
                             "Key": "MN.M9-11.2.3.3",
                             "Label": "Factor common monomial factors from polynomials, factor quadratic polynomials, and factor the difference of two squares.",
                             "Examples": [
-                                "For example, 9x⁶ – x⁴ = (3x³ – x²)(3x³ + x²)."
+                                "For example, 9x⁶ - x⁴ = (3x³ - x^2)(3x³ + x^2)."
                             ],
                             "Subs": []
                         },
@@ -156,7 +156,7 @@
                             "Key": "MN.M9-11.2.3.4",
                             "Label": "Add, subtract, multiply, divide and simplify algebraic fractions.",
                             "Examples": [
-                                "For example, 1/(1 – x) + x/(1 + x) is equivalent to (1 + 2x – x²)/(1 – x²)."
+                                "For example, 1/(1 - x) + x/(1 + x) is equivalent to (1 + 2x - x^2)/(1 - x^2)."
                             ],
                             "Subs": []
                         },
@@ -164,7 +164,7 @@
                             "Key": "MN.M9-11.2.3.5",
                             "Label": "Check whether a given complex number is a solution of a quadratic equation by substituting it for the variable and evaluating the expression, using arithmetic with complex numbers.",
                             "Examples": [
-                                "For example, the complex number (1 + i)/2 is a solution of 2x² – 2x + 1 = 0, since 2((1+i)/2)² – 2((1 + i)/2) + 1 = i – (1 + i) + 1 = 0."
+                                "For example, the complex number (1 + i)/2 is a solution of 2x^2- 2x + 1 = 0, since 2((1+i)/2)^2 - 2((1 + i)/2) + 1 = i - (1 + i) + 1 = 0."
                             ],
                             "Subs": []
                         },
@@ -225,7 +225,7 @@
                             "Key": "MN.M9-11.2.4.6",
                             "Label": "Represent relationships in various contexts using absolute value inequalities in two variables; solve them graphically.",
                             "Examples": [
-                                "For example, if a pipe is to be cut to a length of 5 meters accurate to within a tenth of its diameter, the relationship between the length x of the pipe and its diameter y satisfies the inequality |x – 5| ≤ 0.1y."
+                                "For example, if a pipe is to be cut to a length of 5 meters accurate to within a tenth of its diameter, the relationship between the length x of the pipe and its diameter y satisfies the inequality |x - 5| ≤ 0.1y."
                             ],
                             "Subs": []
                         },
@@ -233,8 +233,8 @@
                             "Key": "MN.M9-11.2.4.7",
                             "Label": "Solve equations that contain radical expressions. Recognize that extraneous solutions may arise when using symbolic methods.",
                             "Examples": [
-                                "For example, the equation √(x – 9) = 9√x may be solved by squaring both sides to obtain x – 9 = 81x, which has the solution x = -9/80 However, this is not a solution of the original equation, so it is an extraneous solution that should be discarded. The original equation has no solution in this case.",
-                                "For example, solve ∛(–x + 1) = -5."
+                                "For example, the equation √(x - 9) = 9√x may be solved by squaring both sides to obtain x - 9 = 81x, which has the solution x = -9/80 However, this is not a solution of the original equation, so it is an extraneous solution that should be discarded. The original equation has no solution in this case.",
+                                "For example, solve ∛(-x + 1) = -5."
                             ],
                             "Subs": []
                         },
@@ -447,7 +447,7 @@
                         },
                         {
                             "Key": "MN.M9-11.3.4.5",
-                            "Label": "Know the equation for the graph of a circle with radius r and center (h, k), (x – h)² + (y – k)² = r² and justify this equation using the Pythagorean Theorem and properties of translations.",
+                            "Label": "Know the equation for the graph of a circle with radius r and center (h, k), (x - h)^2 + (y - k)^2 = r² and justify this equation using the Pythagorean Theorem and properties of translations.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -589,7 +589,7 @@
                             "Key": "MN.M9-11.4.3.7",
                             "Label": "Understand and use simple probability formulas involving intersections, unions and complements of events.",
                             "Examples": [
-                                "For example, if the probability of an event is p, then the probability of the complement of an event is 1 – p; the probability of the intersection of two independent events is the product of their probabilities.",
+                                "For example, if the probability of an event is p, then the probability of the complement of an event is 1 - p; the probability of the intersection of two independent events is the product of their probabilities.",
                                 "For example, the probability of the union of two events equals the sum of the probabilities of the two individual events minus the probability of the intersection of the events."
                             ],
                             "Subs": []

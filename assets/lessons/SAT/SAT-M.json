@@ -1,0 +1,936 @@
+{
+    "Variable": {
+        "Definition": "A symbol for a number is not known yet.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Constant": {
+        "Definition": "A fixed number.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Expression": {
+        "Definition": "A combination of variables, constants, and operations (+, -, ×, ÷), without an equal sign (=).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Equation": {
+        "Definition": "A statement that compares two expressions with an equal sign (=).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Solution": {
+        "Definition": "A value for a variable that makes an equation true or, for a system, a set of values for the variables that satisfies all equations simultaneously.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Order Of Operations": {
+        "Definition": "Describes the correct sequence for calculations. The acrononym PEMDAS describes this sequence - Parentheses, then Exponents, then Multiplication and Division, then Addition and Subtraction",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Equivalent Expressions": {
+        "Definition": "Two expression that are equal to each other for all possible variable values.",
+        "Category": "",
+        "Examples": [
+            "2(x+1) = 2x+2"
+        ],
+        "Related": []
+    },
+    "Equivalent Equations": {
+        "Definition": "Two equations that have the same solution set.",
+        "Category": "",
+        "Examples": [
+            "x+1=2 and 2x+2=4"
+        ],
+        "Related": []
+    },
+    "Absolute Value": {
+        "Definition": "The distance that a number is from zero on the number line. Written as |x|.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Function": {
+        "Definition": "A rule that assigns each input value exactly one output value. Think of it like a machine where the input is x and the output is f(x).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Domain": {
+        "Definition": "The set of all possible input values (x-values).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Range (Algebra)": {
+        "Definition": "The set of all possible output values (f(x) or y-values).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Rate Of Change": {
+        "Definition": "Describes how one quantity changes in relation to another.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Slope"
+        ]
+    },
+    "Slope": {
+        "Definition": "Describes how one quantity changes in relation to another for linear functions.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Rate Of Change"
+        ]
+    },
+    "Y-Intercept": {
+        "Definition": "The point where the line crosses the y-axis (where x=0).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Linear Function": {
+        "Definition": "A function described by an equation that can be written as y=mx+b (slope-intercept form). Its graph is a straight line.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Polynomial Function": {
+        "Definition": "A function that involves sums of terms with non-negative integer exponents on variables​. Examples include linear (n=1), quadratic (n=2), and cubic (n=3) functions.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Quadratic Function": {
+        "Definition": "A polynomial function of degree 2.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Parabola"
+        ]
+    },
+    "Parabola": {
+        "Definition": "The graph of a quadratic equation. It's a U-shaped curve.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Vertex": {
+        "Definition": "The highest or lowest point of a parabola.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "X-Intercept": {
+        "Definition": "A point where the line crosses the x-axis (where y=0).",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Root"
+        ]
+    },
+    "Root": {
+        "Definition": "A solution for a quadratic equation.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "X-Intercept"
+        ]
+    },
+    "Cubic Function": {
+        "Definition": "A polynomial function of degree 3. It's an S-shaped curve.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exponent": {
+        "Definition": "An operation that that describes repeated multiplication of the same expression.",
+        "Category": "",
+        "Examples": [
+            "2³=2×2×2=8"
+        ],
+        "Related": []
+    },
+    "Exponential Function": {
+        "Definition": "A function that has the form f(x)=abˣ, where a is the initial value and b (the base) is positive and not 1.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exponential Growth": {
+        "Definition": "Describes an exponential function, where b>1.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exponential Decay": {
+        "Definition": "Describes an exponential function, where 0<b<1.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "System Of Equations": {
+        "Definition": "A set of two or more equations with the same variables.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Intersection": {
+        "Definition": "A point on a graph where multiple equations are equal or cross over each other.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Substitution": {
+        "Definition": "Solving one equation for one variable, then substituting that expression into the other equation.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Elimination": {
+        "Definition": "Adding or subtracting the equations (possibly after multiplying them by constants) to eliminate one variable.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Unique Solution": {
+        "Definition": "When solving a system of linear equations, the lines intersect at exactly one point. This means that the equations have different slopes.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "No Solution": {
+        "Definition": "When solving a system of linear equations, the lines never intersect. This means that the equations are parallel and distinct (same slopes, different y-intercepts).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Infinitely Many Solutions": {
+        "Definition": "When solving a system of linear equations, the lines overlap everywhere. This means that the equations are identical (same slopes and y-intercepts).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Inequality": {
+        "Definition": "A statement that compares two expressions that are not equal - such as less than (<) or greater than (>).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Strict Inequality": {
+        "Definition": "An inequality that includes < or >.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Slack Inequality": {
+        "Definition": "An inequality that includes ≤ or ≥.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Literal Inequality": {
+        "Definition": "An inequality that includes variables.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Double Inequality": {
+        "Definition": "An inequality created by combining two inequalities into one.",
+        "Category": "",
+        "Examples": [
+            "3<x<7"
+        ],
+        "Related": []
+    },
+    "Solution Set": {
+        "Definition": "Describes all values that make an inequality true.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Point": {
+        "Definition": "A specific location in space, no dimension.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Line": {
+        "Definition": "An infinite, straight path extending in two opposite directions.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Line Segment": {
+        "Definition": "A part of a line with two distinct endpoints.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Ray": {
+        "Definition": "A part of a line with one endpoint, extending infinitely in one direction.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Angle": {
+        "Definition": "Formed by two rays sharing a common endpoint. It's measured in degrees or radians.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Right Angle": {
+        "Definition": "An angle that is exactly 90°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Acute Angle": {
+        "Definition": "An angle that is less than 90°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Obtuse Angle": {
+        "Definition": "An angle that is greater than 90°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Complementary Angles": {
+        "Definition": "Two angles whose sum is 90°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Supplementary Angles": {
+        "Definition": "Two angles whose sum is 180°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Linear Pair": {
+        "Definition": "Two adjacent angles that are supplementary. When combined, the pair form a straight line.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Vertical Angles": {
+        "Definition": "Opposite angles formed by two intersecting lines. These angles are equal.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Transversal": {
+        "Definition": "A line that intersects two or more other lines (usually parallel).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Corresponding Angles": {
+        "Definition": "Angles that have the same relative position at each intersection when a transversal intersects parallel lines. These angles are equal.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Alternate Interior Angles": {
+        "Definition": "Angles that are on opposite sides of the transversal and inside the two lines when a transversal intersects parallel lines. These angles are equal.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Alternate Exterior Angles": {
+        "Definition": "Angles that are on opposite sides of the transversal and outside the two lines when a transversal intersects parallel lines. These angles are equal.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Interior Angles": {
+        "Definition": "Angles that are inside the two lines when a transversal intersects parallel lines. These angles are equal.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exterior Angles": {
+        "Definition": "Angles that are outside the two lines when a transversal intersects parallel lines. These angles are equal.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Triangle": {
+        "Definition": "A polygon with three sides and three angles. The sum of angles in a triangle is always 180°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Right Triangle": {
+        "Definition": "A triangle that has one 90° angle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Hypotenuse": {
+        "Definition": "The side opposite the right angle of a right triangle. This is always the longest side of a triangle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Legs": {
+        "Definition": "The sides forming the right angle of a right triangle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Trigonometric Ratios": {
+        "Definition": "The ratios of the side of a right triangle. The acronym SOH-CAH-TOA describes these ratios - Sin(x)=Opposite/Hypotenuse, Cos(x)=Adjacent/Hypotenuse, and Tan(x)=Opposite/Adjacent.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Opposite Side": {
+        "Definition": "The side across from an acute angle in a right triangle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Adjacent Side": {
+        "Definition": "The non-hypotenuse side next to an acute angle in a right triangle",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Sine": {
+        "Definition": "A trigonometric function that is defined by the ratio of the side opposite of an acute angle to the hypotenuse in a right triangle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Cosine": {
+        "Definition": "A trigonometric function that is defined by the ratio of the side adjacent to an acute angle to the hypotenuse in a right triangle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Tangent (Trigonometry)": {
+        "Definition": "A trigonometric function that is defined by the ratio of the side opposite of an acute angle to the side adjacent in a right triangle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "45-45-90 Triangle": {
+        "Definition": "A right triangle where the angle measures are 45°, 45°, and 90°. It's sides always have a ratio of 1:1:√2 for the sides opposite of the 45°, 45°, and 90° angles respectively.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "30-60-90 Triangle": {
+        "Definition": "A right triangle where the angle measures are 30°, 60°, and 90°. It's sides always have a ratio of 1:√3:2 for the sides opposite of the 30°, 60°, and 90° angles respectively.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Perimeter": {
+        "Definition": "The total distance around the outside of a 2D shape. It's calculated by add all side lengths for the shape.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Area": {
+        "Definition": "The amount of surface a 2D shape covers. It's units are square.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Surface Area": {
+        "Definition": "The total area of all the surfaces (faces) of a 3D object. It's units are square.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Volume": {
+        "Definition": "The amount of space a 3D object occupies. It's units are cubic.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Circle": {
+        "Definition": "A shape defined by the set of all points in a plane equidistant from a central point.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Equidistant": {
+        "Definition": "Describes when two points are equal distances from another point.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Radius": {
+        "Definition": "Distance from the center to any point on a circle. It's half the circumference of a circle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Diameter": {
+        "Definition": "Distance across a circle through the center. It's twice the radius of a circle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Circumference": {
+        "Definition": "Distance, or perimeter, around the circle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Chord": {
+        "Definition": "A line segment whose endpoints are on the circle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Secant": {
+        "Definition": "A line that intersects a circle at two points.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Tangent (Geometry)": {
+        "Definition": "A line that intersects a circle at exactly one point (the point of tangency). It's perpendicular to the radius at the point of tangency.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Arc": {
+        "Definition": "A portion of the circumference of a circle.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Sector": {
+        "Definition": "A portion of the area of a circle bounded by two radii and their intercepted arc. It's shaped like a slice of pizza.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Degrees": {
+        "Definition": "A common unit for measuring angles - represented as °. A full circle is 360°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Radians": {
+        "Definition": "A common unit for measuring angles. A full circle is 2π radians.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Ratio": {
+        "Definition": "A relation between two amounts showing how much larger or smaller one amount is than the other.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Part-To-Part Ration": {
+        "Definition": "A ratio that compares two distinct pieces of a total.",
+        "Category": "",
+        "Examples": [
+            "The ratio of apples to oranges is 3:2."
+        ],
+        "Related": []
+    },
+    "Part-To-Whole Ration": {
+        "Definition": "A ratio that compares a part to the total.",
+        "Category": "",
+        "Examples": [
+            "A ratio of apples to total fruit is 3:5."
+        ],
+        "Related": []
+    },
+    "Proportion": {
+        "Definition": "An equation stating that two ratios are equal.",
+        "Category": "",
+        "Examples": [
+            "a/b​=c/d"
+        ],
+        "Related": []
+    },
+    "Rate": {
+        "Definition": "A ratio comparing quantities with different units.",
+        "Category": "",
+        "Examples": [
+            "miles per hour or dollars per pound"
+        ],
+        "Related": []
+    },
+    "Unit Rate": {
+        "Definition": "A rate where the second quantity is 1 unit.",
+        "Category": "",
+        "Examples": [
+            "60 miles/1 hour or $3/pound"
+        ],
+        "Related": []
+    },
+    "Proportional Relationship": {
+        "Definition": "A relationship between two quantities if their ratio is constant. Graphically, this is a straight line through the origin (y=kx, where k is the constant of proportionality, or unit rate).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Unit": {
+        "Definition": "A standard quantity of measurement.",
+        "Category": "",
+        "Examples": [
+            "meter, gram, or second"
+        ],
+        "Related": []
+    },
+    "Unit Conversion": {
+        "Definition": "Changing a measurement from one unit to another.",
+        "Category": "",
+        "Examples": [
+            "1 foot converts to 12 inches"
+        ],
+        "Related": []
+    },
+    "Conversion Factor": {
+        "Definition": "A ratio equal to 1, used to convert units.",
+        "Category": "",
+        "Examples": [
+            "1 foot:12 inches"
+        ],
+        "Related": []
+    },
+    "Percentage": {
+        "Definition": "A way of expressing a part of a whole as a fraction of 100.",
+        "Category": "",
+        "Examples": [
+            "25%=25/100=0.25"
+        ],
+        "Related": []
+    },
+    "Growth Rate": {
+        "Definition": "A percent increase over a specific time period.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "One-Variable Data": {
+        "Definition": "Describes a single characteristic measured for each item.",
+        "Category": "",
+        "Examples": [
+            "test score of students"
+        ],
+        "Related": []
+    },
+    "Data Distribution": {
+        "Definition": "Describes how data points are spread or clustered.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Measure Of Center": {
+        "Definition": "A measure that describes the typical or central value of a data set. The most common are mean, median, and mode.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Mean": {
+        "Definition": "The average of the dataset - calculated as the sum of all values divided by the total number of values. This measure is sensitive to outliers.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Median": {
+        "Definition": "The middle value when the dataset is ordered. If an even number of values, average of two middle ones. This measure is sensitive to outliers.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Mode": {
+        "Definition": "The value(s) that appear most frequently. A data set can have no mode, one mode, or multiple modes.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Measure Of Spread": {
+        "Definition": "A measure that describes how much the values are varied or dispersed. The most common are range and standard deviation.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Range": {
+        "Definition": "The difference between the maximum value and the minimum value. This measure very sensitive to outliers.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Standard Deviation": {
+        "Definition": "The measure of how much values typically deviate from the mean. If small, the data is clustered around the mean; if large, the data is spread out.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Outlier": {
+        "Definition": "A data point significantly different from other data points. Outliers can heavily skew the mean and the range, but have less effect on the median and the mode.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Two-Variable Data": {
+        "Definition": "Describes two characteristics measured for each item.",
+        "Category": "",
+        "Examples": [
+            "height and weight of students"
+        ],
+        "Related": []
+    },
+    "Scatterplot": {
+        "Definition": "A graph that shows a two-variable data set. Its axes are the two variables and each point is an item in the data set.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Correlation Coefficient": {
+        "Definition": "A measure that describes the strength and direction of a linear relationship between two variables in a data set.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Line Of Best Fit": {
+        "Definition": "A straight line that best represents the trend in a scatterplot. Also known as a regression line.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Interpolation": {
+        "Definition": "Making a prediction using the line of best fit for an x-value within the range of the original data set.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Extrapolation": {
+        "Definition": "Making a prediction using the line of best fit for an x-value outside the range of the original data set. It's not always reliable since the trend may not continue beyond the range of the original data set.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Population": {
+        "Definition": "The entire group of individuals or items being studied.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Sample": {
+        "Definition": "A subset of the population from which data is collected.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Random Sample": {
+        "Definition": "A sample where every member of the population has an equal chance of being selected. It helps avoid biased results.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Representative Sample": {
+        "Definition": "A sample that accurately reflects the characteristics of the population. It's the goal of taking a random sample.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Sampling Method": {
+        "Definition": "The procedure used to select the sample.",
+        "Category": "",
+        "Examples": [
+            "simple, random, or stratified"
+        ],
+        "Related": []
+    },
+    "Data Inference": {
+        "Definition": "Drawing conclusions about a population based on data from a sample.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Margin Of Error": {
+        "Definition": "A measure of the uncertainty in an estimate from a sample. A larger sample size generally leads to a smaller margin of error.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Confidence Interval": {
+        "Definition": "A range of values, derived from sample data, that is likely to contain the true population parameter with a certain level of confidence. It's defined by a sample statistic and a margin of error.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Statistical Claim": {
+        "Definition": "A conclusion about a population parameter based on sample data.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Bias": {
+        "Definition": "A systematic error in data collection, analysis, or interpretation that leads to misleading results.",
+        "Category": "",
+        "Examples": [
+            "selection bias or response bias"
+        ],
+        "Related": []
+    },
+    "Confounding Variable": {
+        "Definition": "An unmeasured third variable that influences both the supposed cause and effect, leading to a spurious association.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Observational Study": {
+        "Definition": "A study where researchers observe subjects and measure variables without assigning treatments. It can show correlation but not causation.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Experiment": {
+        "Definition": "A study where researchers deliberately impose treatments on subjects and observe responses. Well-designed experiments with random assignment and a control group can establish causation.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Control Group": {
+        "Definition": "A group within an experiment that receives no treatment or a placebo, providing a baseline for comparison.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Correlation": {
+        "Definition": "When two variables tend to vary together. It does not always imply causation.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Causation": {
+        "Definition": "When a change in one variable directly causes a change in another.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Probability": {
+        "Definition": "A measure of the likelihood of an event occurring. It's a number between 0 (impossible) and 1 (certain).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Event": {
+        "Definition": "A specific outcome or set of desired outcomes.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Sample Space": {
+        "Definition": "The set of all possible outcomes of an experiment.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Possible Outcomes"
+        ]
+    },
+    "Possible Outcomes": {
+        "Definition": "All of the distinct results that occur in a probability scenario.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Sample Space"
+        ]
+    },
+    "Desired Outcomes": {
+        "Definition": "The specific results aimed for in a probability scenario.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Mutually Exclusive Events": {
+        "Definition": "Events that cannot occur at the same time.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Independent Events": {
+        "Definition": "Events where the occurrence of one does not affect the probability of the other.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Dependent Events": {
+        "Definition": "Events where the occurrence of one event does affect the probability of the other.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Conditional Probability": {
+        "Definition": "The probability of event B occurring, given that event A has already occurred. It can be written P(B∣A).",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Triangle Sum Theorem": {
+        "Definition": "The theorem that states that the sum of the interior angles of any triangle is always 180°.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exterior Angle Theorem": {
+        "Definition": "The theorem that states that the measure of an exterior angle of a triangle is equal to the sum of the measures of its two non-adjacent interior angles.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Pythagorean Theorem": {
+        "Definition": "The theorem that states that that the square of the hypotenuse of a right triangle is equal to the sum of the squares of the other two sides..",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Distance Formula"
+        ]
+    },
+    "Distance Formula": {
+        "Definition": "The equation that defines the distances between pairs of points in terms of their coordinates.",
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Pythagorean Theorem"
+        ]
+    },
+    "Discriminant": {
+        "Definition": "A function of the coefficients of a polynomial equation whose value gives information about the roots of the polynomial.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Completing The Square": {
+        "Definition": "",
+        "Category": "A technique for converting a quadratic polynomial in standard form to vertex form.",
+        "Examples": [],
+        "Related": []
+    },
+    "Transformation": {
+        "Definition": "A process that changes the position, orientation, or shape of an object or function.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Parent Function": {
+        "Definition": "The simplest function that still satisfies the definition of a certain type of function.",
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    }
+}

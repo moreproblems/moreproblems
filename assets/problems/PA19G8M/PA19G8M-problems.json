@@ -14,7 +14,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (4⁴)² • (4⁷)⁻²?"
+            "Which expression is equivalent to (4⁴)^2 • (4⁷)⁻²?"
         ],
         "AnswerChoices": {
             "A": {
@@ -29,7 +29,7 @@
                 "Choice": "1/4³",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses negative exponent on second factor to move (4⁷)² to denominator, but then “cancels” exponents of 2; evaluates as (4⁴)²/(4⁷)² = (4⁴)/(4⁷).",
+                    "Rationale": "Uses negative exponent on second factor to move (4⁷)^2 to denominator, but then “cancels” exponents of 2; evaluates as (4⁴)^2/(4⁷)^2 = (4⁴)/(4⁷).",
                     "Percent": 13
                 }
             },
@@ -69,7 +69,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which statement describes values of x and y such that x/y could be an irrational number?"
+            "Which statement describes values of `x` and `y` such that x/y could be an irrational number?"
         ],
         "AnswerChoices": {
             "A": {
@@ -130,7 +130,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–0.222...",
+                "Choice": "`-0.222...`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks repeating would mean irrational; disregards negative sign.",
@@ -138,7 +138,7 @@
                 }
             },
             "B": {
-                "Choice": "π – 3",
+                "Choice": "`pi-3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds a number between 0 and 1; disregards the fact that it is irrational.",
@@ -146,7 +146,7 @@
                 }
             },
             "C": {
-                "Choice": "√(1/4)",
+                "Choice": "`sqrt(1/4)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -154,7 +154,7 @@
                 }
             },
             "D": {
-                "Choice": "3/2",
+                "Choice": "`3/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds a rational number; disregards the fact that it is not between 0 and 1.",
@@ -189,7 +189,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The number is rational and equivalent to 56/99.",
+                "Choice": "The number is rational and equivalent to `56/99`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -197,7 +197,7 @@
                 }
             },
             "B": {
-                "Choice": "The number is rational and equivalent to 56/100.",
+                "Choice": "The number is rational and equivalent to `56/100`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Ignores the repeating portion of the decimal.",
@@ -205,7 +205,7 @@
                 }
             },
             "C": {
-                "Choice": "The number is irrational and equivalent to 1/56.",
+                "Choice": "The number is irrational and equivalent to `1/56`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Assumes a repeating decimal is irrational and selects an incorrect rational representation.",
@@ -249,7 +249,7 @@
                 "Choice": "0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes c + (–c) = 0, so assumes expression value is 0.",
+                    "Rationale": "Notes c + (-c) = 0, so assumes expression value is 0.",
                     "Percent": 14
                 }
             },
@@ -262,10 +262,10 @@
                 }
             },
             "C": {
-                "Choice": "1/9²ᶜ",
+                "Choice": "1/9^2ᶜ",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Combines c and –c into –2c; writes as a fraction with a positive exponent.",
+                    "Rationale": "Combines c and -c into -2c; writes as a fraction with a positive exponent.",
                     "Percent": 28
                 }
             },
@@ -273,7 +273,7 @@
                 "Choice": "9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes c + (–c) = 0, so leaves 9.",
+                    "Rationale": "Notes c + (-c) = 0, so leaves 9.",
                     "Percent": 21
                 }
             }
@@ -431,18 +431,18 @@
                 }
             },
             "C": {
-                "Choice": "The graph of y = 3x² is linear and passes through the point (0, 0).",
+                "Choice": "The graph of y = 3x^2is linear and passes through the point (0, 0).",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes correctly that y = 3x² passes through the origin, but misses that it is nonlinear.",
+                    "Rationale": "Notes correctly that y = 3x^2passes through the origin, but misses that it is nonlinear.",
                     "Percent": 13
                 }
             },
             "D": {
-                "Choice": "The graph of y = 3²x + 9 is nonlinear and passes through the point (0, 9).",
+                "Choice": "The graph of y = 3^2x + 9 is nonlinear and passes through the point (0, 9).",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that y = 3²x + 9 has a squared term, so assumes that it is nonlinear.",
+                    "Rationale": "Sees that y = 3^2x + 9 has a squared term, so assumes that it is nonlinear.",
                     "Percent": 12
                 }
             }
@@ -472,7 +472,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–3",
+                "Choice": "-3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the slope will not change.",
@@ -480,7 +480,7 @@
                 }
             },
             "B": {
-                "Choice": "–1/3",
+                "Choice": "-1/3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the slope will be inverted.",
@@ -553,7 +553,7 @@
                 }
             },
             "D": {
-                "Choice": "a rotation of 180° about the point (0, –0.5), followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Choice": "a rotation of 180° about the point (0, -0.5), followed by a dilation centered at the origin with a scale factor of 0.5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not notice that the rotation causes the misalignment of A to D', B to C', C to B', and D to A'.",
@@ -605,7 +605,7 @@
                 "Choice": "Angle C is a right angle.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle and that angle C is always the right angle (a² + b² = c²).",
+                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle and that angle C is always the right angle (`a^2+b^2=c^2`).",
                     "Percent": 10
                 }
             },
@@ -637,7 +637,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Point R is located at (1, 2) on a coordinate grid. Point S is located at (4, –5) on the same coordinate grid. What is the distance from point R to point S, rounded to the nearest tenth?"
+            "Point R is located at (1, 2) on a coordinate grid. Point S is located at (4, -5) on the same coordinate grid. What is the distance from point R to point S, rounded to the nearest tenth?"
         ],
         "AnswerChoices": {
             "A": {
@@ -828,7 +828,7 @@
                 }
             },
             "C": {
-                "Choice": "y = –0.8x + 8",
+                "Choice": "y = -0.8x + 8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -836,7 +836,7 @@
                 }
             },
             "D": {
-                "Choice": "y = –8x + 0.8",
+                "Choice": "y = -8x + 0.8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Switches the slope and y-intercept and switches their signs.",
@@ -952,7 +952,7 @@
                 "Content": [
                     "An online marketplace sells the same brand of beeswax that is sold at the craft store. At the online marketplace, 7 pounds of beeswax costs $78.75.",
                     "• For the craft store, an equation in the form c = r p can be used to describe the relationship between the number of pounds (p) of beeswax purchased and the cost (c), in dollars.\n\n• For the online marketplace, an equation in the form c = sp can be used to describe the relationship between the number of pounds (p) of beeswax purchased and the cost (c), in dollars.",
-                    "Explain why the value of the expression r – s must be 1.14."
+                    "Explain why the value of the expression r - s must be 1.14."
                 ],
                 "AnswerChoices": {}
             },

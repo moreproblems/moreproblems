@@ -182,14 +182,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function g is defined by g(x) = x² + 9. For which value of x is g(x) = 25?"
+            "The function g is defined by g(x) = x^2+ 9. For which value of x is g(x) = 25?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that g(x) = x² + 9. Substituting 25 for g(x) in this equation yields 25 = x² + 9. Subtracting 9 from both sides of this equation yields 16 = x². Taking the square root of each side of this equation yields x = ±4. It follows that g(x) = 25 when the value of x is 4 or -4. Only 4 is listed among the choices.",
+                    "Rationale": "It's given that g(x) = x^2+ 9. Substituting 25 for g(x) in this equation yields 25 = x^2+ 9. Subtracting 9 from both sides of this equation yields 16 = x^2. Taking the square root of each side of this equation yields x = ±4. It follows that g(x) = 25 when the value of x is 4 or -4. Only 4 is listed among the choices.",
                     "Percent": 0
                 }
             },
@@ -323,14 +323,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by the equation f(x) = 7x + 2. What is the value of f(x) when x = 4?"
+            "The function f is defined by the equation f(x) = 7x + 2. What is the value of `f(x)` when x = 4?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:30",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of f(x) when x = 4 can be found by substituting 4 for x in the given equation f(x) = 7x + 2. This yields f(4) = 7(4) + 2, or f(4) = 30. Therefore, when x = 4, the value of f(x) is 30.",
+                    "Rationale": "The value of `f(x)` when x = 4 can be found by substituting 4 for x in the given equation f(x) = 7x + 2. This yields f(4) = 7(4) + 2, or f(4) = 30. Therefore, when x = 4, the value of f(x) is 30.",
                     "Percent": 0
                 }
             }
@@ -488,7 +488,7 @@
                 "Choice": "15",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given system of linear equations can be solved by the substitution method. Substituting –3x for y from the first equation in the given system into the second equation yields 4x + (–3x) = 15, or x = 15.",
+                    "Rationale": "The given system of linear equations can be solved by the substitution method. Substituting -3x for y from the first equation in the given system into the second equation yields 4x + (-3x) = 15, or x = 15.",
                     "Percent": 0
                 }
             },
@@ -536,7 +536,7 @@
                 "Choice": "y = -1.9x + 10.1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation representing a linear model can be written in the form y = a + bx, or y = bx + a, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = –1.9 + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
+                    "Rationale": "The equation representing a linear model can be written in the form y = a + bx, or y = bx + a, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = -1.9 + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
                     "Percent": 0
                 }
             },
@@ -577,7 +577,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT1M1/media/12a.jpg",
-            "The graph of y = f(x) is shown, where the function f is defined by f(x) = ax³ + bx² + cx + d and a, b, c, and d are constants. For how many values of x does f(x) = 0"
+            "The graph of y = f(x) is shown, where the function f is defined by f(x) = ax³ + bx^2+ cx + d and a, b, c, and d are constants. For how many values of x does f(x) = 0"
         ],
         "AnswerChoices": {
             "A": {
@@ -671,7 +671,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The correct answer is either 2 or –12. The left-hand side of the given equation can be rewritten by factoring. The two values that multiply to –24 and add to 10 are 12 and –2. It follows that the given equation can be rewritten as (z + 12)(z - 2) = 0. Setting each factor equal to 0 yields two equations: z + 12 = 0 and z - 2 = 0. Subtracting 12 from both sides of the equation z + 12 = 0 results in z = -12. Adding 2 to both sides of the equation z - 2 = 0 results in z = 2.",
+                    "Rationale": "The correct answer is either 2 or -12. The left-hand side of the given equation can be rewritten by factoring. The two values that multiply to -24 and add to 10 are 12 and -2. It follows that the given equation can be rewritten as (z + 12)(z - 2) = 0. Setting each factor equal to 0 yields two equations: z + 12 = 0 and z - 2 = 0. Subtracting 12 from both sides of the equation z + 12 = 0 results in z = -12. Adding 2 to both sides of the equation z - 2 = 0 results in z = 2.",
                     "Percent": 0
                 }
             },
@@ -679,7 +679,7 @@
                 "Choice": "equal:-12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The correct answer is either 2 or –12. The left-hand side of the given equation can be rewritten by factoring. The two values that multiply to –24 and add to 10 are 12 and –2. It follows that the given equation can be rewritten as (z + 12)(z - 2) = 0. Setting each factor equal to 0 yields two equations: z + 12 = 0 and z - 2 = 0. Subtracting 12 from both sides of the equation z + 12 = 0 results in z = -12. Adding 2 to both sides of the equation z - 2 = 0 results in z = 2.",
+                    "Rationale": "The correct answer is either 2 or -12. The left-hand side of the given equation can be rewritten by factoring. The two values that multiply to -24 and add to 10 are 12 and -2. It follows that the given equation can be rewritten as (z + 12)(z - 2) = 0. Setting each factor equal to 0 yields two equations: z + 12 = 0 and z - 2 = 0. Subtracting 12 from both sides of the equation z + 12 = 0 results in z = -12. Adding 2 to both sides of the equation z - 2 = 0 results in z = 2.",
                     "Percent": 0
                 }
             }
@@ -734,7 +734,7 @@
                 "Choice": "9,600,000",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let y represent the number of cells per milliliter x hours after the initial observation. Since the number of cells per milliliter doubles every 3 hours, the relationship between x and y can be represented by an exponential equation of the form y = a(b)ˣ/ᵏ, where a is the number of cells per milliliter during the initial observation and the number of cells per milliliter increases by a factor of b every k hours. It's given that there were 300,000 cells per milliliter during the initial observation. Therefore, a = 300,000. It's also given that the number of cells per milliliter doubles, or increases by a factor of 2, every 3 hours. Therefore, b = 2 and k = 3. Substituting 300,000 for a, 2 for b, and 3 for k in the equation y = a(b)ˣ/ᵏ yields y = 300,000(2)ˣ/³. The number of cells per milliliter there will be 15 hours after the initial observation is the value of y in this equation when x = 15. Substituting 15 for x in the equation y = 300,000(2)ˣ/³ yields y = 300,000(2)¹⁵/³, or y = 300,000(2)⁵. This is equivalent to y = 300,000(32), or y = 9,600,000. Therefore, 15 hours after the initial observation, there will be 9,600,000 cells per milliliter.",
+                    "Rationale": "Let y represent the number of cells per milliliter x hours after the initial observation. Since the number of cells per milliliter doubles every 3 hours, the relationship between `x` and `y` can be represented by an exponential equation of the form y = a(b)ˣ/ᵏ, where a is the number of cells per milliliter during the initial observation and the number of cells per milliliter increases by a factor of b every k hours. It's given that there were 300,000 cells per milliliter during the initial observation. Therefore, a = 300,000. It's also given that the number of cells per milliliter doubles, or increases by a factor of 2, every 3 hours. Therefore, b = 2 and k = 3. Substituting 300,000 for a, 2 for b, and 3 for k in the equation y = a(b)ˣ/ᵏ yields y = 300,000(2)ˣ/³. The number of cells per milliliter there will be 15 hours after the initial observation is the value of y in this equation when x = 15. Substituting 15 for x in the equation y = 300,000(2)ˣ/³ yields y = 300,000(2)¹⁵/³, or y = 300,000(2)⁵. This is equivalent to y = 300,000(32), or y = 9,600,000. Therefore, 15 hours after the initial observation, there will be 9,600,000 cells per milliliter.",
                     "Percent": 0
                 }
             }
@@ -758,38 +758,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 6x⁸y² + 12x²y²"
+            "Which expression is equivalent to 6x⁸y^2+ 12x^2y^2"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6x²y²(2x⁶)",
+                "Choice": "6x^2y^2(2x⁶)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 12x⁸y², not 6x⁸y² + 12x²y².",
+                    "Rationale": "This expression is equivalent to 12x⁸y^2, not 6x⁸y^2+ 12x^2y^2.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "6x²y²(x⁴)",
+                "Choice": "6x^2y^2(x⁴)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 6x⁶y², not 6x⁸y² + 12x²y².",
+                    "Rationale": "This expression is equivalent to 6x⁶y^2, not 6x⁸y^2+ 12x^2y^2.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "6x²y²(x⁶ + 2)",
+                "Choice": "6x^2y^2(x⁶ + 2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since each term of the given expression has a common factor of 6x²y², it may be rewritten as 6x²y²(x⁶) + 6x²y²(2), or 6x²y²(x⁶ + 2).",
+                    "Rationale": "Since each term of the given expression has a common factor of 6x^2y^2, it may be rewritten as 6x^2y^2(x⁶) + 6x^2y^2(2), or 6x^2y^2(x⁶ + 2).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "6x²y²(x⁴ + 2)",
+                "Choice": "6x^2y^2(x⁴ + 2)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 6x⁶y² + 12x²y², not 6x⁸y² + 12x²y².",
+                    "Rationale": "This expression is equivalent to 6x⁶y^2+ 12x^2y^2, not 6x⁸y^2+ 12x^2y^2.",
                     "Percent": 0
                 }
             }
@@ -884,7 +884,7 @@
                 "Choice": "8x + 12y = 480",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph shown is a line passing through the points (0, 40) and (60, 0). Since the relationship between x and y is linear, if two points on the graph make a linear equation true, then the equation represents the relationship. Substituting 0 for x and 40 for y in the equation in this choice, 8x + 12y = 480, yields 8(0) + 12(40) = 480, or 480 = 480, which is true. Substituting 60 for x and 0 for y in the equation 8x + 12y = 480 yields 8(60) + 12(0) = 480, or 480 = 48, which is true. Therefore, the equation 8x + 12y = 480 represents the relationship between x and y.",
+                    "Rationale": "The graph shown is a line passing through the points (0, 40) and (60, 0). Since the relationship between `x` and `y` is linear, if two points on the graph make a linear equation true, then the equation represents the relationship. Substituting 0 for x and 40 for y in the equation in this choice, 8x + 12y = 480, yields 8(0) + 12(40) = 480, or 480 = 480, which is true. Substituting 60 for x and 0 for y in the equation 8x + 12y = 480 yields 8(60) + 12(0) = 480, or 480 = 48, which is true. Therefore, the equation 8x + 12y = 480 represents the relationship between `x` and `y`.",
                     "Percent": 0
                 }
             },
@@ -955,7 +955,7 @@
                 "Choice": "1,849",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The area of a circle can be found by using the formula A = πr², where A is the area and r is the radius of the circle. It's given that the radius of circle A is 3n. Substituting this value for r into the formula A = πr² gives A = π(3n)², or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula A = πr² gives A = π(129n)², or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
+                    "Rationale": "The area of a circle can be found by using the formula A = πr², where A is the area and r is the radius of the circle. It's given that the radius of circle A is 3n. Substituting this value for r into the formula A = πr² gives A = π(3n)^2, or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula A = πr² gives A = π(129n)^2, or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
                     "Percent": 0
                 }
             }
@@ -1011,14 +1011,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A circle in the xy-plane has a diameter with endpoints (2, 4) and (2, 14). An equation of this circle is (x – 2)² + (y – 9)² = r², where r is a positive constant. What is the value of r?"
+            "A circle in the xy-plane has a diameter with endpoints (2, 4) and (2, 14). An equation of this circle is (x - 2)^2 + (y - 9)^2 = r², where r is a positive constant. What is the value of r?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form of an equation of a circle in the xy-plane is (x – h)² + (y – k)² = r², where h, k, and r are constants, the coordinates of the center of the circle are (h, k), and the length of the radius of the circle is r. It's given that an equation of the circle is (x – 2)² + (y – 9)² = r². Therefore, the center of this circle is (2, 9). It's given that the endpoints of a diameter of the circle are (2, 4) and (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x₁ – x₂)² + (y₁ – y₂)²). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 – 2)² + (9 – 4)²), or √(0² + 5²), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
+                    "Rationale": "The standard form of an equation of a circle in the xy-plane is (x - h)^2 + (y - k)^2 = r², where h, k, and r are constants, the coordinates of the center of the circle are (h, k), and the length of the radius of the circle is r. It's given that an equation of the circle is (x - 2)^2 + (y - 9)^2 = r². Therefore, the center of this circle is (2, 9). It's given that the endpoints of a diameter of the circle are (2, 4) and (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x₁ - x₂)^2 + (y₁ - y₂)^2). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 - 2)^2 + (9 - 4)^2), or √(0^2 + 5^2), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
                     "Percent": 0
                 }
             }
@@ -1157,7 +1157,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–26/3, 0)",
+                "Choice": "(-26/3, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1165,7 +1165,7 @@
                 }
             },
             "B": {
-                "Choice": "(–9/2, 0)",
+                "Choice": "(-9/2, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1173,7 +1173,7 @@
                 }
             },
             "C": {
-                "Choice": "(–11/3, 0)",
+                "Choice": "(-11/3, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1181,10 +1181,10 @@
                 }
             },
             "D": {
-                "Choice": "(–17/6, 0)",
+                "Choice": "(-17/6, 0)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of line h can be written in slope-intercept form y = mx + b, where m is the slope of the line and (0, b) is the y-intercept of the line. It's given that line h contains the points (18, 130), (23, 160), and (26, 178). Therefore, its slope m can be found as (160 – 130)/(23 – 18), or 6. Substituting 6 for m in the equation y = mx + b yields y = 6x + b. Substituting 130 for y and 18 for x in this equation yields 130 = 6(18) + b, or 130 = 108 + b. Subtracting 108 from both sides of this equation yields 22 = b. Substituting 22 for b in y = 6x + b yields y = 6x + 22. Since line k is the result of translating line h down 5 units, an equation of line k is y = 6x + 22 – 5, or y = 6x + 17. Substituting 0 for y in this equation yields 0 = 6x + 17. Solving this equation for x yields x = -17/6. Therefore, the x-intercept of line k is (–17/6, 0).",
+                    "Rationale": "The equation of line h can be written in slope-intercept form y = mx + b, where m is the slope of the line and (0, b) is the y-intercept of the line. It's given that line h contains the points (18, 130), (23, 160), and (26, 178). Therefore, its slope m can be found as (160 - 130)/(23 - 18), or 6. Substituting 6 for m in the equation y = mx + b yields y = 6x + b. Substituting 130 for y and 18 for x in this equation yields 130 = 6(18) + b, or 130 = 108 + b. Subtracting 108 from both sides of this equation yields 22 = b. Substituting 22 for b in y = 6x + b yields y = 6x + 22. Since line k is the result of translating line h down 5 units, an equation of line k is y = 6x + 22 - 5, or y = 6x + 17. Substituting 0 for y in this equation yields 0 = 6x + 17. Solving this equation for x yields x = -17/6. Therefore, the x-intercept of line k is (-17/6, 0).",
                     "Percent": 0
                 }
             }
@@ -1208,11 +1208,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the xy-plane, the graph of the equation y = –x² + 9x – 100 intersects the line y = c at exactly one point. What is the value of c?"
+            "In the xy-plane, the graph of the equation y = -x^2+ 9x - 100 intersects the line y = c at exactly one point. What is the value of c?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–481/4",
+                "Choice": "-481/4",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1220,7 +1220,7 @@
                 }
             },
             "B": {
-                "Choice": "–100",
+                "Choice": "-100",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1228,15 +1228,15 @@
                 }
             },
             "C": {
-                "Choice": "–319/4",
+                "Choice": "-319/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = –x² + 9x – 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x – h)² + k, the vertex of its graph in the xy-plane is (h, k). The given quadratic equation, y = –x² + 9x – 100, can be rewritten as y = (x² – 2(9/2)x + (9/2)²) + (9/2)² – 100, or y = –(x – 9/2)² + (–319/4). Thus, the value of c is equal to –319/4.",
+                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = -x^2+ 9x - 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)^2 + k, the vertex of its graph in the xy-plane is (h, k). The given quadratic equation, y = -x^2+ 9x - 100, can be rewritten as y = (x^2- 2(9/2)x + (9/2)^2) + (9/2)^2 - 100, or y = -(x - 9/2)^2 + (-319/4). Thus, the value of c is equal to -319/4.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "–9/2",
+                "Choice": "-9/2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1276,10 +1276,10 @@
                 }
             },
             "B": {
-                "Choice": "(–3r/2 + 7/2, r)",
+                "Choice": "(-3r/2 + 7/2, r)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point (x, y) lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, –3r/2 + 7/2 and r, for x and y, respectively, in the first equation yields 2(–3r/2 + 7/2) + 3r = 7, which is equivalent to –3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (–3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
+                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point (x, y) lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, -3r/2 + 7/2 and r, for `x` and `y`, respectively, in the first equation yields 2(-3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (-3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
                     "Percent": 0
                 }
             },
@@ -1292,7 +1292,7 @@
                 }
             },
             "D": {
-                "Choice": "(r, –3r/2 + 7/2)",
+                "Choice": "(r, -3r/2 + 7/2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",

@@ -120,7 +120,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the sum of the complex numbers 2 + 3i and 4 + 8i, where i = √–1?"
+            "What is the sum of the complex numbers 2 + 3i and 4 + 8i, where i = √-1?"
         ],
         "AnswerChoices": {
             "A": {
@@ -173,7 +173,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:4x² – 9 = (px + t)(px – t)",
+            ":ibox:4x^2- 9 = (px + t)(px - t)",
             "In the equation above, p and t are constants. Which of the following could be the value of p?"
         ],
         "AnswerChoices": {
@@ -181,7 +181,7 @@
                 "Choice": "2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The right side of the equation can be multiplied using the distributive property: (px + t)(px – t) = p²x² – ptx + ptx – t². Combining like terms gives p²x² – t². Substituting this expression for the right side of the equation gives 4x² – 9 = p²x² – t², where p and t are constants. This equation is true for all values of x only when 4 = p² and 9 = t². If 4 = p², then p = 2 or p = –2. Therefore, of the given answer choices, only 2 could be the value of p.",
+                    "Rationale": "The right side of the equation can be multiplied using the distributive property: (px + t)(px - t) = p²x^2- ptx + ptx - t^2. Combining like terms gives p²x^2- t^2. Substituting this expression for the right side of the equation gives 4x^2- 9 = p²x^2- t^2, where p and t are constants. This equation is true for all values of x only when 4 = p² and 9 = t^2. If 4 = p², then p = 2 or p = -2. Therefore, of the given answer choices, only 2 could be the value of p.",
                     "Percent": 0
                 }
             },
@@ -189,7 +189,7 @@
                 "Choice": "3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the equation to be true for all values of x, the coefficients of x² on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 3.",
+                    "Rationale": "For the equation to be true for all values of x, the coefficients of x^2on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 3.",
                     "Percent": 0
                 }
             },
@@ -197,7 +197,7 @@
                 "Choice": "4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the equation to be true for all values of x, the coefficients of x² on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 4.",
+                    "Rationale": "For the equation to be true for all values of x, the coefficients of x^2on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 4.",
                     "Percent": 0
                 }
             },
@@ -205,7 +205,7 @@
                 "Choice": "9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the equation to be true for all values of x, the coefficients of x² on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 9.",
+                    "Rationale": "For the equation to be true for all values of x, the coefficients of x^2on both sides of the equation must be equal; that is, 4 = p². Therefore, the value of p cannot be 9.",
                     "Percent": 0
                 }
             }
@@ -227,14 +227,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is the graph of the equation y = 2x – 5 in the xy-plane?"
+            "Which of the following is the graph of the equation y = 2x - 5 in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/SAT16M1/media/5a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of y = 2x – 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, –5). This graph crosses the y-axis at the point (0, 2.5), not (0, –5), and it has a slope of 1/2, not 2.",
+                    "Rationale": "The graph of y = 2x - 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, -5). This graph crosses the y-axis at the point (0, 2.5), not (0, -5), and it has a slope of 1/2, not 2.",
                     "Percent": 0
                 }
             },
@@ -242,7 +242,7 @@
                 "Choice": "problems/SAT16M1/media/5b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of y = 2x – 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, –5). This choice crosses the y-axis at (0, –5); however, the slope of this line is –2, not 2.",
+                    "Rationale": "The graph of y = 2x - 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, -5). This choice crosses the y-axis at (0, -5); however, the slope of this line is -2, not 2.",
                     "Percent": 0
                 }
             },
@@ -250,7 +250,7 @@
                 "Choice": "problems/SAT16M1/media/5c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of y = 2x – 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, –5). This choice has a slope of 2; however, the graph crosses the y-axis at (0, 5), not (0, –5).",
+                    "Rationale": "The graph of y = 2x - 5 in the xy-plane is a line with slope 2 and a y-intercept at (0, -5). This choice has a slope of 2; however, the graph crosses the y-axis at (0, 5), not (0, -5).",
                     "Percent": 0
                 }
             },
@@ -258,7 +258,7 @@
                 "Choice": "problems/SAT16M1/media/5d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the xy-plane, the graph of the equation y = mx + b, where m and b are constants, is a line with slope m and y-intercept (0, b). Therefore, the graph of y = 2x – 5 in the xy-plane is a line with slope 2 and a y-intercept (0, –5). Having a slope of 2 means that for each increase in x by 1, the value of y increases by 2. Only the graph in this choice has a slope of 2 and crosses the y-axis at (0, –5). Therefore, the graph shown in this choice must be the correct answer.",
+                    "Rationale": "In the xy-plane, the graph of the equation y = mx + b, where m and b are constants, is a line with slope m and y-intercept (0, b). Therefore, the graph of y = 2x - 5 in the xy-plane is a line with slope 2 and a y-intercept (0, -5). Having a slope of 2 means that for each increase in x by 1, the value of y increases by 2. Only the graph in this choice has a slope of 2 and crosses the y-axis at (0, -5). Therefore, the graph shown in this choice must be the correct answer.",
                     "Percent": 0
                 }
             }
@@ -280,14 +280,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If x = 2y/3 and y = 18, what is the value of 2x – 3?"
+            "If x = 2y/3 and y = 18, what is the value of 2x - 3?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "21",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting the given value of y = 18 into the equation x = 2y/3 yields x = (2/3)(18), or x = 12. The value of the expression 2x – 3 when x = 12 is 2(12) – 3 = 21.",
+                    "Rationale": "Substituting the given value of y = 18 into the equation x = 2y/3 yields x = (2/3)(18), or x = 12. The value of the expression 2x - 3 when x = 12 is 2(12) - 3 = 21.",
                     "Percent": 0
                 }
             },
@@ -295,7 +295,7 @@
                 "Choice": "15",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If 2x – 3 = 15, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 9. Substituting 9 for x and 18 for y into the equation x = 2y/3 yields 9 = (2/3)18 = 12, which is false. Therefore, the value of 2x – 3 cannot be 15.",
+                    "Rationale": "If 2x - 3 = 15, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 9. Substituting 9 for x and 18 for y into the equation x = 2y/3 yields 9 = (2/3)18 = 12, which is false. Therefore, the value of 2x - 3 cannot be 15.",
                     "Percent": 0
                 }
             },
@@ -303,7 +303,7 @@
                 "Choice": "12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If 2x – 3 = 12, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 7.5. Substituting 7.5 for x and 18 for y into the equation x = 2y/3 yields 7.5 = (2/3)18 = 12, which is false. Therefore, the value of 2x – 3 cannot be 12.",
+                    "Rationale": "If 2x - 3 = 12, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 7.5. Substituting 7.5 for x and 18 for y into the equation x = 2y/3 yields 7.5 = (2/3)18 = 12, which is false. Therefore, the value of 2x - 3 cannot be 12.",
                     "Percent": 0
                 }
             },
@@ -311,7 +311,7 @@
                 "Choice": "10",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If 2x – 3 = 10, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 6.5. Substituting 6.5 for x and 18 for y into the equation x = 2y/3 yields 6.5 = (2/3)18 = 12, which is false. Therefore, the value of 2x – 3 cannot be 10.",
+                    "Rationale": "If 2x - 3 = 10, then adding 3 to both sides of the equation and then dividing both sides of the equation by 2 yields x = 6.5. Substituting 6.5 for x and 18 for y into the equation x = 2y/3 yields 6.5 = (2/3)18 = 12, which is false. Therefore, the value of 2x - 3 cannot be 10.",
                     "Percent": 0
                 }
             }
@@ -394,7 +394,7 @@
                 "Choice": "1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "When x = 1, the equation w(x) + t(x) = x is not true. According to the table, w(1) = –1 and t(1) = –3. Substituting the values of each term when x = 1 gives –1 + (–3) = 1, an equation that is not true.",
+                    "Rationale": "When x = 1, the equation w(x) + t(x) = x is not true. According to the table, w(1) = -1 and t(1) = -3. Substituting the values of each term when x = 1 gives -1 + (-3) = 1, an equation that is not true.",
                     "Percent": 0
                 }
             },
@@ -402,7 +402,7 @@
                 "Choice": "2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This question can be answered by making a connection between the table and the algebraic equation. Each row of the table gives a value of x and its corresponding values in both w(x) and t(x). For instance, the first row gives x = 1 and the corresponding values w(1) = –1 and t(1) = –3. The row in the table where x = 2 is the only row that has the property x = w(x) + t(x): 2 = 3 + (–1). Therefore, this choice is the correct answer.",
+                    "Rationale": "This question can be answered by making a connection between the table and the algebraic equation. Each row of the table gives a value of x and its corresponding values in both w(x) and t(x). For instance, the first row gives x = 1 and the corresponding values w(1) = -1 and t(1) = -3. The row in the table where x = 2 is the only row that has the property x = w(x) + t(x): 2 = 3 + (-1). Therefore, this choice is the correct answer.",
                     "Percent": 0
                 }
             },
@@ -547,14 +547,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT16M1/media/11a.jpg",
-            "The vertex of the parabola in the xy-plane above is (0, c). Which of the following is true about the parabola with the equation y = –a(x – b)² + c?"
+            "The vertex of the parabola in the xy-plane above is (0, c). Which of the following is true about the parabola with the equation y = -a(x - b)^2 + c?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "The vertex is (b, c) and the graph opens upward.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The coefficient of x² in the equation y = –a(x – b)² + c is negative. Therefore, the parabola with this equation opens downward, not upward.",
+                    "Rationale": "The coefficient of x^2in the equation y = -a(x - b)^2 + c is negative. Therefore, the parabola with this equation opens downward, not upward.",
                     "Percent": 0
                 }
             },
@@ -562,23 +562,23 @@
                 "Choice": "The vertex is (b, c) and the graph opens downward.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the shown parabola opens upward, the coefficient of x² in the equation y = ax² + c must be positive. Given that a is positive, –a is negative, and therefore the graph of the equation y = –a(x – b)² + c will be a parabola that opens downward. The vertex of this parabola is (b, c), because the maximum value of y, c, is reached when x = b.",
+                    "Rationale": "Since the shown parabola opens upward, the coefficient of x^2in the equation y = ax^2+ c must be positive. Given that a is positive, -a is negative, and therefore the graph of the equation y = -a(x - b)^2 + c will be a parabola that opens downward. The vertex of this parabola is (b, c), because the maximum value of y, c, is reached when x = b.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The vertex is (–b, c) and the graph opens upward.",
+                "Choice": "The vertex is (-b, c) and the graph opens upward.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The coefficient of x² in the equation y = –a(x – b)² + c is negative. Therefore, the parabola with this equation opens downward, not upward.",
+                    "Rationale": "The coefficient of x^2in the equation y = -a(x - b)^2 + c is negative. Therefore, the parabola with this equation opens downward, not upward.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "The vertex is (–b, c) and the graph opens downward.",
+                "Choice": "The vertex is (-b, c) and the graph opens downward.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The vertex of this parabola is (b, c), not (–b, c), because the maximum value of y, c, is reached when x = b.",
+                    "Rationale": "The vertex of this parabola is (b, c), not (-b, c), because the maximum value of y, c, is reached when x = b.",
                     "Percent": 0
                 }
             }
@@ -600,14 +600,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is equivalent to (4x² + 6x)/(4x + 2)?"
+            "Which of the following is equivalent to (4x^2+ 6x)/(4x + 2)?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly factoring the numerator and denominator of the expression (4x² + 6x)/(4x + 2) and then incorrectly identifying common factors in the two factored expressions.",
+                    "Rationale": "This choice may result from incorrectly factoring the numerator and denominator of the expression (4x^2+ 6x)/(4x + 2) and then incorrectly identifying common factors in the two factored expressions.",
                     "Percent": 0
                 }
             },
@@ -615,12 +615,12 @@
                 "Choice": "x + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly factoring the numerator and denominator of the expression (4x² + 6x)/(4x + 2) and then incorrectly identifying common factors in the two factored expressions.",
+                    "Rationale": "This choice may result from incorrectly factoring the numerator and denominator of the expression (4x^2+ 6x)/(4x + 2) and then incorrectly identifying common factors in the two factored expressions.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "x – 2/(4x + 2)",
+                "Choice": "x - 2/(4x + 2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from a variety of mistakes made when performing long division.",
@@ -628,10 +628,10 @@
                 }
             },
             "D": {
-                "Choice": "x + 1 – 2/(4x + 2)",
+                "Choice": "x + 1 - 2/(4x + 2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Dividing 4x² + 6x by 4x + 2 gives with x + 1 with a remainder of –2. Therefore, the expression (4x² + 6x)/(4x + 2) is equivalent to x + 1 – 2/(4x + 2).",
+                    "Rationale": "Dividing 4x^2+ 6x by 4x + 2 gives with x + 1 with a remainder of -2. Therefore, the expression (4x^2+ 6x)/(4x + 2) is equivalent to x + 1 - 2/(4x + 2).",
                     "Percent": 0
                 }
             }
@@ -653,20 +653,20 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:2x² – 4x = t",
+            ":ibox:2x^2- 4x = t",
             "In the equation above, t is a constant. If the equation has no real solutions, which of the following could be the value of t?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–3",
+                "Choice": "-3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The number of solutions to any quadratic equation in the form ax² + bx + c = 0, where a, b, and c are constants, can be found by evaluating the expression b² – 4ac, which is called the discriminant. If the value of b² – 4ac is a positive number, then there will be exactly two real solutions to the equation. If the value of b² – 4ac is zero, then there will be exactly one real solution to the equation. Finally, if the value of b² – 4ac is negative, then there will be no real solutions to the equation.\nThe given equation 2x² – 4x = t is a quadratic equation in one variable, where t is a constant. Subtracting t from both sides of the equation gives 2x² – 4x – t = 0. In this form, a = 2, b = –4, and c = –t. The values of t for which the equation has no real solutions are the same values of t for which the discriminant of this equation is a negative value. The discriminant is equal to (–4)² – 4(2)(–t); therefore, (–4)² – 4(2)(–t) < 0. Simplifying the left side of the inequality gives 16 + 8t < 0. Subtracting 16 from both sides of the inequality and then dividing both sides by 8 gives t < –2. Of the values given in the options, –3 is the only value that is less than –2.",
+                    "Rationale": "The number of solutions to any quadratic equation in the form ax^2+ bx + c = 0, where a, b, and c are constants, can be found by evaluating the expression b² - 4ac, which is called the discriminant. If the value of b² - 4ac is a positive number, then there will be exactly two real solutions to the equation. If the value of b² - 4ac is zero, then there will be exactly one real solution to the equation. Finally, if the value of b² - 4ac is negative, then there will be no real solutions to the equation.\nThe given equation 2x^2- 4x = t is a quadratic equation in one variable, where t is a constant. Subtracting t from both sides of the equation gives 2x^2- 4x - t = 0. In this form, a = 2, b = -4, and c = -t. The values of t for which the equation has no real solutions are the same values of t for which the discriminant of this equation is a negative value. The discriminant is equal to (-4)^2 - 4(2)(-t); therefore, (-4)^2 - 4(2)(-t) < 0. Simplifying the left side of the inequality gives 16 + 8t < 0. Subtracting 16 from both sides of the inequality and then dividing both sides by 8 gives t < -2. Of the values given in the options, -3 is the only value that is less than -2.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "–1",
+                "Choice": "-1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice results from a misconception about how to use the discriminant to determine the number of solutions of a quadratic equation in one variable.",
@@ -760,7 +760,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is equivalent to (a + b/2)²?"
+            "Which of the following is equivalent to (a + b/2)^2?"
         ],
         "AnswerChoices": {
             "A": {
@@ -828,7 +828,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: (16²)¹/². Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 1/2. So the value of b can be 2.",
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: (16^2)¹/². Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 1/2. So the value of b can be 2.",
                     "Percent": 0
                 }
             },
@@ -844,7 +844,7 @@
                 "Choice": "equal:8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: 4². Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 2. So the value of b can be 8.",
+                    "Rationale": "16 can be written in exponential form aᵇ/⁴, where a and b are positive integers as follows: 4^2. Hence, if aᵇ/⁴ = 16, where a and b are positive integers, then b/4 can be 2. So the value of b can be 8.",
                     "Percent": 0
                 }
             },
@@ -912,7 +912,7 @@
                 "Choice": "equal:30",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the figure given, since BD is parallel to AE and both segments are intersected by CE, then angle BDC and angle AEC are corresponding angles and therefore congruent. Angle BCD and angle ACE are also congruent because they are the same angle. Triangle BCD and triangle ACE are similar because if two angles of one triangle are congruent to two angles of another triangle, the triangles are similar. Since triangle BCD and triangle ACE are similar, their corresponding sides are proportional. So in triangle BCD and triangle ACE, BD corresponds to AE and CD corresponds to CE. Therefore, BD/CD = AE/CE. Since triangle BCD is a right triangle, the Pythagorean theorem can be used to give the value of CD: 6² + 8² = CD². Taking the square root of each side gives CD = 10. Substituting the values in the proportion BD/CD = AE/CE yields 67/10 = 18/CE. Multiplying each side by CE, and then multiplying by 10/6 yields CE = 30. Therefore, the length of CE is 30.",
+                    "Rationale": "In the figure given, since BD is parallel to AE and both segments are intersected by CE, then angle BDC and angle AEC are corresponding angles and therefore congruent. Angle BCD and angle ACE are also congruent because they are the same angle. Triangle BCD and triangle ACE are similar because if two angles of one triangle are congruent to two angles of another triangle, the triangles are similar. Since triangle BCD and triangle ACE are similar, their corresponding sides are proportional. So in triangle BCD and triangle ACE, BD corresponds to AE and CD corresponds to CE. Therefore, BD/CD = AE/CE. Since triangle BCD is a right triangle, the Pythagorean theorem can be used to give the value of CD: 6^2 + 8^2 = CD². Taking the square root of each side gives CD = 10. Substituting the values in the proportion BD/CD = AE/CE yields 67/10 = 18/CE. Multiplying each side by CE, and then multiplying by 10/6 yields CE = 30. Therefore, the length of CE is 30.",
                     "Percent": 0
                 }
             }

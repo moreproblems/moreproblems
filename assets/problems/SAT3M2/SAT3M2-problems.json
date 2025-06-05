@@ -237,7 +237,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 20w – (4w + 3w)?"
+            "Which expression is equivalent to 20w - (4w + 3w)?"
         ],
         "AnswerChoices": {
             "A": {
@@ -323,15 +323,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:y = x² – 14x + 22",
-            "The given equation relates the variables x and y. For what value of x does the value of y reach its minimum?"
+            ":box:y = x^2- 14x + 22",
+            "The given equation relates the variables `x` and `y`. For what value of x does the value of y reach its minimum?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "When an equation is of the form y = ax² + bx + c, where a, b, and c are constants, the value of y reaches its minimum when x = -b/2a. Since the given equation is of the form y = ax² + bx + c, it follows that a = 1, b = -14, and c = 22. Therefore, the value of y reaches its minimum when x = -(-14)/(2(1)), or x = 7.",
+                    "Rationale": "When an equation is of the form y = ax^2+ bx + c, where a, b, and c are constants, the value of y reaches its minimum when x = -b/2a. Since the given equation is of the form y = ax^2+ bx + c, it follows that a = 1, b = -14, and c = 22. Therefore, the value of y reaches its minimum when x = -(-14)/(2(1)), or x = 7.",
                     "Percent": 0
                 }
             }
@@ -355,7 +355,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 9x² + 5x?"
+            "Which expression is equivalent to 9x^2+ 5x?"
         ],
         "AnswerChoices": {
             "A": {
@@ -370,7 +370,7 @@
                 "Choice": "5x(9x + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 45x² + 5x, not 9x² + 5x.",
+                    "Rationale": "This expression is equivalent to 45x^2+ 5x, not 9x^2+ 5x.",
                     "Percent": 0
                 }
             },
@@ -378,15 +378,15 @@
                 "Choice": "9x(x + 5)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 9x² + 45x, not 9x² + 5x.",
+                    "Rationale": "This expression is equivalent to 9x^2+ 45x, not 9x^2+ 5x.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "x²(9x + 5)",
+                "Choice": "x^2(9x + 5)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This expression is equivalent to 9x³ + 5x², not 9x² + 5x.",
+                    "Rationale": "This expression is equivalent to 9x³ + 5x^2, not 9x^2+ 5x.",
                     "Percent": 0
                 }
             }
@@ -465,7 +465,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:x = 8\n\ny = x² + 8",
+            ":box:x = 8\n\ny = x^2+ 8",
             "The graphs of the equations in the given system of equations intersect at the point (x, y) in the xy-plane. What is the value of y?"
         ],
         "AnswerChoices": {
@@ -497,7 +497,7 @@
                 "Choice": "72",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the graphs of the equations in the given system intersect at the point (x, y), the point (x, y) represents a solution to the given system of equations. The first equation of the given system of equations states that x = 8. Substituting 8 for x in the second equation of the given system of equations yields y = 8² + 8, or y = 72. Therefore, the value of y is 72.",
+                    "Rationale": "Since the graphs of the equations in the given system intersect at the point (x, y), the point (x, y) represents a solution to the given system of equations. The first equation of the given system of equations states that x = 8. Substituting 8 for x in the second equation of the given system of equations yields y = 8^2 + 8, or y = 72. Therefore, the value of y is 72.",
                     "Percent": 0
                 }
             }
@@ -521,7 +521,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The scatterplot shows the relationship between two variables, x and y. A line of best fit is also shown.",
+            "The scatterplot shows the relationship between two variables, `x` and `y`. A line of best fit is also shown.",
             "problems/SAT3M2/media/11a.jpg",
             "Which of the following equations best represents the line of best fit shown?"
         ],
@@ -535,7 +535,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 13.5 – 0.8x",
+                "Choice": "y = 13.5 - 0.8x",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The line of best fit shown intersects the y-axis at a positive y-value and has a negative slope. The graph of an equation of the form y = a + bx, where a and b are constants, intersects the y-axis at a y-value of a and has a slope of b. Of the given choices, only this choice represents a line that intersects the y-axis at a positive y-value, 13.5, and has a negative slope, -0.8.",
@@ -543,7 +543,7 @@
                 }
             },
             "C": {
-                "Choice": "y = –13.5 + 0.8x",
+                "Choice": "y = -13.5 + 0.8x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation represents a line that intersects the y-axis at a negative y-value, not a positive y-value, and has a positive slope, not a negative slope.",
@@ -551,7 +551,7 @@
                 }
             },
             "D": {
-                "Choice": "y = –13.5 – 0.8x",
+                "Choice": "y = -13.5 - 0.8x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation represents a line that intersects the y-axis at a negative y-value, not a positive y-value.",
@@ -664,7 +664,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:x(x + 1) – 56 = 4x(x – 7)",
+            ":box:x(x + 1) - 56 = 4x(x - 7)",
             "What is the sum of the solutions to the given equation?"
         ],
         "AnswerChoices": {
@@ -672,7 +672,7 @@
                 "Choice": "equal:29/3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applying the distributive property to the left-hand side of the given equation, x(x + 1) - 56, yields x² + x - 56. Applying the distributive property to the right-hand side of the given equation, 4x(x - 7), yields 4x² - 28x. Thus, the equation becomes x² + x - 56 = 4x² - 28x. Combining like terms on the left- and right-hand sides of this equation yields 0 = (4x² - x²) + (-28x - x) + 56, or 3x² - 29x + 56 = 0. For a quadratic equation in the form ax² + bx + c = 0, where a, b, and c are constants, the quadratic formula gives the solutions to the equation in the form x = (-b ± √(b² - 4ac))/2a. Substituting 3 for a, -29 for b, and 56 for c from the equation 3x² - 29x + 56 = 0 into the quadratic formula yields x = (29 ± √((-29)² - 4(3)(56)))/(2(3)), or x = 29/6 ± 13/6. It follows that the solutions to the given equation are 29/6 + 13/6 and 29/6 - 13/6. Adding these two solutions gives the sum of the solutions: 29/6 + 13/6 + 29/6 - 13/6, which is equivalent to 29/6 + 29/6, or 29/3  Note that 29/3, 9.666, and 9.667 are examples of ways to enter a correct answer.",
+                    "Rationale": "Applying the distributive property to the left-hand side of the given equation, x(x + 1) - 56, yields x^2+ x - 56. Applying the distributive property to the right-hand side of the given equation, 4x(x - 7), yields 4x^2- 28x. Thus, the equation becomes x^2+ x - 56 = 4x^2- 28x. Combining like terms on the left- and right-hand sides of this equation yields 0 = (4x^2- x^2) + (-28x - x) + 56, or 3x^2- 29x + 56 = 0. For a quadratic equation in the form ax^2+ bx + c = 0, where a, b, and c are constants, the quadratic formula gives the solutions to the equation in the form `x=(-b±sqrt(b^2-4ac))/(2a)`. Substituting 3 for a, -29 for b, and 56 for c from the equation 3x^2- 29x + 56 = 0 into the quadratic formula yields x = (29 ± √((-29)^2 - 4(3)(56)))/(2(3)), or x = 29/6 ± 13/6. It follows that the solutions to the given equation are 29/6 + 13/6 and 29/6 - 13/6. Adding these two solutions gives the sum of the solutions: 29/6 + 13/6 + 29/6 - 13/6, which is equivalent to 29/6 + 29/6, or 29/3  Note that 29/3, 9.666, and 9.667 are examples of ways to enter a correct answer.",
                     "Percent": 0
                 }
             }
@@ -868,7 +868,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–2",
+                "Choice": "-2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The given system of linear equations can be solved by the elimination method. Multiplying each side of the second equation in the given system by 3 yields (2x + 2y)(3) = (10)(3), or 6x + 6y = 30. Subtracting this equation from the first equation in the given system yields (6x + 7y) - (6x + 6y) = (28) - (30), which is equivalent to (6x - 6x) + (7y - 6y) = 28 - 30, or y = -2.",
@@ -923,7 +923,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x ≤ 6n – 12",
+                "Choice": "x ≤ 6n - 12",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This inequality shows the possible values of x if the maximum, not the minimum, value of x is 12 less than 6 times n.",
@@ -931,15 +931,15 @@
                 }
             },
             "B": {
-                "Choice": "x ≥ 6n – 12",
+                "Choice": "x ≥ 6n - 12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the minimum value of x is 12 less than 6 times another number n. Therefore, the possible values of x are all greater than or equal to the value of 12 less than 6 times n. The value of 6 times n is given by the expression 6n. The value of 12 less than 6n is given by the expression 6n – 12. Therefore, the possible values of x are all greater than or equal to 6n – 12. This can be shown by the inequality x ≥ 6n – 12.",
+                    "Rationale": "It's given that the minimum value of x is 12 less than 6 times another number n. Therefore, the possible values of x are all greater than or equal to the value of 12 less than 6 times n. The value of 6 times n is given by the expression 6n. The value of 12 less than 6n is given by the expression 6n - 12. Therefore, the possible values of x are all greater than or equal to 6n - 12. This can be shown by the inequality x ≥ 6n - 12.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "x ≤ 12 – 6n",
+                "Choice": "x ≤ 12 - 6n",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This inequality shows the possible values of x if the maximum, not the minimum, value of x is 6 times n less than 12, not 12 less than 6 times n.",
@@ -947,7 +947,7 @@
                 }
             },
             "D": {
-                "Choice": "x ≥ 12 – 6n",
+                "Choice": "x ≥ 12 - 6n",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This inequality shows the possible values of x if the minimum value of x is 6 times n less than 12, not 12 less than 6 times n.",
@@ -1005,7 +1005,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph of 9x – 10y = 19 is translated down 4 units in the xy-plane. What is the x-coordinate of the x-intercept of the resulting graph?"
+            "The graph of 9x - 10y = 19 is translated down 4 units in the xy-plane. What is the x-coordinate of the x-intercept of the resulting graph?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1036,11 +1036,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two variables, x and y, are related such that for each increase of 1 in the value of x, the value of y increases by a factor of 4. When x = 0, y = 200. Which equation represents this relationship?"
+            "Two variables, `x` and `y`, are related such that for each increase of 1 in the value of x, the value of y increases by a factor of 4. When x = 0, y = 200. Which equation represents this relationship?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 4(x)²⁰⁰",
+                "Choice": "y = 4(x)^2⁰⁰",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -1067,7 +1067,7 @@
                 "Choice": "y = 200(4)ˣ",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the value of y increases by a constant factor, 4, for each increase of 1 in the value of x, the relationship between x and y is exponential. An exponential relationship between x and y can be represented by an equation of the form y = a(b)ˣ, where a is the value of x when y = 0 and y increases by a factor of b for each increase of 1 in the value of x. Since y = 200 when x = 0, a = 200. Since y increases by a factor of 4 for each increase of 1 in the value of x, b = 4. Substituting 200 for a and 4 for b in the equation y = a(b)ˣ yields y = 200(4)ˣ. Thus, the equation y = 200(4)ˣ represents the relationship between x and y.",
+                    "Rationale": "Since the value of y increases by a constant factor, 4, for each increase of 1 in the value of x, the relationship between `x` and `y` is exponential. An exponential relationship between `x` and `y` can be represented by an equation of the form y = a(b)ˣ, where a is the value of x when y = 0 and y increases by a factor of b for each increase of 1 in the value of x. Since y = 200 when x = 0, a = 200. Since y increases by a factor of 4 for each increase of 1 in the value of x, b = 4. Substituting 200 for a and 4 for b in the equation y = a(b)ˣ yields y = 200(4)ˣ. Thus, the equation y = 200(4)ˣ represents the relationship between `x` and `y`.",
                     "Percent": 0
                 }
             }
@@ -1091,7 +1091,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:x² – 2x – 9 = 0",
+            ":box:x^2- 2x - 9 = 0",
             "One solution to the given equation can be written as 1 + √k, where k is a constant. What is the value of k?"
         ],
         "AnswerChoices": {
@@ -1107,7 +1107,7 @@
                 "Choice": "10",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Adding 9 to each side of the given equation yields x² - 2x = 9. To complete the square, adding 1 to each side of this equation yields x² - 2x + 1 = 9 + 1, or (x - 1)²  = 10. Taking the square root of each side of this equation yields x - 1 = ±√10. Adding 1 to each side of this equation yields x = 1 ± √10. Since it's given that one of the solutions to the equation can be written as 1 + √k, the value of k must be 10.",
+                    "Rationale": "Adding 9 to each side of the given equation yields x^2- 2x = 9. To complete the square, adding 1 to each side of this equation yields x^2- 2x + 1 = 9 + 1, or (x - 1)^2  = 10. Taking the square root of each side of this equation yields x - 1 = ±√10. Adding 1 to each side of this equation yields x = 1 ± √10. Since it's given that one of the solutions to the equation can be written as 1 + √k, the value of k must be 10.",
                     "Percent": 0
                 }
             },
@@ -1261,7 +1261,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:–9x² + 30x + c = 0",
+            ":box:-9x^2+ 30x + c = 0",
             "In the given equation, c is a constant. The equation has exactly one solution. What is the value of c?"
         ],
         "AnswerChoices": {
@@ -1282,15 +1282,15 @@
                 }
             },
             "C": {
-                "Choice": "–25",
+                "Choice": "-25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation -9x² + 30x 0 + c = 0 has exactly one solution. A quadratic equation of the form ax² + bx + c = 0 has exactly one solution if and only if its discriminant, -4ac + b², is equal to zero. It follows that for the given equation, a = -9 and b = 30. Substituting 9- for a and 30 for b into b² - 4ac- yields 30² - 4(-9)(c), or 900 + 36c. Since the discriminant must equal zero, 900 + 36c = 0. Subtracting 36c from both sides of this equation yields 900 = -36c. Dividing each side of this equation by -36 yields -25 = c. Therefore, the value of c is -25.",
+                    "Rationale": "It's given that the equation -9x^2+ 30x 0 + c = 0 has exactly one solution. A quadratic equation of the form ax^2+ bx + c = 0 has exactly one solution if and only if its discriminant, -4ac + b², is equal to zero. It follows that for the given equation, a = -9 and b = 30. Substituting 9- for a and 30 for b into b² - 4ac- yields 30^2 - 4(-9)(c), or 900 + 36c. Since the discriminant must equal zero, 900 + 36c = 0. Subtracting 36c from both sides of this equation yields 900 = -36c. Dividing each side of this equation by -36 yields -25 = c. Therefore, the value of c is -25.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "–53",
+                "Choice": "-53",
                 "Key": {
                     "Correct": false,
                     "Rationale": "If the value of c is -53, this would yield a discriminant that is less than zero. Therefore, the given equation would have no real solutions, rather than exactly one solution.",
@@ -1317,7 +1317,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:3y/2 – x/4 = 2/3 – 3y/2\n\nx/2 + 3/2 = py + 9/2",
+            ":box:3y/2 - x/4 = 2/3 - 3y/2\n\nx/2 + 3/2 = py + 9/2",
             "In the given system of equations, p is a constant. If the system has no solution, what is the value of p?"
         ],
         "AnswerChoices": {
@@ -1325,7 +1325,7 @@
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A system of two linear equations in two variables, x and y, has no solution if the lines represented by the equations in the xy-plane are parallel and distinct. Lines represented by equations in standard form, Ax + By = C and Dx + Ey = F, are parallel if the coefficients for x and y in one equation are proportional to the corresponding coefficients in the other equation, meaning D/A = E/B; and the lines are distinct if the constants are not proportional, meaning F/C is not equal to D/A or E/B. The first equation in the given system is (3/2)y - (1/4)x = 2/3 - (3/2)y. Multiplying each side of this equation by 12 yields 18y - 3x = 8 - 18y. Adding 18y to each side of this equation yields 36y - 3x = 8, or -3x + 36y = 8. The second equation in the given system is (1/2)x + 3/2 = py + 9/2. Multiplying each side of this equation by 2 yields x + 3 = 2py + 9. Subtracting 2py from each side of this equation yields x + 3 - 2py = 9. Subtracting 3 from each side of this equation yields x - 2py = 6. Therefore, the two equations in the given system, written in standard form, are -3x + 36y = 8 and x - 2py = 6. As previously stated, if this system has no solution, the lines represented by the equations in the xy-plane are parallel and distinct, meaning the proportion 1/(-3) = (-2p)/36, or -1/3 = -p/18, is true and the proportion 6/8 = 1/(-3) is not true. The proportion 6/8 = 1/(-3) is not true. Multiplying each side of the true proportion, -1/3 = -p/18, by -18 yields p = 6. Therefore, if the system has no solution, then the value of p is 6.",
+                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the xy-plane are parallel and distinct. Lines represented by equations in standard form, Ax + By = C and Dx + Ey = F, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients in the other equation, meaning D/A = E/B; and the lines are distinct if the constants are not proportional, meaning F/C is not equal to D/A or E/B. The first equation in the given system is (3/2)y - (1/4)x = 2/3 - (3/2)y. Multiplying each side of this equation by 12 yields 18y - 3x = 8 - 18y. Adding 18y to each side of this equation yields 36y - 3x = 8, or -3x + 36y = 8. The second equation in the given system is (1/2)x + 3/2 = py + 9/2. Multiplying each side of this equation by 2 yields x + 3 = 2py + 9. Subtracting 2py from each side of this equation yields x + 3 - 2py = 9. Subtracting 3 from each side of this equation yields x - 2py = 6. Therefore, the two equations in the given system, written in standard form, are -3x + 36y = 8 and x - 2py = 6. As previously stated, if this system has no solution, the lines represented by the equations in the xy-plane are parallel and distinct, meaning the proportion 1/(-3) = (-2p)/36, or -1/3 = -p/18, is true and the proportion 6/8 = 1/(-3) is not true. The proportion 6/8 = 1/(-3) is not true. Multiplying each side of the true proportion, -1/3 = -p/18, by -18 yields p = 6. Therefore, if the system has no solution, then the value of p is 6.",
                     "Percent": 0
                 }
             }

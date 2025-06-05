@@ -183,12 +183,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:3x = 12\n–3x + y = –6",
+            ":ibox:3x = 12\n-3x + y = -6",
             "The solution to the given system of equations (x, y). What is the value of y?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–3",
+                "Choice": "-3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -243,7 +243,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = –x/9 – 14",
+                "Choice": "y = -x/9 - 14",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation represents a line with a slope of -1/9 and a y-intercept of (0, -14).",
@@ -251,7 +251,7 @@
                 }
             },
             "B": {
-                "Choice": "y = –x/9 + 14",
+                "Choice": "y = -x/9 + 14",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation represents a line with a slope of -1/9 and a y-intercept of (0, 14).",
@@ -259,7 +259,7 @@
                 }
             },
             "C": {
-                "Choice": "y = x/9 – 14",
+                "Choice": "y = x/9 - 14",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation represents a line with a slope of 1/9 and a y-intercept of (0, -14).",
@@ -327,7 +327,7 @@
         "Explain": false,
         "Content": [
             ":ibox:f(x) = x + 8/11",
-            "The function f is defined by the given equation. What is the value of f(x) when x = 3/11?"
+            "The function f is defined by the given equation. What is the value of `f(x)` when x = 3/11?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -359,7 +359,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT9M2/media/8a.jpg",
-            "The table shows three values of x and their corresponding values of y. There is a linear relationship between x and y. Which of the following equations represents this relationship?"
+            "The table shows three values of x and their corresponding values of y. There is a linear relationship between `x` and `y`. Which of the following equations represents this relationship?"
         ],
         "AnswerChoices": {
             "A": {
@@ -379,7 +379,7 @@
                 }
             },
             "C": {
-                "Choice": "y = –5x + 13",
+                "Choice": "y = -5x + 13",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -387,10 +387,10 @@
                 }
             },
             "D": {
-                "Choice": "y = –5x + 18",
+                "Choice": "y = -5x + 18",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A linear relationship can be represented by an equation of the form y = mx + b, where m and b are constants. It's given in the table that when x = 0, y = 18. Substituting 0 for x and 18 for y in y = mx + b yields 18 = m(0) + b ,or 18 = b. Substituting 18 for b in the equation y = mx + b yields y = mx + 18. It's also given in the table that when x = 1, y = 13. Substituting 1 for x and 13 for y in the equation y = mx + 18 yields 13 = m(1) + 18, or 13 = m + 18. Subtracting 18 from both sides of this equation yields -5 = m. Therefore, the equation y = –5x + 18 represents the relationship between x and y.",
+                    "Rationale": "A linear relationship can be represented by an equation of the form y = mx + b, where m and b are constants. It's given in the table that when x = 0, y = 18. Substituting 0 for x and 18 for y in y = mx + b yields 18 = m(0) + b ,or 18 = b. Substituting 18 for b in the equation y = mx + b yields y = mx + 18. It's also given in the table that when x = 1, y = 13. Substituting 1 for x and 13 for y in the equation y = mx + 18 yields 13 = m(1) + 18, or 13 = m + 18. Subtracting 18 from both sides of this equation yields -5 = m. Therefore, the equation y = -5x + 18 represents the relationship between `x` and `y`.",
                     "Percent": 0
                 }
             }
@@ -414,7 +414,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x + 7 = 10\n(x + 7)² = y",
+            ":ibox:x + 7 = 10\n(x + 7)^2 = y",
             "Which ordered pair (x, y) is a solution to the given system of equations?"
         ],
         "AnswerChoices": {
@@ -422,7 +422,7 @@
                 "Choice": "(3, 100)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The solution to a system of equations is the ordered pair (x, y) that satisfies all equations in the system. It's given by the first equation in the system that x + 7 = 10. Substituting 10 for x + 7 into the second equation yields y = 10², or y = 100. The x-coordinate of the solution to the system of equations can be found by subtracting 7 from both sides of the equation x + 7 = 10, which yields x = 3. Therefore, the ordered pair (3, 100) is a solution to the given system of equations.",
+                    "Rationale": "The solution to a system of equations is the ordered pair (x, y) that satisfies all equations in the system. It's given by the first equation in the system that x + 7 = 10. Substituting 10 for x + 7 into the second equation yields y = 10^2, or y = 100. The x-coordinate of the solution to the system of equations can be found by subtracting 7 from both sides of the equation x + 7 = 10, which yields x = 3. Therefore, the ordered pair (3, 100) is a solution to the given system of equations.",
                     "Percent": 0
                 }
             },
@@ -470,11 +470,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = 7x – 84. What is the x-intercept of the graph of y = f(x) in the xy-plane?"
+            "The function f is defined by f(x) = 7x - 84. What is the x-intercept of the graph of `y=f(x)` in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(–12, 0)",
+                "Choice": "(-12, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -482,7 +482,7 @@
                 }
             },
             "B": {
-                "Choice": "(–7, 0)",
+                "Choice": "(-7, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -501,7 +501,7 @@
                 "Choice": "(12, 0)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given function f is a linear function. Therefore, the graph of y = f(x) in the xy-plane has one x-intercept at the point (k, 0), where k is a constant. Substituting 0 for f(x) and k for x in the given function yields 0 = 7k - 84. Adding 84 to both sides of this equation yields 84 = 7k. Dividing both sides of this equation by 7 yields 12 = k. Therefore, the x-intercept of the graph of y = f(x) in the xy-plane is (12, 0).",
+                    "Rationale": "The given function f is a linear function. Therefore, the graph of `y=f(x)` in the xy-plane has one x-intercept at the point (k, 0), where k is a constant. Substituting 0 for f(x) and k for x in the given function yields 0 = 7k - 84. Adding 84 to both sides of this equation yields 84 = 7k. Dividing both sides of this equation by 7 yields 12 = k. Therefore, the x-intercept of the graph of `y=f(x)` in the xy-plane is (12, 0).",
                     "Percent": 0
                 }
             }
@@ -581,7 +581,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:w(t) = 300 – 4t",
+            ":ibox:w(t) = 300 - 4t",
             "The function w models the volume of liquid, in milliliters, in a container t seconds after it begins draining from a hole at the bottom. According to the model, what is the predicted volume, in milliliters, draining from the container each second?"
         ],
         "AnswerChoices": {
@@ -613,7 +613,7 @@
                 "Choice": "4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function w models the volume of liquid, in milliliters, in a container t seconds after it begins draining from a hole at the bottom. The given function w(t) = 300 – 4th can be rewritten as w(t) = –4t + 300. Thus, for each increase of t by 1, the value of w(t) decreases by 4(1), or 4. Therefore, the predicted volume, in milliliters, draining from the container each second is 4 milliliters.",
+                    "Rationale": "It's given that the function w models the volume of liquid, in milliliters, in a container t seconds after it begins draining from a hole at the bottom. The given function w(t) = 300 - 4th can be rewritten as w(t) = -4t + 300. Thus, for each increase of t by 1, the value of w(t) decreases by 4(1), or 4. Therefore, the predicted volume, in milliliters, draining from the container each second is 4 milliliters.",
                     "Percent": 0
                 }
             }
@@ -669,7 +669,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:z² + 10z – 24 = 0",
+            ":ibox:z² + 10z - 24 = 0",
             "What is one of the solutions to the given equation?"
         ],
         "AnswerChoices": {
@@ -876,7 +876,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:m(t) = –0.0274(t/2)² + 7.3873(t/7) + 72.032",
+            ":ibox:m(t) = -0.0274(t/2)^2 + 7.3873(t/7) + 72.032",
             "The function m gives the predicted body mass m(t), in kilograms (kg), of a certain animal t days after it was born in a wildlife reserve, where t ≤ 390. Which of the following is the best interpretation of the statement “m(330) is approximately equal to 362” in this context?"
         ],
         "AnswerChoices": {
@@ -1018,14 +1018,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = aˣ + b, where a and b are constants and a > 0. In the xy-plane, the graph of y = f(x) has a y-intercept at (0, –25) and passes through the point (2, 23). What is the value of a + b?"
+            "The function f is defined by f(x) = aˣ + b, where a and b are constants and a > 0. In the xy-plane, the graph of y = f(x) has a y-intercept at (0, -25) and passes through the point (2, 23). What is the value of a + b?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:-19",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that function f is defined by f(x) = aˣ + b, where a and b are constants and a > 0. It's also given that the graph of y = f(x) in the xy-plane has a y-intercept at (0, -25) and passes through the point (2, 23). Since the graph has a y-intercept at (0, -25), f(0) = -25. Substituting 0 for x in the given equation yields f(0) = a⁰ + b, or f(0) = 1 + b, and substituting -25 for f(0) in this equation yields -25 = 1 + b. Subtracting 1 from each side of this equation yields -26 = b. Substituting -26 for b in the equation f(x) = aˣ + b yields f(x) = aˣ - 26. Since the graph also passes through the point (2, 23), f(2) = 23. Substituting 2 for x in the equation f(x) = aˣ - 26 yields f(2) = a² - 26, and substituting 23 for f(2) yields 23 = a² - 26. Adding 26 to each side of this equation yields 49 = a². Taking the square root of both sides of this equation yields ±7 = a. Since it's given that a > 0, the value of a is 7. It follows that the value of a + b is 7 - 26, or -19.",
+                    "Rationale": "It's given that function f is defined by f(x) = aˣ + b, where a and b are constants and a > 0. It's also given that the graph of `y=f(x)` in the xy-plane has a y-intercept at (0, -25) and passes through the point (2, 23). Since the graph has a y-intercept at (0, -25), f(0) = -25. Substituting 0 for x in the given equation yields f(0) = a⁰ + b, or f(0) = 1 + b, and substituting -25 for f(0) in this equation yields -25 = 1 + b. Subtracting 1 from each side of this equation yields -26 = b. Substituting -26 for b in the equation f(x) = aˣ + b yields f(x) = aˣ - 26. Since the graph also passes through the point (2, 23), f(2) = 23. Substituting 2 for x in the equation f(x) = aˣ - 26 yields f(2) = a² - 26, and substituting 23 for f(2) yields 23 = a² - 26. Adding 26 to each side of this equation yields 49 = a². Taking the square root of both sides of this equation yields ±7 = a. Since it's given that a > 0, the value of a is 7. It follows that the value of a + b is 7 - 26, or -19.",
                     "Percent": 0
                 }
             }
@@ -1049,7 +1049,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y x > 13 – 18",
+            ":ibox:y x > 13 - 18",
             "For which of the following tables are all the values of x and their corresponding values of y solutions to the given inequality?"
         ],
         "AnswerChoices": {
@@ -1215,11 +1215,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (y + 12)/(x – 8) + y(x – 8)/(x²y – 8xy)"
+            "Which expression is equivalent to (y + 12)/(x - 8) + y(x - 8)/(x^2y - 8xy)"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(xy + y + 4)/(x³y – 16x²y + 64xy)",
+                "Choice": "(xy + y + 4)/(x³y - 16x^2y + 64xy)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1227,7 +1227,7 @@
                 }
             },
             "B": {
-                "Choice": "(xy + 9y + 12)/(x²y – 8xy + x – 8)",
+                "Choice": "(xy + 9y + 12)/(x^2y - 8xy + x - 8)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1235,15 +1235,15 @@
                 }
             },
             "C": {
-                "Choice": "(xy² + 13xy – 8y)/(x²y – 8xy)",
+                "Choice": "(xy^2+ 13xy - 8y)/(x^2y - 8xy)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Factoring the denominator in the second term of the given expression gives (y + 12)/(x – 8) + y(x – 8)/(xy(x – 8)). This expression can be rewritten with common denominators by multiplying the first term by xy/(xy), giving (xy(y + 12))/(xy(x – 8)) + y(x – 8)/(xy(x – 8)). Adding these two terms yields (xy(y + 12) + y(x – 8))/(xy(x – 8)). Using the distributive property to rewrite this expression gives (xy² + 12xy + xy – 8y)/(x²y – 8xy). Combining the like terms in the numerator of this expression gives (xy² + 13xy – 8y)/(x²y – 8xy).",
+                    "Rationale": "Factoring the denominator in the second term of the given expression gives (y + 12)/(x - 8) + y(x - 8)/(xy(x - 8)). This expression can be rewritten with common denominators by multiplying the first term by xy/(xy), giving (xy(y + 12))/(xy(x - 8)) + y(x - 8)/(xy(x - 8)). Adding these two terms yields (xy(y + 12) + y(x - 8))/(xy(x - 8)). Using the distributive property to rewrite this expression gives (xy^2+ 12xy + xy - 8y)/(x^2y - 8xy). Combining the like terms in the numerator of this expression gives (xy^2+ 13xy - 8y)/(x^2y - 8xy).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "(xy² + 13xy – 8y)/(x³y – 16x²y + 64xy)",
+                "Choice": "(xy^2+ 13xy - 8y)/(x³y - 16x^2y + 64xy)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1270,7 +1270,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = a(2.2ˣ + 2.2ᵇ), where a and b are integer constants and  0 < a < b. The functions g and h are equivalent to function f, where k and m are constants. Which of the following equations displays the y-coordinate of the y-intercept of the graph of y = f(x) in the xy-plane as a constant or coefficient?",
+            "The function f is defined by f(x) = a(2.2ˣ + 2.2ᵇ), where a and b are integer constants and  0 < a < b. The functions g and h are equivalent to function f, where k and m are constants. Which of the following equations displays the y-coordinate of the y-intercept of the graph of `y=f(x)` in the xy-plane as a constant or coefficient?",
             ":ibox:I. g(x) = a(2.2ˣ + k)\nII. h(x) = a(2.2)ˣ + m"
         ],
         "AnswerChoices": {
@@ -1302,7 +1302,7 @@
                 "Choice": "Neither I nor II",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A y-intercept of a graph in the xy-plane is a point where the graph intersects the y-axis, or a point where x = 0. Substituting 0 for x in the equation defining function f yields f(0) = a(2.2⁰ + 2.2ᵇ), or f(0) = a(1 + 2.2ᵇ). So, the y-coordinate of the y-intercept of the graph is a(1 + 2.2ᵇ), or equivalently, a + a(2.2ᵇ). It's given that function g is equivalent to function f, where 0 < a < b. It follows that k = 2.2ᵇ. Since a(2.2ᵇ) can't be equal to 0, the coefficient a can't be equal to a + a(2.2ᵇ). Since 0 < a, the constant k, which is equal to 2.2ᵇ, can't be equal to a + a(2.2ᵇ). Therefore, function g doesn't display the y-coordinate of the y-intercept of the graph of y = f(x) in the xy-plane as a constant or coefficient. It's also given that function h is equivalent to function f, where 0 < a < b. The equation defining f can be rewritten as f(x) = a(2.2)ˣ + a(2.2)ᵇ. It follows that m = a(2.2)ᵇ. Since a(2.2)ᵇ can't be equal to 0, the coefficient a can't be equal to a + a(2.2)ᵇ. Since 0 < a, the constant m, which is equal to a(2.2)ᵇ, can't be equal to a + a(2.2)ᵇ. Therefore, function h doesn't display the y-coordinate of the y-intercept of the graph of y = f(x) in the xy-plane as a constant or coefficient. Thus, neither function g nor function h displays the y-coordinate of the y-intercept of the graph of y = f(x) in the xy-plane as a constant or coefficient.",
+                    "Rationale": "A y-intercept of a graph in the xy-plane is a point where the graph intersects the y-axis, or a point where x = 0. Substituting 0 for x in the equation defining function f yields f(0) = a(2.2⁰ + 2.2ᵇ), or f(0) = a(1 + 2.2ᵇ). So, the y-coordinate of the y-intercept of the graph is a(1 + 2.2ᵇ), or equivalently, a + a(2.2ᵇ). It's given that function g is equivalent to function f, where 0 < a < b. It follows that k = 2.2ᵇ. Since a(2.2ᵇ) can't be equal to 0, the coefficient a can't be equal to a + a(2.2ᵇ). Since 0 < a, the constant k, which is equal to 2.2ᵇ, can't be equal to a + a(2.2ᵇ). Therefore, function g doesn't display the y-coordinate of the y-intercept of the graph of `y=f(x)` in the xy-plane as a constant or coefficient. It's also given that function h is equivalent to function f, where 0 < a < b. The equation defining f can be rewritten as f(x) = a(2.2)ˣ + a(2.2)ᵇ. It follows that m = a(2.2)ᵇ. Since a(2.2)ᵇ can't be equal to 0, the coefficient a can't be equal to a + a(2.2)ᵇ. Since 0 < a, the constant m, which is equal to a(2.2)ᵇ, can't be equal to a + a(2.2)ᵇ. Therefore, function h doesn't display the y-coordinate of the y-intercept of the graph of `y=f(x)` in the xy-plane as a constant or coefficient. Thus, neither function g nor function h displays the y-coordinate of the y-intercept of the graph of `y=f(x)` in the xy-plane as a constant or coefficient.",
                     "Percent": 0
                 }
             }
@@ -1326,7 +1326,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x(kx – 56) = –16",
+            ":ibox:x(kx - 56) = -16",
             "In the given equation, k is an integer constant. If the equation has no real solution, what is the least possible value of k?"
         ],
         "AnswerChoices": {
@@ -1334,7 +1334,7 @@
                 "Choice": "equal:50",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation of the form ax² + bx + c = 0, where a, b, and c are constants, has no real solutions if and only if its discriminant, b² - 4ac, is negative. Applying the distributive property to the left-hand side of the equation x(kx – 56) = –16 yields kx² – 56x = –16. Adding 16 to each side of this equation yields kx² – 56x + 16 = 0. Substituting k for a, -56 for b, and 16 for c in b² - 4ac yields a discriminant of (-56)² - 4(k)(16), or 3,136 - 64k. If the given equation has no real solution, it follows that the value of 3,136 - 64k must be negative. Therefore, 3,136 - 64k < 0. Adding 64k to both sides of this inequality yields 3,136 < 64k. Dividing both sides of this inequality by 64 yields k 49 < k, or k > 49. Since it's given that k is an integer, the least possible value of k is 50.",
+                    "Rationale": "An equation of the form ax^2+ bx + c = 0, where a, b, and c are constants, has no real solutions if and only if its discriminant, b² - 4ac, is negative. Applying the distributive property to the left-hand side of the equation x(kx - 56) = -16 yields kx^2- 56x = -16. Adding 16 to each side of this equation yields kx^2- 56x + 16 = 0. Substituting k for a, -56 for b, and 16 for c in b² - 4ac yields a discriminant of (-56)^2 - 4(k)(16), or 3,136 - 64k. If the given equation has no real solution, it follows that the value of 3,136 - 64k must be negative. Therefore, 3,136 - 64k < 0. Adding 64k to both sides of this inequality yields 3,136 < 64k. Dividing both sides of this inequality by 64 yields k 49 < k, or k > 49. Since it's given that k is an integer, the least possible value of k is 50.",
                     "Percent": 0
                 }
             }

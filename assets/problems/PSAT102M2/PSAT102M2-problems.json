@@ -183,19 +183,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When the equation y = 5x + p, where p is a constant, is graphed in the xy-plane, the line passes through the point (–2, 1). What is the value of p?"
+            "When the equation y = 5x + p, where p is a constant, is graphed in the xy-plane, the line passes through the point (-2, 1). What is the value of p?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–9",
+                "Choice": "-9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice likely arises by subtracting 10 from both sides of the equation 1 = 5(–2) + p rather than by adding 10.",
+                    "Rationale": "This choice likely arises by subtracting 10 from both sides of the equation 1 = 5(-2) + p rather than by adding 10.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "–2",
+                "Choice": "-2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is likely arises from mistakenly equating the value of p with the x-coordinate of the given point.",
@@ -214,7 +214,7 @@
                 "Choice": "11",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the xy-plane, the point (–2, 1) is the point where x = –2 and y = 1. Because (–2, 1) is on the line, we can substitute x = –2 and y = 1 into the equation for the line. This substitution yields 1 = 5(–2) + p, or 1 = –10 + p. Solving this equation for p gives p = 11.",
+                    "Rationale": "In the xy-plane, the point (-2, 1) is the point where x = -2 and y = 1. Because (-2, 1) is on the line, we can substitute x = -2 and y = 1 into the equation for the line. This substitution yields 1 = 5(-2) + p, or 1 = -10 + p. Solving this equation for p gives p = 11.",
                     "Percent": 0
                 }
             }
@@ -463,28 +463,28 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(x²y – 3y² + 5xy²)  (x²y + 3xy² – 3y²)",
+            ":ibox:(x^2y - 3y^2+ 5xy^2) - (-x^2y + 3xy^2- 3y^2)",
             "Which of the following is equivalent to the expression above?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2x²y + 2xy²",
+                "Choice": "2x^2y + 2xy^2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Distributing the factor of –1 through the second expression in parentheses in (x²y – 3y² + 5xy²) – (x²y + 3xy² – 3y²) yields x²y – 3y² + 5xy² – 3xy² + 3y². Regrouping by like terms, the expression becomes (x²y + x²y) + (–3y² + 3y²) + (5xy² – 3xy²), which simplifies to 2x²y + 2xy².",
+                    "Rationale": "Distributing the factor of -1 through the second expression in parentheses in (x^2y - 3y^2+ 5xy^2) - (x^2y + 3xy^2- 3y^2) yields x^2y - 3y^2+ 5xy^2- 3xy^2+ 3y^2. Regrouping by like terms, the expression becomes (x^2y + x^2y) + (-3y^2+ 3y^2) + (5xy^2- 3xy^2), which simplifies to 2x^2y + 2xy^2.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "8xy² – 6y²",
+                "Choice": "8xy^2- 6y^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is the result of adding, rather than subtracting, the given expressions (x²y – 3y² + 5xy²) and (–x²y + 3xy² – 3y²).",
+                    "Rationale": "This choice is the result of adding, rather than subtracting, the given expressions (x^2y - 3y^2+ 5xy^2) and (-x^2y + 3xy^2- 3y^2).",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "2x²y + 8xy² – 6y²",
+                "Choice": "2x^2y + 8xy^2- 6y^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the result of subtracting only the first term in the second expression from the first expression and adding the other terms in the second expression to the first expression.",
@@ -492,7 +492,7 @@
                 }
             },
             "D": {
-                "Choice": "xy² + 9xy – 15xy²",
+                "Choice": "xy^2+ 9xy - 15xy^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the result of attempting to multiply the first, second, and third terms in each of the two expressions rather than subtracting.",
@@ -519,7 +519,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:4x – x/2 – 7 = 7(x/2 – 7)",
+            ":ibox:4x - x/2 - 7 = 7(x/2 - 7)",
             "Which of the following describes the solution to the equation above?"
         ],
         "AnswerChoices": {
@@ -527,7 +527,7 @@
                 "Choice": "x = 0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may be the result of substituting 0 for x in the given equation and incorrectly applying the distributive property on the right side of the equation, yielding –7 = –7.",
+                    "Rationale": "This choice may be the result of substituting 0 for x in the given equation and incorrectly applying the distributive property on the right side of the equation, yielding -7 = -7.",
                     "Percent": 0
                 }
             },
@@ -543,7 +543,7 @@
                 "Choice": "The equation has infinitely many solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly distributing the 7 on the right-hand side of the equation to obtain 7x/2 – 7 = 7x/2 – 7; this equation has infinitely many solutions.",
+                    "Rationale": "This choice may result from incorrectly distributing the 7 on the right-hand side of the equation to obtain 7x/2 - 7 = 7x/2 - 7; this equation has infinitely many solutions.",
                     "Percent": 0
                 }
             },
@@ -551,7 +551,7 @@
                 "Choice": "The equation has no solutions.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation 4x – x/2 – 7 = 7(x/2 – 7) can be rewritten as 7x/2 – 7 = 7x/2 – 49, which results in the equation 7 = 49. Because 7 is not equal to 49, there is no value of x that makes the equation true. Therefore, there are no solutions to this equation.",
+                    "Rationale": "The equation 4x - x/2 - 7 = 7(x/2 - 7) can be rewritten as 7x/2 - 7 = 7x/2 - 49, which results in the equation 7 = 49. Because 7 is not equal to 49, there is no value of x that makes the equation true. Therefore, there are no solutions to this equation.",
                     "Percent": 0
                 }
             }
@@ -608,7 +608,7 @@
                 "Choice": "The range of Joseph's bills is greater than the range of Samuel's bills, while the median of Joseph's bills is less than the median of Samuel's bills.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The range of Joseph's bills is $193.12 – $145.30 = $47.82, which is greater than the range of Samuel's bills, which is $188.99 – $149.23 = $39.76. The median of Joseph's bills is $180.33, which is less than the median of Samuel's bills, $181.27.",
+                    "Rationale": "The range of Joseph's bills is $193.12 - $145.30 = $47.82, which is greater than the range of Samuel's bills, which is $188.99 - $149.23 = $39.76. The median of Joseph's bills is $180.33, which is less than the median of Samuel's bills, $181.27.",
                     "Percent": 0
                 }
             }
@@ -769,7 +769,7 @@
                 "Choice": "265",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The number of calories listed in the table can be ordered from least to greatest, as follows: 700, 740, 810, 900, 1,050, and 1,120. Since the total of numbers in the list, 6, is an even number, the median is the mean of the two middle numbers, 810 and 900, which is (810 + 900)/2 = 855. According to the table, the cheeseburger at the Riverside Diner has 1,120 calories. Therefore, the difference in the number of calories in a cheeseburger at the Riverside Diner and the median number of calories in cheeseburgers at all six restaurants is 1,120 – 855 = 265.",
+                    "Rationale": "The number of calories listed in the table can be ordered from least to greatest, as follows: 700, 740, 810, 900, 1,050, and 1,120. Since the total of numbers in the list, 6, is an even number, the median is the mean of the two middle numbers, 810 and 900, which is (810 + 900)/2 = 855. According to the table, the cheeseburger at the Riverside Diner has 1,120 calories. Therefore, the difference in the number of calories in a cheeseburger at the Riverside Diner and the median number of calories in cheeseburgers at all six restaurants is 1,120 - 855 = 265.",
                     "Percent": 0
                 }
             },
@@ -777,7 +777,7 @@
                 "Choice": "390",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This answer choice may be the result of assuming that the median is the third number listed in the table, finding the difference between the number of calories in a cheeseburger at the Riverside Diner and the number of calories in a cheeseburger at Molly's (1,120 – 740 = 380), and then selecting the closest available value, 390.",
+                    "Rationale": "This answer choice may be the result of assuming that the median is the third number listed in the table, finding the difference between the number of calories in a cheeseburger at the Riverside Diner and the number of calories in a cheeseburger at Molly's (1,120 - 740 = 380), and then selecting the closest available value, 390.",
                     "Percent": 0
                 }
             }
@@ -801,19 +801,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A circle is graphed in the xy-plane. If the circle has a radius of 3 and the center of the circle is at (4, –2), which of the following could be an equation of the circle?"
+            "A circle is graphed in the xy-plane. If the circle has a radius of 3 and the center of the circle is at (4, -2), which of the following could be an equation of the circle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x + 4)² + (y – 2)² = 3",
+                "Choice": "(x + 4)^2 + (y - 2)^2 = 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation is of a circle with center at (–4, 2) and a radius of √3, not 3.",
+                    "Rationale": "This equation is of a circle with center at (-4, 2) and a radius of √3, not 3.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "(x + 4)² – (y – 2)² = 3",
+                "Choice": "(x + 4)^2 - (y - 2)^2 = 3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation defines an ellipse rather than a circle; in the standard form for an equation of a circle, the two squared terms on the left-hand side of the equation are added, not subtracted.",
@@ -821,15 +821,15 @@
                 }
             },
             "C": {
-                "Choice": "(x – 4)² + (y + 2)² = 9",
+                "Choice": "(x - 4)^2 + (y + 2)^2 = 9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form for the equation of a circle in the xy-plane with center (h, k) and radius r is (x – h)² + (y – k)² = r². Therefore, the equation of a circle with radius 3 and center (4, –2) is (x – 4)² + (y + 2)² = 9.",
+                    "Rationale": "The standard form for the equation of a circle in the xy-plane with center (h, k) and radius r is (x - h)^2 + (y - k)^2 = r². Therefore, the equation of a circle with radius 3 and center (4, -2) is (x - 4)^2 + (y + 2)^2 = 9.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "(x – 4)² – (y + 2)² = 9",
+                "Choice": "(x - 4)^2 - (y + 2)^2 = 9",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation defines an ellipse rather than a circle; in the standard form for an equation of a circle, the two squared terms on the left-hand side of the equation are added, not subtracted.",
@@ -938,7 +938,7 @@
                 "Choice": "10%",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This answer choice may be the result of subtracting the number of students enrolled in Propel who had a GPA of 3.0 or greater from the number of students not enrolled in Propel who had a GPA of 3.0 or greater (95 – 61 = 34), then dividing the result by the total number of students in the study.",
+                    "Rationale": "This answer choice may be the result of subtracting the number of students enrolled in Propel who had a GPA of 3.0 or greater from the number of students not enrolled in Propel who had a GPA of 3.0 or greater (95 - 61 = 34), then dividing the result by the total number of students in the study.",
                     "Percent": 0
                 }
             },
@@ -946,7 +946,7 @@
                 "Choice": "12%",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "There are 61 students enrolled in Propel who had a GPA of 3.0 or greater and 48 students enrolled in Propel who had a GPA of less than 3.0, so there are a total of 61 + 48 = 109 students enrolled in Propel. The percentage of students enrolled in Propel who had a GPA of 3.0 or greater is 61/109 × 100% ≈ 55.96% or about 56%. There are 95 students who are not enrolled in Propel who had a GPA of 3.0 or greater and 123 students not enrolled in Propel who had a GPA of less than 3.0, so there are a total of 95 + 123 = 218 students who are not enrolled in Propel. The percentage of students not enrolled in Propel who had a GPA of 3.0 or greater is 95/218 × ≈ 100% 43.58%, or about 44%. Therefore, the difference, to the nearest whole percent, between the percentage of students enrolled in Propel who had a GPA of 3.0 or greater and the percentage of students not enrolled in Propel who had a GPA of 3.0 or greater is 56% – 44% = 12%.",
+                    "Rationale": "There are 61 students enrolled in Propel who had a GPA of 3.0 or greater and 48 students enrolled in Propel who had a GPA of less than 3.0, so there are a total of 61 + 48 = 109 students enrolled in Propel. The percentage of students enrolled in Propel who had a GPA of 3.0 or greater is 61/109 × 100% ≈ 55.96% or about 56%. There are 95 students who are not enrolled in Propel who had a GPA of 3.0 or greater and 123 students not enrolled in Propel who had a GPA of less than 3.0, so there are a total of 95 + 123 = 218 students who are not enrolled in Propel. The percentage of students not enrolled in Propel who had a GPA of 3.0 or greater is 95/218 × ≈ 100% 43.58%, or about 44%. Therefore, the difference, to the nearest whole percent, between the percentage of students enrolled in Propel who had a GPA of 3.0 or greater and the percentage of students not enrolled in Propel who had a GPA of 3.0 or greater is 56% - 44% = 12%.",
                     "Percent": 0
                 }
             }
@@ -1082,12 +1082,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "f(x) = (2x – 4)/(2x² + 2x – 4)",
+            "f(x) = (2x - 4)/(2x^2+ 2x - 4)",
             "A rational function is defined above. Which of the following is an equivalent form that displays values not included in the domain as constants or coefficients?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "f(x) = (x – 2)/(x² + x – 2)",
+                "Choice": "f(x) = (x - 2)/(x^2+ x - 2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The values of x where the denominator is equal to 0 are not displayed as constants or coefficients.",
@@ -1095,10 +1095,10 @@
                 }
             },
             "B": {
-                "Choice": "f(x) = 2(x – 2)/(2(x + 2)(x – 1))",
+                "Choice": "f(x) = 2(x - 2)/(2(x + 2)(x - 1))",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The domain of the rational function f(x) = (2x – 4)/(2x² + 2x – 4) will be all real values of x except the values of x for which the denominator, 2x² + 2x – 4, becomes 0. Solving the equation 2x² + 2x – 4 = 0 gives x = 1 and x = –2. The equation in this choice, f(x) = 2(x – 2)/(2(x + 2)(x – 1)), is equivalent to the given function, since the numerator and denominator are just the factored forms of 2x – 4 and 2x² + 2x – 4, respectively. Therefore, the equation in this choice is an equivalent form of f(x) that displays values not included in the domain as constants.",
+                    "Rationale": "The domain of the rational function f(x) = (2x - 4)/(2x^2+ 2x - 4) will be all real values of x except the values of x for which the denominator, 2x^2+ 2x - 4, becomes 0. Solving the equation 2x^2+ 2x - 4 = 0 gives x = 1 and x = -2. The equation in this choice, f(x) = 2(x - 2)/(2(x + 2)(x - 1)), is equivalent to the given function, since the numerator and denominator are just the factored forms of 2x - 4 and 2x^2+ 2x - 4, respectively. Therefore, the equation in this choice is an equivalent form of f(x) that displays values not included in the domain as constants.",
                     "Percent": 0
                 }
             },
@@ -1106,15 +1106,15 @@
                 "Choice": "f(x) = 1/(x + 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is not equivalent to f(x) = (2x – 4)/(2x² + 2x – 4).",
+                    "Rationale": "This choice is not equivalent to f(x) = (2x - 4)/(2x^2+ 2x - 4).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "f(x) = 1/(2x²)",
+                "Choice": "f(x) = 1/(2x^2)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is not equivalent to f(x) = (2x – 4)/(2x² + 2x – 4).",
+                    "Rationale": "This choice is not equivalent to f(x) = (2x - 4)/(2x^2+ 2x - 4).",
                     "Percent": 0
                 }
             }
@@ -1153,7 +1153,7 @@
                 "Choice": "1/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It is given that the equation A = 4p + 64 will relate the area A, in square feet, of the path and the perimeter p, in feet, of the fountain. This equation can be rewritten to express p in terms of A: subtracting 64 from each side of A = 4p + 64 gives A – 64 = 4p, and dividing by 4 and simplifying gives p = A/4 – 16. For each additional square foot of area, the value of A increases by 1. Using p = A/4 – 16, an increase in A by 1 results in an increase in p by 1/4. Therefore, the perimeter of the fountain increases by 1/4 foot for each additional square foot of the path's area.",
+                    "Rationale": "It is given that the equation A = 4p + 64 will relate the area A, in square feet, of the path and the perimeter p, in feet, of the fountain. This equation can be rewritten to express p in terms of A: subtracting 64 from each side of A = 4p + 64 gives A - 64 = 4p, and dividing by 4 and simplifying gives p = A/4 - 16. For each additional square foot of area, the value of A increases by 1. Using p = A/4 - 16, an increase in A by 1 results in an increase in p by 1/4. Therefore, the perimeter of the fountain increases by 1/4 foot for each additional square foot of the path's area.",
                     "Percent": 0
                 }
             },
@@ -1193,7 +1193,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the xy-plane the graph of the function q is a parabola. The graph intersects the x-axis at (–1, 0) and (r, 0). If the vertex of q occurs at the point (2, 4), what is the value of r?"
+            "In the xy-plane the graph of the function q is a parabola. The graph intersects the x-axis at (-1, 0) and (r, 0). If the vertex of q occurs at the point (2, 4), what is the value of r?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1224,7 +1224,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since q is a function and its graph is a parabola, it follows that q is a quadratic function and the parabola is symmetric about the vertical line through its vertex. Thus, the x-coordinate of the vertex (2, 4) is the average of the x-coordinates of the two x-intercepts (–1, 0) and (r, 0). That is, 2 = (–1 + r)/2. It follows that 4 = –1 + r, so r = 5.",
+                    "Rationale": "Since q is a function and its graph is a parabola, it follows that q is a quadratic function and the parabola is symmetric about the vertical line through its vertex. Thus, the x-coordinate of the vertex (2, 4) is the average of the x-coordinates of the two x-intercepts (-1, 0) and (r, 0). That is, 2 = (-1 + r)/2. It follows that 4 = -1 + r, so r = 5.",
                     "Percent": 0
                 }
             }
@@ -1252,7 +1252,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "C = –25 + 15t",
+                "Choice": "C = -25 + 15t",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This function fails to give the correct value C = 100 for t = 0.",
@@ -1260,7 +1260,7 @@
                 }
             },
             "B": {
-                "Choice": "C = 25 – 15t",
+                "Choice": "C = 25 - 15t",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This function fails to give the correct value C = 100 for t = 0.",
@@ -1276,10 +1276,10 @@
                 }
             },
             "D": {
-                "Choice": "C = 100 – 15t",
+                "Choice": "C = 100 - 15t",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The temperature when chilling began was 100°C. Since the time the chilling began corresponds to the value t = 0, the correct equation must yield the value C = 100 for t = 0. This eliminates choices A, B, and C. The temperature decreases at a constant rate from 100°C to 25°C. So the function that represents C in terms of t must be a linear function of the form C = 100 – at, where a is the rate at which the temperature decreases, in degrees Celsius per second. The temperature decreases from 100°C to 25°C, or 75°C, in 5 seconds. This is a rate of decrease of 15°C per second. Thus, a = 15. Therefore, the linear function in this choice represents correctly the temperature C, in degrees Celsius, as a function of the time t, in seconds, after the chilling began.",
+                    "Rationale": "The temperature when chilling began was 100°C. Since the time the chilling began corresponds to the value t = 0, the correct equation must yield the value C = 100 for t = 0. This eliminates choices A, B, and C. The temperature decreases at a constant rate from 100°C to 25°C. So the function that represents C in terms of t must be a linear function of the form C = 100 - at, where a is the rate at which the temperature decreases, in degrees Celsius per second. The temperature decreases from 100°C to 25°C, or 75°C, in 5 seconds. This is a rate of decrease of 15°C per second. Thus, a = 15. Therefore, the linear function in this choice represents correctly the temperature C, in degrees Celsius, as a function of the time t, in seconds, after the chilling began.",
                     "Percent": 0
                 }
             }
@@ -1319,7 +1319,7 @@
                 "Choice": "121",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the result of multiplying the volume of the sphere by 11² rather than 11³. If the radius of a sphere is multiplied by a factor of 11, its volume is multiplied by 11³ = 1,331, not 11² = 121.",
+                    "Rationale": "This is the result of multiplying the volume of the sphere by 11^2 rather than 11³. If the radius of a sphere is multiplied by a factor of 11, its volume is multiplied by 11³ = 1,331, not 11^2 = 121.",
                     "Percent": 0
                 }
             },
@@ -1414,38 +1414,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If function f is defined by f(x) = 3x² – 5x + 4, what is f (x – 4)?"
+            "If function f is defined by f(x) = 3x^2- 5x + 4, what is f (x - 4)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "f(x – 4) = 3x² – 5x",
+                "Choice": "f(x - 4) = 3x^2- 5x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice subtracts 4 from the right-hand side only, when to find f(x – 4) in terms of x, x – 4 should be substituted for x throughout the equation f(x) = 3x² – 5x + 4.",
+                    "Rationale": "This choice subtracts 4 from the right-hand side only, when to find f(x - 4) in terms of x, x - 4 should be substituted for x throughout the equation f(x) = 3x^2- 5x + 4.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "f(x – 4) = 3x² – 5x + 72",
+                "Choice": "f(x - 4) = 3x^2- 5x + 72",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice likely result from errors in expanding and simplifying the equation f(x – 4) = 3(x – 4)² – 5(x – 4) + 4.",
+                    "Rationale": "This choice likely result from errors in expanding and simplifying the equation f(x - 4) = 3(x - 4)^2 - 5(x - 4) + 4.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "f(x – 4) = 3x² – 29x + 52",
+                "Choice": "f(x - 4) = 3x^2- 29x + 52",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice likely result from errors in expanding and simplifying the equation f(x – 4) = 3(x – 4)² – 5(x – 4) + 4.",
+                    "Rationale": "This choice likely result from errors in expanding and simplifying the equation f(x - 4) = 3(x - 4)^2 - 5(x - 4) + 4.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "f(x – 4) = 3x² – 29x + 72",
+                "Choice": "f(x - 4) = 3x^2- 29x + 72",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The definition of a function describes the rule by which each input, x, is assigned a single output, f(x). So f(x – 4) is the output obtained when the same rule, f, is applied to a different input, x – 4. Therefore, to find f(x – 4), take the definition f(x) = 3x² – 5x + 4 and substitute x – 4 for x throughout the equation to obtain f(x – 4) = 3(x – 4)² – 5(x – 4) + 4.\nNow expand the right-hand side and collect like terms: f(x – 4) = 3(x – 4)² – 5(x – 4) + 4 = 3(x² – 8x + 16) – 5(x – 4) + 4 = 3x² – 24x + 48 – 5x + 20 + 4 = 3x² – 24x – 5x + 48 + 20 + 4 = 3x² – 29x + 72.",
+                    "Rationale": "The definition of a function describes the rule by which each input, x, is assigned a single output, f(x). So f(x - 4) is the output obtained when the same rule, f, is applied to a different input, x - 4. Therefore, to find f(x - 4), take the definition f(x) = 3x^2- 5x + 4 and substitute x - 4 for x throughout the equation to obtain f(x - 4) = 3(x - 4)^2 - 5(x - 4) + 4.\nNow expand the right-hand side and collect like terms: f(x - 4) = 3(x - 4)^2 - 5(x - 4) + 4 = 3(x^2- 8x + 16) - 5(x - 4) + 4 = 3x^2- 24x + 48 - 5x + 20 + 4 = 3x^2- 24x - 5x + 48 + 20 + 4 = 3x^2- 29x + 72.",
                     "Percent": 0
                 }
             }
@@ -1469,7 +1469,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x = y/3\n154 – 4y = 10x",
+            ":ibox:x = y/3\n154 - 4y = 10x",
             "The equations of two lines are shown above. If the lines are graphed in the xy-plane, which of the following ordered pairs represents the point at which the lines would intersect?"
         ],
         "AnswerChoices": {
@@ -1477,7 +1477,7 @@
                 "Choice": "(1, 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This point lies on the line with equation x = y/3, but none of these points lies on the line with equation 154 – 4y = 10x. The point (1, 3) does not lie on the line with equation 154 – 4y = 10x because substituting x = 1 and y = 3 in the equation gives 154 – 4(3) = 10(1); this simplifies to 142 = 10, which is not a true statement.",
+                    "Rationale": "This point lies on the line with equation x = y/3, but none of these points lies on the line with equation 154 - 4y = 10x. The point (1, 3) does not lie on the line with equation 154 - 4y = 10x because substituting x = 1 and y = 3 in the equation gives 154 - 4(3) = 10(1); this simplifies to 142 = 10, which is not a true statement.",
                     "Percent": 0
                 }
             },
@@ -1485,7 +1485,7 @@
                 "Choice": "(3, 9)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This point lies on the line with equation x = y/3, but none of these points lies on the line with equation 154 – 4y = 10x. The point (3, 9) does not lie on the line with equation 154 – 4y = 10x because substituting x = 3 and y = 9 in the equation gives 154 – 4(9) = 10(3); this simplifies to 1118 = 30, which is not a true statement.",
+                    "Rationale": "This point lies on the line with equation x = y/3, but none of these points lies on the line with equation 154 - 4y = 10x. The point (3, 9) does not lie on the line with equation 154 - 4y = 10x because substituting x = 3 and y = 9 in the equation gives 154 - 4(9) = 10(3); this simplifies to 1118 = 30, which is not a true statement.",
                     "Percent": 0
                 }
             },
@@ -1493,7 +1493,7 @@
                 "Choice": "(5, 15)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This point lies on the line with equation x = y/3, but none of these points lies on the line with equation 154 – 4y = 10x. The point (5, 15) does not lie on the line with equation 154 – 4y = 10x because substituting x = 5 and y = 15 in the equation gives 154 – 4(15) = 10(5); this simplifies to 94 = 50, which is not a true statement.",
+                    "Rationale": "This point lies on the line with equation x = y/3, but none of these points lies on the line with equation 154 - 4y = 10x. The point (5, 15) does not lie on the line with equation 154 - 4y = 10x because substituting x = 5 and y = 15 in the equation gives 154 - 4(15) = 10(5); this simplifies to 94 = 50, which is not a true statement.",
                     "Percent": 0
                 }
             },
@@ -1501,7 +1501,7 @@
                 "Choice": "(7, 21)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If (x₀, y₀) is the point at which the two lines intersect, the coordinates x0 and y0 must satisfy each of the given equations in the following system of equations: { x = y/3; 154 – 4y = 10x }\nThis system can be solved by writing the second equation in terms of only x. To do so, first multiply each side of the first equation, x = y/3, by 3, which gives 3x = y. Substituting 3x for y in the second equation, 154 – 4y = 10x, gives 154 – 12x = 10x. Adding 12x to each side of 154 – 12x = 10x gives 154 = 22x, so x = 7. Finally, substituting 7 for x in the equation x = y/3 gives 7 = y/3, and multiplying each side of 7 = y/3 by 3 gives 21 = y. When the two equations are graphed in the xy-plane, the resulting lines intersect at the point (7, 21).",
+                    "Rationale": "If (x₀, y₀) is the point at which the two lines intersect, the coordinates x0 and y0 must satisfy each of the given equations in the following system of equations: { x = y/3; 154 - 4y = 10x }\nThis system can be solved by writing the second equation in terms of only x. To do so, first multiply each side of the first equation, x = y/3, by 3, which gives 3x = y. Substituting 3x for y in the second equation, 154 - 4y = 10x, gives 154 - 12x = 10x. Adding 12x to each side of 154 - 12x = 10x gives 154 = 22x, so x = 7. Finally, substituting 7 for x in the equation x = y/3 gives 7 = y/3, and multiplying each side of 7 = y/3 by 3 gives 21 = y. When the two equations are graphed in the xy-plane, the resulting lines intersect at the point (7, 21).",
                     "Percent": 0
                 }
             }
@@ -1533,7 +1533,7 @@
                 "Choice": "equal:65",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Based on the table, 10 Szechuan chicken meals contain (5)(10) = 50 grams of fat and (35)(10) = 350 grams of carbohydrates. So the greatest number of stir-fry meals that John can purchase must contain no more than 350 – 50 = 300 grams of fat and no more than 2975 – 350 = 2625 grams of carbohydrates. It follows that the greatest number of stir-fry meals he can purchase so that the combination will satisfy the fat requirement is 300/4 = 75, and the greatest number of stir-fry meals he can purchase so that the combination will satisfy the carbohydrate requirement is 2625/40 = 65.625. Since John cannot purchase parts of a meal and purchasing 66 stir-fry meals would exceed the carbohydrate requirement, the greatest number of meals he can purchase so that the carbohydrate requirement will be satisfied is 65. Therefore, the greatest number of stir-fry meals he can purchase so that the combination will satisfy both requirements is 65.",
+                    "Rationale": "Based on the table, 10 Szechuan chicken meals contain (5)(10) = 50 grams of fat and (35)(10) = 350 grams of carbohydrates. So the greatest number of stir-fry meals that John can purchase must contain no more than 350 - 50 = 300 grams of fat and no more than 2975 - 350 = 2625 grams of carbohydrates. It follows that the greatest number of stir-fry meals he can purchase so that the combination will satisfy the fat requirement is 300/4 = 75, and the greatest number of stir-fry meals he can purchase so that the combination will satisfy the carbohydrate requirement is 2625/40 = 65.625. Since John cannot purchase parts of a meal and purchasing 66 stir-fry meals would exceed the carbohydrate requirement, the greatest number of meals he can purchase so that the carbohydrate requirement will be satisfied is 65. Therefore, the greatest number of stir-fry meals he can purchase so that the combination will satisfy both requirements is 65.",
                     "Percent": 0
                 }
             }
@@ -1557,15 +1557,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y = x² – 4x + 3\ny = x – 1",
-            "If (x, y) is a solution to the system of equations above, what is one possible value of the product of x and y?"
+            ":ibox:y = x^2- 4x + 3\ny = x - 1",
+            "If (x, y) is a solution to the system of equations above, what is one possible value of the product of `x` and `y`?"
         ],
         "AnswerChoices": {
             "KEY1": {
                 "Choice": "equal:0",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To solve the given system of equations, one can use the second equation, y = x – 1, and substitute x – 1 for y in the first equation, giving x – 1 = x² – 4x + 3. This equation can be rewritten as x² – 5x + 4 = 0. Since 1 and 4 are the two numbers whose sum is 5 and whose product is 4, they are the solutions to the equation x² – 5x + 4 = 0. From the equation y = x – 1, it follows that (1, 0) is a solution to the given system of equations. Therefore, the value of the product xy is (1)(0) = 0.",
+                    "Rationale": "To solve the given system of equations, one can use the second equation, y = x - 1, and substitute x - 1 for y in the first equation, giving x - 1 = x^2- 4x + 3. This equation can be rewritten as x^2- 5x + 4 = 0. Since 1 and 4 are the two numbers whose sum is 5 and whose product is 4, they are the solutions to the equation x^2- 5x + 4 = 0. From the equation y = x - 1, it follows that (1, 0) is a solution to the given system of equations. Therefore, the value of the product xy is (1)(0) = 0.",
                     "Percent": 0
                 }
             },
@@ -1573,7 +1573,7 @@
                 "Choice": "equal:12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To solve the given system of equations, one can use the second equation, y = x – 1, and substitute x – 1 for y in the first equation, giving x – 1 = x² – 4x + 3. This equation can be rewritten as x² – 5x + 4 = 0. Since 1 and 4 are the two numbers whose sum is 5 and whose product is 4, they are the solutions to the equation x² – 5x + 4 = 0. From the equation y = x – 1, it follows that (4, 3) is a solution to the given system of equations. Therefore, the value of the product xy is (4)(3) = 12.",
+                    "Rationale": "To solve the given system of equations, one can use the second equation, y = x - 1, and substitute x - 1 for y in the first equation, giving x - 1 = x^2- 4x + 3. This equation can be rewritten as x^2- 5x + 4 = 0. Since 1 and 4 are the two numbers whose sum is 5 and whose product is 4, they are the solutions to the equation x^2- 5x + 4 = 0. From the equation y = x - 1, it follows that (4, 3) is a solution to the given system of equations. Therefore, the value of the product xy is (4)(3) = 12.",
                     "Percent": 0
                 }
             }
@@ -1606,7 +1606,7 @@
                 "Choice": "equal:1368",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the graph, the king crab supply in 2006 was 180 million pounds. It is given that 60% of this supply was sold at $8 per pound and the rest of the supply was sold at $7 per pound. It follows that (0.6)(180) = 108 million pounds of king crab was sold at $8 per pound, and 180 – 108 = 72 million pounds of king crab was sold at $7 per pound. Therefore, the revenue generated, in millions of dollars, from the sales of king crab in 2006 was (108)(8) + (72)(7) = 1368.",
+                    "Rationale": "According to the graph, the king crab supply in 2006 was 180 million pounds. It is given that 60% of this supply was sold at $8 per pound and the rest of the supply was sold at $7 per pound. It follows that (0.6)(180) = 108 million pounds of king crab was sold at $8 per pound, and 180 - 108 = 72 million pounds of king crab was sold at $7 per pound. Therefore, the revenue generated, in millions of dollars, from the sales of king crab in 2006 was (108)(8) + (72)(7) = 1368.",
                     "Percent": 0
                 }
             }

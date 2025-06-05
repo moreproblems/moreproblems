@@ -181,14 +181,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by the equation f(x) = 100x + 2. What is the value of f(x) when x = 9?"
+            "The function f is defined by the equation f(x) = 100x + 2. What is the value of `f(x)` when x = 9?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "111",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of f(x) when x = 1.09.",
+                    "Rationale": "This is the value of `f(x)` when x = 1.09.",
                     "Percent": 0
                 }
             },
@@ -196,7 +196,7 @@
                 "Choice": "118",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of f(x) when x = 1.16.",
+                    "Rationale": "This is the value of `f(x)` when x = 1.16.",
                     "Percent": 0
                 }
             },
@@ -204,7 +204,7 @@
                 "Choice": "900",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of f(x) when x = 8.98.",
+                    "Rationale": "This is the value of `f(x)` when x = 8.98.",
                     "Percent": 0
                 }
             },
@@ -212,7 +212,7 @@
                 "Choice": "902",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting 9 for x in the given equation yields f(9) = 100(9) + 2, or f(9) = 902. Therefore, the value of f(x) when x = 9 is 902.",
+                    "Rationale": "Substituting 9 for x in the given equation yields f(9) = 100(9) + 2, or f(9) = 902. Therefore, the value of `f(x)` when x = 9 is 902.",
                     "Percent": 0
                 }
             }
@@ -413,7 +413,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, –6)",
+                "Choice": "(0, -6)",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The y-intercept of a graph in the xy-plane is the point (x, y) on the graph where x = 0. For the graph shown, at x = 0, the corresponding value of y is -6. Therefore, the y-intercept of the graph shown is (0, -6).",
@@ -421,7 +421,7 @@
                 }
             },
             "B": {
-                "Choice": "(–6, 0)",
+                "Choice": "(-6, 0)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -437,7 +437,7 @@
                 }
             },
             "D": {
-                "Choice": "(–5, –5)",
+                "Choice": "(-5, -5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -639,7 +639,7 @@
                 "Choice": "equal:12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of f(36) is the value of f(x) when x = 36. Substituting 36 for x in the given equation yields f(36) = 6 + √36, which is equivalent to f(36) = 6 + 6, or f(36) = 12. Thus, the value of f(36) is 12.",
+                    "Rationale": "The value of f(36) is the value of `f(x)` when x = 36. Substituting 36 for x in the given equation yields f(36) = 6 + √36, which is equivalent to f(36) = 6 + 6, or f(36) = 12. Thus, the value of f(36) is 12.",
                     "Percent": 0
                 }
             }
@@ -763,7 +763,7 @@
                 }
             },
             "B": {
-                "Choice": "c = (b – 42)/f",
+                "Choice": "c = (b - 42)/f",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation can be rewritten as b = cf + 42.",
@@ -779,7 +779,7 @@
                 }
             },
             "D": {
-                "Choice": "c = 42 – b – f",
+                "Choice": "c = 42 - b - f",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation can be rewritten as b = 42 - c - f.",
@@ -883,7 +883,7 @@
                 }
             },
             "C": {
-                "Choice": "–0.7",
+                "Choice": "-0.7",
                 "Key": {
                     "Correct": true,
                     "Rationale": "A line of best fit is shown in the scatterplot such that as the value of x increases, the value of y decreases. It follows that the slope of the line of best fit shown is negative. The slope of a line in the xy-plane that passes through the points (x₁, y₁) and (x₂, y₂) can be calculated as (y₂ - y₁)(x₂ - x₁). The line of best fit shown passes approximately through the points (0, 8) and (10, 1). Substituting (0, 8) for (x₁, y₁) and (10, 1) for (x₂, y₂) in (y₂ - y₁)(x₂ - x₁) yields the slope of the line being approximately (1 - 8)/(10 - 0), which is equivalent to -7/10, or -0.7. Therefore, of the given choices, -0.7 is the closest to the slope of this line of best fit.",
@@ -891,7 +891,7 @@
                 }
             },
             "D": {
-                "Choice": "–7",
+                "Choice": "-7",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1066,7 +1066,7 @@
                 "Choice": "8 years after Immanuel purchased the rare coin, its predicted value is approximately 82 dollars.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function f(x) = 65(1.03)ˣ gives the predicted value, in dollars, of a certain rare coin x years after Immanuel purchased it. It follows that f(x) represents the predicted value, in dollars, of the coin x years after Immanuel purchased it. Since the value of f(8) is the value of f(x) when x = 8, it follows that “f(8) is approximately equal to 82” means that f(x) is approximately equal to 82 when x = 8. Therefore, the best interpretation of the statement “f(8) is approximately equal to 82” in this context is 8 years after Immanuel purchased the rare coin, its predicted value is approximately 82 dollars.",
+                    "Rationale": "It's given that the function f(x) = 65(1.03)ˣ gives the predicted value, in dollars, of a certain rare coin x years after Immanuel purchased it. It follows that f(x) represents the predicted value, in dollars, of the coin x years after Immanuel purchased it. Since the value of f(8) is the value of `f(x)` when x = 8, it follows that “f(8) is approximately equal to 82” means that f(x) is approximately equal to 82 when x = 8. Therefore, the best interpretation of the statement “f(8) is approximately equal to 82” in this context is 8 years after Immanuel purchased the rare coin, its predicted value is approximately 82 dollars.",
                     "Percent": 0
                 }
             }
@@ -1091,19 +1091,19 @@
         "Explain": false,
         "Content": [
             "problems/PSAT891M2/media/23a.jpg",
-            "The table shows three values of x and their corresponding values of y, where n is a constant, for the linear relationship between x and y. What is the slope of the line that represents this relationship in the xy-plane?"
+            "The table shows three values of x and their corresponding values of y, where n is a constant, for the linear relationship between `x` and `y`. What is the slope of the line that represents this relationship in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "–92/3",
+                "Choice": "-92/3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope, m, of a line in the xy-plane can be found using two points on the line, (x₁, y₁) and (x₂, y₂), and the slope formula m = (y₂ - y₁)(x₂ - x₁). Based on the given table, the line representing the relationship between x and y in the xy-plane passes through the points (-6, n + 184), (-3, n + 92), and (0, n), where n is a constant. Substituting two of these points, (-3, n + 92) and (0, n) for (x₁, y₁) and (x₂, y₂), respectively, in the slope formula yields m = (n -(n + 92))/(0 - (-3)), which is equivalent to m = (n - n - 92)/(0 + 3), or m = -92/3. Therefore, the slope of the line that represents this relationship in the xy-plane is -92/3.",
+                    "Rationale": "The slope, m, of a line in the xy-plane can be found using two points on the line, (x₁, y₁) and (x₂, y₂), and the slope formula m = (y₂ - y₁)(x₂ - x₁). Based on the given table, the line representing the relationship between `x` and `y` in the xy-plane passes through the points (-6, n + 184), (-3, n + 92), and (0, n), where n is a constant. Substituting two of these points, (-3, n + 92) and (0, n) for (x₁, y₁) and (x₂, y₂), respectively, in the slope formula yields m = (n -(n + 92))/(0 - (-3)), which is equivalent to m = (n - n - 92)/(0 + 3), or m = -92/3. Therefore, the slope of the line that represents this relationship in the xy-plane is -92/3.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "–3/92",
+                "Choice": "-3/92",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1111,7 +1111,7 @@
                 }
             },
             "C": {
-                "Choice": "(n + 92)/–3",
+                "Choice": "(n + 92)/-3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1119,7 +1119,7 @@
                 }
             },
             "D": {
-                "Choice": "(2n – 92)/3",
+                "Choice": "(2n - 92)/3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1154,7 +1154,7 @@
                 "Choice": "R = 8r and H = 7h",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 8r for R and 7h for H in the expression that represents the volume of the second cylinder yields π(8r)²(7h), or π(64r²)(7h), which is equivalent to π(448r²h), or 448(πr²h). This expression is equal to 448, not 392, times the volume of the cylinder shown.",
+                    "Rationale": "Substituting 8r for R and 7h for H in the expression that represents the volume of the second cylinder yields π(8r)^2(7h), or π(64r²)(7h), which is equivalent to π(448r²h), or 448(πr²h). This expression is equal to 448, not 392, times the volume of the cylinder shown.",
                     "Percent": 0
                 }
             },
@@ -1162,7 +1162,7 @@
                 "Choice": "R = 8r and H = 49h",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 8r for R and 49h for H in the expression that represents the volume of the second cylinder yields π(8r)²(49h), or π(64r²)(49h), which is equivalent to π(3,136r²h), or 3,136(πr²h). This expression is equal to 3,136, not 392, times the volume of the cylinder shown.",
+                    "Rationale": "Substituting 8r for R and 49h for H in the expression that represents the volume of the second cylinder yields π(8r)^2(49h), or π(64r²)(49h), which is equivalent to π(3,136r²h), or 3,136(πr²h). This expression is equal to 3,136, not 392, times the volume of the cylinder shown.",
                     "Percent": 0
                 }
             },
@@ -1170,7 +1170,7 @@
                 "Choice": "R = 7r and H = 8h",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The volume of a right circular cylinder is equal to πa²b, where a is the radius of a base of the cylinder and b is the height of the cylinder. It's given that the cylinder shown has a radius of r and a height of h. It follows that the volume of the cylinder shown is equal to πr²h. It's given that the second right circular cylinder has a radius of R and a height of H. It follows that the volume of the second cylinder is equal to πR²H. This choice gives R = 7r and H = 8h. Substituting 7r for R and 8h for H in the expression that represents the volume of the second cylinder yields π(7r)²(8h), or π(49r²)(8h), which is equivalent to π(392r²h), or 392(πr²h). This expression is equal to 392 times the volume of the cylinder shown, πr²h. Therefore, R = 7r and H = 8h could represent the radius R, in terms of r, and the height H, in terms of h, of the second cylinder.",
+                    "Rationale": "The volume of a right circular cylinder is equal to πa²b, where a is the radius of a base of the cylinder and b is the height of the cylinder. It's given that the cylinder shown has a radius of r and a height of h. It follows that the volume of the cylinder shown is equal to πr²h. It's given that the second right circular cylinder has a radius of R and a height of H. It follows that the volume of the second cylinder is equal to πR²H. This choice gives R = 7r and H = 8h. Substituting 7r for R and 8h for H in the expression that represents the volume of the second cylinder yields π(7r)^2(8h), or π(49r²)(8h), which is equivalent to π(392r²h), or 392(πr²h). This expression is equal to 392 times the volume of the cylinder shown, πr²h. Therefore, R = 7r and H = 8h could represent the radius R, in terms of r, and the height H, in terms of h, of the second cylinder.",
                     "Percent": 0
                 }
             },
@@ -1178,7 +1178,7 @@
                 "Choice": "R = 49r and H = 8h",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 49r for R and 8h for H in the expression that represents the volume of the second cylinder yields π(49r)²(8h), or π(2,401r²)(8h), which is equivalent to π(19,208r²h), or 19,208(πr²h). This expression is equal to 19,208, not 392, times the volume of the cylinder shown.",
+                    "Rationale": "Substituting 49r for R and 8h for H in the expression that represents the volume of the second cylinder yields π(49r)^2(8h), or π(2,401r²)(8h), which is equivalent to π(19,208r²h), or 19,208(πr²h). This expression is equal to 19,208, not 392, times the volume of the cylinder shown.",
                     "Percent": 0
                 }
             }
@@ -1320,7 +1320,7 @@
                 "Choice": "equal:66",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the right circular cone has a height of 22 centimeters (cm) and a base with a diameter of 6 cm. Since the diameter of the base of the cone is 6 cm, the radius of the base is 3 cm. The volume V, in cm³, of a right circular cone can be found using the formula V = (1/3)πr²h, where h is the height, in cm, and r is the radius, in cm, of the base of the cone. Substituting 22 for h and 3 for r in this formula yields V = (1/3)π(3)²(22), or V = 66π. Therefore, the volume of the cone is 66 cm³. It's given that the volume of the cone is nπ cm³. Therefore, the value of n is 66.",
+                    "Rationale": "It's given that the right circular cone has a height of 22 centimeters (cm) and a base with a diameter of 6 cm. Since the diameter of the base of the cone is 6 cm, the radius of the base is 3 cm. The volume V, in cm³, of a right circular cone can be found using the formula V = (1/3)πr²h, where h is the height, in cm, and r is the radius, in cm, of the base of the cone. Substituting 22 for h and 3 for r in this formula yields V = (1/3)π(3)^2(22), or V = 66π. Therefore, the volume of the cone is 66 cm³. It's given that the volume of the cone is nπ cm³. Therefore, the value of n is 66.",
                     "Percent": 0
                 }
             }

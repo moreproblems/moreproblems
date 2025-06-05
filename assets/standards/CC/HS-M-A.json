@@ -8,7 +8,7 @@
         ],
         [
             "Equations & Inequalities",
-            "An equation is a statement of equality between two expressions, often viewed as a question asking for which values of the variables the expressions on either side are in fact equal. These values are the solutions to the equation. An identity, in contrast, is true for all values of the variables; identities are often developed by rewriting an expression in an equivalent form.\n\nThe solutions of an equation in one variable form a set of numbers; the solutions of an equation in two variables form a set of ordered pairs of numbers, which can be plotted in the coordinate plane. Two or more equations and/or inequalities form a system. A solution for such a system must satisfy every equation and inequality in the system.\n\nAn equation can often be solved by successively deducing from it one or more simpler equations. For example, one can add the same constant to both sides without changing the solutions, but squaring both sides might lead to extraneous solutions. Strategic competence in solving includes looking ahead for productive manipulations and anticipating the nature and number of solutions.\n\nSome equations have no solutions in a given number system, but have a solution in a larger system. For example, the solution of x + 1 = 0 is an integer, not a whole number; the solution of 2x + 1 = 0 is a rational number, not an integer; the solutions of x² – 2 = 0 are real numbers, not rational numbers; and the solutions of x² + 2 = 0 are complex numbers, not real numbers.\n\nThe same solution techniques used to solve equations can be used to rearrange formulas. For example, the formula for the area of a trapezoid, A = ((b₁ +b₂)/2)h, can be solved for h using the same deductive process.\n\nInequalities can be solved by reasoning about the properties of inequality. Many, but not all, of the properties of equality continue to hold for inequalities and can be useful in solving them."
+            "An equation is a statement of equality between two expressions, often viewed as a question asking for which values of the variables the expressions on either side are in fact equal. These values are the solutions to the equation. An identity, in contrast, is true for all values of the variables; identities are often developed by rewriting an expression in an equivalent form.\n\nThe solutions of an equation in one variable form a set of numbers; the solutions of an equation in two variables form a set of ordered pairs of numbers, which can be plotted in the coordinate plane. Two or more equations and/or inequalities form a system. A solution for such a system must satisfy every equation and inequality in the system.\n\nAn equation can often be solved by successively deducing from it one or more simpler equations. For example, one can add the same constant to both sides without changing the solutions, but squaring both sides might lead to extraneous solutions. Strategic competence in solving includes looking ahead for productive manipulations and anticipating the nature and number of solutions.\n\nSome equations have no solutions in a given number system, but have a solution in a larger system. For example, the solution of x + 1 = 0 is an integer, not a whole number; the solution of 2x + 1 = 0 is a rational number, not an integer; the solutions of x^2- 2 = 0 are real numbers, not rational numbers; and the solutions of x^2+ 2 = 0 are complex numbers, not real numbers.\n\nThe same solution techniques used to solve equations can be used to rearrange formulas. For example, the formula for the area of a trapezoid, A = ((b₁ +b₂)/2)h, can be solved for h using the same deductive process.\n\nInequalities can be solved by reasoning about the properties of inequality. Many, but not all, of the properties of equality continue to hold for inequalities and can be useful in solving them."
         ],
         [
             "Connections To Functions & Modeling",
@@ -51,7 +51,7 @@
                             "Key": "CC.M9-12.A-SSE.A.2",
                             "Label": "Use the structure of an expression to identify ways to rewrite it.",
                             "Examples": [
-                                "For example, see x⁴ – y⁴ as (x²)² – (y²)², thus recognizing it as a difference of squares that can be factored as (x² – y²)(x² + y²)."
+                                "For example, see x⁴ - y⁴ as (x^2)^2 - (y^2)^2, thus recognizing it as a difference of squares that can be factored as (x^2- y^2)(x^2+ y^2)."
                             ],
                             "Subs": []
                         }
@@ -126,7 +126,7 @@
                     "Subs": [
                         {
                             "Key": "CC.M9-12.A-APR.B.2",
-                            "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x – a is p(a), so p(a) = 0 if and only if (x – a) is a factor of p(x).",
+                            "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x - a is p(a), so p(a) = 0 if and only if (x - a) is a factor of p(x).",
                             "Examples": [],
                             "Subs": []
                         },
@@ -147,13 +147,13 @@
                             "Key": "CC.M9-12.A-APR.C.4",
                             "Label": "Prove polynomial identities and use them to describe numerical relationships.",
                             "Examples": [
-                                "For example, the polynomial identity (x² + y²)² = (x² – y²)² + (2xy)² can be used to generate Pythagorean triples."
+                                "For example, the polynomial identity (x^2+ y^2)^2 = (x^2- y^2)^2 + (2xy)^2 can be used to generate Pythagorean triples."
                             ],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.A-APR.C.5",
-                            "Label": "Know and apply the Binomial Theorem for the expansion of (x + y)ⁿ in powers of x and y for a positive integer n, where x and y are any numbers, with coefficients determined for example by Pascal's Triangle.",
+                            "Label": "Know and apply the Binomial Theorem for the expansion of (x + y)ⁿ in powers of `x` and `y` for a positive integer n, where `x` and `y` are any numbers, with coefficients determined for example by Pascal's Triangle.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -264,13 +264,13 @@
                             "Subs": [
                                 {
                                     "Key": "CC.M9-12.A-REI.B.4.a",
-                                    "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x – p)² = q that has the same solutions. Derive the quadratic formula from this form.",
+                                    "Label": "Use the method of completing the square to transform any quadratic equation in x into an equation of the form (x - p)^2 = q that has the same solutions. Derive the quadratic formula from this form.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CC.M9-12.A-REI.B.4.b",
-                                    "Label": "Solve quadratic equations by inspection (e.g., for x² = 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b.",
+                                    "Label": "Solve quadratic equations by inspection (e.g., for x^2= 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -299,7 +299,7 @@
                             "Key": "CC.M9-12.A-REI.C.7",
                             "Label": "Solve a simple system consisting of a linear equation and a quadratic equation in two variables algebraically and graphically.",
                             "Examples": [
-                                "For example, find the points of intersection between the line y = –3x and the circle x² + y² = 3."
+                                "For example, find the points of intersection between the line y = -3x and the circle x^2+ y^2= 3."
                             ],
                             "Subs": []
                         },
