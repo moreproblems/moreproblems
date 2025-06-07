@@ -357,7 +357,7 @@
                 "Choice": "y = x/3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is given in the form y = mx + b, where m is the slope. Therefore, the graph has a slope of 1/3.",
+                    "Rationale": "This choice is given in the form `y=mx+b`, where m is the slope. Therefore, the graph has a slope of 1/3.",
                     "Percent": 0
                 }
             },
@@ -365,7 +365,7 @@
                 "Choice": "y = x - 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is given in the form y = mx + b, where m is the slope. Therefore, the graph has a slope of 1 (because x = 1 ∙ x).",
+                    "Rationale": "This choice is given in the form `y=mx+b`, where m is the slope. Therefore, the graph has a slope of 1 (because x = 1 ∙ x).",
                     "Percent": 0
                 }
             },
@@ -373,7 +373,7 @@
                 "Choice": "y = 3x + 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of an equation given in the form y = mx + b has slope m. The equation in this choice is y = 3x + 2, so the slope of its graph is 3.",
+                    "Rationale": "The graph of an equation given in the form `y=mx+b` has slope m. The equation in this choice is y = 3x + 2, so the slope of its graph is 3.",
                     "Percent": 0
                 }
             },
@@ -381,7 +381,7 @@
                 "Choice": "y = 6x + 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is given in the form y = mx + b, where m is the slope. Therefore, the graph has a slope of 6.",
+                    "Rationale": "This choice is given in the form `y=mx+b`, where m is the slope. Therefore, the graph has a slope of 6.",
                     "Percent": 0
                 }
             }
@@ -494,7 +494,7 @@
                 "Choice": "10.11",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Using the volume formula V = 7πk³/48 and the given information that the volume of the glass is 473 cubic centimeters, the value of k can be found as follows:\n473 = 7πk³/48\nk³⁴ = 473(48)/7π\nk = ∛(473(48)/7π) ≈ 10.10690\nTherefore, the value of k is approximately 10.11 centimeters.",
+                    "Rationale": "Using the volume formula V = 7πk³/48 and the given information that the volume of the glass is 473 cubic centimeters, the value of k can be found as follows:\n473 = 7πk³/48\nk³⁴ = 473(48)/7π\nk = ∛(473(48)/7π) ~~ 10.10690\nTherefore, the value of k is approximately 10.11 centimeters.",
                     "Percent": 0
                 }
             }
@@ -916,7 +916,7 @@
                 "Choice": "mode < median < mean",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The mode is the data value with the highest frequency. So for the data shown, the mode is 18. The median is the middle data value when the data values are sorted from least to greatest. Since there are 20 ages ordered, the median is the average of the two middle values, the 10th and 11th, which for these data are both 19. Therefore, the median is 19. The mean is the sum of the data values divided by the number of the data values. So for these data, the mean is ((18 × 6) + (19 × 5) + (20 × 4) + (21 × 2) + (22 × 1) + (23 × 1) + (30 × 1))/20 = 20.\nSince the mode is 18, the median is 19, and the mean is 20, mode < median < mean.\nAlternate approach: After determining the mode, 18, and the median, 19, it remains to determine whether the mean is less than 19 or more than 19. Because the mean is a balancing point, there is as much deviation below the mean as above the mean. It is possible to compare the data to 19 to determine the balance of deviation above and below the mean. There is a total deviation of only 6 below 19 (the 6 values of 18); however, the data value 30 alone deviates by 11 above 19. Thus the mean must be greater than 19.",
+                    "Rationale": "The mode is the data value with the highest frequency. So for the data shown, the mode is 18. The median is the middle data value when the data values are sorted from least to greatest. Since there are 20 ages ordered, the median is the average of the two middle values, the 10th and 11th, which for these data are both 19. Therefore, the median is 19. The mean is the sum of the data values divided by the number of the data values. So for these data, the mean is ((18 × 6) + (19 × 5) + (20 × 4) + (21 × 2) + (22 × 1) + (23 × 1) + (30 × 1))/20 = 20.\nSince the mode is 18, the median is 19, and the mean is 20, mode < median < mean.\n\nAlternate approach: After determining the mode, 18, and the median, 19, it remains to determine whether the mean is less than 19 or more than 19. Because the mean is a balancing point, there is as much deviation below the mean as above the mean. It is possible to compare the data to 19 to determine the balance of deviation above and below the mean. There is a total deviation of only 6 below 19 (the 6 values of 18); however, the data value 30 alone deviates by 11 above 19. Thus the mean must be greater than 19.",
                     "Percent": 0
                 }
             },
@@ -1012,7 +1012,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of y = f(x), the solutions to f(x) = 0 correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1652,7 +1652,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The maximum value of the function f occurs at the highest point on the graph of y = f(x); the highest point on the graph is (4, 3). For any point on the graph of f, the y-coordinate gives the value of the function at the x-coordinate; therefore, the maximum value of the function f is 3. It is stated that k is the maximum value of f, so k = 3. Thus, g(k) = g(3). From the table of values for g, it can be seen that when x = 3, g(3) = 6.",
+                    "Rationale": "The maximum value of the function f occurs at the highest point on the graph of `y=f(x)`; the highest point on the graph is (4, 3). For any point on the graph of f, the y-coordinate gives the value of the function at the x-coordinate; therefore, the maximum value of the function f is 3. It is stated that k is the maximum value of f, so k = 3. Thus, g(k) = g(3). From the table of values for g, it can be seen that when x = 3, g(3) = 6.",
                     "Percent": 0
                 }
             },
@@ -1793,7 +1793,7 @@
                 "Choice": "equal:25.4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The average speed is the total distance divided by the total time. The total distance is 11 miles and the total time is 26 minutes. Thus, the average speed is 11/26 miles per minute.\nThe question asks for the average speed in miles per hour, and there are 60 minutes in an hour; converting miles per minute to miles per hour gives the following:\nAverage speed = (11 miles)/(26 minutes) × (60 minutes)/(1 hour)\n= 660/26 miles per hour\n≈ 25.38 miles per hour\nTherefore, to the nearest tenth of a mile per hour, the average speed of Paul Revere's ride would have been 25.4 miles per hour.",
+                    "Rationale": "The average speed is the total distance divided by the total time. The total distance is 11 miles and the total time is 26 minutes. Thus, the average speed is 11/26 miles per minute.\nThe question asks for the average speed in miles per hour, and there are 60 minutes in an hour; converting miles per minute to miles per hour gives the following:\nAverage speed = (11 miles)/(26 minutes) × (60 minutes)/(1 hour)\n= 660/26 miles per hour\n~~ 25.38 miles per hour\nTherefore, to the nearest tenth of a mile per hour, the average speed of Paul Revere's ride would have been 25.4 miles per hour.",
                     "Percent": 0
                 }
             }
@@ -1825,7 +1825,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions y = f(x) and y = g(x) intersect at x = a. The graph y = f(x) is given, and the graph of y = g(x) may be sketched as a line with y-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
+                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\n\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions `y=f(x)` and `y=g(x)` intersect at x = a. The graph `y=f(x)` is given, and the graph of `y=g(x)` may be sketched as a line with y-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
                     "Percent": 0
                 }
             },
@@ -1833,7 +1833,7 @@
                 "Choice": "equal:8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions y = f(x) and y = g(x) intersect at x = a. The graph y = f(x) is given, and the graph of y = g(x) may be sketched as a line with y-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
+                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\n\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions `y=f(x)` and `y=g(x)` intersect at x = a. The graph `y=f(x)` is given, and the graph of `y=g(x)` may be sketched as a line with y-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
                     "Percent": 0
                 }
             }
@@ -1858,14 +1858,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT18M2/media/36a.jpg",
-            "In triangle RST above, point W (not shown) lies on RT. What is the value of cos(∠RSW) - sin(∠WST)?"
+            "In triangle RST above, point W (not shown) lies on RT. What is the value of cos(/_RSW) - sin(/_WST)?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:0",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Note that no matter where point W is on RT, the sum of the measures of ∠RSW and ∠WST is equal to the measure of ∠RST, which is 90°. Thus, ∠RSW and ∠WST are complementary angles. Since the cosine of an angle is equal to the sine of its complementary angle, cos(∠RSW) = sin(∠WST). Therefore, cos(∠RSW) - sin(∠WST) = 0.",
+                    "Rationale": "Note that no matter where point W is on RT, the sum of the measures of /_RSW and /_WST is equal to the measure of /_RST, which is 90°. Thus, /_RSW and /_WST are complementary angles. Since the cosine of an angle is equal to the sine of its complementary angle, cos(/_RSW) = sin(/_WST). Therefore, cos(/_RSW) - sin(/_WST) = 0.",
                     "Percent": 0
                 }
             }

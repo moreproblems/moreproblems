@@ -152,7 +152,7 @@
                 "Choice": "It has a positive slope and a negative y-intercept.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To find the slope and y-intercept, the given equation can be rewritten in slope-intercept form y = mx + b, where m represents the slope of the line and b represents the y-intercept. The given equation 2y - 3x = -4 can be rewritten in slope-intercept form by first adding 3x to both sides of the equation, which yields 2y = 3x - 4. Then, dividing both sides of the equation by 2 results in the equation y = 3x/2 - 2. The coefficient of x, 3//2, is the slope of the graph and is positive, and the constant term, -2, is the y-intercept of the graph and is negative. Thus, the graph of the equation 2y - 3x = -4 has a positive slope and a negative y-intercept.",
+                    "Rationale": "To find the slope and y-intercept, the given equation can be rewritten in slope-intercept form `y=mx+b`, where m represents the slope of the line and b represents the y-intercept. The given equation 2y - 3x = -4 can be rewritten in slope-intercept form by first adding 3x to both sides of the equation, which yields 2y = 3x - 4. Then, dividing both sides of the equation by 2 results in the equation y = 3x/2 - 2. The coefficient of x, 3//2, is the slope of the graph and is positive, and the constant term, -2, is the y-intercept of the graph and is negative. Thus, the graph of the equation 2y - 3x = -4 has a positive slope and a negative y-intercept.",
                     "Percent": 0
                 }
             }
@@ -251,7 +251,7 @@
                 "Choice": "$150",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the variable h represents the number of hours a job took, the coefficient of h, 75, represents the electrician's charge per hour, in dollars, after an initial fixed charge of $125. It's given that the electrician worked 2 hours longer on Ms. Sanchez's job than on Mr. Roland's job; therefore, the additional charge for Ms. Sanchez's job is $75 × 2 = $150.\nAlternate approach: The amounts the electrician charged for Mr. Roland's job and Ms. Sanchez's job can be expressed in terms of t. If Mr. Roland's job took t hours, then it cost 75t + 125 dollars. Ms. Sanchez's job must then have taken t + 2 hours, so it cost 75(t + 2) + 125 = 75t + 275 dollars. The difference between the two costs is (75t + 275) - (75t + 125) = $150.",
+                    "Rationale": "Since the variable h represents the number of hours a job took, the coefficient of h, 75, represents the electrician's charge per hour, in dollars, after an initial fixed charge of $125. It's given that the electrician worked 2 hours longer on Ms. Sanchez's job than on Mr. Roland's job; therefore, the additional charge for Ms. Sanchez's job is $75 × 2 = $150.\n\nAlternate approach: The amounts the electrician charged for Mr. Roland's job and Ms. Sanchez's job can be expressed in terms of t. If Mr. Roland's job took t hours, then it cost 75t + 125 dollars. Ms. Sanchez's job must then have taken t + 2 hours, so it cost 75(t + 2) + 125 = 75t + 275 dollars. The difference between the two costs is (75t + 275) - (75t + 125) = $150.",
                     "Percent": 0
                 }
             },
@@ -458,7 +458,7 @@
                 "Choice": "One",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A solution to the system of three equations is any ordered pair (x, y) that is a solution to each of the three equations. Such an ordered pair (x, y) must lie on the graph of each equation in the xy-plane; in other words, it must be a point where all three graphs intersect. The graphs of all three equations intersect at exactly one point, (-1, 3). Therefore, the system of equations has one solution.",
+                    "Rationale": "A solution to the system of three equations is any ordered pair `(x,y)` that is a solution to each of the three equations. Such an ordered pair `(x,y)` must lie on the graph of each equation in the xy-plane; in other words, it must be a point where all three graphs intersect. The graphs of all three equations intersect at exactly one point, (-1, 3). Therefore, the system of equations has one solution.",
                     "Percent": 0
                 }
             },
@@ -496,7 +496,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(ax + 3)(5x^2- bx + 4) = 20x³ - 9x^2- 2x + 12",
+            ":ibox:(ax + 3)(5x^2- bx + 4) = 20x^3 - 9x^2- 2x + 12",
             "The equation above is true for all x, where a and b are constants. What is the value of ab?"
         ],
         "AnswerChoices": {
@@ -520,7 +520,7 @@
                 "Choice": "24",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the equation is true for all x, then the expressions on both sides of the equation will be equivalent. Multiplying the polynomials on the left-hand side of the equation gives 5ax³ - abx^2+ 4ax + 15x^2- 3bx + 12. On the right-hand side of the equation, the only x 2-term is -9x 2. Since the expressions on both sides of the equation are equivalent, it follows that -abx^2+ 15x^2= -9x^2, which can be rewritten as (-ab + 15)x^2= -9x^2. Therefore, -ab + 15 = -9, which gives ab = 24.",
+                    "Rationale": "If the equation is true for all x, then the expressions on both sides of the equation will be equivalent. Multiplying the polynomials on the left-hand side of the equation gives 5ax^3 - abx^2+ 4ax + 15x^2- 3bx + 12. On the right-hand side of the equation, the only x 2-term is -9x 2. Since the expressions on both sides of the equation are equivalent, it follows that -abx^2+ 15x^2= -9x^2, which can be rewritten as (-ab + 15)x^2= -9x^2. Therefore, -ab + 15 = -9, which gives ab = 24.",
                     "Percent": 0
                 }
             },
@@ -666,7 +666,7 @@
                 "Choice": "f(x) = 4(x - 3)^2 + 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a parabola in vertex form is `f(x)=a(x-h)^2+k`, where the point (h, k) is the vertex of the parabola and a is a constant. The graph shows that the coordinates of the vertex are (3, 1), so h = 3 and k = 1. Therefore, an equation that defines f can be written as f(x) = a(x - 3)^2 + 1. To find a, substitute a value for x and its corresponding value for y, or f(x). For example, (4, 5) is a point on the graph of f. So a must satisfy the equation 5 = a(4 - 3)^2 + 1, which can be rewritten as 4 = a(1)^2, or a = 4. An equation that defines f is therefore f(x) = 4(x - 3)^2 + 1.",
+                    "Rationale": "The equation of a parabola in vertex form is `f(x)=a(x-h)^2+k`, where the point `(h,k)` is the vertex of the parabola and a is a constant. The graph shows that the coordinates of the vertex are (3, 1), so h = 3 and k = 1. Therefore, an equation that defines f can be written as f(x) = a(x - 3)^2 + 1. To find a, substitute a value for x and its corresponding value for y, or f(x). For example, (4, 5) is a point on the graph of f. So a must satisfy the equation 5 = a(4 - 3)^2 + 1, which can be rewritten as 4 = a(1)^2, or a = 4. An equation that defines f is therefore f(x) = 4(x - 3)^2 + 1.",
                     "Percent": 0
                 }
             },
@@ -856,7 +856,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The left-hand side of the given equation contains a common factor of 2 and can be rewritten as 2(2x + 1). Dividing both sides of this equation by 2 yields 2x + 1 = 2. Therefore, the value of 2x + 1 is 2.\nAlternate approach: Subtracting 2 from both sides of the given equation yields 4x = 2. Dividing both sides of this equation by 4 yields x = 1/2. Substituting 1/2 for x in the expression 2x + 1 yields 2(1/2) + 1 = 2.",
+                    "Rationale": "The left-hand side of the given equation contains a common factor of 2 and can be rewritten as 2(2x + 1). Dividing both sides of this equation by 2 yields 2x + 1 = 2. Therefore, the value of 2x + 1 is 2.\n\nAlternate approach: Subtracting 2 from both sides of the given equation yields 4x = 2. Dividing both sides of this equation by 4 yields x = 1/2. Substituting 1/2 for x in the expression 2x + 1 yields 2(1/2) + 1 = 2.",
                     "Percent": 0
                 }
             }
@@ -915,7 +915,7 @@
                 "Choice": "equal:3/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "By definition of the sine ratio, since sin(R) = 4/5,PQ/PR = 4/5. Therefore, if PQ = 4n, then PR = 5n, where n is a positive constant. Then QR = kn, where k is another positive constant. Applying the Pythagorean theorem, the following relationship holds: (kn)^2 + (4n)^2 = (5n)^2, or k²n² + 16n² = 25n². Subtracting 16n² from both sides of this equation yields k²n² = 9n². Taking the square root of both sides of k²n² = 9n² yields kn = 3n. It follows that k = 3. Therefore, if PQ = 4n and PR = 5n, then QR = 3n, and by definition of the tangent ratio, tan(P) = 3n/4n, or 3/4.",
+                    "Rationale": "By definition of the sine ratio, since sin(R) = 4/5,PQ/PR = 4/5. Therefore, if PQ = 4n, then PR = 5n, where n is a positive constant. Then QR = kn, where k is another positive constant. Applying the Pythagorean theorem, the following relationship holds: (kn)^2 + (4n)^2 = (5n)^2, or k^2n² + 16n² = 25n². Subtracting 16n² from both sides of this equation yields k^2n² = 9n². Taking the square root of both sides of k^2n² = 9n² yields kn = 3n. It follows that k = 3. Therefore, if PQ = 4n and PR = 5n, then QR = 3n, and by definition of the tangent ratio, tan(P) = 3n/4n, or 3/4.",
                     "Percent": 0
                 }
             }

@@ -360,7 +360,7 @@
                 "Choice": "V = π(6)^2 • h",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student used the formula V = πr²h, where V represents the volume of the cylinder in cubic units, r represents the radius (distance from the center to the circumference of a circle) of the cylinder in units, and h represents the height (vertical distance from top to bottom) of the cylinder in units. Because the length of the diameter (a straight line going through the center of a circle connecting two points on the circumference) of the cylinder is 12 feet, the radius of the cylinder would be half of 12 feet, or 6 feet. Substituting 6 for r in the formula results in V = π(6)^2 • h.",
+                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student used the formula `V=pir^2h`, where V represents the volume of the cylinder in cubic units, r represents the radius (distance from the center to the circumference of a circle) of the cylinder in units, and h represents the height (vertical distance from top to bottom) of the cylinder in units. Because the length of the diameter (a straight line going through the center of a circle connecting two points on the circumference) of the cylinder is 12 feet, the radius of the cylinder would be half of 12 feet, or 6 feet. Substituting 6 for r in the formula results in V = π(6)^2 • h.",
                     "Percent": 75
                 }
             },
@@ -368,7 +368,7 @@
                 "Choice": "V = π(6h)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely multiplied `pi` by the square of the product (answer) of the radius and the height in the formula. The student needs to focus on understanding the formula for determining the volume of a cylinder, V = πr²h.",
+                    "Rationale": "The student likely multiplied `pi` by the square of the product (answer) of the radius and the height in the formula. The student needs to focus on understanding the formula for determining the volume of a cylinder, `V=pir^2h`.",
                     "Percent": 8
                 }
             },
@@ -376,7 +376,7 @@
                 "Choice": "V = π(12)^2 • h",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the length of the diameter in place of the length of the radius in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, V = πr²h.",
+                    "Rationale": "The student likely used the length of the diameter in place of the length of the radius in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, `V=pir^2h`.",
                     "Percent": 11
                 }
             },
@@ -384,7 +384,7 @@
                 "Choice": "V = π(12h)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the length of the diameter in place of the length of the radius, resulting in `pi` multiplied by the square of the product (answer) of the diameter and the height in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, V = πr²h.",
+                    "Rationale": "The student likely used the length of the diameter in place of the length of the radius, resulting in `pi` multiplied by the square of the product (answer) of the diameter and the height in the formula. The student needs to focus on the relationship between the radius and the diameter and the formula for determining the volume of a cylinder, `V=pir^2h`.",
                     "Percent": 5
                 }
             }
@@ -545,7 +545,7 @@
             "Proportionality"
         ],
         "SubTopics": [
-            "Write an equation in the form y = mx + b to model a linear relationship between two quantities using verbal, numerical, tabular, and graphical representations."
+            "Write an equation in the form `y=mx+b` to model a linear relationship between two quantities using verbal, numerical, tabular, and graphical representations."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -570,7 +570,7 @@
                 "Choice": "y = x/4 - 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student likely determined that because the line appears to intersect (cross over) the y-axis (vertical) at (0, - 2), the value of b (represents the y-intercept (value where a line crosses the y-axis) in the equation y = mx + b) would be -2. The graph also appears to pass through the point at (4, -1), and the slope (steepness of a straight line when graphed on a coordinate grid; m = (y₂ - y₁)/(x₂ - x₁)) between this point and the point at (0, -2) would be represented by the expression (-1 - (-2))/(4 - 0), which has a value of 1/4. This means that the value of m (represents the slope in the equation y = mx + b) is 1/4. Therefore, the equation that best represents the line shown on the graph is y = x/4 - 2.",
+                    "Rationale": "The student likely determined that because the line appears to intersect (cross over) the y-axis (vertical) at (0, - 2), the value of b (represents the y-intercept (value where a line crosses the y-axis) in the equation `y=mx+b`) would be -2. The graph also appears to pass through the point at (4, -1), and the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) between this point and the point at (0, -2) would be represented by the expression (-1 - (-2))/(4 - 0), which has a value of 1/4. This means that the value of m (represents the slope in the equation `y=mx+b`) is 1/4. Therefore, the equation that best represents the line shown on the graph is y = x/4 - 2.",
                     "Percent": 69
                 }
             },
@@ -826,7 +826,7 @@
             "Proportionality"
         ],
         "SubTopics": [
-            "Represent linear non-proportional situations with tables, graphs, and equations in the form of y = mx + b, where b ≠ 0."
+            "Represent linear non-proportional situations with tables, graphs, and equations in the form of `y=mx+b`, where b ≠ 0."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1076,7 +1076,7 @@
                 "Choice": "problems/TX18G8M/media/20b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that a rate of 6 miles in 48 minutes is equivalent to 6/48 or 1/8 mile per minute. The graph appears to have a slope (steepness of a straight line when graphed on a coordinate grid, m = (y₂ - y₁)/(x₂ - x₁)) equivalent to 1/8 mile per minute, because for each increase of 1 mile, the number of minutes appears to increase by 8. Therefore the graph best represents Joseph's average rate of speed during the race.",
+                    "Rationale": "The student should have determined that a rate of 6 miles in 48 minutes is equivalent to 6/48 or 1/8 mile per minute. The graph appears to have a slope (steepness of a straight line when graphed on a coordinate grid, `m=(y_2-y_1)/(x_2-x_1)`) equivalent to 1/8 mile per minute, because for each increase of 1 mile, the number of minutes appears to increase by 8. Therefore the graph best represents Joseph's average rate of speed during the race.",
                     "Percent": 58
                 }
             },
@@ -1333,7 +1333,7 @@
                 "Choice": "The volume of the cylinder is about 377 cubic inches less than the volume of the cone.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the formula for the volume of a cylinder to calculate the volume of the cone. The student needs to focus on understanding and properly applying the formula for determining the volume of a cone (V = 1/3 • πr²h) and the volume of a cylinder (V = πr²h) and understanding the relationship between the volumes of the figures.",
+                    "Rationale": "The student likely used the formula for the volume of a cylinder to calculate the volume of the cone. The student needs to focus on understanding and properly applying the formula for determining the volume of a cone (V = 1/3 • πr²h) and the volume of a cylinder (`V=pir^2h`) and understanding the relationship between the volumes of the figures.",
                     "Percent": 10
                 }
             },
@@ -1341,7 +1341,7 @@
                 "Choice": "The volume of the cylinder is about 25 cubic inches greater than the volume of the cone.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the volume (amount of three-dimensional space taken up) in cubic inches of the cone is represented by the formula V = 1/3 • πr²h, which is represented by the expression 1/3 • π(4)^2 • (12) and has a value of approximately 201. The volume in cubic inches of the cylinder is represented by the formula V = πr²h, which is represented by the expression π(3)^2 • 8 and has a value of approximately 226. The difference in the volumes would be represented by, which means that the volume of the cylinder is about 25 cubic inches greater than the volume of the cone.",
+                    "Rationale": "The student should have determined that the volume (amount of three-dimensional space taken up) in cubic inches of the cone is represented by the formula V = 1/3 • πr²h, which is represented by the expression 1/3 • π(4)^2 • (12) and has a value of approximately 201. The volume in cubic inches of the cylinder is represented by the formula `V=pir^2h`, which is represented by the expression π(3)^2 • 8 and has a value of approximately 226. The difference in the volumes would be represented by, which means that the volume of the cylinder is about 25 cubic inches greater than the volume of the cone.",
                     "Percent": 68
                 }
             },
@@ -1349,7 +1349,7 @@
                 "Choice": "The volume of the cylinder is about 25 cubic inches less than the volume of the cone.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the correct volumes but misunderstood which solid had the greater volume. The student needs to focus on understanding and properly applying the formula for determining the volume of a cone (V = 1/3 • πr²h) and the volume of a cylinder (V = πr²h) and understanding the relationship between the volumes of the figures.",
+                    "Rationale": "The student likely calculated the correct volumes but misunderstood which solid had the greater volume. The student needs to focus on understanding and properly applying the formula for determining the volume of a cone (V = 1/3 • πr²h) and the volume of a cylinder (`V=pir^2h`) and understanding the relationship between the volumes of the figures.",
                     "Percent": 15
                 }
             }
@@ -1477,7 +1477,7 @@
             "Proportionality"
         ],
         "SubTopics": [
-            "Write an equation in the form y = mx + b to model a linear relationship between two quantities using verbal, numerical, tabular, and graphical representations."
+            "Write an equation in the form `y=mx+b` to model a linear relationship between two quantities using verbal, numerical, tabular, and graphical representations."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1544,7 +1544,7 @@
         "Explain": false,
         "Content": [
             "A square with a perimeter of 20 units is graphed on a coordinate grid. The square is dilated by a scale factor of 0.4 with the origin as the center of dilation.",
-            "If (x, y) represents the location of any point on the original square, which ordered pair represents the coordinates of the corresponding point on the resulting square?"
+            "If `(x,y)` represents the location of any point on the original square, which ordered pair represents the coordinates of the corresponding point on the resulting square?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1559,7 +1559,7 @@
                 "Choice": "(0.4x, 0.4y)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the rule for the effect a dilation (transformation that makes a figure larger or smaller) by a scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure) of k with the origin (point where the x-axis (horizontal) and the y-axis (vertical) on a coordinate grid intersect and also the point represented by the ordered pair (0, 0)) as the center of dilation has on the coordinates (set of values that show the position of a point on the coordinate grid in relation to the origin) of a point is that the point on the dilated figure located at (x, y) will be the point located at (kx, ky). Because the scale factor used in the dilation of the square is 0.4, the image of any point on the square located at (x, y) will be the point located at (0.4x, 0.4y).",
+                    "Rationale": "The student should have determined that the rule for the effect a dilation (transformation that makes a figure larger or smaller) by a scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure) of k with the origin (point where the x-axis (horizontal) and the y-axis (vertical) on a coordinate grid intersect and also the point represented by the ordered pair (0, 0)) as the center of dilation has on the coordinates (set of values that show the position of a point on the coordinate grid in relation to the origin) of a point is that the point on the dilated figure located at `(x,y)` will be the point located at (kx, ky). Because the scale factor used in the dilation of the square is 0.4, the image of any point on the square located at `(x,y)` will be the point located at (0.4x, 0.4y).",
                     "Percent": 63
                 }
             },
@@ -1775,7 +1775,7 @@
                 "Choice": "6.24 in.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`) should be used but multiplied each dimension by 2 before adding the results and calculating the square root of the sum (√(8.5 •2 + 11 •2) = √(17 + 22) = √39 ≈ 6.24). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
+                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`) should be used but multiplied each dimension by 2 before adding the results and calculating the square root of the sum (√(8.5 •2 + 11 •2) = √(17 + 22) = √39 ~~ 6.24). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
                     "Percent": 13
                 }
             },
@@ -1791,7 +1791,7 @@
                 "Choice": "6.98 in.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; a² + b62 = c²) should be used but subtracted the squares of the two lengths and then calculated the square root of the sum (√(11^2 - 8.5^2) = √(121 - 72.25) = √48.75 ≈ 6.98). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
+                    "Rationale": "The student likely knew that the Pythagorean theorem (in a right triangle, the square of the hypotenuse is equal to the sum (total) of the squares of the other two sides; a² + b62 = c²) should be used but subtracted the squares of the two lengths and then calculated the square root of the sum (√(11^2 - 8.5^2) = √(121 - 72.25) = √48.75 ~~ 6.98). The student needs to focus on recognizing when the Pythagorean theorem needs to be used and how to properly apply it with the given information.",
                     "Percent": 13
                 }
             },
@@ -2033,7 +2033,7 @@
                 "Choice": "equal:-5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the slope (steepness of a straight line when graphed on a coordinate grid, m = (y₂ - y₁)/(x₂ - x₁)), the difference in a pair of y-values (values in the second column of the table) should be divided by the difference in the corresponding pair of x-values (values in the first column of the table). Using the first two pairs of values in the table, the expression (60 - 65)/(2 - 1) represents the slope, and when the numerator (top number) and denominator (bottom number) are simplified, the result is -5/1, the value of which is -5.",
+                    "Rationale": "To determine the slope (steepness of a straight line when graphed on a coordinate grid, `m=(y_2-y_1)/(x_2-x_1)`), the difference in a pair of y-values (values in the second column of the table) should be divided by the difference in the corresponding pair of x-values (values in the first column of the table). Using the first two pairs of values in the table, the expression (60 - 65)/(2 - 1) represents the slope, and when the numerator (top number) and denominator (bottom number) are simplified, the result is -5/1, the value of which is -5.",
                     "Percent": 41
                 }
             }
@@ -2249,7 +2249,7 @@
                 "Choice": "problems/TX18G8M/media/42c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the graph appears to pass through the points located at (0, 0) and (10, -35), and the slope (steepness of a straight line when graphed on a coordinate grid; m = (y₂ - y₁)/(x₂ - x₁)) between these points is represented by the expression (-35 - 0)/(10 - 0), which has a simplified value of -7/2. Based on the context of the graph, this slope represents a change in depth of 7 feet every 2 hours.",
+                    "Rationale": "The student should have determined that the graph appears to pass through the points located at (0, 0) and (10, -35), and the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) between these points is represented by the expression (-35 - 0)/(10 - 0), which has a simplified value of -7/2. Based on the context of the graph, this slope represents a change in depth of 7 feet every 2 hours.",
                     "Percent": 69
                 }
             },

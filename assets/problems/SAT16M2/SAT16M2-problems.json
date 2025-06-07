@@ -571,7 +571,7 @@
         "Explain": false,
         "Content": [
             ":ibox:7x + 3y = 8\n6x - 3y = 5",
-            "For the solution (x, y) to the system of equations above, what is the value of x - y?"
+            "For the solution `(x,y)` to the system of equations above, what is the value of x - y?"
         ],
         "AnswerChoices": {
             "A": {
@@ -757,7 +757,7 @@
                 "Choice": "h = 4.5t - 27",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the table, the height of the sunflower is 36.36 cm on day 14 and 131.00 cm on day 35. Since the height of the sunflower between day 14 and day 35 changes at a nearly constant rate, the height of the sunflower increases by approximately (131.00 - 36.36)/(35 - 14) ≈ 4.5 cm per day. Therefore, the equation that models the height of the sunflower t days after it begins to grow is of the form h = 4.5t + b. Any ordered pair (t, h) from the table between day 14 and day 35 can be used to estimate the value of b. For example, substituting the ordered pair (14, 36.36) for (t, h) into the equation h = 4.5t + b gives 36.36 = 4.5(14) + b. Solving this for b yields b = -26.64. Therefore, of the given choices, the equation h = 4.5t - 27 best models the height h, in centimeters, of the sunflower t days after it begins to grow.",
+                    "Rationale": "According to the table, the height of the sunflower is 36.36 cm on day 14 and 131.00 cm on day 35. Since the height of the sunflower between day 14 and day 35 changes at a nearly constant rate, the height of the sunflower increases by approximately (131.00 - 36.36)/(35 - 14) ~~ 4.5 cm per day. Therefore, the equation that models the height of the sunflower t days after it begins to grow is of the form h = 4.5t + b. Any ordered pair (t, h) from the table between day 14 and day 35 can be used to estimate the value of b. For example, substituting the ordered pair (14, 36.36) for (t, h) into the equation h = 4.5t + b gives 36.36 = 4.5(14) + b. Solving this for b yields b = -26.64. Therefore, of the given choices, the equation h = 4.5t - 27 best models the height h, in centimeters, of the sunflower t days after it begins to grow.",
                     "Percent": 0
                 }
             },
@@ -802,7 +802,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = (1/2) • (5/2)ˣ",
+                "Choice": "y = (1/2) • (5/2)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The relationship between `x` and `y` cannot be exponential because the differences, not the ratios, of y-values are the same every time the x-values change by the same amount.",
@@ -810,7 +810,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 2 • (3/4)ˣ",
+                "Choice": "y = 2 • (3/4)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The relationship between `x` and `y` cannot be exponential because the differences, not the ratios, of y-values are the same every time the x-values change by the same amount.",
@@ -1334,7 +1334,7 @@
                 "Choice": "5.4%",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To find the percent increase of the customer's water bill, the absolute increase of the bill, in dollars, is divided by the original amount of the bill, and the result is multiplied by 100%, as follows: (79.86 - 75.74)/75.74 ≈ 0.054; 0.054 × 100% = 5.4%.",
+                    "Rationale": "To find the percent increase of the customer's water bill, the absolute increase of the bill, in dollars, is divided by the original amount of the bill, and the result is multiplied by 100%, as follows: (79.86 - 75.74)/75.74 ~~ 0.054; 0.054 × 100% = 5.4%.",
                     "Percent": 0
                 }
             }
@@ -1478,7 +1478,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "One way to find the radius of the circle is to put the given equation in standard form, (x - h)^2 + (y - k)^2 = r², where (h, k) is the center of the circle and the radius of the circle is r. To do this, divide the original equation, 2x^2- 6x + 2y^2+ 2y = 45, by 2 to make the leading coefficients of x^2and y^2each equal to 1: x^2- 3x + y^2+ y = 22.5. Then complete the square to put the equation in standard form. To do so, first rewrite x^2- 3x + y^2+ y = 22.5 as (x^2- 3x + 2.25) - 2.25 + (y^2+ y + 0.25) - 0.25 = 22.5. Second, add 2.25 and 0.25 to both sides of the equation: (x^2- 3x + 2.25) + (y^2+ y + 0.25) = 25. Since x^2- 3x + 2.25 = (x - 1.5)^2, y^2- x + 0.25 = (y - 0.5)^2, and 25 = 5^2, it follows that (x - 1.5)^2 + (y - 0.5)^2 = 5^2. Therefore, the radius of the circle is 5.",
+                    "Rationale": "One way to find the radius of the circle is to put the given equation in standard form, `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` is the center of the circle and the radius of the circle is r. To do this, divide the original equation, 2x^2- 6x + 2y^2+ 2y = 45, by 2 to make the leading coefficients of x^2and y^2each equal to 1: x^2- 3x + y^2+ y = 22.5. Then complete the square to put the equation in standard form. To do so, first rewrite x^2- 3x + y^2+ y = 22.5 as (x^2- 3x + 2.25) - 2.25 + (y^2+ y + 0.25) - 0.25 = 22.5. Second, add 2.25 and 0.25 to both sides of the equation: (x^2- 3x + 2.25) + (y^2+ y + 0.25) = 25. Since x^2- 3x + 2.25 = (x - 1.5)^2, y^2- x + 0.25 = (y - 0.5)^2, and 25 = 5^2, it follows that (x - 1.5)^2 + (y - 0.5)^2 = 5^2. Therefore, the radius of the circle is 5.",
                     "Percent": 0
                 }
             },
@@ -1763,7 +1763,7 @@
                 "Choice": "equal:97",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The volume of a cylinder can be found by using the formula V = πr²h, where r is the radius of the circular base and h is the height of the cylinder. The smallest possible volume, in cubic inches, of a graduated cylinder produced by the laboratory supply company can be found by substituting 2 for r and 7.75 for h, giving V = π(2^2)(7.75). This gives a volume of approximately 97.39 cubic inches, which rounds to97 cubic inches. The largest possible volume, in cubic inches, can be found by substituting 2 for r and 8 for h, giving V = π(2^2)(8). This gives a volume of approximately 100.53 cubic inches, which rounds to 101 cubic inches. Therefore, the possible volumes are all the integers greater than or equal to 97 and less than or equal to 101, which are 97, 98, 99, 100, and 101. Any of these numbers may be gridded as the correct answer.",
+                    "Rationale": "The volume of a cylinder can be found by using the formula `V=pir^2h`, where r is the radius of the circular base and h is the height of the cylinder. The smallest possible volume, in cubic inches, of a graduated cylinder produced by the laboratory supply company can be found by substituting 2 for r and 7.75 for h, giving V = π(2^2)(7.75). This gives a volume of approximately 97.39 cubic inches, which rounds to97 cubic inches. The largest possible volume, in cubic inches, can be found by substituting 2 for r and 8 for h, giving V = π(2^2)(8). This gives a volume of approximately 100.53 cubic inches, which rounds to 101 cubic inches. Therefore, the possible volumes are all the integers greater than or equal to 97 and less than or equal to 101, which are 97, 98, 99, 100, and 101. Any of these numbers may be gridded as the correct answer.",
                  "Percent": 0
                 }
             },
@@ -1771,7 +1771,7 @@
                 "Choice": "equal:101",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The volume of a cylinder can be found by using the formula V = πr²h, where r is the radius of the circular base and h is the height of the cylinder. The smallest possible volume, in cubic inches, of a graduated cylinder produced by the laboratory supply company can be found by substituting 2 for r and 7.75 for h, giving V = π(2^2)(7.75). This gives a volume of approximately 97.39 cubic inches, which rounds to97 cubic inches. The largest possible volume, in cubic inches, can be found by substituting 2 for r and 8 for h, giving V = π(2^2)(8). This gives a volume of approximately 100.53 cubic inches, which rounds to 101 cubic inches. Therefore, the possible volumes are all the integers greater than or equal to 97 and less than or equal to 101, which are 97, 98, 99, 100, and 101. Any of these numbers may be gridded as the correct answer.",
+                    "Rationale": "The volume of a cylinder can be found by using the formula `V=pir^2h`, where r is the radius of the circular base and h is the height of the cylinder. The smallest possible volume, in cubic inches, of a graduated cylinder produced by the laboratory supply company can be found by substituting 2 for r and 7.75 for h, giving V = π(2^2)(7.75). This gives a volume of approximately 97.39 cubic inches, which rounds to97 cubic inches. The largest possible volume, in cubic inches, can be found by substituting 2 for r and 8 for h, giving V = π(2^2)(8). This gives a volume of approximately 100.53 cubic inches, which rounds to 101 cubic inches. Therefore, the possible volumes are all the integers greater than or equal to 97 and less than or equal to 101, which are 97, 98, 99, 100, and 101. Any of these numbers may be gridded as the correct answer.",
                     "Percent": 0
                 }
             }

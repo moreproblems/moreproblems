@@ -360,7 +360,7 @@
                                     "Key": "ME.M9-12.SSE.B.3.c",
                                     "Label": "Use the properties of exponents to transform expressions for exponential functions.",
                                     "Examples": [
-                                        "For example, the expression 1.15t can be rewritten as (1.151/12)12t ≈ 1.01212t to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                        "For example, the expression 1.15t can be rewritten as (1.151/12)12t ~~ 1.01212t to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
                                     ],
                                     "Subs": []
                                 }
@@ -418,7 +418,7 @@
                             "Key": "ME.M9-12.APR.B.2",
                             "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x - a is p(a), so p(a) = 0 if and only if (x - a) is a factor of p(x).",
                             "Examples": [
-                                "For example, consider the polynomial function P(x) = x⁴ - 2x³ + ax^2+ 8x + 12, where a is an unknown real number. If (x-3) is a factor of this polynomial, what is the value of a?"
+                                "For example, consider the polynomial function P(x) = x⁴ - 2x^3 + ax^2+ 8x + 12, where a is an unknown real number. If (x-3) is a factor of this polynomial, what is the value of a?"
                             ],
                             "Subs": []
                         },
@@ -628,7 +628,7 @@
                         },
                         {
                             "Key": "ME.M9-12.REI.D.11",
-                            "Label": "Explain why the x-coordinates of the points where the graphs of the equations y = f(x) and y = g(x) intersect are the solutions of the equation f(x) = g(x); find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
+                            "Label": "Explain why the x-coordinates of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation f(x) = g(x); find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -654,7 +654,7 @@
                     "Subs": [
                         {
                             "Key": "ME.M9-12.IF.A.1",
-                            "Label": "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation y = f(x).",
+                            "Label": "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation `y=f(x)`.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -855,7 +855,7 @@
                                     "Key": "ME.M9-12.BF.B.4.a",
                                     "Label": "Solve an equation of the form f(x) = c (where c represents the output value of the function) for a simple function f that has an inverse and write an expression for the inverse.",
                                     "Examples": [
-                                        "For example, if f(x) = 2x³, then solving f(x) = c leads to x = (c/2)¹/³, which is the general formula for finding an input from a specific output, c, for this function."
+                                        "For example, if f(x) = 2x^3, then solving f(x) = c leads to x = (c/2)¹/³, which is the general formula for finding an input from a specific output, c, for this function."
                                     ],
                                     "Subs": []
                                 },

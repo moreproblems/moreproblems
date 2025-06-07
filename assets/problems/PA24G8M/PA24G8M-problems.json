@@ -185,7 +185,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5√7 ≈ 17.5\n7√5 ≈ 5.9\n5√7 > 7√5",
+                "Choice": "5√7 ~~ 17.5\n7√5 ~~ 5.9\n5√7 > 7√5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice calculates 5√7 as 5 • 7/2 and 7√5 as (7 • 5).",
@@ -193,7 +193,7 @@
                 }
             },
             "B": {
-                "Choice": "5√7 ≈ 7.6\n7√5 ≈ 5.9\n5√7 > 7√5",
+                "Choice": "5√7 ~~ 7.6\n7√5 ~~ 5.9\n5√7 > 7√5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice calculates 5√7 as 5 + 7 and 7√5 as (7 • 5).",
@@ -201,7 +201,7 @@
                 }
             },
             "C": {
-                "Choice": "5√7 ≈ 13.2\n7√5 ≈ 17.5\n5√7 < 7√5",
+                "Choice": "5√7 ~~ 13.2\n7√5 ~~ 17.5\n5√7 < 7√5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice calculates 5√7 as 5 • √7 but then calculates 7√5 as 7 • 5/2.",
@@ -209,7 +209,7 @@
                 }
             },
             "D": {
-                "Choice": "5√7 ≈ 13.2\n7√5 ≈ 15.7\n5√7 < 7√5",
+                "Choice": "5√7 ~~ 13.2\n7√5 ~~ 15.7\n5√7 < 7√5",
                 "Key": {
                     "Correct": true,
                     "Rationale": "This choice calculates 5√7 as 5 • √7, resulting in the product 13.22875..., calculates 7√5 as 7 • √5, resulting in the product 15.65247..., and then uses these values to compare the two expressions.",
@@ -326,7 +326,7 @@
                 "Choice": "m = (-b - b)/(b - (-a))",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice applies the slope formula m = (y₂ - y₁)/(x₂ - x₁), using (-a, b) for (x₁, y₁) and (b, -b) for (x₂, y₂) by substituting -b for y₂, b for y₁, b for x₂, and -a for x₁.",
+                    "Rationale": "This choice applies the slope formula `m=(y_2-y_1)/(x_2-x_1)`, using (-a, b) for `(x_1,y_1)` and (b, -b) for `(x_2,y_2)` by substituting -b for y₂, b for y₁, b for x₂, and -a for x₁.",
                     "Percent": 40
                 }
             }
@@ -567,7 +567,7 @@
             "Functions"
         ],
         "SubTopics": [
-            "Interpret the equation y = mx + b as defining a linear function whose graph is a straight line; give examples of functions that are not linear."
+            "Interpret the equation `y=mx+b` as defining a linear function whose graph is a straight line; give examples of functions that are not linear."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -679,7 +679,7 @@
             "Functions"
         ],
         "SubTopics": [
-            "Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two (x, y) values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models and in terms of its graph or a table of values."
+            "Construct a function to model a linear relationship between two quantities. Determine the rate of change and initial value of the function from a description of a relationship or from two `(x,y)` values, including reading these from a table or from a graph. Interpret the rate of change and initial value of a linear function in terms of the situation it models and in terms of its graph or a table of values."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -874,7 +874,7 @@
                 "Choice": "301 cubic inches",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice divides the diameter (8) by 2 to determine the radius, resulting in a radius of 4, applies the volume formula for a cylinder (V = πr²h), using r = 4 and h = 36 to write the equation V = π • 4^2 • 36, which can be simplified as V = π • 16 • 36 = 576π, and then divides the volume by 6, resulting in a quotient of 96π, which can be approximated using 96 • 3.14 = 301.44.",
+                    "Rationale": "This choice divides the diameter (8) by 2 to determine the radius, resulting in a radius of 4, applies the volume formula for a cylinder (`V=pir^2h`), using r = 4 and h = 36 to write the equation V = π • 4^2 • 36, which can be simplified as V = π • 16 • 36 = 576π, and then divides the volume by 6, resulting in a quotient of 96π, which can be approximated using 96 • 3.14 = 301.44.",
                     "Percent": 58
                 }
             },

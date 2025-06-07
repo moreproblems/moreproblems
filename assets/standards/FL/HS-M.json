@@ -255,7 +255,7 @@
                             "Key": "FL.M9-12.AR.1.7",
                             "Label": "Rewrite a polynomial expression as a product of polynomials over the real number system.",
                             "Examples": [
-                                "The expression 4x³y - 3x^2y⁴ is equivalent to the factored form x^2y(4x - 3y³).",
+                                "The expression 4x^3y - 3x^2y⁴ is equivalent to the factored form x^2y(4x - 3y^3).",
                                 "The expression 16x^2- 9y^2is equivalent to the factored form (4x - 3y)(4x + 3y)."
                             ],
                             "Subs": []
@@ -2257,7 +2257,7 @@
                             "Key": "FL.M9-12.C.1.5",
                             "Label": "Find limits at infinity.",
                             "Examples": [
-                                "Find lim(x→∞) 2x³ - 500x^2."
+                                "Find lim(x→∞) 2x^3 - 500x^2."
                             ],
                             "Subs": []
                         },
@@ -2301,7 +2301,7 @@
                             "Key": "FL.M9-12.C.1.11",
                             "Label": "Apply the Intermediate Value Theorem and the Extreme Value Theorem.",
                             "Examples": [
-                                "Use the Intermediate Value Theorem to show that g(x) = x³ + 3x^2- 9x - 2 has a zero between x = 0 and x = 3.",
+                                "Use the Intermediate Value Theorem to show that g(x) = x^3 + 3x^2- 9x - 2 has a zero between x = 0 and x = 3.",
                                 "Use the Extreme Value Theorem to decide whether f(x) = tan(x) has a minimum and maximum on the interval [-π/4, π/4]. What about on the  interval [-π, π]?"
                             ],
                             "Subs": []
@@ -2355,7 +2355,7 @@
                             "Key": "FL.M9-12.C.2.6",
                             "Label": "Find derivatives of inverse functions.",
                             "Examples": [
-                                "Let f(x) = 2x³ and g(x) = f⁻¹(x), find g'(2)."
+                                "Let f(x) = 2x^3 and g(x) = f⁻¹(x), find g'(2)."
                             ],
                             "Subs": []
                         },
@@ -2371,7 +2371,7 @@
                             "Key": "FL.M9-12.C.2.8",
                             "Label": "Find derivatives using logarithmic differentiation.",
                             "Examples": [
-                                "Find the derivative of f(x) = (3x^2+ 5)ˣ."
+                                "Find the derivative of f(x) = (3x^2+ 5)^x."
                             ],
                             "Subs": []
                         },
@@ -2426,7 +2426,7 @@
                             "Key": "FL.M9-12.C.3.4",
                             "Label": "Find local and absolute maximum and minimum points of a function.",
                             "Examples": [
-                                "For the graph of the function f(x) = x³ - 3x, find the local maximum and local minimum points of f(x) on [-2, 3]."
+                                "For the graph of the function f(x) = x^3 - 3x, find the local maximum and local minimum points of f(x) on [-2, 3]."
                             ],
                             "Subs": []
                         },
@@ -2434,7 +2434,7 @@
                             "Key": "FL.M9-12.C.3.5",
                             "Label": "Determine the concavity and points of inflection of a function using its second derivative.",
                             "Examples": [
-                                "For the graph of the function f(x) = x³ - 3x, find the points of inflection of f(x) and determine where f(x) is concave upward and concave downward."
+                                "For the graph of the function f(x) = x^3 - 3x, find the points of inflection of f(x) and determine where f(x) is concave upward and concave downward."
                             ],
                             "Subs": []
                         },
@@ -2537,7 +2537,7 @@
                             "Key": "FL.M9-12.C.4.7",
                             "Label": "Evaluate definite and indefinite integrals by using integration by substitution.",
                             "Examples": [
-                                "Find ∫ x^2(x³ + 1)⁴dx."
+                                "Find ∫ x^2(x^3 + 1)⁴dx."
                             ],
                             "Subs": []
                         }

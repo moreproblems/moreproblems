@@ -365,7 +365,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of y = f(x), the solutions to f(x) = 0 correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -541,7 +541,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT7M1/media/11a.jpg",
-            "The graph of a system of an absolute value function and a linear function is shown. What is the solution (x, y) to this system of two equations?"
+            "The graph of a system of an absolute value function and a linear function is shown. What is the solution `(x,y)` to this system of two equations?"
         ],
         "AnswerChoices": {
             "A": {
@@ -684,7 +684,7 @@
         "Explain": false,
         "Content": [
             ":ibox:y = 9x + 12\nx + 7y = 20",
-            "The solution to the given system of equations is (x, y). What is the value of y?"
+            "The solution to the given system of equations is `(x,y)`. What is the value of y?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -706,7 +706,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Understand that the ordered pairs that satisfy an equation of the form (x - h)^2 + (y - k)^2 = r² form a circle when plotted in the xy-plane."
+            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the xy-plane."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -722,7 +722,7 @@
                 "Choice": "The center is at (13, k) and the radius is 8.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For a circle in the xy-plane that has the equation (x - h)^2 + (y - k)^2 = r², where h, k, and r are constants, (h, k) is the center of the circle and the positive value of r is the radius of the circle. In the given equation, h = 13 and r² = 64. Taking the square root of each side of r² = 64 yields r = ±8. Therefore, the center of the circle is at (13, k) and the radius is 8.",
+                    "Rationale": "For a circle in the xy-plane that has the equation `(x-h)^2+(y-k)^2=r^2`, where h, k, and r are constants, `(h,k)` is the center of the circle and the positive value of r is the radius of the circle. In the given equation, h = 13 and r² = 64. Taking the square root of each side of r² = 64 yields r = ±8. Therefore, the center of the circle is at (13, k) and the radius is 8.",
                     "Percent": 0
                 }
             },
@@ -837,10 +837,10 @@
                 }
             },
             "B": {
-                "Choice": "f(x) = 33(1.5)ˣ",
+                "Choice": "f(x) = 33(1.5)^x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Each of the given choices is an equation of the form f(x) = a(b)ˣ⁻ᵏ, where a, b, and k are constants. For an equation of this form, the coefficient, a, is equal to the value of the function when the exponent is equal to 0, or when x = k. It follows that in the equation f(x) = 33(1.5)ˣ, the coefficient, 33, is equal to the value of f(0). Substituting 0 for x in this equation yields f(x) = 33(1.5)⁰, which is equivalent to f(0) = 33(1), or f(0) = 33. Thus, the value of c is 33 and the equation f(x) = 33(1.5)ˣ shows the value of c as the coefficient.",
+                    "Rationale": "Each of the given choices is an equation of the form f(x) = a(b)ˣ⁻ᵏ, where a, b, and k are constants. For an equation of this form, the coefficient, a, is equal to the value of the function when the exponent is equal to 0, or when x = k. It follows that in the equation f(x) = 33(1.5)^x, the coefficient, 33, is equal to the value of f(0). Substituting 0 for x in this equation yields f(x) = 33(1.5)⁰, which is equivalent to f(0) = 33(1), or f(0) = 33. Thus, the value of c is 33 and the equation f(x) = 33(1.5)^x shows the value of c as the coefficient.",
                     "Percent": 0
                 }
             },
@@ -895,7 +895,7 @@
                 "Choice": "790",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that t minutes after an initial observation, the number of bacteria in a population is 40,000(2)ᵗ/⁷⁹⁰. This expression consists of the initial number of bacteria, 40,000, multiplied by the expression 2ᵗ/⁷⁹⁰. The time, in minutes, it takes for the number of bacteria to double is the increase in the value of t that causes the expression 2ᵗ/⁷⁹⁰ to double. Since the base is 2, the expression 2ᵗ/⁷⁹⁰ will double when the exponent increases by 1. Since the exponent of this expression is t/790, the exponent will increase by 1 when t increases by 790. Therefore, the time, in minutes, it takes for the number of bacteria in the population to double is 790.\nAlternate approach: The initial number of bacteria in the population can be found by substituting 0 for t in the given function. This yields f(0) = 40,000(2)⁰/⁷⁹⁰, or f(0) = 40,000. Therefore, the initial number of bacteria present in the population is 40,000, so the bacteria population will have doubled when f(t) = 80,000. Substituting 80,000 for f(t) in the given function yields 80,000 = 40,000(2)ᵗ/⁷⁹⁰. Dividing both sides of this equation by 40,000 yields 2 = 2ᵗ/⁷⁹⁰, or 2¹ = 2ᵗ/⁷⁹⁰. It follows that 1 = t/790. Multiplying both sides of this equation by 790 yields 790 = t. Therefore, the time, in minutes, it takes for the number of bacteria in the population to double is 790.",
+                    "Rationale": "It's given that t minutes after an initial observation, the number of bacteria in a population is 40,000(2)ᵗ/⁷⁹⁰. This expression consists of the initial number of bacteria, 40,000, multiplied by the expression 2ᵗ/⁷⁹⁰. The time, in minutes, it takes for the number of bacteria to double is the increase in the value of t that causes the expression 2ᵗ/⁷⁹⁰ to double. Since the base is 2, the expression 2ᵗ/⁷⁹⁰ will double when the exponent increases by 1. Since the exponent of this expression is t/790, the exponent will increase by 1 when t increases by 790. Therefore, the time, in minutes, it takes for the number of bacteria in the population to double is 790.\n\nAlternate approach: The initial number of bacteria in the population can be found by substituting 0 for t in the given function. This yields f(0) = 40,000(2)⁰/⁷⁹⁰, or f(0) = 40,000. Therefore, the initial number of bacteria present in the population is 40,000, so the bacteria population will have doubled when f(t) = 80,000. Substituting 80,000 for f(t) in the given function yields 80,000 = 40,000(2)ᵗ/⁷⁹⁰. Dividing both sides of this equation by 40,000 yields 2 = 2ᵗ/⁷⁹⁰, or 2¹ = 2ᵗ/⁷⁹⁰. It follows that 1 = t/790. Multiplying both sides of this equation by 790 yields 790 = t. Therefore, the time, in minutes, it takes for the number of bacteria in the population to double is 790.",
                     "Percent": 0
                 }
             },
@@ -1181,7 +1181,7 @@
                 "Choice": "3x + sy = 18s",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The linear relationship between `x` and `y` can be represented by an equation of the form y - y₁ = m(x - x₁), where m is the slope of the graph of the equation in the xy-plane and (x₁, y₁) is a point on the graph. The slope of a line can be found using two points on the line and the slope formula m = (y₂ - y₁)/(x₂ - x₁). Each value of x and its corresponding value of y in the table can be represented by a point (x, y). Substituting the points (-s, 21) and (s, 15) for (x₁, y₁) and (x₂, y₂), respectively, in the slope formula yields m = (15 - 21)/(s - (-s)), which gives m = -6/(2s), or m = -3/s. Substituting -3/s for m and the point (s, 15) for (x₁, y₁) in the equation y - y₁ = m(x - x₁)yields y - 15 = -3(x - s)/s. Distributing -3/s on the right-hand side of this equation yields y - 15 = -3x/s + 3. Adding 15 to each side of this equation yields sy = -3x/s + 18. Multiplying each side of this equation by s yields sy = -3x + 18s. Adding 3x to each side of this equation yields 3x + sy = 18s. Therefore, the equation 3x + sy = 18s represents this relationship.",
+                    "Rationale": "The linear relationship between `x` and `y` can be represented by an equation of the form `y-y_1=m(x-x_1)`, where m is the slope of the graph of the equation in the xy-plane and `(x_1,y_1)` is a point on the graph. The slope of a line can be found using two points on the line and the slope formula `m=(y_2-y_1)/(x_2-x_1)`. Each value of x and its corresponding value of y in the table can be represented by a point `(x,y)`. Substituting the points (-s, 21) and (s, 15) for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields m = (15 - 21)/(s - (-s)), which gives m = -6/(2s), or m = -3/s. Substituting -3/s for m and the point (s, 15) for `(x_1,y_1)` in the equation `y-y_1=m(x-x_1)`yields y - 15 = -3(x - s)/s. Distributing -3/s on the right-hand side of this equation yields y - 15 = -3x/s + 3. Adding 15 to each side of this equation yields sy = -3x/s + 18. Multiplying each side of this equation by s yields sy = -3x + 18s. Adding 3x to each side of this equation yields 3x + sy = 18s. Therefore, the equation 3x + sy = 18s represents this relationship.",
                     "Percent": 0
                 }
             },
@@ -1339,7 +1339,7 @@
                 "Choice": "equal:-13/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of x for which f(x) reaches its minimum can be found by rewriting the given equation in the form f(x) = (x - h)^2 + k, where f(x) reaches its minimum, k, when the value of x is h. The given equation, f(x) = (x - 2)(x + 15), can be rewritten as f(x) = x^2+ 13x - 30. By completing the square, this equation can be rewritten as f(x) = (x^2+ 13x + (13/2)^2) - 30 - (13/2)^2, which is equivalent to f(x) = (x + 13/2)^2 - 289/4, or f(x) = (x - (-13/2))^2 - 289/4. Therefore, f(x) reaches its minimum when the value of x is -13/2.\nAlternate approach: The graph of `y=f(x)` in the xy-plane is a parabola. The value of x for the vertex of a parabola is the x-value of the midpoint between the two x-intercepts of the parabola. Since it's given that f(x) = (x - 2)(x + 15), it follows that the two x-intercepts of the graph of `y=f(x)` in the xy-plane occur when x = 2 and x = -15, or at the points (2, 0) and (-15, 0). The midpoint between two points, (x₁, y₁) and (x₂, y₂), is (((x₁ + x₂))/2, ((y₁ + y₂))/2). Therefore, the midpoint between (2, 0) and (-15, 0) is ((2 - 15)/2, (0 + 0)/2), or (-13/2, 0). It follows that f(x) reaches its minimum when the value of x is -13/2.",
+                    "Rationale": "The value of x for which f(x) reaches its minimum can be found by rewriting the given equation in the form f(x) = (x - h)^2 + k, where f(x) reaches its minimum, k, when the value of x is h. The given equation, f(x) = (x - 2)(x + 15), can be rewritten as f(x) = x^2+ 13x - 30. By completing the square, this equation can be rewritten as f(x) = (x^2+ 13x + (13/2)^2) - 30 - (13/2)^2, which is equivalent to f(x) = (x + 13/2)^2 - 289/4, or f(x) = (x - (-13/2))^2 - 289/4. Therefore, f(x) reaches its minimum when the value of x is -13/2.\n\nAlternate approach: The graph of `y=f(x)` in the xy-plane is a parabola. The value of x for the vertex of a parabola is the x-value of the midpoint between the two x-intercepts of the parabola. Since it's given that f(x) = (x - 2)(x + 15), it follows that the two x-intercepts of the graph of `y=f(x)` in the xy-plane occur when x = 2 and x = -15, or at the points (2, 0) and (-15, 0). The midpoint between two points, `(x_1,y_1)` and `(x_2,y_2)`, is (((x₁ + x₂))/2, ((y₁ + y₂))/2). Therefore, the midpoint between (2, 0) and (-15, 0) is ((2 - 15)/2, (0 + 0)/2), or (-13/2, 0). It follows that f(x) reaches its minimum when the value of x is -13/2.",
                     "Percent": 0
                 }
             }

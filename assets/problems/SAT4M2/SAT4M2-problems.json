@@ -128,7 +128,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 12x³ - 5x³?"
+            "Which expression is equivalent to 12x^3 - 5x^3?"
         ],
         "AnswerChoices": {
             "A": {
@@ -140,7 +140,7 @@
                 }
             },
             "B": {
-                "Choice": "17x³",
+                "Choice": "17x^3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the result of adding, not subtracting, the two like terms.",
@@ -148,10 +148,10 @@
                 }
             },
             "C": {
-                "Choice": "7x³",
+                "Choice": "7x^3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given expression shows subtraction of two like terms. The two terms can be subtracted as follows: 12x³ - 5x³ = (12 - 5)x³, or 7x³.",
+                    "Rationale": "The given expression shows subtraction of two like terms. The two terms can be subtracted as follows: 12x^3 - 5x^3 = (12 - 5)x^3, or 7x^3.",
                     "Percent": 0
                 }
             },
@@ -184,14 +184,14 @@
         "Explain": false,
         "Content": [
             ":box:x + y = 18\n\n5y = x",
-            "What is the solution (x, y) to the given system of equations?"
+            "What is the solution `(x,y)` to the given system of equations?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "(15, 3)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The second equation in the given system defines the value of x as 5y. Substituting 5y for x into the first equation yields 5y + y = 18 or 6y = 18. Dividing each side of this equation by 6 yields y = 3. Substituting 3 for y in the second equation yields 5(3) = x or x = 15. Therefore, the solution (x, y) to the given system of equations is (15, 3).",
+                    "Rationale": "The second equation in the given system defines the value of x as 5y. Substituting 5y for x into the first equation yields 5y + y = 18 or 6y = 18. Dividing each side of this equation by 6 yields y = 3. Substituting 3 for y in the second equation yields 5(3) = x or x = 15. Therefore, the solution `(x,y)` to the given system of equations is (15, 3).",
                     "Percent": 0
                 }
             },
@@ -422,7 +422,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = 270(0.1)ˣ. What is the value of f(0)?"
+            "The function f is defined by f(x) = 270(0.1)^x. What is the value of f(0)?"
         ],
         "AnswerChoices": {
             "A": {
@@ -603,7 +603,7 @@
                 "Choice": "9/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying each side of the given equation by -16 yields 64x^2+ 112x = 576. To complete the square, adding 49 to each side of this equation yields 64x^2+ 112x + 49 = 576 + 49, or (8x + 7)^2 = 625. Taking the square root of each side of this equation yields two equations: 8x + 7 = 25 and 8x + 7 = -25. Subtracting 7 from each side of the equation 8x + 7 = 25 yields 8x = 18. Dividing each side of this equation by 8 yields x = 18/8, or x = 9/4. Therefore, 9/4 is a solution to the given equation. Subtracting 7 from each side of the equation 8x + 7 = -25 yields 8x = -32. Dividing each side of this equation by 8 yields x = -4. Therefore, the given equation has two solutions, 9/4 and -4. Since 9/4 is positive, it follows that 9/4 is the positive solution to the given equation. Alternate approach: Adding 4x^2and 7x to each side of the given equation yields 0 = 4x^2+ 7x - 36. The right-hand side of this equation can be rewritten as 4x^2+ 16x - 9x - 36. Factoring out the common factor of 4x from the first two terms of this expression and the common factor of -9 from the second two terms yields 4x(x + 4) - 9(x + 4). Factoring out the common factor of (x + 4) from these two terms yields the expression (4x - 9)(x + 4). Since this expression is equal to 0, it follows that either 4x - 9 = 0 or x + 4 = 0. Adding 9 to each side of the equation 4x - 9 = 0 yields 4x = 9. Dividing each side of this equation by 4 yields x = 9/4. Therefore, 9/4 is a positive solution to the given equation. Subtracting 4 from each side of the equation x + 4 = 0 yields x = -4. Therefore, the given equation has two solutions, 9/4 and -4. Since 9/4 is positive, it follows that 9/4 is the positive solution to the given equation.",
+                    "Rationale": "Multiplying each side of the given equation by -16 yields 64x^2+ 112x = 576. To complete the square, adding 49 to each side of this equation yields 64x^2+ 112x + 49 = 576 + 49, or (8x + 7)^2 = 625. Taking the square root of each side of this equation yields two equations: 8x + 7 = 25 and 8x + 7 = -25. Subtracting 7 from each side of the equation 8x + 7 = 25 yields 8x = 18. Dividing each side of this equation by 8 yields x = 18/8, or x = 9/4. Therefore, 9/4 is a solution to the given equation. Subtracting 7 from each side of the equation 8x + 7 = -25 yields 8x = -32. Dividing each side of this equation by 8 yields x = -4. Therefore, the given equation has two solutions, 9/4 and -4. Since 9/4 is positive, it follows that 9/4 is the positive solution to the given equation.\n\nAlternate approach: Adding 4x^2and 7x to each side of the given equation yields 0 = 4x^2+ 7x - 36. The right-hand side of this equation can be rewritten as 4x^2+ 16x - 9x - 36. Factoring out the common factor of 4x from the first two terms of this expression and the common factor of -9 from the second two terms yields 4x(x + 4) - 9(x + 4). Factoring out the common factor of (x + 4) from these two terms yields the expression (4x - 9)(x + 4). Since this expression is equal to 0, it follows that either 4x - 9 = 0 or x + 4 = 0. Adding 9 to each side of the equation 4x - 9 = 0 yields 4x = 9. Dividing each side of this equation by 4 yields x = 9/4. Therefore, 9/4 is a positive solution to the given equation. Subtracting 4 from each side of the equation x + 4 = 0 yields x = -4. Therefore, the given equation has two solutions, 9/4 and -4. Since 9/4 is positive, it follows that 9/4 is the positive solution to the given equation.",
                     "Percent": 0
                 }
             },
@@ -684,7 +684,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that function f is defined by f(x) = 2x + 3. Therefore, the equation representing the graph of `y=f(x)` in the xy-plane is y = 2x + 3, and the graph is a line. For a linear equation in the form y = mx + b, m represents the slope of the line. Since the value of m in the equation y = 2x + 3 is 2, the slope of the line defined by function f is 2. It's given that line j is parallel to the line defined by function f. The slopes of parallel lines are equal. Therefore, the slope of line j is also 2.",
+                    "Rationale": "It's given that function f is defined by f(x) = 2x + 3. Therefore, the equation representing the graph of `y=f(x)` in the xy-plane is y = 2x + 3, and the graph is a line. For a linear equation in the form `y=mx+b`, m represents the slope of the line. Since the value of m in the equation y = 2x + 3 is 2, the slope of the line defined by function f is 2. It's given that line j is parallel to the line defined by function f. The slopes of parallel lines are equal. Therefore, the slope of line j is also 2.",
                     "Percent": 0
                 }
             }
@@ -938,7 +938,7 @@
                 "Choice": "The metal ball's minimum height was 3 inches above the ground.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of a quadratic equation in the form y = a(x - h)^2 + k, where a, h, and k are positive constants, is a parabola that opens upward with vertex (h, k). The given function f(x) = (1/9)(x - 7)^2 + 3 is in the form y = a(x - h)^2 + k, where y = f(x), a = 1/9, h = 7, and k = 3. Therefore, the graph of y = f(x) is a parabola that opens upward with vertex (7, 3). Since the parabola opens upward, the vertex is the lowest point on the graph. It follows that the y-coordinate of the vertex of the graph of y = f(x) is the minimum value of f(x). Therefore, the minimum value of f(x) is 3. It's given that f(x) = (1/9)(x - 7)^2 + 3 represents the metal ball's height above the ground, in inches, x seconds after it started moving on a track. Therefore, the best interpretation of the vertex of the graph of y = f(x) is that the metal ball's minimum height was 3 inches above the ground.",
+                    "Rationale": "The graph of a quadratic equation in the form y = a(x - h)^2 + k, where a, h, and k are positive constants, is a parabola that opens upward with vertex `(h,k)`. The given function f(x) = (1/9)(x - 7)^2 + 3 is in the form y = a(x - h)^2 + k, where `y=f(x)`, a = 1/9, h = 7, and k = 3. Therefore, the graph of `y=f(x)` is a parabola that opens upward with vertex (7, 3). Since the parabola opens upward, the vertex is the lowest point on the graph. It follows that the y-coordinate of the vertex of the graph of `y=f(x)` is the minimum value of f(x). Therefore, the minimum value of f(x) is 3. It's given that f(x) = (1/9)(x - 7)^2 + 3 represents the metal ball's height above the ground, in inches, x seconds after it started moving on a track. Therefore, the best interpretation of the vertex of the graph of `y=f(x)` is that the metal ball's minimum height was 3 inches above the ground.",
                     "Percent": 0
                 }
             },
@@ -1025,7 +1025,7 @@
                 "Choice": "equal:51",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A quadratic equation of the form ax^2+ bx + c = 0, where a, b, and c are constants, has no real solution if and only if its discriminant, -4ac + b², is negative. In the given equation, a = -1 and c = -676. Substituting -1 for a and -676 for c in this expression yields a discriminant of b² - 4(-1)(676) < 0, or b² - 2,704. Since this value must be negative, b² - 2,704 < 0, or b² < 2,704. Taking the positive square root of each side of this inequality yields b < 52. Since b is a positive integer, and the greatest integer less than 52 is 51, the greatest possible value of b is 51.",
+                    "Rationale": "A quadratic equation of the form `ax^2+bx+c=0`, where a, b, and c are constants, has no real solution if and only if its discriminant, -4ac + b², is negative. In the given equation, a = -1 and c = -676. Substituting -1 for a and -676 for c in this expression yields a discriminant of b² - 4(-1)(676) < 0, or b² - 2,704. Since this value must be negative, b² - 2,704 < 0, or b² < 2,704. Taking the positive square root of each side of this inequality yields b < 52. Since b is a positive integer, and the greatest integer less than 52 is 51, the greatest possible value of b is 51.",
                     "Percent": 0
                 }
             }
@@ -1057,7 +1057,7 @@
                 "Choice": "Zero",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A solution to a system of equations must satisfy each equation in the system. It follows that if an ordered pair (x, y) is a solution to the system, the point (x, y) lies on the graph in the xy-plane of each equation in the system. The only point that lies on each graph of the system of two linear equations shown is their intersection point (8, 2). It follows that if a new graph of three linear equations is created using the system of equations shown and the graph of 4 16 x y + = -, this system has either zero solutions or one solution, the point (8, 2). Substituting 8 for x and 2 for y in the equation x + 4y = -16 yields 8 + 4(2) = -16, or 16 = -16. Since this equation is not true, the point (8, 2) does not lie on the graph of x + 4y = -16. Therefore, (8, 2) is not a solution to the system of three equations. It follows that there are zero solutions to this system.",
+                    "Rationale": "A solution to a system of equations must satisfy each equation in the system. It follows that if an ordered pair `(x,y)` is a solution to the system, the point `(x,y)` lies on the graph in the xy-plane of each equation in the system. The only point that lies on each graph of the system of two linear equations shown is their intersection point (8, 2). It follows that if a new graph of three linear equations is created using the system of equations shown and the graph of 4 16 x y + = -, this system has either zero solutions or one solution, the point (8, 2). Substituting 8 for x and 2 for y in the equation x + 4y = -16 yields 8 + 4(2) = -16, or 16 = -16. Since this equation is not true, the point (8, 2) does not lie on the graph of x + 4y = -16. Therefore, (8, 2) is not a solution to the system of three equations. It follows that there are zero solutions to this system.",
                     "Percent": 0
                 }
             },
@@ -1248,7 +1248,7 @@
                 "Choice": "x^2+ (y + 1)^2 = 49",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph in the xy-plane of an equation of the form (x - h)^2 + (y - k)^2 = r² is a circle with center (h, k) and a radius of length r. It's given that circle A is represented by x^2+ (y - 1)^2 = 49, which can be rewritten as x^2+ (y - 1)^2 = 7^2. Therefore, circle A has center (0, 1) and a radius of length 7. Shifting circle A down two units is a rigid vertical translation of circle A that does not change its size or shape. Since circle B is obtained by shifting circle A down two units, it follows that circle B has the same radius as circle A, and for each point (x, y) on circle A, the point (x, y - 2) lies on circle B. Moreover, if (h, k) is the center of circle A, then (h, k - 2) is the center of circle B. Therefore, circle B has a radius of 7 and the center of circle B is (0, 1 - 2), or (0, -1). Thus, circle B can be represented by the equation x^2+ (y + 1)^2 = 7^2, or x^2+ (y + 1)^2 = 49.",
+                    "Rationale": "The graph in the xy-plane of an equation of the form `(x-h)^2+(y-k)^2=r^2` is a circle with center `(h,k)` and a radius of length r. It's given that circle A is represented by x^2+ (y - 1)^2 = 49, which can be rewritten as x^2+ (y - 1)^2 = 7^2. Therefore, circle A has center (0, 1) and a radius of length 7. Shifting circle A down two units is a rigid vertical translation of circle A that does not change its size or shape. Since circle B is obtained by shifting circle A down two units, it follows that circle B has the same radius as circle A, and for each point `(x,y)` on circle A, the point (x, y - 2) lies on circle B. Moreover, if `(h,k)` is the center of circle A, then (h, k - 2) is the center of circle B. Therefore, circle B has a radius of 7 and the center of circle B is (0, 1 - 2), or (0, -1). Thus, circle B can be represented by the equation x^2+ (y + 1)^2 = 7^2, or x^2+ (y + 1)^2 = 49.",
                     "Percent": 0
                 }
             }
@@ -1318,7 +1318,7 @@
             "Problem-Solving & Data Analysis"
         ],
         "SubTopics": [
-            "Understand and use the relationship between percent change and growth factor (5% and 1.05, for example); include percentages greater than or equal to 100%."
+            "Understand and use the relationship between percent change and growth factor (`5%` and `1.05`, for example); include percentages greater than or equal to `100%`."
         ],
         "SuppContent": [],
         "SuppTools": [

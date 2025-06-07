@@ -500,7 +500,7 @@
                 "Choice": "y = 9.4 - 0.9x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The data points suggest that as the variable x increases, the variable y decreases, which implies that an appropriate linear model for the data has a negative slope. The data points also show that when x is close to 0, y is greater than 9. Therefore, the y-intercept of the graph of an appropriate linear model has a y-coordinate greater than 9. The graph of an equation of the form y = a + bx, where a and b are constants, has a y-intercept with a y-coordinate of a and has a slope of b. Of the given choices, only this choice represents a graph that has a negative slope, -0.9, and a y-intercept with a y-coordinate greater than 9, 9.4.",
+                    "Rationale": "The data points suggest that as the variable x increases, the variable y decreases, which implies that an appropriate linear model for the data has a negative slope. The data points also show that when x is close to 0, y is greater than 9. Therefore, the y-intercept of the graph of an appropriate linear model has a y-coordinate greater than 9. The graph of an equation of the form `y=a+bx`, where a and b are constants, has a y-intercept with a y-coordinate of a and has a slope of b. Of the given choices, only this choice represents a graph that has a negative slope, -0.9, and a y-intercept with a y-coordinate greater than 9, 9.4.",
                     "Percent": 0
                 }
             }
@@ -604,7 +604,7 @@
                 "Choice": "y = -x - 8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation of a line can be written in the form y = mx + b = +, where m is the slope of the line and (0, b) is the y-intercept of the line. The line shown passes through the point (0, -8), so b = -8. The line shown also passes through the point (-8, 0). The slope, m, of a line passing through two points (x₁, y₁) and (x₂, y₂) can be calculated using the equation m = (y₂ - y₁)/(x₂ - x₁). For the points (0, -8) and (-8, 0), this gives m = ((-8) - 0)/(0 - (-8)), or m = -1. Substituting -8 for b and -1 for m in y = mx + b yields y = (-1)x + (-8), or y = -x - 8. Therefore, an equation of the graph shown is y = -x - 8.",
+                    "Rationale": "An equation of a line can be written in the form `y=mx+b` = +, where m is the slope of the line and `(0,b)` is the y-intercept of the line. The line shown passes through the point (0, -8), so b = -8. The line shown also passes through the point (-8, 0). The slope, m, of a line passing through two points `(x_1,y_1)` and `(x_2,y_2)` can be calculated using the equation `m=(y_2-y_1)/(x_2-x_1)`. For the points (0, -8) and (-8, 0), this gives m = ((-8) - 0)/(0 - (-8)), or m = -1. Substituting -8 for b and -1 for m in `y=mx+b` yields y = (-1)x + (-8), or y = -x - 8. Therefore, an equation of the graph shown is y = -x - 8.",
                     "Percent": 0
                 }
             },
@@ -668,7 +668,7 @@
         "Explain": false,
         "Content": [
             ":box:24x + y = 48\n\n6x + y = 72",
-            "The solution to the given system of equations is (x, y). What is the value of y?"
+            "The solution to the given system of equations is `(x,y)`. What is the value of y?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -730,7 +730,7 @@
                 "Choice": "y = -x/3 + 13",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation that defines line t in the xy-plane can be written in slope-intercept form y = mx + b, where m is the slope of line t and (0, b) is its y-intercept. It's given that line t has a slope of -1/3. Therefore, m = -1/3. Substituting -1/3 for m in the equation y = mx + b yields y = -1/3 + b, or y = -x/3 + b. It's also given that line t passes through the point (9, 10). Substituting 9 for x and 10 for y in the equation y = -x/3 + b yields 10 = -9/3 + b, or 10 = -3 + b. Adding 3 to both sides of this equation yields 13 = b. Substituting 13 for b in the equation y = -x/3 + b yields y = -x/3 + 13.",
+                    "Rationale": "The equation that defines line t in the xy-plane can be written in slope-intercept form `y=mx+b`, where m is the slope of line t and `(0,b)` is its y-intercept. It's given that line t has a slope of -1/3. Therefore, m = -1/3. Substituting -1/3 for m in the equation `y=mx+b` yields y = -1/3 + b, or y = -x/3 + b. It's also given that line t passes through the point (9, 10). Substituting 9 for x and 10 for y in the equation y = -x/3 + b yields 10 = -9/3 + b, or 10 = -3 + b. Adding 3 to both sides of this equation yields 13 = b. Substituting 13 for b in the equation y = -x/3 + b yields y = -x/3 + 13.",
                     "Percent": 0
                 }
             }
@@ -754,7 +754,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f(x) = 206(1.034)ˣ models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where x is the number of years after 1957. Which of the following is the best interpretation of “f(5)is approximately equal to 243” in this context?"
+            "The function f(x) = 206(1.034)^x models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where x is the number of years after 1957. Which of the following is the best interpretation of “f(5)is approximately equal to 243” in this context?"
         ],
         "AnswerChoices": {
             "A": {
@@ -769,7 +769,7 @@
                 "Choice": "The value of the bank account is estimated to be approximately 243 dollars in 1962.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function f(x) = 206(1.034)ˣ models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where x is the number of years after 1957. It follows that f(x) represents the estimated value, in dollars, of the bank account x years after 1957. Since the value of f(5) is the value of `f(x)` when x = 5, it follows that “f(5)is approximately equal to 243” means that f(x) is approximately equal to 243 when x = 5. In the given context, this means that the value of the bank account is estimated to be approximately 243 dollars 5 years after 1957. Therefore, the best interpretation of the statement “f(5) is approximately equal to 243” in this context is the value of the bank account is estimated to be approximately 243 dollars in 1962.",
+                    "Rationale": "It's given that the function f(x) = 206(1.034)^x models the value, in dollars, of a certain bank account by the end of each year from 1957 through 1972, where x is the number of years after 1957. It follows that f(x) represents the estimated value, in dollars, of the bank account x years after 1957. Since the value of f(5) is the value of `f(x)` when x = 5, it follows that “f(5)is approximately equal to 243” means that f(x) is approximately equal to 243 when x = 5. In the given context, this means that the value of the bank account is estimated to be approximately 243 dollars 5 years after 1957. Therefore, the best interpretation of the statement “f(5) is approximately equal to 243” in this context is the value of the bank account is estimated to be approximately 243 dollars in 1962.",
                     "Percent": 0
                 }
             },
@@ -800,7 +800,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Apply knowledge that changing by a scale factor of k changes all lengths by a factor of k, changes all areas by a factor of k², and changes all volumes by a factor of k³."
+            "Apply knowledge that changing by a scale factor of `k` changes all lengths by a factor of `k`, changes all areas by a factor of `k^2`, and changes all volumes by a factor of `k^3`."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -982,7 +982,7 @@
                 "Choice": "equal:100",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that point O is the center of a circle and the measure of arc RS on the circle is 100°. It follows that points R and S lie on the circle. Therefore, OR and OS are radii of the circle. A central angle is an angle formed by two radii of a circle, with its vertex at the center of the circle. Therefore, ∠ROS is a central angle. Because the degree measure of an arc is equal to the measure of its associated central angle, it follows that the measure, in degrees, of ∠ROS is 100.",
+                    "Rationale": "It's given that point O is the center of a circle and the measure of arc RS on the circle is 100°. It follows that points R and S lie on the circle. Therefore, OR and OS are radii of the circle. A central angle is an angle formed by two radii of a circle, with its vertex at the center of the circle. Therefore, /_ROS is a central angle. Because the degree measure of an arc is equal to the measure of its associated central angle, it follows that the measure, in degrees, of /_ROS is 100.",
                     "Percent": 0
                 }
             }
@@ -1148,7 +1148,7 @@
         "Explain": false,
         "Content": [
             ":box:y = 2x^2- 21x + 64\n\ny = 3x + a",
-            "In the given system of equations, a is a constant. The graphs of the equations in the given system intersect at exactly one point, (x, y),in the xy-plane. What is the value of x?"
+            "In the given system of equations, a is a constant. The graphs of the equations in the given system intersect at exactly one point, `(x,y)`,in the xy-plane. What is the value of x?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1171,7 +1171,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graphs of the equations in the given system intersect at exactly one point, (x, y), in the xy-plane. Therefore, (x, y) is the only solution to the given system of equations. The given system of equations can be solved by subtracting the second equation, y = 3x + a, from the first equation, y = 2x^2- 21x + 64. This yields y - y = (2x^2- 21x + 64) - (3x + a), or 0 = 2x^2- 24x - a. Since the given system has only one solution, this equation has only one solution. A quadratic equation in the form rx^2+ sx + t = 0, where r, s, and t are constants, has one solution if and only if the discriminant, s² - 4rt, is equal to zero. Substituting 2 for r, -24 for s, and -a + 64 for t in the expression s² - 4rt yields (-24)^2 - (4)(2)(64 - a). Setting this expression equal to zero yields (-24)^2 - (4)(2)(64 - a), or 8a + 64 = 0. Subtracting 64 from both sides of this equation yields 8a = -64. Dividing both sides of this equation by 8 yields a = -8. Substituting -8 for a in the equation 0 = 2x^2- 24x + 64 - a yields 0 = 2x^2- 24x + 64 + 8, or 0 = 2x^2- 24x + 72. Factoring 2 from the right-hand side of this equation yields 0 = 2(x^2- 12x + 36). Dividing both sides of this equation by 2 yields 0 = x^2- 12x + 36, which is equivalent to 0 = (x - 6)(x - 6), or 0 = (x - 6)^2. Taking the square root of both sides of this equation yields 0 = x - 6. Adding 6 to both sides of this equation yields x = 6.",
+                    "Rationale": "It's given that the graphs of the equations in the given system intersect at exactly one point, `(x,y)`, in the xy-plane. Therefore, `(x,y)` is the only solution to the given system of equations. The given system of equations can be solved by subtracting the second equation, y = 3x + a, from the first equation, y = 2x^2- 21x + 64. This yields y - y = (2x^2- 21x + 64) - (3x + a), or 0 = 2x^2- 24x - a. Since the given system has only one solution, this equation has only one solution. A quadratic equation in the form rx^2+ sx + t = 0, where r, s, and t are constants, has one solution if and only if the discriminant, s² - 4rt, is equal to zero. Substituting 2 for r, -24 for s, and -a + 64 for t in the expression s² - 4rt yields (-24)^2 - (4)(2)(64 - a). Setting this expression equal to zero yields (-24)^2 - (4)(2)(64 - a), or 8a + 64 = 0. Subtracting 64 from both sides of this equation yields 8a = -64. Dividing both sides of this equation by 8 yields a = -8. Substituting -8 for a in the equation 0 = 2x^2- 24x + 64 - a yields 0 = 2x^2- 24x + 64 + 8, or 0 = 2x^2- 24x + 72. Factoring 2 from the right-hand side of this equation yields 0 = 2(x^2- 12x + 36). Dividing both sides of this equation by 2 yields 0 = x^2- 12x + 36, which is equivalent to 0 = (x - 6)(x - 6), or 0 = (x - 6)^2. Taking the square root of both sides of this equation yields 0 = x - 6. Adding 6 to both sides of this equation yields x = 6.",
                     "Percent": 0
                 }
             },
@@ -1289,7 +1289,7 @@
                 "Choice": "-12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a parabola in the xy-plane can be written in the form y = a(x - h)^2 + k, where a is a constant and (h, k) is the vertex of the parabola. If a is positive, the parabola will open upward, and if a is negative, the parabola will open downward. It's given that the parabola has vertex (9, -14). Substituting 9 for h and 14- for k in the equation y = a(x - h)^2 + k gives y = a(x - 9)^2 - 14, which can be rewritten as y = a(x - 9)(x - 9) - 14, or y = a(x^2- 18x + 81) - 14. Distributing the factor of a on the right-hand side of this equation yields y = ax^2- 18ax + 81a - 14. Therefore, the equation of the parabola, y = ax^2- 18ax + 81a - 14, can be written in the form y = ax^2+ bx + c, where a = a, b = -18a, and c = 81a - 14. Substituting -18a for b and 81a - 14 for c in the expression a + b + c yields (a) + (-18a) + (81a - 14), or 64a - 14. Since the vertex of the parabola, (9, -14), is below the x-axis, and it's given that the parabola intersects the x-axis at two points, the parabola must open upward. Therefore, the constant a must have a positive value. Setting the expression 64a - 14 equal to the value in this choice yields 64a - 14 = -12. Adding 14 to both sides of this equation yields 64a = 2. Dividing both sides of this equation by 64 yields a = 2/64, which is a positive value. Therefore, if the equation of the parabola is written in the form y = ax^2+ bx + c, where a, b, and c are constants, the value of a + b + c could be -12.",
+                    "Rationale": "The equation of a parabola in the xy-plane can be written in the form y = a(x - h)^2 + k, where a is a constant and `(h,k)` is the vertex of the parabola. If a is positive, the parabola will open upward, and if a is negative, the parabola will open downward. It's given that the parabola has vertex (9, -14). Substituting 9 for h and 14- for k in the equation y = a(x - h)^2 + k gives y = a(x - 9)^2 - 14, which can be rewritten as y = a(x - 9)(x - 9) - 14, or y = a(x^2- 18x + 81) - 14. Distributing the factor of a on the right-hand side of this equation yields y = ax^2- 18ax + 81a - 14. Therefore, the equation of the parabola, y = ax^2- 18ax + 81a - 14, can be written in the form y = ax^2+ bx + c, where a = a, b = -18a, and c = 81a - 14. Substituting -18a for b and 81a - 14 for c in the expression a + b + c yields (a) + (-18a) + (81a - 14), or 64a - 14. Since the vertex of the parabola, (9, -14), is below the x-axis, and it's given that the parabola intersects the x-axis at two points, the parabola must open upward. Therefore, the constant a must have a positive value. Setting the expression 64a - 14 equal to the value in this choice yields 64a - 14 = -12. Adding 14 to both sides of this equation yields 64a = 2. Dividing both sides of this equation by 64 yields a = 2/64, which is a positive value. Therefore, if the equation of the parabola is written in the form y = ax^2+ bx + c, where a, b, and c are constants, the value of a + b + c could be -12.",
                     "Percent": 0
                 }
             }

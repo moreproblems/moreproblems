@@ -72,7 +72,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = x³ + 15. What is the value of f(2)?"
+            "The function f is defined by f(x) = x^3 + 15. What is the value of f(2)?"
         ],
         "AnswerChoices": {
             "A": {
@@ -87,7 +87,7 @@
                 "Choice": "21",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of f(2) when f(x) = x(3) + 15, rather than f(x) = x³ + 15.",
+                    "Rationale": "This is the value of f(2) when f(x) = x(3) + 15, rather than f(x) = x^3 + 15.",
                     "Percent": 0
                 }
             },
@@ -421,7 +421,7 @@
                 "Choice": "The electrician's hourly rate",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the electrician charges a onetime fee plus an hourly rate. It's also given that the graph represents the total charge, in dollars, for x hours of work. This graph shows a linear relationship in the xy-plane. Thus, the total charge y, in dollars, for x hours of work can be represented as y = mx + b, where m is the slope and (0, b) is the y-intercept of the graph of the equation in the xy-plane. Since the given graph represents the total charge, in dollars, by anelectrician for x hours of work, it follows that its slope is m, or the electrician's hourly rate.",
+                    "Rationale": "It's given that the electrician charges a onetime fee plus an hourly rate. It's also given that the graph represents the total charge, in dollars, for x hours of work. This graph shows a linear relationship in the xy-plane. Thus, the total charge y, in dollars, for x hours of work can be represented as `y=mx+b`, where m is the slope and `(0,b)` is the y-intercept of the graph of the equation in the xy-plane. Since the given graph represents the total charge, in dollars, by anelectrician for x hours of work, it follows that its slope is m, or the electrician's hourly rate.",
                     "Percent": 0
                 }
             },
@@ -460,7 +460,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Apply knowledge that changing by a scale factor of k changes all lengths by a factor of k, changes all areas by a factor of k², and changes all volumes by a factor of k³."
+            "Apply knowledge that changing by a scale factor of `k` changes all lengths by a factor of `k`, changes all areas by a factor of `k^2`, and changes all volumes by a factor of `k^3`."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -539,7 +539,7 @@
                 "Choice": "y = 7x + 5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a line in the xy-plane can be written in slope-intercept form y = mx + b, where m is the slope of the line and (0, b) is its y-intercept. It's given that the line passes through the point (0, 5). Therefore, b = 5. It's also given that the line is parallel to the graph of y = 7x + 4, which means the line has the same slope as the graph of y = 7x + 4. The slope of the graph of y = 7x + 4 is 7. Therefore, m = 7. Substituting 7 for m and 5 for b in the equation y = mx + b yields y = 7x + 5.",
+                    "Rationale": "The equation of a line in the xy-plane can be written in slope-intercept form `y=mx+b`, where m is the slope of the line and `(0,b)` is its y-intercept. It's given that the line passes through the point (0, 5). Therefore, b = 5. It's also given that the line is parallel to the graph of y = 7x + 4, which means the line has the same slope as the graph of y = 7x + 4. The slope of the graph of y = 7x + 4 is 7. Therefore, m = 7. Substituting 7 for m and 5 for b in the equation `y=mx+b` yields y = 7x + 5.",
                     "Percent": 0
                 }
             },
@@ -665,14 +665,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = (x - 6)(x - 2)(x + 6). In the xy-plane, the graph of y = g(x) is the result of translating the graph of y = f(x) up 4 units. What is the value of g(0)?"
+            "The function f is defined by f(x) = (x - 6)(x - 2)(x + 6). In the xy-plane, the graph of `y=g(x)` is the result of translating the graph of `y=f(x)` up 4 units. What is the value of g(0)?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:76",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph of  y = g(x) is the result of translating the graph of  y = f(x) up 4 units in the xy-plane. It follows that the graph of y = g(x) is the same as the graph of y = f(x) + 4. Substituting g(x) for y in the equation y = f(x) + 4 yields g(x) = f(x) + 4. It's given that f(x) = (x - 6)(x - 2)(x + 6). Substituting (x - 6)(x - 2)(x + 6) for f(x) in the equation g(x) = f(x) + 4 yields g(0) = (x - 6)(x - 2)(x + 6) + 4. Substituting 0 for x in this equation yields g(0) = (0 - 6)(0 - 2)(0 + 6) + 4, or g(0) = 76. Thus, the value of g(0) is 76.",
+                    "Rationale": "It's given that the graph of  `y=g(x)` is the result of translating the graph of  `y=f(x)` up 4 units in the xy-plane. It follows that the graph of `y=g(x)` is the same as the graph of y = f(x) + 4. Substituting g(x) for y in the equation y = f(x) + 4 yields g(x) = f(x) + 4. It's given that f(x) = (x - 6)(x - 2)(x + 6). Substituting (x - 6)(x - 2)(x + 6) for f(x) in the equation g(x) = f(x) + 4 yields g(0) = (x - 6)(x - 2)(x + 6) + 4. Substituting 0 for x in this equation yields g(0) = (0 - 6)(0 - 2)(0 + 6) + 4, or g(0) = 76. Thus, the value of g(0) is 76.",
                     "Percent": 0
                 }
             }
@@ -918,7 +918,7 @@
         "Explain": false,
         "Content": [
             ":box:y ≤ x + 7\n\ny ≥ -2x - 1",
-            "Which point (x, y) is a solution to the given system of inequalities in the xy-plane?"
+            "Which point `(x,y)` is a solution to the given system of inequalities in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -949,7 +949,7 @@
                 "Choice": "(14, 0)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A point (x, y) is a solution to a system of inequalities in the xy-plane if substituting the x-coordinate and the y-coordinate of the point for `x` and `y`, respectively, in each inequality makes both of the inequalities true. Substituting the x-coordinate and the y-coordinate of this choice, 14 and 0, for `x` and `y`, respectively, in the first inequality in the given system, y ≤ x + 7, yields 0 ≤ 14 + 7, or 0 ≤ 21, which is true. Substituting 14 for x and 0 for y in the second inequality in the given system, y ≥ -2x - 1, yields 0 ≥ -2(14) - 1, or 0 ≥ -29, which is true. Therefore, the point (14, 0) is a solution to the given system of inequalities in the xy-plane.",
+                    "Rationale": "A point `(x,y)` is a solution to a system of inequalities in the xy-plane if substituting the x-coordinate and the y-coordinate of the point for `x` and `y`, respectively, in each inequality makes both of the inequalities true. Substituting the x-coordinate and the y-coordinate of this choice, 14 and 0, for `x` and `y`, respectively, in the first inequality in the given system, y ≤ x + 7, yields 0 ≤ 14 + 7, or 0 ≤ 21, which is true. Substituting 14 for x and 0 for y in the second inequality in the given system, y ≥ -2x - 1, yields 0 ≥ -2(14) - 1, or 0 ≥ -29, which is true. Therefore, the point (14, 0) is a solution to the given system of inequalities in the xy-plane.",
                     "Percent": 0
                 }
             }
@@ -1116,7 +1116,7 @@
                 "Choice": "Increasing exponential",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This could describe the function f(x) = (2.01)ˣ, where f(x) is equal to 201% of f(x - 1), not x, for x > 0.",
+                    "Rationale": "This could describe the function f(x) = (2.01)^x, where f(x) is equal to 201% of f(x - 1), not x, for x > 0.",
                     "Percent": 0
                 }
             },
@@ -1149,7 +1149,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT3M1/media/24a.jpg",
-            "The rational function f is defined by an equation in the form f(x) = a/(x + b), where a and b are constants. The partial graph of y = f(x) is shown. If g(x) = f(x + 4), which equation could define function g?"
+            "The rational function f is defined by an equation in the form f(x) = a/(x + b), where a and b are constants. The partial graph of `y=f(x)` is shown. If g(x) = f(x + 4), which equation could define function g?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1172,7 +1172,7 @@
                 "Choice": "g(x) = 6/(x + 8)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that f(x) = a/(x + b) and that the graph shown is a partial graph of y = f(x). Substituting y for f(x) in the equation f(x) = a/(x + b) yields y = a/(x + b). The graph passes through the point (-7, -2). Substituting -7 for x and -2 for y in the equation y = a/(x + b) yields -2 = a/(-7 + b). Multiplying each side of this equation by -7 + b yields -2(-7 + b) = a, or 14 - 2b = a. The graph also passes through the point (-5, -6). Substituting -5 for x and -6 for y in the equation y = a/(x + b) yields -6 = a/(-5 + b). Multiplying each side of this equation by -5 + b yields -6(-5 + b) = a, or 30 - 6b = a. Substituting 14 - 2b for a in this equation yields 30 - 6b = 14 - 2b. Adding 6b to each side of this equation yields 30 = 14 + 4b. Subtracting 14 from each side of this equation yields 16 = 4b. Dividing each side of this equation by 4 yields 4 = b. Substituting 4 for b in the equation 14 - 2b = a yields 14 - 2(4) = a, or 6 = a. Substituting 6 for a and 4 for b in the equation f(x) = a/(x + b) yields f(x) = 6/(x + 4). It's given that g(x) = f(x + 4). Substituting x + 4 for x in the equation f(x) = 6/(x + 4) yields f(x + 4) = 6/(x + 4 + 4), which is equivalent to f(x + 4) = 6/(x + 8). It follows that g(x) = 6/(x + 8).",
+                    "Rationale": "It's given that f(x) = a/(x + b) and that the graph shown is a partial graph of `y=f(x)`. Substituting y for f(x) in the equation f(x) = a/(x + b) yields y = a/(x + b). The graph passes through the point (-7, -2). Substituting -7 for x and -2 for y in the equation y = a/(x + b) yields -2 = a/(-7 + b). Multiplying each side of this equation by -7 + b yields -2(-7 + b) = a, or 14 - 2b = a. The graph also passes through the point (-5, -6). Substituting -5 for x and -6 for y in the equation y = a/(x + b) yields -6 = a/(-5 + b). Multiplying each side of this equation by -5 + b yields -6(-5 + b) = a, or 30 - 6b = a. Substituting 14 - 2b for a in this equation yields 30 - 6b = 14 - 2b. Adding 6b to each side of this equation yields 30 = 14 + 4b. Subtracting 14 from each side of this equation yields 16 = 4b. Dividing each side of this equation by 4 yields 4 = b. Substituting 4 for b in the equation 14 - 2b = a yields 14 - 2(4) = a, or 6 = a. Substituting 6 for a and 4 for b in the equation f(x) = a/(x + b) yields f(x) = 6/(x + 4). It's given that g(x) = f(x + 4). Substituting x + 4 for x in the equation f(x) = 6/(x + 4) yields f(x + 4) = 6/(x + 4 + 4), which is equivalent to f(x + 4) = 6/(x + 8). It follows that g(x) = 6/(x + 8).",
                     "Percent": 0
                 }
             },
@@ -1208,7 +1208,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(xy + y + 4)/(x³y - 16x^2y + 64xy)",
+                "Choice": "(xy + y + 4)/(x^3y - 16x^2y + 64xy)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1232,7 +1232,7 @@
                 }
             },
             "D": {
-                "Choice": "(xy^2+ 13xy - 8y)/(x³y - 16x^2y + 64xy)",
+                "Choice": "(xy^2+ 13xy - 8y)/(x^3y - 16x^2y + 64xy)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1322,7 +1322,7 @@
                 "Choice": "equal:10",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph of x^2+ x + y^2+ y  = 199/2 in the xy-plane is a circle. The equation of a circle in the xy-plane can be written in the form (x - h)^2 + (y - k)^2 = r², where the coordinates of the center of the circle are (h, k) and the length of the radius of the circle is r. The term (x-h)^2 in this equation can be obtained by adding the square of half the coefficient of x to both sides of the given equation to complete the square. The coefficient of x is 1. Half the coefficient of x is 1/2. The square of half the coefficient of x is 1/4. Adding 1/4 to each side of (x^2+ x) + (y^2+ y) = 199/2 yields (x^2+ x + 1/4) + (y^2+ y) = 199/2 + 1/4, or (x + 1/2)^2 + (y^2+ y) = 199/2 + 1/4. Similarly, the term (y - k)^2 can be obtained by adding the square of half the coefficient of y to both sides of this equation, which yields (x + 1/2)^2 + (y^2+ y + 1/4) = 199/2 + 1/4 + 1/4, or (x + 1/2)^2 + (y + 1/2)^2 = 199/2 + 1/4 + 1/4. This equation is equivalent to (x + 1/2)^2 + (y + 1/2)^2 = 100, or (x + 1/2)^2 + (y + 1/2)^2 = 10^2. Therefore, the length of the circle's radius is 10.",
+                    "Rationale": "It's given that the graph of x^2+ x + y^2+ y  = 199/2 in the xy-plane is a circle. The equation of a circle in the xy-plane can be written in the form `(x-h)^2+(y-k)^2=r^2`, where the coordinates of the center of the circle are `(h,k)` and the length of the radius of the circle is r. The term (x-h)^2 in this equation can be obtained by adding the square of half the coefficient of x to both sides of the given equation to complete the square. The coefficient of x is 1. Half the coefficient of x is 1/2. The square of half the coefficient of x is 1/4. Adding 1/4 to each side of (x^2+ x) + (y^2+ y) = 199/2 yields (x^2+ x + 1/4) + (y^2+ y) = 199/2 + 1/4, or (x + 1/2)^2 + (y^2+ y) = 199/2 + 1/4. Similarly, the term (y - k)^2 can be obtained by adding the square of half the coefficient of y to both sides of this equation, which yields (x + 1/2)^2 + (y^2+ y + 1/4) = 199/2 + 1/4 + 1/4, or (x + 1/2)^2 + (y + 1/2)^2 = 199/2 + 1/4 + 1/4. This equation is equivalent to (x + 1/2)^2 + (y + 1/2)^2 = 100, or (x + 1/2)^2 + (y + 1/2)^2 = 10^2. Therefore, the length of the circle's radius is 10.",
                     "Percent": 0
                 }
             }

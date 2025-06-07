@@ -734,7 +734,7 @@
         "Explain": false,
         "Content": [
             "Consider this expression.",
-            ":ibox:(x³y⁵)⁴(x³y^2)⁻²",
+            ":ibox:(x^3y⁵)⁴(x^3y^2)⁻²",
             "Which of the following is equivalent to the expression?"
         ],
         "AnswerChoices": {
@@ -1361,7 +1361,7 @@
         "Explain": false,
         "Content": [
             "In right triangle QRS, the length of side QR is equal to one-half the length of hypotenuse QS.",
-            "What is the measure, in degrees, of ∠S?"
+            "What is the measure, in degrees, of /_S?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1392,9 +1392,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In this diagram, ∆JKL ≅ ∆STU.",
+            "In this diagram, ∆JKL ~= ∆STU.",
             "problems/MA22G10M/media/22a.jpg",
-            "Based on the measurements in the diagram, what is the measure of ∠K?"
+            "Based on the measurements in the diagram, what is the measure of /_K?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1904,7 +1904,7 @@
         "Content": [
             "This diagram shows a circle and an inscribed quadrilateral, with angle measures represented by expressions.",
             "problems/MA22G10M/media/30a.jpg",
-            "Based on the diagram, what is m∠V?"
+            "Based on the diagram, what is m/_V?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2376,8 +2376,8 @@
         "Explain": false,
         "Content": [
             "Triangle EFG is similar to triangle JKL.",
-            ":ibox:• The measure of ∠E is 32°.\n\n• The measure of ∠K is 49°.",
-            "What is the measure of ∠F?"
+            ":ibox:• The measure of /_E is 32°.\n\n• The measure of /_K is 49°.",
+            "What is the measure of /_F?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2465,9 +2465,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider ∠Y.",
+            "Consider /_Y.",
             "problems/MA22G10M/media/38a.jpg",
-            "A compass and a straightedge were used to perform a construction given ∠Y. This diagram shows the completed construction.",
+            "A compass and a straightedge were used to perform a construction given /_Y. This diagram shows the completed construction.",
             "problems/MA22G10M/media/38a.jpg",
             "These steps were followed to complete the construction.",
             ":ibox:• An arc was drawn, with the compass, from point Y through the sides of the angle to create point X and point Z.\n\n• Two arcs were drawn, each with the same compass setting, one from point X and one from point Z. The arcs intersect to create point P.\n\n• A ray was drawn, with the straightedge, from point Y through point P.",
@@ -2475,7 +2475,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "m∠PYX = m∠PYZ",
+                "Choice": "m/_PYX = m/_PYZ",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2483,7 +2483,7 @@
                 }
             },
             "B": {
-                "Choice": "m∠XYZ = (m∠PYZ)/2",
+                "Choice": "m/_XYZ = (m/_PYZ)/2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2491,7 +2491,7 @@
                 }
             },
             "C": {
-                "Choice": "ray YP is an angle bisector of ∠XYZ",
+                "Choice": "ray YP is an angle bisector of /_XYZ",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

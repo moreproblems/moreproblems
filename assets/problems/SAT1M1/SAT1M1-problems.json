@@ -465,7 +465,7 @@
         "Explain": false,
         "Content": [
             ":box:y = -3x\n\n4x + y = 15",
-            "The solution to the given system of equations is (x, y). What is the value of x?"
+            "The solution to the given system of equations is `(x,y)`. What is the value of x?"
         ],
         "AnswerChoices": {
             "A": {
@@ -536,7 +536,7 @@
                 "Choice": "y = -1.9x + 10.1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation representing a linear model can be written in the form y = a + bx, or y = bx + a, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = -1.9 + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
+                    "Rationale": "The equation representing a linear model can be written in the form `y=a+bx`, or `y=bx+a`, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = -1.9 + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
                     "Percent": 0
                 }
             },
@@ -577,7 +577,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT1M1/media/12a.jpg",
-            "The graph of y = f(x) is shown, where the function f is defined by f(x) = ax³ + bx^2+ cx + d and a, b, c, and d are constants. For how many values of x does f(x) = 0"
+            "The graph of `y=f(x)` is shown, where the function f is defined by f(x) = ax^3 + bx^2+ cx + d and a, b, c, and d are constants. For how many values of x does `f(x)=0`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -600,7 +600,7 @@
                 "Choice": "Three",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a value of x satisfies f(x) = 0, the graph of y = f(x) will contain a point (x, 0) and thus touch the x-axis. Since there are 3 points at which this graph touches the x-axis, there are 3 values of x for which f(x) = 0.",
+                    "Rationale": "If a value of x satisfies `f(x)=0`, the graph of `y=f(x)` will contain a point (x, 0) and thus touch the x-axis. Since there are 3 points at which this graph touches the x-axis, there are 3 values of x for which `f(x)=0`.",
                     "Percent": 0
                 }
             },
@@ -955,7 +955,7 @@
                 "Choice": "1,849",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The area of a circle can be found by using the formula A = πr², where A is the area and r is the radius of the circle. It's given that the radius of circle A is 3n. Substituting this value for r into the formula A = πr² gives A = π(3n)^2, or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula A = πr² gives A = π(129n)^2, or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
+                    "Rationale": "The area of a circle can be found by using the formula `A=pir^2`, where A is the area and r is the radius of the circle. It's given that the radius of circle A is 3n. Substituting this value for r into the formula `A=pir^2` gives A = π(3n)^2, or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula `A=pir^2` gives A = π(129n)^2, or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
                     "Percent": 0
                 }
             }
@@ -1018,7 +1018,7 @@
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form of an equation of a circle in the xy-plane is (x - h)^2 + (y - k)^2 = r², where h, k, and r are constants, the coordinates of the center of the circle are (h, k), and the length of the radius of the circle is r. It's given that an equation of the circle is (x - 2)^2 + (y - 9)^2 = r². Therefore, the center of this circle is (2, 9). It's given that the endpoints of a diameter of the circle are (2, 4) and (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x₁ - x₂)^2 + (y₁ - y₂)^2). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 - 2)^2 + (9 - 4)^2), or √(0^2 + 5^2), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
+                    "Rationale": "The standard form of an equation of a circle in the xy-plane is `(x-h)^2+(y-k)^2=r^2`, where h, k, and r are constants, the coordinates of the center of the circle are `(h,k)`, and the length of the radius of the circle is r. It's given that an equation of the circle is (x - 2)^2 + (y - 9)^2 = r². Therefore, the center of this circle is (2, 9). It's given that the endpoints of a diameter of the circle are (2, 4) and (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x₁ - x₂)^2 + (y₁ - y₂)^2). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 - 2)^2 + (9 - 4)^2), or √(0^2 + 5^2), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
                     "Percent": 0
                 }
             }
@@ -1184,7 +1184,7 @@
                 "Choice": "(-17/6, 0)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of line h can be written in slope-intercept form y = mx + b, where m is the slope of the line and (0, b) is the y-intercept of the line. It's given that line h contains the points (18, 130), (23, 160), and (26, 178). Therefore, its slope m can be found as (160 - 130)/(23 - 18), or 6. Substituting 6 for m in the equation y = mx + b yields y = 6x + b. Substituting 130 for y and 18 for x in this equation yields 130 = 6(18) + b, or 130 = 108 + b. Subtracting 108 from both sides of this equation yields 22 = b. Substituting 22 for b in y = 6x + b yields y = 6x + 22. Since line k is the result of translating line h down 5 units, an equation of line k is y = 6x + 22 - 5, or y = 6x + 17. Substituting 0 for y in this equation yields 0 = 6x + 17. Solving this equation for x yields x = -17/6. Therefore, the x-intercept of line k is (-17/6, 0).",
+                    "Rationale": "The equation of line h can be written in slope-intercept form `y=mx+b`, where m is the slope of the line and `(0,b)` is the y-intercept of the line. It's given that line h contains the points (18, 130), (23, 160), and (26, 178). Therefore, its slope m can be found as (160 - 130)/(23 - 18), or 6. Substituting 6 for m in the equation `y=mx+b` yields y = 6x + b. Substituting 130 for y and 18 for x in this equation yields 130 = 6(18) + b, or 130 = 108 + b. Subtracting 108 from both sides of this equation yields 22 = b. Substituting 22 for b in y = 6x + b yields y = 6x + 22. Since line k is the result of translating line h down 5 units, an equation of line k is y = 6x + 22 - 5, or y = 6x + 17. Substituting 0 for y in this equation yields 0 = 6x + 17. Solving this equation for x yields x = -17/6. Therefore, the x-intercept of line k is (-17/6, 0).",
                     "Percent": 0
                 }
             }
@@ -1231,7 +1231,7 @@
                 "Choice": "-319/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = -x^2+ 9x - 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)^2 + k, the vertex of its graph in the xy-plane is (h, k). The given quadratic equation, y = -x^2+ 9x - 100, can be rewritten as y = (x^2- 2(9/2)x + (9/2)^2) + (9/2)^2 - 100, or y = -(x - 9/2)^2 + (-319/4). Thus, the value of c is equal to -319/4.",
+                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = -x^2+ 9x - 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)^2 + k, the vertex of its graph in the xy-plane is `(h,k)`. The given quadratic equation, y = -x^2+ 9x - 100, can be rewritten as y = (x^2- 2(9/2)x + (9/2)^2) + (9/2)^2 - 100, or y = -(x - 9/2)^2 + (-319/4). Thus, the value of c is equal to -319/4.",
                     "Percent": 0
                 }
             },
@@ -1279,7 +1279,7 @@
                 "Choice": "(-3r/2 + 7/2, r)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point (x, y) lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, -3r/2 + 7/2 and r, for `x` and `y`, respectively, in the first equation yields 2(-3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (-3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
+                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point `(x,y)` lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, -3r/2 + 7/2 and r, for `x` and `y`, respectively, in the first equation yields 2(-3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (-3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
                     "Percent": 0
                 }
             },

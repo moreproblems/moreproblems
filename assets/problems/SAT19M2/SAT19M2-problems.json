@@ -141,7 +141,7 @@
                 "Choice": "49",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying both sides of the given equation by 5 yields 2n = 50. Substituting 50 for 2n in the expression 2n - 1 yields 50 - 1 = 49.\nAlternate approach: Dividing both sides of 2n = 50 by 2 yields n = 25. Evaluating the expression 2n - 1 for n = 25 yields 2(25) - 1 = 49.",
+                    "Rationale": "Multiplying both sides of the given equation by 5 yields 2n = 50. Substituting 50 for 2n in the expression 2n - 1 yields 50 - 1 = 49.\n\nAlternate approach: Dividing both sides of 2n = 50 by 2 yields n = 25. Evaluating the expression 2n - 1 for n = 25 yields 2(25) - 1 = 49.",
                     "Percent": 0
                 }
             },
@@ -228,7 +228,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of y = f(x), the solutions to f(x) = 0 correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [
             "problems/SAT19M2/supps/SAT19M2-S1.json"
@@ -630,7 +630,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Biologists found a new species of pale shrimp at the world's deepest undersea vent, the Beebe Vent Field. The vent is 3.1 miles below the sea's surface. Approximately how many kilometers below the sea's surface is the vent? (1 kilometer ≈ 0.6214 miles)"
+            "Biologists found a new species of pale shrimp at the world's deepest undersea vent, the Beebe Vent Field. The vent is 3.1 miles below the sea's surface. Approximately how many kilometers below the sea's surface is the vent? (1 kilometer ~~ 0.6214 miles)"
         ],
         "AnswerChoices": {
             "A": {
@@ -661,7 +661,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that 1 kilometer is approximately equivalent to 0.6214 miles. Let x be the number of kilometers equivalent to 3.1 miles. The proportion (1 kilometer)/(0.6214 miles) = (x kilometers)/(3.1 miles) can be used to solve for the value of x. Multiplying both sides of this equation by 3.1 yields 3.1/0.6214 = x, or x ≈ 4.99. This is approximately 5 kilometers.",
+                    "Rationale": "It's given that 1 kilometer is approximately equivalent to 0.6214 miles. Let x be the number of kilometers equivalent to 3.1 miles. The proportion (1 kilometer)/(0.6214 miles) = (x kilometers)/(3.1 miles) can be used to solve for the value of x. Multiplying both sides of this equation by 3.1 yields 3.1/0.6214 = x, or x ~~ 4.99. This is approximately 5 kilometers.",
                     "Percent": 0
                 }
             }
@@ -826,7 +826,7 @@
                 "Choice": "y = 3x/2 + 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope-intercept form of a linear equation is y = ax + b, where a is the slope of the graph of the equation and b is the y-coordinate of the y-intercept of the graph. Two ordered pairs (x₁, y₁) and (x₂, y₂) can be used to compute the slope of the line with the formula a = (y₂ - y₁)/(x₂ - x₁). Substituting t he two ordered pairs (2, 4) and (0, 1) into this formula gives a = (4 - 1)/(2 - 0), which simplifies to 3/2. Substituting this value for a in the slope-intercept form of the equation yields y = 3x/2 + b. Substituting values from the ordered pair (0, 1) into this equation yields 1 = (3/2)(0) + b, so b = 1. Substituting this value for b in the slope-intercept equation yields y = 3x/2 + 1.",
+                    "Rationale": "The slope-intercept form of a linear equation is y = ax + b, where a is the slope of the graph of the equation and b is the y-coordinate of the y-intercept of the graph. Two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` can be used to compute the slope of the line with the formula a = `(y_2-y_1)/(x_2-x_1)`. Substituting t he two ordered pairs (2, 4) and (0, 1) into this formula gives a = (4 - 1)/(2 - 0), which simplifies to 3/2. Substituting this value for a in the slope-intercept form of the equation yields y = 3x/2 + b. Substituting values from the ordered pair (0, 1) into this equation yields 1 = (3/2)(0) + b, so b = 1. Substituting this value for b in the slope-intercept equation yields y = 3x/2 + 1.",
                     "Percent": 0
                 }
             }
@@ -983,7 +983,7 @@
                 }
             },
             "C": {
-                "Choice": "p = (0.05)ˣ",
+                "Choice": "p = (0.05)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from incorrectly converting 5% to its decimal equivalent, which isn't necessary since p is expressed as a percentage. The context should be represented by a linear relationship, not by an exponential relationship.",
@@ -991,7 +991,7 @@
                 }
             },
             "D": {
-                "Choice": "p = (1.05)ˣ",
+                "Choice": "p = (1.05)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from incorrectly converting 5% to its decimal equivalent, which isn't necessary since p is expressed as a percentage. The context should be represented by a linear relationship, not by an exponential relationship.",
@@ -1136,7 +1136,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "h(x) = -3(d)ˣ",
+                "Choice": "h(x) = -3(d)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "For this function, the value of h(x) when x = 0 is -3, not d.",
@@ -1160,7 +1160,7 @@
                 }
             },
             "D": {
-                "Choice": "h(x) = d(3)ˣ",
+                "Choice": "h(x) = d(3)^x",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Since the function h is exponential, it can be written as h(x) = abˣ, where a is the y-coordinate of the y-intercept and b is the growth rate. Since it's given that the y-coordinate of the y-intercept is d, the exponential function can be written as h(x) = dbˣ. These conditions are only met by the equation in this choice.",
@@ -1439,7 +1439,7 @@
                 "Choice": "The time at which the projectile hits the ground",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The positive x-intercept of the graph of y = h(x) is a point (x, y) for which y = 0. Since y = h(x) models the height above the ground, in feet, of the projectile, a y-value of 0 must correspond to the height of the projectile when it is 0 feet above ground or, in other words, when the projectile is on the ground. Since x represents the time since the projectile was launched, it follows that the positive x-intercept, (x, 0), represents the time at which the projectile hits the ground.",
+                    "Rationale": "The positive x-intercept of the graph of y = h(x) is a point `(x,y)` for which y = 0. Since y = h(x) models the height above the ground, in feet, of the projectile, a y-value of 0 must correspond to the height of the projectile when it is 0 feet above ground or, in other words, when the projectile is on the ground. Since x represents the time since the projectile was launched, it follows that the positive x-intercept, (x, 0), represents the time at which the projectile hits the ground.",
                     "Percent": 0
                 }
             }
@@ -1454,7 +1454,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of y = f(x), the solutions to f(x) = 0 correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1581,7 +1581,7 @@
                 "Choice": "Each year between 1940 and 2010, the average increase in minimum wage was 0.096 dollars.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation is in slope-intercept form, or y = mx + b, where m is the value of the slope of the line of best fit. Therefore, the slope of the line of best fit is 0.096. From the definition of slope, it follows that an increase of 1 in the x-value corresponds to an increase of 0.096 in the y-value. Therefore, the line of best fit predicts that for each year between 1940 and 2010, the minimum wage will increase by 0.096 dollar per hour.",
+                    "Rationale": "The given equation is in slope-intercept form, or `y=mx+b`, where m is the value of the slope of the line of best fit. Therefore, the slope of the line of best fit is 0.096. From the definition of slope, it follows that an increase of 1 in the x-value corresponds to an increase of 0.096 in the y-value. Therefore, the line of best fit predicts that for each year between 1940 and 2010, the minimum wage will increase by 0.096 dollar per hour.",
                     "Percent": 0
                 }
             },
@@ -1676,7 +1676,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Understand that the ordered pairs that satisfy an equation of the form (x - h)^2 + (y - k)^2 = r² form a circle when plotted in the xy-plane."
+            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the xy-plane."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1686,14 +1686,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT19M2/media/31a.jpg",
-            "In the xy-plane above, the circle has center (h, k) radius 10. What is the value of k?"
+            "In the xy-plane above, the circle has center `(h,k)` radius 10. What is the value of k?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Circles are symmetric with respect to any given diameter through the center (h, k). One diameter of the circle is perpendicular to the x-axis. Therefore, the value of h is the mean of the x-coordinates of the circle's two x-intercepts: h = (20 + 4)/2 = 12. The radius of the circle is given as 10, so the point (h, k) must be a distance of 10 units from any point on the circle. The equation of any circle can be written as (x - h)^2 + (y - k)^2 = r², where (h, k) is the center of the circle and r is the length of the radius of the circle. Substituting 12 for h and 10 for r into this equation gives (x - 12)^2 + (y - k)^2 = 10^2. Substituting the x-coordinate and y-coordinate of a point on the circle, (4, 0), gives (4 - 12)^2 + (0 - k)^2 = 10^2, or 64 + k² = 100. Subtracting 64 from both sides of this equation yields k² = 36. Therefore, k = ±√36. Since the graph shows the point (h, k) in the first quadrant, k must be the positive square root of 36, so k = 6.",
+                    "Rationale": "Circles are symmetric with respect to any given diameter through the center `(h,k)`. One diameter of the circle is perpendicular to the x-axis. Therefore, the value of h is the mean of the x-coordinates of the circle's two x-intercepts: h = (20 + 4)/2 = 12. The radius of the circle is given as 10, so the point `(h,k)` must be a distance of 10 units from any point on the circle. The equation of any circle can be written as `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` is the center of the circle and r is the length of the radius of the circle. Substituting 12 for h and 10 for r into this equation gives (x - 12)^2 + (y - k)^2 = 10^2. Substituting the x-coordinate and y-coordinate of a point on the circle, (4, 0), gives (4 - 12)^2 + (0 - k)^2 = 10^2, or 64 + k^2 = 100. Subtracting 64 from both sides of this equation yields k^2 = 36. Therefore, k = ±√36. Since the graph shows the point `(h,k)` in the first quadrant, k must be the positive square root of 36, so k = 6.",
                     "Percent": 0
                 }
             }
@@ -1851,7 +1851,7 @@
                 "Choice": "equal:1.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the system of linear equations has no solutions. Therefore, the lines represented by the two equations are parallel. Each of the equations can be written in slope-intercept form, or y = mx + b, where m is the slope of the line and b is the y-coordinate of the line's y-intercept. Subtracting 3x/4 from both sides of 3x/4 - y/2 = 12 yields -y/2 = -3x/4 + 12. Dividing both sides of this equation by -1/2 yields y = (-3/4)/(-/12)x + 12/(-1/2), or y = 3x/2 - 24. Therefore, the slope of the line represented by the first equation in the system is 3/2. The second equation in the system can be put into slope-intercept form by first subtracting ax from both sides of ax - by = 9, then dividing both sides of the equation by -b, which yields y = ax/b - 9/b. Therefore, the slope of the line represented by the second equation in the system is a/b. Parallel lines have equal slopes. Therefore, a/b = 3/2.",
+                    "Rationale": "It's given that the system of linear equations has no solutions. Therefore, the lines represented by the two equations are parallel. Each of the equations can be written in slope-intercept form, or `y=mx+b`, where m is the slope of the line and b is the y-coordinate of the line's y-intercept. Subtracting 3x/4 from both sides of 3x/4 - y/2 = 12 yields -y/2 = -3x/4 + 12. Dividing both sides of this equation by -1/2 yields y = (-3/4)/(-/12)x + 12/(-1/2), or y = 3x/2 - 24. Therefore, the slope of the line represented by the first equation in the system is 3/2. The second equation in the system can be put into slope-intercept form by first subtracting ax from both sides of ax - by = 9, then dividing both sides of the equation by -b, which yields y = ax/b - 9/b. Therefore, the slope of the line represented by the second equation in the system is a/b. Parallel lines have equal slopes. Therefore, a/b = 3/2.",
                     "Percent": 0
                 }
             }
@@ -1917,7 +1917,7 @@
                 "Choice": "equal:3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The correct answer is 3. Let y be the number of international tourist arrivals in Russia in 2012, and let x be the number of these arrivals in 2011. It's given that y is 13.5% greater than x, or y = 1.135x. The table gives that y = 24.7, so 24.7 = 1.135x. Dividing both sides of this equation by 1.135 yields 24.7/1.135 = x, or x ≈ 21.8 million arrivals. The difference in the number of tourist arrivals between these two years is 24.7 million - 21.8 million = 2.9 million. Therefore, the value of k is 3 when rounded to the nearest integer.",
+                    "Rationale": "The correct answer is 3. Let y be the number of international tourist arrivals in Russia in 2012, and let x be the number of these arrivals in 2011. It's given that y is 13.5% greater than x, or y = 1.135x. The table gives that y = 24.7, so 24.7 = 1.135x. Dividing both sides of this equation by 1.135 yields 24.7/1.135 = x, or x ~~ 21.8 million arrivals. The difference in the number of tourist arrivals between these two years is 24.7 million - 21.8 million = 2.9 million. Therefore, the value of k is 3 when rounded to the nearest integer.",
                     "Percent": 0
                 }
             }

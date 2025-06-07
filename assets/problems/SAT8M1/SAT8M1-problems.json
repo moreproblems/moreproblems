@@ -481,7 +481,7 @@
                 "Choice": "y = 7x + 5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a line in the xy-plane can be written in slope-intercept form y = mx + b, where m is the slope of the line and (0, b) is its y-intercept. It's given that the line passes through the point (0, 5). Therefore, b = 5. It's also given that the line is parallel to the graph of y = 7x + 4, which means the line has the same slope as the graph of y = 7x + 4. The slope of the graph of y = 7x + 4 is 7. Therefore, m = 7. Substituting 7 for m and 5 for b in the equation y = mx + b yields y = 7x + 5.",
+                    "Rationale": "The equation of a line in the xy-plane can be written in slope-intercept form `y=mx+b`, where m is the slope of the line and `(0,b)` is its y-intercept. It's given that the line passes through the point (0, 5). Therefore, b = 5. It's also given that the line is parallel to the graph of y = 7x + 4, which means the line has the same slope as the graph of y = 7x + 4. The slope of the graph of y = 7x + 4 is 7. Therefore, m = 7. Substituting 7 for m and 5 for b in the equation `y=mx+b` yields y = 7x + 5.",
                     "Percent": 0
                 }
             },
@@ -537,7 +537,7 @@
                 "Choice": "y = -1.9x + 10.1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation representing a linear model can be written in the form y = a + bx, or y = bx + a, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = -1.9x + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
+                    "Rationale": "The equation representing a linear model can be written in the form `y=a+bx`, or `y=bx+a`, where b is the slope of the graph of the model and (0, a) is the y-intercept of the graph of the model. The scatterplot shows that as the x-values of the data points increase, the y-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, b < 0. The scatterplot also shows that the data points are close to the y-axis at a positive value of y. Therefore, the y-intercept of the graph of an appropriate linear model has a positive y-coordinate, which means a > 0. Of the given choices, only this choice, y = -1.9x + 10.1, has a negative value for b, the slope, and a positive value for a, the y-coordinate of the y-intercept.",
                     "Percent": 0
                 }
             },
@@ -581,7 +581,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "p = 0.96(15,000)ˣ",
+                "Choice": "p = 0.96(15,000)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Substituting 0 for x in this equation indicates the predicted population in 2005 was 0.96 rather than 15,000.",
@@ -589,7 +589,7 @@
                 }
             },
             "B": {
-                "Choice": "p = 1.04(15,000)ˣ",
+                "Choice": "p = 1.04(15,000)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Substituting 0 for x in this equation indicates the predicted population in 2005 was 1.04 rather than 15,000.",
@@ -597,7 +597,7 @@
                 }
             },
             "C": {
-                "Choice": "p = 15,000(0.96)ˣ",
+                "Choice": "p = 15,000(0.96)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This equation indicates the predicted population is decreasing, rather than increasing, by 4% each year.",
@@ -605,10 +605,10 @@
                 }
             },
             "D": {
-                "Choice": "p = 15,000(1.04)ˣ",
+                "Choice": "p = 15,000(1.04)^x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a model predicts the population of Bergen in 2005 was 15,000. The model also predicts that each year for the next 5 years, the population increased by 4% of the previous year's population. The predicted population in one of these years can be found by multiplying the predicted population from the previous year by 1.04. Since the predicted population in 2005 was 15,000, the predicted population 1 year later is 15,000(1.04). The predicted population 2 years later is this value times 1.04, which is 15,000(1.04)(1.04), or 15,000(1.04)^2. The predicted population 3 years later is this value times 1.04, or 15,000(1.04)³. More generally, the predicted population, p, x years after 2005 is represented by the equation p = 15,000(1.04)ˣ.",
+                    "Rationale": "It's given that a model predicts the population of Bergen in 2005 was 15,000. The model also predicts that each year for the next 5 years, the population increased by 4% of the previous year's population. The predicted population in one of these years can be found by multiplying the predicted population from the previous year by 1.04. Since the predicted population in 2005 was 15,000, the predicted population 1 year later is 15,000(1.04). The predicted population 2 years later is this value times 1.04, which is 15,000(1.04)(1.04), or 15,000(1.04)^2. The predicted population 3 years later is this value times 1.04, or 15,000(1.04)³. More generally, the predicted population, p, x years after 2005 is represented by the equation p = 15,000(1.04)^x.",
                     "Percent": 0
                 }
             }
@@ -686,7 +686,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of y = f(x), the solutions to f(x) = 0 correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -696,7 +696,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT8M1/media/15a.jpg",
-            "The graph of y = f(x) is shown, where the function f is defined by f(x) = ax³ + bx^2+ cx + d and a, b, c, and d are constants. For how many values of x does f(x) = 0?"
+            "The graph of `y=f(x)` is shown, where the function f is defined by f(x) = ax^3 + bx^2+ cx + d and a, b, c, and d are constants. For how many values of x does `f(x)=0`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -719,7 +719,7 @@
                 "Choice": "Three",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a value of x satisfies f(x) = 0, the graph of y = f(x) will contain a point (x, 0) and thus touch the x-axis. Since there are 3 points at which this graph touches the x-axis, there are 3 values of x for which f(x) = 0.",
+                    "Rationale": "If a value of x satisfies `f(x)=0`, the graph of `y=f(x)` will contain a point (x, 0) and thus touch the x-axis. Since there are 3 points at which this graph touches the x-axis, there are 3 values of x for which `f(x)=0`.",
                     "Percent": 0
                 }
             },
@@ -853,7 +853,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Apply knowledge that changing by a scale factor of k changes all lengths by a factor of k, changes all areas by a factor of k², and changes all volumes by a factor of k³."
+            "Apply knowledge that changing by a scale factor of `k` changes all lengths by a factor of `k`, changes all areas by a factor of `k^2`, and changes all volumes by a factor of `k^3`."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -893,7 +893,7 @@
                 "Choice": "1,849",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The area of a circle can be found by using the formula A = πr², where A is the area and r is the radius of the circle. It's given that the radius of circle A is n 3. Substituting this value for r into the formula A = πr² gives A = π(3n)^2, or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula A = πr² gives A = π(129)^2, or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
+                    "Rationale": "The area of a circle can be found by using the formula `A=pir^2`, where A is the area and r is the radius of the circle. It's given that the radius of circle A is n 3. Substituting this value for r into the formula `A=pir^2` gives A = π(3n)^2, or 9πn². It's also given that the radius of circle B is 129n. Substituting this value for r into the formula `A=pir^2` gives A = π(129)^2, or 16,641πn². Dividing the area of circle B by the area of circle A gives (16,641πn²)/(9πn²), which simplifies to 1,849. Therefore, the area of circle B is 1,849 times the area of circle A.",
                     "Percent": 0
                 }
             }
@@ -1036,7 +1036,7 @@
         "Explain": false,
         "Content": [
             ":ibox:y ≤ x + 7\ny ≥ -2x - 1",
-            "Which point (x, y) is a solution to the given system of inequalities in the xy-plane?"
+            "Which point `(x,y)` is a solution to the given system of inequalities in the xy-plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1067,7 +1067,7 @@
                 "Choice": "(14, 0)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A point (x, y) is a solution to a system of inequalities in the xy-plane if substituting the x-coordinate and the y-coordinate of the point for `x` and `y`, respectively, in each inequality makes both of the inequalities true. Substituting the x-coordinate and the y-coordinate of this choice, 14 and 0, for `x` and `y`, respectively, in the first inequality in the given system, y ≤ x + 7, yields 0 ≤ 14 + 7, or 0 ≤ 21, which is true. Substituting 14 for x and 0 for y in the second inequality in the given system, 0 ≥ -2x - 1, yields 0 ≥ -2(14) - 1, or 0 ≥ -29, which is true. Therefore, the point (14, 0) is a solution to the given system of inequalities in the xy-plane.",
+                    "Rationale": "A point `(x,y)` is a solution to a system of inequalities in the xy-plane if substituting the x-coordinate and the y-coordinate of the point for `x` and `y`, respectively, in each inequality makes both of the inequalities true. Substituting the x-coordinate and the y-coordinate of this choice, 14 and 0, for `x` and `y`, respectively, in the first inequality in the given system, y ≤ x + 7, yields 0 ≤ 14 + 7, or 0 ≤ 21, which is true. Substituting 14 for x and 0 for y in the second inequality in the given system, 0 ≥ -2x - 1, yields 0 ≥ -2(14) - 1, or 0 ≥ -29, which is true. Therefore, the point (14, 0) is a solution to the given system of inequalities in the xy-plane.",
                     "Percent": 0
                 }
             }
@@ -1227,7 +1227,7 @@
                 "Choice": "-319/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = -x^2+ 9x - 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)^2 + k, the vertex of its graph in the xy-plane is (h, k). The given quadratic equation, y = -x^2+ 9x - 100, can be rewritten as y = (x^2- 2(9/2)x + (9/2)^2) + (9/2)^2 - 100, or y = -(x - 9/2)^2 + (-319/4). Thus, the value of c is equal to -319/4.",
+                    "Rationale": "In the xy-plane, the graph of the line y = c is a horizontal line that crosses the y-axis at y = c and the graph of the quadratic equation y = -x^2+ 9x - 100 is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of c should be equal to the y-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, y = a(x - h)^2 + k, the vertex of its graph in the xy-plane is `(h,k)`. The given quadratic equation, y = -x^2+ 9x - 100, can be rewritten as y = (x^2- 2(9/2)x + (9/2)^2) + (9/2)^2 - 100, or y = -(x - 9/2)^2 + (-319/4). Thus, the value of c is equal to -319/4.",
                     "Percent": 0
                 }
             },
@@ -1260,7 +1260,7 @@
         "Explain": false,
         "Content": [
             "The functions f and g are defined by the given equations, where x ≥ 0. Which of the following equations displays, as a constant or coefficient, the maximum value of the function it defines, where x ≥ 0?",
-            ":ibox:I. f(x) = 18(1.25)ˣ + 41\nII. g(x) = 9(0.73)ˣ"
+            ":ibox:I. f(x) = 18(1.25)^x + 41\nII. g(x) = 9(0.73)^x"
         ],
         "AnswerChoices": {
             "A": {
@@ -1275,7 +1275,7 @@
                 "Choice": "II only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For the function f, since the base of the exponent, 1.25, is greater than 1, the value of (1.25)ˣ increases as x increases. Therefore, the value of 18(1.25)ˣ and the value of 18(1.25)ˣ + 41 also increase as x increases. Since f is therefore an increasing function where x ≥ 0, the function f has no maximum value. For the function g, since the base of the exponent, 0.73, is less than 1, the value of (0.73)ˣ decreases as x increases. Therefore, the value of 9(0.73)ˣ also decreases as x increases. It follows that the maximum value of g(x) for x ≥ 0 occurs when x = 0. Substituting 0 for x in the function g yields g(0) = 9(0.73)⁰ which is equivalent to g(0) = 9(1), or g(0) = 9. Therefore, the maximum value of g(x) for x ≥ 0 is 9, which appears as a coefficient in equation II. So, of the two equations given, only II displays, as a constant or coefficient, the maximum value of the function it defines, where x ≥ 0.",
+                    "Rationale": "For the function f, since the base of the exponent, 1.25, is greater than 1, the value of (1.25)^x increases as x increases. Therefore, the value of 18(1.25)^x and the value of 18(1.25)^x + 41 also increase as x increases. Since f is therefore an increasing function where x ≥ 0, the function f has no maximum value. For the function g, since the base of the exponent, 0.73, is less than 1, the value of (0.73)^x decreases as x increases. Therefore, the value of 9(0.73)^x also decreases as x increases. It follows that the maximum value of g(x) for x ≥ 0 occurs when x = 0. Substituting 0 for x in the function g yields g(0) = 9(0.73)⁰ which is equivalent to g(0) = 9(1), or g(0) = 9. Therefore, the maximum value of g(x) for x ≥ 0 is 9, which appears as a coefficient in equation II. So, of the two equations given, only II displays, as a constant or coefficient, the maximum value of the function it defines, where x ≥ 0.",
                     "Percent": 0
                 }
             },

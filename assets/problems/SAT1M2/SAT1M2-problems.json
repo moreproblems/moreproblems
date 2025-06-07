@@ -127,7 +127,7 @@
         "Explain": false,
         "Content": [
             ":box:3x = 12\n\n-3x + y = -6",
-            "The solution to the given system of equations is (x, y). What is the value of y?"
+            "The solution to the given system of equations is `(x,y)`. What is the value of y?"
         ],
         "AnswerChoices": {
             "A": {
@@ -349,7 +349,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of y = f(x), the solutions to f(x) = 0 correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -373,7 +373,7 @@
                 "Choice": "(0, -2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of the graph of a function in the xy-plane is the point on the graph where x = 0. It's given that f(x) = (1/10)x - 2. Substituting 0 for x in this equation yields f(0) = 1/10(0) - 2, or f(0) = -2. Since it's given that y = f(x), it follows that y = -2 when x = 0. Therefore, the y-intercept of the graph of `y=f(x)` in the xy-plane is (0, -2).",
+                    "Rationale": "The y-intercept of the graph of a function in the xy-plane is the point on the graph where x = 0. It's given that f(x) = (1/10)x - 2. Substituting 0 for x in this equation yields f(0) = 1/10(0) - 2, or f(0) = -2. Since it's given that `y=f(x)`, it follows that y = -2 when x = 0. Therefore, the y-intercept of the graph of `y=f(x)` in the xy-plane is (0, -2).",
                     "Percent": 0
                 }
             },
@@ -413,11 +413,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = 7x³. In the xy-plane, the graph of y = g(x) is the result of shifting the graph of y = f(x) down 2 units. Which equation defines function g?"
+            "The function f is defined by f(x) = 7x^3. In the xy-plane, the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down 2 units. Which equation defines function g?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "g(x) = (7/2)x³",
+                "Choice": "g(x) = (7/2)x^3",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -425,7 +425,7 @@
                 }
             },
             "B": {
-                "Choice": "g(x) = 7x³/²",
+                "Choice": "g(x) = 7x^3/²",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -433,18 +433,18 @@
                 }
             },
             "C": {
-                "Choice": "g(x) = 7x³ + 2",
+                "Choice": "g(x) = 7x^3 + 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation defines a function g for which the graph of y = g(x) is the result of shifting the graph of y = f(x) up, not down, 2 units.",
+                    "Rationale": "This equation defines a function g for which the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` up, not down, 2 units.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "g(x) = 7x³ - 2",
+                "Choice": "g(x) = 7x^3 - 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the graph of y = g(x) is the result of shifting the graph of y = f(x) down k units in the xy-plane, the function g can be defined by an equation of the form g(x) = f(x) - k. It's given that f(x) = 7x³ and the graph of y = g(x) is the result of shifting the graph of y = f(x) down 2 units. Substituting 7x³ for f(x) and 2 for k in the equation g(x) = f(x) - k yields g(x) = 7x³ - 2.",
+                    "Rationale": "If the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down k units in the xy-plane, the function g can be defined by an equation of the form g(x) = f(x) - k. It's given that f(x) = 7x^3 and the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down 2 units. Substituting 7x^3 for f(x) and 2 for k in the equation g(x) = f(x) - k yields g(x) = 7x^3 - 2.",
                     "Percent": 0
                 }
             }
@@ -469,14 +469,14 @@
         "Explain": false,
         "Content": [
             ":box:x + 7 = 10\n\n(x + 7)^2 = y",
-            "Which ordered pair (x, y) is a solution to the given system of equations?"
+            "Which ordered pair `(x,y)` is a solution to the given system of equations?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "(3, 100)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The solution to a system of equations is the ordered pair (x, y) that satisfies all equations in the system. It's given by the first equation in the system that x + 7 = 10. Substituting 10 for x + 7 into the second equation yields 10^2 = y, or y = 100. The x-coordinate of the solution to the system of equations can be found by subtracting 7 from both sides of the equation x + 7 = 10, which yields x = 3. Therefore, the ordered pair (3, 100) is a solution to the given system of equations.",
+                    "Rationale": "The solution to a system of equations is the ordered pair `(x,y)` that satisfies all equations in the system. It's given by the first equation in the system that x + 7 = 10. Substituting 10 for x + 7 into the second equation yields 10^2 = y, or y = 100. The x-coordinate of the solution to the system of equations can be found by subtracting 7 from both sides of the equation x + 7 = 10, which yields x = 3. Therefore, the ordered pair (3, 100) is a solution to the given system of equations.",
                     "Percent": 0
                 }
             },
@@ -524,19 +524,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (7x³ + 7x) - (6x³ - 3x)?"
+            "Which expression is equivalent to (7x^3 + 7x) - (6x^3 - 3x)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x³ + 10x",
+                "Choice": "x^3 + 10x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applying the distributive property, the given expression can be written as 7x³ + 7x - 6x³ + 3x. Grouping like terms in this expression yields (7x³ - 6x³) + (7x + 3x). Combining like terms in this expression yields x³ + 10x.",
+                    "Rationale": "Applying the distributive property, the given expression can be written as 7x^3 + 7x - 6x^3 + 3x. Grouping like terms in this expression yields (7x^3 - 6x^3) + (7x + 3x). Combining like terms in this expression yields x^3 + 10x.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "-13x³ + 10x",
+                "Choice": "-13x^3 + 10x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -544,7 +544,7 @@
                 }
             },
             "C": {
-                "Choice": "-13x³ + 4x",
+                "Choice": "-13x^3 + 4x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -552,7 +552,7 @@
                 }
             },
             "D": {
-                "Choice": "x³ + 4x",
+                "Choice": "x^3 + 4x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -856,7 +856,7 @@
             "Problem-Solving & Data Analysis"
         ],
         "SubTopics": [
-            "Understand and use the relationship between percent change and growth factor (5% and 1.05, for example); include percentages greater than or equal to 100%."
+            "Understand and use the relationship between percent change and growth factor (`5%` and `1.05`, for example); include percentages greater than or equal to `100%`."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1107,7 +1107,7 @@
                 "Choice": "8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "he standard form of an equation of a circle in the xy-plane is (x - h)^2 + (y - k)^2 = r², where the coordinates of the center of the circle are (h, k) and the length of the radius of the circle is r. For the circle in the xy-plane with equation (x - 5)^2 + (y - 3)^2, it follows that r² = 16. Taking the square root of both sides of this equation yields r = 4 or r = -4. Because r represents the length of the radius of the circle and this length must be positive, r = 4. Therefore, the radius of the circle is 4. The diameter of a circle is twice the length of the radius of the circle. Thus, 2(4) yields 8. Therefore, the diameter of the circle is 8.",
+                    "Rationale": "he standard form of an equation of a circle in the xy-plane is `(x-h)^2+(y-k)^2=r^2`, where the coordinates of the center of the circle are `(h,k)` and the length of the radius of the circle is r. For the circle in the xy-plane with equation (x - 5)^2 + (y - 3)^2, it follows that r² = 16. Taking the square root of both sides of this equation yields r = 4 or r = -4. Because r represents the length of the radius of the circle and this length must be positive, r = 4. Therefore, the radius of the circle is 4. The diameter of a circle is twice the length of the radius of the circle. Thus, 2(4) yields 8. Therefore, the diameter of the circle is 8.",
                     "Percent": 0
                 }
             },
@@ -1159,7 +1159,7 @@
                 }
             },
             "B": {
-                "Choice": "f(x) = 80(1.6)ˣ",
+                "Choice": "f(x) = 80(1.6)^x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1273,7 +1273,7 @@
                 "Choice": ":box:10x + 7y = 1\n\nax + 2by = 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Two lines are perpendicular if their slopes are negative reciprocals, meaning that the slope of the first line is equal to -1 divided by the slope of the second line. Each equation in the given pair of equations can be written in slope-intercept form, y = mx + b, where m is the slope of the graph of the equation in the xy-plane and (0, b) is the y-intercept. For the first equation, 5x + 7y = 1, subtracting 5x from both sides gives 7y = -5x + 1, and dividing both sides of this equation by 7 gives y = -(5/7)x + 2/7. Therefore, the slope of the graph of this equation is -5/7. For the second equation, ax + by = 1, subtracting ax from both sides gives by = -ax + 1, and dividing both sides of this equation by b gives y = -(a/b)x + 1/b. Therefore, the slope of the graph of this equation is -a/b. Since the graph of the given pair of equations is a pair of perpendicular lines, the slope of the graph of the second equation, -a/b, must be the negative reciprocal of the slope of the graph of the first equation, -5/7. The negative reciprocal of -5/7 is -1/(-5/7), or 7/5. Therefore, -a/b = 7/5, or a/b = -7/5. Similarly, rewriting the equations in this choice in slope-intercept form yields y = -(10/7)x + 1/7 and y = -(a/2b)x + 1/2b. It follows that the slope of the graph of the first equation in this choice is -10/7 and the slope of the graph of the second equation in this choice is -a/2b. Since a/b = -7/5, -a/2b is equal to -(1/2)(-7/5), or 7/10. Since 7/10 is the negative reciprocal of -10/7, the pair of equations in this choice represents a pair of perpendicular lines.",
+                    "Rationale": "Two lines are perpendicular if their slopes are negative reciprocals, meaning that the slope of the first line is equal to -1 divided by the slope of the second line. Each equation in the given pair of equations can be written in slope-intercept form, `y=mx+b`, where m is the slope of the graph of the equation in the xy-plane and `(0,b)` is the y-intercept. For the first equation, 5x + 7y = 1, subtracting 5x from both sides gives 7y = -5x + 1, and dividing both sides of this equation by 7 gives y = -(5/7)x + 2/7. Therefore, the slope of the graph of this equation is -5/7. For the second equation, ax + by = 1, subtracting ax from both sides gives by = -ax + 1, and dividing both sides of this equation by b gives y = -(a/b)x + 1/b. Therefore, the slope of the graph of this equation is -a/b. Since the graph of the given pair of equations is a pair of perpendicular lines, the slope of the graph of the second equation, -a/b, must be the negative reciprocal of the slope of the graph of the first equation, -5/7. The negative reciprocal of -5/7 is -1/(-5/7), or 7/5. Therefore, -a/b = 7/5, or a/b = -7/5. Similarly, rewriting the equations in this choice in slope-intercept form yields y = -(10/7)x + 1/7 and y = -(a/2b)x + 1/2b. It follows that the slope of the graph of the first equation in this choice is -10/7 and the slope of the graph of the second equation in this choice is -a/2b. Since a/b = -7/5, -a/2b is equal to -(1/2)(-7/5), or 7/10. Since 7/10 is the negative reciprocal of -10/7, the pair of equations in this choice represents a pair of perpendicular lines.",
                     "Percent": 0
                 }
             },
@@ -1321,7 +1321,7 @@
                 "Choice": "equal:289",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A quadratic equation of the form ax^2+ bx + c = 0,where a, b, and c are constants, has no real solutions when the value of the discriminant, b² - 4ac, is less than 0. In the given equation, x^2- 34x + c = 0, a = 1 and b= -34. Therefore, the discriminant of the given equation can be expressed as (-34)^2 - 4(1)(c), or 1,156 - 4c. It follows that the given equation has no real solutions when 1,156 - 4c < 0. Adding 4c to both sides of this inequality yields 1,156 < 4c. Dividing both sides of this inequality by 4 yields 289 < c, or c > 289. It's given that the equation x^2- 34 + c = 0 has no real solutions when c > n. Therefore, the least possible value of n is 289.",
+                    "Rationale": "A quadratic equation of the form `ax^2+bx+c=0`,where a, b, and c are constants, has no real solutions when the value of the discriminant, `b^2-4ac`, is less than 0. In the given equation, x^2- 34x + c = 0, a = 1 and b= -34. Therefore, the discriminant of the given equation can be expressed as (-34)^2 - 4(1)(c), or 1,156 - 4c. It follows that the given equation has no real solutions when 1,156 - 4c < 0. Adding 4c to both sides of this inequality yields 1,156 < 4c. Dividing both sides of this inequality by 4 yields 289 < c, or c > 289. It's given that the equation x^2- 34 + c = 0 has no real solutions when c > n. Therefore, the least possible value of n is 289.",
                     "Percent": 0
                 }
             }
