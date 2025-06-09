@@ -16,11 +16,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 20 buttons in a bag: 8 white buttons, 2 orange buttons, and 10 brown buttons. If one of these buttons is selected at random, what is the probability of selecting a white button?"
+            "There are `20` buttons in a bag: `8` white buttons, `2` orange buttons, and `10` brown buttons. If one of these buttons is selected at random, what is the probability of selecting a white button?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/20",
+                "Choice": "`2/20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the probability of selecting an orange button from the bag.",
@@ -28,15 +28,15 @@
                 }
             },
             "B": {
-                "Choice": "8/20",
+                "Choice": "`8/20`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that there are 20 buttons in a bag and 8 of the buttons are white. If one button from the bag is selected at random, the probability of selecting a white button is the number of white buttons in the bag divided by the total number of buttons in the bag. Therefore, if one button from the bag is selected at random, the probability of selecting a white button is 8/20.",
+                    "Rationale": "It's given that there are `20` buttons in a bag and `8` of the buttons are white. If one button from the bag is selected at random, the probability of selecting a white button is the number of white buttons in the bag divided by the total number of buttons in the bag. Therefore, if one button from the bag is selected at random, the probability of selecting a white button is `8/20`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "10/20",
+                "Choice": "`10/20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the probability of selecting a brown button from the bag.",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "12/20",
+                "Choice": "`12/20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the probability of selecting a button that isn't white from the bag.",
@@ -71,38 +71,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An employee at a restaurant prepares sandwiches and salads. It takes the employee 1.5 minutes to prepare a sandwich and 1.9 minutes to prepare a salad. The employee spends a total of 46.1 minutes preparing x sandwiches and y salads. Which equation represents this situation?"
+            "An employee at a restaurant prepares sandwiches and salads. It takes the employee `1.5text( minutes)` to prepare a sandwich and `1.9text( minutes)` to prepare a salad. The employee spends a total of `46.1text( minutes)` preparing `x` sandwiches and `y` salads. Which equation represents this situation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1.9x + 1.5y = 46.1",
+                "Choice": "`1.9x+1.5y=46.1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a situation where it takes the employee 1.9 minutes, rather than 1.5 minutes, to prepare a sandwich and 1.5 minutes, rather than 1.9 minutes, to prepare a salad.",
+                    "Rationale": "This equation represents a situation where it takes the employee `1.9text( minutes)`, rather than `1.5text( minutes)`, to prepare a sandwich and `1.5text( minutes)`, rather than `1.9text( minutes)`, to prepare a salad.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "1.5x + 1.9y = 46.1",
+                "Choice": "`1.5x+1.9y=46.1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the employee takes 1.5 minutes to prepare a sandwich. Multiplying 1.5 by the number of sandwiches, x, yields 1.5x, the amount of time the employee spends preparing x sandwiches. It's also given that the employee takes 1.9 minutes to prepare a salad. Multiplying 1.9 by the number of salads, y, yields 1.9y, the amount of time the employee spends preparing y salads. It follows that the total amount of time, in minutes, the employee spends preparing x sandwiches and y salads is 1.5x + 1.9y. It's given that the employee spends a total of 46.1 minutes preparing x sandwiches and y salads. Thus, the equation 1.5x + 1.9y = 46.1 represents this situation.",
+                    "Rationale": "It's given that the employee takes `1.5text( minutes)` to prepare a sandwich. Multiplying `1.5` by the number of sandwiches, `x`, yields `1.5x`, the amount of time the employee spends preparing `x` sandwiches. It's also given that the employee takes `1.9text( minutes)` to prepare a salad. Multiplying `1.9` by the number of salads, `y`, yields `1.9y`, the amount of time the employee spends preparing `y` salads. It follows that the total amount of time, in `text(minutes)`, the employee spends preparing `x` sandwiches and y salads is `1.5x+1.9y`. It's given that the employee spends a total of `46.1text( minutes)` preparing `x` sandwiches and `y` salads. Thus, the equation `1.5x+1.9y=46.1` represents this situation.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "x + y = 46.1",
+                "Choice": "`x+y=46.1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a situation where it takes the employee 1 minute, rather than 1.5 minutes, to prepare a sandwich and 1 minute, rather than 1.9 minutes, to prepare a salad.",
+                    "Rationale": "This equation represents a situation where it takes the employee `1text( minute)`, rather than `1.5text( minutes)`, to prepare a sandwich and `1` minute, rather than `1.9text( minutes)`, to prepare a salad.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "30.7x + 24.3y = 46.1",
+                "Choice": "`30.7x+24.3y=46.1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a situation where it takes the employee 30.7 minutes, rather than 1.5 minutes, to prepare a sandwich and 24.3 minutes, rather than 1.9 minutes, to prepare a salad.",
+                    "Rationale": "This equation represents a situation where it takes the employee `30.7text( minutes)`, rather than `1.5text( minutes)`, to prepare a sandwich and `24.3text( minutes)`, rather than `1.9text( minutes)`, to prepare a salad.",
                     "Percent": 0
                 }
             }
@@ -126,19 +126,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In a box of pens, the ratio of black pens to red pens is 8 to 1. There are 40 black pens in the box. How many red pens are in the box?"
+            "In a box of pens, the ratio of black pens to red pens is `8` to `1`. There are `40` black pens in the box. How many red pens are in the box?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the ratio of black pens to red pens is 8 to 1. Therefore, there are 1/8 as many red pens as black pens in the box. It's also given that there are 40 black pens in the box. Therefore, the number of red pens is 1/8 of the 40 black pens. Thus, the number of red pens is 40(1/8), or 5.",
+                    "Rationale": "It's given that the ratio of black pens to red pens is `8` to `1`. Therefore, there are `1/8` as many red pens as black pens in the box. It's also given that there are `40` black pens in the box. Therefore, the number of red pens is `1/8` of the `40` black pens. Thus, the number of red pens is `40(1/8)`, or `5`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the number of black pens in the box for every red pen.",
@@ -146,7 +146,7 @@
                 }
             },
             "C": {
-                "Choice": "40",
+                "Choice": "`40`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the number of black pens in the box.",
@@ -154,10 +154,10 @@
                 }
             },
             "D": {
-                "Choice": "320",
+                "Choice": "`320`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the number of red pens in the box if the ratio of black pens to red pens is 1 to 8.",
+                    "Rationale": "This is the number of red pens in the box if the ratio of black pens to red pens is `1` to `8`.",
                     "Percent": 0
                 }
             }
@@ -181,38 +181,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by the equation f(x) = 100x + 2. What is the value of `f(x)` when x = 9?"
+            "The function f is defined by the equation `f(x)=100x+2`. What is the value of `f(x)` when `x=9`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "111",
+                "Choice": "`111`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of `f(x)` when x = 1.09.",
+                    "Rationale": "This is the value of `f(x)` when `x=1.09`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "118",
+                "Choice": "`118`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of `f(x)` when x = 1.16.",
+                    "Rationale": "This is the value of `f(x)` when `x=1.16`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "900",
+                "Choice": "`900`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of `f(x)` when x = 8.98.",
+                    "Rationale": "This is the value of `f(x)` when `x=8.98`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "902",
+                "Choice": "`902`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting 9 for x in the given equation yields f(9) = 100(9) + 2, or f(9) = 902. Therefore, the value of `f(x)` when x = 9 is 902.",
+                    "Rationale": "Substituting `9` for `x` in the given equation yields `f(9)=100(9)+2`, or `f(9)=902`. Therefore, the value of `f(x)` when `x=9` is `902`.",
                     "Percent": 0
                 }
             }
@@ -236,11 +236,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The length, y, of a white whale was 162 centimeters cm when it was born and increased an average of 4.8 cm per month for the first 12 months after it was born. Which equation best represents this situation, where x is the number of months after the whale was born and y is the length, in cm, of the whale?"
+            "The length, `y`, of a white whale was `162text( centimeters)` (`text(cm)`) when it was born and increased an average of `4.8text( cm per month)` for the first `12text( months)` after it was born. Which equation best represents this situation, where `x` is the number of months after the whale was born and `y` is the length, in `text(cm)`, of the whale?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 162x",
+                "Choice": "`y=162x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -248,7 +248,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 162x + 162",
+                "Choice": "`y=162x+162`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -256,7 +256,7 @@
                 }
             },
             "C": {
-                "Choice": "y = 4.8x + 4.8",
+                "Choice": "`y=4.8x+4.8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -264,10 +264,10 @@
                 }
             },
             "D": {
-                "Choice": "y = 4.8x + 162",
+                "Choice": "`y=4.8x+162`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the length of the whale was 162 cm when it was born and that its length increased an average of 4.8 cm per month for the first 12 months after it was born. Since x represents the number of months after the whale was born, the total increase in the whale's length, in cm, is 4.8 times x, or 4.8x. The length of the whale y, in cm, can be found by adding the whale's length at birth, 162 cm, to the total increase in length, 4.8x cm. Therefore, the equation that best represents this situation is y = 4.8x + 162.",
+                    "Rationale": "It's given that the length of the whale was `162text( cm)` when it was born and that its length increased an average of `4.8text( cm per month)` for the first `12text( months)` after it was born. Since `x` represents the number of months after the whale was born, the total increase in the whale's length, in `text(cm)`, is `4.8` times `x`, or `4.8x`. The length of the whale `y`, in `text(cm)`, can be found by adding the whale's length at birth, `162text( cm)`, to the total increase in length, `4.8xtext( cm)`. Therefore, the equation that best represents this situation is `y=4.8x+162`.",
                     "Percent": 0
                 }
             }
@@ -291,14 +291,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The perimeter of an isosceles triangle is 83 inches. Each of the two congruent sides of the triangle has a length of 24 inches. What is the length, in inches, of the third side?"
+            "The perimeter of an isosceles triangle is `83text( inches)`. Each of the two congruent sides of the triangle has a length of `24text( inches)`. What is the length, in `text(inches)`, of the third side?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:35",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the perimeter of an isosceles triangle is 83 inches and that each of the two congruent sides has a length of 24 inches. The perimeter of a triangle is the sum of the lengths of its three sides. The equation 24 + 24 + x = 83 can be used to represent this situation, where x is the length, in inches, of the third side. Combining like terms on the left-hand side of this equation yields 48 + x = 83. Subtracting 48 from both sides of this equation yields x = 35. Therefore, the length, in inches, of the third side is 35.",
+                    "Rationale": "It's given that the perimeter of an isosceles triangle is `83text( inches)` and that each of the two congruent sides has a length of `24text( inches)`. The perimeter of a triangle is the sum of the lengths of its three sides. The equation `24+24+x=83` can be used to represent this situation, where `x` is the length, in `text(inches)`, of the third side. Combining like terms on the left-hand side of this equation yields `48+x=83`. Subtracting `48` from both sides of this equation yields `x=35`. Therefore, the length, in `text(inches)`, of the third side is `35`.",
                     "Percent": 0
                 }
             }
@@ -322,14 +322,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If 2 + x = 60, what is the value of 16 + 8x?"
+            "If `2+x=60`, what is the value of `16+8x`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:480",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying both sides of the given equation by 8 yields 8(2 + x) = 8(60), or 16 + 8x = 480. Therefore, if 2 + x = 60, the value of 16 + 8x is 480.",
+                    "Rationale": "Multiplying both sides of the given equation by `8` yields `8(2+x)=8(60)`, or `16+8x=480`. Therefore, if `2+x=60`, the value of `16+8x` is `480`.",
                     "Percent": 0
                 }
             }
@@ -353,11 +353,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The population density of Worthington is 290 people per square mile. Worthington has a population of 92,800 people. What is the area, in square miles, of Worthington?"
+            "The population density of Worthington is `290text( people per square mile)`. Worthington has a population of `92,800` people. What is the area, in `text(square miles)`, of Worthington?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "102,400",
+                "Choice": "`102,400`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -365,7 +365,7 @@
                 }
             },
             "B": {
-                "Choice": "93,090",
+                "Choice": "`93,090`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -373,15 +373,15 @@
                 }
             },
             "C": {
-                "Choice": "320",
+                "Choice": "`320`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the population density of Worthington is 290 people per square mile and Worthington has a population of 92,800 people. Therefore, the area of Worthington is 92,800 people (1 square mile/290 people), which is equivalent to (92,800 square miles/290), or 320 square miles.",
+                    "Rationale": "It's given that the population density of Worthington is `290text( people per square mile)` and Worthington has a population of `92,800` people. Therefore, the area of Worthington is `(92,800text( people))((1text( square mile))/(290text( people)))`, which is equivalent to `((92,800text( square miles))/290)`, or `320text( square miles)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "32",
+                "Choice": "`32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -399,7 +399,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -409,19 +409,19 @@
         "Explain": false,
         "Content": [
             "problems/PSAT891M2/media/9a.jpg",
-            "What is the y-intercept of the graph shown?"
+            "What is the `text(y)`-intercept of the graph shown?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, -6)",
+                "Choice": "`(0,-6)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of a graph in the xy-plane is the point `(x,y)` on the graph where x = 0. For the graph shown, at x = 0, the corresponding value of y is -6. Therefore, the y-intercept of the graph shown is (0, -6).",
+                    "Rationale": "The `text(y)`-intercept of a graph in the `text(xy)`-plane is the point `(x,y)` on the graph where `x=0`. For the graph shown, at `x=0`, the corresponding value of `y` is `-6`. Therefore, the `text(y)`-intercept of the graph shown is `(0,-6)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "(-6, 0)",
+                "Choice": "`(-6,0)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -429,7 +429,7 @@
                 }
             },
             "C": {
-                "Choice": "(0, 0)",
+                "Choice": "`(0,0)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -437,7 +437,7 @@
                 }
             },
             "D": {
-                "Choice": "(-5, -5)",
+                "Choice": "`(-5,-5)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -464,13 +464,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph shown models the number of candy bars a certain machine wraps with a label in x seconds.",
+            "The graph shown models the number of candy bars a certain machine wraps with a label in `xtext( seconds)`.",
             "problems/PSAT891M2/media/10a.jpg",
             "According to the graph, what is the estimated number of candy bars the machine wraps with a label per second?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -478,15 +478,15 @@
                 }
             },
             "B": {
-                "Choice": "40",
+                "Choice": "`40`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For the graph shown, the x-axis represents time, in seconds, and the y-axis represents the number of candy bars wrapped. The slope of a line in the xy-plane is the change in y for each 1-unit increase in x. It follows that the slope of the graph shown represents the estimated number of candy bars the machine wraps with a label per second. The slope, m, of a line in the xy-plane can be found using any two points, `(x_1,y_1)` and `(x_2,y_2)`, on the line and the slope formula m = (y₂ - y₁)(x₂ - x₁). The graph shown passes through the points (0, 0) and (2, 80). Substituting these points for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields m = (80 - 0)/(2 - 0), which is equivalent to m = 80/2, or m = 40. Therefore, the estimated number of candy bars the machine wraps with a label per second is 40.",
+                    "Rationale": "For the graph shown, the `text(x)`-axis represents time, in `text(seconds)`, and the `text(y)`-axis represents the number of candy bars wrapped. The slope of a line in the `text(xy)`-plane is the change in `y` for each `1text(-unit)` increase in `x`. It follows that the slope of the graph shown represents the estimated number of candy bars the machine wraps with a label per second. The slope, `m`, of a line in the `text(xy)`-plane can be found using any two points, `(x_1,y_1)` and `(x_2,y_2)`, on the line and the slope formula `m = (y_2-y_1)(x_2-x_1)`. The graph shown passes through the points `(0,0)` and `(2,80)`. Substituting these points for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields `m=(80-0)/(2-0)`, which is equivalent to `m=80/2`, or `m=40`. Therefore, the estimated number of candy bars the machine wraps with a label per second is `40`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "78",
+                "Choice": "`78`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -494,7 +494,7 @@
                 }
             },
             "D": {
-                "Choice": "80",
+                "Choice": "`80`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -521,11 +521,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In a right triangle, the measure of one of the acute angles is 51°. What is the measure, in degrees, of the other acute angle?"
+            "In a right triangle, the measure of one of the acute angles is `51°`. What is the measure, in `text(degrees)`, of the other acute angle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -533,15 +533,15 @@
                 }
             },
             "B": {
-                "Choice": "39",
+                "Choice": "`39`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The sum of the measures of the interior angles of a triangle is 180 degrees. Since the triangle is a right triangle, it has one angle that measures 90 degrees. Therefore, the sum of the measures, in degrees, of the remaining two angles is 180 - 90, or 90. It's given that the measure of one of the acute angles in the triangle is 51 degrees. Therefore, the measure, in degrees, of the other acute angle is 90 - 51, or 39.",
+                    "Rationale": "The sum of the measures of the interior angles of a triangle is `180text( degrees)`. Since the triangle is a right triangle, it has one angle that measures `90text( degrees)`. Therefore, the sum of the measures, in `text(degrees)`, of the remaining two angles is `180-90`, or `90`. It's given that the measure of one of the acute angles in the triangle is `51text( degrees)`. Therefore, the measure, in `text(degrees)`, of the other acute angle is `90-51`, or `39`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "49",
+                "Choice": "`49`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -549,10 +549,10 @@
                 }
             },
             "D": {
-                "Choice": "51",
+                "Choice": "`51`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the measure, in degrees, of the acute angle whose measure is given.",
+                    "Rationale": "This is the measure, in `text(degrees)`, of the acute angle whose measure is given.",
                     "Percent": 0
                 }
             }
@@ -576,12 +576,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:2, 9, 14, 23, 32",
+            ":ibox:`2`, `9`, `14`, `23`, `32`",
             "What is the mean of the data shown?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "14",
+                "Choice": "`14`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the median, not the mean, of the data shown.",
@@ -589,15 +589,15 @@
                 }
             },
             "B": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The mean of a set of data values is the sum of all the data values divided by the number of data values in the set. The sum of the data values shown is 2 + 9 + 14 + 23 + 32, or 80. Since there are 5 data values in the set, the mean of the data shown is 80/5, or 16.",
+                    "Rationale": "The mean of a set of data values is the sum of all the data values divided by the number of data values in the set. The sum of the data values shown is `2+9+14+23+32`, or `80`. Since there are `5` data values in the set, the mean of the data shown is `80/5`, or `16`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "17",
+                "Choice": "`17`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -605,7 +605,7 @@
                 }
             },
             "D": {
-                "Choice": "32",
+                "Choice": "`32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the maximum, not the mean, of the data shown.",
@@ -632,14 +632,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = 6 + √x the value of f(36)?"
+            "The function `f` is defined by `f(x)=6+sqrt(x)` the value of `f(36)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of f(36) is the value of `f(x)` when x = 36. Substituting 36 for x in the given equation yields f(36) = 6 + √36, which is equivalent to f(36) = 6 + 6, or f(36) = 12. Thus, the value of f(36) is 12.",
+                    "Rationale": "The value of `f(36)` is the value of `f(x)` when `x=36`. Substituting `36` for `x` in the given equation yields `f(36)=6+sqrt(36)`, which is equivalent to `f(36)=6+6`, or `f(36)=12`. Thus, the value of `f(36)` is `12`.",
                     "Percent": 0
                 }
             }
@@ -663,15 +663,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x + 3y = 29\n3y = 11",
-            "The solution to the given system of equations is `(x,y)`. What is the value of x?"
+            ":ibox:`x+3y=29`\n`3y=11`",
+            "The solution to the given system of equations is `(x,y)`. What is the value of `x`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:18",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given by the second equation in the system that 3y = 11. Substituting 11 for 3y in the first equation in the system, x + 3y = 29, yields x + 11 = 29. Subtracting 11 from both sides of this equation yields x = 18.",
+                    "Rationale": "It's given by the second equation in the system that `3y=11`. Substituting `11` for `3y` in the first equation in the system, `x+3y=29`, yields `x+11=29`. Subtracting `11` from both sides of this equation yields `x=18`.",
                     "Percent": 0
                 }
             }
@@ -695,38 +695,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "On a car trip, Rhett and Jessica each drove for part of the trip, and the total distance they drove was under 220 miles. Rhett drove at an average speed of 35 miles per hour (mph), and Jessica drove at an average speed of 40 mph. Which of the following inequalities represents this situation, where r is the number of hours Rhett drove and j is the number of hours Jessica drove?"
+            "On a car trip, Rhett and Jessica each drove for part of the trip, and the total distance they drove was under `220text( miles)`. Rhett drove at an average speed of `35text( miles per hour)` (`text(mph)`), and Jessica drove at an average speed of `40text( mph)`. Which of the following inequalities represents this situation, where `r` is the number of hours Rhett drove and `j` is the number of hours Jessica drove?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "35r + 40j > 220",
+                "Choice": "`35r+40jgt220`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a situation in which the total distance Rhett and Jessica drove was over, rather than under, 220 miles.",
+                    "Rationale": "This inequality represents a situation in which the total distance Rhett and Jessica drove was over, rather than under, `220text( miles)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "35r + 40j < 220",
+                "Choice": "`35r+40jlt220`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that Rhett drove at an average speed of 35 miles per hour and that he drove for r hours. Multiplying 35 miles per hour by r hours yields 35r miles, or the distance that Rhett drove. It's also given that Jessica drove at an average speed of 40 miles per hour and that she drove for j hours. Multiplying 40 miles per hour by j hours yields 40j miles, or the distance that Jessica drove. The total distance, in miles, that Rhett and Jessica drove can be represented by the expression 35r + 40j. It's given that the total distance they drove was under 220 miles. Therefore, the inequality 35r + 40j < 220 represents this situation.",
+                    "Rationale": "It's given that Rhett drove at an average speed of `35text( miles per hour)` and that he drove for `rtext( hours)`. Multiplying `35text( miles per hour)` by `rtext( hours)` yields `35rtext( miles)`, or the distance that Rhett drove. It's also given that Jessica drove at an average speed of `40text( miles per hour)` and that she drove for `jtext( hours)`. Multiplying `40text( miles per hour)` by `jtext( hours)` yields `40jtext( miles)`, or the distance that Jessica drove. The total distance, in `text(miles)`, that Rhett and Jessica drove can be represented by the expression `35r+40j`. It's given that the total distance they drove was under `220text( miles)`. Therefore, the inequality `35r+40jlt220` represents this situation.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "40r + 35j > 220",
+                "Choice": "`40r+35jgt220`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a situation in which Rhett drove at an average speed of 40, rather than 35, miles per hour, Jessica drove at an average speed of 35, rather than 40, miles per hour, and the total distance they drove was over, rather than under, 220 miles.",
+                    "Rationale": "This inequality represents a situation in which Rhett drove at an average speed of `40`, rather than `35`, `text(miles per hour)`, Jessica drove at an average speed of `35`, rather than `40`, `text(miles per hour)`, and the total distance they drove was over, rather than under, `220text( miles)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "40r + 35j < 220",
+                "Choice": "`40r+35jlt220`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a situation in which Rhett drove at an average speed of 40, rather than 35, miles per hour, and Jessica drove at an average speed of 35, rather than 40, miles per hour.",
+                    "Rationale": "This inequality represents a situation in which Rhett drove at an average speed of `40`, rather than `35`, `text(miles per hour)`, and Jessica drove at an average speed of `35`, rather than `40`, `text(miles per hour)`.",
                     "Percent": 0
                 }
             }
@@ -750,39 +750,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:b = 42cf",
-            "The given equation relates the positive numbers b, c, and f. Which equation correctly expresses c in terms of b and f?"
+            ":ibox:`b=42cf`",
+            "The given equation relates the positive numbers `b`, `c`, and `f`. Which equation correctly expresses `c` in terms of `b` and `f`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "c = b/42f",
+                "Choice": "`c=b/(42f)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation b = 42cf relates the positive numbers b, c, and f. Dividing each side of the given equation by 42f yields b/42f = c, or c = b/42f. Thus, the equation c = b/42f correctly expresses c in terms of b and f.",
+                    "Rationale": "It's given that the equation `b=42cf` relates the positive numbers `b`, `c`, and `f`. Dividing each side of the given equation by `42f` yields `b/(42f)=c`, or `c=b/(42f)`. Thus, the equation `c=b/(42f)` correctly expresses `c` in terms of `b` and `f`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "c = (b - 42)/f",
+                "Choice": "`c=(b-42)/f`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation can be rewritten as b = cf + 42.",
+                    "Rationale": "This equation can be rewritten as `b=cf+42`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "c = 42bf",
+                "Choice": "`c=42bf`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation can be rewritten as b = c/42f.",
+                    "Rationale": "This equation can be rewritten as `b=c/(42f)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "c = 42 - b - f",
+                "Choice": "`c=42-b-f`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation can be rewritten as b = 42 - c - f.",
+                    "Rationale": "This equation can be rewritten as `b=42-c-f`.",
                     "Percent": 0
                 }
             }
@@ -806,11 +806,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Davio bought some potatoes and celery. The potatoes cost $0.69 per pound, and the celery cost $0.99 per pound. If Davio spent $5.34 in total and bought twice as many pounds of celery as pounds of potatoes, how many pounds of celery did Davio buy?"
+            "Davio bought some potatoes and celery. The potatoes cost `$0.69text( per pound)`, and the celery cost `$0.99text( per pound)`. If Davio spent `$5.34` in total and bought twice as many pounds of celery as pounds of potatoes, how many pounds of celery did Davio buy?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This is the number of pounds of potatoes, not the number of pounds of celery, Davio bought.",
@@ -818,7 +818,7 @@
                 }
             },
             "B": {
-                "Choice": "2.5",
+                "Choice": "`2.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -826,7 +826,7 @@
                 }
             },
             "C": {
-                "Choice": "2.67",
+                "Choice": "`2.67`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -834,10 +834,10 @@
                 }
             },
             "D": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let p represent the number of pounds of potatoes and let c represent the number of pounds of celery that Davio bought. It's given that potatoes cost $0.69 per pound and celery costs $0.99 per pound. If Davio spent $5.34 in total, then the equation 0.69p + 0.99c = 5.34 represents this situation. It's also given that Davio bought twice as many pounds of celery as pounds of potatoes; therefore, c = 2p. Substituting 2p for c in the equation 0.69p + 0.99c = 5.34 yields 0.69p + 0.99(2p) = 5.34, which is equivalent to 0.69 1.98p = 5.34, or 2.67p = 5.34. Dividing both sides of this equation by 2.67 yields p = 2. Substituting 2 for p in the equation c = 2p yields c = 2(2), or c = 4. Therefore, Davio bought 4 pounds of celery.",
+                    "Rationale": "Let `p` represent the number of pounds of potatoes and let `c` represent the number of pounds of celery that Davio bought. It's given that potatoes cost `$0.69text( per pound)` and celery costs `$0.99text( per pound)`. If Davio spent `$5.34` in total, then the equation `0.69p+0.99c=5.34` represents this situation. It's also given that Davio bought twice as many pounds of celery as pounds of potatoes; therefore, `c=2p`. Substituting `2p` for `c` in the equation `0.69p+0.99c=5.34` yields `0.69p+0.99(2p)=5.34`, which is equivalent to `0.69+1.98p=5.34`, or `2.67p=5.34`. Dividing both sides of this equation by `2.67` yields `p=2`. Substituting `2` for `p` in the equation `c=2p` yields `c=2(2)`, or `c=4`. Therefore, Davio bought `4text( pounds)` of celery.",
                     "Percent": 0
                 }
             }
@@ -867,7 +867,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The line of best fit shown has a negative slope, not a positive slope.",
@@ -875,7 +875,7 @@
                 }
             },
             "B": {
-                "Choice": "0.7",
+                "Choice": "`0.7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The line of best fit shown has a negative slope, not a positive slope.",
@@ -883,15 +883,15 @@
                 }
             },
             "C": {
-                "Choice": "-0.7",
+                "Choice": "`-0.7`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A line of best fit is shown in the scatterplot such that as the value of x increases, the value of y decreases. It follows that the slope of the line of best fit shown is negative. The slope of a line in the xy-plane that passes through the points `(x_1,y_1)` and `(x_2,y_2)` can be calculated as (y₂ - y₁)(x₂ - x₁). The line of best fit shown passes approximately through the points (0, 8) and (10, 1). Substituting (0, 8) for `(x_1,y_1)` and (10, 1) for `(x_2,y_2)` in (y₂ - y₁)(x₂ - x₁) yields the slope of the line being approximately (1 - 8)/(10 - 0), which is equivalent to -7/10, or -0.7. Therefore, of the given choices, -0.7 is the closest to the slope of this line of best fit.",
+                    "Rationale": "A line of best fit is shown in the scatterplot such that as the value of `x` increases, the value of `y` decreases. It follows that the slope of the line of best fit shown is negative. The slope of a line in the `text(xy)`-plane that passes through the points `(x_1,y_1)` and `(x_2,y_2)` can be calculated as `(y_2-y_1)(x_2-x_1)`. The line of best fit shown passes approximately through the points `(0,8)` and `(10,1)`. Substituting `(0,8)` for `(x_1,y_1)` and `(10,1)` for `(x_2,y_2)` in `(y_2-y_1)(x_2-x_1)` yields the slope of the line being approximately `(1-8)/(10-0)`, which is equivalent to `-7/10`, or `-0.7`. Therefore, of the given choices, `-0.7` is the closest to the slope of this line of best fit.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "-7",
+                "Choice": "`-7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -918,38 +918,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Scientists collected fallen acorns that each housed a colony of the ant species P. ohioensis and analyzed each colony's structure. For any of these colonies, if the colony has x worker ants, the equation y = 0.67x + 2.6, where 20 ≤ x ≤ 110, gives the predicted number of larvae, y, in the colony. If one of these colonies has 58 worker ants, which of the following is closest to the predicted number of larvae in the colony?"
+            "Scientists collected fallen acorns that each housed a colony of the ant species P. ohioensis and analyzed each colony's structure. For any of these colonies, if the colony has x worker ants, the equation `y=0.67x+2.6`, where `20lexle110`, gives the predicted number of larvae, `y`, in the colony. If one of these colonies has `58` worker ants, which of the following is closest to the predicted number of larvae in the colony?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "41",
+                "Choice": "`41`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": " It’s given that the equation `y=0.67x+2.6`, where `20lexle110`, gives the predicted number of larvae, `y`, in a colony of ants if the colony has `x` worker ants. If one of these colonies has `58` worker ants, the predicted number of larvae in that colony can be found by substituting `58` for `x` in the given equation. Substituting `58` for `x` in the given equation yields `y=0.67(58)+2.6`, or `1=41.46`. Of the given choices, `41` is closest to the predicted number of larvae in the colony.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "61",
+                "Choice": "`61`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is closest to the predicted number of larvae in a colony with 87 worker ants.",
+                    "Rationale": "This is closest to the predicted number of larvae in a colony with `87` worker ants.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "83",
+                "Choice": "`83`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is closest to the number of worker ants for which the predicted number of larvae in a colony is 58.",
+                    "Rationale": "This is closest to the number of worker ants for which the predicted number of larvae in a colony is `58`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "190",
+                "Choice": "`190`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is closest to the predicted number of larvae in a colony with 280 worker ants.",
+                    "Rationale": "This is closest to the predicted number of larvae in a colony with `280` worker ants.",
                     "Percent": 0
                 }
             }
@@ -973,14 +973,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What number is 40% greater than 115?"
+            "What number is `40%` greater than `115`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:161",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For a number to be 40% greater than 115, it follows that the number is (100% of 115) + (40% of 115), which can be written as 100/100(115) + 40/100(115). This expression is equivalent to 1(115) + 0.4(115), or 1.4(115), which is equal to 161. Therefore, 161 is 40% greater than 115.",
+                    "Rationale": "For a number to be `40%` greater than `115`, it follows that the number is `(100%text( of )115) + (40%text( of )115)`, which can be written as` 100/100(115) + 40/100(115)`. This expression is equivalent to `1(115)+0.4(115)`, or `1.4(115)`, which is equal to `161`. Therefore, `161` is `40%` greater than `115`.",
                     "Percent": 0
                 }
             }
@@ -1004,14 +1004,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "For the values j and k, the ratio of j to k is 11 to 12. If j is multiplied by 17, what is k multiplied by in order to maintain the same ratio?"
+            "For the values `j` and `k`, the ratio of `j` to `k` is `11` to `12`. If `j` is multiplied by `17`, what is `k` multiplied by in order to maintain the same ratio?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:17",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If one value is multiplied by a number, then the other value must be multiplied by the same number in order to maintain the same ratio. It's given that j is multiplied by 17. Therefore, in order to maintain the same ratio, k must also be multiplied by 17.",
+                    "Rationale": "If one value is multiplied by a number, then the other value must be multiplied by the same number in order to maintain the same ratio. It's given that `j` is multiplied by `17`. Therefore, in order to maintain the same ratio, `k` must also be multiplied by `17`.",
                     "Percent": 0
                 }
             }
@@ -1035,11 +1035,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Immanuel purchased a certain rare coin on January 1. The function f(x) = 65(1.03)^x, where 0 ≤ x ≤ 10, gives the predicted value, in dollars, of the rare coin x years after Immanuel purchased it. What is the best interpretation of the statement “ f(8) is approximately equal to 82” in this context?"
+            "Immanuel purchased a certain rare coin on `text(January 1)`. The function `f(x)=65(1.03)^x`, where `0lexle10`, gives the predicted value, in `text(dollars)`, of the rare coin `xtext( years)` after Immanuel purchased it. What is the best interpretation of the statement “`f(8)` is approximately equal to `82`” in this context?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "When the rare coin's predicted value is approximately 82 dollars, it is 8% greater than the predicted value, in dollars, on January 1 of the previous year.",
+                "Choice": "When the rare coin's predicted value is approximately `82text( dollars)`, it is `8%` greater than the predicted value, in `text(dollars)`, on `text(January 1)` of the previous year.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1047,7 +1047,7 @@
                 }
             },
             "B": {
-                "Choice": "When the rare coin's predicted value is approximately 82 dollars, it is 8 times the predicted value, in dollars, on January 1 of the previous year.",
+                "Choice": "When the rare coin's predicted value is approximately `82text( dollars)`, it is `8` times the predicted value, in `text(dollars)`, on `text(January 1)` of the previous year.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1055,7 +1055,7 @@
                 }
             },
             "C": {
-                "Choice": "From the day Immanuel purchased the rare coin to 8 years after Immanuel purchased the coin, its predicted value increased by a total of approximately 82 dollars.",
+                "Choice": "From the day Immanuel purchased the rare coin to `8text( years)` after Immanuel purchased the coin, its predicted value increased by a total of approximately `82text( dollars)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1063,10 +1063,10 @@
                 }
             },
             "D": {
-                "Choice": "8 years after Immanuel purchased the rare coin, its predicted value is approximately 82 dollars.",
+                "Choice": "8 years after Immanuel purchased the rare coin, its predicted value is approximately `82text( dollars)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function f(x) = 65(1.03)^x gives the predicted value, in dollars, of a certain rare coin x years after Immanuel purchased it. It follows that f(x) represents the predicted value, in dollars, of the coin x years after Immanuel purchased it. Since the value of f(8) is the value of `f(x)` when x = 8, it follows that “f(8) is approximately equal to 82” means that f(x) is approximately equal to 82 when x = 8. Therefore, the best interpretation of the statement “f(8) is approximately equal to 82” in this context is 8 years after Immanuel purchased the rare coin, its predicted value is approximately 82 dollars.",
+                    "Rationale": "It's given that the function `f(x)=65(1.03)^x` gives the predicted value, in `text(dollars)`, of a certain rare coin `xtext( years)` after Immanuel purchased it. It follows that `f(x)` represents the predicted value, in `text(dollars)`, of the coin `xtext( years)` after Immanuel purchased it. Since the value of `f(8)` is the value of `f(x)` when `x=8`, it follows that “`f(8)` is approximately equal to `82`” means that `f(x)` is approximately equal to `82` when `x=8`. Therefore, the best interpretation of the statement “`f(8)` is approximately equal to `82`” in this context is `8text( years)` after Immanuel purchased the rare coin, its predicted value is approximately `82text( dollars)`.",
                     "Percent": 0
                 }
             }
@@ -1091,19 +1091,19 @@
         "Explain": false,
         "Content": [
             "problems/PSAT891M2/media/23a.jpg",
-            "The table shows three values of x and their corresponding values of y, where n is a constant, for the linear relationship between `x` and `y`. What is the slope of the line that represents this relationship in the xy-plane?"
+            "The table shows three values of `x` and their corresponding values of `y`, where `n` is a constant, for the linear relationship between `x` and `y`. What is the slope of the line that represents this relationship in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-92/3",
+                "Choice": "`-92/3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope, m, of a line in the xy-plane can be found using two points on the line, `(x_1,y_1)` and `(x_2,y_2)`, and the slope formula m = (y₂ - y₁)(x₂ - x₁). Based on the given table, the line representing the relationship between `x` and `y` in the xy-plane passes through the points (-6, n + 184), (-3, n + 92), and (0, n), where n is a constant. Substituting two of these points, (-3, n + 92) and (0, n) for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields m = (n -(n + 92))/(0 - (-3)), which is equivalent to m = (n - n - 92)/(0 + 3), or m = -92/3. Therefore, the slope of the line that represents this relationship in the xy-plane is -92/3.",
+                    "Rationale": "The slope, `m`, of a line in the `text(xy)`-plane can be found using two points on the line, `(x_1,y_1)` and `(x_2,y_2)`, and the slope formula `m = (y_2-y_1)(x_2-x_1)`. Based on the given table, the line representing the relationship between `x` and `y` in the `text(xy)`-plane passes through the points `(-6,n+184),` `(-3,n+92)`, and `(0,n)`, where n is a constant. Substituting two of these points, `(-3,n+92)` and `(0,n)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields `m=(n-(n+92))/(0-(-3))`, which is equivalent to `m=(n-n-92)/(0+3)`, or `m=-92/3`. Therefore, the slope of the line that represents this relationship in the `text(xy)`-plane is `-92/3`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "-3/92",
+                "Choice": "`-3/92`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1111,7 +1111,7 @@
                 }
             },
             "C": {
-                "Choice": "(n + 92)/-3",
+                "Choice": "`(n+92)/(-3)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1119,7 +1119,7 @@
                 }
             },
             "D": {
-                "Choice": "(2n - 92)/3",
+                "Choice": "`(2n-92)/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual errors.",
@@ -1147,38 +1147,38 @@
         "Explain": false,
         "Content": [
             "problems/PSAT891M2/media/24a.jpg",
-            "The figure shown is a right circular cylinder with a radius of r and height of h. A second right circular cylinder (not shown) has a volume that is 392 times as large as the volume of the cylinder shown. Which of the following could represent the radius R, in terms of r, and the height H, in terms of h, of the second cylinder?"
+            "The figure shown is a right circular cylinder with a radius of `r` and height of `h`. A second right circular cylinder (not shown) has a volume that is `392` times as large as the volume of the cylinder shown. Which of the following could represent the radius `R`, in terms of `r`, and the height `H`, in terms of `h`, of the second cylinder?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "R = 8r and H = 7h",
+                "Choice": "`R=8r` and `H=7h`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 8r for R and 7h for H in the expression that represents the volume of the second cylinder yields π(8r)^2(7h), or π(64r²)(7h), which is equivalent to π(448r²h), or 448(πr²h). This expression is equal to 448, not 392, times the volume of the cylinder shown.",
+                    "Rationale": "Substituting `8r` for `R` and `7h` for `H` in the expression that represents the volume of the second cylinder yields `pi(8r)^2(7h)`, or `pi(64r^2)(7h)`, which is equivalent to `pi(448r^2h)`, or `448(pir^2h)`. This expression is equal to `448`, not `392`, times the volume of the cylinder shown.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "R = 8r and H = 49h",
+                "Choice": "`R=8r` and `H=49h`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 8r for R and 49h for H in the expression that represents the volume of the second cylinder yields π(8r)^2(49h), or π(64r²)(49h), which is equivalent to π(3,136r²h), or 3,136(πr²h). This expression is equal to 3,136, not 392, times the volume of the cylinder shown.",
+                    "Rationale": "Substituting `8r` for `R` and `49h` for `H` in the expression that represents the volume of the second cylinder yields `pi(8r)^2(49h)`, or `pi(64r^2)(49h)`, which is equivalent to `pi(3,136r^2h)`, or `3,136(pir^2h)`. This expression is equal to `3,136`, not `392`, times the volume of the cylinder shown.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "R = 7r and H = 8h",
+                "Choice": "`R=7r` and `H=8h`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The volume of a right circular cylinder is equal to πa²b, where a is the radius of a base of the cylinder and b is the height of the cylinder. It's given that the cylinder shown has a radius of r and a height of h. It follows that the volume of the cylinder shown is equal to πr²h. It's given that the second right circular cylinder has a radius of R and a height of H. It follows that the volume of the second cylinder is equal to πR²H. This choice gives R = 7r and H = 8h. Substituting 7r for R and 8h for H in the expression that represents the volume of the second cylinder yields π(7r)^2(8h), or π(49r²)(8h), which is equivalent to π(392r²h), or 392(πr²h). This expression is equal to 392 times the volume of the cylinder shown, πr²h. Therefore, R = 7r and H = 8h could represent the radius R, in terms of r, and the height H, in terms of h, of the second cylinder.",
+                    "Rationale": "The volume of a right circular cylinder is equal to `pia^2b`, where `a` is the radius of a base of the cylinder and `b` is the height of the cylinder. It's given that the cylinder shown has a radius of `r` and a height of `h`. It follows that the volume of the cylinder shown is equal to `pir^2h`. It's given that the second right circular cylinder has a radius of `R` and a height of `H`. It follows that the volume of the second cylinder is equal to `piR^2H`. This choice gives `R=7r` and `H=8h`. Substituting `7r` for `R` and `8h` for `H` in the expression that represents the volume of the second cylinder yields `pi(7r)^2(8h)`, or `pi(49r²)(8h)`, which is equivalent to `pi(392r^2h)`, or `392(pir^2h)`. This expression is equal to `392` times the volume of the cylinder shown, `pir^2h`. Therefore, `R=7r` and `H=8h` could represent the radius `R`, in terms of `r`, and the height `H`, in terms of `h`, of the second cylinder.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "R = 49r and H = 8h",
+                "Choice": "`R=49r` and `H=8h`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 49r for R and 8h for H in the expression that represents the volume of the second cylinder yields π(49r)^2(8h), or π(2,401r²)(8h), which is equivalent to π(19,208r²h), or 19,208(πr²h). This expression is equal to 19,208, not 392, times the volume of the cylinder shown.",
+                    "Rationale": "Substituting `49r` for `R` and `8h` for `H` in the expression that represents the volume of the second cylinder yields `pi(49r)^2(8h)`, or `pi(2,401r^2)(8h)`, which is equivalent to `pi(19,208r^2h)`, or `19,208(pir^2h)`. This expression is equal to `19,208`, not `392`, times the volume of the cylinder shown.",
                     "Percent": 0
                 }
             }
@@ -1202,11 +1202,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Each side of a 30-sided polygon has one of three lengths. The number of sides with length 8 centimeters (cm) is 5 times the number of sides n with length 3 cm. There are 6 sides with length 4 cm. Which equation must be true for the value of n?"
+            "Each side of a `30`-sided polygon has one of three lengths. The number of sides with length `8text( centimeters)` (`text(cm)`) is `5` times the number of sides `n` with length `3text( cm)`. There are `6` sides with length `4text( cm)`. Which equation must be true for the value of `n`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5n + 6 = 30",
+                "Choice": "`5n+6=30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual or calculation errors.",
@@ -1214,15 +1214,15 @@
                 }
             },
             "B": {
-                "Choice": "6n + 6 = 30",
+                "Choice": "`6n+6=30`",
                 "Key": {
                     "Correct": true,
-                "Rationale": "It's given that each side of a 30-sided polygon has one of three lengths. It's also given that the number of sides with length 8 centimeters (cm) is 5 times the number of sides n with length 3 cm. Therefore, there are 5 × n, or 5n, sides with length 8 cm. It's also given that there are 6 sides with length 4 cm. Therefore, the number of 3 cm, 4 cm, and 8 cm sides are n, 6, and 5n, respectively. Since there are a total of 30 sides, the equation n + 6 + 5n = 30 represents this situation. Combining like terms on the left-hand side of this equation yields 6n + 6 = 30. Therefore, the equation that must be true for the value of n is 6n + 6 = 30.",
+                "Rationale": "It's given that each side of a `30`-sided polygon has one of three lengths. It's also given that the number of sides with length 8 centimeters (`text(cm)`) is `5` times the number of sides n with length `3text( cm)`. Therefore, there are `5xxn`, or `5n`, sides with length `8text( cm)`. It's also given that there are `6` sides with length `4text( cm)`. Therefore, the number of `3text( cm)`, `4text( cm)`, and `8text( cm)` sides are `n`, `6`, and `5n`, respectively. Since there are a total of `30` sides, the equation `n+6+5n=30` represents this situation. Combining like terms on the left-hand side of this equation yields `6n+6=30`. Therefore, the equation that must be true for the value of `n` is `6n+6=30`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "8n + 3n + 4n = 30",
+                "Choice": "`8n+3n+4n=30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual or calculation errors.",
@@ -1230,7 +1230,7 @@
                 }
             },
             "D": {
-                "Choice": "8(5n) + 3n + 4(6) = 30",
+                "Choice": "`8(5n)+3n+4(6)=30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual or calculation errors.",
@@ -1257,7 +1257,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Data set F consists of 55 integers between 170 and 290. Data set G consists of all the integers in data set F as well as the integer 10. Which of the following must be less for data set F than for data set G?",
+            "Data set `F` consists of `55` integers between `170` and `290`. Data set `G` consists of all the integers in data set `F` as well as the integer `10`. Which of the following must be less for data set `F` than for data set `G`?",
             ":ibox:I. The mean\nII. The median"
         ],
         "AnswerChoices": {
@@ -1289,7 +1289,7 @@
                 "Choice": "Neither I nor II",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that data set F consists of 55 integers between 170 and 290 and data set G consists of all the integers in data set F as well as the integer 10. Since the integer 10 is less than all the integers in data set F, the mean of data set G must be less than the mean of data set F. Thus, the mean of data set F isn't less than the mean of data set G. When a data set is in ascending order, the median is between the two middle values when there is an even number of values and the median is the middle value when there is an odd number of values. It follows that the median of data set F is either greater than or equal to the median of data set G. Therefore, the median of data set F isn't less than the median of data set G. Thus, neither the mean nor the median must be less for data set F than for data set G.",
+                    "Rationale": "It's given that data set `F` consists of `55` integers between `170` and `290` and data set `G` consists of all the integers in data set `F` as well as the integer `10`. Since the integer `10` is less than all the integers in data set `F`, the mean of data set `G` must be less than the mean of data set `F`. Thus, the mean of data set `F` isn't less than the mean of data set `G`. When a data set is in ascending order, the median is between the two middle values when there is an even number of values and the median is the middle value when there is an odd number of values. It follows that the median of data set `F` is either greater than or equal to the median of data set `G`. Therefore, the median of data set `F` isn't less than the median of data set `G`. Thus, neither the mean nor the median must be less for data set `F` than for data set `G`.",
                     "Percent": 0
                 }
             }
@@ -1313,14 +1313,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A right circular cone has a height of 22 centimeters (cm) and a base with a diameter of 6 cm. The volume of this cone is nπ cm³. What is the value of n?"
+            "A right circular cone has a height of `22text( centimeters)` (`text(cm)`) and a base with a diameter of `6text( cm)`. The volume of this cone is `npitext( cm)^3`. What is the value of `n`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:66",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the right circular cone has a height of 22 centimeters (cm) and a base with a diameter of 6 cm. Since the diameter of the base of the cone is 6 cm, the radius of the base is 3 cm. The volume V, in cm³, of a right circular cone can be found using the formula `V=1/3pir^2h`, where h is the height, in cm, and r is the radius, in cm, of the base of the cone. Substituting 22 for h and 3 for r in this formula yields V = (1/3)π(3)^2(22), or V = 66π. Therefore, the volume of the cone is 66 cm³. It's given that the volume of the cone is nπ cm³. Therefore, the value of n is 66.",
+                    "Rationale": "It's given that the right circular cone has a height of `22text( centimeters)` (`text(cm)`) and a base with a diameter of `6text( cm)`. Since the diameter of the base of the cone is `6text( cm)`, the radius of the base is `3text( cm)`. The volume `V`, in `text(cm)^3`, of a right circular cone can be found using the formula `V=1/3pir^2h`, where `h` is the height, in `text(cm)`, and `r` is the radius, in `text(cm)`, of the base of the cone. Substituting `22` for `h` and `3` for `r` in this formula yields `V=1/3pi(3)^2(22)`, or `V=66pi`. Therefore, the volume of the cone is `66text( cm)^3`. It's given that the volume of the cone is nπ `text(cm)^3`. Therefore, the value of `n` is `66`.",
                     "Percent": 0
                 }
             }

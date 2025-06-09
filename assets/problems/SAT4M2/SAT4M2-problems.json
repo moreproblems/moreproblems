@@ -239,14 +239,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The point (8, 2) in the xy-plane is a solution to which of the following systems of inequalities?"
+            "The point (8, 2) in the `text(xy)`-plane is a solution to which of the following systems of inequalities?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": ":box:x > 0\n\ny > 0",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given point, (8, 2), is located in the first quadrant in the xy-plane. The system of inequalities in this choice represents all the points in the first quadrant in the xy-plane. Therefore, (8, 2) is a solution to the system of inequalities in this choice.",
+                    "Rationale": "The given point, (8, 2), is located in the first quadrant in the `text(xy)`-plane. The system of inequalities in this choice represents all the points in the first quadrant in the `text(xy)`-plane. Therefore, (8, 2) is a solution to the system of inequalities in this choice.",
                     "Percent": 0
                 }
             },
@@ -254,7 +254,7 @@
                 "Choice": ":box:x > 0\n\ny < 0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This system of inequalities represents all the points in the fourth quadrant, not the first quadrant, in the xy-plane.",
+                    "Rationale": "This system of inequalities represents all the points in the fourth quadrant, not the first quadrant, in the `text(xy)`-plane.",
                     "Percent": 0
                 }
             },
@@ -262,7 +262,7 @@
                 "Choice": ":box:x < 0\n\ny > 0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This system of inequalities represents all the points in the second quadrant, not the first quadrant, in the xy-plane.",
+                    "Rationale": "This system of inequalities represents all the points in the second quadrant, not the first quadrant, in the `text(xy)`-plane.",
                     "Percent": 0
                 }
             },
@@ -270,7 +270,7 @@
                 "Choice": ":box:x < 0\n\ny < 0",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This system of inequalities represents all the points in the third quadrant, not the first quadrant, in the xy-plane.",
+                    "Rationale": "This system of inequalities represents all the points in the third quadrant, not the first quadrant, in the `text(xy)`-plane.",
                     "Percent": 0
                 }
             }
@@ -677,14 +677,14 @@
         "Explain": false,
         "Content": [
             ":box:f(x) = 2x + 3",
-            "For the given function f, the graph of `y=f(x)` in the xy-plane is parallel to line j. What is the slope of line j?"
+            "For the given function f, the graph of `y=f(x)` in the `text(xy)`-plane is parallel to line j. What is the slope of line j?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that function f is defined by f(x) = 2x + 3. Therefore, the equation representing the graph of `y=f(x)` in the xy-plane is y = 2x + 3, and the graph is a line. For a linear equation in the form `y=mx+b`, m represents the slope of the line. Since the value of m in the equation y = 2x + 3 is 2, the slope of the line defined by function f is 2. It's given that line j is parallel to the line defined by function f. The slopes of parallel lines are equal. Therefore, the slope of line j is also 2.",
+                    "Rationale": "It's given that function f is defined by f(x) = 2x + 3. Therefore, the equation representing the graph of `y=f(x)` in the `text(xy)`-plane is y = 2x + 3, and the graph is a line. For a linear equation in the form `y=mx+b`, m represents the slope of the line. Since the value of m in the equation y = 2x + 3 is 2, the slope of the line defined by function f is 2. It's given that line j is parallel to the line defined by function f. The slopes of parallel lines are equal. Therefore, the slope of line j is also 2.",
                     "Percent": 0
                 }
             }
@@ -883,7 +883,7 @@
                 "Choice": "-130",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the y-coordinate of the y-intercept of the graph of `y=f(x)` in the xy-plane.",
+                    "Rationale": "This is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane.",
                     "Percent": 0
                 }
             },
@@ -891,7 +891,7 @@
                 "Choice": "-13",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is one of the x-coordinates of the x-intercepts of the graph of `y=f(x)` in the xy-plane.",
+                    "Rationale": "This is one of the `text(x)`-coordinates of the `text(x)`-intercepts of the graph of `y=f(x)` in the `text(xy)`-plane.",
                     "Percent": 0
                 }
             },
@@ -907,7 +907,7 @@
                 "Choice": "-3/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that f(x) = (x - 10)(x + 13), which can be rewritten as f(x) = x^2+ 3x - 130. Since the coefficient of the x^2-term is positive, the graph of `y=f(x)` in the xy-plane opens upward and reaches its minimum value at its vertex. The x-coordinate of the vertex is the value of x such that f(x) reaches its minimum. For an equation in the form f(x) = ax^2+ bx + c, where a, b, and c are constants, the x-coordinate of the vertex is -b/2a. For the equation f(x) = x^2+ 3x - 130, a = 1, b = 3, and c = -130. It follows that the x-coordinate of the vertex is -3/2(1), or -3/2. Therefore, f(x) reaches its minimum when the value of x is -3/2.",
+                    "Rationale": "It's given that f(x) = (x - 10)(x + 13), which can be rewritten as f(x) = x^2+ 3x - 130. Since the coefficient of the x^2-term is positive, the graph of `y=f(x)` in the `text(xy)`-plane opens upward and reaches its minimum value at its vertex. The `text(x)`-coordinate of the vertex is the value of x such that f(x) reaches its minimum. For an equation in the form f(x) = ax^2+ bx + c, where a, b, and c are constants, the `text(x)`-coordinate of the vertex is -b/2a. For the equation f(x) = x^2+ 3x - 130, a = 1, b = 3, and c = -130. It follows that the `text(x)`-coordinate of the vertex is -3/2(1), or -3/2. Therefore, f(x) reaches its minimum when the value of x is -3/2.",
                     "Percent": 0
                 }
             }
@@ -931,14 +931,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f(x) = (x - 7)^2 + 3 gives a metal ball's height above the ground f(x), in inches, x seconds after it started moving on a track, where 0 ≤ x ≤ 10. Which of the following is the best interpretation of the vertex of the graph of `y=f(x)` in the xy-plane?"
+            "The function f(x) = (x - 7)^2 + 3 gives a metal ball's height above the ground f(x), in inches, x seconds after it started moving on a track, where 0 ≤ x ≤ 10. Which of the following is the best interpretation of the vertex of the graph of `y=f(x)` in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "The metal ball's minimum height was 3 inches above the ground.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of a quadratic equation in the form y = a(x - h)^2 + k, where a, h, and k are positive constants, is a parabola that opens upward with vertex `(h,k)`. The given function f(x) = (1/9)(x - 7)^2 + 3 is in the form y = a(x - h)^2 + k, where `y=f(x)`, a = 1/9, h = 7, and k = 3. Therefore, the graph of `y=f(x)` is a parabola that opens upward with vertex (7, 3). Since the parabola opens upward, the vertex is the lowest point on the graph. It follows that the y-coordinate of the vertex of the graph of `y=f(x)` is the minimum value of f(x). Therefore, the minimum value of f(x) is 3. It's given that f(x) = (1/9)(x - 7)^2 + 3 represents the metal ball's height above the ground, in inches, x seconds after it started moving on a track. Therefore, the best interpretation of the vertex of the graph of `y=f(x)` is that the metal ball's minimum height was 3 inches above the ground.",
+                    "Rationale": "The graph of a quadratic equation in the form y = a(x - h)^2 + k, where a, h, and k are positive constants, is a parabola that opens upward with vertex `(h,k)`. The given function f(x) = (1/9)(x - 7)^2 + 3 is in the form y = a(x - h)^2 + k, where `y=f(x)`, a = 1/9, h = 7, and k = 3. Therefore, the graph of `y=f(x)` is a parabola that opens upward with vertex (7, 3). Since the parabola opens upward, the vertex is the lowest point on the graph. It follows that the `text(y)`-coordinate of the vertex of the graph of `y=f(x)` is the minimum value of f(x). Therefore, the minimum value of f(x) is 3. It's given that f(x) = (1/9)(x - 7)^2 + 3 represents the metal ball's height above the ground, in inches, x seconds after it started moving on a track. Therefore, the best interpretation of the vertex of the graph of `y=f(x)` is that the metal ball's minimum height was 3 inches above the ground.",
                     "Percent": 0
                 }
             },
@@ -1057,7 +1057,7 @@
                 "Choice": "Zero",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A solution to a system of equations must satisfy each equation in the system. It follows that if an ordered pair `(x,y)` is a solution to the system, the point `(x,y)` lies on the graph in the xy-plane of each equation in the system. The only point that lies on each graph of the system of two linear equations shown is their intersection point (8, 2). It follows that if a new graph of three linear equations is created using the system of equations shown and the graph of 4 16 x y + = -, this system has either zero solutions or one solution, the point (8, 2). Substituting 8 for x and 2 for y in the equation x + 4y = -16 yields 8 + 4(2) = -16, or 16 = -16. Since this equation is not true, the point (8, 2) does not lie on the graph of x + 4y = -16. Therefore, (8, 2) is not a solution to the system of three equations. It follows that there are zero solutions to this system.",
+                    "Rationale": "A solution to a system of equations must satisfy each equation in the system. It follows that if an ordered pair `(x,y)` is a solution to the system, the point `(x,y)` lies on the graph in the `text(xy)`-plane of each equation in the system. The only point that lies on each graph of the system of two linear equations shown is their intersection point (8, 2). It follows that if a new graph of three linear equations is created using the system of equations shown and the graph of 4 16 x y + = -, this system has either zero solutions or one solution, the point (8, 2). Substituting 8 for x and 2 for y in the equation x + 4y = -16 yields 8 + 4(2) = -16, or 16 = -16. Since this equation is not true, the point (8, 2) does not lie on the graph of x + 4y = -16. Therefore, (8, 2) is not a solution to the system of three equations. It follows that there are zero solutions to this system.",
                     "Percent": 0
                 }
             },
@@ -1208,7 +1208,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Describe how a change to the equation representing a circle affects the graph of the circle in the xy-plane or how a change to the graph of a circle affects the equation that represents the circle."
+            "Describe how a change to the equation representing a circle affects the graph of the circle in the `text(xy)`-plane or how a change to the graph of a circle affects the equation that represents the circle."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1217,7 +1217,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The equation x^2+ (y - 1)^2 = 49 represents circle A. Circle B is obtained by shifting circle A down 2 units in the xy-plane. Which of the following equations represents circle B?"
+            "The equation x^2+ (y - 1)^2 = 49 represents circle A. Circle B is obtained by shifting circle A down 2 units in the `text(xy)`-plane. Which of the following equations represents circle B?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1248,7 +1248,7 @@
                 "Choice": "x^2+ (y + 1)^2 = 49",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph in the xy-plane of an equation of the form `(x-h)^2+(y-k)^2=r^2` is a circle with center `(h,k)` and a radius of length r. It's given that circle A is represented by x^2+ (y - 1)^2 = 49, which can be rewritten as x^2+ (y - 1)^2 = 7^2. Therefore, circle A has center (0, 1) and a radius of length 7. Shifting circle A down two units is a rigid vertical translation of circle A that does not change its size or shape. Since circle B is obtained by shifting circle A down two units, it follows that circle B has the same radius as circle A, and for each point `(x,y)` on circle A, the point (x, y - 2) lies on circle B. Moreover, if `(h,k)` is the center of circle A, then (h, k - 2) is the center of circle B. Therefore, circle B has a radius of 7 and the center of circle B is (0, 1 - 2), or (0, -1). Thus, circle B can be represented by the equation x^2+ (y + 1)^2 = 7^2, or x^2+ (y + 1)^2 = 49.",
+                    "Rationale": "The graph in the `text(xy)`-plane of an equation of the form `(x-h)^2+(y-k)^2=r^2` is a circle with center `(h,k)` and a radius of length r. It's given that circle A is represented by x^2+ (y - 1)^2 = 49, which can be rewritten as x^2+ (y - 1)^2 = 7^2. Therefore, circle A has center (0, 1) and a radius of length 7. Shifting circle A down two units is a rigid vertical translation of circle A that does not change its size or shape. Since circle B is obtained by shifting circle A down two units, it follows that circle B has the same radius as circle A, and for each point `(x,y)` on circle A, the point (x, y - 2) lies on circle B. Moreover, if `(h,k)` is the center of circle A, then (h, k - 2) is the center of circle B. Therefore, circle B has a radius of 7 and the center of circle B is (0, 1 - 2), or (0, -1). Thus, circle B can be represented by the equation x^2+ (y + 1)^2 = 7^2, or x^2+ (y + 1)^2 = 49.",
                     "Percent": 0
                 }
             }

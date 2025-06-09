@@ -67,8 +67,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:\tGiven:∆DEF is located on the coordinate plane.\n\t\t/_D measures 136°",
-            "If the triangle is rotated 90° counterclockwise about the origin to form ∆D'E'F', what is the measure of /_D'?"
+            ":ibox:\tGiven:`triangleDEF` is located on the coordinate plane.\n\t\t/_D measures 136°",
+            "If the triangle is rotated 90° counterclockwise about the origin to form `triangleD'E'F'`, what is the measure of /_D'?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1578,7 +1578,7 @@
             "Indicate for each transformation both which quadrant new points will be located and whether the new image will be parallel to the original."
         ],
         "AnswerChoices": {
-            "A:reflecting over the x-axis:4": {
+            "A:reflecting over the `text(x)`-axis:4": {
                 "Choice": "4:IV",
                 "Key": {
                     "Correct": true,
@@ -1586,7 +1586,7 @@
                     "Percent": 0
                 }
             },
-            "A:reflecting over the x-axis:5": {
+            "A:reflecting over the `text(x)`-axis:5": {
                 "Choice": "5:Parallel",
                 "Key": {
                     "Correct": true,
@@ -1594,7 +1594,7 @@
                     "Percent": 0
                 }
             },
-            "B:reflecting over the y-axis:2": {
+            "B:reflecting over the `text(y)`-axis:2": {
                 "Choice": "2:II",
                 "Key": {
                     "Correct": true,
@@ -1602,7 +1602,7 @@
                     "Percent": 0
                 }
             },
-            "B:reflecting over the y-axis:5": {
+            "B:reflecting over the `text(y)`-axis:5": {
                 "Choice": "5:Parallel",
                 "Key": {
                     "Correct": true,
@@ -1792,7 +1792,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Reflect triangle ABC across the x-axis, followed by a translation 5 units left.",
+                "Choice": "Reflect triangle ABC across the `text(x)`-axis, followed by a translation 5 units left.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1800,7 +1800,7 @@
                 }
             },
             "B": {
-                "Choice": "Reflect triangle ABC across the x-axis, followed by a reflection over the y-axis.",
+                "Choice": "Reflect triangle ABC across the `text(x)`-axis, followed by a reflection over the `text(y)`-axis.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1816,7 +1816,7 @@
                 }
             },
             "D": {
-                "Choice": "Rotate triangle ABC 90 degrees counterclockwise with the center of rotation at point (0, 0), followed by a reflection across the x-axis.",
+                "Choice": "Rotate triangle ABC 90 degrees counterclockwise with the center of rotation at point (0, 0), followed by a reflection across the `text(x)`-axis.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2201,7 +2201,7 @@
         "Content": [
             "Triangle ABC is given.",
             "problems/MS22G8M/media/39a.jpg",
-            "Triangle ABC is rotated 90° clockwise around the origin, resulting in ∆A'B'C'. What are the coordinates of B'?"
+            "Triangle ABC is rotated 90° clockwise around the origin, resulting in `triangleA'B'C'`. What are the coordinates of B'?"
         ],
         "AnswerChoices": {
             "A": {
@@ -3149,7 +3149,7 @@
                     "Percent": 0
                 }
             },
-            "B:Parallelogram EFGHis reflected over the y-axis and translated 8 units down.": {
+            "B:Parallelogram EFGHis reflected over the `text(y)`-axis and translated 8 units down.": {
                 "Choice": "2:Does not show EFGH maps to E'F'G'H'",
                 "Key": {
                     "Correct": true,
@@ -3157,7 +3157,7 @@
                     "Percent": 0
                 }
             },
-            "C:Parallelogram EFGH is reflected over the x-axis and then reflected over the y-axis.": {
+            "C:Parallelogram EFGH is reflected over the `text(x)`-axis and then reflected over the `text(y)`-axis.": {
                 "Choice": "1:Shows EFGH maps to E'F'G'H'",
                 "Key": {
                     "Correct": true,
@@ -3289,7 +3289,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a reflection over the x-axis, followed by a translation 3 units right and 3 units up",
+                "Choice": "a reflection over the `text(x)`-axis, followed by a translation 3 units right and 3 units up",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

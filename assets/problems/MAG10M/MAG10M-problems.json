@@ -69,9 +69,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider ∆XYZ.",
+            "Consider `triangleXYZ`.",
             "problems/MAG10M/media/2a.jpg",
-            "A compass and a straightedge were used to perform a construction given ∆XYZ. This diagram shows the completed construction.",
+            "A compass and a straightedge were used to perform a construction given `triangleXYZ`. This diagram shows the completed construction.",
             "problems/MAG10M/media/2b.jpg",
             "The following steps were used to complete the construction.",
             ":ibox:• An arc was drawn, with the compass, from point X through the sides of /_YXZ to create point F and point E.\n\n• Two arcs were drawn, with the same compass setting, one from point F and one from point E. The arcs intersect to create point P.\n\n• A ray was drawn, with the straightedge, from point X through point P.\n\n• The intersection of XP and YZ was labeled point G.",
@@ -87,7 +87,7 @@
                 }
             },
             "B": {
-                "Choice": "XG is a median of ∆XYZ.",
+                "Choice": "XG is a median of `triangleXYZ`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -317,7 +317,7 @@
         "Content": [
             "Triangle ABC is shown on this coordinate plane.",
             "problems/MAG10M/media/6a.jpg",
-            "Triangle ABC will be reflected across the x-axis and then translated 3 units up to create its image, triangle A'B'C'. Which of the following shows the correct location of triangle A'B'C' on the coordinate plane?"
+            "Triangle ABC will be reflected across the `text(x)`-axis and then translated 3 units up to create its image, triangle A'B'C'. Which of the following shows the correct location of triangle A'B'C' on the coordinate plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -900,7 +900,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a translation 1/2 unit up followed by a reflection across the y-axis",
+                "Choice": "a translation 1/2 unit up followed by a reflection across the `text(y)`-axis",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -908,7 +908,7 @@
                 }
             },
             "B": {
-                "Choice": "a reflection across the x-axis followed by a rotation of 90 degrees",
+                "Choice": "a reflection across the `text(x)`-axis followed by a rotation of 90 degrees",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -924,7 +924,7 @@
                 }
             },
             "D": {
-                "Choice": "a dilation by a scale factor of -1 followed by a reflection across the y-axis",
+                "Choice": "a dilation by a scale factor of -1 followed by a reflection across the `text(y)`-axis",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",

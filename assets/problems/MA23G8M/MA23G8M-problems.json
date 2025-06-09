@@ -127,7 +127,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "translate 4 units down, and then reflect over the x-axis",
+                "Choice": "translate 4 units down, and then reflect over the `text(x)`-axis",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -135,7 +135,7 @@
                 }
             },
             "B": {
-                "Choice": "translate 4 units to the right, and then reflect over the y-axis",
+                "Choice": "translate 4 units to the right, and then reflect over the `text(y)`-axis",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -252,7 +252,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the y-intercept of the line represented by the `x` and `y` values shown in the table? Show or explain how you got your answer."
+                    "What is the `text(y)`-intercept of the line represented by the `x` and `y` values shown in the table? Show or explain how you got your answer."
 
                 ],
                 "AnswerChoices": {
@@ -1164,7 +1164,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The graph crosses the x-axis at `(0,b)`.",
+                        "Choice": "The graph crosses the `text(x)`-axis at `(0,b)`.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1172,7 +1172,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "The graph crosses the y-axis at `(0,b)`.",
+                        "Choice": "The graph crosses the `text(y)`-axis at `(0,b)`.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",

@@ -200,7 +200,7 @@
                 "Choice": "11.2 miles per gallon",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines the difference in distance by subtracting the greatest value on the x-axis from 323, determines the difference in gas used by subtracting the greatest value on the y-axis from 19, and then divides the difference of the distances by the difference of the gas used (123 ÷ 11).",
+                    "Rationale": "Determines the difference in distance by subtracting the greatest value on the `text(x)`-axis from 323, determines the difference in gas used by subtracting the greatest value on the `text(y)`-axis from 19, and then divides the difference of the distances by the difference of the gas used (123 ÷ 11).",
                     "Percent": 17
                 }
             },
@@ -216,7 +216,7 @@
                 "Choice": "20.5 miles per gallon",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the gas mileage for the old car by dividing 323 miles by 19 gallons to get 17 miles per gallon, determines the gas mileage for the new car by selecting a point on the line and dividing the x-value by the y-value (e.g., 150 ÷ 4) to get 37.5 miles per gallon, and then finds the difference between these two gas mileages.",
+                    "Rationale": "Determines the gas mileage for the old car by dividing 323 miles by 19 gallons to get 17 miles per gallon, determines the gas mileage for the new car by selecting a point on the line and dividing the `text(x)`-value by the `text(y)`-value (e.g., 150 ÷ 4) to get 37.5 miles per gallon, and then finds the difference between these two gas mileages.",
                     "Percent": 49
                 }
             }
@@ -241,7 +241,7 @@
         "Explain": false,
         "Content": [
             "Line j and line k are graphed on the same coordinate grid.",
-            ":box:• Line j has a slope of -2/3 and intersects the y-axis at -4.\n\n• Line k has a different negative slope than line j and intersects the y-axis above line j.",
+            ":box:• Line j has a slope of -2/3 and intersects the `text(y)`-axis at -4.\n\n• Line k has a different negative slope than line j and intersects the `text(y)`-axis above line j.",
             "Which equation could describe line k?"
         ],
         "AnswerChoices": {
@@ -249,7 +249,7 @@
                 "Choice": "y = (-1/6)x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that -1/6 is a negative slope not equal to -2/3 and that the y-intercept (0) means the line intersects the y-axis above line j.",
+                    "Rationale": "Recognizes that -1/6 is a negative slope not equal to -2/3 and that the `text(y)`-intercept (0) means the line intersects the `text(y)`-axis above line j.",
                     "Percent": 35
                 }
             },
@@ -265,7 +265,7 @@
                 "Choice": "y = (-1/2)x - 5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the y-intercept (-5) means the line intersects the y-axis below line j.",
+                    "Rationale": "Does not consider that the `text(y)`-intercept (-5) means the line intersects the `text(y)`-axis below line j.",
                     "Percent": 24
                 }
             },
@@ -363,7 +363,7 @@
                 "Choice": "(0, -4)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the y-intercept of the “lower” line.",
+                    "Rationale": "Identifies the `text(y)`-intercept of the “lower” line.",
                     "Percent": 8
                 }
             },
@@ -371,7 +371,7 @@
                 "Choice": "(0, 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the y-intercept of the “upper” line.",
+                    "Rationale": "Identifies the `text(y)`-intercept of the “upper” line.",
                     "Percent": 6
                 }
             },
@@ -387,7 +387,7 @@
                 "Choice": "(3, -1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the correct x-coordinate but adds the two y-intercepts to determine the y-coordinate.",
+                    "Rationale": "Identifies the correct `text(x)`-coordinate but adds the two `text(y)`-intercepts to determine the `text(y)`-coordinate.",
                     "Percent": 5
                 }
             }
@@ -428,7 +428,7 @@
                 "Choice": "problems/PA21G8M/media/8b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly identifies the table as representing a function and uses the change of 10 in y-values as the slope. This choice is not a function since multiple y-values are paired with the same x-value.",
+                    "Rationale": "Incorrectly identifies the table as representing a function and uses the change of 10 in `text(y)`-values as the slope. This choice is not a function since multiple `text(y)`-values are paired with the same `text(x)`-value.",
                     "Percent": 27
                 }
             },
@@ -436,7 +436,7 @@
                 "Choice": "problems/PA21G8M/media/8c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes the line represents a function but incorrectly determines slope by subtracting the least value on the x-axis from the greatest value. The slope of this choice is 0 since the line is horizontal (“flat”).",
+                    "Rationale": "Recognizes the line represents a function but incorrectly determines slope by subtracting the least value on the `text(x)`-axis from the greatest value. The slope of this choice is 0 since the line is horizontal (“flat”).",
                     "Percent": 9
                 }
             },
@@ -477,7 +477,7 @@
                 "Choice": "y = mx",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the y-intercept is not 0 (i.e., the line does not pass through the origin).",
+                    "Rationale": "Does not consider that the `text(y)`-intercept is not 0 (i.e., the line does not pass through the origin).",
                     "Percent": 12
                 }
             },
@@ -485,7 +485,7 @@
                 "Choice": "`y=mx+b`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that the relationship is linear (y = mx) and has a y-intercept other than 0 (+ b).",
+                    "Rationale": "Recognizes that the relationship is linear (y = mx) and has a `text(y)`-intercept other than 0 (+ b).",
                     "Percent": 73
                 }
             },
@@ -493,7 +493,7 @@
                 "Choice": "y = x^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a nonlinear equation (y = x^2) and does not consider that the y-intercept is not 0 (i.e., the line does not pass through the origin).",
+                    "Rationale": "Selects a nonlinear equation (y = x^2) and does not consider that the `text(y)`-intercept is not 0 (i.e., the line does not pass through the origin).",
                     "Percent": 8
                 }
             },
@@ -501,7 +501,7 @@
                 "Choice": "y = x^2+ b",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a nonlinear equation (y = x^2) that has a y-intercept other than 0 (+ b).",
+                    "Rationale": "Selects a nonlinear equation (y = x^2) that has a `text(y)`-intercept other than 0 (+ b).",
                     "Percent": 7
                 }
             }
@@ -829,7 +829,7 @@
                 "Choice": "√65",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the differences between the x-values and between the y-values for point A and point C (-1 - (-5) = 4 and 2 - (-5) = 7), uses the Pythagorean theorem (`a^2+b^2=c^2`) to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root OR uses the Pythagorean theorem (`a^2+b^2=c^2`) to set up (AB)^2 + (BC)^2 = (AC)^2, substitutes the lengths of sides AB and BC to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root.",
+                    "Rationale": "Determines the differences between the `text(x)`-values and between the `text(y)`-values for point A and point C (-1 - (-5) = 4 and 2 - (-5) = 7), uses the Pythagorean theorem (`a^2+b^2=c^2`) to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root OR uses the Pythagorean theorem (`a^2+b^2=c^2`) to set up (AB)^2 + (BC)^2 = (AC)^2, substitutes the lengths of sides AB and BC to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root.",
                     "Percent": 39
                 }
             },

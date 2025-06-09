@@ -328,7 +328,7 @@
                 "Choice": "(0, 0), (0, 6), and (3, 2) are all solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows point of intersection is solution, but thinks y-intercepts are also solutions.",
+                    "Rationale": "Knows point of intersection is solution, but thinks `text(y)`-intercepts are also solutions.",
                     "Percent": 14
                 }
             }
@@ -418,7 +418,7 @@
                 "Choice": "13",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines function 1 has greatest rate of change; adds y-intercept to 10.",
+                    "Rationale": "Determines function 1 has greatest rate of change; adds `text(y)`-intercept to 10.",
                     "Percent": 14
                 }
             },
@@ -475,7 +475,7 @@
                 "Choice": "The relation is a function.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not see the repeated x-value.",
+                    "Rationale": "Does not see the repeated `text(x)`-value.",
                     "Percent": 17
                 }
             },
@@ -483,7 +483,7 @@
                 "Choice": "The relation is not a function, but removing (1, 3) and replacing it with (2, 6) would make the new relation a function.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notices that 1 is repeated as an x-value, but the replacement also results in a repeated x-value.",
+                    "Rationale": "Notices that 1 is repeated as an `text(x)`-value, but the replacement also results in a repeated `text(x)`-value.",
                     "Percent": 9
                 }
             },
@@ -499,7 +499,7 @@
                 "Choice": "The relation is not a function, but removing (3, 5) and replacing it with (3, 6) would make the new relation a function.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks a repeated y-value makes the set of ordered pairs not a function.",
+                    "Rationale": "Thinks a repeated `text(y)`-value makes the set of ordered pairs not a function.",
                     "Percent": 26
                 }
             }
@@ -698,7 +698,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "transformation: reflection across the y-axis\nrelationship: similar and congruent",
+                "Choice": "transformation: reflection across the `text(y)`-axis\nrelationship: similar and congruent",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -706,7 +706,7 @@
                 }
             },
             "B": {
-                "Choice": "transformation: reflection across the y-axis\nrelationship: similar, but not congruent",
+                "Choice": "transformation: reflection across the `text(y)`-axis\nrelationship: similar, but not congruent",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Confuses congruency with similarity.",
@@ -717,7 +717,7 @@
                 "Choice": "transformation: reflection across the line y = x\nrelationship: similar and congruent",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that x-coordinate and y-coordinate in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x.",
+                    "Rationale": "Sees that `text(x)`-coordinate and `text(y)`-coordinate in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x.",
                     "Percent": 17
                 }
             },
@@ -725,7 +725,7 @@
                 "Choice": "transformation: reflection across the line y = x\nrelationship: similar, but not congruent",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that x-coordinate and y-coordinate in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x; confuses congruency with similarity.",
+                    "Rationale": "Sees that `text(x)`-coordinate and `text(y)`-coordinate in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x; confuses congruency with similarity.",
                     "Percent": 9
                 }
             }
@@ -763,7 +763,7 @@
                 }
             },
             "B": {
-                "Choice": "a translation 2 units to the right and then a reflection across the y-axis",
+                "Choice": "a translation 2 units to the right and then a reflection across the `text(y)`-axis",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Aligns R with S'.",
@@ -771,7 +771,7 @@
                 }
             },
             "C": {
-                "Choice": "a reflection across the y-axis and then a translation 1 unit to the right and 3 units up",
+                "Choice": "a reflection across the `text(y)`-axis and then a translation 1 unit to the right and 3 units up",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Selects first translation in wrong direction after reflection.",
@@ -779,7 +779,7 @@
                 }
             },
             "D": {
-                "Choice": "a translation 1 unit to the right and 3 units up and then a reflection across the y-axis",
+                "Choice": "a translation 1 unit to the right and 3 units up and then a reflection across the `text(y)`-axis",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",

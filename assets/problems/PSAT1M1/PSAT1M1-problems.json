@@ -354,14 +354,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "For the function f, the graph of `y=f(x)` in the xy-plane has a slope of `3` and passes through the point `(0,-8)`. Which equation defines `f`?"
+            "For the function f, the graph of `y=f(x)` in the `text(xy)`-plane has a slope of `3` and passes through the point `(0,-8)`. Which equation defines `f`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`f(x)=3x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this function, the graph of `y=f(x)` in the xy-plane passes through the point `(0, 0)`, not `(0, -8)`.",
+                    "Rationale": "For this function, the graph of `y=f(x)` in the `text(xy)`-plane passes through the point `(0, 0)`, not `(0, -8)`.",
                     "Percent": 0
                 }
             },
@@ -369,7 +369,7 @@
                 "Choice": "`f(x)=3x-8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation defining a linear function can be written in the form `f(x)=mx+b`, where `m` and `b` are constants, `m` is the slope of the graph of `y=f(x)` in the xy-plane, and `(0, b)` is the y-intercept of the graph. It's given that for the function `f`, the graph of `y=f(x)` in the xy-plane has a slope of `3`. Therefore, `m=3`. It's also given that this graph passes through the point `(0, -8)`. Therefore, the y-intercept of the graph is `(0, -8)`, and it follows that `b=-8`. Substituting `3` for `m` and `-8` for `b` in the equation `f(x)=mx+b` yields `f(x)=3x-8`. Thus, the equation that defines `f` is `f(x)=3x-8`.",
+                    "Rationale": "An equation defining a linear function can be written in the form `f(x)=mx+b`, where `m` and `b` are constants, `m` is the slope of the graph of `y=f(x)` in the `text(xy)`-plane, and `(0, b)` is the `text(y)`-intercept of the graph. It's given that for the function `f`, the graph of `y=f(x)` in the `text(xy)`-plane has a slope of `3`. Therefore, `m=3`. It's also given that this graph passes through the point `(0, -8)`. Therefore, the `text(y)`-intercept of the graph is `(0, -8)`, and it follows that `b=-8`. Substituting `3` for `m` and `-8` for `b` in the equation `f(x)=mx+b` yields `f(x)=3x-8`. Thus, the equation that defines `f` is `f(x)=3x-8`.",
                     "Percent": 0
                 }
             },
@@ -377,7 +377,7 @@
                 "Choice": "`f(x)=3x+5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this function, the graph of `y=f(x)` in the xy-plane passes through the point `(0, 5)`, not `(0, -8)`.",
+                    "Rationale": "For this function, the graph of `y=f(x)` in the `text(xy)`-plane passes through the point `(0, 5)`, not `(0, -8)`.",
                     "Percent": 0
                 }
             },
@@ -385,7 +385,7 @@
                 "Choice": "`f(x)=3x+11`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this function, the graph of `y=f(x)` in the xy-plane passes through the point `(0, 11)`, not `(0, -8)`.",
+                    "Rationale": "For this function, the graph of `y=f(x)` in the `text(xy)`-plane passes through the point `(0, 11)`, not `(0, -8)`.",
                     "Percent": 0
                 }
             }
@@ -601,7 +601,7 @@
                 "Choice": "`0.44`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the scatterplot shows the relationship between two variables, `x` and `y`, and a line of best fit is shown. For the line of best fit shown, for each increase in the value of `x` by `1`, the corresponding value of `y` increases by a constant rate. It follows that the relationship between the variables `x` and `y` has a positive linear trend. A line in the xy-plane that passes through the points `(a, b)` and `(c, d)` has a slope of `(d-b)/(c-a)`. The line of best fit shown passes approximately through the points `(0, 0.25)` and `(4, 2)`. It follows that the slope of this line is approximately `(2-0.25)/(4-0)`, which is equivalent to `0.4375`. Therefore, of the given choices, `0.44` is closest to the slope of the line of best fit shown.",
+                    "Rationale": "It's given that the scatterplot shows the relationship between two variables, `x` and `y`, and a line of best fit is shown. For the line of best fit shown, for each increase in the value of `x` by `1`, the corresponding value of `y` increases by a constant rate. It follows that the relationship between the variables `x` and `y` has a positive linear trend. A line in the `text(xy)`-plane that passes through the points `(a, b)` and `(c, d)` has a slope of `(d-b)/(c-a)`. The line of best fit shown passes approximately through the points `(0, 0.25)` and `(4, 2)`. It follows that the slope of this line is approximately `(2-0.25)/(4-0)`, which is equivalent to `0.4375`. Therefore, of the given choices, `0.44` is closest to the slope of the line of best fit shown.",
                     "Percent": 0
                 }
             },
@@ -633,14 +633,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The y-intercept of the graph of `12x+2y=18` in the xy-plane is `(0, y)`. What is the value of `y`?"
+            "The `text(y)`-intercept of the graph of `12x+2y=18` in the `text(xy)`-plane is `(0, y)`. What is the value of `y`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the y-intercept of the graph of `12x+2y=18` in the xy-plane is `(0, y)`. Substituting `0` for `x` in the equation `12x+2y=18` yields `12(0)+2y=18`, or `2y=18`. Dividing both sides of this equation by `2` yields `y=9`. Therefore, the value of `y` is `9`.",
+                    "Rationale": "It's given that the `text(y)`-intercept of the graph of `12x+2y=18` in the `text(xy)`-plane is `(0, y)`. Substituting `0` for `x` in the equation `12x+2y=18` yields `12(0)+2y=18`, or `2y=18`. Dividing both sides of this equation by `2` yields `y=9`. Therefore, the value of `y` is `9`.",
                     "Percent": 0
                 }
             }
@@ -703,7 +703,7 @@
                 "Choice": "`1.0text( second)` after being launched, the ball's height above ground is `4.8text( meters)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph shows the height above ground, in meters, of a ball `xtext( seconds)` after the ball was launched upward from a platform. In the graph shown, the x-axis represents time, in seconds, and the y-axis represents the height of the ball above ground, in meters. It follows that for the marked point `(1.0, 4.8)`, `1.00` represents the time, in seconds, after the ball was launched upward from a platform and `4.80` represents the height of the ball above ground, in meters. Therefore, the best interpretation of the marked point `(1.0, 4.8)` is `1.00text( second)` after being launched, the ball's height above ground is `4.80text( meters)`.",
+                    "Rationale": "It's given that the graph shows the height above ground, in meters, of a ball `xtext( seconds)` after the ball was launched upward from a platform. In the graph shown, the `text(x)`-axis represents time, in seconds, and the `text(y)`-axis represents the height of the ball above ground, in meters. It follows that for the marked point `(1.0, 4.8)`, `1.00` represents the time, in seconds, after the ball was launched upward from a platform and `4.80` represents the height of the ball above ground, in meters. Therefore, the best interpretation of the marked point `(1.0, 4.8)` is `1.00text( second)` after being launched, the ball's height above ground is `4.80text( meters)`.",
                     "Percent": 0
                 }
             },
@@ -1150,7 +1150,7 @@
         "Explain": false,
         "Content": [
             ":box:`f(x)=(a-19)/x+5`",
-            "In the given function `f`, `a` is a constant. The graph of function `f` in the xy-plane, where `y=f(x)`, is translated `3text( units)` down and `4text( units)` to the right to produce the graph of `y=g(x)`. Which equation defines function `g`?"
+            "In the given function `f`, `a` is a constant. The graph of function `f` in the `text(xy)`-plane, where `y=f(x)`, is translated `3text( units)` down and `4text( units)` to the right to produce the graph of `y=g(x)`. Which equation defines function `g`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1165,7 +1165,7 @@
                 "Choice": "`g(x)=(a-19)/(x-4)+2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph of `y=g(x)` is produced by translating the graph of `y=f(x)` `3text( units)` down and `4text( units)` to the right in the xy-plane. Therefore, function `g` can be defined by an equation in the form `g(x)=f(x-4)-3`. Function `f` is defined by the equation `f(x)=(a-19)/x+5`, where `a` is a constant. Substituting `x-4` for `x` in the equation `f(x)=(a-19)/x+5` yields `f(x-4)=(a-19)/(x-4)+5`. Substituting `(a-19)/(x-4)+5` for `f(x-4)` in the equation `g(x)=f(x-4)-3` yields `g(x) = (a-19)/(x-4)+5-3`, or `g(x)=(a-19)/(x-4)+2`. Therefore, the equation that defines function `g` is `g(x)=(a-19)/(x-4)+2`.",
+                    "Rationale": "It's given that the graph of `y=g(x)` is produced by translating the graph of `y=f(x)` `3text( units)` down and `4text( units)` to the right in the `text(xy)`-plane. Therefore, function `g` can be defined by an equation in the form `g(x)=f(x-4)-3`. Function `f` is defined by the equation `f(x)=(a-19)/x+5`, where `a` is a constant. Substituting `x-4` for `x` in the equation `f(x)=(a-19)/x+5` yields `f(x-4)=(a-19)/(x-4)+5`. Substituting `(a-19)/(x-4)+5` for `f(x-4)` in the equation `g(x)=f(x-4)-3` yields `g(x) = (a-19)/(x-4)+5-3`, or `g(x)=(a-19)/(x-4)+2`. Therefore, the equation that defines function `g` is `g(x)=(a-19)/(x-4)+2`.",
                     "Percent": 0
                 }
             },

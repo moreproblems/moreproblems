@@ -73,14 +73,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT1M2/media/2a.jpg",
-            "What is the x-intercept of the graph shown?"
+            "What is the `text(x)`-intercept of the graph shown?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`(-5, 0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the x-intercept of a graph in the xy-plane that intersects the x-axis at `x=-5`, not `x=4`.",
+                    "Rationale": "This is the `text(x)`-intercept of a graph in the `text(xy)`-plane that intersects the `text(x)`-axis at `x=-5`, not `x=4`.",
                     "Percent": 0
                 }
             },
@@ -88,7 +88,7 @@
                 "Choice": "`(5, 0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the x-intercept of a graph in the xy-plane that intersects the x-axis at `x=5`, not `x=4`.",
+                    "Rationale": "This is the `text(x)`-intercept of a graph in the `text(xy)`-plane that intersects the `text(x)`-axis at `x=5`, not `x=4`.",
                     "Percent": 0
                 }
             },
@@ -96,7 +96,7 @@
                 "Choice": "`(-4, 0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the x-intercept of a graph in the xy-plane that intersects the x-axis at `x=-4`, not `x=4`.",
+                    "Rationale": "This is the `text(x)`-intercept of a graph in the `text(xy)`-plane that intersects the `text(x)`-axis at `x=-4`, not `x=4`.",
                     "Percent": 0
                 }
             },
@@ -104,7 +104,7 @@
                 "Choice": "`(4, 0)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The x-intercept of the graph shown is the point `(x,y)` on the graph where `y=0`. At `y=0`, the corresponding value of `x` is `4`. Therefore, the x-intercept of the graph shown is `(4, 0)`.",
+                    "Rationale": "The `text(x)`-intercept of the graph shown is the point `(x,y)` on the graph where `y=0`. At `y=0`, the corresponding value of `x` is `4`. Therefore, the `text(x)`-intercept of the graph shown is `(4, 0)`.",
                     "Percent": 0
                 }
             }
@@ -184,14 +184,14 @@
         "Explain": false,
         "Content": [
             ":box:`x=49`\n\n`y=sqrt(x)+9`",
-            "The graphs of the given equations intersect at the point `(x,y)` in the xy-plane. What is the value of y?"
+            "The graphs of the given equations intersect at the point `(x,y)` in the `text(xy)`-plane. What is the value of y?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`16`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graphs of the given equations intersect at the point `(x,y)` in the xy-plane. It follows that `(x,y)` represents a solution to the system consisting of the given equations. The first equation given is `x=49`. Substituting `49` for `x` in the second equation given, `y=sqrt(x)+9`, yields `y=sqrt(49)+9`, which is equivalent to `y=7+9`, or `y=16`. It follows that the graphs of the given equations intersect at the point `(49, 16)`. Therefore, the value of `y` is `16`.",
+                    "Rationale": "It's given that the graphs of the given equations intersect at the point `(x,y)` in the `text(xy)`-plane. It follows that `(x,y)` represents a solution to the system consisting of the given equations. The first equation given is `x=49`. Substituting `49` for `x` in the second equation given, `y=sqrt(x)+9`, yields `y=sqrt(49)+9`, which is equivalent to `y=7+9`, or `y=16`. It follows that the graphs of the given equations intersect at the point `(49, 16)`. Therefore, the value of `y` is `16`.",
                     "Percent": 0
                 }
             },
@@ -325,14 +325,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line `k` is defined by `y=1/4x+1`. Line `j` is parallel to line `k` in the xy-plane. What is the slope of `j`?"
+            "Line `k` is defined by `y=1/4x+1`. Line `j` is parallel to line `k` in the `text(xy)`-plane. What is the slope of `j`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that line `k` is defined by `y=1/4x+1`. It's also given that line `j` is parallel to line `k` in the xy-plane. A line in the xy-plane represented by an equation in slope-intercept form `y=mx+b` has a slope of `m` and a y-intercept of `(0, b)`. Therefore, the slope of line `k` is `1/4`. Since parallel lines have equal slopes, the slope of line `j` is `1/4`. Note that `1/4` and `0.25` are examples of ways to enter a correct answer.",
+                    "Rationale": "It's given that line `k` is defined by `y=1/4x+1`. It's also given that line `j` is parallel to line `k` in the `text(xy)`-plane. A line in the `text(xy)`-plane represented by an equation in slope-intercept form `y=mx+b` has a slope of `m` and a `text(y)`-intercept of `(0, b)`. Therefore, the slope of line `k` is `1/4`. Since parallel lines have equal slopes, the slope of line `j` is `1/4`. Note that `1/4` and `0.25` are examples of ways to enter a correct answer.",
                     "Percent": 0
                 }
             }
@@ -569,7 +569,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "Given a linear inequality or system of linear inequalities, interpret a point in the xy-plane in terms of the solution set."
+            "Given a linear inequality or system of linear inequalities, interpret a point in the `text(xy)`-plane in terms of the solution set."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1013,7 +1013,7 @@
                 "Choice": "equal:1/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For the graph shown, `x` represents time, in `text(seconds)`, and `y` represents momentum, in `text(newton-seconds)`. Therefore, the average rate of change, in `text(newton-seconds per second)`, in the momentum of the object between two x-values is the difference in the corresponding y-values divided by the difference in the x-values. The graph shows that at `x=2`, the corresponding y-value is `6`. The graph also shows that at `x=6`, the corresponding y-value is `8`. It follows that the average rate of change, in `text(newton-seconds per second)`, from `x=2` to `x=6` is `(8-6)/(6-2)`, which is equivalent to `2/4`, or `1/2`.",
+                    "Rationale": "For the graph shown, `x` represents time, in `text(seconds)`, and `y` represents momentum, in `text(newton-seconds)`. Therefore, the average rate of change, in `text(newton-seconds per second)`, in the momentum of the object between two `text(x)`-values is the difference in the corresponding `text(y)`-values divided by the difference in the `text(x)`-values. The graph shows that at `x=2`, the corresponding `text(y)`-value is `6`. The graph also shows that at `x=6`, the corresponding `text(y)`-value is `8`. It follows that the average rate of change, in `text(newton-seconds per second)`, from `x=2` to `x=6` is `(8-6)/(6-2)`, which is equivalent to `2/4`, or `1/2`.",
                     "Percent": 0
                 }
             }

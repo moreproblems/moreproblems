@@ -131,7 +131,7 @@
                 "Choice": "problems/TX22G7M/media/3a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph best represents the situation, the student should have understood that the statement “Nicole had a collection of 60 stuffed animals” means that the number of stuffed animals in her collection, 60, represents the y-value when no months have passed; this is represented by the point (0, 60) on the graph. The student should then have understood that the statement “she gave away 5 stuffed animals per month” means that the rate of change (ratio of the change in y-values to the change in x-values) for this situation is -5, since the number of stuffed animals decreases by 5 animals each month. The number of months is represented by the x-value. This graph shows the y-value decreasing by 5 each time the x-value increases by 1.",
+                    "Rationale": "To determine which graph best represents the situation, the student should have understood that the statement “Nicole had a collection of 60 stuffed animals” means that the number of stuffed animals in her collection, 60, represents the `text(y)`-value when no months have passed; this is represented by the point (0, 60) on the graph. The student should then have understood that the statement “she gave away 5 stuffed animals per month” means that the rate of change (ratio of the change in `text(y)`-values to the change in `text(x)`-values) for this situation is -5, since the number of stuffed animals decreases by 5 animals each month. The number of months is represented by the `text(x)`-value. This graph shows the `text(y)`-value decreasing by 5 each time the `text(x)`-value increases by 1.",
                     "Percent": 78
                 }
             },
@@ -202,7 +202,7 @@
                 "Choice": "944 cm²",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the area (amount of space covered) of the figure, the student should have calculated the area of each shape (parallelogram and trapezoid) and found the sum of the results. To find the area of the parallelogram (A = bh, where b represents the length of the base of the parallelogram and h represents the height), the length of the base should be multiplied by the height. The length of the base is shown as 26 centimeters. To determine the height of the parallelogram, subtract the height of the trapezoid (16 centimeters) from the height of the composite figure (32 centimeters); 32 - 16 = 16. This gives the height of the parallelogram. Thus the area of the parallelogram is 26  ́ 16 = 416 square centimeters. Next, to find the area of the trapezoid (A = 1/2 • [b₁ + b₂] h, where b₁ and b₂ represent the lengths of the parallel sides of the trapezoid and h represents the height), substitute b₁ = 26, b₂ = 40, and h = 16 into the area formula: A = 1/2 • (26 + 40)(16) = 1/2 • (66)(16) = 528 square centimeters. The sum of the areas of the two shapes is 416 + 528 = 944 square centimeters.",
+                    "Rationale": "To determine the area (amount of space covered) of the figure, the student should have calculated the area of each shape (parallelogram and trapezoid) and found the sum of the results. To find the area of the parallelogram (A = bh, where b represents the length of the base of the parallelogram and h represents the height), the length of the base should be multiplied by the height. The length of the base is shown as 26 centimeters. To determine the height of the parallelogram, subtract the height of the trapezoid (16 centimeters) from the height of the composite figure (32 centimeters); 32 - 16 = 16. This gives the height of the parallelogram. Thus the area of the parallelogram is 26  ́ 16 = 416 square centimeters. Next, to find the area of the trapezoid (A = 1/2 • [b_1 + b_2] h, where b_1 and b_2 represent the lengths of the parallel sides of the trapezoid and h represents the height), substitute b_1 = 26, b_2 = 40, and h = 16 into the area formula: A = 1/2 • (26 + 40)(16) = 1/2 • (66)(16) = 528 square centimeters. The sum of the areas of the two shapes is 416 + 528 = 944 square centimeters.",
                     "Percent": 38
                 }
             },
@@ -777,7 +777,7 @@
                 "Choice": "problems/TX22G7M/media/15c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents this relationship, the student should have recognized that the constant rate of change for this situation is 2.5 cups of food per day, since the dog eats 1.25 cups of food twice each day: 1.25(2) = 2.5. The student should have recognized that the total number of cups of food is represented by y and the number of days is represented by x. The student then should have checked x- and y-values to find the graph in which each y-value is the result of multiplying the corresponding x-value by 2.5. The line contains the points (1, 2.5) and (2, 5).",
+                    "Rationale": "To determine the graph that best represents this relationship, the student should have recognized that the constant rate of change for this situation is 2.5 cups of food per day, since the dog eats 1.25 cups of food twice each day: 1.25(2) = 2.5. The student should have recognized that the total number of cups of food is represented by y and the number of days is represented by x. The student then should have checked x- and `text(y)`-values to find the graph in which each `text(y)`-value is the result of multiplying the corresponding `text(x)`-value by 2.5. The line contains the points (1, 2.5) and (2, 5).",
                     "Percent": 39
                 }
             },
@@ -1025,7 +1025,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which equation represents the linear relationship between the x-values and the y-values in the table?",
+            "Which equation represents the linear relationship between the `text(x)`-values and the `text(y)`-values in the table?",
             "problems/TX22G7M/media/20a.jpg"
         ],
         "AnswerChoices": {
@@ -1033,7 +1033,7 @@
                 "Choice": "y = 2x + 12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the change in the x-values, 1 - (-1) = 2, as the value of m and the change in the y-values, 1 - (-11) = 12, as the value of b. The student then likely substituted m = 2 and b = 12 into the equation `y=mx+b`, resulting in y = 2x + 12. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
+                    "Rationale": "The student likely used the change in the `text(x)`-values, 1 - (-1) = 2, as the value of m and the change in the `text(y)`-values, 1 - (-11) = 12, as the value of b. The student then likely substituted m = 2 and b = 12 into the equation `y=mx+b`, resulting in y = 2x + 12. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
                     "Percent": 28
                 }
             },
@@ -1041,7 +1041,7 @@
                 "Choice": "y = 5x - 6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely reversed the meanings of m and b in the equation `y=mx+b`, using m to represent the y-value when x = 0 and b to represent the rate of change and switched the signs of the numbers, resulting in the equation y = 5x - 6. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
+                    "Rationale": "The student likely reversed the meanings of m and b in the equation `y=mx+b`, using m to represent the `text(y)`-value when x = 0 and b to represent the rate of change and switched the signs of the numbers, resulting in the equation y = 5x - 6. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
                     "Percent": 18
                 }
             },
@@ -1049,7 +1049,7 @@
                 "Choice": "y = 6x - 5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which equation represents the linear relationship between the x-values and the y-values in the table, the student could have identified the rate of change (ratio of the change in y-values to the change in x-values) and the y-value when x = 0 and written the equation in the form `y=mx+b`, where m represents the rate of change and b represents the y-value when x = 0. To find the rate of change, the student could have used the ordered pairs (-1, -11) and (1, 1) from the table and calculated the change in y as 1 - (-11) = 12, and the change in x as 1 - (-1) = 2,resulting in the ratio 12/2 = 6. The student then could have calculated b, the y-value when x = 0, by recognizing that since the rate of change is 6, the value of y when x = 0 must be 6 units more than the value of y when x = -1: -11 + 6 = -5. Substituting 6 for m and -5 for b in the equation `y=mx+b` results in the equation y = 6x - 5. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which equation represents the linear relationship between the `text(x)`-values and the `text(y)`-values in the table, the student could have identified the rate of change (ratio of the change in `text(y)`-values to the change in `text(x)`-values) and the `text(y)`-value when x = 0 and written the equation in the form `y=mx+b`, where m represents the rate of change and b represents the `text(y)`-value when x = 0. To find the rate of change, the student could have used the ordered pairs (-1, -11) and (1, 1) from the table and calculated the change in y as 1 - (-11) = 12, and the change in x as 1 - (-1) = 2,resulting in the ratio 12/2 = 6. The student then could have calculated b, the `text(y)`-value when x = 0, by recognizing that since the rate of change is 6, the value of y when x = 0 must be 6 units more than the value of y when x = -1: -11 + 6 = -5. Substituting 6 for m and -5 for b in the equation `y=mx+b` results in the equation y = 6x - 5. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 38
                 }
             },
@@ -1057,7 +1057,7 @@
                 "Choice": "y = -x - 11",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the x-value and y-value from the point (-1, -11) as the values of m and b, respectively, resulting in the equation y = -1x - 11, which is equivalent to y = -x - 11. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
+                    "Rationale": "The student likely used the `text(x)`-value and `text(y)`-value from the point (-1, -11) as the values of m and b, respectively, resulting in the equation y = -1x - 11, which is equivalent to y = -x - 11. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
                     "Percent": 16
                 }
             }
@@ -1178,7 +1178,7 @@
                 "Choice": "problems/TX22G7M/media/23b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day and chose a point with a y-value of 500, but did not recognize that the corresponding x-value is 10 instead of 1. The student needs to focus on how to represent a real-world situation with a graphical representation.",
+                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day and chose a point with a `text(y)`-value of 500, but did not recognize that the corresponding `text(x)`-value is 10 instead of 1. The student needs to focus on how to represent a real-world situation with a graphical representation.",
                     "Percent": 9
                 }
             },
@@ -1194,7 +1194,7 @@
                 "Choice": "problems/TX22G7M/media/23d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents the relationship between y and x, the student should have recognized that the total number of users is represented by y and that the number of days is represented by x. The student should have also recognized that the rate at which the number of users increases is 500 users each day. The student then should have checked pairs of x- and y-values, such as (2, 1,000), (4, 2,000), (6, 3,000), and (8, 4,000), to find the graph in which each y-value was the result of multiplying the corresponding x-value by 500.",
+                    "Rationale": "To determine the graph that best represents the relationship between y and x, the student should have recognized that the total number of users is represented by y and that the number of days is represented by x. The student should have also recognized that the rate at which the number of users increases is 500 users each day. The student then should have checked pairs of x- and `text(y)`-values, such as (2, 1,000), (4, 2,000), (6, 3,000), and (8, 4,000), to find the graph in which each `text(y)`-value was the result of multiplying the corresponding `text(x)`-value by 500.",
                     "Percent": 51
                 }
             }

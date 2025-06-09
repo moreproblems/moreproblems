@@ -128,14 +128,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT5M1/media/3a.jpg",
-            "The graph of the linear function f is shown, where `y=f(x)`. What is the y-intercept of the graph of f?"
+            "The graph of the linear function f is shown, where `y=f(x)`. What is the `text(y)`-intercept of the graph of f?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "(0, 0)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is the point where the x-axis, not the graph of f, intersects the y-axis.",
+                    "Rationale": "This choice is the point where the `text(x)`-axis, not the graph of f, intersects the `text(y)`-axis.",
                     "Percent": 0
                 }
             },
@@ -159,7 +159,7 @@
                 "Choice": "(0, 8)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of a graph is the point where the graph intersects the y-axis. The graph of function f shown intersects the y-axis at the point (0, 8). Therefore, the y-intercept of the graph of f is (0, 8).",
+                    "Rationale": "The `text(y)`-intercept of a graph is the point where the graph intersects the `text(y)`-axis. The graph of function f shown intersects the `text(y)`-axis at the point (0, 8). Therefore, the `text(y)`-intercept of the graph of f is (0, 8).",
                     "Percent": 0
                 }
             }
@@ -304,7 +304,7 @@
                 "Choice": "equal:4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A solution to a system of equations must satisfy each equation in the system. It follows that if `(x,y)` is a solution to the system, the point `(x,y)` lies on the graph in the xy-plane of each equation in the system. According to the graph, the point `(x,y)` that lies on the graph of each equation in the system is (4, 1). Therefore, the solution to the system is (4, 1). It follows that the value of x is 4.",
+                    "Rationale": "A solution to a system of equations must satisfy each equation in the system. It follows that if `(x,y)` is a solution to the system, the point `(x,y)` lies on the graph in the `text(xy)`-plane of each equation in the system. According to the graph, the point `(x,y)` that lies on the graph of each equation in the system is (4, 1). Therefore, the solution to the system is (4, 1). It follows that the value of x is 4.",
                     "Percent": 0
                 }
             }
@@ -927,7 +927,7 @@
                 "Choice": "-√3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A trigonometric ratio can be found using the unit circle, that is, a circle with radius 1 unit. If a central angle of a unit circle in the xy-plane centered at the origin has its starting side on the positive x-axis and its terminal side intersects the circle at a point `(x,y)`, then the value of the tangent of the central angle is equal to the y-coordinate divided by the x-coordinate. There are 2π radians in a circle. Dividing 92π/3 by 2π yields 92/6, which is equivalent to 15 + 2/3. It follows that on the unit circle centered at the origin in the xy-plane, the angle 92π/3 is the result of 15 revolutions from its starting side on the positive x-axis followed by a rotation through 2π/3 radians. Therefore, the angles 92π/3 and 2π/3 are coterminal angles and tan(92π/3) is equal to tan(2π/3). Since 2π/3 is greater than π/2 and less than π, it follows that the terminal side of the angle is in quadrant II and forms an angle of π/3, or 60°, with the negative x-axis. Therefore, the terminal side of the angle intersects the unit circle at the point (-1/2, √3/2). It follows that the value of tan(2π/3) is (√3/2)/(-1/2), which is equivalent to -√3. Therefore, the value of tan(92π/3) is -√3.",
+                    "Rationale": "A trigonometric ratio can be found using the unit circle, that is, a circle with radius 1 unit. If a central angle of a unit circle in the `text(xy)`-plane centered at the origin has its starting side on the positive `text(x)`-axis and its terminal side intersects the circle at a point `(x,y)`, then the value of the tangent of the central angle is equal to the `text(y)`-coordinate divided by the `text(x)`-coordinate. There are 2π radians in a circle. Dividing 92π/3 by 2π yields 92/6, which is equivalent to 15 + 2/3. It follows that on the unit circle centered at the origin in the `text(xy)`-plane, the angle 92π/3 is the result of 15 revolutions from its starting side on the positive `text(x)`-axis followed by a rotation through 2π/3 radians. Therefore, the angles 92π/3 and 2π/3 are coterminal angles and tan(92π/3) is equal to tan(2π/3). Since 2π/3 is greater than π/2 and less than π, it follows that the terminal side of the angle is in quadrant II and forms an angle of π/3, or 60°, with the negative `text(x)`-axis. Therefore, the terminal side of the angle intersects the unit circle at the point (-1/2, √3/2). It follows that the value of tan(2π/3) is (√3/2)/(-1/2), which is equivalent to -√3. Therefore, the value of tan(92π/3) is -√3.",
                     "Percent": 0
                 }
             },
@@ -1007,7 +1007,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function g is defined by g(x) = (x + 14)(t - x) where t is a constant. In the xy-plane, the graph of `y=g(x)` passes through the point (24, 0). What is the value of g(0)?"
+            "The function g is defined by g(x) = (x + 14)(t - x) where t is a constant. In the `text(xy)`-plane, the graph of `y=g(x)` passes through the point (24, 0). What is the value of g(0)?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1029,7 +1029,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the xy-plane."
+            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `text(xy)`-plane."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1039,7 +1039,7 @@
         "Explain": false,
         "Content": [
             ":ibox:(x + 4)^2 + (y - 19)^2 = 121",
-            "The graph of the given equation is a circle in the xy-plane. The point (a, b) lies on the circle. Which of the following is a possible value for a?"
+            "The graph of the given equation is a circle in the `text(xy)`-plane. The point (a, b) lies on the circle. Which of the following is a possible value for a?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1054,7 +1054,7 @@
                 "Choice": "-14",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation of the form `(x-h)^2+(y-k)^2=r^2`, where h, k, and r are constants, represents a circle in the xy-plane with center `(h,k)` and radius r. Therefore, the circle represented by the given equation has center (-4, 19) and radius 11. Since the center of the circle has an x-coordinate of -4 and the radius of the circle is 11, the least possible x-coordinate for any point on the circle is -4 - 11, or -15. Similarly, the greatest possible x-coordinate for any point on the circle is -4 + 11, or 7. Therefore, if the point (a, b) lies on the circle, it must be true that a -15 ≤ a ≤ 7. Of the given choices, only -14 satisfies this inequality.",
+                    "Rationale": "An equation of the form `(x-h)^2+(y-k)^2=r^2`, where h, k, and r are constants, represents a circle in the `text(xy)`-plane with center `(h,k)` and radius r. Therefore, the circle represented by the given equation has center (-4, 19) and radius 11. Since the center of the circle has an `text(x)`-coordinate of -4 and the radius of the circle is 11, the least possible `text(x)`-coordinate for any point on the circle is -4 - 11, or -15. Similarly, the greatest possible `text(x)`-coordinate for any point on the circle is -4 + 11, or 7. Therefore, if the point (a, b) lies on the circle, it must be true that a -15 ≤ a ≤ 7. Of the given choices, only -14 satisfies this inequality.",
                     "Percent": 0
                 }
             },
@@ -1260,14 +1260,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = ax^2+ bx + c where a, b, and c are constants. The graph of `y=f(x)` in the xy-plane passes through the points (7, 0) and (-3, 0). If a is an integer greater than 1, which of the following could be the value of a + b?"
+            "The function f is defined by f(x) = ax^2+ bx + c where a, b, and c are constants. The graph of `y=f(x)` in the `text(xy)`-plane passes through the points (7, 0) and (-3, 0). If a is an integer greater than 1, which of the following could be the value of a + b?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "-6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph of `y=f(x)` in the xy-plane passes through the points (7, 0) and (-3, 0). It follows that when the value of x is either 7 or -3, the value of f(x) is 0. It's also given that the function f is defined by f(x) = ax^2+ bx + c, where a, b, and c are constants. It follows that the function f is a quadratic function and, therefore, may be written in factored form as f(x) = a(x - u)(x - v), where the value of f(x) is 0 when x is either u or v. Since the value of f(x) is 0 when the value of x is either 7 or -3, and the value of f(x) is 0 when the value of x is either u or v, it follows that u and v are equal to 7 and -3. Substituting 7 for u and -3 for v in the equation f(x) = a(x - u)(x - v) yields f(x) = a(x - 7)(x - (-3)), or f(x) = a(x - 7)(x + 3). Distributing the right-hand side of this equation yields f(x) = a(x^2- 7x + 3x -21), or f(x) = ax^2- 4ax -21a. Since it's given that f(x) = ax^2, it follows that b = -4a. Adding a to each side of this equation yields a + b = -3a. Since a + b = -3a, if a is an integer, the value of a + b must be a multiple of 3. If a is an integer greater than 1, it follows that a ≥ 2. Therefore, -3a ≤ -3(2). It follows that the value of a + b is less than or equal to -3(2), or -6. Of the given choices, only -6 is a multiple of 3 that's less than or equal to -6.",
+                    "Rationale": "It's given that the graph of `y=f(x)` in the `text(xy)`-plane passes through the points (7, 0) and (-3, 0). It follows that when the value of x is either 7 or -3, the value of f(x) is 0. It's also given that the function f is defined by f(x) = ax^2+ bx + c, where a, b, and c are constants. It follows that the function f is a quadratic function and, therefore, may be written in factored form as f(x) = a(x - u)(x - v), where the value of f(x) is 0 when x is either u or v. Since the value of f(x) is 0 when the value of x is either 7 or -3, and the value of f(x) is 0 when the value of x is either u or v, it follows that u and v are equal to 7 and -3. Substituting 7 for u and -3 for v in the equation f(x) = a(x - u)(x - v) yields f(x) = a(x - 7)(x - (-3)), or f(x) = a(x - 7)(x + 3). Distributing the right-hand side of this equation yields f(x) = a(x^2- 7x + 3x -21), or f(x) = ax^2- 4ax -21a. Since it's given that f(x) = ax^2, it follows that b = -4a. Adding a to each side of this equation yields a + b = -3a. Since a + b = -3a, if a is an integer, the value of a + b must be a multiple of 3. If a is an integer greater than 1, it follows that a ≥ 2. Therefore, -3a ≤ -3(2). It follows that the value of a + b is less than or equal to -3(2), or -6. Of the given choices, only -6 is a multiple of 3 that's less than or equal to -6.",
                     "Percent": 0
                 }
             },

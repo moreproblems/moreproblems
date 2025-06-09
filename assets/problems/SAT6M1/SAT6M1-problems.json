@@ -716,7 +716,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph models the number of active projects a company was working on x months after the end of November 2012. Therefore, the value of x that corresponds to the end of November 2012 is 0. The point at which x = 0 is the y-intercept of the graph. It follows that the y-intercept of the graph shown is the point (0, 5). Therefore, according to the model, the predicted number of active projects the company was working on at the end of November 2012 is 5.",
+                    "Rationale": "It's given that the graph models the number of active projects a company was working on x months after the end of November 2012. Therefore, the value of x that corresponds to the end of November 2012 is 0. The point at which x = 0 is the `text(y)`-intercept of the graph. It follows that the `text(y)`-intercept of the graph shown is the point (0, 5). Therefore, according to the model, the predicted number of active projects the company was working on at the end of November 2012 is 5.",
                     "Percent": 0
                 }
             },
@@ -779,7 +779,7 @@
                 "Choice": "y = 8x + 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the relationship between `x` and `y` is linear. An equation representing a linear relationship can be written in the form `y=mx+b`, where m is the slope and b is the y-coordinate of the y-intercept of the graph of the relationship in the xy-plane. It's given that for every increase in the value of x by 1, the value of y increases by 8. The slope of a line can be expressed as the change in y over the change in x. Thus, the slope, m, of the line representing this relationship can be expressed as 8/1, or 8. Substituting 8 for m in the equation `y=mx+b` yields y = 8x + b. It's also given that when the value of x is 2, the value of y is 18. Substituting 2 for x and 18 for y in the equation y = 8x + b yields 18 = 8(2) + b, or 18 = 16 + b. Subtracting 16 from each side of this equation yields 2 = b. Substituting 2 for b in the equation y = 8x + b yields y = 8x + 2. Therefore, the equation y = 8x + 2 represents this relationship.",
+                    "Rationale": "It's given that the relationship between `x` and `y` is linear. An equation representing a linear relationship can be written in the form `y=mx+b`, where m is the slope and b is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of the relationship in the `text(xy)`-plane. It's given that for every increase in the value of x by 1, the value of y increases by 8. The slope of a line can be expressed as the change in y over the change in x. Thus, the slope, m, of the line representing this relationship can be expressed as 8/1, or 8. Substituting 8 for m in the equation `y=mx+b` yields y = 8x + b. It's also given that when the value of x is 2, the value of y is 18. Substituting 2 for x and 18 for y in the equation y = 8x + b yields 18 = 8(2) + b, or 18 = 16 + b. Subtracting 16 from each side of this equation yields 2 = b. Substituting 2 for b in the equation y = 8x + b yields y = 8x + 2. Therefore, the equation y = 8x + 2 represents this relationship.",
                     "Percent": 0
                 }
             },
@@ -980,14 +980,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the y-coordinate of the y-intercept of the graph of 3x/7 = -5y/9 + 21 in the xy-plane?"
+            "What is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of 3x/7 = -5y/9 + 21 in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:189/5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A y-intercept of a graph in the xy-plane is a point where the graph intersects the y-axis, which is a point with an x-coordinate of 0. Substituting 0 for x in the given equation yields 3(0)/7 = -5y/9 + 21, or 0 = -5y/9 + 21. Subtracting 21 from both sides of this equation yields -21 = -5y/9. Multiplying both sides of this equation by -9 yields 189 = 5y. Dividing both sides of this 189 = equation by 5 yields 189/5 = y. Therefore, the y-coordinate of the y-intercept of the graph of the given equation in the xy-plane is 189/5.",
+                    "Rationale": "A `text(y)`-intercept of a graph in the `text(xy)`-plane is a point where the graph intersects the `text(y)`-axis, which is a point with an `text(x)`-coordinate of 0. Substituting 0 for x in the given equation yields 3(0)/7 = -5y/9 + 21, or 0 = -5y/9 + 21. Subtracting 21 from both sides of this equation yields -21 = -5y/9. Multiplying both sides of this equation by -9 yields 189 = 5y. Dividing both sides of this 189 = equation by 5 yields 189/5 = y. Therefore, the `text(y)`-coordinate of the `text(y)`-intercept of the graph of the given equation in the `text(xy)`-plane is 189/5.",
                     "Percent": 0
                 }
             }
@@ -1019,7 +1019,7 @@
                 "Choice": "equal:-24",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the graph passes through the point (0, -6), it follows that when the value of x is 0, the value of y is -6. Substituting 0 for x and -6 for y in the given equation yields -6 = 2(0)^2 + b(0) + c, or -6 = c. Therefore, the value of c is 6-. Substituting 6- for c in the given equation yields y = 2x^2+ bx + c. Since the graph passes through the point (-1, 8), it follows that when the value of x is -1, the value of y is -8. Substituting -1 for x and -8 for y in the equation y = 2x^2+ bx + c yields -8 = 2(-1)^2 + b(-1) - 6, or -8 = 2 - b - 6, which is equivalent to -8 = -4 - b. Adding 4 to each side of this equation yields -4 = -b. Dividing each side of this equation by -1 yields 4 = b. Since the value of b is 4 and the value of c is -6, it follows that the value of bc is (4)(-6), or -24.\n\nAlternate approach: The given equation represents a parabola in the xy-plane with a vertex at (-1, -8). Therefore, the given equation, y = 2x^2+ bx + c, which is written in standard form, can be written in vertex form, y = a(x - h)^2 + k, where `(h,k)` is the vertex of the parabola and a is the value of the coefficient on the x2 term when the equation is written in standard form. It follows that a = 2. Substituting 2 for a, -1 for h, and -8 for k in this equation yields y = 2(x - (-1))^2 - 8, or y = 2(x + 1)^2 - 8. Squaring the binomial on the right-hand side of this equation yields y = 2(x^2+ 2x + 1) - 8. Multiplying each term inside the parentheses on the right-hand side of this equation by 2 yields y = 2x^2+ 4x + 2 - 8, which is equivalent to y = 2x^2+ 4x - 6. From the given equation y = 2x^2+ bx + c, it follows that the value of b is 4 and the value of c is -6. Therefore, the value of bc is (4)(-6), or -24.",
+                    "Rationale": "Since the graph passes through the point (0, -6), it follows that when the value of x is 0, the value of y is -6. Substituting 0 for x and -6 for y in the given equation yields -6 = 2(0)^2 + b(0) + c, or -6 = c. Therefore, the value of c is 6-. Substituting 6- for c in the given equation yields y = 2x^2+ bx + c. Since the graph passes through the point (-1, 8), it follows that when the value of x is -1, the value of y is -8. Substituting -1 for x and -8 for y in the equation y = 2x^2+ bx + c yields -8 = 2(-1)^2 + b(-1) - 6, or -8 = 2 - b - 6, which is equivalent to -8 = -4 - b. Adding 4 to each side of this equation yields -4 = -b. Dividing each side of this equation by -1 yields 4 = b. Since the value of b is 4 and the value of c is -6, it follows that the value of bc is (4)(-6), or -24.\n\nAlternate approach: The given equation represents a parabola in the `text(xy)`-plane with a vertex at (-1, -8). Therefore, the given equation, y = 2x^2+ bx + c, which is written in standard form, can be written in vertex form, y = a(x - h)^2 + k, where `(h,k)` is the vertex of the parabola and a is the value of the coefficient on the x2 term when the equation is written in standard form. It follows that a = 2. Substituting 2 for a, -1 for h, and -8 for k in this equation yields y = 2(x - (-1))^2 - 8, or y = 2(x + 1)^2 - 8. Squaring the binomial on the right-hand side of this equation yields y = 2(x^2+ 2x + 1) - 8. Multiplying each term inside the parentheses on the right-hand side of this equation by 2 yields y = 2x^2+ 4x + 2 - 8, which is equivalent to y = 2x^2+ 4x - 6. From the given equation y = 2x^2+ bx + c, it follows that the value of b is 4 and the value of c is -6. Therefore, the value of bc is (4)(-6), or -24.",
                     "Percent": 0
                 }
             }
@@ -1089,7 +1089,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Describe how a change to the equation representing a circle affects the graph of the circle in the xy-plane or how a change to the graph of a circle affects the equation that represents the circle."
+            "Describe how a change to the equation representing a circle affects the graph of the circle in the `text(xy)`-plane or how a change to the graph of a circle affects the equation that represents the circle."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1106,7 +1106,7 @@
                 "Choice": "(x + 2)^2 + (y + 6)^2 = (4)(9)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the graph, the center of circle A has coordinates (-2, 0), and the radius of circle A is 3. It's given that circle B is the result of shifting circle A down 6 units and increasing the radius so that the radius of circle B is 2 times the radius of circle A. It follows that the center of circle B is 6 units below the center of circle A. The point that's 6 units below (-2, 0) has the same x-coordinate as (-2, 0) and has a y-coordinate that is 6 less than the y-coordinate of (-2, 0). Therefore, the coordinates of the center of circle B are (-2, 0 - 6), or (-2, -6). Since the radius of circle B is 2 times the radius of circle A, the radius of circle B is 2 3 ^ ^ h h. A circle in the xy-plane can be defined by an equation of the form `(x-h)^2+(y-k)^2=r^2`, where the coordinates of the center of the circle are `(h,k)` and the radius of the circle is r. Substituting -2 for h, -6 for k, and (2)(3) for r in this equation yields (x - (-2))^2 + (y - (-6))^2 = (2)^2(3)^2, which is equivalent to (x + 2)^2 + (y + 6)^2 = (2)^2(3)^2, or (x + 2)^2 + (y + 6)^2 = (4)(9). Therefore, the equation (x + 2)^2 + (y + 6)^2 = (4)(9) defines circle B.",
+                    "Rationale": "According to the graph, the center of circle A has coordinates (-2, 0), and the radius of circle A is 3. It's given that circle B is the result of shifting circle A down 6 units and increasing the radius so that the radius of circle B is 2 times the radius of circle A. It follows that the center of circle B is 6 units below the center of circle A. The point that's 6 units below (-2, 0) has the same `text(x)`-coordinate as (-2, 0) and has a `text(y)`-coordinate that is 6 less than the `text(y)`-coordinate of (-2, 0). Therefore, the coordinates of the center of circle B are (-2, 0 - 6), or (-2, -6). Since the radius of circle B is 2 times the radius of circle A, the radius of circle B is 2 3 ^ ^ h h. A circle in the `text(xy)`-plane can be defined by an equation of the form `(x-h)^2+(y-k)^2=r^2`, where the coordinates of the center of the circle are `(h,k)` and the radius of the circle is r. Substituting -2 for h, -6 for k, and (2)(3) for r in this equation yields (x - (-2))^2 + (y - (-6))^2 = (2)^2(3)^2, which is equivalent to (x + 2)^2 + (y + 6)^2 = (2)^2(3)^2, or (x + 2)^2 + (y + 6)^2 = (4)(9). Therefore, the equation (x + 2)^2 + (y + 6)^2 = (4)(9) defines circle B.",
                     "Percent": 0
                 }
             },
@@ -1266,14 +1266,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/26a.jpg",
-            "The table shows three values of x and their corresponding values of g(x), where g(x) = f(x)/(x + 3) and f is a linear function. What is the y-intercept of the graph of `y=f(x)` in the xy-plane?"
+            "The table shows three values of x and their corresponding values of g(x), where g(x) = f(x)/(x + 3) and f is a linear function. What is the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "(0, 36)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the table shows values of x and their corresponding values of g(x), where g(x) = f(x)/(x + 3). It's also given that f is a linear function. It follows that an equation that defines f can be written in the form f(x) = mx + b, where m represents the slope and b represents the y-coordinate of the y-intercept `(0,b)` of the graph of `y=f(x)` in the xy-plane. The slope of the graph of `y=f(x)` can be found using two points, `(x_1,y_1)` and `(x_2,y_2)`, that are on the graph of `y=f(x)`, and the formula `m=(y_2-y_1)/(x_2-x_1)`. Since the table shows values of x and their corresponding values of g(x), substituting values of x and g(x) in the equation g(x) = f(x)/(x + 3) can be used to define function f. Using the first pair of values from the table, x = -27 and g(x) = 3, yields 3 = f(-27)/(-27 + 3), or 3 = f(-27)/(-24). Multiplying each side of this equation by -24 yields -72 = f(-27), so the point (-27, -72) is on the graph of `y=f(x)`. Using the second pair of values from the table, x = -9 and g(x) = 0, yields 0 = f(-9)/(-9 + 3), or 0 = f(-9)/(-6). Multiplying each side of this equation by -6 yields 0 = f(-9), so the point (-9, 0) is on the graph of `y=f(x)`. Substituting (-27, -72) and (-9, 0) for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the formula `m=(y_2-y_1)/(x_2-x_1)` yields m = (0 - (-72))/(-9 - (-27)), or m = 4. Substituting 4 for m in the equation f(x) = mx + b yields f(x) = 4x + b. Since 0 = f(-9), substituting -9 for x and 0 for f(x) in the equation f(x) = 4x + b yields 0 = 4(-9) + b, or 0 = -36 + b. Adding 36 to both sides of this equation yields 36 = b. It follows that 36 is the y-coordinate of the y-intercept `(0,b)` of the graph of `y=f(x)`. Therefore, the y-intercept of the graph of `y=f(x)` is (0, 36).",
+                    "Rationale": "It's given that the table shows values of x and their corresponding values of g(x), where g(x) = f(x)/(x + 3). It's also given that f is a linear function. It follows that an equation that defines f can be written in the form f(x) = mx + b, where m represents the slope and b represents the `text(y)`-coordinate of the `text(y)`-intercept `(0,b)` of the graph of `y=f(x)` in the `text(xy)`-plane. The slope of the graph of `y=f(x)` can be found using two points, `(x_1,y_1)` and `(x_2,y_2)`, that are on the graph of `y=f(x)`, and the formula `m=(y_2-y_1)/(x_2-x_1)`. Since the table shows values of x and their corresponding values of g(x), substituting values of x and g(x) in the equation g(x) = f(x)/(x + 3) can be used to define function f. Using the first pair of values from the table, x = -27 and g(x) = 3, yields 3 = f(-27)/(-27 + 3), or 3 = f(-27)/(-24). Multiplying each side of this equation by -24 yields -72 = f(-27), so the point (-27, -72) is on the graph of `y=f(x)`. Using the second pair of values from the table, x = -9 and g(x) = 0, yields 0 = f(-9)/(-9 + 3), or 0 = f(-9)/(-6). Multiplying each side of this equation by -6 yields 0 = f(-9), so the point (-9, 0) is on the graph of `y=f(x)`. Substituting (-27, -72) and (-9, 0) for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the formula `m=(y_2-y_1)/(x_2-x_1)` yields m = (0 - (-72))/(-9 - (-27)), or m = 4. Substituting 4 for m in the equation f(x) = mx + b yields f(x) = 4x + b. Since 0 = f(-9), substituting -9 for x and 0 for f(x) in the equation f(x) = 4x + b yields 0 = 4(-9) + b, or 0 = -36 + b. Adding 36 to both sides of this equation yields 36 = b. It follows that 36 is the `text(y)`-coordinate of the `text(y)`-intercept `(0,b)` of the graph of `y=f(x)`. Therefore, the `text(y)`-intercept of the graph of `y=f(x)` is (0, 36).",
                     "Percent": 0
                 }
             },
@@ -1281,7 +1281,7 @@
                 "Choice": "(0, 12)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "12 is the y-coordinate of the y-intercept of the graph of `y=g(x)`.",
+                    "Rationale": "12 is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of `y=g(x)`.",
                     "Percent": 0
                 }
             },
@@ -1297,7 +1297,7 @@
                 "Choice": "(0, -9)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-9 is the x-coordinate of the x-intercept of the graph of `y=g(x)`.",
+                    "Rationale": "-9 is the `text(x)`-coordinate of the `text(x)`-intercept of the graph of `y=g(x)`.",
                     "Percent": 0
                 }
             }

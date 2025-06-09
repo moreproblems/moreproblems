@@ -185,7 +185,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT2M1/media/4a.jpg",
-            "What is the y-intercept of the graph shown?"
+            "What is the `text(y)`-intercept of the graph shown?"
         ],
         "AnswerChoices": {
             "A": {
@@ -216,7 +216,7 @@
                 "Choice": "`(0, 8)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of a graph in the xy-plane is the point at which the graph crosses the y-axis. The graph shown crosses the y-axis at the point `(0, 8)`. Therefore, the y-intercept of the graph shown is `(0, 8)`.",
+                    "Rationale": "The `text(y)`-intercept of a graph in the `text(xy)`-plane is the point at which the graph crosses the `text(y)`-axis. The graph shown crosses the `text(y)`-axis at the point `(0, 8)`. Therefore, the `text(y)`-intercept of the graph shown is `(0, 8)`.",
                     "Percent": 0
                 }
             }
@@ -570,7 +570,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and `f(0)` corresponds to the y-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and `f(0)` corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -918,14 +918,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function `h` is defined by `h(x)=4x+28`. The graph of `y=h(x)` in the xy-plane has an x-intercept at `(a, 0)` and a y-intercept at `(0, b)`, where `a` and `b` are constants. What is the value of `a+b`?"
+            "The function `h` is defined by `h(x)=4x+28`. The graph of `y=h(x)` in the `text(xy)`-plane has an `text(x)`-intercept at `(a, 0)` and a `text(y)`-intercept at `(0, b)`, where `a` and `b` are constants. What is the value of `a+b`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`21`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The x-intercept of a graph in the xy-plane is the point on the graph where `y=0`. It's given that function `h` is defined by `h(x)=4x+28`. Therefore, the equation representing the graph of `y=h(x)` is `y=4x+28`. Substituting `0` for `y` in the equation `y=4x+28` yields `0=4x+28`. Subtracting `28` from both sides of this equation yields `-28=4x`. Dividing both sides of this equation by `4` yields `-7=x`. Therefore, the x-intercept of the graph of `y=h(x)` in the xy-plane is `(-7,0)`. It's given that the x-intercept of the graph of `y=h(x)` is `(a,0)`. Therefore, `a=-7`. The y-intercept of a graph in the xy-plane is the point on the graph where `x=0`. Substituting `0` for `x` in the equation `y=4x+28` yields `y=4(0)+28`, or `y=28`. Therefore, the y-intercept of the graph of `y=h(x)` in the xy-plane is `(0,28)`. It's given that the y-intercept of the graph of `y=h(x)` is `(0,b)`. Therefore, `b=28`. If `a=-7` and `b=28`, then the value of `a+b` is `-7+28`, or `21`.",
+                    "Rationale": "The `text(x)`-intercept of a graph in the `text(xy)`-plane is the point on the graph where `y=0`. It's given that function `h` is defined by `h(x)=4x+28`. Therefore, the equation representing the graph of `y=h(x)` is `y=4x+28`. Substituting `0` for `y` in the equation `y=4x+28` yields `0=4x+28`. Subtracting `28` from both sides of this equation yields `-28=4x`. Dividing both sides of this equation by `4` yields `-7=x`. Therefore, the `text(x)`-intercept of the graph of `y=h(x)` in the `text(xy)`-plane is `(-7,0)`. It's given that the `text(x)`-intercept of the graph of `y=h(x)` is `(a,0)`. Therefore, `a=-7`. The `text(y)`-intercept of a graph in the `text(xy)`-plane is the point on the graph where `x=0`. Substituting `0` for `x` in the equation `y=4x+28` yields `y=4(0)+28`, or `y=28`. Therefore, the `text(y)`-intercept of the graph of `y=h(x)` in the `text(xy)`-plane is `(0,28)`. It's given that the `text(y)`-intercept of the graph of `y=h(x)` is `(0,b)`. Therefore, `b=28`. If `a=-7` and `b=28`, then the value of `a+b` is `-7+28`, or `21`.",
                     "Percent": 0
                 }
             },
@@ -1155,7 +1155,7 @@
                 "Choice": "`f(x)=(-1/4)x-12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation for the graph shown can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the graph and its y-intercept is `(0,b)`. Since the y-intercept of the graph shown is `(0,2)`, the value of `b` is `2`. Since the graph also passes through the point `(4,1)`, the slope can be calculated as `(1-2)/(4-0)`, or `-1/4`. Therefore, the value of `m` is `-1/4`. Substituting `-1/4` for `m` and `2` for `b` in the equation `y=mx+b` yields `y=(-1/4)x+2`. It's given that an equation for the graph shown is `y=f(x)+14`. Substituting `f(x)+14` for `y` in the equation `y=(-1/4)x+2` yields `f(x)+14=(-1/4)x+2`. Subtracting `14` from both sides of this equation yields `f(x)=(-1/4)x-12`.",
+                    "Rationale": "An equation for the graph shown can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the graph and its `text(y)`-intercept is `(0,b)`. Since the `text(y)`-intercept of the graph shown is `(0,2)`, the value of `b` is `2`. Since the graph also passes through the point `(4,1)`, the slope can be calculated as `(1-2)/(4-0)`, or `-1/4`. Therefore, the value of `m` is `-1/4`. Substituting `-1/4` for `m` and `2` for `b` in the equation `y=mx+b` yields `y=(-1/4)x+2`. It's given that an equation for the graph shown is `y=f(x)+14`. Substituting `f(x)+14` for `y` in the equation `y=(-1/4)x+2` yields `f(x)+14=(-1/4)x+2`. Subtracting `14` from both sides of this equation yields `f(x)=(-1/4)x-12`.",
                     "Percent": 0
                 }
             },

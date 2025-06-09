@@ -15,7 +15,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT15M1/media/1a.jpg",
-            "Which of the following is an equation of line in the xy-plane above?"
+            "Which of the following is an equation of line in the `text(xy)`-plane above?"
         ],
         "AnswerChoices": {
             "A": {
@@ -38,7 +38,7 @@
                 "Choice": "y = x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The line defined by this equation has y-intercept (0, 0), whereas line has y-intercept (0, 1).",
+                    "Rationale": "The line defined by this equation has `text(y)`-intercept (0, 0), whereas line has `text(y)`-intercept (0, 1).",
                     "Percent": 0
                 }
             },
@@ -46,7 +46,7 @@
                 "Choice": "y = x + 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "From the graph, the y-intercept of line l is (0, 1). The line also passes through the point (1, 2). Therefore the slope of the line is (2 - 1)/(1 - 0) = 1/1 = 1, and in slope-intercept form, the equation for line l is y = x + 1.",
+                    "Rationale": "From the graph, the `text(y)`-intercept of line l is (0, 1). The line also passes through the point (1, 2). Therefore the slope of the line is (2 - 1)/(1 - 0) = 1/1 = 1, and in slope-intercept form, the equation for line l is y = x + 1.",
                     "Percent": 0
                 }
             }
@@ -167,21 +167,21 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is an example of a function whose graph in the xy-plane has no x-intercepts?"
+            "Which of the following is an example of a function whose graph in the `text(xy)`-plane has no `text(x)`-intercepts?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "A linear function whose rate of change is not zero",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of a linear function in the xy-plane whose rate of change is not zero is a line with a nonzero slope. The x-axis is a horizontal line and thus has slope 0, so the graph of the linear function whose rate of change is not zero is a line that is not parallel to the x-axis. Thus, the graph must intersect the x-axis at some point, and this point is an x-intercept of the graph.",
+                    "Rationale": "The graph of a linear function in the `text(xy)`-plane whose rate of change is not zero is a line with a nonzero slope. The `text(x)`-axis is a horizontal line and thus has slope 0, so the graph of the linear function whose rate of change is not zero is a line that is not parallel to the `text(x)`-axis. Thus, the graph must intersect the `text(x)`-axis at some point, and this point is an `text(x)`-intercept of the graph.",
                     "Percent": 0
                 }
             },
@@ -189,7 +189,7 @@
                 "Choice": "A quadratic function with real zeros",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of any function with a real zero must have an x-intercept.",
+                    "Rationale": "The graph of any function with a real zero must have an `text(x)`-intercept.",
                     "Percent": 0
                 }
             },
@@ -197,7 +197,7 @@
                 "Choice": "A quadratic function with no real zeros",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If f is a function of x, then the graph of f in the xy-plane consists of all points (x, f(x)). An x-intercept is where the graph intersects the x-axis; since all points on the x-axis have y-coordinate 0, the graph of f will cross the x-axis at values of x such that `f(x)=0`. Therefore, the graph of a function f will have no x-intercepts if and only if f has no real zeros. Likewise, the graph of a quadratic function with no real zeros will have no x-intercepts.",
+                    "Rationale": "If f is a function of x, then the graph of f in the `text(xy)`-plane consists of all points (x, f(x)). An `text(x)`-intercept is where the graph intersects the `text(x)`-axis; since all points on the `text(x)`-axis have `text(y)`-coordinate 0, the graph of f will cross the `text(x)`-axis at values of x such that `f(x)=0`. Therefore, the graph of a function f will have no `text(x)`-intercepts if and only if f has no real zeros. Likewise, the graph of a quadratic function with no real zeros will have no `text(x)`-intercepts.",
                     "Percent": 0
                 }
             },
@@ -205,7 +205,7 @@
                 "Choice": "A cubic polynomial with at least one real zero",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of any function with a real zero must have an x-intercept.",
+                    "Rationale": "The graph of any function with a real zero must have an `text(x)`-intercept.",
                     "Percent": 0
                 }
             }
@@ -380,7 +380,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "For a linear function that represents a context, interpret the meaning of an input/ output pair, constant, variable, factor, or term based on the context, including situations where seeing structure provides an advantage."
+            "For a linear function that represents a context, interpret the meaning of an input/output pair, constant, variable, factor, or term based on the context, including situations where seeing structure provides an advantage."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -708,7 +708,7 @@
         "Explain": false,
         "Content": [
             ":ibox:f(x) = 2ˣ + 1",
-            "The function f is defined by the equation above. Which of the following is the graph of y = -f(x) the xy-plane?"
+            "The function f is defined by the equation above. Which of the following is the graph of y = -f(x) the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -731,7 +731,7 @@
                 "Choice": "problems/SAT15M1/media/14c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of y = -f(x) is the graph of the equation y = -(2ˣ + 1), or y = -2ˣ - 1. This should be the graph of a decreasing exponential function. The y-intercept of the graph can be found by substituting the value x = 0 into the equation, as follows: y = -2⁰ - 1 = -1 - 1 = -2. Therefore, the graph should pass through the point (0, -2). This choice is the only one that passes through this point.",
+                    "Rationale": "The graph of y = -f(x) is the graph of the equation y = -(2ˣ + 1), or y = -2ˣ - 1. This should be the graph of a decreasing exponential function. The `text(y)`-intercept of the graph can be found by substituting the value x = 0 into the equation, as follows: y = -2⁰ - 1 = -1 - 1 = -2. Therefore, the graph should pass through the point (0, -2). This choice is the only one that passes through this point.",
                     "Percent": 0
                 }
             },

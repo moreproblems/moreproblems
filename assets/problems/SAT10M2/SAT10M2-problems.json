@@ -80,7 +80,7 @@
                 "Choice": "y = x + 3.4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The line of best fit shown has a positive slope and intersects the y-axis at a positive y-value. The graph of an equation of the form `y=mx+b`, where m and b are constants, has a slope of m and intersects the y-axis at a y-value of b. Of the given choices, only y = x + 3.4 represents a line that has a positive slope, 1, and intersects the y-axis at a positive y-value, 3.4.",
+                    "Rationale": "The line of best fit shown has a positive slope and intersects the `text(y)`-axis at a positive `text(y)`-value. The graph of an equation of the form `y=mx+b`, where m and b are constants, has a slope of m and intersects the `text(y)`-axis at a `text(y)`-value of b. Of the given choices, only y = x + 3.4 represents a line that has a positive slope, 1, and intersects the `text(y)`-axis at a positive `text(y)`-value, 3.4.",
                     "Percent": 0
                 }
             },
@@ -88,7 +88,7 @@
                 "Choice": "y = x - 3.4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a line that intersects the y-axis at a negative y-value, not a positive y-value.",
+                    "Rationale": "This equation represents a line that intersects the `text(y)`-axis at a negative `text(y)`-value, not a positive `text(y)`-value.",
                     "Percent": 0
                 }
             },
@@ -104,7 +104,7 @@
                 "Choice": "y = -x - 3.4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a line that has a negative slope, not a positive slope, and intersects the y-axis at a negative y-value, not a positive y-value.",
+                    "Rationale": "This equation represents a line that has a negative slope, not a positive slope, and intersects the `text(y)`-axis at a negative `text(y)`-value, not a positive `text(y)`-value.",
                     "Percent": 0
                 }
             }
@@ -404,7 +404,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "For a linear function that represents a context, interpret the meaning of an input/ output pair, constant, variable, factor, or term based on the context, including situations where seeing structure provides an advantage."
+            "For a linear function that represents a context, interpret the meaning of an input/output pair, constant, variable, factor, or term based on the context, including situations where seeing structure provides an advantage."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -470,7 +470,7 @@
         "Explain": false,
         "Content": [
             "y = 76\ny = x^2- 5",
-            "The graphs of the given equations in the xy-plane intersect at the point `(x,y)`. What is a possible value of x?"
+            "The graphs of the given equations in the `text(xy)`-plane intersect at the point `(x,y)`. What is a possible value of x?"
         ],
         "AnswerChoices": {
             "A": {
@@ -485,7 +485,7 @@
                 "Choice": "-9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the point `(x,y)` is an intersection point of the graphs of the given equations in the xy-plane, the pair `(x,y)` should satisfy both equations, and thus is a solution of the given system. According to the first equation, y = 76. Substituting 76 in place of y in the second equation yields x^2- 5 = 76. Adding 5 to both sides of this equation yields x^2= 81. Taking the square root of both sides of this equation yields two solutions: x = 9 and x = -9. Of these two solutions, only -9 is given as a choice.",
+                    "Rationale": "Since the point `(x,y)` is an intersection point of the graphs of the given equations in the `text(xy)`-plane, the pair `(x,y)` should satisfy both equations, and thus is a solution of the given system. According to the first equation, y = 76. Substituting 76 in place of y in the second equation yields x^2- 5 = 76. Adding 5 to both sides of this equation yields x^2= 81. Taking the square root of both sides of this equation yields two solutions: x = 9 and x = -9. Of these two solutions, only -9 is given as a choice.",
                     "Percent": 0
                 }
             },
@@ -855,7 +855,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -864,14 +864,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = (-8)(2)^x + 22. What is the y-intercept of the graph of `y=f(x)` in the xy-plane?"
+            "The function f is defined by f(x) = (-8)(2)^x + 22. What is the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "(0, 14)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of the graph of `y=f(x)` in the xy-plane occurs at the point on the graph where x = 0. In other words, when x = 0, the corresponding value of f(x) is the y-coordinate of the y-intercept. Substituting 0 for x in the given equation yields f(0) = (-8)(2)⁰ + 22, which is equivalent to f(0) = (-8)(1) + 22, or f(0) = 14. Thus, when x = 0, the corresponding value of f(x) is 14. Therefore, the y-intercept of the graph of `y=f(x)` in the xy-plane is (0, 14).",
+                    "Rationale": "The `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane occurs at the point on the graph where x = 0. In other words, when x = 0, the corresponding value of f(x) is the `text(y)`-coordinate of the `text(y)`-intercept. Substituting 0 for x in the given equation yields f(0) = (-8)(2)⁰ + 22, which is equivalent to f(0) = (-8)(1) + 22, or f(0) = 14. Thus, when x = 0, the corresponding value of f(x) is 14. Therefore, the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane is (0, 14).",
                     "Percent": 0
                 }
             },
@@ -895,7 +895,7 @@
                 "Choice": "(0, -8)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could be the y-intercept for f(x) = (-8)(2)^x, not f(x) = (-8)(2)^x + 22.",
+                    "Rationale": "This choice could be the `text(y)`-intercept for f(x) = (-8)(2)^x, not f(x) = (-8)(2)^x + 22.",
                     "Percent": 0
                 }
             }
@@ -965,7 +965,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Describe how a change to the equation representing a circle affects the graph of the circle in the xy-plane or how a change to the graph of a circle affects the equation that represents the circle."
+            "Describe how a change to the equation representing a circle affects the graph of the circle in the `text(xy)`-plane or how a change to the graph of a circle affects the equation that represents the circle."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -974,14 +974,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A circle in the xy-plane has a diameter with endpoints (2, 4) and (2, 14). An equation of this circle is (x - 2)^2 + (y - 9)^2 = r², where r is a positive constant. What is the value of r?"
+            "A circle in the `text(xy)`-plane has a diameter with endpoints (2, 4) and (2, 14). An equation of this circle is (x - 2)^2 + (y - 9)^2 = r², where r is a positive constant. What is the value of r?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form of an equation of a circle in the xy-plane is `(x-h)^2+(y-k)^2=r^2`, where h, k, and r are constants, the coordinates of the center of the circle are `(h,k)`, and the length of the radius of the circle is r. It's given that an equation of the circle is (x - 2)^2 + (y - 9)^2 = r². Therefore, the center of this circle is (2, 9). It's given that the endpoints of a diameter of the circle are (2, 4) and, (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x₁ - x₂)^2 + (y₁ - y₂)^2). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 - 2)^2 + (9 - 4)^2), or  √(0^2 + 5^2), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
+                    "Rationale": "The standard form of an equation of a circle in the `text(xy)`-plane is `(x-h)^2+(y-k)^2=r^2`, where h, k, and r are constants, the coordinates of the center of the circle are `(h,k)`, and the length of the radius of the circle is r. It's given that an equation of the circle is (x - 2)^2 + (y - 9)^2 = r². Therefore, the center of this circle is (2, 9). It's given that the endpoints of a diameter of the circle are (2, 4) and, (2, 14). The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, √((x_1 - x_2)^2 + (y_1 - y_2)^2). Substituting the center of the circle (2, 9) and one endpoint of the diameter (2, 4) in this formula gives a distance of √((2 - 2)^2 + (9 - 4)^2), or  √(0^2 + 5^2), which is equivalent to 5. Since the distance from the center of the circle to an endpoint of a diameter is 5, the value of r is 5.",
                     "Percent": 0
                 }
             }
@@ -1005,14 +1005,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line l is defined by 3y + 12x = 5. Line n is perpendicular to line l in the xy-plane. What is the slope of line n?"
+            "Line l is defined by 3y + 12x = 5. Line n is perpendicular to line l in the `text(xy)`-plane. What is the slope of line n?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For an equation in slope-intercept form `y=mx+b`, m represents the slope of the line in the xy-plane defined by this equation. It's given that line l is defined by 3y + 12x = 5. Subtracting 12x from both sides of this equation yields 3y = -12x + 5. Dividing both sides of this equation by 3 yields y = -12x/3 + 5/3, or y = -4x + 5/3. Thus, the slope of line l in the xy-plane is -4. Since line n is perpendicular to line l in the xy-plane, the slope of line n is the negative reciprocal of the slope of line l. The negative reciprocal of -4 is -1/(-4) = 1/4.",
+                    "Rationale": "For an equation in slope-intercept form `y=mx+b`, m represents the slope of the line in the `text(xy)`-plane defined by this equation. It's given that line l is defined by 3y + 12x = 5. Subtracting 12x from both sides of this equation yields 3y = -12x + 5. Dividing both sides of this equation by 3 yields y = -12x/3 + 5/3, or y = -4x + 5/3. Thus, the slope of line l in the `text(xy)`-plane is -4. Since line n is perpendicular to line l in the `text(xy)`-plane, the slope of line n is the negative reciprocal of the slope of line l. The negative reciprocal of -4 is -1/(-4) = 1/4.",
                     "Percent": 0
                 }
             }

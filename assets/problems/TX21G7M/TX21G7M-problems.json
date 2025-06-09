@@ -707,7 +707,7 @@
                 "Choice": "problems/TX21G7M/media/14a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents the relationship between `x` and `y`, the student could have recognized that the total number of new words learned by the student is represented by y, the number of weeks since the student has been in the program is represented by x, and the rate at which the student learned words is 15 words per week (y = 15x). The student then could have checked pairs of x- and y-values to find the graph in which each y-value was the result of multiplying the corresponding x-value by 15. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the graph that best represents the relationship between `x` and `y`, the student could have recognized that the total number of new words learned by the student is represented by y, the number of weeks since the student has been in the program is represented by x, and the rate at which the student learned words is 15 words per week (y = 15x). The student then could have checked pairs of x- and `text(y)`-values to find the graph in which each `text(y)`-value was the result of multiplying the corresponding `text(x)`-value by 15. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 68
                 }
             },
@@ -715,7 +715,7 @@
                 "Choice": "problems/TX21G7M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely misinterpreted the x-axis as the number of months instead of the number of weeks. The student needs to focus on how to represent a real-world situation with a graphical representation.",
+                    "Rationale": "The student likely misinterpreted the `text(x)`-axis as the number of months instead of the number of weeks. The student needs to focus on how to represent a real-world situation with a graphical representation.",
                     "Percent": 5
                 }
             },
@@ -731,7 +731,7 @@
                 "Choice": "problems/TX21G7M/media/14d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely misinterpreted the x-axis as the number of days instead of the number of weeks. The student needs to focus on how to represent a real-world situation with a graphical representation.",
+                    "Rationale": "The student likely misinterpreted the `text(x)`-axis as the number of days instead of the number of weeks. The student needs to focus on how to represent a real-world situation with a graphical representation.",
                     "Percent": 7
                 }
             }
@@ -1034,7 +1034,7 @@
                 "Choice": "y = 3x - 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely confused the m- and b-values in the equation `y=mx+b`, thinking that m represented the y-value when x = 0 and b represented the rate of change. The student needs to focus on understanding how to determine the equation of a line from a graph.",
+                    "Rationale": "The student likely confused the m- and b-values in the equation `y=mx+b`, thinking that m represented the `text(y)`-value when x = 0 and b represented the rate of change. The student needs to focus on understanding how to determine the equation of a line from a graph.",
                     "Percent": 20
                 }
             },
@@ -1042,7 +1042,7 @@
                 "Choice": "y = -x/2 + 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely found the correct y-value when x = 0 (3) but identified the rate of change as the ratio of the horizontal distance to the vertical distance (-3/6 = -1/2) instead of the ratio of the vertical distance to the horizontal distance (-6/3 = -2). The student needs to focus on understanding how to determine the equation of a line from a graph.",
+                    "Rationale": "The student likely found the correct `text(y)`-value when x = 0 (3) but identified the rate of change as the ratio of the horizontal distance to the vertical distance (-3/6 = -1/2) instead of the ratio of the vertical distance to the horizontal distance (-6/3 = -2). The student needs to focus on understanding how to determine the equation of a line from a graph.",
                     "Percent": 26
                 }
             },
@@ -1050,7 +1050,7 @@
                 "Choice": "y = -2x + 3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the equation representing the relationship between `x` and `y` in the graph, the student could have identified the rate of change (ratio of the change in y-values to the change in x-values) and the y-value when x = 0 of the graphed line and written the equation in the form `y=mx+b`, where m represents the rate of change and b represents the y-value when x = 0. To find the rate of change, the student could have used the points (-2, 7) and (1, 1) and found the ratio of the vertical distance (up and down) to the horizontal distance (left to right). The vertical distance between these two points is 6 units, and the horizontal distance between these two points is 3 units. Since the line is decreasing from left to right, the rate of change is negative. This results in a rate of change of -6/3 = -2. The y-value is 3 when x = 0.Substituting -2 for m and 3 for b in the equation `y=mx+b` results in the equation y = -2x + 3. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the equation representing the relationship between `x` and `y` in the graph, the student could have identified the rate of change (ratio of the change in `text(y)`-values to the change in `text(x)`-values) and the `text(y)`-value when x = 0 of the graphed line and written the equation in the form `y=mx+b`, where m represents the rate of change and b represents the `text(y)`-value when x = 0. To find the rate of change, the student could have used the points (-2, 7) and (1, 1) and found the ratio of the vertical distance (up and down) to the horizontal distance (left to right). The vertical distance between these two points is 6 units, and the horizontal distance between these two points is 3 units. Since the line is decreasing from left to right, the rate of change is negative. This results in a rate of change of -6/3 = -2. The `text(y)`-value is 3 when x = 0.Substituting -2 for m and 3 for b in the equation `y=mx+b` results in the equation y = -2x + 3. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 34
                 }
             },
@@ -1058,7 +1058,7 @@
                 "Choice": "y = 2x + 3/2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the x-value when y = 0 (3/2) instead of the y-value when x = 0 (3). The student also disregarded that the line was decreasing from left to right and thought the rate of change was positive instead of negative (2). The student needs to focus on understanding how to determine the equation of a line from a graph.",
+                    "Rationale": "The student likely used the `text(x)`-value when y = 0 (3/2) instead of the `text(y)`-value when x = 0 (3). The student also disregarded that the line was decreasing from left to right and thought the rate of change was positive instead of negative (2). The student needs to focus on understanding how to determine the equation of a line from a graph.",
                     "Percent": 20
                 }
             }

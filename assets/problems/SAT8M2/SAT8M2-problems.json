@@ -17,7 +17,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT8M2/media/1a.jpg",
-            "What is the y-intercept of the line graphed?"
+            "What is the `text(y)`-intercept of the line graphed?"
         ],
         "AnswerChoices": {
             "A": {
@@ -40,7 +40,7 @@
                 "Choice": "(0, 5)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of a graph is the point where the graph intersects the y-axis. The line graphed intersects the y-axis at the point (0, 5). Therefore, the y-intercept of the line graphed is (0, 5).",
+                    "Rationale": "The `text(y)`-intercept of a graph is the point where the graph intersects the `text(y)`-axis. The line graphed intersects the `text(y)`-axis at the point (0, 5). Therefore, the `text(y)`-intercept of the line graphed is (0, 5).",
                     "Percent": 0
                 }
             },
@@ -302,7 +302,7 @@
                 "Choice": "equal:9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that g(x) = 6x. Substituting 54 for g (x) in the given function yields 54 = 6x. Dividing both sides of this equation by 6 yields x = 9. Therefore, the value of x when g(x) = 54 is 9.",
+                    "Rationale": "It's given that g(x) = 6x. Substituting 54 for g(x) in the given function yields 54 = 6x. Dividing both sides of this equation by 6 yields x = 9. Therefore, the value of x when g(x) = 54 is 9.",
                     "Percent": 0
                 }
             }
@@ -357,7 +357,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = x/10 - 2. What is the y-intercept of the graph of `y=f(x)` in the xy-plane?"
+            "The function f is defined by f(x) = x/10 - 2. What is the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -372,7 +372,7 @@
                 "Choice": "(0, -2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of the graph of a function in the xy-plane is the point on the graph where x = 0. It's given that f(x) = x/10 - 2. Substituting 0 for x in this equation yields f(0) = (0)/10 - 2, or f(0) = -2. Since it's given that `y=f(x)`, it follows that y = -2 when x = 0. Therefore, the y-intercept of the graph of `y=f(x)` in the xy-plane is (0, -2).",
+                    "Rationale": "The `text(y)`-intercept of the graph of a function in the `text(xy)`-plane is the point on the graph where x = 0. It's given that f(x) = x/10 - 2. Substituting 0 for x in this equation yields f(0) = (0)/10 - 2, or f(0) = -2. Since it's given that `y=f(x)`, it follows that y = -2 when x = 0. Therefore, the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane is (0, -2).",
                     "Percent": 0
                 }
             },
@@ -467,7 +467,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f is defined by f(x) = 7x^3. In the xy-plane, the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down 2 units. Which equation defines function g?"
+            "The function f is defined by f(x) = 7x^3. In the `text(xy)`-plane, the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down 2 units. Which equation defines function g?"
         ],
         "AnswerChoices": {
             "A": {
@@ -498,7 +498,7 @@
                 "Choice": "g(x) = 7x^3 - 2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down k units in the xy-plane, the function g can be defined by an equation of the form g(x) = f(x) - k. It's given that f(x) = 7x^3 and the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down 2 units. Substituting 7x^3 for f(x) and 2 for k in the equation g(x) = f(x) yields g(x) = 7x^3 - 2.",
+                    "Rationale": "If the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down k units in the `text(xy)`-plane, the function g can be defined by an equation of the form g(x) = f(x) - k. It's given that f(x) = 7x^3 and the graph of `y=g(x)` is the result of shifting the graph of `y=f(x)` down 2 units. Substituting 7x^3 for f(x) and 2 for k in the equation g(x) = f(x) yields g(x) = 7x^3 - 2.",
                     "Percent": 0
                 }
             }
@@ -1100,7 +1100,7 @@
                 "Choice": "-6x + y = 18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The equation -6x + y = 18 and the given equation represent the same line in the xy-plane. Therefore, a system of these linear equations would have infinitely many solutions, rather than no solution.",
+                    "Rationale": "The equation -6x + y = 18 and the given equation represent the same line in the `text(xy)`-plane. Therefore, a system of these linear equations would have infinitely many solutions, rather than no solution.",
                     "Percent": 0
                 }
             },
@@ -1108,7 +1108,7 @@
                 "Choice": "-6x + y = 22",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the xy-plane are parallel and distinct. Lines represented by equations in standard form, `Ax+By=C` and `Dx+Ey=F`, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients in the other equation, meaning D/A = E/B; and the lines are distinct if the constants are not proportional, meaning F/C is not equal to D/A or E/B. The given equation, y = 6x + 18, can be written in standard form by subtracting 6x from both sides of the equation to yield -6x + y = 18. Therefore, the given equation can be written in the form `Ax+By=C`, where A = -,6 B = 1, and C = 18. The equation in this choice, -6x + y = 22, is written in the form `Dx+Ey=F`, where D = -6, E = 1, and F = 22. Therefore, D/A = (-6)/(-6), which can be rewritten as D/A = 1; E/B = 1/1, which can be rewritten as E/B = 1; and F/C = 22/18, which can be rewritten as F/C = 11/9. Since D/A = 1, E/B = 1, and F/C is not equal to 1, it follows that the given equation and the equation -6x + y = 22 are parallel and distinct. Therefore, a system of two linear equations consisting of the given equation and the equation -6x + y = 22 has no solution. Thus, the equation in this choice could be the second equation in the system.",
+                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the `text(xy)`-plane are parallel and distinct. Lines represented by equations in standard form, `Ax+By=C` and `Dx+Ey=F`, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients in the other equation, meaning D/A = E/B; and the lines are distinct if the constants are not proportional, meaning F/C is not equal to D/A or E/B. The given equation, y = 6x + 18, can be written in standard form by subtracting 6x from both sides of the equation to yield -6x + y = 18. Therefore, the given equation can be written in the form `Ax+By=C`, where A = -,6 B = 1, and C = 18. The equation in this choice, -6x + y = 22, is written in the form `Dx+Ey=F`, where D = -6, E = 1, and F = 22. Therefore, D/A = (-6)/(-6), which can be rewritten as D/A = 1; E/B = 1/1, which can be rewritten as E/B = 1; and F/C = 22/18, which can be rewritten as F/C = 11/9. Since D/A = 1, E/B = 1, and F/C is not equal to 1, it follows that the given equation and the equation -6x + y = 22 are parallel and distinct. Therefore, a system of two linear equations consisting of the given equation and the equation -6x + y = 22 has no solution. Thus, the equation in this choice could be the second equation in the system.",
                     "Percent": 0
                 }
             },
@@ -1116,7 +1116,7 @@
                 "Choice": "-12x + y = 36",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The equation -12x + y = 36 and the given equation represent lines in the xy-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution. ",
+                    "Rationale": "The equation -12x + y = 36 and the given equation represent lines in the `text(xy)`-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution. ",
                     "Percent": 0
                 }
             },
@@ -1124,7 +1124,7 @@
                 "Choice": "-12x + y = 18",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The equation -12x + y = 18 and the given equation represent lines in the xy-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution.",
+                    "Rationale": "The equation -12x + y = 18 and the given equation represent lines in the `text(xy)`-plane that are distinct and not parallel. Therefore, a system of these linear equations would have exactly one solution, rather than no solution.",
                     "Percent": 0
                 }
             }
@@ -1148,7 +1148,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangles PQR and LMN are graphed in the xy-plane. Triangle PQR has vertices P, Q, and R at (4, 5), (4, 7), and (6, 5), respectively. Triangle LMN has vertices L, M, and N at(4, 5), (4,7 + k), and (6 + k,5), respectively, where k is a positive constant. If the measure of /_Q is t°, what is the measure of /_N?"
+            "Triangles PQR and LMN are graphed in the `text(xy)`-plane. Triangle PQR has vertices P, Q, and R at (4, 5), (4, 7), and (6, 5), respectively. Triangle LMN has vertices L, M, and N at(4, 5), (4,7 + k), and (6 + k,5), respectively, where k is a positive constant. If the measure of /_Q is t°, what is the measure of /_N?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1171,7 +1171,7 @@
                 "Choice": "(90 - t)°",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since P = (4, 5) and Q = (4, 7), side PQ is parallel to the y-axis and has a length of 2. Since P = (4, 5) and R = (6, 5), side PR is parallel to the x-axis and has a length of 2. Therefore, triangle PQR is a right isosceles triangle, where /_P has measure 90° and /_Q and /_R each have measure 45°. It follows that if the measure of /_Q is t°, then t = 45. Since L = (4, 5) and M = (4, 7 + k), side LM is parallel to the y-axis and has a length of k + 2. Since L = (4, 5) and N = (6 + k, 5), side LN is parallel to the x-axis and has a length of k + 2. Therefore, triangle LMN is a right isosceles triangle, where /_L has measure 90° and /_M and /_N each have measure 45°. Of the given choices, only (90 - t)° is equal to 45°, so the measure of /_N + is (90 - t)°.",
+                    "Rationale": "Since P = (4, 5) and Q = (4, 7), side PQ is parallel to the `text(y)`-axis and has a length of 2. Since P = (4, 5) and R = (6, 5), side PR is parallel to the `text(x)`-axis and has a length of 2. Therefore, triangle PQR is a right isosceles triangle, where /_P has measure 90° and /_Q and /_R each have measure 45°. It follows that if the measure of /_Q is t°, then t = 45. Since L = (4, 5) and M = (4, 7 + k), side LM is parallel to the `text(y)`-axis and has a length of k + 2. Since L = (4, 5) and N = (6 + k, 5), side LN is parallel to the `text(x)`-axis and has a length of k + 2. Therefore, triangle LMN is a right isosceles triangle, where /_L has measure 90° and /_M and /_N each have measure 45°. Of the given choices, only (90 - t)° is equal to 45°, so the measure of /_N + is (90 - t)°.",
                     "Percent": 0
                 }
             },
@@ -1204,7 +1204,7 @@
         "Explain": false,
         "Content": [
             ":ibox:2x + 3y = 7\n10x + 15y = 35",
-            "For each real number r, which of the following points lies on the graph of each equation in the xy-plane for the given system?"
+            "For each real number r, which of the following points lies on the graph of each equation in the `text(xy)`-plane for the given system?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1219,7 +1219,7 @@
                 "Choice": "(-3r/2 + 7/2, r)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point `(x,y)` lies on the graph of an equation in the xy-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and y-coordinates of this choice, -3r/2 + 7/2 and r, for `x` and `y`, respectively, in the first equation yields 2(-3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (-3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the xy-plane for the given system.",
+                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by 5. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point `(x,y)` lies on the graph of an equation in the `text(xy)`-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the x- and `text(y)`-coordinates of this choice, -3r/2 + 7/2 and r, for `x` and `y`, respectively, in the first equation yields 2(-3r/2 + 7/2) + 3r = 7, which is equivalent to -3r + 7 + 3r = 7, or 7 = 7. Therefore, the point (-3r/2 + 7/2, r) represents a solution to the first equation and thus lies on the graph of each equation in the `text(xy)`-plane for the given system.",
                     "Percent": 0
                 }
             },

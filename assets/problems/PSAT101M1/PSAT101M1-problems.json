@@ -14,19 +14,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A babysitter earns $8 an hour for babysitting 2 children and an additional $3 tip when both children are put to bed on time. If the babysitter gets the children to bed on time, what expression could be used to determine how much the babysitter earned?"
+            "A babysitter earns `$8text( an hour)` for babysitting `2` children and an additional `$3` tip when both children are put to bed on time. If the babysitter gets the children to bed on time, what expression could be used to determine how much the babysitter earned?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8x + 3, where x is the number of hours",
+                "Choice": "`8x+3`, where `x` is the number of hours",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let x be the number of hours that the babysitter worked. Since the babysitter earns money at a rate of $8 per hour, she earned 8x dollars for the x hours worked. If the babysitter gets both children to bed on time, the babysitter earns an additional $3 tip. Therefore, the babysitter earned a total amount of dollars.",
+                    "Rationale": "Let `x` be the number of hours that the babysitter worked. Since the babysitter earns money at a rate of `$8text( per hour)`, she earned `8xtext( dollars)` for the `xtext( hours)` worked. If the babysitter gets both children to bed on time, the babysitter earns an additional `$3` tip. Therefore, the babysitter earned a total amount of dollars.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "3x + 8, where x is the number of hours",
+                "Choice": "`3x+8`, where `x` is the number of hours",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The tip and the rate per hour have been interchanged in the expression.",
@@ -34,7 +34,7 @@
                 }
             },
             "C": {
-                "Choice": "x(8 + 2) + 3, where x is the number of children",
+                "Choice": "`x(8+2)+3`, where `x` is the number of children",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The number of children is not part of how the babysitter's earnings are calculated.",
@@ -42,7 +42,7 @@
                 }
             },
             "D": {
-                "Choice": "3x + (8 + 2), where x is the number of children",
+                "Choice": "`3x+(8+2)`, where `x` is the number of children",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The number of children is not part of how the babysitter's earnings are calculated.",
@@ -67,39 +67,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:3(x + y) = y",
-            "If `(x,y)` is a solution to the equation above and y ≠ 0, what is the ratio x/y?"
+            ":ibox:`3(x+y)=y`",
+            "If `(x,y)` is a solution to the equation above and `y!=0`, what is the ratio `x/y`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-4/3",
+                "Choice": "`-4/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from errors during algebraic transformations of the equation 3(x + y)= y.",
+                    "Rationale": "This choice could result from errors during algebraic transformations of the equation `3(x+y)=y`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "-2/3",
+                "Choice": "`-2/3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "We can find the ratio x/y by rearranging the equation. Multiplying out the expression on the left side of the equation yields 3x + 3y = y. Then, subtracting 3y from both sides of the equation gives 3x = -2y. Finally, dividing both sides of this equation by 3y (note that y ≠ 0) gives x/y= -2/3.",
+                    "Rationale": "We can find the ratio `x/y` by rearranging the equation. Multiplying out the expression on the left side of the equation yields `3x+3y=y`. Then, subtracting `3y` from both sides of the equation gives `3x=-2y`. Finally, dividing both sides of this equation by `3y` (note that `y!=0`) gives `x/y=-2/3`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from errors during algebraic transformations of the equation 3(x + y)= y.",
+                    "Rationale": "This choice could result from errors during algebraic transformations of the equation `3(x+y)=y`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "2/3",
+                "Choice": "`2/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from errors during algebraic transformations of the equation 3(x + y)= y.",
+                    "Rationale": "This choice could result from errors during algebraic transformations of the equation `3(x+y)=y`.",
                     "Percent": 0
                 }
             }
@@ -121,39 +121,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:x/2 - y/4 = 10\nx/8 - y/8 = 19",
+            ":ibox:`x/2-y/4=10`\n`x/8-y/8 =19`",
             "Which ordered pair `(x,y)` satisfies the system of equations above?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(-112, -264)",
+                "Choice": "`(-112,-264)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "First, we clear the fractions from the two given equations by multiplying both sides of the first equation by 4 and then both sides of the second equation by 8 (note that the new equations are equivalent to the original ones). Thus the system becomes {2x - y = 40; x - y = 152}. Subtracting side by side the second equation from the first eliminates the variable y, (2x -y) - (x - y) = 40 - 152, leaving an equation with just one variable, x. Solving this equation gives x = -112. Substituting -112 for x into the equation x - y = 152 gives y = -264. Therefore, (-112, -264) is the ordered pair that satisfies the system of equations given.",
+                    "Rationale": "First, we clear the fractions from the two given equations by multiplying both sides of the first equation by `4` and then both sides of the second equation by `8` (note that the new equations are equivalent to the original ones). Thus the system becomes `{(2x-y=40),(x-y=152):}`. Subtracting side by side the second equation from the first eliminates the variable `y`, `(2x-y)-(x-y)=40-152`, leaving an equation with just one variable, `x`. Solving this equation gives `x=-112`. Substituting `-112` for `x` into the equation `x-y=152` gives `y=-264`. Therefore, `(-112,-264)` is the ordered pair that satisfies the system of equations given.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "(64, 88)",
+                "Choice": "`(64,88)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ordered pair in each choice does not satisfy both equations in the system. The ordered pair (64, 88)does not satisfy equation x/8 - y/8 = 19 because (64)/8 - (88)/8 ≠ 19.",
+                    "Rationale": "The ordered pair in each choice does not satisfy both equations in the system. The ordered pair `(64,88)` does not satisfy equation `x/8-y/8=19` because `(64)/8-(88)/8!=19`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "(232/3, 224/3)",
+                "Choice": "`(232/3,224/3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ordered pair in each choice does not satisfy both equations in the system. The ordered pair (232/3, 224/3)does not satisfy equation x/8 - y/8 = 19 because (232/3)/8 - (224/3)/8 ≠ 19.",
+                    "Rationale": "The ordered pair in each choice does not satisfy both equations in the system. The ordered pair `(232/3,224/3)` does not satisfy equation `x/8-y/8=19` because `(232/3)/8-(224/3)/8!=19`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "(288, 536)",
+                "Choice": "`(288,536)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ordered pair in each choice does not satisfy both equations in the system. The ordered pair (288, 536)does not satisfy equation x/8 - y/8 = 19 because (288)/8 - (536)/8 ≠ 19.",
+                    "Rationale": "The ordered pair in each choice does not satisfy both equations in the system. The ordered pair `(288,536)` does not satisfy equation `x/8-y/8=19` because `(288)/8-(536)/8!=19`.",
                     "Percent": 0
                 }
             }
@@ -176,38 +176,38 @@
         "Explain": false,
         "Content": [
             "problems/PSAT101M1/media/4a.jpg",
-            "Triangle ABC above is isosceles with AB = AC and BC = 48. The ratio of DE to DF is 5 : 7. What is the length of DC?"
+            "Triangle `ABC` above is isosceles with `AB=AC` and `BC = 48`. The ratio of `DE` to `DF` is `5:7`. What is the length of `DC`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This value for DC would result in BC being less than 48 units long.",
+                    "Rationale": "This value for `DC` would result in `BC` being less than `48` units long.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This value for DC would result in BC being less than 48 units long.",
+                    "Rationale": "This value for `DC` would result in `BC` being less than `48` units long.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This value for DC would result in BC being less than 48 units long.",
+                    "Rationale": "This value for `DC` would result in `BC` being less than `48` units long.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "28",
+                "Choice": "`28`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The base angles, /_B and /_C, of isosceles triangle ABC are congruent. Additionally, /_BED and /_CFD are both right angles and therefore are congruent. Because △BED and △ CFD have two corresponding pairs of angles that are congruent, they are similar. Consequently, the corresponding sides of the similar triangles are proportional. So BD/DC = DE/DF, and since DE/DF = 5/7, it follows that. If we let BD = 5x, then DC = 7x. Since BD + DC = BC and BC = 48, it follows that 5x + 7x = 48. Solving this equation for x gives x = 4, and so DC is 7(4) = 28.",
+                    "Rationale": "The base angles, `/_B` and `/_C`, of isosceles triangle `ABC` are congruent. Additionally, `/_BED` and `/_CFD` are both right angles and therefore are congruent. Because `triangleBED` and `triangleCFD` have two corresponding pairs of angles that are congruent, they are similar. Consequently, the corresponding sides of the similar triangles are proportional. So `(BD)/(DC)=(DE)/(DF)`, and since `(DE)/(DF)=5/7`, it follows that. If we let `BD=5x`, then `DC=7x`. Since `BD+DC=BC` and `BC=48`, it follows that `5x+7x=48`. Solving this equation for `x` gives `x=4`, and so `DC` is `7(4)=28`.",
                     "Percent": 0
                 }
             }
@@ -229,35 +229,35 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In a certain game, a player can solve easy or hard puzzles. A player earns 30 points for solving an easy puzzle and 60 points for solving a hard puzzle. Tina solved a total of 50 puzzles playing this game, earning 1,950 points in all. How many hard puzzles did Tina solve?"
+            "In a certain game, a player can solve easy or hard puzzles. A player earns `30` points for solving an easy puzzle and `60` points for solving a hard puzzle. Tina solved a total of `50` puzzles playing this game, earning `1,950` points in all. How many hard puzzles did Tina solve?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the number of hard puzzles Tina solved were as indicated, the total number of points she would earn will not be 1,950.",
+                    "Rationale": "If the number of hard puzzles Tina solved were as indicated, the total number of points she would earn will not be `1,950`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `x` and `y` be the number of easy and hard puzzles, respectively, that Tina solved. Since she solved a total of 50 puzzles, it follows that x + y = 50. She earned a total of 1,950 points, so it must also be true that 30x + 60y = 1,950. Dividing both sides of this equation by 30 gives x + 2y = 65. Subtracting the first equation, x + y = 50, from the second equation, x + 2y = 65, gives y = 15. Therefore, Tina solved 15 hard puzzles.",
+                    "Rationale": "Let `x` and `y` be the number of easy and hard puzzles, respectively, that Tina solved. Since she solved a total of `50` puzzles, it follows that `x+y=50`. She earned a total of `1,950` points, so it must also be true that `30x+60y=1,950`. Dividing both sides of this equation by `30` gives `x+2y=65`. Subtracting the first equation, `x+y=50`, from the second equation, `x+2y=65`, gives `y = 15`. Therefore, Tina solved `15` hard puzzles.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "25",
+                "Choice": "`25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the number of hard puzzles Tina solved were as indicated, the total number of points she would earn will not be 1,950.",
+                    "Rationale": "If the number of hard puzzles Tina solved were as indicated, the total number of points she would earn will not be `1,950`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "35",
+                "Choice": "`35`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice could be the result of interchanging the number of hard puzzles and easy puzzles.",
@@ -282,39 +282,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:2x^2+ 7x - 15 = 0",
-            "If r and s are two solutions of the equation above and r > s, which of the following is the value of r - s?"
+            ":ibox:`2x^2+7x-15=0`",
+            "If r and s are two solutions of the equation above and `rgts`, which of the following is the value of `r-s`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "15/2",
+                "Choice": "`15/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions r and s, but are not equivalent to the difference r - s of these solutions. For example, 15/2 is the value of -rs, not the value of r - s.",
+                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `r` and `s`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "13/2",
+                "Choice": "`13/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This equation can be solved using the quadratic formula or factoring. The quadratic formula approach is left as an exercise for students. We will show first how to solve this equation using simple factoring and then will show how to solve it using both the structure of the equation and factoring.\nSince gives 7x = 10x - 3x, the given equation can be rewritten as 2x^2+ (10x - 3x) - 15 = 0. Regrouping the terms so that the left side of the equation is in the factored form gives (2x - 3)(x + 5) = 0, from which it follows that 2x - 3 = 0 or x + 5 = 0. Thus, the quadratic equation has solutions 3/2 and -5. Since r and s are solutions to the quadratic equation and r > s, we can conclude that r = 3/2 and s = -5 ; therefore, r - s = 3/2 - (-5) = 13/2.",
+                    "Rationale": "This equation can be solved using the quadratic formula or factoring. The quadratic formula approach is left as an exercise for students. We will show first how to solve this equation using simple factoring and then will show how to solve it using both the structure of the equation and factoring.\nSince gives `7x=10x-3x`, the given equation can be rewritten as `2x^2+(10x-3x)-15=0`. Regrouping the terms so that the left side of the equation is in the factored form gives `(2x-3)(x+5)=0`, from which it follows that `2x-3=0` or `x+5=0`. Thus, the quadratic equation has solutions `3/2` and `-5`. Since `r` and `s` are solutions to the quadratic equation and `rgts`, we can conclude that `r=3/2` and `s=-5`; therefore, `r-s=3/2-(-5)=13/2`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "11/2",
+                "Choice": "`11/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions r and s, but are not equivalent to the difference r - s of these solutions. For example, 15/2 is the value of -rs, not the value of r - s.",
+                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `r` and `s`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "3/2",
+                "Choice": "`3/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions r and s, but are not equivalent to the difference r - s of these solutions. For example, 15/2 is the value of -rs, not the value of r - s.",
+                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `r` and `s`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
                     "Percent": 0
                 }
             }
@@ -336,38 +336,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "To cut a lawn, Allan charges a fee of $15 for his equipment and $8.50 per hour spent cutting a lawn. Taylor charges a fee of $12 for his equipment and $9.25 per hour spent cutting a lawn. If x represents the number of hours spent cutting a lawn, what are all the values of x for which Taylor's total charge is greater than Allan's total charge?"
+            "To cut a lawn, Allan charges a fee of `$15` for his equipment and `$8.50text( per hour)` spent cutting a lawn. Taylor charges a fee of `$12` for his equipment and `$9.25text( per hour)` spent cutting a lawn. If `x` represents the number of hours spent cutting a lawn, what are all the values of `x` for which Taylor's total charge is greater than Allan's total charge?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x > 4",
+                "Choice": "`xgt4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If x represents the number of hours spent cutting the lawn, the total fee that Allan charges is 8.5x + 15 dollars and the total fee that Taylor charges is 9.25x + 12 dollars. To find all of the values of x for which Taylor's total fee is greater than Allan's total fee, we solve the inequality 9.25x + 12 > 8.5x + 15, which simplifies to 0.75x > 3, and so x > 4.",
+                    "Rationale": "If `x` represents the number of hours spent cutting the lawn, the total fee that Allan charges is `8.5x+15text( dollars)` and the total fee that Taylor charges is `9.25x+12text( dollars)`. To find all of the values of `x` for which Taylor's total fee is greater than Allan's total fee, we solve the inequality `9.25x+12gt8.5x+15`, which simplifies to `0.75xgt3`, and so `xgt4`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "3 ≤ x ≤ 4",
+                "Choice": "`3lexle4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Allan's total charge is greater than Taylor's total charge when x < 4.",
+                    "Rationale": "Allan's total charge is greater than Taylor's total charge when `xlt4`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "4 ≤ x ≤ 5",
+                "Choice": "`4lexle5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Allan's total charge and Taylor's total charge at x = 4 are exactly the same, and Taylor's total charge is greater than Allan's total charge also for values of x greater than 5.",
+                    "Rationale": "Allan's total charge and Taylor's total charge at `x=4` are exactly the same, and Taylor's total charge is greater than Allan's total charge also for values of x greater than `5`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "x < 3",
+                "Choice": "`xlt3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Allan's total charge is greater than Taylor's charge when x is less than 3.",
+                    "Rationale": "Allan's total charge is greater than Taylor's charge when x is less than `3`.",
                     "Percent": 0
                 }
             }
@@ -389,28 +389,28 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:n = 456 - 3T",
-            "The equation above is used to model the relationship between the number of cups, n, of hot chocolate sold per day in a coffee shop and the average daily temperature, T, in degrees Fahrenheit. According to the model, what is the meaning of the 3 in the equation?"
+            ":ibox:`n=456-3T`",
+            "The equation above is used to model the relationship between the number of cups, `n`, of hot chocolate sold per day in a coffee shop and the average daily temperature, `T`, in `text(degrees Fahrenheit)`. According to the model, what is the meaning of the `3` in the equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "For every increase of 3°F, one more cup of hot chocolate will be sold.",
+                "Choice": "For every increase of `3°text(F)`, one more cup of hot chocolate will be sold.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "he change in the average daily temperature and the change in the number of cups of hot chocolate have been interchanged.",
+                    "Rationale": "The change in the average daily temperature and the change in the number of cups of hot chocolate have been interchanged.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "For every decrease of 3°F, one more cup of hot chocolate will be sold.",
+                "Choice": "For every decrease of `3°text(F)`, one more cup of hot chocolate will be sold.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "he change in the average daily temperature and the change in the number of cups of hot chocolate have been interchanged.",
+                    "Rationale": "The change in the average daily temperature and the change in the number of cups of hot chocolate have been interchanged.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "For every increase of 1°F, three more cups of hot chocolate will be sold.",
+                "Choice": "For every increase of `1°text(F)`, three more cups of hot chocolate will be sold.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "According to the model, the higher value of daily temperature corresponds to a lower, not higher, number of cups of hot chocolate sold.",
@@ -418,10 +418,10 @@
                 }
             },
             "D": {
-                "Choice": "For every decrease of 1°F, three more cups of hot chocolate will be sold.",
+                "Choice": "For every decrease of `1°text(F)`, three more cups of hot chocolate will be sold.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the model, if the average daily temperature is T degrees Fahrenheit, then the number of cups of hot chocolate sold per day in the coffee shop would be 456 - 3T. If the temperature decreases by 1°F, then the number of cups of hot chocolate sold per day in the coffee shop would be 456 - 3(T - 1), which can be rewritten as (456 - 3T) + 3. Therefore, for every 1°F drop in the average daily temperature, the coffee shop sells three more cups of hot chocolate.",
+                    "Rationale": "According to the model, if the average daily temperature is `Ttext( degrees Fahrenheit)`, then the number of cups of hot chocolate sold per day in the coffee shop would be `456-3T`. If the temperature decreases by `1°text(F)`, then the number of cups of hot chocolate sold per day in the coffee shop would be `456-3(T-1)`, which can be rewritten as `(456-3T)+3`. Therefore, for every `1°text(F)` drop in the average daily temperature, the coffee shop sells three more cups of hot chocolate.",
                     "Percent": 0
                 }
             }
@@ -443,38 +443,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A truck enters a stretch of road that drops 4 meters in elevation for every 100 meters along the length of the road. The road is at 1,300 meters elevation where the truck entered, and the truck is traveling at 16 meters per second along the road. What is the elevation of the road, in meters, at the point where the truck passes t seconds after entering the road?"
+            "A truck enters a stretch of road that drops `4text( meters)` in elevation for every `100text( meters)` along the length of the road. The road is at `1,300text( meters)` elevation where the truck entered, and the truck is traveling at `16text( meters per second)` along the road. What is the elevation of the road, in `text(meters)`, at the point where the truck passes `t text( seconds)` after entering the road?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1,300 - 0.04t",
+                "Choice": "`1,300-0.04t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "4t/100 would be the number of meters that the elevation drops t seconds after the truck enters the road if its speed were 1 meter per second.",
+                    "Rationale": "`(4t)/100` would be the number of meters that the elevation drops `t text( seconds)` after the truck enters the road if its speed were `1text( meter per second)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "1,300 - 0.64t",
+                "Choice": "`1,300-0.64t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the truck is traveling at 16 meters per second along the road, the distance it has traveled t seconds after entering the road is 16t meters. Since the elevation of the road drops 4 meters for every 100 meters along the length of the road, it follows that for 16t meters along the road, the elevation drops (4/100)16t or 0.64t. Therefore, the elevation of the road at the point where the truck passes t seconds after entering the road is 1,300 - 0.64t meters.",
+                    "Rationale": "Since the truck is traveling at `16text( meters per second)` along the road, the distance it has traveled `t text( seconds)` after entering the road is `16t text( meters)`. Since the elevation of the road drops `4text( meters)` for every `100text( meters)` along the length of the road, it follows that for `16t text( meters)` along the road, the elevation drops `(4/100)16t` or `0.64t`. Therefore, the elevation of the road at the point where the truck passes t seconds after entering the road is `1,300-0.64t text( meters)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "1,300 - 4t",
+                "Choice": "`1,300-4t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "4t meters does not give the number of meters the elevation of the road drops.",
+                    "Rationale": "`4t text( meters)` does not give the number of meters the elevation of the road drops.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "1,300 - 16t",
+                "Choice": "`1,300-16t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The drop rate of 4 meters for every 100 meters along the road is not used.",
+                    "Rationale": "The drop rate of `4text( meters)` for every `100text( meters)` along the road is not used.",
                     "Percent": 0
                 }
             }
@@ -496,38 +496,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If f(x - 1) = 2x + 3 for all values of x, what is the value of f(-3)?"
+            "If `f(x-1)=2x+3` for all values of `x`, what is the value of `f(-3)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-7",
+                "Choice": "`-7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "f is a function, and there is one and only one value for f(-3), which as shown above is -1. Therefore, -7 can't be the value of f(-3).",
+                    "Rationale": "`f` is a function, and there is one and only one value for `f(-3)`, which as shown above is `-1`. Therefore, `-7` can't be the value of `f(-3)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "-5",
+                "Choice": "`-5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "f is a function, and there is one and only one value for f(-3), which as shown above is -1. Therefore, -5 can't be the value of f(-3).",
+                    "Rationale": "`f` is a function, and there is one and only one value for `f(-3)`, which as shown above is `-1`. Therefore, `-5` can't be the value of `f(-3)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "-3",
+                "Choice": "`-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "f is a function, and there is one and only one value for f(-3), which as shown above is -1. Therefore, -3 can't be the value of f(-3).",
+                    "Rationale": "`f` is a function, and there is one and only one value for `f(-3)`, which as shown above is `-1`. Therefore, `-3` can't be the value of `f(-3)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "-1",
+                "Choice": "`-1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since f(x - 1) = 2x + 3 for all values of x, f(-3) = f(-2 - 1) = 2(-2) + 3, and so the value of f(-3) is -1.",
+                    "Rationale": "Since `f(x-1)=2x+3` for all values of `x`, `f(-3)=f(-2-1)=2(-2)+3`, and so the value of `f(-3)` is `-1`.",
                     "Percent": 0
                 }
             }
@@ -549,11 +549,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is equivalent to (s - t)(s/t)?"
+            "Which of the following is equivalent to `(s-t)(s/t)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "s/t - s",
+                "Choice": "`s/t-s`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "In this choices, at least one of the products in the expansion is not correct.",
@@ -561,7 +561,7 @@
                 }
             },
             "B": {
-                "Choice": "s/t - st",
+                "Choice": "`s/t-st`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "In this choices, at least one of the products in the expansion is not correct.",
@@ -569,15 +569,15 @@
                 }
             },
             "C": {
-                "Choice": "s²/t - s",
+                "Choice": "`s^2/t-s`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Using the distributive property to expand the given expression gives s(s/t) - t(s/t) = s²/t - s.",
+                    "Rationale": "Using the distributive property to expand the given expression gives `s(s/t)-t(s/t)=s^2/t-s`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "s²/t - s/t^2",
+                "Choice": "`s^2/t-s/t^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "In this choices, at least one of the products in the expansion is not correct.",
@@ -602,39 +602,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:p(x) = 3(x^2+ 10x + 5) - 5(x - k)",
-            "In the polynomial p(x) defined above, k is a constant. If p(x) is divisible by x, what is the value of k?"
+            ":ibox:`p(x)=3(x^2+10x+5)-5(x-k)`",
+            "In the polynomial `p(x)` defined above, k is a constant. If `p(x)` is divisible by `x`, what is the value of `k`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-3",
+                "Choice": "`-3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If polynomial p(x) is divisible by x, then x must be a factor of the polynomial, or equivalently, the constant term of the polynomial must be zero. Multiplying out on the right side of the equation gives p(x) = 3x2^2+ 30x + 15 - 5x + 5k, which can be rewritten as p(x) = 3x^2+ 25x + (5k + 15). Hence, 5k + 15 = 0, and so k = -3.",
+                    "Rationale": "If polynomial `p(x)` is divisible by `x`, then `x` must be a factor of the polynomial, or equivalently, the constant term of the polynomial must be zero. Multiplying out on the right side of the equation gives `p(x)=3x2^2+30x+15-5x+5k`, which can be rewritten as `p(x)=3x^2+25x+(5k+15)`. Hence, `5k+15=0`, and so `k=-3`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "-2",
+                "Choice": "`-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the value of k was as indicated, then x would not be a factor of the polynomial p(x), and so p(x) would not be divisible by x.",
+                    "Rationale": "If the value of `k` was as indicated, then `x` would not be a factor of the polynomial `p(x)`, and so `p(x)` would not be divisible by `x`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "0",
+                "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the value of k was as indicated, then x would not be a factor of the polynomial p(x), and so p(x) would not be divisible by x.",
+                    "Rationale": "If the value of `k` was as indicated, then `x` would not be a factor of the polynomial `p(x)`, and so `p(x)` would not be divisible by `x`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the value of k was as indicated, then x would not be a factor of the polynomial p(x), and so p(x) would not be divisible by x.",
+                    "Rationale": "If the value of `k` was as indicated, then `x` would not be a factor of the polynomial `p(x)`, and so `p(x)` would not be divisible by `x`.",
                     "Percent": 0
                 }
             }
@@ -656,38 +656,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the xy-plane, if the parabola with equation y = ax^2+ bx + c, where a, b, and c are constants, passes through the point (-1, 1), which of the following must be true?"
+            "In the `text(xy)`-plane, if the parabola with equation `y=ax^2+bx+c`, where `a`, `b`, and `c` are constants, passes through the point `(-1,1)`, which of the following must be true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a - b = 1",
+                "Choice": "`a-b=1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from misinterpreting what it means for the point (-1, 1) to be on the parabola or from common calculation errors while expressing this fact algebraically.",
+                    "Rationale": "This choice could result from misinterpreting what it means for the point `(-1,1)` to be on the parabola or from common calculation errors while expressing this fact algebraically.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "-b + c = 1",
+                "Choice": "`-b+c=1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from misinterpreting what it means for the point (-1, 1) to be on the parabola or from common calculation errors while expressing this fact algebraically.",
+                    "Rationale": "This choice could result from misinterpreting what it means for the point `(-1,1)` to be on the parabola or from common calculation errors while expressing this fact algebraically.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "a + b + c = 1 ",
+                "Choice": "`a+b+c=1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from misinterpreting what it means for the point (-1, 1) to be on the parabola or from common calculation errors while expressing this fact algebraically.",
+                    "Rationale": "This choice could result from misinterpreting what it means for the point `(-1,1)` to be on the parabola or from common calculation errors while expressing this fact algebraically.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "a - b + c = 1",
+                "Choice": "`a-b+c=1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the graph of a parabola passes through the point (-1, 1), then the ordered pair (-1, 1) must satisfy the equation of the parabola. Thus, 1 = a(-1)^2 + b(-1) + c, which is equivalent to a - b + c = 1.",
+                    "Rationale": "If the graph of a parabola passes through the point `(-1,1)`, then the ordered pair `(-1,1)` must satisfy the equation of the parabola. Thus, `1=a(-1)^2+b(-1)+c`, which is equivalent to `a-b+c=1`.",
                     "Percent": 0
                 }
             }
@@ -709,14 +709,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "For what value of h is 24 = h/10 - 6?"
+            "For what value of `h` is `24=h/10-6`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:300",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To solve the given equation for h, first add 6 to both sides of the equation to get 30 = h/10. Then multiply both sides of this equation by 10 to yield h = 300.",
+                    "Rationale": "To solve the given equation for `h`, first add `6` to both sides of the equation to get `30=h/10`. Then multiply both sides of this equation by `10` to yield `h=300`.",
                     "Percent": 0
                 }
             }
@@ -738,14 +738,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of a if (2a + 3) - (4a - 8) = 7?"
+            "What is the value of a if `(2a+3)-(4a-8)=7`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation given can be rewritten as 2a + 3 - 4a + 8 = 7, -2a + 11 = 7, which is equivalent to, and so a = 2.",
+                    "Rationale": "The equation given can be rewritten as `2a+3-4a+8=7`, `-2a+11=7`, which is equivalent to, and so `a=2`.",
                     "Percent": 0
                 }
             }
@@ -767,14 +767,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If x is not equal to zero, what is the value of 4(3x)^2/(2x)^2?"
+            "If `x` is not equal to zero, what is the value of `(4(3x)^2)/((2x)^2)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying out the given expression gives 4(9x^2)/4x^2. Since x ≠ 0, dividing both the numerator and the denominator of the fraction by 4x^2simplifies the expression to 9.",
+                    "Rationale": "Multiplying out the given expression gives `(4(9x^2))/(4x^2)`. Since `x!=0`, dividing both the numerator and the denominator of the fraction by `4x^2s` simplifies the expression to `9`.",
                     "Percent": 0
                 }
             }
@@ -796,14 +796,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If x - 2 is a factor of x^2- bx + b, where b is a constant, what is the value of b?"
+            "If `x-2` is a factor of `x^2-bx+b`, where `b` is a constant, what is the value of `b`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If x - 2 is a factor of x^2- bx + b, where b is a constant, then x^2- bx + b can be written as the product (x - 2)(x - a) for some real number a. Expanding (x - 2)(x - a) gives x^2- 2x - ax+ 2a, which can be rewritten as x^2- (2 + a)x + 2a. Hence, x^2- (2 + a)x + 2a = x^2- bx + b is true for all values of x. Consequently, the coefficients of like terms on each side of the equation must be the same: 2 + a = b and 2a = b. Solving this system gives b = 4.",
+                    "Rationale": "If `x-2` is a factor of `x^2-bx+b`, where `b` is a constant, then `x^2-bx+b` can be written as the product `(x-2)(x-a)` for some real number `a`. Expanding `(x-2)(x-a)` gives `x^2-2x-ax+2a`, which can be rewritten as `x^2-(2+a)x+2a`. Hence, `x^2-(2+a)x+2a=x^2-bx+b` is true for all values of `x`. Consequently, the coefficients of like terms on each side of the equation must be the same: `2+a=b` and `2a=b`. Solving this system gives `b=4`.",
                     "Percent": 0
                 }
             }

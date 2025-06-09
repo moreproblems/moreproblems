@@ -950,7 +950,7 @@
                 "Choice": "18",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the xy-plane are distinct and parallel. The graphs of two lines in the xy-plane represented by equations in the form `Ax+By=C`, where A, B, and C are constants, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients in the other equation. The first equation in the given system can be written in the form `Ax+By=C` by subtracting 9y from both sides of the equation to yield 4x - 18y = 5. The second equation in the given system can be written in the form `Ax+By=C` by subtracting 4x from both sides of the equation to yield -4x + hy = 2. The coefficient of x in this second equation, -4, is -1 times the coefficient of x in the first equation, 4. For the lines to be parallel, the coefficient of y in the second equation, h, must also be -1 times the coefficient of y in the first equation, -18. Thus, h = -1(-18), or h = 18. Therefore, if the given system has no solution, the value of h is 18.",
+                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has no solution if the lines represented by the equations in the `text(xy)`-plane are distinct and parallel. The graphs of two lines in the `text(xy)`-plane represented by equations in the form `Ax+By=C`, where A, B, and C are constants, are parallel if the coefficients for `x` and `y` in one equation are proportional to the corresponding coefficients in the other equation. The first equation in the given system can be written in the form `Ax+By=C` by subtracting 9y from both sides of the equation to yield 4x - 18y = 5. The second equation in the given system can be written in the form `Ax+By=C` by subtracting 4x from both sides of the equation to yield -4x + hy = 2. The coefficient of x in this second equation, -4, is -1 times the coefficient of x in the first equation, 4. For the lines to be parallel, the coefficient of y in the second equation, h, must also be -1 times the coefficient of y in the first equation, -18. Thus, h = -1(-18), or h = 18. Therefore, if the given system has no solution, the value of h is 18.",
                     "Percent": 0
                 }
             }
@@ -1037,7 +1037,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Function f is defined by f(x) = (x + 6)(x + 5)(x + 1). Function g is defined by g(x) = f(x - 1). The graph of `y=g(x)` in the xy-plane has x-intercepts at (a, 0), (b,0), and (c, 0), where a, b, and c are distinct constants. What is the value of a + b + c?"
+            "Function f is defined by f(x) = (x + 6)(x + 5)(x + 1). Function g is defined by g(x) = f(x - 1). The graph of `y=g(x)` in the `text(xy)`-plane has `text(x)`-intercepts at (a, 0), (b,0), and (c, 0), where a, b, and c are distinct constants. What is the value of a + b + c?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1052,7 +1052,7 @@
                 "Choice": "-9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that g(x) = f(x - 1). Since f(x) = (x + 6)(x + 5)(x + 1) it follows that f(x - 1) = (x - 1 + 6)(x - 1 + 5)(x - 1 + 1). Combining like terms yields f(x - 1) = (x + 5)(x + 4)(x). Therefore, g(x) = x(x + 5)(x + 4). The x-intercepts of a graph in the xy-plane are the points where y = 0. The x-coordinates of the x-intercepts of the graph of `y=g(x)` in the xy-plane can be found by solving the equation 0 = x(x + 5)(x + 4). Applying the zero product property to this equation yields three equations: x = 0, x + 5 = 0, and x + 4 = 0. Solving each of these equations for x yields x = 0, x = -5, and x = -4, respectively. Therefore, the x-intercepts of the graph of `y=g(x)` are (0, 0), (-5, 0), and (-4, 0). It follows that the values of a, b, and c are 0, -5, and -4. Thus, the value of a + b + c is 0 + (-5) + (-4), which is equal to -9.",
+                    "Rationale": "It's given that g(x) = f(x - 1). Since f(x) = (x + 6)(x + 5)(x + 1) it follows that f(x - 1) = (x - 1 + 6)(x - 1 + 5)(x - 1 + 1). Combining like terms yields f(x - 1) = (x + 5)(x + 4)(x). Therefore, g(x) = x(x + 5)(x + 4). The `text(x)`-intercepts of a graph in the `text(xy)`-plane are the points where y = 0. The `text(x)`-coordinates of the `text(x)`-intercepts of the graph of `y=g(x)` in the `text(xy)`-plane can be found by solving the equation 0 = x(x + 5)(x + 4). Applying the zero product property to this equation yields three equations: x = 0, x + 5 = 0, and x + 4 = 0. Solving each of these equations for x yields x = 0, x = -5, and x = -4, respectively. Therefore, the `text(x)`-intercepts of the graph of `y=g(x)` are (0, 0), (-5, 0), and (-4, 0). It follows that the values of a, b, and c are 0, -5, and -4. Thus, the value of a + b + c is 0 + (-5) + (-4), which is equal to -9.",
                     "Percent": 0
                 }
             },

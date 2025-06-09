@@ -828,7 +828,7 @@
                 "Choice": "Title: Airplane Elevation\nA: Elevation (feet)\nB: Time since Start (minutes)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize the non-continuous aspect of the x-axis.",
+                    "Rationale": "Does not recognize the non-continuous aspect of the `text(x)`-axis.",
                     "Percent": 17
                 }
             },
@@ -844,7 +844,7 @@
                 "Choice": "Title: Movie Tickets\nA: Number of Tickets\nB: Total Cost ($)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize the non-continuous aspect of the x-axis.",
+                    "Rationale": "Does not recognize the non-continuous aspect of the `text(x)`-axis.",
                     "Percent": 20
                 }
             }

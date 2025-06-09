@@ -88,7 +88,7 @@
                 "Choice": "12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For the graph shown, the x-axis represents temperature, in kelvins, and the y-axis represents the estimated pressure, in pounds per square inch (psi). The estimated pressure of the argon when the temperature is 600 kelvins can be found by locating the point on the graph where the value of x is equal to 600. The graph passes through the point (600, 12). This means that when the temperature is 600 kelvins, the estimated pressure is 12 psi.",
+                    "Rationale": "For the graph shown, the `text(x)`-axis represents temperature, in kelvins, and the `text(y)`-axis represents the estimated pressure, in pounds per square inch (psi). The estimated pressure of the argon when the temperature is 600 kelvins can be found by locating the point on the graph where the value of x is equal to 600. The graph passes through the point (600, 12). This means that when the temperature is 600 kelvins, the estimated pressure is 12 psi.",
                     "Percent": 0
                 }
             },
@@ -364,7 +364,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line r in the xy-plane has a slope of 4 and passes through the point (0, 6). Which equation defines line r?"
+            "Line r in the `text(xy)`-plane has a slope of 4 and passes through the point (0, 6). Which equation defines line r?"
         ],
         "AnswerChoices": {
             "A": {
@@ -395,7 +395,7 @@
                 "Choice": "y = 4x + 6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A line in the xy-plane with a slope of m and a y-intercept of `(0,b)` h can be defined by an equation in the form `y=mx+b`. It's given that line r has a slope of 4 and passes through the point (0, 6). It follows that m = 4 and b = 6. Substituting 4 for m and 6 for b in the equation `y=mx+b` yields y = 4x + 6. Therefore, the equation y = 4x + 6 defines line r.",
+                    "Rationale": "A line in the `text(xy)`-plane with a slope of m and a `text(y)`-intercept of `(0,b)` h can be defined by an equation in the form `y=mx+b`. It's given that line r has a slope of 4 and passes through the point (0, 6). It follows that m = 4 and b = 6. Substituting 4 for m and 6 for b in the equation `y=mx+b` yields y = 4x + 6. Therefore, the equation y = 4x + 6 defines line r.",
                     "Percent": 0
                 }
             }
@@ -420,7 +420,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT5M2/media/9a.jpg",
-            "A competitive diver dives from a platform into the water. The graph shown gives the height above the water y, in meters, of the diver x seconds after diving from the platform. What is the best interpretation of the x-intercept of the graph?"
+            "A competitive diver dives from a platform into the water. The graph shown gives the height above the water y, in meters, of the diver x seconds after diving from the platform. What is the best interpretation of the `text(x)`-intercept of the graph?"
         ],
         "AnswerChoices": {
             "A": {
@@ -435,7 +435,7 @@
                 "Choice": "The diver hits the water at 1.6 seconds.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph shows the height above the water y, in meters, of a diver x seconds after diving from a platform. The x-intercept of a graph is the point at which the graph intersects the x-axis, or when the value of y is 0. The graph shown intersects the x-axis between x = 1 and x = 2. In other words, the diver is 0 meters above the water, or hits the water, between 1 and 2 seconds after diving from the platform. Of the given choices, only this choice includes an interpretation where the diver hits the water between 1 and 2 seconds. Therefore, the best interpretation of the x-intercept of the graph is the diver hits the water at 1.6 seconds.",
+                    "Rationale": "It's given that the graph shows the height above the water y, in meters, of a diver x seconds after diving from a platform. The `text(x)`-intercept of a graph is the point at which the graph intersects the `text(x)`-axis, or when the value of y is 0. The graph shown intersects the `text(x)`-axis between x = 1 and x = 2. In other words, the diver is 0 meters above the water, or hits the water, between 1 and 2 seconds after diving from the platform. Of the given choices, only this choice includes an interpretation where the diver hits the water between 1 and 2 seconds. Therefore, the best interpretation of the `text(x)`-intercept of the graph is the diver hits the water at 1.6 seconds.",
                     "Percent": 0
                 }
             },
@@ -443,7 +443,7 @@
                 "Choice": "The diver reaches a maximum height above the water at 0.2 seconds.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is the best interpretation of the maximum value, not the x-intercept, of the graph.",
+                    "Rationale": "This choice is the best interpretation of the maximum value, not the `text(x)`-intercept, of the graph.",
                     "Percent": 0
                 }
             },
@@ -532,7 +532,7 @@
         "Content": [
             "The scatterplot shows the relationship between two variables `x` and `y`. A line of best fit for the data is also shown.",
             "problems/SAT5M2/media/11a.jpg",
-            "For how many of the 10 data points is the actual y-value greater than the y-value predicted by the line of best fit?"
+            "For how many of the 10 data points is the actual `text(y)`-value greater than the `text(y)`-value predicted by the line of best fit?"
         ],
         "AnswerChoices": {
             "A": {
@@ -547,7 +547,7 @@
                 "Choice": "4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is the number of data points that have an actual y-value that's less than the y-value predicted by the line of best fit.",
+                    "Rationale": "This choice is the number of data points that have an actual `text(y)`-value that's less than the `text(y)`-value predicted by the line of best fit.",
                     "Percent": 0
                 }
             },
@@ -555,7 +555,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Any data point that's located above the line of best fit has a y-value that's greater than the y-value predicted by the line of best fit. For the scatterplot shown, 6 of the data points are above the line of best fit. Therefore, 6 of the data points have an actual y-value that's greater than the y-value predicted by the line of best fit.",
+                    "Rationale": "Any data point that's located above the line of best fit has a `text(y)`-value that's greater than the `text(y)`-value predicted by the line of best fit. For the scatterplot shown, 6 of the data points are above the line of best fit. Therefore, 6 of the data points have an actual `text(y)`-value that's greater than the `text(y)`-value predicted by the line of best fit.",
                     "Percent": 0
                 }
             },
@@ -642,14 +642,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the slope of the graph of y = (29x + 10)/3 + 5x in the xy-plane?"
+            "What is the slope of the graph of y = (29x + 10)/3 + 5x in the `text(xy)`-plane?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:44/3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A linear equation can be written in the form `y=mx+b`, where m is the slope of the graph of the equation in the xy-plane and `(0,b)` is the y-intercept. Distributing the 1/3 in the equation y = (29x + 10)/3 + 5x yields y = 29x/3 + 10/3 + 5x. Combining like terms on the right-hand side of this equation yields y = 44x/3 + 10/3. This equation is in the form `y=mx+b`, where m = 44/3 and b = 10/3. Therefore, the slope of the graph of the given equation in the xy-plane is 44/3.",
+                    "Rationale": "A linear equation can be written in the form `y=mx+b`, where m is the slope of the graph of the equation in the `text(xy)`-plane and `(0,b)` is the `text(y)`-intercept. Distributing the 1/3 in the equation y = (29x + 10)/3 + 5x yields y = 29x/3 + 10/3 + 5x. Combining like terms on the right-hand side of this equation yields y = 44x/3 + 10/3. This equation is in the form `y=mx+b`, where m = 44/3 and b = 10/3. Therefore, the slope of the graph of the given equation in the `text(xy)`-plane is 44/3.",
                     "Percent": 0
                 }
             }
@@ -761,7 +761,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In △RST, the measure of /_R is 63°. Which of the following could be the measure, in degrees, of /_S?"
+            "In `triangleRST`, the measure of /_R is 63°. Which of the following could be the measure, in degrees, of /_S?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1266,7 +1266,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A circle in the xy-plane has its center at (-1, 1). Line t is tangent to this circle at the point (5, -4). Which of the following points also lies on line t?"
+            "A circle in the `text(xy)`-plane has its center at (-1, 1). Line t is tangent to this circle at the point (5, -4). Which of the following points also lies on line t?"
         ],
         "AnswerChoices": {
             "A": {

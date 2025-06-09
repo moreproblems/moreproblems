@@ -68,9 +68,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "∆ABC is rotated 180° counter clockwise about the origin to produce ∆A'B'C'.",
+            "`triangleABC` is rotated 180° counter clockwise about the origin to produce `triangleA'B'C'`.",
             "problems/TN19HSG/media/2a.jpg",
-            "What are the coordinates of ∆A'B'C'?"
+            "What are the coordinates of `triangleA'B'C'`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -123,12 +123,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider the line segment defined by the points A(0, 1) and B(4, 6). How does a reflection across the x-axis affect AB?",
+            "Consider the line segment defined by the points A(0, 1) and B(4, 6). How does a reflection across the `text(x)`-axis affect AB?",
             "Select ALL that apply."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The x-values of the reflection are the opposite values of the x-values of the original segment.",
+                "Choice": "The `text(x)`-values of the reflection are the opposite values of the `text(x)`-values of the original segment.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -136,7 +136,7 @@
                 }
             },
             "B": {
-                "Choice": "The y-values of the endpoints become their opposites.",
+                "Choice": "The `text(y)`-values of the endpoints become their opposites.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -185,12 +185,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which transformation proves ∆ABC ~= ∆DEF?",
+            "Which transformation proves `triangleABC~=triangleDEF`?",
             "problems/TN19HSG/media/4a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "reflection of ∆ABC over the line y = x",
+                "Choice": "reflection of `triangleABC` over the line y = x",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -198,7 +198,7 @@
                 }
             },
             "B": {
-                "Choice": "translation of ∆ABC 7 units right and 9 units down",
+                "Choice": "translation of `triangleABC` 7 units right and 9 units down",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -206,7 +206,7 @@
                 }
             },
             "C": {
-                "Choice": "rotation of ∆ABC 90° clockwise, centered at the origin",
+                "Choice": "rotation of `triangleABC` 90° clockwise, centered at the origin",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -214,7 +214,7 @@
                 }
             },
             "D": {
-                "Choice": "reflection of ∆ABC over the y -axis and then over the x-axis",
+                "Choice": "reflection of `triangleABC` over the y -axis and then over the `text(x)`-axis",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -651,12 +651,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What sequence of transformations can be used to prove that ∆ABC ~ ∆DEF?",
+            "What sequence of transformations can be used to prove that `triangleABC~triangleDEF`?",
             "problems/TN19HSG/media/12a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Dilate ∆ABC with respect to the origin using a scale factor of 1/3. Then reflect the result over the y-axis.",
+                "Choice": "Dilate `triangleABC` with respect to the origin using a scale factor of 1/3. Then reflect the result over the `text(y)`-axis.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -664,7 +664,7 @@
                 }
             },
             "B": {
-                "Choice": "Dilate ∆ABC with respect to the origin using a scale factor of 1/2. Then reflect the result over the y-axis.",
+                "Choice": "Dilate `triangleABC` with respect to the origin using a scale factor of 1/2. Then reflect the result over the `text(y)`-axis.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -672,7 +672,7 @@
                 }
             },
             "C": {
-                "Choice": "Dilate ∆ABC with respect to the origin using a scale factor of 1/3. Then reflect the result over the x-axis.",
+                "Choice": "Dilate `triangleABC` with respect to the origin using a scale factor of 1/3. Then reflect the result over the `text(x)`-axis.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -680,7 +680,7 @@
                 }
             },
             "D": {
-                "Choice": "Dilate ∆ABC with respect to the origin using a scale factor of 1/2. Then reflect the result over the x-axis.",
+                "Choice": "Dilate `triangleABC` with respect to the origin using a scale factor of 1/2. Then reflect the result over the `text(x)`-axis.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -705,7 +705,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "On a coordinate plane, ∆ABC has vertices at A(10, 5), B(10, 15), and C(5, 5). ∆A'B'C' has vertices at A'(30, 12), B'(30, 52), and C'(10, 12). Which transformation maps ∆ABC onto ∆A'B'C'."
+            "On a coordinate plane, `triangleABC` has vertices at A(10, 5), B(10, 15), and C(5, 5). `triangleA'B'C'` has vertices at A'(30, 12), B'(30, 52), and C'(10, 12). Which transformation maps `triangleABC` onto `triangleA'B'C'`."
         ],
         "AnswerChoices": {
             "A": {
@@ -773,7 +773,7 @@
                 }
             },
             "B": {
-                "Choice": "∆ABC ~ ∆EDC",
+                "Choice": "`triangleABC~triangleEDC`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -781,7 +781,7 @@
                 }
             },
             "C": {
-                "Choice": "Dilation by a factor of EC/AC centered at point C followed by a rotation of 180 about point C, maps ∆ABC to ∆EDC.",
+                "Choice": "Dilation by a factor of EC/AC centered at point C followed by a rotation of 180 about point C, maps `triangleABC` to `triangleEDC`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -789,7 +789,7 @@
                 }
             },
             "D": {
-                "Choice": "Rotation 180 about point C followed by a dilation by a factor of EC/AC centered at point C, maps ABC ∆ to ∆EDC.",
+                "Choice": "Rotation 180 about point C followed by a dilation by a factor of EC/AC centered at point C, maps `triangleABC` to `triangleEDC`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -797,7 +797,7 @@
                 }
             },
             "E": {
-                "Choice": "Dilation by a factor of EC/AC centered at point C followed by a reflection across the line through C parallel to AB, maps ∆ABC to EDC ",
+                "Choice": "Dilation by a factor of EC/AC centered at point C followed by a reflection across the line through C parallel to AB, maps `triangleABC` to EDC ",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -822,9 +822,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "∆ABC and ∆XYZ are both right triangles.",
+            "`triangleABC` and `triangleXYZ` are both right triangles.",
             "problems/TN19HSG/media/15a.jpg",
-            "Which statement and reason are missing from the proof to prove ∆ABC ~ ∆XYZ?"
+            "Which statement and reason are missing from the proof to prove `triangleABC~triangleXYZ`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -878,12 +878,12 @@
         "Explain": false,
         "Content": [
             "The following statements describe triangles ABC and PQR.",
-            ":ibox:For ∆ABC : AC = 2, AB = 4, and BC = 5.\n\nFor ∆PQR : QR = 7.5, PR = 3, and PQ = 6.",
-            "Which statement explains why ∆ABC and ∆PQR are either similar or not similar?"
+            ":ibox:For `triangleABC` : AC = 2, AB = 4, and BC = 5.\n\nFor `trianglePQR` : QR = 7.5, PR = 3, and PQ = 6.",
+            "Which statement explains why `triangleABC` and `trianglePQR` are either similar or not similar?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "∆ABC and ∆PQR are not similar because AC/QR ≠ AB/PR.",
+                "Choice": "`triangleABC` and `trianglePQR` are not similar because AC/QR ≠ AB/PR.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -891,7 +891,7 @@
                 }
             },
             "B": {
-                "Choice": "∆ABC and ∆PQR are similar because AC/PR = PQ/AB = BC/QR.",
+                "Choice": "`triangleABC` and `trianglePQR` are similar because AC/PR = PQ/AB = BC/QR.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -899,7 +899,7 @@
                 }
             },
             "C": {
-                "Choice": "∆ABC and ∆PQR are similar because AB/PQ = BC/QR.",
+                "Choice": "`triangleABC` and `trianglePQR` are similar because AB/PQ = BC/QR.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -907,7 +907,7 @@
                 }
             },
             "D": {
-                "Choice": "∆ABC and ∆PQR are similar because AC/PR = BC/QR = AB/PQ.",
+                "Choice": "`triangleABC` and `trianglePQR` are similar because AC/PR = BC/QR = AB/PQ.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1042,12 +1042,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "On a coordinate plane, ∆ABC has vertices at A(3, 6), B(12, 6), and C(12, 1). Which statements are true?",
+            "On a coordinate plane, `triangleABC` has vertices at A(3, 6), B(12, 6), and C(12, 1). Which statements are true?",
             "Select ALL that apply."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "∆ABC is a right triangle.",
+                "Choice": "`triangleABC` is a right triangle.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1055,7 +1055,7 @@
                 }
             },
             "B": {
-                "Choice": "∆ABC is an equilateral triangle.",
+                "Choice": "`triangleABC` is an equilateral triangle.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1063,7 +1063,7 @@
                 }
             },
             "C": {
-                "Choice": "∆ABC is an isosceles triangle.",
+                "Choice": "`triangleABC` is an isosceles triangle.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1071,7 +1071,7 @@
                 }
             },
             "D": {
-                "Choice": "∆ABC is a scalene triangle.",
+                "Choice": "`triangleABC` is a scalene triangle.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1190,7 +1190,7 @@
                 }
             },
             "B": {
-                "Choice": "The perimeter of ∆ABC is about 15 units.",
+                "Choice": "The perimeter of `triangleABC` is about 15 units.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",

@@ -1021,7 +1021,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "∆FGE ~ ∆TUS",
+                        "Choice": "`triangleFGE~triangleTUS`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1029,7 +1029,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "∆GEF ~ ∆QPR",
+                        "Choice": "`triangleGEF~triangleQPR`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1037,7 +1037,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "∆LMN ~ ∆PQR",
+                        "Choice": "`triangleLMN~trianglePQR`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1045,7 +1045,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "∆NML ~ ∆TSU",
+                        "Choice": "`triangleNML~triangleTSU`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1068,7 +1068,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "∆EFG ~ ∆ZYX",
+                        "Choice": "`triangleEFG~triangleZYX`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1076,7 +1076,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "∆EGF ~ ∆XYZ",
+                        "Choice": "`triangleEGF~triangleXYZ`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1084,7 +1084,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "∆FEG ~ ∆XZY",
+                        "Choice": "`triangleFEG~triangleXZY`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1092,7 +1092,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "∆FGE ~ ∆YZX",
+                        "Choice": "`triangleFGE~triangleYZX`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1100,7 +1100,7 @@
                         }
                     },
                     "E": {
-                        "Choice": "∆GFE ~ ∆YXZ",
+                        "Choice": "`triangleGFE~triangleYXZ`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1639,7 +1639,7 @@
         "Content": [
             "Consider square EFGH, shown on this coordinate plane.",
             "problems/MA19G10M/media/25a.jpg",
-            "Square EFGH will be reflected over the y-axis. Which graph correctly shows the image of square EFGH after the reflection?"
+            "Square EFGH will be reflected over the `text(y)`-axis. Which graph correctly shows the image of square EFGH after the reflection?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1812,11 +1812,11 @@
             "problems/MA19G10M/media/28a.jpg",
             "The function g(x) is represented by this equation.",
             ":ibox:g(x) = 10x + 40",
-            "Which statement correctly compares the rates of change and y-intercepts of f(x) and g(x)?"
+            "Which statement correctly compares the rates of change and `text(y)`-intercepts of f(x) and g(x)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Function f(x) has a greater rate of change and a greater y-intercept than function g(x).",
+                "Choice": "Function f(x) has a greater rate of change and a greater `text(y)`-intercept than function g(x).",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1824,7 +1824,7 @@
                 }
             },
             "B": {
-                "Choice": "Function g(x) has a greater rate of change and a greater y-intercept than function f(x).",
+                "Choice": "Function g(x) has a greater rate of change and a greater `text(y)`-intercept than function f(x).",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1832,7 +1832,7 @@
                 }
             },
             "C": {
-                "Choice": "Function f(x) has a greater rate of change than function g(x), and function g(x) has a greater y-intercept than function f(x).",
+                "Choice": "Function f(x) has a greater rate of change than function g(x), and function g(x) has a greater `text(y)`-intercept than function f(x).",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1840,7 +1840,7 @@
                 }
             },
             "D": {
-                "Choice": "Function g(x) has a greater rate of change than function f(x), and function f(x) has a greater y-intercept than function g(x).",
+                "Choice": "Function g(x) has a greater rate of change than function f(x), and function f(x) has a greater `text(y)`-intercept than function g(x).",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1901,7 +1901,7 @@
         "Explain": false,
         "Content": [
             "THIS PROBLEM HAS THREE PARTS.",
-            "A student graphed ∆PQR on a coordinate plane, as shown.",
+            "A student graphed `trianglePQR` on a coordinate plane, as shown.",
             "problems/MA19G10M/media/30a.jpg"
         ],
         "AnswerChoices": {},
@@ -1912,7 +1912,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The student reflected ∆PQR over the x-axis to create ∆EFG. What are the coordinates of vertex E ? Show or explain how you got your answer."
+                    "The student reflected `trianglePQR` over the `text(x)`-axis to create `triangleEFG`. What are the coordinates of vertex E ? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1931,11 +1931,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The student performed a different single transformation on ∆PQR to create ∆JKL. The coordinates of vertex K are (4, 1). What could be the single transformation the student performed?"
+                    "The student performed a different single transformation on `trianglePQR` to create `triangleJKL`. The coordinates of vertex K are (4, 1). What could be the single transformation the student performed?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
-                        "Choice": "match:reflection over y-axis",
+                        "Choice": "match:reflection over `text(y)`-axis",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1950,7 +1950,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Describe a type of transformation the student can perform on ∆PQR so that its image, ∆UVW, is similar to, but NOT congruent to, ∆PQR. Show or explain how you got your answer."
+                    "Describe a type of transformation the student can perform on `trianglePQR` so that its image, `triangleUVW`, is similar to, but NOT congruent to, `trianglePQR`. Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2393,7 +2393,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The slope of the line is negative, and the y-intercept of the line is negative.",
+                        "Choice": "The slope of the line is negative, and the `text(y)`-intercept of the line is negative.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -2401,7 +2401,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The slope of the line is negative, and the y-intercept of the line is positive.",
+                        "Choice": "The slope of the line is negative, and the `text(y)`-intercept of the line is positive.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -2409,7 +2409,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The slope of the line is positive, and the y-intercept of the line is negative.",
+                        "Choice": "The slope of the line is positive, and the `text(y)`-intercept of the line is negative.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -2417,7 +2417,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "The slope of the line is positive, and the y-intercept of the line is positive.",
+                        "Choice": "The slope of the line is positive, and the `text(y)`-intercept of the line is positive.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -2811,7 +2811,7 @@
                 }
             },
             "D": {
-                "Choice": "The line of best fit should contain the points with the highest and lowest y-values.",
+                "Choice": "The line of best fit should contain the points with the highest and lowest `text(y)`-values.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

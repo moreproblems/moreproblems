@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "a reflection over the y-axis",
+                "Choice": "a reflection over the `text(y)`-axis",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "a reflection over the x-axis",
+                "Choice": "a reflection over the `text(x)`-axis",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -233,12 +233,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Determine which statement is true in regard to ∆ABC and ∆LMN.",
+            "Determine which statement is true in regard to `triangleABC` and `triangleLMN`.",
             "problems/TN20HSG/media/5a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "∆ABC ~ ∆LMN by AA criterion.",
+                "Choice": "`triangleABC~triangleLMN` by AA criterion.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -246,7 +246,7 @@
                 }
             },
             "B": {
-                "Choice": "∆ABC ~ ∆LMN by SAS criterion.",
+                "Choice": "`triangleABC~triangleLMN` by SAS criterion.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -254,7 +254,7 @@
                 }
             },
             "C": {
-                "Choice": "∆ABC ~ ∆LMN by SSS criterion.",
+                "Choice": "`triangleABC~triangleLMN` by SSS criterion.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -262,7 +262,7 @@
                 }
             },
             "D": {
-                "Choice": "∆ABC and ∆LMN are not similar.",
+                "Choice": "`triangleABC` and `triangleLMN` are not similar.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -289,7 +289,7 @@
         "Content": [
             "The triangles QTP and SPT are shown. Ray MR is the perpendicular bisector of line segment PT and intersects line segment PT at point M.",
             "problems/TN20HSG/media/6a.jpg",
-            "Which transformation would indicate that ∆QTP ~= ∆SPT?"
+            "Which transformation would indicate that `triangleQTP~=triangleSPT`?"
         ],
         "AnswerChoices": {
             "M": {
@@ -450,13 +450,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "∆RSV ~ ∆UST",
+            "`triangleRSV~triangleUST`",
             "problems/TN20HSG/media/9a.jpg",
             "Select the TWO statements that must be true."
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "∆STU is a right triangle.",
+                "Choice": "`triangleSTU` is a right triangle.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -599,7 +599,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the figure shown, ∆RST ~ ∆UVW.",
+            "In the figure shown, `triangleRST~triangleUVW`.",
             "problems/TN20HSG/media/12a.jpg",
             "problems/TN20HSG/media/12b.jpg",
             "Write an expression in terms of m and p that represents tan(R)."
@@ -968,9 +968,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The illustration shown represents the intersections of three roads: Highway 35, State Route 17, and Interstate 16. The region bounded by the three roads is represented by ∆ABC. Each unit in the grid represents 1 mile.",
+            "The illustration shown represents the intersections of three roads: Highway 35, State Route 17, and Interstate 16. The region bounded by the three roads is represented by `triangleABC`. Each unit in the grid represents 1 mile.",
             "problems/TN20HSG/media/21a.jpg",
-            "Which statements about ∆ABC are true? Select the THREE that apply."
+            "Which statements about `triangleABC` are true? Select the THREE that apply."
         ],
         "AnswerChoices": {
             "A": {
@@ -1085,7 +1085,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A line segment has end points R(-2, -2) and S(4, 1). What is the x-coordinate of the point that is 2/3 of the way from R to S on this line segment?"
+            "A line segment has end points R(-2, -2) and S(4, 1). What is the `text(x)`-coordinate of the point that is 2/3 of the way from R to S on this line segment?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1114,7 +1114,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "∆RST ~ ∆UVW. The dilation that maps ∆RST to ∆UVW has a dilation factor of 2/3.",
+            "`triangleRST~triangleUVW`. The dilation that maps `triangleRST` to `triangleUVW` has a dilation factor of 2/3.",
             "The measure of angle R is 20°, and the measure of angle S is 100°.",
             "What is the measure, in degrees, of angle W?"
         ],

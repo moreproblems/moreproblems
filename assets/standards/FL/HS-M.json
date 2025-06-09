@@ -379,7 +379,7 @@
                         },
                         {
                             "Key": "FL.M9-12.AR.3.5",
-                            "Label": "Given the x-intercepts and another point on the graph of a quadratic function, write the equation for the function.",
+                            "Label": "Given the `text(x)`-intercepts and another point on the graph of a quadratic function, write the equation for the function.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -812,7 +812,7 @@
                         },
                         {
                             "Key": "FL.M9-12.F.2.2",
-                            "Label": "Identify the effect on the graph of a given function of two or more transformations defined by adding a real number to the x- or y-values or multiplying the x- or y-values by a real number.",
+                            "Label": "Identify the effect on the graph of a given function of two or more transformations defined by adding a real number to the x- or `text(y)`-values or multiplying the x- or `text(y)`-values by a real number.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -830,7 +830,7 @@
                         },
                         {
                             "Key": "FL.M9-12.F.2.5",
-                            "Label": "Given a table, equation or graph that represents a function, create a corresponding table, equation or graph of the transformed function defined by adding a real number to the x- or y-values or multiplying the x- or y-values by a real number.",
+                            "Label": "Given a table, equation or graph that represents a function, create a corresponding table, equation or graph of the transformed function defined by adding a real number to the x- or `text(y)`-values or multiplying the x- or `text(y)`-values by a real number.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -845,7 +845,7 @@
                             "Key": "FL.M9-12.F.3.1",
                             "Label": "Given a mathematical or real-world context, combine two functions, limited to linear and quadratic, using arithmetic operations. When appropriate, include domain restrictions for the new function.",
                             "Examples": [
-                                "The quotient of the functions f(x) = 3x^2- 7x + 3 and g(x) = 6x - 1 can be expressed as h(x) = (3x^2- 7x + 3)/(6x - 1), where the domain of h(x) is -∞ ≤ x < 1/6 and 1/6 < x ≤ ∞."
+                                "The quotient of the functions f(x) = 3x^2- 7x + 3 and g(x) = 6x - 1 can be expressed as h(x) = (3x^2- 7x + 3)/(6x - 1), where the domain of h(x) is -oo ≤ x < 1/6 and 1/6 < x ≤ oo."
                             ],
                             "Subs": []
                         },
@@ -1182,7 +1182,7 @@
                             "Key": "FL.M9-12.GR.2.1",
                             "Label": "Given a preimage and image, describe the transformation and represent the transformation algebraically using coordinates.",
                             "Examples": [
-                                "Given a triangle whose vertices have the coordinates (-3, 4), (2, 1.7) and (-0.4, -3). If this triangle is reflected across the y-axis the transformation can be described using coordinates as (x, y) → (-x, y) resulting in the image whose vertices have the coordinates (3, 4), (-2, 1.7) and (0.4, -3)."
+                                "Given a triangle whose vertices have the coordinates (-3, 4), (2, 1.7) and (-0.4, -3). If this triangle is reflected across the `text(y)`-axis the transformation can be described using coordinates as (x, y) → (-x, y) resulting in the image whose vertices have the coordinates (3, 4), (-2, 1.7) and (0.4, -3)."
                             ],
                             "Subs": []
                         },
@@ -1705,7 +1705,7 @@
                         },
                         {
                             "Key": "FL.M9-12.DP.2.4",
-                            "Label": "Fit a linear function to bivariate numerical data that suggests a linear association and interpret the slope and y-intercept of the model. Use the model to solve real-world problems in terms of the context of the data.",
+                            "Label": "Fit a linear function to bivariate numerical data that suggests a linear association and interpret the slope and `text(y)`-intercept of the model. Use the model to solve real-world problems in terms of the context of the data.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -1926,7 +1926,7 @@
                             "Key": "FL.M9-12.DP.5.11",
                             "Label": "Evaluate reports based on data from diverse media, print and digital resources by interpreting graphs and tables; evaluating data-based arguments; determining whether a valid sampling method was used; or interpreting provided statistics.",
                             "Examples": [
-                                "A local news station changes the y-axis on a data display from 0 to 10,000 to include data only within the range 7,000 to 10,000. Depending on the purpose, this could emphasize differences in data values in a misleading way."
+                                "A local news station changes the `text(y)`-axis on a data display from 0 to 10,000 to include data only within the range 7,000 to 10,000. Depending on the purpose, this could emphasize differences in data values in a misleading way."
                             ],
                             "Subs": []
                         }
@@ -2257,7 +2257,7 @@
                             "Key": "FL.M9-12.C.1.5",
                             "Label": "Find limits at infinity.",
                             "Examples": [
-                                "Find lim(x→∞) 2x^3 - 500x^2."
+                                "Find lim(x→oo) 2x^3 - 500x^2."
                             ],
                             "Subs": []
                         },
@@ -2459,7 +2459,7 @@
                             "Key": "FL.M9-12.C.3.8",
                             "Label": "Find average and instantaneous rates of change. Explain the instantaneous rate of change as the limit of the average rate of change. Interpret a derivative as a rate of change in applications, including velocity, speed and acceleration.",
                             "Examples": [
-                                "The vertical distance traveled by an object within the earth's gravitational field, neglecting air resistance, is given by the equation x = 0.5gt² + vₒt + xₒ, where g is the force on the object due to earth's gravity, vₒ is the initial velocity, x₀ is the initial height above the ground, t is the time in seconds and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = -10 m/s²."
+                                "The vertical distance traveled by an object within the earth's gravitational field, neglecting air resistance, is given by the equation x = 0.5gt² + vₒt + xₒ, where g is the force on the object due to earth's gravity, vₒ is the initial velocity, x_0 is the initial height above the ground, t is the time in seconds and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = -10 m/s²."
                             ],
                             "Subs": []
                         },
@@ -2582,7 +2582,7 @@
                         },
                         {
                             "Key": "FL.M9-12.C.5.5",
-                            "Label": "Find the area between a curve and the x-axis or between two curves by using definite integrals.",
+                            "Label": "Find the area between a curve and the `text(x)`-axis or between two curves by using definite integrals.",
                             "Examples": [
                                 "Find the area bounded by y = √x, y = 0 and x = 2."
                             ],
@@ -2600,8 +2600,8 @@
                             "Key": "FL.M9-12.C.5.7",
                             "Label": "Find the volume of a figure with known cross-sectional area, including figures of revolution, by using definite integrals.",
                             "Examples": [
-                                "A cone with its vertex at the origin lies symmetrically along the x-axis. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
-                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x^2for 0 ≤ x ≤ 1 is revolved around the y-axis?"
+                                "A cone with its vertex at the origin lies symmetrically along the `text(x)`-axis. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
+                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x^2for 0 ≤ x ≤ 1 is revolved around the `text(y)`-axis?"
                             ],
                             "Subs": []
                         }

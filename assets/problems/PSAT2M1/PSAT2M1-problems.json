@@ -284,7 +284,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to x-intercepts of the graph and f(0) corresponds to the y-intercept of the graph; make connections between the input/ output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -294,14 +294,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT2M1/media/6a.jpg",
-            "The y-intercept of the graph shown is `(x,y)`. What is the value of `y`?"
+            "The `text(y)`-intercept of the graph shown is `(x,y)`. What is the value of `y`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:40",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The y-intercept of a graph in the xy-plane is the point `(x,y)` on the graph where `x=0`. The y-intercept of the graph shown is `(0,40)`. Therefore, the value of `y` is `40`.",
+                    "Rationale": "The `text(y)`-intercept of a graph in the `text(xy)`-plane is the point `(x,y)` on the graph where `x=0`. The `text(y)`-intercept of the graph shown is `(0,40)`. Therefore, the value of `y` is `40`.",
                     "Percent": 0
                 }
             }
@@ -477,7 +477,7 @@
                 "Choice": "`yge2/3x-6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation for the line representing the boundary of the shaded region can be written in slope-intercept form `y=mx+b`, where `m` is the slope and `(0,b)` is the y-intercept of the line. For the graph shown, the boundary line passes through the points `(0,-6)` and `(9,0)`. Given two points on a line, `(x_1,y_1)` and `(x_2,y_2)`, the slope of the line can be calculated using the equation `m=(y_2-y_1)/(x_2-x_1)`. Substituting the points `(0,-6)` and `(9,0)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in this equation yields `m=(0-(-6))/(9-0)`, which is equivalent to `m=6/9`, or `m=2/3`. Since the point `(0,-6)` represents the y-intercept, it follows that `b=-6`. Substituting `2/3` for `m` and `-6` for `b` in the equation `y=mx+b` yields `y=2/3x-6` as the equation of the boundary line. Since the shaded region represents all the points on and above this boundary line, it follows that the shaded region shown represents the solutions to the inequality `yge2/3x-6`.",
+                    "Rationale": "The equation for the line representing the boundary of the shaded region can be written in slope-intercept form `y=mx+b`, where `m` is the slope and `(0,b)` is the `text(y)`-intercept of the line. For the graph shown, the boundary line passes through the points `(0,-6)` and `(9,0)`. Given two points on a line, `(x_1,y_1)` and `(x_2,y_2)`, the slope of the line can be calculated using the equation `m=(y_2-y_1)/(x_2-x_1)`. Substituting the points `(0,-6)` and `(9,0)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in this equation yields `m=(0-(-6))/(9-0)`, which is equivalent to `m=6/9`, or `m=2/3`. Since the point `(0,-6)` represents the `text(y)`-intercept, it follows that `b=-6`. Substituting `2/3` for `m` and `-6` for `b` in the equation `y=mx+b` yields `y=2/3x-6` as the equation of the boundary line. Since the shaded region represents all the points on and above this boundary line, it follows that the shaded region shown represents the solutions to the inequality `yge2/3x-6`.",
                     "Percent": 0
                 }
             },
@@ -485,7 +485,7 @@
                 "Choice": "`yge2/3x+6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a region whose boundary line has a y-intercept of `(0,6)`, not `(0,-6)`.",
+                    "Rationale": "This inequality represents a region whose boundary line has a `text(y)`-intercept of `(0,6)`, not `(0,-6)`.",
                     "Percent": 0
                 }
             },
@@ -493,7 +493,7 @@
                 "Choice": "`yge2/3x-9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a region whose boundary line has a y-intercept of `(0,-9)`, not `(0,-6)`.",
+                    "Rationale": "This inequality represents a region whose boundary line has a `text(y)`-intercept of `(0,-9)`, not `(0,-6)`.",
                     "Percent": 0
                 }
             },
@@ -501,7 +501,7 @@
                 "Choice": "`yge2/3x+9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a region whose boundary line has a y-intercept of `(0,9)`, not `(0,-6)`.",
+                    "Rationale": "This inequality represents a region whose boundary line has a `text(y)`-intercept of `(0,9)`, not `(0,-6)`.",
                     "Percent": 0
                 }
             }
@@ -978,14 +978,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT2M1/media/20a.jpg",
-            "The scatterplot shows the relationship between two variables, `x` and `y`. A line of best fit is also shown. For how many of the `11` data points does the line of best fit predict a greater y-value than the actual y-value?"
+            "The scatterplot shows the relationship between two variables, `x` and `y`. A line of best fit is also shown. For how many of the `11` data points does the line of best fit predict a greater `text(y)`-value than the actual `text(y)`-value?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The line of best fit predicts a greater y-value than the actual y-value for any data point that's located below the line of best fit. For the scatterplot shown, `6` of the data points are below the line of best fit. Therefore, the line of best fit predicts a greater y-value than the actual y-value for `6` of the data points.",
+                    "Rationale": "The line of best fit predicts a greater `text(y)`-value than the actual `text(y)`-value for any data point that's located below the line of best fit. For the scatterplot shown, `6` of the data points are below the line of best fit. Therefore, the line of best fit predicts a greater `text(y)`-value than the actual `text(y)`-value for `6` of the data points.",
                     "Percent": 0
                 }
             }
@@ -1073,7 +1073,7 @@
                 "Choice": "Zero",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has zero solutions if the lines representing the equations in the xy-plane are distinct and parallel. Two lines are distinct and parallel if they have the same slope but different y-intercepts. Each equation in the given system can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the line representing the equation in the xy-plane and `(0,b)` is the y-intercept. Adding `12x` to both sides of the first equation in the given system of equations, `-12x+14y=36`, yields `14y=12x+36`. Dividing both sides of this equation by `14` yields `y=6/7x+18/7`. It follows that the first equation in the given system of equations has a slope of `6/7` and a y-intercept of `(0,18/7)`. Adding `6x` to both sides of the second equation in the given system of equations, `-6x+7y=-18`, yields `7y=6x-18`. Dividing both sides of this equation by `7` yields `y=6/7x-18/7`. It follows that the second equation in the given system of equations has a slope of `6/7` and a y-intercept of `(0,-18/7)`. Since the slopes of these lines are the same and the y-intercepts are different, it follows that the given system of equations has zero solutions.\n\nAlternate approach: To solve the system by elimination, multiplying the second equation in the given system of equations, `-6x+7y=-18`, by `-2` yields `12x-14y=36`. Adding this equation to the first equation in the given system of equations, `-12x+14y=36`, yields `(-12x+12x)+(-14y+14y)=36+36`, or `0=72`. Since this equation isn't true, the given system of equations has zero solutions.",
+                    "Rationale": "A system of two linear equations in two variables, `x` and `y`, has zero solutions if the lines representing the equations in the `text(xy)`-plane are distinct and parallel. Two lines are distinct and parallel if they have the same slope but different `text(y)`-intercepts. Each equation in the given system can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the line representing the equation in the `text(xy)`-plane and `(0,b)` is the `text(y)`-intercept. Adding `12x` to both sides of the first equation in the given system of equations, `-12x+14y=36`, yields `14y=12x+36`. Dividing both sides of this equation by `14` yields `y=6/7x+18/7`. It follows that the first equation in the given system of equations has a slope of `6/7` and a `text(y)`-intercept of `(0,18/7)`. Adding `6x` to both sides of the second equation in the given system of equations, `-6x+7y=-18`, yields `7y=6x-18`. Dividing both sides of this equation by `7` yields `y=6/7x-18/7`. It follows that the second equation in the given system of equations has a slope of `6/7` and a `text(y)`-intercept of `(0,-18/7)`. Since the slopes of these lines are the same and the `text(y)`-intercepts are different, it follows that the given system of equations has zero solutions.\n\nAlternate approach: To solve the system by elimination, multiplying the second equation in the given system of equations, `-6x+7y=-18`, by `-2` yields `12x-14y=36`. Adding this equation to the first equation in the given system of equations, `-12x+14y=36`, yields `(-12x+12x)+(-14y+14y)=36+36`, or `0=72`. Since this equation isn't true, the given system of equations has zero solutions.",
                     "Percent": 0
                 }
             }
@@ -1231,7 +1231,7 @@
                 "Choice": "`18x+Ry=36`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation representing the linear relationship shown can be written in slope-intercept form `y=mx+b`, where `m` is the slope and `(0,b)` is the y-intercept of the line. The line shown passes through the points `(0,6)` and `(2,0)`. Given two points on a line, `(x_1,y_1)` and `(x_2,y_2)`, the slope of the line can be calculated using the equation `m=(y_2-y_1)/(x_2-x_1)`. Substituting `(0,6)` and `(2,0)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in this equation yields `m=(0-6)/(2-0)`, which is equivalent to `m=-6/2`, or `m=-3`. Since `(0,6)` is the y-intercept, it follows that `b=6`. Substituting `-3` for `m` and `6` for `b` in the equation `y=mx+b` yields `y=-3x+6`. Adding `3x` to both sides of this equation yields `3x+y=6`. Multiplying this equation by `6` yields `18x+6y=36`. It follows that the equation `18x+Ry=36`, where `R` is a positive constant, represents this relationship.",
+                    "Rationale": "The equation representing the linear relationship shown can be written in slope-intercept form `y=mx+b`, where `m` is the slope and `(0,b)` is the `text(y)`-intercept of the line. The line shown passes through the points `(0,6)` and `(2,0)`. Given two points on a line, `(x_1,y_1)` and `(x_2,y_2)`, the slope of the line can be calculated using the equation `m=(y_2-y_1)/(x_2-x_1)`. Substituting `(0,6)` and `(2,0)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in this equation yields `m=(0-6)/(2-0)`, which is equivalent to `m=-6/2`, or `m=-3`. Since `(0,6)` is the `text(y)`-intercept, it follows that `b=6`. Substituting `-3` for `m` and `6` for `b` in the equation `y=mx+b` yields `y=-3x+6`. Adding `3x` to both sides of this equation yields `3x+y=6`. Multiplying this equation by `6` yields `18x+6y=36`. It follows that the equation `18x+Ry=36`, where `R` is a positive constant, represents this relationship.",
                     "Percent": 0
                 }
             },
