@@ -1258,14 +1258,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, a parabola has vertex (9, -14) and intersects the `text(x)`-axis at two points. If the equation of the parabola is written in the form y = ax^2+ bx + c, where a, b, and c are constants, which of the following could be the value of a + b + c?"
+            "In the `text(xy)`-plane, a parabola has vertex (9, -14) and intersects the `text(x)`-axis at two points. If the equation of the parabola is written in the form `y=ax^2+bx+c`, where a, b, and c are constants, which of the following could be the value of a + b + c?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "-23",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax^2+ bx + c, where a, b, and c are constants and a + b + c = -23, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the `text(x)`-axis at zero points, not two points.",
+                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form `y=ax^2+bx+c`, where a, b, and c are constants and a + b + c = -23, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the `text(x)`-axis at zero points, not two points.",
                     "Percent": 0
                 }
             },
@@ -1273,7 +1273,7 @@
                 "Choice": "-19",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax^2+ bx + c, where a, b, and c are constants and a + b + c = -19, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the `text(x)`-axis at zero points, not two points.",
+                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form `y=ax^2+bx+c`, where a, b, and c are constants and a + b + c = -19, then the value of a will be negative, which means the parabola will open downward, not upward, and will intersect the `text(x)`-axis at zero points, not two points.",
                     "Percent": 0
                 }
             },
@@ -1281,7 +1281,7 @@
                 "Choice": "-14",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form y = ax^2+ bx + c, where a, b, and c are constants and a + b + c = -14, then the value of a will be 0, which is inconsistent with the equation of a parabola.",
+                    "Rationale": "If the equation of a parabola with a vertex at (9, -14) is written in the form `y=ax^2+bx+c`, where a, b, and c are constants and a + b + c = -14, then the value of a will be 0, which is inconsistent with the equation of a parabola.",
                     "Percent": 0
                 }
             },
@@ -1289,7 +1289,7 @@
                 "Choice": "-12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of a parabola in the `text(xy)`-plane can be written in the form y = a(x - h)^2 + k, where a is a constant and `(h,k)` is the vertex of the parabola. If a is positive, the parabola will open upward, and if a is negative, the parabola will open downward. It's given that the parabola has vertex (9, -14). Substituting 9 for h and 14- for k in the equation y = a(x - h)^2 + k gives y = a(x - 9)^2 - 14, which can be rewritten as y = a(x - 9)(x - 9) - 14, or y = a(x^2- 18x + 81) - 14. Distributing the factor of a on the right-hand side of this equation yields y = ax^2- 18ax + 81a - 14. Therefore, the equation of the parabola, y = ax^2- 18ax + 81a - 14, can be written in the form y = ax^2+ bx + c, where a = a, b = -18a, and c = 81a - 14. Substituting -18a for b and 81a - 14 for c in the expression a + b + c yields (a) + (-18a) + (81a - 14), or 64a - 14. Since the vertex of the parabola, (9, -14), is below the `text(x)`-axis, and it's given that the parabola intersects the `text(x)`-axis at two points, the parabola must open upward. Therefore, the constant a must have a positive value. Setting the expression 64a - 14 equal to the value in this choice yields 64a - 14 = -12. Adding 14 to both sides of this equation yields 64a = 2. Dividing both sides of this equation by 64 yields a = 2/64, which is a positive value. Therefore, if the equation of the parabola is written in the form y = ax^2+ bx + c, where a, b, and c are constants, the value of a + b + c could be -12.",
+                    "Rationale": "The equation of a parabola in the `text(xy)`-plane can be written in the form `y=a(x-h)^2+k`, where a is a constant and `(h,k)` is the vertex of the parabola. If a is positive, the parabola will open upward, and if a is negative, the parabola will open downward. It's given that the parabola has vertex (9, -14). Substituting 9 for h and 14- for k in the equation `y=a(x-h)^2+k` gives y = a(x - 9)^2 - 14, which can be rewritten as y = a(x - 9)(x - 9) - 14, or y = a(x^2- 18x + 81) - 14. Distributing the factor of a on the right-hand side of this equation yields y = ax^2- 18ax + 81a - 14. Therefore, the equation of the parabola, y = ax^2- 18ax + 81a - 14, can be written in the form `y=ax^2+bx+c`, where a = a, b = -18a, and c = 81a - 14. Substituting -18a for b and 81a - 14 for c in the expression a + b + c yields (a) + (-18a) + (81a - 14), or 64a - 14. Since the vertex of the parabola, (9, -14), is below the `text(x)`-axis, and it's given that the parabola intersects the `text(x)`-axis at two points, the parabola must open upward. Therefore, the constant a must have a positive value. Setting the expression 64a - 14 equal to the value in this choice yields 64a - 14 = -12. Adding 14 to both sides of this equation yields 64a = 2. Dividing both sides of this equation by 64 yields a = 2/64, which is a positive value. Therefore, if the equation of the parabola is written in the form `y=ax^2+bx+c`, where a, b, and c are constants, the value of a + b + c could be -12.",
                     "Percent": 0
                 }
             }
