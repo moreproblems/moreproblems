@@ -145,7 +145,7 @@
                 "Choice": "`(-2,6)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The solution `(x,y)` to the system of two equations corresponds to the point where the graphs of the equations intersect in the `text(xy)`-plane. The graphs of the linear equation and the nonlinear equation shown intersect at the point `(-2,6)`. Thus, the solution `(x,y)` to this system is `(-2,6)`.",
+                    "Rationale": "The solution `(x,y)` to the system of two equations corresponds to the point where the graphs of the equations intersect in the `xy`-plane. The graphs of the linear equation and the nonlinear equation shown intersect at the point `(-2,6)`. Thus, the solution `(x,y)` to this system is `(-2,6)`.",
                     "Percent": 0
                 }
             },
@@ -287,7 +287,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `x`-intercepts of the graph and `f(0)` corresponds to the `y`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -297,14 +297,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT2M2/media/6a.jpg",
-            "The parabola shown intersects the `text(y)`-axis at the point `(x,y)`. What is the value of `y`?"
+            "The parabola shown intersects the `y`-axis at the point `(x,y)`. What is the value of `y`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the parabola intersects the `text(y)`-axis at the point `(x,y)`. The graph shows that the parabola intersects the `text(y)`-axis at the point `(0,7)`. Therefore, the value of `y` is `7`.",
+                    "Rationale": "It's given that the parabola intersects the `y`-axis at the point `(x,y)`. The graph shows that the parabola intersects the `y`-axis at the point `(0,7)`. Therefore, the value of `y` is `7`.",
                     "Percent": 0
                 }
             }
@@ -392,7 +392,7 @@
                 "Choice": "`y=0.9x+2.2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A linear model can be written in the form `y=mx+b`, where `m` is the slope of the graph of the model in the `text(xy)`-plane and `(0,b)` is the `text(y)`-intercept. The graph of an appropriate linear model for this relationship passes near the points `(1,3)` and `(9,10)` in the `text(xy)`-plane. Two points on a line, `(x_1,y_1)` and `(x_2,y_2)`, can be used to find the slope of the line using the slope formula, `m=(y_2-y_1)/(x_2-x_1)`. Substituting the points `(1,3)` and `(9,10)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields `m=(10-3)/(9-1)`, or `m=0.875`. Therefore, the value of `m` for an appropriate linear model is approximately `0.875`. Substituting `0.875` for `m` in `y=mx+b` yields `y=0.875x+b`. Since an appropriate linear model passes near the point `(1,3)`, the approximate value of `b` can be found by substituting `1` for `x` and `3` for `y` in the equation `y=0.875x+b`, which yields `3=(0.875)(1)+b`, or `3=0.875+b`. Subtracting `0.875` from both sides of this equation yields `2.125=b`. Therefore, the value of `b` for an appropriate linear model is approximately `2.125`. Thus, of the given choices, `y=0.9x+2.2` is the most appropriate linear model for this relationship.\n\nAlternate approach: A linear model can be written in the form `y=mx+b` where `m` is the slope of the graph of the model in the `text(xy)`-plane and `(0,b)` is the `text(y)`-intercept. The scatterplot shows that as the `text(x)`-values of the data points increase, the `text(y)`-values of the data points increase, which means the graph of an appropriate linear model has a positive slope. Of the given choices, `y=0.9x+2.2` is the only linear model whose graph has a positive slope.",
+                    "Rationale": "A linear model can be written in the form `y=mx+b`, where `m` is the slope of the graph of the model in the `xy`-plane and `(0,b)` is the `y`-intercept. The graph of an appropriate linear model for this relationship passes near the points `(1,3)` and `(9,10)` in the `xy`-plane. Two points on a line, `(x_1,y_1)` and `(x_2,y_2)`, can be used to find the slope of the line using the slope formula, `m=(y_2-y_1)/(x_2-x_1)`. Substituting the points `(1,3)` and `(9,10)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields `m=(10-3)/(9-1)`, or `m=0.875`. Therefore, the value of `m` for an appropriate linear model is approximately `0.875`. Substituting `0.875` for `m` in `y=mx+b` yields `y=0.875x+b`. Since an appropriate linear model passes near the point `(1,3)`, the approximate value of `b` can be found by substituting `1` for `x` and `3` for `y` in the equation `y=0.875x+b`, which yields `3=(0.875)(1)+b`, or `3=0.875+b`. Subtracting `0.875` from both sides of this equation yields `2.125=b`. Therefore, the value of `b` for an appropriate linear model is approximately `2.125`. Thus, of the given choices, `y=0.9x+2.2` is the most appropriate linear model for this relationship.\n\nAlternate approach: A linear model can be written in the form `y=mx+b` where `m` is the slope of the graph of the model in the `xy`-plane and `(0,b)` is the `y`-intercept. The scatterplot shows that as the `x`-values of the data points increase, the `y`-values of the data points increase, which means the graph of an appropriate linear model has a positive slope. Of the given choices, `y=0.9x+2.2` is the only linear model whose graph has a positive slope.",
                     "Percent": 0
                 }
             }
@@ -417,7 +417,7 @@
         "Explain": false,
         "Content": [
             ":ibox:`d=16-x/30`",
-            "The equation shown gives the estimated amount of diesel `d`, in `text(gallons)`, that remains in the gas tank of a truck after being driven `xtext( miles)`, where `0lexle480`. What is the estimated amount of diesel, in `text(gallons)`, that remains in the gas tank of the truck when `x=300`?"
+            "The equation shown gives the estimated amount of diesel `d`, in `text(gallons)`, that remains in the gas tank of a truck after being driven `x` `text(miles)`, where `0lexle480`. What is the estimated amount of diesel, in `text(gallons)`, that remains in the gas tank of the truck when `x=300`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -432,7 +432,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation `d=16-x/30` gives the estimated amount of diesel `d`, in `text(gallons)`, that remains in the gas tank of the truck after being driven `xtext( miles)`. Substituting `300` for `x` in the given equation yields `d=16-300/30`, which is equivalent to `d=16-10`, or `d=6`. Therefore, the estimated amount of diesel that remains in the gas tank of the truck when `x=300` is `6text( gallons)`.",
+                    "Rationale": "It's given that the equation `d=16-x/30` gives the estimated amount of diesel `d`, in `text(gallons)`, that remains in the gas tank of the truck after being driven `x` `text(miles)`. Substituting `300` for `x` in the given equation yields `d=16-300/30`, which is equivalent to `d=16-10`, or `d=6`. Therefore, the estimated amount of diesel that remains in the gas tank of the truck when `x=300` is `6` `text(gallons)`.",
                     "Percent": 0
                 }
             },
@@ -496,7 +496,7 @@
                 "Choice": "problems/PSAT2M2/media/10c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Each of the tables shows the same three values of `x`: `-1`, `0`, and `1`. Substituting `-1` for `x` in the given function yields `g(-1)=11(-1)+4`, or `g(-1)=-7`. Therefore, when `x=-1`, the corresponding value of `g(x)` is `-7`. Substituting `0` for `x` in the given function yields `g(0)=11(0)+4`, or `g(0)=4`. Therefore, when `x=0`, the corresponding value of `g(x)` is `4`. Substituting `1` for `x` in the given function yields `g(1)=11(1)+4`, or `g(1)=15`. Therefore, when `x=1`, the corresponding value of `g(x)` is `15`. The table in this choice shows `-7`, `4`, and `15` as the corresponding value of `g(x)` for `text(x)`-values of `-1`, `0`, and `1`, respectively. Therefore, the table in this choice shows three values of `x`and their corresponding values of `g(x)`.",
+                    "Rationale": "Each of the tables shows the same three values of `x`: `-1`, `0`, and `1`. Substituting `-1` for `x` in the given function yields `g(-1)=11(-1)+4`, or `g(-1)=-7`. Therefore, when `x=-1`, the corresponding value of `g(x)` is `-7`. Substituting `0` for `x` in the given function yields `g(0)=11(0)+4`, or `g(0)=4`. Therefore, when `x=0`, the corresponding value of `g(x)` is `4`. Substituting `1` for `x` in the given function yields `g(1)=11(1)+4`, or `g(1)=15`. Therefore, when `x=1`, the corresponding value of `g(x)` is `15`. The table in this choice shows `-7`, `4`, and `15` as the corresponding value of `g(x)` for `x`-values of `-1`, `0`, and `1`, respectively. Therefore, the table in this choice shows three values of `x`and their corresponding values of `g(x)`.",
                     "Percent": 0
                 }
             },
@@ -528,14 +528,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The pressure exerted on a scuba diver at sea level is `14.70text( pounds per square inch (psi)`). For each foot the scuba diver descends below sea level, the pressure exerted on the scuba diver increases by `0.44text( psi)`. What is the total pressure, in `text(psi)`, exerted on the scuba diver at `105text( feet)` below sea level?"
+            "The pressure exerted on a scuba diver at sea level is `14.70` `text(pounds per square inch)` (`text(psi)`). For each foot the scuba diver descends below sea level, the pressure exerted on the scuba diver increases by `0.44` `text(psi)`. What is the total pressure, in `text(psi)`, exerted on the scuba diver at `105` `text(feet)` below sea level?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`60.90`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the pressure exerted on a scuba diver at sea level is `14.70text( pounds per square inch)` (`text(psi)`). It's also given that for each foot the scuba diver descends below sea level, the pressure exerted on the scuba diver increases by `0.44text( psi)`. The total pressure, in `text(psi)`, exerted on the scuba diver at x feet below sea level can be represented by the expression `0.44x+14.70`. Substituting `105` for `x` in this expression yields `0.44(105)+14.70`, or `60.90`.Therefore, the total pressure exerted on the scuba diver at `105text( feet)` below sea level is `60.90text( psi)`.",
+                    "Rationale": "It's given that the pressure exerted on a scuba diver at sea level is `14.70` `text(pounds per square inch)` (`text(psi)`). It's also given that for each foot the scuba diver descends below sea level, the pressure exerted on the scuba diver increases by `0.44` `text(psi)`. The total pressure, in `text(psi)`, exerted on the scuba diver at x feet below sea level can be represented by the expression `0.44x+14.70`. Substituting `105` for `x` in this expression yields `0.44(105)+14.70`, or `60.90`.Therefore, the total pressure exerted on the scuba diver at `105` `text(feet)` below sea level is `60.90` `text(psi)`.",
                     "Percent": 0
                 }
             },
@@ -551,7 +551,7 @@
                 "Choice": "`14.70`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the pressure, in `text(psi)`, exerted on the scuba diver at sea level, not at `105text( feet)` below sea level.",
+                    "Rationale": "This is the pressure, in `text(psi)`, exerted on the scuba diver at sea level, not at `105` `text(feet)` below sea level.",
                     "Percent": 0
                 }
             },
@@ -638,14 +638,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The area of a rectangle is `57text( square inches)`. The length of the longest side of the rectangle is `19text( inches)`. What is the length, in inches, of the shortest side of this rectangle?"
+            "The area of a rectangle is `57` `text(square inches)`. The length of the longest side of the rectangle is `19` `text(inches)`. What is the length, in inches, of the shortest side of this rectangle?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The area of a rectangle can be calculated by multiplying the length of its longest side by the length of its shortest side. It's given that the area of the rectangle is `57text( square inches)` and the length of the longest side of the rectangle is `19text( inches)`. Let `x` represent the length, in `text(inches)`, of the shortest side of this rectangle. It follows that `57=19x`. Dividing both sides of this equation by `19` yields `3=x`. Therefore, the length, in `text(inches)`, of the shortest side of the rectangle is `3`.",
+                    "Rationale": "The area of a rectangle can be calculated by multiplying the length of its longest side by the length of its shortest side. It's given that the area of the rectangle is `57` `text(square inches)` and the length of the longest side of the rectangle is `19` `text(inches)`. Let `x` represent the length, in `text(inches)`, of the shortest side of this rectangle. It follows that `57=19x`. Dividing both sides of this equation by `19` yields `3=x`. Therefore, the length, in `text(inches)`, of the shortest side of the rectangle is `3`.",
                     "Percent": 0
                 }
             }
@@ -669,14 +669,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "How many `text(yard)` are equivalent to `77text( rods(`? (`5.5text( yards)=1text( rod)`)"
+            "How many `text(yard)` are equivalent to `77` `text(rods(`? (`5.5` `text(yards)=1` `text(rod)`)"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:423.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `5.5text( yards)=1text( rod)`. Therefore, `77text( rods)` is equivalent to `(77text( rods))((5.5text( yards))/(1text( rod)))`, or `423.5text( yards)`.",
+                    "Rationale": "It's given that `5.5` `text(yards)=1` `text(rod)`. Therefore, `77` `text(rods)` is equivalent to `(77` `text(rods))((5.5text( yards))/(1text( rod)))`, or `423.5` `text(yards)`.",
                     "Percent": 0
                 }
             }
@@ -756,14 +756,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "For the linear function `g`, the graph of `y=g(x)` in the `text(xy)`-plane has a slope of `2` and passes through the point `(1,14)`. Which equation defines `g`?"
+            "For the linear function `g`, the graph of `y=g(x)` in the `xy`-plane has a slope of `2` and passes through the point `(1,14)`. Which equation defines `g`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`g(x)=2x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this function, the graph of `y=g(x)` in the `text(xy)`-plane passes through the point `(1,2)`, not `(1,14)`.",
+                    "Rationale": "For this function, the graph of `y=g(x)` in the `xy`-plane passes through the point `(1,2)`, not `(1,14)`.",
                     "Percent": 0
                 }
             },
@@ -771,7 +771,7 @@
                 "Choice": "`g(x)=2x+2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this function, the graph of `y=g(x)` in the `text(xy)`-plane passes through the point `(1,4)`, not `(1,14)`.",
+                    "Rationale": "For this function, the graph of `y=g(x)` in the `xy`-plane passes through the point `(1,4)`, not `(1,14)`.",
                     "Percent": 0
                 }
             },
@@ -779,7 +779,7 @@
                 "Choice": "`g(x)=2x+12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation defining a linear function can be written in the form `g(x)=mx+b`, where `m` is the slope and `(0,b)` is the `text(y)`-intercept of the graph of `y=g(x)` in the `text(xy)`-plane. It's given that the graph of `y=g(x)` has a slope of `2`. Therefore, `m=2`. It's also given that the graph of `y=g(x)` passes through the point `(1,14)`. It follows that when `x=1`, `g(x)=14`. Substituting `1` for `x`, `14` for `g(x)`, and `2` for `m` in the equation `g(x)=mx+b` yields `14=2(1)+b`, or `14=2+b`. Subtracting `2` from each side of this equation yields `12=b`. Therefore, `b=12`. Substituting `2` for `m` and `12` for `b` in the equation `g(x)=mx+b` yields `g(x)=2x+12`. Therefore, the equation that defines `g` is `g(x)=2x+12`.",
+                    "Rationale": "An equation defining a linear function can be written in the form `g(x)=mx+b`, where `m` is the slope and `(0,b)` is the `y`-intercept of the graph of `y=g(x)` in the `xy`-plane. It's given that the graph of `y=g(x)` has a slope of `2`. Therefore, `m=2`. It's also given that the graph of `y=g(x)` passes through the point `(1,14)`. It follows that when `x=1`, `g(x)=14`. Substituting `1` for `x`, `14` for `g(x)`, and `2` for `m` in the equation `g(x)=mx+b` yields `14=2(1)+b`, or `14=2+b`. Subtracting `2` from each side of this equation yields `12=b`. Therefore, `b=12`. Substituting `2` for `m` and `12` for `b` in the equation `g(x)=mx+b` yields `g(x)=2x+12`. Therefore, the equation that defines `g` is `g(x)=2x+12`.",
                     "Percent": 0
                 }
             },
@@ -787,7 +787,7 @@
                 "Choice": "`g(x)=2x+14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this function, the graph of `y=g(x)` in the `text(xy)`-plane passes through the point `(1,16)`, not `(1,14)`.",
+                    "Rationale": "For this function, the graph of `y=g(x)` in the `xy`-plane passes through the point `(1,16)`, not `(1,14)`.",
                     "Percent": 0
                 }
             }
@@ -812,7 +812,7 @@
         "Explain": false,
         "Content": [
             "problems/PSAT2M2/media/17a.jpg",
-            "The graph gives the estimated population `y`, in `text(thousands)`, of a town `xtext( years)` since `2003`, where `0lexle5`. Which of the following best describes the increase in the estimated population from `x=0` to `x=1`?"
+            "The graph gives the estimated population `y`, in `text(thousands)`, of a town `x` `text(years)` since `2003`, where `0lexle5`. Which of the following best describes the increase in the estimated population from `x=0` to `x=1`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -827,7 +827,7 @@
                 "Choice": "The estimated population at `x=1` is `1.5` times the estimated population at `x=0`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "On the graph shown, the `text(y)`-axis represents estimated population, in `text(thousands)`. The graph shows that when `x=0`, the `text(y)`-coordinate is `6`. Therefore, the estimated population at `x=0` is `6text( thousand)`. The graph also shows that when `x=1`, the `text(y)`-coordinate is `9`. Therefore, the estimated population at `x=1` is `9text( thousand)`. Dividing `9text( thousand)` by `6text( thousand)` yields `1.5`; therefore, `9text( thousand)` is `1.5` times `6text( thousand)`. It follows that the estimated population at `x=1` is `1.5` times the estimated population at `x=0`.",
+                    "Rationale": "On the graph shown, the `y`-axis represents estimated population, in `text(thousands)`. The graph shows that when `x=0`, the `y`-coordinate is `6`. Therefore, the estimated population at `x=0` is `6` `text(thousand)`. The graph also shows that when `x=1`, the `y`-coordinate is `9`. Therefore, the estimated population at `x=1` is `9` `text(thousand)`. Dividing `9` `text(thousand)` by `6` `text(thousand)` yields `1.5`; therefore, `9` `text(thousand)` is `1.5` times `6` `text(thousand)`. It follows that the estimated population at `x=1` is `1.5` times the estimated population at `x=0`.",
                     "Percent": 0
                 }
             },
@@ -979,14 +979,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT2M2/media/20a.jpg",
-            "Line j is shown in the `text(xy)`-plane. Line `k` (not shown) is parallel to line `j`. What is the slope of line `k`?"
+            "Line j is shown in the `xy`-plane. Line `k` (not shown) is parallel to line `j`. What is the slope of line `k`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that line `k` is parallel to line `j`. It follows that the slope of line `k` is equal to the slope of line `j`. Given two points on a line in the `text(xy)`-plane, `(x_1,y_1)` and `(x_2,y_2)`, the slope of the line can be calculated as `(y_2-y_1)/(x_2-x_1)`. In the `text(xy)`-plane shown, the points `(0,5)` and `(1,9)` are on line `j`. It follows that the slope of line `j` is `(9-5)/(1-0)`, or `4`. Since the slope of line `j` is equal to the slope of line `k`, the slope of line `k` is also `4`.",
+                    "Rationale": "It's given that line `k` is parallel to line `j`. It follows that the slope of line `k` is equal to the slope of line `j`. Given two points on a line in the `xy`-plane, `(x_1,y_1)` and `(x_2,y_2)`, the slope of the line can be calculated as `(y_2-y_1)/(x_2-x_1)`. In the `xy`-plane shown, the points `(0,5)` and `(1,9)` are on line `j`. It follows that the slope of line `j` is `(9-5)/(1-0)`, or `4`. Since the slope of line `j` is equal to the slope of line `k`, the slope of line `k` is also `4`.",
                     "Percent": 0
                 }
             }
@@ -1010,14 +1010,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A line segment that has a length of `115text( centimeters)` (`text(cm)`) is divided into three parts. One part is `47text( cm)` long. The other two parts have lengths that are equal to each other. What is the length, in `text(cm)`, of one of the other two parts of equal length?"
+            "A line segment that has a length of `115` `text(centimeters)` (`text(cm)`) is divided into three parts. One part is `47` `text(cm)` long. The other two parts have lengths that are equal to each other. What is the length, in `text(cm)`, of one of the other two parts of equal length?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:34",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a line segment has a length of `115text( cm)` and is divided into three parts, where one part is `47text( cm)` long and the other two parts have lengths that are equal. If `x` represents the length, in `text(cm)`, of each of the two parts of equal length, then the equation `47+x+x=115`, or `47+2x=115`, represents this situation. Subtracting `47` from each side of this equation yields `2x=68`. Dividing each side of this equation by `2` yields `x=34`. Therefore, the length, in `text(cm)`, of one of the two parts of equal length is `34`.",
+                    "Rationale": "It's given that a line segment has a length of `115` `text(cm)` and is divided into three parts, where one part is `47` `text(cm)` long and the other two parts have lengths that are equal. If `x` represents the length, in `text(cm)`, of each of the two parts of equal length, then the equation `47+x+x=115`, or `47+2x=115`, represents this situation. Subtracting `47` from each side of this equation yields `2x=68`. Dividing each side of this equation by `2` yields `x=34`. Therefore, the length, in `text(cm)`, of one of the two parts of equal length is `34`.",
                     "Percent": 0
                 }
             }
@@ -1098,7 +1098,7 @@
         "Explain": false,
         "Content": [
             "problems/PSAT2M2/media/23a.jpg",
-            "The table shows two values of `x` and their corresponding values of `y`. In the `text(xy)`-plane, the graph of the linear equation representing this relationship `(1/7,a)`. What is the value of `a`?"
+            "The table shows two values of `x` and their corresponding values of `y`. In the `xy`-plane, the graph of the linear equation representing this relationship `(1/7,a)`. What is the value of `a`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1129,7 +1129,7 @@
                 "Choice": "`172/7`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The linear relationship between `x` and `y` can be represented by the equation `y=mx+b`, where m is the slope of the graph of this equation in the `text(xy)`-plane and `b` is the `text(y)`-coordinate of the `text(y)`-intercept. The slope of a line between any two points `(x_1,y_1)` and `(x_2,y_2)` on the line can be calculated using the slope formula `m=(y_2-y_1)/(x_2-x_1)`. Based on the table, the graph contains the points `(-18,-48)` and `(7,52)`. Substituting `(-18,-48)` and `(7,52)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields `m=(52-(-48))/(7-(-18))`, which is equivalent to `m=100/25`, or `m=4`. Substituting `4` for `m`, `-18` for `x`, and `-48` for `y` in the equation `y=mx+b` yields `-48=4(-18)+b`, or `-48=-72+b`. Adding `72` to both sides of this equation yields `24=b`. Therefore, `m=4` and `b=24`. Substituting `4` for `m` and `24` for `b` in the equation `y=mx+b` yields `y=4x+24`. Thus, the equation `y=4x+24` represents the linear relationship between `x` and `y`. It's also given that the graph of the linear equation representing this relationship in the `text(xy)`-plane passes through the point `(1/7,a)`. Substituting `1/7` for `x` and `a` for `y` in the equation `y=4x+24` yields `a=4(1/7)+24`, which is equivalent to `a=4/7+168/7`, or `a=172/7`.",
+                    "Rationale": "The linear relationship between `x` and `y` can be represented by the equation `y=mx+b`, where m is the slope of the graph of this equation in the `xy`-plane and `b` is the `y`-coordinate of the `y`-intercept. The slope of a line between any two points `(x_1,y_1)` and `(x_2,y_2)` on the line can be calculated using the slope formula `m=(y_2-y_1)/(x_2-x_1)`. Based on the table, the graph contains the points `(-18,-48)` and `(7,52)`. Substituting `(-18,-48)` and `(7,52)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the slope formula yields `m=(52-(-48))/(7-(-18))`, which is equivalent to `m=100/25`, or `m=4`. Substituting `4` for `m`, `-18` for `x`, and `-48` for `y` in the equation `y=mx+b` yields `-48=4(-18)+b`, or `-48=-72+b`. Adding `72` to both sides of this equation yields `24=b`. Therefore, `m=4` and `b=24`. Substituting `4` for `m` and `24` for `b` in the equation `y=mx+b` yields `y=4x+24`. Thus, the equation `y=4x+24` represents the linear relationship between `x` and `y`. It's also given that the graph of the linear equation representing this relationship in the `xy`-plane passes through the point `(1/7,a)`. Substituting `1/7` for `x` and `a` for `y` in the equation `y=4x+24` yields `a=4(1/7)+24`, which is equivalent to `a=4/7+168/7`, or `a=172/7`.",
                     "Percent": 0
                 }
             }
@@ -1154,14 +1154,14 @@
         "Explain": false,
         "Content": [
             ":ibox:`576^((2x+2))`",
-            "The graph of the given equation in the `text(xy)`-plane has a `text(y)`-intercept of `(r,s)`. Which of the following equivalent equations displays the value of `s` as a constant, a coefficient, or the base?"
+            "The graph of the given equation in the `xy`-plane has a `y`-intercept of `(r,s)`. Which of the following equivalent equations displays the value of `s` as a constant, a coefficient, or the base?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`y=331,776^((x+1))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `text(y)`-intercept of a graph in the `text(xy)`-plane is the point where `x=0`. Substituting `0` for `x` in the given equation, `y = 576^((2x+2))`, yields `576^((2(0)+2))`, which is equivalent to `y=576^2`, or `y=331,776`. Therefore, the graph of the given equation in the `text(xy)`-plane has a `text(y)`-intercept of `(0,331,776)`. It follows that `r=0` and `s=331,776`. Thus, the equivalent equation `y=331,776^((x+1))` displays the value of `s` as the base.",
+                    "Rationale": "The `y`-intercept of a graph in the `xy`-plane is the point where `x=0`. Substituting `0` for `x` in the given equation, `y = 576^((2x+2))`, yields `576^((2(0)+2))`, which is equivalent to `y=576^2`, or `y=331,776`. Therefore, the graph of the given equation in the `xy`-plane has a `y`-intercept of `(0,331,776)`. It follows that `r=0` and `s=331,776`. Thus, the equivalent equation `y=331,776^((x+1))` displays the value of `s` as the base.",
                     "Percent": 0
                 }
             },

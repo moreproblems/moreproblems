@@ -127,14 +127,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The total cost, in `text(dollars)`, to rent a surfboard consists of a `$25` service fee and a `$10text( per hour)` rental fee. A person rents a surfboard for `t text( hours)` and intends to spend a maximum of `$75` to rent the surfboard. Which inequality represents this situation?"
+            "The total cost, in `text(dollars)`, to rent a surfboard consists of a `$25` service fee and a `$10` `text(per hour)` rental fee. A person rents a surfboard for `t` `text(hours)` and intends to spend a maximum of `$75` to rent the surfboard. Which inequality represents this situation?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`10tle75`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This represents a situation where the rental fee, not the total cost, is at most `75text( dollars)`.",
+                    "Rationale": "This represents a situation where the rental fee, not the total cost, is at most `75` `text(dollars)`.",
                     "Percent": 0
                 }
             },
@@ -158,7 +158,7 @@
                 "Choice": "`25+10tle75`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The cost of the rental fee depends on the number of hours the surfboard is rented. Multiplying `t text( hours)` by `10text( dollars per hour)` yields a rental fee of `10t text( dollars)`. The total cost of the rental consists of the rental fee plus the `25text( dollar)` service fee, which yields a total cost of `25+10t text( dollars)`. Since the person intends to spend a maximum of `75text( dollars)` to rent the surfboard, the total cost must be at most `75text( dollars)`. Therefore, the inequality `25+10tle75` represents this situation.",
+                    "Rationale": "The cost of the rental fee depends on the number of hours the surfboard is rented. Multiplying `t` `text(hours)` by `10` `text(dollars per hour)` yields a rental fee of `10t` `text(dollars)`. The total cost of the rental consists of the rental fee plus the `25` `text(dollar)` service fee, which yields a total cost of `25+10t` `text(dollars)`. Since the person intends to spend a maximum of `75` `text(dollars)` to rent the surfboard, the total cost must be at most `75` `text(dollars)`. Therefore, the inequality `25+10tle75` represents this situation.",
                     "Percent": 0
                 }
             }
@@ -292,14 +292,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A printer produces posters at a constant rate of `42text( posters per minute)`. At what rate, in `text(posters per hour)`, does the printer produce the posters?"
+            "A printer produces posters at a constant rate of `42` `text(posters per minute)`. At what rate, in `text(posters per hour)`, does the printer produce the posters?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:2520",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "There are `60text( minutes in one hour)`. At a rate of `42text( posters per minute)`, the number of posters produced in one hour can be determined by `((42text( posters))/(1text( minute)))((60text( minutes))/(1text( hour)))`, which is `2,520text( posters per hour)`.",
+                    "Rationale": "There are `60` `text(minutes in one hour)`. At a rate of `42` `text(posters per minute)`, the number of posters produced in one hour can be determined by `((42` `text(posters))/(1` `text(minute)))((60` `text(minutes))/(1` `text(hour)))`, which is `2,520` `text(posters per hour)`.",
                     "Percent": 0
                 }
             }
@@ -528,7 +528,7 @@
                 "Choice": "`y=-1.9x-10.1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of this model has a `text(y)`-intercept with a negative `text(y)`-coordinate, not a positive `text(y)`-coordinate.",
+                    "Rationale": "The graph of this model has a `y`-intercept with a negative `y`-coordinate, not a positive `y`-coordinate.",
                     "Percent": 0
                 }
             },
@@ -536,7 +536,7 @@
                 "Choice": "`y=-1.9x+10.1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation representing a linear model can be written in the form `y=a+bx`, or `y=bx+a`, where b is the slope of the graph of the model and `(0,a)` is the `text(y)`-intercept of the graph of the model. The scatterplot shows that as the `text(x)`-values of the data points increase, the `text(y)`-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, `blt0`. The scatterplot also shows that the data points are close to the `text(y)`-axis at a positive value of `y`. Therefore, the `text(y)`-intercept of the graph of an appropriate linear model has a positive `text(y)`-coordinate, which means `agt0`. Of the given choices, only this choice, `y=-1.9+10.1`, has a negative value for `b`, the slope, and a positive value for `a`, the `text(y)`-coordinate of the `text(y)`-intercept.",
+                    "Rationale": "The equation representing a linear model can be written in the form `y=a+bx`, or `y=bx+a`, where b is the slope of the graph of the model and `(0,a)` is the `y`-intercept of the graph of the model. The scatterplot shows that as the `x`-values of the data points increase, the `y`-values of the data points decrease, which means the graph of an appropriate linear model has a negative slope. Therefore, `blt0`. The scatterplot also shows that the data points are close to the `y`-axis at a positive value of `y`. Therefore, the `y`-intercept of the graph of an appropriate linear model has a positive `y`-coordinate, which means `agt0`. Of the given choices, only this choice, `y=-1.9+10.1`, has a negative value for `b`, the slope, and a positive value for `a`, the `y`-coordinate of the `y`-intercept.",
                     "Percent": 0
                 }
             },
@@ -544,7 +544,7 @@
                 "Choice": "`y=1.9x-10.1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of this model has a positive slope, not a negative slope, and a `text(y)`-intercept with a negative `text(y)`-coordinate, not a positive `text(y)`-coordinate.",
+                    "Rationale": "The graph of this model has a positive slope, not a negative slope, and a `y`-intercept with a negative `y`-coordinate, not a positive `y`-coordinate.",
                     "Percent": 0
                 }
             },
@@ -600,7 +600,7 @@
                 "Choice": "Three",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a value of `x` satisfies `f(x)=0`, the graph of `y=f(x)` will contain a point `(x,0)` and thus touch the `text(x)`-axis. Since there are `3` points at which this graph touches the `text(x)`-axis, there are `3` values of `x` for which `f(x)=0`.",
+                    "Rationale": "If a value of `x` satisfies `f(x)=0`, the graph of `y=f(x)` will contain a point `(x,0)` and thus touch the `x`-axis. Since there are `3` points at which this graph touches the `x`-axis, there are `3` values of `x` for which `f(x)=0`.",
                     "Percent": 0
                 }
             },
@@ -703,7 +703,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Bacteria are growing in a liquid growth medium. There were `300,000text( cells per milliliter)` during an initial observation. The number of cells per milliliter doubles every `3text( hours)`. How many cells per milliliter will there be `15text( hours)` after the initial observation?"
+            "Bacteria are growing in a liquid growth medium. There were `300,000` `text(cells per milliliter)` during an initial observation. The number of cells per milliliter doubles every `3` `text(hours)`. How many cells per milliliter will there be `15` `text(hours)` after the initial observation?"
         ],
         "AnswerChoices": {
             "A": {
@@ -734,7 +734,7 @@
                 "Choice": "`9,600,000`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `y` represent the number of cells per milliliter `xtext( hours)` after the initial observation. Since the number of cells per milliliter doubles every `3text( hours)`, the relationship between `x` and `y` can be represented by an exponential equation of the form `y=a(b)^(x/k)`, where `a` is the number of cells per milliliter during the initial observation and the number of cells per milliliter increases by a factor of `b` every `ktext( hours)`. It's given that there were `300,000text( cells per milliliter)` during the initial observation. Therefore, `a=300,000`. It's also given that the number of cells per milliliter doubles, or increases by a factor of `2`, every `3text( hours)`. Therefore, `b=2` and `k=3`. Substituting `300,000` for `a`, `2` for `b`, and `3` for `k` in the equation `y=a(b)^(x/k)` yields `y=300,000(2)^(x/3)`. The number of cells per milliliter there will be `15text( hours)` after the initial observation is the value of `y` in this equation when `x=15`. Substituting `15` for `x` in the equation `y=300,000(2)^(x/3)` yields `y=300,000(2)^(15/3)`, or `y=300,000(2)^5`. This is equivalent to `y=300,000(32)`, or `y=9,600,000`. Therefore, `15text( hours)` after the initial observation, there will be `9,600,000text( cells per milliliter)`.",
+                    "Rationale": "Let `y` represent the number of cells per milliliter `x` `text(hours)` after the initial observation. Since the number of cells per milliliter doubles every `3` `text(hours)`, the relationship between `x` and `y` can be represented by an exponential equation of the form `y=a(b)^(x/k)`, where `a` is the number of cells per milliliter during the initial observation and the number of cells per milliliter increases by a factor of `b` every `k` `text(hours)`. It's given that there were `300,000` `text(cells per milliliter)` during the initial observation. Therefore, `a=300,000`. It's also given that the number of cells per milliliter doubles, or increases by a factor of `2`, every `3` `text(hours)`. Therefore, `b=2` and `k=3`. Substituting `300,000` for `a`, `2` for `b`, and `3` for `k` in the equation `y=a(b)^(x/k)` yields `y=300,000(2)^(x/3)`. The number of cells per milliliter there will be `15` `text(hours)` after the initial observation is the value of `y` in this equation when `x=15`. Substituting `15` for `x` in the equation `y=300,000(2)^(x/3)` yields `y=300,000(2)^(15/3)`, or `y=300,000(2)^5`. This is equivalent to `y=300,000(32)`, or `y=9,600,000`. Therefore, `15` `text(hours)` after the initial observation, there will be `9,600,000` `text(cells per milliliter)`.",
                     "Percent": 0
                 }
             }
@@ -1002,7 +1002,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Describe how a change to the equation representing a circle affects the graph of the circle in the `text(xy)`-plane or how a change to the graph of a circle affects the equation that represents the circle."
+            "Describe how a change to the equation representing a circle affects the graph of the circle in the `xy`-plane or how a change to the graph of a circle affects the equation that represents the circle."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1011,14 +1011,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A circle in the `text(xy)`-plane has a diameter with endpoints `(2,4)` and `(2,14)`. An equation of this circle is `(x-2)^2+(y-9)^2=r^2`, where `r` is a positive constant. What is the value of `r`?"
+            "A circle in the `xy`-plane has a diameter with endpoints `(2,4)` and `(2,14)`. An equation of this circle is `(x-2)^2+(y-9)^2=r^2`, where `r` is a positive constant. What is the value of `r`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form of an equation of a circle in the `text(xy)`-plane is `(x-h)^2+(y-k)^2=r^2`, where `h`, `k`, and `r` are constants, the coordinates of the center of the circle are `(h,k)`, and the length of the radius of the circle is `r`. It's given that an equation of the circle is `(x-2)^2+(y-9)^2=r^2`. Therefore, the center of this circle is `(2,9)`. It's given that the endpoints of a diameter of the circle are `(2,4)` and `(2,14)`. The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, `sqrt((x_1-x_2)^2+(y_1-y_2)^2)`. Substituting the center of the circle `(2,9)` and one endpoint of the diameter `(2,4)` in this formula gives a distance of `sqrt((2-2)^2+(9-4)^2)`, or `sqrt(0^2+5^2)`, which is equivalent to `5`. Since the distance from the center of the circle to an endpoint of a diameter is `5`, the value of `r` is `5`.",
+                    "Rationale": "The standard form of an equation of a circle in the `xy`-plane is `(x-h)^2+(y-k)^2=r^2`, where `h`, `k`, and `r` are constants, the coordinates of the center of the circle are `(h,k)`, and the length of the radius of the circle is `r`. It's given that an equation of the circle is `(x-2)^2+(y-9)^2=r^2`. Therefore, the center of this circle is `(2,9)`. It's given that the endpoints of a diameter of the circle are `(2,4)` and `(2,14)`. The length of the radius is the distance from the center of the circle to an endpoint of a diameter of the circle, which can be found using the distance formula, `sqrt((x_1-x_2)^2+(y_1-y_2)^2)`. Substituting the center of the circle `(2,9)` and one endpoint of the diameter `(2,4)` in this formula gives a distance of `sqrt((2-2)^2+(9-4)^2)`, or `sqrt(0^2+5^2)`, which is equivalent to `5`. Since the distance from the center of the circle to an endpoint of a diameter is `5`, the value of `r` is `5`.",
                     "Percent": 0
                 }
             }
@@ -1042,7 +1042,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The measure of angle `R` is `(2pi)/3text( radians)`. The measure of angle `T` is `(5pi)/12text( radians)` greater than the measure of angle `R`. What is the measure of angle `T`, in `text(degrees)`?"
+            "The measure of angle `R` is `(2pi)/3` `text(radians)`. The measure of angle `T` is `(5pi)/12` `text(radians)` greater than the measure of angle `R`. What is the measure of angle `T`, in `text(degrees)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1065,7 +1065,7 @@
                 "Choice": "`195`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the measure of angle `R` is `(2pi)/3text( radians)`, and the measure of angle `T` is `(5pi)/12text( radians)` greater than the measure of angle `R`. Therefore, the measure of angle `T` is equal to `(2pi)/3+(5pi)/12text( radians)`. Multiplying `(2pi)/3` by `4/4` to get a common denominator with `(5pi)/12` yields `(8pi)/12`. Therefore, `(2pi)/3+(5pi)/12` is equivalent to `(8pi)/12+(5pi)/12`, or `(13pi)/12`. Therefore, the measure of angle `T` is `(13pi)/12text( radians)`. The measure of angle `T`, in `text(degrees)`, can be found by multiplying its measure, in `text(radians)`, by `180/pi`. This yields `((13pi)/12)(180/pi)`, which is equivalent to `195text( degrees)`. Therefore, the measure of angle `T` is `195text( degrees)`.",
+                    "Rationale": "It's given that the measure of angle `R` is `(2pi)/3` `text(radians)`, and the measure of angle `T` is `(5pi)/12` `text(radians)` greater than the measure of angle `R`. Therefore, the measure of angle `T` is equal to `(2pi)/3+(5pi)/12` `text(radians)`. Multiplying `(2pi)/3` by `4/4` to get a common denominator with `(5pi)/12` yields `(8pi)/12`. Therefore, `(2pi)/3+(5pi)/12` is equivalent to `(8pi)/12+(5pi)/12`, or `(13pi)/12`. Therefore, the measure of angle `T` is `(13pi)/12` `text(radians)`. The measure of angle `T`, in `text(degrees)`, can be found by multiplying its measure, in `text(radians)`, by `180/pi`. This yields `((13pi)/12)(180/pi)`, which is equivalent to `195` `text(degrees)`. Therefore, the measure of angle `T` is `195` `text(degrees)`.",
                     "Percent": 0
                 }
             },
@@ -1097,7 +1097,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A certain town has an area of `4.36text( square miles)`. What is the area, in `text(square yards)`, of this town? (`1text( mile)=1,760text( yards)`)"
+            "A certain town has an area of `4.36` `text(square miles)`. What is the area, in `text(square yards)`, of this town? (`1` `text(mile)=1,760` `text(yards)`)"
         ],
         "AnswerChoices": {
             "A": {
@@ -1128,7 +1128,7 @@
                 "Choice": "`13,505,536`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the number of yards in `1text( mile)` is `1,760`, the number of square yards in `1text( square mile)` is `(1,760)(1,760)=3,097,600`. Therefore, if the area of the town is `4.36text( square miles)`, it is `4.36(3,097,600)=13,505,536`, in `text(square yards)`.",
+                    "Rationale": "Since the number of yards in `1` `text(mile)` is `1,760`, the number of square yards in `1` `text(square mile)` is `(1,760)(1,760)=3,097,600`. Therefore, if the area of the town is `4.36` `text(square miles)`, it is `4.36(3,097,600)=13,505,536`, in `text(square yards)`.",
                     "Percent": 0
                 }
             }
@@ -1153,7 +1153,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT1M1/media/24a.jpg",
-            "For line `h`, the table shows three values of `x` and their corresponding values of `y`. Line `k` is the result of translating line h down `5text( units)` in the `text(xy)`-plane. What is the `text(x)`-intercept of line `k`?"
+            "For line `h`, the table shows three values of `x` and their corresponding values of `y`. Line `k` is the result of translating line h down `5` `text(units)` in the `xy`-plane. What is the `x`-intercept of line `k`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1184,7 +1184,7 @@
                 "Choice": "`(-17/6,0)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation of line `h` can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the line and `(0,b)` is the `text(y)`-intercept of the line. It's given that line `h` contains the points `(18,130)`, `(23,160)`, and `(26,178)`. Therefore, its slope m can be found as `(160-130)/(23-18)`, or `6`. Substituting `6` for `m` in the equation `y=mx+b` yields `y=6x+b`. Substituting `130` for `y` and `18` for `x` in this equation yields `130=6(18)+b`, or `130=108+b`. Subtracting `108` from both sides of this equation yields `22=b`. Substituting `22` for `b` in `y=6x+b` yields `y=6x+22`. Since line `k` is the result of translating line `h` down `5text( units)`, an equation of line `k` is `y=6x+22-5`, or `y=6x+17`. Substituting `0` for `y` in this equation yields `0=6x+17`. Solving this equation for `x` yields `x=-17/6`. Therefore, the `text(x)`-intercept of line `k` is `(-17/6,0)`.",
+                    "Rationale": "The equation of line `h` can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the line and `(0,b)` is the `y`-intercept of the line. It's given that line `h` contains the points `(18,130)`, `(23,160)`, and `(26,178)`. Therefore, its slope m can be found as `(160-130)/(23-18)`, or `6`. Substituting `6` for `m` in the equation `y=mx+b` yields `y=6x+b`. Substituting `130` for `y` and `18` for `x` in this equation yields `130=6(18)+b`, or `130=108+b`. Subtracting `108` from both sides of this equation yields `22=b`. Substituting `22` for `b` in `y=6x+b` yields `y=6x+22`. Since line `k` is the result of translating line `h` down `5` `text(units)`, an equation of line `k` is `y=6x+22-5`, or `y=6x+17`. Substituting `0` for `y` in this equation yields `0=6x+17`. Solving this equation for `x` yields `x=-17/6`. Therefore, the `x`-intercept of line `k` is `(-17/6,0)`.",
                     "Percent": 0
                 }
             }
@@ -1208,7 +1208,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, the graph of the equation `y=-x^2+9x-100` intersects the line `y=c` at exactly one point. What is the value of `c`?"
+            "In the `xy`-plane, the graph of the equation `y=-x^2+9x-100` intersects the line `y=c` at exactly one point. What is the value of `c`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1231,7 +1231,7 @@
                 "Choice": "`-319/4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the `text(xy)`-plane, the graph of the line `y=c` is a horizontal line that crosses the `text(y)`-axis at `y=c` and the graph of the quadratic equation `y=-x^2+9x-100` is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of `c` should be equal to the `text(y)`-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, `y=a(x-h)^2+k`, the vertex of its graph in the `text(xy)`-plane is `(h,k)`. The given quadratic equation, `y=-x^2+9x-100`, can be rewritten as `y=(x^2-2(9/2)x+(9/2)^2)+(9/2)^2-100`, or `y=-(x-9/2)^2+(-319/4)`. Thus, the value of `c` is equal to `-319/4`.",
+                    "Rationale": "In the `xy`-plane, the graph of the line `y=c` is a horizontal line that crosses the `y`-axis at `y=c` and the graph of the quadratic equation `y=-x^2+9x-100` is a parabola. A parabola can intersect a horizontal line at exactly one point only at its vertex. Therefore, the value of `c` should be equal to the `y`-coordinate of the vertex of the graph of the given equation. For a quadratic equation in vertex form, `y=a(x-h)^2+k`, the vertex of its graph in the `xy`-plane is `(h,k)`. The given quadratic equation, `y=-x^2+9x-100`, can be rewritten as `y=(x^2-2(9/2)x+(9/2)^2)+(9/2)^2-100`, or `y=-(x-9/2)^2+(-319/4)`. Thus, the value of `c` is equal to `-319/4`.",
                     "Percent": 0
                 }
             },
@@ -1264,7 +1264,7 @@
         "Explain": false,
         "Content": [
             ":box:`2x+3y=7`\n\n`10x+15y=35`",
-            "For each real number `r`, which of the following points lies on the graph of each equation in the `text(xy)`-plane for the given system?"
+            "For each real number `r`, which of the following points lies on the graph of each equation in the `xy`-plane for the given system?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1279,7 +1279,7 @@
                 "Choice": "`(-(3r)/2+7/2,r)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by `5`. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point `(x,y)` lies on the graph of an equation in the `text(xy)`-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the `text(x)`- and `text(y)`-coordinates of this choice, `-(3r)/2+7/2` and `r`, for `x` and `y`, respectively, in the first equation yields `2(-(3r)/2+7/2)+3r=7`, which is equivalent to `-3r+7+3r=7`, or `7=7`. Therefore, the point `(-(3r)/2+7/2,r)` represents a solution to the first equation and thus lies on the graph of each equation in the `text(xy)`-plane for the given system.",
+                    "Rationale": "The two given equations are equivalent because the second equation can be obtained from the first equation by multiplying each side of the equation by `5`. Thus, the graphs of the equations are coincident, so if a point lies on the graph of one of the equations, it also lies on the graph of the other equation. A point `(x,y)` lies on the graph of an equation in the `xy`-plane if and only if this point represents a solution to the equation. It is sufficient, therefore, to find the point that represents a solution to the first given equation. Substituting the `x`- and `y`-coordinates of this choice, `-(3r)/2+7/2` and `r`, for `x` and `y`, respectively, in the first equation yields `2(-(3r)/2+7/2)+3r=7`, which is equivalent to `-3r+7+3r=7`, or `7=7`. Therefore, the point `(-(3r)/2+7/2,r)` represents a solution to the first equation and thus lies on the graph of each equation in the `xy`-plane for the given system.",
                     "Percent": 0
                 }
             },
@@ -1319,7 +1319,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The perimeter of an equilateral triangle is `624text( centimeters)`. The height of this triangle is `ksqrt(3)text( centimeters)`, where `k` is a constant. What is the value of `k`?"
+            "The perimeter of an equilateral triangle is `624` `text(centimeters)`. The height of this triangle is `ksqrt(3)` `text(centimeters)`, where `k` is a constant. What is the value of `k`?"
         ],
         "AnswerChoices": {
             "KEY": {

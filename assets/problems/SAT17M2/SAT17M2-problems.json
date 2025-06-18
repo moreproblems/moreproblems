@@ -229,7 +229,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "Given a linear inequality or system of linear inequalities, interpret a point in the `text(xy)`-plane in terms of the solution set."
+            "Given a linear inequality or system of linear inequalities, interpret a point in the `xy`-plane in terms of the solution set."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -907,14 +907,14 @@
         "Explain": false,
         "Content": [
             ":ibox:y = 19.99 + 1.50x",
-            "The equation above models the total cost y,in dollars, that a company charges a customer to rent a truck for one day and drive the truck x miles. The total cost consists of a flat fee plus a charge per mile driven. When the equation is graphed in the `text(xy)`-plane, what does the `text(y)`-intercept of the graph represent in terms of the model?"
+            "The equation above models the total cost y,in dollars, that a company charges a customer to rent a truck for one day and drive the truck x miles. The total cost consists of a flat fee plus a charge per mile driven. When the equation is graphed in the `xy`-plane, what does the `y`-intercept of the graph represent in terms of the model?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "A flat fee of $19.99",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `text(y)`-intercept of the graph of y = 19.99 + 1.50x in the `text(xy)`-plane is the point on the graph with an `text(x)`-coordinate equal to 0. In the model represented by the equation, the `text(x)`-coordinate represents the number of miles a rental truck is driven during a one-day rental, and so the `text(y)`-intercept represents the charge, in dollars, for the rental when the truck is driven 0 miles; that is, the `text(y)`-intercept represents the cost, in dollars, of the flat fee. Since the `text(y)`-intercept of the graph of y = 19.99 + 1.50x is (0, 19.99), the `text(y)`-intercept represents a flat fee of $19.99 in terms of the model.",
+                    "Rationale": "The `y`-intercept of the graph of y = 19.99 + 1.50x in the `xy`-plane is the point on the graph with an `x`-coordinate equal to 0. In the model represented by the equation, the `x`-coordinate represents the number of miles a rental truck is driven during a one-day rental, and so the `y`-intercept represents the charge, in dollars, for the rental when the truck is driven 0 miles; that is, the `y`-intercept represents the cost, in dollars, of the flat fee. Since the `y`-intercept of the graph of y = 19.99 + 1.50x is (0, 19.99), the `y`-intercept represents a flat fee of $19.99 in terms of the model.",
                     "Percent": 0
                 }
             },
@@ -922,7 +922,7 @@
                 "Choice": "A charge per mile of $1.50",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The slope of the graph of y = 19.99 + 1.50x in the `text(xy)`-plane, not the `text(y)`-intercept, represents a driving charge per mile of $1.50 in terms of the model.",
+                    "Rationale": "The slope of the graph of y = 19.99 + 1.50x in the `xy`-plane, not the `y`-intercept, represents a driving charge per mile of $1.50 in terms of the model.",
                     "Percent": 0
                 }
             },
@@ -1346,7 +1346,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Solve problems involving derived units, including those that arise from products (e.g., kilowatt-hours) and quotients (e.g., population per square kilometer)."
+            "Solve problems involving derived units, including those that arise from products (e.g., `text(kilowatt-hours)`) and quotients (e.g., text`(population per square kilometer)`)."
         ],
         "SuppContent": [
             "problems/SAT17M2/supps/SAT17M2-S3.json"
@@ -1548,7 +1548,7 @@
                 "Choice": "2 to 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The line shown has a slope of (6 - 0)/(3 - 0) = 2 and a `text(y)`-intercept of (0, 0); therefore, the equation of the line is y = 2x. This means that for each point on the line, the value of the `text(y)`-coordinate is twice the value of the `text(x)`-coordinate. Therefore, for the point (s, t), the ratio of t to s is 2 to 1.",
+                    "Rationale": "The line shown has a slope of (6 - 0)/(3 - 0) = 2 and a `y`-intercept of (0, 0); therefore, the equation of the line is y = 2x. This means that for each point on the line, the value of the `y`-coordinate is twice the value of the `x`-coordinate. Therefore, for the point (s, t), the ratio of t to s is 2 to 1.",
                     "Percent": 0
                 }
             },
@@ -1571,7 +1571,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `text(xy)`-plane."
+            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `xy`-plane."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1600,10 +1600,10 @@
                 }
             },
             "C": {
-                "Choice": "(0, 0)",
+                "Choice": "`(0,0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The distance between (0, 0) and (-3, 1) is √((0 + 3)^2 + (0 - 1)^2) = √((3)^2 + (1)^2) = √8, which is less than 5, and therefore (0, 0) lies in the interior of the circle.",
+                    "Rationale": "The distance between `(0,0)` and (-3, 1) is √((0 + 3)^2 + (0 - 1)^2) = √((3)^2 + (1)^2) = √8, which is less than 5, and therefore `(0,0)` lies in the interior of the circle.",
                     "Percent": 0
                 }
             },
@@ -1722,7 +1722,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line t is shown in the `text(xy)`-plane below.",
+            "Line t is shown in the `xy`-plane below.",
             "problems/SAT17M2/media/32a.jpg",
             "What is the slope of line t?"
         ],
@@ -1731,7 +1731,7 @@
                 "Choice": "equal:2/5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope of the line can be found by selecting any two points `(x_1,y_1)` and `(x_2,y_2)` on the line and then dividing the difference of the `text(y)`-coordinates (y2 - y1) by the difference of the `text(x)`-coordinates (x_2 - x_1). Using the points (-6, -27/5) and (9, 3/5), the slope is (3/5 - (-27/5))/(9 - (-6)) = (30/5)/15. This can be rewritten as 6/15, which reduces to 2/5.",
+                    "Rationale": "The slope of the line can be found by selecting any two points `(x_1,y_1)` and `(x_2,y_2)` on the line and then dividing the difference of the `y`-coordinates (y2 - y1) by the difference of the `x`-coordinates (x_2 - x_1). Using the points (-6, -27/5) and (9, 3/5), the slope is (3/5 - (-27/5))/(9 - (-6)) = (30/5)/15. This can be rewritten as 6/15, which reduces to 2/5.",
                     "Percent": 0
                 }
             }
@@ -1826,7 +1826,7 @@
                 "Choice": "equal:0",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For an ordered pair to satisfy a system of equations, both the x- and `text(y)`-values of the ordered pair must satisfy each equation in the system. Both expressions on the right-hand side of the given equations are equal to y, therefore it follows that both expressions on the right-hand side of the equations are equal to each other: x^2- 4x + 4 = 4 - x. This equation can be rewritten as x^2- 3x = 0, and then through factoring, the equation becomes x(x - 3) = 0. Because the product of the two factors is equal to 0, it can be concluded that either x = 0 or x - 3 = 0, or rather, x = 0 or x = 3.",
+                    "Rationale": "For an ordered pair to satisfy a system of equations, both the x- and `y`-values of the ordered pair must satisfy each equation in the system. Both expressions on the right-hand side of the given equations are equal to y, therefore it follows that both expressions on the right-hand side of the equations are equal to each other: x^2- 4x + 4 = 4 - x. This equation can be rewritten as x^2- 3x = 0, and then through factoring, the equation becomes x(x - 3) = 0. Because the product of the two factors is equal to 0, it can be concluded that either x = 0 or x - 3 = 0, or rather, x = 0 or x = 3.",
                     "Percent": 0
                 }
             },
@@ -1834,7 +1834,7 @@
                 "Choice": "equal:3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For an ordered pair to satisfy a system of equations, both the x- and `text(y)`-values of the ordered pair must satisfy each equation in the system. Both expressions on the right-hand side of the given equations are equal to y, therefore it follows that both expressions on the right-hand side of the equations are equal to each other: x^2- 4x + 4 = 4 - x. This equation can be rewritten as x^2- 3x = 0, and then through factoring, the equation becomes x(x - 3) = 0. Because the product of the two factors is equal to 0, it can be concluded that either x = 0 or x - 3 = 0, or rather, x = 0 or x = 3.",
+                    "Rationale": "For an ordered pair to satisfy a system of equations, both the x- and `y`-values of the ordered pair must satisfy each equation in the system. Both expressions on the right-hand side of the given equations are equal to y, therefore it follows that both expressions on the right-hand side of the equations are equal to each other: x^2- 4x + 4 = 4 - x. This equation can be rewritten as x^2- 3x = 0, and then through factoring, the equation becomes x(x - 3) = 0. Because the product of the two factors is equal to 0, it can be concluded that either x = 0 or x - 3 = 0, or rather, x = 0 or x = 3.",
                     "Percent": 0
                 }
             }

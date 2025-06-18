@@ -261,7 +261,7 @@
                 "Choice": "Eva charges $5 more per hour than Rafael, and neither charges an initial fee, so the only place their graphs will intersect is at (0, 0).",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Interprets (1.0, 40) on the graph as Eva charging $40 per hour and the rate of change (i.e., the coefficient of x) in the equation as Rafael charging $35 per hour, determines that Eva charges $5 more per hour by subtracting the two rates ($40 - $35), interprets (0, 0) on the graph and the lack of a constant term in the equation as Eva and Rafael not charging an initial fee, and recognizes that linear relations with different slopes will have only one point of intersection.",
+                    "Rationale": "Interprets (1.0, 40) on the graph as Eva charging $40 per hour and the rate of change (i.e., the coefficient of x) in the equation as Rafael charging $35 per hour, determines that Eva charges $5 more per hour by subtracting the two rates ($40 - $35), interprets `(0,0)` on the graph and the lack of a constant term in the equation as Eva and Rafael not charging an initial fee, and recognizes that linear relations with different slopes will have only one point of intersection.",
                     "Percent": 56
                 }
             },
@@ -269,7 +269,7 @@
                 "Choice": "Eva and Rafael each charge the same amount per hour and do not charge an initial fee, so the only place their graphs will intersect is at (0, 0).",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not realize the conditions that would make them have the same line OR realizes (0, 0) is a point on both lines but does not recognize that they represent different lines.",
+                    "Rationale": "Does not realize the conditions that would make them have the same line OR realizes `(0,0)` is a point on both lines but does not recognize that they represent different lines.",
                     "Percent": 13
                 }
             }
@@ -356,7 +356,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The two lines must have the same slope and the same `text(y)`-intercept.",
+                "Choice": "The two lines must have the same slope and the same `y`-intercept.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Considers only the same slope and does not recognize that the lines are colinear OR confuses “infinitely many solutions” for “no solutions”.",
@@ -364,26 +364,26 @@
                 }
             },
             "B": {
-                "Choice": "The two lines must have different slopes but the same `text(y)`-intercept.",
+                "Choice": "The two lines must have different slopes but the same `y`-intercept.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize that lines with the same `text(y)`-intercept will have a solution at the `text(y)`-intercept.",
+                    "Rationale": "Does not recognize that lines with the same `y`-intercept will have a solution at the `y`-intercept.",
                     "Percent": 15
                 }
             },
             "C": {
-                "Choice": "The two lines must have the same slope but different `text(y)`-intercepts.",
+                "Choice": "The two lines must have the same slope but different `y`-intercepts.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that two lines with the same slope but different `text(y)`-intercepts will be parallel (i.e., they will never intersect) and, therefore, will have no solutions.",
+                    "Rationale": "Recognizes that two lines with the same slope but different `y`-intercepts will be parallel (i.e., they will never intersect) and, therefore, will have no solutions.",
                     "Percent": 44
                 }
             },
             "D": {
-                "Choice": "The two lines must have different slopes and different `text(y)`-intercepts.",
+                "Choice": "The two lines must have different slopes and different `y`-intercepts.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Considers only the different `text(y)`-intercepts and does not recognize that lines with different slopes will always have a solution.",
+                    "Rationale": "Considers only the different `y`-intercepts and does not recognize that lines with different slopes will always have a solution.",
                     "Percent": 20
                 }
             }
@@ -539,7 +539,7 @@
                 "Choice": "Beth's favorite drink: $2.75\nPhil's favorite drink: $3.25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the rate of change in the table by dividing the difference between two remaining balances (e.g., $33.50 - $50.00 = -$16.50) by the difference between the respective number of drinks purchased (e.g., 6 - 0 = 6), determines the rate of change in the graph by dividing the difference between the `text(y)`-coordinates of two points (e.g., $4.00 - $30.00 = -$26.00) by the difference between the `text(x)`-coordinates of the same two points (e.g., 8 - 0 = 8), and interprets the negative rates as the costs of the drinks.",
+                    "Rationale": "Determines the rate of change in the table by dividing the difference between two remaining balances (e.g., $33.50 - $50.00 = -$16.50) by the difference between the respective number of drinks purchased (e.g., 6 - 0 = 6), determines the rate of change in the graph by dividing the difference between the `y`-coordinates of two points (e.g., $4.00 - $30.00 = -$26.00) by the difference between the `x`-coordinates of the same two points (e.g., 8 - 0 = 8), and interprets the negative rates as the costs of the drinks.",
                     "Percent": 64
                 }
             },
@@ -604,7 +604,7 @@
                 "Choice": "From hour 2 to hour 3, the snowfall increased by 1.5 inches.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly considers that the `text(y)`-value represents the hourly rate.",
+                    "Rationale": "Incorrectly considers that the `y`-value represents the hourly rate.",
                     "Percent": 9
                 }
             },
@@ -650,7 +650,7 @@
                 }
             },
             "B": {
-                "Choice": "a reflection across the line y = x, followed by a reflection across the `text(x)`-axis",
+                "Choice": "a reflection across the line y = x, followed by a reflection across the `x`-axis",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Knows that two reflections result in a rotation and uses a pair of reflections that will produce a figure that appears in quadrant I but has an incorrect orientation.",
@@ -666,10 +666,10 @@
                 }
             },
             "D": {
-                "Choice": "a 90° counterclockwise rotation about point R, followed by a reflection across the `text(y)`-axis",
+                "Choice": "a 90° counterclockwise rotation about point R, followed by a reflection across the `y`-axis",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies a set of transformations that moves point P to point P' by rotating point P from (-5, 4) to (-6, 1) and then reflecting it from 6 units to the left of the `text(y)`-axis to 6 units to the right of the `text(y)`-axis, moves point R to point R' by rotating point R onto itself (since it is the center of rotation) and then reflecting it from 4 units to the left of the `text(y)`-axis to 4 units to the right of the `text(y)`-axis, moves point S to point S' by rotating point S from (0, 4) to (-5, 6) and then reflecting it from 5 units to the left of the `text(y)`-axis to 5 units to the right of the `text(y)`-axis, moves point T to point T' by rotating point T from (-5, 0) to (-2, 1) and then reflecting it from 2 units to the left of the `text(y)`-axis to 2 units to the right of the `text(y)`-axis.",
+                    "Rationale": "Identifies a set of transformations that moves point P to point P' by rotating point P from (-5, 4) to (-6, 1) and then reflecting it from 6 units to the left of the `y`-axis to 6 units to the right of the `y`-axis, moves point R to point R' by rotating point R onto itself (since it is the center of rotation) and then reflecting it from 4 units to the left of the `y`-axis to 4 units to the right of the `y`-axis, moves point S to point S' by rotating point S from (0, 4) to (-5, 6) and then reflecting it from 5 units to the left of the `y`-axis to 5 units to the right of the `y`-axis, moves point T to point T' by rotating point T from (-5, 0) to (-2, 1) and then reflecting it from 2 units to the left of the `y`-axis to 2 units to the right of the `y`-axis.",
                     "Percent": 50
                 }
             }
@@ -699,7 +699,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The `text(x)`-axis represents the number of times a week a student walks to school, and the `text(y)`-axis represents the distance from home. The line of best fit has a positive slope.",
+                "Choice": "The `x`-axis represents the number of times a week a student walks to school, and the `y`-axis represents the distance from home. The line of best fit has a positive slope.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses a relation in which the distance from home is dependent upon the number of times a week a student walks to school.",
@@ -707,7 +707,7 @@
                 }
             },
             "B": {
-                "Choice": "The `text(x)`-axis represents the number of times a week a student rides the bus to school, and the `text(y)`-axis represents the distance from home. The line of best fit has a negative slope.",
+                "Choice": "The `x`-axis represents the number of times a week a student rides the bus to school, and the `y`-axis represents the distance from home. The line of best fit has a negative slope.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses a relation in which the distance from home is dependent upon the number of times a week a student rides the bus to school.",
@@ -715,15 +715,15 @@
                 }
             },
             "C": {
-                "Choice": "The `text(x)`-axis represents the distance from home, and the `text(y)`-axis represents the number of times a week a student walks to school. The line of best fit has a negative slope.",
+                "Choice": "The `x`-axis represents the distance from home, and the `y`-axis represents the number of times a week a student walks to school. The line of best fit has a negative slope.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that the `text(x)`-axis should represent the distance from home since it is the independent variable and recognizes that the slope would be negative (as the distance from home increases, the number of times walking should decrease).",
+                    "Rationale": "Recognizes that the `x`-axis should represent the distance from home since it is the independent variable and recognizes that the slope would be negative (as the distance from home increases, the number of times walking should decrease).",
                     "Percent": 42
                 }
             },
             "D": {
-                "Choice": "The `text(x)`-axis represents the distance from home, and the `text(y)`-axis represents the number of times a week a student rides the bus to school. The line of best fit has a negative slope.",
+                "Choice": "The `x`-axis represents the distance from home, and the `y`-axis represents the number of times a week a student rides the bus to school. The line of best fit has a negative slope.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize that this situation would have a positive slope (as the distance from home increases, the number of times riding the bus should also increase).",
@@ -751,7 +751,7 @@
         "Explain": false,
         "Content": [
             "A researcher analyzes a bivariate data set and determines that the data set is closely, but not exactly, modeled by a function. The researcher's description of the function is given below.",
-            "Each `text(y)`-value in the data set is about 3 more than 4 times the corresponding `text(x)`-value in the data set.",
+            "Each `y`-value in the data set is about 3 more than 4 times the corresponding `x`-value in the data set.",
             "Based on the description, which table most likely contains values in the data set?"
         ],
         "AnswerChoices": {
@@ -775,7 +775,7 @@
                 "Choice": "problems/PA22G8M/media/14c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies a relationship that is close to, but not exactly, y = 4x + 3 by multiplying each `text(x)`-value by 4 before adding 3, and then comparing the result to the `text(y)`-value (e.g., 4(5) + 3 = 23, which is close to, but not exactly, 23.60).",
+                    "Rationale": "Identifies a relationship that is close to, but not exactly, y = 4x + 3 by multiplying each `x`-value by 4 before adding 3, and then comparing the result to the `y`-value (e.g., 4(5) + 3 = 23, which is close to, but not exactly, 23.60).",
                     "Percent": 51
                 }
             },
@@ -879,7 +879,7 @@
                 "Explain": false,
                 "Content": [
                     "The discounted price, in dollars, the gym charges can be represented by the equation y = 10x + 5.",
-                    "What are the slope and the `text(y)`-intercept of the equation? What do the slope and the `text(y)`-intercept each represent in this situation?",
+                    "What are the slope and the `y`-intercept of the equation? What do the slope and the `y`-intercept each represent in this situation?",
                     "Slope: :FR-1:",
                     "Y-intercept: :FR-2:"
                 ],

@@ -227,14 +227,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is the graph of the equation y = 2x - 5 in the `text(xy)`-plane?"
+            "Which of the following is the graph of the equation y = 2x - 5 in the `xy`-plane?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/SAT16M1/media/5a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of y = 2x - 5 in the `text(xy)`-plane is a line with slope 2 and a `text(y)`-intercept at (0, -5). This graph crosses the `text(y)`-axis at the point (0, 2.5), not (0, -5), and it has a slope of 1/2, not 2.",
+                    "Rationale": "The graph of y = 2x - 5 in the `xy`-plane is a line with slope 2 and a `y`-intercept at (0, -5). This graph crosses the `y`-axis at the point (0, 2.5), not (0, -5), and it has a slope of 1/2, not 2.",
                     "Percent": 0
                 }
             },
@@ -242,7 +242,7 @@
                 "Choice": "problems/SAT16M1/media/5b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of y = 2x - 5 in the `text(xy)`-plane is a line with slope 2 and a `text(y)`-intercept at (0, -5). This choice crosses the `text(y)`-axis at (0, -5); however, the slope of this line is -2, not 2.",
+                    "Rationale": "The graph of y = 2x - 5 in the `xy`-plane is a line with slope 2 and a `y`-intercept at (0, -5). This choice crosses the `y`-axis at (0, -5); however, the slope of this line is -2, not 2.",
                     "Percent": 0
                 }
             },
@@ -250,7 +250,7 @@
                 "Choice": "problems/SAT16M1/media/5c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of y = 2x - 5 in the `text(xy)`-plane is a line with slope 2 and a `text(y)`-intercept at (0, -5). This choice has a slope of 2; however, the graph crosses the `text(y)`-axis at (0, 5), not (0, -5).",
+                    "Rationale": "The graph of y = 2x - 5 in the `xy`-plane is a line with slope 2 and a `y`-intercept at (0, -5). This choice has a slope of 2; however, the graph crosses the `y`-axis at (0, 5), not (0, -5).",
                     "Percent": 0
                 }
             },
@@ -258,7 +258,7 @@
                 "Choice": "problems/SAT16M1/media/5d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the `text(xy)`-plane, the graph of the equation `y=mx+b`, where m and b are constants, is a line with slope m and `text(y)`-intercept `(0,b)`. Therefore, the graph of y = 2x - 5 in the `text(xy)`-plane is a line with slope 2 and a `text(y)`-intercept (0, -5). Having a slope of 2 means that for each increase in x by 1, the value of y increases by 2. Only the graph in this choice has a slope of 2 and crosses the `text(y)`-axis at (0, -5). Therefore, the graph shown in this choice must be the correct answer.",
+                    "Rationale": "In the `xy`-plane, the graph of the equation `y=mx+b`, where m and b are constants, is a line with slope m and `y`-intercept `(0,b)`. Therefore, the graph of y = 2x - 5 in the `xy`-plane is a line with slope 2 and a `y`-intercept (0, -5). Having a slope of 2 means that for each increase in x by 1, the value of y increases by 2. Only the graph in this choice has a slope of 2 and crosses the `y`-axis at (0, -5). Therefore, the graph shown in this choice must be the correct answer.",
                     "Percent": 0
                 }
             }
@@ -547,7 +547,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT16M1/media/11a.jpg",
-            "The vertex of the parabola in the `text(xy)`-plane above is (0, c). Which of the following is true about the parabola with the equation y = -a(x - b)^2 + c?"
+            "The vertex of the parabola in the `xy`-plane above is (0, c). Which of the following is true about the parabola with the equation y = -a(x - b)^2 + c?"
         ],
         "AnswerChoices": {
             "A": {
@@ -661,7 +661,7 @@
                 "Choice": "-3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The number of solutions to any quadratic equation in the form `ax^2+bx+c=0`, where a, b, and c are constants, can be found by evaluating the expression `b^2-4ac`, which is called the discriminant. If the value of `b^2-4ac` is a positive number, then there will be exactly two real solutions to the equation. If the value of `b^2-4ac` is zero, then there will be exactly one real solution to the equation. Finally, if the value of `b^2-4ac` is negative, then there will be no real solutions to the equation.\nThe given equation 2x^2- 4x = t is a quadratic equation in one variable, where t is a constant. Subtracting t from both sides of the equation gives 2x^2- 4x - t = 0. In this form, a = 2, b = -4, and c = -t. The values of t for which the equation has no real solutions are the same values of t for which the discriminant of this equation is a negative value. The discriminant is equal to (-4)^2 - 4(2)(-t); therefore, (-4)^2 - 4(2)(-t) < 0. Simplifying the left side of the inequality gives 16 + 8t < 0. Subtracting 16 from both sides of the inequality and then dividing both sides by 8 gives t < -2. Of the values given in the options, -3 is the only value that is less than -2.",
+                    "Rationale": "The number of solutions to any quadratic equation in the form `ax^2+bx+c=0`, where `a`, `b`, and `c` are constants, can be found by evaluating the expression `b^2-4ac`, which is called the discriminant. If the value of `b^2-4ac` is a positive number, then there will be exactly two real solutions to the equation. If the value of `b^2-4ac` is zero, then there will be exactly one real solution to the equation. Finally, if the value of `b^2-4ac` is negative, then there will be no real solutions to the equation.\nThe given equation 2x^2- 4x = t is a quadratic equation in one variable, where t is a constant. Subtracting t from both sides of the equation gives 2x^2- 4x - t = 0. In this form, a = 2, b = -4, and c = -t. The values of t for which the equation has no real solutions are the same values of t for which the discriminant of this equation is a negative value. The discriminant is equal to (-4)^2 - 4(2)(-t); therefore, (-4)^2 - 4(2)(-t) < 0. Simplifying the left side of the inequality gives 16 + 8t < 0. Subtracting 16 from both sides of the inequality and then dividing both sides by 8 gives t < -2. Of the values given in the options, -3 is the only value that is less than -2.",
                     "Percent": 0
                 }
             },

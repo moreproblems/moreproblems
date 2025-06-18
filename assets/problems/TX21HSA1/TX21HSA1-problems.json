@@ -80,7 +80,7 @@
                 "Choice": "g(x) = 6x + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the value for m as where the line appears to cross the `text(x)`-axis, (6, 0). The student needs to focus on understanding how to write a linear function in slope-intercept form given a graph.",
+                    "Rationale": "The student likely identified the value for m as where the line appears to cross the `x`-axis, (6, 0). The student needs to focus on understanding how to write a linear function in slope-intercept form given a graph.",
                     "Percent": 16
                 }
             },
@@ -96,7 +96,7 @@
                 "Choice": "g(x) = (-3/2)x + 6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the slope as m = (x_2 - x_1)/(y_2 - y_1), resulting in m = (6 - 0)/(0 - 4) = 6/(-4) = -6/4 = -3/2. The student likely identified the value for b as where the line appears to cross the `text(x)`-axis, (6, 0). The student needs to focus on understanding how to write a linear function in slope-intercept form given a graph.",
+                    "Rationale": "The student likely calculated the slope as m = (x_2 - x_1)/(y_2 - y_1), resulting in m = (6 - 0)/(0 - 4) = 6/(-4) = -6/4 = -3/2. The student likely identified the value for b as where the line appears to cross the `x`-axis, (6, 0). The student needs to focus on understanding how to write a linear function in slope-intercept form given a graph.",
                     "Percent": 9
                 }
             },
@@ -104,7 +104,7 @@
                 "Choice": "g(x) = (-2/3)x + 4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which function is best represented by the graph, the student could have found the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and the `text(y)`-intercept (value where a line crosses the `text(y)`-axis vertical) to substitute into the slope-intercept form of a line (`y=mx+b`). The slope can be found by calculating the change in `text(y)`-values over the change in `text(x)`-values (m = (0 - 4)/(6 - 0) = (-4)/6 = -4/6 = -2/3). The equation can be completed by substituting 4 from the `text(y)`-intercept, (0, 4), for b and -2/3 for m, resulting in y = (-2/3)x + 4. Since y is represented by g(x), the function is g(x) = (-2/3)x + 4. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which function is best represented by the graph, the student could have found the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and the `y`-intercept (value where a line crosses the `y`-axis vertical) to substitute into the slope-intercept form of a line (`y=mx+b`). The slope can be found by calculating the change in `y`-values over the change in `x`-values (m = (0 - 4)/(6 - 0) = (-4)/6 = -4/6 = -2/3). The equation can be completed by substituting 4 from the `y`-intercept, (0, 4), for b and -2/3 for m, resulting in y = (-2/3)x + 4. Since y is represented by g(x), the function is g(x) = (-2/3)x + 4. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 70
                 }
             }
@@ -245,10 +245,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, 2)",
+                "Choice": "`(0,2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified an ordered pair on the `text(y)`-axis (vertical axis) that represents the inequality 32 > 32 as being a true statement. The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
+                    "Rationale": "The student likely identified an ordered pair on the `y`-axis (vertical axis) that represents the inequality 32 > 32 as being a true statement. The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
                     "Percent": 25
                 }
             },
@@ -256,7 +256,7 @@
                 "Choice": "(-3, 5)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which ordered pair is in the solution set of 8x + 16y > 32, the student could have substituted the given x- and `text(y)`-values of the ordered pair into the inequality to see if it generates a true statement. Using the ordered pair (-3, 5), -3 will be substituted into the inequality for the `text(x)`-value and 5 will be substituted for the `text(y)`-value. This gives 8(-3) + 16(5) > 32, which simplifies to -24 + 80 > 32, which is a true statement. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which ordered pair is in the solution set of 8x + 16y > 32, the student could have substituted the given x- and `y`-values of the ordered pair into the inequality to see if it generates a true statement. Using the ordered pair (-3, 5), -3 will be substituted into the inequality for the `x`-value and 5 will be substituted for the `y`-value. This gives 8(-3) + 16(5) > 32, which simplifies to -24 + 80 > 32, which is a true statement. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 39
                 }
             },
@@ -272,7 +272,7 @@
                 "Choice": "(4, 0)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified an ordered pair on the `text(x)`-axis (horizontal axis) that represents the inequality 32 > 32 as being a true statement. The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
+                    "Rationale": "The student likely identified an ordered pair on the `x`-axis (horizontal axis) that represents the inequality 32 > 32 as being a true statement. The student needs to focus on understanding how to determine whether an ordered pair is in the solution set of an inequality.",
                     "Percent": 25
                 }
             }
@@ -319,7 +319,7 @@
                 "Choice": "y = (9/13)x - 7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the equation of a line in slope-intercept form (`y=mx+b`, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and b represents the `text(y)`-intercept (value where a line crosses the `text(y)`-axis)), the student could have found the slope of the line using the coordinates of the two given points. The student could have substituted the x- and `text(y)`-coordinates of (-26, -11) and (39, 34) into the slope formula, resulting in m = (34 - (-11))/(39 - (-26)) = 45/65 = 9/13. Next, the student could have substituted the x- and `text(y)`-values of the point (39, 34) and m = 9/13 into the point-slope formula, `y-y_1=m(x-x_1)`, resulting in y - 34 = (9/13)(x - 39). Next, the student could have distributed (multiplied) 9/13 to the terms inside the parentheses, resulting in y - 34 = (9/13)x - 27. Finally, the student could have added 34 to both sides of the equation, resulting in y = (9/13)x + 7. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the equation of a line in slope-intercept form (`y=mx+b`, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and b represents the `y`-intercept (value where a line crosses the `y`-axis)), the student could have found the slope of the line using the coordinates of the two given points. The student could have substituted the x- and `y`-coordinates of (-26, -11) and (39, 34) into the slope formula, resulting in m = (34 - (-11))/(39 - (-26)) = 45/65 = 9/13. Next, the student could have substituted the x- and `y`-values of the point (39, 34) and m = 9/13 into the point-slope formula, `y-y_1=m(x-x_1)`, resulting in y - 34 = (9/13)(x - 39). Next, the student could have distributed (multiplied) 9/13 to the terms inside the parentheses, resulting in y - 34 = (9/13)x - 27. Finally, the student could have added 34 to both sides of the equation, resulting in y = (9/13)x + 7. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 62
                 }
             },
@@ -342,7 +342,7 @@
             "Quadratic Functions & Equations"
         ],
         "SubTopics": [
-            "Graph quadratic functions on the coordinate plane and use the graph to identify key attributes, if possible, including `text(x)`-intercept, `text(y)`-intercept, zeros, maximum value, minimum values, vertex, and the equation of the axis of symmetry."
+            "Graph quadratic functions on the coordinate plane and use the graph to identify key attributes, if possible, including `x`-intercept, `y`-intercept, zeros, maximum value, minimum values, vertex, and the equation of the axis of symmetry."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -360,7 +360,7 @@
                 "Choice": "problems/TX21HSA1/media/7a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph could represent function p, the student should have identified the graph that has an axis of symmetry at x = -3 and exactly one zero (where the curve touches the `text(x)`-axis). The axis of symmetry is an imaginary vertical line that goes through the vertex (high or low point of the curve) of a parabola (U-shaped graph) and is represented by the equation x = n, with n representing the `text(x)`-coordinate of the vertex. The vertex of the graph is located on the `text(x)`-axis (horizontal) at (-3, 0). Since the vertex is on the `text(x)`-axis, the vertex is also the only zero of the function represented by the graph. Therefore, this graph could represent p because the equation for the axis of symmetry is x = -3, and the function has only one zero at (-3, 0).",
+                    "Rationale": "To determine which graph could represent function p, the student should have identified the graph that has an axis of symmetry at x = -3 and exactly one zero (where the curve touches the `x`-axis). The axis of symmetry is an imaginary vertical line that goes through the vertex (high or low point of the curve) of a parabola (U-shaped graph) and is represented by the equation x = n, with n representing the `x`-coordinate of the vertex. The vertex of the graph is located on the `x`-axis (horizontal) at (-3, 0). Since the vertex is on the `x`-axis, the vertex is also the only zero of the function represented by the graph. Therefore, this graph could represent p because the equation for the axis of symmetry is x = -3, and the function has only one zero at (-3, 0).",
                     "Percent": 74
                 }
             },
@@ -454,7 +454,7 @@
             "Describing & Graphing Linear Functions, Equations & Inequalities"
         ],
         "SubTopics": [
-            "Graph linear functions on the coordinate plane and identify key features, including `text(x)`-intercept, `text(y)`-intercept, zeros, and slope, in mathematical and real-world problems."
+            "Graph linear functions on the coordinate plane and identify key features, including `x`-intercept, `y`-intercept, zeros, and slope, in mathematical and real-world problems."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -465,38 +465,38 @@
         "Content": [
             "The graph of linear function g passes through the points (-7, -4) and (7, 6), as shown.",
             "problems/TX21HSA1/media/9a.jpg",
-            "What are the slope and `text(y)`-intercept of the graph of g?"
+            "What are the slope and `y`-intercept of the graph of g?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The slope is 5/7, and the `text(y)`-intercept is -1.",
+                "Choice": "The slope is 5/7, and the `y`-intercept is -1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely found the correct value of the slope but identified the integer (a set of numbers that includes counting numbers, their opposites, and zero) closest to the `text(x)`-intercept (value where a line crosses the `text(x)`-axis) as the value of the `text(y)`-intercept (-1), since the value of the `text(x)`-intercept is -1.4. The student needs to focus on understanding how to identify the key features of linear functions.",
+                    "Rationale": "The student likely found the correct value of the slope but identified the integer (a set of numbers that includes counting numbers, their opposites, and zero) closest to the `x`-intercept (value where a line crosses the `x`-axis) as the value of the `y`-intercept (-1), since the value of the `x`-intercept is -1.4. The student needs to focus on understanding how to identify the key features of linear functions.",
                     "Percent": 6
                 }
             },
             "B": {
-                "Choice": "The slope is 5/7, and the `text(y)`-intercept is 1.",
+                "Choice": "The slope is 5/7, and the `y`-intercept is 1.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the values that best represent the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`), the student could have substituted the coordinates of the two given points, (-7, -4) and (7, 6), into the slope formula, resulting in m = (6 - (-4))/(7 - (-7)) = 10/14 = 5/7. Then, the student could have substituted 5/7 and the point (7, 6) into the point-slope form of a line (`y-y_1=m(x-x_1)`), resulting in y -6 = (5/7)(x - 7) ⇒ y - 6 = (5/7)x - 5 ⇒ y = (5/7)x + 1. Simplifying, the student would find the `text(y)`-intercept (value where a line crosses the `text(y)`-axis) to be (0, 1). The value of 1 best represents the `text(y)`-intercept of the graph of the function. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the values that best represent the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`), the student could have substituted the coordinates of the two given points, (-7, -4) and (7, 6), into the slope formula, resulting in m = (6 - (-4))/(7 - (-7)) = 10/14 = 5/7. Then, the student could have substituted 5/7 and the point (7, 6) into the point-slope form of a line (`y-y_1=m(x-x_1)`), resulting in y -6 = (5/7)(x - 7) ⇒ y - 6 = (5/7)x - 5 ⇒ y = (5/7)x + 1. Simplifying, the student would find the `y`-intercept (value where a line crosses the `y`-axis) to be (0, 1). The value of 1 best represents the `y`-intercept of the graph of the function. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 71
                 }
             },
             "C": {
-                "Choice": "The slope is 7/5, and the `text(y)`-intercept is -1.",
+                "Choice": "The slope is 7/5, and the `y`-intercept is -1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the slope as m = (x_2 - x_1)/(y_2 - y_1), resulting in m = (7 - (-7))/(6 - (-4)) = 14/10 = 7/5, and identified the integer (a set of numbers that includes counting numbers, their opposites, and zero) closest to the `text(x)`-intercept (value where a line crosses the `text(x)`-axis) as the value of the `text(y)`-intercept (-1), since the value of the `text(x)`-intercept is -1.4. The student needs to focus on understanding how to calculate and identify the key features of linear functions.",
+                    "Rationale": "The student likely calculated the slope as m = (x_2 - x_1)/(y_2 - y_1), resulting in m = (7 - (-7))/(6 - (-4)) = 14/10 = 7/5, and identified the integer (a set of numbers that includes counting numbers, their opposites, and zero) closest to the `x`-intercept (value where a line crosses the `x`-axis) as the value of the `y`-intercept (-1), since the value of the `x`-intercept is -1.4. The student needs to focus on understanding how to calculate and identify the key features of linear functions.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "The slope is 7/5, and the `text(y)`-intercept is 1.",
+                "Choice": "The slope is 7/5, and the `y`-intercept is 1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely found the correct value of the `text(y)`-intercept but calculated the slope as m = (x_2 - x_1)/(y_2 - y_1) resulting in m = (7 - (-7))/(6 - (-4)) = 14/10 = 7/5. The student needs to focus on understanding how to calculate and identify the key features of linear functions.",
+                    "Rationale": "The student likely found the correct value of the `y`-intercept but calculated the slope as m = (x_2 - x_1)/(y_2 - y_1) resulting in m = (7 - (-7))/(6 - (-4)) = 14/10 = 7/5. The student needs to focus on understanding how to calculate and identify the key features of linear functions.",
                     "Percent": 16
                 }
             }
@@ -592,7 +592,7 @@
                 "Choice": "g(x) = 25.5(0.6)^x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the function, the student could have determined that the relationship can be represented by the exponential function g(x) = abˣ, where a is the initial (beginning) value (the value of g(x) when x = 0), b is the common factor (ratio of the successive terms of the function), and x is the variable (symbol used to represent an unknown number). To write the exponential function, the student could have identified 25.5 as the initial value. Next, the student could have determined the common factor of 0.6 by dividing each `text(y)`-coordinate by the next `text(y)`-coordinate: 9.18/15.3 = 0.6 and 15.3/25.5 = 0.6. Lastly, the student could have substituted 25.5 for a and 0.6 for b in the function g(x) = abˣ, resulting in g(x) = 25.5(0.6)^x. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the function, the student could have determined that the relationship can be represented by the exponential function g(x) = abˣ, where a is the initial (beginning) value (the value of g(x) when x = 0), b is the common factor (ratio of the successive terms of the function), and x is the variable (symbol used to represent an unknown number). To write the exponential function, the student could have identified 25.5 as the initial value. Next, the student could have determined the common factor of 0.6 by dividing each `y`-coordinate by the next `y`-coordinate: 9.18/15.3 = 0.6 and 15.3/25.5 = 0.6. Lastly, the student could have substituted 25.5 for a and 0.6 for b in the function g(x) = abˣ, resulting in g(x) = 25.5(0.6)^x. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 61
                 }
             },
@@ -600,7 +600,7 @@
                 "Choice": "g(x) = 6.12(25.5)^x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the initial value as the absolute value (how far a number is from zero) of the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) between the points (1, 15.3) and (2, 9.18), calculating |(9.18 - 15.3)/(2 - 1)| = |-6.12/1| = |-6.12| = 6.12. The student likely identified the common factor as the `text(y)`-intercept (value where a graph crosses the `text(y)`-axis), resulting in b = 25.5. Lastly, the student likely substituted 6.12 for a and 25.5 for b in the function g(x) = abˣ, resulting in g(x) = 6.12(25.5)^x. The student needs to focus on understanding how to determine the initial value and common factor of an exponential function when given a graph.",
+                    "Rationale": "The student likely identified the initial value as the absolute value (how far a number is from zero) of the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) between the points (1, 15.3) and (2, 9.18), calculating |(9.18 - 15.3)/(2 - 1)| = |-6.12/1| = |-6.12| = 6.12. The student likely identified the common factor as the `y`-intercept (value where a graph crosses the `y`-axis), resulting in b = 25.5. Lastly, the student likely substituted 6.12 for a and 25.5 for b in the function g(x) = abˣ, resulting in g(x) = 6.12(25.5)^x. The student needs to focus on understanding how to determine the initial value and common factor of an exponential function when given a graph.",
                     "Percent": 15
                 }
             },
@@ -649,7 +649,7 @@
                 "Choice": "All real numbers less than or equal to 1.25",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the `text(x)`-coordinate of the ordered pair (1.25, 7.66) as representing the upper bound of the range. The student needs to focus on understanding the difference between domain (all possible `text(x)`-values) and range for a quadratic function represented as a table of values.",
+                    "Rationale": "The student likely identified the `x`-coordinate of the ordered pair (1.25, 7.66) as representing the upper bound of the range. The student needs to focus on understanding the difference between domain (all possible `x`-values) and range for a quadratic function represented as a table of values.",
                     "Percent": 12
                 }
             },
@@ -657,7 +657,7 @@
                 "Choice": "All real numbers greater than or equal to 0 and less than or equal to 7.66",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the range (all possible `text(y)`-values) for this situation, the student could have plotted the eight ordered pairs presented in the table on a coordinate grid and analyzed the shape of the graph. The student could have plotted points at (0, 0), (0.25, 2.76), (0.50, 4.90), (0.75, 6.43), (1.00, 7.35), (1.25, 7.66), (1.50, 7.35), and (1.75, 6.43) on a coordinate grid, determining that the points of the graph represent a U-shaped graph, also known as a parabola. As the graph of the parabola opens downward, the maximum value should be identified as 7.66 because the vertex (high point of the curve) (1.25, 7.66) is the same distance horizontally from the points (1.00, 7.35) and (1.50, 7.35), which means the vertex must be halfway between the two points. The graph of the parabola is bounded below at 0, or ground level, because the distance from the ground can only be represented by 0 and positive numbers. Therefore, the range for this situation can be described as all real numbers greater than or equal to 0 and less than or equal to 7.66. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the range (all possible `y`-values) for this situation, the student could have plotted the eight ordered pairs presented in the table on a coordinate grid and analyzed the shape of the graph. The student could have plotted points at (0, 0), (0.25, 2.76), (0.50, 4.90), (0.75, 6.43), (1.00, 7.35), (1.25, 7.66), (1.50, 7.35), and (1.75, 6.43) on a coordinate grid, determining that the points of the graph represent a U-shaped graph, also known as a parabola. As the graph of the parabola opens downward, the maximum value should be identified as 7.66 because the vertex (high point of the curve) (1.25, 7.66) is the same distance horizontally from the points (1.00, 7.35) and (1.50, 7.35), which means the vertex must be halfway between the two points. The graph of the parabola is bounded below at 0, or ground level, because the distance from the ground can only be represented by 0 and positive numbers. Therefore, the range for this situation can be described as all real numbers greater than or equal to 0 and less than or equal to 7.66. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 54
                 }
             },
@@ -665,7 +665,7 @@
                 "Choice": "All real numbers greater than or equal to 0 and less than or equal to 1.25",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the situational restriction of the distance from the ground as being positive. However, the student chose the `text(x)`-value for the upper bound instead of the `text(y)`-value. The student needs to focus on understanding how to represent the range of a quadratic function from a table of values representing a situation.",
+                    "Rationale": "The student correctly identified the situational restriction of the distance from the ground as being positive. However, the student chose the `x`-value for the upper bound instead of the `y`-value. The student needs to focus on understanding how to represent the range of a quadratic function from a table of values representing a situation.",
                     "Percent": 13
                 }
             }
@@ -698,7 +698,7 @@
                 "Choice": "problems/TX21HSA1/media/13a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph best represents the solution set of x + y < 1 and x - y ≤ 2, the student could have graphed each inequality and its solution set and determined where the two solution sets overlap with each other. To graph the first inequality, the student could have isolated the y on one side of the inequality. The student could have subtracted x from both sides of the inequality, resulting in y < -x + 1. This line will cross the `text(y)`-axis (vertical) at 1 and have a slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) of -1. The student could have then determined that the “<” symbol means “less than,” and the correct solutions will be shaded below a dashed line (to indicate no points on the line are part of the solution set). To graph the second inequality, the student could have isolated the y on one side of the inequality. The student could have first added y to both sides of the inequality, resulting in x ≤ y + 2. The student could have then subtracted 2 from both sides of the inequality, resulting in x - 2 ≤ y or y ≥ x - 2. This line will cross the `text(y)`-axis at -2 and will have a slope of 1. The student could have then determined that the “≥” symbol means “greater than or equal to,” and the correct solutions will be shaded above a solid line (to indicate points on the line are part of the solution set). Lastly, the student could have verified where the shaded regions overlap with each other. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which graph best represents the solution set of x + y < 1 and x - y ≤ 2, the student could have graphed each inequality and its solution set and determined where the two solution sets overlap with each other. To graph the first inequality, the student could have isolated the y on one side of the inequality. The student could have subtracted x from both sides of the inequality, resulting in y < -x + 1. This line will cross the `y`-axis (vertical) at 1 and have a slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) of -1. The student could have then determined that the “<” symbol means “less than,” and the correct solutions will be shaded below a dashed line (to indicate no points on the line are part of the solution set). To graph the second inequality, the student could have isolated the y on one side of the inequality. The student could have first added y to both sides of the inequality, resulting in x ≤ y + 2. The student could have then subtracted 2 from both sides of the inequality, resulting in x - 2 ≤ y or y ≥ x - 2. This line will cross the `y`-axis at -2 and will have a slope of 1. The student could have then determined that the “≥” symbol means “greater than or equal to,” and the correct solutions will be shaded above a solid line (to indicate points on the line are part of the solution set). Lastly, the student could have verified where the shaded regions overlap with each other. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 39
                 }
             },
@@ -859,7 +859,7 @@
                 "Choice": "f(x) = (-1/2)x^2+ 8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which function is best represented by the graph, the student could have identified the solutions (`text(x)`-values when y is equal to 0) of the function as u and v and used the solutions to construct and simplify the equation of a quadratic function using f(x) = a(x - u)(x - v), where a, u, and v represent values. The solutions can be identified by where the parabola (U-shaped graph) crosses the `text(x)`-axis (at x = -4 and x = 4). Letting u = -4 and v = 4, the student could have substituted those values into the equation f(x) = a(x - u)(x - v), resulting in f(x) = a(x - (-4))(x - 4) ⇒ f(x) = a(x + 4)(x - 4). The student could have then multiplied the expressions (x + 4) and (x - 4), resulting in f(x) = a(x^2- 4x + 4x - 16). The student could have then combined like terms (terms that contain the same variables raised to the same powers), resulting in f(x) = a(x^2- 16). Next, the student could have solved for a by substituting the coordinates of the vertex (high or low point of the curve), (0, 8), into the function f(x) = a(x - 16), resulting in 8 = a((0)^2 - 16) ⇒ a(0 - 16) ⇒ 8 = -16a ⇒ a = 8/(-16) ⇒ a = -8/16 ⇒ a = -1/2. The student could have then substituted the value of a into the function f(x) = a(x^2- 16), resulting in f(x) = (-1/2)(x^2- 16). Lastly, the student could have distributed (multiplied) -1/2 to both terms in the parentheses, resulting in f(x) = (-1/2)x^2+ 8. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which function is best represented by the graph, the student could have identified the solutions (`x`-values when y is equal to 0) of the function as u and v and used the solutions to construct and simplify the equation of a quadratic function using f(x) = a(x - u)(x - v), where a, u, and v represent values. The solutions can be identified by where the parabola (U-shaped graph) crosses the `x`-axis (at x = -4 and x = 4). Letting u = -4 and v = 4, the student could have substituted those values into the equation f(x) = a(x - u)(x - v), resulting in f(x) = a(x - (-4))(x - 4) ⇒ f(x) = a(x + 4)(x - 4). The student could have then multiplied the expressions (x + 4) and (x - 4), resulting in f(x) = a(x^2- 4x + 4x - 16). The student could have then combined like terms (terms that contain the same variables raised to the same powers), resulting in f(x) = a(x^2- 16). Next, the student could have solved for a by substituting the coordinates of the vertex (high or low point of the curve), (0, 8), into the function f(x) = a(x - 16), resulting in 8 = a((0)^2 - 16) ⇒ a(0 - 16) ⇒ 8 = -16a ⇒ a = 8/(-16) ⇒ a = -8/16 ⇒ a = -1/2. The student could have then substituted the value of a into the function f(x) = a(x^2- 16), resulting in f(x) = (-1/2)(x^2- 16). Lastly, the student could have distributed (multiplied) -1/2 to both terms in the parentheses, resulting in f(x) = (-1/2)x^2+ 8. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 68
                 }
             },
@@ -908,7 +908,7 @@
                 "Choice": "-5/8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the slope as the change in the `text(x)`-values divided by the change in the `text(y)`-values: m = (x_2 - x_1)/(y_2 - y_1) = (8 - (-7))/(-15 - 9) = 15/(-24) -15/24 = -5/8. The student needs to focus on understanding how to use the formula for the slope of a line when given a table of values.",
+                    "Rationale": "The student likely calculated the slope as the change in the `x`-values divided by the change in the `y`-values: m = (x_2 - x_1)/(y_2 - y_1) = (8 - (-7))/(-15 - 9) = 15/(-24) -15/24 = -5/8. The student needs to focus on understanding how to use the formula for the slope of a line when given a table of values.",
                     "Percent": 21
                 }
             },
@@ -916,7 +916,7 @@
                 "Choice": "8/5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the slope as the change in the `text(y)`-values divided by the change in the `text(x)`-values but made a sign error: `m=(y_2-y_1)/(x_2-x_1)` = (-15 - 9)/(8 - (-7)) = 24/15 = 8/5. The student needs to focus on understanding how to use the formula for the slope of a line when given a table of values and integer arithmetic.",
+                    "Rationale": "The student likely calculated the slope as the change in the `y`-values divided by the change in the `x`-values but made a sign error: `m=(y_2-y_1)/(x_2-x_1)` = (-15 - 9)/(8 - (-7)) = 24/15 = 8/5. The student needs to focus on understanding how to use the formula for the slope of a line when given a table of values and integer arithmetic.",
                     "Percent": 12
                 }
             },
@@ -924,7 +924,7 @@
                 "Choice": "5/8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the slope as the change in the `text(x)`-values divided by the change in the `text(y)`-values and made a sign error: m = (x_2 - x_1)/(y_2 - y_1) = (8 - (-7))/(-15 - 9) = (-15)/(-24) = 5/8. The student needs to focus on understanding how to use the formula for the slope of a line when given a table of values and integer arithmetic.",
+                    "Rationale": "The student likely calculated the slope as the change in the `x`-values divided by the change in the `y`-values and made a sign error: m = (x_2 - x_1)/(y_2 - y_1) = (8 - (-7))/(-15 - 9) = (-15)/(-24) = 5/8. The student needs to focus on understanding how to use the formula for the slope of a line when given a table of values and integer arithmetic.",
                     "Percent": 7
                 }
             }
@@ -939,7 +939,7 @@
             "Number & Algebraic Methods"
         ],
         "SubTopics": [
-            "Factor, if possible, trinomials with real factors in the form ax^2+ bx + c, including perfect square trinomials of degree two."
+            "Factor, if possible, trinomials with real factors in the form `ax^2+bx+c`, including perfect square trinomials of degree two."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1010,7 +1010,7 @@
                 "Choice": "8x + 3y = -45",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the value of b as -15 (-1 = -16 + b ⇒ b = -16 + 1 ⇒ b = -15) instead of 15 before converting the equation from slope-intercept form to standard form, resulting in y = (-8/3)x - 15 ⇒ 3y = -8x - 45 ⇒ 8x + 3y = -45. The student needs to focus on understanding how to determine the `text(y)`-intercept of a line that is parallel to a given line represented by an equation in standard form.",
+                    "Rationale": "The student likely calculated the value of b as -15 (-1 = -16 + b ⇒ b = -16 + 1 ⇒ b = -15) instead of 15 before converting the equation from slope-intercept form to standard form, resulting in y = (-8/3)x - 15 ⇒ 3y = -8x - 45 ⇒ 8x + 3y = -45. The student needs to focus on understanding how to determine the `y`-intercept of a line that is parallel to a given line represented by an equation in standard form.",
                     "Percent": 19
                 }
             },
@@ -1018,7 +1018,7 @@
                 "Choice": "8x - 3y = -51",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the value of m as 8/3 (8x+ 3 y = 15 ⇒ 3y = 8x + 15 ⇒ y = (8/3)x + 3, so m = 8/3) instead of -8/3 and the value of b as 17 (-1 = 16 + b ⇒ b = 16 + 1 ⇒ b = 17)insteadof15 before converting the equation from slope-intercept form to standard form, resulting in y = (8/3)x + 17 ⇒ 3y = 8x + 51 ⇒ 8x - 3y = -51. The student needs to focus on understanding how to determine the slope and `text(y)`-intercept of a line that is parallel to a given line represented by an equation in standard form.",
+                    "Rationale": "The student likely calculated the value of m as 8/3 (8x+ 3 y = 15 ⇒ 3y = 8x + 15 ⇒ y = (8/3)x + 3, so m = 8/3) instead of -8/3 and the value of b as 17 (-1 = 16 + b ⇒ b = 16 + 1 ⇒ b = 17)insteadof15 before converting the equation from slope-intercept form to standard form, resulting in y = (8/3)x + 17 ⇒ 3y = 8x + 51 ⇒ 8x - 3y = -51. The student needs to focus on understanding how to determine the slope and `y`-intercept of a line that is parallel to a given line represented by an equation in standard form.",
                     "Percent": 15
                 }
             },
@@ -1026,7 +1026,7 @@
                 "Choice": "8x + 3y = 45",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the equation of a line parallel (lines that do not intersect (cross over) and are always the same distance from each other) to another line, the student could have first changed the equation 8x + 3y = 15 from standard form (`Ax+By=C`) to slope-intercept form (`y=mx+b`, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and b represents the `text(y)`-intercept (value where a line crosses the `text(y)`-axis)) by isolating the variable (symbol used to represent an unknown number) y, resulting in y = (-8/3)x + 5. Since parallel lines have the same slope, the student could have substituted m = -8/3 into the slope-intercept form, resulting in y = (-8/3)x + b. To determine b, the student could have substituted the point (6, -1) for `x` and `y` in the slope-intercept form, resulting in -1 = (-8/3)(6) + b. The student could have then multiplied -8/3 by 6, resulting in -1 = -16 + b. To solve the equation for b, the student could have added 16 to both sides of the equation, resulting in 15 = b. Substituting the value of b into the slope-intercept form results in y = (-8/3)x + 15. To convert the equation from slope-intercept form to standard form, the student could have first multiplied both sides of the equation by 3, resulting in 3y = -8x + 45, and then added 8x to both sides of the equation, resulting in 8x + 3y = 45. The equation 8x + 3y = 45 represents the line that passes through the point (6, -1) and is parallel to the line represented by 8x + 3y = 15. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the equation of a line parallel (lines that do not intersect (cross over) and are always the same distance from each other) to another line, the student could have first changed the equation 8x + 3y = 15 from standard form (`Ax+By=C`) to slope-intercept form (`y=mx+b`, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and b represents the `y`-intercept (value where a line crosses the `y`-axis)) by isolating the variable (symbol used to represent an unknown number) y, resulting in y = (-8/3)x + 5. Since parallel lines have the same slope, the student could have substituted m = -8/3 into the slope-intercept form, resulting in y = (-8/3)x + b. To determine b, the student could have substituted the point (6, -1) for `x` and `y` in the slope-intercept form, resulting in -1 = (-8/3)(6) + b. The student could have then multiplied -8/3 by 6, resulting in -1 = -16 + b. To solve the equation for b, the student could have added 16 to both sides of the equation, resulting in 15 = b. Substituting the value of b into the slope-intercept form results in y = (-8/3)x + 15. To convert the equation from slope-intercept form to standard form, the student could have first multiplied both sides of the equation by 3, resulting in 3y = -8x + 45, and then added 8x to both sides of the equation, resulting in 8x + 3y = 45. The equation 8x + 3y = 45 represents the line that passes through the point (6, -1) and is parallel to the line represented by 8x + 3y = 15. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 50
                 }
             },
@@ -1034,7 +1034,7 @@
                 "Choice": "8x - 3y = 51",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely calculated the value of m as 8/3 (8x + 3y = 15 ⇒ 3y = 8x + 15 ⇒ y = (8/3)x + 3, so m = 8/3) instead of -8/3 and the value of b as -17 (-1 = 16 + b ⇒ b = -16 - 1 ⇒ b = -17) instead of 15 before converting the equation from slope-intercept form to standard form, resulting in y = (8/3)x - 17 ⇒ 3y = 8x - 51 ⇒ 8x - 3y = 51. The student needs to focus on understanding how to determine the slope and `text(y)`-intercept of a line that is parallel to a given line represented by an equation in standard form.",
+                    "Rationale": "The student likely calculated the value of m as 8/3 (8x + 3y = 15 ⇒ 3y = 8x + 15 ⇒ y = (8/3)x + 3, so m = 8/3) instead of -8/3 and the value of b as -17 (-1 = 16 + b ⇒ b = -16 - 1 ⇒ b = -17) instead of 15 before converting the equation from slope-intercept form to standard form, resulting in y = (8/3)x - 17 ⇒ 3y = 8x - 51 ⇒ 8x - 3y = 51. The student needs to focus on understanding how to determine the slope and `y`-intercept of a line that is parallel to a given line represented by an equation in standard form.",
                     "Percent": 16
                 }
             }
@@ -1067,7 +1067,7 @@
                 "Choice": "equal:0.8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the value of a, the student could have first identified f(x) = x as representing the equation of the linear parent function. The student could have determined that h(x) = af(x) means h(x) = ax, which is the same form as y = mx, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) of the line. The student could have substituted the x- and `text(y)`-coordinates of the two given points on the graph, (-5, -4) and (10, 8), into the slope formula, resulting in m = (8 - (-4))/(10 - (-5)) = 12/15 = 0.8. The student could have then substituted the value of the slope into the equation y = mx, resulting in y = 0.8x. Lastly, the student could have substituted h(x) for y and f(x) for x, resulting in h(x) = 0.8f(x). Therefore, the value of a is equal to 0.8 because h(x) = af(x) and h(x) = 0.8f(x). The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the value of a, the student could have first identified f(x) = x as representing the equation of the linear parent function. The student could have determined that h(x) = af(x) means h(x) = ax, which is the same form as y = mx, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) of the line. The student could have substituted the x- and `y`-coordinates of the two given points on the graph, (-5, -4) and (10, 8), into the slope formula, resulting in m = (8 - (-4))/(10 - (-5)) = 12/15 = 0.8. The student could have then substituted the value of the slope into the equation y = mx, resulting in y = 0.8x. Lastly, the student could have substituted h(x) for y and f(x) for x, resulting in h(x) = 0.8f(x). Therefore, the value of a is equal to 0.8 because h(x) = af(x) and h(x) = 0.8f(x). The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 25
                 }
             }
@@ -1181,7 +1181,7 @@
                 "Choice": "Domain: -7 ≤ x ≤ 6\nRange: -4 ≤ g(x) ≤ 5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the domain (all possible `text(x)`-values) of the part of linear function g shown, the student could have identified all the `text(x)`-values for which the graph has a `text(y)`-value. The graph extends from -7 on the left to 6 on the right and includes those two `text(x)`-values and all the `text(x)`-values in between them. Therefore, the domain is all real numbers greater than or equal to -7 and less than or equal to 6, or -7 ≤ x ≤ 6. To determine the range (all possible `text(y)`-values) of the part of linear function g shown, the student could have identified all the values of y for which the graph has an `text(x)`-value. The graph extends from -4 at its lowest point to 5 at its highest point and includes those two `text(y)`-values and all the `text(y)`-values in between them. Therefore, the range is all real numbers greater than or equal to -4 and less than or equal to 5, or -4 ≤ y ≤ 5 ⇒ -4 ≤ g(x) ≤ 5. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the domain (all possible `x`-values) of the part of linear function g shown, the student could have identified all the `x`-values for which the graph has a `y`-value. The graph extends from -7 on the left to 6 on the right and includes those two `x`-values and all the `x`-values in between them. Therefore, the domain is all real numbers greater than or equal to -7 and less than or equal to 6, or -7 ≤ x ≤ 6. To determine the range (all possible `y`-values) of the part of linear function g shown, the student could have identified all the values of y for which the graph has an `x`-value. The graph extends from -4 at its lowest point to 5 at its highest point and includes those two `y`-values and all the `y`-values in between them. Therefore, the range is all real numbers greater than or equal to -4 and less than or equal to 5, or -4 ≤ y ≤ 5 ⇒ -4 ≤ g(x) ≤ 5. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 51
                 }
             }
@@ -1271,7 +1271,7 @@
                 "Choice": "y = 1.75x + 3.5\ny = -4x - 8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the system of equations represented by lines f and g, the student could have determined the equation of each line in slope-intercept form (`y=mx+b`, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and b represents the `text(y)`-intercept (value where a line crosses the `text(y)`-axis)). For line f, the student could have substituted the x- and `text(y)`-coordinates of (2, 7) and (4, 10.5) into the slope formula, resulting in m = (10.5 - 7)/(4 - 2) = 3.5/2 = 1.75. The student could have then substituted the x- and `text(y)`-values of the point (2,7) and m = 1.75 into the point-slope formula, `y-y_1=m(x-x_1)`, resulting in y - 7 = 1.75(x - 2). The student could have then distributed (multiplied) 1.75 to the terms inside the parentheses, resulting in y - 7 = 1.75x - 3.5. The student could have then added 7 to both sides of the equation, resulting in y = 1.75x + 3.5. For line g, the student could have substituted the x- and `text(y)`-coordinates of (-3, 4) and (-2, 0) into the slope formula, resulting in m = (0 - 4)/(-2 - (-3)) = -4/1 = -4. The student could have then substituted the x- and `text(y)`-values of the point (-2, 0) and m = -4 into the point-slope formula, `y-y_1=m(x-x_1)`, resulting in y - 0 = -4(x - (-2)) ⇒ y - 0 = -4(x + 2). The student could have then distributed -4 to the terms inside the parentheses, resulting in y - 0 = -4x - 8. The student could have then added 0 to both sides of the equation, resulting in y = -4x - 8. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the system of equations represented by lines f and g, the student could have determined the equation of each line in slope-intercept form (`y=mx+b`, where m represents the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and b represents the `y`-intercept (value where a line crosses the `y`-axis)). For line f, the student could have substituted the x- and `y`-coordinates of (2, 7) and (4, 10.5) into the slope formula, resulting in m = (10.5 - 7)/(4 - 2) = 3.5/2 = 1.75. The student could have then substituted the x- and `y`-values of the point (2,7) and m = 1.75 into the point-slope formula, `y-y_1=m(x-x_1)`, resulting in y - 7 = 1.75(x - 2). The student could have then distributed (multiplied) 1.75 to the terms inside the parentheses, resulting in y - 7 = 1.75x - 3.5. The student could have then added 7 to both sides of the equation, resulting in y = 1.75x + 3.5. For line g, the student could have substituted the x- and `y`-coordinates of (-3, 4) and `(-2,0)` into the slope formula, resulting in m = (0 - 4)/(-2 - (-3)) = -4/1 = -4. The student could have then substituted the x- and `y`-values of the point `(-2,0)` and m = -4 into the point-slope formula, `y-y_1=m(x-x_1)`, resulting in y - 0 = -4(x - (-2)) ⇒ y - 0 = -4(x + 2). The student could have then distributed -4 to the terms inside the parentheses, resulting in y - 0 = -4x - 8. The student could have then added 0 to both sides of the equation, resulting in y = -4x - 8. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 54
                 }
             },
@@ -1279,7 +1279,7 @@
                 "Choice": "y = 1.75x + 3.5\ny = -4x - 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student calculated the correct equation for line f but likely identified the `text(x)`-intercept (value where a line crosses the `text(x)`-axis) as the value of b in the equation for line g. The student needs to focus on understanding how to identify the `text(y)`-intercept of a line when given tables of values.",
+                    "Rationale": "The student calculated the correct equation for line f but likely identified the `x`-intercept (value where a line crosses the `x`-axis) as the value of b in the equation for line g. The student needs to focus on understanding how to identify the `y`-intercept of a line when given tables of values.",
                     "Percent": 20
                 }
             },
@@ -1287,7 +1287,7 @@
                 "Choice": "y = 3.5x + 1.75\ny = -4x - 8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student calculated the correct equation for line g but likely switched the values of m and b in the equation for line f. The student needs to focus on understanding how to identify the slope and `text(y)`-intercept of a line when given tables of values.",
+                    "Rationale": "The student calculated the correct equation for line g but likely switched the values of m and b in the equation for line f. The student needs to focus on understanding how to identify the slope and `y`-intercept of a line when given tables of values.",
                     "Percent": 16
                 }
             },
@@ -1295,7 +1295,7 @@
                 "Choice": "y = 3.5x + 1.75\ny = -4x - 2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely switched the values of m and b in the equation for line f and identified the `text(x)`-intercept (value where a line crosses the `text(x)`-axis) as the value of b in the equation for line g. The student needs to focus on understanding how to identify the slopes and `text(y)`-intercepts of lines when given tables of values.",
+                    "Rationale": "The student likely switched the values of m and b in the equation for line f and identified the `x`-intercept (value where a line crosses the `x`-axis) as the value of b in the equation for line g. The student needs to focus on understanding how to identify the slopes and `y`-intercepts of lines when given tables of values.",
                     "Percent": 11
                 }
             }
@@ -1422,7 +1422,7 @@
             "Exponential Functions & Equations"
         ],
         "SubTopics": [
-            "Graph exponential functions that model growth and decay and identify key features, including `text(y)`-intercept and asymptote, in mathematical and real-world problems."
+            "Graph exponential functions that model growth and decay and identify key features, including `y`-intercept and asymptote, in mathematical and real-world problems."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1431,14 +1431,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of the `text(y)`-intercept of the graph of g(x) = 73(4/5)ˣ?"
+            "What is the value of the `y`-intercept of the graph of g(x) = 73(4/5)ˣ?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:73",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student could have realized g(x) = 73(4/5)^x represents an exponential function, g(x) = a(b)^x, where a is the `text(y)`-intercept (value where the graph crosses the `text(y)`-axis), b is the growth factor, and x is the variable (symbol used to represent an unknown number). Therefore, the value of the `text(y)`-intercept of the graph of g(x) = 73(4/5)^x is 73. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "The student could have realized g(x) = 73(4/5)^x represents an exponential function, g(x) = a(b)^x, where a is the `y`-intercept (value where the graph crosses the `y`-axis), b is the growth factor, and x is the variable (symbol used to represent an unknown number). Therefore, the value of the `y`-intercept of the graph of g(x) = 73(4/5)^x is 73. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 43
                 }
             }
@@ -1462,14 +1462,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph of f(x) = x^2is reflected over the `text(x)`-axis and is stretched horizontally to create the graph of function g. Which graph could represent g?"
+            "The graph of f(x) = x^2is reflected over the `x`-axis and is stretched horizontally to create the graph of function g. Which graph could represent g?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "problems/TX21HSA1/media/28a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the horizontal stretch but likely applied the reflection over the `text(y)`-axis instead of the `text(x)`-axis when identifying the graph of function g. The student needs to focus on understanding how a reflection affects the graph of the quadratic parent function on a coordinate grid.",
+                    "Rationale": "The student correctly identified the horizontal stretch but likely applied the reflection over the `y`-axis instead of the `x`-axis when identifying the graph of function g. The student needs to focus on understanding how a reflection affects the graph of the quadratic parent function on a coordinate grid.",
                     "Percent": 25
                 }
             },
@@ -1477,7 +1477,7 @@
                 "Choice": "problems/TX21HSA1/media/28b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the reflection over the `text(x)`-axis but likely identified a vertical stretch as a horizontal stretch when identifying the graph of function g. The student needs to focus on understanding how a horizontal stretch affects the graph of the quadratic parent function on a coordinate grid.",
+                    "Rationale": "The student correctly identified the reflection over the `x`-axis but likely identified a vertical stretch as a horizontal stretch when identifying the graph of function g. The student needs to focus on understanding how a horizontal stretch affects the graph of the quadratic parent function on a coordinate grid.",
                     "Percent": 12
                 }
             },
@@ -1485,7 +1485,7 @@
                 "Choice": "problems/TX21HSA1/media/28c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely applied the reflection over the `text(y)`-axis instead of the `text(x)`-axis and identified a vertical stretch as a horizontal stretch when identifying the graph of function g. The student needs to focus on understanding how a reflection and horizontal stretch affect the graph of the quadratic parent function on a coordinate grid.",
+                    "Rationale": "The student likely applied the reflection over the `y`-axis instead of the `x`-axis and identified a vertical stretch as a horizontal stretch when identifying the graph of function g. The student needs to focus on understanding how a reflection and horizontal stretch affect the graph of the quadratic parent function on a coordinate grid.",
                     "Percent": 28
                 }
             },
@@ -1493,7 +1493,7 @@
                 "Choice": "problems/TX21HSA1/media/28d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph best represents g(x), the student could have first identified f(x) = x^2as the quadratic parent function. The student could have then determined that if the graph of f(x) = x^2is reflected over the `text(x)`-axis and is stretched horizontally, the graph of function g should open downward from the `text(x)`-axis and be wider than the graph of the quadratic parent function. The student could have then realized that this graph shows both characteristics of the graph of function g. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which graph best represents g(x), the student could have first identified f(x) = x^2as the quadratic parent function. The student could have then determined that if the graph of f(x) = x^2is reflected over the `x`-axis and is stretched horizontally, the graph of function g should open downward from the `x`-axis and be wider than the graph of the quadratic parent function. The student could have then realized that this graph shows both characteristics of the graph of function g. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 35
                 }
             }
@@ -1604,7 +1604,7 @@
                 "Choice": "7x + 4y < 28",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the inequality that is best represented by the graph, the student could have determined the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and `text(y)`-intercept (value where a line crosses the `text(y)`-axis) of the boundary line and changed the inequality from slope-intercept form to standard form. The student could have used the coordinates (0, 7) and (4, 0) from the boundary line and substituted the x- and `text(y)`-coordinates into the slope formula, resulting in m = (0 - 7)/(4 - 0) = (-7)/4 = -7/4. The student could have then identified the `text(y)`-intercept as 7 from 4-0 4 4the given graph. The student could have then substituted m = -7/4 and b = 7 into the equation `y=mx+b`, resulting in y = (-7/4)x + 7. The student could have identified the inequality symbol as “<” because the graph of the line is dashed. To change the inequality from slope-intercept form to standard form, the student could have taken y < (-7/4)x + 7 and multiplied both sides of the inequality by 4, resulting in 4y < -7x + 28. Lastly, the student could have added 7x to both sides of the inequality, resulting in 7x + 4y < 28. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the inequality that is best represented by the graph, the student could have determined the slope (steepness of a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) and `y`-intercept (value where a line crosses the `y`-axis) of the boundary line and changed the inequality from slope-intercept form to standard form. The student could have used the coordinates (0, 7) and (4, 0) from the boundary line and substituted the x- and `y`-coordinates into the slope formula, resulting in m = (0 - 7)/(4 - 0) = (-7)/4 = -7/4. The student could have then identified the `y`-intercept as 7 from 4-0 4 4the given graph. The student could have then substituted m = -7/4 and b = 7 into the equation `y=mx+b`, resulting in y = (-7/4)x + 7. The student could have identified the inequality symbol as “<” because the graph of the line is dashed. To change the inequality from slope-intercept form to standard form, the student could have taken y < (-7/4)x + 7 and multiplied both sides of the inequality by 4, resulting in 4y < -7x + 28. Lastly, the student could have added 7x to both sides of the inequality, resulting in 7x + 4y < 28. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 29
                 }
             }
@@ -1674,7 +1674,7 @@
             "Number & Algebraic Methods"
         ],
         "SubTopics": [
-            "Factor, if possible, trinomials with real factors in the form ax^2+ bx + c, including perfect square trinomials of degree two."
+            "Factor, if possible, trinomials with real factors in the form `ax^2+bx+c`, including perfect square trinomials of degree two."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1706,7 +1706,7 @@
                 "Choice": "(8w + 3)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly determined the value of b but likely determined the value of a as 8w, calculating (16w²)/2 as 16/2 • w²/² = 8w. Therefore, the student identified the factors as (8w + 3)^2. The student needs to focus on understanding how to find the square root of a perfect square.",
+                    "Rationale": "The student correctly determined the value of b but likely determined the value of a as 8w, calculating (16w²)/2 as 16/2 • w^2/² = 8w. Therefore, the student identified the factors as (8w + 3)^2. The student needs to focus on understanding how to find the square root of a perfect square.",
                     "Percent": 28
                 }
             },
@@ -1714,7 +1714,7 @@
                 "Choice": "(8w - 3)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely determined the value of a as 8w, calculating (16w²)/2 as 16/2 • w²/² = 8w, and determined the value of b as -3, calculating √9 as -3 instead of 3. Therefore, the student identified the factors as (8w - 3)^2. The student needs to focus on understanding how to find the square roots of perfect squares.",
+                    "Rationale": "The student likely determined the value of a as 8w, calculating (16w²)/2 as 16/2 • w^2/² = 8w, and determined the value of b as -3, calculating √9 as -3 instead of 3. Therefore, the student identified the factors as (8w - 3)^2. The student needs to focus on understanding how to find the square roots of perfect squares.",
                     "Percent": 6
                 }
             }
@@ -1745,7 +1745,7 @@
                 "Choice": "problems/TX21HSA1/media/33a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph best represents a function with a domain (all possible `text(x)`-values) of all real numbers less than or equal to 6, the student should have identified a graph with a closed starting point containing an `text(x)`-coordinate of 6 and with a ray (a part of a line with a starting point that goes in one direction forever) extending to the left of that point forever. This graph has both requirements because it contains a closed starting point at (6, -2) and continues up forever (as represented by the arrow) to the left. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which graph best represents a function with a domain (all possible `x`-values) of all real numbers less than or equal to 6, the student should have identified a graph with a closed starting point containing an `x`-coordinate of 6 and with a ray (a part of a line with a starting point that goes in one direction forever) extending to the left of that point forever. This graph has both requirements because it contains a closed starting point at (6, -2) and continues up forever (as represented by the arrow) to the left. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 47
                 }
             },
@@ -1753,7 +1753,7 @@
                 "Choice": "problems/TX21HSA1/media/33b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified a graph with a range (all possible `text(y)`-values) of all real numbers less than or equal to 6. The student needs to focus on understanding how to identify the domain of a function from a graph.",
+                    "Rationale": "The student likely identified a graph with a range (all possible `y`-values) of all real numbers less than or equal to 6. The student needs to focus on understanding how to identify the domain of a function from a graph.",
                     "Percent": 24
                 }
             },
@@ -1769,7 +1769,7 @@
                 "Choice": "problems/TX21HSA1/media/33d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified a graph with a range (all possible `text(y)`-values) of all real numbers greater than or equal to 6. The student needs to focus on understanding how to identify the domain of a function from a graph.",
+                    "Rationale": "The student likely identified a graph with a range (all possible `y`-values) of all real numbers greater than or equal to 6. The student needs to focus on understanding how to identify the domain of a function from a graph.",
                     "Percent": 8
                 }
             }
@@ -1784,7 +1784,7 @@
             "Quadratic Functions & Equations"
         ],
         "SubTopics": [
-            "Graph quadratic functions on the coordinate plane and use the graph to identify key attributes, if possible, including `text(x)`-intercept, `text(y)`-intercept, zeros, maximum value, minimum values, vertex, and the equation of the axis of symmetry."
+            "Graph quadratic functions on the coordinate plane and use the graph to identify key attributes, if possible, including `x`-intercept, `y`-intercept, zeros, maximum value, minimum values, vertex, and the equation of the axis of symmetry."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1802,7 +1802,7 @@
                 "Choice": "equal:225",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the maximum (greatest) value of the graph of the function, the student should have identified the `text(y)`-coordinate of the vertex (high point of the curve) of the graph. The student should have identified the coordinates of the vertex as (3.75, 225) because that point is an equal distance from points (1.5, 144) and (6, 144). Therefore, the maximum value of the graph of the function is 225, or 225 feet. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the maximum (greatest) value of the graph of the function, the student should have identified the `y`-coordinate of the vertex (high point of the curve) of the graph. The student should have identified the coordinates of the vertex as (3.75, 225) because that point is an equal distance from points (1.5, 144) and (6, 144). Therefore, the maximum value of the graph of the function is 225, or 225 feet. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 57
                 }
             }
@@ -2002,7 +2002,7 @@
                 "Choice": "f(x) = 16(3/2)^x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which function represents the relationship, the student could have determined that the relationship can be represented by an exponential function, f(x) = abˣ, where a is the `text(y)`-intercept (value where the graph crosses the `text(y)`-axis), b is the common factor (ratio of the successive terms of the function), and x is the variable (symbol used to represent an unknown number). To write the exponential function, the student could have determined the common factor by dividing each f(x)-value by the previous f(x)-value, calculating 54/36 = 3/2, 81/54 = 3/2, 121.5/81 = 3/2, and 182.25/121.5 = 3/2. Then, the student could have determined the `text(y)`-intercept by dividing the first f(x)-value of 36 by 3/2, which gives the point (1, 24). Doing this once more, the student could have attained the point (0, 16), the `text(y)`-intercept. The student could have then substituted 16 for a and 3/2 for b, resulting in f(x) = 16(3/2)^x. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which function represents the relationship, the student could have determined that the relationship can be represented by an exponential function, f(x) = abˣ, where a is the `y`-intercept (value where the graph crosses the `y`-axis), b is the common factor (ratio of the successive terms of the function), and x is the variable (symbol used to represent an unknown number). To write the exponential function, the student could have determined the common factor by dividing each f(x)-value by the previous f(x)-value, calculating 54/36 = 3/2, 81/54 = 3/2, 121.5/81 = 3/2, and 182.25/121.5 = 3/2. Then, the student could have determined the `y`-intercept by dividing the first f(x)-value of 36 by 3/2, which gives the point (1, 24). Doing this once more, the student could have attained the point (0, 16), the `y`-intercept. The student could have then substituted 16 for a and 3/2 for b, resulting in f(x) = 16(3/2)^x. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 50
                 }
             },
@@ -2010,7 +2010,7 @@
                 "Choice": "f(x) = 16(2/3)^x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the `text(y)`-intercept but likely determined the common factor as 2/3 by dividing each f(x)-value by the next f(x)-value, calculating 36/54 = 2/3, 54/81 = 2/3, 81/121.5 = 2/3, and 121.5/182.25 = 2/3. The student likely then substituted 16 for a and 2/3 for b, resulting inf(x) = 16(2/3)^x. The student needs to focus on understanding how to find the common factor of an exponential function from a table of values.",
+                    "Rationale": "The student correctly identified the `y`-intercept but likely determined the common factor as 2/3 by dividing each f(x)-value by the next f(x)-value, calculating 36/54 = 2/3, 54/81 = 2/3, 81/121.5 = 2/3, and 121.5/182.25 = 2/3. The student likely then substituted 16 for a and 2/3 for b, resulting inf(x) = 16(2/3)^x. The student needs to focus on understanding how to find the common factor of an exponential function from a table of values.",
                     "Percent": 18
                 }
             },
@@ -2018,7 +2018,7 @@
                 "Choice": "f(x) = 36(3/2)^x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the common factor but likely identified the first f(x)-value in the table as the `text(y)`-intercept, resulting in f(x) = 36(3/2)^x. The student needs to focus on understanding how to find the `text(y)`-intercept of an exponential function from a table of values.",
+                    "Rationale": "The student correctly identified the common factor but likely identified the first f(x)-value in the table as the `y`-intercept, resulting in f(x) = 36(3/2)^x. The student needs to focus on understanding how to find the `y`-intercept of an exponential function from a table of values.",
                     "Percent": 19
                 }
             },
@@ -2026,7 +2026,7 @@
                 "Choice": "f(x) = 36(2/3)^x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the first f(x)-value in the table as the `text(y)`-intercept and determined the common factor as 2/3 by dividing each f(x)-value by the next f(x)-value, calculating 36/54 = 2/3, 54/81 = 2/3, 81/121.5 = 2/3, and 121.5/182.25 = 2/3. The student likely then substituted 36 for a and 2/3 for b, resulting in f(x) = 36(2/3)^x. The student needs to focus on understanding how to find the `text(y)`-intercept and common factor of an exponential function from a table of values.",
+                    "Rationale": "The student likely identified the first f(x)-value in the table as the `y`-intercept and determined the common factor as 2/3 by dividing each f(x)-value by the next f(x)-value, calculating 36/54 = 2/3, 54/81 = 2/3, 81/121.5 = 2/3, and 121.5/182.25 = 2/3. The student likely then substituted 36 for a and 2/3 for b, resulting in f(x) = 36(2/3)^x. The student needs to focus on understanding how to find the `y`-intercept and common factor of an exponential function from a table of values.",
                     "Percent": 13
                 }
             }
@@ -2041,7 +2041,7 @@
             "Writing & Solving Linear Functions, Equations & Inequalities"
         ],
         "SubTopics": [
-            "Write an equation of a line that is parallel or perpendicular to the x- or `text(y)`-axis and determine whether the slope of the line is zero or undefined."
+            "Write an equation of a line that is parallel or perpendicular to the x- or `y`-axis and determine whether the slope of the line is zero or undefined."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2050,36 +2050,36 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which statement best represents the equation of the line shown on the grid and its relationship to the `text(x)`-axis?",
+            "Which statement best represents the equation of the line shown on the grid and its relationship to the `x`-axis?",
             "problems/TX21HSA1/media/39a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The equation of the line is x = 2.5, and the line is parallel to the `text(x)`-axis.",
+                "Choice": "The equation of the line is x = 2.5, and the line is parallel to the `x`-axis.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified that the horizontal line and the `text(x)`-axis are parallel to each other but likely used the variable (symbol used to represent an unknown number) x for the equation of the horizontal line because the line is parallel to the `text(x)`-axis. The student needs to focus on understanding how to write the equation of a horizontal line.",
+                    "Rationale": "The student correctly identified that the horizontal line and the `x`-axis are parallel to each other but likely used the variable (symbol used to represent an unknown number) x for the equation of the horizontal line because the line is parallel to the `x`-axis. The student needs to focus on understanding how to write the equation of a horizontal line.",
                     "Percent": 17
                 }
             },
             "B": {
-                "Choice": "The equation of the line is x = 2.5, and the line is perpendicular to the `text(x)`-axis.",
+                "Choice": "The equation of the line is x = 2.5, and the line is perpendicular to the `x`-axis.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the variable (symbol used to represent an unknown number) x for the equation of the horizontal line because the line is parallel to the `text(x)`-axis and reversed the characteristics of parallel and perpendicular (lines that intersect at a 90-degree angle) lines. The student needs to focus on understanding the characteristics of parallel and perpendicular lines and how to write the equation of a horizontal line.",
+                    "Rationale": "The student likely used the variable (symbol used to represent an unknown number) x for the equation of the horizontal line because the line is parallel to the `x`-axis and reversed the characteristics of parallel and perpendicular (lines that intersect at a 90-degree angle) lines. The student needs to focus on understanding the characteristics of parallel and perpendicular lines and how to write the equation of a horizontal line.",
                     "Percent": 7
                 }
             },
             "C": {
-                "Choice": "The equation of the line is y = 2.5, and the line is parallel to the `text(x)`-axis.",
+                "Choice": "The equation of the line is y = 2.5, and the line is parallel to the `x`-axis.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which statement best represents the equation of the line shown on the grid and its relationship to the `text(x)`-axis, the student could have first recognized that because the line is horizontal, the equation of the line can be written as y = c, where c is the value through which the line intersects (crosses) the `text(y)`-axis, resulting in y = 2.5. The student could have then recognized that since the line shown on the grid represents a horizontal line and the `text(x)`-axis represents the horizontal axis of the grid, the horizontal line and `text(x)`-axis are parallel (lines that do not intersect and are always the same distance from each other). Therefore, the student could state that the equation of the line is y = 2.5 and the line is parallel to the `text(x)`-axis. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which statement best represents the equation of the line shown on the grid and its relationship to the `x`-axis, the student could have first recognized that because the line is horizontal, the equation of the line can be written as y = c, where c is the value through which the line intersects (crosses) the `y`-axis, resulting in y = 2.5. The student could have then recognized that since the line shown on the grid represents a horizontal line and the `x`-axis represents the horizontal axis of the grid, the horizontal line and `x`-axis are parallel (lines that do not intersect and are always the same distance from each other). Therefore, the student could state that the equation of the line is y = 2.5 and the line is parallel to the `x`-axis. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 66
                 }
             },
             "D": {
-                "Choice": "The equation of the line is y = 2.5, and the line is perpendicular to the `text(x)`-axis.",
+                "Choice": "The equation of the line is y = 2.5, and the line is perpendicular to the `x`-axis.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student correctly identified the equation of the horizontal line but likely reversed the characteristics of parallel and perpendicular (lines that intersect at a 90-degree angle) lines. The student needs to focus on understanding the characteristics of parallel and perpendicular lines.",
@@ -2152,7 +2152,7 @@
             "Describing & Graphing Linear Functions, Equations & Inequalities"
         ],
         "SubTopics": [
-            "Graph linear functions on the coordinate plane and identify key features, including `text(x)`-intercept, `text(y)`-intercept, zeros, and slope, in mathematical and real-world problems."
+            "Graph linear functions on the coordinate plane and identify key features, including `x`-intercept, `y`-intercept, zeros, and slope, in mathematical and real-world problems."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2161,14 +2161,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Linear function t has an `text(x)`-intercept of -1 and a `text(y)`-intercept of 5. Which graph best represents t?"
+            "Linear function t has an `x`-intercept of -1 and a `y`-intercept of 5. Which graph best represents t?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/TX21HSA1/media/41a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely reversed the values of the intercepts, identifying the graph of a line with an `text(x)`-intercept of 5 and a `text(y)`-intercept of -1. The student needs to focus on understanding how to identify the intercepts of a linear function.",
+                    "Rationale": "The student likely reversed the values of the intercepts, identifying the graph of a line with an `x`-intercept of 5 and a `y`-intercept of -1. The student needs to focus on understanding how to identify the intercepts of a linear function.",
                     "Percent": 8
                 }
             },
@@ -2176,7 +2176,7 @@
                 "Choice": "problems/TX21HSA1/media/41b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the `text(y)`-intercept but likely identified the opposite value of the `text(x)`-intercept, identifying the graph of a line with an `text(x)`-intercept of 1 and a `text(y)`-intercept of 5. The student needs to focus on understanding how to identify the `text(x)`-intercept of a linear function.",
+                    "Rationale": "The student correctly identified the `y`-intercept but likely identified the opposite value of the `x`-intercept, identifying the graph of a line with an `x`-intercept of 1 and a `y`-intercept of 5. The student needs to focus on understanding how to identify the `x`-intercept of a linear function.",
                     "Percent": 8
                 }
             },
@@ -2184,7 +2184,7 @@
                 "Choice": "problems/TX21HSA1/media/41c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the `text(x)`-intercept but likely identified the opposite value of the `text(y)`-intercept, identifying the graph of a line with an `text(x)`-intercept of -1 and a `text(y)`-intercept of -5. The student needs to focus on understanding how to identify the `text(y)`-intercept of a linear function.",
+                    "Rationale": "The student correctly identified the `x`-intercept but likely identified the opposite value of the `y`-intercept, identifying the graph of a line with an `x`-intercept of -1 and a `y`-intercept of -5. The student needs to focus on understanding how to identify the `y`-intercept of a linear function.",
                     "Percent": 10
                 }
             },
@@ -2192,7 +2192,7 @@
                 "Choice": "problems/TX21HSA1/media/41d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph best represents linear function t, the student could have identified the graph of a line that appears to have an `text(x)`-intercept (value where a line crosses the `text(x)`-axis (horizontal axis)) of -1 and a `text(y)`-intercept (value where a line crosses the `text(y)`-axis (vertical axis)) of 5. The student could have determined that the line intersects (crosses) the `text(x)`-axis at (-1, 0) and the `text(y)`-axis at (0, 5), representing an `text(x)`-intercept of -1 and a `text(y)`-intercept of 5. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which graph best represents linear function t, the student could have identified the graph of a line that appears to have an `x`-intercept (value where a line crosses the `x`-axis (horizontal axis)) of -1 and a `y`-intercept (value where a line crosses the `y`-axis (vertical axis)) of 5. The student could have determined that the line intersects (crosses) the `x`-axis at (-1, 0) and the `y`-axis at (0, 5), representing an `x`-intercept of -1 and a `y`-intercept of 5. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 73
                 }
             }
@@ -2257,7 +2257,7 @@
                 "Choice": "Domain: x ≥ - 3\nRange: y ≥ 5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student identified the range of the function correctly but likely identified the domain of the function as the `text(x)`-coordinate of the graph's lowest point and all the `text(x)`-values greater than that `text(x)`-coordinate, resulting in all values greater than or equal to -3, or x ≥ -3. The student needs to focus on understanding how to represent the domain of a quadratic function when given a graph.",
+                    "Rationale": "The student identified the range of the function correctly but likely identified the domain of the function as the `x`-coordinate of the graph's lowest point and all the `x`-values greater than that `x`-coordinate, resulting in all values greater than or equal to -3, or x ≥ -3. The student needs to focus on understanding how to represent the domain of a quadratic function when given a graph.",
                     "Percent": 18
                 }
             },
@@ -2265,7 +2265,7 @@
                 "Choice": "Domain: All real numbers\nRange: y ≥ 5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the domain (all possible `text(x)`-values) and range (all possible `text(y)`-values) of the quadratic function, the student could have analyzed the parabola (U-shaped graph) graphed on the grid. To identify the domain of the function, the student could have identified all the `text(x)`-values for which the graph has a `text(y)`-value. The student could have determined that the graph continues to expand upward and outward indefinitely, making the domain all real numbers. To identify the range of the function, the student could have identified all the `text(y)`-values for which the graph has an `text(x)`-value. The student could have identified the `text(y)`-coordinate of the graph's lowest point, (-3, 5), and all the `text(y)`-values greater than that `text(y)`-coordinate, resulting in all values greater than or equal to 5, or y ≥ 5. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the domain (all possible `x`-values) and range (all possible `y`-values) of the quadratic function, the student could have analyzed the parabola (U-shaped graph) graphed on the grid. To identify the domain of the function, the student could have identified all the `x`-values for which the graph has a `y`-value. The student could have determined that the graph continues to expand upward and outward indefinitely, making the domain all real numbers. To identify the range of the function, the student could have identified all the `y`-values for which the graph has an `x`-value. The student could have identified the `y`-coordinate of the graph's lowest point, (-3, 5), and all the `y`-values greater than that `y`-coordinate, resulting in all values greater than or equal to 5, or y ≥ 5. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 57
                 }
             },
@@ -2273,7 +2273,7 @@
                 "Choice": "Domain: x ≥ - 3\nRange: All real numbers",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the domain of the function as the `text(x)`-coordinate of the graph's lowest point and all the `text(x)`-values greater than that `text(x)`-coordinate, resulting in all values greater than or equal to -3, or x ≥ -3. The student likely identified the range of the function as all real numbers because the parabola expands upward and outward indefinitely. The student needs to focus on understanding how to represent the domain and range of a quadratic function when given a graph.",
+                    "Rationale": "The student likely identified the domain of the function as the `x`-coordinate of the graph's lowest point and all the `x`-values greater than that `x`-coordinate, resulting in all values greater than or equal to -3, or x ≥ -3. The student likely identified the range of the function as all real numbers because the parabola expands upward and outward indefinitely. The student needs to focus on understanding how to represent the domain and range of a quadratic function when given a graph.",
                     "Percent": 16
                 }
             },
@@ -2281,7 +2281,7 @@
                 "Choice": "Domain: y ≥ 5\nRange: x ≥ -3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the domain of the function as the `text(y)`-coordinate of the graph's lowest point and all the `text(y)`-values greater than that `text(y)`-coordinate, resulting in all values greater than or equal to 5, or y ≥ 5. The student likely identified the range of the function as the `text(x)`-coordinate of the graph's lowest point and all the `text(x)`-values greater than that `text(x)`-coordinate, resulting in all values greater than or equal to -3, or x ≥ -3. The student needs to focus on understanding how to represent the domain and range of a quadratic function when given a graph.",
+                    "Rationale": "The student likely identified the domain of the function as the `y`-coordinate of the graph's lowest point and all the `y`-values greater than that `y`-coordinate, resulting in all values greater than or equal to 5, or y ≥ 5. The student likely identified the range of the function as the `x`-coordinate of the graph's lowest point and all the `x`-values greater than that `x`-coordinate, resulting in all values greater than or equal to -3, or x ≥ -3. The student needs to focus on understanding how to represent the domain and range of a quadratic function when given a graph.",
                     "Percent": 9
                 }
             }
@@ -2314,7 +2314,7 @@
                 "Choice": "f(x) = 26(x - 2)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which linear function represents f, the student could have found the slope (steepness of y - y a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) of the line and substituted the slope and one ordered pair from the table into the point-slope formula, `y-y_1=m(x-x_1)`. The student could have calculated the slope using the ordered pairs (2, 0) and (5, 78), resulting in m = (8 - 0)/(5 - 2) = 78/3 = 26. The student could have then substituted the x- and `text(y)`-values of (2, 0) and m = 26 into the point-slope formula, resulting in y - 0 = 26(x - 2). Lastly, the student could have replaced y with f(x) and subtracted 0, resulting in f(x) = 26(x - 2). The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which linear function represents f, the student could have found the slope (steepness of y - y a straight line when graphed on a coordinate grid; `m=(y_2-y_1)/(x_2-x_1)`) of the line and substituted the slope and one ordered pair from the table into the point-slope formula, `y-y_1=m(x-x_1)`. The student could have calculated the slope using the ordered pairs (2, 0) and (5, 78), resulting in m = (8 - 0)/(5 - 2) = 78/3 = 26. The student could have then substituted the x- and `y`-values of (2, 0) and m = 26 into the point-slope formula, resulting in y - 0 = 26(x - 2). Lastly, the student could have replaced y with f(x) and subtracted 0, resulting in f(x) = 26(x - 2). The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 58
                 }
             },
@@ -2322,7 +2322,7 @@
                 "Choice": "f(x) = -26(2x - 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely reversed the values of the slope and `text(y)`-intercept (value where a line crosses the `text(y)`-axis) in the equation f(x) = 26x - 52 before factoring out a common factor, resulting in f(x) = -52x + 26 ⇒ f(x) = -26(2x - 1). The student needs to focus on understanding how to determine a linear function from a table of values.",
+                    "Rationale": "The student likely reversed the values of the slope and `y`-intercept (value where a line crosses the `y`-axis) in the equation f(x) = 26x - 52 before factoring out a common factor, resulting in f(x) = -52x + 26 ⇒ f(x) = -26(2x - 1). The student needs to focus on understanding how to determine a linear function from a table of values.",
                     "Percent": 15
                 }
             },
@@ -2330,7 +2330,7 @@
                 "Choice": "f(x) = 13(x - 2)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified an equation that is true for only the ordered pair representing the `text(x)`-intercept (value where a line crosses the `text(x)`-axis) of the graph, (2, 0), identifying the function as f(x) = 13(x - 2). The student needs to focus on understanding how to determine a linear function from a table of values.",
+                    "Rationale": "The student likely identified an equation that is true for only the ordered pair representing the `x`-intercept (value where a line crosses the `x`-axis) of the graph, (2, 0), identifying the function as f(x) = 13(x - 2). The student needs to focus on understanding how to determine a linear function from a table of values.",
                     "Percent": 15
                 }
             },
@@ -2338,7 +2338,7 @@
                 "Choice": "f(x) = -2(26x - 1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the value of the slope as the `text(y)`-intercept (value where a line crosses the `text(y)`-axis) of -52 and the value of the `text(y)`-intercept as the `text(x)`-intercept (value where a line crosses the `text(x)`-axis) of 2 before factoring out a common factor, resulting in f(x) = -52x + 2 ⇒ f(x) = -2(26x - 1). The student needs to focus on understanding how to determine a linear function from a table of values.",
+                    "Rationale": "The student likely identified the value of the slope as the `y`-intercept (value where a line crosses the `y`-axis) of -52 and the value of the `y`-intercept as the `x`-intercept (value where a line crosses the `x`-axis) of 2 before factoring out a common factor, resulting in f(x) = -52x + 2 ⇒ f(x) = -2(26x - 1). The student needs to focus on understanding how to determine a linear function from a table of values.",
                     "Percent": 12
                 }
             }
@@ -2353,7 +2353,7 @@
             "Number & Algebraic Methods"
         ],
         "SubTopics": [
-            "Factor, if possible, trinomials with real factors in the form ax^2+ bx + c, including perfect square trinomials of degree two."
+            "Factor, if possible, trinomials with real factors in the form `ax^2+bx+c`, including perfect square trinomials of degree two."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2369,7 +2369,7 @@
                 "Choice": "(x + 1)(x + 24)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified two terms that had a product of 24x^2but a sum of 25x (x and 24x), writing out the expression x^2+ x + 24x + 24. The student likely then grouped the terms and factored out the greatest common factors, resulting in x(x + 1) + 24(x + 1). Lastly, the student likely factored out (x + 1) from the expression, resulting in (x + 1)(x + 24). The student needs to focus on understanding how to find the factors of an expression in the form ax^2+ bx + c.",
+                    "Rationale": "The student likely identified two terms that had a product of 24x^2but a sum of 25x (x and 24x), writing out the expression x^2+ x + 24x + 24. The student likely then grouped the terms and factored out the greatest common factors, resulting in x(x + 1) + 24(x + 1). Lastly, the student likely factored out (x + 1) from the expression, resulting in (x + 1)(x + 24). The student needs to focus on understanding how to find the factors of an expression in the form `ax^2+bx+c`.",
                     "Percent": 10
                 }
             },
@@ -2377,7 +2377,7 @@
                 "Choice": "(x + 2)(x + 12)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified two terms that had a product of 24x^2but a sum of 14x (2x and 12x), writing out the expression x^2+ 2x + 12x + 24. The student likely then grouped the terms and factored out the greatest common factors, resulting in x(x + 2) + 12(x + 2). Lastly, the student likely factored out (x + 2) from the expression, resulting in (x + 2)(x + 12). The student needs to focus on understanding how to find the factors of an expression in the form ax^2+ bx + c.",
+                    "Rationale": "The student likely identified two terms that had a product of 24x^2but a sum of 14x (2x and 12x), writing out the expression x^2+ 2x + 12x + 24. The student likely then grouped the terms and factored out the greatest common factors, resulting in x(x + 2) + 12(x + 2). Lastly, the student likely factored out (x + 2) from the expression, resulting in (x + 2)(x + 12). The student needs to focus on understanding how to find the factors of an expression in the form `ax^2+bx+c`.",
                     "Percent": 19
                 }
             },
@@ -2385,7 +2385,7 @@
                 "Choice": "(x + 3)(x + 8)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified two terms that had a product of 24x^2but a sum of 11x (3x and 8x), writing out the expression x^2+ 3x + 8x + 24. The student likely then grouped the terms and factored out the greatest common factors, resulting in x(x + 3) + 8(x + 3). Lastly, the student likely factored out (x + 3) from the expression, resulting in (x + 3)(x + 8). The student needs to focus on understanding how to find the factors of an expression in the form ax^2+ bx + c.",
+                    "Rationale": "The student likely identified two terms that had a product of 24x^2but a sum of 11x (3x and 8x), writing out the expression x^2+ 3x + 8x + 24. The student likely then grouped the terms and factored out the greatest common factors, resulting in x(x + 3) + 8(x + 3). Lastly, the student likely factored out (x + 3) from the expression, resulting in (x + 3)(x + 8). The student needs to focus on understanding how to find the factors of an expression in the form `ax^2+bx+c`.",
                     "Percent": 10
                 }
             },
@@ -2448,7 +2448,7 @@
                 "Choice": "problems/TX21HSA1/media/46d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the shaded part of the graph that does not include the origin (0, 0) but likely identified the inequality symbol “≤” as meaning “less than,” which could be represented by a dashed line (to indicate no points on the line are part of the solution set). The student needs to focus on understanding how inequality symbols affect the graph of a solution set.",
+                    "Rationale": "The student correctly identified the shaded part of the graph that does not include the origin `(0,0)` but likely identified the inequality symbol “≤” as meaning “less than,” which could be represented by a dashed line (to indicate no points on the line are part of the solution set). The student needs to focus on understanding how inequality symbols affect the graph of a solution set.",
                     "Percent": 15
                 }
             }
@@ -2482,7 +2482,7 @@
                 "Choice": "y = 0.001x^2- 0.426x + 35.672",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely reversed the x- and `text(y)`-values from the table when calculating the quadratic regression ((145, 2.25), (154, 2.50), (168, 2.75), (172, 3.00), (160, 3.25), (137, 3.50), (126, 3.75)), resulting in y = 0.001x^2- 0.426x + 35.672. The student needs to focus on understanding how to pair up the values given in a table when generating a function using quadratic regression.",
+                    "Rationale": "The student likely reversed the x- and `y`-values from the table when calculating the quadratic regression ((145, 2.25), (154, 2.50), (168, 2.75), (172, 3.00), (160, 3.25), (137, 3.50), (126, 3.75)), resulting in y = 0.001x^2- 0.426x + 35.672. The student needs to focus on understanding how to pair up the values given in a table when generating a function using quadratic regression.",
                     "Percent": 16
                 }
             },
@@ -2498,7 +2498,7 @@
                 "Choice": "y = 0.001x^2+ 35.672",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely reversed the x- and `text(y)`-values from the table when calculating the quadratic regression ((145, 2.25), (154, 2.50), (168, 2.75), (172, 3.00), (160, 3.25), (137, 3.50), (126, 3.75)) and only included the positive terms in the function, resulting in y = 0.001x^2+ 35.672. The student needs to focus on understanding how to pair up the values given in a table when generating a function using quadratic regression and how to write that quadratic function.",
+                    "Rationale": "The student likely reversed the x- and `y`-values from the table when calculating the quadratic regression ((145, 2.25), (154, 2.50), (168, 2.75), (172, 3.00), (160, 3.25), (137, 3.50), (126, 3.75)) and only included the positive terms in the function, resulting in y = 0.001x^2+ 35.672. The student needs to focus on understanding how to pair up the values given in a table when generating a function using quadratic regression and how to write that quadratic function.",
                     "Percent": 21
                 }
             },
@@ -2594,7 +2594,7 @@
                 "Choice": "x > 1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the variable (symbol used to represent an unknown number) representing the domain but likely identified the range (all possible `text(y)`-values) of the part shown, which is all real numbers greater than 1, or x > 1. The student needs to focus on understanding how to represent the domain of an exponential function when given a part of the graph.",
+                    "Rationale": "The student correctly identified the variable (symbol used to represent an unknown number) representing the domain but likely identified the range (all possible `y`-values) of the part shown, which is all real numbers greater than 1, or x > 1. The student needs to focus on understanding how to represent the domain of an exponential function when given a part of the graph.",
                     "Percent": 9
                 }
             },
@@ -2602,7 +2602,7 @@
                 "Choice": "y > 1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the range (all possible `text(y)`-values) of the part shown, which is all real numbers greater than 1, or y > 1. The student needs to focus on understanding how to represent the domain of an exponential function when given a part of the graph.",
+                    "Rationale": "The student likely identified the range (all possible `y`-values) of the part shown, which is all real numbers greater than 1, or y > 1. The student needs to focus on understanding how to represent the domain of an exponential function when given a part of the graph.",
                     "Percent": 17
                 }
             },
@@ -2610,7 +2610,7 @@
                 "Choice": "x > -2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the domain (all possible `text(x)`-values) of the part of exponential function f, the student could have identified all the values of x for which the graph has a `text(y)`-value. The graph contains an open circle at x = -2, meaning the graph starts but does not include the point (-2, 1). The graph extends upward and to the right indefinitely from (-2, 1). Therefore, the domain of the part shown is all real numbers greater than -2, or x > -2. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the domain (all possible `x`-values) of the part of exponential function f, the student could have identified all the values of x for which the graph has a `y`-value. The graph contains an open circle at x = -2, meaning the graph starts but does not include the point (-2, 1). The graph extends upward and to the right indefinitely from (-2, 1). Therefore, the domain of the part shown is all real numbers greater than -2, or x > -2. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 64
                 }
             },
@@ -2618,7 +2618,7 @@
                 "Choice": "y > -2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the values of the domain but likely identified the variable (symbol used to represent an unknown number) representing the range (all possible `text(y)`-values), which is all real numbers greater than -2, or y > -2. The student needs to focus on understanding how to represent the domain of an exponential function when given a part of the graph.",
+                    "Rationale": "The student correctly identified the values of the domain but likely identified the variable (symbol used to represent an unknown number) representing the range (all possible `y`-values), which is all real numbers greater than -2, or y > -2. The student needs to focus on understanding how to represent the domain of an exponential function when given a part of the graph.",
                     "Percent": 10
                 }
             }
@@ -2651,7 +2651,7 @@
                 "Choice": "8.5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely combined the y-terms of 6y + (-2y + 9) = -59 and identified the value as a negative number, resulting in -8y + 9 = -59. The student likely then subtracted 9 from both sides of the equation, resulting in -8y = -68. Lastly, the student likely divided both sides of the equation by -8, resulting in y = 8.5. The student needs to focus on understanding how to combine like terms when calculating the solution to a system of equations.",
+                    "Rationale": "The student likely combined the `y`-terms of 6y + (-2y + 9) = -59 and identified the value as a negative number, resulting in -8y + 9 = -59. The student likely then subtracted 9 from both sides of the equation, resulting in -8y = -68. Lastly, the student likely divided both sides of the equation by -8, resulting in y = 8.5. The student needs to focus on understanding how to combine like terms when calculating the solution to a system of equations.",
                     "Percent": 24
                 }
             },
@@ -2659,7 +2659,7 @@
                 "Choice": "-17",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the `text(y)`-value of the solution to the system of equations, the student could have used the substitution method. Since the second equation indicates that x is equal to -2y + 9, the student could have substituted -2y + 9 for x in the first equation, resulting in 6y + (-2y + 9) = -59. The student could have then combined like terms (terms that contain the same variables raised to the same powers), resulting in 4y + 9 = -59. The student could have then subtracted 9 from both sides of the equation, resulting in 4y = -68. Lastly, the student could have divided both sides of the equation by 4, resulting in y = -17. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the `y`-value of the solution to the system of equations, the student could have used the substitution method. Since the second equation indicates that x is equal to -2y + 9, the student could have substituted -2y + 9 for x in the first equation, resulting in 6y + (-2y + 9) = -59. The student could have then combined like terms (terms that contain the same variables raised to the same powers), resulting in 4y + 9 = -59. The student could have then subtracted 9 from both sides of the equation, resulting in 4y = -68. Lastly, the student could have divided both sides of the equation by 4, resulting in y = -17. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 42
                 }
             },
@@ -2667,7 +2667,7 @@
                 "Choice": "43",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely determined the `text(x)`-value of the solution to the system of equations, calculating x = -2(-17) + 9 = 34 + 9 = 43. The student needs to focus on understanding how to identify the value of y in the solution to a system of equations.",
+                    "Rationale": "The student likely determined the `x`-value of the solution to the system of equations, calculating x = -2(-17) + 9 = 34 + 9 = 43. The student needs to focus on understanding how to identify the value of y in the solution to a system of equations.",
                     "Percent": 13
                 }
             },
@@ -2690,7 +2690,7 @@
             "Describing & Graphing Linear Functions, Equations & Inequalities"
         ],
         "SubTopics": [
-            "Graph linear functions on the coordinate plane and identify key features, including `text(x)`-intercept, `text(y)`-intercept, zeros, and slope, in mathematical and real-world problems."
+            "Graph linear functions on the coordinate plane and identify key features, including `x`-intercept, `y`-intercept, zeros, and slope, in mathematical and real-world problems."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2701,38 +2701,38 @@
         "Content": [
             "The graph models the linear relationship between the number of monthly payments made on a loan and the remaining balance in dollars left to pay on the loan.",
             "problems/TX21HSA1/media/51a.jpg",
-            "Which statement describes the `text(x)`-intercept of the graph?"
+            "Which statement describes the `x`-intercept of the graph?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The `text(x)`-intercept is 60, which represents the initial balance in dollars of the loan.",
+                "Choice": "The `x`-intercept is 60, which represents the initial balance in dollars of the loan.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the value of the `text(x)`-intercept but likely described the meaning of the `text(y)`-intercept (value where a line crosses the `text(y)`-axis) for the given situation. The student needs to focus on understanding and interpreting the `text(x)`-intercept of a linear function representing a situation.",
+                    "Rationale": "The student correctly identified the value of the `x`-intercept but likely described the meaning of the `y`-intercept (value where a line crosses the `y`-axis) for the given situation. The student needs to focus on understanding and interpreting the `x`-intercept of a linear function representing a situation.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "The `text(x)`-intercept is 27,000, which represents the initial balance in dollars of the loan.",
+                "Choice": "The `x`-intercept is 27,000, which represents the initial balance in dollars of the loan.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the value and meaning of the `text(y)`-intercept (value where a line crosses the `text(y)`-axis) for the given situation. The student needs to focus on understanding and interpreting the `text(x)`-intercept of a linear function representing a situation.",
+                    "Rationale": "The student likely identified the value and meaning of the `y`-intercept (value where a line crosses the `y`-axis) for the given situation. The student needs to focus on understanding and interpreting the `x`-intercept of a linear function representing a situation.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "The `text(x)`-intercept is 60, which represents the number of monthly payments needed to repay the loan.",
+                "Choice": "The `x`-intercept is 60, which represents the number of monthly payments needed to repay the loan.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which statement describes the `text(x)`-intercept (value where a line crosses the `text(x)`-axis (horizontal axis)) of the graph, the student should have determined that the line intersects (crosses) the `text(x)`-axis at (60, 0). The student should have then determined that the `text(x)`-axis represents the number of monthly payments made on a loan and the `text(y)`-axis (vertical) represents the remaining balance in dollars of the loan. Therefore, the `text(x)`-intercept is 60, which represents the number of monthly payments needed to repay the loan.",
+                    "Rationale": "To determine which statement describes the `x`-intercept (value where a line crosses the `x`-axis (horizontal axis)) of the graph, the student should have determined that the line intersects (crosses) the `x`-axis at (60, 0). The student should have then determined that the `x`-axis represents the number of monthly payments made on a loan and the `y`-axis (vertical) represents the remaining balance in dollars of the loan. Therefore, the `x`-intercept is 60, which represents the number of monthly payments needed to repay the loan.",
                     "Percent": 72
                 }
             },
             "D": {
-                "Choice": "The `text(x)`-intercept is 27,000, which represents the number of monthly payments needed to repay the loan.",
+                "Choice": "The `x`-intercept is 27,000, which represents the number of monthly payments needed to repay the loan.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student correctly identified the meaning of the `text(x)`-intercept but likely identified the value of the `text(y)`-intercept (value where a line crosses the `text(y)`-axis) for the given situation. The student needs to focus on understanding and interpreting the `text(x)`-intercept of a linear function representing a situation.",
+                    "Rationale": "The student correctly identified the meaning of the `x`-intercept but likely identified the value of the `y`-intercept (value where a line crosses the `y`-axis) for the given situation. The student needs to focus on understanding and interpreting the `x`-intercept of a linear function representing a situation.",
                     "Percent": 7
                 }
             }
@@ -2802,7 +2802,7 @@
             "Exponential Functions & Equations"
         ],
         "SubTopics": [
-            "Graph exponential functions that model growth and decay and identify key features, including `text(y)`-intercept and asymptote, in mathematical and real-world problems."
+            "Graph exponential functions that model growth and decay and identify key features, including `y`-intercept and asymptote, in mathematical and real-world problems."
         ],
         "SuppContent": [],
         "SuppTools": [

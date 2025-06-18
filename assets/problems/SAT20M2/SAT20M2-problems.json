@@ -78,7 +78,7 @@
                 "Choice": "problems/SAT20M2/media/2a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The text messaging plan charges a flat fee of $5 per month for up to 100 text messages. This is represented graphically with a constant value of y = 5 for 0 ≤ x ≤ 100. After 100 messages, each additional message sent costs $0.25. This is represented graphically with an increase of 0.25 on the `text(y)`-axis for every increase of 1 on the `text(x)`-axis. This choice matches these descriptions.",
+                    "Rationale": "The text messaging plan charges a flat fee of $5 per month for up to 100 text messages. This is represented graphically with a constant value of y = 5 for 0 ≤ x ≤ 100. After 100 messages, each additional message sent costs $0.25. This is represented graphically with an increase of 0.25 on the `y`-axis for every increase of 1 on the `x`-axis. This choice matches these descriptions.",
                     "Percent": 0
                 }
             },
@@ -141,7 +141,7 @@
                 "Choice": "problems/SAT20M2/media/3b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "During the first 15 minutes Jake is in the theater, or from 0 to 15 minutes, Jake's popcorn amount decreases by half. This is represented graphically by a linear decrease. From 15 to 45 minutes, Jake stops eating popcorn. This is represented graphically by a constant `text(y)`-value. From 45 to 90 minutes, Jake eats more popcorn. This is represented graphically by another linear decrease as the amount of popcorn in the bag gradually goes down. At 90 minutes, Jake spills all of his remaining popcorn. This is represented graphically by a vertical drop in the `text(y)`-value to 0. This choice matches these representations.",
+                    "Rationale": "During the first 15 minutes Jake is in the theater, or from 0 to 15 minutes, Jake's popcorn amount decreases by half. This is represented graphically by a linear decrease. From 15 to 45 minutes, Jake stops eating popcorn. This is represented graphically by a constant `y`-value. From 45 to 90 minutes, Jake eats more popcorn. This is represented graphically by another linear decrease as the amount of popcorn in the bag gradually goes down. At 90 minutes, Jake spills all of his remaining popcorn. This is represented graphically by a vertical drop in the `y`-value to 0. This choice matches these representations.",
                     "Percent": 0
                 }
             },
@@ -545,7 +545,7 @@
                 "Choice": "It is plausible that the percentage of students who see a movie at least once per month is between 19% and 27%.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The margin of error is applied to the sample statistic to create an interval in which the population statistic most likely falls. An estimate of 23% with a margin of error of 4% creates an interval of 23% ± 4%, or between 19% and 27%. Thus, it's plausible that the percentage of students in the population who see a movie at least once a month is between 19% and 27%.",
+                    "Rationale": "The margin of error is applied to the sample statistic to create an interval in which the population statistic most likely falls. An estimate of 23% with a margin of error of 4% creates an interval of 23% +- 4%, or between 19% and 27%. Thus, it's plausible that the percentage of students in the population who see a movie at least once a month is between 19% and 27%.",
                     "Percent": 0
                 }
             }
@@ -810,7 +810,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the volume V of a right circular cone is `V=1/3pir^2h`, where r is the radius of the base and h is the height of the cone. It's given that the cone's volume is 24π cubic inches and its height is 2 inches. Substituting 24π for V and 2 for h yields 24π = πr²(2)/3. Rewriting the right-hand side of this equation yields 24π = (2π/3)r², which is equivalent to 36 = r². Taking the square root of both sides of this equation gives r = ±6. Since the radius is a measure of length, it can't be negative. Therefore, the radius of the base of the cone is 6 inches.",
+                    "Rationale": "The formula for the volume V of a right circular cone is `V=1/3pir^2h`, where r is the radius of the base and h is the height of the cone. It's given that the cone's volume is 24π cubic inches and its height is 2 inches. Substituting 24π for V and 2 for h yields 24π = πr²(2)/3. Rewriting the right-hand side of this equation yields 24π = (2π/3)r^2, which is equivalent to 36 = r^2. Taking the square root of both sides of this equation gives r = +-6. Since the radius is a measure of length, it can't be negative. Therefore, the radius of the base of the cone is 6 inches.",
                     "Percent": 0
                 }
             },
@@ -1017,7 +1017,7 @@
         "Explain": false,
         "Content": [
             ":ibox:y (x - 3)^2 + a ",
-            "In the equation above, a is a constant. The graph of the equation in the `text(xy)`-plane is a parabola. Which of the following is true about the parabola?"
+            "In the equation above, a is a constant. The graph of the equation in the `xy`-plane is a parabola. Which of the following is true about the parabola?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1048,7 +1048,7 @@
                 "Choice": "Its maximum occurs at (3, a).",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The vertex form of a quadratic equation is y = n(x - h)^2 + k, where `(h,k)` gives the coordinates of the vertex of the parabola in the `text(xy)`-plane and the sign of the constant n determines whether the parabola opens upward or downward. If n is negative, the parabola opens downward and the vertex is the maximum. The given equation has the values h = 3, k = a, and n = -1. Therefore, the vertex of the parabola is (3, a) and the parabola opens downward. Thus, the parabola's maximum occurs at (3, a).",
+                    "Rationale": "The vertex form of a quadratic equation is y = n(x - h)^2 + k, where `(h,k)` gives the coordinates of the vertex of the parabola in the `xy`-plane and the sign of the constant n determines whether the parabola opens upward or downward. If n is negative, the parabola opens downward and the vertex is the maximum. The given equation has the values h = 3, k = a, and n = -1. Therefore, the vertex of the parabola is (3, a) and the parabola opens downward. Thus, the parabola's maximum occurs at (3, a).",
                     "Percent": 0
                 }
             }
@@ -1143,7 +1143,7 @@
                 "Choice": "25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "'s given that Clayton uses 100 milliliters of the 20% by mass solution, so y = 100. Substituting 100 for y in the given equation yields 0.10x + 0.20(100) = 0.18(x + 100), which can be rewritten as 0.10x + 20 = 0.18x + 18. Subtracting x 0.10 and 18 from both sides of the equation gives 2 = 0.08x. Dividing both sides of this equation by 0.08 gives x = 25. Thus, Clayton uses 25 milliliters of the 10% by mass saline solution.",
+                    "Rationale": "It's given that Clayton uses 100 milliliters of the 20% by mass solution, so y = 100. Substituting 100 for y in the given equation yields 0.10x + 0.20(100) = 0.18(x + 100), which can be rewritten as 0.10x + 20 = 0.18x + 18. Subtracting x 0.10 and 18 from both sides of the equation gives 2 = 0.08x. Dividing both sides of this equation by 0.08 gives x = 25. Thus, Clayton uses 25 milliliters of the 10% by mass saline solution.",
                     "Percent": 0
                 }
             },
@@ -1246,7 +1246,7 @@
                 "Choice": "x + 2y = a",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope-intercept form of a linear equation in the `text(xy)`-plane is `y=mx+b`, where m is the slope of the graph of the equation and b is the `text(y)`-coordinate of the `text(y)`-intercept of the graph. Any two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting t he two pairs (a, 0) and (3a, -a) from the table into the formula gives m = (-a - 0)/(3a - a), which can be rewritten as -a/2a, or -1/2. Substituting t his value for m in the slope-intercept form of the equation produces y = -x/2 + b. Substituting values from the ordered pair (a, 0) in the table into this equation produces 0 = (-1/2)(a) + b, which simplifies to b = a/2. Substituting t his value for b in the slope-intercept form of the equation produces y = -x/2 + a/2. Rewriting this equation in standard form by adding x/2 to both sides and then multiplying both sides by 2 gives the equation x + 2y = a.",
+                    "Rationale": "The slope-intercept form of a linear equation in the `xy`-plane is `y=mx+b`, where m is the slope of the graph of the equation and b is the `y`-coordinate of the `y`-intercept of the graph. Any two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting t he two pairs (a, 0) and (3a, -a) from the table into the formula gives m = (-a - 0)/(3a - a), which can be rewritten as -a/2a, or -1/2. Substituting t his value for m in the slope-intercept form of the equation produces y = -x/2 + b. Substituting values from the ordered pair (a, 0) in the table into this equation produces 0 = (-1/2)(a) + b, which simplifies to b = a/2. Substituting t his value for b in the slope-intercept form of the equation produces y = -x/2 + a/2. Rewriting this equation in standard form by adding x/2 to both sides and then multiplying both sides by 2 gives the equation x + 2y = a.",
                     "Percent": 0
                 }
             },
@@ -1254,7 +1254,7 @@
                 "Choice": "x + 2y = 5a",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from a calculation error when determining the `text(y)`-intercept of the graph of the equation.",
+                    "Rationale": "This choice may result from a calculation error when determining the `y`-intercept of the graph of the equation.",
                     "Percent": 0
                 }
             },
@@ -1310,7 +1310,7 @@
                 "Choice": "y = 0.5x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope-intercept form of a linear equation is `y=mx+b`, where m is the slope of the graph of the equation and b is the `text(y)`-coordinate of the `text(y)`-intercept of the graph. Any two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting the coordinates of (120, 60) and (160, 80), which lie on the line of best fit, into this formula gives m = (80 - 60)/(160 - 120), which simplifies to 20/40, or 0.5. Substituting this value for m in the slope-intercept form of the equation produces y = 0.5x + b. Substituting values from the ordered pair (120, 60) into this equation produces 60 = 0.5(120) + b, so b = 0. Substituting this value for b in the slope-intercept form of the equation produces y = 0.5x + 0, or y = 0.5x.",
+                    "Rationale": "The slope-intercept form of a linear equation is `y=mx+b`, where m is the slope of the graph of the equation and b is the `y`-coordinate of the `y`-intercept of the graph. Any two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting the coordinates of (120, 60) and (160, 80), which lie on the line of best fit, into this formula gives m = (80 - 60)/(160 - 120), which simplifies to 20/40, or 0.5. Substituting this value for m in the slope-intercept form of the equation produces y = 0.5x + b. Substituting values from the ordered pair (120, 60) into this equation produces 60 = 0.5(120) + b, so b = 0. Substituting this value for b in the slope-intercept form of the equation produces y = 0.5x + 0, or y = 0.5x.",
                     "Percent": 0
                 }
             },
@@ -1351,14 +1351,14 @@
         "Explain": false,
         "Content": [
             ":ibox:2.4x - 1.5y = 0.3\n1.6x + 0.5y = -1.3",
-            "The system of equations above is graphed in the `text(xy)`-plane. What is the `text(x)`-coordinate of the intersection point `(x,y)` of the system?"
+            "The system of equations above is graphed in the `xy`-plane. What is the `x`-coordinate of the intersection point `(x,y)` of the system?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "-0.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The intersection point `(x,y)` of the two graphs can be found by multiplying the second equation in the system 1.6x + 0.5y = -1.3 by 3, which gives 4.8x + 1.5y = -3.9. The y-terms in the equation 4.8x + 1.5y = -3.9 and the first equation in the system 2.4x - 1.5y = 0.3 have coefficients that are opposites. Adding the left- and right-hand sides of the equations 4.8x + 1.5y = -3.9 and 2.4x - 1.5y = 0.3 produces 7.2x + 0.0y = -3.6, which is equivalent to 7.2x = -3.6. Dividing both sides of the equation by 7.2 gives x = -0.5. Therefore, the `text(x)`-coordinate of the intersection point `(x,y)` of the system is -0.5.",
+                    "Rationale": "The intersection point `(x,y)` of the two graphs can be found by multiplying the second equation in the system 1.6x + 0.5y = -1.3 by 3, which gives 4.8x + 1.5y = -3.9. The `y`-terms in the equation 4.8x + 1.5y = -3.9 and the first equation in the system 2.4x - 1.5y = 0.3 have coefficients that are opposites. Adding the left- and right-hand sides of the equations 4.8x + 1.5y = -3.9 and 2.4x - 1.5y = 0.3 produces 7.2x + 0.0y = -3.6, which is equivalent to 7.2x = -3.6. Dividing both sides of the equation by 7.2 gives x = -0.5. Therefore, the `x`-coordinate of the intersection point `(x,y)` of the system is -0.5.",
                     "Percent": 0
                 }
             },
@@ -1366,7 +1366,7 @@
                 "Choice": "-0.25",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An `text(x)`-value of -0.25 produces `text(y)`-values of -0.6 and -1.8 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Rationale": "An `x`-value of -0.25 produces `y`-values of -0.6 and -1.8 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
                     "Percent": 0
                 }
             },
@@ -1374,7 +1374,7 @@
                 "Choice": "0.8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An `text(x)`-value of 0.8 produces `text(y)`-values of 1.08 and -5.16 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Rationale": "An `x`-value of 0.8 produces `y`-values of 1.08 and -5.16 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
                     "Percent": 0
                 }
             },
@@ -1382,7 +1382,7 @@
                 "Choice": "1.75",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An `text(x)`-value of 1.75 produces `text(y)`-values of 2.6 and -8.2 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Rationale": "An `x`-value of 1.75 produces `y`-values of 2.6 and -8.2 for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
                     "Percent": 0
                 }
             }
@@ -1518,7 +1518,7 @@
         "Explain": false,
         "Content": [
             ":ibox:f(x) = (x + 3)(x - k)",
-            "The function f is defined above. If k is a positive integer, which of the following could represent the graph of `y=f(x)` in the `text(xy)`-plane?"
+            "The function f is defined above. If k is a positive integer, which of the following could represent the graph of `y=f(x)` in the `xy`-plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1549,7 +1549,7 @@
                 "Choice": "problems/SAT20M2/media/28d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of a quadratic function in the form f(x) = a(x - b)(x - c) intersects the `text(x)`-axis at (b, 0) and (c, 0). The graph will be a parabola that opens upward if a is positive and downward if a is negative. For the function f, a = 1, b = -3, and c = k. Therefore, the graph of the function f opens upward and intersects the `text(x)`-axis at (-3, 0) and (k, 0). Since k is a positive integer, the intersection point (k, 0) will have an `text(x)`-coordinate that is a positive integer. The only graph that opens upward, passes through the point (-3, 0), and has another `text(x)`-intercept with a positive integer as the `text(x)`-coordinate is this choice.",
+                    "Rationale": "The graph of a quadratic function in the form f(x) = a(x - b)(x - c) intersects the `x`-axis at (b, 0) and (c, 0). The graph will be a parabola that opens upward if a is positive and downward if a is negative. For the function f, a = 1, b = -3, and c = k. Therefore, the graph of the function f opens upward and intersects the `x`-axis at (-3, 0) and (k, 0). Since k is a positive integer, the intersection point (k, 0) will have an `x`-coordinate that is a positive integer. The only graph that opens upward, passes through the point (-3, 0), and has another `x`-intercept with a positive integer as the `x`-coordinate is this choice.",
                     "Percent": 0
                 }
             }
@@ -1843,14 +1843,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, a line that has the equation y = c for some constant c intersects a parabola at exactly one point. If the parabola has the equation y = -x^2+ 5x what is the value of c?"
+            "In the `xy`-plane, a line that has the equation y = c for some constant c intersects a parabola at exactly one point. If the parabola has the equation y = -x^2+ 5x what is the value of c?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:25/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a line intersects a parabola at a point, the coordinates of the intersection point must satisfy the equation of the line and the equation of the parabola. Since the equation of the line is y = c, where c is a constant, the `text(y)`-coordinate of the intersection point must be c. It follows then that substituting c for y in the equation for the parabola will result in another true equation: c = -x^2+ 5x. Subtracting c from both sides of c = -x^2+ 5x and then dividing both sides by -1 yields 0 = x^2- 5x + c. The solution to this quadratic equation would give the `text(x)`-coordinate(s) of the point(s) of intersection. Since it's given that the line and parabola intersect at exactly one point, the equation 0 = x^2- 5x + c has exactly one solution. A quadratic equation in the form 0 = ax^2+ bx + c has exactly one solution when its discriminant `b^2-4ac` is equal to 0. In the equation 0 = x^2- 5x + c, a = 1, b = -5, and c = c. Therefore, (-5)^2 - 4(1)(c) = 0, or 25 - 4c = 0. Subtracting 25 from both sides of 25 - 4c = 0 and then dividing both sides by -4 yields c = 25/4. Therefore, if the line y = c intersects the parabola defined by y = -x 2 + 5x at exactly one point, then c = 25/4.",
+                    "Rationale": "If a line intersects a parabola at a point, the coordinates of the intersection point must satisfy the equation of the line and the equation of the parabola. Since the equation of the line is y = c, where c is a constant, the `y`-coordinate of the intersection point must be c. It follows then that substituting c for y in the equation for the parabola will result in another true equation: c = -x^2+ 5x. Subtracting c from both sides of c = -x^2+ 5x and then dividing both sides by -1 yields 0 = x^2- 5x + c. The solution to this quadratic equation would give the `x`-coordinate(s) of the point(s) of intersection. Since it's given that the line and parabola intersect at exactly one point, the equation 0 = x^2- 5x + c has exactly one solution. A quadratic equation in the form `0=ax^2+bx+c` has exactly one solution when its discriminant `b^2-4ac` is equal to 0. In the equation 0 = x^2- 5x + c, a = 1, b = -5, and c = c. Therefore, (-5)^2 - 4(1)(c) = 0, or 25 - 4c = 0. Subtracting 25 from both sides of 25 - 4c = 0 and then dividing both sides by -4 yields c = 25/4. Therefore, if the line y = c intersects the parabola defined by y = -x 2 + 5x at exactly one point, then c = 25/4.",
                     "Percent": 0
                 }
             }

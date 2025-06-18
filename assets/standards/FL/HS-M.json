@@ -212,7 +212,7 @@
                             "Key": "FL.M9-12.AR.1.1",
                             "Label": "Identify and interpret parts of an equation or expression that represent a quantity in terms of a mathematical or real-world context, including viewing one or more of its parts as a single entity.",
                             "Examples": [
-                                "(Algebra 1) Derrick is using the formula P = 1000(1 + .1)ᵗ to make a prediction about the camel population in Australia. He identifies the growth factor as (1 + .1), or 1.1, and states that the camel population will grow at an annual rate of 10% per year.",
+                                "(Algebra 1) Derrick is using the formula P = 1000(1 + .1)^t to make a prediction about the camel population in Australia. He identifies the growth factor as (1 + .1), or 1.1, and states that the camel population will grow at an annual rate of 10% per year.",
                                 "The expression 1.15ᵗ can be rewritten as (1.15¹/¹²)¹²ᵗ which is approximately equivalent to 1.012¹²ᵗ. This latter expression reveals the approximate equivalent monthly interest rate of 1.2% if the annual rate is 15%."
                             ],
                             "Subs": []
@@ -379,7 +379,7 @@
                         },
                         {
                             "Key": "FL.M9-12.AR.3.5",
-                            "Label": "Given the `text(x)`-intercepts and another point on the graph of a quadratic function, write the equation for the function.",
+                            "Label": "Given the `x`-intercepts and another point on the graph of a quadratic function, write the equation for the function.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -812,7 +812,7 @@
                         },
                         {
                             "Key": "FL.M9-12.F.2.2",
-                            "Label": "Identify the effect on the graph of a given function of two or more transformations defined by adding a real number to the x- or `text(y)`-values or multiplying the x- or `text(y)`-values by a real number.",
+                            "Label": "Identify the effect on the graph of a given function of two or more transformations defined by adding a real number to the x- or `y`-values or multiplying the x- or `y`-values by a real number.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -830,7 +830,7 @@
                         },
                         {
                             "Key": "FL.M9-12.F.2.5",
-                            "Label": "Given a table, equation or graph that represents a function, create a corresponding table, equation or graph of the transformed function defined by adding a real number to the x- or `text(y)`-values or multiplying the x- or `text(y)`-values by a real number.",
+                            "Label": "Given a table, equation or graph that represents a function, create a corresponding table, equation or graph of the transformed function defined by adding a real number to the x- or `y`-values or multiplying the x- or `y`-values by a real number.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -1182,7 +1182,7 @@
                             "Key": "FL.M9-12.GR.2.1",
                             "Label": "Given a preimage and image, describe the transformation and represent the transformation algebraically using coordinates.",
                             "Examples": [
-                                "Given a triangle whose vertices have the coordinates (-3, 4), (2, 1.7) and (-0.4, -3). If this triangle is reflected across the `text(y)`-axis the transformation can be described using coordinates as (x, y) → (-x, y) resulting in the image whose vertices have the coordinates (3, 4), (-2, 1.7) and (0.4, -3)."
+                                "Given a triangle whose vertices have the coordinates (-3, 4), (2, 1.7) and (-0.4, -3). If this triangle is reflected across the `y`-axis the transformation can be described using coordinates as (x, y) → (-x, y) resulting in the image whose vertices have the coordinates (3, 4), (-2, 1.7) and (0.4, -3)."
                             ],
                             "Subs": []
                         },
@@ -1705,7 +1705,7 @@
                         },
                         {
                             "Key": "FL.M9-12.DP.2.4",
-                            "Label": "Fit a linear function to bivariate numerical data that suggests a linear association and interpret the slope and `text(y)`-intercept of the model. Use the model to solve real-world problems in terms of the context of the data.",
+                            "Label": "Fit a linear function to bivariate numerical data that suggests a linear association and interpret the slope and `y`-intercept of the model. Use the model to solve real-world problems in terms of the context of the data.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -1926,7 +1926,7 @@
                             "Key": "FL.M9-12.DP.5.11",
                             "Label": "Evaluate reports based on data from diverse media, print and digital resources by interpreting graphs and tables; evaluating data-based arguments; determining whether a valid sampling method was used; or interpreting provided statistics.",
                             "Examples": [
-                                "A local news station changes the `text(y)`-axis on a data display from 0 to 10,000 to include data only within the range 7,000 to 10,000. Depending on the purpose, this could emphasize differences in data values in a misleading way."
+                                "A local news station changes the `y`-axis on a data display from 0 to 10,000 to include data only within the range 7,000 to 10,000. Depending on the purpose, this could emphasize differences in data values in a misleading way."
                             ],
                             "Subs": []
                         }
@@ -2241,7 +2241,7 @@
                             "Key": "FL.M9-12.C.1.3",
                             "Label": "Find limits of rational functions that are undefined at a point.",
                             "Examples": [
-                                "The magnitude of the force between two positive charges, q₁ and q₂, can be described by the following function: F(r) = k(q₁q₂/r²), where 𝑘 is Coulomb's constant and r is the distance between the two charges. Find the limit as r approaches 0 of the function F(r). Interpret the answer in terms of the context."
+                                "The magnitude of the force between two positive charges, q₁ and q₂, can be described by the following function: F(r) = k(q₁q₂/r^2), where 𝑘 is Coulomb's constant and r is the distance between the two charges. Find the limit as r approaches 0 of the function F(r). Interpret the answer in terms of the context."
                             ],
                             "Subs": []
                         },
@@ -2338,7 +2338,7 @@
                             "Label": "Apply the rules for finding derivatives of constants, sums, products, quotients and the Chain Rule to solve problems with functions limited to algebraic, trigonometric, inverse trigonometric, logarithmic and exponential.",
                             "Examples": [
                                 "Find dy/dx for the function y = ln(x).",
-                                "Show that the derivative of f(x) = tan(x) is f'(x) = sec²x using the quotient rule for derivatives.",
+                                "Show that the derivative of f(x) = tan(x) is f'(x) = sec^2x using the quotient rule for derivatives.",
                                 "Find f'(x) for f(x) = (x^2+ 2)¹/²."
                             ],
                             "Subs": []
@@ -2582,7 +2582,7 @@
                         },
                         {
                             "Key": "FL.M9-12.C.5.5",
-                            "Label": "Find the area between a curve and the `text(x)`-axis or between two curves by using definite integrals.",
+                            "Label": "Find the area between a curve and the `x`-axis or between two curves by using definite integrals.",
                             "Examples": [
                                 "Find the area bounded by y = √x, y = 0 and x = 2."
                             ],
@@ -2600,8 +2600,8 @@
                             "Key": "FL.M9-12.C.5.7",
                             "Label": "Find the volume of a figure with known cross-sectional area, including figures of revolution, by using definite integrals.",
                             "Examples": [
-                                "A cone with its vertex at the origin lies symmetrically along the `text(x)`-axis. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
-                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x^2for 0 ≤ x ≤ 1 is revolved around the `text(y)`-axis?"
+                                "A cone with its vertex at the origin lies symmetrically along the `x`-axis. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
+                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x^2for 0 ≤ x ≤ 1 is revolved around the `y`-axis?"
                             ],
                             "Subs": []
                         }

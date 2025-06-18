@@ -73,14 +73,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT1M2/media/2a.jpg",
-            "What is the `text(x)`-intercept of the graph shown?"
+            "What is the `x`-intercept of the graph shown?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`(-5, 0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the `text(x)`-intercept of a graph in the `text(xy)`-plane that intersects the `text(x)`-axis at `x=-5`, not `x=4`.",
+                    "Rationale": "This is the `x`-intercept of a graph in the `xy`-plane that intersects the `x`-axis at `x=-5`, not `x=4`.",
                     "Percent": 0
                 }
             },
@@ -88,7 +88,7 @@
                 "Choice": "`(5, 0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the `text(x)`-intercept of a graph in the `text(xy)`-plane that intersects the `text(x)`-axis at `x=5`, not `x=4`.",
+                    "Rationale": "This is the `x`-intercept of a graph in the `xy`-plane that intersects the `x`-axis at `x=5`, not `x=4`.",
                     "Percent": 0
                 }
             },
@@ -96,7 +96,7 @@
                 "Choice": "`(-4, 0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the `text(x)`-intercept of a graph in the `text(xy)`-plane that intersects the `text(x)`-axis at `x=-4`, not `x=4`.",
+                    "Rationale": "This is the `x`-intercept of a graph in the `xy`-plane that intersects the `x`-axis at `x=-4`, not `x=4`.",
                     "Percent": 0
                 }
             },
@@ -104,7 +104,7 @@
                 "Choice": "`(4, 0)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `text(x)`-intercept of the graph shown is the point `(x,y)` on the graph where `y=0`. At `y=0`, the corresponding value of `x` is `4`. Therefore, the `text(x)`-intercept of the graph shown is `(4, 0)`.",
+                    "Rationale": "The `x`-intercept of the graph shown is the point `(x,y)` on the graph where `y=0`. At `y=0`, the corresponding value of `x` is `4`. Therefore, the `x`-intercept of the graph shown is `(4, 0)`.",
                     "Percent": 0
                 }
             }
@@ -184,14 +184,14 @@
         "Explain": false,
         "Content": [
             ":box:`x=49`\n\n`y=sqrt(x)+9`",
-            "The graphs of the given equations intersect at the point `(x,y)` in the `text(xy)`-plane. What is the value of y?"
+            "The graphs of the given equations intersect at the point `(x,y)` in the `xy`-plane. What is the value of y?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`16`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graphs of the given equations intersect at the point `(x,y)` in the `text(xy)`-plane. It follows that `(x,y)` represents a solution to the system consisting of the given equations. The first equation given is `x=49`. Substituting `49` for `x` in the second equation given, `y=sqrt(x)+9`, yields `y=sqrt(49)+9`, which is equivalent to `y=7+9`, or `y=16`. It follows that the graphs of the given equations intersect at the point `(49, 16)`. Therefore, the value of `y` is `16`.",
+                    "Rationale": "It's given that the graphs of the given equations intersect at the point `(x,y)` in the `xy`-plane. It follows that `(x,y)` represents a solution to the system consisting of the given equations. The first equation given is `x=49`. Substituting `49` for `x` in the second equation given, `y=sqrt(x)+9`, yields `y=sqrt(49)+9`, which is equivalent to `y=7+9`, or `y=16`. It follows that the graphs of the given equations intersect at the point `(49, 16)`. Therefore, the value of `y` is `16`.",
                     "Percent": 0
                 }
             },
@@ -230,7 +230,7 @@
             "Problem-Solving & Data Analysis"
         ],
         "SubTopics": [
-            "Solve problems involving derived units, including those that arise from products (e.g., kilowatt-hours) and quotients (e.g., population per square kilometer)."
+            "Solve problems involving derived units, including those that arise from products (e.g., `text(kilowatt-hours)`) and quotients (e.g., text`(population per square kilometer)`)."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -239,7 +239,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cherry pitting machine pits `12text( pounds)` of cherries in `3text( minutes)`. At this rate, how many minutes does it take the machine to pit `96text( pounds)` of cherries?"
+            "A cherry pitting machine pits `12` `text(pounds)` of cherries in `3` `text(minutes)`. At this rate, how many minutes does it take the machine to pit `96` `text(pounds)` of cherries?"
         ],
         "AnswerChoices": {
             "A": {
@@ -262,7 +262,7 @@
                 "Choice": "`24`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the cherry pitting machine pits `12text( pounds)` of cherries in `3text( minutes)`. This rate can be written as `(12text( pounds of cherries))/(3text( minutes))`. If the number of minutes it takes the machine to pit `96text( pounds)` of cherries is represented by `x`, the value of `x` can be calculated by solving the equation `(12text( pounds of cherries))/(3text( minutes)) = (96text( pounds of cherries))/(xtext( minutes))`, which can be rewritten as `12/3=96/x`, or `4=96/x`. Multiplying each side of this equation by `x` yields `4x=96`. Dividing each side of this equation by `4` yields `x=24`. Therefore, it takes the machine `24text( minutes)` to pit `96text( pounds)` of cherries.",
+                    "Rationale": "It's given that the cherry pitting machine pits `12` `text(pounds)` of cherries in `3` `text(minutes)`. This rate can be written as `(12` `text(pounds of cherries))/(3` `text(minutes))`. If the number of minutes it takes the machine to pit `96` `text(pounds)` of cherries is represented by `x`, the value of `x` can be calculated by solving the equation `(12text( pounds of cherries))/(3text( minutes))=(96text( pounds of cherries))/(xtext( minutes))`, which can be rewritten as `12/3=96/x`, or `4=96/x`. Multiplying each side of this equation by `x` yields `4x=96`. Dividing each side of this equation by `4` yields `x=24`. Therefore, it takes the machine `24` `text(minutes)` to pit `96` `text(pounds)` of cherries.",
                     "Percent": 0
                 }
             },
@@ -325,14 +325,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line `k` is defined by `y=1/4x+1`. Line `j` is parallel to line `k` in the `text(xy)`-plane. What is the slope of `j`?"
+            "Line `k` is defined by `y=1/4x+1`. Line `j` is parallel to line `k` in the `xy`-plane. What is the slope of `j`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that line `k` is defined by `y=1/4x+1`. It's also given that line `j` is parallel to line `k` in the `text(xy)`-plane. A line in the `text(xy)`-plane represented by an equation in slope-intercept form `y=mx+b` has a slope of `m` and a `text(y)`-intercept of `(0, b)`. Therefore, the slope of line `k` is `1/4`. Since parallel lines have equal slopes, the slope of line `j` is `1/4`. Note that `1/4` and `0.25` are examples of ways to enter a correct answer.",
+                    "Rationale": "It's given that line `k` is defined by `y=1/4x+1`. It's also given that line `j` is parallel to line `k` in the `xy`-plane. A line in the `xy`-plane represented by an equation in slope-intercept form `y=mx+b` has a slope of `m` and a `y`-intercept of `(0, b)`. Therefore, the slope of line `k` is `1/4`. Since parallel lines have equal slopes, the slope of line `j` is `1/4`. Note that `1/4` and `0.25` are examples of ways to enter a correct answer.",
                     "Percent": 0
                 }
             }
@@ -467,14 +467,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "For a camping trip a group bought `x` one-liter bottles of water and `y` three-liter bottles of water, for a total of `240text( liters)` of water. Which equation represents this situation?"
+            "For a camping trip a group bought `x` one-liter bottles of water and `y` three-liter bottles of water, for a total of `240` `text(liters)` of water. Which equation represents this situation?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`x+3y=240`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that for a camping trip a group bought `x` one-liter bottles of water and `y` three-liter bottles of water. Since the group bought `x` one-liter bottles of water, the total number of liters bought from `x` one-liter bottles of water is represented as `1x`, or `x`. Since the group bought `y` three-liter bottles of water, the total number of liters bought from `y` three-liter bottles of water is represented as `3y`. It's given that the group bought a total of `240text( liters)`; thus, the equation `x+3y=240` represents this situation.",
+                    "Rationale": "It's given that for a camping trip a group bought `x` one-liter bottles of water and `y` three-liter bottles of water. Since the group bought `x` one-liter bottles of water, the total number of liters bought from `x` one-liter bottles of water is represented as `1x`, or `x`. Since the group bought `y` three-liter bottles of water, the total number of liters bought from `y` three-liter bottles of water is represented as `3y`. It's given that the group bought a total of `240` `text(liters)`; thus, the equation `x+3y=240` represents this situation.",
                     "Percent": 0
                 }
             },
@@ -498,7 +498,7 @@
                 "Choice": "`3x+y=240`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a situation where the group bought `x` three-liter bottles of water and `y` one-liter bottles of water, for a total of `240text( liters)` of water.",
+                    "Rationale": "This equation represents a situation where the group bought `x` three-liter bottles of water and `y` one-liter bottles of water, for a total of `240` `text(liters)` of water.",
                     "Percent": 0
                 }
             }
@@ -569,7 +569,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "Given a linear inequality or system of linear inequalities, interpret a point in the `text(xy)`-plane in terms of the solution set."
+            "Given a linear inequality or system of linear inequalities, interpret a point in the `xy`-plane in terms of the solution set."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -697,14 +697,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cleaning service that cleans both offices and homes can clean at most `14text( places per day)`. Which inequality represents this situation, where `f` is the number of offices and `h` is the number of homes?"
+            "A cleaning service that cleans both offices and homes can clean at most `14` `text(places per day)`. Which inequality represents this situation, where `f` is the number of offices and `h` is the number of homes?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`f+hle14`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the cleaning service cleans both offices and homes, where `f` is the number of offices and `h` is the number of homes the cleaning service can clean per day. Therefore, the expression `f+h` represents the number of places the cleaning service can clean per day. It's also given that the cleaning service can clean at most `14text( places per day)`. Since `f+h` represents the number of places the cleaning service can clean per day and the service can clean at most `14text( places per day)`, it follows that the inequality `f+hle14` represents this situation.",
+                    "Rationale": "It's given that the cleaning service cleans both offices and homes, where `f` is the number of offices and `h` is the number of homes the cleaning service can clean per day. Therefore, the expression `f+h` represents the number of places the cleaning service can clean per day. It's also given that the cleaning service can clean at most `14` `text(places per day)`. Since `f+h` represents the number of places the cleaning service can clean per day and the service can clean at most `14` `text(places per day)`, it follows that the inequality `f+hle14` represents this situation.",
                     "Percent": 0
                 }
             },
@@ -712,7 +712,7 @@
                 "Choice": "`f+hge14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality represents a cleaning service that cleans at least `14text( places per day)`.",
+                    "Rationale": "This inequality represents a cleaning service that cleans at least `14` `text(places per day)`.",
                     "Percent": 0
                 }
             },
@@ -863,7 +863,7 @@
         "Explain": false,
         "Content": [
             ":box:`y=0.25x^2-7.5x+90.25`",
-            "The equation gives the estimated stock price `y`, in `text(dollars)`, for a certain company `xtext( days)` after a new product launched, where `0lexle20`. Which statement is the best interpretation of `(x,y)=(1,83)` in this context?"
+            "The equation gives the estimated stock price `y`, in `text(dollars)`, for a certain company `x` `text(days)` after a new product launched, where `0lexle20`. Which statement is the best interpretation of `(x,y)=(1,83)` in this context?"
         ],
         "AnswerChoices": {
             "A": {
@@ -875,7 +875,7 @@
                 }
             },
             "B": {
-                "Choice": "The company's estimated stock price increased `$1` every `83text( days)` after the new product launched.",
+                "Choice": "The company's estimated stock price increased `$1` every `83` `text(days)` after the new product launched.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -883,15 +883,15 @@
                 }
             },
             "C": {
-                "Choice": "`1text( day)` after the new product launched, the company's estimated stock price is `$83`.",
+                "Choice": "`1` `text(day)` after the new product launched, the company's estimated stock price is `$83`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the given equation, `x` represents the number of days after a new product launched, where `0lexle20`, and `y` represents the estimated stock price, in `text(dollars)`, for a certain company. Therefore, the best interpretation of `(x,y)=(1,83)` in this context is that `1text( day)` after the new product launched, the company's estimated stock price is `$83`.",
+                    "Rationale": "In the given equation, `x` represents the number of days after a new product launched, where `0lexle20`, and `y` represents the estimated stock price, in `text(dollars)`, for a certain company. Therefore, the best interpretation of `(x,y)=(1,83)` in this context is that `1` `text(day)` after the new product launched, the company's estimated stock price is `$83`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "`83text( days)` after the new product launched, the company's estimated stock price is `$1`.",
+                "Choice": "`83` `text(days)` after the new product launched, the company's estimated stock price is `$1`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -974,14 +974,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A triangular prism has a height of `8text( centimeters)` (`text(cm)`) and a volume of `216text(cm)^3`. What is the area, in `text(cm)^2`, of the base of the prism? (The volume of a triangular prism is equal to `Bh`, where `B` is the area of the base and `h` is the height of the prism.)"
+            "A triangular prism has a height of `8` `text(centimeters)` (`text(cm)`) and a volume of `216text(cm)^3`. What is the area, in `text(cm)^2`, of the base of the prism? (The volume of a triangular prism is equal to `Bh`, where `B` is the area of the base and `h` is the height of the prism.)"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:27",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a triangular prism has a volume of `216text( cubic centimeters)` (`text(cm)^3`) and the volume of a triangular prism is equal to `Bh`, where `B` is the area of the base and `h` is the height of the prism. Therefore, `216=Bh`. It's also given that the triangular prism has a height of `8text( cm)`. Therefore, `h=8`. Substituting `8` for `h` in the equation `216=Bh` yields `216=B(8)`. Dividing both sides of this equation by `8` yields `27=B`. Therefore, the area, in `text(cm)^2`, of the base of the prism is `27`.",
+                    "Rationale": "It's given that a triangular prism has a volume of `216` `text(cubic centimeters)` (`text(cm)^3`) and the volume of a triangular prism is equal to `Bh`, where `B` is the area of the base and `h` is the height of the prism. Therefore, `216=Bh`. It's also given that the triangular prism has a height of `8` `text(cm)`. Therefore, `h=8`. Substituting `8` for `h` in the equation `216=Bh` yields `216=B(8)`. Dividing both sides of this equation by `8` yields `27=B`. Therefore, the area, in `text(cm)^2`, of the base of the prism is `27`.",
                     "Percent": 0
                 }
             }
@@ -1006,14 +1006,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT1M2/media/21a.jpg",
-            "The graph shows the momentum `y`, in `text(newton-seconds)`, of an object `xtext( seconds)` after the object started moving, for `0lexle8`. What is the average rate of change, in `text(newton‑seconds per second)`, in the momentum of the object from `x=2` to `x=6`?"
+            "The graph shows the momentum `y`, in `text(newton-seconds)`, of an object `x` `text(seconds)` after the object started moving, for `0lexle8`. What is the average rate of change, in `text(newton‑seconds per second)`, in the momentum of the object from `x=2` to `x=6`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For the graph shown, `x` represents time, in `text(seconds)`, and `y` represents momentum, in `text(newton-seconds)`. Therefore, the average rate of change, in `text(newton-seconds per second)`, in the momentum of the object between two `text(x)`-values is the difference in the corresponding `text(y)`-values divided by the difference in the `text(x)`-values. The graph shows that at `x=2`, the corresponding `text(y)`-value is `6`. The graph also shows that at `x=6`, the corresponding `text(y)`-value is `8`. It follows that the average rate of change, in `text(newton-seconds per second)`, from `x=2` to `x=6` is `(8-6)/(6-2)`, which is equivalent to `2/4`, or `1/2`.",
+                    "Rationale": "For the graph shown, `x` represents time, in `text(seconds)`, and `y` represents momentum, in `text(newton-seconds)`. Therefore, the average rate of change, in `text(newton-seconds per second)`, in the momentum of the object between two `x`-values is the difference in the corresponding `y`-values divided by the difference in the `x`-values. The graph shows that at `x=2`, the corresponding `y`-value is `6`. The graph also shows that at `x=6`, the corresponding `y`-value is `8`. It follows that the average rate of change, in `text(newton-seconds per second)`, from `x=2` to `x=6` is `(8-6)/(6-2)`, which is equivalent to `2/4`, or `1/2`.",
                     "Percent": 0
                 }
             }
@@ -1093,14 +1093,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A bus traveled on the highway and on local roads to complete a trip of `160text( miles)`. The trip took `4text( hours)`. The bus traveled at an average speed of `55text( miles per hour)` (`text(mph)`) on the highway and an average speed of `25text( mph)` on local roads. If `x` is the time, in `text(hours)`, the bus traveled on the highway and `y` is the time, in `text(hours)`, it traveled on local roads, which system of equations represents this situation?"
+            "A bus traveled on the highway and on local roads to complete a trip of `160` `text(miles)`. The trip took `4` `text(hours)`. The bus traveled at an average speed of `55` `text(miles per hour)` (`text(mph)`) on the highway and an average speed of `25` `text(mph)` on local roads. If `x` is the time, in `text(hours)`, the bus traveled on the highway and `y` is the time, in `text(hours)`, it traveled on local roads, which system of equations represents this situation?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": ":box:`55x+25y=4`\n\n`x+y=160`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This system of equations represents a situation where the trip was `4text( miles)` and took `160text( hours)`.",
+                    "Rationale": "This system of equations represents a situation where the trip was `4` `text(miles)` and took `160` `text(hours)`.",
                     "Percent": 0
                 }
             },
@@ -1108,7 +1108,7 @@
                 "Choice": ":box:`55x+25y=160`\n\n`x+y=4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the bus traveled at an average speed of `55text( miles per hour)` (`text(mph)`) on the highway for `xtext( hours)`, then the bus traveled `55xtext( miles)` on the highway. If the bus traveled at an average speed of `25text( mph)` on local roads for `ytext( hours)`, then the bus traveled `25ytext( miles)` on local roads. It's given that the trip was `160text( miles)`. This can be represented by the equation `55x+25y=160`. It's also given that the trip took `4text( hours)`. This can be represented by the equation `x+y=4`. Therefore, the system consisting of the equations `55x+25y=160` and `x+y=4` represents this situation.",
+                    "Rationale": "If the bus traveled at an average speed of `55` `text(miles per hour)` (`text(mph)`) on the highway for `x` `text(hours)`, then the bus traveled `55x` `text(miles)` on the highway. If the bus traveled at an average speed of `25` `text(mph)` on local roads for `y` `text(hours)`, then the bus traveled `25y` `text(miles)` on local roads. It's given that the trip was `160` `text(miles)`. This can be represented by the equation `55x+25y=160`. It's also given that the trip took `4` `text(hours)`. This can be represented by the equation `x+y=4`. Therefore, the system consisting of the equations `55x+25y=160` and `x+y=4` represents this situation.",
                     "Percent": 0
                 }
             },
@@ -1116,7 +1116,7 @@
                 "Choice": ":box:`25x+55y=4`\n\n`x+y=160`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This system of equations represents a situation where the trip was `4text( miles)` and took `160text( hours)`, and the bus traveled at an average speed of `25text( mph)` on the highway and `55text( mph)` on local roads.",
+                    "Rationale": "This system of equations represents a situation where the trip was `4` `text(miles)` and took `160` `text(hours)`, and the bus traveled at an average speed of `25` `text(mph)` on the highway and `55` `text(mph)` on local roads.",
                     "Percent": 0
                 }
             },
@@ -1124,7 +1124,7 @@
                 "Choice": ":box:`25x+55y=160`\n\n`x+y=4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This system of equations represents a situation where the bus traveled at an average speed of `25text( mph)` on the highway and `55text( mph)` on local roads.",
+                    "Rationale": "This system of equations represents a situation where the bus traveled at an average speed of `25` `text(mph)` on the highway and `55` `text(mph)` on local roads.",
                     "Percent": 0
                 }
             }
@@ -1204,7 +1204,7 @@
         "Explain": false,
         "Content": [
             ":box:`f(x)=2x+244`",
-            "The given function `f` represents the perimeter, in `text(centimeters)` (`text(cm)`), of a rectangle with a length of `xtext( cm)` and a fixed width. What is the width, in `text(cm)`, of the rectangle?"
+            "The given function `f` represents the perimeter, in `text(centimeters)` (`text(cm)`), of a rectangle with a length of `x` `text(cm)` and a fixed width. What is the width, in `text(cm)`, of the rectangle?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1219,7 +1219,7 @@
                 "Choice": "`122`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `f(x)=2x+244` represents the perimeter, in `text(centimeters)` (`text(cm)`), of a rectangle with a length of `xtext( cm)` and a fixed width. If `w` represents a fixed width, in `text(cm)`, then the perimeter, in `text(cm)`, of a rectangle with a length of `xtext( cm)` and a fixed width of `wtext( cm)` can be given by the function `f(x)=2x+2w`. Therefore, `2x+2w=244+2x`. Subtracting `2x` from both sides of this equation yields `2w=244`. Dividing both sides of this equation by `2` yields `w=122`. Therefore, the width, in `text(cm)`, of the rectangle is `122`.",
+                    "Rationale": "It's given that `f(x)=2x+244` represents the perimeter, in `text(centimeters)` (`text(cm)`), of a rectangle with a length of `x` `text(cm)` and a fixed width. If `w` represents a fixed width, in `text(cm)`, then the perimeter, in `text(cm)`, of a rectangle with a length of `x` `text(cm)` and a fixed width of `w` `text(cm)` can be given by the function `f(x)=2x+2w`. Therefore, `2x+2w=244+2x`. Subtracting `2x` from both sides of this equation yields `2w=244`. Dividing both sides of this equation by `2` yields `w=122`. Therefore, the width, in `text(cm)`, of the rectangle is `122`.",
                     "Percent": 0
                 }
             },

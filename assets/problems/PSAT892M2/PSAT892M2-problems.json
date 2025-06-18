@@ -25,7 +25,7 @@
                 "Choice": "`8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "One of the wolves produced `8` offspring, but its weight was greater than `50text( pounds)`.",
+                    "Rationale": "One of the wolves produced `8` offspring, but its weight was greater than `50` `text(pounds)`.",
                     "Percent": 0
                 }
             },
@@ -33,7 +33,7 @@
                 "Choice": "`7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Three of the wolves produced `7` offspring each, but their weights were each greater than `50text( pounds)`.",
+                    "Rationale": "Three of the wolves produced `7` offspring each, but their weights were each greater than `50` `text(pounds)`.",
                     "Percent": 0
                 }
             },
@@ -41,7 +41,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For each point on the scatterplot shown, the `text(x)`-value represents the weight, in `text(pounds)`, of a female gray wolf and the `text(y)`-value represents the number of offspring that wolf produced. The point on the graph with an `text(x)`-value of `50` has a `text(y)`-value of `6`. Therefore, the `50text(-pound)` gray wolf produced `6` offspring.",
+                    "Rationale": "For each point on the scatterplot shown, the `x`-value represents the weight, in `text(pounds)`, of a female gray wolf and the `y`-value represents the number of offspring that wolf produced. The point on the graph with an `x`-value of `50` has a `y`-value of `6`. Therefore, the `50text(-pound)` gray wolf produced `6` offspring.",
                     "Percent": 0
                 }
             },
@@ -49,7 +49,7 @@
                 "Choice": "`5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Two of the wolves produced `5` offspring each, but their weights were each less than `50text( pounds)`.",
+                    "Rationale": "Two of the wolves produced `5` offspring each, but their weights were each less than `50` `text(pounds)`.",
                     "Percent": 0
                 }
             }
@@ -241,14 +241,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A line in the `text(xy)`-plane has a slope of `-1/2` and passes through the point `(0,3)`. Which equation represents this line?"
+            "A line in the `xy`-plane has a slope of `-1/2` and passes through the point `(0,3)`. Which equation represents this line?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`y=-x/2-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a line in the `text(xy)`-plane that passes through the point `(0,-3)`, not `(0,3)`.",
+                    "Rationale": "This equation represents a line in the `xy`-plane that passes through the point `(0,-3)`, not `(0,3)`.",
                     "Percent": 0
                 }
             },
@@ -256,7 +256,7 @@
                 "Choice": "`y=-x/2+3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A line in the `text(xy)`-plane with a slope of `m` and a `text(y)`-intercept of `(0,b)` can be represented by the equation `y=mx+b`. It's given that the line has a slope of `-1/2`. Therefore, `m=-1/2`. It's also given that the line passes through the point `(0,3)`. Therefore, `b=3`. Substituting `-1/2` for `m` and `3` for `b` in the equation `y=mx+b` yields `y=-x/2+3`. Therefore, the equation `y=-x/2+3` represents this line.",
+                    "Rationale": "A line in the `xy`-plane with a slope of `m` and a `y`-intercept of `(0,b)` can be represented by the equation `y=mx+b`. It's given that the line has a slope of `-1/2`. Therefore, `m=-1/2`. It's also given that the line passes through the point `(0,3)`. Therefore, `b=3`. Substituting `-1/2` for `m` and `3` for `b` in the equation `y=mx+b` yields `y=-x/2+3`. Therefore, the equation `y=-x/2+3` represents this line.",
                     "Percent": 0
                 }
             },
@@ -264,7 +264,7 @@
                 "Choice": "`y=x/2-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a line in the `text(xy)`-plane that has a slope of `1/2`, not `-1/2`, and passes through the point `(0,-3)`, not `(0,3)`.",
+                    "Rationale": "This equation represents a line in the `xy`-plane that has a slope of `1/2`, not `-1/2`, and passes through the point `(0,-3)`, not `(0,3)`.",
                     "Percent": 0
                 }
             },
@@ -272,7 +272,7 @@
                 "Choice": "`y=x/2+3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a line in the `text(xy)`-plane that has a slope of `1/2`, not `-1/2`.",
+                    "Rationale": "This equation represents a line in the `xy`-plane that has a slope of `1/2`, not `-1/2`.",
                     "Percent": 0
                 }
             }
@@ -296,14 +296,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A product costs `11.00text( dollars per pound)`. What is the cost, in `text(dollars)`, for `6text( pounds)` of the product?"
+            "A product costs `11.00` `text(dollars per pound)`. What is the cost, in `text(dollars)`, for `6` `text(pounds)` of the product?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:66",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a product costs `11.00text( dollars per pound)`. Therefore, the cost for `6text( pounds)` of the product is `((11.00text( dollars))/(1text( pound)))(6text(pounds))`, which is equivalent to `66.00`, or `66`, `text(dollars)`.",
+                    "Rationale": "It's given that a product costs `11.00` `text(dollars per pound)`. Therefore, the cost for `6` `text(pounds)` of the product is `((11.00text( dollars))/(1text( pound)))(6text( pounds))`, which is equivalent to `66.00`, or `66`, `text(dollars)`.",
                     "Percent": 0
                 }
             }
@@ -327,14 +327,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The equation `46=2x+2y` gives the perimeter of a rectangular rug that has length `x`, in `text(feet)`, and width `y`, in `text(feet)`. The width of the rug is `8text( feet)`. What is the length, in `text(feet)`, of the rug?"
+            "The equation `46=2x+2y` gives the perimeter of a rectangular rug that has length `x`, in `text(feet)`, and width `y`, in `text(feet)`. The width of the rug is `8` `text(feet)`. What is the length, in `text(feet)`, of the rug?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:15",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation `46=2x+2y` gives the perimeter of a rectangular rug that has length `x`, in `text(feet)`, and width `y`, in `text(feet)`. It's also given that the width of the rug is `8text( feet)`. Substituting `8` for `y` in the equation `46=2x+2y` yields `46=2x+2(8)`, or `46=2x+16`. Subtracting `16` from both sides of this equation yields `30=2x`. Dividing both sides of this equation by `2` yields `15=x`. Since `x` represents the length, in `text(feet)`, of the rug, it follows that the length of the rug is `15text( feet)`.",
+                    "Rationale": "It's given that the equation `46=2x+2y` gives the perimeter of a rectangular rug that has length `x`, in `text(feet)`, and width `y`, in `text(feet)`. It's also given that the width of the rug is `8` `text(feet)`. Substituting `8` for `y` in the equation `46=2x+2y` yields `46=2x+2(8)`, or `46=2x+16`. Subtracting `16` from both sides of this equation yields `30=2x`. Dividing both sides of this equation by `2` yields `15=x`. Since `x` represents the length, in `text(feet)`, of the rug, it follows that the length of the rug is `15` `text(feet)`.",
                     "Percent": 0
                 }
             }
@@ -359,14 +359,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT892M2/media/8a.jpg",
-            "Twelve data points are shown in the scatterplot. A line of best fit for the data is also shown. At `x=1,200`, which of the following is closest to the `text(y)`-value predicted by the line of best fit?"
+            "Twelve data points are shown in the scatterplot. A line of best fit for the data is also shown. At `x=1,200`, which of the following is closest to the `y`-value predicted by the line of best fit?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the integer value closest to the `text(y)`-value predicted by the line of best fit at `x=1,800`.",
+                    "Rationale": "This is the integer value closest to the `y`-value predicted by the line of best fit at `x=1,800`.",
                     "Percent": 0
                 }
             },
@@ -374,7 +374,7 @@
                 "Choice": "`14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the integer value closest to the `text(y)`-value predicted by the line of best fit at `x=1,500`.",
+                    "Rationale": "This is the integer value closest to the `y`-value predicted by the line of best fit at `x=1,500`.",
                     "Percent": 0
                 }
             },
@@ -382,7 +382,7 @@
                 "Choice": "`11`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "On the line of best fit, an `text(x)`-value of `1,200` corresponds to a `text(y)`-value between `10` and `12`. Therefore, of the given choices, `11` is closest to the `text(y)`-value predicted by the line of best fit at `x=1,200`.",
+                    "Rationale": "On the line of best fit, an `x`-value of `1,200` corresponds to a `y`-value between `10` and `12`. Therefore, of the given choices, `11` is closest to the `y`-value predicted by the line of best fit at `x=1,200`.",
                     "Percent": 0
                 }
             },
@@ -390,7 +390,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the integer value closest to the `text(y)`-value predicted by the line of best fit at `x=600`.",
+                    "Rationale": "This is the integer value closest to the `y`-value predicted by the line of best fit at `x=600`.",
                     "Percent": 0
                 }
             }
@@ -776,7 +776,7 @@
                 "Choice": "`f(x)=17`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation defining the linear function `f` can be written in the form `f(x)=mx+b`, where `m` is the slope and `(0,b)` is the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane. The slope of the graph of `y=f(x)` can be found using the formula `m=(y_2-y_1)/(x_2-x_1)`, where `(x_1,y_1)` and `(x_2,y_2)` are any two points that the graph passes through. If `f(0)=17`, it follows that the graph of `y=f(x)` passes through the point `(0,17)`. If `f(1)=17`, it follows that the graph of `y=f(x)` passes through the point `(1,17)`. Substituting `(0,17)` and `(1,17)` for `(x_1,y_1)` and `(x_2,y_2)`,respectively, in the formula `m=(y_2-y_1)/(x_2-x_1)` yields `m=(17-17)/(1-0)`, which is equivalent to `m=-0/1`, or `m=0`. Since the graph of `y=f(x)` passes through `(0,17)`, it follows that `b=17`. Substituting `0` for `m` and `17` for `b` in the equation `f(x)=mx+b` yields `f(x)=0x+17`, or `f(x)=17`. Thus, the equation that defines `f` is `f(x)=17`.",
+                    "Rationale": "An equation defining the linear function `f` can be written in the form `f(x)=mx+b`, where `m` is the slope and `(0,b)` is the `y`-intercept of the graph of `y=f(x)` in the `xy`-plane. The slope of the graph of `y=f(x)` can be found using the formula `m=(y_2-y_1)/(x_2-x_1)`, where `(x_1,y_1)` and `(x_2,y_2)` are any two points that the graph passes through. If `f(0)=17`, it follows that the graph of `y=f(x)` passes through the point `(0,17)`. If `f(1)=17`, it follows that the graph of `y=f(x)` passes through the point `(1,17)`. Substituting `(0,17)` and `(1,17)` for `(x_1,y_1)` and `(x_2,y_2)`,respectively, in the formula `m=(y_2-y_1)/(x_2-x_1)` yields `m=(17-17)/(1-0)`, which is equivalent to `m=-0/1`, or `m=0`. Since the graph of `y=f(x)` passes through `(0,17)`, it follows that `b=17`. Substituting `0` for `m` and `17` for `b` in the equation `f(x)=mx+b` yields `f(x)=0x+17`, or `f(x)=17`. Thus, the equation that defines `f` is `f(x)=17`.",
                     "Percent": 0
                 }
             },
@@ -839,7 +839,7 @@
                 "Choice": "`-52.16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is the change, in `text(degrees Celsius)`, in the estimated surface water temperature over `326text( days)`.",
+                    "Rationale": "This choice is the change, in `text(degrees Celsius)`, in the estimated surface water temperature over `326` `text(days)`.",
                     "Percent": 0
                 }
             }
@@ -919,35 +919,35 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A sample of a certain isotope takes `29text( years)` to decay to half its original mass. The function `s(t)=184(0.5)^(t/29)` gives the approximate mass of this isotope, in `text(grams)`, that remains t years after a `184text(-gram)` sample starts to decay. Which statement is the best interpretation of `s(87)=23` in this context?"
+            "A sample of a certain isotope takes `29` `text(years)` to decay to half its original mass. The function `s(t)=184(0.5)^(t/29)` gives the approximate mass of this isotope, in `text(grams)`, that remains t years after a `184text(-gram)` sample starts to decay. Which statement is the best interpretation of `s(87)=23` in this context?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Approximately `23text( grams)` of the sample remains `87text( years)` after the sample starts to decay.",
+                "Choice": "Approximately `23` `text(grams)` of the sample remains `87` `text(years)` after the sample starts to decay.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the given function, `s(t)` represents the approximate mass, in `text(grams)`, of the sample that remains `t text( years)` after the sample starts to decay. It follows that the best interpretation of `s(87)=23` is that approximately `23text( grams)` of the sample remains `87text( years)` after the sample starts to decay.",
+                    "Rationale": "In the given function, `s(t)` represents the approximate mass, in `text(grams)`, of the sample that remains `t` `text(years)` after the sample starts to decay. It follows that the best interpretation of `s(87)=23` is that approximately `23` `text(grams)` of the sample remains `87` `text(years)` after the sample starts to decay.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "The mass of the sample has decreased by approximately `23text( grams)` `87text( years)` after the sample starts to decay.",
+                "Choice": "The mass of the sample has decreased by approximately `23` `text(grams)` `87` `text(years)` after the sample starts to decay.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The mass of the sample has decreased by approximately `184-23`, or `161`, `text(grams)`, not `23text( grams)`, `87text( years)` after the sample starts to decay.",
+                    "Rationale": "The mass of the sample has decreased by approximately `184-23`, or `161`, `text(grams)`, not `23` `text(grams)`, `87` `text(years)` after the sample starts to decay.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The mass of the sample has decreased by approximately `87text( grams)` `23text( years)` after the sample starts to decay.",
+                "Choice": "The mass of the sample has decreased by approximately `87` `text(grams)` `23` `text(years)` after the sample starts to decay.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The mass of the sample has decreased by approximately `78text( grams)`, not `87text( grams)`, `23text( years)` after the sample starts to decay.",
+                    "Rationale": "The mass of the sample has decreased by approximately `78` `text(grams)`, not `87` `text(grams)`, `23` `text(years)` after the sample starts to decay.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "Approximately `87text( grams)` of the sample remains `23text( years)` after the sample starts to decay.",
+                "Choice": "Approximately `87` `text(grams)` of the sample remains `23` `text(years)` after the sample starts to decay.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This would be the best interpretation of `s(23)=87`, not `s(87)=23`.",
@@ -974,14 +974,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "How many `text(fluid ounces)` are equivalent to `76text( quarts`)? (`8text( fluid ounces)=1text( cup)` and `4text( cups)=1text( quart)`)"
+            "How many `text(fluid ounces)` are equivalent to `76` `text(quarts`)? (`8` `text(fluid ounces)=1` `text(cup)` and `4` `text(cups)=1` `text(quart)`)"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:2432",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `4text( cups)=1text( quart)`. It follows that `76text( quarts)` is equivalent to `(76text( quarts))((4text( cups))/(1text( quart)))`, or `304text( cups)`. It's also given that `8text( fluid ounces)=1text( cup)`. It follows that `304text( cups)` is equivalent to `(304text( cups))((8text( fluid ounces))/(1text( cup)))`, or `2,432text( fluid ounces)`.",
+                    "Rationale": "It's given that `4` `text(cups)=1` `text(quart)`. It follows that `76` `text(quarts)` is equivalent to `(76` `text(quarts))((4text( cups))/(1text( quart)))`, or `304` `text(cups)`. It's also given that `8` `text(fluid ounces)=1` `text(cup)`. It follows that `304` `text(cups)` is equivalent to `(304` `text(cups))((8text( fluid ounces))/(1text( cup)))`, or `2,432` `text(fluid ounces)`.",
                     "Percent": 0
                 }
             }
@@ -1005,14 +1005,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A piece of wire with a length of `32text( inches)` is cut into two parts. One part has a length of `xtext( inches)`, and the other part has a length of `ytext( inches)`. The value of `x` is `4` more than `3` times the value of `y`. What is the value of `x`?"
+            "A piece of wire with a length of `32` `text(inches)` is cut into two parts. One part has a length of `x` `text(inches)`, and the other part has a length of `y` `text(inches)`. The value of `x` is `4` more than `3` times the value of `y`. What is the value of `x`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a piece of wire has a length of `32text( inches)` and is cut into two parts. It's also given that one part has a length of `xtext( inches)` and the other part has a length of `ytext( inches)`. It follows that the equation `x+y=32` represents this situation. It's also given that the value of `x` is `4` more than `3` times the value of `y`, or `x=3y+4`. Substituting `3y+4` for `x` in the equation `x+y=32` yields `3y+4+y=32`. Combining like terms on the left-hand side of this equation yields `4y+4=32`. Subtracting `4` from both sides of this equation yields `4y=28`. Dividing both sides of this equation by `4` yields `y=7`. Substituting `7` for `y` in the equation `x=3y+4` yields `x=3(7)+4`, or `x=25`. Therefore, the value of `x` is ``25``.",
+                    "Rationale": "It's given that a piece of wire has a length of `32` `text(inches)` and is cut into two parts. It's also given that one part has a length of `x` `text(inches)` and the other part has a length of `y` `text(inches)`. It follows that the equation `x+y=32` represents this situation. It's also given that the value of `x` is `4` more than `3` times the value of `y`, or `x=3y+4`. Substituting `3y+4` for `x` in the equation `x+y=32` yields `3y+4+y=32`. Combining like terms on the left-hand side of this equation yields `4y+4=32`. Subtracting `4` from both sides of this equation yields `4y=28`. Dividing both sides of this equation by `4` yields `y=7`. Substituting `7` for `y` in the equation `x=3y+4` yields `x=3(7)+4`, or `x=25`. Therefore, the value of `x` is ``25``.",
                     "Percent": 0
                 }
             }
@@ -1093,7 +1093,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A sphere has a radius of `17/5text( feet)`. What is the volume, in `text(cubic feet)`, of the sphere?"
+            "A sphere has a radius of `17/5` `text(feet)`. What is the volume, in `text(cubic feet)`, of the sphere?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1108,7 +1108,7 @@
                 "Choice": "`(68pi)/15`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the volume, in `text(cubic feet)`, of a sphere with a radius of `sqrt(17/5)text( feet)`.",
+                    "Rationale": "This is the volume, in `text(cubic feet)`, of a sphere with a radius of `sqrt(17/5)` `text(feet)`.",
                     "Percent": 0
                 }
             },
@@ -1124,7 +1124,7 @@
                 "Choice": "`(19,652pi)/375`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The volume, `V`, of a sphere can be found using the formula `V=(4pi)/3r^3`, where `r` is the radius of the sphere. It's given that the sphere has a radius of `17/5text( feet)`. Substituting `17/5` for `r` in the formula `V=(4pi)/3r^3` yields `V=(4pi)/3(17/5)^3` which is equivalent to `V=(4pi)/3((4,913)/125)` or `V=(19,652pi)/375`. Therefore, the volume, in `text(cubic feet)`, of the sphere is `(19,652pi)/375`.",
+                    "Rationale": "The volume, `V`, of a sphere can be found using the formula `V=(4pi)/3r^3`, where `r` is the radius of the sphere. It's given that the sphere has a radius of `17/5` `text(feet)`. Substituting `17/5` for `r` in the formula `V=(4pi)/3r^3` yields `V=(4pi)/3(17/5)^3` which is equivalent to `V=(4pi)/3((4,913)/125)` or `V=(19,652pi)/375`. Therefore, the volume, in `text(cubic feet)`, of the sphere is `(19,652pi)/375`.",
                     "Percent": 0
                 }
             }
@@ -1315,14 +1315,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A right square prism has a height of `14text( units)`. The volume of the prism is `2,016text( cubic units)`. What is the length, in `text(units)`, of an edge of the base?"
+            "A right square prism has a height of `14` `text(units)`. The volume of the prism is `2,016` `text(cubic units)`. What is the length, in `text(units)`, of an edge of the base?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:12",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The volume, `V`, of a right square prism can be calculated using the formula `V=s^2h`, where `s` represents the length of an edge of the base and `h` represents the height of the prism. It's given that the volume of the prism is `2,016text( cubic units)` and the height is `14text( units)`. Substituting `2,016` for `V` and `14` for `h` in the formula `V = s^2h` yields, `2,016=(s^2)(14)`. Dividing both sides of this equation by `14` yields `144 = s^2`. Taking the square root of both sides of this equation yields two solutions: `-12=s` and `12=s`. The length can't be negative, so `12=x`. Therefore, the length, in `text(units)`, of an edge of the base is `12`.",
+                    "Rationale": "The volume, `V`, of a right square prism can be calculated using the formula `V=s^2h`, where `s` represents the length of an edge of the base and `h` represents the height of the prism. It's given that the volume of the prism is `2,016` `text(cubic units)` and the height is `14` `text(units)`. Substituting `2,016` for `V` and `14` for `h` in the formula `V = s^2h` yields, `2,016=(s^2)(14)`. Dividing both sides of this equation by `14` yields `144 = s^2`. Taking the square root of both sides of this equation yields two solutions: `-12=s` and `12=s`. The length can't be negative, so `12=x`. Therefore, the length, in `text(units)`, of an edge of the base is `12`.",
                     "Percent": 0
                 }
             }

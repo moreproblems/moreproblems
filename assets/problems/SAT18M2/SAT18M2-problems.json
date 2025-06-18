@@ -350,7 +350,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, the graph of which of the following equations is a line with a slope of 3?"
+            "In the `xy`-plane, the graph of which of the following equations is a line with a slope of 3?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1012,7 +1012,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `x`-intercepts of the graph and `f(0)` corresponds to the `y`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1021,14 +1021,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The range of the polynomial function f is the set of real numbers less than or equal to 4. If the zeros of f are -3 and 1, which of the following could be the graph of `y=f(x)` in the `text(xy)`-plane?"
+            "The range of the polynomial function f is the set of real numbers less than or equal to 4. If the zeros of f are -3 and 1, which of the following could be the graph of `y=f(x)` in the `xy`-plane?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/SAT18M2/media/19a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since zeros of f correspond to the `text(x)`-intercepts of the graph of f, and the range of f gives all the possible `text(y)`-values on the graph of the function, the correct graph of the function has only points with `text(y)`-values less than or equal to 4, and crosses the `text(x)`-axis at only (-3, 0) and (1, 0). The graph in this choice satisfies both of these conditions.",
+                    "Rationale": "Since zeros of f correspond to the `x`-intercepts of the graph of f, and the range of f gives all the possible `y`-values on the graph of the function, the correct graph of the function has only points with `y`-values less than or equal to 4, and crosses the `x`-axis at only (-3, 0) and (1, 0). The graph in this choice satisfies both of these conditions.",
                     "Percent": 0
                 }
             },
@@ -1044,7 +1044,7 @@
                 "Choice": "problems/SAT18M2/media/19c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph has `text(y)`-values greater than 4.",
+                    "Rationale": "The graph has `y`-values greater than 4.",
                     "Percent": 0
                 }
             },
@@ -1250,10 +1250,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "M = 1,800(1.02)ᵗ/⁴",
+                "Choice": "M = 1,800(1.02)^(t/4)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In 1 year, there are 4 quarter years, so the number of quarter years, t, is 4 times the number of years, y; that is, t = 4y. This is equivalent to y = t/4, and substituting this into the expression for M in terms of y gives M = 1,800(1.02)ᵗ/⁴.",
+                    "Rationale": "In 1 year, there are 4 quarter years, so the number of quarter years, t, is 4 times the number of years, y; that is, t = 4y. This is equivalent to y = t/4, and substituting this into the expression for M in terms of y gives M = 1,800(1.02)^(t/4).",
                     "Percent": 0
                 }
             },
@@ -1467,7 +1467,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, the point (p, r) lies on the line with equation y = x + b, where b is a constant. The point with coordinates (2p, 5r) lies on the line with equation y = 2x + b. If p ≠ 0,what is the value of r/p?"
+            "In the `xy`-plane, the point (p, r) lies on the line with equation y = x + b, where b is a constant. The point with coordinates (2p, 5r) lies on the line with equation y = 2x + b. If p ≠ 0,what is the value of r/p?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1644,7 +1644,7 @@
                 "Choice": "7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the `text(x)`-coordinate of the maximum point as the value of k.",
+                    "Rationale": "This choice may result from using the `x`-coordinate of the maximum point as the value of k.",
                     "Percent": 0
                 }
             },
@@ -1652,7 +1652,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The maximum value of the function f occurs at the highest point on the graph of `y=f(x)`; the highest point on the graph is (4, 3). For any point on the graph of f, the `text(y)`-coordinate gives the value of the function at the `text(x)`-coordinate; therefore, the maximum value of the function f is 3. It is stated that k is the maximum value of f, so k = 3. Thus, g(k) = g(3). From the table of values for g, it can be seen that when x = 3, g(3) = 6.",
+                    "Rationale": "The maximum value of the function f occurs at the highest point on the graph of `y=f(x)`; the highest point on the graph is (4, 3). For any point on the graph of f, the `y`-coordinate gives the value of the function at the `x`-coordinate; therefore, the maximum value of the function f is 3. It is stated that k is the maximum value of f, so k = 3. Thus, g(k) = g(3). From the table of values for g, it can be seen that when x = 3, g(3) = 6.",
                     "Percent": 0
                 }
             },
@@ -1755,14 +1755,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, the equations x + 2y = 10 and 3x + 6y = c represent the same line for some constant c. What is the value of c?"
+            "In the `xy`-plane, the equations x + 2y = 10 and 3x + 6y = c represent the same line for some constant c. What is the value of c?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:30",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the equations x + 2y = 10 and 3x + 6y = c represent the same line in the `text(xy)`-plane, they must be equivalent equations. The expression 3x + 6y on the left-hand side of the second equation is equivalent to 3(x + 2y), which is 3 times the left-hand side of the first equation. Thus, to be equivalent, the right-hand side of the second equation, c, must be 3 times the right-hand side of the first equation, 10. Therefore, c = 30.",
+                    "Rationale": "Since the equations x + 2y = 10 and 3x + 6y = c represent the same line in the `xy`-plane, they must be equivalent equations. The expression 3x + 6y on the left-hand side of the second equation is equivalent to 3(x + 2y), which is 3 times the left-hand side of the first equation. Thus, to be equivalent, the right-hand side of the second equation, c, must be 3 times the right-hand side of the first equation, 10. Therefore, c = 30.",
                     "Percent": 0
                 }
             }
@@ -1818,14 +1818,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT18M2/media/35a.jpg",
-            "The graph of the function f, defined by f(x)= -(x - 4)^2/2 + 10, is shown in the `text(xy)`-plane above. If the function g (not shown) is defined by g(x) = -x + 10, what is one possible value of a such that f(a) = g(a)?"
+            "The graph of the function f, defined by f(x)= -(x - 4)^2/2 + 10, is shown in the `xy`-plane above. If the function g (not shown) is defined by g(x) = -x + 10, what is one possible value of a such that f(a) = g(a)?"
         ],
         "AnswerChoices": {
             "KEY1": {
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\n\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions `y=f(x)` and `y=g(x)` intersect at x = a. The graph `y=f(x)` is given, and the graph of `y=g(x)` may be sketched as a line with `text(y)`-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
+                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\n\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions `y=f(x)` and `y=g(x)` intersect at x = a. The graph `y=f(x)` is given, and the graph of `y=g(x)` may be sketched as a line with `y`-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
                     "Percent": 0
                 }
             },
@@ -1833,7 +1833,7 @@
                 "Choice": "equal:8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\n\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions `y=f(x)` and `y=g(x)` intersect at x = a. The graph `y=f(x)` is given, and the graph of `y=g(x)` may be sketched as a line with `text(y)`-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
+                    "Rationale": "Substituting x = a in the definitions for f and g gives f (a) = -(a - 4)^2/2 + 10 and g(a) = -a + 10, respectively. If f(a) = g(a), then -(a - 4)^2/2 + 10 = -a + 10. Subtracting 10 from both sides of this equation gives -(a - 4)^2/2 = -a. Multiplying both sides by -2 gives (a - 4)^2 = 2a. Expanding (a - 4)^2 gives a² - 8a + 16 = 2a. Combining the like terms on one side of the equation gives a² - 10a + 16 = 0. One way to solve this equation is to factor a² - 10a + 16 by identifying two numbers with a sum of -10 and a product of 16. These numbers are -2 and -8, so the quadratic equation can be factored as (a - 2)(a - 8) = 0. Therefore, the possible values of a are either 2 or 8.\n\nAlternate approach: Graphically, the condition f (a) = g(a) implies the graphs of the functions `y=f(x)` and `y=g(x)` intersect at x = a. The graph `y=f(x)` is given, and the graph of `y=g(x)` may be sketched as a line with `y`-intercept 10 and a slope of -1 (taking care to note the different scales on each axis). These two graphs intersect at x = 2 and x = 8.",
                     "Percent": 0
                 }
             }

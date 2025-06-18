@@ -228,7 +228,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `x`-intercepts of the graph and `f(0)` corresponds to the `y`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [
             "problems/SAT19M2/supps/SAT19M2-S1.json"
@@ -270,7 +270,7 @@
                 "Choice": "195",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `text(x)`-axis of the graph represents the time, in minutes, after the coffee was removed from the heat source, and the `text(y)`-axis of the graph represents the temperature, in degrees Fahrenheit, of the coffee. The coffee was first removed from the heat source when x = 0. The graph shows that when x = 0, the `text(y)`-value was a little less than 200°F. Of the answer choices given, 195 is the best approximation.",
+                    "Rationale": "The `x`-axis of the graph represents the time, in minutes, after the coffee was removed from the heat source, and the `y`-axis of the graph represents the temperature, in degrees Fahrenheit, of the coffee. The coffee was first removed from the heat source when x = 0. The graph shows that when x = 0, the `y`-value was a little less than 200°F. Of the answer choices given, 195 is the best approximation.",
                     "Percent": 0
                 }
             }
@@ -407,7 +407,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The line graphed in the `text(xy)`-plane below models the total cost, in dollars, for a cab ride, y, in a certain city during nonpeak hours based on the number of miles traveled, x.",
+            "The line graphed in the `xy`-plane below models the total cost, in dollars, for a cab ride, y, in a certain city during nonpeak hours based on the number of miles traveled, x.",
             "problems/SAT19M2/media/8a.jpg",
             "According to the graph, what is the cost for each additional mile traveled, in dollars, of a cab ride?"
         ],
@@ -424,7 +424,7 @@
                 "Choice": "$2.60",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from calculating the slope of the line that passes through the points (5, 13) and (0, 0). However, (0, 0) does not lie on the line shown.",
+                    "Rationale": "This choice may result from calculating the slope of the line that passes through the points (5, 13) and (0, 0). However, `(0,0)` does not lie on the line shown.",
                     "Percent": 0
                 }
             },
@@ -432,7 +432,7 @@
                 "Choice": "$3.00",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the `text(y)`-coordinate of the `text(y)`-intercept of the graph and represents the flat fee for a cab ride before the charge for any miles traveled is added.",
+                    "Rationale": "This is the `y`-coordinate of the `y`-intercept of the graph and represents the flat fee for a cab ride before the charge for any miles traveled is added.",
                     "Percent": 0
                 }
             },
@@ -795,14 +795,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line m in the `text(xy)`-plane contains the points (2, 4) and (0, 1). Which of the following is an equation of line m?"
+            "Line m in the `xy`-plane contains the points (2, 4) and (0, 1). Which of the following is an equation of line m?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "y = 2x + 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from misinterpreting the change in `text(x)`-values as the slope and misinterpreting the change in `text(y)`-values as the `text(y)`-coordinate of the `text(y)`-intercept of the graph.",
+                    "Rationale": "This choice may result from misinterpreting the change in `x`-values as the slope and misinterpreting the change in `y`-values as the `y`-coordinate of the `y`-intercept of the graph.",
                     "Percent": 0
                 }
             },
@@ -810,7 +810,7 @@
                 "Choice": "y = 2x + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the x- and `text(y)`-values of one of the given points as the slope and `text(y)`-coordinate of the `text(y)`-intercept, respectively.",
+                    "Rationale": "This choice may result from using the x- and `y`-values of one of the given points as the slope and `y`-coordinate of the `y`-intercept, respectively.",
                     "Percent": 0
                 }
             },
@@ -818,7 +818,7 @@
                 "Choice": "y = 3x/2 + 3",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation has the correct slope but the incorrect `text(y)`-coordinate of the `text(y)`-intercept.",
+                    "Rationale": "This equation has the correct slope but the incorrect `y`-coordinate of the `y`-intercept.",
                     "Percent": 0
                 }
             },
@@ -826,7 +826,7 @@
                 "Choice": "y = 3x/2 + 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope-intercept form of a linear equation is y = ax + b, where a is the slope of the graph of the equation and b is the `text(y)`-coordinate of the `text(y)`-intercept of the graph. Two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` can be used to compute the slope of the line with the formula a = `(y_2-y_1)/(x_2-x_1)`. Substituting t he two ordered pairs (2, 4) and (0, 1) into this formula gives a = (4 - 1)/(2 - 0), which simplifies to 3/2. Substituting this value for a in the slope-intercept form of the equation yields y = 3x/2 + b. Substituting values from the ordered pair (0, 1) into this equation yields 1 = (3/2)(0) + b, so b = 1. Substituting this value for b in the slope-intercept equation yields y = 3x/2 + 1.",
+                    "Rationale": "The slope-intercept form of a linear equation is y = ax + b, where a is the slope of the graph of the equation and b is the `y`-coordinate of the `y`-intercept of the graph. Two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` can be used to compute the slope of the line with the formula a = `(y_2-y_1)/(x_2-x_1)`. Substituting t he two ordered pairs (2, 4) and (0, 1) into this formula gives a = (4 - 1)/(2 - 0), which simplifies to 3/2. Substituting this value for a in the slope-intercept form of the equation yields y = 3x/2 + b. Substituting values from the ordered pair (0, 1) into this equation yields 1 = (3/2)(0) + b, so b = 1. Substituting this value for b in the slope-intercept equation yields y = 3x/2 + 1.",
                     "Percent": 0
                 }
             }
@@ -1084,7 +1084,7 @@
                 "Choice": "problems/SAT19M2/media/20a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "There are 0 calories in 0 servings of Crunchy Grain cereal so the line must begin at the point (0, 0). Point (0, 0) is the origin, labeled O. Additionally, each serving increases the calories by 250. Therefore, the number of calories increases as the number of servings increases, so the line must have a positive slope. Of the choices, only this choice shows a graph with a line that begins at the origin and has a positive slope.",
+                    "Rationale": "There are 0 calories in 0 servings of Crunchy Grain cereal so the line must begin at the point (0, 0). Point `(0,0)` is the origin, labeled O. Additionally, each serving increases the calories by 250. Therefore, the number of calories increases as the number of servings increases, so the line must have a positive slope. Of the choices, only this choice shows a graph with a line that begins at the origin and has a positive slope.",
                     "Percent": 0
                 }
             },
@@ -1132,7 +1132,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph of the exponential function h in the `text(xy)`-plane, where y = h(x), has a `text(y)`-intercept of d, where d is a positive constant. Which of the following could define the function h?"
+            "The graph of the exponential function h in the `xy`-plane, where y = h(x), has a `y`-intercept of d, where d is a positive constant. Which of the following could define the function h?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1163,7 +1163,7 @@
                 "Choice": "h(x) = d(3)^x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the function h is exponential, it can be written as h(x) = abˣ, where a is the `text(y)`-coordinate of the `text(y)`-intercept and b is the growth rate. Since it's given that the `text(y)`-coordinate of the `text(y)`-intercept is d, the exponential function can be written as h(x) = dbˣ. These conditions are only met by the equation in this choice.",
+                    "Rationale": "Since the function h is exponential, it can be written as h(x) = abˣ, where a is the `y`-coordinate of the `y`-intercept and b is the growth rate. Since it's given that the `y`-coordinate of the `y`-intercept is d, the exponential function can be written as h(x) = dbˣ. These conditions are only met by the equation in this choice.",
                     "Percent": 0
                 }
             }
@@ -1408,14 +1408,14 @@
         "Explain": false,
         "Content": [
             ":ibox:h(x) = -16x^2+ 100x + 10",
-            "The quadratic function above models the height above the ground h, in feet, of a projectile x seconds after it had been launched vertically. If y = h(x) is graphed in the `text(xy)`-plane, which of the following represents the real-life meaning of the positive `text(x)`-intercept of the graph?"
+            "The quadratic function above models the height above the ground h, in feet, of a projectile x seconds after it had been launched vertically. If y = h(x) is graphed in the `xy`-plane, which of the following represents the real-life meaning of the positive `x`-intercept of the graph?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "The initial height of the projectile",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from misidentifying the `text(y)`-intercept as a positive `text(x)`-intercept.",
+                    "Rationale": "This choice may result from misidentifying the `y`-intercept as a positive `x`-intercept.",
                     "Percent": 0
                 }
             },
@@ -1423,7 +1423,7 @@
                 "Choice": "The maximum height of the projectile",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from misidentifying the `text(y)`-value of the vertex of the graph of the function as an `text(x)`-intercept.",
+                    "Rationale": "This choice may result from misidentifying the `y`-value of the vertex of the graph of the function as an `x`-intercept.",
                     "Percent": 0
                 }
             },
@@ -1431,7 +1431,7 @@
                 "Choice": "The time at which the projectile reaches its maximum height",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from misidentifying the `text(x)`-value of the vertex of the graph of the function as an `text(x)`-intercept.",
+                    "Rationale": "This choice may result from misidentifying the `x`-value of the vertex of the graph of the function as an `x`-intercept.",
                     "Percent": 0
                 }
             },
@@ -1439,7 +1439,7 @@
                 "Choice": "The time at which the projectile hits the ground",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The positive `text(x)`-intercept of the graph of y = h(x) is a point `(x,y)` for which y = 0. Since y = h(x) models the height above the ground, in feet, of the projectile, a `text(y)`-value of 0 must correspond to the height of the projectile when it is 0 feet above ground or, in other words, when the projectile is on the ground. Since x represents the time since the projectile was launched, it follows that the positive `text(x)`-intercept, `(x,0)`, represents the time at which the projectile hits the ground.",
+                    "Rationale": "The positive `x`-intercept of the graph of y = h(x) is a point `(x,y)` for which y = 0. Since y = h(x) models the height above the ground, in feet, of the projectile, a `y`-value of 0 must correspond to the height of the projectile when it is 0 feet above ground or, in other words, when the projectile is on the ground. Since x represents the time since the projectile was launched, it follows that the positive `x`-intercept, `(x,0)`, represents the time at which the projectile hits the ground.",
                     "Percent": 0
                 }
             }
@@ -1454,7 +1454,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `text(x)`-intercepts of the graph and f(0) corresponds to the `text(y)`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `x`-intercepts of the graph and `f(0)` corresponds to the `y`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1463,14 +1463,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, the graph of the polynomial function f crosses the `text(x)`-axis at exactly two points, (a, 0) and (b, 0), where a and b are both positive. Which of the following could define f?"
+            "In the `xy`-plane, the graph of the polynomial function f crosses the `x`-axis at exactly two points, (a, 0) and (b, 0), where a and b are both positive. Which of the following could define f?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "f(x) = (x - a)(x - b)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since (a, 0) and (b, 0) are the only two points where the graph of f crosses the `text(x)`-axis, it must be true that f(a) = 0 and f(b) = 0 and that f(x) is not equal to 0 for any other value of x. Of the given choices, this choice is the only function for which this is true. If f(x) = (x - a)(x - b), then f(a) = (a - a)(a - b), which can be rewritten as f(a) = 0(a - b), or f(a) = 0. Also, f(b) = (b - a)(b - b), which can be rewritten as f(b) = (b - a)(0), or f(b) = 0. Furthermore, if f(x) = (x - a)(x - b) is equal to 0, then it follows that either x - a = 0 or x - b = 0. Solving each of these equations by adding a to both sides of the first equation and adding b to both sides of the second equation yields x = a or x = b. Therefore, the graph of f(x) = (x - a)(x - b) crosses the `text(x)`-axis at exactly two points, (a, 0) and (b, 0).",
+                    "Rationale": "Since (a, 0) and (b, 0) are the only two points where the graph of f crosses the `x`-axis, it must be true that f(a) = 0 and f(b) = 0 and that f(x) is not equal to 0 for any other value of x. Of the given choices, this choice is the only function for which this is true. If f(x) = (x - a)(x - b), then f(a) = (a - a)(a - b), which can be rewritten as f(a) = 0(a - b), or f(a) = 0. Also, f(b) = (b - a)(b - b), which can be rewritten as f(b) = (b - a)(0), or f(b) = 0. Furthermore, if f(x) = (x - a)(x - b) is equal to 0, then it follows that either x - a = 0 or x - b = 0. Solving each of these equations by adding a to both sides of the first equation and adding b to both sides of the second equation yields x = a or x = b. Therefore, the graph of f(x) = (x - a)(x - b) crosses the `x`-axis at exactly two points, (a, 0) and (b, 0).",
                     "Percent": 0
                 }
             },
@@ -1486,7 +1486,7 @@
                 "Choice": "f(x) = (x - a)(x + b)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "f(b) = (b - a)(2b); its graph could only be 0 if b = a, but it would cross the `text(x)`-axis at only one point, since (a, 0) and (b, 0) would be the same point.",
+                    "Rationale": "f(b) = (b - a)(2b); its graph could only be 0 if b = a, but it would cross the `x`-axis at only one point, since (a, 0) and (b, 0) would be the same point.",
                     "Percent": 0
                 }
             },
@@ -1494,7 +1494,7 @@
                 "Choice": "f(x) = x(x - a)(x - b)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This graph crosses the `text(x)`-axis at (0, 0) as well as at (a, 0) and (b, 0).",
+                    "Rationale": "This graph crosses the `x`-axis at `(0,0)` as well as at (a, 0) and (b, 0).",
                     "Percent": 0
                 }
             }
@@ -1518,38 +1518,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If y = 3x^2+ 6x + 2 is graphed in the `text(xy)`-plane, which of the following characteristics of the graph is displayed as a constant or coefficient in the equation?"
+            "If y = 3x^2+ 6x + 2 is graphed in the `xy`-plane, which of the following characteristics of the graph is displayed as a constant or coefficient in the equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`text(y)`-coordinate of the vertex",
+                "Choice": "`y`-coordinate of the vertex",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The `text(y)`-coordinate of the vertex of the graph is -1, not 3, 6, or 2.",
+                    "Rationale": "The `y`-coordinate of the vertex of the graph is -1, not 3, 6, or 2.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "`text(x)`-intercept(s)",
+                "Choice": "`x`-intercept(s)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The `text(x)`-coordinates of the `text(x)`-intercepts of the graph are at approximately -1.577 and -0.423, not 3, 6, or 2.",
+                    "Rationale": "The `x`-coordinates of the `x`-intercepts of the graph are at approximately -1.577 and -0.423, not 3, 6, or 2.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`text(y)`-intercept",
+                "Choice": "`y`-intercept",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting 0 for x in the given equation yields 3(0)^2 + 6(0) + 2 = 2. Therefore, the graph of the given equation passes through the point (0, 2), which is the `text(y)`-intercept of the graph. The right-hand side of the given equation, y = 3x^2+ 6x + 2, displays the constant 2, which directly corresponds to the `text(y)`-coordinate of the `text(y)`-intercept of the graph of this equation in the `text(xy)`-plane.",
+                    "Rationale": "Substituting 0 for x in the given equation yields 3(0)^2 + 6(0) + 2 = 2. Therefore, the graph of the given equation passes through the point (0, 2), which is the `y`-intercept of the graph. The right-hand side of the given equation, y = 3x^2+ 6x + 2, displays the constant 2, which directly corresponds to the `y`-coordinate of the `y`-intercept of the graph of this equation in the `xy`-plane.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "`text(x)`-intercept of the line of symmetry",
+                "Choice": "`x`-intercept of the line of symmetry",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The `text(x)`-coordinate of the `text(x)`-intercept of the line of symmetry is at -1, not 3, 6, or 2.",
+                    "Rationale": "The `x`-coordinate of the `x`-intercept of the line of symmetry is at -1, not 3, 6, or 2.",
                     "Percent": 0
                 }
             }
@@ -1581,7 +1581,7 @@
                 "Choice": "Each year between 1940 and 2010, the average increase in minimum wage was 0.096 dollars.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation is in slope-intercept form, or `y=mx+b`, where m is the value of the slope of the line of best fit. Therefore, the slope of the line of best fit is 0.096. From the definition of slope, it follows that an increase of 1 in the `text(x)`-value corresponds to an increase of 0.096 in the `text(y)`-value. Therefore, the line of best fit predicts that for each year between 1940 and 2010, the minimum wage will increase by 0.096 dollar per hour.",
+                    "Rationale": "The given equation is in slope-intercept form, or `y=mx+b`, where m is the value of the slope of the line of best fit. Therefore, the slope of the line of best fit is 0.096. From the definition of slope, it follows that an increase of 1 in the `x`-value corresponds to an increase of 0.096 in the `y`-value. Therefore, the line of best fit predicts that for each year between 1940 and 2010, the minimum wage will increase by 0.096 dollar per hour.",
                     "Percent": 0
                 }
             },
@@ -1589,7 +1589,7 @@
                 "Choice": "Each year between 1940 and 2010, the average increase in minimum wage was 0.49 dollars.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the `text(y)`-coordinate of the `text(y)`-intercept as the average increase, instead of the slope.",
+                    "Rationale": "This choice may result from using the `y`-coordinate of the `y`-intercept as the average increase, instead of the slope.",
                     "Percent": 0
                 }
             },
@@ -1597,7 +1597,7 @@
                 "Choice": "Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.096 dollars.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the 10-year increments given on the `text(x)`-axis to incorrectly interpret the slope of the line of best fit.",
+                    "Rationale": "This choice may result from using the 10-year increments given on the `x`-axis to incorrectly interpret the slope of the line of best fit.",
                     "Percent": 0
                 }
             },
@@ -1605,7 +1605,7 @@
                 "Choice": "Every 10 years between 1940 and 2010, the average increase in minimum wage was 0.488 dollars.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the `text(y)`-coordinate of the `text(y)`-intercept as the average increase, instead of the slope, and from using the 10-year increments given on the `text(x)`-axis to incorrectly interpret the slope of the line of best fit.",
+                    "Rationale": "This choice may result from using the `y`-coordinate of the `y`-intercept as the average increase, instead of the slope, and from using the 10-year increments given on the `x`-axis to incorrectly interpret the slope of the line of best fit.",
                     "Percent": 0
                 }
             }
@@ -1637,7 +1637,7 @@
                 "Choice": "d = 0.03t + 402",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from an error in calculating the slope and misidentifying the `text(y)`-coordinate of the `text(y)`-intercept of the graph as the value of d at t = 10 rather than the value of d at t = 0.",
+                    "Rationale": "This choice may result from an error in calculating the slope and misidentifying the `y`-coordinate of the `y`-intercept of the graph as the value of d at t = 10 rather than the value of d at t = 0.",
                     "Percent": 0
                 }
             },
@@ -1645,7 +1645,7 @@
                 "Choice": "d = 10t + 402",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from using the smallest value of t on the graph as the slope and misidentifying the `text(y)`-coordinate of the `text(y)`-intercept of the graph as the value of d at t = 10 rather than the value of d at t = 0.",
+                    "Rationale": "This choice may result from using the smallest value of t on the graph as the slope and misidentifying the `y`-coordinate of the `y`-intercept of the graph as the value of d at t = 10 rather than the value of d at t = 0.",
                     "Percent": 0
                 }
             },
@@ -1653,7 +1653,7 @@
                 "Choice": "d = 33t + 300",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from misidentifying the `text(y)`-coordinate of the `text(y)`-intercept as the smallest value of d on the graph.",
+                    "Rationale": "This choice may result from misidentifying the `y`-coordinate of the `y`-intercept as the smallest value of d on the graph.",
                     "Percent": 0
                 }
             },
@@ -1661,7 +1661,7 @@
                 "Choice": "d = 33t + 84",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "On the line of best fit, d increases from approximately 480 to 880 between t = 12 and t = 24. The slope of the line of best fit is the difference in d-values divided by the difference in t-values, which gives (880 - 480)/(24 - 12) = 400/12, or approximately 33. Writing the equation of the line of best fit in slope-intercept form gives d = 33t + b, where b is the `text(y)`-coordinate of the `text(y)`-intercept. This equation is satisfied by all points on the line, so d = 480 when t = 12. Thus, 480 = 33(12) + b, which is equivalent to 480 = 396 + b. Subtracting 396 from both sides of this equation gives b = 84. Therefore, an equation for the line of best fit could be d = 33t + 84.",
+                    "Rationale": "On the line of best fit, d increases from approximately 480 to 880 between t = 12 and t = 24. The slope of the line of best fit is the difference in d-values divided by the difference in t-values, which gives (880 - 480)/(24 - 12) = 400/12, or approximately 33. Writing the equation of the line of best fit in slope-intercept form gives d = 33t + b, where b is the `y`-coordinate of the `y`-intercept. This equation is satisfied by all points on the line, so d = 480 when t = 12. Thus, 480 = 33(12) + b, which is equivalent to 480 = 396 + b. Subtracting 396 from both sides of this equation gives b = 84. Therefore, an equation for the line of best fit could be d = 33t + 84.",
                     "Percent": 0
                 }
             }
@@ -1676,7 +1676,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `text(xy)`-plane."
+            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `xy`-plane."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1686,14 +1686,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT19M2/media/31a.jpg",
-            "In the `text(xy)`-plane above, the circle has center `(h,k)` radius 10. What is the value of k?"
+            "In the `xy`-plane above, the circle has center `(h,k)` radius 10. What is the value of k?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Circles are symmetric with respect to any given diameter through the center `(h,k)`. One diameter of the circle is perpendicular to the `text(x)`-axis. Therefore, the value of h is the mean of the `text(x)`-coordinates of the circle's two `text(x)`-intercepts: h = (20 + 4)/2 = 12. The radius of the circle is given as 10, so the point `(h,k)` must be a distance of 10 units from any point on the circle. The equation of any circle can be written as `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` is the center of the circle and r is the length of the radius of the circle. Substituting 12 for h and 10 for r into this equation gives (x - 12)^2 + (y - k)^2 = 10^2. Substituting the `text(x)`-coordinate and `text(y)`-coordinate of a point on the circle, (4, 0), gives (4 - 12)^2 + (0 - k)^2 = 10^2, or 64 + k^2 = 100. Subtracting 64 from both sides of this equation yields k^2 = 36. Therefore, k = ±√36. Since the graph shows the point `(h,k)` in the first quadrant, k must be the positive square root of 36, so k = 6.",
+                    "Rationale": "Circles are symmetric with respect to any given diameter through the center `(h,k)`. One diameter of the circle is perpendicular to the `x`-axis. Therefore, the value of h is the mean of the `x`-coordinates of the circle's two `x`-intercepts: h = (20 + 4)/2 = 12. The radius of the circle is given as 10, so the point `(h,k)` must be a distance of 10 units from any point on the circle. The equation of any circle can be written as `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` is the center of the circle and r is the length of the radius of the circle. Substituting 12 for h and 10 for r into this equation gives (x - 12)^2 + (y - k)^2 = 10^2. Substituting the `x`-coordinate and `y`-coordinate of a point on the circle, (4, 0), gives (4 - 12)^2 + (0 - k)^2 = 10^2, or 64 + k^2 = 100. Subtracting 64 from both sides of this equation yields k^2 = 36. Therefore, k = +-√36. Since the graph shows the point `(h,k)` in the first quadrant, k must be the positive square root of 36, so k = 6.",
                     "Percent": 0
                 }
             }
@@ -1717,14 +1717,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `text(xy)`-plane, line L has a `text(y)`-intercept of -13 and is perpendicular to the line with equation y = -2x/3. If the point (10, b) is on line L, what is the value of b?"
+            "In the `xy`-plane, line L has a `y`-intercept of -13 and is perpendicular to the line with equation y = -2x/3. If the point (10, b) is on line L, what is the value of b?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that line l is perpendicular to the line with equation y = -2x/3. Since the equation y = -2x/3 is written in slope-intercept form, the slope of the line is -2/3. The slope of line l must be the negative reciprocal of -2/3, which is 3/2. It' s also given that the `text(y)`-coordinate of the `text(y)`-intercept of line l is -13, so the equation of line l in slope-intercept form is y = 3x/2 - 13. If y = b when x = 10, b = (3/2)(10) - 13, which is equivalent to b = 15 - 13, or b = 2.",
+                    "Rationale": "It's given that line l is perpendicular to the line with equation y = -2x/3. Since the equation y = -2x/3 is written in slope-intercept form, the slope of the line is -2/3. The slope of line l must be the negative reciprocal of -2/3, which is 3/2. It' s also given that the `y`-coordinate of the `y`-intercept of line l is -13, so the equation of line l in slope-intercept form is y = 3x/2 - 13. If y = b when x = 10, b = (3/2)(10) - 13, which is equivalent to b = 15 - 13, or b = 2.",
                     "Percent": 0
                 }
             }
@@ -1851,7 +1851,7 @@
                 "Choice": "equal:1.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the system of linear equations has no solutions. Therefore, the lines represented by the two equations are parallel. Each of the equations can be written in slope-intercept form, or `y=mx+b`, where m is the slope of the line and b is the `text(y)`-coordinate of the line's `text(y)`-intercept. Subtracting 3x/4 from both sides of 3x/4 - y/2 = 12 yields -y/2 = -3x/4 + 12. Dividing both sides of this equation by -1/2 yields y = (-3/4)/(-/12)x + 12/(-1/2), or y = 3x/2 - 24. Therefore, the slope of the line represented by the first equation in the system is 3/2. The second equation in the system can be put into slope-intercept form by first subtracting ax from both sides of ax - by = 9, then dividing both sides of the equation by -b, which yields y = ax/b - 9/b. Therefore, the slope of the line represented by the second equation in the system is a/b. Parallel lines have equal slopes. Therefore, a/b = 3/2.",
+                    "Rationale": "It's given that the system of linear equations has no solutions. Therefore, the lines represented by the two equations are parallel. Each of the equations can be written in slope-intercept form, or `y=mx+b`, where m is the slope of the line and b is the `y`-coordinate of the line's `y`-intercept. Subtracting 3x/4 from both sides of 3x/4 - y/2 = 12 yields -y/2 = -3x/4 + 12. Dividing both sides of this equation by -1/2 yields y = (-3/4)/(-/12)x + 12/(-1/2), or y = 3x/2 - 24. Therefore, the slope of the line represented by the first equation in the system is 3/2. The second equation in the system can be put into slope-intercept form by first subtracting ax from both sides of ax - by = 9, then dividing both sides of the equation by -b, which yields y = ax/b - 9/b. Therefore, the slope of the line represented by the second equation in the system is a/b. Parallel lines have equal slopes. Therefore, a/b = 3/2.",
                     "Percent": 0
                 }
             }

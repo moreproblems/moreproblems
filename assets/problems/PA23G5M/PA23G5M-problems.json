@@ -577,7 +577,7 @@
                 "Choice": "problems/PA23G5M/media/11a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses Bruce's savings as the `text(x)`-coordinates and Len's savings as the `text(y)`-coordinates.",
+                    "Rationale": "This choice uses Bruce's savings as the `x`-coordinates and Len's savings as the `y`-coordinates.",
                     "Percent": 20
                 }
             },
@@ -585,7 +585,7 @@
                 "Choice": "problems/PA23G5M/media/11b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses Bruce's savings as the `text(y)`-coordinates and Len's savings as the `text(x)`-coordinates.",
+                    "Rationale": "This choice uses Bruce's savings as the `y`-coordinates and Len's savings as the `x`-coordinates.",
                     "Percent": 18
                 }
             },
@@ -593,7 +593,7 @@
                 "Choice": "problems/PA23G5M/media/11c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice increases each `text(x)`-coordinate by 1 since this represents the number of weeks and increases each `text(y)`-coordinate by 3 since this represents the two brothers saving a total of $3 each week.",
+                    "Rationale": "This choice increases each `x`-coordinate by 1 since this represents the number of weeks and increases each `y`-coordinate by 3 since this represents the two brothers saving a total of $3 each week.",
                     "Percent": 48
                 }
             },
@@ -601,7 +601,7 @@
                 "Choice": "problems/PA23G5M/media/11d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses the weekly total savings as the `text(x)`-coordinates and the numbers of weeks as the `text(y)`-coordinates.",
+                    "Rationale": "This choice uses the weekly total savings as the `x`-coordinates and the numbers of weeks as the `y`-coordinates.",
                     "Percent": 14
                 }
             }
@@ -616,7 +616,7 @@
             "Geometry"
         ],
         "SubTopics": [
-            "Identify parts of the coordinate plane (`text(x)`-axis, `text(y)`-axis, and the origin) and the ordered pair (`text(x)`-coordinate and `text(y)`-coordinate). Limit the coordinate plane to quadrant I."
+            "Identify parts of the coordinate plane (`x`-axis, `y`-axis, and the origin) and the ordered pair (`x`-coordinate and `y`-coordinate). Limit the coordinate plane to quadrant I."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -627,14 +627,14 @@
         "Content": [
             "A coordinate grid is shown below.",
             "problems/PA23G5M/media/12a.jpg",
-            "Which two points on the coordinate grid have the same `text(y)`-coordinate?"
+            "Which two points on the coordinate grid have the same `y`-coordinate?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "point G and point K",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects two points on the `text(y)`-axis.",
+                    "Rationale": "This choice selects two points on the `y`-axis.",
                     "Percent": 17
                 }
             },
@@ -642,7 +642,7 @@
                 "Choice": "point J and point M",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects two points with the same `text(x)`-coordinate.",
+                    "Rationale": "This choice selects two points with the same `x`-coordinate.",
                     "Percent": 13
                 }
             },
@@ -650,7 +650,7 @@
                 "Choice": "point G and point J",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice either selects two points that have the same second coordinate since the second coordinate of an ordered pair represents the `text(y)`-coordinate OR selects two points on the same horizontal line since the `text(y)`-coordinate represents the distance from the `text(x)`-axis.",
+                    "Rationale": "This choice either selects two points that have the same second coordinate since the second coordinate of an ordered pair represents the `y`-coordinate OR selects two points on the same horizontal line since the `y`-coordinate represents the distance from the `x`-axis.",
                     "Percent": 53
                 }
             },
@@ -658,7 +658,7 @@
                 "Choice": "point F and point T",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects two points that have the `text(x)`-coordinate and `text(y)`-coordinate switched.",
+                    "Rationale": "This choice selects two points that have the `x`-coordinate and `y`-coordinate switched.",
                     "Percent": 17
                 }
             }
@@ -691,7 +691,7 @@
                 "Choice": "(5, 10)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the `text(x)`-coordinate represents the amount of time, so uses 5 as the first coordinate of the ordered pair; looks at the line directly above the 5 on the `text(x)`-axis, sees that it is halfway between the 8 and 12 grid lines, and uses 10 as the second coordinate of the ordered pair since 10 is halfway between 8 and 12.",
+                    "Rationale": "This choice recognizes that the `x`-coordinate represents the amount of time, so uses 5 as the first coordinate of the ordered pair; looks at the line directly above the 5 on the `x`-axis, sees that it is halfway between the 8 and 12 grid lines, and uses 10 as the second coordinate of the ordered pair since 10 is halfway between 8 and 12.",
                     "Percent": 63
                 }
             },
@@ -699,7 +699,7 @@
                 "Choice": "(5, 11)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects a `text(y)`-value that is 1 less than 12 (using a y-scale of 2 rather than 4).",
+                    "Rationale": "This choice selects a `y`-value that is 1 less than 12 (using a y-scale of 2 rather than 4).",
                     "Percent": 19
                 }
             },
@@ -715,7 +715,7 @@
                 "Choice": "(11, 5)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects a `text(y)`-value that is 1 less than 12 (using a y-scale of 2 rather than 4) and reverses the ordered pair.",
+                    "Rationale": "This choice selects a `y`-value that is 1 less than 12 (using a y-scale of 2 rather than 4) and reverses the ordered pair.",
                     "Percent": 6
                 }
             }

@@ -16,20 +16,20 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:(p + 3) + 8 = 10",
-            "What value of p is the solution to the given equation?"
+            ":ibox:`(p+3)+8=10`",
+            "What value of `p` is the solution to the given equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-1",
+                "Choice": "`-1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Subtracting 8 from both sides of the given equation yields p + 3 = 2. Subtracting 3 from both sides of this equation yields p = -1.",
+                    "Rationale": "Subtracting `8` from both sides of the given equation yields `p+3=2`. Subtracting `3` from both sides of this equation yields `p=-1`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -37,7 +37,7 @@
                 }
             },
             "C": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -45,7 +45,7 @@
                 }
             },
             "D": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -129,7 +129,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:k^2 - 53 = 91",
+            ":ibox:`k^2-53=91`",
             "What is the positive solution to the given equation?"
         ],
         "AnswerChoices": {
@@ -137,31 +137,31 @@
                 "Choice": "144",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the positive solution to the equation k^2 - 53 = 20,683, not k^2 - 53 = 91.",
+                    "Rationale": "This is the positive solution to the equation `k^2-53=20,683`, not `k^2-53=91`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "72",
+                "Choice": "`72`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the positive solution to the equation k^2 - 53 = 5,131, not k^2 - 53 = 91.",
+                    "Rationale": "This is the positive solution to the equation `k^2-53=5,131`, not `k^2-53=91`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "38",
+                "Choice": "`38`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the positive solution to the equation k^2 - 53 = 1,391, not k^2 - 53 = 91.",
+                    "Rationale": "This is the positive solution to the equation `k^2 -53=1,391`, not `k^2-53=91`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Adding 53 to each side of the given equation yields k^2 = 144. Taking the square root of each side of this equation yields k = ±12. Therefore, the positive solution to the given equation is 12.",
+                    "Rationale": "Adding `53` to each side of the given equation yields `k^2=144`. Taking the square root of each side of this equation yields `k=+-12`. Therefore, the positive solution to the given equation is `12`.",
                     "Percent": 0
                 }
             }
@@ -185,11 +185,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "During a portion of a flight, a small airplane's cruising speed varied between 150 miles per hour and 170 miles per hour. Which inequality best represents this situation, where s is the cruising speed, in miles per hour, during this portion of the flight?"
+            "During a portion of a flight, a small airplane's cruising speed varied between `150` `text(miles per hour)` and `170` `text(miles per hour)`. Which inequality best represents this situation, where `s` is the cruising speed, in `text(miles per hour)`, during this portion of the flight?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "s ≤ 20",
+                "Choice": "`sle20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -197,7 +197,7 @@
                 }
             },
             "B": {
-                "Choice": "s ≤ 150",
+                "Choice": "`sle150`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -205,7 +205,7 @@
                 }
             },
             "C": {
-                "Choice": "s ≤ 170",
+                "Choice": "`sle170`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -213,10 +213,10 @@
                 }
             },
             "D": {
-                "Choice": "150 ≤ s ≤ 170",
+                "Choice": "`150lesle170`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that during a portion of a flight, a small airplane's cruising speed varied between 150 miles per hour and 170 miles per hour. It's also given that s represents the cruising speed, in miles per hour, during this portion of the flight. It follows that the airplane's cruising speed, in miles per hour, was at least 150, which means s ≥ 150, and was at most 170, which means s ≤ 170. Therefore, the inequality that best represents this situation is 150 ≤ s ≤ 170.",
+                    "Rationale": "It's given that during a portion of a flight, a small airplane's cruising speed varied between `150` `text(miles per hour)` and `170` `text(miles per hour)`. It's also given that `s` represents the cruising speed, in `text(miles per hour)`, during this portion of the flight. It follows that the airplane's cruising speed, in `text(miles per hour)`, was at least `150`, which means `sge150`, and was at most `170`, which means `sle170`. Therefore, the inequality that best represents this situation is `150lesle170`.",
                     "Percent": 0
                 }
             }
@@ -241,27 +241,27 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/5a.jpg",
-            "An object was launched upward from a platform. The graph shown models the height above ground, y, in meters, of the object x seconds after it was launched. For which of the following intervals of time was the height of the object increasing for the entire interval?"
+            "An object was launched upward from a platform. The graph shown models the height above ground, `y`, in `text(meters)`, of the object `x` `text(seconds)` after it was launched. For which of the following intervals of time was the height of the object increasing for the entire interval?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "From x = 0 to x = 2",
+                "Choice": "From `x=0` to `x=2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the variable y represents the height, in meters, of the object above the ground. The graph shows that the height of the object was increasing from x = 0 to x = 2, and decreasing from x = 2 to x = 4. Therefore, the height of the object was increasing for the entire interval of time from x = 0 to x = 2.",
+                    "Rationale": "It's given that the variable `y` represents the height, in `text(meters)`, of the object above the ground. The graph shows that the height of the object was increasing from `x=0` to `x=2`, and decreasing from `x=2` to `x=4`. Therefore, the height of the object was increasing for the entire interval of time from `x=0` to `x=2`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "From x = 0 to x = 4",
+                "Choice": "From `x=0` to `x=4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The height of the object wasn't increasing for this entire interval of time, as it was decreasing from x = 2 to x = 4.",
+                    "Rationale": "The height of the object wasn't increasing for this entire interval of time, as it was decreasing from `x=2` to `x=4`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "From x = 2 to x = 3",
+                "Choice": "From `x=2` to `x=3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The height of the object was decreasing, not increasing, for this entire interval of time.",
@@ -269,7 +269,7 @@
                 }
             },
             "D": {
-                "Choice": "From x = 3 to x = 4",
+                "Choice": "From `x=3` to `x=4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The height of the object was decreasing, not increasing, for this entire interval of time.",
@@ -296,14 +296,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "How many YARDS are equivalent to 1,116 inches (1 yard = 36 inches)?"
+            "How many `text(yards)` are equivalent to `1,116` `text(inches)` (`1` `text(yard)=36` `text(inches)`)?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:31",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that 1 yard is equal to 36 inches. Therefore, 1 ,16 inches is equivalent (1,116 inches)((1 yard)/(36 inches)), or 31 yards.",
+                    "Rationale": "It's given that `1` `text(yard)` is equal to `36` `text(inches)`. Therefore, `1,116` inches is equivalent `(1,116` `text(inches))((1` `text(yard))/(36` `text(inches)))`, or `31` `text(yards)`.",
                     "Percent": 0
                 }
             }
@@ -327,15 +327,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:f(x) = 14 + 4x",
-            "The function f represents the total cost, in dollars, of attending an arcade when x games are played. How many games can be played for a total cost of $58?"
+            ":ibox:`f(x)=14+4x`",
+            "The function f represents the total cost, in `text(dollars)`, of attending an arcade when `x` games are played. How many games can be played for a total cost of `$58`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:11",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function f(x) = 14 + 4x represents the total cost, in dollars, of attending an arcade when x games are played. Substituting 58 for f(x) in the given equation yields 58 = 14 + 4x. Subtracting 14 from each side of this equation yields 44 = 4x. Dividing each side of this equation by 4 yields 11 = x. Therefore, 11 games can be played for a total cost of $58.",
+                    "Rationale": "It's given that the function `f(x)=14+4x` represents the total cost, in `text(dollars)`, of attending an arcade when `x` games are played. Substituting `58` for `f(x)` in the given equation yields `58=14+4x`. Subtracting `14` from each side of this equation yields `44=4x`. Dividing each side of this equation by `4` yields `11=x`. Therefore, `11` games can be played for a total cost of `$58`.",
                     "Percent": 0
                 }
             }
@@ -359,12 +359,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:f(x) = x + b",
-            "For the linear function f, b is a constant. When x = 0, f(x) = 30. What is the value of b?"
+            ":ibox:`f(x)=x+b`",
+            "For the linear function `f`, `b` is a constant. When `x=0`, `f(x)=30`. What is the value of `b`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-30",
+                "Choice": "`-30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -372,7 +372,7 @@
                 }
             },
             "B": {
-                "Choice": "-1/30",
+                "Choice": "`-1/30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -380,7 +380,7 @@
                 }
             },
             "C": {
-                "Choice": "1/30",
+                "Choice": "`1/30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -388,10 +388,10 @@
                 }
             },
             "D": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that when x = 0, f(x) = 30. Substituting 0 for x and 30 for f(x) in the given function yields 30 = 0 + b, or 30 = b. Therefore, the value of b is 30.",
+                    "Rationale": "It's given that when `x=0`, `f(x)=30`. Substituting `0` for `x` and `30` for `f(x)` in the given function yields `30=0+b`, or `30=b`. Therefore, the value of `b` is `30`.",
                     "Percent": 0
                 }
             }
@@ -415,12 +415,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:P(t) = 1,800(1.02)ᵗ",
-            "The function P gives the estimated number of marine mammals in a certain area, where t is the number of years since a study began. What is the best interpretation of P(0) = 1,800 in this context?"
+            ":ibox:`P(t)=1,800(1.02)^t`",
+            "The function `P` gives the estimated number of marine mammals in a certain area, where `t` is the number of years since a study began. What is the best interpretation of `P(0)=1,800` in this context?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The estimated number of marine mammals in the area was 102 when the study began.",
+                "Choice": "The estimated number of marine mammals in the area was `102` when the study began.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -428,15 +428,15 @@
                 }
             },
             "B": {
-                "Choice": "The estimated number of marine mammals in the area was 1,800 when the study began.",
+                "Choice": "The estimated number of marine mammals in the area was `1,800` when the study began.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The function P gives the estimated number of marine mammals in a certain area, where t is the number of years since a study began. Since the value of P(0) is the value of P(t) when t = 0, it follows that P(0) = 1,800 means that the value of P(t) is 1,800 when t = 0. Since t is the number of years since the study began, it follows that t = 0 is 0 years since the study began, or when the study began. Therefore, the best interpretation of P(0) = 1,800 in this context is the estimated number of marine mammals in the area was 1,800 when the study began.",
+                    "Rationale": "The function `P` gives the estimated number of marine mammals in a certain area, where t is the number of years since a study began. Since the value of `P(0)` is the value of `P(t)` when `t=0`, it follows that `P(0)=1,800` means that the value of `P(t)` is `1,800` when `t=0`. Since `t` is the number of years since the study began, it follows that `t=0` is `0` `text(years)` since the study began, or when the study began. Therefore, the best interpretation of `P(0)=1,800` in this context is the estimated number of marine mammals in the area was `1,800` when the study began.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The estimated number of marine mammals in the area increased by 102 each year during the study.",
+                "Choice": "The estimated number of marine mammals in the area increased by `102` each year during the study.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -444,7 +444,7 @@
                 }
             },
             "D": {
-                "Choice": "The estimated number of marine mammals in the area increased by 1,800 each year during the study.",
+                "Choice": "The estimated number of marine mammals in the area increased by `1,800` each year during the study.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -471,38 +471,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A manager is responsible for ordering supplies for a shaved ice shop. The shop's inventory starts with 4,500 paper cups, and the manager estimates that 70 of these paper cups are used each day. Based on this estimate, in how many days will the supply of paper cups reach 1,700?"
+            "A manager is responsible for ordering supplies for a shaved ice shop. The shop's inventory starts with `4,500` paper cups, and the manager estimates that `70` of these paper cups are used each day. Based on this estimate, in how many days will the supply of paper cups reach `1,700`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After 20 days, the estimated supply of paper cups would be 4,500 - 70(20), or 3,100 cups, not 1,700 cups.",
+                    "Rationale": "After `20` `text(days)`, the estimated supply of paper cups would be `4,500-70(20)`, or `3,100` `text(cups)`, not `1,700` `text(cups)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "40",
+                "Choice": "`40`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the shop's inventory starts with 4,500 paper cups and that the manager estimates that 70 of these paper cups are used each day. Let x represent the number of days in which the estimated supply of paper cups will reach 1,700. The equation 4,500 - 70x = 1,700 represents this situation. Subtracting 4,500 from both sides of this equation yields -70x = -2,800. Dividing both sides of this equation by 70- yields x 40=. Therefore, based on this estimate, the supply of paper cups will reach 1,700 in 40 days.",
+                    "Rationale": "It's given that the shop's inventory starts with `4,500` paper cups and that the manager estimates that `70` of these paper cups are used each day. Let `x` represent the number of days in which the estimated supply of paper cups will reach `1,700`. The equation `4,500-70x=1,700` represents this situation. Subtracting `4,500` from both sides of this equation yields -`70x=-2,800`. Dividing both sides of this equation by `-70` yields `x=40`. Therefore, based on this estimate, the supply of paper cups will reach 1,700 in 40 days.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "60",
+                "Choice": "`60`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After 60 days, the estimated supply of paper cups would be 4,500 - 70(60), or 300 cups, not 1,700 cups.",
+                    "Rationale": "After `60` `text(days)`, the estimated supply of paper cups would be `4,500-70(60)`, or `300` `text(cups)`, not `1,700` `text(cups)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "80",
+                "Choice": "`80`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After 80 days, the estimated supply of paper cups would be 4,500 - 70(80), or -1,100 cups, which isn't possible.",
+                    "Rationale": "After `80` `text(days)`, the estimated supply of paper cups would be `4,500 - 70(80)`, or `-1,100` `text(cups)`, which isn't possible.",
                     "Percent": 0
                 }
             }
@@ -526,15 +526,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:y > 4x + 8",
-            "For which of the following tables are all the values of x and their corresponding values of y solutions to the given inequality?"
+            ":ibox:`yge4x+8`",
+            "For which of the following tables are all the values of `x` and their corresponding values of `y` solutions to the given inequality?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/SAT6M1/media/11a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In each choice, the values of x are 2, 4, and 6. Substituting the first value of x, 2, for x in the given inequality yields y > 4(2) + 8, or y > 16. Therefore, when x = 2, the corresponding value of y must be greater than 16. Of the given choices, only this choice is a table where the value of y corresponding to x = 2 is greater than 16. To confirm that the other values of x in this table and their corresponding values of y are also solutions to the given inequality, the values of `x` and `y` in the table can be substituted for `x` and `y` in the given inequality. Substituting 4 for x and 30 for y in the given inequality yields 30 > 4(4) + 8, or 30 > 24, which is true. Substituting 6 for x and 41 for y in the given inequality yields 41 > 4(6) + 8, or 41 > 32, which is true. It follows that for this choice, all the values of x and their corresponding values of y are solutions to the given inequality.",
+                    "Rationale": "In each choice, the values of `x` are `2`, `4`, and `6`. Substituting the first value of `x`, `2`, for `x` in the given inequality yields `yge4(2)+8`, or `yge16`. Therefore, when `x=2`, the corresponding value of `y` must be greater than `16`. Of the given choices, only this choice is a table where the value of `y` corresponding to `x=2` is greater than `16`. To confirm that the other values of `x` in this table and their corresponding values of `y` are also solutions to the given inequality, the values of `x` and `y` in the table can be substituted for `x` and `y` in the given inequality. Substituting `4` for `x` and `30` for `y` in the given inequality yields `30ge4(4)+8`, or `30ge24`, which is true. Substituting `6` for `x` and `41` for `y` in the given inequality yields `41ge4(6)+8`, or `41ge32`, which is true. It follows that for this choice, all the values of `x` and their corresponding values of `y` are solutions to the given inequality.",
                     "Percent": 0
                 }
             },
@@ -542,7 +542,7 @@
                 "Choice": "problems/SAT6M1/media/11b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 2 for x and 8 for y in the given inequality yields 8 > 4(2) + 8, or 8 > 16, which is false.",
+                    "Rationale": "Substituting `2` for `x` and `8` for `y` in the given inequality yields `8ge4(2)+8`, or `8ge16`, which is false.",
                     "Percent": 0
                 }
             },
@@ -550,7 +550,7 @@
                 "Choice": "problems/SAT6M1/media/11c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 2 for x and 13 for y in the given inequality yields 8 > 4(2) + 8, or 13 > 16, which is false.",
+                    "Rationale": "Substituting `2` for `x` and `13` for `y` in the given inequality yields `8ge4(2)+8`, or `13ge16`, which is false.",
                     "Percent": 0
                 }
             },
@@ -558,7 +558,7 @@
                 "Choice": "problems/SAT6M1/media/11d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting 2 for x and 13 for y in the given inequality yields 8 > 4(2) + 8, or 13 > 16, which is false.",
+                    "Rationale": "Substituting `2` for `x` and `13` for `y` in the given inequality yields `8ge4(2)+8`, or `13ge16`, which is false.",
                     "Percent": 0
                 }
             }
@@ -582,38 +582,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (x^2+ 11)^2 + (x - 5)(x + 5)?"
+            "Which expression is equivalent to `(x^2+11)^2+(x-5)(x+5)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x⁴ + 23x^2- 14",
+                "Choice": "`x^44+23x^2-14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Equivalent expressions must be equivalent for any value of x. Substituting 0 for x in this expression yields -14, whereas substituting 0 for x in the given expression yields 96.",
+                    "Rationale": "Equivalent expressions must be equivalent for any value of `x`. Substituting `0` for `x` in this expression yields `-14`, whereas substituting `0` for `x` in the given expression yields `96`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "x⁴ + 23x^2+ 96",
+                "Choice": "`x^4+23x^2+96`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The expression (x^2+ 11)^2 can be written as (x^2+ 11)(x^2+ 11), which is equivalent to x^2(x^2+ 11) + 11(x^2+ 11). Distributing x^2and 11 to (x^2+ 11) yields x⁴ + 11x^2+ 11x^2+ 121, or x⁴ + 22x^2+ 121. The expression (x - 5)(x + 5) is equivalent to x(x - 5) + 5(x - 5). Distributing x and 5 to (x - 5) yields (x^2- 5x + 5x - 25, or x^2- 25. Therefore, the expression (x^2+ 11)^2 + (x - 5)(x + 5) is equivalent to (x⁴ + 22x^2+ 121) + (x^2- 25), or x⁴ + 22x^2+ 121 + x^2- 25. Combining like terms in this expression yields x⁴ + 23x^2+ 96.",
+                    "Rationale": "The expression `(x^2+11)^2` can be written as `(x^2+11)(x^2+11)`, which is equivalent to `x^2(x^2+11)+11(x^2+11)`. Distributing `x^2` and `11` to `(x^2+11)` yields `x^4+11x^2+11x^2+121`, or `x^4+22x^2+121`. The expression `(x-5)(x+5)` is equivalent to `x(x-5)+5(x-5)`. Distributing `x` and `5` to `(x-5)` yields `x^2-5x+5x-25`, or `x^2-25`. Therefore, the expression (x^2+ 11)^2+(x-5)(x+5) is equivalent to `(x^4+22x^2+121)+(x^2-25)`, or `x^4+22x^2+121+x^2-25`. Combining like terms in this expression yields `x^4+23x^2+96`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "x⁴ + 12x^2+ 121",
+                "Choice": "`x^4+12x^2+121`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Equivalent expressions must be equivalent for any value of x. Substituting 0 for x in this expression yields 121, whereas substituting 0 for x in the given expression yields 96.",
+                    "Rationale": "Equivalent expressions must be equivalent for any value of `x`. Substituting `0` for `x` in this expression yields `121`, whereas substituting `0` for `x` in the given expression yields 96.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "x⁴ + x^2+ 146",
+                "Choice": "`x^4+x^2+146`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Equivalent expressions must be equivalent for any value of x. Substituting 0 for x in this expression yields 146, whereas substituting 0 for x in the given expression yields 96.",
+                    "Rationale": "Equivalent expressions must be equivalent for any value of `x`. Substituting `0` for `x` in this expression yields `146`, whereas substituting `0` for x` in the given expression yields `96`.",
                     "Percent": 0
                 }
             }
@@ -637,14 +637,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function h is defined by h(x) = 8/(5x + 6). What is the value of h(2)?"
+            "The function `h` is defined by `h(x)=8/(5x+6)`. What is the value of `h(2)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of h(2) is the value of h(x) when x = 2. Substituting 2 for x in the given equation yields h(2) = 8/(5(2) + 6), which is equivalent to h(2) = 8/16, or h(2) = 1/2. Therefore, the value of h(2) is 1/2.",
+                    "Rationale": "The value of `h(2)` is the value of `h(x)` when `x=2`. Substituting `2` for `x` in the given equation yields `h(2)=8/(5(2)+6)`, which is equivalent to `h(2)=8/16`, or `h(2)=1/2`. Therefore, the value of `h(2)` is `1/2`.",
                     "Percent": 0
                 }
             }
@@ -669,14 +669,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/14a.jpg",
-            "The figure shows the lengths, in inches, of two sides of a right triangle. What is the area of the triangle, in square inches?"
+            "The figure shows the lengths, in `text(inches)`, of two sides of a right triangle. What is the area of the triangle, in `text(square inches)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:15/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The area, A, of a triangle is given by the formula A = bh/2, where b is the length of the base of the triangle and h is the height of the triangle. In the right triangle shown, the length of the base of the triangle is 5 inches, and the height is 3 inches. It follows that b = 5 and h = 3. Substituting 5 for b and 3 for h in the formula A = bh/2 yields A = (5)(3)/2, which is equivalent to A = (15)/2, or A = 15/2. Therefore, the area of the triangle, in square inches, is 15.2.",
+                    "Rationale": "The area, `A`, of a triangle is given by the formula `A=(bh)/2`, where `b` is the length of the base of the triangle and `h` is the height of the triangle. In the right triangle shown, the length of the base of the triangle is `5` `text(inches)`, and the height is `3` `text(inches)`. It follows that `b=5` and `h=3`. Substituting `5` for `b` and `3` for `h` in the formula `A=(bh)/2` yields `A=(5)(3)/2`, which is equivalent to `A=(15)/2`, or `A=15/2`. Therefore, the area of the triangle, in `text(square inches)`, is `15/2`.",
                     "Percent": 0
                 }
             }
@@ -701,38 +701,38 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/15a.jpg",
-            "The graph models the number of active projects a company was working on x months after the end of November 2012, where 0 ≤ x ≤ 6. According to the model, what is the predicted number of active projects the company was working on at the end of November 2012?"
+            "The graph models the number of active projects a company was working on x months after the end of `text(November 2012)`, where `0lexle6`. According to the model, what is the predicted number of active projects the company was working on at the end of `text(November 2012)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0",
+                "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of x that corresponds to the end of November 2012, not the predicted number of active projects the company was working on at the end of November 2012.",
+                    "Rationale": "This is the value of `x` that corresponds to the end of `text(November 2012)`, not the predicted number of active projects the company was working on at the end of `text(November 2012)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph models the number of active projects a company was working on x months after the end of November 2012. Therefore, the value of x that corresponds to the end of November 2012 is 0. The point at which x = 0 is the `text(y)`-intercept of the graph. It follows that the `text(y)`-intercept of the graph shown is the point (0, 5). Therefore, according to the model, the predicted number of active projects the company was working on at the end of November 2012 is 5.",
+                    "Rationale": "It's given that the graph models the number of active projects a company was working on `x` `text(months)` after the end of `text(November 2012)`. Therefore, the value of `x` that corresponds to the end of `text(November 2012)` is `0`. The point at which `x=0` is the `y`-intercept of the graph. It follows that the `y`-intercept of the graph shown is the point `(0,5)`. Therefore, according to the model, the predicted number of active projects the company was working on at the end of `text(November 2012)` is `5`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the predicted number of active projects the company was working on 2 months after the end of November 2012.",
+                    "Rationale": "This is the predicted number of active projects the company was working on `2` `text(months)` after the end of `text(November 2012)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the predicted number of active projects the company was working on 4 months after the end of November 2012.",
+                    "Rationale": "This is the predicted number of active projects the company was working on `4` `text(months)` after the end of `text(November 2012)`.",
                     "Percent": 0
                 }
             }
@@ -756,38 +756,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The relationship between two variables, `x` and `y`, is linear. For every increase in the value of x by 1, the value of y increases by 8. When the value of x is 2, the value of y is 18. Which equation represents this relationship?"
+            "The relationship between two variables, `x` and `y`, is linear. For every increase in the value of `x` by `1`, the value of `y` increases by `8`. When the value of `x` is `2`, the value of `y` is `18`. Which equation represents this relationship?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 2x + 18",
+                "Choice": "`y=2x+18`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a relationship where for every increase in the value of x by 1, the value of y increases by 2, not 8, and when the value of x is 2, the value of y is 22, not 18.",
+                    "Rationale": "This equation represents a relationship where for every increase in the value of `x` by `1`, the value of `y` increases by `2`, not `8`, and when the value of `x` is `2`, the value of `y` is `22`, not `18`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "y = 2x + 8",
+                "Choice": "`y=2x+8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a relationship where for every increase in the value of x by 1, the value of y increases by 2, not 8, and when the value of x is 2, the value of y is 12, not 18.",
+                    "Rationale": "This equation represents a relationship where for every increase in the value of `x` by `1`, the value of `y` increases by `2`, not 8, and when the value of `x` is `2`, the value of `y` is `12`, not `18`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "y = 8x + 2",
+                "Choice": "`y=8x+2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the relationship between `x` and `y` is linear. An equation representing a linear relationship can be written in the form `y=mx+b`, where m is the slope and b is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of the relationship in the `text(xy)`-plane. It's given that for every increase in the value of x by 1, the value of y increases by 8. The slope of a line can be expressed as the change in y over the change in x. Thus, the slope, m, of the line representing this relationship can be expressed as 8/1, or 8. Substituting 8 for m in the equation `y=mx+b` yields y = 8x + b. It's also given that when the value of x is 2, the value of y is 18. Substituting 2 for x and 18 for y in the equation y = 8x + b yields 18 = 8(2) + b, or 18 = 16 + b. Subtracting 16 from each side of this equation yields 2 = b. Substituting 2 for b in the equation y = 8x + b yields y = 8x + 2. Therefore, the equation y = 8x + 2 represents this relationship.",
+                    "Rationale": "It's given that the relationship between `x` and `y` is linear. An equation representing a linear relationship can be written in the form `y=mx+b`, where `m` is the slope and `b` is the `y`-coordinate of the `y`-intercept of the graph of the relationship in the `xy`-plane. It's given that for every increase in the value of `x` by `1`, the value of `y` increases by `8`. The slope of a line can be expressed as the change in `y` over the change in `x`. Thus, the slope, `m`, of the line representing this relationship can be expressed as `8/1`, or `8`. Substituting `8` for `m` in the equation `y=mx+b` yields `y=8x+b`. It's also given that when the value of `x` is `2`, the value of `y` is `18`. Substituting `2` for `x` and `18` for `y` in the equation `y=8x+b` yields `18=8(2)+b`, or `18=16+b`. Subtracting `16` from each side of this equation yields `2=b`. Substituting `2` for `b` in the equation `y=8x+b` yields `y=8x+2`. Therefore, the equation `y=8x+2` represents this relationship.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "y = 3x + 26",
+                "Choice": "`y=3x+26`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a relationship where for every increase in the value of x by 1, the value of y increases by 3, not 8, and when the value of x is 2, the value of y is 32, not 18.",
+                    "Rationale": "This equation represents a relationship where for every increase in the value of `x` by `1`, the value of `y` increases by `3`, not `8`, and when the value of `x` is `2`, the value of `y` is `32`, not `18`.",
                     "Percent": 0
                 }
             }
@@ -811,39 +811,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:P = N(19 - C)",
-            "The given equation relates the positive numbers P, N, and C. Which equation correctly expresses C in terms of P and N?"
+            ":ibox:`P=N(19-C)`",
+            "The given equation relates the positive numbers `P`, `N`, and `C`. Which equation correctly expresses `C` in terms of `P` and `N`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "C = (19 + P)/N",
+                "Choice": "`C=(19+P)/N`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation is equivalent to P = NC - 19, not P = N(19 - C).",
+                    "Rationale": "This equation is equivalent to `P=NC-19`, not `P=N(19-C)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "C = (19 - P)/N",
+                "Choice": "`C=(19-P)/N`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation is equivalent to P = 19 - NC, not P = N(19 - C).",
+                    "Rationale": "This equation is equivalent to `P=19-NC`, not `P=N(19-C)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "C = 19 + P/N",
+                "Choice": "`C=19+P/N`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation is equivalent to P = N(C - 19), not P = N(19 - C).",
+                    "Rationale": "This equation is equivalent to `P=N(C-19`), not `P=N(19-C`).",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "C = 19 - P/N",
+                "Choice": "`C=19-P/N`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the values of P, N, and C are positive. Therefore, dividing each side of the given equation by N yields P/N = 19 - C. Subtracting 19 from each side of this equation yields P/N - 19  = -C. Dividing each side of this equation by -1 yields 19 - P/N  = C, or C = 19 - P/N.",
+                    "Rationale": "It's given that the values of `P`, `N`, and `C` are positive. Therefore, dividing each side of the given equation by `N` yields `P/N=19-C`. Subtracting `19` from each side of this equation yields `P/N-19 =-C`. Dividing each side of this equation by `-1` yields `19-P/N =C`, or `C=19-P/N`.",
                     "Percent": 0
                 }
             }
@@ -867,12 +867,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:w² + 12w - 40 = 0",
+            ":ibox:`w^2+12w-40=0`",
             "Which of the following is a solution to the given equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6 - 2√19",
+                "Choice": "`6-2sqrt(19)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -880,7 +880,7 @@
                 }
             },
             "B": {
-                "Choice": "2√19",
+                "Choice": "`2sqrt(19)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -888,7 +888,7 @@
                 }
             },
             "C": {
-                "Choice": "√19",
+                "Choice": "`sqrt(19)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -896,10 +896,10 @@
                 }
             },
             "D": {
-                "Choice": "-6 + 2√19",
+                "Choice": "`-6+2sqrt(19)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Adding 40 to both sides of the given equation yields w² + 12w = 40. To complete the square, adding (12/2)^2, or 6^2, to both sides of this equation yields w² + 12w + 6^2 = 40 + 6^2, or (w + 6)^2 = 76. Taking the square root of both sides of this equation yields w + 6 = ±√76, or w + 6 = ±2√19. Subtracting 6 from both sides of this equation yields w = -6 ± 2√19. Therefore, the solutions to the given equation are -6 + 2√19 and -6 - 2√19. Of these two solutions, only -6 + 2√19 is given as a choice.",
+                    "Rationale": "Adding 40 to both sides of the given equation yields `w^2+12w=40`. To complete the square, adding `(12/2)^2`, or `6^2`, to both sides of this equation yields `w^2+12w+6^2=40+6^2`, or `(w+6)^2=76`. Taking the square root of both sides of this equation yields `w+6=+-sqrt(76)`, or `w+6=+-2sqrt(19)`. Subtracting `6` from both sides of this equation yields `w=-6+-2sqrt(19)`. Therefore, the solutions to the given equation are `-6+2sqrt(19)` and `-6-2sqrt(19)`. Of these two solutions, only `-6 + 2sqrt(19)` is given as a choice.",
                     "Percent": 0
                 }
             }
@@ -923,13 +923,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table shown summarizes the number of employees at each of the 17 restaurants in a town.",
+            "The table shown summarizes the number of employees at each of the `17` restaurants in a town.",
             "problems/SAT6M1/media/19a.jpg",
             "Which of the following could be the median number of employees for the restaurants in this town?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -937,7 +937,7 @@
                 }
             },
             "B": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the position of the median in the list, not the value of the median.",
@@ -945,7 +945,7 @@
                 }
             },
             "C": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -953,10 +953,10 @@
                 }
             },
             "D": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a data set contains an odd number of data values, the median is represented by the middle data value in the list when the data values are listed in ascending or descending order. Since the numbers of employees are given as ranges of values rather than specific values, it's only possible to determine the range in which the median falls, rather than the exact median. Since there are 17 restaurants included in the data set and the numbers of employees are listed in ascending order, it follows that the median number of employees will be represented by the ninth restaurant in the list. Since the first 2 restaurants each have 2 to 7 employees, numbers of employees in the 2 to 7 range would be represented by the first and second restaurants in the list. The next 4 restaurants each have 8 to 13 employees. Therefore, numbers of employees in the 8 to 13 range will be represented by the third through sixth restaurants in the list. The next 2 restaurants each have 14 to 19 employees. Therefore, numbers of employees in the 14 to 19 range will be represented by the seventh and eighth restaurants in the list. Since the next 7 restaurants each have 20 to 25 employees, numbers of employees in the 20 to 25 range will be represented by the ninth through fifteenth restaurants in the list. This means that the ninth restaurant in the list, which has the median number of employees for the restaurants in this town, has a number of employees in the 20 to 25 range. Of the given choices, the only number of employees in the 20 to 25 range is 21.",
+                    "Rationale": "If a data set contains an odd number of data values, the median is represented by the middle data value in the list when the data values are listed in ascending or descending order. Since the numbers of employees are given as ranges of values rather than specific values, it's only possible to determine the range in which the median falls, rather than the exact median. Since there are `17` restaurants included in the data set and the numbers of employees are listed in ascending order, it follows that the median number of employees will be represented by the ninth restaurant in the list. Since the first `2` restaurants each have `2` to `7` employees, numbers of employees in the `2` to `7` range would be represented by the first and second restaurants in the list. The next `4` restaurants each have `8` to `13` employees. Therefore, numbers of employees in the `8` to `13` range will be represented by the third through sixth restaurants in the list. The next `2` restaurants each have `14` to `19` employees. Therefore, numbers of employees in the `14` to `19` range will be represented by the seventh and eighth restaurants in the list. Since the next `7` restaurants each have `20` to `25` employees, numbers of employees in the `20` to `25` range will be represented by the ninth through fifteenth restaurants in the list. This means that the ninth restaurant in the list, which has the median number of employees for the restaurants in this town, has a number of employees in the `20` to `25` range. Of the given choices, the only number of employees in the `20` to `25` range is `21`.",
                     "Percent": 0
                 }
             }
@@ -980,14 +980,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of 3x/7 = -5y/9 + 21 in the `text(xy)`-plane?"
+            "What is the `y`-coordinate of the `y`-intercept of the graph of `(3x)/7=-(5y)/9+21` in the `xy`-plane?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:189/5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A `text(y)`-intercept of a graph in the `text(xy)`-plane is a point where the graph intersects the `text(y)`-axis, which is a point with an `text(x)`-coordinate of 0. Substituting 0 for x in the given equation yields 3(0)/7 = -5y/9 + 21, or 0 = -5y/9 + 21. Subtracting 21 from both sides of this equation yields -21 = -5y/9. Multiplying both sides of this equation by -9 yields 189 = 5y. Dividing both sides of this 189 = equation by 5 yields 189/5 = y. Therefore, the `text(y)`-coordinate of the `text(y)`-intercept of the graph of the given equation in the `text(xy)`-plane is 189/5.",
+                    "Rationale": "A `y`-intercept of a graph in the `xy`-plane is a point where the graph intersects the `y`-axis, which is a point with an `x`-coordinate of `0`. Substituting `0` for `x` in the given equation yields `(3(0))/7=-(5y)/9+21`, or `0=-(5y)/9+21`. Subtracting `21` from both sides of this equation yields `-21=-(5y)/9`. Multiplying both sides of this equation by `-9` yields `189=5y`. Dividing both sides of this equation by `5` yields `189/5=y`. Therefore, the `y`-coordinate of the `y`-intercept of the graph of the given equation in the `xy`-plane is `189/5`.",
                     "Percent": 0
                 }
             }
@@ -1012,14 +1012,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/21a.jpg",
-            "The graph of y = 2x^2+ bx + c is shown, where b and c are constants. What is the value of bc?"
+            "The graph of `y=2x^2+bx+c` is shown, where b and c are constants. What is the value of `bc`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:-24",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the graph passes through the point (0, -6), it follows that when the value of x is 0, the value of y is -6. Substituting 0 for x and -6 for y in the given equation yields -6 = 2(0)^2 + b(0) + c, or -6 = c. Therefore, the value of c is 6-. Substituting 6- for c in the given equation yields y = 2x^2+ bx + c. Since the graph passes through the point (-1, 8), it follows that when the value of x is -1, the value of y is -8. Substituting -1 for x and -8 for y in the equation y = 2x^2+ bx + c yields -8 = 2(-1)^2 + b(-1) - 6, or -8 = 2 - b - 6, which is equivalent to -8 = -4 - b. Adding 4 to each side of this equation yields -4 = -b. Dividing each side of this equation by -1 yields 4 = b. Since the value of b is 4 and the value of c is -6, it follows that the value of bc is (4)(-6), or -24.\n\nAlternate approach: The given equation represents a parabola in the `text(xy)`-plane with a vertex at (-1, -8). Therefore, the given equation, y = 2x^2+ bx + c, which is written in standard form, can be written in vertex form, `y=a(x-h)^2+k`, where `(h,k)` is the vertex of the parabola and a is the value of the coefficient on the x2 term when the equation is written in standard form. It follows that a = 2. Substituting 2 for a, -1 for h, and -8 for k in this equation yields y = 2(x - (-1))^2 - 8, or y = 2(x + 1)^2 - 8. Squaring the binomial on the right-hand side of this equation yields y = 2(x^2+ 2x + 1) - 8. Multiplying each term inside the parentheses on the right-hand side of this equation by 2 yields y = 2x^2+ 4x + 2 - 8, which is equivalent to y = 2x^2+ 4x - 6. From the given equation y = 2x^2+ bx + c, it follows that the value of b is 4 and the value of c is -6. Therefore, the value of bc is (4)(-6), or -24.",
+                    "Rationale": "Since the graph passes through the point `(0,-6)`, it follows that when the value of `x` is `0`, the value of `y` is `-6`. Substituting `0` for `x` and `-6` for `y` in the given equation yields` -6=2(0)^2+b(0)+c`, or `-6=c`. Therefore, the value of `c` is `-6`. Substituting `-6` for `c` in the given equation yields `y=2x^2+bx+c`. Since the graph passes through the point `(-1,8)`, it follows that when the value of `x` is `-1`, the value of `y` is `-8`. Substituting `-1` for `x` and `-8` for `y` in the equation `y=2x^2+bx+c` yields `-8=2(-1)^2+b(-1)-6`, or `-8=2-b-6`, which is equivalent to `-8=-4-b`. Adding `4` to each side of this equation yields `-4=-b`. Dividing each side of this equation by `-1` yields `4=b`. Since the value of `b` is `4` and the value of `c` is `-6`, it follows that the value of `bc` is `(4)(-6)`, or `-24`.\n\nAlternate approach: The given equation represents a parabola in the `xy`-plane with a vertex at `(-1,-8)`. Therefore, the given equation, `y=2x^2+bx+c`, which is written in standard form, can be written in vertex form, `y=a(x-h)^2+k`, where `(h,k)` is the vertex of the parabola and `a` is the value of the coefficient on the `x^2` term when the equation is written in standard form. It follows that `a=2`. Substituting `2` for `a`, `-1` for `h`, and `-8` for `k` in this equation yields `y = 2(x-(-1))^2-8`, or `y=2(x+1)^2-8`. Squaring the binomial on the right-hand side of this equation yields `y=2(x^2+2x+1)-8`. Multiplying each term inside the parentheses on the right-hand side of this equation by `2` yields `y=2x^2+4x+2-8`, which is equivalent to` y=2x^2+4x-6`. From the given equation `y=2x^2+bx+c`, it follows that the value of `b` is `4` and the value of `c` is `-6`. Therefore, the value of `bc` is `(4)(-6)`, or `-24`.",
                     "Percent": 0
                 }
             }
@@ -1043,11 +1043,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In 2008, Zinah earned 14% more than in 2007, and in 2009 Zinah earned 4% more than in 2008. If Zinah earned y times as much in 2009 as in 2007, what is the value of y?"
+            "In `2008`, Zinah earned `14%` more than in `2007`, and in `2009` Zinah earned `4%` more than in `2008`. If Zinah earned `y` times as much in `2009` as in `2007`, what is the value of `y`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.5600",
+                "Choice": "`0.5600`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1055,7 +1055,7 @@
                 }
             },
             "B": {
-                "Choice": "1.0056",
+                "Choice": "`1.0056`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1063,7 +1063,7 @@
                 }
             },
             "C": {
-                "Choice": "1.1800",
+                "Choice": "`1.1800`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1071,10 +1071,10 @@
                 }
             },
             "D": {
-                "Choice": "1.1856",
+                "Choice": "`1.1856`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that in 2008 Zinah earned 14% more than in 2007. Let h represent the amount Zinah earned in 2007 and let j represent the amount that Zinah earned in 2008. This situation can be represented by the equation j = (1 + 14/100)h, or j = 1.14h. It's also given that in 2009 Zinah earned 4% more than in 2008. Let k represent the amount Zinah earned in 2009. This situation can be represented by the equation k = (1 + 4/100), or k = 1.04j. Substituting 1.14h for j in the equation k = 1.04j yields k = (1.04)(1.14), or k = 1.1856h. If Zinah earned y times as much in 2009 as in 2007, then the value of y is 1.1856.",
+                    "Rationale": "It's given that in `2008` Zinah earned `14%` more than in `2007`. Let `h` represent the amount Zinah earned in `2007` and let `j` represent the amount that Zinah earned in `2008`. This situation can be represented by the equation `j=(1+14/100)h`, or `j=1.14h`. It's also given that in `2009` Zinah earned `4%` more than in `2008`. Let `k` represent the amount Zinah earned in `2009`. This situation can be represented by the equation `k=(1+4/100)`, or `k=1.04j`. Substituting `1.14h` for `j` in the equation `k=1.04j` yields `k=(1.04)(1.14)`, or `k=1.1856h`. If Zinah earned `y` times as much in `2009` as in `2007`, then the value of `y` is `1.1856`.",
                     "Percent": 0
                 }
             }
@@ -1089,7 +1089,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Describe how a change to the equation representing a circle affects the graph of the circle in the `text(xy)`-plane or how a change to the graph of a circle affects the equation that represents the circle."
+            "Describe how a change to the equation representing a circle affects the graph of the circle in the `xy`-plane or how a change to the graph of a circle affects the equation that represents the circle."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1099,19 +1099,19 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/23a.jpg",
-            "Circle A (shown) is defined by the equation (x + 2)^2 + y^2= 9. Circle B (not shown) is the result of shifting circle A down 6 units and increasing the radius so that the radius of circle B is 2 times the radius of circle A. Which equation defines circle B?"
+            "Circle `A` (shown) is defined by the equation `(x+2)^2+y^2=9`. Circle `B` (not shown) is the result of shifting circle `A` down `6` `text(units)` and increasing the radius so that the radius of circle `B` is `2` times the radius of circle `A`. Which equation defines circle `B`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x + 2)^2 + (y + 6)^2 = (4)(9)",
+                "Choice": "`(x+2)^2+(y+6)^2=(4)(9)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the graph, the center of circle A has coordinates (-2, 0), and the radius of circle A is 3. It's given that circle B is the result of shifting circle A down 6 units and increasing the radius so that the radius of circle B is 2 times the radius of circle A. It follows that the center of circle B is 6 units below the center of circle A. The point that's 6 units below (-2, 0) has the same `text(x)`-coordinate as (-2, 0) and has a `text(y)`-coordinate that is 6 less than the `text(y)`-coordinate of (-2, 0). Therefore, the coordinates of the center of circle B are (-2, 0 - 6), or (-2, -6). Since the radius of circle B is 2 times the radius of circle A, the radius of circle B is 2 3 ^ ^ h h. A circle in the `text(xy)`-plane can be defined by an equation of the form `(x-h)^2+(y-k)^2=r^2`, where the coordinates of the center of the circle are `(h,k)` and the radius of the circle is r. Substituting -2 for h, -6 for k, and (2)(3) for r in this equation yields (x - (-2))^2 + (y - (-6))^2 = (2)^2(3)^2, which is equivalent to (x + 2)^2 + (y + 6)^2 = (2)^2(3)^2, or (x + 2)^2 + (y + 6)^2 = (4)(9). Therefore, the equation (x + 2)^2 + (y + 6)^2 = (4)(9) defines circle B.",
+                    "Rationale": "According to the graph, the center of circle `A` has coordinates `(-2,0)`, and the radius of circle `A` is `3`. It's given that circle `B` is the result of shifting circle `A` down `6` `text(units)` and increasing the radius so that the radius of circle `B` is `2` times the radius of circle `A`. It follows that the center of circle `B` is `6` `text(units)` below the center of circle `A`. The point that's `6` `text(units)` below `(-2,0)` has the same `x`-coordinate as `(-2,0)` and has a `y`-coordinate that is `6` less than the `y`-coordinate of `(-2,0)`. Therefore, the coordinates of the center of circle `B` are `(-2,0-6)`, or `(-2,-6)`. Since the radius of circle `B` is `2` times the radius of circle `A`, the radius of circle `B` is `(2)(3)`. A circle in the `xy`-plane can be defined by an equation of the form `(x-h)^2+(y-k)^2=r^2`, where the coordinates of the center of the circle are `(h,k)` and the radius of the circle is `r`. Substituting `-2` for `h`, `-6` for `k`, and `(2)(3)` for `r` in this equation yields `(x-(-2))^2+(y-(-6))^2=(2)^2(3)^2`, which is equivalent to `(x+2)^2+(y+6)^2=(2)^2(3)^2`, or `(x+2)^2+(y+6)^2=(4)(9)`. Therefore, the equation `(x+2)^2+(y+6)^2=(4)(9`) defines circle `B`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "2(x + 2)^2 + 2(y + 6)^2 = 9",
+                "Choice": "`2(x+2)^2+2(y+6)^2=9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1119,15 +1119,15 @@
                 }
             },
             "C": {
-                "Choice": "(x + 2)^2 + (y - 6)^2 = (4)(9)",
+                "Choice": "`(x+2)^2+(y-6)^2=(4)(9)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation defines a circle that's the result of shifting circle A up, not down, by 6 units and increasing the radius.",
+                    "Rationale": "This equation defines a circle that's the result of shifting circle `A` up, not down, by `6` `text(units)` and increasing the radius.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "2(x + 2)^2 + 2(y - 6)^2 = 9",
+                "Choice": "`2(x+2)^2+2(y-6)^2=9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1155,11 +1155,11 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/24a.jpg",
-            "Right triangle ABC is shown. What is the value of tan(A)?"
+            "Right triangle `ABC` is shown. What is the value of `tan(A)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "√3/54",
+                "Choice": "`sqrt(3)/54`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1167,26 +1167,26 @@
                 }
             },
             "B": {
-                "Choice": "1/√3",
+                "Choice": "`1/sqrt(3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of 1/tan(A), not the value of tan(A).",
+                    "Rationale": "This is the value of `1/tan(A)`, not the value of `tan(A)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "√3",
+                "Choice": "`sqrt(3)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the triangle shown, the measure of angle B is 30° and angle C is a right angle, which means that it has a measure of 90°. Since the sum of the angles in a triangle is equal to 180°, the measure of angle A is equal to 180° - (30 + 90)°, or 60°. In a right triangle whose acute angles have measures 30° and 60°, the lengths of the legs can be represented by the expressions x, x√3, and 2x, where x is the length of the leg opposite the angle with measure 30°, x√3 is the length of the leg opposite the angle with measure 60°, and 2x is the length of the hypotenuse. In the triangle shown, the hypotenuse has a length of 54. It follows that 2x = 54, or x = 27. Therefore, the length of the leg opposite angle B is 27 and the length of the leg opposite angle A is 27√3. The tangent of an acute angle in a right triangle is defined as the ratio of the length of the leg opposite the angle to the length of the leg adjacent to the angle. The length of the leg opposite angle A is 27√3 and the length of the leg adjacent to angle A is 27. Therefore, the value of tan(A) is (27√3)/27, or √3.",
+                    "Rationale": "In the triangle shown, the measure of angle `B` is `30°` and angle `C` is a right angle, which means that it has a measure of `90°`. Since the sum of the angles in a triangle is equal to `180°`, the measure of angle `A` is equal to `180°-(30+90)°`, or `60°`. In a right triangle whose acute angles have measures `30°` and `60°`, the lengths of the legs can be represented by the expressions `x`, `xsqrt(3)`, and `2x`, where `x` is the length of the leg opposite the angle with measure `30°`, `xsqrt(3)` is the length of the leg opposite the angle with measure `60°`, and `2x` is the length of the hypotenuse. In the triangle shown, the hypotenuse has a length of `54`. It follows that `2x=54`, or `x=27`. Therefore, the length of the leg opposite angle `B` is `27` and the length of the leg opposite angle `A` is `27sqrt(3)`. The tangent of an acute angle in a right triangle is defined as the ratio of the length of the leg opposite the angle to the length of the leg adjacent to the angle. The length of the leg opposite angle `A` is `27sqrt(3)` and the length of the leg adjacent to angle `A` is `27`. Therefore, the value of `tan(A)` is `(27sqrt(3))/27`, or `sqrt(3)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "27√3",
+                "Choice": "`27sqrt(3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the length of the leg opposite angle A, not the value of tan(A).",
+                    "Rationale": "This is the length of the leg opposite angle `A`, not the value of `tan(A)`.",
                     "Percent": 0
                 }
             }
@@ -1210,38 +1210,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "At the time that an article was first featured on the home page of a news website, there were 40 comments on the article. An exponential model estimates that at the end of each hour after the article was first featured on the home page, the number of comments on the article had increased by 190% of the number of comments on the article at the end of the previous hour. Which of the following equations best represents this model, where C is the estimated number of comments on the article t hours after the article was first featured on the home page and t ≤ 4?"
+            "At the time that an article was first featured on the home page of a news website, there were `40` comments on the article. An exponential model estimates that at the end of each hour after the article was first featured on the home page, the number of comments on the article had increased by `190%` of the number of comments on the article at the end of the previous hour. Which of the following equations best represents this model, where `C` is the estimated number of comments on the article `t` `text(hours)` after the article was first featured on the home page and `tle4`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "C = 40(1.19)ᵗ",
+                "Choice": "`C=40(1.19)^t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This model represents a situation where the number of comments at the end of each hour increased by 19% of the number of comments at the end of the previous hour, rather than 190%.",
+                    "Rationale": "This model represents a situation where the number of comments at the end of each hour increased by `19%` of the number of comments at the end of the previous hour, rather than `190%`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "C = 40(1.9)ᵗ",
+                "Choice": "`C=40(1.9)^t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This model represents a situation where the number of comments at the end of each hour increased by 90% of the number of comments at the end of the previous hour, rather than 190%.",
+                    "Rationale": "This model represents a situation where the number of comments at the end of each hour increased by `90%` of the number of comments at the end of the previous hour, rather than `190%`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "C = 40(19)ᵗ",
+                "Choice": "`C = 40(19)^t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This model represents a situation where the number of comments at the end of each hour was 19 times the number of comments at the end of the previous hour, rather than increasing by 190% of the number of comments at the end of the previous hour.",
+                    "Rationale": "This model represents a situation where the number of comments at the end of each hour was `19` times the number of comments at the end of the previous hour, rather than increasing by `190%` of the number of comments at the end of the previous hour.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "C = 40(2.9)ᵗ",
+                "Choice": "`C = 40(2.9)^t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that an exponential model estimates that the number of comments on an article increased by a fixed percentage at the end of each hour. Therefore, the model can be represented by an exponential equation of the form C = Kaᵗ, where C is the estimated number of comments on the article t hours after the article was first featured on the home page and K and a are constants. It's also given that when the article was first featured on the home page of the news website, there were 40 comments on the article. This means that when t = 0, C = 40. Substituting 0 for t and 40 for C in the equation C = Kaᵗ yields 40 = Ka⁰, or 40 = K. It's also given that the number of comments on the article at the end of an hour had increased by 190% of the number of comments on the article at the end of the previous hour. Multiplying the percent increase by the number of comments on the article at the end of the previous hour yields the number of estimated additional comments the article has on its home page: (40)(190/100), or 76 comments. Thus, the estimated number of comments for the following hour is the sum of the comments from the end of the previous hour and the number of additional comments, which is 40 + 76, or 116. This means that when t = 1, C = 116. Substituting 1 for t, 116 for C, and 40 for K in the equation C = Kaᵗ yields 116 = 40aᵗ, or 116 = 40a. Dividing both sides of this equation by 40 yields 2.9 = a. Substituting 40 for K and 2.9 for a in the equation C = Kaᵗ yields C = 40(2.9)ᵗ. Thus, the equation that best represents this model is C = 40(2.9)ᵗ.",
+                    "Rationale": "It's given that an exponential model estimates that the number of comments on an article increased by a fixed percentage at the end of each hour. Therefore, the model can be represented by an exponential equation of the form `C=Ka^t`, where `C` is the estimated number of comments on the article t hours after the article was first featured on the home page and `K` and `a` are constants. It's also given that when the article was first featured on the home page of the news website, there were `40` comments on the article. This means that when `t=0`, `C=40`. Substituting `0` for `t` and `40` for `C` in the equation `C = Ka^t` yields `40 = Ka^0`, or `40=K`. It's also given that the number of comments on the article at the end of an hour had increased by `190%` of the number of comments on the article at the end of the previous hour. Multiplying the percent increase by the number of comments on the article at the end of the previous hour yields the number of estimated additional comments the article has on its home page: `(40)(190/100)`, or `76` comments. Thus, the estimated number of comments for the following hour is the sum of the comments from the end of the previous hour and the number of additional comments, which is `40+76`, or `116`. This means that when `t=1`, `C=116`. Substituting `1` for `t`, `116` for `C`, and `40` for `K` in the equation `C = Ka^t` yields `116 = 40a^t`, or `116=40a`. Dividing both sides of this equation by `40` yields `2.9=a`. Substituting `40` for `K` and `2.9` for `a` in the equation `C=Ka^t` yields `C=40(2.9)^t`. Thus, the equation that best represents this model is `C=40(2.9)^t`.",
                     "Percent": 0
                 }
             }
@@ -1266,38 +1266,38 @@
         "Explain": false,
         "Content": [
             "problems/SAT6M1/media/26a.jpg",
-            "The table shows three values of x and their corresponding values of g(x), where g(x) = f(x)/(x + 3) and f is a linear function. What is the `text(y)`-intercept of the graph of `y=f(x)` in the `text(xy)`-plane?"
+            "The table shows three values of `x` and their corresponding values of `g(x)`, where `g(x)=f(x)/(x+3)` and `f` is a linear function. What is the `y`-intercept of the graph of `y=f(x)` in the `xy`-plane?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, 36)",
+                "Choice": "`(0,36)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the table shows values of x and their corresponding values of g(x), where g(x) = f(x)/(x + 3). It's also given that f is a linear function. It follows that an equation that defines f can be written in the form f(x) = mx + b, where m represents the slope and b represents the `text(y)`-coordinate of the `text(y)`-intercept `(0,b)` of the graph of `y=f(x)` in the `text(xy)`-plane. The slope of the graph of `y=f(x)` can be found using two points, `(x_1,y_1)` and `(x_2,y_2)`, that are on the graph of `y=f(x)`, and the formula `m=(y_2-y_1)/(x_2-x_1)`. Since the table shows values of x and their corresponding values of g(x), substituting values of x and g(x) in the equation g(x) = f(x)/(x + 3) can be used to define function f. Using the first pair of values from the table, x = -27 and g(x) = 3, yields 3 = f(-27)/(-27 + 3), or 3 = f(-27)/(-24). Multiplying each side of this equation by -24 yields -72 = f(-27), so the point (-27, -72) is on the graph of `y=f(x)`. Using the second pair of values from the table, x = -9 and g(x) = 0, yields 0 = f(-9)/(-9 + 3), or 0 = f(-9)/(-6). Multiplying each side of this equation by -6 yields 0 = f(-9), so the point (-9, 0) is on the graph of `y=f(x)`. Substituting (-27, -72) and (-9, 0) for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the formula `m=(y_2-y_1)/(x_2-x_1)` yields m = (0 - (-72))/(-9 - (-27)), or m = 4. Substituting 4 for m in the equation f(x) = mx + b yields f(x) = 4x + b. Since 0 = f(-9), substituting -9 for x and 0 for f(x) in the equation f(x) = 4x + b yields 0 = 4(-9) + b, or 0 = -36 + b. Adding 36 to both sides of this equation yields 36 = b. It follows that 36 is the `text(y)`-coordinate of the `text(y)`-intercept `(0,b)` of the graph of `y=f(x)`. Therefore, the `text(y)`-intercept of the graph of `y=f(x)` is (0, 36).",
+                    "Rationale": "It's given that the table shows values of `x` and their corresponding values of `g(x)`, where `g(x)=f(x)/(x+3)`. It's also given that `f` is a linear function. It follows that an equation that defines `f` can be written in the form `f(x)=mx+b`, where `m` represents the slope and `b` represents the `y`-coordinate of the `y`-intercept `(0,b)` of the graph of `y=f(x)` in the `xy`-plane. The slope of the graph of `y=f(x)` can be found using two points, `(x_1,y_1)` and `(x_2,y_2)`, that are on the graph of `y=f(x)`, and the formula `m=(y_2-y_1)/(x_2-x_1)`. Since the table shows values of `x` and their corresponding values of `g(x)`, substituting values of `x` and `g(x)` in the equation `g(x)=f(x)/(x+3)` can be used to define function `f`. Using the first pair of values from the table, `x=-27` and `g(x)=3`, yields `3=f(-27)/(-27+3)`, or `3=f(-27)/(-24)`. Multiplying each side of this equation by `-24` yields `-72=f(-27)`, so the point `(-27,-72)` is on the graph of `y=f(x)`. Using the second pair of values from the table, `x=-9` and `g(x)=0`, yields `0=f(-9)/(-9+3)`, or `0=f(-9)/(-6)`. Multiplying each side of this equation by `-6` yields `0=f(-9)`, so the point `(-9,0)` is on the graph of `y=f(x)`. Substituting `(-27,-72)` and `(-9,0)` for `(x_1,y_1)` and `(x_2,y_2)`, respectively, in the formula `m=(y_2-y_1)/(x_2-x_1)` yields `m=(0-(-72))/(-9-(-27))`, or `m=4`. Substituting `4` for `m` in the equation `f(x)=mx+b` yields `f(x)=4x+b`. Since `0=f(-9)`, substituting `-9` for `x` and `0` for `f(x)` in the equation `f(x)=4x+b` yields `0=4(-9)+b`, or `0=-36+b`. Adding `36` to both sides of this equation yields `36=b`. It follows that `36` is the `y`-coordinate of the `y`-intercept `(0,b)` of the graph of `y=f(x)`. Therefore, the `y`-intercept of the graph of `y=f(x)` is `(0,36)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "(0, 12)",
+                "Choice": "`(0,12)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "12 is the `text(y)`-coordinate of the `text(y)`-intercept of the graph of `y=g(x)`.",
+                    "Rationale": "`12` is the `y`-coordinate of the `y`-intercept of the graph of `y=g(x)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "(0, 4)",
+                "Choice": "`(0,4)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": " 4 is the slope of the graph of `y=g(x)`.",
+                    "Rationale": " `4` is the slope of the graph of `y=g(x)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "(0, -9)",
+                "Choice": "`(0,-9)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-9 is the `text(x)`-coordinate of the `text(x)`-intercept of the graph of `y=g(x)`.",
+                    "Rationale": "`-9` is the `x`-coordinate of the `x`-intercept of the graph of `y=g(x)`.",
                     "Percent": 0
                 }
             }
@@ -1321,14 +1321,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In right triangle ABC, angle C is the right angle and BC = 162. Point D on side AB is connected by a line segment with point E on side AC such that line segment DE is parallel to side BC and CE = 2AE. What is the length of line segment DE?"
+            "In right triangle `ABC`, angle `C` is the right angle and `BC=162`. Point `D` on side `AB` is connected by a line segment with point `E` on side `AC` such that line segment `DE` is parallel to side `BC` and `CE=2AE`. What is the length of line segment `DE`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:54",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that in triangle ABC, point D on side AB is connected by a line segment with point E on side AC such that line segment DE is parallel to side BC. It follows that parallel segments DE and BC are intersected by sides AB and AC. If two parallel segments are intersected by a third segment, corresponding angles are congruent. Thus, corresponding angles C and AED are congruent and corresponding angles B and ADE are congruent. Since triangle ADE has two angles that are each congruent to an angle in triangle ABC, triangle ADE is similar to triangle ABC by the angle-angle similarity postulate, where side DE corresponds to side BC, and side AE corresponds to side AC. Since the lengths of corresponding sides in similar triangles are proportional, it follows that DE/BC = AE/AC. Since point E lies on side AC, AE + CE = AC. It's given that CE = 2AE. Substituting 2AE for CE in the equation AE + CE = AC yields AE + 2AE = AC, or 3AE = AC. It's given that BC = 162. Substituting 162 for BC and 3AE for AC in the equation DE/BC = AE/AC yields DE/162 = AE/(3AE), or DE/162 = 1/3. Multiplying both sides of this equation by 162 yields DE = 54. Thus, the length of line segment DE is 54.",
+                    "Rationale": "It's given that in triangle `ABC`, point `D` on side `AB` is connected by a line segment with point `E` on side `AC` such that line segment `DE` is parallel to side `BC`. It follows that parallel segments `DE` and `BC` are intersected by sides `AB` and `AC`. If two parallel segments are intersected by a third segment, corresponding angles are congruent. Thus, corresponding angles `C` and `AED` are congruent and corresponding angles `B` and `ADE` are congruent. Since triangle `ADE` has two angles that are each congruent to an angle in triangle `ABC`, triangle `ADE` is similar to triangle `ABC` by the angle-angle similarity postulate, where side `DE` corresponds to side `BC`, and side `AE` corresponds to side `AC`. Since the lengths of corresponding sides in similar triangles are proportional, it follows that `(DE)/(BC)=(AE)/(AC)`. Since point `E` lies on side `AC`, `AE+CE=AC`. It's given that `CE=2AE`. Substituting `2AE` for `CE` in the equation `AE+CE=AC` yields `AE+2AE=AC`, or `3AE=AC`. It's given that `BC=162`. Substituting `162` for `BC` and `3AE` for `AC` in the equation `(DE)/(BC)=(AE)/(AC)` yields `(DE)/162=(AE)/(3AE)`, or `(DE)/162=1/3`. Multiplying both sides of this equation by `162` yields `DE=54`. Thus, the length of line segment `DE` is `54`.",
                     "Percent": 0
                 }
             }

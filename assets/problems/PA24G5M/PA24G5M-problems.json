@@ -678,7 +678,7 @@
         "Explain": false,
         "Content": [
             "Sarah creates two different number patterns. She uses the numbers in her patterns as ordered pairs on a graph. The two rules are described below.",
-            ":ibox:`text(x)`-coordinate rule: start at 2 and follow the pattern “add 2”\n\n`text(y)`-coordinate rule: start at 6 and follow the pattern “add 4”",
+            ":ibox:`x`-coordinate rule: start at 2 and follow the pattern “add 2”\n\n`y`-coordinate rule: start at 6 and follow the pattern “add 4”",
             "The patterns continue. What is the ordered pair of the 4th point on Sarah's graph?"
         ],
         "AnswerChoices": {
@@ -686,7 +686,7 @@
                 "Choice": "(6, 18)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice adds 4 to the starting `text(x)`-coordinate (2 + 4 = 6) to find an incorrect `text(x)`-coordinate but then identifies the correct `text(y)`-coordinate (18).",
+                    "Rationale": "This choice adds 4 to the starting `x`-coordinate (2 + 4 = 6) to find an incorrect `x`-coordinate but then identifies the correct `y`-coordinate (18).",
                     "Percent": 18
                 }
             },
@@ -694,7 +694,7 @@
                 "Choice": "(6, 24)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice adds 4 to the starting `text(x)`-coordinate (2 + 4 = 6) and multiplies the starting `text(y)`-coordinate by 4 (6 × 4 = 24).",
+                    "Rationale": "This choice adds 4 to the starting `x`-coordinate (2 + 4 = 6) and multiplies the starting `y`-coordinate by 4 (6 × 4 = 24).",
                     "Percent": 17
                 }
             },
@@ -702,7 +702,7 @@
                 "Choice": "(8, 18)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the 4th point is found by applying each rule three times, so applies “add 2” three times to the starting `text(x)`-coordinate (2 + 2 × 3 = 8) and applies “add 4” three times to the starting `text(y)`-coordinate (6 + 4 × 3 = 18).",
+                    "Rationale": "This choice recognizes that the 4th point is found by applying each rule three times, so applies “add 2” three times to the starting `x`-coordinate (2 + 2 × 3 = 8) and applies “add 4” three times to the starting `y`-coordinate (6 + 4 × 3 = 18).",
                     "Percent": 42
                 }
             },
@@ -710,7 +710,7 @@
                 "Choice": "(8, 24)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice multiplies the starting `text(x)`-coordinate by 4 (2 × 4 = 8) and the starting `text(y)`-coordinate by 4 (6 × 4 = 24).",
+                    "Rationale": "This choice multiplies the starting `x`-coordinate by 4 (2 × 4 = 8) and the starting `y`-coordinate by 4 (6 × 4 = 24).",
                     "Percent": 23
                 }
             }
@@ -743,7 +743,7 @@
                 "Choice": "(5, 3)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice identifies a point with the same `text(y)`-coordinate as (2, 3) but does not consider that this point is 3 units from the given point.",
+                    "Rationale": "This choice identifies a point with the same `y`-coordinate as (2, 3) but does not consider that this point is 3 units from the given point.",
                     "Percent": 26
                 }
             },
@@ -751,12 +751,12 @@
                 "Choice": "origin",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that the origin is at (0, 0), which contains the smallest `text(x)`-coordinate and `text(y)`-coordinate, but does not consider how far this point is from (2, 3).",
+                    "Rationale": "This choice recognizes that the origin is at (0, 0), which contains the smallest `x`-coordinate and `y`-coordinate, but does not consider how far this point is from (2, 3).",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "`text(x)`-axis",
+                "Choice": "`x`-axis",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice either plots the given point at (3, 2) rather than at (2, 3) and compares the distance to each axis OR plots (2, 3) correctly but then switches the axes.",
@@ -764,10 +764,10 @@
                 }
             },
             "D": {
-                "Choice": "`text(y)`-axis",
+                "Choice": "`y`-axis",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice identifies the point (2, 3) as 2 units to the right of the `text(y)`-axis and 3 units up from the `text(x)`-axis, meaning the point is closer to the `text(y)`-axis (2 units) than to the `text(x)`-axis (3 units), to the point (5, 3), which is 3 units away, or to the origin, which is more than 3 units away.",
+                    "Rationale": "This choice identifies the point (2, 3) as 2 units to the right of the `y`-axis and 3 units up from the `x`-axis, meaning the point is closer to the `y`-axis (2 units) than to the `x`-axis (3 units), to the point (5, 3), which is 3 units away, or to the origin, which is more than 3 units away.",
                     "Percent": 41
                 }
             }
@@ -793,14 +793,14 @@
         "Content": [
             "The coordinate grid shown below is used to determine the locations of future buildings on a plot of land.",
             "problems/PA24G5M/media/15a.jpg",
-            "The four corners of the plot of land are (0, 0), (0, 10), (10, 10), and (10, 0). Because of spacing regulations, any buildings represented by points with the same `text(y)`-coordinate must be at least 2 units apart. The location of the first building will be represented by point (3, 7). What is the GREATEST number of buildings that can have a `text(y)`-coordinate of 7?"
+            "The four corners of the plot of land are (0, 0), (0, 10), (10, 10), and (10, 0). Because of spacing regulations, any buildings represented by points with the same `y`-coordinate must be at least 2 units apart. The location of the first building will be represented by point (3, 7). What is the GREATEST number of buildings that can have a `y`-coordinate of 7?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that there is only 1 available point between (3, 7) and the `text(y)`-axis [(1, 7) ] and that there are at most 3 available points between (3, 7) and the right side of the coordinate grid [(5, 7), (7, 7), and (9, 7)], for a total of 5 available points, which represents 5 buildings.",
+                    "Rationale": "This choice recognizes that there is only 1 available point between (3, 7) and the `y`-axis [(1, 7) ] and that there are at most 3 available points between (3, 7) and the right side of the coordinate grid [(5, 7), (7, 7), and (9, 7)], for a total of 5 available points, which represents 5 buildings.",
                     "Percent": 39
                 }
             },
@@ -808,7 +808,7 @@
                 "Choice": "6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice identifies the greatest number of points with a common `text(y)`-coordinate that could appear on the grid with a minimum distance of 2 units (i.e., counts all the even `text(x)`-coordinates) but does not consider that the given point of (3, 7) has an odd `text(x)`-coordinate.",
+                    "Rationale": "This choice identifies the greatest number of points with a common `y`-coordinate that could appear on the grid with a minimum distance of 2 units (i.e., counts all the even `x`-coordinates) but does not consider that the given point of (3, 7) has an odd `x`-coordinate.",
                     "Percent": 18
                 }
             },
@@ -816,7 +816,7 @@
                 "Choice": "8",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice considers the 10 points with positive whole-number `text(x)`-coordinates when y = 7 and eliminates only the points (2, 7) and (4, 7) from this set since they are each only 1 unit from the given point of (3, 7).",
+                    "Rationale": "This choice considers the 10 points with positive whole-number `x`-coordinates when y = 7 and eliminates only the points (2, 7) and (4, 7) from this set since they are each only 1 unit from the given point of (3, 7).",
                     "Percent": 17
                 }
             },
@@ -824,7 +824,7 @@
                 "Choice": "9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice considers all 11 points with whole-number `text(x)`-coordinates when y = 7 and eliminates only the points (2, 7) and (4, 7) from this set since they are each only 1 unit from the given point of (3, 7).",
+                    "Rationale": "This choice considers all 11 points with whole-number `x`-coordinates when y = 7 and eliminates only the points (2, 7) and (4, 7) from this set since they are each only 1 unit from the given point of (3, 7).",
                     "Percent": 26
                 }
             }
