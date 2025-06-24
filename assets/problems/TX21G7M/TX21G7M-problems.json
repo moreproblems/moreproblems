@@ -707,7 +707,7 @@
                 "Choice": "problems/TX21G7M/media/14a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents the relationship between `x` and `y`, the student could have recognized that the total number of new words learned by the student is represented by y, the number of weeks since the student has been in the program is represented by x, and the rate at which the student learned words is 15 words per week (y = 15x). The student then could have checked pairs of x- and `y`-values to find the graph in which each `y`-value was the result of multiplying the corresponding `x`-value by 15. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the graph that best represents the relationship between `x` and `y`, the student could have recognized that the total number of new words learned by the student is represented by y, the number of weeks since the student has been in the program is represented by x, and the rate at which the student learned words is 15 words per week (y = 15x). The student then could have checked pairs of `x`- and `y`-values to find the graph in which each `y`-value was the result of multiplying the corresponding `x`-value by 15. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
                     "Percent": 68
                 }
             },
@@ -1282,7 +1282,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "153.86 cm²",
+                "Choice": "153.86 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found the diameter (straight line going through the center of a circle connecting two points on the circle), 7 cm, and used it as the radius in the formula for area, resulting in A ~~ 3.14 × 7^2 = 153.86 square centimeters. The student needs to focus on understanding that the radius is needed to determine the area of a circle.",
@@ -1290,7 +1290,7 @@
                 }
             },
             "B": {
-                "Choice": "43.96 cm²",
+                "Choice": "43.96 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found the diameter (straight line going through the center of a circle connecting two points on the circle), 7 cm, and used it as the radius in the formula for area. The student then multiplied the value by 2 instead of squaring it, resulting in A ~~ 3.14 × 7 × 2 = 43.96 square centimeters. The student needs to focus on understanding how to correctly apply the formula for the area of a circle.",
@@ -1298,7 +1298,7 @@
                 }
             },
             "C": {
-                "Choice": "21.98 cm²",
+                "Choice": "21.98 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the radius in the formula for area and multiplied the value by 2 instead of squaring it, resulting in A ~~ 3.14 × 3.5 × 2 = 21.98 square centimeters. The student needs to focus on understanding how to correctly apply the formula for the area of a circle.",
@@ -1306,7 +1306,7 @@
                 }
             },
             "D": {
-                "Choice": "38.47 cm²",
+                "Choice": "38.47 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the measurement that is closest to the area (amount of space covered by a surface) of the circle, the student should have measured the radius (distance from the center of the circle to a point on the circle) of the circle to the nearest half centimeter. The radius of the circle is closest to 3.5 centimeters. The student should then have used the formula for the area of a circle from the Area section of the STAAR Grade 7 Mathematics Reference Materials page within the student's test booklet (`A=pir^2`, where A = area and r = the radius). Substituting 3.5 for the value of the radius and 3.14 for `pi` (from the Additional Information section of the STAAR Grade 7 Mathematics Reference Materials page within the student's test booklet) into the formula for area results in A ~~ 3.14 × (3.5)^2 = 38.47 square centimeters.",
@@ -1640,7 +1640,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "67 cm²",
+                "Choice": "67 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the area of (amount of space covered by) the figure, the student could have calculated the combined areas of the triangle, rectangle, and two semicircles (one whole circle). The base of the triangle is 6 centimeters, and the height of the triangle is 4 centimeters. The base of the rectangle is 8 centimeters, and the height of the rectangle is 6 centimeters. For each semicircle, the diameter (straight line going through the center of a circle connecting two points on the circle) is 3 centimeters. As a result, the radius (distance from the center of the circle to a point on the circle) of each semicircle is 1.5 centimeters, or half the length of the diameter. The student could have used the formulas for the areas of a triangle, rectangle, and circle from the Area section of the STAAR Grade 7 Mathematics Reference Materials page within the student's test booklet (triangle: A = 1/2 • bh, where A = area of the triangle, b = the base, and h = the height; rectangle: A = bh, where A = area of the rectangle, b = the base, and h = the height; and circle: `A=pir^2`, where A = area of the circle, `pi` = pi (approximately 3.14), and r = radius). The student could have combined the formulas to find the area of the figure, using A = (area of the triangle) + (area of the rectangle) + (area of the whole circle), or A = ⎛⎜1/2 • bh) + (bh) + (πr²). Substituting values into the formula results in A ~~ (1/2 × 6 × 4) + (8 × 6) + (3.14 × (1.5)^2) ~~ 12 + 48 + 7 = 67, or approximately 67 square centimeters. The rationale for the correct answer is an efficient way to solve the problem. However, other methods could be used to solve the problem correctly.",
@@ -1648,7 +1648,7 @@
                 }
             },
             "G": {
-                "Choice": "74 cm²",
+                "Choice": "74 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the areas of the triangle and rectangle correctly but calculated the area of two whole circles instead of two semicircles, resulting in 12 + 48 + 7 + 7 = 74 square centimeters. The student needs to focus on understanding how to determine the area of composite figures.",
@@ -1656,7 +1656,7 @@
                 }
             },
             "H": {
-                "Choice": "79 cm²",
+                "Choice": "79 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the areas of the rectangle and semicircles correctly but did not multiply by 1/2 when calculating the area of the triangle. Instead of 1/2 • (6 × 4), the student calculated (6 × 4), resulting in 24 + 48 + 7 = 79 square centimeters. The student needs to focus on understanding how to calculate the area of a triangle.",
@@ -1664,7 +1664,7 @@
                 }
             },
             "J": {
-                "Choice": "88 cm²",
+                "Choice": "88 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the areas of the triangle and rectangle correctly but calculated the areas of the two semicircles with a radius of 3. Instead of π × (1.5)^2, the student calculated π × (3)^2, resulting in 12 + 48 + 28 = 88 square centimeters. The student needs to focus on understanding how to calculate the area of a circle.",

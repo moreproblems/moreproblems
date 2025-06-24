@@ -330,7 +330,7 @@
                 "Choice": "(x, y) ⇒ (5x/4, 5y/4)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "When a figure is dilated (enlarged or decreased in size), its measurements increase or decrease based on the scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). In order to create a smaller polygon, a scale factor of less than 1 (in this case 0.9) is necessary. The origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid cross, represented by the ordered pair (0, 0)) as the center of dilation means that each of the points on the dilated figure will be 0.9 as far from the origin as they were on the original figure. If the location of each point was originally represented by `(x,y)`, then the new location will be (0.9x, 0.9y).",
+                    "Rationale": "When a figure is dilated (enlarged or decreased in size), its measurements increase or decrease based on the scale factor (ratio of the length of a side of one figure to the length of the corresponding (paired) side of a similar figure). In order to create a smaller polygon, a scale factor of less than 1 (in this case 0.9) is necessary. The origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid cross, represented by the ordered pair `(0,0)`) as the center of dilation means that each of the points on the dilated figure will be 0.9 as far from the origin as they were on the original figure. If the location of each point was originally represented by `(x,y)`, then the new location will be (0.9x, 0.9y).",
                     "Percent": 0
                 }
             }
@@ -434,7 +434,7 @@
                 "Choice": "12.4 ft",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "When the line representing the diagonal length of a rectangle is drawn, that line divides the rectangle into two identical right triangles (closed figures with three sides and one 90-degree angle). Given the length of two sides of a right triangle, the length of the third side can be determined or confirmed by using the Pythagorean theorem, `a^2+b^2=c^2`. The c in the Pythagorean theorem represents the hypotenuse (the longest side, which is opposite the 90-degree angle), while a and b represent the other two sides (in no particular order). To determine the length of this rectangle, the student should have substituted the width (4) for a or b and the diagonal (13) for c in the Pythagorean theorem. The substitution results in 4^2 + b² = 13^2, which when solved results in b is approximately equal to 12.4.",
+                    "Rationale": "When the line representing the diagonal length of a rectangle is drawn, that line divides the rectangle into two identical right triangles (closed figures with three sides and one 90-degree angle). Given the length of two sides of a right triangle, the length of the third side can be determined or confirmed by using the Pythagorean theorem, `a^2+b^2=c^2`. The c in the Pythagorean theorem represents the hypotenuse (the longest side, which is opposite the 90-degree angle), while a and b represent the other two sides (in no particular order). To determine the length of this rectangle, the student should have substituted the width (4) for a or b and the diagonal (13) for c in the Pythagorean theorem. The substitution results in 4^2 + b^2 = 13^2, which when solved results in b is approximately equal to 12.4.",
                     "Percent": 0
                 }
             },
@@ -490,7 +490,7 @@
             "Two-Dimensional Shapes"
         ],
         "SubTopics": [
-            "Explain the effect of translations, reflections over the x- or `y`-axis, and rotations limited to 90°, 180°, 270°, and 360° as applied to two-dimensional shapes on a coordinate plane using an algebraic representation."
+            "Explain the effect of translations, reflections over the `x`- or `y`-axis, and rotations limited to 90°, 180°, 270°, and 360° as applied to two-dimensional shapes on a coordinate plane using an algebraic representation."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -685,7 +685,7 @@
                 "Choice": "problems/TX19G8M/media/13c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized the scatterplot resembled a line with a negative slope; however, the student may have thought that since the line does not pass through the origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid cross, represented by the ordered pair (0, 0)) that the line does not represent a linear relationship. The student needs to focus on the definition of a linear relationship between `x` and `y` and how that relationship can be represented graphically.",
+                    "Rationale": "The student likely recognized the scatterplot resembled a line with a negative slope; however, the student may have thought that since the line does not pass through the origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid cross, represented by the ordered pair `(0,0)`) that the line does not represent a linear relationship. The student needs to focus on the definition of a linear relationship between `x` and `y` and how that relationship can be represented graphically.",
                     "Percent": 0
                 }
             },
@@ -1382,7 +1382,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "603.19 cm²",
+                "Choice": "603.19 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the diameter as the radius in the surface area formula, S = 2π • (6)(10) + 2π • (6)^2. The student needs to focus on correctly identifying the parts of the formula and how they are related to the figure.",
@@ -1390,7 +1390,7 @@
                 }
             },
             "G": {
-                "Choice": "245.04 cm²",
+                "Choice": "245.04 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the total surface area (total area of the surfaces of a three-dimensional figure) of the can, the student should have used the formula for the total surface area of a cylinder, S = 2π • rh + 2π • r^2, in which r represents the radius (distance from the center to the circumference of a circle) and h represents the height (vertical distance from top to bottom) of the can. To determine the value of r, the student should have divided the given diameter (straight line going through the center of a circle connecting two points on the circumference), 6, by 2, resulting in r = 3. Substituting the given values, the student should have evaluated S = 2π • (3)(10) + 2π • (3)^2, which is approximately equal to 245.04. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
@@ -1398,7 +1398,7 @@
                 }
             },
             "H": {
-                "Choice": "376.99 cm²",
+                "Choice": "376.99 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the diameter as the radius in the lateral surface area formula, S = 2S(6)(10). The student needs to focus on understanding and properly applying the formula for determining the total surface area of a figure and correctly identifying the parts of the formula and how they are related to the figure.",
@@ -1406,7 +1406,7 @@
                 }
             },
             "J": {
-                "Choice": "188.50 cm²",
+                "Choice": "188.50 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the lateral surface area formula, S = 2π • rh. The student needs to focus on understanding and properly applying the formula for determining the total surface area of a figure and correctly identifying the parts of the formula and how they are related to the figure.",
@@ -1664,7 +1664,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "251.3 cm³",
+                "Choice": "251.3 `text(cm)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely multiplied the two values in the stem by π. The product (answer to a multiplication problem) of (5 • 16 • π) is approximately equal to 251.3. The student needs to focus on identifying and using the formula required for the task.",
@@ -1672,7 +1672,7 @@
                 }
             },
             "B": {
-                "Choice": "4,021.2 cm³",
+                "Choice": "4,021.2 `text(cm)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the value of the diameter (straight line going through the center of a circle connecting two points on the circumference) instead of the radius, usingV = π • (16)^2 • (5), resulting in approximately 4,021.2. The student needs to focus on identifying the appropriate values and using the formula required for the task.",
@@ -1680,7 +1680,7 @@
                 }
             },
             "C": {
-                "Choice": "1,005.3 cm³",
+                "Choice": "1,005.3 `text(cm)^3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student should have used the formula for the volume of a cylinder, V = π • r^2 • h. To determine the value of r, the radius (distance from the center to the circumference of a circle) of the cylinder, the student should have set the formula for the circumference of a circle equal to the given value for the circumference, C = 2πr = 16π, an d solved for r. The student should have found the radius of the cylinder is 8 cm. Substituting the value of the radius and the given value of the height in the formula,V = π • (8)^2 • (5), results in approximately 1,005.3.",
@@ -1688,7 +1688,7 @@
                 }
             },
             "D": {
-                "Choice": "628.3 cm³",
+                "Choice": "628.3 `text(cm)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely squared the value of the height instead of the radius within the formula for the volume of a cylinder, V = π • (5)^2 • (8), resulting in 628.3. The student needs to focus on identifying the appropriate values and using the formula required for the task.",
@@ -1722,7 +1722,7 @@
                 "Choice": "problems/TX19G8M/media/32a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph appears to show a proportional relationship between `x` and `y`, the student should have recognized the line that passes through the origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid cross, represented by the ordered pair (0, 0)).",
+                    "Rationale": "To determine which graph appears to show a proportional relationship between `x` and `y`, the student should have recognized the line that passes through the origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid cross, represented by the ordered pair `(0,0)`).",
                     "Percent": 0
                 }
             },
@@ -2135,7 +2135,7 @@
                 "Choice": "$5,612.16",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the sum of two bank accounts with different types of interest, the student should have calculated the balance in each account and then added the two amounts. To determine the balance in Account I, the student should have used the formula for simple interest, I = Prt, in which P represents the principal (initial loan amount), r represents the interest rate, and t represents the length of time in years, I = ($2,500)(0.04)(3) = $300. The student should have then added the interest to the principal, $2,500 + $300 = $2,800. To determine the balance in Account II, the student should have used the formula for compound interest, A = P (1 + r)ᵗ, in which A represents the balance amount (principal and interest combined), A = $2,500(1 + 0.04)³ = $2,812.16. Finally the student should have added $2,800 + $2,812.16 and determined that the sum of the two accounts at the end of 3 years was $5,612.16.",
+                    "Rationale": "To determine the sum of two bank accounts with different types of interest, the student should have calculated the balance in each account and then added the two amounts. To determine the balance in Account I, the student should have used the formula for simple interest, I = Prt, in which P represents the principal (initial loan amount), r represents the interest rate, and t represents the length of time in years, I = ($2,500)(0.04)(3) = $300. The student should have then added the interest to the principal, $2,500 + $300 = $2,800. To determine the balance in Account II, the student should have used the formula for compound interest, A = P (1 + r)^t, in which A represents the balance amount (principal and interest combined), A = $2,500(1 + 0.04)³ = $2,812.16. Finally the student should have added $2,800 + $2,812.16 and determined that the sum of the two accounts at the end of 3 years was $5,612.16.",
                     "Percent": 0
                 }
             },
@@ -2221,7 +2221,7 @@
             "Two-Dimensional Shapes"
         ],
         "SubTopics": [
-            "Explain the effect of translations, reflections over the x- or `y`-axis, and rotations limited to 90°, 180°, 270°, and 360° as applied to two-dimensional shapes on a coordinate plane using an algebraic representation."
+            "Explain the effect of translations, reflections over the `x`- or `y`-axis, and rotations limited to 90°, 180°, 270°, and 360° as applied to two-dimensional shapes on a coordinate plane using an algebraic representation."
         ],
         "SuppContent": [],
         "SuppTools": [

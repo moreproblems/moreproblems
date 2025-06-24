@@ -183,7 +183,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "1,056 cm²",
+                "Choice": "1,056 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the area of the parallelogram correctly but incorrectly calculated the area of the trapezoid. The student likely multiplied one base of the trapezoid, 40 centimeters, by the height of the trapezoid, 16 centimeters, to get an area of 640 square centimeters for the trapezoid. The resulting area of the figure is 416 + 640 = 1,056 square centimeters. The student needs to focus on understanding how to determine the area of a composite figure.",
@@ -191,7 +191,7 @@
                 }
             },
             "G": {
-                "Choice": "1,360 cm²",
+                "Choice": "1,360 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the area of the trapezoid correctly but incorrectly calculated the area of the parallelogram. The student likely used a height of 32 centimeters instead of 16 centimeters for the parallelogram to get an area of 832 square centimeters for the parallelogram. The resulting area of the figure is 832 + 528 = 1,360 square centimeters. The student needs to focus on understanding how to determine the area of a composite figure.",
@@ -199,7 +199,7 @@
                 }
             },
             "H": {
-                "Choice": "944 cm²",
+                "Choice": "944 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the area (amount of space covered) of the figure, the student should have calculated the area of each shape (parallelogram and trapezoid) and found the sum of the results. To find the area of the parallelogram (A = bh, where b represents the length of the base of the parallelogram and h represents the height), the length of the base should be multiplied by the height. The length of the base is shown as 26 centimeters. To determine the height of the parallelogram, subtract the height of the trapezoid (16 centimeters) from the height of the composite figure (32 centimeters); 32 - 16 = 16. This gives the height of the parallelogram. Thus the area of the parallelogram is 26  ́ 16 = 416 square centimeters. Next, to find the area of the trapezoid (A = 1/2 • [b_1 + b_2] h, where b_1 and b_2 represent the lengths of the parallel sides of the trapezoid and h represents the height), substitute b_1 = 26, b_2 = 40, and h = 16 into the area formula: A = 1/2 • (26 + 40)(16) = 1/2 • (66)(16) = 528 square centimeters. The sum of the areas of the two shapes is 416 + 528 = 944 square centimeters.",
@@ -207,7 +207,7 @@
                 }
             },
             "J": {
-                "Choice": "528 cm²",
+                "Choice": "528 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the area of the trapezoid and forgot to add the area of the parallelogram. The area of the trapezoid is 528 square centimeters. The student needs to focus on understanding how to determine the area of a composite figure.",
@@ -769,7 +769,7 @@
                 "Choice": "problems/TX22G7M/media/15b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that the dog eats 2.5 cups of food each day but reversed the meanings of the x- and y-axes. The student needs to focus on understanding how to represent real-world situations with a graph.",
+                    "Rationale": "The student likely recognized that the dog eats 2.5 cups of food each day but reversed the meanings of the `x`- and `y`-axes. The student needs to focus on understanding how to represent real-world situations with a graph.",
                     "Percent": 11
                 }
             },
@@ -777,7 +777,7 @@
                 "Choice": "problems/TX22G7M/media/15c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents this relationship, the student should have recognized that the constant rate of change for this situation is 2.5 cups of food per day, since the dog eats 1.25 cups of food twice each day: 1.25(2) = 2.5. The student should have recognized that the total number of cups of food is represented by y and the number of days is represented by x. The student then should have checked x- and `y`-values to find the graph in which each `y`-value is the result of multiplying the corresponding `x`-value by 2.5. The line contains the points (1, 2.5) and (2, 5).",
+                    "Rationale": "To determine the graph that best represents this relationship, the student should have recognized that the constant rate of change for this situation is 2.5 cups of food per day, since the dog eats 1.25 cups of food twice each day: 1.25(2) = 2.5. The student should have recognized that the total number of cups of food is represented by y and the number of days is represented by x. The student then should have checked `x`- and `y`-values to find the graph in which each `y`-value is the result of multiplying the corresponding `x`-value by 2.5. The line contains the points (1, 2.5) and (2, 5).",
                     "Percent": 39
                 }
             },
@@ -785,7 +785,7 @@
                 "Choice": "problems/TX22G7M/media/15d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used 1.25 cups of food each day instead of 2.5 cups of food each day and reversed the meanings of the x- and y-axes. The student needs to focus on understanding how to represent real-world situations with a graph.",
+                    "Rationale": "The student likely used 1.25 cups of food each day instead of 2.5 cups of food each day and reversed the meanings of the `x`- and `y`-axes. The student needs to focus on understanding how to represent real-world situations with a graph.",
                     "Percent": 16
                 }
             }
@@ -1170,7 +1170,7 @@
                 "Choice": "problems/TX22G7M/media/23a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day but reversed the meanings of the x- and y-axes. The student needs to focus on how to represent a real-world situation with a graphical representation.",
+                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day but reversed the meanings of the `x`- and `y`-axes. The student needs to focus on how to represent a real-world situation with a graphical representation.",
                     "Percent": 27
                 }
             },
@@ -1194,7 +1194,7 @@
                 "Choice": "problems/TX22G7M/media/23d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents the relationship between y and x, the student should have recognized that the total number of users is represented by y and that the number of days is represented by x. The student should have also recognized that the rate at which the number of users increases is 500 users each day. The student then should have checked pairs of x- and `y`-values, such as (2, 1,000), (4, 2,000), (6, 3,000), and (8, 4,000), to find the graph in which each `y`-value was the result of multiplying the corresponding `x`-value by 500.",
+                    "Rationale": "To determine the graph that best represents the relationship between y and x, the student should have recognized that the total number of users is represented by y and that the number of days is represented by x. The student should have also recognized that the rate at which the number of users increases is 500 users each day. The student then should have checked pairs of `x`- and `y`-values, such as (2, 1,000), (4, 2,000), (6, 3,000), and (8, 4,000), to find the graph in which each `y`-value was the result of multiplying the corresponding `x`-value by 500.",
                     "Percent": 51
                 }
             }

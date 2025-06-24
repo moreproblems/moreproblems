@@ -25,7 +25,7 @@
                 "Choice": "`x`-intercept: (5, 0)\n`y`-intercepts: (0, 10) and (0, -2)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student switched the values of the x- and `y`-intercepts and reversed the signs of the intercepts, likely because of confusion about the relationship between the intercepts and the factored form of a quadratic equation. In addition, the student switched the x- and `y`-coordinates of the ordered pairs. In choosing (5, 0) as the `x`-intercept, the student confused the `x`-intercept with the `y`-intercept (y = -5), reversed the sign, and placed the intercept in the `x`-coordinate position. In choosing (0, 10) and (0, -2) as `y`-intercepts, the student confused the `y`-intercept (y = -5) with the `x`-intercepts (x = -10 and x = 2), reversed the signs, and placed the intercepts int he `y`-coordinate positions. The student needs to focus on understanding how to identify the intercepts of a quadratic function when given a graph.",
+                    "Rationale": "The student switched the values of the `x`- and `y`-intercepts and reversed the signs of the intercepts, likely because of confusion about the relationship between the intercepts and the factored form of a quadratic equation. In addition, the student switched the `x`- and `y`-coordinates of the ordered pairs. In choosing (5, 0) as the `x`-intercept, the student confused the `x`-intercept with the `y`-intercept (y = -5), reversed the sign, and placed the intercept in the `x`-coordinate position. In choosing (0, 10) and (0, -2) as `y`-intercepts, the student confused the `y`-intercept (y = -5) with the `x`-intercepts (x = -10 and x = 2), reversed the signs, and placed the intercepts int he `y`-coordinate positions. The student needs to focus on understanding how to identify the intercepts of a quadratic function when given a graph.",
                     "Percent": 4
                 }
             },
@@ -33,7 +33,7 @@
                 "Choice": "`x`-intercepts: (0, -10) and (0, 2)\n`y`-intercept: (-5, 0)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student chose the correct values for the intercepts but switched the x- and `y`-coordinates of the ordered pairs. The `x`-intercepts are located at -10 and 2, but the correct ordered pairs are (-10, 0) and (2, 0) instead of (0, -10) and (0, 2). Similarly, the student chose the correct location of the `y`-intercept but transposed the values of the coordinates; the correct ordered pair is (0, -5) instead of (-5, 0). The student needs to focus on understanding the correct order of the values in an ordered pair.",
+                    "Rationale": "The student chose the correct values for the intercepts but switched the `x`- and `y`-coordinates of the ordered pairs. The `x`-intercepts are located at -10 and 2, but the correct ordered pairs are (-10, 0) and (2, 0) instead of (0, -10) and (0, 2). Similarly, the student chose the correct location of the `y`-intercept but transposed the values of the coordinates; the correct ordered pair is (0, -5) instead of (-5, 0). The student needs to focus on understanding the correct order of the values in an ordered pair.",
                     "Percent": 20
                 }
             },
@@ -41,7 +41,7 @@
                 "Choice": "`x`-intercept: (0, 5)\n`y`-intercepts: (10, 0) and `(-2,0)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student switched the values of the x- and `y`-intercepts and reversed the signs of the intercepts, likely because of confusion about the relationship between the intercepts and the factored form of a quadratic equation. In choosing (0, 5) as the `x`-intercept, the student confused the `x`-intercept with the `y`-intercept and reversed the sign. In choosing (10, 0) and `(-2,0)` as `y`-intercepts, the student confused the `y`-intercept with the `x`-intercepts and reversed the signs. The student needs to focus on understanding how to identify the intercepts of a quadratic function when given a graph and on understanding the correct order of the values in an ordered pair.",
+                    "Rationale": "The student switched the values of the `x`- and `y`-intercepts and reversed the signs of the intercepts, likely because of confusion about the relationship between the intercepts and the factored form of a quadratic equation. In choosing (0, 5) as the `x`-intercept, the student confused the `x`-intercept with the `y`-intercept and reversed the sign. In choosing (10, 0) and `(-2,0)` as `y`-intercepts, the student confused the `y`-intercept with the `x`-intercepts and reversed the signs. The student needs to focus on understanding how to identify the intercepts of a quadratic function when given a graph and on understanding the correct order of the values in an ordered pair.",
                     "Percent": 5
                 }
             },
@@ -147,7 +147,7 @@
                 "Choice": "y = (2/5)x - 3\ny = (-3/5)x - 8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the system of equations that is best represented by the graph, the student could have found the equation of each line shown in the graph in slope-intercept form (`y=mx+b`, where `m=(y_2-y_1)/(x_2-x_1)` represents the slope of the line and b represents the value of the `y`-intercept). To find the equation of the line that is increasing from left to right, the student could have recognized that the graph intersects the `y`-axis at (0, -3), so the value of the `y`-intercept, b, is -3. The student could have substituted the x- and `y`-coordinates of (0, -3) and (-5, -5) into the slope formula, resulting in m = (-5 - (-3))/(-5 - 0) = -2/(-5) = 2/5. Since b = -3 and m = 2/5, the equation for the line that is increasing from left to right is y = (2/5)x - 3. Similarly, to find the equation of the line that is decreasing from left to right, the student could recognize that the graph intersects the `y`-axis at (0, -8), so the value of the `y`-intercept, b, is -8. The student could have substituted the x- and `y`-coordinates of (0, -8) and (-5, -5) into the slope formula, resulting in m = (-5 - (-8))/(-5 - 0) = 3/(-5) = -3/5. Since b = -8 and m = -3/5, the equation for the line that is increasing from left to right is y = (-3/5)x - 8. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the system of equations that is best represented by the graph, the student could have found the equation of each line shown in the graph in slope-intercept form (`y=mx+b`, where `m=(y_2-y_1)/(x_2-x_1)` represents the slope of the line and b represents the value of the `y`-intercept). To find the equation of the line that is increasing from left to right, the student could have recognized that the graph intersects the `y`-axis at (0, -3), so the value of the `y`-intercept, b, is -3. The student could have substituted the `x`- and `y`-coordinates of (0, -3) and (-5, -5) into the slope formula, resulting in m = (-5 - (-3))/(-5 - 0) = -2/(-5) = 2/5. Since b = -3 and m = 2/5, the equation for the line that is increasing from left to right is y = (2/5)x - 3. Similarly, to find the equation of the line that is decreasing from left to right, the student could recognize that the graph intersects the `y`-axis at (0, -8), so the value of the `y`-intercept, b, is -8. The student could have substituted the `x`- and `y`-coordinates of (0, -8) and (-5, -5) into the slope formula, resulting in m = (-5 - (-8))/(-5 - 0) = 3/(-5) = -3/5. Since b = -8 and m = -3/5, the equation for the line that is increasing from left to right is y = (-3/5)x - 8. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 76
                 }
             },
@@ -194,7 +194,7 @@
                 "Choice": "problems/TX22HSA1/media/4a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely concluded that any parabola represents a function. A parabola represents a function only when it opens vertically, either up or down. The student needs to focus on understanding whether a relation (relationship between the x- and `y`-values of ordered pairs) represented in a graph defines a function.",
+                    "Rationale": "The student likely concluded that any parabola represents a function. A parabola represents a function only when it opens vertically, either up or down. The student needs to focus on understanding whether a relation (relationship between the `x`- and `y`-values of ordered pairs) represented in a graph defines a function.",
                     "Percent": 23
                 }
             },
@@ -202,7 +202,7 @@
                 "Choice": "problems/TX22HSA1/media/4b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely concluded that any parabola represents a function. A parabola represents a function only if it opens vertically, either up or down. The student needs to focus on understanding whether a relation (relationship between the x- and `y`-values of ordered pairs) represented in a graph defines a function.",
+                    "Rationale": "The student likely concluded that any parabola represents a function. A parabola represents a function only if it opens vertically, either up or down. The student needs to focus on understanding whether a relation (relationship between the `x`- and `y`-values of ordered pairs) represented in a graph defines a function.",
                     "Percent": 17
                 }
             },
@@ -210,7 +210,7 @@
                 "Choice": "problems/TX22HSA1/media/4c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely concluded that any continuous graph represents a function, failing to observe that, for example, when x = 0, there are three corresponding values of y at y = 6, y = 0, and y = -6. The student needs to focus on understanding whether a relation (relationship between the x- and `y`-values of ordered pairs) represented in a graph defines a function.",
+                    "Rationale": "The student likely concluded that any continuous graph represents a function, failing to observe that, for example, when x = 0, there are three corresponding values of y at y = 6, y = 0, and y = -6. The student needs to focus on understanding whether a relation (relationship between the `x`- and `y`-values of ordered pairs) represented in a graph defines a function.",
                     "Percent": 9
                 }
             },
@@ -275,7 +275,7 @@
                 "Choice": "There are an infinite number of solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the elimination method incorrectly by multiplying the `y`-term in the first equation by 2 and by multiplying the `x`-term and the constant term in the second equation by -2, understanding that the coefficients must be opposites of each other. The student likely obtained 2x + 2y = 40 and -2x - 2y = 40. Next, the student likely added x- and `y`-terms together but subtracted the constant terms, resulting in 0 = 0. The student then concluded that there are an infinite number of solutions to the system of equations. The student needs to focus on correctly using the elimination method to solve a system of equations.",
+                    "Rationale": "The student likely used the elimination method incorrectly by multiplying the `y`-term in the first equation by 2 and by multiplying the `x`-term and the constant term in the second equation by -2, understanding that the coefficients must be opposites of each other. The student likely obtained 2x + 2y = 40 and -2x - 2y = 40. Next, the student likely added `x`- and `y`-terms together but subtracted the constant terms, resulting in 0 = 0. The student then concluded that there are an infinite number of solutions to the system of equations. The student needs to focus on correctly using the elimination method to solve a system of equations.",
                     "Percent": 13
                 }
             }
@@ -434,7 +434,7 @@
                 "Choice": "problems/TX22HSA1/media/8c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the correct boundary line in slope-intercept form, y = (-8/5)x + 20, with correct slope, -8/5, and `y`-intercept, 20. The student likely interpreted the inequality symbol “≤” as meaning “greater than or equal to” instead of “less than or equal to,” which could be represented by a solid line, and identified the shaded region of the graph as not including the ordered pair (0, 0), since 0 ≥ 20 is not a true statement. The student needs to focus on understanding how the inequality symbol affects the graph of the solution set of a linear inequality.",
+                    "Rationale": "The student likely identified the correct boundary line in slope-intercept form, y = (-8/5)x + 20, with correct slope, -8/5, and `y`-intercept, 20. The student likely interpreted the inequality symbol “≤” as meaning “greater than or equal to” instead of “less than or equal to,” which could be represented by a solid line, and identified the shaded region of the graph as not including the ordered pair `(0,0)`, since 0 ≥ 20 is not a true statement. The student needs to focus on understanding how the inequality symbol affects the graph of the solution set of a linear inequality.",
                     "Percent": 22
                 }
             },
@@ -714,7 +714,7 @@
                 "Choice": "A vertical shift down",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which answer choice best describes the transformation of the graph of f(x) = x^2to the graph of n(x) = x^2- 1, the student could have recognized that subtracting 1 from x^2causes the vertex of the parabola to shift from the origin, (0, 0), down 1 unit to (0, -1). The student then could have realized that all the `y`-values on the parabola would also shift down 1 unit, representing a vertical translation down of the entire parabola. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which answer choice best describes the transformation of the graph of f(x) = x^2to the graph of n(x) = x^2- 1, the student could have recognized that subtracting 1 from x^2causes the vertex of the parabola to shift from the origin, `(0,0)`, down 1 unit to (0, -1). The student then could have realized that all the `y`-values on the parabola would also shift down 1 unit, representing a vertical translation down of the entire parabola. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 67
                 }
             },
@@ -897,7 +897,7 @@
                 "Choice": "x = 3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which value of x is a solution to the equation, the student could have first recognized that one side of the equation must be set equal to 0. The student could have subtracted 30x and added 45 to both sides of the equation, resulting in 5x^2- 30x + 45 = 0. Next, the student could have found the factors (numbers or expressions that can be multiplied to get another number or expression) of 5x^2- 30x + 45 = 0 and solved for the value of x. The student could have factored out a 5 from the equation, resulting in 5(x^2- 6x + 9) = 0. The student could have then found the factors of x^2- 6x + 9. The student could have recognized that x^2and 9 represent perfect squares (numbers made by squaring whole numbers). Using this, the student could have noticed that x^2- 6x + 9 has the form of a perfect square trinomial, a² - 2ab + b², which factors as (a - b)^2. In this case, a² - 2ab + b² = x^2- 2(3)x + 3^2, which makes a = x and b = 3, so the factors can be written as (x - 3)^2. Finally, the student could have set the factor (x - 3) equal to 0 and solved for x, obtaining x = 3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which value of x is a solution to the equation, the student could have first recognized that one side of the equation must be set equal to 0. The student could have subtracted 30x and added 45 to both sides of the equation, resulting in 5x^2- 30x + 45 = 0. Next, the student could have found the factors (numbers or expressions that can be multiplied to get another number or expression) of 5x^2- 30x + 45 = 0 and solved for the value of x. The student could have factored out a 5 from the equation, resulting in 5(x^2- 6x + 9) = 0. The student could have then found the factors of x^2- 6x + 9. The student could have recognized that x^2and 9 represent perfect squares (numbers made by squaring whole numbers). Using this, the student could have noticed that x^2- 6x + 9 has the form of a perfect square trinomial, a² - 2ab + b^2, which factors as (a - b)^2. In this case, a² - 2ab + b^2 = x^2- 2(3)x + 3^2, which makes a = x and b = 3, so the factors can be written as (x - 3)^2. Finally, the student could have set the factor (x - 3) equal to 0 and solved for x, obtaining x = 3. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 59
                 }
             },
@@ -1578,7 +1578,7 @@
                 "Choice": "The only zero, 6, can be found when 0 = (x - 6)(x - 6).",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely incorrectly identified the difference of squares pattern as a² - b² = (a - b)(a - b), obtaining (x - 6)(x - 6) instead of (x + 6)(x - 6). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
+                    "Rationale": "The student likely incorrectly identified the difference of squares pattern as a² - b^2 = (a - b)(a - b), obtaining (x - 6)(x - 6) instead of (x + 6)(x - 6). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
                     "Percent": 12
                 }
             },
@@ -1586,7 +1586,7 @@
                 "Choice": "The only zero, 18, can be found when 0 = (x - 18)(x - 18).",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely incorrectly identified the difference of squares pattern as a² - b² = (a - b)(a - b), and then likely divided 36 by 2 instead of taking the square root of 36, resulting in (x - 18)(x - 18). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
+                    "Rationale": "The student likely incorrectly identified the difference of squares pattern as a² - b^2 = (a - b)(a - b), and then likely divided 36 by 2 instead of taking the square root of 36, resulting in (x - 18)(x - 18). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
                     "Percent": 10
                 }
             },
@@ -1594,7 +1594,7 @@
                 "Choice": "The zeros, -6 and 6, can be found when 0 = (x + 6)(x - 6).",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which statement is true, the student could have first found the factors (numbers or expressions that can be multiplied to get another number or expression) of x^2- 36. The student could have recognized that x^2- 36 can be rewritten as (x)^2 - (6)^2, which represents the difference of squares pattern, where a² - b² can be written as the product of the binomial factors (a + b) and (a - b). Applying this pattern, the student could have rewritten the expression x^2- 36 = (x)^2 - (6)^2 as the product (x + 6)(x - 6). Finally, the student could have solved for the zeros (input value, x, that produces an output value, y, of zero) by setting each factor (expression within the parentheses) equal to zero (x + 6 = 0 and x - 6 = 0) and solving for x, resulting in x = -6 and x = 6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which statement is true, the student could have first found the factors (numbers or expressions that can be multiplied to get another number or expression) of x^2- 36. The student could have recognized that x^2- 36 can be rewritten as (x)^2 - (6)^2, which represents the difference of squares pattern, where a² - b^2 can be written as the product of the binomial factors (a + b) and (a - b). Applying this pattern, the student could have rewritten the expression x^2- 36 = (x)^2 - (6)^2 as the product (x + 6)(x - 6). Finally, the student could have solved for the zeros (input value, x, that produces an output value, y, of zero) by setting each factor (expression within the parentheses) equal to zero (x + 6 = 0 and x - 6 = 0) and solving for x, resulting in x = -6 and x = 6. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 70
                 }
             },
@@ -1602,7 +1602,7 @@
                 "Choice": "The zeros, -18 and 18, can be found when 0 = (x + 18)(x - 18).",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely correctly identified the difference of squares pattern as a² - b² = (a + b)(a - b). The student then likely divided 36 by 2 instead of taking the square root of 36, resulting in (x + 18)(x - 18). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
+                    "Rationale": "The student likely correctly identified the difference of squares pattern as a² - b^2 = (a + b)(a - b). The student then likely divided 36 by 2 instead of taking the square root of 36, resulting in (x + 18)(x - 18). The student needs to focus on understanding how to factor an expression representing the difference of squares.",
                     "Percent": 8
                 }
             }
@@ -1817,7 +1817,7 @@
             "Writing & Solving Linear Functions, Equations & Inequalities"
         ],
         "SubTopics": [
-            "Write an equation of a line that is parallel or perpendicular to the x- or `y`-axis and determine whether the slope of the line is zero or undefined."
+            "Write an equation of a line that is parallel or perpendicular to the `x`- or `y`-axis and determine whether the slope of the line is zero or undefined."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1946,7 +1946,7 @@
                 "Choice": "(-8, 8)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which ordered pair is in the solution set of y > (-1/6)x - 4, the student should have recognized that the graph of the solution set of the inequality would have a boundary line that is dashed because the “>” symbol indicates that the solution set of the inequality does not include the points that lie on the boundary line. Next, the student could have used the test point `(0,0)` to determine which half-plane is included in the solution set. Substituting `(0,0)` into y > (-1/6)x - 4, the student could have obtained 0 > (-1/6)(0) - 4 and then 0 > -4. Since that is a true statement, the student could have then concluded that the solution set of the inequality is the half-plane that contains (0, 0), not including the points on the boundary line. Finally, the student could have realized that the point (-8, 8) lies in that half-plane. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which ordered pair is in the solution set of y > (-1/6)x - 4, the student should have recognized that the graph of the solution set of the inequality would have a boundary line that is dashed because the “>” symbol indicates that the solution set of the inequality does not include the points that lie on the boundary line. Next, the student could have used the test point `(0,0)` to determine which half-plane is included in the solution set. Substituting `(0,0)` into y > (-1/6)x - 4, the student could have obtained 0 > (-1/6)(0) - 4 and then 0 > -4. Since that is a true statement, the student could have then concluded that the solution set of the inequality is the half-plane that contains `(0,0)`, not including the points on the boundary line. Finally, the student could have realized that the point (-8, 8) lies in that half-plane. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 29
                 }
             },
@@ -2027,7 +2027,7 @@
                 "Choice": "y = (9/5)x + 32",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the equation that best represents the line shown in the graph, the student could have used the slope-intercept form of a linear equation (`y=mx+b`, where m = (y_2 - y_1)/(x_2 -x_1) represents the slope of the line and b represents the value of the `y`-intercept). The student first could have recognized that the graph intersects the `y`-axis at (0, 32), so the value of the `y`-intercept, b, is 32. Next, the student could have substituted the x- and `y`-coordinates of (0, 32) and (10, 104) into the slope formula, resulting in m = (104 - 32)/(40 - 0) = 72/40 = 9/5. Since b = 32 and m = 9/5, the equation for the line is y = (9/5)x + 32. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the equation that best represents the line shown in the graph, the student could have used the slope-intercept form of a linear equation (`y=mx+b`, where m = (y_2 - y_1)/(x_2 -x_1) represents the slope of the line and b represents the value of the `y`-intercept). The student first could have recognized that the graph intersects the `y`-axis at (0, 32), so the value of the `y`-intercept, b, is 32. Next, the student could have substituted the `x`- and `y`-coordinates of (0, 32) and (10, 104) into the slope formula, resulting in m = (104 - 32)/(40 - 0) = 72/40 = 9/5. Since b = 32 and m = 9/5, the equation for the line is y = (9/5)x + 32. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 53
                 }
             }
@@ -2266,7 +2266,7 @@
                 "Choice": "4(3m - 5)(3m + 5)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the expression equivalent to 36m² - 100, the student could have first recognized that 36 and 100 have a greatest (largest) common factor of 4 and factored that out, resulting in 36m² - 100 = 4(9m² - 25). Next, the student could have recognized that the expression inside the parentheses, 9m² - 25, can be rewritten as (3m)^2 - (5)^2, which represents the difference-of-squares pattern, where a² - b² can be written as the product of the binomial factors (a - b) and (a + b). Applying this pattern, the student could have rewritten the expression 4(9m² - 25) = 4[(3m)^2 - (5)^2] as the product 4(3m - 5)(3m + 5). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the expression equivalent to 36m² - 100, the student could have first recognized that 36 and 100 have a greatest (largest) common factor of 4 and factored that out, resulting in 36m² - 100 = 4(9m² - 25). Next, the student could have recognized that the expression inside the parentheses, 9m² - 25, can be rewritten as (3m)^2 - (5)^2, which represents the difference-of-squares pattern, where a² - b^2 can be written as the product of the binomial factors (a - b) and (a + b). Applying this pattern, the student could have rewritten the expression 4(9m² - 25) = 4[(3m)^2 - (5)^2] as the product 4(3m - 5)(3m + 5). This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 55
                 }
             },
@@ -2282,7 +2282,7 @@
                 "Choice": "4(3m - 5)^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that 36 and 100 have a greatest (largest) common factor of 4 and factored that out, resulting in 36m² - 100 = 4(9m² - 25). Next, the student likely recognized that 9 and 25 are perfect squares and applied the perfect-square trinomial pattern for factoring (a² - 2ab + b² = (a - b)^2) instead of the difference-of-squares factoring pattern, obtaining 4(3m - 5)^2. The student needs to focus on understanding how to factor quadratic expressions.",
+                    "Rationale": "The student likely recognized that 36 and 100 have a greatest (largest) common factor of 4 and factored that out, resulting in 36m² - 100 = 4(9m² - 25). Next, the student likely recognized that 9 and 25 are perfect squares and applied the perfect-square trinomial pattern for factoring (a² - 2ab + b^2 = (a - b)^2) instead of the difference-of-squares factoring pattern, obtaining 4(3m - 5)^2. The student needs to focus on understanding how to factor quadratic expressions.",
                     "Percent": 9
                 }
             }

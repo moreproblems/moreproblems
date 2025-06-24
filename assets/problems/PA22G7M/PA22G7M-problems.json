@@ -641,15 +641,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "121 cm²",
+                "Choice": "121 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the area of the rectangle by multiplying the side lengths (17 • 8 = 136 cm²), determines the approximate area of the small circle by multiplying the square of the radius by `pi` and rounding to the nearest whole number (2.2^2 • π ~~ 15 cm²), and then subtracts the approximate area of the circle from the area of the rectangle (136 - 15 = 121 cm²).",
+                    "Rationale": "Determines the area of the rectangle by multiplying the side lengths (17 • 8 = 136 `text(cm)^2`), determines the approximate area of the small circle by multiplying the square of the radius by `pi` and rounding to the nearest whole number (2.2^2 • π ~~ 15 `text(cm)^2`), and then subtracts the approximate area of the circle from the area of the rectangle (136 - 15 = 121 `text(cm)^2`).",
                     "Percent": 38
                 }
             },
             "B": {
-                "Choice": "122 cm²",
+                "Choice": "122 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts the circumference of the circle from the area of the rectangle.",
@@ -657,7 +657,7 @@
                 }
             },
             "C": {
-                "Choice": "129 cm²",
+                "Choice": "129 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not square the radius.",
@@ -665,7 +665,7 @@
                 }
             },
             "D": {
-                "Choice": "136 cm²",
+                "Choice": "136 `text(cm)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Determines the area of the rectangle only.",
