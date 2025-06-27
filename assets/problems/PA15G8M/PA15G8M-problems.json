@@ -226,7 +226,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The human body contains about 1 × 10¹² bacteria. The human body contains about 4 × 10⁴ genes. The number of bacteria contained in the human body is how many times as great as the number of genes contained in the human body?"
+            "The human body contains about 1 × 10^12 bacteria. The human body contains about 4 × 10⁴ genes. The number of bacteria contained in the human body is how many times as great as the number of genes contained in the human body?"
         ],
         "AnswerChoices": {
             "A": {
@@ -511,7 +511,7 @@
         "Content": [
             "The lengths of the legs of two right triangles are listed below.",
             ":box:• triangle A: 5 inches and 5 inches\n\n• triangle B: 4 inches and 6 inches",
-            "Which statement correctly compares the lengths, in inches, of the hypotenuses for the two triangles?"
+            "Which statement correctly compares the lengths, in `text(inches)`, of the hypotenuses for the two triangles?"
         ],
         "AnswerChoices": {
             "A": {
@@ -568,7 +568,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A packing crate in the shape of a cube has a volume of 70 cubic feet. The length (x), in feet, of one side of the cube can be found by solving x^3 = 70. Which point on the number line represents the length, in feet, of one side of the cube?"
+            "A packing crate in the shape of a cube has a volume of 70 cubic feet. The length (x), in `text(feet)`, of one side of the cube can be found by solving x^3 = 70. Which point on the number line represents the length, in `text(feet)`, of one side of the cube?"
         ],
         "AnswerChoices": {
             "A": {
@@ -741,7 +741,7 @@
         "Content": [
             "Towns X, Y, and Z can be represented as the vertices of a right triangle as shown below.",
             "problems/PA15G8M/media/14a.jpg",
-            "What is the shortest distance, in feet, from town X to town Z?"
+            "What is the shortest distance, in `text(feet)`, from town X to town Z?"
         ],
         "AnswerChoices": {
             "A": {
@@ -796,7 +796,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Connie sells hamburgers at a food stand. The graph below shows the relationship between the weight (x), in pounds, of meat used and the price (y), in dollars, of a hamburger.",
+            "Connie sells hamburgers at a food stand. The graph below shows the relationship between the weight (x), in `text(pounds)`, of meat used and the price (y), in `text(dollars)`, of a hamburger.",
             "problems/PA15G8M/media/15a.jpg",
             "The cost of meat per pound is the same for each hamburger Connie sells. What is the cost of meat per pound for each hamburger Connie sells?"
         ],
@@ -821,7 +821,7 @@
                 "Choice": "$2.00",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "`y`-intercept of graph (fixed cost).",
+                    "Rationale": "`ytext(-intercept)` of graph (fixed cost).",
                     "Percent": 0
                 }
             },
@@ -976,7 +976,7 @@
                 "Choice": "y = x + 4",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Treats the slope as the `y`-intercept.",
+                    "Rationale": "Treats the slope as the `ytext(-intercept)`.",
                     "Percent": 0
                 }
             },
@@ -1082,7 +1082,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Quinn needs to buy fabric for a border to sew onto all four edges of a tablecloth. He also needs an extra 0.875 feet of fabric to make a matching potholder. The length of the table cloth is 4/3 of its width (w), in feet. The total amount of fabric needed (f), in feet, is represented by the equation below.",
+            "Quinn needs to buy fabric for a border to sew onto all four edges of a tablecloth. He also needs an extra 0.875 feet of fabric to make a matching potholder. The length of the table cloth is 4/3 of its width (w), in `text(feet)`. The total amount of fabric needed (f), in `text(feet)`, is represented by the equation below.",
             "f = 2(w + (4/3)w) + 0.875",
             "Quinn needs 113/8 feet of fabric for the border of the tablecloth and the potholder. What is the width of Quinn's tablecloth?"
         ],
@@ -1256,7 +1256,7 @@
         "Explain": false,
         "Content": [
             "Karen and Maria each open a savings account at the same time. They only make deposits into their accounts and do not make withdrawals.",
-            ":box:• When Karen opens her account she deposits $28 into it. She then deposits $5 into her account each week.\n\n• The total amount of money (y), in dollars, in Maria's account x weeks after it is opened is described by the function y = 8x + 7.",
+            ":box:• When Karen opens her account she deposits $28 into it. She then deposits $5 into her account each week.\n\n• The total amount of money (y), in `text(dollars)`, in Maria's account x weeks after it is opened is described by the function y = 8x + 7.",
             "What is the total amount of money that each girl has in her account 2 weeks after they have the same amount of money in their accounts?"
         ],
         "AnswerChoices": {
@@ -1327,7 +1327,7 @@
                 "Choice": "problems/PA15G8M/media/24a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks the table is not a function since the change in `y`-values (12) is not equal to the first `y`-value (6).",
+                    "Rationale": "Thinks the table is not a function since the change in `ytext(-values)` (12) is not equal to the first `ytext(-value)` (6).",
                     "Percent": 0
                 }
             },
@@ -1335,7 +1335,7 @@
                 "Choice": "problems/PA15G8M/media/24b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks the graph is not a function since it is not linear and every `y`-value repeats.",
+                    "Rationale": "Thinks the graph is not a function since it is not linear and every `ytext(-value)` repeats.",
                     "Percent": 0
                 }
             },
@@ -1367,7 +1367,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An online video service offers two price options. Pricing for option A is given by y = 2x + 10, where x is the number of videos watched and y is the total cost in dollars. Pricing for option B is shown in the graph below.",
+            "An online video service offers two price options. Pricing for option A is given by y = 2x + 10, where x is the number of videos watched and y is the total cost in `text(dollars)`. Pricing for option B is shown in the graph below.",
             "problems/PA15G8M/media/25a.jpg",
             "Both options include an initial charge and a charge per video watched. Which statement correctly compares the two price options?"
         ],
@@ -1538,7 +1538,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Sonia opened a savings account and then added the same amount to the savings account every week. After 5 weeks, her savings account had a total of $45. After 10 weeks, her savings account had a total of $70. Which equation represents the amount of money (y), in dollars, in Sonia's savings account after x weeks?"
+            "Sonia opened a savings account and then added the same amount to the savings account every week. After 5 weeks, her savings account had a total of $45. After 10 weeks, her savings account had a total of $70. Which equation represents the amount of money (y), in `text(dollars)`, in Sonia's savings account after x weeks?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1569,7 +1569,7 @@
                 "Choice": "y = 20x + 5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Mixes up slope and `y`-intercept.",
+                    "Rationale": "Mixes up slope and `ytext(-intercept)`.",
                     "Percent": 0
                 }
             }
@@ -1593,7 +1593,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Andrea walks 5 miles from the library to her home. She starts walking at an average rate of 2 miles per hour. After 1 hour, she stops walking for 0.25 hour. When she begins walking again, Andrea walks at an average rate of 3 miles per hour until she arrives home. Which graph represents Andrea's distance (y), in miles, from her home as a function of the amount of time (x), in hours, since she left the library?"
+            "Andrea walks 5 miles from the library to her home. She starts walking at an average rate of 2 miles per hour. After 1 hour, she stops walking for 0.25 hour. When she begins walking again, Andrea walks at an average rate of 3 miles per hour until she arrives home. Which graph represents Andrea's distance (y), in miles, from her home as a function of the amount of time (x), in `text(hours)`, since she left the library?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1648,7 +1648,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The manager of a small chain of restaurants compared the sales at different restaurant locations. She drew a graph comparing the daily sales, in dollars, to the number of competing restaurants in the neighborhood.",
+            "The manager of a small chain of restaurants compared the sales at different restaurant locations. She drew a graph comparing the daily sales, in `text(dollars)`, to the number of competing restaurants in the neighborhood.",
             "problems/PA15G8M/media/30a.jpg",
             "Based on the graph, how much do the daily sales change with each additional competitor in the neighborhood?"
         ],
@@ -1681,7 +1681,7 @@
                 "Choice": "The daily sales decrease by $200.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Looks at the change between gridlines on the `y`-axis without calculating slope.",
+                    "Rationale": "Looks at the change between gridlines on the `ytext(-axis)` without calculating slope.",
                     "Percent": 0
                 }
             }
@@ -1705,7 +1705,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "At a market, assorted fruit costs $3 per pound for the first 10 pounds of fruit purchased. After the first 10 pounds, the fruit costs $2 per pound. Which graph represents the total cost (y), in dollars, of going to the market as a function of the weight of fruit (x), in pounds, purchased?"
+            "At a market, assorted fruit costs $3 per pound for the first 10 pounds of fruit purchased. After the first 10 pounds, the fruit costs $2 per pound. Which graph represents the total cost (y), in `text(dollars)`, of going to the market as a function of the weight of fruit (x), in `text(pounds)`, purchased?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2229,7 +2229,7 @@
                 "Choice": "7",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Estimates for 1 hour instead of 3 OR looks at `y`-value of the first plotted point.",
+                    "Rationale": "Estimates for 1 hour instead of 3 OR looks at `ytext(-value)` of the first plotted point.",
                     "Percent": 0
                 }
             },
@@ -2405,7 +2405,7 @@
                 }
             },
             "B": {
-                "Choice": "The `y`-intercepts and the slopes of the lines of best fit for data sets A and B both differ by 4.",
+                "Choice": "The `ytext(-intercepts)` and the slopes of the lines of best fit for data sets A and B both differ by 4.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2413,7 +2413,7 @@
                 }
             },
             "C": {
-                "Choice": "The `y`-intercepts of the lines of best fit for data sets A and B differ by 4, but the slopes are the same.",
+                "Choice": "The `ytext(-intercepts)` of the lines of best fit for data sets A and B differ by 4, but the slopes are the same.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -2676,7 +2676,7 @@
                 "Explain": false,
                 "Content": [
                     "The area of the square game board she makes is 256 square inches.",
-                    "What is the length, in inches, of one side of the game board?"
+                    "What is the length, in `text(inches)`, of one side of the game board?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2696,7 +2696,7 @@
                 "Explain": false,
                 "Content": [
                     "Fiona cuts out checkers pieces from sheets of construction paper that are each 0.0063 inch thick.",
-                    "What is the thickness, in inches, of one checkers piece, written in scientific notation?"
+                    "What is the thickness, in `text(inches)`, of one checkers piece, written in scientific notation?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2716,7 +2716,7 @@
                 "Explain": false,
                 "Content": [
                     "Fiona plans to make a box in the shape of a rectangular prism for storing the checkers pieces. The box will have a square base and a volume of 8 cubic inches. She wants the smallest dimension to be at least 1 inch. She comes up with two different designs for the box. One of the designs has dimensions of 1 inch by 1 inch by 8 inches.",
-                    "What could be the dimensions, in inches, of Fiona's other box? Why does this meet Fiona's requirements? (Hint: The volume of a rectangular prism is l × w × h.)",
+                    "What could be the dimensions, in `text(inches)`, of Fiona's other box? Why does this meet Fiona's requirements? (Hint: The volume of a rectangular prism is l × w × h.)",
                     "Length: :FR-1:",
                     "Width: :FR-2:",
                     "Height: :FR-3:"
@@ -2780,7 +2780,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What are the prices, in dollars, for the entry fee and for each roller coaster ride?",
+                    "What are the prices, in `text(dollars)`, for the entry fee and for each roller coaster ride?",
                     "Entry fee: :FR-1:",
                     "Cost per ride: :FR-2:"
                 ],
@@ -2820,7 +2820,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Explain how the `y`-intercept and the slope of the function in Part A differs from the `y`-intercept and the slope of the function in Part B. Be sure to indicate what each represents in your explanation."
+                    "Explain how the `ytext(-intercept)` and the slope of the function in Part A differs from the `ytext(-intercept)` and the slope of the function in Part B. Be sure to indicate what each represents in your explanation."
                 ],
                 "AnswerChoices": {}
             }
@@ -2876,7 +2876,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Sylvia applies two transformations to WXYZ. She applies a reflection across the `y`-axis and then a rotation of 180° counterclockwise about the origin.",
+                    "Sylvia applies two transformations to WXYZ. She applies a reflection across the `ytext(-axis)` and then a rotation of 180° counterclockwise about the origin.",
                     "W': :FR-1:",
                     "X': :FR-2:",
                     "Y': :FR-3:",
@@ -3029,7 +3029,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The `y`-intercept should be less than 0",
+                        "Choice": "The `ytext(-intercept)` should be less than 0",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -3037,7 +3037,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "The `y`-intercept should be greater than 0",
+                        "Choice": "The `ytext(-intercept)` should be greater than 0",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",

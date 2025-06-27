@@ -320,7 +320,7 @@
                 "Explain": true,
                 "Content": [
                     "The toy company plans to start making a larger carton that holds exactly 1,000 blocks, with no gaps or overlaps.",
-                    "What could be the measurements, in inches, of the larger carton's length, width, AND height? Show or explain how you got your answers.",
+                    "What could be the measurements, in `text(inches)`, of the larger carton's length, width, AND height? Show or explain how you got your answers.",
                     "\n\nLength = :FR-1:",
                     "Width = :FR-2:",
                     "Height = :FR-3:"
@@ -489,7 +489,7 @@
                 "Explain": false,
                 "Content": [
                     "The Star Ticket Company charges $8 per ticket plus one $20 handling fee per order.",
-                    "Complete the table provided in your answer space to show the total costs, in dollars, of purchasing different numbers of tickets from the Star Ticket Company.",
+                    "Complete the table provided in your answer space to show the total costs, in `text(dollars)`, of purchasing different numbers of tickets from the Star Ticket Company.",
                     ":table:problems/MA23G5M/supps/MA23G5M-T1.json"
 
                 ],
@@ -519,7 +519,7 @@
                 "Explain": false,
                 "Content": [
                     "The Best Ticket Company charges $10 per ticket plus one $7 handling fee per order.",
-                    "Complete the table provided in your answer space to show the total costs, in dollars, of purchasing different numbers of tickets from the Best Ticket Company.",
+                    "Complete the table provided in your answer space to show the total costs, in `text(dollars)`, of purchasing different numbers of tickets from the Best Ticket Company.",
                     ":table:problems/MA23G5M/supps/MA23G5M-T2.json"
                 ],
                 "AnswerChoices": {
@@ -547,7 +547,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the difference between the total costs, in dollars, of purchasing 5 tickets with a handling fee from the Star Ticket Company and purchasing 5 tickets with a handling fee from the Best Ticket Company? Show or explain how you got your answer."
+                    "What is the difference between the total costs, in `text(dollars)`, of purchasing 5 tickets with a handling fee from the Star Ticket Company and purchasing 5 tickets with a handling fee from the Best Ticket Company? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -566,7 +566,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Will either the Star Ticket Company or the Best Ticket Company ALWAYS have the least total cost, in dollars, for ANY number of tickets? Explain how you know your answer is correct."
+                    "Will either the Star Ticket Company or the Best Ticket Company ALWAYS have the least total cost, in `text(dollars)`, for ANY number of tickets? Explain how you know your answer is correct."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -997,7 +997,7 @@
         "Content": [
             "A square with a side length of 1 foot (ft.) is divided into equal parts, as shown.",
             "problems/MA23G5M/media/15a.jpg",
-            "What is the area, in square feet, of the SHADED part of the square?"
+            "What is the area, in `text(square feet)`, of the SHADED part of the square?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1051,7 +1051,7 @@
         "Explain": false,
         "Content": [
             "Vivienne bought 6 packages of cheese for a party. Each package of cheese weighs 8 ounces.",
-            "What is the total weight, in POUNDS, of the cheese Vivienne bought for the party?"
+            "What is the total weight, in `text(pounds)`, of the cheese Vivienne bought for the party?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1081,7 +1081,7 @@
         "Explain": false,
         "Content": [
             "One cup of trail mix contains 1/3 pound of dried fruit. Riley has 7 1/2 cups of the trail mix.",
-            "What is the total amount, in pounds, of dried fruit in Riley's trail mix?"
+            "What is the total amount, in `text(pounds)`, of dried fruit in Riley's trail mix?"
         ],
         "AnswerChoices": {
             "A": {

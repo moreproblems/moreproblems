@@ -351,7 +351,7 @@
         "Explain": false,
         "Content": [
             "Information about the costs of apples at an orchard is listed below.",
-            ":ibox:• The cost of apples is $1.00 per pound when picked by an employee.\n\n• The equation t = 0.85 n describes the relationship between the total cost (t), in dollars, and the number of pounds of apples (n) when picked by a customer.",
+            ":ibox:• The cost of apples is $1.00 per pound when picked by an employee.\n\n• The equation t = 0.85 n describes the relationship between the total cost (t), in `text(dollars)`, and the number of pounds of apples (n) when picked by a customer.",
             "An employee and a customer both pick some apples. The employee and the customer each picked $34.00 worth of apples. How many more pounds of apples did the customer pick than the employee picked?"
         ],
         "AnswerChoices": {
@@ -407,7 +407,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Klavier rents out two different studio spaces to bands. The equations shown below represent the total cost (y), in dollars, to rent each studio for x hours.",
+            "Mr. Klavier rents out two different studio spaces to bands. The equations shown below represent the total cost (y), in `text(dollars)`, to rent each studio for x hours.",
             ":ibox:large studio: y = 80 x + 40\n\nsmall studio: y = 60 x + 60",
             "Based on the system of equations, which statement about the rental costs is correct?"
         ],
@@ -416,7 +416,7 @@
                 "Choice": "There is no length of time at which the rental cost for the large studio is equal to the rental cost for the small studio since the graph consists of two curves that never intersect.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that the equations are not equivalent because the `y`-intercepts are not equal (40 ≠ 60) but thinks that each equation can be represented by a curve rather than a line and that the curves are “parallel” since 80 + 40 = 60 + 60.",
+                    "Rationale": "This choice recognizes that the equations are not equivalent because the `ytext(-intercepts)` are not equal (40 ≠ 60) but thinks that each equation can be represented by a curve rather than a line and that the curves are “parallel” since 80 + 40 = 60 + 60.",
                     "Percent": 13
                 }
             },
@@ -424,7 +424,7 @@
                 "Choice": "There is no length of time at which the rental cost for the large studio is equal to the rental cost for the small studio since the graph consists of two straight lines that never intersect.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that each equation can be represented by a line and that the lines are not collinear since the `y`-intercepts are not equal (40 ≠ 60) but thinks that the lines are parallel since 80 + 40 = 60 + 60.",
+                    "Rationale": "This choice recognizes that each equation can be represented by a line and that the lines are not collinear since the `ytext(-intercepts)` are not equal (40 ≠ 60) but thinks that the lines are parallel since 80 + 40 = 60 + 60.",
                     "Percent": 23
                 }
             },
@@ -528,7 +528,7 @@
                 "Choice": "At x = -2, the relation has two closed points.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice either recognizes that a relation cannot be a function if there are two or more distinct `y`-values for any given `x`-value and that the two closed points at x = -2 represent two distinct `y`-values (2 and -4) OR uses the vertical line test and identifies two distinct points for the vertical line at x = -2, resulting in a failure of the vertical line test.",
+                    "Rationale": "This choice either recognizes that a relation cannot be a function if there are two or more distinct `ytext(-values)` for any given `xtext(-value)` and that the two closed points at x = -2 represent two distinct `ytext(-values)` (2 and -4) OR uses the vertical line test and identifies two distinct points for the vertical line at x = -2, resulting in a failure of the vertical line test.",
                     "Percent": 31
                 }
             },
@@ -544,7 +544,7 @@
                 "Choice": "At x = 1, the relation has a closed point and an open point.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that a relation cannot be a function if there are two or more distinct `y`-values for any given `x`-value but does not realize that the open point at (1, 6) does not represent an actual value for x = 1 and that the open point only indicates that the line segment extends to the right of (1, 6).",
+                    "Rationale": "This choice recognizes that a relation cannot be a function if there are two or more distinct `ytext(-values)` for any given `xtext(-value)` but does not realize that the open point at (1, 6) does not represent an actual value for x = 1 and that the open point only indicates that the line segment extends to the right of (1, 6).",
                     "Percent": 21
                 }
             },
@@ -552,7 +552,7 @@
                 "Choice": "Between x = 3 and x = 4, the relation has no values.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice considers that functions must be continuous for all `x`-values and notices a gap in the relation between x = 3 and x = 4.",
+                    "Rationale": "This choice considers that functions must be continuous for all `xtext(-values)` and notices a gap in the relation between x = 3 and x = 4.",
                     "Percent": 18
                 }
             }
@@ -583,7 +583,7 @@
                 "Choice": "y = 65/1.2x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice considers any equation with no `y`-intercept to represent a proportional relationship and is therefore a linear function.",
+                    "Rationale": "This choice considers any equation with no `ytext(-intercept)` to represent a proportional relationship and is therefore a linear function.",
                     "Percent": 15
                 }
             },
@@ -591,7 +591,7 @@
                 "Choice": "y = 1.2/x + 65",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects an equation that appears to be in the form y = m x + b but does not consider that the `x`-variable is in the denominator.",
+                    "Rationale": "This choice selects an equation that appears to be in the form y = m x + b but does not consider that the`xtext(-variable)` is in the denominator.",
                     "Percent": 15
                 }
             },
@@ -607,7 +607,7 @@
                 "Choice": "y = 1.2x^2+ 65",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects an equation that appears to be in the form y = m x + b but does not consider the exponent of the `x`-variable.",
+                    "Rationale": "This choice selects an equation that appears to be in the form y = m x + b but does not consider the exponent of the`xtext(-variable)`.",
                     "Percent": 20
                 }
             }
@@ -697,7 +697,7 @@
                 "Choice": "y = 2.5x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice calculates the rate of change by using the change in total mass for any two rows divided by the change in the number of pennies for the same two rows (e.g., (257.5 - 252.5)/(3 - 1) = 5/2 = 2.5) but does not include the `y`-intercept.",
+                    "Rationale": "This choice calculates the rate of change by using the change in total mass for any two rows divided by the change in the number of pennies for the same two rows (e.g., (257.5 - 252.5)/(3 - 1) = 5/2 = 2.5) but does not include the `ytext(-intercept)`.",
                     "Percent": 18
                 }
             },
@@ -705,7 +705,7 @@
                 "Choice": "y = 2.5x + 250",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice calculates the rate of change by using the change in total mass for any two rows divided by the change in the number of pennies for the same two rows (e.g., (260 - 257.5)/(4 - 3) = 2.5/1 = 2.5) and then determines the `y`-intercept by subtracting the rate of change from the total mass for 1 penny (252.5 - 2.5 = 250).",
+                    "Rationale": "This choice calculates the rate of change by using the change in total mass for any two rows divided by the change in the number of pennies for the same two rows (e.g., (260 - 257.5)/(4 - 3) = 2.5/1 = 2.5) and then determines the `ytext(-intercept)` by subtracting the rate of change from the total mass for 1 penny (252.5 - 2.5 = 250).",
                     "Percent": 54
                 }
             },
@@ -713,7 +713,7 @@
                 "Choice": "y = 250x",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses the `y`-intercept as the rate of change and does not include a `y`-intercept.",
+                    "Rationale": "This choice uses the `ytext(-intercept)` as the rate of change and does not include a `ytext(-intercept)`.",
                     "Percent": 11
                 }
             },
@@ -721,7 +721,7 @@
                 "Choice": "y = 250x + 2.5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice switches the `y`-intercept and rate of change.",
+                    "Rationale": "This choice switches the `ytext(-intercept)` and rate of change.",
                     "Percent": 17
                 }
             }
@@ -754,7 +754,7 @@
                 "Choice": "a rotation of 180° centered at (4, 4)\na dilation with a scale factor of 2 centered at (5, 4)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that to orient trapezoid PQRS in the same direction as trapezoid TUVW, a rotation of 180° must occur and that the rotation should be centered at (4, 4) to move point S from (3, 4) to (5, 4), which is the location of point W, and this would result in point P rotating from (3, 1) to (5, 7), point Q rotating from (1, 2) to (7, 6), and point R rotating from (1, 4) to (7, 4), and then recognizes that, to increase the size of trapezoid PQRS to match the size of trapezoid TUVW, a dilation with a scale factor of 2 must occur and that the dilation should be centered at (5, 4) to keep the rotated point S on point W, and this would result in moving the rotated point P from (5, 7) to (5, 10), which is the location of point T, moving the rotated point Q from (7, 6) to (9, 8), which is the location of point U, and moving the rotated point R from (7, 4) to which is the location of point V.",
+                    "Rationale": "This choice recognizes that to orient trapezoid PQRS in the same direction as trapezoid TUVW, a rotation of 180° must occur and that the rotation should be centered at (4, 4) to move point S from (3, 4) to (5, 4), which is the location of point W, and this would result in point P rotating from (3, 1) to (5, 7), point Q rotating from `(1,2)` to (7, 6), and point R rotating from (1, 4) to (7, 4), and then recognizes that, to increase the size of trapezoid PQRS to match the size of trapezoid TUVW, a dilation with a scale factor of 2 must occur and that the dilation should be centered at (5, 4) to keep the rotated point S on point W, and this would result in moving the rotated point P from (5, 7) to (5, 10), which is the location of point T, moving the rotated point Q from (7, 6) to (9, 8), which is the location of point U, and moving the rotated point R from (7, 4) to which is the location of point V.",
                     "Percent": 41
                 }
             },
@@ -803,7 +803,7 @@
         "Explain": false,
         "Content": [
             "The lengths of the two legs of a right triangle are 4 centimeters and 8 centimeters. The length (h), in centimeters, of the hypotenuse of the right triangle can be determined using the equation shown below.",
-            ":ibox:4^2 + 8^2 = h²",
+            ":ibox:4^2 + 8^2 = h^2",
             "What is the length, in centimeters, of the hypotenuse of the right triangle?"
         ],
         "AnswerChoices": {
@@ -811,7 +811,7 @@
                 "Choice": "√12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice adds 4 and 8 without applying the exponents, resulting in the equation 12 = h², and then takes the square root of both sides of the equation to remove the exponent of 2 from h².",
+                    "Rationale": "This choice adds 4 and 8 without applying the exponents, resulting in the equation 12 = h^2, and then takes the square root of both sides of the equation to remove the exponent of 2 from h^2.",
                     "Percent": 11
                 }
             },
@@ -819,7 +819,7 @@
                 "Choice": "√32",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice multiplies 4 and 8 without applying the exponents, resulting in the equation 32 = h², and then takes the square root of both sides of the equation to remove the exponent of 2 from h.",
+                    "Rationale": "This choice multiplies 4 and 8 without applying the exponents, resulting in the equation 32 = h^2, and then takes the square root of both sides of the equation to remove the exponent of 2 from h.",
                     "Percent": 11
                 }
             },
@@ -827,7 +827,7 @@
                 "Choice": "√40",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice determines that 4^2 = 16 and 8^2 = 64, adds 16 and 64, resulting in the equation 80 = h², but then divides 80 by 2 before taking the square root of both sides of the equation to remove the exponent of 2 from h².",
+                    "Rationale": "This choice determines that 4^2 = 16 and 8^2 = 64, adds 16 and 64, resulting in the equation 80 = h^2, but then divides 80 by 2 before taking the square root of both sides of the equation to remove the exponent of 2 from h^2.",
                     "Percent": 9
                 }
             },
@@ -835,7 +835,7 @@
                 "Choice": "√80",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice determines that 4^2 = 16 and 8^2 = 64, adds 16 and 64, resulting in the equation 80 = h², and then takes the square root of both sides of the equation to remove the exponent of 2 from h².",
+                    "Rationale": "This choice determines that 4^2 = 16 and 8^2 = 64, adds 16 and 64, resulting in the equation 80 = h^2, and then takes the square root of both sides of the equation to remove the exponent of 2 from h^2.",
                     "Percent": 69
                 }
             }
@@ -882,7 +882,7 @@
                 "Choice": "1,206 cubic inches",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses d² rather than r^2 to apply the volume formula for a  cylinder as V = π • (8)^2 • 36 = 2,304π, and then divides the volume by 6, resulting in a quotient of 384π, which can be approximated using 384 • 3.14 = 1,205.76.",
+                    "Rationale": "This choice uses `d^2` rather than r^2 to apply the volume formula for a  cylinder as V = π • (8)^2 • 36 = 2,304π, and then divides the volume by 6, resulting in a quotient of 384π, which can be approximated using 384 • 3.14 = 1,205.76.",
                     "Percent": 16
                 }
             },

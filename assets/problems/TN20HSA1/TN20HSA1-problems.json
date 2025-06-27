@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "Avery is solving the following equation.",
-            ":ibox:-2|m - 2| = -6",
+            ":ibox:`-2abs(m-2)=-6`",
             "Which equation is equivalent to Avery's equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "- 2m + 4 = -6",
+                "Choice": "`-2m+4=-6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -28,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "|m - 2| = -3",
+                "Choice": "`abs(m-2)=-3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "2m + 4 = 6",
+                "Choice": "`2m+4=6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "|m - 2| = 3",
+                "Choice": "`abs(m-2)=3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -69,12 +69,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Grace and her brother need $400 to go to band camp. Their parents have agreed to help them earn money by paying them $25 each time they mow the lawn and $10 for each hour they babysit their younger brother. They will have to do a combination of both chores to earn the money.",
-            "Select the equation that represents the number of lawns they can mow, m, and hours they can babysit, b, to earn $400."
+            "Grace and her brother need `$400` to go to band camp. Their parents have agreed to help them earn money by paying them `$25` each time they mow the lawn and `$10` for each hour they babysit their younger brother. They will have to do a combination of both chores to earn the money.",
+            "Select the equation that represents the number of lawns they can mow, `m`, and hours they can babysit, `b`, to earn `$400`."
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "10m + 25b = 400",
+                "Choice": "`10m+25b=400`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -82,7 +82,7 @@
                 }
             },
             "P": {
-                "Choice": "10m - 25b = 400",
+                "Choice": "`10m-25b=400`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -90,7 +90,7 @@
                 }
             },
             "R": {
-                "Choice": "25m + 10b = 400",
+                "Choice": "`25m+10b=400`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -98,7 +98,7 @@
                 }
             },
             "S": {
-                "Choice": "25m - 10b = 400",
+                "Choice": "`205m-10b=40`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -116,7 +116,7 @@
             "Interpreting Functions"
         ],
         "SubTopics": [
-            "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation `y=f(x)`."
+            "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If `f` is a function and `x` is an element of its domain, then `f(x)` denotes the output of `f` corresponding to the input x. The graph of `f` is the graph of the equation `y=f(x)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -243,7 +243,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "f(x) = |x + 2| - 1",
+                "Choice": "`f(x)=abs(x+2)-1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -251,7 +251,7 @@
                 }
             },
             "B": {
-                "Choice": "f(x) = |x + 1| - 2",
+                "Choice": "`f(x)=abs(x+1)-2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -259,7 +259,7 @@
                 }
             },
             "C": {
-                "Choice": "f(x) = |x - 2| + 1",
+                "Choice": "`f(x)=abs(x-2)+1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -267,7 +267,7 @@
                 }
             },
             "D": {
-                "Choice": "f(x) = |x - 1| + 2",
+                "Choice": "`f(x)=abs(x-1)+2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -292,11 +292,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (q² - 16)?"
+            "Which expression is equivalent to `(q^2-16)`?"
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "(q - 4)^2",
+                "Choice": "`(q-4)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +304,7 @@
                 }
             },
             "P": {
-                "Choice": "(q + 4)(q - 4)",
+                "Choice": "`(q+4)(q-4)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -312,7 +312,7 @@
                 }
             },
             "R": {
-                "Choice": "(q + 8)(q - 2)",
+                "Choice": "`(q+8)(q-2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -320,7 +320,7 @@
                 }
             },
             "S": {
-                "Choice": "(q - 8)(q + 2)",
+                "Choice": "`(q-8)(q+2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -345,7 +345,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two of Ms. Cole's Earth science classes have 23 students each. Box plots for recent test scores for these two classes are displayed.",
+            "Two of Ms. Cole's Earth science classes have `23` students each. Box plots for recent test scores for these two classes are displayed.",
             "problems/TN20HSA1/media/7a.jpg",
             "problems/TN20HSA1/media/7b.jpg",
             "Which statement about the scores is true?"
@@ -368,7 +368,7 @@
                 }
             },
             "C": {
-                "Choice": "More students in third period than in fifth period scored an 87 or above.",
+                "Choice": "More students in third period than in fifth period scored an `87` or above.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -376,7 +376,7 @@
                 }
             },
             "D": {
-                "Choice": "Fewer students in third period than in fifth period scored a 70 or below.",
+                "Choice": "Fewer students in third period than in fifth period scored a `70` or below.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -402,7 +402,7 @@
         "Explain": false,
         "Content": [
             "Simplify the expression.",
-            ":ibox:(3x⁴ + 9x^3 - 7x + 15) + (-6x⁴ - 8x^2+ 5x - 3)",
+            ":ibox:`(3x^4+9x^3-7x+15)+(-6x^4-8x^2+5x-3)`",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -425,20 +425,20 @@
             "Building Functions"
         ],
         "SubTopics": [
-            "Identify the effect on the graph of replacing f(x) by f(x) + k, kf(x), f(kx), and f(x + k) for specific values of k (both positive and negative); find the value of k given graphs."
+            "Identify the effect on the graph of replacing `f(x)` by `f(x)+k`, `k (x)`, `f(k)`, and `f(x+k)` for specific values of `k` (both positive and negative); find the value of `k` given the graphs."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function f(x) = x^2- 3x - 4",
+            "The function `f(x)=x^2-3x-4` is graphed on the coordinate plane.",
             "problems/TN20HSA1/media/9a.jpg",
-            "Consider f(x - 3). Which option correctly describes the transformation to the graph?"
+            "Consider `f(x-3)`. Which option correctly describes the transformation to the graph?"
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "up 3 units",
+                "Choice": "up `3` `text(units)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -446,7 +446,7 @@
                 }
             },
             "P": {
-                "Choice": "down 3 units",
+                "Choice": "down `3` `text(units)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -454,7 +454,7 @@
                 }
             },
             "R": {
-                "Choice": "left 3 units",
+                "Choice": "left `3` `text(units)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -462,7 +462,7 @@
                 }
             },
             "S": {
-                "Choice": "right 3 units",
+                "Choice": "right `3` `text(units)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -487,9 +487,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The height, in inches, of each student in Megan's algebra class is shown.",
+            "The height, in `text(inches)`, of each student in Megan's algebra class is shown.",
             "problems/TN20HSA1/media/10a.jpg",
-            "Select the THREE measures that will be affected if a student who is 77 inches tall joins the class."
+            "Select the THREE measures that will be affected if a student who is `77` `text(inches)` tall joins the class."
         ],
         "AnswerChoices": {
             "A": {
@@ -550,12 +550,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jesse sent an email to 4 people for a school project. In her email, she requested that each person copy and send the same email to 4 additional people.",
-            "If everyone continues to send the email as requested, which equation could be used to determine the number of emails, y, that will be sent for a given round, x?"
+            "Jesse sent an email to `4` people for a school project. In her email, she requested that each person copy and send the same email to `4` additional people.",
+            "If everyone continues to send the email as requested, which equation could be used to determine the number of emails, `y`, that will be sent for a given round, `x`?"
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "y = x⁴",
+                "Choice": "`y=x^4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -563,7 +563,7 @@
                 }
             },
             "P": {
-                "Choice": "y = 4ˣ",
+                "Choice": "`y=4^x`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -571,7 +571,7 @@
                 }
             },
             "R": {
-                "Choice": "y = 4x",
+                "Choice": "`y=4x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -579,7 +579,7 @@
                 }
             },
             "S": {
-                "Choice": "y = 4/x",
+                "Choice": "`y=4/x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -605,11 +605,11 @@
         "Explain": false,
         "Content": [
             "Solve the inequality.",
-            ":ibox:4x - 7 ≥ (-12x + 14)/4"
+            ":ibox:`4x-7ge(-12x+14)/4`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "x ≥ 7/2",
+                "Choice": "`xge7/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -617,7 +617,7 @@
                 }
             },
             "B": {
-                "Choice": "x ≤ 7/2",
+                "Choice": "`xle7/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -625,7 +625,7 @@
                 }
             },
             "C": {
-                "Choice": "x ≥ 3/2",
+                "Choice": "`xge3/2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -633,7 +633,7 @@
                 }
             },
             "D": {
-                "Choice": "x ≤ 3/2",
+                "Choice": "`xle3/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -658,12 +658,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider the expression (x^2- 4)(x + 3).",
-            "Select ALL values of x for which (x^2- 4)(x + 3) = 0."
+            "Consider the expression `(x^2-4)(x+3)`.",
+            "Select ALL values of x for which `(x^2-4)(x+3)=0`."
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "-4",
+                "Choice": "`-4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -671,7 +671,7 @@
                 }
             },
             "P": {
-                "Choice": "-3",
+                "Choice": "`-3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -679,7 +679,7 @@
                 }
             },
             "R": {
-                "Choice": "-2",
+                "Choice": "`-2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -687,7 +687,7 @@
                 }
             },
             "S": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -695,7 +695,7 @@
                 }
             },
             "T": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -703,7 +703,7 @@
                 }
             },
             "V": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -728,12 +728,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The equation A = 1750(1.04)^t represents an account balance t years after the account was created.",
+            "The equation `A=1750(1.04)^t` represents an account balance `t` `text(years)` after the account was created.",
             "Which statement is correct?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The account balance will decrease 0.04% each year.",
+                "Choice": "The account balance will decrease `0.04`% `text(each year)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -741,7 +741,7 @@
                 }
             },
             "B": {
-                "Choice": "The account balance will increase 0.04% each year.",
+                "Choice": "The account balance will increase `0.04%` `text(each year)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -749,7 +749,7 @@
                 }
             },
             "C": {
-                "Choice": "The account balance will decrease 4% each year.",
+                "Choice": "The account balance will decrease `4%` `text(each year)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -757,7 +757,7 @@
                 }
             },
             "D": {
-                "Choice": "The account balance will increase 4% each year.",
+                "Choice": "The account balance will increase `4%` `text(each year)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -775,7 +775,7 @@
             "Reasoning With Equations & Inequalities"
         ],
         "SubTopics": [
-            "Explain why the `x`-coordinates of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation f(x) = g(x). Find approximate solutions by graphing the functions or making a table of values, using technology when appropriate."
+            "Explain why the `xtext(-coordinates)` of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation `f(x)=g(x)`. Find approximate solutions by graphing the functions or making a table of values, using technology when appropriate."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -784,11 +784,11 @@
         "Content": [
             "The graph of two functions is shown on the coordinate plane.",
             "problems/TN20HSA1/media/15a.jpg",
-            "Select ALL values of x for which f(x) = g(x)."
+            "Select ALL values of `x` for which `f(x)=g(x)`."
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "-2",
+                "Choice": "`-2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -796,7 +796,7 @@
                 }
             },
             "P": {
-                "Choice": "-1",
+                "Choice": "`-1`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -804,7 +804,7 @@
                 }
             },
             "R": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -812,7 +812,7 @@
                 }
             },
             "S": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -820,7 +820,7 @@
                 }
             },
             "T": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -852,7 +852,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.01 cm",
+                "Choice": "`0.01` `text(cm)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -860,7 +860,7 @@
                 }
             },
             "B": {
-                "Choice": "0.05 cm",
+                "Choice": "`0.05` `text(cm)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -868,7 +868,7 @@
                 }
             },
             "C": {
-                "Choice": "0.1 cm",
+                "Choice": "`0.1` `text(cm)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -876,7 +876,7 @@
                 }
             },
             "D": {
-                "Choice": "0.5 cm",
+                "Choice": "`0.5` `text(cm)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -894,7 +894,7 @@
             "Reasoning With Equations & Inequalities"
         ],
         "SubTopics": [
-            "Solve quadratic equations by inspection (e.g., for x^2= 49), taking square roots, knowing and applying the quadratic formula, and factoring, as appropriate to the initial form of the equation. Recognize when a quadratic equation has solutions that are not real numbers."
+            "Solve quadratic equations by inspection (e.g., for `x^2=49`), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when a quadratic equation has solutions that are not real numbers."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -902,12 +902,12 @@
         "Explain": false,
         "Content": [
             "Consider the equation.",
-            ":ibox:x^2- 12x + 49 = 22",
+            ":ibox:`x^2-12x+49=22`",
             "Which equation has the SAME solution(s) as the given equation?"
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "(x - 6)^2 = 9",
+                "Choice": "`(x-6)^2=9`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -915,7 +915,7 @@
                 }
             },
             "P": {
-                "Choice": "(x - 7)^2 = 22",
+                "Choice": "`(x-7)^2=22`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -923,7 +923,7 @@
                 }
             },
             "R": {
-                "Choice": "(x + 7)^2 = 4.7",
+                "Choice": "`(x+7)^2=4.7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -931,7 +931,7 @@
                 }
             },
             "S": {
-                "Choice": "(x - 12)^2 = -27",
+                "Choice": "`(x-12)^2=-27`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -957,8 +957,8 @@
         "Explain": false,
         "Content": [
             "A rock is thrown from a cliff into a ravine.",
-            "The function h(t) = -16t² + 192t + 2560 describes the height, in feet, of the rock t seconds after it is thrown.",
-            "What is the height of the rock, in feet, 8 seconds after it is thrown?",
+            "The function `h(t)=-16t^2+192t+2560` describes the height, in `text(feet)`, of the rock `t` `text(seconds)` after it is thrown.",
+            "What is the height of the rock, in `text(feet)`, `8` `text(seconds)` after it is thrown?",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -988,8 +988,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "John has a goal to ride his bike 100 miles this summer. John has ridden 12 miles thus far. There are 40 days left in the summer.",
-            "What is the average number of miles John must ride per day to reach his goal of 100 miles?",
+            "John has a goal to ride his bike `100` `text(miles)` this summer. John has ridden `12` `text(miles)` thus far. There are `40` `text(days)` left in the summer.",
+            "What is the average number of miles John must ride per day to reach his goal of `100` `text(miles)`?",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -1020,8 +1020,8 @@
         "Explain": false,
         "Content": [
             "Consider the function.",
-            ":ibox:f(x) = -2x^2+ 20x - 42",
-            "Which graph shows ALL the values of x for which f(x) ≥ 0?"
+            ":ibox:`f(x)=-2x^2+20x-42`",
+            "Which graph shows ALL the values of `x` for which `f(x)ge0`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1080,7 +1080,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Hayden should include the opposite of 7 as a second solution.",
+                "Choice": "Hayden should include the opposite of `7` as a second solution.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1088,7 +1088,7 @@
                 }
             },
             "B": {
-                "Choice": "Hayden should include the reciprocal of 7 as a second solution.",
+                "Choice": "Hayden should include the reciprocal of `7` as a second solution.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1096,7 +1096,7 @@
                 }
             },
             "C": {
-                "Choice": "Hayden should also solve for -x + 3 = -4 to determine a second solution.",
+                "Choice": "Hayden should also solve for `-x+3=-4` to determine a second solution.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1104,7 +1104,7 @@
                 }
             },
             "D": {
-                "Choice": "Hayden should also solve for x - 3 = -4 to determine a second solution.",
+                "Choice": "Hayden should also solve for `x-3=-4` to determine a second solution.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1129,14 +1129,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A farmer performs an experiment to find the amount of fertilizer needed to increase crop yields. She uses different amounts of fertilizer, measured in pounds per acre (lb/acre). She then records the yields, in bushels per acre (bu/acre). Her results are shown in the table and graphed on the scatter plot.",
+            "A farmer performs an experiment to find the amount of fertilizer needed to increase crop yields. She uses different amounts of fertilizer, measured in `text(pounds per acre)` `(text(lb)/text(acre))`. She then records the yields, in `text(bushels per acre)` `(text(bu)/text(acre))`. Her results are shown in the table and graphed on the scatter plot.",
             "problems/TN20HSA1/media/22a.jpg",
             "problems/TN20HSA1/media/22b.jpg",
             "Which equation BEST models the farmer's data?"
         ],
         "AnswerChoices": {
             "M": {
-                "Choice": "y = 0.37x + 31",
+                "Choice": "`y=0.37x+31`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1144,7 +1144,7 @@
                 }
             },
             "P": {
-                "Choice": "y = 32(1.006)^x",
+                "Choice": "`y=32(1.006)^x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1152,7 +1152,7 @@
                 }
             },
             "R": {
-                "Choice": "y = -0.009x^2+ 2.13x - 43",
+                "Choice": "`y=-0.009x^2+2.13x-43`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1160,7 +1160,7 @@
                 }
             },
             "S": {
-                "Choice": "y = -0.009x^2+ 2.13x + 43",
+                "Choice": "`y=-0.009x^2+2.13x+43`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1195,11 +1195,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Jackie buys 3 hot dogs and 1 pretzel from a restaurant for $12.25. Sylvia buys 2 hot dogs and 4 pretzels from the same restaurant for $16.50."
+                    "Jackie buys `3` hot dogs and `1` pretzel from a restaurant for `$12.25`. Sylvia buys `2` hot dogs and `4` pretzels from the same restaurant for `$16.50`."
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "2h + 1p = 12.25\n\n3h + 4p = 16.50",
+                        "Choice": "`2h+1p=12.25`\n\n`3h+4p=16.50`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1207,7 +1207,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "3h + 2h = 12.25\n\n1p + 4p = 16.50",
+                        "Choice": "`3h+2h=12.25`\n\n`1p+4p=16.50`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1215,7 +1215,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "2h + 4p = 12.25\n\n3h + 1p = 16.50",
+                        "Choice": "`2h+4p=12.25`\n\n`3h+1p=16.50`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1223,7 +1223,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "3h + 1p = 12.25\n\n2h + 4p = 16.50",
+                        "Choice": "`3h+1p=12.25`\n\n`2h+4p=16.50`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1238,7 +1238,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What is the price, in dollars, of a hot dog at the restaurant?",
+                    "What is the price, in `text(dollars)`, of a hot dog at the restaurant?",
                     "Enter your answer in the space provided."
                 ],
                 "AnswerChoices": {
@@ -1269,8 +1269,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The length of a garden is 6 feet more than the width. The area of the garden is 40 square feet.",
-            "What is the length, in feet, of the garden?",
+            "The length of a garden is `6` `text(feet)` more than the width. The area of the garden is `40` `text(square feet)`.",
+            "What is the length, in `text(feet)`, of the garden?",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -1300,8 +1300,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The Booneville History Museum had 25,000 visitors in 1980. The number of visitors has decreased by 2.5% each year since 1980.",
-            "Write a function v(t) to represent the number of visitors to the Booneville History Museum t years after 1980.",
+            "The Booneville History Museum had `25text(,)000` visitors in `1980`. The number of visitors has decreased by `2.5%` `text(each year)` since `1980`.",
+            "Write a function `v(t)` to represent the number of visitors to the Booneville History Museum `t` `text(years)` after `1980`.",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -1331,8 +1331,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Karen is buying supplies for a party. She plans to spend at least $100 on food and at least $50 on party favors. She can spend no more than $250 total on food and party favors.",
-            "Which graph shows the solution set to the amount of money Karen can spend on food, f, and party favors, p, and spend no more than $250?"
+            "Karen is buying supplies for a party. She plans to spend at least `$100` on food and at least `$50` on party favors. She can spend no more than `$250` total on food and party favors.",
+            "Which graph shows the solution set to the amount of money Karen can spend on food, `f`, and party favors, `p`, and spend no more than `$250`?"
         ],
         "AnswerChoices": {
             "M": {
@@ -1385,8 +1385,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider the equation 3(x - 5)^2 + 6 = 54.",
-            "What is the greatest value of x that makes the equation true?",
+            "Consider the equation `3(x-5)^2+6=54`.",
+            "What is the greatest value of `x` that makes the equation true?",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -1416,8 +1416,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function g(z) = 400z - z² can be used to determine the area, in square feet, of a field, where z represents the width of the field in feet. A farmer will plant spinach in this field and expects to harvest 1 pound of spinach per square foot.",
-            "If the field is 50 feet wide, what is the total number of pounds of spinach the farmer should expect to harvest from the field?",
+            "The function `g(z)=400z-z^2` can be used to determine the area, in `text(square feet)`, of a field, where `z` represents the width of the field in `text(feet)`. A farmer will plant spinach in this field and expects to harvest `1` `text(pound)` of spinach `text(per square foot)`.",
+            "If the field is `50` `text(feet)` wide, what is the total number of pounds of spinach the farmer should expect to harvest from the field?",
             "Enter your answer in the space provided."
         ],
         "AnswerChoices": {
@@ -1447,13 +1447,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The speed of sound at sea level, in dry air (70°F), is approximately 340 meters per second. Assume the graph correctly shows the distance, d, a sound wave created by a loud noise at sea level has traveled after t seconds.",
+            "The speed of sound at sea level, in dry air (`70text(°F)`), is approximately `340` `text(meters per second)`. Assume the graph correctly shows the distance, `d`, a sound wave created by a loud noise at sea level has traveled after `t` `text(seconds)`.",
             "problems/TN20HSA1/media/29a.jpg",
             "Which set of numbers is MOST appropriate to label the seven tick marks along the vertical axis (distance)?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1, 2, 3, 4, 5, 6, 7",
+                "Choice": "`1`, `2`, `3`, `4`, `5`, `6`, `7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1461,7 +1461,7 @@
                 }
             },
             "B": {
-                "Choice": "70, 140, 210, 280, 350, 420, 490",
+                "Choice": "`70`, `140`, `210`, `280`, `350`, `420`, `490`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1469,7 +1469,7 @@
                 }
             },
             "C": {
-                "Choice": "100, 200, 300, 400, 500, 600, 700",
+                "Choice": "`100`, `200`, `300`, `400`, `500`, `600`, `700`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1477,7 +1477,7 @@
                 }
             },
             "D": {
-                "Choice": "340, 680, 1020, 1360, 1700, 2040, 2380",
+                "Choice": "`340`, `680`, `1020`, `1360`, `1700`, `2040`, `2380`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1502,7 +1502,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A quadratic function is given as f(x) = x^2+ 8x + 6.",
+            "A quadratic function is given as `f(x)=x^2+8x+6`.",
             "Rewrite the given function in an equivalent form that would reveal the vertex of the function.",
             "Enter your answer in the space provided."
         ],

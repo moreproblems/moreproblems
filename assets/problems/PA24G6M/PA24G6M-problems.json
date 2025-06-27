@@ -489,7 +489,7 @@
                 }
             },
             "C": {
-                "Choice": "the fixed fee, in dollars, Ms. Diaz pays to rent the picnic area",
+                "Choice": "the fixed fee, in `text(dollars)`, Ms. Diaz pays to rent the picnic area",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice identifies what the 60 represents.",
@@ -497,7 +497,7 @@
                 }
             },
             "D": {
-                "Choice": "the total amount of money, in dollars, Ms. Diaz pays to rent the picnic area",
+                "Choice": "the total amount of money, in `text(dollars)`, Ms. Diaz pays to rent the picnic area",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice identifies what the y represents.",
@@ -889,7 +889,7 @@
                 "Choice": "The high temperatures are skewed to the right, making the mean value of 84.9°F an appropriate measure of center.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice thinks the data distribution is skewed to the right because of the three 90-degree temperatures and does not recognize that the mean value is not an appropriate measure of center for skewed data.",
+                    "Rationale": "This choice thinks the data distribution is skewed to the right because of the three `90text(-degree)` temperatures and does not recognize that the mean value is not an appropriate measure of center for skewed data.",
                     "Percent": 24
                 }
             },
@@ -897,7 +897,7 @@
                 "Choice": "The high temperatures are skewed to the right, making the median value of 84.9°F an appropriate measure of center.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice thinks that the data distribution is skewed to the right because of the three 90-degree temperatures and uses the value for the mean (84.9) rather than for the median (84) even though the median would be an appropriate measure of center for skewed data.",
+                    "Rationale": "This choice thinks that the data distribution is skewed to the right because of the three `90text(-degree)` temperatures and uses the value for the mean (84.9) rather than for the median (84) even though the median would be an appropriate measure of center for skewed data.",
                     "Percent": 16
                 }
             }
@@ -933,9 +933,9 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The local theater is offering a discount for purchasing 4 tickets to a performance. When 4 tickets with the same price are purchased, a $6 discount is applied. The expression shown below can be used to determine the total amount of money, in dollars, a customer is charged when purchasing 4 tickets with the same price.",
+                    "The local theater is offering a discount for purchasing 4 tickets to a performance. When 4 tickets with the same price are purchased, a $6 discount is applied. The expression shown below can be used to determine the total amount of money, in `text(dollars)`, a customer is charged when purchasing 4 tickets with the same price.",
                     ":ibox:4n - 6",
-                    "What is the total amount of money, in dollars, a customer is charged when n = 30?"
+                    "What is the total amount of money, in `text(dollars)`, a customer is charged when n = 30?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -966,7 +966,7 @@
                 "Content": [
                     "The ticket price for a performance on Thursday evening is t dollars. The ticket price for a performance on Friday evening is $35, which is $12 more than it is on Thursday evening. The equation shown below represents this situation.",
                     ":ibox:t + 12 = 35",
-                    "What is the ticket price (t), in dollars, for a performance on Thursday evening?"
+                    "What is the ticket price (t), in `text(dollars)`, for a performance on Thursday evening?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -985,8 +985,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "With the discount applied to some of the tickets purchased, the average ticket price is p dollars. The expression shown below can be used to determine the amount of money, in dollars, the local theater expects to earn based on the average ticket price.",
-                    ":ibox:250p - 5p² - 2,000",
+                    "With the discount applied to some of the tickets purchased, the average ticket price is p dollars. The expression shown below can be used to determine the amount of money, in `text(dollars)`, the local theater expects to earn based on the average ticket price.",
+                    ":ibox:250p - 5p^2 - 2,000",
                     "Explain why the local theater should NOT set the average ticket price to less than $10 or to more than $40."
                 ],
                 "AnswerChoices": {}

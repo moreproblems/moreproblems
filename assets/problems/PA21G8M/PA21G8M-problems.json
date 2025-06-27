@@ -14,7 +14,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The volume of Jupiter is approximately 10¹⁴ cubic kilometers. The volume of Earth is approximately 10¹¹ cubic kilometers. How many planets the size of Earth does it take to equal the volume of Jupiter?"
+            "The volume of Jupiter is approximately 10^14 cubic kilometers. The volume of Earth is approximately 10¹¹ cubic kilometers. How many planets the size of Earth does it take to equal the volume of Jupiter?"
         ],
         "AnswerChoices": {
             "A": {
@@ -126,7 +126,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Trevor is riding his bicycle for a workout. The graph below shows the relationship between the amount of time, in minutes, he rides and the distance, in kilometers, he rides during his 25-minute workout.",
+            "Trevor is riding his bicycle for a workout. The graph below shows the relationship between the amount of time, in `text(minutes)`, he rides and the distance, in kilometers, he rides during his 25-minute workout.",
             "problems/PA21G8M/media/3a.jpg",
             "Based on the graph, which statement about the rate at which Trevor rides during his workout is true?"
         ],
@@ -192,7 +192,7 @@
                 "Choice": "8 miles per gallon",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the new car, divides the `x`-scale by the `y`-scale (50 ÷ 2 = 25) and then subtracts 17 from 25.",
+                    "Rationale": "For the new car, divides the `xtext(-scale)` by the `ytext(-scale)` (50 ÷ 2 = 25) and then subtracts 17 from 25.",
                     "Percent": 14
                 }
             },
@@ -200,7 +200,7 @@
                 "Choice": "11.2 miles per gallon",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines the difference in distance by subtracting the greatest value on the `x`-axis from 323, determines the difference in gas used by subtracting the greatest value on the `y`-axis from 19, and then divides the difference of the distances by the difference of the gas used (123 ÷ 11).",
+                    "Rationale": "Determines the difference in distance by subtracting the greatest value on the `xtext(-axis)` from 323, determines the difference in gas used by subtracting the greatest value on the `ytext(-axis)` from 19, and then divides the difference of the distances by the difference of the gas used (123 ÷ 11).",
                     "Percent": 17
                 }
             },
@@ -216,7 +216,7 @@
                 "Choice": "20.5 miles per gallon",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the gas mileage for the old car by dividing 323 miles by 19 gallons to get 17 miles per gallon, determines the gas mileage for the new car by selecting a point on the line and dividing the `x`-value by the `y`-value (e.g., 150 ÷ 4) to get 37.5 miles per gallon, and then finds the difference between these two gas mileages.",
+                    "Rationale": "Determines the gas mileage for the old car by dividing 323 miles by 19 gallons to get 17 miles per gallon, determines the gas mileage for the new car by selecting a point on the line and dividing the `xtext(-value)` by the `ytext(-value)` (e.g., 150 ÷ 4) to get 37.5 miles per gallon, and then finds the difference between these two gas mileages.",
                     "Percent": 49
                 }
             }
@@ -241,7 +241,7 @@
         "Explain": false,
         "Content": [
             "Line j and line k are graphed on the same coordinate grid.",
-            ":box:• Line j has a slope of -2/3 and intersects the `y`-axis at -4.\n\n• Line k has a different negative slope than line j and intersects the `y`-axis above line j.",
+            ":box:• Line j has a slope of -2/3 and intersects the `ytext(-axis)` at -4.\n\n• Line k has a different negative slope than line j and intersects the `ytext(-axis)` above line j.",
             "Which equation could describe line k?"
         ],
         "AnswerChoices": {
@@ -249,7 +249,7 @@
                 "Choice": "y = (-1/6)x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that -1/6 is a negative slope not equal to -2/3 and that the `y`-intercept (0) means the line intersects the `y`-axis above line j.",
+                    "Rationale": "Recognizes that -1/6 is a negative slope not equal to -2/3 and that the `ytext(-intercept)` (0) means the line intersects the `ytext(-axis)` above line j.",
                     "Percent": 35
                 }
             },
@@ -265,7 +265,7 @@
                 "Choice": "y = (-1/2)x - 5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the `y`-intercept (-5) means the line intersects the `y`-axis below line j.",
+                    "Rationale": "Does not consider that the `ytext(-intercept)` (-5) means the line intersects the `ytext(-axis)` below line j.",
                     "Percent": 24
                 }
             },
@@ -363,7 +363,7 @@
                 "Choice": "(0, -4)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the `y`-intercept of the “lower” line.",
+                    "Rationale": "Identifies the `ytext(-intercept)` of the “lower” line.",
                     "Percent": 8
                 }
             },
@@ -371,7 +371,7 @@
                 "Choice": "`(0,3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the `y`-intercept of the “upper” line.",
+                    "Rationale": "Identifies the `ytext(-intercept)` of the “upper” line.",
                     "Percent": 6
                 }
             },
@@ -387,7 +387,7 @@
                 "Choice": "(3, -1)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the correct `x`-coordinate but adds the two `y`-intercepts to determine the `y`-coordinate.",
+                    "Rationale": "Identifies the correct `xtext(-coordinate)` but adds the two `ytext(-intercepts)` to determine the `ytext(-coordinate)`.",
                     "Percent": 5
                 }
             }
@@ -428,7 +428,7 @@
                 "Choice": "problems/PA21G8M/media/8b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly identifies the table as representing a function and uses the change of 10 in `y`-values as the slope. This choice is not a function since multiple `y`-values are paired with the same `x`-value.",
+                    "Rationale": "Incorrectly identifies the table as representing a function and uses the change of 10 in `ytext(-values)` as the slope. This choice is not a function since multiple `ytext(-values)` are paired with the same `xtext(-value)`.",
                     "Percent": 27
                 }
             },
@@ -436,7 +436,7 @@
                 "Choice": "problems/PA21G8M/media/8c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes the line represents a function but incorrectly determines slope by subtracting the least value on the `x`-axis from the greatest value. The slope of this choice is 0 since the line is horizontal (“flat”).",
+                    "Rationale": "Recognizes the line represents a function but incorrectly determines slope by subtracting the least value on the `xtext(-axis)` from the greatest value. The slope of this choice is 0 since the line is horizontal (“flat”).",
                     "Percent": 9
                 }
             },
@@ -444,7 +444,7 @@
                 "Choice": "y = 5x + 1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Using the slope formula (`m=(y_2-y_1)/(x_2-x_1)`), the slope of this choice is 5 since the equation is written in slope-intercept form (`y=mx+b`). This choice contains the greatest slope among the options that represent functions.",
+                    "Rationale": "Using the slope formula (`m=(y_2-y_1)/(x_2-x_1)`), the slope of this choice is 5 since the equation is written in slope-intercept form `(y=mx+b)`. This choice contains the greatest slope among the options that represent functions.",
                     "Percent": 50
                 }
             }
@@ -468,16 +468,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A parking lot charges a monthly fee plus a charge per day for a car parked in the lot. The graph below shows the relationship between the total cost (y), in dollars, and the number of days (x) the car is parked in the lot.",
+            "A parking lot charges a monthly fee plus a charge per day for a car parked in the lot. The graph below shows the relationship between the total cost (y), in `text(dollars)`, and the number of days (x) the car is parked in the lot.",
             "problems/PA21G8M/media/9a.jpg",
-            "Which equation could represent the relationship between the total cost (y), in dollars, and the number of days (x) the car is parked in the lot?"
+            "Which equation could represent the relationship between the total cost (y), in `text(dollars)`, and the number of days (x) the car is parked in the lot?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "y = mx",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the `y`-intercept is not 0 (i.e., the line does not pass through the origin).",
+                    "Rationale": "Does not consider that the `ytext(-intercept)` is not 0 (i.e., the line does not pass through the origin).",
                     "Percent": 12
                 }
             },
@@ -485,7 +485,7 @@
                 "Choice": "`y=mx+b`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that the relationship is linear (y = mx) and has a `y`-intercept other than 0 (+ b).",
+                    "Rationale": "Recognizes that the relationship is linear (y = mx) and has a `ytext(-intercept)` other than 0 (+ b).",
                     "Percent": 73
                 }
             },
@@ -493,7 +493,7 @@
                 "Choice": "y = x^2",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a nonlinear equation (y = x^2) and does not consider that the `y`-intercept is not 0 (i.e., the line does not pass through the origin).",
+                    "Rationale": "Selects a nonlinear equation (y = x^2) and does not consider that the `ytext(-intercept)` is not 0 (i.e., the line does not pass through the origin).",
                     "Percent": 8
                 }
             },
@@ -501,7 +501,7 @@
                 "Choice": "y = x^2+ b",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a nonlinear equation (y = x^2) that has a `y`-intercept other than 0 (+ b).",
+                    "Rationale": "Selects a nonlinear equation (y = x^2) that has a `ytext(-intercept)` other than 0 (+ b).",
                     "Percent": 7
                 }
             }
@@ -580,7 +580,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ben currently has $70 in his trip fund. He makes $45 per week doing yard work for his neighbors. He keeps $18 of the $45 for weekly expenses. The remaining amount goes into his trip fund. Which function can be used to determine the amount of money (y), in dollars, that Ben has in his trip fund at the end of x weeks?"
+            "Ben currently has $70 in his trip fund. He makes $45 per week doing yard work for his neighbors. He keeps $18 of the $45 for weekly expenses. The remaining amount goes into his trip fund. Which function can be used to determine the amount of money (y), in `text(dollars)`, that Ben has in his trip fund at the end of x weeks?"
         ],
         "AnswerChoices": {
             "A": {
@@ -806,7 +806,7 @@
         "Content": [
             "In the grid shown below, rectangle ABCD represents the location of a pool at a city park.",
             "problems/PA21G8M/media/15a.jpg",
-            "Anna swims in a straight line from corner A to corner C of the swimming pool. What is the distance, in meters, Anna swims?"
+            "Anna swims in a straight line from corner A to corner C of the swimming pool. What is the distance, in `text(meters)`, Anna swims?"
         ],
         "AnswerChoices": {
             "A": {
@@ -829,7 +829,7 @@
                 "Choice": "√65",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the differences between the `x`-values and between the `y`-values for point A and point C (-1 - (-5) = 4 and 2 - (-5) = 7), uses the Pythagorean theorem (`a^2+b^2=c^2`) to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root OR uses the Pythagorean theorem (`a^2+b^2=c^2`) to set up (AB)^2 + (BC)^2 = (AC)^2, substitutes the lengths of sides AB and BC to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root.",
+                    "Rationale": "Determines the differences between the `xtext(-values)` and between the `ytext(-values)` for point A and point C (-1 - (-5) = 4 and 2 - (-5) = 7), uses the Pythagorean theorem (`a^2+b^2=c^2`) to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root OR uses the Pythagorean theorem (`a^2+b^2=c^2`) to set up (AB)^2 + (BC)^2 = (AC)^2, substitutes the lengths of sides AB and BC to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root.",
                     "Percent": 39
                 }
             },
@@ -892,7 +892,7 @@
                 "Choice": "141.37 cubic inches",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the volume formula for a cylinder (V = 91/3)πr²h) instead of the volume formula for a cone (`V=1/3pir^2h`) and uses the diameter (3) instead of the radius (1.5) in the volume formula.",
+                    "Rationale": "Uses the volume formula for a cylinder (V = 91/3)πr^2h) instead of the volume formula for a cone (`V=1/3pir^2h`) and uses the diameter (3) instead of the radius (1.5) in the volume formula.",
                     "Percent": 3
                 }
             }

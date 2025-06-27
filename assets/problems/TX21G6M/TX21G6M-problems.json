@@ -505,14 +505,14 @@
         "Content": [
             "A portion of Taquan's check register is shown. Before Taquan made his utility payment on March 24, the balance of his account was $1,094.80.",
             "problems/TX21G6M/media/10a.jpg",
-            "Based on the information in the check register, what was the balance of Taquan's checking account in dollars and cents after the transaction on March 29?"
+            "Based on the information in the check register, what was the balance of Taquan's checking account in `text(dollars)` and cents after the transaction on March 29?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1143.89",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the balance of Taquan's checking account after the transaction on March 29 in dollars and cents, the student should have used the starting balance ($1,094.80), subtracted the amount of each withdrawal from the balance, and added the amount of each deposit to the balance ($1,094.80 - $193.66 - $650.00 + $50.00 + $842.75 = $1,143.89), resulting in a balance of $1,143.89 after the transaction on March 29. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the balance of Taquan's checking account after the transaction on March 29 in `text(dollars)` and cents, the student should have used the starting balance ($1,094.80), subtracted the amount of each withdrawal from the balance, and added the amount of each deposit to the balance ($1,094.80 - $193.66 - $650.00 + $50.00 + $842.75 = $1,143.89), resulting in a balance of $1,143.89 after the transaction on March 29. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 35
                 }
             }
@@ -911,13 +911,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The dimensions of the rectangular prism are given in feet.",
+            "The dimensions of the rectangular prism are given in `text(feet)`.",
             "problems/TX21G6M/media/18a.jpg",
             "What is the volume of the rectangular prism in cubic feet?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "120 1/8 ft³",
+                "Choice": "120 1/8 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the formula for the volume of a rectangular prism correctly but multiplied the whole numbers separately from the fractional parts and then added the products (answers), resulting in 5 × 3 + 1/4 = 15 + 1/4; 15 1/4 × 8 1/2 = 15 × 8 + 1/4 × 1/2 = 120 + 1/8 = 120 1/8. The student needs to focus on understanding how to calculate products involving mixed numbers.",
@@ -925,15 +925,15 @@
                 }
             },
             "G": {
-                "Choice": "133 7/8 ft³",
+                "Choice": "133 7/8 `text(ft)^3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the rectangular prism in cubic feet, the student should have substituted the given values into the formula for the volume of a rectangular prism from the Volume section of the STAAR Grade 6 Mathematics Reference Materials within the student's test booklet (V = Bh, where V represents the volume, B represents the area (amount of space covered by the surface) of the base, and h represents the height (vertical distance from top to bottom)). To determine B, the area of the base, the student should have multiplied 5 1/4 ft by 3 ft, resulting in 15 3/4 ft². Then the student should have substituted the values of B = 15 3/4 and h = 8 1/2 into the volume formula (V = 15 3/4 × 8 1/2), resulting in a volume of 133 7/8 ft³.",
+                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the rectangular prism in cubic feet, the student should have substituted the given values into the formula for the volume of a rectangular prism from the Volume section of the STAAR Grade 6 Mathematics Reference Materials within the student's test booklet (V = Bh, where V represents the volume, B represents the area (amount of space covered by the surface) of the base, and h represents the height (vertical distance from top to bottom)). To determine B, the area of the base, the student should have multiplied 5 1/4 ft by 3 ft, resulting in 15 3/4 `text(ft)^2`. Then the student should have substituted the values of B = 15 3/4 and h = 8 1/2 into the volume formula (V = 15 3/4 × 8 1/2), resulting in a volume of 133 7/8 `text(ft)^3`.",
                     "Percent": 31
                 }
             },
             "H": {
-                "Choice": "16 3/4 ft³",
+                "Choice": "16 3/4 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the given dimensions together and did not realize that the unit of measurement would be feet instead of cubic feet, resulting in 5 1/4 + 3 = 8 1/4; 8 1/4 + 8 1/2 = 16 3/4. The student needs to focus on understanding how to calculate the volume of a rectangular prism.",
@@ -941,7 +941,7 @@
                 }
             },
             "J": {
-                "Choice": "24 1/4 ft³",
+                "Choice": "24 1/4 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely multiplied the given dimensions of the base and then added the height to the area of the base, resulting in 5 1/4 × 3 = 15 3/4; 15 3/4 +8 1/2 = 24 1/4. The student needs to focus on understanding how to calculate the volume of a rectangular prism.",
@@ -967,14 +967,14 @@
         "Explain": false,
         "Content": [
             "At a bookstore the total cost of 6 books is $45.00. Each book costs the same amount.",
-            "Which table shows the relationship between the number of books bought and the total cost in dollars?"
+            "Which table shows the relationship between the number of books bought and the total cost in `text(dollars)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/TX21G6M/media/19a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the table that shows the relationship between the number of books bought and the total cost in dollars, the student should have first divided $45.00 by 6 to determine that the cost of each book is $7.50 and then determined that each cost in the second row of the table is 7.5 times the corresponding (paired) number of books bought in the first row of the table. This relationship can be represented in the form y = kx, where y represents the cost in dollars, k represents the cost per book (7.50), and x represents the number of books bought.",
+                    "Rationale": "To determine the table that shows the relationship between the number of books bought and the total cost in `text(dollars)`, the student should have first divided $45.00 by 6 to determine that the cost of each book is $7.50 and then determined that each cost in the second row of the table is 7.5 times the corresponding (paired) number of books bought in the first row of the table. This relationship can be represented in the form y = kx, where y represents the cost in `text(dollars)`, k represents the cost per book (7.50), and x represents the number of books bought.",
                     "Percent": 70
                 }
             },
@@ -1370,7 +1370,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The length of a marathon race is 26 miles 385 yards. What is the total length of the marathon race in yards?"
+            "The length of a marathon race is 26 miles 385 yards. What is the total length of the marathon race in `text(yards)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1385,7 +1385,7 @@
                 "Choice": "46,145  yd",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the total length of a marathon race in yards, the student could have first converted 26 miles to feet by multiplying 26 by 5,280 (1 mile = 5,280 feet), resulting in 137,280 feet. The student then could have converted 137,280 feet to yards by dividing 137,280 by 3 (1 yard = 3 feet), resulting in 45,760 yards. The student then could have added the 385 yards to the 45,760 yards, resulting in 46,145 yards.",
+                    "Rationale": "To determine the total length of a marathon race in `text(yards)`, the student could have first converted 26 miles to feet by multiplying 26 by 5,280 (1 mile = 5,280 feet), resulting in 137,280 feet. The student then could have converted 137,280 feet to yards by dividing 137,280 by 3 (1 yard = 3 feet), resulting in 45,760 yards. The student then could have added the 385 yards to the 45,760 yards, resulting in 46,145 yards.",
                     "Percent": 63
                 }
             },
@@ -1618,7 +1618,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The length of a rectangle is 7 inches, and the area of the rectangle is 199.5 square inches. What is the width of the rectangle in inches?"
+            "The length of a rectangle is 7 inches, and the area of the rectangle is 199.5 square inches. What is the width of the rectangle in `text(inches)`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -1870,7 +1870,7 @@
                 "Choice": "Quadrant II",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student chose the quadrant where ordered pairs must have a negative `x`-value and a positive `y`-value instead of a negative `x`-value and a negative `y`-value. The student needs to focus on understanding where to place a point on a coordinate grid based on an ordered pair.",
+                    "Rationale": "The student chose the quadrant where ordered pairs must have a negative `xtext(-value)` and a positive `ytext(-value)` instead of a negative `xtext(-value)` and a negative `ytext(-value)`. The student needs to focus on understanding where to place a point on a coordinate grid based on an ordered pair.",
                     "Percent": 14
                 }
             },
@@ -1878,7 +1878,7 @@
                 "Choice": "Quadrant IV",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student chose the quadrant where ordered pairs must have a positive `x`-value and a negative `y`-value instead of a negative `x`-value and a negative `y`-value. The student needs to focus on understanding where to place a point on a coordinate grid based on an ordered pair.",
+                    "Rationale": "The student chose the quadrant where ordered pairs must have a positive `xtext(-value)` and a negative `ytext(-value)` instead of a negative `xtext(-value)` and a negative `ytext(-value)`. The student needs to focus on understanding where to place a point on a coordinate grid based on an ordered pair.",
                     "Percent": 19
                 }
             },
@@ -1886,7 +1886,7 @@
                 "Choice": "Quadrant III",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the quadrant (one of the four quarters of a coordinate grid) where point Q is located, the student should have used the given coordinates (-9.73, -3.32). The student should have realized the coordinates of point Q are given as an ordered pair (two numbers usually written in parentheses; can be used to show the position on a coordinate grid, where the horizontal (left to right) value, x, is first, and the vertical (up and down) value, y, is second), where the `x`-value is negative and the `y`-value is negative. Therefore, the point must be located in Quadrant III. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the quadrant (one of the four quarters of a coordinate grid) where point Q is located, the student should have used the given coordinates (-9.73, -3.32). The student should have realized the coordinates of point Q are given as an ordered pair (two numbers usually written in parentheses; can be used to show the position on a coordinate grid, where the horizontal (left to right) value, x, is first, and the vertical (up and down) value, y, is second), where the `xtext(-value)` is negative and the `ytext(-value)` is negative. Therefore, the point must be located in Quadrant III. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 60
                 }
             },
@@ -1894,7 +1894,7 @@
                 "Choice": "Quadrant I",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student chose the quadrant where ordered pairs must have a positive `x`-value and a positive `y`-value instead of a negative `x`-value and a negative `y`-value. The student needs to focus on understanding where to place a point on a coordinate grid based on an ordered pair.",
+                    "Rationale": "The student chose the quadrant where ordered pairs must have a positive `xtext(-value)` and a positive `ytext(-value)` instead of a negative `xtext(-value)` and a negative `ytext(-value)`. The student needs to focus on understanding where to place a point on a coordinate grid based on an ordered pair.",
                     "Percent": 6
                 }
             }

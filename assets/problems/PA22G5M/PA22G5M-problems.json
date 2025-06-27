@@ -698,7 +698,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "for the `x`-axis, using a scale of 1 instead of a scale of 2",
+                "Choice": "for the `xtext(-axis)`, using a scale of 1 instead of a scale of 2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not realize that less of the data would be displayed (the graph would not extend past day 5).",
@@ -706,7 +706,7 @@
                 }
             },
             "B": {
-                "Choice": "for the `x`-axis, using a scale of 3 instead of a scale of 2",
+                "Choice": "for the `xtext(-axis)`, using a scale of 3 instead of a scale of 2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not realize that this would not change the amount of data displayed on the graph (the graph would extend to day 15, which is not necessary).",
@@ -714,18 +714,18 @@
                 }
             },
             "C": {
-                "Choice": "for the `y`-axis, using a scale of 15 instead of a scale of 25",
+                "Choice": "for the `ytext(-axis)`, using a scale of 15 instead of a scale of 25",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes that the `y`-axis should change but does not realize that less of the data would be displayed.",
+                    "Rationale": "Recognizes that the `ytext(-axis)` should change but does not realize that less of the data would be displayed.",
                     "Percent": 20
                 }
             },
             "D": {
-                "Choice": "for the `y`-axis, using a scale of 35 instead of a scale of 25",
+                "Choice": "for the `ytext(-axis)`, using a scale of 35 instead of a scale of 25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that using a scale of 35 for the `y`-axis would change the values from 0, 25, 50, ..., 250 to 0, 35, 70, ..., 350, which would allow the greatest height from the table (348 cm) to be displayed on the graph without changing the size of the grid.",
+                    "Rationale": "Recognizes that using a scale of 35 for the `ytext(-axis)` would change the values from 0, 25, 50, ..., 250 to 0, 35, 70, ..., 350, which would allow the greatest height from the table (348 cm) to be displayed on the graph without changing the size of the grid.",
                     "Percent": 48
                 }
             }
@@ -867,7 +867,7 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "Leon is selling candy bars for a school fundraiser. He raises $3.00 for each candy bar he sells. The graph shown below represents the total amount of money, in dollars, Leon has raised based on the number of candy bars he has sold.",
+            "Leon is selling candy bars for a school fundraiser. He raises $3.00 for each candy bar he sells. The graph shown below represents the total amount of money, in `text(dollars)`, Leon has raised based on the number of candy bars he has sold.",
             "problems/PA2G5M/media/16a.jpg",
             "The pattern continues."
         ],
@@ -883,7 +883,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "`x`-axis",
+                        "Choice": "`xtext(-axis)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -891,7 +891,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "`y`-axis",
+                        "Choice": "`ytext(-axis)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -925,7 +925,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Explain why it is NOT possible for any of the points on the graph to have a `y`-coordinate of 77."
+                    "Explain why it is NOT possible for any of the points on the graph to have a `ytext(-coordinate)` of 77."
                 ],
                 "AnswerChoices": {}
             },

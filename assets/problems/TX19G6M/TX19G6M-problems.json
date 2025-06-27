@@ -122,9 +122,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The expression shown can be used to calculate the amount of money in dollars a grocery store customer should receive in change when paying with $50.",
+            "The expression shown can be used to calculate the amount of money in `text(dollars)` a grocery store customer should receive in change when paying with $50.",
             "50 - (14 + 12 + 2(5) + 2(2) + 3)",
-            "What amount of change in dollars should the customer receive?"
+            "What amount of change in `text(dollars)` should the customer receive?"
         ],
         "AnswerChoices": {
             "A": {
@@ -155,7 +155,7 @@
                 "Choice": "$7",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the amount of change in dollars the customer should receive, the student should have first multiplied the two groupings of numbers in the innermost parentheses, 2 times 5, resulting in 10, and 2 times 2, resulting in 4. The student then should have added the numbers in the outer pair of parentheses (14 + 12 + 10 + 4 + 3 = 43). Finally, the student should have subtracted 43 from 50, resulting in a final answer of $7.",
+                    "Rationale": "To determine the amount of change in `text(dollars)` the customer should receive, the student should have first multiplied the two groupings of numbers in the innermost parentheses, 2 times 5, resulting in 10, and 2 times 2, resulting in 4. The student then should have added the numbers in the outer pair of parentheses (14 + 12 + 10 + 4 + 3 = 43). Finally, the student should have subtracted 43 from 50, resulting in a final answer of $7.",
                     "Percent": 0
                 }
             }
@@ -548,7 +548,7 @@
                 }
             },
             "C": {
-                "Choice": "Victoria has y dollars.\nThis amount is 12 times x, the amount of money in dollars Victoria's brother has.",
+                "Choice": "Victoria has y dollars.\nThis amount is 12 times x, the amount of money in `text(dollars)` Victoria's brother has.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine which situation can be represented by the equation y = 12x, the student should have first recognized that the variables (symbols or letters used to represent unknown numbers) represent the amounts of money each person in the situation has. The variable y represents the amount of money Victoria has, and the variable x represents the amount of money Victoria's brother has. The student should have determined that “12 times x” means that Victoria's amount of money (y) is equal to 12 times the amount of money her brother has (x) and can be represented as 12x. As a result, the student should have determined that the equation representing this situation is y = 12x.",
@@ -581,7 +581,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The weights of four puppies are shown in pounds.",
+            "The weights of four puppies are shown in `text(pounds)`.",
             "9.5\t9 3/8\t9.125\t9 3/4",
             "Which list shows these weights in order from greatest to least?"
         ],
@@ -690,13 +690,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The dimensions of a lawn shaped like a trapezoid are given in meters.",
+            "The dimensions of a lawn shaped like a trapezoid are given in `text(meters)`.",
             "problems/TX19G6M/media/14a.jpg",
             "What is the area of the lawn in square meters?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "108 m²",
+                "Choice": "108 m^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely multiplied the bases (12 and 18) and then multiplied the result by 1/2, resulting in 108. The student needs to focus on understanding how to calculate the area of a trapezoid.",
@@ -704,7 +704,7 @@
                 }
             },
             "G": {
-                "Choice": "60 m²",
+                "Choice": "60 m^2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the area of (amount of space covered by) the lawn in square meters, the student should have substituted the values into the formula for the area of a trapezoid from the Area section of the STAAR Grade 6 Mathematics Reference Materials within the student's test booklet (`A=1/2(b_1+b_2)h`, where A represents the area, b_1 represents the length of one base, b_2 represents the length of the second base, and h represents the height (vertical distance from top to bottom)). Substituting b_1 = 12, b_2 = 18, and h = 4, the student should have determined that A = 1/2 • (12 + 18)(4) = 60.",
@@ -712,7 +712,7 @@
                 }
             },
             "H": {
-                "Choice": "72 m²",
+                "Choice": "72 m^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely multiplied the base (18) by the height (4), resulting in 72. The student needs to focus on understanding how to calculate the area of a trapezoid.",
@@ -720,7 +720,7 @@
                 }
             },
             "J": {
-                "Choice": "120 m²",
+                "Choice": "120 m^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely substituted the values into the formula correctly but did not complete all of the steps, omitting the multiplication by 1/2, resulting in 120. The student needs to focus on understanding how to calculate the area of a trapezoid.",
@@ -762,7 +762,7 @@
                 "Choice": "Data Set I shows a multiplicative relationship in which y is 5.5 times x.\nData Set II shows an additive relationship in which y is 20 more than x.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely determined the multiplicative relationship in Data Set I correctly but used only the last row of values in the table for Data Set II (5 and 25) to determine the `y`-value is 20 more than the corresponding `x`-value and incorrectly identified the relationship as additive (+). The student needs to focus on understanding how to determine the relationships of corresponding values in a table in order to differentiate between additive and multiplicative relationships.",
+                    "Rationale": "The student likely determined the multiplicative relationship in Data Set I correctly but used only the last row of values in the table for Data Set II (5 and 25) to determine the `ytext(-value)` is 20 more than the corresponding `xtext(-value)` and incorrectly identified the relationship as additive (+). The student needs to focus on understanding how to determine the relationships of corresponding values in a table in order to differentiate between additive and multiplicative relationships.",
                     "Percent": 0
                 }
             },
@@ -770,7 +770,7 @@
                 "Choice": "Both data sets show multiplicative relationships.\nIn Data Set I, y is 5.5 times x, and in Data Set II, y is 5 times x.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the statements that describe the relationship between `x` and `y` in Data Set I and Data Set II, the student should have determined that in the table for Data Set I, each `y`-value is 5.5 times the corresponding (paired) `x`-value, and in the table for Data Set II, each `y`-value is 5 times the corresponding `x`-value. The student should have understood that each of the data sets represents a multiplicative relationship because of the operation (×).",
+                    "Rationale": "To determine the statements that describe the relationship between `x` and `y` in Data Set I and Data Set II, the student should have determined that in the table for Data Set I, each `ytext(-value)` is 5.5 times the corresponding (paired) `xtext(-value)`, and in the table for Data Set II, each `ytext(-value)` is 5 times the corresponding `xtext(-value)`. The student should have understood that each of the data sets represents a multiplicative relationship because of the operation (×).",
                     "Percent": 0
                 }
             },
@@ -778,7 +778,7 @@
                 "Choice": "Data Set I shows an additive relationship in which y is 4.5 more than x.\nData Set II shows a multiplicative relationship in which y is 5 times x.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely determined the multiplicative relationship in Data Set II correctly but used only the first row of values in the table for Data Set I (1 and 5.5) to determine the `y`-value is 4.5 more than the `x`-value and incorrectly identified the relationship as additive. The student needs to focus on understanding how to determine the relationships of corresponding values in a table in order to differentiate between additive and multiplicative relationships.",
+                    "Rationale": "The student likely determined the multiplicative relationship in Data Set II correctly but used only the first row of values in the table for Data Set I (1 and 5.5) to determine the `ytext(-value)` is 4.5 more than the `xtext(-value)` and incorrectly identified the relationship as additive. The student needs to focus on understanding how to determine the relationships of corresponding values in a table in order to differentiate between additive and multiplicative relationships.",
                     "Percent": 0
                 }
             }
@@ -1571,7 +1571,7 @@
         "Explain": false,
         "Content": [
             "The area of a rectangle is 45.5 square inches. The base of the rectangle is 7 inches.",
-            "What is the height of the rectangle in inches?"
+            "What is the height of the rectangle in `text(inches)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1633,7 +1633,7 @@
                 "Choice": "Point W",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the point that is best represented by the ordered pair (2, -5.5), the student should have determined the point with an ordered pair that is 2 units right of the origin (point where the `x`-axis (horizontal) and the `y`-axis (vertical) on a coordinate grid intersect; also the point represented by the ordered pair `(0,0)`) and -5.5 units below the origin. Because point W is located 2 units to the right of the origin, the value of the `x`-coordinate (horizontal position from 0) of point W is 2, and the value of the `y`-coordinate (vertical position from 0) of point W is -5.5.",
+                    "Rationale": "To determine the point that is best represented by the ordered pair (2, -5.5), the student should have determined the point with an ordered pair that is 2 units right of the origin (point where the `xtext(-axis)` (horizontal) and the `ytext(-axis)` (vertical) on a coordinate grid intersect; also the point represented by the ordered pair `(0,0)`) and -5.5 units below the origin. Because point W is located 2 units to the right of the origin, the value of the `xtext(-coordinate)` (horizontal position from 0) of point W is 2, and the value of the `ytext(-coordinate)` (vertical position from 0) of point W is -5.5.",
                     "Percent": 0
                 }
             },
@@ -1641,7 +1641,7 @@
                 "Choice": "Point V",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely chose a point (point V) represented by an ordered pair with the opposite sign for the value of the `x`-coordinate (-2 instead of 2). The student needs to focus on understanding how to graph ordered pairs on a coordinate grid.",
+                    "Rationale": "The student likely chose a point (point V) represented by an ordered pair with the opposite sign for the value of the `xtext(-coordinate)` (-2 instead of 2). The student needs to focus on understanding how to graph ordered pairs on a coordinate grid.",
                     "Percent": 0
                 }
             },
@@ -1649,7 +1649,7 @@
                 "Choice": "Point S",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely chose a point (point S) represented by an ordered pair with reversed values for the `x`-coordinate and the `y`-coordinate and with the opposite signs for the values of the `x`-coordinate and the `y`-coordinate (-2 instead of 2, 5.5 instead of -5.5), resulting in the point located at (5.5, -2) instead of (2, -5.5). The student needs to focus on understanding how to graph ordered pairs on a coordinate grid.",
+                    "Rationale": "The student likely chose a point (point S) represented by an ordered pair with reversed values for the `xtext(-coordinate)` and the `ytext(-coordinate)` and with the opposite signs for the values of the `xtext(-coordinate)` and the `ytext(-coordinate)` (-2 instead of 2, 5.5 instead of -5.5), resulting in the point located at (5.5, -2) instead of (2, -5.5). The student needs to focus on understanding how to graph ordered pairs on a coordinate grid.",
                     "Percent": 0
                 }
             },
@@ -1657,7 +1657,7 @@
                 "Choice": "Point R",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely chose a point (point R) represented by an ordered pair with reversed values for the `x`-coordinate and the `y`-coordinate, resulting in the point located at (-5.5, 2) instead of (2, -5.5). The student needs to focus on understanding how to graph ordered pairs on a coordinate grid.",
+                    "Rationale": "The student likely chose a point (point R) represented by an ordered pair with reversed values for the `xtext(-coordinate)` and the `ytext(-coordinate)`, resulting in the point located at (-5.5, 2) instead of (2, -5.5). The student needs to focus on understanding how to graph ordered pairs on a coordinate grid.",
                     "Percent": 0
                 }
             }
@@ -1681,14 +1681,14 @@
         "Content": [
             "A portion of Raúl's check register is shown. His checking account had a balance of $539.50 on April 2.",
             "problems/TX19G6M/media/33a.jpg",
-            "Based on the information in the check register, what was the balance of Raúl's checking account after the transaction on April 13 in dollars and cents?"
+            "Based on the information in the check register, what was the balance of Raúl's checking account after the transaction on April 13 in `text(dollars)` and cents?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:535.25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the balance of Raúl's checking account after the transaction on April 13 in dollars and cents, the student should have used the starting balance ($539.50), subtracted the amount of each withdrawal from the balance, and added the amount of the deposit to the balance ($539.50 - $35.50 - $23.75 + $55.00 = $535.25), resulting in a balance of $535.25 after the transaction on April 13. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the balance of Raúl's checking account after the transaction on April 13 in `text(dollars)` and cents, the student should have used the starting balance ($539.50), subtracted the amount of each withdrawal from the balance, and added the amount of the deposit to the balance ($539.50 - $35.50 - $23.75 + $55.00 = $535.25), resulting in a balance of $535.25 after the transaction on April 13. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 0
                 }
             }

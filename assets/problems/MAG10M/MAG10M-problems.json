@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "Albert drew the line represented by this equation on a coordinate plane.",
-            ":ibox:y = -x/2 + 5",
-            "On the same coordinate plane, Penny drew a line that is perpendicular to Albert's line AND passes through the point (-4, 3). Which of the following equations represents Penny's line?"
+            ":ibox:`y=-x/2+5`",
+            "On the same coordinate plane, Penny drew a line that is perpendicular to Albert's line AND passes through the point `(-4,3)`. Which of the following equations represents Penny's line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 2x + 5",
+                "Choice": "`y=2x+5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -28,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 2x + 11",
+                "Choice": "`y=2x+11`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "y = -2x - 5",
+                "Choice": "`y=-2x-5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "y = -2x - 11",
+                "Choice": "`y=-2x-11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -74,12 +74,12 @@
             "A compass and a straightedge were used to perform a construction given `triangleXYZ`. This diagram shows the completed construction.",
             "problems/MAG10M/media/2b.jpg",
             "The following steps were used to complete the construction.",
-            ":ibox:• An arc was drawn, with the compass, from point X through the sides of /_YXZ to create point F and point E.\n\n• Two arcs were drawn, with the same compass setting, one from point F and one from point E. The arcs intersect to create point P.\n\n• A ray was drawn, with the straightedge, from point X through point P.\n\n• The intersection of XP and YZ was labeled point G.",
+            ":ibox:• An arc was drawn, with the compass, from point X through the sides of `/_YXZ` to create point `F` and point `E`.\n\n• Two arcs were drawn, with the same compass setting, one from point `F` and one from point `E`. The arcs intersect to create point `P`.\n\n• A ray was drawn, with the straightedge, from point `X` through point `P`.\n\n• The intersection of `bar(XP)` and `bar(YZ)` was labeled point `G`.",
             "Based on the construction, which of the following MUST be true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "XG is congruent to YG.",
+                "Choice": "`bar(XG)` is congruent to `bar(YG)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -87,7 +87,7 @@
                 }
             },
             "B": {
-                "Choice": "XG is a median of `triangleXYZ`.",
+                "Choice": "`bar(XG)` is a median of `triangleXYZ`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -95,7 +95,7 @@
                 }
             },
             "C": {
-                "Choice": "XG is an angle bisector of /_YXZ.",
+                "Choice": "`bar(XG)` is an angle bisector of `/_YXZ`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -103,7 +103,7 @@
                 }
             },
             "D": {
-                "Choice": "XG is a perpendicular bisector of YZ.",
+                "Choice": "`bar(XG)` is a perpendicular bisector of `bar(YZ)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -130,7 +130,7 @@
         "Content": [
             "Consider this polygon.",
             "problems/MAG10M/media/3a.jpg",
-            "What is the sum, in degrees, of the measures of the interior angles of the polygon?"
+            "What is the sum, in `text(degrees)`, of the measures of the interior angles of the polygon?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -161,7 +161,7 @@
         "Content": [
             "THIS PROBLEM HAS FOUR PARTS.",
             "Consider this inequality.",
-            ":ibox:y ≥ 2x - 1"
+            ":ibox:`yge2x-1`"
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -210,7 +210,7 @@
                 "Explain": false,
                 "Content": [
                     "Consider this system of inequalities.",
-                    "x + y > -2\n\nx - y < 4",
+                    ":ibox:`x+ygt-2`\n\n`x-ylt4`",
                     "On the coordinate plane provided in your answer space, graph the solution set of the system of inequalities."
                 ],
                 "AnswerChoices": {
@@ -260,13 +260,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "This equation represents the ideal gas law, where T is the temperature.",
-            ":ibox:PV = nRT",
-            "Which equation has been correctly rearranged to solve for T?"
+            "This equation represents the ideal gas law, where `T` is the temperature.",
+            ":ibox:`PV=nRT`",
+            "Which equation has been correctly rearranged to solve for `T`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "T = nR - PV",
+                "Choice": "`T=nR-PV`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -274,7 +274,7 @@
                 }
             },
             "B": {
-                "Choice": "T = PV - nR",
+                "Choice": "`T=PV-nR`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -282,7 +282,7 @@
                 }
             },
             "C": {
-                "Choice": "T = nR/PV",
+                "Choice": "`T=(nR)/(PV)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -290,7 +290,7 @@
                 }
             },
             "D": {
-                "Choice": "T = PV/nR",
+                "Choice": "`T=(PV)/(nR)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -315,9 +315,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle ABC is shown on this coordinate plane.",
+            "Triangle `ABC` is shown on this coordinate plane.",
             "problems/MAG10M/media/6a.jpg",
-            "Triangle ABC will be reflected across the `x`-axis and then translated 3 units up to create its image, triangle A'B'C'. Which of the following shows the correct location of triangle A'B'C' on the coordinate plane?"
+            "Triangle `ABC` will be reflected across the `xtext(-axis)` and then translated `3` `text(units)` up to create its image, triangle `A'B'C'`. Which of the following shows the correct location of triangle `A'B'C'` on the coordinate plane?"
         ],
         "AnswerChoices": {
             "A": {
@@ -424,7 +424,7 @@
                 "Explain": false,
                 "Content": [
                     "Consider this expression.",
-                    ":ibox:1.8 + √1.8",
+                    ":ibox:`1.8+sqrt(1.8)`",
                     "Which of the following statements about the expression is true?"
                 ],
                 "AnswerChoices": {
@@ -480,8 +480,8 @@
         "Explain": false,
         "Content": [
             "A student went on a two-day hike.",
-            ":ibox:• On day one, the student hiked 11 kilometers.\n\n• On day two, the student hiked at a rate of 2 kilometers per hour for x hours.",
-            "Which of the following graphs represents y, the total distance, in kilometers, the student hiked over both days after hiking for x hours on day two?"
+            ":ibox:• On day one, the student hiked `11` `text(kilometers)`.\n\n• On day two, the student hiked at a rate of `2` `text(kilometers per hour)` for `x` `text(hours)`.",
+            "Which of the following graphs represents `y`, the total distance, in `text(kilometers)`, the student hiked over both days after hiking for `x` `text(hours)` on day two?"
         ],
         "AnswerChoices": {
             "A": {
@@ -535,13 +535,13 @@
         "Explain": false,
         "Content": [
             "Consider this expression.",
-            ":ibox:∛t",
-            "Which of the following are equivalent to the expression for all positive values of t?",
+            ":ibox:`root(3)(t)`",
+            "Which of the following are equivalent to the expression for all positive values of `t`?",
             "Select the THREE equivalent expressions."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "t¹/³",
+                "Choice": "`t^(1/3)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -549,7 +549,7 @@
                 }
             },
             "B": {
-                "Choice": "t^2/³",
+                "Choice": "`t^(2/3)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -557,7 +557,7 @@
                 }
             },
             "C": {
-                "Choice": "t³/²",
+                "Choice": "`t^(3/2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -565,7 +565,7 @@
                 }
             },
             "D": {
-                "Choice": "t¹/³/t^2/³",
+                "Choice": "`(t^(1/3))/(t^(2/3))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -573,18 +573,18 @@
                 }
             },
             "E": {
-                "Choice": "t^2/³/t¹/³",
+                "Choice": "`(t^(2/3))/(t^(1/3))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "t/t",
+                    "Rationale": "",
                     "Percent": 0
                 }
             },
             "F": {
-                "Choice": "t⁴/³/t",
+                "Choice": "`(t^(4/3))/t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "t/t",
+                    "Rationale": "",
                     "Percent": 0
                 }
             }
@@ -606,9 +606,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle GRV is inscribed in a circle, as shown.",
+            "Triangle `GRV` is inscribed in a circle, as shown.",
             "problems/MAG10M/media/10a.jpg",
-            "In the triangle, GR ~= GV. What is the measure, in degrees, of GR?"
+            "In the triangle, `bar(GR)~=bar(GV)`. What is the measure, in `text(degrees)`, of `bar(GR)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -630,7 +630,7 @@
             "Functions"
         ],
         "SubTopics": [
-            "Identify the effect on the graph of replacing f(x) by f(x) + k, kf(x), f(kx), and f(x + k) for specific values of k (both positive and negative); find the value of k given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them."
+            "Identify the effect on the graph of replacing `f(x)` by `f(x)+k`, `k (x)`, `f(k)`, and `f(x+k)` for specific values of `k` (both positive and negative); find the value of `k` given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -638,7 +638,7 @@
         "Explain": false,
         "Content": [
             "THIS PROBLEM HAS FOUR PARTS.",
-            "The function f(x) is graphed on this coordinate plane.",
+            "The function `f(x)` is graphed on this coordinate plane.",
             "problems/MAG10M/media/11a.jpg"
         ],
         "AnswerChoices": {},
@@ -649,7 +649,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Based on the graph, what is the value of f(4)?"
+                    "Based on the graph, what is the value of `f(4)`?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -668,7 +668,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "If the value of f (4) + k is -5, what is the value of k ? Show or explain how you got your answer."
+                    "If the value of `f(4)+k` is `-5`, what is the value of `k`? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -687,7 +687,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Explain the difference between the graph of f(x) + 3 and the graph of f (x + 3)."
+                    "Explain the difference between the graph of `f(x)+3` and the graph of `f(x+3)`."
                 ],
                 "AnswerChoices": {}
             },
@@ -697,7 +697,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "On the coordinate plane provided in your answer space, use the graph of f(x) to graph -f (x + 2) + 1."
+                    "On the coordinate plane provided in your answer space, use the graph of `f(x)` to graph `-f(x+2)+1`."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -728,7 +728,7 @@
         "Explain": false,
         "Content": [
             "A guidance counselor will meet with twelve students to discuss their grade point averages. The list of grade point averages is shown.",
-            ":ibox:3.4, 2.2, 1.9, 3.8, 2.7, 3.1, 3.6, 1.8, 3.3, 2.4, 3.5, 2.9",
+            ":ibox:`3.4, 2.2, 1.9, 3.8, 2.7, 3.1, 3.6, 1.8, 3.3, 2.4, 3.5, 2.9`",
             "Which of the following histograms correctly shows the distribution of the students' grade point averages?"
         ],
         "AnswerChoices": {
@@ -782,12 +782,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ten years ago, the population of a town was 5,085 people. Since then, the population of the town has increased by a total of 19.51%.",
+            "Ten years ago, the population of a town was `5text(,)085` people. Since then, the population of the town has increased by a total of `19.51%`.",
             "Which of the following is CLOSEST to the current population of the town?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5,500",
+                "Choice": "`5text(,)500`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -795,7 +795,7 @@
                 }
             },
             "B": {
-                "Choice": "6,000",
+                "Choice": "`6text(,)000`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -803,7 +803,7 @@
                 }
             },
             "C": {
-                "Choice": "6,600",
+                "Choice": "`6text(,)600`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -811,7 +811,7 @@
                 }
             },
             "D": {
-                "Choice": "7,200",
+                "Choice": "`7text(,)200`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -838,13 +838,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The number of loaves of bread remaining in a restaurant h hours after opening for the day can be modeled by this function.",
-            ":ibox:L(h) = 42 - 3.5h",
+            "The number of loaves of bread remaining in a restaurant `h` `text(hours)` after opening for the day can be modeled by this function.",
+            ":ibox:`L(h)=42-3.5h`",
             "What is the domain of the function?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0 ≤ h ≤ 12",
+                "Choice": "`0lehle12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -852,7 +852,7 @@
                 }
             },
             "B": {
-                "Choice": "0 ≤ h ≤ 38.5",
+                "Choice": "`0lehle38`.5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -860,7 +860,7 @@
                 }
             },
             "C": {
-                "Choice": "0 ≤ h ≤ 42",
+                "Choice": "`0lehle42`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -868,7 +868,7 @@
                 }
             },
             "D": {
-                "Choice": "0 ≤ h ≤ 45.5",
+                "Choice": "`0lehle45.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -900,7 +900,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a translation 1/2 unit up followed by a reflection across the `y`-axis",
+                "Choice": "a translation `1/2` `text(unit)` up followed by a reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -908,7 +908,7 @@
                 }
             },
             "B": {
-                "Choice": "a reflection across the `x`-axis followed by a rotation of 90 degrees",
+                "Choice": "a reflection across the `xtext(-axis)` followed by a rotation of `90` `text(degrees)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -916,7 +916,7 @@
                 }
             },
             "C": {
-                "Choice": "a dilation by a scale factor of 2 followed by a translation 5 units left",
+                "Choice": "a dilation by a scale factor of `2` followed by a translation `5` `text(units)` left",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -924,7 +924,7 @@
                 }
             },
             "D": {
-                "Choice": "a dilation by a scale factor of -1 followed by a reflection across the `y`-axis",
+                "Choice": "a dilation by a scale factor of `-1` followed by a reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -932,7 +932,7 @@
                 }
             },
             "E": {
-                "Choice": "a dilation by a scale factor of -2 followed by a dilation by a scale factor of 2",
+                "Choice": "a dilation by a scale factor of `-2` followed by a dilation by a scale factor of `2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -960,12 +960,12 @@
         "Explain": false,
         "Content": [
             "A carpenter measured the dimensions of the floor in a rectangular room. He rounded the measurements to the nearest foot and recorded them as shown.",
-            ":box:width = 9 feet\n\nlength = 15 feet",
+            ":box:width`=9` `text(feet)`\n\nlength`=15` `text(feet)`",
             "Based on the rounded measurements, which of the following statements could be true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The actual width of the floor is 8 feet 4 inches.",
+                "Choice": "The actual width of the floor is `8` `text(feet)` `4` `text(inches)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -973,7 +973,7 @@
                 }
             },
             "B": {
-                "Choice": "The actual length of the floor is 15 feet 5 inches.",
+                "Choice": "The actual length of the floor is `15` `text(feet)` `5` `text(inches)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -981,7 +981,7 @@
                 }
             },
             "C": {
-                "Choice": "The actual area of the floor is 149.5 square feet.",
+                "Choice": "The actual area of the floor is `149.5` `text(square feet)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -989,7 +989,7 @@
                 }
             },
             "D": {
-                "Choice": "The actual perimeter of the floor is 44 feet 10 inches.",
+                "Choice": "The actual perimeter of the floor is `44` `text(feet)` `10` `text(inches)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1018,7 +1018,7 @@
         "Content": [
             "THIS PROBLEM HAS FOUR PARTS.",
             "A coach recorded the number of goals scored by a soccer team in each of its last ten games. The data are shown.",
-            ":box:3, 2, 10, 2, 1, 5, 3, 2, 1, 5"
+            ":box:`3,2,10,2,1,5,3,2,1,5`"
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -1085,7 +1085,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The value 10 in the data is an outlier. Explain how this outlier affects the distribution of the data."
+                    "The value `10` in the data is an outlier. Explain how this outlier affects the distribution of the data."
                 ],
                 "AnswerChoices": {}
             },
@@ -1095,7 +1095,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "If the value 10 in the data is replaced by the mode, by how much will the mean change? Show or explain how you got your answer."
+                    "If the value `10` in the data is replaced by the mode, by how much will the mean change? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1127,9 +1127,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Similar triangles RST and UVW are shown in this diagram.",
+            "Similar triangles `RST` and `UVW` are shown in this diagram.",
             "problems/MAG10M/media/18a.jpg",
-            "Based on the dimensions in the diagram, what is the length, in centimeters, of VW?"
+            "Based on the dimensions in the diagram, what is the length, in `text(centimeters)`, of `bar(VW)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1151,7 +1151,7 @@
             "Functions"
         ],
         "SubTopics": [
-            "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation `y=f(x)`."
+            "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If `f` is a function and `x` is an element of its domain, then `f(x)` denotes the output of `f` corresponding to the input `x`. The graph of `f` is the graph of the equation `y=f(x)`."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1161,12 +1161,12 @@
         "Explain": false,
         "Content": [
             "Consider this function.",
-            ":ibox:f(x) = x^2+ 1",
-            "Which of the following expressions is equivalent to f(m + 2)?"
+            ":ibox:`f(x)=x^2+1`",
+            "Which of the following expressions is equivalent to `f(m+2)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "m² + 3",
+                "Choice": "`m^2+3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1174,7 +1174,7 @@
                 }
             },
             "B": {
-                "Choice": "m² + 5",
+                "Choice": "`m^2+5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1182,7 +1182,7 @@
                 }
             },
             "C": {
-                "Choice": "m² + 4m + 4",
+                "Choice": "`m^2+4m+4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1190,7 +1190,7 @@
                 }
             },
             "D": {
-                "Choice": "m² + 4m + 5",
+                "Choice": "`m^2+4m+5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1229,7 +1229,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What is the radius, in units, of the circle?"
+                    "What is the radius, in `text(units)`, of the circle?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1252,7 +1252,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "(x + 3)^2 + (y - 5)^2 = 4",
+                        "Choice": "`(x+3)^2+(y-5)^2=4`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1260,7 +1260,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "(x + 3)^2 + (y - 5)^2 = 8",
+                        "Choice": "`(x+3)^2+(y-5)^2=8`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1268,7 +1268,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "(x - 3)^2 + (y + 5)^2 = 16",
+                        "Choice": "`(x-3)^2+(y+5)^2=16`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1276,7 +1276,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "(x - 3)^2 + (y + 5)^2 = 64",
+                        "Choice": "`(x-3)^2+(y+5)^2=64`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1295,7 +1295,7 @@
             "Functions"
         ],
         "SubTopics": [
-            "Interpret the parameters in a linear or exponential function (of the form f(x) = bˣ + k) in terms of a context."
+            "Interpret the parameters in a linear or exponential function (of the form `f(x)=b^x+k`) in terms of a context."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1304,13 +1304,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The number of customers doing business with a landscaping company each week, over t weeks since the beginning of last summer, can be modeled by this function.",
-            ":ibox:f (t) = 21 + 4t",
+            "The number of customers doing business with a landscaping company each week, over `t` `text(weeks)` since the beginning of last summer, can be modeled by this function.",
+            ":ibox:`f(t)=21+4t`",
             "Based on the function, which of the following statements is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The number of customers increased by 21 per week.",
+                "Choice": "The number of customers increased by `21` `text(per week)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1318,7 +1318,7 @@
                 }
             },
             "B": {
-                "Choice": "The number of customers decreased by a factor of 4.",
+                "Choice": "The number of customers decreased by a factor of `4`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1326,7 +1326,7 @@
                 }
             },
             "C": {
-                "Choice": "The company began last summer with 21 customers.",
+                "Choice": "The company began last summer with `21` customers.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1334,7 +1334,7 @@
                 }
             },
             "D": {
-                "Choice": "The company had a total of 21 customers after 4 weeks.",
+                "Choice": "The company had a total of `21` customers after `4` `text(weeks)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1361,9 +1361,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student plotted EF on a coordinate plane. The coordinates of the endpoints are shown.",
-            ":ibox:• E (-2, 1)\n\n• F (1, -2)",
-            "The student will dilate EF by a scale factor of 2 with respect to point F to create KL. Which of the following graphs correctly shows KL?"
+            "A student plotted `bar(EF)` on a coordinate plane. The coordinates of the endpoints are shown.",
+            ":ibox:• `E(-2,1)`\n\n• `F(1,-2)`",
+            "The student will dilate `bar(EF)` by a scale factor of `2` with respect to point `F` to create `bar(KL)`. Which of the following graphs correctly shows `bar(KL)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1409,7 +1409,7 @@
             "Statistics & Probability"
         ],
         "SubTopics": [
-            "Understand that two events A and B are independent if the probability of A and B occurring together is the product of their probabilities, and use this characterization to determine if they are independent."
+            "Understand that two events `A` and `B` are independent if the probability of `A` and `B` occurring together is the product of their probabilities, and use this characterization to determine if they are independent."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1418,13 +1418,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Consider these probabilities of events X and Y.",
-            ":ibox:• P(X) = 0.4\n\n• P(Y) = 0.6\n\n• P(X and Y) = 0.24\n\n• P(X or Y) = 0.76",
-            "Which of the following statements about events X and Y is true?"
+            "Consider these probabilities of events `X` and `Y`.",
+            ":ibox:• `P(X)=0.4`\n\n• `P(Y)=0.6`\n\n• `P(X and Y)=0.24`\n\n• `P(X or Y)=0.76`",
+            "Which of the following statements about events `X` and `Y` is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Events X and Y are dependent events because the equation 0.4 + 0.6 = 1 is true.",
+                "Choice": "Events `X` and `Y` are dependent events because the equation `0.4+0.6=1` is true.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1432,7 +1432,7 @@
                 }
             },
             "B": {
-                "Choice": "Events X and Y are independent events because the equation (0.4)(0.6) = 0.24 is true.",
+                "Choice": "Events `X` and `Y` are independent events because the equation `(0.4)(0.6)=0.24` is true.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1440,7 +1440,7 @@
                 }
             },
             "C": {
-                "Choice": "Events X and Y are dependent events because the equation P(X or Y) = P(X and Y) is not true.",
+                "Choice": "Events `X` and `Y` are dependent events because the equation `P(X or Y)=P(X and Y)` is not true.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1448,7 +1448,7 @@
                 }
             },
             "D": {
-                "Choice": "Events X and Y are independent events because the equation P(X and Y) = P(X) + P(Y) is not true.",
+                "Choice": "Events `X` and `Y` are independent events because the equation `P(X and Y)=P(X)+P(Y)` is not true.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1476,7 +1476,7 @@
         "Explain": false,
         "Content": [
             "THIS PROBLEM HAS FOUR PARTS.",
-            "Consider right triangle EFG.",
+            "Consider right triangle `EFG`.",
             "problems/MAG10M/media/24a.jpg"
         ],
         "AnswerChoices": {},
@@ -1487,11 +1487,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What is sin(𝜃) in terms of the sides of triangle EFG?"
+                    "What is `sin(theta)` in terms of the sides of triangle `EFG`?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "EF/EG",
+                        "Choice": "`(EF)/(EG)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1499,7 +1499,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "FG/EG",
+                        "Choice": "`(FG)/(EG)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1507,7 +1507,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "EG/FG",
+                        "Choice": "`(EG)/(FG)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1515,7 +1515,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "FG/EF",
+                        "Choice": "`(FG)/(EF)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1530,7 +1530,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Explain the relationship between sin(𝜃) and cos(/_G)."
+                    "Explain the relationship between `sin(theta)` and `cos(/_G)`."
                 ],
                 "AnswerChoices": {}
             },
@@ -1540,7 +1540,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "If sin(30°) = 1/2 and cos(𝜃) = 1/2, what is the value of 𝜃, in degrees? Show or explain how you got your answer."
+                    "If `sin(30°)=1/2` and `cos(theta)=1/2`, what is the value of `theta`, in `text(degrees)`? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1560,12 +1560,12 @@
                 "Explain": false,
                 "Content": [
                     "Consider this incomplete equation.",
-                    ":box:cos(/_G) = cos(___)",
-                    "Complete the equation so that it represents cos(/_G) in terms of 𝜃."
+                    ":box:`cos(/_G)=cos(ul())`",
+                    "Complete the equation so that it represents `cos(/_G)` in terms of `theta`."
                 ],
                 "AnswerChoices": {
                     "KEY": {
-                        "Choice": "equal:90-𝜃",
+                        "Choice": "equal:90-theta",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1594,7 +1594,7 @@
         "Explain": false,
         "Content": [
             "Consider this inequality.",
-            "| 4 - 2x | > 6",
+            "`abs(4-2x)gt6`",
             "Which of the following number lines shows the solution set of the inequality?"
         ],
         "AnswerChoices": {
@@ -1650,14 +1650,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Right circular cylinder S, oblique circular cylinder T, and some of their dimensions are shown in this diagram.",
+            "Right circular cylinder `S`, oblique circular cylinder `T`, and some of their dimensions are shown in this diagram.",
             "problems/MAG10M/media/26a.jpg",
             "problems/MAG10M/media/26b.jpg",
             "Which statement about the cylinders is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The volume of cylinder S is equal to the volume of cylinder T.",
+                "Choice": "The volume of cylinder `S` is equal to the volume of cylinder `T`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1665,7 +1665,7 @@
                 }
             },
             "B": {
-                "Choice": "The volume of cylinder S is less than the volume of cylinder T.",
+                "Choice": "The volume of cylinder `S` is less than the volume of cylinder `T`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1673,7 +1673,7 @@
                 }
             },
             "C": {
-                "Choice": "The volume of cylinder S is greater than the volume of cylinder T.",
+                "Choice": "The volume of cylinder `S` is greater than the volume of cylinder `T`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

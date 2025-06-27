@@ -304,7 +304,7 @@
                 "Choice": "The cost of 1 pound of tangerines is $2.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds down for `y`-value when x = 1.",
+                    "Rationale": "Rounds down for `ytext(-value)` when x = 1.",
                     "Percent": 9
                 }
             },
@@ -312,7 +312,7 @@
                 "Choice": "The cost of 2 pounds of tangerines is $1.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds down for `y`-value when x = 1; reverses definitions of `x` and `y` in relationship.",
+                    "Rationale": "Rounds down for `ytext(-value)` when x = 1; reverses definitions of `x` and `y` in relationship.",
                     "Percent": 8
                 }
             },
@@ -985,7 +985,7 @@
                 "Explain": true,
                 "Content": [
                     "Archie has a goal to finish covering the field before 1 2/3 hours have elapsed. He will use any remaining time to water the field. After 1 hour has elapsed, he has covered 4,000 square yards of the field.",
-                    "Explain why Archie will be able to meet his goal by working at this rate. As part of the explanation, determine the amount of time, in hours, Archie will have to water the field."
+                    "Explain why Archie will be able to meet his goal by working at this rate. As part of the explanation, determine the amount of time, in `text(hours)`, Archie will have to water the field."
                 ],
                 "AnswerChoices": {
                     "KEY": {

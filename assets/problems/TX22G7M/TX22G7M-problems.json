@@ -131,7 +131,7 @@
                 "Choice": "problems/TX22G7M/media/3a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which graph best represents the situation, the student should have understood that the statement “Nicole had a collection of 60 stuffed animals” means that the number of stuffed animals in her collection, 60, represents the `y`-value when no months have passed; this is represented by the point (0, 60) on the graph. The student should then have understood that the statement “she gave away 5 stuffed animals per month” means that the rate of change (ratio of the change in `y`-values to the change in `x`-values) for this situation is -5, since the number of stuffed animals decreases by 5 animals each month. The number of months is represented by the `x`-value. This graph shows the `y`-value decreasing by 5 each time the `x`-value increases by 1.",
+                    "Rationale": "To determine which graph best represents the situation, the student should have understood that the statement “Nicole had a collection of 60 stuffed animals” means that the number of stuffed animals in her collection, 60, represents the `ytext(-value)` when no months have passed; this is represented by the point (0, 60) on the graph. The student should then have understood that the statement “she gave away 5 stuffed animals per month” means that the rate of change (ratio of the change in `ytext(-values)` to the change in `xtext(-values)`) for this situation is -5, since the number of stuffed animals decreases by 5 animals each month. The number of months is represented by the `xtext(-value)`. This graph shows the `ytext(-value)` decreasing by 5 each time the `xtext(-value)` increases by 1.",
                     "Percent": 78
                 }
             },
@@ -373,7 +373,7 @@
                 "Choice": "40 mm³",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the volume (amount of three-dimensional space) of the rectangular pyramid in cubic millimeters, the student should have used the formula for the volume of a pyramid (V = 1/3 • Bh, where V = the volume, B = the area [amount of space covered by a surface] of the base, and h = the height [vertical distance from top to bottom] of the pyramid). To determine B, the student should have found the area of the rectangular base by multiplying 4 mm by 5 mm, resulting in 20 mm². Then the student should have substituted the values B = 20 and h = 6 into the volume formula, V = 1/3 • (20)(6),resulting in a volume of 40 mm³.",
+                    "Rationale": "To determine the volume (amount of three-dimensional space) of the rectangular pyramid in cubic millimeters, the student should have used the formula for the volume of a pyramid (V = 1/3 • Bh, where V = the volume, B = the area [amount of space covered by a surface] of the base, and h = the height [vertical distance from top to bottom] of the pyramid). To determine B, the student should have found the area of the rectangular base by multiplying 4 mm by 5 mm, resulting in 20 mm^2. Then the student should have substituted the values B = 20 and h = 6 into the volume formula, V = 1/3 • (20)(6),resulting in a volume of 40 mm³.",
                     "Percent": 51
                 }
             }
@@ -451,11 +451,11 @@
         "Explain": false,
         "Content": [
             "Chad will have new carpet put on the rectangular floors of two rooms in his house. One floor is 12 1/2 feet long, and the other floor is 15 3/4 feet long. Each floor has a width of 10 feet.",
-            "What is the total area in square feet of the new carpet?"
+            "What is the total area in `text(square feet)` of the new carpet?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "125 ft²",
+                "Choice": "125 `text(ft)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found the area of the floor for the room that is 12 1/2 feet by 10 feet instead of finding the total area of the floors of both rooms. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) that are required to solve the problem.",
@@ -463,7 +463,7 @@
                 }
             },
             "B": {
-                "Choice": "157.5 ft²",
+                "Choice": "157.5 `text(ft)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found the area of the floor for the room that is 15 3/4 feet by 10 feet instead of finding the total area of the floors of both rooms. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) that are required to solve the problem.",
@@ -471,15 +471,15 @@
                 }
             },
             "C": {
-                "Choice": "282.5 ft²",
+                "Choice": "282.5 `text(ft)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the total area in square feet of the new carpet, the student should have found the area (amount of space covered by a surface) of the floor for each rectangular room and added the areas. The area of a rectangle (A = bh, where b represents the length of the base of the rectangle and h represents the height), is determined by multiplying the base of the rectangle by the height. The area of the floor of one room is 12 1/2 × 10 = 125 square feet. The area of the floor of the other room is 15 3/4 × 10 = 157.5 square feet. The total area of the new carpet is 125 + 157.5 = 282.5 square feet.",
+                    "Rationale": "To determine the total area in `text(square feet)` of the new carpet, the student should have found the area (amount of space covered by a surface) of the floor for each rectangular room and added the areas. The area of a rectangle (A = bh, where b represents the length of the base of the rectangle and h represents the height), is determined by multiplying the base of the rectangle by the height. The area of the floor of one room is 12 1/2 × 10 = 125 square feet. The area of the floor of the other room is 15 3/4 × 10 = 157.5 square feet. The total area of the new carpet is 125 + 157.5 = 282.5 square feet.",
                     "Percent": 60
                 }
             },
             "D": {
-                "Choice": "96.5 ft²",
+                "Choice": "96.5 `text(ft)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found the total perimeter (distance around the outside) of the floors of both rooms instead of finding the total area of the floors of both rooms. The total perimeter of the floors of both rooms is 12 1/2 + 12 1/2 + 10 + 10 + 15 3/4 + 15 3/4 + 10 + 10 = 96 1 feet. The student needs to focus on understanding problem situations and the mathematical operations (+, -, ×, ÷) that are required to solve the problem.",
@@ -769,7 +769,7 @@
                 "Choice": "problems/TX22G7M/media/15b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that the dog eats 2.5 cups of food each day but reversed the meanings of the `x`- and `y`-axes. The student needs to focus on understanding how to represent real-world situations with a graph.",
+                    "Rationale": "The student likely recognized that the dog eats 2.5 cups of food each day but reversed the meanings of the `xtext(-)` and `ytext(-axes)`. The student needs to focus on understanding how to represent real-world situations with a graph.",
                     "Percent": 11
                 }
             },
@@ -777,7 +777,7 @@
                 "Choice": "problems/TX22G7M/media/15c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents this relationship, the student should have recognized that the constant rate of change for this situation is 2.5 cups of food per day, since the dog eats 1.25 cups of food twice each day: 1.25(2) = 2.5. The student should have recognized that the total number of cups of food is represented by y and the number of days is represented by x. The student then should have checked `x`- and `y`-values to find the graph in which each `y`-value is the result of multiplying the corresponding `x`-value by 2.5. The line contains the points (1, 2.5) and (2, 5).",
+                    "Rationale": "To determine the graph that best represents this relationship, the student should have recognized that the constant rate of change for this situation is 2.5 cups of food per day, since the dog eats 1.25 cups of food twice each day: 1.25(2) = 2.5. The student should have recognized that the total number of cups of food is represented by y and the number of days is represented by x. The student then should have checked `xtext(-)` and `ytext(-values)` to find the graph in which each `ytext(-value)` is the result of multiplying the corresponding `xtext(-value)` by 2.5. The line contains the points (1, 2.5) and (2, 5).",
                     "Percent": 39
                 }
             },
@@ -785,7 +785,7 @@
                 "Choice": "problems/TX22G7M/media/15d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used 1.25 cups of food each day instead of 2.5 cups of food each day and reversed the meanings of the `x`- and `y`-axes. The student needs to focus on understanding how to represent real-world situations with a graph.",
+                    "Rationale": "The student likely used 1.25 cups of food each day instead of 2.5 cups of food each day and reversed the meanings of the `xtext(-)` and `ytext(-axes)`. The student needs to focus on understanding how to represent real-world situations with a graph.",
                     "Percent": 16
                 }
             }
@@ -1025,7 +1025,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which equation represents the linear relationship between the `x`-values and the `y`-values in the table?",
+            "Which equation represents the linear relationship between the `xtext(-values)` and the `ytext(-values)` in the table?",
             "problems/TX22G7M/media/20a.jpg"
         ],
         "AnswerChoices": {
@@ -1033,7 +1033,7 @@
                 "Choice": "y = 2x + 12",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the change in the `x`-values, 1 - (-1) = 2, as the value of m and the change in the `y`-values, 1 - (-11) = 12, as the value of b. The student then likely substituted m = 2 and b = 12 into the equation `y=mx+b`, resulting in y = 2x + 12. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
+                    "Rationale": "The student likely used the change in the `xtext(-values)`, 1 - (-1) = 2, as the value of m and the change in the `ytext(-values)`, 1 - (-11) = 12, as the value of b. The student then likely substituted m = 2 and b = 12 into the equation `y=mx+b`, resulting in y = 2x + 12. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
                     "Percent": 28
                 }
             },
@@ -1041,7 +1041,7 @@
                 "Choice": "y = 5x - 6",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely reversed the meanings of m and b in the equation `y=mx+b`, using m to represent the `y`-value when x = 0 and b to represent the rate of change and switched the signs of the numbers, resulting in the equation y = 5x - 6. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
+                    "Rationale": "The student likely reversed the meanings of m and b in the equation `y=mx+b`, using m to represent the `ytext(-value)` when x = 0 and b to represent the rate of change and switched the signs of the numbers, resulting in the equation y = 5x - 6. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
                     "Percent": 18
                 }
             },
@@ -1049,7 +1049,7 @@
                 "Choice": "y = 6x - 5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which equation represents the linear relationship between the `x`-values and the `y`-values in the table, the student could have identified the rate of change (ratio of the change in `y`-values to the change in `x`-values) and the `y`-value when x = 0 and written the equation in the form `y=mx+b`, where m represents the rate of change and b represents the `y`-value when x = 0. To find the rate of change, the student could have used the ordered pairs (-1, -11) and (1, 1) from the table and calculated the change in y as 1 - (-11) = 12, and the change in x as 1 - (-1) = 2,resulting in the ratio 12/2 = 6. The student then could have calculated b, the `y`-value when x = 0, by recognizing that since the rate of change is 6, the value of y when x = 0 must be 6 units more than the value of y when x = -1: -11 + 6 = -5. Substituting 6 for m and -5 for b in the equation `y=mx+b` results in the equation y = 6x - 5. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which equation represents the linear relationship between the `xtext(-values)` and the `ytext(-values)` in the table, the student could have identified the rate of change (ratio of the change in `ytext(-values)` to the change in `xtext(-values)`) and the `ytext(-value)` when x = 0 and written the equation in the form `y=mx+b`, where m represents the rate of change and `b` represents the `ytext(-value)` when x = 0. To find the rate of change, the student could have used the ordered pairs (-1, -11) and (1, 1) from the table and calculated the change in y as 1 - (-11) = 12, and the change in x as 1 - (-1) = 2,resulting in the ratio 12/2 = 6. The student then could have calculated b, the `ytext(-value)` when x = 0, by recognizing that since the rate of change is 6, the value of y when x = 0 must be 6 units more than the value of y when x = -1: -11 + 6 = -5. Substituting 6 for m and -5 for b in the equation `y=mx+b` results in the equation y = 6x - 5. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 38
                 }
             },
@@ -1057,7 +1057,7 @@
                 "Choice": "y = -x - 11",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the `x`-value and `y`-value from the point (-1, -11) as the values of m and b, respectively, resulting in the equation y = -1x - 11, which is equivalent to y = -x - 11. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
+                    "Rationale": "The student likely used the `xtext(-value)` and `ytext(-value)` from the point (-1, -11) as the values of m and b, respectively, resulting in the equation y = -1x - 11, which is equivalent to y = -x - 11. The student needs to focus on understanding how to represent linear equations in the form of `y=mx+b` from a table.",
                     "Percent": 16
                 }
             }
@@ -1081,11 +1081,11 @@
         "Content": [
             "A sidewalk in the shape of two triangles, a rectangle, and a square was built around the edge of a building as shown.",
             "problems/TX22G7M/media/21a.jpg",
-            "What is the area of the sidewalk in square feet?"
+            "What is the area of the sidewalk in `text(square feet)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "108 ft²",
+                "Choice": "108 `text(ft)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found only the area of the rectangle by multiplying the base and height, resulting in 18(6) = 108 square feet. The student needs to focus on understanding how to determine the area of composite figures.",
@@ -1093,7 +1093,7 @@
                 }
             },
             "B": {
-                "Choice": "162 ft²",
+                "Choice": "162 `text(ft)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the area for only one of the triangles instead of the area for both triangles when calculating the total area of the sidewalk, resulting in A = 18 + 108 + 36 = 162 square feet. The student needs to focus on understanding how to determine the area of composite figures.",
@@ -1101,7 +1101,7 @@
                 }
             },
             "C": {
-                "Choice": "144 ft²",
+                "Choice": "144 `text(ft)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the areas of the triangles and rectangle but ignored the area of the square, resulting in A = 18 + 18 + 108 = 144 square feet. The student needs to focus on understanding how to determine the area of composite figures.",
@@ -1109,10 +1109,10 @@
                 }
             },
             "D": {
-                "Choice": "180 ft²",
+                "Choice": "180 `text(ft)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the area (amount of space covered by a surface) of the sidewalk in square feet, the student should have calculated the sum of the areas of the shapes that make up the sidewalk. The sidewalk is made up of two congruent triangles, a rectangle, and a square. The student should have calculated the area of each triangle by substituting b = 6 and h = 6 into the formula for the area of a triangle (A = 1/2 • bh, where A represents the area of the triangle, b represents the base of the triangle, and h represents the height), resulting in A = 1/2 • (6)(6) = 18 square feet. The student should have also calculated the area of the rectangle by substituting b = 18 and h = 6 into the formula for the area of a rectangle (A = bh, where A represents the area of the rectangle, b represents the base of the rectangle, and h represents the height), resulting in A = 18(6) = 108 square feet. Lastly, since a square is also a rectangle, the student should have calculated the area of the square by using the same formula for area of a rectangle (A = bh), substituting the value 6 for b and h into the formula resulting in A = 6(6) = 36 square feet. The student should then have found the sum of the areas to find the total area of the sidewalk, resulting in A = 18 + 18 + 108 + 36 = 180 square feet.",
+                    "Rationale": "To determine the area (amount of space covered by a surface) of the sidewalk in `text(square feet)`, the student should have calculated the sum of the areas of the shapes that make up the sidewalk. The sidewalk is made up of two congruent triangles, a rectangle, and a square. The student should have calculated the area of each triangle by substituting b = 6 and h = 6 into the formula for the area of a triangle (A = 1/2 • bh, where A represents the area of the triangle, b represents the base of the triangle, and h represents the height), resulting in A = 1/2 • (6)(6) = 18 square feet. The student should have also calculated the area of the rectangle by substituting b = 18 and h = 6 into the formula for the area of a rectangle (A = bh, where A represents the area of the rectangle, b represents the base of the rectangle, and h represents the height), resulting in A = 18(6) = 108 square feet. Lastly, since a square is also a rectangle, the student should have calculated the area of the square by using the same formula for area of a rectangle (A = bh), substituting the value 6 for b and h into the formula resulting in A = 6(6) = 36 square feet. The student should then have found the sum of the areas to find the total area of the sidewalk, resulting in A = 18 + 18 + 108 + 36 = 180 square feet.",
                     "Percent": 48
                 }
             }
@@ -1134,7 +1134,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The price of a computer is $899.00. The sales tax rate is 7%. What is the sales tax on this computer in dollars and cents?"
+            "The price of a computer is $899.00. The sales tax rate is 7%. What is the sales tax on this computer in `text(dollars)` and cents?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1170,7 +1170,7 @@
                 "Choice": "problems/TX22G7M/media/23a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day but reversed the meanings of the `x`- and `y`-axes. The student needs to focus on how to represent a real-world situation with a graphical representation.",
+                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day but reversed the meanings of the `xtext(-)` and `ytext(-axes)`. The student needs to focus on how to represent a real-world situation with a graphical representation.",
                     "Percent": 27
                 }
             },
@@ -1178,7 +1178,7 @@
                 "Choice": "problems/TX22G7M/media/23b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day and chose a point with a `y`-value of 500, but did not recognize that the corresponding `x`-value is 10 instead of 1. The student needs to focus on how to represent a real-world situation with a graphical representation.",
+                    "Rationale": "The student likely recognized that the number of users increases by 500 users each day and chose a point with a `ytext(-value)` of 500, but did not recognize that the corresponding `xtext(-value)` is 10 instead of 1. The student needs to focus on how to represent a real-world situation with a graphical representation.",
                     "Percent": 9
                 }
             },
@@ -1194,7 +1194,7 @@
                 "Choice": "problems/TX22G7M/media/23d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the graph that best represents the relationship between y and x, the student should have recognized that the total number of users is represented by y and that the number of days is represented by x. The student should have also recognized that the rate at which the number of users increases is 500 users each day. The student then should have checked pairs of `x`- and `y`-values, such as (2, 1,000), (4, 2,000), (6, 3,000), and (8, 4,000), to find the graph in which each `y`-value was the result of multiplying the corresponding `x`-value by 500.",
+                    "Rationale": "To determine the graph that best represents the relationship between y and x, the student should have recognized that the total number of users is represented by y and that the number of days is represented by x. The student should have also recognized that the rate at which the number of users increases is 500 users each day. The student then should have checked pairs of `xtext(-)` and `ytext(-values)`, such as (2, 1,000), (4, 2,000), (6, 3,000), and (8, 4,000), to find the graph in which each `ytext(-value)` was the result of multiplying the corresponding `xtext(-value)` by 500.",
                     "Percent": 51
                 }
             }
@@ -1221,7 +1221,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "50.24 mm²",
+                "Choice": "50.24 mm^2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine which measurement is closest to the area (amount of space covered by a surface) of circle S in square millimeters, the student should have used the formula for the area of a circle (`A=pir^2`, where A = the area of the circle and r = the radius [distance from the center of the circle to a point on the circle]). The student should have recognized that the radius of circle L is 8 millimeters, and the radius of circle S is half of the radius of circle L, resulting in r = 1/2 × 8 = 4 millimeters. The student then should have substituted r = 4 and π ~~ 3.14 into the formula for the area of a circle, resulting in A ~~ 3.14 × 4^2 ~~ 3.14 × 16 ~~ 50.24 square millimeters.",
@@ -1229,7 +1229,7 @@
                 }
             },
             "G": {
-                "Choice": "25.12 mm²",
+                "Choice": "25.12 mm^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the formula for the circumference (distance around the circle) (C = 2πr, where C = the circumference and r = the radius) instead of the formula for the area of a circle, resulting in 2 × 3.14 × 4 = 25.12. The student needs to focus on understanding how to apply the correct formula for the area of a circle.",
@@ -1237,7 +1237,7 @@
                 }
             },
             "H": {
-                "Choice": "200.96 mm²",
+                "Choice": "200.96 mm^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used 8 millimeters for the radius of circle S instead of 4 millimeters, resulting in A ~~ 3.14 × 8^2 ~~ 3.14 × 64 ~~ 200.96 square millimeters. The student needs to focus on understanding how to correctly apply the formula for the area of a circle.",
@@ -1245,7 +1245,7 @@
                 }
             },
             "J": {
-                "Choice": "12.56 mm²",
+                "Choice": "12.56 mm^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely did not square the value of the radius in the formula for the area of a circle, resulting in A ~~ 3.14 × 4 ~~ 12.56 square millimeters. The student needs to focus on understanding how to correctly apply the formula for the area of a circle.",
@@ -1438,7 +1438,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "268.8 in²",
+                "Choice": "268.8 in^2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the total surface area (total amount of space covered by the surfaces) of the triangular prism in square inches, the student should have identified the pairs of congruent (same shape and size) triangles in the net (two-dimensional view of a three-dimensional figure) and recognized that the base of the triangle is 12 inches and the height is 10.4 inches. The student should have substituted b = 12 and h = 10.4 into the formula for the area of a triangle (A = 1/2 • bh, where A represents the area of the triangle, b represents the base of the triangle, and h represents the height), resulting in A = 1/2 • (12)(10.4) = 62.4 square inches for each triangle shown in the net. Since the triangles in the net are equilateral triangles (all side lengths of the triangle are equal), each rectangle in the net has a base of 4 inches and a height of 12 inches. The student should have substituted b = 4 and h = 12 into the formula for area of a rectangle (A = bh, where A represents the area of the rectangle, b represents the length of the base of the rectangle, and h represents the height), resulting in A = 4(12) = 48 square inches for each rectangle in the net. The combined area of the triangles and rectangles, 48 + 48 + 48 + 62.4 + 62.4 = 268.8 square inches, is equal to the total surface area of the triangular prism.",
@@ -1446,7 +1446,7 @@
                 }
             },
             "G": {
-                "Choice": "432 in²",
+                "Choice": "432 in^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the area for each triangle in the net using 12 inches for the height of the triangle instead of 10.4 inches and used the formula for the area of a rectangle instead of the formula for the area of a triangle, resulting in 12(12) = 144 square inches. The student then likely found the area for each rectangle in the net, resulting in 4(12) = 48 square inches. Lastly, the student likely calculated the total surface area of the triangular prism by adding the areas of all the triangles and rectangles, resulting in 144 + 144 + 48 + 48 + 48 = 432 square inches. The student needs to focus on understanding the steps and formulas needed to determine the total surface area of a prism from a net.",
@@ -1454,7 +1454,7 @@
                 }
             },
             "H": {
-                "Choice": "288 in²",
+                "Choice": "288 in^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the area of the triangles in the net using 12 inches for the height of the triangle instead of 10.4 inches, resulting in 1/2 • (12)(12) = 72 square inches. The student then likely found the area for each rectangle in the net, resulting in 4(12) = 48 square inches. Lastly, the student likely calculated the total surface area of the triangular prism by adding the areas of all the triangles and rectangles, resulting in 72 + 72 + 48 + 48 + 48 = 288 square inches. The student needs to focus on understanding how to find the dimensions of a triangle from a net.",
@@ -1462,7 +1462,7 @@
                 }
             },
             "J": {
-                "Choice": "393.6 in²",
+                "Choice": "393.6 in^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used the formula for the area of a rectangle instead of the formula for the area of a triangle when calculating the area of each equilateral triangle, resulting in 10.4(12) = 124.8 square inches. The student then likely found the area for each rectangle, resulting in 4(12) = 48 square inches. Lastly, the student likely calculated the total surface area of the triangular prism by adding the areas of all triangular and rectangular faces, resulting in 124.8 + 124.8 + 48 + 48 + 48 = 393.6 square inches. The student needs to focus on understanding the steps and formulas needed to determine the total surface area of a prism from a net.",
@@ -1543,14 +1543,14 @@
         "Explain": false,
         "Content": [
             "An engineer created a scale drawing of a building using a scale in which 0.25 inch represents 2 feet. The length of the actual building is 250 feet.",
-            "What is the length in inches of the building in the scale drawing?"
+            "What is the length in `text(inches)` of the building in the scale drawing?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:31.25",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the length in inches of the building in the scale drawing, the student could have set up the proportion (comparison of two ratios) 0.25/2 = x/250, comparing the ratio of the scale where 0.25 inch represents 2 feet and the ratio of the length of the building in the scale drawing (x inches) to the length of the actual building (250 feet). To solve the proportion, the student could have multiplied by each denominator (the number on the bottom of a fraction) on both sides of the equation, resulting in 2x = 0.25(250) or 2x = 62.5. Lastly, the student could have divided both sides of the equation by 2, resulting in x = 62.5/2 = 31.25. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the length in `text(inches)` of the building in the scale drawing, the student could have set up the proportion (comparison of two ratios) 0.25/2 = x/250, comparing the ratio of the scale where 0.25 inch represents 2 feet and the ratio of the length of the building in the scale drawing (x inches) to the length of the actual building (250 feet). To solve the proportion, the student could have multiplied by each denominator (the number on the bottom of a fraction) on both sides of the equation, resulting in 2x = 0.25(250) or 2x = 62.5. Lastly, the student could have divided both sides of the equation by 2, resulting in x = 62.5/2 = 31.25. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 23
                 }
             }
@@ -1933,7 +1933,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "7 ft³",
+                "Choice": "7 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the given dimensions, resulting in 1.5 + 3.5 + 2 = 7. The student needs to focus on understanding how to apply the formula for the volume of a rectangular prism when given the dimensions.",
@@ -1941,7 +1941,7 @@
                 }
             },
             "G": {
-                "Choice": "7.25 ft³",
+                "Choice": "7.25 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely found the area of the base, B, by multiplying 1.5 by 3.5, but then added 2 to the result instead of multiplying, resulting in (1.5)(3.5) + 2 = 5.25 + 2 = 7.25. The student needs to focus on understanding how to apply the formula for the volume of a rectangular prism when given the dimensions.",
@@ -1949,7 +1949,7 @@
                 }
             },
             "H": {
-                "Choice": "8.5 ft³",
+                "Choice": "8.5 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely used 3.5 and 2 as the dimensions of the base and then added 1.5 to the result, obtaining (3.5)(2) + 1.5 = 7 + 1.5 = 8.5. The student needs to focus on understanding how to apply the formula for the volume of a rectangular prism when given the dimensions.",
@@ -1957,7 +1957,7 @@
                 }
             },
             "J": {
-                "Choice": "10.5 ft³",
+                "Choice": "10.5 `text(ft)^3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the volume (amount of three-dimensional space) of the rectangular prism in cubic feet, the student could have used the formula for the volume of a prism (V = Bh, where V = the volume, B = the area [amount of space covered by a surface] of the base, and h = the height [vertical distance from top to bottom] of the prism). Since the base of the rectangular prism is a rectangle, the student could have calculated the area of the rectangular base as B = bh (where b represents the base of the rectangle and h represents the height of the rectangle), using b = 1.5 and h = 3.5, obtaining B = (1.5)(3.5) = 5.25 square feet. Next, the student could have substituted B = 5.25 and h = 2 into the volume formula: V = (5.25)(2) = 10.5 cubic feet. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",

@@ -148,7 +148,7 @@
                                             "Key": "MD.M9-12.A2.A-SSE.B.3.c",
                                             "Label": "Use the properties of exponents to transform expressions for exponential functions.",
                                             "Examples": [
-                                                "For example the expression 1.15ᵗ can be rewritten as (1.15¹/¹²)¹²ᵗ ~~ 1.012¹²ᵗ to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                                "For example the expression 1.15ᵗ can be rewritten as (1.15^(1/12))^(12t) ~~ 1.012^(12t) to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
                                             ],
                                             "Subs": []
                                         }
@@ -276,7 +276,7 @@
                                     "Subs": [
                                         {
                                             "Key": "MD.M9-12.A2.A-REI.B.4.b",
-                                            "Label": "Solve quadratic equations by inspection (e.g., for x^2= 49), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b.",
+                                            "Label": "Solve quadratic equations by inspection (e.g., for `x^2=49`), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as `a+-bi` for real numbers `a` and `b`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -312,7 +312,7 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.A-REI.D.11",
-                                    "Label": "Explain why the `x`-coordinates of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation f(x) = g(x); find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
+                                    "Label": "Explain why the `xtext(-coordinates)` of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation `f(x)=g(x)`; find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -417,7 +417,7 @@
                                             "Key": "MD.M9-12.A2.F-IF.C.8.b",
                                             "Label": "Use the properties of exponents to interpret expressions for exponential functions.",
                                             "Examples": [
-                                                "For example, identify percent rate of change in functions such as y = (1.02)^t, y = (0.97)^t, y = (1.01)¹²ᵗ, y = (1.2)^(t/10), and classify them as representing exponential growth or decay."
+                                                "For example, identify percent rate of change in functions such as y = (1.02)^t, y = (0.97)^t, y = (1.01)^(12t), y = (1.2)^(t/10), and classify them as representing exponential growth or decay."
                                             ],
                                             "Subs": []
                                         }
@@ -586,7 +586,7 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.F-TF.C.8",
-                                    "Label": "Prove the Pythagorean identity sin²(𝜃) + cos²(𝜃) = 1 and use it to find sin(𝜃), cos(𝜃), or tan(𝜃) given sin(𝜃), cos(𝜃), or tan(𝜃) and the quadrant of the angle.",
+                                    "Label": "Prove the Pythagorean identity sin^2(𝜃) + cos²(𝜃) = 1 and use it to find sin(𝜃), cos(𝜃), or tan(𝜃) given sin(𝜃), cos(𝜃), or tan(𝜃) and the quadrant of the angle.",
                                     "Examples": [],
                                     "Subs": []
                                 }

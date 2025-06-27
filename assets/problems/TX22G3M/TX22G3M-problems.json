@@ -29,7 +29,7 @@
                 "Choice": "571 > 582",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely misinterpreted the “>” to mean “less than” instead of “greater than.” The two numbers have the same digit, 5, in the hundreds place so the student could have then compared the digits in the tens place. The number 571 has a 7 in the tens place, and the number 582 has an 8 in the tens place. Since 7 < 8 (7 is less than 8), 571 is less than 582 (571 < 582). The student needs to focus on understanding how comparison symbols are used to compare numbers.",
+                    "Rationale": "The student likely misinterpreted the “`>`” to mean “less than” instead of “greater than.” The two numbers have the same digit, 5, in the hundreds place so the student could have then compared the digits in the tens place. The number 571 has a 7 in the tens place, and the number 582 has an 8 in the tens place. Since 7 < 8 (7 is less than 8), 571 is less than 582 (571 < 582). The student needs to focus on understanding how comparison symbols are used to compare numbers.",
                     "Percent": 3
                 }
             },
@@ -45,7 +45,7 @@
                 "Choice": "709 < 692",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely misinterpreted the “<” to mean “greater than” instead of “less than.” The student could  have compared the digits in the hundreds place. The number 709 has a 7 in the hundreds place, and the number 692 has a 6 in the hundreds place. Since 7 > 6 (7 is greater than 6), 709 is greater than 692 (709 > 692). The student needs to focus on understanding how comparison symbols are used to compare numbers.",
+                    "Rationale": "The student likely misinterpreted the “`<`” to mean “greater than” instead of “less than.” The student could  have compared the digits in the hundreds place. The number 709 has a 7 in the hundreds place, and the number 692 has a 6 in the hundreds place. Since 7 > 6 (7 is greater than 6), 709 is greater than 692 (709 > 692). The student needs to focus on understanding how comparison symbols are used to compare numbers.",
                     "Percent": 5
                 }
             }
@@ -231,14 +231,14 @@
         "Explain": false,
         "Content": [
             "The rectangular floor of Ms. Ragan's closet is completely covered with carpet squares. Each carpet square covers 1 square foot of the floor. There are 4 rows, and each row has 16 carpet squares.",
-            "What is the area of the floor of this closet in square feet?"
+            "What is the area of the floor of this closet in `text(square feet)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:64",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the area (amount of space covered) of the floor in square feet, the student could have determined that the number of rows (4) and the number of carpet squares in each row (16) represent the dimensions of the floor. The student then could have multiplied 16 by 4 (16 × 4 = 64). Because the floor can be covered with 64 carpet squares, it represents an area of 64 square feet. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the area (amount of space covered) of the floor in `text(square feet)`, the student could have determined that the number of rows (4) and the number of carpet squares in each row (16) represent the dimensions of the floor. The student then could have multiplied 16 by 4 (16 × 4 = 64). Because the floor can be covered with 64 carpet squares, it represents an area of 64 square feet. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 53
                 }
             }
@@ -786,7 +786,7 @@
         "Content": [
             "Each side of this figure is the same length. The perimeter of the figure is 72 inches.",
             "problems/TX22G3M/media/16a.jpg",
-            "What is the length of one side of the figure in inches?"
+            "What is the length of one side of the figure in `text(inches)`?"
         ],
         "AnswerChoices": {
             "F": {

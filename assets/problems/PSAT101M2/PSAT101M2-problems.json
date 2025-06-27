@@ -403,7 +403,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the slope of the line in the `xy`-plane that passes through the points `(-5/2,1)` and `(-1/2,4)`?"
+            "What is the slope of the line in the `xytext(-plane)` that passes through the points `(-5/2,1)` and `(-1/2,4)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -434,7 +434,7 @@
                 "Choice": "`3/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the `xy`-plane, the slope `m` of a line that passes through the points `(x_1,y_1)` and `(x_2,y_2)` is the change in `y` over the change in `x` (rise over run), which is expressed by the formula `m=(y_2-y_1)/(x_2-x_1)`. Thus, the slope of the line through the points `(-5/2,1)` and `(-1/2,4)` is `(4-1)/(-1/2-(-5/2))`, which simplifies to `3/2`.",
+                    "Rationale": "In the `xytext(-plane)`, the slope `m` of a line that passes through the points `(x_1,y_1)` and `(x_2,y_2)` is the change in `y` over the change in `x` (rise over run), which is expressed by the formula `m=(y_2-y_1)/(x_2-x_1)`. Thus, the slope of the line through the points `(-5/2,1)` and `(-1/2,4)` is `(4-1)/(-1/2-(-5/2))`, which simplifies to `3/2`.",
                     "Percent": 0
                 }
             }
@@ -681,7 +681,7 @@
         "Explain": false,
         "Content": [
             "problems/PSAT101M2/media/13a.jpg",
-            "The histogram above shows the distribution of the heights, in meters, of `26` pyramids in Egypt. Which of the following could be the median height of the `26` pyramids represented in the histogram?"
+            "The histogram above shows the distribution of the heights, in `text(meters)`, of `26` pyramids in Egypt. Which of the following could be the median height of the `26` pyramids represented in the histogram?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1131,7 +1131,7 @@
         "Explain": false,
         "Content": [
             "problems/PSAT101M2/media/21a.jpg",
-            "What is the minimum value of the function graphed on the `xy`-plane above, for `-4lexle6`?"
+            "What is the minimum value of the function graphed on the `xytext(-plane)` above, for `-4lexle6`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1146,7 +1146,7 @@
                 "Choice": "`-4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "`-4` is the `x`-value of the point on the graph where the minimum value of the function occurs.",
+                    "Rationale": "`-4` is the `xtext(-value)` of the point on the graph where the minimum value of the function occurs.",
                     "Percent": 0
                 }
             },
@@ -1154,7 +1154,7 @@
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The minimum value of a graphed function is the minimum `y`-value of all the points on the graph. For the graph shown, the minimum is at the left endpoint of the graph, the `y`-value of which is `-2`.",
+                    "Rationale": "The minimum value of a graphed function is the minimum `ytext(-value)` of all the points on the graph. For the graph shown, the minimum is at the left endpoint of the graph, the `ytext(-value)` of which is `-2`.",
                     "Percent": 0
                 }
             },
@@ -1162,7 +1162,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are points of the graph below the `x`-axis; therefore, the minimum value of the function cannot be positive.",
+                    "Rationale": "There are points of the graph below the `xtext(-axis)`; therefore, the minimum value of the function cannot be positive.",
                     "Percent": 0
                 }
             }
@@ -1526,14 +1526,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT101M2/media/28a.jpg",
-            "The `xy`-plane above shows one of the two points of intersection of the graphs of a linear function and a quadratic function. The shown point of intersection has coordinates `(v,w)`. If the vertex of the graph of the quadratic function is at `(4,19)`, what is the value of `v`?"
+            "The `xytext(-plane)` above shows one of the two points of intersection of the graphs of a linear function and a quadratic function. The shown point of intersection has coordinates `(v,w)`. If the vertex of the graph of the quadratic function is at `(4,19)`, what is the value of `v`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the vertex of the graph of the quadratic function is at `(4,19)`, the equation of the parabola is of the form `y=a(x-4)^2+19`. It is also given that the parabola passes through point `(0,3)`. This means that `3=a(0-4)^2+19`, and so `a=-1`. So the graph of the parabola is `y=-(x-4)^2+19`.\nSince the line passes through the points `(0,-9)` and `(2,-1)`, one can calculate the slope of the line (`(-1-(-9))/(2-0)=4`) that passes through these points and write the equation of the line in the slope-intercept form as `y=4x-9`.\nThe coordinates of the intersection points of the line and the parabola satisfy both the equation of the parabola and the equation of the line. Therefore, these coordinates are the solutions to the following system of  equations: `{(y=4x-9), (y=-(x-4)^2+19):}`\nSubstituting `4x-9` for `y` into the second equation gives `4x-9=-(x-4)^2+19`, which is equivalent to `x^2-4x-12=0`. After factoring, this equation can be rewritten as `(x-6)(x+2)=0`, and so `x=6` or `x=-2`. Since point `(v,w)` is on the right side of the `y`-axis, it follows that `v` cannot be `-2`. Therefore, `v=6`.",
+                    "Rationale": "Since the vertex of the graph of the quadratic function is at `(4,19)`, the equation of the parabola is of the form `y=a(x-4)^2+19`. It is also given that the parabola passes through point `(0,3)`. This means that `3=a(0-4)^2+19`, and so `a=-1`. So the graph of the parabola is `y=-(x-4)^2+19`.\nSince the line passes through the points `(0,-9)` and `(2,-1)`, one can calculate the slope of the line (`(-1-(-9))/(2-0)=4`) that passes through these points and write the equation of the line in the slope-intercept form as `y=4x-9`.\nThe coordinates of the intersection points of the line and the parabola satisfy both the equation of the parabola and the equation of the line. Therefore, these coordinates are the solutions to the following system of  equations: `{(y=4x-9), (y=-(x-4)^2+19):}`\nSubstituting `4x-9` for `y` into the second equation gives `4x-9=-(x-4)^2+19`, which is equivalent to `x^2-4x-12=0`. After factoring, this equation can be rewritten as `(x-6)(x+2)=0`, and so `x=6` or `x=-2`. Since point `(v,w)` is on the right side of the `ytext(-axis)`, it follows that `v` cannot be `-2`. Therefore, `v=6`.",
                     "Percent": 0
                 }
             }

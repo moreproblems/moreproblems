@@ -16,7 +16,7 @@
         "Content": [
             "Joslyn built the shelf shown below to fit into a narrow closet.",
             "problems/PA15G7M/media/1a.jpg",
-            "The shelf is made of 3 pieces of wood, each 0.3 meter wide. There is also 0.05 meter of space between the shelf and the wall on each side. What is the width, in meters, of Joslyn's closet?"
+            "The shelf is made of 3 pieces of wood, each 0.3 meter wide. There is also 0.05 meter of space between the shelf and the wall on each side. What is the width, in `text(meters)`, of Joslyn's closet?"
         ],
         "AnswerChoices": {
             "A": {
@@ -397,9 +397,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Keyana put 0.83 liter of water into a bucket. Matt put 0.98 liter of water into another bucket. When they combined their water into a bigger bucket, 10% of the water spilled out. The water they collected had a weight of 1.021 kilograms per liter of water. The expression shown below represents the weight, in kilograms, of the water in the bigger bucket.",
+            "Keyana put 0.83 liter of water into a bucket. Matt put 0.98 liter of water into another bucket. When they combined their water into a bigger bucket, 10% of the water spilled out. The water they collected had a weight of 1.021 kilograms per liter of water. The expression shown below represents the weight, in `text(kilograms)`, of the water in the bigger bucket.",
             "[0.9(0.83 + 0.98)] × 1.021",
-            "Rounded to the nearest thousandth, what is the weight, in kilograms, of the water in the bigger bucket?"
+            "Rounded to the nearest thousandth, what is the weight, in `text(kilograms)`, of the water in the bigger bucket?"
         ],
         "AnswerChoices": {
             "A": {
@@ -513,7 +513,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph below models the relationship between the time (x), in hours, Janet works and the amount of money (y), in dollars, she earns.",
+            "The graph below models the relationship between the time (x), in `text(hours)`, Janet works and the amount of money (y), in `text(dollars)`, she earns.",
             "problems/PA15G7M/media/10a.jpg",
             "Which statement explains how Janet knows that the number of hours she works and the amount of money she earns are proportionally related?"
         ],
@@ -627,7 +627,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph below shows the relationship between the number of pages printed (x) at a print shop and the total price (y), in dollars.",
+            "The graph below shows the relationship between the number of pages printed (x) at a print shop and the total price (y), in `text(dollars)`.",
             "problems/PA15G7M/media/12a.jpg",
             "Based on the graph, what is the unit price at the print shop?"
         ],
@@ -636,7 +636,7 @@
                 "Choice": "$0.10 per page",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Looks at the point (2, 1) and thinks the 1 represents 10 cents.",
+                    "Rationale": "Looks at the point `(2,1)` and thinks the 1 represents 10 cents.",
                     "Percent": 0
                 }
             },
@@ -644,7 +644,7 @@
                 "Choice": "$0.20 per page",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Looks at (2, 1) and thinks the 2 represents 20 cents.",
+                    "Rationale": "Looks at `(2,1)` and thinks the 2 represents 20 cents.",
                     "Percent": 0
                 }
             },
@@ -652,7 +652,7 @@
                 "Choice": "$0.25 per page",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Estimates the `y`-coordinate at x = 1.",
+                    "Rationale": "Estimates the `ytext(-coordinate)` at x = 1.",
                     "Percent": 0
                 }
             },
@@ -806,7 +806,7 @@
         "Content": [
             "A concert hall sells tickets in three different price ranges. For each price range, there are both adult and child rates.",
             "problems/PA15G7M/media/15a.jpg",
-            "Which statement describes the relationship between the adult ticket prices (a), in dollars, and the child ticket prices (c), in dollars?"
+            "Which statement describes the relationship between the adult ticket prices (a), in `text(dollars)`, and the child ticket prices (c), in `text(dollars)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -829,7 +829,7 @@
                 "Choice": "The relationship is not proportional. The change in a is not constant, and therefore the relationship cannot be expressed as one equation.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks proportional needs constant change in table `x`-values.",
+                    "Rationale": "Thinks proportional needs constant change in table `xtext(-values)`.",
                     "Percent": 0
                 }
             },
@@ -837,7 +837,7 @@
                 "Choice": "The relationship is not proportional. The change in c is not constant, and therefore the relationship cannot be expressed as one equation.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks proportional needs constant change in table `y`-values.",
+                    "Rationale": "Thinks proportional needs constant change in table `ytext(-values)`.",
                     "Percent": 0
                 }
             }
@@ -861,9 +861,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When Rachel exceeds the number of minutes on her cell phone plan, she is charged an extra cost for each minute. The graph below shows the total cost (y), in dollars, for exceeding her cell phone plan's minutes by x minutes.",
+            "When Rachel exceeds the number of minutes on her cell phone plan, she is charged an extra cost for each minute. The graph below shows the total cost (y), in `text(dollars)`, for exceeding her cell phone plan's minutes by x minutes.",
             "problems/PA15G7M/media/16a.jpg",
-            "What does the `y`-coordinate represent when the `x`-coordinate has a value of 1?"
+            "What does the `ytext(-coordinate)` represent when the `xtext(-coordinate)` has a value of 1?"
         ],
         "AnswerChoices": {
             "A": {
@@ -975,7 +975,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph below represents the amount of simple interest (I), in dollars, earned on an investment of P dollars over one year. The interest rate is r.",
+            "The graph below represents the amount of simple interest (I), in `text(dollars)`, earned on an investment of P dollars over one year. The interest rate is r.",
             "problems/PA15G7M/media/18a.jpg",
             "An investment of $600 at a different interest rate (q) will earn $24 in simple interest over one year. Which statement about interest rates r and q is true?"
         ],
@@ -1097,7 +1097,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The variable x is the dependent variable in the relationship and represents the depth, in feet, of the object.",
+                "Choice": "The variable x is the dependent variable in the relationship and represents the depth, in `text(feet)`, of the object.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "x is the independent variable.",
@@ -1105,7 +1105,7 @@
                 }
             },
             "B": {
-                "Choice": "The variable x is the independent variable in the relationship and represents the depth, in feet, of the object.",
+                "Choice": "The variable x is the independent variable in the relationship and represents the depth, in `text(feet)`, of the object.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1113,7 +1113,7 @@
                 }
             },
             "C": {
-                "Choice": "The variable x is the dependent variable in the relationship and represents the pressure, in pounds per square inch, on the object.",
+                "Choice": "The variable x is the dependent variable in the relationship and represents the pressure, in `text(pounds per square inch)`, on the object.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "x is the independent variable and represents the depth.",
@@ -1121,7 +1121,7 @@
                 }
             },
             "D": {
-                "Choice": "The variable x is the independent variable in the relationship and represents the pressure, in pounds per square feet, on the object.",
+                "Choice": "The variable x is the independent variable in the relationship and represents the pressure, in `text(pounds per square feet)`, on the object.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "x represents the depth.",
@@ -1543,7 +1543,7 @@
         "Content": [
             "A city is building a new pool. A scale drawing of the pool is shown below.",
             "problems/PA15G7M/media/28a.jpg",
-            "What is the area, in square feet, of the pool?"
+            "What is the area, in `text(square feet)`, of the pool?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2728,9 +2728,9 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The expression shown below represents the perimeter, in feet, of Shawn's garden.",
+                    "The expression shown below represents the perimeter, in `text(feet)`, of Shawn's garden.",
                     ":ibox:15 + 2 x + 7 + 15 + 2 x + 7",
-                    "Use exactly two terms to write an equivalent expression to represent the perimeter, in feet, of Shawn's garden."
+                    "Use exactly two terms to write an equivalent expression to represent the perimeter, in `text(feet)`, of Shawn's garden."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2749,8 +2749,8 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The area, in square feet, of Shawn's garden is found by calculating 15 (2 x + 7). Shawn incorrectly says the area can also be found using the expression 30 x + 7.",
-                    "Describe the error in Shawn's expression. As part of your explanation, find the difference, in square feet, between the actual area of Shawn's garden and the area found using his expression."
+                    "The area, in `text(square feet)`, of Shawn's garden is found by calculating 15 (2 x + 7). Shawn incorrectly says the area can also be found using the expression 30 x + 7.",
+                    "Describe the error in Shawn's expression. As part of your explanation, find the difference, in `text(square feet)`, between the actual area of Shawn's garden and the area found using his expression."
                 ],
                 "AnswerChoices": {
                     "KEY": {

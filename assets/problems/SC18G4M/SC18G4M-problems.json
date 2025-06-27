@@ -828,12 +828,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Kent buys a bag of potatoes. He knows the weight of the bag in pounds.",
+            "Kent buys a bag of potatoes. He knows the weight of the bag in `text(pounds)`.",
             "How can Kent find the weight of the bag of potatoes in OUNCES?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "multiply the weight of the bag in pounds by 16",
+                "Choice": "multiply the weight of the bag in `text(pounds)` by 16",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -841,7 +841,7 @@
                 }
             },
             "B": {
-                "Choice": "divide the weight of the bag in pounds by 16",
+                "Choice": "divide the weight of the bag in `text(pounds)` by 16",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -849,7 +849,7 @@
                 }
             },
             "C": {
-                "Choice": "add 16 to the weight of the bag in pounds",
+                "Choice": "add 16 to the weight of the bag in `text(pounds)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -857,7 +857,7 @@
                 }
             },
             "D": {
-                "Choice": "subtract 16 from the weight of the bag in pounds",
+                "Choice": "subtract 16 from the weight of the bag in `text(pounds)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -990,11 +990,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jacob correctly measures the lengths, in inches, of 4 lightbulbs as shown.                                                                     ",
+            "Jacob correctly measures the lengths, in `text(inches)`, of 4 lightbulbs as shown.                                                                     ",
             "problems/SC18G4M/media/19a.jpg",
             "The line plot shows the length of 3 lightbulbs.",
             "problems/SC18G4M/media/19b.jpg",
-            "What is the length, in inches, of the lightbulb NOT represented on the line plot?"
+            "What is the length, in `text(inches)`, of the lightbulb NOT represented on the line plot?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1047,7 +1047,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The line plot shows the lengths, in inches, of different insects.",
+            "The line plot shows the lengths, in `text(inches)`, of different insects.",
             "problems/SC18G4M/media/20a.jpg",
             "How many different insects are represented in the line plot?"
         ],

@@ -277,7 +277,7 @@
             "Algebra"
         ],
         "SubTopics": [
-            "Given a linear inequality or system of linear inequalities, interpret a point in the `xy`-plane in terms of the solution set."
+            "Given a linear inequality or system of linear inequalities, interpret a point in the `xytext(-plane)` in terms of the solution set."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -285,14 +285,14 @@
         "Explain": false,
         "Content": [
             ":ibox:`ygt2x-1`\n`2xgt5`",
-            "Which of the following consists of the `y`-coordinates of all the points that satisfy the system of inequalities above?"
+            "Which of the following consists of the `ytext(-coordinates)` of all the points that satisfy the system of inequalities above?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`ygt6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are points with a `y`-coordinate less than `6` that satisfy the given system of inequalities. For example, `(3,5.5)` satisfies both inequalities.",
+                    "Rationale": "There are points with a `ytext(-coordinate)` less than `6` that satisfy the given system of inequalities. For example, `(3,5.5)` satisfies both inequalities.",
                     "Percent": 0
                 }
             },
@@ -316,7 +316,7 @@
                 "Choice": "`ygt3/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This inequality allows `y`-values that are not the `y`-coordinate of any point that satisfies both inequalities. For example, `y=2` is contained in the set `ygt3/2`; however, if `2` is substituted into the first inequality for `y`, the result is `xlt3/2`. This cannot be true because the second inequality gives `xgt5/2`.",
+                    "Rationale": "This inequality allows `ytext(-values)` that are not the `ytext(-coordinate)` of any point that satisfies both inequalities. For example, `y=2` is contained in the set `ygt3/2`; however, if `2` is substituted into the first inequality for `y`, the result is `xlt3/2`. This cannot be true because the second inequality gives `xgt5/2`.",
                     "Percent": 0
                 }
             }
@@ -439,7 +439,7 @@
             "Geometry & Trigonometry"
         ],
         "SubTopics": [
-            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `xy`-plane."
+            "Understand that the ordered pairs that satisfy an equation of the form `(x-h)^2+(y-k)^2=r^2` form a circle when plotted in the `xytext(-plane)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -447,14 +447,14 @@
         "Explain": false,
         "Content": [
             ":ibox:`(x-6)^2+(y+5)^2=16`",
-            "In the `xy`-plane, the graph of the equation above is a circle. Point `P` is on the circle and has coordinates `(10,-5)`. If `bar(PQ)` is a diameter of the circle, what are the coordinates of point `Q`?"
+            "In the `xytext(-plane)`, the graph of the equation above is a circle. Point `P` is on the circle and has coordinates `(10,-5)`. If `bar(PQ)` is a diameter of the circle, what are the coordinates of point `Q`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`(2,-5)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form for the equation of a circle is `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` are the coordinates of the center and `r` is the length of the radius. According to the given equation, the center of the circle is `(6,-5)`. Let `(x_1,y_1)` represent the coordinates of point `Q`. Since point `P (10,-5)` and point `Q (x_1,y_1)` are the endpoints of a diameter of the circle, the center `(6,-5)` lies on the diameter, halfway between `P` and `Q`. Therefore, the following relationships hold: `(x_1+10)/2=6` and `(y_1+(-5))/2=-5`. Solving the equations for `x_1` and `y_1`, respectively, yields `x_1=2` and `y_1=-5`. Therefore, the coordinates of point `Q` are `(2,-5)`.\n\nAlternate approach: Since point `P (10,-5)` on the circle and the center of the circle `(6,-5)` have the same `y`-coordinate, it follows that the radius of the circle is `10-6=4`. In addition, the opposite end of the diameter `bar(PQ)` must have the same `y`-coordinate as `P` and be `4` `text(units)` away from the center. Hence, the coordinates of point `Q` must be `(2,-5)`.",
+                    "Rationale": "The standard form for the equation of a circle is `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` are the coordinates of the center and `r` is the length of the radius. According to the given equation, the center of the circle is `(6,-5)`. Let `(x_1,y_1)` represent the coordinates of point `Q`. Since point `P (10,-5)` and point `Q (x_1,y_1)` are the endpoints of a diameter of the circle, the center `(6,-5)` lies on the diameter, halfway between `P` and `Q`. Therefore, the following relationships hold: `(x_1+10)/2=6` and `(y_1+(-5))/2=-5`. Solving the equations for `x_1` and `y_1`, respectively, yields `x_1=2` and `y_1=-5`. Therefore, the coordinates of point `Q` are `(2,-5)`.\n\nAlternate approach: Since point `P (10,-5)` on the circle and the center of the circle `(6,-5)` have the same `ytext(-coordinate)`, it follows that the radius of the circle is `10-6=4`. In addition, the opposite end of the diameter `bar(PQ)` must have the same `ytext(-coordinate)` as `P` and be `4` `text(units)` away from the center. Hence, the coordinates of point `Q` must be `(2,-5)`.",
                     "Percent": 0
                 }
             },
@@ -546,7 +546,7 @@
             "Advanced Math"
         ],
         "SubTopics": [
-            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `x`-intercepts of the graph and `f(0)` corresponds to the `y`-intercept of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
+            "Understand and use the fact that for the graph of `y=f(x)`, the solutions to `f(x)=0` correspond to `xtext(-intercepts)` of the graph and `f(0)` corresponds to the `ytext(-intercept)` of the graph; make connections between the input/output pairs and points on a graph; interpret this information in a context."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -561,7 +561,7 @@
                 "Choice": "`y=x(x-2)(x+3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph of the equation in this answer choice has the correct factors. However, at `x=0` the graph of the equation in this choice crosses the `x`-axis; the graph shown touches the `x`-axis but doesn't cross it.",
+                    "Rationale": "The graph of the equation in this answer choice has the correct factors. However, at `x=0` the graph of the equation in this choice crosses the `xtext(-axis)`; the graph shown touches the `xtext(-axis)` but doesn't cross it.",
                     "Percent": 0
                 }
             },
@@ -569,7 +569,7 @@
                 "Choice": "`y=x^2(x-2)(x+3)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `x`-coordinates of the `x`-intercepts of the graph are `-3`, `0`, and `2`. This means that if `y=f(x)` is the equation of the graph, where `f` is a polynomial function, then `(x+3)`, `x`, and `(x-2)` are factors of `f`. In this choice, `x` is raised to the second power. At `x=0`, the graph touches the `x`-axis but doesn't cross it. This means that `x`, as a factor of `f`, is raised to an even power. In this choice, `f` is a fourth-degree polynomial. The `y`-coordinates of points on the graph become large and positive as `x` becomes large and negative; this is consistent with a fourth-degree polynomial. Therefore, of the choices given, only this choice could be the equation of the graph.",
+                    "Rationale": "The `xtext(-coordinates)` of the `xtext(-intercepts)` of the graph are `-3`, `0`, and `2`. This means that if `y=f(x)` is the equation of the graph, where `f` is a polynomial function, then `(x+3)`, `x`, and `(x-2)` are factors of `f`. In this choice, `x` is raised to the second power. At `x=0`, the graph touches the `xtext(-axis)` but doesn't cross it. This means that `x`, as a factor of `f`, is raised to an even power. In this choice, `f` is a fourth-degree polynomial. The `ytext(-coordinates)` of points on the graph become large and positive as `x` becomes large and negative; this is consistent with a fourth-degree polynomial. Therefore, of the choices given, only this choice could be the equation of the graph.",
                     "Percent": 0
                 }
             },
@@ -577,7 +577,7 @@
                 "Choice": "`y=x(x+2)(x-3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is likely the result of misinterpreting the relationship between the `x`-intercepts of a graph of a polynomial function and the factors of the polynomial expression.",
+                    "Rationale": "This choice is likely the result of misinterpreting the relationship between the `xtext(-intercepts)` of a graph of a polynomial function and the factors of the polynomial expression.",
                     "Percent": 0
                 }
             },
@@ -585,7 +585,7 @@
                 "Choice": "`y=x^2(x+2)(x-3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is likely the result of misinterpreting the relationship between the `x`-intercepts of a graph of a polynomial function and the factors of the polynomial expression.",
+                    "Rationale": "This choice is likely the result of misinterpreting the relationship between the `xtext(-intercepts)` of a graph of a polynomial function and the factors of the polynomial expression.",
                     "Percent": 0
                 }
             }
@@ -721,7 +721,7 @@
                 "Choice": "There are exactly `4` solutions.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In the `xy`-plane, a parabola and a line can intersect at no more than two points. Since the graph of the first equation is a parabola and the graph of the second equation is a line, the system cannot have more than `2` solutions.",
+                    "Rationale": "In the `xytext(-plane)`, a parabola and a line can intersect at no more than two points. Since the graph of the first equation is a parabola and the graph of the second equation is a line, the system cannot have more than `2` solutions.",
                     "Percent": 0
                 }
             },

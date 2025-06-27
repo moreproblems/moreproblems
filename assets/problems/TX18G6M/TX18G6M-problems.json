@@ -86,7 +86,7 @@
                 "Choice": "A = 1/2 • (6 + 10)x",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the equation that can be used to find A, the area (amount of space covered by a surface) of the face of the lamp shade in square inches, the student should have identified 6 and 10 as the lengths in inches of the two bases (parallel sides) of the trapezoid and x as the height (vertical distance from top to bottom) in inches of the trapezoid, and then identified A = 1/2 • (6 + 10)x as the equation that includes these quantities correctly in the formula for the area of a trapezoid (`A=1/2(b_1+b_2)h`).",
+                    "Rationale": "To determine the equation that can be used to find A, the area (amount of space covered by a surface) of the face of the lamp shade in square inches, the student should have identified 6 and 10 as the lengths in `text(inches)` of the two bases (parallel sides) of the trapezoid and x as the height (vertical distance from top to bottom) in `text(inches)` of the trapezoid, and then identified A = 1/2 • (6 + 10)x as the equation that includes these quantities correctly in the formula for the area of a trapezoid (`A=1/2(b_1+b_2)h`).",
                     "Percent": 76
                 }
             },
@@ -261,7 +261,7 @@
                 "Choice": "problems/TX18G6M/media/5c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely divided 18 by 720, resulting in 0.025, thought this meant the carpenter charged $25 for each hour of work, and identified a table of values that represented this hourly rate. The student needs to focus on calculating the unit rate (charge per hour worked) by dividing a `y`-value by its corresponding `x`-value.",
+                    "Rationale": "The student likely divided 18 by 720, resulting in 0.025, thought this meant the carpenter charged $25 for each hour of work, and identified a table of values that represented this hourly rate. The student needs to focus on calculating the unit rate (charge per hour worked) by dividing a `ytext(-value)` by its corresponding `xtext(-value)`.",
                     "Percent": 8
                 }
             },
@@ -640,7 +640,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Alejandra has $600 in her checking account. She wants to spend part of this money on a computer. She wants to have at least $250 left in her checking account after buying the computer. The inequality shown can be used to find t, the amount of money in dollars that Alejandra can spend on the computer.",
+            "Alejandra has $600 in her checking account. She wants to spend part of this money on a computer. She wants to have at least $250 left in her checking account after buying the computer. The inequality shown can be used to find t, the amount of money in `text(dollars)` that Alejandra can spend on the computer.",
             "t + 250 ≤ 600",
             "Which inequality represents all possible values of t?"
         ],
@@ -863,7 +863,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5 in²",
+                "Choice": "5 in^2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the area (amount of space covered by a surface) of triangle PQR in square inches, the student should have measured the lengths of the two perpendicular sides (sides that meet to form a 90° angle) of the triangle to the nearest 1/2 inch, and then substituted those values into the formula for the area of a triangle, A = (b × h)/2, in which A represents the area, b represents the length of the base, and h represents the height (vertical distance from top to bottom). Substituting b = 4 and h = 2 12, the student should have determined that A = 1/2 • (4)(2 1/2) = 5.",
@@ -871,7 +871,7 @@
                 }
             },
             "B": {
-                "Choice": "8 3/4 in²",
+                "Choice": "8 3/4 in^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the length of the hypotenuse (longest side) and the length of the base, calculating 4 3/4 + 4 = 8 3/4. The student needs to focus on how to calculate the area of a triangle.",
@@ -879,7 +879,7 @@
                 }
             },
             "C": {
-                "Choice": "6 1/2 in²",
+                "Choice": "6 1/2 in^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the length of the base and the length of the height. The student needs to focus on how to use the base and height of a triangle to calculate the area.",
@@ -887,7 +887,7 @@
                 }
             },
             "D": {
-                "Choice": "11 in²",
+                "Choice": "11 in^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely measured the three sides of the triangle correctly but calculated the perimeter (distance around the outside) instead of the area, rounded the sum of 4 inches, 2 1/2 inches, and 4 3/4 inches to the nearest inch, and did not notice that the measurement units were incorrect. The student needs to focus on understanding the difference between perimeter and area.",
@@ -1078,14 +1078,14 @@
         "Content": [
             "The coordinate grid shows points P, Q, R, and S. All the coordinates for these points are integers.",
             "problems/TX18G6M/media/21a.jpg",
-            "What is the value of the `x`-coordinate of point P?"
+            "What is the value of the `xtext(-coordinate)` of point P?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:-6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the value of the `x`-coordinate (horizontal position from 0) of point P, the student should have determined how far to the left or right of the origin (point where the `x`-axis (horizontal) and `y`-axis (vertical) on a coordinate grid intersect; also the point represented by the ordered pair `(0,0)`) point P is located. Because point P is located 6 units to the left of the origin, the value of the `x`-coordinate of point P is -6.",
+                    "Rationale": "To determine the value of the `xtext(-coordinate)` (horizontal position from 0) of point P, the student should have determined how far to the left or right of the origin (point where the `xtext(-axis)` (horizontal) and `ytext(-axis)` (vertical) on a coordinate grid intersect; also the point represented by the ordered pair `(0,0)`) point P is located. Because point P is located 6 units to the left of the origin, the value of the `xtext(-coordinate)` of point P is -6.",
                     "Percent": 53
                 }
             }
@@ -1437,7 +1437,7 @@
                 "Choice": "1, 7.50, 2, 15, 3, 22.50, 4, 30, 5, 37.50, 6, 45",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the list that best represents all the `x`- and `y`-coordinates (vertical position from 0) of the points on the graph. The student needs to focus on understanding that the values of `x`-coordinates of a set of graphed points represent the independent values.",
+                    "Rationale": "The student likely identified the list that best represents all the `xtext(-)` and `ytext(-coordinates)` (vertical position from 0) of the points on the graph. The student needs to focus on understanding that the values of `xtext(-coordinates)` of a set of graphed points represent the independent values.",
                     "Percent": 18
                 }
             },
@@ -1445,7 +1445,7 @@
                 "Choice": "5, 10, 15, 20, 25, 30, 35, 40, 45",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the list that contains the values shown on the `y`-axis (the vertical axis) on the graph. The student needs to focus on understanding that the values of `x`-coordinates of a set of graphed points represent the independent values.",
+                    "Rationale": "The student likely identified the list that contains the values shown on the `ytext(-axis)` (the vertical axis) on the graph. The student needs to focus on understanding that the values of `xtext(-coordinates)` of a set of graphed points represent the independent values.",
                     "Percent": 10
                 }
             },
@@ -1453,7 +1453,7 @@
                 "Choice": "7.50, 15, 22.50, 30, 37.50, 45",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely identified the list that best represents the dependent values (values of the `y`-coordinates (vertical position from 0)) of the graphed points. The student needs to focus on understanding that the values of `x`-coordinates of a set of graphed points represent the independent values.",
+                    "Rationale": "The student likely identified the list that best represents the dependent values (values of the `ytext(-coordinates)` (vertical position from 0)) of the graphed points. The student needs to focus on understanding that the values of `xtext(-coordinates)` of a set of graphed points represent the independent values.",
                     "Percent": 35
                 }
             },
@@ -1461,7 +1461,7 @@
                 "Choice": "1, 2, 3, 4, 5, 6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which list best represents the independent values of the graphed points, the student should have identified the `x`-coordinates (horizontal position from 0) of the graphed points. The points on the graph appear to be located at (1, 7.5), (2, 15), (3, 22.5), (4, 30), (5, 37.5), and (6, 45), so the independent values of the graphed points are 1, 2, 3, 4, 5, and 6.",
+                    "Rationale": "To determine which list best represents the independent values of the graphed points, the student should have identified the `xtext(-coordinates)` (horizontal position from 0) of the graphed points. The points on the graph appear to be located at (1, 7.5), (2, 15), (3, 22.5), (4, 30), (5, 37.5), and (6, 45), so the independent values of the graphed points are 1, 2, 3, 4, 5, and 6.",
                     "Percent": 37
                 }
             }
@@ -1485,14 +1485,14 @@
         "Content": [
             "Patricia recorded the prices of watches at a store. The prices are shown in the table.",
             "problems/TX18G6M/media/29a.jpg",
-            "What is the median price of the watches in dollars?"
+            "What is the median price of the watches in `text(dollars)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:18",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the median (middle number in a set of numbers when the set is ordered by value) price of the watches in dollars (18), the student should have ordered the 8 prices and calculated the number halfway between the fourth-lowest and fifth-lowest prices. The prices listed in order would be 12, 15, 16, 16, 20, 22, 24, 27, and the number halfway between the fourth-lowest price of 16 and the fifth-lowest price of 20 is represented by (16 + 20)/2, which results in a median price in dollars of 18.",
+                    "Rationale": "To determine the median (middle number in a set of numbers when the set is ordered by value) price of the watches in `text(dollars)` (18), the student should have ordered the 8 prices and calculated the number halfway between the fourth-lowest and fifth-lowest prices. The prices listed in order would be 12, 15, 16, 16, 20, 22, 24, 27, and the number halfway between the fourth-lowest price of 16 and the fifth-lowest price of 20 is represented by (16 + 20)/2, which results in a median price in `text(dollars)` of 18.",
                     "Percent": 38
                 }
             }
@@ -1621,7 +1621,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Keith wrote the expression shown to determine the cost in dollars for an upcoming trip.",
+            "Keith wrote the expression shown to determine the cost in `text(dollars)` for an upcoming trip.",
             "(127.50 - 23.50) + 3(86.50 + 4)",
             "Which expression is equivalent to the one Keith wrote?"
         ],
@@ -1707,13 +1707,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The figure represents a water trough in the shape of a rectangular prism. The dimensions of the water trough are given in feet.",
+            "The figure represents a water trough in the shape of a rectangular prism. The dimensions of the water trough are given in `text(feet)`.",
             "problems/TX18G6M/media/34a.jpg",
             "What is the volume of water in the trough in cubic feet when the trough is full?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "21 1/2 ft³",
+                "Choice": "21 1/2 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the perimeter (distance around the outside) of the base by adding 7 feet to 2 1/2 feet and doubling the result, and then added 2 1/2 feet to the result, thinking it was the height of the prism, and did not realize that the unit of measurement would be feet instead of cubic feet. The student needs to focus on understanding how to calculate the volume of a rectangular prism.",
@@ -1721,7 +1721,7 @@
                 }
             },
             "G": {
-                "Choice": "13 1/2 ft³",
+                "Choice": "13 1/2 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely added the given dimensions together and did not realize that the unit of measurement would be feet instead of cubic feet. The student needs to focus on understanding how to calculate the volume of a rectangular prism.",
@@ -1729,15 +1729,15 @@
                 }
             },
             "H": {
-                "Choice": "70 ft³",
+                "Choice": "70 `text(ft)^3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of water in the trough in cubic feet when the trough is full (70 ft3), the student should have used the formula V = Bh, where V represents the volume, B represents the area (amount of space covered by a surface) of the base, and h represents the height (vertical distance from top to bottom), and calculated the area of the base of the prism as 7 feet • 2 1/2 feet, or 17 1/2 ft², and multiplied 17 1/2 ft² by the height, 4 ft, which results in 70 ft³.",
+                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of water in the trough in cubic feet when the trough is full (70 ft3), the student should have used the formula V = Bh, where V represents the volume, B represents the area (amount of space covered by a surface) of the base, and h represents the height (vertical distance from top to bottom), and calculated the area of the base of the prism as 7 feet • 2 1/2 feet, or 17 1/2 `text(ft)^2`, and multiplied 17 1/2 `text(ft)^2` by the height, 4 ft, which results in 70 `text(ft)^3`.",
                     "Percent":50
                 }
             },
             "J": {
-                "Choice": "76 ft³",
+                "Choice": "76 `text(ft)^3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely calculated the perimeter (distance around the outside) of the base by adding 7 feet to 2 1/2 feet and doubling the result, and then multiplied the result by the height of 4 feet. The student needs to focus on understanding the difference between area and perimeter.",

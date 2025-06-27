@@ -181,7 +181,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A pumpkin patch has a width of 432 inches. What is the width of the pumpkin patch in YARDS?"
+            "A pumpkin patch has a width of 432 inches. What is the width of the pumpkin patch in `text(yards)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -907,7 +907,7 @@
         "Explain": false,
         "Content": [
             "Ethan's car can travel 30 miles per gallon of gasoline. Gasoline costs $4 per gallon, including tax. Ethan drove his car 180 miles on a trip.",
-            "What was the total cost, in dollars, of the gasoline that the car used for Ethan's trip?"
+            "What was the total cost, in `text(dollars)`, of the gasoline that the car used for Ethan's trip?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1004,7 +1004,7 @@
                 }
             },
             "B": {
-                "Choice": "108n²",
+                "Choice": "108n^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1020,7 +1020,7 @@
                 }
             },
             "D": {
-                "Choice": "108 + n²",
+                "Choice": "108 + n^2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

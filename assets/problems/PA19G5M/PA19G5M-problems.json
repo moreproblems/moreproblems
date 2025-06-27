@@ -697,7 +697,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A company uses boxes with the dimensions shown below. The width is in inches. The length and height are in feet.",
+            "A company uses boxes with the dimensions shown below. The width is in `text(inches)`. The length and height are in `text(feet)`.",
             "problems/PA19G5M/media/13a.jpg",
             "What is the volume, in cubic inches, of each box?"
         ],
@@ -828,7 +828,7 @@
                 "Choice": "Title: Airplane Elevation\nA: Elevation (feet)\nB: Time since Start (minutes)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize the non-continuous aspect of the `x`-axis.",
+                    "Rationale": "Does not recognize the non-continuous aspect of the `xtext(-axis)`.",
                     "Percent": 17
                 }
             },
@@ -844,7 +844,7 @@
                 "Choice": "Title: Movie Tickets\nA: Number of Tickets\nB: Total Cost ($)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize the non-continuous aspect of the `x`-axis.",
+                    "Rationale": "Does not recognize the non-continuous aspect of the `xtext(-axis)`.",
                     "Percent": 20
                 }
             }
