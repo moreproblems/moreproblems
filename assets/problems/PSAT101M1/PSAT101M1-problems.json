@@ -129,7 +129,7 @@
                 "Choice": "`(-112,-264)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "First, we clear the fractions from the two given equations by multiplying both sides of the first equation by `4` and then both sides of the second equation by `8` (note that the new equations are equivalent to the original ones). Thus the system becomes `{(2x-y=40),(x-y=152):}`. Subtracting side by side the second equation from the first eliminates the variable `y`, `(2x-y)-(x-y)=40-152`, leaving an equation with just one variable, `x`. Solving this equation gives `x=-112`. Substituting `-112` for `x` into the equation `x-y=152` gives `y=-264`. Therefore, `(-112,-264)` is the ordered pair that satisfies the system of equations given.",
+                    "Rationale": "First, we clear the fractions from the two given equations by multiplying both sides of the first equation by `4` and then both sides of the second equation by `8` (note that the new equations are equivalent to the original ones). Thus the system becomes `{(2x-y=40),(x-y=152):}`. Subtracting side by side the second equation from the first eliminates the variable `y,(2x-y)-(x-y)=40-152`, leaving an equation with just one variable, `x`. Solving this equation gives `x=-112`. Substituting `-112` for `x` into the equation `x-y=152` gives `y=-264`. Therefore, `(-112,-264)` is the ordered pair that satisfies the system of equations given.",
                     "Percent": 0
                 }
             },
@@ -176,7 +176,7 @@
         "Explain": false,
         "Content": [
             "problems/PSAT101M1/media/4a.jpg",
-            "Triangle `ABC` above is isosceles with `AB=AC` and `BC = 48`. The ratio of `DE` to `DF` is `5:7`. What is the length of `DC`?"
+            "Triangle `ABC` above is isosceles with `AB=ACandBC = 48`. The ratio of `DE` to `DF` is `5:7`. What is the length of `DC`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -207,7 +207,7 @@
                 "Choice": "`28`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The base angles, `/_B` and `/_C`, of isosceles triangle `ABC` are congruent. Additionally, `/_BED` and `/_CFD` are both right angles and therefore are congruent. Because `triangleBED` and `triangleCFD` have two corresponding pairs of angles that are congruent, they are similar. Consequently, the corresponding sides of the similar triangles are proportional. So `(BD)/(DC)=(DE)/(DF)`, and since `(DE)/(DF)=5/7`, it follows that. If we let `BD=5x`, then `DC=7x`. Since `BD+DC=BC` and `BC=48`, it follows that `5x+7x=48`. Solving this equation for `x` gives `x=4`, and so `DC` is `7(4)=28`.",
+                    "Rationale": "The base angles, `/_Band/_C`, of isosceles triangle `ABC` are congruent. Additionally, `/_BEDand/_CFD` are both right angles and therefore are congruent. Because `triangleBEDandtriangleCFD` have two corresponding pairs of angles that are congruent, they are similar. Consequently, the corresponding sides of the similar triangles are proportional. So `(BD)/(DC)=(DE)/(DF)`, and since `(DE)/(DF)=5/7`, it follows that. If we let `BD=5x`, then `DC=7x`. Since `BD+DC=BCandBC=48`, it follows that `5x+7x=48`. Solving this equation for `x` gives `x=4`, and so `DC` is `7(4)=28`.",
                     "Percent": 0
                 }
             }
@@ -244,7 +244,7 @@
                 "Choice": "`15`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `x` and `y` be the number of easy and hard puzzles, respectively, that Tina solved. Since she solved a total of `50` puzzles, it follows that `x+y=50`. She earned a total of `1,950` points, so it must also be true that `30x+60y=1,950`. Dividing both sides of this equation by `30` gives `x+2y=65`. Subtracting the first equation, `x+y=50`, from the second equation, `x+2y=65`, gives `y = 15`. Therefore, Tina solved `15` hard puzzles.",
+                    "Rationale": "Let `xandy` be the number of easy and hard puzzles, respectively, that Tina solved. Since she solved a total of `50` puzzles, it follows that `x+y=50`. She earned a total of `1,950` points, so it must also be true that `30x+60y=1,950`. Dividing both sides of this equation by `30` gives `x+2y=65`. Subtracting the first equation, `x+y=50`, from the second equation, `x+2y=65`, gives `y = 15`. Therefore, Tina solved `15` hard puzzles.",
                     "Percent": 0
                 }
             },
@@ -290,7 +290,7 @@
                 "Choice": "`15/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `r` and `s`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
+                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `rands`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
                     "Percent": 0
                 }
             },
@@ -298,7 +298,7 @@
                 "Choice": "`13/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This equation can be solved using the quadratic formula or factoring. The quadratic formula approach is left as an exercise for students. We will show first how to solve this equation using simple factoring and then will show how to solve it using both the structure of the equation and factoring.\nSince gives `7x=10x-3x`, the given equation can be rewritten as `2x^2+(10x-3x)-15=0`. Regrouping the terms so that the left side of the equation is in the factored form gives `(2x-3)(x+5)=0`, from which it follows that `2x-3=0` or `x+5=0`. Thus, the quadratic equation has solutions `3/2` and `-5`. Since `r` and `s` are solutions to the quadratic equation and `rgts`, we can conclude that `r=3/2` and `s=-5`; therefore, `r-s=3/2-(-5)=13/2`.",
+                    "Rationale": "This equation can be solved using the quadratic formula or factoring. The quadratic formula approach is left as an exercise for students. We will show first how to solve this equation using simple factoring and then will show how to solve it using both the structure of the equation and factoring.\nSince gives `7x=10x-3x`, the given equation can be rewritten as `2x^2+(10x-3x)-15=0`. Regrouping the terms so that the left side of the equation is in the factored form gives `(2x-3)(x+5)=0`, from which it follows that `2x-3=0orx+5=0`. Thus, the quadratic equation has solutions `3/2and-5`. Since `rands` are solutions to the quadratic equation and `rgts`, we can conclude that `r=3/2ands=-5`; therefore, `r-s=3/2-(-5)=13/2`.",
                     "Percent": 0
                 }
             },
@@ -306,7 +306,7 @@
                 "Choice": "`11/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `r` and `s`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
+                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `rands`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
                     "Percent": 0
                 }
             },
@@ -314,7 +314,7 @@
                 "Choice": "`3/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `r` and `s`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
+                    "Rationale": "This choice could result from calculating the value of expressions given in terms of the solutions `rands`, but are not equivalent to the difference `r-s` of these solutions. For example, `15/2` is the value of `-rs`, not the value of `r-s`.",
                     "Percent": 0
                 }
             }
@@ -458,7 +458,7 @@
                 "Choice": "`1,300-0.64t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the truck is traveling at `16` `text(meters per second)` along the road, the distance it has traveled `t` `text(seconds)` after entering the road is `16t` `text(meters)`. Since the elevation of the road drops `4` `text(meters)` for every `100` `text(meters)` along the length of the road, it follows that for `16t` `text(meters)` along the road, the elevation drops `(4/100)16t` or `0.64t`. Therefore, the elevation of the road at the point where the truck passes t seconds after entering the road is `1,300-0.64t` `text(meters)`.",
+                    "Rationale": "Since the truck is traveling at `16` `text(meters per second)` along the road, the distance it has traveled `t` `text(seconds)` after entering the road is `16t` `text(meters)`. Since the elevation of the road drops `4` `text(meters)` for every `100` `text(meters)` along the length of the road, it follows that for `16t` `text(meters)` along the road, the elevation drops `(4/100)16tor0.64t`. Therefore, the elevation of the road at the point where the truck passes t seconds after entering the road is `1,300-0.64t` `text(meters)`.",
                     "Percent": 0
                 }
             },
@@ -527,7 +527,7 @@
                 "Choice": "`-1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `f(x-1)=2x+3` for all values of `x`, `f(-3)=f(-2-1)=2(-2)+3`, and so the value of `f(-3)` is `-1`.",
+                    "Rationale": "Since `f(x-1)=2x+3` for all values of `x,f(-3)=f(-2-1)=2(-2)+3`, and so the value of `f(-3)` is `-1`.",
                     "Percent": 0
                 }
             }
@@ -656,7 +656,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `xytext(-plane)`, if the parabola with equation `y=ax^2+bx+c`, where `a`, `b`, and `c` are constants, passes through the point `(-1,1)`, which of the following must be true?"
+            "In the `xytext(-plane)`, if the parabola with equation `y=ax^2+bx+c`, where `a,b,andc` are constants, passes through the point `(-1,1)`, which of the following must be true?"
         ],
         "AnswerChoices": {
             "A": {
@@ -745,7 +745,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation given can be rewritten as `2a+3-4a+8=7`, `-2a+11=7`, which is equivalent to, and so `a=2`.",
+                    "Rationale": "The equation given can be rewritten as `2a+3-4a+8=7,-2a+11=7`, which is equivalent to, and so `a=2`.",
                     "Percent": 0
                 }
             }
@@ -803,7 +803,7 @@
                 "Choice": "equal:4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If `x-2` is a factor of `x^2-bx+b`, where `b` is a constant, then `x^2-bx+b` can be written as the product `(x-2)(x-a)` for some real number `a`. Expanding `(x-2)(x-a)` gives `x^2-2x-ax+2a`, which can be rewritten as `x^2-(2+a)x+2a`. Hence, `x^2-(2+a)x+2a=x^2-bx+b` is true for all values of `x`. Consequently, the coefficients of like terms on each side of the equation must be the same: `2+a=b` and `2a=b`. Solving this system gives `b=4`.",
+                    "Rationale": "If `x-2` is a factor of `x^2-bx+b`, where `b` is a constant, then `x^2-bx+b` can be written as the product `(x-2)(x-a)` for some real number `a`. Expanding `(x-2)(x-a)` gives `x^2-2x-ax+2a`, which can be rewritten as `x^2-(2+a)x+2a`. Hence, `x^2-(2+a)x+2a=x^2-bx+b` is true for all values of `x`. Consequently, the coefficients of like terms on each side of the equation must be the same: `2+a=band2a=b`. Solving this system gives `b=4`.",
                     "Percent": 0
                 }
             }

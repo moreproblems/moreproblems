@@ -21,7 +21,7 @@
                 "Choice": "`39ax^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For `x=1` and `a=0`, the value of the given expression is `15` and the value of the expression `39ax^2` is `0`.",
+                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For `x=1anda=0`, the value of the given expression is `15` and the value of the expression `39ax^2` is `0`.",
                     "Percent": 0
                 }
             },
@@ -29,7 +29,7 @@
                 "Choice": "`39(a+2x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For `x=1` and `a=0`, the value of the given expression is `15` and the value of the expression `39(a+2x)` is `78`.",
+                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For `x=1anda=0`, the value of the given expression is `15` and the value of the expression `39(a+2x)` is `78`.",
                     "Percent": 0
                 }
             },
@@ -37,7 +37,7 @@
                 "Choice": "`(5+8a)x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For `x=1` and `a=0`, the value of the given expression is `15` and the value of the expression `(5+8a)x` is `5`.",
+                    "Rationale": "This choice may result from incorrectly combining and/or factoring the two terms of the expression. One can check that the expressions in each of these choices are not equivalent to the given expression. For `x=1anda=0`, the value of the given expression is `15` and the value of the expression `(5+8a)x` is `5`.",
                     "Percent": 0
                 }
             },
@@ -67,7 +67,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The formula `d=rt` is used to calculate the distance an object travels over a period of time, `t`, at a constant rate, `r`. Based on this formula, what is the rate, `r`, in terms of `d` and `t`?"
+            "The formula `d=rt` is used to calculate the distance an object travels over a period of time, `t`, at a constant rate, `r`. Based on this formula, what is the rate, `r`, in terms of `dandt`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -120,7 +120,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following ordered pairs `(x,y)` satisfies both equations `y=x^2+3x-4` and `x=y-4`?"
+            "Which of the following ordered pairs `(x,y)` satisfies both equations `y=x^2+3x-4andx=y-4`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -135,7 +135,7 @@
                 "Choice": "`(2,6)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The equation `x=y-4` can be rewritten as `y=x+4`. Substituting `x+4` for `y` in the other equation gives `x+4=x^2+3x-4`, which can be rewritten as `x^2+2x-8=0`. Since `-4` and `2` are the two numbers whose sum is `-2` and whose product is `-8`, they are the solutions to the equation `x^2+2x-8=0`. From the equation `y=x+4`, it follows that the solutions of the system are `(-4,0)` and `(2,6)`. Therefore, of the given choices, `(2,6)` is the correct answer.",
+                    "Rationale": "The equation `x=y-4` can be rewritten as `y=x+4`. Substituting `x+4` for `y` in the other equation gives `x+4=x^2+3x-4`, which can be rewritten as `x^2+2x-8=0`. Since `-4and2` are the two numbers whose sum is `-2` and whose product is `-8`, they are the solutions to the equation `x^2+2x-8=0`. From the equation `y=x+4`, it follows that the solutions of the system are `(-4,0)and(2,6)`. Therefore, of the given choices, `(2,6)` is the correct answer.",
                     "Percent": 0
                 }
             },
@@ -196,7 +196,7 @@
                 "Choice": "3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation can be rewritten as `x^2-4x+3=0`. Since `1` and `3` are two numbers whose sum is `4` and whose product is `3`, it follows that they are the solutions to the equation `x^2-4x+3=0`. Therefore, of the choices given, only `3` can be a solution to the original equation.",
+                    "Rationale": "The given equation can be rewritten as `x^2-4x+3=0`. Since `1and3` are two numbers whose sum is `4` and whose product is `3`, it follows that they are the solutions to the equation `x^2-4x+3=0`. Therefore, of the choices given, only `3` can be a solution to the original equation.",
                     "Percent": 0
                 }
             },
@@ -250,7 +250,7 @@
                 "Choice": "`-4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying each side of the second equation by `3` and then adding the equations eliminates `x`, as follows: `{(-,3x,-,4y,=,20),(+,3x,-,30y,=,48),(=,0,+,34y,=,68):}`\nSolving the obtained equation for `y` gives `y=-2`.\nSubstituting `-2` for `y` in the second equation of the system gives `x-10(-2)=16`, which simplifies to `x+20=16`, or `x=-4`.",
+                    "Rationale": "Multiplying each side of the second equation by `3` and then adding the equations eliminates `x`, as follows: `{(-,3x,-,4y,=,20),(+,3x,-,30y,=,48),(=,0,+,34y,=,68):}`\nSolving the obtained equation for `y` gives `y=-2`.\nSubstituting `-2` for `y` in the second equation of the system gives `x-10(-2)=16`, which simplifies to `x+20=16,orx=-4`.",
                     "Percent": 0
                 }
             },
@@ -333,7 +333,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Giovanni wants to buy shirts that cost `$19.40` each and sweaters that cost `$24.80` each. An `8%` sales tax will be applied to the entire purchase. If Giovanni buys `2` shirts, which equation relates the number of sweaters purchased, `p`, and the total cost in `text(dollars)`, `y`?"
+            "Giovanni wants to buy shirts that cost `$19.40` each and sweaters that cost `$24.80` each. An `8%` sales tax will be applied to the entire purchase. If Giovanni buys `2` shirts, which equation relates the number of sweaters purchased, `p`, and the total cost in `text(dollars),y`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -462,7 +462,7 @@
                 "Choice": "`4,860lexle5,040`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the length, in `text(centimeters)`, of one piece of rope is represented by `q`, and each piece of rope must be at least `270` `text(centimeters)` and no more than `280` `text(centimeters)` long, then it follows that `270leqle280`. In turn, the total length `x`, in `text(centimeters)`, of rope needed for the parachute is `18q` because `18` pieces are needed. So, since `x=18q`, multiplying all the terms of the inequality `270leqle280` by `18` gives `(270xx18)le18qle(280xx18)`, or `4,860lexle5,040`.",
+                    "Rationale": "If the length, in `text(centimeters)`, of one piece of rope is represented by `q`, and each piece of rope must be at least `270` `text(centimeters)` and no more than `280` `text(centimeters)` long, then it follows that `270leqle280`. In turn, the total length `x`, in `text(centimeters)`, of rope needed for the parachute is `18q` because `18` pieces are needed. So, since `x=18q`, multiplying all the terms of the inequality `270leqle280` by `18` gives `(270xx18)le18qle(280xx18),or4,860lexle5,040`.",
                     "Percent": 0
                 }
             },
@@ -499,7 +499,7 @@
                 "Choice": "`12.99n+14.99sge60`\n`n+sle1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The first inequality allows the total cost of nails and screws to exceed the carpenter's budget of `$60`, and the second inequality incorrectly expresses the constraint on the number of boxes that the carpenter can buy. That number must be greater than `1`, since the carpenter must buy at least one box of nails AND one box of screws.",
+                    "Rationale": "The first inequality allows the total cost of nails and screws to exceed the carpenter's budget of `$60`, and the second inequality incorrectly expresses the constraint on the number of boxes that the carpenter can buy. That number must be greater than `1` , since the carpenter must buy at least one box of nails AND one box of screws.",
                     "Percent": 0
                 }
             },
@@ -507,7 +507,7 @@
                 "Choice": "`12.99n+14.99sle60`\n`n+sle1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The second equation incorrectly expresses the constraint on the number of boxes that the carpenter can buy. That number must be greater than `1`, since the carpenter must buy at least one box of nails AND one box of screws.",
+                    "Rationale": "The second equation incorrectly expresses the constraint on the number of boxes that the carpenter can buy. That number must be greater than `1` , since the carpenter must buy at least one box of nails AND one box of screws.",
                     "Percent": 0
                 }
             },
@@ -523,7 +523,7 @@
                 "Choice": "`12.99n+14.99sle60`\n`nge1`\n`sge1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the carpenter needs to buy both nails and screws, at least one box of each needs to be purchased. This can be expressed by the pair of inequalities `nge1` and `sge1`. However, the number of boxes the carpenter can buy is limited by a budget of `$60`. The amount, in `text(dollars)`, the carpenter spends on nails or screws can be expressed as the price of each box multiplied by the number of each type of box, which is `12.99n` for nails and `14.99s` for screws. And since this total cannot exceed `$60`, it follows that `12.99n+14.99sle60`.",
+                    "Rationale": "Since the carpenter needs to buy both nails and screws, at least one box of each needs to be purchased. This can be expressed by the pair of inequalities `nge1andsge1`. However, the number of boxes the carpenter can buy is limited by a budget of `$60`. The amount, in `text(dollars)`, the carpenter spends on nails or screws can be expressed as the price of each box multiplied by the number of each type of box, which is `12.99n` for nails and `14.99s` for screws. And since this total cannot exceed `$60`, it follows that `12.99n+14.99sle60`.",
                     "Percent": 0
                 }
             }
@@ -553,7 +553,7 @@
                 "Choice": "`(BD)/(DC)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In the figure, triangles `ABC` and `BDC` are similar because each has an angle that measures `28°`, and they share angle `C`. Thus their corresponding sides are in proportion. The sides `AB` in triangle `ABC` and `BD` in triangle `BDC` correspond to each other because they are opposite the same angle in both triangles (angle `C`), and the sides `BC` in triangle `ABC` and `DC` in triangle `BDC` correspond to each other because they are opposite the congruent angles with measure `28°` in the corresponding triangles. Therefore, `(AB)/(BC)=(BD)/(DC)`.",
+                    "Rationale": "In the figure, triangles `ABCandBDC` are similar because each has an angle that measures `28°`, and they share angle `C`. Thus their corresponding sides are in proportion. The sides `AB` in triangle `ABCandBD` in triangle `BDC` correspond to each other because they are opposite the same angle in both triangles (angle `C`), and the sides `BC` in triangle `ABCandDC` in triangle `BDC` correspond to each other because they are opposite the congruent angles with measure `28°` in the corresponding triangles. Therefore, `(AB)/(BC)=(BD)/(DC)`.",
                     "Percent": 0
                 }
             },
@@ -600,7 +600,7 @@
         "Explain": false,
         "Content": [
             ":ibox:`(x^2y^3)^(1/2)(x^2y^3)^(1/3)=x^(a/3)y^(a/2)`",
-            "If the equation above, where `a` is a constant, is true for all positive values of `x` and `y`, what is the value of `a`?"
+            "If the equation above, where `a` is a constant, is true for all positive values of `xandy`, what is the value of `a`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -623,7 +623,7 @@
                 "Choice": "`5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "After distributing the outside exponents to each expression within the parentheses by the rules of exponents, the left side of the equation can be rewritten as `(x^2y^3)^(1/2)(x^2y^3)^(1/3)=(x^((2)(1/2))y^((3)(1/2)))(x^((2)(1/3))y^((3)(1/3)))=(xy^(3/2))(x^(2/3)y)`.\nMultiplying the expressions within the parentheses and applying the exponent rules yields `x^(5/3)y^(5/2)=x^(1+2/3)y^(3/2+1)`, which means the equation `x^(5/3)y^(5/2)=x^(a/3)y^(a/2)` is true for all positive values of `x` and `y`. It follows that the corresponding exponents of `x` and `y` on both sides of the equation must be equal, which yields a = 5.",
+                    "Rationale": "After distributing the outside exponents to each expression within the parentheses by the rules of exponents, the left side of the equation can be rewritten as `(x^2y^3)^(1/2)(x^2y^3)^(1/3)=(x^((2)(1/2))y^((3)(1/2)))(x^((2)(1/3))y^((3)(1/3)))=(xy^(3/2))(x^(2/3)y)`.\nMultiplying the expressions within the parentheses and applying the exponent rules yields `x^(5/3)y^(5/2)=x^(1+2/3)y^(3/2+1)`, which means the equation `x^(5/3)y^(5/2)=x^(a/3)y^(a/2)` is true for all positive values of `xandy`. It follows that the corresponding exponents of `xandy` on both sides of the equation must be equal, which yields a = 5.",
                     "Percent": 0
                 }
             },
@@ -668,7 +668,7 @@
                 "Choice": "`-3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of `y=(x-6)(x+12)` is a parabola that opens upward and has a vertical axis of symmetry. The vertex of the parabola lies on this axis of symmetry, and the `xtext(-intercepts)` of the parabola are equidistant from the axis of symmetry. Since the equation `y=(x-6)(x+12)` is in factored form, the `xtext(-intercepts)` of its graph are `(6,0)` and `(-12,0)`. Therefore, the axis of symmetry is the line `x=(6 +(-12))/2`, or `x=-3`. Because the vertex lies on the line `x=-3`, the `xtext(-coordinate)` of the vertex must also be `x=-3`.",
+                    "Rationale": "The graph of `y=(x-6)(x+12)` is a parabola that opens upward and has a vertical axis of symmetry. The vertex of the parabola lies on this axis of symmetry, and the `xtext(-intercepts)` of the parabola are equidistant from the axis of symmetry. Since the equation `y=(x-6)(x+12)` is in factored form, the `xtext(-intercepts)` of its graph are `(6,0)and(-12,0)`. Therefore, the axis of symmetry is the line `x=(6 +(-12))/2,orx=-3`. Because the vertex lies on the line `x=-3`, the `xtext(-coordinate)` of the vertex must also be `x=-3`.",
                     "Percent": 0
                 }
             },
@@ -714,7 +714,7 @@
                 "Choice": "equal:2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a linear equation is written in the form `mx+n=px+r`, where `m=p` and `n=r`, then the linear equation is satisfied by any value of `x` and will have infinitely many solutions. Distributing `7` on the right-hand side of the given equation yields `21x+14=21x+7a`. Therefore, the equation will have infinitely many solutions if `14=7a`; that is, if `a=2`.",
+                    "Rationale": "If a linear equation is written in the form `mx+n=px+r`, where `m=pandn=r`, then the linear equation is satisfied by any value of `x` and will have infinitely many solutions. Distributing `7` on the right-hand side of the given equation yields `21x+14=21x+7a`. Therefore, the equation will have infinitely many solutions if `14=7a`; that is, if `a=2`.",
                     "Percent": 0
                 }
             }
@@ -736,14 +736,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Juliene practiced her dance routine for twice as many minutes on Monday as she did on Tuesday. She practiced her routine those two days for a total of `2` `text(hours)` and `15` `text(minutes)`. For how many minutes did Juliene practice her dance routine on Monday?"
+            "Juliene practiced her dance routine for twice as many minutes on Monday as she did on Tuesday. She practiced her routine those two days for a total of `2` `text(hours)and15` `text(minutes)`. For how many minutes did Juliene practice her dance routine on Monday?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:90",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Juliene practiced twice as long on Monday as she did on Tuesday. Therefore, if `x` is the number of minutes Juliene practiced on Tuesday, then `2x` is the number of minutes she practiced on Monday. The total amount of time Juliene practiced on the two days is `2` `text(hours)` and `15` `text(minutes)`, which is equal to `135` `text(minutes)`. Thus, the equation `x+2x=135` must be true. This simplifies to `3x=135`, and so `x=45`. The number of minutes Juliene practiced on Monday is `2x`, which is equal to `2x=2(45)=90`.",
+                    "Rationale": "Juliene practiced twice as long on Monday as she did on Tuesday. Therefore, if `x` is the number of minutes Juliene practiced on Tuesday, then `2x` is the number of minutes she practiced on Monday. The total amount of time Juliene practiced on the two days is `2` `text(hours)and15` `text(minutes)`, which is equal to `135` `text(minutes)`. Thus, the equation `x+2x=135` must be true. This simplifies to `3x=135`, and so `x=45`. The number of minutes Juliene practiced on Monday is `2x`, which is equal to `2x=2(45)=90`.",
                     "Percent": 0
                 }
             }
@@ -774,7 +774,7 @@
                 "Choice": "equal:1",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It is given that one factor of the quadratic expression is `3x+4`. Thus, `12x^2+ax-20=(3x+4)(mx+p)`, where `a`, `m`, and `p` are integers. Multiplying out the right-hand side of the equation gives `12x^2+ax-20=3mx^2+(3p+4m)x+4p`. It follows that `12=3m`, `a=3p+4m`, and `-20=4p`. Dividing both sides of the equation `12=3m` by `3` gives `m = 4`. Dividing both sides of the equation `-20=4p` by `4` gives `p=-5`. Finally, substituting `m=4` and `p=-5` in the equation `a=3p+4m` gives `a=3(-5)+4(4)=1`.",
+                    "Rationale": "It is given that one factor of the quadratic expression is `3x+4`. Thus, `12x^2+ax-20=(3x+4)(mx+p)`, where `a,m,andp` are integers. Multiplying out the right-hand side of the equation gives `12x^2+ax-20=3mx^2+(3p+4m)x+4p`. It follows that `12=3m,a=3p+4m,and-20=4p`. Dividing both sides of the equation `12=3m` by `3` gives `m = 4`. Dividing both sides of the equation `-20=4p` by `4` gives `p=-5`. Finally, substituting `m=4andp=-5` in the equation `a=3p+4m` gives `a=3(-5)+4(4)=1`.",
                     "Percent": 0
                 }
             }
@@ -797,7 +797,7 @@
         "Explain": false,
         "Content": [
             ":ibox:`(ax+by)(cx-dy)`",
-            "In the expression above, `a`, `b`, `c`, and `d` are non-zero constants and `ad=bc`. If `ac=18` and `bd=50`, what is the value of the coefficient of the `xy` term when the expression is multiplied out and the like terms are collected?"
+            "In the expression above, `a,b,c,andd` are non-zero constants and `ad=bc`. If `ac=18andbd=50`, what is the value of the coefficient of the `xy` term when the expression is multiplied out and the like terms are collected?"
         ],
         "AnswerChoices": {
             "KEY": {

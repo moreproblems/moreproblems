@@ -96,7 +96,7 @@
                 "Choice": "`29/100`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `29` out of every `100` beads that the machine produces have a defect. It follows that if the machine produces `k` beads, then the number of beads that have a defect is `(29/100)k`, for some constant `k`. If a bead produced by the machine will be selected at random, the probability of selecting a bead that has a defect is given by the number of beads with a defect, `(29/100)k`, divided by the number of beads produced by the machine, `k`. Therefore, the probability of selecting a bead that has a defect is `((29/100)k)/k`, or `29/100`.",
+                    "Rationale": "It's given that `29` out of every `100` beads that the machine produces have a defect. It follows that if the machine produces `k` beads, then the number of beads that have a defect is `(29/100)k`, for some constant `k`. If a bead produced by the machine will be selected at random, the probability of selecting a bead that has a defect is given by the number of beads with a defect, `(29/100)k`, divided by the number of beads produced by the machine, `k`. Therefore, the probability of selecting a bead that has a defect is `((29/100)k)/k,or29/100`.",
                     "Percent": 0
                 }
             },
@@ -263,7 +263,7 @@
                 "Choice": "`$15,400`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `f(x)` is the total cost, in `text(dollars)`, to lease a car from this dealership with a monthly payment of `x` `text(dollars)`. Therefore, the total cost, in `text(dollars)`, to lease the car when the monthly payment is `$400` is represented by the value of `f(x)` when `x=400`. Substituting `400` for `x` in the equation `f(x)=36x+1,000` yields `f(400)=36(400)+1,000`, or `f(400)=15,400`. Thus, when the monthly payment is `$400`, the total cost to lease a car is `$15,400`.",
+                    "Rationale": "It's given that `f(x)` is the total cost, in `text(dollars)`, to lease a car from this dealership with a monthly payment of `x` `text(dollars)`. Therefore, the total cost, in `text(dollars)`, to lease the car when the monthly payment is `$400` is represented by the value of `f(x)` when `x=400`. Substituting `400` for `x` in the equation `f(x)=36x+1,000` yields `f(400)=36(400)+1,000,orf(400)=15,400`. Thus, when the monthly payment is `$400`, the total cost to lease a car is `$15,400`.",
                     "Percent": 0
                 }
             },
@@ -302,7 +302,7 @@
                 "Choice": "equal:180",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The perimeter of a polygon is equal to the sum of the lengths of the sides of the polygon. It's given that each side of the square has a length of `45`. Since a square is a polygon with `4` sides, the perimeter of this square is `45+45+45+45`, or `180`.",
+                    "Rationale": "The perimeter of a polygon is equal to the sum of the lengths of the sides of the polygon. It's given that each side of the square has a length of `45`. Since a square is a polygon with `4` sides, the perimeter of this square is `45+45+45+45,or180`.",
                     "Percent": 0
                 }
             }
@@ -334,7 +334,7 @@
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying both sides of the given equation by `x+6` results in `55=x(x+6)`. Applying the distributive property of multiplication to the right-hand side of this equation results in `55=x^2+6x`. Subtracting `55` from both sides of this equation results in `0=x^2+6x-55`. The right-hand side of this equation can be rewritten by factoring. The two values that multiply to `-55` and add to `6` are `11` and `-5`. It follows that the equation `0=x^2+6x-55` can be rewritten as `0=(x+11)(x-5)`. Setting each factor equal to `0` yields two equations: `x+11=0` and `x-5=0`. Subtracting `11` from both sides of the equation `x+11=0` results in `x=-11`. Adding `5` to both sides of the equation `x-5=0` results in `x=5`. Therefore, the positive solution to the given equation is `5`.",
+                    "Rationale": "Multiplying both sides of the given equation by `x+6` results in `55=x(x+6)`. Applying the distributive property of multiplication to the right-hand side of this equation results in `55=x^2+6x`. Subtracting `55` from both sides of this equation results in `0=x^2+6x-55`. The right-hand side of this equation can be rewritten by factoring. The two values that multiply to `-55` and add to `6` are `11and-5`. It follows that the equation `0=x^2+6x-55` can be rewritten as `0=(x+11)(x-5)`. Setting each factor equal to `0` yields two equations: `x+11=0andx-5=0`. Subtracting `11` from both sides of the equation `x+11=0` results in `x=-11`. Adding `5` to both sides of the equation `x-5=0` results in `x=5`. Therefore, the positive solution to the given equation is `5`.",
                     "Percent": 0
                 }
             }
@@ -413,8 +413,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:Data set `X`: `5`, `9`, `9`, `13`\n\nData set `Y`: `5`, `9`, `9`, `13`, `27`",
-            "The lists give the values in data sets `X` and `Y`. Which statement correctly compares the mean of data set `X` and the mean of data set `Y`?"
+            ":ibox:Data set `X`: `5,9,9,13`\n\nData set `Y`: `5,9,9,13,27`",
+            "The lists give the values in data sets `XandY`. Which statement correctly compares the mean of data set `X` and the mean of data set `Y`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -429,7 +429,7 @@
                 "Choice": "The mean of data set `X` is less than the mean of data set `Y`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The mean of a data set is the sum of the values in the data set divided by the number of values in the data set. It follows that the mean of data set `X` is `(5+9+9+13)/4`, or `9`, and the mean of data set `Y` is `(5+9+9+13+27)/5`, or `12.6`. Since `9` is less than `12.6`, the mean of data set `X` is less than the mean of data set `Y`.\n\nAlternate approach: Data set `Y` consists of the `4` values in data set `X` and one additional value, `27`. Since the additional value, `27`, is larger than any value in data set `X`, the mean of data set `X` is less than the mean of data set `Y`.",
+                    "Rationale": "The mean of a data set is the sum of the values in the data set divided by the number of values in the data set. It follows that the mean of data set `X` is `(5+9+9+13)/4,or9`, and the mean of data set `Y` is `(5+9+9+13+27)/5,or12.6`. Since `9` is less than `12.6`, the mean of data set `X` is less than the mean of data set `Y`.\n\nAlternate approach: Data set `Y` consists of the `4` values in data set `X` and one additional value, `27`. Since the additional value, `27`, is larger than any value in data set `X`, the mean of data set `X` is less than the mean of data set `Y`.",
                     "Percent": 0
                 }
             },
@@ -460,7 +460,7 @@
             "Problem-Solving & Data Analysis"
         ],
         "SubTopics": [
-            "Solve problems involving derived units, including those that arise from products (e.g., `text(kilowatt-hours)`) and quotients (e.g., text`(population per square kilometer)`)."
+            "Solve problems involving derived units, including those that arise from products (e.g., `text(kilowatt-hours)`) and quotients (e.g., `text(population per square kilometer)`)."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -539,7 +539,7 @@
                 "Choice": "`48`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplying both sides of the given equation by `4` yields `(4)(4x+2)=(4)(12)`, or `16x+8=48`. Therefore, the value of `16x+8` is `48`.",
+                    "Rationale": "Multiplying both sides of the given equation by `4` yields `(4)(4x+2)=(4)(12),or16x+8=48`. Therefore, the value of `16x+8` is `48`.",
                     "Percent": 0
                 }
             },
@@ -579,7 +579,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An object is kicked from a platform. The equation `h=-4.9t^2+7t+9` represents this situation, where `h` is the height of the object above the ground, in `text(meters)`, `t` `text(seconds)` after it is kicked. Which number represents the height, in `text(meters)`, from which the object was kicked?"
+            "An object is kicked from a platform. The equation `h=-4.9t^2+7t+9` represents this situation, where `h` is the height of the object above the ground, in `text(meters),t` `text(seconds)` after it is kicked. Which number represents the height, in `text(meters)`, from which the object was kicked?"
         ],
         "AnswerChoices": {
             "A": {
@@ -610,7 +610,7 @@
                 "Choice": "`9`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation `h=-4.9t^2+7t+9` represents this situation, where `h` is the height, in `text(meters)`, of the object `t` `text(seconds)` after it is kicked. It follows that the height, in `text(meters)`, from which the object was kicked is the value of `h` when `t=0`. Substituting `0` for `t` in the equation `h=-4.9t^2+7t+9` yields `h=-4.9(0)^2+7(0)+9`, or `h=9`. Therefore, the object was kicked from a height of `9` `text(meters)`.",
+                    "Rationale": "It's given that the equation `h=-4.9t^2+7t+9` represents this situation, where `h` is the height, in `text(meters)`, of the object `t` `text(seconds)` after it is kicked. It follows that the height, in `text(meters)`, from which the object was kicked is the value of `h` when `t=0`. Substituting `0` for `t` in the equation `h=-4.9t^2+7t+9` yields `h=-4.9(0)^2+7(0)+9,orh=9`. Therefore, the object was kicked from a height of `9` `text(meters)`.",
                     "Percent": 0
                 }
             }
@@ -642,7 +642,7 @@
                 "Choice": "equal:25/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation can be rewritten in the form 'f(x)=a(x-h)^2', where `a`, `h`, and `k` are constants. When `agt0`, `h` is the value of `x` for which `f(x)` reaches its minimum. The given equation can be rewritten as `f(x)=4(x^2-(50/4)x)+126`, which is equivalent to `f(x)=4(x^2-(50/4)x+(50/8)^2-(50/8)^2)+126`. This equation can be rewritten as `f(x)=4((x-50/8)^2-(50/8)^2 +126`, or `f(x)=4(x-50/8)^2-4(50/8)^2+126`, which is equivalent to `f(x)=4(x-25/4)^2=-121/4`. Therefore, `h=25/4`, so the value of `x` for which `f(x)` reaches its minimum is `25/4`.",
+                    "Rationale": "The given equation can be rewritten in the form 'f(x)=a(x-h)^2', where `a,h,andk` are constants. When `agt0,h` is the value of `x` for which `f(x)` reaches its minimum. The given equation can be rewritten as `f(x)=4(x^2-(50/4)x)+126`, which is equivalent to `f(x)=4(x^2-(50/4)x+(50/8)^2-(50/8)^2)+126`. This equation can be rewritten as `f(x)=4((x-50/8)^2-(50/8)^2 +126,orf(x)=4(x-50/8)^2-4(50/8)^2+126`, which is equivalent to `f(x)=4(x-25/4)^2=-121/4`. Therefore, `h=25/4`, so the value of `x` for which `f(x)` reaches its minimum is `25/4`.",
                     "Percent": 0
                 }
             }
@@ -673,7 +673,7 @@
                 "Choice": "equal:182",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `s` represent the number of small candles the owner can purchase, and let `l` represent the number of large candles the owner can purchase. It's given that the owner pays `$4.90` per candle to purchase small candles and `$11.60` per candle to purchase large candles. Therefore, the owner pays `4.90s` `text(dollars)` for `s` small candles and `11.60l` `text(dollars)` for `l` large candles, which means the owner pays a total of `4.90s+11.60l` `text(dollars)` to purchase candles. It's given that the owner budgets `$2,200` to purchase candles. Therefore, `4.90s+11.60lge2,200`. It's also given that the owner must purchase a minimum of `200` candles. Therefore, `s+lge200`. The inequalities `4.90s+11.60lle2,200` and `s+lge200` can be combined into one compound inequality by rewriting the second inequality so that its left-hand side is equivalent to the left-hand side of the first inequality. Subtracting `l` from both sides of the inequality `s+lge200` yields `sge200`. Multiplying both sides of this inequality by `4.90` yields `4.90ge4.90(200-l)`, or `4.90sge980-4.90l`. Adding `11.60l` to both sides of this inequality yields `4.90s+11.60lge980-4.90l+11.60l`, or `4.90s+11.60lge980+6.70l`. This inequality can be combined with the inequality `4.90s+11.60lle2,200`, which yields the compound inequality `980+6.70le4.90s+11.60lle2,200`. It follows that `980+6.70lle2,200`. Subtracting `980` from both sides of this inequality yields `6.70lle2,200`. Dividing both sides of this inequality by `6.70` yields approximately `lle182.09`. Since the number of large candles the owner purchases must be a whole number, the maximum number of large candles the owner can purchase is the largest whole number less than `182.09`, which is `182`.",
+                    "Rationale": "Let `s` represent the number of small candles the owner can purchase, and let `l` represent the number of large candles the owner can purchase. It's given that the owner pays `$4.90` per candle to purchase small candles and `$11.60` per candle to purchase large candles. Therefore, the owner pays `4.90s` `text(dollars)` for `s` small candles and `11.60l` `text(dollars)` for `l` large candles, which means the owner pays a total of `4.90s+11.60l` `text(dollars)` to purchase candles. It's given that the owner budgets `$2,200` to purchase candles. Therefore, `4.90s+11.60lge2,200`. It's also given that the owner must purchase a minimum of `200` candles. Therefore, `s+lge200`. The inequalities `4.90s+11.60lle2,200ands+lge200` can be combined into one compound inequality by rewriting the second inequality so that its left-hand side is equivalent to the left-hand side of the first inequality. Subtracting `l` from both sides of the inequality `s+lge200` yields `sge200`. Multiplying both sides of this inequality by `4.90` yields `4.90ge4.90(200-l),or4.90sge980-4.90l`. Adding `11.60l` to both sides of this inequality yields `4.90s+11.60lge980-4.90l+11.60l,or4.90s+11.60lge980+6.70l`. This inequality can be combined with the inequality `4.90s+11.60lle2,200`, which yields the compound inequality `980+6.70le4.90s+11.60lle2,200`. It follows that `980+6.70lle2,200`. Subtracting `980` from both sides of this inequality yields `6.70lle2,200`. Dividing both sides of this inequality by `6.70` yields approximately `lle182.09`. Since the number of large candles the owner purchases must be a whole number, the maximum number of large candles the owner can purchase is the largest whole number less than `182.09`, which is `182`.",
                     "Percent": 0
                 }
             }
@@ -697,7 +697,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the linear function `f`, `f(0)=8` and `f(1)=12`. Which equation defines `f`?"
+            "In the linear function `f,f(0)=8andf(1)=12`. Which equation defines `f`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -728,7 +728,7 @@
                 "Choice": "`f(x)=4x+8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `f` is a linear function, it can be defined by an equation of the form `f(x)=ax+b`, where `a` and `b` are constants. It's given that `f(0)=8`. Substituting `0` for `x` and `8` for `f(x)` in the equation `f(x)=ax+b` yields `8=a(0)+b`, or `8=b`. Substituting `8` for `b` in the equation `f(x)=ax+b` yields `f(x)=ax+8`. It's given that `f(1)=12`. Substituting `1` for `x` and `12` for `f(x)` in the equation `f(x)=ax+8` yields `12=a(1)+8`, or `12=a+8`. Subtracting `8` from both sides of this equation yields `a=4`. Substituting `4` for `a` in the equation `f(x)=ax+8` yields `f(x)=4x+8`. Therefore, an equation that defines `f` is `f(x)=4x+8`.",
+                    "Rationale": "Since `f` is a linear function, it can be defined by an equation of the form `f(x)=ax+b`, where `aandb` are constants. It's given that `f(0)=8`. Substituting `0` for `xand8` for `f(x)` in the equation `f(x)=ax+b` yields `8=a(0)+b,or8=b`. Substituting `8` for `b` in the equation `f(x)=ax+b` yields `f(x)=ax+8`. It's given that `f(1)=12`. Substituting `1` for `xand12` for `f(x)` in the equation `f(x)=ax+8` yields `12=a(1)+8,or12=a+8`. Subtracting `8` from both sides of this equation yields `a=4`. Substituting `4` for `a` in the equation `f(x)=ax+8` yields `f(x)=4x+8`. Therefore, an equation that defines `f` is `f(x)=4x+8`.",
                     "Percent": 0
                 }
             }
@@ -808,7 +808,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT2M1/media/17a.jpg",
-            "The circle shown has center `O`, circumference `144pi`, and diameters `bar(PR)` and `bar(QS)`. The length of arc `overarc(PS)` is twice the length of arc `overarc(PQ)`. What is the length of arc `overarc(QR)`?"
+            "The circle shown has center `O`, circumference `144pi`, and diameters `bar(PR)andbar(QS)`. The length of arc `overarc(PS)` is twice the length of arc `overarc(PQ)`. What is the length of arc `overarc(QR)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -823,7 +823,7 @@
                 "Choice": "`48pi`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `bar(PR)` and `bar(QS)` are diameters of the circle shown, `bar(OS)`, `bar(OR)`, `bar(OP)`, and `bar(OQ)` are radii of the circle and are therefore congruent. Since `/_SOP` and `/_ROQ` are vertical angles, they are congruent. Therefore, arc `overarc(PS)` and arc `overarc(QR)` are formed by congruent radii and have the same angle measure, so they are congruent arcs. Similarly, `/_SOR` and `/_POQ` are vertical angles, so they are congruent. Therefore, arc `overarc(SR)` and arc `overarc(PQ)` are formed by congruent radii and have the same angle measure, so they are congruent arcs. Let `x` represent the length of arc `overarc(SR)`. Since arc `overarc(SR)` and arc `overarc(PQ)` are congruent arcs, the length of arc `overarc(PQ)` can also be represented by `x`. It's given that the length of arc `overarc(PS)` is twice the length of arc `overarc(PQ)`. Therefore, the length of arc `overarc(PS)` can be represented by the expression `2x`. Since arc PS and arc `overarc(QR)` are congruent arcs, the length of arc `overarc(QR)` can also be represented by `2x`. This gives the expression `x+x+2x+2x`. Since it's given that the circumference is `144pi`, the expression `x+x+2x+2x` is equal to `144pi`. Thus `x+x+2x+2x=144pi`, or `6x=144pi`. Dividing both sides of this equation by `6` yields `x=24pi`. Therefore, the length of arc `overarc(QR)` is `2(24pi)`, or `48pi`.",
+                    "Rationale": "Since `bar(PR)andbar(QS)` are diameters of the circle shown, `bar(OS),bar(OR),bar(OP),andbar(OQ)` are radii of the circle and are therefore congruent. Since `/_SOPand/_ROQ` are vertical angles, they are congruent. Therefore, arc `overarc(PS)` and arc `overarc(QR)` are formed by congruent radii and have the same angle measure, so they are congruent arcs. Similarly, `/_SORand/_POQ` are vertical angles, so they are congruent. Therefore, arc `overarc(SR)` and arc `overarc(PQ)` are formed by congruent radii and have the same angle measure, so they are congruent arcs. Let `x` represent the length of arc `overarc(SR)`. Since arc `overarc(SR)` and arc `overarc(PQ)` are congruent arcs, the length of arc `overarc(PQ)` can also be represented by `x`. It's given that the length of arc `overarc(PS)` is twice the length of arc `overarc(PQ)`. Therefore, the length of arc `overarc(PS)` can be represented by the expression `2x`. Since arc PS and arc `overarc(QR)` are congruent arcs, the length of arc `overarc(QR)` can also be represented by `2x`. This gives the expression `x+x+2x+2x`. Since it's given that the circumference is `144pi`, the expression `x+x+2x+2x` is equal to `144pi`. Thus `x+x+2x+2x=144pi,or6x=144pi`. Dividing both sides of this equation by `6` yields `x=24pi`. Therefore, the length of arc `overarc(QR)` is `2(24pi),or48pi`.",
                     "Percent": 0
                 }
             },
@@ -886,7 +886,7 @@
                 "Choice": "`12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `x` represent the number of children in a whale-watching tour group. Let `y` represent the number of adults in this group. Because it's given that `21` people are in a group and the group consists of adults and children, it must be true that `x+y=21`. Since the company's revenue is `60` `text(dollars)` per child, the total revenue from `x` `text(children)` in this group was `60x` `text(dollars)`. Since the company's revenue is `80` `text(dollars)` per adult, the total revenue from `y` `text(adults)` in this group was `80y` `text(dollars)`. Because it's given that the total revenue for this group was `1,440` `text(dollars)`, it must be true that `60x+80y=1,440`. The equations `x+y=21` and `60x+80y=1,440` form a linear system of equations that can be solved to find the value of `x`, which represents the number of children in the group, using the elimination method. Multiplying both sides of the equation `x+y=21` by `80` yields `80x+80y=1,680`. Subtracting `60x+80y=1,440` from `80x+80y=1,680` yields `(80x + 80y)-(60x+80y)=1,680-1,440`, which is equivalent to `80x-60x+80y-80y=240`, or `20x=240`. Dividing both sides of this equation by `20` yields `x=12`. Therefore, `12` people in the group were children.",
+                    "Rationale": "Let `x` represent the number of children in a whale-watching tour group. Let `y` represent the number of adults in this group. Because it's given that `21` people are in a group and the group consists of adults and children, it must be true that `x+y=21`. Since the company's revenue is `60` `text(dollars)` per child, the total revenue from `x` `text(children)` in this group was `60x` `text(dollars)`. Since the company's revenue is `80` `text(dollars)` per adult, the total revenue from `y` `text(adults)` in this group was `80y` `text(dollars)`. Because it's given that the total revenue for this group was `1,440` `text(dollars)`, it must be true that `60x+80y=1,440`. The equations `x+y=21and60x+80y=1,440` form a linear system of equations that can be solved to find the value of `x`, which represents the number of children in the group, using the elimination method. Multiplying both sides of the equation `x+y=21` by `80` yields `80x+80y=1,680`. Subtracting `60x+80y=1,440` from `80x+80y=1,680` yields `(80x + 80y)-(60x+80y)=1,680-1,440`, which is equivalent to `80x-60x+80y-80y=240,or20x=240`. Dividing both sides of this equation by `20` yields `x=12`. Therefore, `12` people in the group were children.",
                     "Percent": 0
                 }
             },
@@ -918,14 +918,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function `h` is defined by `h(x)=4x+28`. The graph of `y=h(x)` in the `xytext(-plane)` has an `xtext(-intercept)` at `(a,0)` and a `ytext(-intercept)` at `(0, b)`, where `a` and `b` are constants. What is the value of `a+b`?"
+            "The function `h` is defined by `h(x)=4x+28`. The graph of `y=h(x)` in the `xytext(-plane)` has an `xtext(-intercept)` at `(a,0)` and a `ytext(-intercept)` at `(0, b)`, where `aandb` are constants. What is the value of `a+b`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`21`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `xtext(-intercept)` of a graph in the `xytext(-plane)` is the point on the graph where `y=0`. It's given that function `h` is defined by `h(x)=4x+28`. Therefore, the equation representing the graph of `y=h(x)` is `y=4x+28`. Substituting `0` for `y` in the equation `y=4x+28` yields `0=4x+28`. Subtracting `28` from both sides of this equation yields `-28=4x`. Dividing both sides of this equation by `4` yields `-7=x`. Therefore, the `xtext(-intercept)` of the graph of `y=h(x)` in the `xytext(-plane)` is `(-7,0)`. It's given that the `xtext(-intercept)` of the graph of `y=h(x)` is `(a,0)`. Therefore, `a=-7`. The `ytext(-intercept)` of a graph in the `xytext(-plane)` is the point on the graph where `x=0`. Substituting `0` for `x` in the equation `y=4x+28` yields `y=4(0)+28`, or `y=28`. Therefore, the `ytext(-intercept)` of the graph of `y=h(x)` in the `xytext(-plane)` is `(0,28)`. It's given that the `ytext(-intercept)` of the graph of `y=h(x)` is `(0,b)`. Therefore, `b=28`. If `a=-7` and `b=28`, then the value of `a+b` is `-7+28`, or `21`.",
+                    "Rationale": "The `xtext(-intercept)` of a graph in the `xytext(-plane)` is the point on the graph where `y=0`. It's given that function `h` is defined by `h(x)=4x+28`. Therefore, the equation representing the graph of `y=h(x)` is `y=4x+28`. Substituting `0` for `y` in the equation `y=4x+28` yields `0=4x+28`. Subtracting `28` from both sides of this equation yields `-28=4x`. Dividing both sides of this equation by `4` yields `-7=x`. Therefore, the `xtext(-intercept)` of the graph of `y=h(x)` in the `xytext(-plane)` is `(-7,0)`. It's given that the `xtext(-intercept)` of the graph of `y=h(x)` is `(a,0)`. Therefore, `a=-7`. The `ytext(-intercept)` of a graph in the `xytext(-plane)` is the point on the graph where `x=0`. Substituting `0` for `x` in the equation `y=4x+28` yields `y=4(0)+28,ory=28`. Therefore, the `ytext(-intercept)` of the graph of `y=h(x)` in the `xytext(-plane)` is `(0,28)`. It's given that the `ytext(-intercept)` of the graph of `y=h(x)` is `(0,b)`. Therefore, `b=28`. If `a=-7andb=28`, then the value of `a+b` is `-7+28,or21`.",
                     "Percent": 0
                 }
             },
@@ -980,7 +980,7 @@
                 "Choice": "equal:8",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since each term of the given expression, `2x^3+42x^2+208x`, has a factor of `2x`, the expression can be rewritten as `2x(x^2)+2x(21x)+2x(104)`, or `(x^2+21x+104)`. Since the values `8` and `13` have a sum of `21` and a product of `104`, the expression `x^2+21x+104` can be factored as `(x+8)(x+13)`. Therefore, the given expression can be factored as `2x(x+8)(x+13)`. It follows that the factors of the given expression are `2`, `x`, `x+8`, and `x+13`. Of these factors, only `x+8` and `x+13` are of the form `x+b`, where `b` is a positive constant. Therefore, the possible values of `b` are `8` and `13`. Thus, the smallest possible value of `b` is `8`.",
+                    "Rationale": "Since each term of the given expression, `2x^3+42x^2+208x`, has a factor of `2x`, the expression can be rewritten as `2x(x^2)+2x(21x)+2x(104),or(x^2+21x+104)`. Since the values `8and13` have a sum of `21` and a product of `104`, the expression `x^2+21x+104` can be factored as `(x+8)(x+13)`. Therefore, the given expression can be factored as `2x(x+8)(x+13)`. It follows that the factors of the given expression are `2,x,x+8,andx+13`. Of these factors, only `x+8andx+13` are of the form `x+b`, where `b` is a positive constant. Therefore, the possible values of `b` are `8and13`. Thus, the smallest possible value of `b` is `8`.",
                     "Percent": 0
                 }
             }
@@ -1012,7 +1012,7 @@
                 "Choice": "equal:29/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the first equation in the given system, the value of `y` is `-1.5`. Substituting `-1.5` for `y` in the second equation in the given system yields `-1.5=x^2+8x+a`. Adding `1.5` to both sides of this equation yields `0=x^2+8x+a+1.5`. If the given system has exactly one distinct real solution, it follows that `0=x^2+8x+a+1.5` has exactly one distinct real solution. A quadratic equation in the form `0=px^2+qx+r`, where `p`, `q`, and `r` are constants, has exactly one distinct real solution if and only if the discriminant, `q^2-4pr`, is equal to `0`. The equation `0=x^2+8x+a+1.5` is in this form, where `p=1`, `q=8`, and `r=a+1.5`. Therefore, the discriminant of the equation `0=x^2+8x+a+1.5` is `(8)^2-4(1)(a+1.5)`, or `58-4a`. Setting the discriminant equal to `0` to solve for `a` yields `58-4a=0`. Adding `4a` to both sides of this equation yields `58=4a`. Dividing both sides of this equation by `4` yields `58/4=a`, or `29/2=a`. Therefore, if the given system of equations has exactly one distinct real solution, the value of `a` is `29/2`.",
+                    "Rationale": "According to the first equation in the given system, the value of `y` is `-1.5`. Substituting `-1.5` for `y` in the second equation in the given system yields `-1.5=x^2+8x+a`. Adding `1.5` to both sides of this equation yields `0=x^2+8x+a+1.5`. If the given system has exactly one distinct real solution, it follows that `0=x^2+8x+a+1.5` has exactly one distinct real solution. A quadratic equation in the form `0=px^2+qx+r`, where `p,q,andr` are constants, has exactly one distinct real solution if and only if the discriminant, `q^2-4pr`, is equal to `0`. The equation `0=x^2+8x+a+1.5` is in this form, where `p=1,q=8,andr=a+1.5`. Therefore, the discriminant of the equation `0=x^2+8x+a+1.5` is `(8)^2-4(1)(a+1.5),or58-4a`. Setting the discriminant equal to `0` to solve for `a` yields `58-4a=0`. Adding `4a` to both sides of this equation yields `58=4a`. Dividing both sides of this equation by `4` yields `58/4=a,or29/2=a`. Therefore, if the given system of equations has exactly one distinct real solution, the value of `a` is `29/2`.",
                     "Percent": 0
                 }
             }
@@ -1052,7 +1052,7 @@
                 "Choice": "problems/SAT2M1/media/22b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `f(x)=(x+6)(x+5)(x-4)` and `y=f(x)-3`. Substituting `(x+6)(x+5)(x-4)` for `f(x)` in the equation `y=f(x)-3` yields `y=(x+6)(x+5)(x-4)-3`. Substituting `-6` for `x` in this equation yields `y=(-6+6)(-6+5)(-6-4)-3`, or `y=-3`. Substituting `-5` for `x` in the equation `y=(x+6)(x+5)(x-4)-3` yields `y=(-5+6)(-5+5)(-5-4)-3`, or `y=-3`. Substituting `4` for `x` in the equation `y = (x+6)(x+5)(x-4)-3` yields `y=(4+6)(4+5)(4-4)-3`, or `y=-3`. Therefore, when `x=-6` then `y=-3`, when `x=-5` then `y=-3`, and when `x=4` then `y=-3`. Thus, the table of values in this choice represents `y=f(x)-3`.",
+                    "Rationale": "It's given that `f(x)=(x+6)(x+5)(x-4)andy=f(x)-3`. Substituting `(x+6)(x+5)(x-4)` for `f(x)` in the equation `y=f(x)-3` yields `y=(x+6)(x+5)(x-4)-3`. Substituting `-6` for `x` in this equation yields `y=(-6+6)(-6+5)(-6-4)-3,ory=-3`. Substituting `-5` for `x` in the equation `y=(x+6)(x+5)(x-4)-3` yields `y=(-5+6)(-5+5)(-5-4)-3,ory=-3`. Substituting `4` for `x` in the equation `y = (x+6)(x+5)(x-4)-3` yields `y=(4+6)(4+5)(4-4)-3,ory=-3`. Therefore, when `x=-6` then `y=-3`, when `x=-5` then `y=-3`, and when `x=4` then `y=-3`. Thus, the table of values in this choice represents `y=f(x)-3`.",
                     "Percent": 0
                 }
             },
@@ -1115,7 +1115,7 @@
                 "Choice": "`q(x)=14(0.55)^x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the value of `q(x)` decreases by a fixed percentage, `45%`, for every increase in the value of `x` by `1`, the function `q` is a decreasing exponential function. A decreasing exponential function can be written in the form `q(x)=a(1-p/100)^x`, where `a` is the value of `q(0)` and the value of `q(x)` decreases by `p%` for every increase in the value of `x` by `1`. If `q(0)=14`, then `a=14`. Since the value of `q(x)` decreases by `45%` for every increase in the value of `x` by `1`, `p=45`. Substituting `14` for `a` and `45` for `p` in the equation `q(x)=a(1-p/100)^x` yields `q(x)=14(1-45/100)^x`, which is equivalent to `q(x)=14(1-0.45)^x`, or `q(x)=14(0.55)^x`.",
+                    "Rationale": "Since the value of `q(x)` decreases by a fixed percentage, `45%`, for every increase in the value of `x` by `1`, the function `q` is a decreasing exponential function. A decreasing exponential function can be written in the form `q(x)=a(1-p/100)^x`, where `a` is the value of `q(0)` and the value of `q(x)` decreases by `p%` for every increase in the value of `x` by `1`. If `q(0)=14`, then `a=14`. Since the value of `q(x)` decreases by `45%` for every increase in the value of `x` by `1,p=45`. Substituting `14` for `aand45` for `p` in the equation `q(x)=a(1-p/100)^x` yields `q(x)=14(1-45/100)^x`, which is equivalent to `q(x)=14(1-0.45)^x,orq(x)=14(0.55)^x`.",
                     "Percent": 0
                 }
             },
@@ -1155,7 +1155,7 @@
                 "Choice": "`f(x)=(-1/4)x-12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An equation for the graph shown can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the graph and its `ytext(-intercept)` is `(0,b)`. Since the `ytext(-intercept)` of the graph shown is `(0,2)`, the value of `b` is `2`. Since the graph also passes through the point `(4,1)`, the slope can be calculated as `(1-2)/(4-0)`, or `-1/4`. Therefore, the value of `m` is `-1/4`. Substituting `-1/4` for `m` and `2` for `b` in the equation `y=mx+b` yields `y=(-1/4)x+2`. It's given that an equation for the graph shown is `y=f(x)+14`. Substituting `f(x)+14` for `y` in the equation `y=(-1/4)x+2` yields `f(x)+14=(-1/4)x+2`. Subtracting `14` from both sides of this equation yields `f(x)=(-1/4)x-12`.",
+                    "Rationale": "An equation for the graph shown can be written in slope-intercept form `y=mx+b`, where `m` is the slope of the graph and its `ytext(-intercept)` is `(0,b)`. Since the `ytext(-intercept)` of the graph shown is `(0,2)`, the value of `b` is `2`. Since the graph also passes through the point `(4,1)`, the slope can be calculated as `(1-2)/(4-0),or-1/4`. Therefore, the value of `m` is `-1/4`. Substituting `-1/4` for `mand2` for `b` in the equation `y=mx+b` yields `y=(-1/4)x+2`. It's given that an equation for the graph shown is `y=f(x)+14`. Substituting `f(x)+14` for `y` in the equation `y=(-1/4)x+2` yields `f(x)+14=(-1/4)x+2`. Subtracting `14` from both sides of this equation yields `f(x)=(-1/4)x-12`.",
                     "Percent": 0
                 }
             },
@@ -1204,7 +1204,7 @@
         "Explain": false,
         "Content": [
             ":ibox:`RS=20`\n\n`ST=48`\n\n`TR=52`",
-            "The side lengths of right triangle `RST` are given. Triangle `RST` is similar to triangle `UVW`, where `S` corresponds to `V` and `T` corresponds to `W`. What is the value of `tan(W)`?"
+            "The side lengths of right triangle `RST` are given. Triangle `RST` is similar to triangle `UVW`, where `S` corresponds to `VandT` corresponds to `W`. What is the value of `tan(W)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1219,7 +1219,7 @@
                 "Choice": "`5/12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that right triangle `RST` is similar to triangle `UVW`, where `S` corresponds to `V` and `T` corresponds to `W`. It's given that the side lengths of the right triangle `RST` are `RS=20`, `ST=48`, and `TR=52`. Corresponding angles in similar triangles are equal. It follows that the measure of angle `T` is equal to the measure of angle `W`. The hypotenuse of a right triangle is the longest side. It follows that the hypotenuse of triangle `RST` is side `TR`. The hypotenuse of a right triangle is the side opposite the right angle. Therefore, angle `S` is a right angle. The adjacent side of an acute angle in a right triangle is the side closest to the angle that is not the hypotenuse. It follows that the adjacent side of angle `T` is side `ST`. The opposite side of an acute angle in a right triangle is the side across from the acute angle. It follows that the opposite side of angle `T` is side `RS`. The tangent of an acute angle in a right triangle is the ratio of the length of the opposite side to the length of the adjacent side. Therefore, `tan(T)=(RS)/(ST)`. Substituting `20` for `RS` and `48` for `ST` in this equation yields `tan(T)=20/48`, or `tan(T)=5/12`. The tangents of two acute angles with equal measures are equal. Since the measure of angle `T` is equal to the measure of angle `W`, it follows that `tan(T)=tan(W)`. Substituting `5/12` for `tan(T)` in this equation yields `5/12=tan(W)`. Therefore, the value of `tan(W)` is `5/12`.",
+                    "Rationale": "It's given that right triangle `RST` is similar to triangle `UVW`, where `S` corresponds to `VandT` corresponds to `W`. It's given that the side lengths of the right triangle `RST` are `RS=20,ST=48,andTR=52`. Corresponding angles in similar triangles are equal. It follows that the measure of angle `T` is equal to the measure of angle `W`. The hypotenuse of a right triangle is the longest side. It follows that the hypotenuse of triangle `RST` is side `TR`. The hypotenuse of a right triangle is the side opposite the right angle. Therefore, angle `S` is a right angle. The adjacent side of an acute angle in a right triangle is the side closest to the angle that is not the hypotenuse. It follows that the adjacent side of angle `T` is side `ST`. The opposite side of an acute angle in a right triangle is the side across from the acute angle. It follows that the opposite side of angle `T` is side `RS`. The tangent of an acute angle in a right triangle is the ratio of the length of the opposite side to the length of the adjacent side. Therefore, `tan(T)=(RS)/(ST)`. Substituting `20` for `RSand48` for `ST` in this equation yields `tan(T)=20/48,ortan(T)=5/12`. The tangents of two acute angles with equal measures are equal. Since the measure of angle `T` is equal to the measure of angle `W`, it follows that `tan(T)=tan(W)`. Substituting `5/12` for `tan(T)` in this equation yields `5/12=tan(W)`. Therefore, the value of `tan(W)` is `5/12`.",
                     "Percent": 0
                 }
             },
@@ -1266,7 +1266,7 @@
                 "Choice": "`P=w/110`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `w` represents the total wall area, in `text(square feet)`. Since the walls of the room will be painted twice, the amount of paint, in `text(gallons)`, needs to cover `2w` `text(square feet)`. It's also given that one gallon of paint will cover `220` `text(square feet)`. Dividing the total area, in `text(square feet)`, of the surface to be painted by the number of square feet covered by one gallon of paint gives the number of gallons of paint that will be needed. Dividing `2w` by `220` yields `(2w)/220`, or `w/110`. Therefore, the equation that represents the total amount of paint `P`, in `text(gallons)`, needed to paint the walls of the room twice is `P=w/110`.",
+                    "Rationale": "It's given that `w` represents the total wall area, in `text(square feet)`. Since the walls of the room will be painted twice, the amount of paint, in `text(gallons)`, needs to cover `2w` `text(square feet)`. It's also given that one gallon of paint will cover `220` `text(square feet)`. Dividing the total area, in `text(square feet)`, of the surface to be painted by the number of square feet covered by one gallon of paint gives the number of gallons of paint that will be needed. Dividing `2w` by `220` yields `(2w)/220,orw/110`. Therefore, the equation that represents the total amount of paint `P`, in `text(gallons)`, needed to paint the walls of the room twice is `P=w/110`.",
                     "Percent": 0
                 }
             },
@@ -1321,7 +1321,7 @@
                 "Choice": "equal:9.87",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the number `a` is `110%` greater than the number `b`. It follows that `a=(1+110/100)b`, or `a=-2.1b`. It's also given that the number `b` is `90%` less than `47`. It follows that `b=(1-90/100)(47)` or `b=0.1(47)`, which yields `b=4.7`. Substituting `4.7` for `b` in the equation `a=2.1b` yields `a=2.1(4.7)`, which is equivalent to `a=9.87`. Therefore, the value of `a` is `9.87`.",
+                    "Rationale": "It's given that the number `a` is `110%` greater than the number `b`. It follows that `a=(1+110/100)b,ora=-2.1b`. It's also given that the number `b` is `90%` less than `47`. It follows that `b=(1-90/100)(47)orb=0.1(47)`, which yields `b=4.7`. Substituting `4.7` for `b` in the equation `a=2.1b` yields `a=2.1(4.7)`, which is equivalent to `a=9.87`. Therefore, the value of `a` is `9.87`.",
                     "Percent": 0
                 }
             }

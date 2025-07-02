@@ -16,7 +16,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A helicopter, initially hovering `40` `text(feet)` above the ground, begins to gain altitude at a rate of `21` `text(feet per second)`. Which of the following functions represents the helicopter's altitude above the ground `y`, in `text(feet)`, `t` `text(seconds)` after the helicopter begins to gain altitude?"
+            "A helicopter, initially hovering `40` `text(feet)` above the ground, begins to gain altitude at a rate of `21` `text(feet per second)`. Which of the following functions represents the helicopter's altitude above the ground `y`, in `text(feet),t` `text(seconds)` after the helicopter begins to gain altitude?"
         ],
         "AnswerChoices": {
             "A": {
@@ -31,7 +31,7 @@
                 "Choice": "`y=40+21t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the helicopter's initial height is `40` `text(feet)` above the ground and that when the helicopter's altitude begins to increase, it increases at a rate of `21` `text(feet per second)`. Therefore, the altitude gain `t` `text(seconds)` after the helicopter begins rising is represented by the expression `21t`. Adding this expression to the helicopter's initial height gives the helicopter's altitude above the ground `y`, in `text(feet)`, `t` `text(seconds)` after the helicopter begins to gain altitude: `y=40+21t`.",
+                    "Rationale": "It's given that the helicopter's initial height is `40` `text(feet)` above the ground and that when the helicopter's altitude begins to increase, it increases at a rate of `21` `text(feet per second)`. Therefore, the altitude gain `t` `text(seconds)` after the helicopter begins rising is represented by the expression `21t`. Adding this expression to the helicopter's initial height gives the helicopter's altitude above the ground `y`, in `text(feet),t` `text(seconds)` after the helicopter begins to gain altitude: `y=40+21t`.",
                     "Percent": 0
                 }
             },
@@ -204,7 +204,7 @@
                 "Choice": "`15`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Subtracting `20` from both sides of the given equation yields `-x=-5`. Dividing both sides of the equation `-x=-5` by `-1` yields `x=5`. Lastly, substituting `5` for `x` in `3x` yields the value of `3x`, or `3(5)=15`.",
+                    "Rationale": "Subtracting `20` from both sides of the given equation yields `-x=-5`. Dividing both sides of the equation `-x=-5` by `-1` yields `x=5`. Lastly, substituting `5` for `x` in `3x` yields the value of `3x,or3(5)=15`.",
                     "Percent": 0
                 }
             },
@@ -244,7 +244,7 @@
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from miscalculating the value of `(-1+3)/2` as `-4/2`, or `-2`.",
+                    "Rationale": "This choice may result from miscalculating the value of `(-1+3)/2` as `-4/2,or-2`.",
                     "Percent": 0
                 }
             },
@@ -260,7 +260,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of `f(-1)` can be found by substituting `-1` for `x` in the given function `f(x)=(x+3)/2`, which yields `f(-1)=(-1+3)/2`. Rewriting the numerator by adding `-1` and `3` yields `2/2`, which equals `1`. Therefore, `f(-1)=1`.",
+                    "Rationale": "The value of `f(-1)` can be found by substituting `-1` for `x` in the given function `f(x)=(x+3)/2`, which yields `f(-1)=(-1+3)/2`. Rewriting the numerator by adding `-1and3` yields `2/2`, which equals `1`. Therefore, `f(-1)=1`.",
                     "Percent": 0
                 }
             },
@@ -474,7 +474,7 @@
                 "Choice": "`4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of `h(5-3)`, or `h(2)`, not of `h(5)-h(3)`.",
+                    "Rationale": "This is the value of `h(5-3),orh(2)`, not of `h(5)-h(3)`.",
                     "Percent": 0
                 }
             },
@@ -482,7 +482,7 @@
                 "Choice": "`24`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The value of the expression `h(5)-h(3)` can be found by substituting `5` and `3` for `x` in the given function. Substituting `5` for `x` in the function yields `h(5)=2^5`, which can be rewritten as `h(5)=32`. Substituting `3` for `x` in the function yields `h(3)=2^3`, which can be rewritten as `h(3)=8`. Substituting these values into the expression `h(5)-h(3)` produces `32-8=24`.",
+                    "Rationale": "The value of the expression `h(5)-h(3)` can be found by substituting `5and3` for `x` in the given function. Substituting `5` for `x` in the function yields `h(5)=2^5`, which can be rewritten as `h(5)=32`. Substituting `3` for `x` in the function yields `h(3)=2^3`, which can be rewritten as `h(3)=8`. Substituting these values into the expression `h(5)-h(3)` produces `32-8=24`.",
                     "Percent": 0
                 }
             },
@@ -534,7 +534,7 @@
                 }
             },
             "C": {
-                "Choice": "The researcher is between `19%` and `27%` sure that most students see a movie at least `text(once per month)`.",
+                "Choice": "The researcher is between `19%and27%` sure that most students see a movie at least `text(once per month)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from interpreting the sample statistic as the researcher's level of confidence in the survey results and applying the margin of error to the level of confidence.",
@@ -542,10 +542,10 @@
                 }
             },
             "D": {
-                "Choice": "It is plausible that the percentage of students who see a movie at least `text(once per month)` is between `19%` and `27%`.",
+                "Choice": "It is plausible that the percentage of students who see a movie at least `text(once per month)` is between `19%and27%`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The margin of error is applied to the sample statistic to create an interval in which the population statistic most likely falls. An estimate of `23%` with a margin of error of `4%` creates an interval of `23%+-4%`, or between `19%` and `27%`. Thus, it's plausible that the percentage of students in the population who see a movie at least `text(once per month)` is between `19%` and `27%`.",
+                    "Rationale": "The margin of error is applied to the sample statistic to create an interval in which the population statistic most likely falls. An estimate of `23%` with a margin of error of `4%` creates an interval of `23%+-4%`, or between `19%and27%`. Thus, it's plausible that the percentage of students in the population who see a movie at least `text(once per month)` is between `19%and27%`.",
                     "Percent": 0
                 }
             }
@@ -648,7 +648,7 @@
                 "Choice": "`$30.00`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `x` represent the original price of the book. Then, `40%` off of `x` is `(1-0.40)x`, or `0.60x`. Since the sale price is `$18.00`, then `0.60x=18`. Dividing both sides of this equation by `0.60` yields `x=30`. Therefore, the original price of the book was `$30`.",
+                    "Rationale": "Let `x` represent the original price of the book. Then, `40%` off of `x` is `(1-0.40)x,or0.60x`. Since the sale price is `$18.00`, then `0.60x=18`. Dividing both sides of this equation by `0.60` yields `x=30`. Therefore, the original price of the book was `$30`.",
                     "Percent": 0
                 }
             },
@@ -698,7 +698,7 @@
                 "Choice": "III only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Colony C showed an increase in size between weeks `0` and `2`.",
+                    "Rationale": "Colony C showed an increase in size between weeks `0and2`.",
                     "Percent": 0
                 }
             },
@@ -706,7 +706,7 @@
                 "Choice": "I and II only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the bar graph, the number of insects in colony A at `text(week)` `0` was approximately `80`, and this number decreased over each respective `text(two-week)` period to approximately `50`, `32`, `25`, and `18`. Similarly, the graph shows that the number of insects in colony B at `text(week)` `0` was approximately `64`, and this number also decreased over each respective `text(two-week)` period to approximately `60`, `40`, `38`, and `10`. Finally, the graph shows that the number of insects in colony C at `text(week)` `0` was approximately `58`; however, the number of insects increased in `text(week)` `2`, to approximately `140`. Therefore, only colony A and colony B showed a decrease in size every `text(two weeks)` after the initial treatment.",
+                    "Rationale": "According to the bar graph, the number of insects in colony A at `text(week)` `0` was approximately `80`, and this number decreased over each respective `text(two-week)` period to approximately `50,32,25,and18`. Similarly, the graph shows that the number of insects in colony B at `text(week)` `0` was approximately `64`, and this number also decreased over each respective `text(two-week)` period to approximately `60,40,38,and10`. Finally, the graph shows that the number of insects in colony C at `text(week)` `0` was approximately `58`; however, the number of insects increased in `text(week)` `2`, to approximately `140`. Therefore, only colony A and colony B showed a decrease in size every `text(two weeks)` after the initial treatment.",
                     "Percent": 0
                 }
             },
@@ -714,7 +714,7 @@
                 "Choice": "I, II, and III",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Colony C showed an increase in size between weeks `0` and `2`.",
+                    "Rationale": "Colony C showed an increase in size between weeks `0and2`.",
                     "Percent": 0
                 }
             }
@@ -755,7 +755,7 @@
                 "Choice": "`1` to `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from setting up ratios using weeks other than `text(week)` `8` and `text(week)` `0` or from calculation errors.",
+                    "Rationale": "This choice may result from setting up ratios using weeks other than `text(week)` `8andtext(week)` `0` or from calculation errors.",
                     "Percent": 0
                 }
             },
@@ -763,7 +763,7 @@
                 "Choice": "`3` to `5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from setting up ratios using weeks other than `text(week)` `8` and `text(week)` `0` or from calculation errors.",
+                    "Rationale": "This choice may result from setting up ratios using weeks other than `text(week)` `8andtext(week)` `0` or from calculation errors.",
                     "Percent": 0
                 }
             },
@@ -771,7 +771,7 @@
                 "Choice": "`1` to `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from setting up ratios using weeks other than `text(week)` `8` and `text(week)` `0` or from calculation errors.",
+                    "Rationale": "This choice may result from setting up ratios using weeks other than `text(week)` `8andtext(week)` `0` or from calculation errors.",
                     "Percent": 0
                 }
             }
@@ -810,7 +810,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the volume `V` of a right circular cone is `V=1/3pir^2h`, where `r` is the radius of the base and `h` is the height of the cone. It's given that the cone's volume is `24pi` `text(cubic inches)` and its height is `2` `text(inches)`. Substituting `24pi` for `V` and `2` for `h` yields `24pi=1/3pir^2(2)`. Rewriting the right-hand side of this equation yields `24pi=((2pi)/3)r^2`, which is equivalent to `36=r^2`. Taking the square root of both sides of this equation gives `r=+-6`. Since the radius is a measure of length, it can't be negative. Therefore, the radius of the base of the cone is `6` `text(inches)`.",
+                    "Rationale": "The formula for the volume `V` of a right circular cone is `V=1/3pir^2h`, where `r` is the radius of the base and `h` is the height of the cone. It's given that the cone's volume is `24pi` `text(cubic inches)` and its height is `2` `text(inches)`. Substituting `24pi` for `Vand2` for `h` yields `24pi=1/3pir^2(2)`. Rewriting the right-hand side of this equation yields `24pi=((2pi)/3)r^2`, which is equivalent to `36=r^2`. Taking the square root of both sides of this equation gives `r=+-6`. Since the radius is a measure of length, it can't be negative. Therefore, the radius of the base of the cone is `6` `text(inches)`.",
                     "Percent": 0
                 }
             },
@@ -873,7 +873,7 @@
                 "Choice": "`160text(,)000`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the population of City X was `120text(,)000` in `2010`, and that it increased by `20%` from `2010` to `2015`. Therefore, the population of City X in `2015` was `120text(,)000(1+0.20)=144text(,)000`. It's also given that the population of City Y decreased by `10%` from `2010` to `2015`. If `y` represents the population of City Y in `2010`, then `y(1-0.10)=144text(,)000`. Solving this equation for `y` yields `y=(144text(,)000)/(1-0.10)`. Simplifying the denominator yields `(144text(,)000)/0.90`, or `160text(,)000`.",
+                    "Rationale": "It's given that the population of City X was `120text(,)000` in `2010`, and that it increased by `20%` from `2010` to `2015`. Therefore, the population of City X in `2015` was `120text(,)000(1+0.20)=144text(,)000`. It's also given that the population of City Y decreased by `10%` from `2010` to `2015`. If `y` represents the population of City Y in `2010`, then `y(1-0.10)=144text(,)000`. Solving this equation for `y` yields `y=(144text(,)000)/(1-0.10)`. Simplifying the denominator yields `(144text(,)000)/0.90,or160text(,)000`.",
                     "Percent": 0
                 }
             },
@@ -984,7 +984,7 @@
                 "Choice": "`0.45`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the tablet user did not answer “Never,” so the tablet user could have answered only “Rarely,” “Often,” or “Always.” These answers make up `24.3%+13.5%+30.9%=68.7%` of the answers the tablet users gave in the survey. The answer “Always” makes up `30.9%` of the answers tablet users gave in the survey. Thus, the probability is `(30.9%)/(68.7%)`, or `0.309/0.687=0.44978`, which rounds up to `0.45`.",
+                    "Rationale": "It's given that the tablet user did not answer “Never,” so the tablet user could have answered only “Rarely,” “Often,” or “Always.” These answers make up `24.3%+13.5%+30.9%=68.7%` of the answers the tablet users gave in the survey. The answer “Always” makes up `30.9%` of the answers tablet users gave in the survey. Thus, the probability is `(30.9%)/(68.7%),or0.309/0.687=0.44978`, which rounds up to `0.45`.",
                     "Percent": 0
                 }
             },
@@ -1048,7 +1048,7 @@
                 "Choice": "Its maximum occurs at `(3,a)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The vertex form of a quadratic equation is `y=n(x-h)^2+k`, where `(h,k)` gives the coordinates of the vertex of the parabola in the `xytext(-plane)` and the sign of the constant `n` determines whether the parabola opens upward or downward. If `n` is negative, the parabola opens downward and the vertex is the maximum. The given equation has the values `h=3`, `k=a`, and `n=-1`. Therefore, the vertex of the parabola is `(3,a)` and the parabola opens downward. Thus, the parabola's maximum occurs at `(3,a)`.",
+                    "Rationale": "The vertex form of a quadratic equation is `y=n(x-h)^2+k`, where `(h,k)` gives the coordinates of the vertex of the parabola in the `xytext(-plane)` and the sign of the constant `n` determines whether the parabola opens upward or downward. If `n` is negative, the parabola opens downward and the vertex is the maximum. The given equation has the values `h=3,k=a,andn=-1`. Therefore, the vertex of the parabola is `(3,a)` and the parabola opens downward. Thus, the parabola's maximum occurs at `(3,a)`.",
                     "Percent": 0
                 }
             }
@@ -1143,7 +1143,7 @@
                 "Choice": "`25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that Clayton uses `100` `text(milliliters)` of the `20%` by mass solution, so `y=100`. Substituting `100` for `y` in the given equation yields `0.10x+0.20(100)=0.18(x+100)`, which can be rewritten as `0.10x+20=0.18x+18`. Subtracting `0.10x` and `18` from both sides of the equation gives `2=0.08x`. Dividing both sides of this equation by `0.08` gives `x=25`. Thus, Clayton uses `25` `text(milliliters)` of the `10%` by mass saline solution.",
+                    "Rationale": "It's given that Clayton uses `100` `text(milliliters)` of the `20%` by mass solution, so `y=100`. Substituting `100` for `y` in the given equation yields `0.10x+0.20(100)=0.18(x+100)`, which can be rewritten as `0.10x+20=0.18x+18`. Subtracting `0.10xand18` from both sides of the equation gives `2=0.08x`. Dividing both sides of this equation by `0.08` gives `x=25`. Thus, Clayton uses `25` `text(milliliters)` of the `10%` by mass saline solution.",
                     "Percent": 0
                 }
             },
@@ -1239,14 +1239,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT20M2/media/23a.jpg",
-            "Some values of `x` and their corresponding values of `y` are shown in the table above, where `a` is a constant. If there is a linear relationship between `x` and `y`, which of the following equations represents the relationship?"
+            "Some values of `x` and their corresponding values of `y` are shown in the table above, where `a` is a constant. If there is a linear relationship between `xandy`, which of the following equations represents the relationship?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`x+2y=a`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope-intercept form of a linear equation in the `xytext(-plane)` is `y=mx+b`, where `m` is the slope of the graph of the equation and `b` is the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph. Any two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting the two pairs `(a,0)` and `(3a,-a)` from the table into the formula gives `m=(-a-0)/(3a-a)`, which can be rewritten as `-a/(2a_`, or `-1/2`. Substituting this value for `m` in the slope-intercept form of the equation produces `y=-x/2+b`. Substituting values from the ordered pair `(a,0)` in the table into this equation produces `0=(-1/2)(a)+b`, which simplifies to `b=a/2`. Substituting this value for `b` in the slope-intercept form of the equation produces `y=-x/2+a/2`. Rewriting this equation in standard form by adding `x/2` to both sides and then multiplying both sides by `2` gives the equation `x+2y=a`.",
+                    "Rationale": "The slope-intercept form of a linear equation in the `xytext(-plane)` is `y=mx+b`, where `m` is the slope of the graph of the equation and `b` is the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph. Any two ordered pairs `(x_1,y_1)and(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting the two pairs `(a,0)and(3a,-a)` from the table into the formula gives `m=(-a-0)/(3a-a)`, which can be rewritten as `-a/(2a_,or-1/2`. Substituting this value for `m` in the slope-intercept form of the equation produces `y=-x/2+b`. Substituting values from the ordered pair `(a,0)` in the table into this equation produces `0=(-1/2)(a)+b`, which simplifies to `b=a/2`. Substituting this value for `b` in the slope-intercept form of the equation produces `y=-x/2+a/2`. Rewriting this equation in standard form by adding `x/2` to both sides and then multiplying both sides by `2` gives the equation `x+2y=a`.",
                     "Percent": 0
                 }
             },
@@ -1310,7 +1310,7 @@
                 "Choice": "`y=0.5x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope-intercept form of a linear equation is `y=mx+b`, where `m` is the slope of the graph of the equation and `b` is the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph. Any two ordered pairs `(x_1,y_1)` and `(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting the coordinates of `(120,60)` and `(160,80)`, which lie on the line of best fit, into this formula gives `m=(80-60)/(160-120)`, which simplifies to `20/40`, or `0.5`. Substituting this value for `m` in the slope-intercept form of the equation produces `y=0.5x+b`. Substituting values from the ordered pair `(120, 60)` into this equation produces `60=0.5(120)+b`, so `b=0`. Substituting this value for `b` in the slope-intercept form of the equation produces `y=0.5x+0`, or `y=0.5x`.",
+                    "Rationale": "The slope-intercept form of a linear equation is `y=mx+b`, where `m` is the slope of the graph of the equation and `b` is the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph. Any two ordered pairs `(x_1,y_1)and(x_2,y_2)` that satisfy a linear equation can be used to compute the slope of the graph of the equation using the formula `m=(y_2-y_1)/(x_2-x_1)`. Substituting the coordinates of `(120,60)and(160,80)`, which lie on the line of best fit, into this formula gives `m=(80-60)/(160-120)`, which simplifies to `20/40,or0.5`. Substituting this value for `m` in the slope-intercept form of the equation produces `y=0.5x+b`. Substituting values from the ordered pair `(120, 60)` into this equation produces `60=0.5(120)+b`, so `b=0`. Substituting this value for `b` in the slope-intercept form of the equation produces `y=0.5x+0,ory=0.5x`.",
                     "Percent": 0
                 }
             },
@@ -1358,7 +1358,7 @@
                 "Choice": "`-0.5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The intersection point `(x,y)` of the two graphs can be found by multiplying the second equation in the system `1.6x+0.5y=-1.3` by `3`, which gives `4.8x+1.5y=-3.9`. The `ytext(-terms)` in the equation `4.8x+1.5y=-3.9` and the first equation in the system `2.4x-1.5y=0.3` have coefficients that are opposites. Adding the left- and right-hand sides of the equations `4.8x+1.5y=-3.9` and `2.4x-1.5y=0.3` produces `7.2x+0.0y=-3.6`, which is equivalent to `7.2x=-3.6`. Dividing both sides of the equation by `7.2` gives `x=-0.5`. Therefore, the `xtext(-coordinate)` of the intersection point `(x,y)` of the system is `-0.5`.",
+                    "Rationale": "The intersection point `(x,y)` of the two graphs can be found by multiplying the second equation in the system `1.6x+0.5y=-1.3` by `3`, which gives `4.8x+1.5y=-3.9`. The `ytext(-terms)` in the equation `4.8x+1.5y=-3.9` and the first equation in the system `2.4x-1.5y=0.3` have coefficients that are opposites. Adding the left- and right-hand sides of the equations `4.8x+1.5y=-3.9and2.4x-1.5y=0.3` produces `7.2x+0.0y=-3.6`, which is equivalent to `7.2x=-3.6`. Dividing both sides of the equation by `7.2` gives `x=-0.5`. Therefore, the `xtext(-coordinate)` of the intersection point `(x,y)` of the system is `-0.5`.",
                     "Percent": 0
                 }
             },
@@ -1366,7 +1366,7 @@
                 "Choice": "`-0.25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An `xtext(-value)` of `-0.25` produces `ytext(-values)` of `-0.6` and `-1.8` for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Rationale": "An `xtext(-value)` of `-0.25` produces `ytext(-values)` of `-0.6and-1.8` for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
                     "Percent": 0
                 }
             },
@@ -1374,7 +1374,7 @@
                 "Choice": "`0.8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An `xtext(-value)` of `0.8` produces `ytext(-values)` of `1.08` and `-5.16` for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Rationale": "An `xtext(-value)` of `0.8` produces `ytext(-values)` of `1.08and-5.16` for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
                     "Percent": 0
                 }
             },
@@ -1382,7 +1382,7 @@
                 "Choice": "`1.75`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An `xtext(-value)` of `1.75` produces `ytext(-values)` of `2.6` and `-8.2` for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
+                    "Rationale": "An `xtext(-value)` of `1.75` produces `ytext(-values)` of `2.6and-8.2` for each equation in the system, respectively. Since the same ordered pair doesn't satisfy both equations, neither point can be the intersection point.",
                     "Percent": 0
                 }
             }
@@ -1437,7 +1437,7 @@
                 "Choice": "`P(t)=310(1.01)^t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A model for a quantity that increases by `r%` `text(per time period)` is an exponential function of the form `P(t)=I(1+r/100)^t`, where `I` is the initial value at time `t=0` and each increase of `t` by `1` represents `1` time period. It's given that `P(t)` is the number of `text(pollen grains per square centimeter)` and `t` is the number of years after the first year the grains were deposited. There were `310` pollen grains at time `t=0`, so `I=310`. This number increased `1%` `text(per year)` after year `t=0`, so `r=1`. Substituting these values into the form of the exponential function gives `P(t)=310(1+1/100)^t`, which can be rewritten as `P(t)=310(1.01)^t`.",
+                    "Rationale": "A model for a quantity that increases by `r%` `text(per time period)` is an exponential function of the form `P(t)=I(1+r/100)^t`, where `I` is the initial value at time `t=0` and each increase of `t` by `1` represents `1` time period. It's given that `P(t)` is the number of `text(pollen grains per square centimeter)andt` is the number of years after the first year the grains were deposited. There were `310` pollen grains at time `t=0`, so `I=310`. This number increased `1%` `text(per year)` after year `t=0`, so `r=1`. Substituting these values into the form of the exponential function gives `P(t)=310(1+1/100)^t`, which can be rewritten as `P(t)=310(1.01)^t`.",
                     "Percent": 0
                 }
             }
@@ -1549,7 +1549,7 @@
                 "Choice": "problems/SAT20M2/media/28d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph of a quadratic function in the form `f(x)=a(x-b)(x-c)` intersects the `xtext(-axis)` at `(b,0)` and `(c,0)`. The graph will be a parabola that opens upward if `a` is positive and downward if `a` is negative. For the function `f`, `a=1`, `b=-3`, and `c=k`. Therefore, the graph of the function `f` opens upward and intersects the `xtext(-axis)` at `(-3,0)` and `(k,0)`. Since `k` is a positive integer, the intersection point `(k,0)` will have an `xtext(-coordinate)` that is a positive integer. The only graph that opens upward, passes through the point `(-3,0)`, and has another `xtext(-intercept)` with a positive integer as the `xtext(-coordinate)` is this choice.",
+                    "Rationale": "The graph of a quadratic function in the form `f(x)=a(x-b)(x-c)` intersects the `xtext(-axis)` at `(b,0)and(c,0)`. The graph will be a parabola that opens upward if `a` is positive and downward if `a` is negative. For the function `f,a=1,b=-3,andc=k`. Therefore, the graph of the function `f` opens upward and intersects the `xtext(-axis)` at `(-3,0)and(k,0)`. Since `k` is a positive integer, the intersection point `(k,0)` will have an `xtext(-coordinate)` that is a positive integer. The only graph that opens upward, passes through the point `(-3,0)`, and has another `xtext(-intercept)` with a positive integer as the `xtext(-coordinate)` is this choice.",
                     "Percent": 0
                 }
             }
@@ -1605,7 +1605,7 @@
                 "Choice": "The approximate increase in a man's height, in `text(inches)`, for each `text(one-inch)` increase in his femur length",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `L` is the femur length, in `text(inches)`, and `H` is the height, in `text(inches)`, of an adult male. Because `L` is multiplied by `1.88` in the equation, for every increase in `L` by `1`, the value of `H` increases by `1.88`. Therefore, the meaning of `1.88` in this context is that a man's height increases by approximately `1.88` `text(inches)` for each one- inch increase in his femur length.",
+                    "Rationale": "It's given that `L` is the femur length, in `text(inches),andH` is the height, in `text(inches)`, of an adult male. Because `L` is multiplied by `1.88` in the equation, for every increase in `L` by `1`, the value of `H` increases by `1.88`. Therefore, the meaning of `1.88` in this context is that a man's height increases by approximately `1.88` `text(inches)` for each one- inch increase in his femur length.",
                     "Percent": 0
                 }
             }
@@ -1630,14 +1630,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT20M2/media/30a.jpg",
-            "In quadrilateral `ABCD` above, `bar(AD)``||``bar(BC)` and `CD=(AB)/2`. What is the measure of angle `B`?"
+            "In quadrilateral `ABCD` above, `bar(AD)``||``bar(BC)andCD=(AB)/2`. What is the measure of angle `B`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`150°`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A segment can be drawn inside of quadrilateral `ABCD` from point `B` to point `F` (not shown) on segment `bar(AD)` such that segment `bar(BF)` is perpendicular to segment `bar(AD)`. This will create rectangle `FBCD` such that `FB=CD`. This will also create right triangle `ABF` such that `FB=(AB)/2`. An acute angle in a right triangle has measure `30°` if and only if the side opposite this angle is half the length of the hypotenuse. (Such a triangle is called a `30°`-`60°`-`90°` triangle.) Since `bar(AB)` is the hypotenuse of right triangle `ABF` and `FB=(AB)/2`, triangle `ABF` must be a `30°`-`60°`-`90°` triangle and angle `ABF` must measure `60°`. The measure of angle `ABC` equals the sum of the measures of angles `ABF` and `FBC`. Because angle `FBC` is in rectangle `FBCD`, it has a measure of `90°`. Therefore, the measure of angle `ABC`, or angle `B` shown in the original figure, is `60°+90°=150°`.",
+                    "Rationale": "A segment can be drawn inside of quadrilateral `ABCD` from point `B` to point `F` (not shown) on segment `bar(AD)` such that segment `bar(BF)` is perpendicular to segment `bar(AD)`. This will create rectangle `FBCD` such that `FB=CD`. This will also create right triangle `ABF` such that `FB=(AB)/2`. An acute angle in a right triangle has measure `30°` if and only if the side opposite this angle is half the length of the hypotenuse. (Such a triangle is called a `30°`-`60°`-`90°` triangle.) Since `bar(AB)` is the hypotenuse of right triangle `ABFandFB=(AB)/2`, triangle `ABF` must be a `30°`-`60°`-`90°` triangle and angle `ABF` must measure `60°`. The measure of angle `ABC` equals the sum of the measures of angles `ABFandFBC`. Because angle `FBC` is in rectangle `FBCD`, it has a measure of `90°`. Therefore, the measure of angle `ABC`, or angle `B` shown in the original figure, is `60°+90°=150°`.",
                     "Percent": 0
                 }
             },
@@ -1653,7 +1653,7 @@
                 "Choice": "`120°`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from adding the measures of angles `BAF` and `FBC` rather than angles `ABF` and `FBC`.",
+                    "Rationale": "This choice may result from adding the measures of angles `BAFandFBC` rather than angles `ABFandFBC`.",
                     "Percent": 0
                 }
             },
@@ -1724,7 +1724,7 @@
                 "Choice": "equal:146",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the triangle sum theorem, the sum of the measures of the three angles of a triangle is `180°`. This triangle is made up of angles with measures of `a°`, `b°`, and `c°`. Therefore, `a+b+c=180`. Substituting `34` for a yields `34+b+c=180`. Subtracting `34` from each side of the equation yields `b+c=146`.",
+                    "Rationale": "According to the triangle sum theorem, the sum of the measures of the three angles of a triangle is `180°`. This triangle is made up of angles with measures of `a°,b°,andc°`. Therefore, `a+b+c=180`. Substituting `34` for a yields `34+b+c=180`. Subtracting `34` from each side of the equation yields `b+c=146`.",
                     "Percent": 0
                 }
             }
@@ -1748,7 +1748,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:`700`, `1200`, `1600`, `2000`, `x`",
+            ":ibox:`700,1200,1600,2000,x`",
             "If the mean of the five numbers above is `1600`, what is the value of `x`?"
         ],
         "AnswerChoices": {
@@ -1780,14 +1780,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The relationship between `x` and `y` can be written as `y=mx`, where `m` is a constant. If `y=17` when `x=a`, what is the value of y when `x=2a`?"
+            "The relationship between `xandy` can be written as `y=mx`, where `m` is a constant. If `y=17` when `x=a`, what is the value of y when `x=2a`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:34",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting the values `y=17` and `x=a` into the equation `y=mx` yields `17=ma`. Solving for `a` gives `a=17/m`. This can be substituted for `a` in `x=2a`, which yields `x=2(17/m)`, or `x=34m`. Substituting `x=34/m` into the equation `y=mx` yields `y=m(34/m)`. This equation can be rewritten as `y=34`.",
+                    "Rationale": "Substituting the values `y=17andx=a` into the equation `y=mx` yields `17=ma`. Solving for `a` gives `a=17/m`. This can be substituted for `a` in `x=2a`, which yields `x=2(17/m),orx=34m`. Substituting `x=34/m` into the equation `y=mx` yields `y=m(34/m)`. This equation can be rewritten as `y=34`.",
                     "Percent": 0
                 }
             }
@@ -1812,14 +1812,14 @@
         "Explain": false,
         "Content": [
             ":ibox:`a(x+b)=4+10`",
-            "In the equation above, `a` and `b` are constants. If the equation has infinitely many solutions for `x`, what is the value of `b`?"
+            "In the equation above, `aandb` are constants. If the equation has infinitely many solutions for `x`, what is the value of `b`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:5/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applying the distributive property of multiplication on the left-hand side of `a(x+b)=4x+10` yields `ax+ab=4x+10`. If `a(x+b)=4x+10` has infinitely many solutions, then `ax+ab=4x+10` must be true for all values of `x`. It follows that `ax=4x` and `ab=10`. Since `ax=4x`, it follows that `a=4`. Substituting `4` for `a` in `ab=10` yields `4b=10`. Dividing both sides of `4b=10` by `4` yields `b=10/4` which simplifies to `5/2`.",
+                    "Rationale": "Applying the distributive property of multiplication on the left-hand side of `a(x+b)=4x+10` yields `ax+ab=4x+10`. If `a(x+b)=4x+10` has infinitely many solutions, then `ax+ab=4x+10` must be true for all values of `x`. It follows that `ax=4xandab=10`. Since `ax=4x`, it follows that `a=4`. Substituting `4` for `a` in `ab=10` yields `4b=10`. Dividing both sides of `4b=10` by `4` yields `b=10/4` which simplifies to `5/2`.",
                     "Percent": 0
                 }
             }
@@ -1850,7 +1850,7 @@
                 "Choice": "equal:25/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If a line intersects a parabola at a point, the coordinates of the intersection point must satisfy the equation of the line and the equation of the parabola. Since the equation of the line is `y=c`, where `c` is a constant, the `ytext(-coordinate)` of the intersection point must be `c`. It follows then that substituting `c` for `y` in the equation for the parabola will result in another true equation: `c=-x^2+5x`. Subtracting `c` from both sides of `c=-x^2+5x` and then dividing both sides by `-1` yields `0=x^2-5x+c`. The solution to this quadratic equation would give the `xtext(-coordinate)`(s) of the point(s) of intersection. Since it's given that the line and parabola intersect at exactly one point, the equation `0=x^2-5x+c` has exactly one solution. A quadratic equation in the form `0=ax^2+bx+c` has exactly one solution when its discriminant `b^2-4ac` is equal to `0`. In the equation `0=x^2-5x+c`, `a=1`, `b=-5`, and `c=c`. Therefore, `(-5)^2-4(1)(c)=0`, or `25-4c=0`. Subtracting `25` from both sides of `25-4c=0` and then dividing both sides by `-4` yields `c=25/4`. Therefore, if the line `y=c` intersects the parabola defined by `y=-x^2+5x` at exactly one point, then `c=25/4`.",
+                    "Rationale": "If a line intersects a parabola at a point, the coordinates of the intersection point must satisfy the equation of the line and the equation of the parabola. Since the equation of the line is `y=c`, where `c` is a constant, the `ytext(-coordinate)` of the intersection point must be `c`. It follows then that substituting `c` for `y` in the equation for the parabola will result in another true equation: `c=-x^2+5x`. Subtracting `c` from both sides of `c=-x^2+5x` and then dividing both sides by `-1` yields `0=x^2-5x+c`. The solution to this quadratic equation would give the `xtext(-coordinate)`(s) of the point(s) of intersection. Since it's given that the line and parabola intersect at exactly one point, the equation `0=x^2-5x+c` has exactly one solution. A quadratic equation in the form `0=ax^2+bx+c` has exactly one solution when its discriminant `b^2-4ac` is equal to `0`. In the equation `0=x^2-5x+c,a=1,b=-5,andc=c`. Therefore, `(-5)^2-4(1)(c)=0,or25-4c=0`. Subtracting `25` from both sides of `25-4c=0` and then dividing both sides by `-4` yields `c=25/4`. Therefore, if the line `y=c` intersects the parabola defined by `y=-x^2+5x` at exactly one point, then `c=25/4`.",
                     "Percent": 0
                 }
             }
@@ -1883,7 +1883,7 @@
                 "Choice": "equal:293",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a peregrine falcon's maximum speed while diving is `200` `text(miles per hour)` and that `1` `text(mile)=5280` `text(feet)`. Therefore, a peregrine falcon's maximum speed while diving is `((200text( miles))/(1text( hour)))((5280text( feet))/(1text( mile)))=1text(,)056text(,)000` `text(feet per hour)`. There are `60` `text(minutes)` in `1` `text(hour)` and `60` `text(seconds in each minute)`, so there are `(60)(60)=3600` `text(seconds)` in `1` `text(hour)`. A peregrine falcon's maximum speed while diving is therefore `((1text(,)056text(,)000text( feet))/(1text( hour)))((1text( hour))/(3600text( seconds)))`, which is approximately `293.33` `text(feet per second)`. To the nearest whole number, this is `293` `text(feet per second)`.",
+                    "Rationale": "It's given that a peregrine falcon's maximum speed while diving is `200` `text(miles per hour)` and that `1` `text(mile)=5280` `text(feet)`. Therefore, a peregrine falcon's maximum speed while diving is `((200text( miles))/(1text( hour)))((5280text( feet))/(1text( mile)))=1text(,)056text(,)000` `text(feet per hour)`. There are `60` `text(minutes)` in `1` `text(hour)and60` `text(seconds in each minute)`, so there are `(60)(60)=3600` `text(seconds)` in `1` `text(hour)`. A peregrine falcon's maximum speed while diving is therefore `((1text(,)056text(,)000text( feet))/(1text( hour)))((1text( hour))/(3600text( seconds)))`, which is approximately `293.33` `text(feet per second)`. To the nearest whole number, this is `293` `text(feet per second)`.",
                     "Percent": 0
                 }
             }
@@ -1916,7 +1916,7 @@
                 "Choice": "equal:9",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If `x` is the number of hours it will take the falcon to dive `0.5` `text(mile)`, then the speed of `200` `text(miles per hour)` can be used to create the proportion `(200text( miles))/(1text( hour))=(0.5text( mile))/(xtext( hours))`. This proportion can be rewritten as `x` `text(hours)=(0.5text( mile))/(200text( miles/hour))`, which gives `x=0.0025`. There are `60` `text(minutes)` in `1` `text(hour)` and `60` `text(seconds in each minute)`, so there are `(60)(60)=3600` `text(seconds)` in `text(one hour)`. Therefore, `0.0025` `text(hour)` is equivalent to `(0.0025text( hour))((3600text( seconds))/(1text( hour)))=9` `text(seconds)`.",
+                    "Rationale": "If `x` is the number of hours it will take the falcon to dive `0.5` `text(mile)`, then the speed of `200` `text(miles per hour)` can be used to create the proportion `(200text( miles))/(1text( hour))=(0.5text( mile))/(xtext( hours))`. This proportion can be rewritten as `x` `text(hours)=(0.5text( mile))/(200text( miles/hour))`, which gives `x=0.0025`. There are `60` `text(minutes)` in `1` `text(hour)and60` `text(seconds in each minute)`, so there are `(60)(60)=3600` `text(seconds)` in `text(one hour)`. Therefore, `0.0025` `text(hour)` is equivalent to `(0.0025text( hour))((3600text( seconds))/(1text( hour)))=9` `text(seconds)`.",
                     "Percent": 0
                 }
             }

@@ -161,7 +161,7 @@
                             "Label": "Interpret expressions that represent a quantity in terms of its context.",
                             "Examples": [
                                 "For example, interpret P(1 + r)n as the product of the initial value P and the growth rate after the first n years.",
-                                "For example, view (1000 - 70x) (0.5 + 0.1x) as the product of the number of items sold and the cost of each item, which produces the profit, where x is the number of 10-cent price increases.",
+                                "For example, view (1000 - 70x) (0.5 + 0.1x) as the product of the number of items sold and the cost of each item, which produces the profit, where `x` is the number of 10-cent price increases.",
                                 "For example, view x(100 - 2x)(30 - 2x) as the product of the length, width, and height, which produces the volume of an open box made from a 100 by 30 rectangle with an x by x square cut out of each corner."
                             ],
                             "Subs": [
@@ -195,7 +195,7 @@
                     "Subs": [
                         {
                             "Key": "TN.M9-12.A22.A-APR.A.1",
-                            "Label": "Know and apply the Factor Theorem: For a polynomial `p(x)` and a number `a`, `p(a)=0` if and only if `(x-a)` is a factor of `p(x)`.",
+                            "Label": "Know and apply the Factor Theorem: For a polynomial `p(x)` and a number `a,p(a)=0` if and only if `(x-a)` is a factor of `p(x)`.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -397,7 +397,7 @@
                                     "Key": "TN.M9-12.A2.F-BF.A.1.a",
                                     "Label": "Combine standard function types using arithmetic operations.",
                                     "Examples": [
-                                        "For example, if 1000 - 70x represents the number of items sold in a month and 0.5 + 0.1x represents the cost of each item, multiply (1000 - 70x)(0.5 + 0.1x) to write the quadratic function representing the profit, where x is the number of 10-cent price increases."
+                                        "For example, if 1000 - 70x represents the number of items sold in a month and 0.5 + 0.1x represents the cost of each item, multiply (1000 - 70x)(0.5 + 0.1x) to write the quadratic function representing the profit, where `x` is the number of 10-cent price increases."
                                     ],
                                     "Subs": []
                                 },
@@ -426,7 +426,7 @@
                     "Subs": [
                         {
                             "Key": "TN.M9-12.A2.F-BF.B.3",
-                            "Label": "Identify the effect on the graph of replacing `f(x)` by `f(x)+k`, `k (x)`, `f(k)`, and `f(x+k)` for specific values of `k` (both positive and negative); find the value of `k` given the graphs.",
+                            "Label": "Identify the effect on the graph of replacing `f(x)` by `f(x)+k,kf(x),f(kx),andf(x+k)`  for specific values of `k` (both positive and negative); find the value of `k` given the graphs.",
                             "Examples": [],
                             "Subs": []
                         },

@@ -69,14 +69,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT18M1/media/2a.jpg",
-            "The graph above shows the distance traveled `d`, in `text(feet)`, by a product on a conveyor belt `m` `text(minutes)` after the product is placed on the belt. Which of the following equations correctly relates `d` and `m`?"
+            "The graph above shows the distance traveled `d`, in `text(feet)`, by a product on a conveyor belt `m` `text(minutes)` after the product is placed on the belt. Which of the following equations correctly relates `dandm`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`d=2m`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The line passes through the origin. Therefore, this is a relationship of the form `d=km`, where `k` is a constant representing the slope of the graph. To find the value of `k`, choose a point `(m,d)` on the graph of the line other than the origin and substitute the values of `m` and `d` into the equation. For example, if the point `(2,4)` is chosen, then `4=k(2)`, and `k=2`. Therefore, the equation of the line is `d=2m`.",
+                    "Rationale": "The line passes through the origin. Therefore, this is a relationship of the form `d=km`, where `k` is a constant representing the slope of the graph. To find the value of `k`, choose a point `(m,d)` on the graph of the line other than the origin and substitute the values of `mandd` into the equation. For example, if the point `(2,4)` is chosen, then `4=k(2),andk=2`. Therefore, the equation of the line is `d=2m`.",
                     "Percent": 0
                 }
             },
@@ -124,7 +124,7 @@
         "Content": [
             "The formula below is often used by project managers to compute `E`,the estimated time to complete a job, where `O` is the shortest completion time, `P` is the longest completion time,and `M` is the most likely completion time.",
             ":ibox:`E=(O+4M+P)/6`",
-            "Which of the following correctly gives `P` in terms of `E`, `O`,and `M`?"
+            "Which of the following correctly gives `P` in terms of `E,O`,and `M`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -201,7 +201,7 @@
                 "Choice": "`64`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `RT=TU`, it follows that `triangleRTU` is an isosceles triangle with base `bar(RU)`. Therefore, `/_TRU` and `/_TUR` are the base angles of an isosceles triangle and are congruent. Let the measures of both `/_TRU` and `/_TUR` be `t°`. According to the triangle sum theorem, the sum of the measures of the three angles of a triangle is `180°`. Therefore, `114°+2t°=180°`, so `t=33`.\nNote that `/_TUR` is the same angle as `/_SUV`. Thus, the measure of `/_SUV` is `33°`. According to the triangle exterior angle theorem, an external angle of a triangle is equal to the sum of the opposite interior angles. Therefore, `x°` is equal to the sum of the measures of `/_VSU` and `/_SUV`; that is, `31°+33°=64°`. Thus, the value of `x` is `64`.",
+                    "Rationale": "Since `RT=TU`, it follows that `triangleRTU` is an isosceles triangle with base `bar(RU)`. Therefore, `/_TRUand/_TUR` are the base angles of an isosceles triangle and are congruent. Let the measures of both `/_TRUand/_TUR` be `t°`. According to the triangle sum theorem, the sum of the measures of the three angles of a triangle is `180°`. Therefore, `114°+2t°=180°`, so `t=33`.\nNote that `/_TUR` is the same angle as `/_SUV`. Thus, the measure of `/_SUV` is `33°`. According to the triangle exterior angle theorem, an external angle of a triangle is equal to the sum of the opposite interior angles. Therefore, `x°` is equal to the sum of the measures of `/_VSUand/_SUV`; that is, `31°+33°=64°`. Thus, the value of `x` is `64`.",
                     "Percent": 0
                 }
             },
@@ -300,7 +300,7 @@
                 "Choice": "`ygt4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Subtracting the same number from each side of an inequality gives an equivalent inequality. Hence, subtracting `1` from each side of the inequality `2xgt5` gives `2x-1gt4`. So the given system of inequalities is equivalent to the system of inequalities `ygt2x-1` and `2x-1gt4`, which can be rewritten as `ygt2x-1gt4`. Using the transitive property of inequalities, it follows that `ygt4`.",
+                    "Rationale": "Subtracting the same number from each side of an inequality gives an equivalent inequality. Hence, subtracting `1` from each side of the inequality `2xgt5` gives `2x-1gt4`. So the given system of inequalities is equivalent to the system of inequalities `ygt2x-1and2x-1gt4`, which can be rewritten as `ygt2x-1gt4`. Using the transitive property of inequalities, it follows that `ygt4`.",
                     "Percent": 0
                 }
             },
@@ -346,7 +346,7 @@
                 "Choice": "`{-1}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when `-1` is substituted for `x` into the given equation, the result is `sqrt(2(-1)+6)+4=(-1)+3`, or `sqrt(4)+4=2`. This is not a true statement, so `-1` is not a solution to the given equation.",
+                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when `-1` is substituted for `x` into the given equation, the result is `sqrt(2(-1)+6)+4=(-1)+3,orsqrt(4)+4=2`. This is not a true statement, so `-1` is not a solution to the given equation.",
                     "Percent": 0
                 }
             },
@@ -354,7 +354,7 @@
                 "Choice": "`{5}`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Subtracting `4` from both sides of `sqrt(2x+6)+4=x+3` isolates the radical expression on the left side of the equation as follows: `sqrt(2x+6)=x-1`. Squaring both sides of `sqrt(2x+6)=x-1` yields `2x+6=x^2-2x+1`. This equation can be rewritten as a quadratic equation in standard form: `x^2-4x-5=0`. One way to solve this quadratic equation is to factor the expression `x^2-4x-5` by identifying two numbers with a sum of `-4` and a product of `-5`. These numbers are `-5` and `1`. So the quadratic equation can be factored as `(x-5)(x+1)=0`. It follows that `5` and `-1` are the solutions to the quadratic equation. However, the solutions must be verified by checking whether `5` and `-1` satisfy the original equation, `sqrt(2x+6)+4=x+3`. When `x=-1`, the original equation gives `sqrt(2(-1)+6)+4=(-1)+3`, or `6=2`, which is false. Therefore, `-1` does not satisfy the original equation. When `x=5`, the original equation gives `sqrt(2(5)+6)+4=5+3`, or `8=8`, which is true. Therefore, `x=5` is the only solution to the original equation, and so the solution set is `{5}`.",
+                    "Rationale": "Subtracting `4` from both sides of `sqrt(2x+6)+4=x+3` isolates the radical expression on the left side of the equation as follows: `sqrt(2x+6)=x-1`. Squaring both sides of `sqrt(2x+6)=x-1` yields `2x+6=x^2-2x+1`. This equation can be rewritten as a quadratic equation in standard form: `x^2-4x-5=0`. One way to solve this quadratic equation is to factor the expression `x^2-4x-5` by identifying two numbers with a sum of `-4` and a product of `-5`. These numbers are `-5and1`. So the quadratic equation can be factored as `(x-5)(x+1)=0`. It follows that `5and-1` are the solutions to the quadratic equation. However, the solutions must be verified by checking whether `5and-1` satisfy the original equation, `sqrt(2x+6)+4=x+3`. When `x=-1`, the original equation gives `sqrt(2(-1)+6)+4=(-1)+3,or6=2`, which is false. Therefore, `-1` does not satisfy the original equation. When `x=5`, the original equation gives `sqrt(2(5)+6)+4=5+3,or8=8`, which is true. Therefore, `x=5` is the only solution to the original equation, and so the solution set is `{5}`.",
                     "Percent": 0
                 }
             },
@@ -362,7 +362,7 @@
                 "Choice": "`{-1,5}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when `-1` is substituted for `x` into the given equation, the result is `sqrt(2(-1)+6)+4=(-1)+3`, or `sqrt(4)+4=2`. This is not a true statement, so `-1` is not a solution to the given equation.",
+                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when `-1` is substituted for `x` into the given equation, the result is `sqrt(2(-1)+6)+4=(-1)+3,orsqrt(4)+4=2`. This is not a true statement, so `-1` is not a solution to the given equation.",
                     "Percent": 0
                 }
             },
@@ -370,7 +370,7 @@
                 "Choice": "`{0,-1,5}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when `0` is substituted for `x` into the given equation, the result is `sqrt(2(0)+6)+4=(0)+3`, or `sqrt(6)+4=3`. This is not a true statement, so `0` is not a solution to the given equation.",
+                    "Rationale": "This choice contains at least one value that results in a false statement when substituted into the given equation. For instance, in this choice, when `0` is substituted for `x` into the given equation, the result is `sqrt(2(0)+6)+4=(0)+3,orsqrt(6)+4=3`. This is not a true statement, so `0` is not a solution to the given equation.",
                     "Percent": 0
                 }
             }
@@ -400,7 +400,7 @@
                 "Choice": "`1/(x+1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The expression `1/(x+1)` is not equivalent to `f(x)/g(x)` because at `x=0`, `1/(x+1)` as a value of `1` and `f(x)/g(x)` has a value of `0`.",
+                    "Rationale": "The expression `1/(x+1)` is not equivalent to `f(x)/g(x)` because at `x=0,1/(x+1)` as a value of `1andf(x)/g(x)` has a value of `0`.",
                     "Percent": 0
                 }
             },
@@ -424,7 +424,7 @@
                 "Choice": "`(x(x+3))/(x+1)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `x^3-9x=x(x+3)(x-3)` and `x^2-2x-3=(x+1)(x-3)`, the fraction `f(x)/g(x)` can be written as `(x(x+3)(x-3))/((x+1)(x-3))`. It is given that `xgt3`, so the common factor `x-3` is not equal to `0`. Therefore, the fraction can be further simplified to `(x(x+3))/(x+1)`.",
+                    "Rationale": "Since `x^3-9x=x(x+3)(x-3)andx^2-2x-3=(x+1)(x-3)`, the fraction `f(x)/g(x)` can be written as `(x(x+3)(x-3))/((x+1)(x-3))`. It is given that `xgt3`, so the common factor `x-3` is not equal to `0`. Therefore, the fraction can be further simplified to `(x(x+3))/(x+1)`.",
                     "Percent": 0
                 }
             }
@@ -454,7 +454,7 @@
                 "Choice": "`(2,-5)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The standard form for the equation of a circle is `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` are the coordinates of the center and `r` is the length of the radius. According to the given equation, the center of the circle is `(6,-5)`. Let `(x_1,y_1)` represent the coordinates of point `Q`. Since point `P (10,-5)` and point `Q (x_1,y_1)` are the endpoints of a diameter of the circle, the center `(6,-5)` lies on the diameter, halfway between `P` and `Q`. Therefore, the following relationships hold: `(x_1+10)/2=6` and `(y_1+(-5))/2=-5`. Solving the equations for `x_1` and `y_1`, respectively, yields `x_1=2` and `y_1=-5`. Therefore, the coordinates of point `Q` are `(2,-5)`.\n\nAlternate approach: Since point `P (10,-5)` on the circle and the center of the circle `(6,-5)` have the same `ytext(-coordinate)`, it follows that the radius of the circle is `10-6=4`. In addition, the opposite end of the diameter `bar(PQ)` must have the same `ytext(-coordinate)` as `P` and be `4` `text(units)` away from the center. Hence, the coordinates of point `Q` must be `(2,-5)`.",
+                    "Rationale": "The standard form for the equation of a circle is `(x-h)^2+(y-k)^2=r^2`, where `(h,k)` are the coordinates of the center and `r` is the length of the radius. According to the given equation, the center of the circle is `(6,-5)`. Let `(x_1,y_1)` represent the coordinates of point `Q`. Since point `P (10,-5)` and point `Q (x_1,y_1)` are the endpoints of a diameter of the circle, the center `(6,-5)` lies on the diameter, halfway between `PandQ`. Therefore, the following relationships hold: `(x_1+10)/2=6and(y_1+(-5))/2=-5`. Solving the equations for `x_1andy_1`, respectively, yields `x_1=2andy_1=-5`. Therefore, the coordinates of point `Q` are `(2,-5)`.\n\nAlternate approach: Since point `P (10,-5)` on the circle and the center of the circle `(6,-5)` have the same `ytext(-coordinate)`, it follows that the radius of the circle is `10-6=4`. In addition, the opposite end of the diameter `bar(PQ)` must have the same `ytext(-coordinate)` as `P` and be `4` `text(units)` away from the center. Hence, the coordinates of point `Q` must be `(2,-5)`.",
                     "Percent": 0
                 }
             },
@@ -523,7 +523,7 @@
                 "Choice": "`19`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `x` represent the number of `2`-person tents and let `y` represent the number of `4`-person tents. It is given that the total number of tents was `60` and the total number of people in the group was `202`. This situation can be expressed as a system of two equations, `x+y=60` and `2x+4y=202`. The first equation can be rewritten as `y=-x+60`. Substituting `-x+60` for y in the equation `2x+4y=202` yields `2x+4(-x+60)=202`. Distributing and combining like terms gives `-2x+240=202`. Subtracting `240` from both sides of `-2x+240=202` and then dividing both sides by `-2` gives `x=19`. Therefore, the number of `2`-person tents is `19`.\n\nAlternate approach: If each of the `60` tents held `4` people, the total number of people that could be accommodated in tents would be `240`. However, the actual number of people who slept in tents was `202`. The difference of `38` accounts for the `2`-person tents. Since each of these tents holds `2` people fewer than a `4`-person tent, `38/2=19` gives the number of `2`-person tents.",
+                    "Rationale": "Let `x` represent the number of `2`-person tents and let `y` represent the number of `4`-person tents. It is given that the total number of tents was `60` and the total number of people in the group was `202`. This situation can be expressed as a system of two equations, `x+y=60and2x+4y=202`. The first equation can be rewritten as `y=-x+60`. Substituting `-x+60` for y in the equation `2x+4y=202` yields `2x+4(-x+60)=202`. Distributing and combining like terms gives `-2x+240=202`. Subtracting `240` from both sides of `-2x+240=202` and then dividing both sides by `-2` gives `x=19`. Therefore, the number of `2`-person tents is `19`.\n\nAlternate approach: If each of the `60` tents held `4` people, the total number of people that could be accommodated in tents would be `240`. However, the actual number of people who slept in tents was `202`. The difference of `38` accounts for the `2`-person tents. Since each of these tents holds `2` people fewer than a `4`-person tent, `38/2=19` gives the number of `2`-person tents.",
                     "Percent": 0
                 }
             },
@@ -569,7 +569,7 @@
                 "Choice": "`y=x^2(x-2)(x+3)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The `xtext(-coordinates)` of the `xtext(-intercepts)` of the graph are `-3`, `0`, and `2`. This means that if `y=f(x)` is the equation of the graph, where `f` is a polynomial function, then `(x+3)`, `x`, and `(x-2)` are factors of `f`. In this choice, `x` is raised to the second power. At `x=0`, the graph touches the `xtext(-axis)` but doesn't cross it. This means that `x`, as a factor of `f`, is raised to an even power. In this choice, `f` is a fourth-degree polynomial. The `ytext(-coordinates)` of points on the graph become large and positive as `x` becomes large and negative; this is consistent with a fourth-degree polynomial. Therefore, of the choices given, only this choice could be the equation of the graph.",
+                    "Rationale": "The `xtext(-coordinates)` of the `xtext(-intercepts)` of the graph are `-3,0,and2`. This means that if `y=f(x)` is the equation of the graph, where `f` is a polynomial function, then `(x+3),x,and(x-2)` are factors of `f`. In this choice, `x` is raised to the second power. At `x=0`, the graph touches the `xtext(-axis)` but doesn't cross it. This means that `x`, as a factor of `f`, is raised to an even power. In this choice, `f` is a fourth-degree polynomial. The `ytext(-coordinates)` of points on the graph become large and positive as `x` becomes large and negative; this is consistent with a fourth-degree polynomial. Therefore, of the choices given, only this choice could be the equation of the graph.",
                     "Percent": 0
                 }
             },
@@ -683,7 +683,7 @@
                 "Choice": "`f(t)=-(21t)/130+4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It is assumed that the oil and gas production decreased at a constant rate. Therefore, the function `f` that best models the production `t` `text(years)` after the year `2000` can be written as a linear function, `f(t)=mt+b`, where `m` is the rate of change of the oil and gas production and `b` is the oil and gas production, in `text(millions)` of barrels, in the year `2000`. Since there were `4` `text(million)` barrels of oil and gas produced in `2000`, `b=4`. The rate of change, `m`, can be calculated as `(4-1.9)/(0-13)=-2.1/13`, which is equivalent to `-21/130`, the rate of change in this choice.",
+                    "Rationale": "It is assumed that the oil and gas production decreased at a constant rate. Therefore, the function `f` that best models the production `t` `text(years)` after the year `2000` can be written as a linear function, `f(t)=mt+b`, where `m` is the rate of change of the oil and gas production and `b` is the oil and gas production, in `text(millions)` of barrels, in the year `2000`. Since there were `4` `text(million)` barrels of oil and gas produced in `2000,b=4`. The rate of change, `m`, can be calculated as `(4-1.9)/(0-13)=-2.1/13`, which is equivalent to `-21/130`, the rate of change in this choice.",
                     "Percent": 0
                 }
             },
@@ -768,7 +768,7 @@
         "Explain": false,
         "Content": [
             ":ibox:`g(x)=2x-1`\n`h(x)=1-g(x)`",
-            "The functions `g` and `h` are defined above. What is the valueof `h(0)`?"
+            "The functions `gandh` are defined above. What is the value of `h(0)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -829,7 +829,7 @@
                 "Choice": "equal:3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The solution to the given equation can be found by factoring the quadratic expression. The factors can be determined by finding two numbers with a sum of `1` and a product of `-12`. The two numbers that meet these constraints are `4` and `-3`. Therefore, the given equation can be rewritten as `(x+4)(x-3)=0`. It follows that the solutions to the equation are `x=-4` or `x=3`. Since it is given that `agt0`, `a` must equal `3`.",
+                    "Rationale": "The solution to the given equation can be found by factoring the quadratic expression. The factors can be determined by finding two numbers with a sum of `1` and a product of `-12`. The two numbers that meet these constraints are `4and-3`. Therefore, the given equation can be rewritten as `(x+4)(x-3)=0`. It follows that the solutions to the equation are `x=-4orx=3`. Since it is given that `agt0,a` must equal `3`.",
                     "Percent": 0
                 }
             }
@@ -851,14 +851,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The sum of `-2x^2+x+31` and `3x^2+7x-8` can be written in the form `ax^2+bx+c`, where `a`, `b`, and `c` are constants. What is the value of `a+b+c`?"
+            "The sum of `-2x^2+x+31and3x^2+7x-8` can be written in the form `ax^2+bx+c`, where `a,b,andc` are constants. What is the value of `a+b+c`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:32",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The sum of the given expressions is `(-2x^2+x+31)+(3x^2+7x-8)`. Combining like terms yields `x^2+8x+23`. Based on the form of the given equation, `a=1`, `b=8`, and `c=23`. Therefore, `a+b+c=32`.\n\nAlternate approach: Because `a+b+c` is the value of `ax^2+bx+c` when `x=1`, it is possible to first make that substitution into each polynomial before adding them. When `x=1`, the first polynomial is equal to `-2+1+31=30` and the second polynomial is equal to `3+7-8=2`. The sum of `30` and `2` is `32`.",
+                    "Rationale": "The sum of the given expressions is `(-2x^2+x+31)+(3x^2+7x-8)`. Combining like terms yields `x^2+8x+23`. Based on the form of the given equation, `a=1,b=8,andc=23`. Therefore, `a+b+c=32`.\n\nAlternate approach: Because `a+b+c` is the value of `ax^2+bx+c` when `x=1`, it is possible to first make that substitution into each polynomial before adding them. When `x=1`, the first polynomial is equal to `-2+1+31=30` and the second polynomial is equal to `3+7-8=2`. The sum of `30and2` is `32`.",
                     "Percent": 0
                 }
             }
@@ -888,7 +888,7 @@
                 "Choice": "equal:3/2",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "One method for solving the system of equations for `y` is to add corresponding sides of the two equations. Adding the left-hand sides gives `(-x+y)+(x+3y)`, or `4y`. Adding the right-hand sides yields `-3.5+9.5=6`. It follows that `4y=6`. Finally, dividing both sides of `4y=6` by `4` yields `y=6/4` or `3/2`.",
+                    "Rationale": "One method for solving the system of equations for `y` is to add corresponding sides of the two equations. Adding the left-hand sides gives `(-x+y)+(x+3y),or4y`. Adding the right-hand sides yields `-3.5+9.5=6`. It follows that `4y=6`. Finally, dividing both sides of `4y=6` by `4` yields `y=6/4or3/2`.",
                     "Percent": 0
                 }
             }

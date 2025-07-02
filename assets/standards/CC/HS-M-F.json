@@ -4,7 +4,7 @@
     "Goals": [
         [
             "Overview of Functions",
-            "Functions describe situations where one quantity determines another. For example, the return on $10,000 invested at an annualized percentage rate of 4.25% is a function of the length of time the money is invested. Because we continually make theories about dependencies between quantities in nature and society, functions are important tools in the construction of mathematical models.\n\nIn school mathematics, functions usually have numerical inputs and outputs and are often defined by an algebraic expression. For example, the time in `text(hours)` it takes for a car to drive 100 miles is a function of the car's speed in miles per hour, v; the rule T(v) = 100/v expresses this relationship algebraically and defines a function whose name is T.\n\nThe set of inputs to a function is called its domain. We often infer the domain to be all inputs for which the expression defining a function has a value, or for which the function makes sense in a given context.\n\nA function can be described in various ways, such as by a graph (e.g., the trace of a seismograph); by a verbal rule, as in, “I'll give you a state, you give me the capital city;” by an algebraic expression like f(x) = a + bx; or by a recursive rule. The graph of a function is often a useful way of visualizing the relationship of the function models, and manipulating a mathematical expression for a function can throw light on the function's properties.\n\nFunctions presented as expressions can model many important phenomena. Two important families of functions characterized by laws of growth are linear functions, which grow at a constant rate, and exponential functions, which grow at a constant percent rate. Linear functions with a constant term of zero describe proportional relationships.\n\nA graphing utility or a computer algebra system can be used to experiment with properties of these functions and their graphs and to build computational models of functions, including recursively defined functions."
+            "Functions describe situations where one quantity determines another. For example, the return on $10,000 invested at an annualized percentage rate of `4.25%` is a function of the length of time the money is invested. Because we continually make theories about dependencies between quantities in nature and society, functions are important tools in the construction of mathematical models.\n\nIn school mathematics, functions usually have numerical inputs and outputs and are often defined by an algebraic expression. For example, the time in `text(hours)` it takes for a car to drive 100 miles is a function of the car's speed in miles per hour, v; the rule `T(v)=100/v` expresses this relationship algebraically and defines a function whose name is T.\n\nThe set of inputs to a function is called its domain. We often infer the domain to be all inputs for which the expression defining a function has a value, or for which the function makes sense in a given context.\n\nA function can be described in various ways, such as by a graph (e.g., the trace of a seismograph); by a verbal rule, as in, “I'll give you a state, you give me the capital city;” by an algebraic expression like `f(x)=a+bx`; or by a recursive rule. The graph of a function is often a useful way of visualizing the relationship of the function models, and manipulating a mathematical expression for a function can throw light on the function's properties.\n\nFunctions presented as expressions can model many important phenomena. Two important families of functions characterized by laws of growth are linear functions, which grow at a constant rate, and exponential functions, which grow at a constant percent rate. Linear functions with a constant term of zero describe proportional relationships.\n\nA graphing utility or a computer algebra system can be used to experiment with properties of these functions and their graphs and to build computational models of functions, including recursively defined functions."
         ],
         [
             "Connections to Expressions, Equations, Modeling, and Coordinates",
@@ -24,7 +24,7 @@
                     "Subs": [
                         {
                             "Key": "CC.M9-12.F-IF.A.1",
-                            "Label": "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation `y=f(x)`.",
+                            "Label": "Understand that a function from one set (called the domain) to another set (called the range) assigns to each element of the domain exactly one element of the range. If `f` is a function and `x` is an element of its domain, then `f(x)` denotes the output of `f` corresponding to the input `x`. The graph of f is the graph of the equation `y=f(x)`.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -38,7 +38,7 @@
                             "Key": "CC.M9-12.F-IF.A.3",
                             "Label": "Recognize that sequences are functions, sometimes defined recursively, whose domain is a subset of the integers.",
                             "Examples": [
-                                "For example, the Fibonacci sequence is defined recursively by f(0) = f(1) = 1, f(n+1) = f(n) + f(n-1) for n ≥ 1."
+                                "For example, the Fibonacci sequence is defined recursively by f(0)=f(1)=1,f(n+1)=f(n)+f(n-1)` for `n>=1`."
                             ],
                             "Subs": []
                         }
@@ -128,7 +128,7 @@
                                     "Key": "CC.M9-12.F-IF.C.8.b",
                                     "Label": "Use the properties of exponents to interpret expressions for exponential functions.",
                                     "Examples": [
-                                        "For example, identify percent rate of change in functions such as y = (1.02)^t, y = (0.97)^t, y = (1.01)^(12t), y = (1.2)^(t/10), and classify them as representing exponential growth or decay."
+                                        "For example, identify percent rate of change in functions such as `y=(1.02)^t,y=(0.97)^t,y=(1.01)^(12t),y=(1.2)^(t/10)`, and classify them as representing exponential growth or decay."
                                     ],
                                     "Subs": []
                                 }
@@ -200,7 +200,7 @@
                     "Subs": [
                         {
                             "Key": "CC.M9-12.F-BF.B.3",
-                            "Label": "Identify the effect on the graph of replacing `f(x)` by `f(x)+k`, `k (x)`, `f(k)`, and `f(x+k)` for specific values of `k` (both positive and negative); find the value of `k` given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them.",
+                            "Label": "Identify the effect on the graph of replacing `f(x)` by `f(x)+k,kf(x),f(kx),andf(x+k)`  for specific values of `k` (both positive and negative); find the value of `k` given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -211,9 +211,9 @@
                             "Subs": [
                                 {
                                     "Key": "CC.M9-12.F-BF.B.4.a",
-                                    "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
+                                    "Label": "Solve an equation of the form `f(x)=c` for a simple function f that has an inverse and write an expression for the inverse.",
                                     "Examples": [
-                                        "For example, f(x) = 2x^3 or f(x) = (x + 1)/(x - 1) for x ≠ 1."
+                                        "For example, `f(x)=2x^3orf(x)=(x+1)/(x-1)` for `x!=1`."
                                     ],
                                     "Subs": []
                                 },
@@ -296,7 +296,7 @@
                         },
                         {
                             "Key": "CC.M9-12.F-LE.A.4",
-                            "Label": "For exponential models, express as a logarithm the solution to abᶜᵗ = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate the logarithm using technology.",
+                            "Label": "For exponential models, express as a logarithm the solution to `ab^(ct)=d` where `a,c,andd` are numbers and the base `b` is `2,10,ore`; evaluate the logarithm using technology.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -341,7 +341,7 @@
                         },
                         {
                             "Key": "CC.M9-12.F-TF.A.3",
-                            "Label": "Use special triangles to determine geometrically the values of sine, cosine, tangent for π/3, π/4 and π/6, and use the unit circle to express the values of sine, cosine, and tangent for π - x, π + x, and 2π - x in terms of their values for x, where x is any real number.",
+                            "Label": "Use special triangles to determine geometrically the values of sine, cosine, tangent for `pi/3,pi/4,andpi/6`, and use the unit circle to express the values of sine, cosine, and tangent for `pi-x,pi+x,and2pi-x` in terms of their values for `x`, where `x` is any real number.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -385,7 +385,7 @@
                     "Subs": [
                         {
                             "Key": "CC.M9-12.F-TF.C.8",
-                            "Label": "Prove the Pythagorean identity sin^2(𝜃) + cos²(𝜃) = 1 and use it to find sin(𝜃), cos(𝜃), or tan(𝜃) given sin(𝜃), cos(𝜃), or tan(𝜃) and the quadrant of the angle.",
+                            "Label": "Prove the Pythagorean identity `sin^2(theta)+cos^2(theta)=1` and use it to find `sin(theta),cos(theta),ortan(theta)` given `sin(theta),cos(theta),ortan(theta)` and the quadrant of the angle.",
                             "Examples": [],
                             "Subs": []
                         },

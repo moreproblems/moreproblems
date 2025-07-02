@@ -12,13 +12,13 @@
         "Related": []
     },
     "Expression": {
-        "Definition": "A combination of variables, constants, and operations (+, -, ×, ÷), without an equal sign (=).",
+        "Definition": "A combination of variables, constants, and operations `(+,-,xx,div)`, without an equal sign `(=)`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Equation": {
-        "Definition": "A statement that compares two expressions with an equal sign (=).",
+        "Definition": "A statement that compares two expressions with an equal sign `(=)`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -39,7 +39,7 @@
         "Definition": "Two expression that are equal to each other for all possible variable values.",
         "Category": "",
         "Examples": [
-            "2(x+1) = 2x+2"
+            "`2(x+1)=2x+2`"
         ],
         "Related": []
     },
@@ -47,18 +47,18 @@
         "Definition": "Two equations that have the same solution set.",
         "Category": "",
         "Examples": [
-            "x+1=2 and 2x+2=4"
+            "`x+1=2and2x+2=4`"
         ],
         "Related": []
     },
     "Absolute Value": {
-        "Definition": "The distance that a number is from zero on the number line. Written as |x|.",
+        "Definition": "The distance that a number is from zero on the number line. Written as `abs(x)`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Function": {
-        "Definition": "A rule that assigns each input value exactly one output value. Think of it like a machine where the input is x and the output is f(x).",
+        "Definition": "A rule that assigns each input value exactly one output value. Think of it like a machine where the input is `x` and the output is `f(x)`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -70,7 +70,7 @@
         "Related": []
     },
     "Range (Algebra)": {
-        "Definition": "The set of all possible output values (f(x) or `ytext(-values)`).",
+        "Definition": "The set of all possible output values (`f(x)` or `ytext(-values)`).",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -92,7 +92,7 @@
         ]
     },
     "Y-Intercept": {
-        "Definition": "The point where the line crosses the `ytext(-axis)` (where x=0).",
+        "Definition": "The point where the line crosses the `ytext(-axis)` (where `x=0`).",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -104,13 +104,13 @@
         "Related": []
     },
     "Polynomial Function": {
-        "Definition": "A function that involves sums of terms with non-negative integer exponents on variables​. Examples include linear (n=1), quadratic (n=2), and cubic (n=3) functions.",
+        "Definition": "A function that involves sums of terms with non-negative integer exponents on variables. Examples include linear `(n=1)`, quadratic `(n=2)`, and cubic `(n=3)` functions.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Quadratic Function": {
-        "Definition": "A polynomial function of degree 2.",
+        "Definition": "A polynomial function of degree `2`.",
         "Category": "",
         "Examples": [],
         "Related": [
@@ -130,7 +130,7 @@
         "Related": []
     },
     "X-Intercept": {
-        "Definition": "A point where the line crosses the `xtext(-axis)` (where y=0).",
+        "Definition": "A point where the line crosses the `xtext(-axis)` (where `y=0`).",
         "Category": "",
         "Examples": [],
         "Related": [
@@ -146,7 +146,7 @@
         ]
     },
     "Cubic Function": {
-        "Definition": "A polynomial function of degree 3. It's an S-shaped curve.",
+        "Definition": "A polynomial function of degree `3`. It's an S-shaped curve.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -155,24 +155,24 @@
         "Definition": "An operation that that describes repeated multiplication of the same expression.",
         "Category": "",
         "Examples": [
-            "2³=2×2×2=8"
+            "`2^3=2xx2xx2=8`"
         ],
         "Related": []
     },
     "Exponential Function": {
-        "Definition": "A function that has the form `f(x)=ab^x`, where a is the initial value and b (the base) is positive and not 1.",
+        "Definition": "A function that has the form `f(x)=ab^x`, where `a` is the initial value and `b` (the base) is positive and not `1`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Exponential Growth": {
-        "Definition": "Describes an exponential function, where b>1.",
+        "Definition": "Describes an exponential function, where `b>1`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Exponential Decay": {
-        "Definition": "Describes an exponential function, where 0<b<1.",
+        "Definition": "Describes an exponential function, where `0<b<1`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -220,19 +220,19 @@
         "Related": []
     },
     "Inequality": {
-        "Definition": "A statement that compares two expressions that are not equal - such as less than (<) or greater than (>).",
+        "Definition": "A statement that compares two expressions that are not equal - such as less than `(<)` or greater than `(>)`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Strict Inequality": {
-        "Definition": "An inequality that includes < or >.",
+        "Definition": "An inequality that includes `<or>`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Slack Inequality": {
-        "Definition": "An inequality that includes ≤ or ≥.",
+        "Definition": "An inequality that includes `<=or>=`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -247,7 +247,7 @@
         "Definition": "An inequality created by combining two inequalities into one.",
         "Category": "",
         "Examples": [
-            "3<x<7"
+            "`3<x<7`"
         ],
         "Related": []
     },
@@ -282,37 +282,37 @@
         "Related": []
     },
     "Angle": {
-        "Definition": "Formed by two rays sharing a common endpoint. It's measured in degrees or radians.",
+        "Definition": "Formed by two rays sharing a common endpoint. It's measured in `text(degrees)ortext(radians)`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Right Angle": {
-        "Definition": "An angle that is exactly 90°.",
+        "Definition": "An angle that is exactly `90°`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Acute Angle": {
-        "Definition": "An angle that is less than 90°.",
+        "Definition": "An angle that is less than `90°`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Obtuse Angle": {
-        "Definition": "An angle that is greater than 90°.",
+        "Definition": "An angle that is greater than `90°`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Complementary Angles": {
-        "Definition": "Two angles whose sum is 90°.",
+        "Definition": "Two angles whose sum is `90°`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Supplementary Angles": {
-        "Definition": "Two angles whose sum is 180°.",
+        "Definition": "Two angles whose sum is `180°`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -366,13 +366,13 @@
         "Related": []
     },
     "Triangle": {
-        "Definition": "A polygon with three sides and three angles. The sum of angles in a triangle is always 180°.",
+        "Definition": "A polygon with three sides and three angles. The sum of angles in a triangle is always `180°`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Right Triangle": {
-        "Definition": "A triangle that has one 90° angle.",
+        "Definition": "A triangle that has one `90°` angle.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -390,7 +390,7 @@
         "Related": []
     },
     "Trigonometric Ratios": {
-        "Definition": "The ratios of the side of a right triangle. The acronym SOH-CAH-TOA describes these ratios - Sin(x)=Opposite/Hypotenuse, Cos(x)=Adjacent/Hypotenuse, and Tan(x)=Opposite/Adjacent.",
+        "Definition": "The ratios of the side of a right triangle. The acronym `text(SOH)-text(CAH)-text(TOA)` describes these ratios - `Sin(x)=text(Opposite)/text(Hypotenuse),Cos(x)=text(Adjacent)/text(Hypotenuse),andTan(x)=text(Opposite)/text(Adjacent)`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -426,13 +426,13 @@
         "Related": []
     },
     "`45`-`45`-`90` Triangle": {
-        "Definition": "A right triangle where the angle measures are 45°, 45°, and 90°. It's sides always have a ratio of 1:1:√2 for the sides opposite of the 45°, 45°, and 90° angles respectively.",
+        "Definition": "A right triangle where the angle measures are `45°,45°,and90°`. It's sides always have a ratio of `1:1:sqrt(2)` for the sides opposite of the `45°,45°,and90°` angles respectively.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "`30`-`60`-`90` Triangle": {
-        "Definition": "A right triangle where the angle measures are 30°, 60°, and 90°. It's sides always have a ratio of 1:√3:2 for the sides opposite of the 30°, 60°, and 90° angles respectively.",
+        "Definition": "A right triangle where the angle measures are `30°,60°,and90°`. It's sides always have a ratio of `1:sqrt(3):2` for the sides opposite of the `30°,60°,and90°` angles respectively.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -522,13 +522,13 @@
         "Related": []
     },
     "Degrees": {
-        "Definition": "A common unit for measuring angles - represented as °. A full circle is 360°.",
+        "Definition": "A common unit for measuring angles - represented as °. A full circle is `360°`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Radians": {
-        "Definition": "A common unit for measuring angles. A full circle is 2π radians.",
+        "Definition": "A common unit for measuring angles. A full circle is `2pi` `text(radians)`.",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -543,7 +543,7 @@
         "Definition": "A ratio that compares two distinct pieces of a total.",
         "Category": "",
         "Examples": [
-            "The ratio of apples to oranges is 3:2."
+            "The ratio of apples to oranges is `3:2`."
         ],
         "Related": []
     },
@@ -551,7 +551,7 @@
         "Definition": "A ratio that compares a part to the total.",
         "Category": "",
         "Examples": [
-            "A ratio of apples to total fruit is 3:5."
+            "A ratio of apples to total fruit is `3:5`."
         ],
         "Related": []
     },
@@ -559,7 +559,7 @@
         "Definition": "An equation stating that two ratios are equal.",
         "Category": "",
         "Examples": [
-            "a/b​=c/d"
+            "`a/b=c/d`"
         ],
         "Related": []
     },
@@ -572,15 +572,15 @@
         "Related": []
     },
     "Unit Rate": {
-        "Definition": "A rate where the second quantity is 1 unit.",
+        "Definition": "A rate where the second quantity is`1` `text(unit)`.",
         "Category": "",
         "Examples": [
-            "60 miles/1 hour or $3/pound"
+            "`(60text( miles))/(1text( hour))or($3)/text(pound)`"
         ],
         "Related": []
     },
     "Proportional Relationship": {
-        "Definition": "A relationship between two quantities if their ratio is constant. Graphically, this is a straight line through the origin (y=kx, where k is the constant of proportionality, or unit rate).",
+        "Definition": "A relationship between two quantities if their ratio is constant. Graphically, this is a straight line through the origin (`y=kx`, where `k` is the constant of proportionality, or unit rate).",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -589,7 +589,7 @@
         "Definition": "A standard quantity of measurement.",
         "Category": "",
         "Examples": [
-            "meter, gram, or second"
+            "`text(meter),text(gram),ortext(second)`"
         ],
         "Related": []
     },
@@ -597,23 +597,23 @@
         "Definition": "Changing a measurement from one unit to another.",
         "Category": "",
         "Examples": [
-            "1 foot converts to 12 inches"
+            "`1` `text(foot)` converts to `12` `text(inches)`"
         ],
         "Related": []
     },
     "Conversion Factor": {
-        "Definition": "A ratio equal to 1, used to convert units.",
+        "Definition": "A ratio equal to `1`, used to convert units.",
         "Category": "",
         "Examples": [
-            "1 foot:12 inches"
+            "`1` `text(foot):12` `text(inches)`"
         ],
         "Related": []
     },
     "Percentage": {
-        "Definition": "A way of expressing a part of a whole as a fraction of 100.",
+        "Definition": "A way of expressing a part of a whole as a fraction of `100`.",
         "Category": "",
         "Examples": [
-            "25%=25/100=0.25"
+            "`25%=25/100=0.25`"
         ],
         "Related": []
     },
@@ -824,7 +824,7 @@
         "Related": []
     },
     "Probability": {
-        "Definition": "A measure of the likelihood of an event occurring. It's a number between 0 (impossible) and 1 (certain).",
+        "Definition": "A measure of the likelihood of an event occurring. It's a number between `0` (impossible) and `1` (certain).",
         "Category": "",
         "Examples": [],
         "Related": []
@@ -876,13 +876,13 @@
         "Related": []
     },
     "Conditional Probability": {
-        "Definition": "The probability of event B occurring, given that event A has already occurred. It can be written P(B∣A).",
+        "Definition": "The probability of event B occurring, given that event A has already occurred. It can be written `P(B|A)`.",
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Triangle Sum Theorem": {
-        "Definition": "The theorem that states that the sum of the interior angles of any triangle is always 180°.",
+        "Definition": "The theorem that states that the sum of the interior angles of any triangle is always `180°`.",
         "Category": "",
         "Examples": [],
         "Related": []

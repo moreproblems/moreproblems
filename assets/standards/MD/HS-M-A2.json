@@ -68,13 +68,13 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.N-CN.A.1",
-                                    "Label": "Know there is a complex number i such that i^2 = -1, and every complex number has the form a + bi with a and b real.",
+                                    "Label": "Know there is a complex number `i` such that `i^2=-1`, and every complex number has the form `a+bi` with `aandb` real.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "MD.M9-12.A2.N-CN.A.2",
-                                    "Label": "Use the relation i^2 = -1 and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
+                                    "Label": "Use the relation `i^2=-1` and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -116,7 +116,7 @@
                                     "Key": "MD.M9-12.A2.A-SSE.A.2",
                                     "Label": "Use the structure of an expression to identify ways to rewrite it.",
                                     "Examples": [
-                                        "For example, see x⁴ - y⁴ as (x^2)^2 - (y^2)^2, thus recognizing it as a difference of squares that can be factored as (x^2- y^2)(x^2+ y^2)."
+                                        "For example, see `x^4-y^4` as `(x^2)^2-(y^2)^2`, thus recognizing it as a difference of squares that can be factored as `(x^2-y^2)(x^2+y^2)`."
                                     ],
                                     "Subs": []
                                 }
@@ -148,7 +148,7 @@
                                             "Key": "MD.M9-12.A2.A-SSE.B.3.c",
                                             "Label": "Use the properties of exponents to transform expressions for exponential functions.",
                                             "Examples": [
-                                                "For example the expression 1.15ᵗ can be rewritten as (1.15^(1/12))^(12t) ~~ 1.012^(12t) to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                                "For example the expression `1.15^t` can be rewritten as `(1.15^(1/12))^(12t)~~1.012^(12t)` to reveal the approximate equivalent monthly interest rate if the annual rate is `15%`."
                                             ],
                                             "Subs": []
                                         }
@@ -178,7 +178,7 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.A-APR.B.2",
-                                    "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x - a is p(a) so p(a) = 0 if and only if (x - a) is a factor of p(x).",
+                                    "Label": "Know and apply the Remainder Theorem: For a polynomial p(x) and a number a, the remainder on division by x - a is p(a) so p(a) = 0 if and only if (x - a) is a factor of `p(x)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -212,7 +212,7 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.A-APR.D",
-                                    "Label": "Rewrite simple rational expressions in different forms; write a(x)/b(x) in the form q(x) + r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the degree of r(x) less than the degree of b(x), using inspection, long division, or, for the more complicated examples, a computer algebra system.",
+                                    "Label": "Rewrite simple rational expressions in different forms; write `(a(x))/(b(x))` in the form `q(x)+(r(x))/(b(x))`, where `a(x),b(x),q(x),andr(x)` are polynomials with the degree of `r(x)` less than the degree of `b(x)`, using inspection, long division, or, for the more complicated examples, a computer algebra system.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -276,7 +276,7 @@
                                     "Subs": [
                                         {
                                             "Key": "MD.M9-12.A2.A-REI.B.4.b",
-                                            "Label": "Solve quadratic equations by inspection (e.g., for `x^2=49`), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as `a+-bi` for real numbers `a` and `b`.",
+                                            "Label": "Solve quadratic equations by inspection (e.g., for `x^2=49`), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as `a+-bi` for real numbers `aandb`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -312,7 +312,7 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.A-REI.D.11",
-                                    "Label": "Explain why the `xtext(-coordinates)` of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation `f(x)=g(x)`; find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
+                                    "Label": "Explain why the `xtext(-coordinates)` of the points where the graphs of the equations `y=f(x)andy=g(x)` intersect are the solutions of the equation `f(x)=g(x)`; find the solutions approximately, e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where `f(x)` and/or `g(x)` are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -492,9 +492,9 @@
                                     "Subs": [
                                         {
                                             "Key": "MD.M9-12.A2.F-BF.B.4.a",
-                                            "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
+                                            "Label": "Solve an equation of the form `f(x)=c` for a simple function f that has an inverse and write an expression for the inverse.",
                                             "Examples": [
-                                                "For example, f(x) = 2x^3 or f(x) = (x + 1)/(x - 1) for x ≠ 1."
+                                                "For example, `f(x)=2x^3orf(x)=(x+1)/(x-1)` for `x!=1`."
                                             ],
                                             "Subs": []
                                         }]
@@ -521,7 +521,7 @@
                                 },
                                 {
                                     "Key": "MD.M9-12.A2.F-LE.A.4",
-                                    "Label": "For exponential models, express as a logarithm the solution to abᶜᵗ = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate the logarithm using technology.",
+                                    "Label": "For exponential models, express as a logarithm the solution to `ab^(ct)=d` where `a,c,andd` are numbers and the base `b` is `2,10,ore`; evaluate the logarithm using technology.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -586,7 +586,7 @@
                             "Subs": [
                                 {
                                     "Key": "MD.M9-12.A2.F-TF.C.8",
-                                    "Label": "Prove the Pythagorean identity sin^2(𝜃) + cos²(𝜃) = 1 and use it to find sin(𝜃), cos(𝜃), or tan(𝜃) given sin(𝜃), cos(𝜃), or tan(𝜃) and the quadrant of the angle.",
+                                    "Label": "Prove the Pythagorean identity `sin^2(theta)+cos^2(theta)=1` and use it to find `sin(theta),cos(theta),ortan(theta)` given `sin(theta),cos(theta),ortan(theta)` and the quadrant of the angle.",
                                     "Examples": [],
                                     "Subs": []
                                 }

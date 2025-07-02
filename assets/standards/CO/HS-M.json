@@ -93,7 +93,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.N-CN.A.1",
-                                    "Label": "Define complex number i such that i^2 =- 1, and show that every complex number has the form a + bi where a and b are real numbers.",
+                                    "Label": "Define complex number i such that i^2 =- 1, and show that every complex number has the form `a+bi` where `aandb` are real numbers.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -179,7 +179,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.N-VM.A.1",
-                                    "Label": "Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., 𝘃, |𝘃|, ||𝘃||, v).",
+                                    "Label": "Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., `bbv, absbbv), norm(bbv), v`).",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -221,7 +221,7 @@
                                         },
                                         {
                                             "Key": "CO.M9-12.N-VM.B.4.c",
-                                            "Label": "Understand vector subtraction 𝘃 - 𝘄 as 𝘃 + (-𝘄), where -𝘄 is the additive inverse of 𝘄, with the same magnitude as 𝘄 and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
+                                            "Label": "Understand vector subtraction `bbv-bbw` as `bbv+(-bbw)`, where -`bbw` is the additive inverse of `bbw`, with the same magnitude as `bbw` and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -234,13 +234,13 @@
                                     "Subs": [
                                         {
                                             "Key": "CO.M9-12.N-VM.B.5.a",
-                                            "Label": "Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as c(vₓ, vy) = (cvₓ, cvy).",
+                                            "Label": "Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as `c(v_x,v_y)=(cv_x,cv_y)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "CO.M9-12.N-VM.B.5.b",
-                                            "Label": "Compute the magnitude of a scalar multiple c𝘃 using ||c𝘃|| = |c|v. Compute the direction of c𝘃 knowing that when |c|v ≠ 0, the direction of c𝘃 is either along 𝘃 (for c > 0) or against 𝘃 (for c < 0).",
+                                            "Label": "Compute the magnitude of a scalar multiple `cbbv` using `norm(cbbv)=abs(c)v`. Compute the direction of `cbbv` knowing that when `abs(c)!=0`, the direction of `cbbv` is either along `bbv` (for `c>0`) or against `bbv` (for `c<0`).",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -291,7 +291,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.N-VM.C.12",
-                                    "Label": "Work with 2 × 2 matrices as transformations of the plane and interpret the absolute value of the determinant in terms of area.",
+                                    "Label": "Work with `2xx2` matrices as transformations of the plane and interpret the absolute value of the determinant in terms of area.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -341,7 +341,7 @@
                                     "Key": "CO.M9-12.A-SSE.A.2",
                                     "Label": "Use the structure of an expression to identify ways to rewrite it.",
                                     "Examples": [
-                                        "For example, see x⁴ - y⁴ as (x^2)^2 - (y^2)^2, thus recognizing it as a difference of squares that can be factored as (x^2- y^2)(x^2+ y^2)."
+                                        "For example, see `x^4-y^4` as `(x^2)^2-(y^2)^2`, thus recognizing it as a difference of squares that can be factored as `(x^2-y^2)(x^2+y^2)`."
                                     ],
                                     "Subs": []
                                 }
@@ -373,7 +373,7 @@
                                             "Key": "CO.M9-12.A-SSE.B.3.c",
                                             "Label": "Use the properties of exponents to transform expressions for exponential functions.",
                                             "Examples": [
-                                                "For example the expression 1.15ᵗ can be rewritten as (1.15^(1/12))^(12t) ~~ 1.012^(12t) to reveal the approximate equivalent monthly interest rate if the annual rate is 15%."
+                                                "For example the expression `1.15^t` can be rewritten as `(1.15^(1/12))^(12t)~~1.012^(12t)` to reveal the approximate equivalent monthly interest rate if the annual rate is `15%`."
                                             ],
                                             "Subs": []
                                         }
@@ -423,7 +423,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.A-APR.B.2",
-                                    "Label": "Know and apply the Remainder Theorem. For a polynomial p(x) and a number a, the remainder on division by x - a is p(a), so p(a) = 0 if and only if (x - a) is a factor of p(x).",
+                                    "Label": "Know and apply the Remainder Theorem. For a polynomial `p(x)` and a number `a`, the remainder on division by `x-a` is `p(a)`, so `p(a)=0` if and only if `(x-a)` is a factor of `p(x)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -450,7 +450,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.A-APR.C.5",
-                                    "Label": "Know and apply the Binomial Theorem for the expansion of in powers of `x` and `y` for a positive integer n, where `x` and `y` are any numbers, with coefficients determined for example by Pascal's Triangle.",
+                                    "Label": "Know and apply the Binomial Theorem for the expansion of in powers of `xandy` for a positive integer n, where `xandy` are any numbers, with coefficients determined for example by Pascal's Triangle.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -463,7 +463,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.A-APR.D.6",
-                                    "Label": "Rewrite simple rational expressions in different forms; write a(x)/b(x) in the form q(x) + r(x)/b(x), where a(x), b(x), q(x), and r(x) are polynomials with the degree of r(x) less than the degree of b(x), using inspection, long division, or, for the more complicated examples, a computer algebra system.",
+                                    "Label": "Rewrite simple rational expressions in different forms; write `(a(x))/(b(x))` in the form `q(x)+(r(x))/(b(x))`, where `a(x),b(x),q(x),andr(x)` are polynomials with the degree of `r(x)` less than the degree of `b(x)`, using inspection, long division, or, for the more complicated examples, a computer algebra system.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -567,7 +567,7 @@
                                         },
                                         {
                                             "Key": "CO.M9-12.A-REI.B.4.b",
-                                            "Label": "Solve quadratic equations (e.g., for x2 = 49) by inspection, taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers a and b.",
+                                            "Label": "Solve quadratic equations (e.g., for x2 = 49) by inspection, taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as a ± bi for real numbers `aandb`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -608,7 +608,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.A-REI.C.9",
-                                    "Label": "Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension 3 × 3 or greater).",
+                                    "Label": "Find the inverse of a matrix if it exists and use it to solve systems of linear equations (using technology for matrices of dimension `3xx3` or greater).",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -627,7 +627,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.A-REI.D.11",
-                                    "Label": "Explain why the `xtext(-coordinates)` of the points where the graphs of the equations `y=f(x)` and `y=g(x)` intersect are the solutions of the equation `f(x)=g(x)`; find the solutions approximately e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where f(x) and/or g(x) are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
+                                    "Label": "Explain why the `xtext(-coordinates)` of the points where the graphs of the equations `y=f(x)andy=g(x)` intersect are the solutions of the equation `f(x)=g(x)`; find the solutions approximately e.g., using technology to graph the functions, make tables of values, or find successive approximations. Include cases where `f(x)` and/or `g(x)` are linear, polynomial, rational, absolute value, exponential, and logarithmic functions.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -653,7 +653,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.F-IF.A.1",
-                                    "Label": "Explain that a function is a correspondence from one set (called the domain) to another set (called the range) that assigns to each element of the domain exactly one element of the range. If f is a function and x is an element of its domain, then f(x) denotes the output of f corresponding to the input x. The graph of f is the graph of the equation `y=f(x)`.",
+                                    "Label": "Explain that a function is a correspondence from one set (called the domain) to another set (called the range) that assigns to each element of the domain exactly one element of the range. If `f` is a function and `x` is an element of its domain, then `f(x)` denotes the output of `f` corresponding to the input `x`. The graph of f is the graph of the equation `y=f(x)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -840,9 +840,9 @@
                                     "Subs": [
                                         {
                                             "Key": "CO.M9-12.F-BF.B.4.a",
-                                            "Label": "Solve an equation of the form f(x) = c for a simple function f that has an inverse and write an expression for the inverse.",
+                                            "Label": "Solve an equation of the form `f(x)=c` for a simple function f that has an inverse and write an expression for the inverse.",
                                             "Examples": [
-                                                "For example, f(x) = 2x^3 or f(x) = (x + 1)/(x - 1) for x ≠ 1."
+                                                "For example, `f(x)=2x^3orf(x)=(x+1)/(x-1)` for `x!=1`."
                                             ],
                                             "Subs": []
                                         },
@@ -925,7 +925,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.F-LE.A.4",
-                                    "Label": " For exponential models, express as a logarithm the solution to abᶜᵗ = d where a, c, and d are numbers and the base b is 2, 10, or e; evaluate the logarithm using technology.",
+                                    "Label": " For exponential models, express as a logarithm the solution to `ab^(ct)=d` where `a,c,andd` are numbers and the base `b` is `2,10,ore`; evaluate the logarithm using technology.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -970,7 +970,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.F-TF.A.3",
-                                    "Label": "Use special triangles to determine geometrically the values to sine, cosine, tangent for π/3, π/4, and π/6 and use the unit circle to express the values sine, cosine, and tangent for x, π + x, and 2π - x and in terms of their values for x where x is any real number.",
+                                    "Label": "Use special triangles to determine geometrically the values to sine, cosine, tangent for π/3, π/4, and π/6 and use the unit circle to express the values sine, cosine, and tangent for x, π + x, and 2π - x and in terms of their values for x where `x` is any real number.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1014,7 +1014,7 @@
                             "Subs": [
                                 {
                                     "Key": "CO.M9-12.F-TF.C.8",
-                                    "Label": "Prove the Pythagorean identity sin^2(𝜃) + cos²(𝜃) = 1 and use it to find sin(𝜃), cos(𝜃), or tan(𝜃) given sin(𝜃), cos(𝜃), or tan(𝜃) and the quadrant of the angle.",
+                                    "Label": "Prove the Pythagorean identity `sin^2(theta)+cos^2(theta)=1` and use it to find `sin(theta),cos(theta),ortan(theta)` given `sin(theta),cos(theta),ortan(theta)` and the quadrant of the angle.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1254,7 +1254,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.S-CP.B.7",
-                                    "Label": "Apply the Addition Rule, P(A or B) = P(A) + P(B) - P(A and B), and interpret the answer in terms of the model.",
+                                    "Label": "Apply the Addition Rule, `P(AorB)=P(A)+P(B)-P(AandB)`, and interpret the answer in terms of the model.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1771,7 +1771,7 @@
                                 },
                                 {
                                     "Key": "CO.M9-12.G-MG.A.2",
-                                    "Label": "Apply concepts of density based on area and volume in modeling situations (e.g., `text(persons per square mile)`, `text(BTUs per cubic foot)`).",
+                                    "Label": "Apply concepts of density based on area and volume in modeling situations (e.g., `text(persons per square mile),text(BTUs per cubic foot)`).",
                                     "Examples": [],
                                     "Subs": []
                                 },

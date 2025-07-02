@@ -1017,6 +1017,7 @@ function parseMath(str,latex) {
   str = str.replace(/&lt;/g,"<");
   frag = AMparseExpr(str.replace(/^\s+/g,""),false)[0];
   node = createMmlNode("mstyle",frag);
+	// node.setAttribute("white-space", "pre-wrap");
   if (mathcolor != "") node.setAttribute("mathcolor",mathcolor);
   if (mathfontsize != "") {
 	  node.setAttribute("fontsize", mathfontsize);

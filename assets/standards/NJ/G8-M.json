@@ -4,7 +4,7 @@
     "Goals": [
         [
             "(1) Formulating & Reasoning About Expressions & Equations",
-            "Students use linear equations and systems of linear equations to represent, analyze, and solve a variety of problems. Students recognize equations for proportions (y/x = m or y = mx) as special linear equations `(y=mx+b)`, understanding that the constant of proportionality (m) is the slope, and the graphs are lines through the origin. They understand that the slope (m) of a line is a constant rate of change, so that if the input or `xtext(-coordinate)` changes by an amount A, the output or `ytext(-coordinate)` changes by the amount m·A. Students also use a linear equation to describe the association between two quantities in bivariate data (such as arm span vs. height for students in a classroom). At this grade, fitting the model, and assessing its fit to the data are done informally. Interpreting the model in the context of the data requires students to express a relationship between the two quantities in question and to interpret components of the relationship (such as slope and `ytext(-intercept)`) in terms of the situation.\n\nStudents strategically choose and efficiently implement procedures to solve linear equations in one variable, understanding that when they use the properties of equality and the concept of logical equivalence, they maintain the solutions of the original equation. Students solve systems of two linear equations in two variables and relate the systems to pairs of lines in the plane; these intersect, are parallel, or are the same line. Students use linear equations, systems of linear equations, linear functions, and their understanding of slope of a line to analyze situations and solve problems."
+            "Students use linear equations and systems of linear equations to represent, analyze, and solve a variety of problems. Students recognize equations for proportions `(y/x=mory=mx)` as special linear equations `(y=mx+b)`, understanding that the constant of proportionality `(m)` is the slope, and the graphs are lines through the origin. They understand that the slope `(m)` of a line is a constant rate of change, so that if the input or `xtext(-coordinate)` changes by an amount A, the output or `ytext(-coordinate)` changes by the amount `m*A`. Students also use a linear equation to describe the association between two quantities in bivariate data (such as arm span vs. height for students in a classroom). At this grade, fitting the model, and assessing its fit to the data are done informally. Interpreting the model in the context of the data requires students to express a relationship between the two quantities in question and to interpret components of the relationship (such as slope and `ytext(-intercept)`) in terms of the situation.\n\nStudents strategically choose and efficiently implement procedures to solve linear equations in one variable, understanding that when they use the properties of equality and the concept of logical equivalence, they maintain the solutions of the original equation. Students solve systems of two linear equations in two variables and relate the systems to pairs of lines in the plane; these intersect, are parallel, or are the same line. Students use linear equations, systems of linear equations, linear functions, and their understanding of slope of a line to analyze situations and solve problems."
         ],
         [
             "(2) Grasping The Concept Of A Function & Using Functions To Describe Quantitative Relationships",
@@ -34,9 +34,9 @@
                         },
                         {
                             "Key": "NJ.M8.NS.A.2",
-                            "Label": "Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., π²).",
+                            "Label": "Use rational approximations of irrational numbers to compare the size of irrational numbers, locate them approximately on a number line diagram, and estimate the value of expressions (e.g., `pi^2`).",
                             "Examples": [
-                                "For example, by truncating the decimal expansion of √2, show that √2 is between 1 and 2, then between 1.4 and 1.5, and explain how to continue on to get better approximations."
+                                "For example, by truncating the decimal expansion of `sqrt(2)`, show that `sqrt(2)` is between `1and2`, then between `1.4and1.5`, and explain how to continue on to get better approximations."
                             ],
                             "Subs": []
                         }
@@ -58,27 +58,27 @@
                             "Key": "NJ.M8.EE.A.1",
                             "Label": "Know and apply the properties of integer exponents to generate equivalent numerical expressions.",
                             "Examples": [
-                                "For example, 3^2 × 3⁻⁵ = 3⁻³ = 1/3³ = 1/27."
+                                "For example, `3^2xx3^-5=3^-3=(1/3)^3=1/27`."
                             ],
                             "Subs": []
                         },
                         {
                             "Key": "NJ.M8.EE.A.2",
-                            "Label": "Use square root and cube root symbols to represent solutions to equations of the form x^2= p and x^3 = p, where p is a positive rational number. Evaluate square roots of small perfect squares and cube roots of small perfect cubes. Know that √2 is irrational.",
+                            "Label": "Use square root and cube root symbols to represent solutions to equations of the form `x^2=pandx^3=p`, where `p` is a positive rational number. Evaluate square roots of small perfect squares and cube roots of small perfect cubes. Know that `sqrt(2)` is irrational.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "NJ.M8.EE.A.3",
-                            "Label": "Use numbers expressed in the form of a single digit times an integer power of 10 to estimate very large or very small quantities, and to express how many times as much one is than the other.",
+                            "Label": "Use numbers expressed in the form of a single digit times an integer power of `10` to estimate very large or very small quantities, and to express how many times as much one is than the other.",
                             "Examples": [
-                                "For example, estimate the population of the United States as 3 × 10⁸ and the population of the world as 7 × 10⁹, and determine that the world population is more than 20 times larger."
+                                "For example, estimate the population of the United States as `3xx10^8` and the population of the world as `7xx10^9`, and determine that the world population is more than ` times larger."
                             ],
                             "Subs": []
                         },
                         {
                             "Key": "NJ.M8.EE.A.4",
-                            "Label": "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Use scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use millimeters per year for seafloor spreading). Interpret scientific notation that has been generated by technology.",
+                            "Label": "Perform operations with numbers expressed in scientific notation, including problems where both decimal and scientific notation are used. Use scientific notation and choose units of appropriate size for measurements of very large or very small quantities (e.g., use `text(millimeters per year)` for seafloor spreading). Interpret scientific notation that has been generated by technology.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -99,7 +99,7 @@
                         },
                         {
                             "Key": "NJ.M8.EE.B.6",
-                            "Label": "Use similar triangles to explain why the slope m is the same between any two distinct points on a non-vertical line in the coordinate plane; derive the equation y = mx for a line through the origin and the equation `y=mx+b` for a line intercepting the vertical axis at b.",
+                            "Label": "Use similar triangles to explain why the slope `m` is the same between any two distinct points on a non-vertical line in the coordinate plane; derive the equation `y=mx` for a line through the origin and the equation `y=mx+b` for a line intercepting the vertical axis at `b`.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -117,7 +117,7 @@
                             "Subs": [
                                 {
                                     "Key": "NJ.M8.EE.C.7.a",
-                                    "Label": "Give examples of linear equations in one variable with one solution, infinitely many solutions, or no solutions. Show which of these possibilities is the case by successively transforming the given equation into simpler forms, until an equivalent equation of the form x = a, a = a, or a = b results (where a and b are different numbers).",
+                                    "Label": "Give examples of linear equations in one variable with one solution, infinitely many solutions, or no solutions. Show which of these possibilities is the case by successively transforming the given equation into simpler forms, until an equivalent equation of the form `x=a,a=a,ora=b` results (where `aandb` are different numbers).",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -144,7 +144,7 @@
                                     "Key": "NJ.M8.EE.C.8.b",
                                     "Label": "Solve systems of two linear equations in two variables algebraically, and estimate solutions by graphing the equations. Solve simple cases by inspection.",
                                     "Examples": [
-                                        "For example, 3x + 2y = 5 and 3x + 2y = 6 have no solution because 3x + 2y cannot simultaneously be 5 and 6."
+                                        "For example, `3x+2y=5and3x+2y=6` have no solution because `3x+2y` cannot simultaneously be `5and6`."
                                     ],
                                     "Subs": []
                                 },
@@ -190,7 +190,7 @@
                             "Key": "NJ.M8.F.A.3",
                             "Label": "Interpret the equation `y=mx+b` as defining a linear function, whose graph is a straight line; give examples of functions that are not linear.",
                             "Examples": [
-                                "For example, the function A = s² giving the area of a square as a function of its side length is not linear because its graph contains the points (1,1), (2,4) and (3,9), which are not on a straight line."
+                                "For example, the function `A=s^2` giving the area of a square as a function of its side length is not linear because its graph contains the points `(1,1),(2,4)and(3,9)`, which are not on a straight line."
                             ],
                             "Subs": []
                         }
@@ -293,7 +293,7 @@
                         },
                         {
                             "Key": "NJ.M8.G.B.7",
-                            "Label": "Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real- world and mathematical problems in two and three dimensions.",
+                            "Label": "Apply the Pythagorean Theorem to determine unknown side lengths in right triangles in real-world and mathematical problems in two and three dimensions.",
                             "Examples": [],
                             "Subs": []
                         },

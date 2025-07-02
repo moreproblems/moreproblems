@@ -4,7 +4,7 @@
     "Goals": [
         [
             "Numbers and Number Systems",
-            "During the years from kindergarten to eighth grade, students must repeatedly extend their conception of number. At first, “number” means “counting number”: 1, 2, 3 ... Soon after that, 0 is used to represent “none” and the whole numbers are formed by the counting numbers together with zero. The next extension is fractions. At first, fractions are barely numbers and tied strongly to pictorial representations. Yet by the time students understand division of fractions, they have a strong concept of fractions as numbers and have connected them, via their decimal representations, with the base-ten system used to represent the whole numbers. During middle school, fractions are augmented by negative fractions to form the rational numbers. In Grade 8, students extend this system once more, augmenting the rational numbers with the irrational numbers to form the real numbers. In high school, students will be exposed to yet another extension of number, when the real numbers are augmented by the imaginary numbers to form the complex numbers.\n\nWith each extension of number, the meanings of addition, subtraction, multiplication, and division are extended. In each new number system — integers, rational numbers, real numbers, and complex numbers — the four operations stay the same in two important ways: They have the commutative, associative, and distributive properties and their new meanings are consistent with their previous meanings.\n\nExtending the properties of whole-number exponents leads to new and productive notation. For example, properties of whole-number exponents suggest that (5¹/³)³ should be 5⁽¹/³⁾³ = 5¹ = 5 and that 5¹/³ should be the cube root of 5.\n\nCalculators, spreadsheets, and computer algebra systems can provide ways for students to become better acquainted with these new number systems and their notation. They can be used to generate data for numerical experiments, to help understand the workings of matrix, vector, and complex number algebra, and to experiment with non-integer exponents."
+            "During the years from kindergarten to eighth grade, students must repeatedly extend their conception of number. At first, “number” means “counting number”: `1,2,3...` Soon after that, `0` is used to represent “none” and the whole numbers are formed by the counting numbers together with zero. The next extension is fractions. At first, fractions are barely numbers and tied strongly to pictorial representations. Yet by the time students understand division of fractions, they have a strong concept of fractions as numbers and have connected them, via their decimal representations, with the base-ten system used to represent the whole numbers. During middle school, fractions are augmented by negative fractions to form the rational numbers. In Grade 8, students extend this system once more, augmenting the rational numbers with the irrational numbers to form the real numbers. In high school, students will be exposed to yet another extension of number, when the real numbers are augmented by the imaginary numbers to form the complex numbers.\n\nWith each extension of number, the meanings of addition, subtraction, multiplication, and division are extended. In each new number system — integers, rational numbers, real numbers, and complex numbers — the four operations stay the same in two important ways: They have the commutative, associative, and distributive properties and their new meanings are consistent with their previous meanings.\n\nExtending the properties of whole-number exponents leads to new and productive notation. For example, properties of whole-number exponents suggest that `(5^(1/3))^3` should be `5^((1/3)3)=5^1=5` and that `5^(1/3)` should be the cube root of `5`.\n\nCalculators, spreadsheets, and computer algebra systems can provide ways for students to become better acquainted with these new number systems and their notation. They can be used to generate data for numerical experiments, to help understand the workings of matrix, vector, and complex number algebra, and to experiment with non-integer exponents."
         ],
         [
             "Quantities",
@@ -26,7 +26,7 @@
                             "Key": "CC.M9-12.N-RN.A.1",
                             "Label": "Explain how the definition of the meaning of rational exponents follows from extending the properties of integer exponents to those values, allowing for a notation for radicals in terms of rational exponents.",
                             "Examples": [
-                                "For example, we define 5¹/³ to be the cube root of 5 because we want (5¹/³)³ = 5⁽¹/³⁾³ to hold, so (5¹/³)³ must equal 5."
+                                "For example, we define `5^(1/3)` to be the cube root of 5 because we want `(5^(1/3))^3 = 5((1/3)3)` to hold, so `(5^(1/3))^3` must equal `5`."
                             ],
                             "Subs": []
                         },
@@ -97,13 +97,13 @@
                     "Subs": [
                         {
                             "Key": "CC.M9-12.N-CN.A.1",
-                            "Label": "Know there is a complex number i such that i^2 = -1, and every complex number has the form a + bi with a and b real.",
+                            "Label": "Know there is a complex number `i` such that `i^2=-1`, and every complex number has the form `a+bi` with `aandb` real.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "CC.M9-12.N-CN.A.2",
-                            "Label": "Use the relation i^2 = -1 and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
+                            "Label": "Use the relation `i^2=-1` and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -130,7 +130,7 @@
                             "Key": "CC.M9-12.N-CN.B.5",
                             "Label": "Represent addition, subtraction, multiplication, and conjugation of complex numbers geometrically on the complex plane; use properties of this representation for computation.",
                             "Examples": [
-                                "For example, (-1 + √3 i)³ = 8 because (-1 + √3 i) has modulus 2 and argument 120°."
+                                "For example, `(-1+sqrt(3)i)^3=8 because `(-1+sqrt(3)i) has modulus `2` and argument `120°`."
                             ],
                             "Subs": []
                         },
@@ -157,7 +157,7 @@
                             "Key": "CC.M9-12.N-CN.C.8",
                             "Label": "Extend polynomial identities to the complex numbers.",
                             "Examples": [
-                                "For example, rewrite x^2+ 4 as (x + 2i)(x - 2i)."
+                                "For example, rewrite `x^2+4` as `(x+2i)(x-2i)`."
                             ],
                             "Subs": []
                         },
@@ -183,7 +183,7 @@
                     "Subs": [
                         {
                             "Key": "CC.M9-12.N-VM.A.1",
-                            "Label": "Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., 𝘃, |𝘃|, ||𝘃||, v).",
+                            "Label": "Recognize vector quantities as having both magnitude and direction. Represent vector quantities by directed line segments, and use appropriate symbols for vectors and their magnitudes (e.g., `bbv, absbbv), norm(bbv), v`).",
                             "Examples": [],
                             "Subs": []
                         },
@@ -225,7 +225,7 @@
                                 },
                                 {
                                     "Key": "CC.M9-12.N-VM.B.4.c",
-                                    "Label": "Understand vector subtraction 𝘃 - 𝘄 as 𝘃 + (-𝘄), where -𝘄 is the additive inverse of 𝘄, with the same magnitude as 𝘄 and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
+                                    "Label": "Understand vector subtraction `bbv-bbw` as `bbv+(-bbw)`, where -`bbw` is the additive inverse of `bbw`, with the same magnitude as `bbw` and pointing in the opposite direction. Represent vector subtraction graphically by connecting the tips in the appropriate order, and perform vector subtraction component-wise.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -238,13 +238,13 @@
                             "Subs": [
                                 {
                                     "Key": "CC.M9-12.N-VM.B.5.a",
-                                    "Label": "Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as c(vₓ, vy) = (cvₓ, cvy).",
+                                    "Label": "Represent scalar multiplication graphically by scaling vectors and possibly reversing their direction; perform scalar multiplication component-wise, e.g., as `c(v_x,v_y)=(cv_x,cv_y)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "CC.M9-12.N-VM.B.5.b",
-                                    "Label": "Compute the magnitude of a scalar multiple c𝘃 using ||c𝘃|| = |c|v. Compute the direction of c𝘃 knowing that when |c|v ≠ 0, the direction of c𝘃 is either along 𝘃 (for c > 0) or against 𝘃 (for c < 0).",
+                                    "Label": "Compute the magnitude of a scalar multiple `cbbv` using `norm(cbbv)=abs(c)v`. Compute the direction of `cbbv` knowing that when `abs(c)!=0`, the direction of `cbbv` is either along `bbv` (for `c>0`) or against `bbv` (for `c<0`).",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -295,7 +295,7 @@
                         },
                         {
                             "Key": "CC.M9-12.N-VM.C.12",
-                            "Label": "Work with 2 × 2 matrices as transformations of the plane, and interpret the absolute value of the determinant in terms of area.",
+                            "Label": "Work with `2xx2` matrices as transformations of the plane, and interpret the absolute value of the determinant in terms of area.",
                             "Examples": [],
                             "Subs": []
                         }
