@@ -17,7 +17,7 @@
                             "Key": "MN.M8.1.1.1",
                             "Label": "Classify real numbers as rational or irrational. Know that when a square root of a positive integer is not an integer, then it is irrational. Know that the sum of a rational number and an irrational number is irrational, and the product of a non-zero rational number and an irrational number is irrational.",
                             "Examples": [
-                                "For example, classify the following numbers as whole numbers, integers, rational numbers, irrational numbers, recognizing that some numbers belong in more than one category: 6/3, 3/6, 3.666..., π/2, -√4, √10, -6.7."
+                                "For example, classify the following numbers as whole numbers, integers, rational numbers, irrational numbers, recognizing that some numbers belong in more than one category: 6/3, 3/6, 3.666..., π/2, -√4, `sqrt(10)`, -6.7."
                             ],
                             "Subs": []
                         },
@@ -36,7 +36,7 @@
                             "Examples": [
                                 "For example, a calculator can be used to determine that 7 is approximately 2.65.",
                                 "For example, to check that 1 5/12 is slightly bigger than √2, do the calculation (1 5/12)^2 = (17/12)^2 = 289/144 = 2 1/144.",
-                                "For example, knowing that 10 is between 3 and 4, try squaring numbers like 3.5, 3.3, 3.1 to determine that 3.1 is a reasonable rational approximation of √10."
+                                "For example, knowing that 10 is between 3 and 4, try squaring numbers like 3.5, 3.3, 3.1 to determine that 3.1 is a reasonable rational approximation of `sqrt(10)`."
                             ],
                             "Subs": []
                         },
@@ -74,7 +74,7 @@
                             "Key": "MN.M8.2.1.1",
                             "Label": "Understand that a function is a relationship between an independent variable and a dependent variable in which the value of the independent variable determines the value of the dependent variable. Use functional notation, such as `f(x)`, to represent such relationships.",
                             "Examples": [
-                                "For example, the relationship between the area of a square and the side length can be expressed as f(x) = x^2. In this case, f(5) = 25, which represents the fact that a square of side length 5 units has area 25 units squared."
+                                "For example, the relationship between the area of a square and the side length can be expressed as `f(x)=x^2`. In this case, f(5) = 25, which represents the fact that a square of side length 5 units has area 25 units squared."
                             ],
                             "Subs": []
                         },
@@ -82,7 +82,7 @@
                             "Key": "MN.M8.2.1.2",
                             "Label": "Use linear functions to represent relationships in which changing the input variable by some amount leads to a change in the output variable that is a constant times that amount.",
                             "Examples": [
-                                "For example, Uncle Jim gave Emily $50 on the day she was born and $25 on each birthday after that. The function f(x) = 50 + 25x represents the amount of money Jim has given after x years. The rate of change is $25 per year."
+                                "For example, Uncle Jim gave Emily $50 on the day she was born and $25 on each birthday after that. The function `f(x)=50+25x` represents the amount of money Jim has given after x years. The rate of change is $25 per year."
                             ],
                             "Subs": []
                         },
@@ -90,7 +90,7 @@
                             "Key": "MN.M8.2.1.3",
                             "Label": "Understand that a function is linear if it can be expressed in the form or if its graph is a straight line.",
                             "Examples": [
-                                "For example, the function f(x) = x^2is not a linear function because its graph contains the points (1,1), (-1,1) and (0,0), which are not on a straight line."
+                                "For example, the function `f(x)=x^2` is not a linear function because its graph contains the points `(1,1),(-1,1)and(0,0)`, which are not on a straight line."
                             ],
                             "Subs": []
                         },
@@ -98,7 +98,7 @@
                             "Key": "MN.M8.2.1.4",
                             "Label": "Understand that an arithmetic sequence is a linear function that can be expressed in the form, where `f(x)=mx+b`, where `x=0,1,2,3,...`",
                             "Examples": [
-                                "For example, the arithmetic sequence 3, 7, 11, 15, ..., can be expressed as f(x) = 4x + 3."
+                                "For example, the arithmetic sequence `3,7,11,15,...`, can be expressed as `f(x)=4x+3`."
                             ],
                             "Subs": []
                         },
@@ -106,7 +106,7 @@
                             "Key": "MN.M8.2.1.5",
                             "Label": "Understand that a geometric sequence is a non-linear function that can be expressed in the form `f(x)=ab^x`, where `x=0,1,2,3,...`",
                             "Examples": [
-                                "For example, the geometric sequence 6, 12, 24, 48, ..., can be expressed in the form f(x) = 6(2ˣ)."
+                                "For example, the geometric sequence `6,12,24,48,...`, can be expressed in the form `f(x)=6(2^x)`."
                             ],
                             "Subs": []
                         }
@@ -139,7 +139,7 @@
                             "Key": "MN.M8.2.2.4",
                             "Label": "Represent arithmetic sequences using equations, tables, graphs and verbal descriptions, and use them to solve problems.",
                             "Examples": [
-                                "For example, if a girl starts with $100 in savings and adds $10 at the end of each month, she will have 100 + 10x dollars after x months."
+                                "For example, if a girl starts with $100 in savings and adds $10 at the end of each month, she will have `100+10x` `text(dollars)` after `x` `text(months)`."
                             ],
                             "Subs": []
                         },
@@ -147,7 +147,7 @@
                             "Key": "MN.M8.2.2.5",
                             "Label": "Represent geometric sequences using equations, tables, graphs and verbal descriptions, and use them to solve problems.",
                             "Examples": [
-                                "For example, if a girl invests $100 at 10% annual interest, she will have 100(1.1ˣ) dollars after x years."
+                                "For example, if a girl invests $100 at 10% annual interest, she will have `100(1.1^x)` `text(dollars)` after `x` `text(years)`."
                             ],
                             "Subs": []
                         }
@@ -246,7 +246,7 @@
                             "Key": "MN.M8.2.4.9",
                             "Label": "Use the relationship between square roots and squares of a number to solve problems.",
                             "Examples": [
-                                "For example, if πx2 = 5, then |x| = √(5/π), or equivalently, x = √(5/π) or x = -√(5/π). If x is understood as the radius of a circle in this example, then the negative solution should be discarded and x = √(5/π)."
+                                "For example, if πx2 = 5, then |x| = sqrt(5/π), or equivalently, x = sqrt(5/π) or x = -sqrt(5/π). If x is understood as the radius of a circle in this example, then the negative solution should be discarded and x = sqrt(5/π)."
                             ],
                             "Subs": []
                         }

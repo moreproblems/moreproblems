@@ -529,34 +529,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The number of butterflies (y) in a population doubles every month (x).",
+                "Choice": "The number of butterflies `(y)` in a population doubles every month `(x)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Misidentifies “doubles every month” as y = 2x instead of as y = 2ˣ.",
+                    "Rationale": "Misidentifies “doubles every month” as `y=2x` instead of as `y=2^x`.",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "The time (y) it takes a car to travel 100 miles depends on the speed (x) of the car.",
+                "Choice": "The time `(y)` it takes a car to travel `100` `text(miles)` depends on the speed `(x)` of the car.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses `d=rt` to write the equation 100 = xy but does not consider that the equation needs to be solved for y to get y = 100/x.",
+                    "Rationale": "Uses `d=rt` to write the equation `100=xy` but does not consider that the equation needs to be solved for `y` to get `y=100/x`.",
                     "Percent": 18
                 }
             },
             "C": {
-                "Choice": "The volume (y) of a cylindrical tank with a height of 2 feet depends on the radius (x) of the tank.",
+                "Choice": "The volume `(y)` of a cylindrical tank with a height of `2` `text(feet)` depends on the radius `(x)` of the tank.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses `V=pir^2h` to write the equation y = π(2)^2x = 12.56x (uses x for the height) instead of writing y = π x^2(2) = 6.28x^2(uses x for the radius).",
+                    "Rationale": "Uses `V=pir^2h` to write the equation `y=pi(2)^2x=12.56x` (uses `x` for the height) instead of writing `y=pix^2(2)=6.28x^2` (uses `x` for the radius).",
                     "Percent": 14
                 }
             },
             "D": {
-                "Choice": "The total income (y) of a worker who earns 8 dollars per hour depends on the number of hours (x) worked.",
+                "Choice": "The total income `(y)` of a worker who earns `8` `text(dollars per hour)` depends on the number of hours `(x)` worked.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses “8 dollars per hour” to write the equation y = 8x + 0.",
+                    "Rationale": "Uses “`8` `text(dollars per hour)`” to write the equation `y=8x+0`.",
                     "Percent": 53
                 }
             }

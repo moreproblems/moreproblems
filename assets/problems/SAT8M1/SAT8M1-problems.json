@@ -577,14 +577,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A model predicts that the population of Bergen was `15,000` in `2005`. The model also predicts that each year for the next `5` `text(years)`, the population `p` increased by `4%` of the previous year's population. Which equation best represents this model, where `x` is the number of years after `2005`, for `xle5`?"
+            "A model predicts that the population of Bergen was `15,000` in `text(2005)`. The model also predicts that each year for the next `5` `text(years)`, the population `p` increased by `4%` of the previous year's population. Which equation best represents this model, where `x` is the number of years after `text(2005)`, for `xle5`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`p=0.96(15,000)^x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting `0` for `x` in this equation indicates the predicted population in `2005` was `0.96` rather than `15,000`.",
+                    "Rationale": "Substituting `0` for `x` in this equation indicates the predicted population in `text(2005)` was `0.96` rather than `15,000`.",
                     "Percent": 0
                 }
             },
@@ -592,7 +592,7 @@
                 "Choice": "`p=1.04(15,000)^x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting `0` for `x` in this equation indicates the predicted population in `2005` was `1.04` rather than `15,000`.",
+                    "Rationale": "Substituting `0` for `x` in this equation indicates the predicted population in `text(2005)` was `1.04` rather than `15,000`.",
                     "Percent": 0
                 }
             },
@@ -608,7 +608,7 @@
                 "Choice": "`p=15,000(1.04)^x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a model predicts the population of Bergen in `2005` was `15,000`. The model also predicts that each year for the next `5` `text(years)`, the population increased by `4%` of the previous year's population. The predicted population in one of these years can be found by multiplying the predicted population from the previous year by `1.04`. Since the predicted population in `2005` was `15,000`, the predicted population `1` `text(year)` later is `15,000(1.04)`. The predicted population `2` `text(years)` later is this value times `1.04`, which is `15,000(1.04)(1.04),or15,000(1.04)^2`. The predicted population `3` `text(years)` later is this value times `1.04,or15,000(1.04)^3`. More generally, the predicted population, `p,x` `text(years)` after `2005` is represented by the equation `p=15,000(1.04)^x`.",
+                    "Rationale": "It's given that a model predicts the population of Bergen in `text(2005)` was `15,000`. The model also predicts that each year for the next `5` `text(years)`, the population increased by `4%` of the previous year's population. The predicted population in one of these years can be found by multiplying the predicted population from the previous year by `1.04`. Since the predicted population in `text(2005)` was `15,000`, the predicted population `1` `text(year)` later is `15,000(1.04)`. The predicted population `2` `text(years)` later is this value times `1.04`, which is `15,000(1.04)(1.04),or15,000(1.04)^2`. The predicted population `3` `text(years)` later is this value times `1.04,or15,000(1.04)^3`. More generally, the predicted population, `p,x` `text(years)` after `text(2005)` is represented by the equation `p=15,000(1.04)^x`.",
                     "Percent": 0
                 }
             }

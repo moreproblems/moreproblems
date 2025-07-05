@@ -865,14 +865,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The population of Greenville increased by `7%` from `2015` to `2016`. If the `2016` population is `k` times the `2015` population, what is the value of `k`?"
+            "The population of Greenville increased by `7%` from `text(2015)` to `text(2016)`. If the `text(2016)` population is `k` times the `text(2015)` population, what is the value of `k`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`0.07`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the percent, represented as a decimal, that the population increased from `2015` to `2016`, not the value of `k`.",
+                    "Rationale": "This is the percent, represented as a decimal, that the population increased from `text(2015)` to `text(2016)`, not the value of `k`.",
                     "Percent": 0
                 }
             },
@@ -888,7 +888,7 @@
                 "Choice": "`1.07`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let `x` be the `2015` population of Greenville. It's given that the population increased by `7%` from `2015` to `2016`. The increase in population can be written as `(0.07)x`. The `2016` population of Greenville is given as the sum of the `2015` population of Greenville and the increase in population from `2015` to `2016`. This can be rewritten as `x=(0.07)x,or1.07x`. Therefore, the value of `k` is `1.07`.",
+                    "Rationale": "Let `x` be the `text(2015)` population of Greenville. It's given that the population increased by `7%` from `text(2015)` to `text(2016)`. The increase in population can be written as `(0.07)x`. The `text(2016)` population of Greenville is given as the sum of the `text(2015)` population of Greenville and the increase in population from `text(2015)` to `text(2016)`. This can be rewritten as `x=(0.07)x,or1.07x`. Therefore, the value of `k` is `1.07`.",
                     "Percent": 0
                 }
             },
@@ -896,7 +896,7 @@
                 "Choice": "`1.7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is the value of `k` if the population increased by `70%`, not `7%`, from `2015` to `2016`.",
+                    "Rationale": "This is the value of `k` if the population increased by `70%`, not `7%`, from `text(2015)` to `text(2016)`.",
                     "Percent": 0
                 }
             }
@@ -1170,7 +1170,7 @@
                 "Choice": "`f(x)=128(1.6)^(x-1)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "For the form of the function in this choice, `f(x)=128(1.6)^(x-1)`, the value of `f(1)` can be found as `f(x)=128(1.6)^(1-1)`, which is equivalent to `128(1.6)^0,or128`. Therefore, `k=128`, which is shown in `f(x) = 128(1.6)^(x-1)` as the coefficient.",
+                    "Rationale": "For the form of the function in this choice, `f(x)=128(1.6)^(x-1)`, the value of `f(1)` can be found as `f(x)=128(1.6)^(1-1)`, which is equivalent to `128(1.6)^0,or128`. Therefore, `k=128`, which is shown in `f(x)=128(1.6)^(x-1)` as the coefficient.",
                     "Percent": 0
                 }
             },
@@ -1202,7 +1202,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A model estimates that at the end of each year from `2015` to `2020`, the number of squirrels in a population was `150%` more than the number of squirrels in the population at the end of the previous year. The model estimates that at the end of `2016`, there were `180` squirrels in the population. Which of the following equations represents this model, where `n` is the estimated number of squirrels in the population `t` `text(years)` after the end of `2015andtle5`?"
+            "A model estimates that at the end of each year from `text(2015)` to `text(2020)`, the number of squirrels in a population was `150%` more than the number of squirrels in the population at the end of the previous year. The model estimates that at the end of `text(2016)`, there were `180` squirrels in the population. Which of the following equations represents this model, where `n` is the estimated number of squirrels in the population `t` `text(years)` after the end of `text(2015)andtle5`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1217,7 +1217,7 @@
                 "Choice": "`n=72(2.5)^t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the model estimates that the number of squirrels in the population increased by a fixed percentage, `150%`, each year, the model can be represented by an exponential equation of the form `n=a(1+p/100)^t`, where `a` is the estimated number of squirrels in the population at the end of `2015`, and the model estimates that at the end of each year, the number is `p%` more than the number at the end of the previous year. Since the model estimates that at the end of each year, the number was `150%` more than the number at the end of the previous year, `p=150`. Substituting `150` for `p` in the equation `n=a(1+p/100)^t` yields `n=a(1+150/100)^t`, which is equivalent to `n=a(1+1.5)^t,orn=a(2.5)^t`. It's given that the estimated number of squirrels at the end of `2016` was `180`. This means that when `t=1,n=180`. Substituting `1` for `tand180` for `n` in the equation `n = a(2.5)^t` yields `180 = a(2.5)^1,or180=2.5a`. Dividing each side of this equation by `2.5` yields `72=a`. Substituting 72 for `a` in the equation `n=a(2.5)^t` yields `n=72(2.5)^t`.",
+                    "Rationale": "Since the model estimates that the number of squirrels in the population increased by a fixed percentage, `150%`, each year, the model can be represented by an exponential equation of the form `n=a(1+p/100)^t`, where `a` is the estimated number of squirrels in the population at the end of `text(2015)`, and the model estimates that at the end of each year, the number is `p%` more than the number at the end of the previous year. Since the model estimates that at the end of each year, the number was `150%` more than the number at the end of the previous year, `p=150`. Substituting `150` for `p` in the equation `n=a(1+p/100)^t` yields `n=a(1+150/100)^t`, which is equivalent to `n=a(1+1.5)^t,orn=a(2.5)^t`. It's given that the estimated number of squirrels at the end of `text(2016)` was `180`. This means that when `t=1,n=180`. Substituting `1` for `tand180` for `n` in the equation `n = a(2.5)^t` yields `180 = a(2.5)^1,or180=2.5a`. Dividing each side of this equation by `2.5` yields `72=a`. Substituting 72 for `a` in the equation `n=a(2.5)^t` yields `n=72(2.5)^t`.",
                     "Percent": 0
                 }
             },
@@ -1225,7 +1225,7 @@
                 "Choice": "`n=180(1.5)^t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a model where at the end of each year, the estimated number of squirrels was `150%` of, not `150%` more than, the estimated number at the end of the previous year, and the estimated number of squirrels at the end of `2015`, not the end of `2016`, was `180`.",
+                    "Rationale": "This equation represents a model where at the end of each year, the estimated number of squirrels was `150%` of, not `150%` more than, the estimated number at the end of the previous year, and the estimated number of squirrels at the end of `text(2015)`, not the end of `text(2016)`, was `180`.",
                     "Percent": 0
                 }
             },
@@ -1233,7 +1233,7 @@
                 "Choice": "`n=180(2.5)^t`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This equation represents a model where the estimated number of squirrels at the end of `2015`, not the end of `2016`, was `180`.",
+                    "Rationale": "This equation represents a model where the estimated number of squirrels at the end of `text(2015)`, not the end of `text(2016)`, was `180`.",
                     "Percent": 0
                 }
             }

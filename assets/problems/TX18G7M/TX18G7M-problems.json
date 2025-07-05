@@ -524,7 +524,7 @@
                 "Choice": "1,632 `text(cm)^3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined the volume (amount of three-dimensional space taken up) of the triangular prism (three-dimensional figure with triangular bases) in cubic centimeters by using the formula `V=Bh` provided in the reference materials, where B is the area (amount of space covered by a surface) of the base and h is the height (distance between the two bases, in this case triangles) of the prism. The base is a triangle, so the area of the triangle can be found with the 1 expression 1/2 × 12 × 8, which equals 48 square centimeters. The height of the triangular prism is 34 2 centimeters, so the volume of the triangular prism is determined by multiplying 48 square centimeters by 34 centimeters, which equals 1,632 cubic centimeters.",
+                    "Rationale": "The student should have determined the volume (amount of three-dimensional space taken up) of the triangular prism (three-dimensional figure with triangular bases) in cubic centimeters by using the formula `V=Bh` provided in the reference materials, where `B` is the area (amount of space covered by a surface) of the base and h is the height (distance between the two bases, in this case triangles) of the prism. The base is a triangle, so the area of the triangle can be found with the 1 expression 1/2 × 12 × 8, which equals 48 square centimeters. The height of the triangular prism is 34 2 centimeters, so the volume of the triangular prism is determined by multiplying 48 square centimeters by 34 centimeters, which equals 1,632 cubic centimeters.",
                     "Percent": 50
                 }
             },
@@ -808,7 +808,7 @@
         "Content": [
             "The diagram shows a door that has a window in it. The front faces of the door and the window are similar rectangles that have the dimensions shown.",
             "problems/TX18G7M/media/16a.jpg",
-            "What is h, the height of the window in centimeters?"
+            "What is h, the height of the window in `text(centimeters)`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -831,7 +831,7 @@
                 "Choice": "150cm",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine h, the height (vertical distance from top to bottom) of the window in centimeters, the student should have determined that the two rectangles (window and door) are similar figures (two figures with corresponding angles equal and corresponding sides proportional) and then set up and solved the proportion (comparison of two ratios) 60/84 = h/210. To solve for h, the student multiplied 210 by 60, which is 12,600, then divided 12,600 by 84, which results in 150 centimeters.",
+                    "Rationale": "To determine h, the height (vertical distance from top to bottom) of the window in `text(centimeters)`, the student should have determined that the two rectangles (window and door) are similar figures (two figures with corresponding angles equal and corresponding sides proportional) and then set up and solved the proportion (comparison of two ratios) 60/84 = h/210. To solve for h, the student multiplied 210 by 60, which is 12,600, then divided 12,600 by 84, which results in 150 centimeters.",
                     "Percent": 41
                 }
             },
@@ -1095,7 +1095,7 @@
                 "Choice": "There are 52 students who want either a chicken meal or a pasta meal.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely found the total number of students from the survey who wanted chicken or pasta (13), and set up a proportion using 100 total students instead of 200 total students. The proportion used is 13/25 = b/100, where b is the total number of students who want either chicken or pasta, resulting in 52 students. The student needs to focus on solving problems involving proportional relationships using quantitative predictions from simple experiments.",
+                    "Rationale": "The student likely found the total number of students from the survey who wanted chicken or pasta (13), and set up a proportion using 100 total students instead of 200 total students. The proportion used is 13/25 = b/100, where `b` is the total number of students who want either chicken or pasta, resulting in 52 students. The student needs to focus on solving problems involving proportional relationships using quantitative predictions from simple experiments.",
                     "Percent": 18
                 }
             },
@@ -1164,7 +1164,7 @@
         "Content": [
             "A company's logo was designed using circles of 3 different sizes. The diameters of two of the circles are shown.",
             "problems/TX18G7M/media/23a.jpg",
-            "Which measurement is closest to the area of the largest circle in square centimeters?"
+            "Which measurement is closest to the area of the largest circle in `text(square centimeters)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1195,7 +1195,7 @@
                 "Choice": "254.34 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the area (amount of space covered by a surface) of the largest circle in square centimeters, the student should have used the formula for area, A, of a circle, A = πr2, provided in the reference materials, where `r` is the radius (distance from the center to the circumference of a circle) of the circle. The diameters (straight line going through the center of a circle connecting two points on the circumference) of the two smaller circles are 6 centimeters and 12 centimeters respectively, combining to make the diameter of the largest circle 18 centimeters. The radius of the largest circle is 9 centimeters. Applying the formula for area, A = π × 9^2 ~~ 254.34 square centimeters.",
+                    "Rationale": "To determine the area (amount of space covered by a surface) of the largest circle in `text(square centimeters)`, the student should have used the formula for area, A, of a circle, A = πr2, provided in the reference materials, where `r` is the radius (distance from the center to the circumference of a circle) of the circle. The diameters (straight line going through the center of a circle connecting two points on the circumference) of the two smaller circles are 6 centimeters and 12 centimeters respectively, combining to make the diameter of the largest circle 18 centimeters. The radius of the largest circle is 9 centimeters. Applying the formula for area, A = π × 9^2 ~~ 254.34 square centimeters.",
                     "Percent": 43
                 }
             }
@@ -1687,7 +1687,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Felicia has 12 buttons in her collection. She will collect 29 new buttons every year. Felicia collects buttons for k years. For what values of k will Felicia have at least 120 buttons?",
+                "Choice": "Felicia has 12 buttons in her collection. She will collect 29 new buttons every year. Felicia collects buttons for k years. For what values of `k` will Felicia have at least 120 buttons?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely mixed up the interpretations of the values of 12 and the 29. The initial number of buttons should be 29 instead of 12, and the rate should be 12 new buttons per year instead of 29. The student needs to focus on understanding how to write real-world problems based on inequalities.",
@@ -1695,7 +1695,7 @@
                 }
             },
             "B": {
-                "Choice": "Felicia has 29 buttons in her collection. She will collect 12 new buttons every year. Felicia collects buttons for k years. For what values of k will Felicia have at least 120 buttons?",
+                "Choice": "Felicia has 29 buttons in her collection. She will collect 12 new buttons every year. Felicia collects buttons for k years. For what values of `k` will Felicia have at least 120 buttons?",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the situation represented by the inequality, the student should have reviewed the inequality for key characteristics. The inequality 120 ≤ 12k + 29 shows that 12 represents a rate and 29 represents a fixed initial amount. Also, “120 is less than or equal to” (120 ≤) indicates that a value should be at least 120. This statement shows that Felicia has 29 buttons initially and collects 12 new buttons every year (rate). The question is asking when she will have “at least” 120 buttons. This situation is represented by the inequality.",
@@ -1703,7 +1703,7 @@
                 }
             },
             "C": {
-                "Choice": "Felicia has 29 buttons in her collection. She will collect 12 new buttons every year. Felicia collects buttons for k years. For what values of k will Felicia have at most 120 buttons?",
+                "Choice": "Felicia has 29 buttons in her collection. She will collect 12 new buttons every year. Felicia collects buttons for k years. For what values of `k` will Felicia have at most 120 buttons?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely interpreted the initial value and the rate of the inequality correctly but misinterpreted the inequality symbol as “at most” instead of “at least.” The student needs to focus on understanding how to write real-world problems based on inequalities.",
@@ -1711,7 +1711,7 @@
                 }
             },
             "D": {
-                "Choice": "Felicia has 12 buttons in her collection. She will collect 29 new buttons every year. Felicia collects buttons for k years. For what values of k will Felicia have at most 120 buttons?",
+                "Choice": "Felicia has 12 buttons in her collection. She will collect 29 new buttons every year. Felicia collects buttons for k years. For what values of `k` will Felicia have at most 120 buttons?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely mixed up the interpretations of the values of 12 and the 29 and misinterpreted the inequality symbol as “at most” instead of “at least.” The student needs to focus on understanding how to write real-world problems based on inequalities.",
@@ -1740,7 +1740,7 @@
         "Content": [
             "The figure shown was created by placing the vertices of a square on the circle. Use the ruler provided to measure the dimensions of the square and the circle to the nearest centimeter.",
             "problems/TX18G7M/media/34a.jpg",
-            "Which measurement is closest to the area of the shaded region of the figure in square centimeters?"
+            "Which measurement is closest to the area of the shaded region of the figure in `text(square centimeters)`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -1763,7 +1763,7 @@
                 "Choice": "29.5 `text(cm)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the area (amount of space covered by a surface) of the shaded region in square centimeters, the student should have measured the dimensions of the circle and the square to the nearest centimeter. The diameter (straight line going through the center of a circle connecting two points on the circumference) of the circle is closest to 10 centimeters, and the length of one side of the square is closest to 7 centimeters. The area of the shaded region is the area of the circle minus the area of the square. To put this in a formula, the area of the shaded region is A = πr^2 - bh, where `r` is the radius (distance from the center to the circumference of a circle) and b and h are the base and height of the square. So the area of the shaded region isA = π × 5^2 - 7(7) = π × 25 - 49, which is about 29.5 square centimeters.",
+                    "Rationale": "To determine the area (amount of space covered by a surface) of the shaded region in `text(square centimeters)`, the student should have measured the dimensions of the circle and the square to the nearest centimeter. The diameter (straight line going through the center of a circle connecting two points on the circumference) of the circle is closest to 10 centimeters, and the length of one side of the square is closest to 7 centimeters. The area of the shaded region is the area of the circle minus the area of the square. To put this in a formula, the area of the shaded region is A = πr^2 - bh, where `r` is the radius (distance from the center to the circumference of a circle) and b and h are the base and height of the square. So the area of the shaded region isA = π × 5^2 - 7(7) = π × 25 - 49, which is about 29.5 square centimeters.",
                     "Percent": 49
                 }
             },

@@ -581,38 +581,38 @@
         "Explain": false,
         "Content": [
             ":ibox:`P(t)=24.8(1.036)^t`",
-            "The function `P` gives the predicted population, in `text(millions)`, of a certain country for the period from `1984` to `2018`, where `t` is the number of years after `1984`. According to the model, what is the best interpretation of the statement “`P(8)` is approximately equal to `32.91`”?"
+            "The function `P` gives the predicted population, in `text(millions)`, of a certain country for the period from `text(1984)` to `text(2018)`, where `t` is the number of years after `text(1984)`. According to the model, what is the best interpretation of the statement “`P(8)` is approximately equal to `32.91`”?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "In `1984`, the predicted population of this country was approximately `8` `text(million)`.",
+                "Choice": "In `text(1984)`, the predicted population of this country was approximately `8` `text(million)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In `1984`, the predicted population of this country was `24.8` `text(million)`, not approximately `8` `text(million)`.",
+                    "Rationale": "In `text(1984)`, the predicted population of this country was `24.8` `text(million)`, not approximately `8` `text(million)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "In `1984`, the predicted population of this country was approximately `32.91` `text(million)`.",
+                "Choice": "In `text(1984)`, the predicted population of this country was approximately `32.91` `text(million)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In `1984`, the predicted population of this country was `24.8` `text(million)`, not approximately `32.91` `text(million)`.",
+                    "Rationale": "In `text(1984)`, the predicted population of this country was `24.8` `text(million)`, not approximately `32.91` `text(million)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`8` `text(years)` after `1984`, the predicted population of this country was approximately `32.91` `text(million)`.",
+                "Choice": "`8` `text(years)` after `text(1984)`, the predicted population of this country was approximately `32.91` `text(million)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The function `P` gives the predicted population, in `text(millions)`, of a certain country for the period from `1984` to `2018`, where `t` is the number of years after `1984`. Since the value of `P(8)` is the value of `P(t)` when `t=8`, it follows that “`P(8)` is approximately equal to `32.91”` means that the value of `P(t)` is approximately equal to `32.91` when `t=8`. Therefore, the best interpretation of the statement “`P(8)` is approximately equal to `32.91`” is that `8` `text(years)` after `1984`, the predicted population of this country was approximately `32.91` `text(million)`.",
+                    "Rationale": "The function `P` gives the predicted population, in `text(millions)`, of a certain country for the period from `text(1984)` to `text(2018)`, where `t` is the number of years after `text(1984)`. Since the value of `P(8)` is the value of `P(t)` when `t=8`, it follows that “`P(8)` is approximately equal to `32.91”` means that the value of `P(t)` is approximately equal to `32.91` when `t=8`. Therefore, the best interpretation of the statement “`P(8)` is approximately equal to `32.91`” is that `8` `text(years)` after `text(1984)`, the predicted population of this country was approximately `32.91` `text(million)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "`32.91` `text(years)` after `1984`, the predicted population of this country was approximately `8` `text(million)`.",
+                "Choice": "`32.91` `text(years)` after `text(1984)`, the predicted population of this country was approximately `8` `text(million)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "`32.91` `text(years)` after `1984`, the predicted population of this country was `24.8(1.036)^32.91` `text(million)`, or approximately `79.42` `text(million)`, not approximately `8` `text(million)`.",
+                    "Rationale": "`32.91` `text(years)` after `text(1984)`, the predicted population of this country was `24.8(1.036)^32.91` `text(million)`, or approximately `79.42` `text(million)`, not approximately `8` `text(million)`.",
                     "Percent": 0
                 }
             }

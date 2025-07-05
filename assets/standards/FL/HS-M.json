@@ -37,7 +37,7 @@
                             "Key": "FL.M9-12.NSO.1.4",
                             "Label": "Apply previous understanding of operations with rational numbers to add, subtract, multiply and divide numerical radicals.",
                             "Examples": [
-                                "(Algebra 1) The expression √136/√2 is equivalent to √(136/2) which is equivalent to √68 which is equivalent to 2√17."
+                                "(Algebra 1) The expression √136/√2 is equivalent to sqrt(136/2) which is equivalent to √68 which is equivalent to 2√17."
                             ],
                             "Subs": []
                         },
@@ -222,8 +222,8 @@
                             "Label": "Rearrange equations or formulas to isolate a quantity of interest.",
                             "Examples": [
                                 "(Algebra 1) The Ideal Gas Law PV = nRT can be rearranged as T = PV/nR to isolate temperature as the quantity of interest.",
-                                "Given the Compound Interest formula A = P(1 + r/n)ⁿᵗ, solve for P.",
-                                "(Mathematics for Data and Financial Literacy Honors) Given the Compound Interest formula A = P(1 + r/n)ⁿᵗ, solve for t."
+                                "Given the Compound Interest formula `A=P(1+r/n)^(nt)`, solve for `P`.",
+                                "(Mathematics for Data and Financial Literacy Honors) Given the Compound Interest formula `A=P(1+r/n)^(nt)`, solve for `t`."
                             ],
                             "Subs": []
                         },
@@ -751,7 +751,7 @@
                             "Key": "FL.M9-12.F.1.2",
                             "Label": "Given a function represented in function notation, evaluate the function for an input in its domain. For a real-world context, interpret the output.",
                             "Examples": [
-                                "(Algebra 1) The function f(x) = x/7 - 8 models Alicia's position in miles 7 relative to a water stand x minutes into a marathon. Evaluate and interpret for a quarter of an hour into the race."
+                                "(Algebra 1) The function `f(x)=x/7-8` models Alicia's position in `text(miles)` relative to a water stand x minutes into a marathon. Evaluate and interpret for a quarter of an hour into the race."
                             ],
                             "Subs": []
                         },
@@ -806,7 +806,7 @@
                     "Subs": [
                         {
                             "Key": "FL.M9-12.F.2.1",
-                            "Label": "Identify the effect on the graph or table of a given function after replacing f(x) by f(x) + k, kf(x), f(kx) and f(x + k) for specific values of k.",
+                            "Label": "Identify the effect on the graph or table of a given function after replacing `f(x)` by `f(x)+k,kf(x),f(kx)andf(x+k)` for specific values of `k`.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -818,7 +818,7 @@
                         },
                         {
                             "Key": "FL.M9-12.F.2.3",
-                            "Label": "Given the graph or table of f(x) and the graph or table of f(x) + k, kf(x), f(kx) and f(x + k), state the type of transformation and find the value of the real number k.",
+                            "Label": "Given the graph or table of `f(x)` and the graph or table of `f(x)+k,kf(x),f(kx)andf(x+k)`, state the type of transformation and find the value of the real number k.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -845,7 +845,7 @@
                             "Key": "FL.M9-12.F.3.1",
                             "Label": "Given a mathematical or real-world context, combine two functions, limited to linear and quadratic, using arithmetic operations. When appropriate, include domain restrictions for the new function.",
                             "Examples": [
-                                "The quotient of the functions f(x) = 3x^2- 7x + 3 and g(x) = 6x - 1 can be expressed as h(x) = (3x^2- 7x + 3)/(6x - 1), where the domain of h(x) is -oo ≤ x < 1/6 and 1/6 < x ≤ oo."
+                                "The quotient of the functions `f(x)=3x^2-7x+3andg(x)=6x-1` can be expressed as `h(x)=(3x^2-7x+3)/(6x-1)`, where the domain of `h(x)` is `-oo<=x<1/6and1/6<x<=oo`."
                             ],
                             "Subs": []
                         },
@@ -1540,13 +1540,13 @@
                         },
                         {
                             "Key": "FL.M9-12.T.2.3",
-                            "Label": "Determine the values of the six basic trigonometric functions for 0, π/6, π/3 and π/4 and their multiples using special triangles.",
+                            "Label": "Determine the values of the six basic trigonometric functions for `0,pi/6,pi/3,andpi/4` and their multiples using special triangles.",
                             "Examples": [],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.T.2.4",
-                            "Label": "Use the unit circle to express the values of sine, cosine and tangent for π - x, π + x and 2π - x in terms of their values for x, where `x` is any real number.",
+                            "Label": "Use the unit circle to express the values of sine, cosine and tangent for `pi-x,pi+x,and2pi-x` in terms of their values for `x`, where `x` is any real number.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -2225,7 +2225,7 @@
                             "Key": "FL.M9-12.C.1.1",
                             "Label": "Demonstrate understanding of the concept of a limit and estimate limits from graphs and tables of values.",
                             "Examples": [
-                                "For f(x) = (x^2+ 2x - 8)/(x - 2), estimate lim(x→2) (x^2+ 2x - 8)/(x - 2) by calculating the function's values for x = 2.1, 2.01, 2.001 and for x = 1.9, 1.99, 1.999. Explain your answer."
+                                "For `f(x)=(x^2+2x-8)/(x-2)`, estimate lim(x→2) (x^2+ 2x - 8)/(x - 2) by calculating the function's values for x = 2.1, 2.01, 2.001 and for x = 1.9, 1.99, 1.999. Explain your answer."
                             ],
                             "Subs": []
                         },
@@ -2249,7 +2249,7 @@
                             "Key": "FL.M9-12.C.1.4",
                             "Label": "Find one-sided limits.",
                             "Examples": [
-                                "Find lim(x→4⁻) -√(4 - x)."
+                                "Find lim(x→4⁻) -sqrt(4 - x)."
                             ],
                             "Subs": []
                         },
@@ -2265,7 +2265,7 @@
                             "Key": "FL.M9-12.C.1.6",
                             "Label": "Decide when a limit is infinite and use limits involving infinity to describe asymptotic behavior.",
                             "Examples": [
-                                "Where does the function, f(x) = 1/(x^2- 7x + 10), have asymptote(s)?"
+                                "Where does the function, `f(x)=1/(x^2-7x+10)`, have asymptote(s)?"
                             ],
                             "Subs": []
                         },
@@ -2287,7 +2287,7 @@
                             "Key": "FL.M9-12.C.1.9",
                             "Label": "Define continuity in terms of limits.",
                             "Examples": [
-                                "Given that the limit of g(x) as x approaches to 5 exists, is the statement “g(x) is continuous at x = 5” necessarily true? Provide example functions to support your conclusion."
+                                "Given that the limit of `g(x)` as x approaches to 5 exists, is the statement “g(x) is continuous at x = 5” necessarily true? Provide example functions to support your conclusion."
                             ],
                             "Subs": []
                         },
@@ -2301,8 +2301,8 @@
                             "Key": "FL.M9-12.C.1.11",
                             "Label": "Apply the Intermediate Value Theorem and the Extreme Value Theorem.",
                             "Examples": [
-                                "Use the Intermediate Value Theorem to show that g(x) = x^3 + 3x^2- 9x - 2 has a zero between x = 0 and x = 3.",
-                                "Use the Extreme Value Theorem to decide whether f(x) = tan(x) has a minimum and maximum on the interval [-π/4, π/4]. What about on the  interval [-π, π]?"
+                                "Use the Intermediate Value Theorem to show that `g(x)=x^3+3x^2-9x-2` has a zero between x = 0 and x = 3.",
+                                "Use the Extreme Value Theorem to decide whether `f(x)=tan(x)` has a minimum and maximum on the interval [-π/4, π/4]. What about on the  interval [-π, π]?"
                             ],
                             "Subs": []
                         }
@@ -2317,7 +2317,7 @@
                             "Key": "FL.M9-12.C.2.1",
                             "Label": "State, understand and apply the definition of derivative. Apply and interpret derivatives geometrically and numerically.",
                             "Examples": [
-                                "Find lim(h→0) ((5 + h)^2 - 5^2)/h. What does the result tell you? Use the limit to determine the derivative function for f(x) = x^2."
+                                "Find lim(h→0) ((5 + h)^2 - 5^2)/h. What does the result tell you? Use the limit to determine the derivative function for `f(x)=x^2`."
                             ],
                             "Subs": []
                         },
@@ -2337,9 +2337,9 @@
                             "Key": "FL.M9-12.C.2.4",
                             "Label": "Apply the rules for finding derivatives of constants, sums, products, quotients and the Chain Rule to solve problems with functions limited to algebraic, trigonometric, inverse trigonometric, logarithmic and exponential.",
                             "Examples": [
-                                "Find dy/dx for the function y = ln(x).",
-                                "Show that the derivative of f(x) = tan(x) is f'(x) = sec^2x using the quotient rule for derivatives.",
-                                "Find f'(x) for f(x) = (x^2+ 2)¹/²."
+                                "Find dy/dx for the function `y=ln(x)`.",
+                                "Show that the derivative of `f(x)=tan(x)` is f'(x) = sec^2x using the quotient rule for derivatives.",
+                                "Find f'(x) for `f(x)=(x^2+2)^(1/2)`."
                             ],
                             "Subs": []
                         },
@@ -2355,7 +2355,7 @@
                             "Key": "FL.M9-12.C.2.6",
                             "Label": "Find derivatives of inverse functions.",
                             "Examples": [
-                                "Let f(x) = 2x^3 and g(x) = f⁻¹(x), find g'(2)."
+                                "Let `f(x)=2x^3andg(x)=f^-1(x)`, find `g'(2)`."
                             ],
                             "Subs": []
                         },
@@ -2363,7 +2363,7 @@
                             "Key": "FL.M9-12.C.2.7",
                             "Label": "Find second derivatives and derivatives of higher order.",
                             "Examples": [
-                                "Let f(x) = e⁵ˣ, find f''(x) and f'''(x)."
+                                "Let `f(x)=e`^(5x)`, find `f''(x)andf'''(x)`."
                             ],
                             "Subs": []
                         },
@@ -2371,7 +2371,7 @@
                             "Key": "FL.M9-12.C.2.8",
                             "Label": "Find derivatives using logarithmic differentiation.",
                             "Examples": [
-                                "Find the derivative of f(x) = (3x^2+ 5)^x."
+                                "Find the derivative of `f(x)=(3x^2+ 5)^x`."
                             ],
                             "Subs": []
                         },
@@ -2379,7 +2379,7 @@
                             "Key": "FL.M9-12.C.2.9",
                             "Label": "Demonstrate and use the relationship between differentiability and continuity.",
                             "Examples": [
-                                "Is f(x) = |x| continuous at x = 0? Is f(x) differentiable at x = 0? Explain your answers."
+                                "Is `f(x)=abs(x)` continuous at `x=0`? Is `f(x)` differentiable at x = 0? Explain your answers."
                             ],
                             "Subs": []
                         },
@@ -2402,7 +2402,7 @@
                             "Key": "FL.M9-12.C.3.1",
                             "Label": "Find the slope of a curve at a point, including points at which there are vertical tangent lines.",
                             "Examples": [
-                                "Find the slope of the line tangent to the graph of f(x) = ∛(1 - x) at x = 1."
+                                "Find the slope of the line tangent to the graph of `f(x)=root(3)(1-x)` at `x=1`."
                             ],
                             "Subs": []
                         },
@@ -2410,7 +2410,7 @@
                             "Key": "FL.M9-12.C.3.2",
                             "Label": "Find an equation for the tangent line to a curve at a point and use it to make local linear approximation.",
                             "Examples": [
-                                "Use a local linear approximation to estimate the value of f(x) = x at xˣ = 2.1."
+                                "Use a local linear approximation to estimate the value of `f(x)=x` at `x^x=2.1`."
                             ],
                             "Subs": []
                         },
@@ -2418,7 +2418,7 @@
                             "Key": "FL.M9-12.C.3.3",
                             "Label": "Determine where a function is decreasing and increasing using its derivative.",
                             "Examples": [
-                                "For what values of x is the function f(x) = x/(x^2+ 1) decreasing?"
+                                "For what values of x is the function `f(x)=x/(x^2+1)` decreasing?"
                             ],
                             "Subs": []
                         },
@@ -2426,7 +2426,7 @@
                             "Key": "FL.M9-12.C.3.4",
                             "Label": "Find local and absolute maximum and minimum points of a function.",
                             "Examples": [
-                                "For the graph of the function f(x) = x^3 - 3x, find the local maximum and local minimum points of f(x) on [-2, 3]."
+                                "For the graph of the function `f(x)=x^3-3x`, find the local maximum and local minimum points of `f(x)` on [-2, 3]."
                             ],
                             "Subs": []
                         },
@@ -2434,15 +2434,15 @@
                             "Key": "FL.M9-12.C.3.5",
                             "Label": "Determine the concavity and points of inflection of a function using its second derivative.",
                             "Examples": [
-                                "For the graph of the function f(x) = x^3 - 3x, find the points of inflection of f(x) and determine where f(x) is concave upward and concave downward."
+                                "For the graph of the function `f(x)=x^3-3x`, find the points of inflection of `f(x)` and determine where `f(x)` is concave upward and concave downward."
                             ],
                             "Subs": []
                         },
                         {
                             "Key": "FL.M9-12.C.3.6",
-                            "Label": "Sketch graphs by using first and second derivatives. Compare the corresponding characteristics of the graphs of f, f' and f“.",
+                            "Label": "Sketch graphs by using first and second derivatives. Compare the corresponding characteristics of the graphs of `f,f'andf“`.",
                             "Examples": [
-                                "Sketch the graph of f(x) = x⁴ + 3x^2- 2x + 1 using information from the first and second derivatives."
+                                "Sketch the graph of `f(x)=x^4+3x^2-2x+1` using information from the first and second derivatives."
                             ],
                             "Subs": []
                         },
@@ -2459,7 +2459,7 @@
                             "Key": "FL.M9-12.C.3.8",
                             "Label": "Find average and instantaneous rates of change. Explain the instantaneous rate of change as the limit of the average rate of change. Interpret a derivative as a rate of change in applications, including velocity, speed and acceleration.",
                             "Examples": [
-                                "The vertical distance traveled by an object within the earth's gravitational field, neglecting air resistance, is given by the equation x = 0.5gt^2 + vₒt + xₒ, where g is the force on the object due to earth's gravity, vₒ is the initial velocity, x_0 is the initial height above the ground, t is the time in `text(seconds)` and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = -10 m/s²."
+                                "The vertical distance traveled by an object within the earth's gravitational field, neglecting air resistance, is given by the equation x = 0.5gt^2 + vₒt + xₒ, where g is the force on the object due to earth's gravity, vₒ is the initial velocity, x_0 is the initial height above the ground, t is the time in `text(seconds)` and down is the negative vertical direction. Determine the instantaneous speed and the average speed for an object, initially at rest, 3 seconds after it is dropped from a 100 m. tall cliff. Describe the object 5 seconds after it is dropped from the same height. Use g = -10 `text(m)/text(s)^2`."
                             ],
                             "Subs": []
                         },
@@ -2475,7 +2475,7 @@
                             "Key": "FL.M9-12.C.3.10",
                             "Label": "Model and solve problems involving rates of change, including related rates.",
                             "Examples": [
-                                "One boat is heading due south at 10 mph. Another boat is heading due west at 15 mph. Both boats are heading toward the same point. If the boats maintain their speeds and directions, they will meet in two hours. Find the rate, in miles per hour, that the distance between them is decreasing exactly one hour before they meet."
+                                "One boat is heading due south at 10 mph. Another boat is heading due west at 15 mph. Both boats are heading toward the same point. If the boats maintain their speeds and directions, they will meet in two hours. Find the rate, in `text(miles per hour)`, that the distance between them is decreasing exactly one hour before they meet."
                             ],
                             "Subs": []
                         }
@@ -2490,9 +2490,9 @@
                             "Key": "FL.M9-12.C.4.1",
                             "Label": "Interpret a definite integral as a limit of Riemann sums. Calculate the values of Riemann sums over equal subdivisions using left, right and midpoint evaluation points.",
                             "Examples": [
-                                "Find the values of the Riemann sums over the interval [0, 1] using 12 and 24 subintervals of equal width for f(x) = eˣ evaluated at the midpoint of each subinterval. Write an expression for the Riemann sums using n intervals of equal width. Find the limit of this Riemann Sums as n goes to infinity.",
-                                "Estimate ∫(0,π) sin(x)dx using a Riemann midpoint sum with 4 subintervals.",
-                                "Find an approximate value for ∫(0,3) x^2dx using 6 rectangles of equal width 0 under the graph of f(x) = x^2between x = 0 and x = 3. How did you form your rectangles? Compute this approximation three times using at least three different methods to form the rectangles."
+                                "Find the values of the Riemann sums over the interval [0, 1] using 12 and 24 subintervals of equal width for `f(x)=e^x` evaluated at the midpoint of each subinterval. Write an expression for the Riemann sums using n intervals of equal width. Find the limit of this Riemann Sums as n goes to infinity.",
+                                "Estimate `int_0^pisin(x)dx` using a Riemann midpoint sum with 4 subintervals.",
+                                "Find an approximate value for `int_0^3x^2dx` using 6 rectangles of equal width 0 under the graph of `f(x)=x^2` between x = 0 and x = 3. How did you form your rectangles? Compute this approximation three times using at least three different methods to form the rectangles."
                             ],
                             "Subs": []
                         },
@@ -2500,8 +2500,8 @@
                             "Key": "FL.M9-12.C.4.2",
                             "Label": "Apply Riemann sums, the Trapezoidal Rule and technology to approximate definite integrals of functions represented algebraically, geometrically and by tables of values.",
                             "Examples": [
-                                "Approximate the value of ∫(0,3) x^2dx using the Trapezoidal Rule with 6 0 subintervals over [0, 3] for f(x) = x^2.",
-                                "Find an approximation to ∫(0,3) √(9 - x^2)dx."
+                                "Approximate the value of `int_0^3x^2dx` using the Trapezoidal Rule with subintervals over [0, 3] for `f(x)=x^2`.",
+                                "Find an approximation to `int_0^3sqrt(9-x^2)dx`."
                             ],
                             "Subs": []
                         },
@@ -2509,7 +2509,7 @@
                             "Key": "FL.M9-12.C.4.3",
                             "Label": "Interpret a definite integral of the rate of change of a quantity over an interval as the change of the quantity over the interval.",
                             "Examples": [
-                                "Explain why ∫(4,5) 2xdx = 5^2 - 4^2."
+                                "Explain why `int_4^52xdx=5^2-4^2`."
                             ],
                             "Subs": []
                         },
@@ -2517,7 +2517,7 @@
                             "Key": "FL.M9-12.C.4.4",
                             "Label": "Evaluate definite integrals by using the Fundamental Theorem of Calculus.",
                             "Examples": [
-                                "Evaluate ∫(1,5) eˣdx."
+                                "Evaluate `int_1^5e^xdx`."
                             ],
                             "Subs": []
                         },
@@ -2537,7 +2537,7 @@
                             "Key": "FL.M9-12.C.4.7",
                             "Label": "Evaluate definite and indefinite integrals by using integration by substitution.",
                             "Examples": [
-                                "Find ∫ x^2(x^3 + 1)⁴dx."
+                                "Find `intx^2(x^3+1)^4dx`."
                             ],
                             "Subs": []
                         }
@@ -2568,7 +2568,7 @@
                             "Key": "FL.M9-12.C.5.3",
                             "Label": "Solve differential equations of the form dy/dt = ky as applied to growth and decay problems.",
                             "Examples": [
-                                "The amount of a certain radioactive material was 10 kg a year ago. The amount is now 9 kg. When will it be reduced to 1 kg? Explain your answer."
+                                "The amount of a certain radioactive material was 10 `text(kg)` a year ago. The amount is now 9 kg. When will it be reduced to 1 kg? Explain your answer."
                             ],
                             "Subs": []
                         },
@@ -2601,7 +2601,7 @@
                             "Label": "Find the volume of a figure with known cross-sectional area, including figures of revolution, by using definite integrals.",
                             "Examples": [
                                 "A cone with its vertex at the origin lies symmetrically along the `xtext(-axis)`. The base of the cone is at x = 5 and the base radius is 7. Use integration to find the volume of the cone.",
-                                "What is the volume of the solid created when the area between the curves f(x) = x and g(x) = x^2for 0 ≤ x ≤ 1 is revolved around the `ytext(-axis)`?"
+                                "What is the volume of the solid created when the area between the curves `f(x)=xandg(x)=x^2` for `0<=x<=1` is revolved around the `ytext(-axis)`?"
                             ],
                             "Subs": []
                         }

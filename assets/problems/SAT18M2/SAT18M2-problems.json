@@ -486,7 +486,7 @@
                 "Choice": "`7.79`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Substituting the values of k from this choice in the formula results in volumes of approximately `217` `text(cubic centimeters)`, which contradict the given information that the volume of the glass is `473` `text(cubic centimeters)`.",
+                    "Rationale": "Substituting the values of `k` from this choice in the formula results in volumes of approximately `217` `text(cubic centimeters)`, which contradict the given information that the volume of the glass is `473` `text(cubic centimeters)`.",
                     "Percent": 0
                 }
             },
@@ -1137,7 +1137,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The amount of plastic, in `text(billions of pounds)`, produced in the United States during the year `1985`",
+                "Choice": "The amount of plastic, in `text(billions of pounds)`, produced in the United States during the year `text(1985)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is the interpretation of the number `46.89` in the line of best fit equation, `y=3.39x+46.89`.",
@@ -1153,7 +1153,7 @@
                 }
             },
             "C": {
-                "Choice": "The average annual plastic production, in `text(billions of pounds)`, in the United States from `1985` to `2003`",
+                "Choice": "The average annual plastic production, in `text(billions of pounds)`, in the United States from `text(1985)` to `text(2003)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is expressed in the wrong units. The number `3.39` has units of `text(billions of pounds per year)`, but this choice has units of `text(billions of pounds)`.",
@@ -1161,10 +1161,10 @@
                 }
             },
             "D": {
-                "Choice": "The average annual increase, in `text(billions of pounds)`, of plastic produced per year in the United States from `1985` to `2003`",
+                "Choice": "The average annual increase, in `text(billions of pounds)`, of plastic produced per year in the United States from `text(1985)` to `text(2003)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The number `3.39` in the equation `y=3.39x+46.89` is the slope, which is the change in `y` per unit change in `x`. Because `y` represents the amount of plastic produced annually, in `text(billions of pounds),andx` represents the number of years since `1985`, the number `3.39` represents the rate of change of the amount of plastic produced with respect to time, in units of `text(billions of pounds per year)`. The change is an increase since `3.39` is positive, and it is described as an average change because the data show increases that are sometimes more and sometimes less than `3.39`.",
+                    "Rationale": "The number `3.39` in the equation `y=3.39x+46.89` is the slope, which is the change in `y` per unit change in `x`. Because `y` represents the amount of plastic produced annually, in `text(billions of pounds),andx` represents the number of years since `text(1985)`, the number `3.39` represents the rate of change of the amount of plastic produced with respect to time, in units of `text(billions of pounds per year)`. The change is an increase since `3.39` is positive, and it is described as an average change because the data show increases that are sometimes more and sometimes less than `3.39`.",
                     "Percent": 0
                 }
             }
@@ -1190,14 +1190,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is closest to the percent increase in the `text(billions of pounds)` of plastic produced in the United States from `2000` to `2003`?"
+            "Which of the following is closest to the percent increase in the `text(billions of pounds)` of plastic produced in the United States from `text(2000)` to `text(2003)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`10%`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `x` is the number of years since `1985`, the year `2000` corresponds to `x=15` and the year `2003` corresponds to `x=18`. The corresponding points on the line of best fit are approximately `(15,98)and(18,107)`. This means that approximately `98` `text(billion pounds)` of plastic were produced in `2000` and approximately `107` `text(billion pounds)` of plastic were produced in `2003`. To calculate the percent increase, subtract the amount of plastic produced in `2000` from the amount of plastic produced in `2003` and then divide the result by the amount of plastic produced in `2000` and multiply by `100`. This yields `((107-98)/98)*100=9.2`, or approximately `10%`.",
+                    "Rationale": "Since `x` is the number of years since `text(1985)`, the year `text(2000)` corresponds to `x=15` and the year `text(2003)` corresponds to `x=18`. The corresponding points on the line of best fit are approximately `(15,98)and(18,107)`. This means that approximately `98` `text(billion pounds)` of plastic were produced in `text(2000)` and approximately `107` `text(billion pounds)` of plastic were produced in `text(2003)`. To calculate the percent increase, subtract the amount of plastic produced in `text(2000)` from the amount of plastic produced in `text(2003)` and then divide the result by the amount of plastic produced in `text(2000)` and multiply by `100`. This yields `((107-98)/98)*100=9.2`, or approximately `10%`.",
                     "Percent": 0
                 }
             },
@@ -1221,7 +1221,7 @@
                 "Choice": "`110%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may be the result of approximating the amount of plastic produced, in `text(billions of pounds)`, in the year `2003` (`x=18`).",
+                    "Rationale": "This choice may be the result of approximating the amount of plastic produced, in `text(billions of pounds)`, in the year `text(2003)` (`x=18`).",
                     "Percent": 0
                 }
             }
@@ -1357,14 +1357,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT18M2/media/25a.jpg",
-            "The table above shows the population of Greenleaf, Idaho, for the years `2000and2010`. If the relationship between population and year is linear, which of the following functions `P` models the population of Greenleaf `t` `text(years)` after `2000`?"
+            "The table above shows the population of Greenleaf, Idaho, for the years `text(2000)andtext(2010)`. If the relationship between population and year is linear, which of the following functions `P` models the population of Greenleaf `t` `text(years)` after `text(2000)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`P(t)=862-1.6t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It is given that the relationship between population and year is linear; therefore, the function that models the population `t` `text(years)` after `2000` is of the form `P(t)=mt+b`, where `m` is the slope and `b` is the population when `t=0`. In the year `2000,t=0`. Therefore, `b=862`. The slope is given by `m=(P(10)-P(0))/(10-0)=(846-862)/(10-0)=-16/10=-1.6`. Therefore, `P(t)=-1.6t+862`, which is equivalent to the equation in this choice.",
+                    "Rationale": "It is given that the relationship between population and year is linear; therefore, the function that models the population `t` `text(years)` after `text(2000)` is of the form `P(t)=mt+b`, where `m` is the slope and `b` is the population when `t=0`. In the year `text(2000),t=0`. Therefore, `b=862`. The slope is given by `m=(P(10)-P(0))/(10-0)=(846-862)/(10-0)=-16/10=-1.6`. Therefore, `P(t)=-1.6t+862`, which is equivalent to the equation in this choice.",
                     "Percent": 0
                 }
             },
@@ -1380,7 +1380,7 @@
                 "Choice": "`P(t)=862+16(t-2,000)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may be the result of incorrectly calculating the slope as just the change in the value of `P`, in addition to incorrectly using `t` to represent the year, instead of the number of years after `2000`.",
+                    "Rationale": "This choice may be the result of incorrectly calculating the slope as just the change in the value of `P`, in addition to incorrectly using `t` to represent the year, instead of the number of years after `text(2000)`.",
                     "Percent": 0
                 }
             },
@@ -1388,7 +1388,7 @@
                 "Choice": "`P(t)=862-1.6(t-2,000)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may be the result of incorrectly using `t` to represent the year instead of the number of years after `2000`.",
+                    "Rationale": "This choice may be the result of incorrectly using `t` to represent the year instead of the number of years after `text(2000)`.",
                     "Percent": 0
                 }
             }

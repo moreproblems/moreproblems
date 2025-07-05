@@ -73,14 +73,14 @@
         "Explain": false,
         "Content": [
             "problems/PSAT892M1/media/2a.jpg",
-            "The graph shown models the number of residents of a certain city `x` `text(years)` after `2010`. How many residents does this model estimate the city had in `2010`?"
+            "The graph shown models the number of residents of a certain city `x` `text(years)` after `text(2010)`. How many residents does this model estimate the city had in `text(2010)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is the value of `x` that represents the year `2010`.",
+                    "Rationale": "This choice is the value of `x` that represents the year `text(2010)`.",
                     "Percent": 0
                 }
             },
@@ -96,7 +96,7 @@
                 "Choice": "`20,000`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that `x` represents years after `2010`. Therefore, `2010` is represented by `x=0`. On the model shown, the point with an `xtext(-coordinate)` of `0` has a `ytext(-coordinate)` of `20,000`. Thus, the model estimates that in `2010`, the city had `20,000` residents.",
+                    "Rationale": "It's given that `x` represents years after `text(2010)`. Therefore, `text(2010)` is represented by `x=0`. On the model shown, the point with an `xtext(-coordinate)` of `0` has a `ytext(-coordinate)` of `20,000`. Thus, the model estimates that in `text(2010)`, the city had `20,000` residents.",
                     "Percent": 0
                 }
             },
@@ -104,7 +104,7 @@
                 "Choice": "`25,000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice is approximately the number of residents the model estimates the city had in `2014`, not `2010`.",
+                    "Rationale": "This choice is approximately the number of residents the model estimates the city had in `, not `text(2010)`.",
                     "Percent": 0
                 }
             }

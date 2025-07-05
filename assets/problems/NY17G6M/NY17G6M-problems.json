@@ -467,7 +467,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7 more than 2 times m",
+                "Choice": "7 more than 2 times `text(m)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -475,7 +475,7 @@
                 }
             },
             "B": {
-                "Choice": "2 more than 7 times m",
+                "Choice": "2 more than 7 times `text(m)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -483,7 +483,7 @@
                 }
             },
             "C": {
-                "Choice": "2 times the sum of 7 and m",
+                "Choice": "2 times the sum of 7 and `text(m)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -491,7 +491,7 @@
                 }
             },
             "D": {
-                "Choice": "7 times the sum of 2 and m",
+                "Choice": "7 times the sum of 2 and `text(m)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -575,7 +575,7 @@
         "Content": [
             "The net of a rectangular prism is shown below. The surface area of each face is labeled.",
             "problems/NY17G6M/media/17a.jpg",
-            "Which values represent the dimensions, in centimeters, of the rectangular prism?"
+            "Which values represent the dimensions, in `text(centimeters)`, of the rectangular prism?"
         ],
         "AnswerChoices": {
             "A": {
@@ -715,7 +715,7 @@
                 }
             },
             "D": {
-                "Choice": "2ⁿ",
+                "Choice": "`2^n`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1133,7 +1133,7 @@
         "Content": [
             "The surface area, S, of a right rectangular prism with length l, width w, and height h can be found using the formula below.",
             ":box:S = 2(lw + wh + hl)",
-            "What is the surface area, in square inches, of a prism with a length of 12 inches, a width of 9 inches, and a height of 2 inches?"
+            "What is the surface area, in `text(square inches)`, of a prism with a length of 12 inches, a width of 9 inches, and a height of 2 inches?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1969,7 +1969,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the area, in square centimeters, of the shaded part of the rectangle shown below?",
+            "What is the area, in `text(square centimeters)`, of the shaded part of the rectangle shown below?",
             "problems/NY17G6M/media/50a.jpg"
         ],
         "AnswerChoices": {

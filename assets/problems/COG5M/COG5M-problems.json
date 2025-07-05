@@ -25,7 +25,7 @@
                     "Percent": 0
                 }
             },
-            "B:All quadrilaterals have 4 sides. Triangles have 3 sides, so no triangles are quadrilaterals.": {
+            "B:All quadrilaterals have `4` sides. Triangles have `3` sides, so no triangles are quadrilaterals.": {
                 "Choice": "1:True",
                 "Key": {
                     "Correct": false,
@@ -49,7 +49,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Solve word problems involving addition and subtraction of fractions referring to the same whole, including cases of unlike denominators, e.g., by using visual fraction models or equations to represent the problem. Use benchmark fractions and number sense of fractions to estimate mentally and assess the reasonableness of answers."
@@ -59,13 +59,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A girl bought 1 pound of spinach. The following amounts were used.",
-            ":ibox:• She used 3/8 pound of spinach in a chicken dish.\n\n• She used 2/5 pound of spinach in a pasta dish.",
+            "A girl bought `1` `text(pound)` of spinach. The following amounts were used.",
+            ":ibox:• She used `3/8` `text(pound)` of spinach in a chicken dish.\n\n• She used `2/5` `text(pound)` of spinach in a pasta dish.",
             "How much spinach did she use for these two dishes?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5/13 pound",
+                "Choice": "`5/13` `text(pound)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -73,7 +73,7 @@
                 }
             },
             "B": {
-                "Choice": "6/13 pound",
+                "Choice": "`6/13` `text(pound)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -81,7 +81,7 @@
                 }
             },
             "C": {
-                "Choice": "27/40 pound",
+                "Choice": "`27/40` `text(pound)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -89,7 +89,7 @@
                 }
             },
             "D": {
-                "Choice": "31/40 pound",
+                "Choice": "`31/40` `text(pound)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -126,7 +126,7 @@
                 "Content": [
                     "The school mascot is a tiger. Students build a “T” for their gym. The dimensions of the “T” are given in the diagram.",
                     "problems/COG5M/media/3a.jpg",
-                    "What is the volume, in cubic feet, of the “T”?"
+                    "What is the volume, in `text(cubic feet)`, of the “T”?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -151,7 +151,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The volume of the “I” is 1 cubic foot more than the volume of the “T.”",
+                        "Choice": "The volume of the “I” is `1` `text(cubic foot)` more than the volume of the “T.”",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -159,7 +159,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The volume of the “I” is 3 cubic feet more than the volume of the “T.”",
+                        "Choice": "The volume of the “I” is `3` `text(cubic feet)` more than the volume of the “T.”",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -167,7 +167,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The volume of the “I” is 5 cubic feet more than the volume of the “T.”",
+                        "Choice": "The volume of the “I” is `5` `text(cubic feet)` more than the volume of the “T.”",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -175,7 +175,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "The volume of the “I” is 6 cubic feet more than the volume of the “T.”",
+                        "Choice": "The volume of the “I” is `6` `text(cubic feet)` more than the volume of the “T.”",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -201,9 +201,9 @@
         "Points": 1,
         "Explain": true,
         "Content": [
-            "A student uses an area model to find the value of the expression 95 × 25.s",
+            "A student uses an area model to find the value of the expression `95xx25`.",
             "problems/COG5M/media/4a.jpg",
-            ":ibox:• Find the value of the expression 2,375 ÷ 95.\n\n• Explain how to use the area model to check your work.\n\n• Explain how the area model shows both multiplication and division."
+            ":ibox:• Find the value of the expression `2text(,)375-:95`.\n\n• Explain how to use the area model to check your work.\n\n• Explain how the area model shows both multiplication and division."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -232,11 +232,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which numbers are needed to complete the expression so that the expression has a value of 8?",
-            ":box:(14 + :M-1: ) × :M-2: ÷ (18 - 12)"
+            "Which numbers are needed to complete the expression so that the expression has a value of `8`?",
+            ":box:`(14+` :M-1: `)xx` :M-2: `-:(18-12)`"
         ],
         "AnswerChoices": {
-            "A:2": {
+            "A:`2`": {
                 "Choice": "2",
                 "Key": {
                     "Correct": true,
@@ -244,7 +244,7 @@
                     "Percent": 0
                 }
             },
-            "B:9": {
+            "B:`9`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -252,7 +252,7 @@
                     "Percent": 0
                 }
             },
-            "C:10": {
+            "C:`10`": {
                 "Choice": "1",
                 "Key": {
                     "Correct": true,
@@ -260,7 +260,7 @@
                     "Percent": 0
                 }
             },
-            "D:12": {
+            "D:`12`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -276,7 +276,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Solve real-world problems involving multiplication of fractions and mixed numbers, e.g., by using visual fraction models or equations to represent the problem."
@@ -286,12 +286,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A bottle has 3/10 liter of tea. A second bottle has 3/5 of that amount of tea.",
+            "A bottle has `3/10` `text(liter)` of tea. A second bottle has `3/5` of that amount of tea.",
             "How many liters of tea are in the second bottle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/50",
+                "Choice": "`3/50`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -299,7 +299,7 @@
                 }
             },
             "B": {
-                "Choice": "3/25",
+                "Choice": "`3/25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -307,7 +307,7 @@
                 }
             },
             "C": {
-                "Choice": "9/50",
+                "Choice": "`9/50`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -315,7 +315,7 @@
                 }
             },
             "D": {
-                "Choice": "9/10",
+                "Choice": "`9/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -341,8 +341,8 @@
         "Explain": false,
         "Content": [
             "What is the value of each equation?",
-            "\n\n8.29 + 1.71 = :DD-1:",
-            "\n\n8.09 + 1.92 = :DD-2:"
+            "\n\n`8.29+1.71=` :DD-1:",
+            "\n\n`8.09+1.92=` :DD-2:"
         ],
         "AnswerChoices": {
             "1:A": {
@@ -439,9 +439,9 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "A fifth-grade class at Middle Valley Elementary School is selling school ribbons to raise money for a field trip. The school ribbons will have a length of 6 inches. The cost of 5 yards of ribbon is $6.",
+                    "A fifth-grade class at Middle Valley Elementary School is selling school ribbons to raise money for a field trip. The school ribbons will have a length of `6` `text(inches)`. The cost of `5` `text(yards)` of ribbon is `$6`.",
                     "problems/COG5M/media/8a.jpg",
-                    ":ibox:• Determine how many school ribbons can be made from the 5 yards of ribbon. Show your work.\n\n• Show how to find the cost of each 6-inch school ribbon. Include your work.\n\n• Write an equation that represents the cost of 5 school ribbons.",
+                    ":ibox:• Determine how many school ribbons can be made from the `5` `text(yards)` of ribbon. Show your work.\n\n• Show how to find the cost of each `6text(-inch)` school ribbon. Include your work.\n\n• Write an equation that represents the cost of `5` school ribbons.",
                     "\n\nSchool ribbons: :FR-1:",
                     "Cost per ribbons: :FR-2:",
                     "Equation: :FR-3:"
@@ -481,11 +481,11 @@
                 "Content": [
                     "The class wants to buy additional supplies and add an eagle sticker to each ribbon.",
                     "The additional supplies are shown.",
-                    ":ibox:• 30 yards of green ribbon that cost $3 for each yard\n\n• 40 yards of white ribbon that cost $2 for each yard\n\n• 10 packages of eagle stickers for $2 a package",
-                    "The parents contribute $145 to help pay for the supplies.",
-                    ":ibox:• Write an equation that can be used to determine c, the total cost of the ribbons and stickers.\n\n• Determine the value of c in your equation.\n\n• Explain or show how to determine the money still needed to pay for the additional supplies.",
+                    ":ibox:• `30` `text(yards)` of green ribbon that cost `$3` for each yard\n\n• `40` `text(yards)` of white ribbon that cost `$2` for each yard\n\n• `10` packages of eagle stickers for `$2` a package",
+                    "The parents contribute `$145` to help pay for the supplies.",
+                    ":ibox:• Write an equation that can be used to determine `c`, the total cost of the ribbons and stickers.\n\n• Determine the value of `c` in your equation.\n\n• Explain or show how to determine the money still needed to pay for the additional supplies.",
                     "\n\nEquation: :FR-1:",
-                    "Solution: c = :FR-2:"
+                    "Solution: `c=` :FR-2:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -523,13 +523,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which numbers are needed to complete the expression so that the expression has a value of 8?",
+            "Which numbers are needed to complete the expression so that the expression has a value of `8`?",
             "problems/COG5M/media/9a.jpg",
-            "What is the volume, in cubic inches, of the right rectangular prism?"
+            "What is the volume, in `text(cubic inches)`, of the right rectangular prism?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -537,7 +537,7 @@
                 }
             },
             "B": {
-                "Choice": "13",
+                "Choice": "`13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -545,7 +545,7 @@
                 }
             },
             "C": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -553,7 +553,7 @@
                 }
             },
             "D": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -579,12 +579,12 @@
         "Explain": false,
         "Content": [
             "The rules for two different number patterns are given.",
-            ":ibox:• Pattern A: Start with 0, and then add 2 to get the next number.\n\n• Pattern B: Start with 2, and then multiply by 2 to get the next number.",
-            "How does the fourth number in Pattern B compare to the fourth number in Pattern A?"
+            ":ibox:• Pattern `A`: Start with `0`, and then add `2` to get the next number.\n\n• Pattern `B`: Start with `2`, and then multiply by `2` to get the next number.",
+            "How does the fourth number in Pattern `B` compare to the fourth number in Pattern `A`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The fourth number in Pattern B is 10 more than the fourth number in Pattern A.",
+                "Choice": "The fourth number in Pattern `B` is `10` more than the fourth number in Pattern `A`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -592,7 +592,7 @@
                 }
             },
             "B": {
-                "Choice": "The fourth number in Pattern B is 2 more than the fourth number in Pattern A.",
+                "Choice": "The fourth number in Pattern `B` is `2` more than the fourth number in Pattern `A`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -600,7 +600,7 @@
                 }
             },
             "C": {
-                "Choice": "The fourth number in Pattern B is 2 times the fourth number in Pattern A.",
+                "Choice": "The fourth number in Pattern `B` is `2` times the fourth number in Pattern `A`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -608,7 +608,7 @@
                 }
             },
             "D": {
-                "Choice": "The fourth number in Pattern B is 4 times the fourth number in Pattern A.",
+                "Choice": "The fourth number in Pattern `B` is `4` times the fourth number in Pattern `A`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -623,7 +623,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Solve real-world problems involving division of unit fractions by non-zero whole numbers and division of whole numbers by unit fractions, e.g., by using visual fraction models and equations to represent the problem."
@@ -633,11 +633,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "How many 1/6-cup servings are in 12 cups of juice?"
+            "How many `1/6text(-cup)` servings are in `12` `text(cups)` of juice?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/72",
+                "Choice": "`1/72`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -645,7 +645,7 @@
                 }
             },
             "B": {
-                "Choice": "1/2",
+                "Choice": "`1/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -653,7 +653,7 @@
                 }
             },
             "C": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -661,7 +661,7 @@
                 }
             },
             "D": {
-                "Choice": "72",
+                "Choice": "`72`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -686,12 +686,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A fish tank is in the shape of a right rectangular prism. The fish tank has a length of 6 feet, a width of 2 feet, and a height of 3 feet.",
-            "What is the volume, in cubic feet, of the fish tank?"
+            "A fish tank is in the shape of a right rectangular prism. The fish tank has a length of `6` `text(feet)`, a width of `2` `text(feet)`, and a height of `3` `text(feet)`.",
+            "What is the volume, in `text(cubic feet)`, of the fish tank?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "11",
+                "Choice": "`11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -699,7 +699,7 @@
                 }
             },
             "B": {
-                "Choice": "18",
+                "Choice": "`18`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -707,7 +707,7 @@
                 }
             },
             "C": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -715,7 +715,7 @@
                 }
             },
             "D": {
-                "Choice": "36",
+                "Choice": "`36`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -751,7 +751,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The smaller garden has a length of 24 feet and a width of 9 feet.",
+                    "The smaller garden has a length of `24` `text(feet)` and a width of `9` `text(feet)`.",
                     "What is the area, in `text(square feet)`, of the smaller garden?"
                 ],
                 "AnswerChoices": {
@@ -771,12 +771,12 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The larger garden has a length of 132 feet and a width of 24 feet.",
+                    "The larger garden has a length of `132` `text(feet)` and a width of `24` `text(feet)`.",
                     "What is the area, in `text(square feet)`, of the larger garden?"
                 ],
                 "AnswerChoices": {
-                    "A": {
-                        "Choice": "3168",
+                    "KEY": {
+                        "Choice": "equal:3168",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -814,11 +814,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Which amount is greater than four hundred forty-five and fifty-seven hundredths?"
+                    "Which amount is greater than `text(four hundred forty-five and fifty-seven hundredths)`?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "Four hundred forty-five and five tenths",
+                        "Choice": "`text(Four hundred forty-five and five tenths)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -826,7 +826,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "Four hundred forty-five and seven tenths",
+                        "Choice": "`text(Four hundred forty-five and seven tenths)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -834,7 +834,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "Four hundred forty-five and five thousandths",
+                        "Choice": "`text(Four hundred forty-five and five thousandths)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -842,7 +842,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "Four hundred forty-five and fifty-seven thousandths",
+                        "Choice": "`text(Four hundred forty-five and fifty-seven thousandths)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -857,11 +857,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What is four hundred forty-five and fifty-seven hundredths rounded to the nearest tenth?"
+                    "What is `text(four hundred forty-five and fifty-seven hundredths)` rounded to the nearest `text(tenth)`?"
                 ],
                 "AnswerChoices": {
-                    "A": {
-                        "Choice": "445.6",
+                    "KEY": {
+                        "Choice": "equal:445.6",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -899,11 +899,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Graph the points for the age, x, in years, and height, y, in `text(inches)`, of the four children."
+                    "Graph the points for the age, `x`, in `text(years)`, and height, `y`, in `text(inches)`, of the four children."
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
-                        "Choice": "(12,50)",
+                        "Choice": "`(12,50)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -911,7 +911,7 @@
                         }
                     },
                     "2:KEY": {
-                        "Choice": "(15,48)",
+                        "Choice": "`(15,48)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -919,7 +919,7 @@
                         }
                     },
                     "3:KEY": {
-                        "Choice": "(10,50)",
+                        "Choice": "`(10,50)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -927,7 +927,7 @@
                         }
                     },
                     "4:KEY": {
-                        "Choice": "(14,52)",
+                        "Choice": "`(14,52)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -942,12 +942,12 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The park rules allow children who are 12 years or older and at least 50 inches tall to go on the water ride.",
+                    "The park rules allow children who are `12` `text(years)` or older and at least `50` `text(inches)` tall to go on the water ride.",
                     "Which coordinate pair could represent the age and height of a child that can go on the ride?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "(11, 54)",
+                        "Choice": "`(11,54)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -955,7 +955,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "(12, 44)",
+                        "Choice": "`(12,44)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -963,7 +963,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "(13, 51)",
+                        "Choice": "`(13,51)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -971,7 +971,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "(14, 49)",
+                        "Choice": "`(14,49)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -987,7 +987,7 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Find the area of a rectangle with fractional side lengths by tiling it with unit squares of the appropriate unit fraction side lengths, and show that the area is the same as would be found by multiplying the side lengths. Multiply fractional side lengths to find areas of rectangles, and represent fraction products as rectangular areas."
@@ -998,8 +998,8 @@
         "Explain": false,
         "Content": [
             "Use the information provided to answer Part A and Part B for this question.",
-            "Student A and Student B created patterns (not to scale) using square tiles.",
-            ":ibox:• The pattern created by each student is made up of 9 square tiles.\n\n• Each tile in the pattern for Student A has a side length of 1/2 inch.\n\n• Each tile in the pattern for Student B has a side length of 1/4 inch.",
+            "Student `A` and Student `B` created patterns (not to scale) using square tiles.",
+            ":ibox:• The pattern created by each student is made up of `9` square tiles.\n\n• Each tile in the pattern for Student `A` has a side length of `1/2` `text(inch)`.\n\n• Each tile in the pattern for Student `B` has a side length of `1/4` `text(inch)`.",
             "problems/COG5M/media/16a.jpg",
             "problems/COG5M/media/16a.jpg"
         ],
@@ -1011,10 +1011,10 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What is the length, in `text(inches)`, of the pattern for Student B?"
+                    "What is the length, in `text(inches)`, of the pattern for Student `B`?"
                 ],
                 "AnswerChoices": {
-                    "A:0": {
+                    "A:`0`": {
                         "Choice": "0",
                         "Key": {
                             "Correct": false,
@@ -1023,7 +1023,7 @@
                         }
                     },
                     "B:": {
-                        "Choice": "1/4",
+                        "Choice": "0.25",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1031,7 +1031,7 @@
                         }
                     },
                     "C:": {
-                        "Choice": "1/2",
+                        "Choice": "0.5",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1039,14 +1039,14 @@
                         }
                     },
                     "D:": {
-                        "Choice": "3/4",
+                        "Choice": "0.75",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
-                    "E:1": {
+                    "E:`1`": {
                         "Choice": "1",
                         "Key": {
                             "Correct": false,
@@ -1055,7 +1055,7 @@
                         }
                     },
                     "F:": {
-                        "Choice": "5/4",
+                        "Choice": "1.25",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1063,7 +1063,7 @@
                         }
                     },
                     "G:": {
-                        "Choice": "3/2",
+                        "Choice": "1.5",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1071,14 +1071,14 @@
                         }
                     },
                     "H:": {
-                        "Choice": "7/4",
+                        "Choice": "1.75",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
-                    "I:2": {
+                    "I:`2`": {
                         "Choice": "2",
                         "Key": {
                             "Correct": false,
@@ -1087,7 +1087,7 @@
                         }
                     },
                     "J:": {
-                        "Choice": "9/4",
+                        "Choice": "2.25",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1095,7 +1095,7 @@
                         }
                     },
                     "K:": {
-                        "Choice": "5/2",
+                        "Choice": "2.5",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1103,14 +1103,14 @@
                         }
                     },
                     "L:": {
-                        "Choice": "11/4",
+                        "Choice": "2.75",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
-                    "M:3": {
+                    "M:`3`": {
                         "Choice": "3",
                         "Key": {
                             "Correct": false,
@@ -1119,7 +1119,7 @@
                         }
                     },
                     "N:": {
-                        "Choice": "13/4",
+                        "Choice": "3.25",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1127,7 +1127,7 @@
                         }
                     },
                     "O:": {
-                        "Choice": "7/2",
+                        "Choice": "3.5",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1135,7 +1135,7 @@
                         }
                     },
                     "P:": {
-                        "Choice": "15/4",
+                        "Choice": "3.75",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1150,7 +1150,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    ":ibox:• Find the area, in square inches, of the pattern for Student A.\n\n• Explain how to find the area of the pattern for Student B using a different method than the one used to find the area of the pattern for Student A."
+                    ":ibox:• Find the area, in `text(square inches)`, of the pattern for Student `A`.\n\n• Explain how to find the area of the pattern for Student `B` using a different method than the one used to find the area of the pattern for Student `A`."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1170,7 +1170,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Add and subtract fractions with unlike denominators (including mixed numbers) by replacing given fractions with equivalent fractions in such a way as to produce an equivalent sum or difference of fractions with like denominators."
@@ -1180,11 +1180,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of the expression 11/8 + 1/5?"
+            "What is the value of the expression `11/8+1/5`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/10",
+                "Choice": "`3/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1192,7 +1192,7 @@
                 }
             },
             "B": {
-                "Choice": "12/13",
+                "Choice": "`12/13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1200,7 +1200,7 @@
                 }
             },
             "C": {
-                "Choice": "63/40",
+                "Choice": "`63/40`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1208,7 +1208,7 @@
                 }
             },
             "D": {
-                "Choice": "15/8",
+                "Choice": "`15/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1243,12 +1243,12 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "A frog wants to reach a pond that is 10 feet away. The frog hops 5 times. Each hop is 18 inches.",
+                    "A frog wants to reach a pond that is `10` `text(feet)` away. The frog hops `5` times. Each hop is `18` `text(inches)`.",
                     "How many more inches does the frog need to travel to reach the pond?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "30",
+                        "Choice": "`30`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1256,7 +1256,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "90",
+                        "Choice": "`90`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1264,7 +1264,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "102",
+                        "Choice": "`102`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1272,7 +1272,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "138",
+                        "Choice": "`138`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1287,12 +1287,12 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The frog has two ways to reach the pond. The frog could hop on grass for 10 feet or hop on the sidewalk for 4 yards and 1 foot to reach the pond.",
+                    "The frog has two ways to reach the pond. The frog could hop on grass for `10` `text(feet)` or hop on the sidewalk for `4` `text(yards)and1` `text(foot)` to reach the pond.",
                     "Which statement is true?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The grass route is 72 inches shorter than the sidewalk route.",
+                        "Choice": "The grass route is `72` `text(inches)` shorter than the sidewalk route.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1300,7 +1300,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The sidewalk route is 5 feet shorter than the grass route.",
+                        "Choice": "The sidewalk route is `5` `text(feet)` shorter than the grass route.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1308,7 +1308,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The sidewalk route is 1 yard longer than the grass route.",
+                        "Choice": "The sidewalk route is `1` `text(yard)` longer than the grass route.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1316,7 +1316,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "The sidewalk route is 2 feet longer than the grass route.",
+                        "Choice": "The sidewalk route is `2` `text(feet)` longer than the grass route.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1347,7 +1347,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "12.012 > 12.12",
+                "Choice": "`12.012>12.12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1355,7 +1355,7 @@
                 }
             },
             "B": {
-                "Choice": "12.071 < 12.12",
+                "Choice": "`12.071<12.12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1363,7 +1363,7 @@
                 }
             },
             "C": {
-                "Choice": "12.07 > 12.054",
+                "Choice": "`12.07>12.054`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1371,7 +1371,7 @@
                 }
             },
             "D": {
-                "Choice": "12.076 > 12.54",
+                "Choice": "`12.076>12.54`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1379,7 +1379,7 @@
                 }
             },
             "E": {
-                "Choice": "12.012 < 12.076",
+                "Choice": "`12.012<12.076`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1391,25 +1391,25 @@
     },
     "20": {
         "Number": 20,
-        "Type": "FD",
+        "Type": "S",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
-            "Interpret the product `a/bxxq` as a parts of a partition of `q` into `b` equal parts; equivalently, as the result of a sequence of operations `axxqdivb`."
+            "Interpret the product `a/bxxq` as a parts of a partition of `q` into `b` equal parts; equivalently, as the result of a sequence of operations `axxq-:b`."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Create a fraction model to show the answer to 1/2 × 3/4.",
+            "Create a fraction model to show the answer to `1/2xx3/4`.",
             "Divide the figure into the correct number of equal parts and then shade the correct number of parts."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "match:fraction=3/8",
+                "Choice": "fraction:3/8",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",

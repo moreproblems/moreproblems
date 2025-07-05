@@ -234,7 +234,7 @@
                                 },
                                 {
                                     "Key": "ME.M9-12.VM.B.5.b",
-                                    "Label": "Compute the magnitude of a scalar multiple cv using ||cv|| = |c|v. Compute the direction of cv knowing that when |c|v ≠ 0, the direction of cv is either along v (for c > 0) or against v (for c < 0).",
+                                    "Label": "Compute the magnitude of a scalar multiple cv using ||cv|| = |c|v. Compute the direction of cv knowing that when |c|v ≠ 0, the direction of cv is either along v (for `c>0`) or against v (for c < 0).",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -318,7 +318,7 @@
                                     "Key": "ME.M9-12.SSE.A.1.b",
                                     "Label": "Interpret multi-part expressions by viewing one or more of their parts as a single entity.",
                                     "Examples": [
-                                        "For example, view P(1 + r)ⁿ as the product of P and a factor not depending on P and interpret the parts."
+                                        "For example, view `P(1+r)^n` as the product of `P` and a factor not depending on `P` and interpret the parts."
                                     ],
                                     "Subs": []
                                 }
@@ -770,7 +770,7 @@
                                 },
                                 {
                                     "Key": "ME.M9-12.IF.C.8.b",
-                                    "Label": "Use the properties of exponents to interpret expressions for exponential functions. For example, apply the properties to financial situations such as identifying appreciation and depreciation rate for the value of a house or car sometime after its initial purchase: Vn = P(1 + r)ⁿ.",
+                                    "Label": "Use the properties of exponents to interpret expressions for exponential functions. For example, apply the properties to financial situations such as identifying appreciation and depreciation rate for the value of a house or car sometime after its initial purchase: `V_n=P(1+r)^n`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -842,7 +842,7 @@
                     "Subs": [
                         {
                             "Key": "ME.M9-12.BF.B.3",
-                            "Label": "Identify the effect on the graph of replacing f(x) by f(x) + k, k f(x), f(kx), and f(x + k) for specific values of k (both positive and negative); find the value of k given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them.",
+                            "Label": "Identify the effect on the graph of replacing `f(x)` by `f(x)+k,kf(x),f(kx),andf(x+k)` for specific values of `k` (both positive and negative); find the value of `k` given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them.",
                             "Examples": [],
                             "Subs": []
                         },
@@ -853,9 +853,9 @@
                             "Subs": [
                                 {
                                     "Key": "ME.M9-12.BF.B.4.a",
-                                    "Label": "Solve an equation of the form f(x) = c (where c represents the output value of the function) for a simple function f that has an inverse and write an expression for the inverse.",
+                                    "Label": "Solve an equation of the form `f(x)=c` (where c represents the output value of the function) for a simple function f that has an inverse and write an expression for the inverse.",
                                     "Examples": [
-                                        "For example, if f(x) = 2x^3, then solving f(x) = c leads to x = (c/2)¹/³, which is the general formula for finding an input from a specific output, c, for this function."
+                                        "For example, if `f(x)=2x^3`, then solving `f(x)=c` leads to x = (c/2)¹/³, which is the general formula for finding an input from a specific output, c, for this function."
                                     ],
                                     "Subs": []
                                 },
@@ -983,7 +983,7 @@
                         },
                         {
                             "Key": "ME.M9-12.TF.A.3",
-                            "Label": "Use special triangles to determine geometrically the values of sine, cosine, tangent for π/3, π/4 and π/6, and use the unit circle to express the values of sine, cosine, and tangent for x, π + x, and 2π - x in terms of their values for x, where `x` is any real number.",
+                            "Label": "Use special triangles to determine geometrically the values of sine, cosine, tangent for `pi/3,pi/4andpi/6`, and use the unit circle to express the values of sine, cosine, and tangent for `x,pi+x,and2pi-x` in terms of their values for `x`, where `x` is any real number.",
                             "Examples": [],
                             "Subs": []
                         },

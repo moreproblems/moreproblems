@@ -968,7 +968,7 @@
                 "Choice": "The product is between 3 and 4.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1`, and `1` is not between 3 and 4.",
+                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is not between 3 and 4.",
                     "Percent": 11
                 }
             },
@@ -976,7 +976,7 @@
                 "Choice": "The product is less than 2/3.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1`, and `1` is not less than 2/3.",
+                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is not less than 2/3.",
                     "Percent": 13
                 }
             },
@@ -984,7 +984,7 @@
                 "Choice": "The product is between 2/3 and 3.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1`, and `1` is between 2/3 and 3.",
+                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is between 2/3 and 3.",
                     "Percent": 54
                 }
             },
@@ -992,7 +992,7 @@
                 "Choice": "The product is greater than 4.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1`, and `1` is not greater than 4.",
+                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is not greater than 4.",
                     "Percent": 21
                 }
             }
@@ -1320,7 +1320,7 @@
         "Content": [
             "The rectangle shown represents the base of a rectangular prism. Use the ruler provided to measure the length and width of the rectangle to the nearest 1/4 inch.",
             "problems/TX17G6M/media/26a.jpg",
-            "The height of the prism is 2 inches. Which measurement is closest to the volume of the prism in cubic inches?"
+            "The height of the prism is 2 inches. Which measurement is closest to the volume of the prism in `text(cubic inches)`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -1695,7 +1695,7 @@
             "Number & Operations"
         ],
         "SubTopics": [
-            "Extend representations for division to include fraction notation such as `a/b` represents the same number as `adivb` where `b!=0`."
+            "Extend representations for division to include fraction notation such as `a/b` represents the same number as `a-:b` where `b!=0`."
         ],
         "SuppContent": [],
         "SuppTools": [],

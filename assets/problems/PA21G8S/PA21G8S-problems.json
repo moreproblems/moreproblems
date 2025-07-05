@@ -555,14 +555,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The acidity of the water in a stream is indicated by its pH. Historically, a certain stream has had a pH of 6.0. Acid rain has caused the stream's pH to become 4.8. Which statement predicts how the stream's ecosystem will most likely be impacted?"
+            "The acidity of the water in a stream is indicated by its `text(pH)`. Historically, a certain stream has had a `text(pH)` of 6.0. Acid rain has caused the stream's `text(pH)` to become 4.8. Which statement predicts how the stream's ecosystem will most likely be impacted?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "The flow rate of the stream will increase.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Flow rate is not directly related to the pH of a stream.",
+                    "Rationale": "Flow rate is not directly related to the `text(pH)` of a stream.",
                     "Percent": 8
                 }
             },
@@ -570,7 +570,7 @@
                 "Choice": "The flow rate of the stream will decrease.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Flow rate is not directly related to the pH of a stream.",
+                    "Rationale": "Flow rate is not directly related to the `text(pH)` of a stream.",
                     "Percent": 18
                 }
             },
@@ -578,7 +578,7 @@
                 "Choice": "The number of fish in the stream will increase.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Changes to the pH of a stream will most likely harm organisms, like fish.",
+                    "Rationale": "Changes to the `text(pH)` of a stream will most likely harm organisms, like fish.",
                     "Percent": 11
                 }
             },
@@ -586,7 +586,7 @@
                 "Choice": "The number of fish in the stream will decrease.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Fish and other stream organisms are likely harmed by a change in pH.",
+                    "Rationale": "Fish and other stream organisms are likely harmed by a change in `text(pH)`.",
                     "Percent": 63
                 }
             }

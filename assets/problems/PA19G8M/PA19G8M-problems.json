@@ -14,11 +14,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to (4⁴)^2 • (4⁷)⁻²?"
+            "Which expression is equivalent to `(4^4)^2*(4^7)^-2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/4⁶",
+                "Choice": "`1/4^6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -26,26 +26,26 @@
                 }
             },
             "B": {
-                "Choice": "1/4³",
+                "Choice": "`1/4^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses negative exponent on second factor to move (4⁷)^2 to denominator, but then “cancels” exponents of 2; evaluates as (4⁴)^2/(4⁷)^2 = (4⁴)/(4⁷).",
+                    "Rationale": "Uses negative exponent on second factor to move `(4^7)^2` to denominator, but then “cancels” exponents of `2`; evaluates as `(4^4)^2/(4^7)^2=(4^4)/(4^7)`.",
                     "Percent": 13
                 }
             },
             "C": {
-                "Choice": "4¹¹",
+                "Choice": "`4^11`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds exponents throughout; evaluates as (4⁶)(4⁵) and then 4⁽⁶⁺⁵⁾.",
+                    "Rationale": "Adds exponents throughout; evaluates as `(4^6)(4^5)` and then `4^(6+5)`.",
                     "Percent": 32
                 }
             },
             "D": {
-                "Choice": "4³⁰",
+                "Choice": "`4^30`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds exponents then multiplies exponents; evaluates as (4⁶)(4⁵) then 4⁽⁶ˣ⁵⁾",
+                    "Rationale": "Adds exponents then multiplies exponents; evaluates as `(4^6)(4^5)` then `4^(6xx5)`.",
                     "Percent": 13
                 }
             }
@@ -69,7 +69,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which statement describes values of `xandy` such that x/y could be an irrational number?"
+            "Which statement describes values of `xandy` such that `x/y` could be an irrational number?"
         ],
         "AnswerChoices": {
             "A": {
@@ -694,7 +694,7 @@
         "Content": [
             "Michael stacks 14 identical disks to form a cylinder.",
             ":box:• Each disk is 1/4 inch thick.\n\n• The diameter of each disk is 3 inches.",
-            "Which measurement is closest to the volume, in cubic inches, of the stack of disks?"
+            "Which measurement is closest to the volume, in `text(cubic inches)`, of the stack of disks?"
         ],
         "AnswerChoices": {
             "A": {

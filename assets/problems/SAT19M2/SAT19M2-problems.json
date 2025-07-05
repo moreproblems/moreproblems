@@ -1035,7 +1035,7 @@
                 "Choice": "`1/4` `text(cup)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that a `3/4text(-cup)` serving of Crunch y Grain cereal provides `210` `text(calories)`. The total number of `text(calories per cup)` can be found by dividing `210` by `3/4`, which gives `210div3/4=280` `text(calories per cup)`. Let `c` be the number of cups of Crunchy Grain cereal and `s` be the number of cups of Super Grain cereal. The expression `280c` represents the number of calories in `c` `text(cups)` of Crunchy Grain cereal, and `240s` represents the number of calories in `s` `text(cups)` of Super Grain cereal. The equation `280c+240s=270` gives the total number of calories in `text(one cup)` of the mixture. Since `c+s=1` `text(cup),c=1-s`. Substituting `1-s` for `c` in the equation `280c+240s=270` yields `280(1-s)+240s=270,or280-280s+240s=270`. Simplifying this equation yields `280-40s=270`. Subtracting `280` from both sides results in `-40s=-10`. Dividing both sides of the equation by `-40` results in `s=1/4`, so t here is `1/4` `text(cup)` of Super Grain cereal in `text(one cup)` of the mixture.",
+                    "Rationale": "It's given that a `3/4text(-cup)` serving of Crunch y Grain cereal provides `210` `text(calories)`. The total number of `text(calories per cup)` can be found by dividing `210` by `3/4`, which gives `210-:3/4=280` `text(calories per cup)`. Let `c` be the number of cups of Crunchy Grain cereal and `s` be the number of cups of Super Grain cereal. The expression `280c` represents the number of calories in `c` `text(cups)` of Crunchy Grain cereal, and `240s` represents the number of calories in `s` `text(cups)` of Super Grain cereal. The equation `280c+240s=270` gives the total number of calories in `text(one cup)` of the mixture. Since `c+s=1` `text(cup),c=1-s`. Substituting `1-s` for `c` in the equation `280c+240s=270` yields `280(1-s)+240s=270,or280-280s+240s=270`. Simplifying this equation yields `280-40s=270`. Subtracting `280` from both sides results in `-40s=-10`. Dividing both sides of the equation by `-40` results in `s=1/4`, so t here is `1/4` `text(cup)` of Super Grain cereal in `text(one cup)` of the mixture.",
                     "Percent": 0
                 }
             },
@@ -1574,19 +1574,19 @@
         "Explain": false,
         "Content": [
             "problems/SAT19M2/media/29a.jpg",
-            "The scatterplot above shows the federal-mandated minimum wage every `10` `text(years)` between `1940and2010`. A line of best fit is shown, and its equation is `y=0.096x-0.488`. What does the line of best fit predict about the increase in the minimum wage over the `70text(-year)` period?"
+            "The scatterplot above shows the federal-mandated minimum wage every `10` `text(years)` between `text(1940)andtext(2010)`. A line of best fit is shown, and its equation is `y=0.096x-0.488`. What does the line of best fit predict about the increase in the minimum wage over the `70text(-year)` period?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Each year between `1940and2010`, the average increase in minimum wage was `0.096` `text(dollars)`.",
+                "Choice": "Each year between `text(1940)andtext(2010)`, the average increase in minimum wage was `0.096` `text(dollars)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The given equation is in slope-intercept form, or `y=mx+b`, where m is the value of the slope of the line of best fit. Therefore, the slope of the line of best fit is `0.096`. From the definition of slope, it follows that an increase of `1` in the `xtext(-value)` corresponds to an increase of `0.096` in the `ytext(-value)`. Therefore, the line of best fit predicts that for each year between `1940and2010`, the minimum wage will increase by `0.096` `text(dollar per hour)`.",
+                    "Rationale": "The given equation is in slope-intercept form, or `y=mx+b`, where m is the value of the slope of the line of best fit. Therefore, the slope of the line of best fit is `0.096`. From the definition of slope, it follows that an increase of `1` in the `xtext(-value)` corresponds to an increase of `0.096` in the `ytext(-value)`. Therefore, the line of best fit predicts that for each year between `text(1940)andtext(2010)`, the minimum wage will increase by `0.096` `text(dollar per hour)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "Each year between `1940and2010`, the average increase in minimum wage was `0.49` `text(dollars)`.",
+                "Choice": "Each year between `text(1940)andtext(2010)`, the average increase in minimum wage was `0.49` `text(dollars)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from using the `ytext(-coordinate)` of the `ytext(-intercept)` as the average increase, instead of the slope.",
@@ -1594,7 +1594,7 @@
                 }
             },
             "C": {
-                "Choice": "Every `10` `text(years)` between `1940and2010`, the average increase in minimum wage was `0.096` `text(dollars)`.",
+                "Choice": "Every `10` `text(years)` between `text(1940)andtext(2010)`, the average increase in minimum wage was `0.096` `text(dollars)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from using the `10text(-year)` increments given on the `xtext(-axis)` to incorrectly interpret the slope of the line of best fit.",
@@ -1602,7 +1602,7 @@
                 }
             },
             "D": {
-                "Choice": "Every `10` `text(years)` between `1940and2010`, the average increase in minimum wage was `0.488` `text(dollars)`.",
+                "Choice": "Every `10` `text(years)` between `text(1940)andtext(2010)`, the average increase in minimum wage was `0.488` `text(dollars)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from using the `ytext(-coordinate)` of the `ytext(-intercept)` as the average increase, instead of the slope, and from using the `10text(-year)` increments given on the `xtext(-axis)` to incorrectly interpret the slope of the line of best fit.",
@@ -1749,7 +1749,7 @@
         "Explain": false,
         "Content": [
             "problems/SAT19M2/media/33a.jpg",
-            "Human blood can be classified into four common blood types — `A,B,AB,andO`. It is also characterized by the presence (`+`) or absence (`-`) of the rhesus factor. The table above shows the distribution of blood type and rhesus factor for a group of people. If one of these people who is rhesus negative (`-`) is chosen at random, the probability that the person has blood type `B` is `1/9`. What is the value of `x`?"
+            "Human blood can be classified into four common blood types — `A,B,AB,andO`. It is also characterized by the presence `(+)` or absence `(-)` of the rhesus factor. The table above shows the distribution of blood type and rhesus factor for a group of people. If one of these people who is rhesus negative `(-)` is chosen at random, the probability that the person has blood type `B` is `1/9`. What is the value of `x`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1877,14 +1877,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on the information given in the table, how much greater, in `text(millions)`, was the median number of international tourist arrivals to the top nine tourist destinations in `2013` than the median number in `2012`, to the nearest `text(tenth of a million)`?"
+            "Based on the information given in the table, how much greater, in `text(millions)`, was the median number of international tourist arrivals to the top nine tourist destinations in `text(2013)` than the median number in `text(2012)`, to the nearest `text(tenth of a million)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:1.3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The median number of tourists is found by ordering the number of tourists from least to greatest and determining the middle value from this list. When the number of tourists in `2012` is ordered from least to greatest, the middle value, or the fifth number, is `46.4` `text(million)`. When the number of tourists in `2013` is ordered from least to greatest, the middle value, or the fifth number, is `47.7` `text(million)`. The difference between these two medians is `47.7` `text(million)-46.4` `text(million)=1.3` `text(million)`.",
+                    "Rationale": "The median number of tourists is found by ordering the number of tourists from least to greatest and determining the middle value from this list. When the number of tourists in `text(2012)` is ordered from least to greatest, the middle value, or the fifth number, is `46.4` `text(million)`. When the number of tourists in `text(2013)` is ordered from least to greatest, the middle value, or the fifth number, is `47.7` `text(million)`. The difference between these two medians is `47.7` `text(million)-46.4` `text(million)=1.3` `text(million)`.",
                     "Percent": 0
                 }
             }
@@ -1910,14 +1910,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The number of international tourist arrivals in Russia in `2012` was `13.5%` greater than in `2011`. The number of international tourist arrivals in Russia was `k` `text(million)` more in `2012` than in `2011`. What is the value of `k` to the nearest `text(integer)`?"
+            "The number of international tourist arrivals in Russia in `text(2012)` was `13.5%` greater than in `text(2011)`. The number of international tourist arrivals in Russia was `k` `text(million)` more in `text(2012)` than in `text(2011)`. What is the value of `k` to the nearest `text(integer)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:3",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The correct answer is `3`. Let `y` be the number of international tourist arrivals in Russia in `2012`, and let `x` be the number of these arrivals in `2011`. It's given that `y` is `13.5%` greater than `x,ory=1.135x`. The table gives that `y=24.7,` so `24.7=1.135x`. Dividing both sides of this equation by `1.135` yields `24.7/1.135=x,orx~~21.8` `text(million)` arrivals. The difference in the number of tourist arrivals between these two years is `24.7` `text(million)-21.8` `text(million)=2.9` `text(million)`. Therefore, the value of `k` is `3` when rounded to the nearest integer.",
+                    "Rationale": "The correct answer is `3`. Let `y` be the number of international tourist arrivals in Russia in `text(2012)`, and let `x` be the number of these arrivals in `text(2011)`. It's given that `y` is `13.5%` greater than `x,ory=1.135x`. The table gives that `y=24.7,` so `24.7=1.135x`. Dividing both sides of this equation by `1.135` yields `24.7/1.135=x,orx~~21.8` `text(million)` arrivals. The difference in the number of tourist arrivals between these two years is `24.7` `text(million)-21.8` `text(million)=2.9` `text(million)`. Therefore, the value of `k` is `3` when rounded to the nearest integer.",
                     "Percent": 0
                 }
             }

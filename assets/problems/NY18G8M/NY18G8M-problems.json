@@ -971,7 +971,7 @@
         "Content": [
             "The scatter plot below shows the average points scored per game by players of different ages in an adult basketball league.",
             "problems/NY18G8M/media/31a.jpg",
-            "Which statement best describes the association between a player's age, in years, and the average points scored per game?"
+            "Which statement best describes the association between a player's age, in `text(years)`, and the average points scored per game?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1483,7 +1483,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": ":box:-4 < x < -2 and\n-1 < x < 1",
+                "Choice": ":box:`-4<x<-2and`\n`-1<x<1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1491,7 +1491,7 @@
                 }
             },
             "B": {
-                "Choice": ":box:-4 < x < -2 and\n0 < x < 2",
+                "Choice": ":box:`-4<x<-2and`\n`0<x<2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1499,7 +1499,7 @@
                 }
             },
             "C": {
-                "Choice": ":box:-2 < x < 0 and\n2 < x < 4",
+                "Choice": ":box:`-2<x<0and`\n`2<x<4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1507,7 +1507,7 @@
                 }
             },
             "D": {
-                "Choice": ":box:-2 < x < -1 and\n2 < x < 4",
+                "Choice": ":box:`-2<x<-1and`\n`2<x<4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

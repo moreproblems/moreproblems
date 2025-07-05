@@ -188,7 +188,7 @@
                 "Choice": "A 4-year loan with a 5.2% annual simple interest rate",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the loan option that would allow the customer to pay the least amount of interest, the student should have first calculated the amount of interest for each option using the simple interest formula I = Prt, in which P represents the principal (initial loan amount), r represents the rate (in decimal form), and t represents the length of time in years. To determine the amount of interest for a 4-year loan with a 5.2% annual simple interest rate (option A), the student should have calculated I = ($12,000)(0.052)(4) = $2,496. To determine the amount of interest for a 5-year loan with a 4.2% annual simple interest rate (option B), the student should have calculated I = ($12,000)(0.042)(5) = $2,520. To determine the amount of interest for a 6-year loan with a 4.7% annual simple interest rate (option C), the student should have calculated I = ($12,000)(0.047)(6) = $3,384. To determine the amount of interest for a 3-year loan with an 8.4% annual simple interest rate (option D), the student should have calculated I = ($12,000)(0.084)(3) = $3,024. Finally the student should have determined that a 4-year loan with a 5.2% annual simple interest rate (option A) results in the least amount of interest.",
+                    "Rationale": "To determine the loan option that would allow the customer to pay the least amount of interest, the student should have first calculated the amount of interest for each option using the simple interest formula I = Prt, in which P represents the principal (initial loan amount), r represents the rate (in decimal form), and t represents the length of time in `text(years)`. To determine the amount of interest for a 4-year loan with a 5.2% annual simple interest rate (option A), the student should have calculated I = ($12,000)(0.052)(4) = $2,496. To determine the amount of interest for a 5-year loan with a 4.2% annual simple interest rate (option B), the student should have calculated I = ($12,000)(0.042)(5) = $2,520. To determine the amount of interest for a 6-year loan with a 4.7% annual simple interest rate (option C), the student should have calculated I = ($12,000)(0.047)(6) = $3,384. To determine the amount of interest for a 3-year loan with an 8.4% annual simple interest rate (option D), the student should have calculated I = ($12,000)(0.084)(3) = $3,024. Finally the student should have determined that a 4-year loan with a 5.2% annual simple interest rate (option A) results in the least amount of interest.",
                     "Percent": 54
                 }
             },
@@ -372,7 +372,7 @@
                 "Choice": "$3,637.50",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the amount of interest the account earned at the end of 15 years, the student should have used the formula I = Prt, in which P represents the principal (initial loan amount), r represents the interest rate (in decimal form), and t represents the length of time in years. Using the given information, the student should have written the equation as I = ($5,000)(0.0485)(15), which results in $3,637.50.",
+                    "Rationale": "To determine the amount of interest the account earned at the end of 15 years, the student should have used the formula I = Prt, in which P represents the principal (initial loan amount), r represents the interest rate (in decimal form), and t represents the length of time in `text(years)`. Using the given information, the student should have written the equation as I = ($5,000)(0.0485)(15), which results in $3,637.50.",
                     "Percent": 65
                 }
             },
@@ -552,9 +552,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The scatterplot shows the height in centimeters and weight in `text(kilograms)` of several students.",
+            "The scatterplot shows the height in `text(centimeters)` and weight in `text(kilograms)` of several students.",
             "problems/TX21G8M/media/11a.jpg",
-            "Based on the scatterplot, which is the best prediction of the height in centimeters of a student with a weight of 64 kilograms?"
+            "Based on the scatterplot, which is the best prediction of the height in `text(centimeters)` of a student with a weight of 64 kilograms?"
         ],
         "AnswerChoices": {
             "A": {
@@ -585,7 +585,7 @@
                 "Choice": "156 cm",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the best prediction of the height in centimeters of a student with a weight of 64 kilograms using a scatterplot (a graph of plotted points that shows the relationship between two sets of data), the student could have drawn a line that closely follows the pattern formed by the points on the graph by keeping about half of the points above the line and the other half below the line. A good line for this scatterplot would pass slightly above the point at (135, 29) but very close to the point at (135.5, 33) and below the point at (152, 62), passing above the point at (155, 59), very close to (155, 61). The student could have then identified where the grid line marked 64 (representing a weight of 64 kilograms) intersects (crosses over) the line the student drew and determined that the height in centimeters corresponding to that point is about 156 centimeters. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine the best prediction of the height in `text(centimeters)` of a student with a weight of 64 kilograms using a scatterplot (a graph of plotted points that shows the relationship between two sets of data), the student could have drawn a line that closely follows the pattern formed by the points on the graph by keeping about half of the points above the line and the other half below the line. A good line for this scatterplot would pass slightly above the point at (135, 29) but very close to the point at (135.5, 33) and below the point at (152, 62), passing above the point at (155, 59), very close to (155, 61). The student could have then identified where the grid line marked 64 (representing a weight of 64 kilograms) intersects (crosses over) the line the student drew and determined that the height in `text(centimeters)` corresponding to that point is about 156 centimeters. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 65
                 }
             }
@@ -720,7 +720,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diameter of a cylinder is 2.5 inches, and the height is 7.5 inches. Which equation can be used to find V, the volume of the cylinder in cubic inches?"
+            "The diameter of a cylinder is 2.5 inches, and the height is 7.5 inches. Which equation can be used to find V, the volume of the cylinder in `text(cubic inches)`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -969,7 +969,7 @@
                 "Choice": "1.0 in.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the radius (distance from the center to the edge of a circle) of the cone, the student should have used the formula for the volume (amount of three-dimensional space taken up) of a cone, V = 1/3 • Bh, where B represents the area (amount of space covered by the surface) of the base of the cone (circle), which is also the formula for the area of a circle, A = πr2. Combining the formulas results in the formula V = 1/3 • πr^2h. Substituting the values into the formula results in (1.5π) = 1/3 • πr^2 • (4.5). Solving the equation for r, r^2 = (1.5π) ÷ (1/3 • π(4.5)⎞ ⇒ r = √((1.5π) ÷ (1/3  π(4.5))) = √((1.5π) ÷ (1.5π)) = √1, results in 1.0.",
+                    "Rationale": "To determine the radius (distance from the center to the edge of a circle) of the cone, the student should have used the formula for the volume (amount of three-dimensional space taken up) of a cone, V = 1/3 • Bh, where B represents the area (amount of space covered by the surface) of the base of the cone (circle), which is also the formula for the area of a circle, A = πr2. Combining the formulas results in the formula V = 1/3 • πr^2h. Substituting the values into the formula results in (1.5π) = 1/3 • πr^2 • (4.5). Solving the equation for r, r^2 = (1.5π) ÷ (1/3 • π(4.5)⎞ ⇒ r = sqrt((1.5π) ÷ (1/3  π(4.5))) = sqrt((1.5π) ÷ (1.5π)) = √1, results in 1.0.",
                     "Percent": 38
                 }
             },
@@ -1227,7 +1227,7 @@
         "Content": [
             "The dimensions of a rectangular prism are shown in the diagram.",
             "problems/TX21G8M/media/23a.jpg",
-            "What is the total surface area in square inches of the prism?"
+            "What is the total surface area in `text(square inches)` of the prism?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1330,7 +1330,7 @@
                 "Choice": "$1.32",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the difference between the two savings accounts with different types of interest, the student should have calculated the amount of interest in each account and then subtracted the two amounts. To determine the amount of interest in Account I, the student should have used the formula for simple interest, I = Prt, in which P represents the principal (initial loan amount), r represents the interest rate (in decimal form), and t represents the length of time in years, I = ($1,750)(0.0275)(2) = $96.25. To determine the balance in Account II, the student should have used the formula for compound interest, A = P(1 + r)^t, in which A represents the balance amount (principal and interest combined), A = ($1,750)(1 + 0.0275)^2 = $1,847.57. The student should have then subtracted the principal from the balance amount, $1,847.57 - $1,750 = $97.57. Finally the student should have subtracted ($97.57 - $96.25) and determined that the difference between the interest of the two accounts at the end of 2 years was $1.32.",
+                    "Rationale": "To determine the difference between the two savings accounts with different types of interest, the student should have calculated the amount of interest in each account and then subtracted the two amounts. To determine the amount of interest in Account I, the student should have used the formula for simple interest, I = Prt, in which P represents the principal (initial loan amount), r represents the interest rate (in decimal form), and t represents the length of time in `text(years)`, I = ($1,750)(0.0275)(2) = $96.25. To determine the balance in Account II, the student should have used the formula for compound interest, A = P(1 + r)^t, in which A represents the balance amount (principal and interest combined), A = ($1,750)(1 + 0.0275)^2 = $1,847.57. The student should have then subtracted the principal from the balance amount, $1,847.57 - $1,750 = $97.57. Finally the student should have subtracted ($97.57 - $96.25) and determined that the difference between the interest of the two accounts at the end of 2 years was $1.32.",
                     "Percent": 29
                 }
             },
@@ -1921,7 +1921,7 @@
                 "Choice": "7.8 units",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the coordinates of point X (5, 6) to identify the lengths of the sides of the right triangle as 5 and 6 (using only the values of those coordinates) and used the Pythagorean theorem, solving √(5^2 + 6^2), or √61, resulting in a value of approximately 7.8 units. The student needs to focus on how to properly apply the Pythagorean theorem using the given information.",
+                    "Rationale": "The student likely used the coordinates of point X (5, 6) to identify the lengths of the sides of the right triangle as 5 and 6 (using only the values of those coordinates) and used the Pythagorean theorem, solving sqrt(5^2 + 6^2), or √61, resulting in a value of approximately 7.8 units. The student needs to focus on how to properly apply the Pythagorean theorem using the given information.",
                     "Percent": 21
                 }
             },
@@ -1937,7 +1937,7 @@
                 "Choice": "13.0 units",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely counted the lengths of the sides of the right triangle incorrectly as 11 and 7 instead of 10 and 6 and used the Pythagorean theorem, solving √(11^2 + 7^2), or √170, resulting in a value of approximately 13.0 units. The student needs to focus on how to properly apply the Pythagorean theorem using the given information.",
+                    "Rationale": "The student likely counted the lengths of the sides of the right triangle incorrectly as 11 and 7 instead of 10 and 6 and used the Pythagorean theorem, solving sqrt(11^2 + 7^2), or √170, resulting in a value of approximately 13.0 units. The student needs to focus on how to properly apply the Pythagorean theorem using the given information.",
                     "Percent": 14
                 }
             },
@@ -1945,7 +1945,7 @@
                 "Choice": "11.7 units",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which measurement is closest to the length of XY in units, the student should have determined that the line segment represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one `90text(-degree)` angle). The lengths in units of the two legs of the right triangle can be represented by subtracting the `xtext(-coordinates)` (horizontal position from 0) of the two endpoints of the line segment (the part of a line connecting two endpoints) and by subtracting the `ytext(-coordinates)` (vertical position from 0) of the two endpoints of the line segment. This means that the lengths in units of the legs are 5 - (-5) = 10 and 6 - 0 = 6. Using the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2orc=sqrt(a^2+b^2)`),thelengthinunitsoflinesegmentXYcanbe represented by the expression √(10^2 + 6^2), or √136, which has a value of approximately 11.7 units. Therefore the approximate length of line segment XY is 11.7 units. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which measurement is closest to the length of XY in units, the student should have determined that the line segment represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one `90text(-degree)` angle). The lengths in units of the two legs of the right triangle can be represented by subtracting the `xtext(-coordinates)` (horizontal position from 0) of the two endpoints of the line segment (the part of a line connecting two endpoints) and by subtracting the `ytext(-coordinates)` (vertical position from 0) of the two endpoints of the line segment. This means that the lengths in units of the legs are 5 - (-5) = 10 and 6 - 0 = 6. Using the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2orc=sqrt(a^2+b^2)`),thelengthinunitsoflinesegmentXYcanbe represented by the expression sqrt(10^2 + 6^2), or √136, which has a value of approximately 11.7 units. Therefore the approximate length of line segment XY is 11.7 units. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 46
                 }
             }
@@ -2035,7 +2035,7 @@
                 "Choice": "equal:61",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the length of the ramp in `text(feet)`, the student should have determined that because the diagram represents a right triangle (a closed figure with three sides and one `90text(-degree)` angle) with legs of 60 feet and 11 feet, the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides, `a^2+b^2=c^2orc=sqrt(a^2+b^2)`) can be used to calculate this distance. The distance in `text(feet)` is equal to √(60^2 + 11^2). When the two values under the radical symbol (√) are squared, the result is √(3,600 + 121), which equals √3,721. The value of √3,721 is 61, which means the distance of the ramp is 61 feet.",
+                    "Rationale": "To determine the length of the ramp in `text(feet)`, the student should have determined that because the diagram represents a right triangle (a closed figure with three sides and one `90text(-degree)` angle) with legs of 60 feet and 11 feet, the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides, `a^2+b^2=c^2orc=sqrt(a^2+b^2)`) can be used to calculate this distance. The distance in `text(feet)` is equal to sqrt(60^2 + 11^2). When the two values under the radical symbol (√) are squared, the result is sqrt(3,600 + 121), which equals √3,721. The value of √3,721 is 61, which means the distance of the ramp is 61 feet.",
                     "Percent": 38
                 }
             }
@@ -2059,7 +2059,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student solved the equation x^2= 132 to find the length of the diagonal of a square in centimeters. Which measurement is closest to x, the length of the diagonal of this square, in centimeters?"
+            "A student solved the equation x^2= 132 to find the length of the diagonal of a square in `text(centimeters)`. Which measurement is closest to x, the length of the diagonal of this square, in `text(centimeters)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2090,7 +2090,7 @@
                 "Choice": "11 cm",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which measurement is closest to x, the length of the diagonal of the square in centimeters, the student could have determined that x^2= 132 can be solved for x by taking the square root of both sides of the equation (√(x^2) = √132 or x = √132), resulting in 11 centimeters being closest to the measurement of x. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which measurement is closest to x, the length of the diagonal of the square in `text(centimeters)`, the student could have determined that x^2= 132 can be solved for x by taking the square root of both sides of the equation (sqrt(x^2) = √132 or x = √132), resulting in 11 centimeters being closest to the measurement of x. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 54
                 }
             }
@@ -2116,7 +2116,7 @@
         "Content": [
             "The table shows the dimensions of three cylinders.",
             "problems/TX21G8M/media/40a.jpg",
-            "Which two cylinders have the same lateral surface area in square inches?"
+            "Which two cylinders have the same lateral surface area in `text(square inches)`?"
         ],
         "AnswerChoices": {
             "F": {

@@ -754,11 +754,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function `f(x)=206(1.034)^x` models the value, in `text(dollars)`, of a certain bank account by the end of each year from `1957` through `1972`, where `x` is the number of years after `1957`. Which of the following is the best interpretation of “`f(5)`is approximately equal to `243`” in this context?"
+            "The function `f(x)=206(1.034)^x` models the value, in `text(dollars)`, of a certain bank account by the end of each year from `text(1957)` through `text(1972)`, where `x` is the number of years after `text(1957)`. Which of the following is the best interpretation of “`f(5)`is approximately equal to `243`” in this context?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The value of the bank account is estimated to be approximately `5` `text(dollars)` greater in `1962` than in `1957`.",
+                "Choice": "The value of the bank account is estimated to be approximately `5` `text(dollars)` greater in `text(1962)` than in `text(1957)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -769,12 +769,12 @@
                 "Choice": "The value of the bank account is estimated to be approximately 243 dollars in 1962.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the function `f(x)=206(1.034)^x` models the value, in `text(dollars)`, of a certain bank account by the end of each year from `1957` through `1972`, where `x` is the number of years after `1957`. It follows that `f(x)` represents the estimated value, in `text(dollars)`, of the bank account `x` `text(years)` after `1957`. Since the value of `f(5)` is the value of `f(x)` when `x=5`, it follows that “`f(5)`is approximately equal to `243`” means that `f(x)` is approximately equal to `243` when `x=5`. In the given context, this means that the value of the bank account is estimated to be approximately `243` `text(dollars)` `5` `text(years)` after `1957`. Therefore, the best interpretation of the statement “`f(5)` is approximately equal to `243`” in this context is the value of the bank account is estimated to be approximately `243` `text(dollars)` in `1962`.",
+                    "Rationale": "It's given that the function `f(x)=206(1.034)^x` models the value, in `text(dollars)`, of a certain bank account by the end of each year from `text(1957)` through `text(1972)`, where `x` is the number of years after `text(1957)`. It follows that `f(x)` represents the estimated value, in `text(dollars)`, of the bank account `x` `text(years)` after `text(1957)`. Since the value of `f(5)` is the value of `f(x)` when `x=5`, it follows that “`f(5)`is approximately equal to `243`” means that `f(x)` is approximately equal to `243` when `x=5`. In the given context, this means that the value of the bank account is estimated to be approximately `243` `text(dollars)` `5` `text(years)` after `text(1957)`. Therefore, the best interpretation of the statement “`f(5)` is approximately equal to `243`” in this context is the value of the bank account is estimated to be approximately `243` `text(dollars)` in `text(1962)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The value, in `text(dollars)`, of the bank account is estimated to be approximately `5` times greater in `1962` than in `1957`.",
+                "Choice": "The value, in `text(dollars)`, of the bank account is estimated to be approximately `5` times greater in `text(1962)` than in `text(1957)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",
@@ -782,7 +782,7 @@
                 }
             },
             "D": {
-                "Choice": "The value of the bank account is estimated to increase by approximately `243` `text(dollars)` every `5` `text(years)` between `1957and1972`.",
+                "Choice": "The value of the bank account is estimated to increase by approximately `243` `text(dollars)` every `5` `text(years)` between `text(1957))andtext(1972)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual errors.",

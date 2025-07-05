@@ -639,7 +639,7 @@
                 }
             },
             "B": {
-                "Choice": "x > 0",
+                "Choice": "`x>0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -684,7 +684,7 @@
         "Content": [
             "Jensen stopped at rest area A along the side of the highway. His map, shown below, has a scale of 1 inch to 35 miles.",
             "problems/NY17G7M/media/19a.jpg",
-            "Jensen planned to stop at rest area B next. What is the actual distance, in miles, between the two rest areas?"
+            "Jensen planned to stop at rest area B next. What is the actual distance, in `text(miles)`, between the two rest areas?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1573,7 +1573,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A triangle has side lengths of (5.5x + 6.2y) centimeters, (4.3x + 8.3z) centimeters, and (1.6z - 5.1y) centimeters. Which expression represents the perimeter, in centimeters, of the triangle?"
+            "A triangle has side lengths of (5.5x + 6.2y) centimeters, (4.3x + 8.3z) centimeters, and (1.6z - 5.1y) centimeters. Which expression represents the perimeter, in `text(centimeters)`, of the triangle?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1963,7 +1963,7 @@
         "Content": [
             "A student uses a solution that contains 16 grams of water to conduct an evaporation experiment.",
             ":box:• At the end of one hour, the amount of water in the solution has decreased by 3.5%.\n\n• At the end of two hours, the amount of water in the solution has decreased by another 4.25%.",
-            "Which calculations can be used to determine the amount of water, in grams, remaining in the solution at the end of the second hour?"
+            "Which calculations can be used to determine the amount of water, in `text(grams)`, remaining in the solution at the end of the second hour?"
         ],
         "AnswerChoices": {
             "A": {

@@ -19,7 +19,7 @@
         "Explain": false,
         "Content": [
             "A dichotomous key of different mollusks is shown.",
-            ":box:Partial Mollusk Dichotomous Key\n\n1a: External shell is present ...................................Go to 2\n1b: No external shell is present ...............................Go to 3\n\n2a: Single shell .....................................................Go to 4\n2b: Two shells ......................................................Go to 5\n\n3a: Moves by jet propulsion ....................................Squid\n3b: Moves by crawling with a single muscular foot ...Slug\n\n4a: Moves by jet propulsion ....................................Nautilus\n4b: Moves by crawling with a single muscular foot ....Snail\n\n5a: Can burrow in the sand ....................................Clam\n5b: Attaches to solid surfaces .................................Oyster",
+            ":box:Partial Mollusk Dichotomous Key\n\n`1a`: External shell is present ...................................Go to `2`\n1b: No external shell is present ...............................Go to `3`\n\n`2a`: Single shell .....................................................Go to `4`\n`2b`: Two shells ......................................................Go to `5`\n\n`3a`: Moves by jet propulsion ....................................Squid\n`3b`: Moves by crawling with a single muscular foot ...Slug\n\n`4a`: Moves by jet propulsion ....................................Nautilus\n`4b`: Moves by crawling with a single muscular foot ....Snail\n\n`5a`: Can burrow in the sand ....................................Clam\n`5b`: Attaches to solid surfaces .................................Oyster",
             "Which mollusk moves by jet propulsion and does not have an external shell?"
         ],
         "AnswerChoices": {
@@ -256,7 +256,7 @@
                 "Choice": "problems/TX22HSB/media/5a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is an example of a deletion mutation. In this model, “R” and “Z” genes have been deleted from the chromosome.",
+                    "Rationale": "This is an example of a deletion mutation. In this model, `“R”and“Z”` genes have been deleted from the chromosome.",
                     "Percent": 6
                 }
             },
@@ -264,7 +264,7 @@
                 "Choice": "problems/TX22HSB/media/5b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is an example of a deletion mutation. In this model, the “U” gene has been deleted from the chromosome.",
+                    "Rationale": "This is an example of a deletion mutation. In this model, the `“U”` gene has been deleted from the chromosome.",
                     "Percent": 14
                 }
             },
@@ -272,7 +272,7 @@
                 "Choice": "problems/TX22HSB/media/5c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This is an example of a translocation mutation. In this model, the “S” and “U” genes have swapped positions in the chromosome.",
+                    "Rationale": "This is an example of a translocation mutation. In this model, the `“S”and“U”` genes have swapped positions in the chromosome.",
                     "Percent": 23
                 }
             },
@@ -280,7 +280,7 @@
                 "Choice": "problems/TX22HSB/media/5d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An insertion mutation is a result of inserting new nitrogenous bases into DNA. In this model, new “K” and “L” genes have been inserted into the chromosome.",
+                    "Rationale": "An insertion mutation is a result of inserting new nitrogenous bases into DNA. In this model, new `“K”and“L”` genes have been inserted into the chromosome.",
                     "Percent": 57
                 }
             }
@@ -306,38 +306,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In a Central Texas grassland, the producers incorporate 12,000 kJ of energy from the sun into their tissues. About how much energy would be incorporated into the tissues of herbivores?"
+            "In a Central Texas grassland, the producers incorporate `12text(,)000` `text(kJ)` of energy from the sun into their tissues. About how much energy would be incorporated into the tissues of herbivores?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "12,000 kJ",
+                "Choice": "`12text(,)000` `text(kJ)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Twelve thousand kilojoules of energy is the same amount of energy present in the producers. This answer is incorrect because it does not account for the approximately 90% loss of energy that occurs when herbivores consume plants.",
+                    "Rationale": "`text(Twelve thousand kilojoules)` of energy is the same amount of energy present in the producers. This answer is incorrect because it does not account for the approximately `90%` loss of energy that occurs when herbivores consume plants.",
                     "Percent": 13
                 }
             },
             "G": {
-                "Choice": "1,200 kJ",
+                "Choice": "`1text(,)200` `text(kJ)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Twelve thousand kilojoules (kJ) of energy from the sun is incorporated into the tissues of the producers. Only 10 percent, or 1,200 kJ, of energy is incorporated into the tissues of herbivores when they consume producers.",
+                    "Rationale": "`text(Twelve thousand kilojoules)` `(text(kJ))` of energy from the sun is incorporated into the tissues of the producers. Only `10` `text(percent)`, or `1text(,)200` `text(kJ)`, of energy is incorporated into the tissues of herbivores when they consume producers.",
                     "Percent": 71
                 }
             },
             "H": {
-                "Choice": "10,800 kJ",
+                "Choice": "`10text(,)800` `text(kJ)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Ten-thousand-eight-hundred kilojoules is not approximately 10 percent of the initial kilojoules of energy incorporated into the tissues of the producers.",
+                    "Rationale": "`text(Ten-thousand-eight-hundred kilojoules)` is not approximately `10` `text(percent)` of the initial kilojoules of energy incorporated into the tissues of the producers.",
                     "Percent": 12
                 }
             },
             "J": {
-                "Choice": "1,080 kJ",
+                "Choice": "`1text(,)080` `text(kJ)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "One-thousand-eighty kilojoules is not approximately 10 percent of the initial kilojoules of energy incorporated into the tissues of the producers.",
+                    "Rationale": "`text(One-thousand-eighty kilojoules)` is not approximately `10` `text(percent)` of the initial kilojoules of energy incorporated into the tissues of the producers.",
                     "Percent": 4
                 }
             }
@@ -365,7 +365,7 @@
         "Content": [
             "Positive thigmotropism is a response in plants in which they move and grow toward an object the plant comes into physical contact with, usually curling around the object.",
             "problems/TX22HSB/media/7a.jpg",
-            "This response of the shoot system benefits the plant by allowing the plant to  — "
+            "This response of the shoot system benefits the plant by allowing the plant to —"
         ],
         "AnswerChoices": {
             "A": {
@@ -423,7 +423,7 @@
         "Explain": false,
         "Content": [
             "White clovers, Trifolium repens, are plants that are native to Europe and Central Asia and are able to produce the poison cyanide within their cells. Skunk cabbage, Symplocarpus foetidus, is a plant that is native to eastern North America and can produce a chemical that makes it have a strong, foul odor and bitter taste.",
-            "The chemicals produced by both the white clovers and skunk cabbages are adaptations that allow them to  — "
+            "The chemicals produced by both the white clovers and skunk cabbages are adaptations that allow them to —"
         ],
         "AnswerChoices": {
             "F": {
@@ -489,7 +489,7 @@
                 "Choice": "problems/TX22HSB/media/9b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The albino allele (c) is recessive to all other alleles, so expression of the albino phenotype requires two copies of the allele. This option is the only option where two albino alleles would result.",
+                    "Rationale": "The albino allele `(c)` is recessive to all other alleles, so expression of the albino phenotype requires two copies of the allele. This option is the only option where two albino alleles would result.",
                     "Percent": 68
                 }
             },
@@ -593,7 +593,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Blue flying fish live in the upper layers of the ocean. Blue flying fish have enlarged pectoral fins that enable them to glide for 400 meters above the ocean surface and appear to fly.",
+            "Blue flying fish live in the upper layers of the ocean. Blue flying fish have enlarged pectoral fins that enable them to glide for `400` `text(meters)` above the ocean surface and appear to fly.",
             "Which statement best describes how natural selection led to enlarged pectoral fins in blue flying fish?"
         ],
         "AnswerChoices": {
@@ -651,16 +651,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Scientists determined the total mass of DNA from a sample of animal cells. The masses of equal numbers of cells were taken during three different stages of the cell cycle. Stage I contains cells massed during G1 of the cell cycle.",
+            "Scientists determined the total mass of DNA from a sample of animal cells. The masses of equal numbers of cells were taken during three different stages of the cell cycle. Stage ``I`` contains cells massed during `G_1` of the cell cycle.",
             "problems/TX22HSB/media/12a.jpg",
-            "Which statement best describes the cells during Stage II?"
+            "Which statement best describes the cells during Stage `II`?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "The cells have replicated their DNA, but have not completed mitosis and cytokinesis.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "During Stage II, the cells have replicated their DNA, but have not completed mitosis and cytokinesis. Therefore, the mass of DNA is double the mass of the DNA in stages I and III.",
+                    "Rationale": "During Stage `II`, the cells have replicated their DNA, but have not completed mitosis and cytokinesis. Therefore, the mass of DNA is double the mass of the DNA in stages `IandIII`.",
                     "Percent": 58
                 }
             },
@@ -668,7 +668,7 @@
                 "Choice": "The cells have completed mitosis and cytokinesis without replicating their DNA.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "These cells have half the mass of DNA as in stages I and III because DNA did not replicate.",
+                    "Rationale": "These cells have half the mass of DNA as in stages `IandIII` because DNA did not replicate.",
                     "Percent": 12
                 }
             },
@@ -676,7 +676,7 @@
                 "Choice": "The cells have replicated their DNA and completed mitosis and cytokinesis.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "These cells have the same mass of DNA as seen in stages I and III.",
+                    "Rationale": "These cells have the same mass of DNA as seen in stages `IandIII`.",
                     "Percent": 25
                 }
             },
@@ -684,7 +684,7 @@
                 "Choice": "The cells have temporarily exited the cell cycle without replicating their DNA.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "These cells are in the G₀ phase and have the same mass of DNA as in stages I and III.",
+                    "Rationale": "These cells are in the `G_0` phase and have the same mass of DNA as in stages `IandIII`.",
                     "Percent": 5
                 }
             }
@@ -708,7 +708,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Green anoles are lizards that can change their skin color rapidly in response to various stimuli. This adaptation is the result of  — "
+            "Green anoles are lizards that can change their skin color rapidly in response to various stimuli. This adaptation is the result of —"
         ],
         "AnswerChoices": {
             "A": {
@@ -883,34 +883,34 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Cys",
+                "Choice": "`text(Cys)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A mRNA codon of UGU or UGC would code for the amino acid Cys.",
+                    "Rationale": "A mRNA codon of `text(UGU)ortext(UGC)` would code for the amino acid `text(Cys)`.",
                     "Percent": 12
                 }
             },
             "G": {
-                "Choice": "Phe",
+                "Choice": "`text(Phe)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An mRNA codon of UUU or UUC would code for the amino acid Phe.",
+                    "Rationale": "An mRNA codon of `text(UUU)ortext(UUC)` would code for the amino acid `text(Phe)`.",
                     "Percent": 13
                 }
             },
             "H": {
-                "Choice": "Ile",
+                "Choice": "`text(Ile)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An mRNA codon of AUU, AUC, or AUA would code for the amino acid Ile.",
+                    "Rationale": "An mRNA codon of `text(AUU),text(AUC),ortext(AUA)` would code for the amino acid `text(Ile)`.",
                     "Percent": 12
                 }
             },
             "J": {
-                "Choice": "Met",
+                "Choice": "`text(Met)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The first mRNA codon is AUG. AUG on the codon chart codes for the amino acid Met.",
+                    "Rationale": "The first mRNA codon is `text(AUG)`. `text(AUG)` on the codon chart codes for the amino acid `text(Met)`.",
                     "Percent": 64
                 }
             }
@@ -1056,7 +1056,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(1) filaments\n(2) petals\n(3) stigma",
+                "Choice": "`(1)` filaments\n`(2)` petals\n`(3)` stigma",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Filaments do not attract pollinators.",
@@ -1064,7 +1064,7 @@
                 }
             },
             "B": {
-                "Choice": "(1) petals\n(2) ovule\n(3) stigma",
+                "Choice": "`(1)` petals\n`(2)` ovule\n`(3)` stigma",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Pollinators do not deposit pollen onto the ovule.",
@@ -1072,7 +1072,7 @@
                 }
             },
             "C": {
-                "Choice": "(1) filaments\n(2) petals\n(3) ovule",
+                "Choice": "`(1)` filaments\n`(2)` petals\n`(3)` ovule",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Filaments do not attract pollinators.",
@@ -1080,7 +1080,7 @@
                 }
             },
             "D": {
-                "Choice": "(1) petals\n(2) stigma\n(3) ovule",
+                "Choice": "`(1)` petals\n`(2)` stigma\n`(3)` ovule",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Petals attract pollinators, pollinators deposit pollen on the stigma, and the pollen grain must grow and fuse with an ovule to complete fertilization.",
@@ -1225,7 +1225,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Heart rate increases ⇒ Blood vessels constrict ⇒ Blood pressure increases",
+                "Choice": "`text(Heart rate increases)->text(Blood vessels constrict)->text(Blood pressure increases)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The heart and blood vessels are part of the circulatory system.",
@@ -1233,7 +1233,7 @@
                 }
             },
             "G": {
-                "Choice": "Blood vessel is damaged ⇒ Platelets begin to clump ⇒ Blood vessel ruptures",
+                "Choice": "`text(Blood vessel is damaged)->text(Platelets begin to clump)->text(Blood vessel ruptures)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Blood vessels and platelets are part of the circulatory system.",
@@ -1241,7 +1241,7 @@
                 }
             },
             "H": {
-                "Choice": "Blood sugar levels rise ⇒ Pancreas secretes insulin ⇒ Blood sugar continues to rise",
+                "Choice": "`text(Blood sugar levels rise)->text(Pancreas secretes insulin)->text(Blood sugar continues to rise)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The pancreas and blood sugar levels are controlled by the digestive and endocrine systems.",
@@ -1249,7 +1249,7 @@
                 }
             },
             "J": {
-                "Choice": "Body temperature increases ⇒ Glands release sweat ⇒ Body temperature decreases",
+                "Choice": "`text(Body temperature increases)->text(Glands release sweat)->text(Body temperature decreases)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Sweat glands are part of the excretory system that is located within the integumentary system. When body temperature increases, the glands release sweat, and body temperature decreases.",
@@ -1449,7 +1449,7 @@
         "Content": [
             "The graph shows the oxygen consumed by an athlete during different stages of training.",
             "problems/TX22HSB/media/26a.jpg",
-            "Based on the graph, which process is occurring between minute 5 and minute 10?"
+            "Based on the graph, which process is occurring between `text(minute)` `5andtext(minute)` `10`?"
         ],
         "AnswerChoices": {
             "F": {
@@ -1480,7 +1480,7 @@
                 "Choice": "Mitochondria are using oxygen to produce ATP.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Mitochondria produce energy for cells. The increase in the consumption of oxygen between 5 and 10 minutes is due to mitochondria using oxygen to produce ATP.",
+                    "Rationale": "Mitochondria produce energy for cells. The increase in the consumption of oxygen between `5and10` `text(minutes)` is due to mitochondria using oxygen to produce ATP.",
                     "Percent": 433
                 }
             }
@@ -1681,39 +1681,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In domesticated dogs, hair type is controlled by two different alleles. The allele for wire hair is (H) and the allele for smooth hair is (h).",
+            "In domesticated dogs, hair type is controlled by two different alleles. The allele for wire hair is `(H)` and the allele for smooth hair is `(h)`.",
             "When two heterozygous dogs are crossed, what percentage of the offspring is expected to be homozygous for smooth hair?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "0%",
+                "Choice": "`0%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In a Punnett square, Hh × Hh will result in 25% HH (homozygous wirehair), 50% Hh (heterozygous wirehair), and 25% hh (smooth hair). Zero percent is not an option.",
+                    "Rationale": "In a Punnett square, `HhxxHh` will result in `25%` `HH` (homozygous wirehair), `50%` `Hh` (heterozygous wirehair), and `25%` `hh` (smooth hair). Zero percent is not an option.",
                     "Percent": 7
                 }
             },
             "G": {
-                "Choice": "25%",
+                "Choice": "`25%`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "When two heterozygous dogs are crossed, the percentage of the offspring that are expected to be homozygous for smooth hair will be 25%. In a Punnett square, Hh × Hh will result in 25% HH (homozygous wirehair), 50% Hh (heterozygous wirehair), and 25% hh (smooth hair).",
+                    "Rationale": "When two heterozygous dogs are crossed, the percentage of the offspring that are expected to be homozygous for smooth hair will be `25%`. In a Punnett square, `HhxxHh` will result in `25%` `HH` (homozygous wirehair), `50%` `Hh` (heterozygous wirehair), and `25%` `hh` (smooth hair).",
                     "Percent": 60
                 }
             },
             "H": {
-                "Choice": "50%",
+                "Choice": "`50%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In a Punnett square, Hh × Hh will result in 25% HH (homozygous wirehair), 50% Hh (heterozygous wirehair), and 25% hh (smooth hair). Therefore, 50 percent of the population will have a heterozygous genotype for wirehair.",
+                    "Rationale": "In a Punnett square, `HhxxHh` will result in `25%` `HH` (homozygous wirehair), `50%` `Hh` (heterozygous wirehair), and `25%` `hh` (smooth hair). Therefore, `50` `text(percent)` of the population will have a heterozygous genotype for wirehair.",
                     "Percent": 26
                 }
             },
             "J": {
-                "Choice": "75%",
+                "Choice": "`75%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In a Punnett square, Hh × Hh will result in 25% HH (homozygous wirehair), 50% Hh (heterozygous wirehair), and 25% hh (smooth hair). Therefore, 75 percent of the population will have wirehair.",
+                    "Rationale": "In a Punnett square, `HhxxHh` will result in `25%` `HH` (homozygous wirehair), `50%` `Hh` (heterozygous wirehair), and `25%` `hh` (smooth hair). Therefore, `75` `text(percent)` of the population will have wirehair.",
                     "Percent": 7
                 }
             }
@@ -1800,34 +1800,34 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Sample 1",
+                "Choice": "Sample `1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sample 1 is a plant due to the presence of a chloroplast.",
+                    "Rationale": "Sample `1` is a plant due to the presence of a chloroplast.",
                     "Percent": 15
                 }
             },
             "G": {
-                "Choice": "Sample 2",
+                "Choice": "Sample `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sample 2 is bacteria due to the absence of both a nucleus and a chloroplast.",
+                    "Rationale": "Sample `2` is bacteria due to the absence of both a nucleus and a chloroplast.",
                     "Percent": 17
                 }
             },
             "H": {
-                "Choice": "Sample 3",
+                "Choice": "Sample `3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Sample 3 is a virus due to the absence of organelles and the presence of a small genome.",
+                    "Rationale": "Sample `3` is a virus due to the absence of organelles and the presence of a small genome.",
                     "Percent": 57
                 }
             },
             "J": {
-                "Choice": "Sample 4",
+                "Choice": "Sample `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sample 4 is an animal due to the presence of a nucleus and ribosome and the absence of a chloroplast.",
+                    "Rationale": "Sample `4` is an animal due to the presence of a nucleus and ribosome and the absence of a chloroplast.",
                     "Percent": 10
                 }
             }
@@ -2202,7 +2202,7 @@
         "Explain": false,
         "Content": [
             "Two scientists studied patterns of evolution in the fossil record. Many species they analyzed showed periods of slow changes interrupted by a period of rapid change.",
-            "This pattern of periods of slow change interrupted by periods of rapid change with few, if any transitional fossils, best describes the theory of  — "
+            "This pattern of periods of slow change interrupted by periods of rapid change with few, if any transitional fossils, best describes the theory of —"
         ],
         "AnswerChoices": {
             "A": {
@@ -2264,7 +2264,7 @@
                 "Choice": "problems/TX22HSB/media/40a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "DNA replication occurs during the S phase. Nuclear division occurs during the M phase.",
+                    "Rationale": "DNA replication occurs during the `S` phase. Nuclear division occurs during the `M` phase.",
                     "Percent": 45
                 }
             },
@@ -2272,7 +2272,7 @@
                 "Choice": "problems/TX22HSB/media/40b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Nuclear division occurs during the M phase.",
+                    "Rationale": "Nuclear division occurs during the `M` phase.",
                     "Percent": 10
                 }
             },
@@ -2280,7 +2280,7 @@
                 "Choice": "problems/TX22HSB/media/40c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Cytoplasm division occurs during the M phase. Cell growth occurs during the S phase.",
+                    "Rationale": "Cytoplasm division occurs during the `M` phase. Cell growth occurs during the `S` phase.",
                     "Percent": 12
                 }
             },
@@ -2288,7 +2288,7 @@
                 "Choice": "problems/TX22HSB/media/40d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "DNA replication occurs during the S phase.",
+                    "Rationale": "DNA replication occurs during the `S` phase.",
                     "Percent": 33
                 }
             }
@@ -2316,38 +2316,38 @@
         "Content": [
             "A phylogenetic tree based on genetic similarities is shown.",
             "problems/TX22HSB/media/41a.jpg",
-            "Which numbered location on the phylogenetic tree identifies characteristics shared by Species B, C, and D?"
+            "Which numbered location on the phylogenetic tree identifies characteristics shared by Species `B,C,andD`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Location 1",
+                "Choice": "Location `1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Location 1 is the branch point that led to all lineages on this phylogenetic tree.",
+                    "Rationale": "Location `1` is the branch point that led to all lineages on this phylogenetic tree.",
                     "Percent": 6
                 }
             },
             "B": {
-                "Choice": "Location 2",
+                "Choice": "Location `2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Location 2 is the branch point on the phylogenetic tree that identifies characteristics shared by Species B, C, and D.",
+                    "Rationale": "Location `2` is the branch point on the phylogenetic tree that identifies characteristics shared by Species `B,C,andD`.",
                     "Percent": 79
                 }
             },
             "C": {
-                "Choice": "Location 3",
+                "Choice": "Location `3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Location 3 is the branch point that led to all species on the phylogenetic tree except for Species A.",
+                    "Rationale": "Location `3` is the branch point that led to all species on the phylogenetic tree except for Species `A`.",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "Location 4",
+                "Choice": "Location `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Location 4 is the branch point that led to Species E and F on the phylogenetic tree.",
+                    "Rationale": "Location `4` is the branch point that led to Species `EandF` on the phylogenetic tree.",
                     "Percent": 6
                 }
             }
@@ -2431,7 +2431,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Cross-pollination of flowers from different populations of the same species will most likely result in  — "
+            "Cross-pollination of flowers from different populations of the same species will most likely result in —"
         ],
         "AnswerChoices": {
             "A": {
@@ -2486,7 +2486,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "After a wheat field is cleared, wild grasses and weeds begin growing. This process is considered  — "
+            "After a wheat field is cleared, wild grasses and weeds begin growing. This process is considered —"
         ],
         "AnswerChoices": {
             "F": {
@@ -2514,7 +2514,7 @@
                 }
             },
             "J": {
-                "Choice": "econdary succession because the field contains inorganic matter",
+                "Choice": "secondary succession because the field contains inorganic matter",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Soil is needed for secondary succession to occur; however, inorganic matter such as water is a necessary component for producers (grasses and weeds) to grow.",
@@ -2550,34 +2550,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "I: glucose and carbon dioxide\nII: oxygen and water",
+                "Choice": "`I`: glucose and carbon dioxide\n`II`: oxygen and water",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Glucose and oxygen are the products of photosynthesis, which occur in the chloroplast (organelle II). Oxygen and glucose are the reactants of cellular respiration, which takes place in the mitochondria (organelle I).",
+                    "Rationale": "Glucose and oxygen are the products of photosynthesis, which occur in the chloroplast (organelle `II`). Oxygen and glucose are the reactants of cellular respiration, which takes place in the mitochondria (organelle `I`).",
                     "Percent": 20
                 }
             },
             "B": {
-                "Choice": "I: carbon dioxide and oxygen\nII: glucose and water",
+                "Choice": "`I`: carbon dioxide and oxygen\n`II`: glucose and water",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In organelle I, carbon dioxide and oxygen are not the products of cellular respiration. In organelle II, glucose and water are not the products of photosynthesis.",
+                    "Rationale": "In organelle `I`, carbon dioxide and oxygen are not the products of cellular respiration. In organelle `II`, glucose and water are not the products of photosynthesis.",
                     "Percent": 22
                 }
             },
             "C": {
-                "Choice": "I: oxygen and glucose\nII: water and carbon dioxide",
+                "Choice": "`I`: oxygen and glucose\n`II`: water and carbon dioxide",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "In organelle I, oxygen and glucose are not the products of cellular respiration. In organelle II, water and carbon dioxide are not the products of photosynthesis.",
+                    "Rationale": "In organelle `I`, oxygen and glucose are not the products of cellular respiration. In organelle `II`, water and carbon dioxide are not the products of photosynthesis.",
                     "Percent": 23
                 }
             },
             "D": {
-                "Choice": "I: carbon dioxide and water\nII: glucose and oxygen",
+                "Choice": "`I`: carbon dioxide and water\n`II`: glucose and oxygen",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Organelle I is mitochondria, where carbon dioxide and water are the products of the process of cellular respiration. Organelle II is a chloroplast, where glucose and oxygen are the products of the process of photosynthesis.",
+                    "Rationale": "Organelle `I` is mitochondria, where carbon dioxide and water are the products of the process of cellular respiration. Organelle `II` is a chloroplast, where glucose and oxygen are the products of the process of photosynthesis.",
                     "Percent": 35
                 }
             }
@@ -2832,7 +2832,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Cell ⇒ tissue ⇒ organ ⇒ organ system",
+                "Choice": "`text(Cell)->text(tissue)->text(organ)->text(organ system)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The order of cell, tissue, organ, and organ system represents the smallest to largest levels of cellular organization.",
@@ -2840,7 +2840,7 @@
                 }
             },
             "G": {
-                "Choice": "Organ system ⇒ organ ⇒ tissue ⇒ cell",
+                "Choice": "`text(Organ system)->text(organ)->text(tissue)->text(cell)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This order is reversed from largest to smallest levels of organization. Cells form tissues, tissues form organs, and organs form organ systems.",
@@ -2848,7 +2848,7 @@
                 }
             },
             "H": {
-                "Choice": "Tissue ⇒ organ ⇒ organ system ⇒ cell",
+                "Choice": "`text(Tissue)->text(organ)->text(organ system)->text(cell)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Cells must form before they can be organized into tissues, organs, and organ systems.",
@@ -2856,7 +2856,7 @@
                 }
             },
             "J": {
-                "Choice": "Cell ⇒ organ system ⇒ organ ⇒ tissue",
+                "Choice": "`text(Cell)->text(organ system)->text(organ)->text(tissue)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Cells organize to form tissue before organs and organ systems can form.",

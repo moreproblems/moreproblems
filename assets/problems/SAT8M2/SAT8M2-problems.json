@@ -73,14 +73,14 @@
         "Explain": false,
         "Content": [
             "problems/SAT8M2/media/2a.jpg",
-            "For a certain region, the table shows the average number of store employees in `2016` by type of store. Based on the table, how much greater was the average number of store employees in warehouse stores than in supermarkets?"
+            "For a certain region, the table shows the average number of store employees in `text(2016)` by type of store. Based on the table, how much greater was the average number of store employees in warehouse stores than in supermarkets?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`83`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this region in `2016`, this is how much greater the average number of store employees was in department stores than in supermarkets.",
+                    "Rationale": "For this region in `text(2016)`, this is how much greater the average number of store employees was in department stores than in supermarkets.",
                     "Percent": 0
                 }
             },
@@ -88,7 +88,7 @@
                 "Choice": "`152`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this region in `2016`, this is how much greater the average number of store employees was in warehouse stores than in department stores.",
+                    "Rationale": "For this region in `text(2016)`, this is how much greater the average number of store employees was in warehouse stores than in department stores.",
                     "Percent": 0
                 }
             },
@@ -96,7 +96,7 @@
                 "Choice": "`235`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The table shows that for a certain region in `2016`, the average number of store employees in warehouse stores was `365` and the average number of store employees in supermarkets was `130`. Subtracting `130` from `365` yields `365-130,or235`. Therefore, the average number of store employees was `235` greater in warehouse stores than in supermarkets.",
+                    "Rationale": "The table shows that for a certain region in `text(2016)`, the average number of store employees in warehouse stores was `365` and the average number of store employees in supermarkets was `130`. Subtracting `130` from `365` yields `365-130,or235`. Therefore, the average number of store employees was `235` greater in warehouse stores than in supermarkets.",
                     "Percent": 0
                 }
             },
@@ -104,7 +104,7 @@
                 "Choice": "`495`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For this region in `2016`, this is the sum of the average number of store employees in warehouse stores and in supermarkets.",
+                    "Rationale": "For this region in `text(2016)`, this is the sum of the average number of store employees in warehouse stores and in supermarkets.",
                     "Percent": 0
                 }
             }

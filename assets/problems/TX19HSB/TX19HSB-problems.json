@@ -132,12 +132,12 @@
         "Explain": false,
         "Content": [
             "Eight components present in nucleic acids are listed in the box.",
-            ":box:Components of Nucleic Acids\n\n1. Phosphate\n2. Ribose sugar\n3. Deoxyribose sugar\n4. Uracil\n5. Thymine\n6. Adenine\n7. Guanine\n8. Cytosine",
+            ":box:Components of Nucleic Acids\n\n`1`. Phosphate\n`2`. Ribose sugar\n`3`. Deoxyribose sugar\n`4`. Uracil\n`5`. Thymine\n`6`. Adenine\n`7`. Guanine\n`8`. Cytosine",
             "Which components bond with adenine in a section of double-stranded DNA?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1, 3, 5, and 6 only",
+                "Choice": "`1,3,5,and6` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The nitrogenous base adenine would not bond to another adenine because they are not complementary to each other. Phosphate groups, while part of the nucleotide structure, do not directly bond to the nitrogenous bases; they are attached to the sugar groups along the outside of the DNA molecules.",
@@ -145,7 +145,7 @@
                 }
             },
             "B": {
-                "Choice": "3 and 5 only",
+                "Choice": "`3and5` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Adenine is bonded to the deoxyribose sugar on its own strand as well as to its complementary nucleotide, thymine, on the complementary strand.",
@@ -153,7 +153,7 @@
                 }
             },
             "C": {
-                "Choice": "2 and 4 only",
+                "Choice": "`2and4` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Ribose sugar and uracil are both components of RNA; therefore they would not be part of a double-stranded DNA molecule.",
@@ -161,7 +161,7 @@
                 }
             },
             "D": {
-                "Choice": "3, 4, 7, and 8 only",
+                "Choice": "`3,4,7,and8` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Guanine and cytosine are both nitrogenous bases that would not bond to adenine because they are not complementary to it. Uracil is a nitrogenous base that is a part of RNA and not DNA.",
@@ -300,40 +300,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students use a microscope to look for structures present in four different cells. The students placed an X for each structure that was viewed for each cell on the table shown.",
+            "Students use a microscope to look for structures present in four different cells. The students placed an `X` for each structure that was viewed for each cell on the table shown.",
             "problems/TX19HSB/media/6a.jpg",
             "Which cell that was viewed is most likely a prokaryote?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Cell W",
+                "Choice": "Cell `W`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The students viewed a nucleus in Cell W, so it cannot be classified as a prokaryote.",
+                    "Rationale": "The students viewed a nucleus in Cell `W`, so it cannot be classified as a prokaryote.",
                     "Percent": 0
                 }
             },
             "G": {
-                "Choice": "Cell X",
+                "Choice": "Cell `X`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A prokaryote is a unicellular organism that does not have a nucleus. Cell X is most likely a prokaryote because the students did not view a nucleus in the cell.",
+                    "Rationale": "A prokaryote is a unicellular organism that does not have a nucleus. Cell `X` is most likely a prokaryote because the students did not view a nucleus in the cell.",
                     "Percent": 0
                 }
             },
             "H": {
-                "Choice": "Cell Y",
+                "Choice": "Cell `Y`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The students viewed a nucleus in Cell Y, so it cannot be classified as a prokaryote.",
+                    "Rationale": "The students viewed a nucleus in Cell `Y`, so it cannot be classified as a prokaryote.",
                     "Percent": 0
                 }
             },
             "J": {
-                "Choice": "Cell Z",
+                "Choice": "Cell `Z`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The students viewed a nucleus in Cell Z, so it cannot be classified as a prokaryote.",
+                    "Rationale": "The students viewed a nucleus in Cell `Z`, so it cannot be classified as a prokaryote.",
                     "Percent": 0
                 }
             }
@@ -360,7 +360,7 @@
         "Explain": false,
         "Content": [
             "A dichotomous key for identifying fish is shown.",
-            ":box:1a: Body is long and narrow ................................Go to 2\n1b: Body is not long and narrow ...........................Go to 3\n\n2a: Pointed fins ..................................................Trumpetfish\n2b: Fish has smooth fins ......................................Moray eel\n\n3a: Eyes located on top of the head ......................Go to 4\n3b: Eyes located on either side of the head ............Go to 5\n\n4a: Long, whip-like tail ........................................Spotted eagle ray\n4b: Short, blunt tail ............................................Peacock flounder\n\n5a: Body is spotted .............................................Go to 6\n5b: Body is not spotted .......................................Go to 7\n\n6a: Chin whiskers present ...................................Spotted goatfish\n6b: Chin whiskers absent ....................................Bandtail puffer\n\n7a: Striped ........................................................Go to 8\n7b: No stripes ....................................................Glassy sweeper\n\n8a: V-shaped tail ................................................Squirrelfish\n8b: Blunt, rounded tail ........................................Glasseye snapper",
+            ":box:`1a`: Body is long and narrow ................................Go to `2`\n`1b`: Body is not long and narrow ...........................Go to `3`\n\n`2a`: Pointed fins ..................................................Trumpetfish\n`2b`: Fish has smooth fins ......................................Moray eel\n\n`3a`: Eyes located on top of the head ......................Go to `4`\n`3b`: Eyes located on either side of the head ............Go to `5`\n\n`4a`: Long, whip-like tail ........................................Spotted eagle ray\n`4b`: Short, blunt tail ............................................Peacock flounder\n\n`5a`: Body is spotted .............................................Go to `6`\n`5b`: Body is not spotted .......................................Go to `7`\n\n`6a`: Chin whiskers present ...................................Spotted goatfish\n`6b`: Chin whiskers absent ....................................Bandtail puffer\n\n`7a`: Striped ........................................................Go to `8`\n`7b`: No stripes ....................................................Glassy sweeper\n\n`8a`: V-shaped tail ................................................Squirrelfish\n`8b`: Blunt, rounded tail ........................................Glasseye snapper",
             "Based on this key, which two fish have eyes located on either side of their head and are not spotted?"
         ],
         "AnswerChoices": {
@@ -482,10 +482,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The cell cycle skips G₀ phase and repeats G₁ phase.",
+                "Choice": "The cell cycle skips `G_0` phase and repeats `G_1` phase.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Spindle fibers do not form during the G₀ or G₁ phases of the cell cycle, so they would be unaffected by the chemical colchicine.",
+                    "Rationale": "Spindle fibers do not form during the `G_0orG_1` phases of the cell cycle, so they would be unaffected by the chemical colchicine.",
                     "Percent": 0
                 }
             },
@@ -506,10 +506,10 @@
                 }
             },
             "D": {
-                "Choice": "The cell cycle skips S phase and proceeds to G₂ phase.",
+                "Choice": "The cell cycle skips S phase and proceeds to `G_2` phase.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Spindle fibers do not form during the e S or G₂ phases of the cell cycle, so they would be unaffected by the chemical colchicine.",
+                    "Rationale": "Spindle fibers do not form during the `SorG_2` phases of the cell cycle, so they would be unaffected by the chemical colchicine.",
                     "Percent": 0
                 }
             }
@@ -591,7 +591,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The San Marcos salamander, Eurycea nana, is a light reddish-brown translucent salamander about 2-5 cm in length. E. nana is found only in Spring Lake and a portion of the San Marcos River.",
+            "The San Marcos salamander, Eurycea nana, is a light reddish-brown translucent salamander about `2-5` `text(cm)` in length. E. nana is found only in Spring Lake and a portion of the San Marcos River.",
             "Which human activity would most likely decrease the ability of the salamanders to survive?"
         ],
         "AnswerChoices": {
@@ -651,7 +651,7 @@
         "Content": [
             "The diagram shows data on the evolution of horses.",
             "problems/TX19HSB/media/12a.jpg",
-            "The data in the diagram is evidence that  — "
+            "The data in the diagram is evidence that —"
         ],
         "AnswerChoices": {
             "F": {
@@ -666,7 +666,7 @@
                 "Choice": "horses slowly developed over time",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The time scale shown in the diagram provides evidence that horses slowly developed over a time period of 60 million years.",
+                    "Rationale": "The time scale shown in the diagram provides evidence that horses slowly developed over a time period of `60` `text(million years)`.",
                     "Percent": 0
                 }
             },
@@ -942,38 +942,38 @@
             "Mice have two unlinked allele pairs that affect fur color. The table shows how allele pairs affect fur color. The term “agouti” describes fur with pigmentation that changes in each hair from the shaft to the tip, giving the fur a banded appearance. Mice with the aa allele pair are albino, regardless of the second allele-pair combination.",
             "problems/TX19HSB/media/17a.jpg",
             "problems/TX19HSB/media/17b.jpg",
-            "What is the probability of albinism in the offspring of a cross between two mice with AaBb alleles?"
+            "What is the probability of albinism in the offspring of a cross between two mice with `AaBb` alleles?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/16",
+                "Choice": "`1/16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Crossing two mice with AaBb alleles is predicted to have a probability higher than one out of sixteen combinations for offspring with albinism.",
+                    "Rationale": "Crossing two mice with `AaBb` alleles is predicted to have a probability higher than one out of sixteen combinations for offspring with albinism.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "3/16",
+                "Choice": "`3/16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Crossing two mice with AaBb alleles is predicted to have a probability higher than three out of sixteen combinations for offspring with albinism.",
+                    "Rationale": "Crossing two mice with `AaBb` alleles is predicted to have a probability higher than three out of sixteen combinations for offspring with albinism.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "4/16",
+                "Choice": "`4/16`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The probability of albinism in the offspring of two mice with AaBb alleles is determined by how many are likely to have the 'aa' allele combination. Completing the combinations in the graphic shown, there will be four out of sixteen (4/16) possible combinations that will have the 'aa' allele combination that will result in albinism in the offspring.",
+                    "Rationale": "The probability of albinism in the offspring of two mice with `AaBb` alleles is determined by how many are likely to have the `'aa'` allele combination. Completing the combinations in the graphic shown, there will be four out of sixteen `(4/16)` possible combinations that will have the `'aa'` allele combination that will result in albinism in the offspring.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "9/16",
+                "Choice": "`9/16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Crossing two mice with AaBb alleles is predicted to have a probability lower than nine out of sixteen combinations for offspring with albinism.",
+                    "Rationale": "Crossing two mice with `AaBb` alleles is predicted to have a probability lower than nine out of sixteen combinations for offspring with albinism.",
                     "Percent": 0
                 }
             }
@@ -1077,10 +1077,10 @@
                 }
             },
             "C": {
-                "Choice": "C₆H₁₂O₆",
+                "Choice": "`text(C)_6text(H)_12text(O)_6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Glucose (C₆H₁₂O₆) is a reactant, not a product, of cellular respiration.",
+                    "Rationale": "Glucose `(text(C)_6text(H)_12text(O)_6)` is a reactant, not a product, of cellular respiration.",
                     "Percent": 0
                 }
             },
@@ -1256,7 +1256,7 @@
                 "Choice": "The cheetah population becomes less likely to survive an outbreak of a disease or an environmental change, increasing the chance of species extinction.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "population with low genetic diversity is highly unlikely to have a type of genetic variation that will enable them to survive changes such as an outbreak of a disease or an environmental change, which then increases their chance of species extinction during such a change.",
+                    "Rationale": "A population with low genetic diversity is highly unlikely to have a type of genetic variation that will enable them to survive changes such as an outbreak of a disease or an environmental change, which then increases their chance of species extinction during such a change.",
                     "Percent": 0
                 }
             },
@@ -1290,7 +1290,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "CRISPR-Cas9 is a genetic modification technique that edits parts of the genome of an organism. Using this technique scientists can add, remove, or modify sections of the DNA sequence.",
+            "`text(CRISPR-Cas9)` is a genetic modification technique that edits parts of the genome of an organism. Using this technique scientists can add, remove, or modify sections of the DNA sequence.",
             "How can scientists use this technique to control gene expression?"
         ],
         "AnswerChoices": {
@@ -1298,7 +1298,7 @@
                 "Choice": "By activating or deactivating specific genes",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Scientists can use the CRISPR-Cas9 genetic modification technique to control gene expression by activating or deactivating specific genes, which can be done by removing or modifying sections of the DNA sequence of an organism.",
+                    "Rationale": "Scientists can use the `text(CRISPR-Cas9)` genetic modification technique to control gene expression by activating or deactivating specific genes, which can be done by removing or modifying sections of the DNA sequence of an organism.",
                     "Percent": 0
                 }
             },
@@ -1464,38 +1464,38 @@
         "Content": [
             "The inheritance pattern for an autosomal dominant trait is shown in the pedigree. Shaded symbols represent individuals that express the dominant trait.",
             "problems/TX19HSB/media/26a.jpg",
-            "Based on this pedigree, what are the most likely genotypes of individuals I-1 and I-2?"
+            "Based on this pedigree, what are the most likely genotypes of individuals `text(I-1)andtext(I-2)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "I-1: aa\nI-2: Aa",
+                "Choice": "`text(I-1): aa`\n`text(I-2): Aa`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Individual I-1 is shaded in the pedigree and therefore must have at least one dominant allele (A) to have the trait.",
+                    "Rationale": "Individual `text(I-1)` is shaded in the pedigree and therefore must have at least one dominant allele `(A)` to have the trait.",
                     "Percent": 0
                 }
             },
             "G": {
-                "Choice": "I-1: AA\nI-2: Aa",
+                "Choice": "`text(I-1): A A`\n`text(I-2): Aa`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Individual I-2 is not shaded in the pedigree and therefore does not have a dominant allele (A) to have the trait.",
+                    "Rationale": "Individual `text(I-2)` is not shaded in the pedigree and therefore does not have a dominant allele `(A)` to have the trait.",
                     "Percent": 0
                 }
             },
             "H": {
-                "Choice": "I-1: Aa\nI-2: aa",
+                "Choice": "`text(I-1): Aa`\n`text(I-2): aa`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Based on the pedigree shown, individual I-1 has at least one dominant allele (A) because the individual symbol is shaded. Also, because this individual has offspring without the dominant the trait, it must also carry a recessive allele (a). Individual I-2 is most likely homozygous recessive (aa) because the individual symbol is not shaded and therefore does not have the dominant trait.",
+                    "Rationale": "Based on the pedigree shown, individual `text(I-1)` has at least one dominant allele `(A)` because the individual symbol is shaded. Also, because this individual has offspring without the dominant the trait, it must also carry a recessive allele `(a)`. Individual `text(I-2)` is most likely homozygous recessive `(aa)` because the individual symbol is not shaded and therefore does not have the dominant trait.",
                     "Percent": 0
                 }
             },
             "J": {
-                "Choice": "I-1: aa\nI-2: AA",
+                "Choice": "`text(I-1): aa`\n`text(I-2): A A`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Individual I-1 is shaded in the pedigree and therefore must have at least one dominant allele (A) to have the trait.",
+                    "Rationale": "Individual `text(I-1)` is shaded in the pedigree and therefore must have at least one dominant allele `(A)` to have the trait.",
                     "Percent": 0
                 }
             }
@@ -1519,7 +1519,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When cells lose their ability to regulate the cell cycle, they can divide at an accelerated rate and form a mass of cells. This mass of cells is referred to as  — "
+            "When cells lose their ability to regulate the cell cycle, they can divide at an accelerated rate and form a mass of cells. This mass of cells is referred to as —"
         ],
         "AnswerChoices": {
             "A": {
@@ -1923,7 +1923,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Grassland ecosystems in Texas have evolved to depend on periodic fires to return nutrients to the soil and encourage plant reproduction. Humans have prevented fires in many of these grassland areas, resulting in plant and animal communities with little diversity. Wildlife biologists often recommend purposefully starting fires called prescribed burns, which are monitored and controlled, in grassland ecosystems every 3 to 4 years. These biologists observe greater diversity in plant and animal life in the years following a prescribed burn.",
+            "Grassland ecosystems in Texas have evolved to depend on periodic fires to return nutrients to the soil and encourage plant reproduction. Humans have prevented fires in many of these grassland areas, resulting in plant and animal communities with little diversity. Wildlife biologists often recommend purposefully starting fires called prescribed burns, which are monitored and controlled, in grassland ecosystems every `3` to `4` `text(years)`. These biologists observe greater diversity in plant and animal life in the years following a prescribed burn.",
             "What natural processes are the biologists attempting to imitate?"
         ],
         "AnswerChoices": {
@@ -1987,7 +1987,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Option 1",
+                "Choice": "Option `1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Absorption of water and nutrients are not dependent on the plant's ability to respond to the direction of light.",
@@ -1995,15 +1995,15 @@
                 }
             },
             "B": {
-                "Choice": "Option 2",
+                "Choice": "Option `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Seed dispersal and absorption of CO₂ are not dependent on the plant's ability to respond to the direction of light.",
+                    "Rationale": "Seed dispersal and absorption of `text(CO)_2` are not dependent on the plant's ability to respond to the direction of light.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Option 3",
+                "Choice": "Option `3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Respiration and food storage are not dependent on the plant's ability to respond to the direction of light.",
@@ -2011,7 +2011,7 @@
                 }
             },
             "D": {
-                "Choice": "Option 4",
+                "Choice": "Option `4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Photosynthesis is the process by which plants convert the energy from sunlight into food; therefore, photosynthesis is directly dependent on the plant's ability to respond to the direction of light.",
@@ -2040,7 +2040,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Exposure to the building material asbestos has been linked to certain types of cancers. Asbestos causes mutations in the p53 gene, which controls tumor suppression.",
+            "Exposure to the building material asbestos has been linked to certain types of cancers. Asbestos causes mutations in the `text(p53)` gene, which controls tumor suppression.",
             "Which statement best explains why people with cancer due to asbestos exposure do not pass the mutation on to their offspring?"
         ],
         "AnswerChoices": {
@@ -2222,7 +2222,7 @@
                 }
             },
             "B": {
-                "Choice": "Protists produce approximately 75 percent of the oxygen on Earth.",
+                "Choice": "Protists produce approximately `75` `text(percent)` of the oxygen on Earth.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Plants produce oxygen also, so this role would not have the most positive effect on plant populations.",
@@ -2324,7 +2324,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Gametes produced by an organism contain a combination of genes from that organism. In every gamete, this combination is  — "
+            "Gametes produced by an organism contain a combination of genes from that organism. In every gamete, this combination is —"
         ],
         "AnswerChoices": {
             "A": {
@@ -2439,39 +2439,39 @@
         "Explain": false,
         "Content": [
             "A segment of a DNA strand is shown.",
-            "3' AGGTCAGGT 5'",
+            ":ibox:`3'text( AGGTCAGGT )5'`",
             "Which of these is the correct complementary DNA strand for the segment shown?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5' AGGTCAGGT 3'",
+                "Choice": "`5'text( AGGTCAGGT )3'`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The strand 5' AGGTCAGGT 3' is not complementary to the strand 3' AGGTCAGGT 5' because it does not follow the DNA base pairing rules.",
+                    "Rationale": "The strand `5'text( AGGTCAGGT )3'` is not complementary to the strand `3'text( AGGTCAGGT )5'` because it does not follow the DNA base pairing rules.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "5' ACCUGAGGU 3'",
+                "Choice": "`5'text( ACCUGAGGU )3'`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The strand 5' ACCUGAGGU 3' is not complementary to the strand 3' AGGTCAGGT 5' because it does not follow the DNA base pairing rules.",
+                    "Rationale": "The strand `5'text( ACCUGAGGU )3'` is not complementary to the strand `3'text( AGGTCAGGT )5'` because it does not follow the DNA base pairing rules.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "5' TGGACTGGA 3'",
+                "Choice": "`5'text( TGGACTGGA )3'`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The strand 5' TGGACTGGA 3' is not complementary to the strand 3' AGGTCAGGT 5' because it does not follow the DNA base pairing rules.",
+                    "Rationale": "The strand `5'text( TGGACTGGA )3'` is not complementary to the strand `3'text( AGGTCAGGT )5'` because it does not follow the DNA base pairing rules.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "5' TCCAGTCCA 3'",
+                "Choice": "`5'text( TCCAGTCCA )3'`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In order for a DNA strand to be complementary, it must follow the DNA base pairing rules: adenine (A) always pairs with thymine (T), and guanine (G) always pairs with cytosine (C). The strand 5' TCCAGTCCA 3' follows these base pairing rules to be complementary to the strand 3' AGGTCAGGT 5'.",
+                    "Rationale": "In order for a DNA strand to be complementary, it must follow the DNA base pairing rules: adenine `(A)` always pairs with thymine `(T)`, and guanine `(G)` always pairs with cytosine `(C)`. The strand `5'text( TCCAGTCCA )3'` follows these base pairing rules to be complementary to the strand `3'text( AGGTCAGGT )5'`.",
                     "Percent": 0
                 }
             }
@@ -2724,7 +2724,7 @@
         "Explain": false,
         "Content": [
             "Some species of millipedes will roll into a ball when threatened, while other species of millipedes can secrete noxious chemicals from their bodies.",
-            "These adaptations allow the millipedes to  — "
+            "These adaptations allow the millipedes to —"
         ],
         "AnswerChoices": {
             "F": {
@@ -2840,7 +2840,7 @@
         "Content": [
             "Transmembrane proteins span the width of cell membranes. Four types of transmembrane proteins are shown in a section of cell membrane.",
             "problems/TX19HSB/media/50a.jpg",
-            "Although these proteins have different specific functions, they all  — "
+            "Although these proteins have different specific functions, they all —"
         ],
         "AnswerChoices": {
             "F": {

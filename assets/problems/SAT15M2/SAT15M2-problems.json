@@ -21,34 +21,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`2003`-`2004`",
+                "Choice": "`text(2003)-text(2004)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Between `2010and2011`, approximately `20` more 3-D movies were released. The change in the number of 3-D movies released between any of the other pairs of consecutive years is significantly smaller than `20`.",
+                    "Rationale": "Between `text(2010)andtext(2011)`, approximately `20` more 3-D movies were released. The change in the number of 3-D movies released between any of the other pairs of consecutive years is significantly smaller than `20`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "`2008`-`2009`",
+                "Choice": "`text(2008)-text(2009)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Between `2010and2011`, approximately `20` more 3-D movies were released. The change in the number of 3-D movies released between any of the other pairs of consecutive years is significantly smaller than `20`.",
+                    "Rationale": "Between `text(2010)andtext(2011)`, approximately `20` more 3-D movies were released. The change in the number of 3-D movies released between any of the other pairs of consecutive years is significantly smaller than `20`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`2009`-`2010`",
+                "Choice": "`text(2009)-text(2010)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Between `2010and2011`, approximately `20` more 3-D movies were released. The change in the number of 3-D movies released between any of the other pairs of consecutive years is significantly smaller than `20`.",
+                    "Rationale": "Between `text(2010)andtext(2011)`, approximately `20` more 3-D movies were released. The change in the number of 3-D movies released between any of the other pairs of consecutive years is significantly smaller than `20`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "`2010`-`2011`",
+                "Choice": "`text(2010)-text(2011)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The change in the number of 3-D movies released between any two consecutive years can be found by first estimating the number of 3-D movies released for each of the two years and then finding the positive difference between these two estimates. Between `2003and2004`, this change is approximately `2-2=0` movies; between `2008and2009`, this change is approximately `20-8=12` movies; between `2009and2010`, this change is approximately `26-20=6` movies; and between `2010and2011`, this change is approximately `46-26=20` movies. Therefore, of the pairs of consecutive years in the choices, the greatest increase in the number of 3-D movies released occurred during the time period between `2010and2011`.",
+                    "Rationale": "The change in the number of 3-D movies released between any two consecutive years can be found by first estimating the number of 3-D movies released for each of the two years and then finding the positive difference between these two estimates. Between `text(2003)andtext(2004)`, this change is approximately `2-2=0` movies; between `text(2008)andtext(2009)`, this change is approximately `20-8=12` movies; between `text(20090andtext(2010)`, this change is approximately `26-20=6` movies; and between `text(2010)andtext(2011)`, this change is approximately `46-26=20` movies. Therefore, of the pairs of consecutive years in the choices, the greatest increase in the number of 3-D movies released occurred during the time period between `text(2010)andtext(2011)`.",
                     "Percent": 0
                 }
             }
@@ -458,7 +458,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the `1908` Olympic Games, the Olympic marathon was lengthened from `40` `text(kilometers)` to approximately `42` `text(kilometers)`. Of the following, which is closest to the increase in the distance of the Olympic marathon, in miles? (`1` `text(mile)` is approximately `1.6` `text(kilometers)`.)"
+            "In the `text(1908)` Olympic Games, the Olympic marathon was lengthened from `40` `text(kilometers)` to approximately `42` `text(kilometers)`. Of the following, which is closest to the increase in the distance of the Olympic marathon, in `text(miles)`? (`1` `text(mile)` is approximately `1.6` `text(kilometers)`.)"
         ],
         "AnswerChoices": {
             "A": {
@@ -473,7 +473,7 @@
                 "Choice": "`1.25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "In `1908`, the marathon was lengthened by `42-40=2` `text(kilometers)`. Since `1` `text(mile)` is approximately `1.6` `text(kilometers)`, the increase of `2` `text(kilometers)` can be converted to miles by multiplying as shown: `2` `text(kilometers)xx(1text( mile))/(1.6text( kilometers))=1.25` `text(miles)`.",
+                    "Rationale": "In `text(1908)`, the marathon was lengthened by `42-40=2` `text(kilometers)`. Since `1` `text(mile)` is approximately `1.6` `text(kilometers)`, the increase of `2` `text(kilometers)` can be converted to miles by multiplying as shown: `2` `text(kilometers)xx(1text( mile))/(1.6text( kilometers))=1.25` `text(miles)`.",
                     "Percent": 0
                 }
             },
@@ -1036,7 +1036,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Triangles `ADBandCDB` are congruent to each other because they are both `30°`-`60°`-`90°` triangles and share the side `BD`. In triangle `ADB`, side `AD` is opposite to the angle `30°`; therefore, the length of `AD` is half the length of hypotenuse `AB`. Since the triangles are congruent `AB=BC=12`. So the length of `AD` is `12/2=6`.",
+                    "Rationale": "Triangles `ADBandCDB` are congruent to each other because they are both `30°-60°-90°` triangles and share the side `BD`. In triangle `ADB`, side `AD` is opposite to the angle `30°`; therefore, the length of `AD` is half the length of hypotenuse `AB`. Since the triangles are congruent `AB=BC=12`. So the length of `AD` is `12/2=6`.",
                     "Percent": 0
                 }
             },
@@ -1133,7 +1133,7 @@
         "Explain": false,
         "Content": [
             ":ibox:`(a-b)/a=c`",
-            "In the equation above, if a is negative and b is positive, which of the following must be true?"
+            "In the equation above, if a is negative and `b` is positive, which of the following must be true?"
         ],
         "AnswerChoices": {
             "A": {

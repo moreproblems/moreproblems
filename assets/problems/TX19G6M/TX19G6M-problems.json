@@ -556,7 +556,7 @@
                 }
             },
             "D": {
-                "Choice": "Victoria is y years old.\nHer age is 12 years greater than x, her brother's age in years.",
+                "Choice": "Victoria is y years old.\nHer age is 12 years greater than x, her brother's age in `text(years)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose a situation represented by the equation y = 12 + x instead of y = 12x. The student needs to focus on understanding how to identify situations that can be represented by equations in the form `y=kx`.",
@@ -1074,7 +1074,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The dimensions of the rectangular prism shown are given in centimeters.",
+            "The dimensions of the rectangular prism shown are given in `text(centimeters)`.",
             "problems/TX19G6M/media/21a.jpg",
             "What is the volume of the rectangular prism in cubic centimeters?"
         ],
@@ -1870,7 +1870,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Timothy has a set of plastic squares. The table shows the relationship between A, the area of each square in square centimeters, and s, the side length of each square in centimeters.",
+            "Timothy has a set of plastic squares. The table shows the relationship between A, the area of each square in `text(square centimeters)`, and s, the side length of each square in `text(centimeters)`.",
             "problems/TX19G6M/media/37a.jpg",
             "Which equation can be used to represent the relationship between A and s for these squares?"
         ],

@@ -17,7 +17,7 @@
                             "Key": "MN.M9-11.2.1.1",
                             "Label": "Understand the definition of a function. Use functional notation and evaluate a function at a given point in its domain.",
                             "Examples": [
-                                "For example, if f(x) = 1/(x^2- 3), find f(-4)."
+                                "For example, if `f(x)=1/(x^2-3)`, find `f(-4)`."
                             ],
                             "Subs": []
                         },
@@ -31,7 +31,7 @@
                             "Key": "MN.M9-11.2.1.3",
                             "Label": "Find the domain of a function defined symbolically, graphically or in a real-world context.",
                             "Examples": [
-                                "For example, the formula f(x) = πx^2can represent a function whose domain is all real numbers, but in the context of the area of a circle, the domain would be restricted to positive x."
+                                "For example, the formula `f(x)=pix^2` can represent a function whose domain is all real numbers, but in the context of the area of a circle, the domain would be restricted to positive x."
                             ],
                             "Subs": []
                         },
@@ -65,7 +65,7 @@
                             "Key": "MN.M9-11.2.1.8",
                             "Label": "Make qualitative statements about the rate of change of a function, based on its graph or table of values.",
                             "Examples": [
-                                "For example, the function f(x) = 3ˣ increases for all x, but it increases faster when x > 2 than it does when x < 2."
+                                "For example, the function `f(x)=3^x` increases for all `x`, but it increases faster when `x>2` than it does when `x<2`."
                             ],
                             "Subs": []
                         },
@@ -73,7 +73,7 @@
                             "Key": "MN.M9-11.2.1.9",
                             "Label": "Determine how translations affect the symbolic and graphical forms of a function. Know how to use graphing technology to examine translations.",
                             "Examples": [
-                                "For example, determine how the graph of f(x) = |x - h| + k changes as h and k change."
+                                "For example, determine how the graph of `f(x)=abs(x-h)+k` changes as `handk` change."
                             ],
                             "Subs": []
                         }
@@ -108,8 +108,8 @@
                             "Key": "MN.M9-11.2.2.4",
                             "Label": "Express the terms in a geometric sequence recursively and by giving an explicit (closed form) formula, and express the partial sums of a geometric series recursively.",
                             "Examples": [
-                                "For example, a closed form formula for the terms tₙ in the geometric sequence 3, 6, 12, 24, ... is tₙ = 3(2)ⁿ⁻¹, where n = 1, 2, 3, ..., and this sequence can be expressed recursively by writing t₁ = 3 and tn = 2tₙ₋₁, for n ≥ 2.",
-                                "For example, the partial sums sn of the series 3 + 6 + 12 + 24 + ... can be expressed recursively by writing s₁ = 3 and sₙ = 3 + 2sₙ₋₁, for n ≥ 2."
+                                "For example, a closed form formula for the terms tₙ in the geometric sequence `3,6,12,24,...` is `t_n=3(2)^(n-1)`, where `n=1,2,3,...`, and this sequence can be expressed recursively by writing `t_1=3andt_n=2t_(n-1)`, for `n>=2`.",
+                                "For example, the partial sums sn of the series `3+6+12+24+...` can be expressed recursively by writing `s_1=3ands_n=3+2s_(n-1)`, for `n>=2`."
                             ],
                             "Subs": []
                         },
@@ -121,7 +121,7 @@
                         },
                         {
                             "Key": "MN.M9-11.2.2.6",
-                            "Label": "Sketch the graphs of common non-linear functions such as f(x) = √x, f(x) = |x|, f(x) = 1/x, f(x) = x^3, and translations of these functions, such as f(x) = √(x - 2) + 4. Know how to use graphing technology to graph these functions.",
+                            "Label": "Sketch the graphs of common non-linear functions such as `f(x)=sqrt(x),f(x)=abs(x),f(x)=1/x,f(x)=x^3`, and translations of these functions, such as `f(x)=sqrt(x-2)+4`. Know how to use graphing technology to graph these functions.",
                             "Examples": [],
                             "Subs": []
                         }
@@ -233,7 +233,7 @@
                             "Key": "MN.M9-11.2.4.7",
                             "Label": "Solve equations that contain radical expressions. Recognize that extraneous solutions may arise when using symbolic methods.",
                             "Examples": [
-                                "For example, the equation √(x - 9) = 9√x may be solved by squaring both sides to obtain x - 9 = 81x, which has the solution x = -9/80 However, this is not a solution of the original equation, so it is an extraneous solution that should be discarded. The original equation has no solution in this case.",
+                                "For example, the equation sqrt(x - 9) = 9√x may be solved by squaring both sides to obtain x - 9 = 81x, which has the solution x = -9/80 However, this is not a solution of the original equation, so it is an extraneous solution that should be discarded. The original equation has no solution in this case.",
                                 "For example, solve ∛(-x + 1) = -5."
                             ],
                             "Subs": []
@@ -378,9 +378,9 @@
                         },
                         {
                             "Key": "MN.M9-11.3.3.5",
-                            "Label": "Know and apply properties of right triangles, including properties of `45`-`45`-`90and30`-`60`-`90` triangles, to solve problems and logically justify results.",
+                            "Label": "Know and apply properties of right triangles, including properties of `45-45-90and30-60-90` triangles, to solve problems and logically justify results.",
                             "Examples": [
-                                "For example, use `30`-`60`-`90` triangles to analyze geometric figures involving equilateral triangles and hexagons.",
+                                "For example, use `30-60-90` triangles to analyze geometric figures involving equilateral triangles and hexagons.",
                                 "For example, determine exact values of the trigonometric ratios in these special triangles using relationships among the side lengths."
                             ],
                             "Subs": []

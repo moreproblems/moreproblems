@@ -236,16 +236,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A computer monitor uses square pixels to display an image. The expression shown below represents the approximate area, in square inches, of one pixel on the computer monitor.",
+            "A computer monitor uses square pixels to display an image. The expression shown below represents the approximate area, in `text(square inches)`, of one pixel on the computer monitor.",
             ":ibox:(1.04 × 10⁻²)^2",
-            "What is the approximate area, in square inches, of one pixel on the computer monitor?"
+            "What is the approximate area, in `text(square inches)`, of one pixel on the computer monitor?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "1.0816 × 10⁻²",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the expression (1.04^2 × 10⁻²)^2 can be represented as (1.04^2 × 10⁻²)(1.04^2 × 10⁻²) = 1.04^2 × (10⁻²)^2, squares the 1.04, resulting in 1.0816, and then applies the exponential property (aᵐ)ⁿ = aᵐˣⁿ to simplify (10⁻²)^2 as 10⁻²ˣ², resulting in 10⁻⁴.",
+                    "Rationale": "This choice recognizes that the expression (1.04^2 × 10⁻²)^2 can be represented as (1.04^2 × 10⁻²)(1.04^2 × 10⁻²) = 1.04^2 × (10⁻²)^2, squares the 1.04, resulting in 1.0816, and then applies the exponential property `(a^m)^n=a^(mxxn)` to simplify `(10^-2)^2` as `10^(-2xx2)`, resulting in `10^-4`.",
                     "Percent": 60
                 }
             },
@@ -688,9 +688,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A science experiment requires students to find the mass of a bucket with different numbers of pennies in it. The table below shows the total masses, in grams, of the bucket with different numbers of pennies in the bucket.",
+            "A science experiment requires students to find the mass of a bucket with different numbers of pennies in it. The table below shows the total masses, in `text(grams)`, of the bucket with different numbers of pennies in the bucket.",
             "problems/PA24G8M/media/13a.jpg",
-            "Which equation represents the relationship between the total mass (y), in grams, of the bucket and the number of pennies (x) in the bucket?"
+            "Which equation represents the relationship between the total mass (y), in `text(grams)`, of the bucket and the number of pennies (x) in the bucket?"
         ],
         "AnswerChoices": {
             "A": {
@@ -802,9 +802,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The lengths of the two legs of a right triangle are 4 centimeters and 8 centimeters. The length (h), in centimeters, of the hypotenuse of the right triangle can be determined using the equation shown below.",
+            "The lengths of the two legs of a right triangle are 4 centimeters and 8 centimeters. The length (h), in `text(centimeters)`, of the hypotenuse of the right triangle can be determined using the equation shown below.",
             ":ibox:4^2 + 8^2 = h^2",
-            "What is the length, in centimeters, of the hypotenuse of the right triangle?"
+            "What is the length, in `text(centimeters)`, of the hypotenuse of the right triangle?"
         ],
         "AnswerChoices": {
             "A": {

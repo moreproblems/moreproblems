@@ -850,14 +850,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In `2015` the populations of City X and City Y were equal. From `2010` to `2015`, the population of City X increased by `20%` and the population of City Y decreased by `10%`. If the population of City X was `120text(,)000` in `2010`, what was the population of City Y in `2010`?"
+            "In `text(2015)` the populations of City X and City Y were equal. From `text(2010)` to `text(2015)`, the population of City X increased by `20%` and the population of City Y decreased by `10%`. If the population of City X was `120text(,)000` in `text(2010)`, what was the population of City Y in `text(2010)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`60text(,)000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the population of City Y in `2010` was `60text(,)000`, then the population of City Y in `2015` would have been `60text(,)000(0.90)=54text(,)000`, which is not equal to the City X population in `2015` of `144text(,)000`.",
+                    "Rationale": "If the population of City Y in `text(2010)` was `60text(,)000`, then the population of City Y in `text(2015)` would have been `60text(,)000(0.90)=54text(,)000`, which is not equal to the City X population in `text(2015)` of `144text(,)000`.",
                     "Percent": 0
                 }
             },
@@ -865,7 +865,7 @@
                 "Choice": "`90text(,)000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "`90text(,)000(0.90)=81text(,)000`, which is not equal to the City X population in `2015` of `144text(,)000`.",
+                    "Rationale": "`90text(,)000(0.90)=81text(,)000`, which is not equal to the City X population in `text(2015)` of `144text(,)000`.",
                     "Percent": 0
                 }
             },
@@ -873,7 +873,7 @@
                 "Choice": "`160text(,)000`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the population of City X was `120text(,)000` in `2010`, and that it increased by `20%` from `2010` to `2015`. Therefore, the population of City X in `2015` was `120text(,)000(1+0.20)=144text(,)000`. It's also given that the population of City Y decreased by `10%` from `2010` to `2015`. If `y` represents the population of City Y in `2010`, then `y(1-0.10)=144text(,)000`. Solving this equation for `y` yields `y=(144text(,)000)/(1-0.10)`. Simplifying the denominator yields `(144text(,)000)/0.90,or160text(,)000`.",
+                    "Rationale": "It's given that the population of City X was `120text(,)000` in `text(2010)`, and that it increased by `20%` from `text(2010)` to `text(2015)`. Therefore, the population of City X in `text(2015)` was `120text(,)000(1+0.20)=144text(,)000`. It's also given that the population of City Y decreased by `10%` from `text(2010)` to `text(2015)`. If `y` represents the population of City Y in `text(2010)`, then `y(1-0.10)=144text(,)000`. Solving this equation for `y` yields `y=(144text(,)000)/(1-0.10)`. Simplifying the denominator yields `(144text(,)000)/0.90,or160text(,)000`.",
                     "Percent": 0
                 }
             },
@@ -881,7 +881,7 @@
                 "Choice": "`240text(,)000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "`240text(,)000(0.90)=216text(,)000`, which is not equal to the City X population in `2015` of `144text(,)000`.",
+                    "Rationale": "`240text(,)000(0.90)=216text(,)000`, which is not equal to the City X population in `text(2015)` of `144text(,)000`.",
                     "Percent": 0
                 }
             }
@@ -1637,7 +1637,7 @@
                 "Choice": "`150°`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A segment can be drawn inside of quadrilateral `ABCD` from point `B` to point `F` (not shown) on segment `bar(AD)` such that segment `bar(BF)` is perpendicular to segment `bar(AD)`. This will create rectangle `FBCD` such that `FB=CD`. This will also create right triangle `ABF` such that `FB=(AB)/2`. An acute angle in a right triangle has measure `30°` if and only if the side opposite this angle is half the length of the hypotenuse. (Such a triangle is called a `30°`-`60°`-`90°` triangle.) Since `bar(AB)` is the hypotenuse of right triangle `ABFandFB=(AB)/2`, triangle `ABF` must be a `30°`-`60°`-`90°` triangle and angle `ABF` must measure `60°`. The measure of angle `ABC` equals the sum of the measures of angles `ABFandFBC`. Because angle `FBC` is in rectangle `FBCD`, it has a measure of `90°`. Therefore, the measure of angle `ABC`, or angle `B` shown in the original figure, is `60°+90°=150°`.",
+                    "Rationale": "A segment can be drawn inside of quadrilateral `ABCD` from point `B` to point `F` (not shown) on segment `bar(AD)` such that segment `bar(BF)` is perpendicular to segment `bar(AD)`. This will create rectangle `FBCD` such that `FB=CD`. This will also create right triangle `ABF` such that `FB=(AB)/2`. An acute angle in a right triangle has measure `30°` if and only if the side opposite this angle is half the length of the hypotenuse. (Such a triangle is called a `30°-60°-90°` triangle.) Since `bar(AB)` is the hypotenuse of right triangle `ABFandFB=(AB)/2`, triangle `ABF` must be a `30°-60°-90°` triangle and angle `ABF` must measure `60°`. The measure of angle `ABC` equals the sum of the measures of angles `ABFandFBC`. Because angle `FBC` is in rectangle `FBCD`, it has a measure of `90°`. Therefore, the measure of angle `ABC`, or angle `B` shown in the original figure, is `60°+90°=150°`.",
                     "Percent": 0
                 }
             },
@@ -1645,7 +1645,7 @@
                 "Choice": "`135°`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice may result from identifying triangle `ABF` as a `45°`-`45°`-`90°` triangle and the measure of angle `ABF` as `45°`.",
+                    "Rationale": "This choice may result from identifying triangle `ABF` as a `45°-45°-90°` triangle and the measure of angle `ABF` as `45°`.",
                     "Percent": 0
                 }
             },

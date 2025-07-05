@@ -218,13 +218,13 @@
         "Explain": false,
         "Content": [
             "A student created a model of a DNA sequence and its mRNA transcript, as shown.",
-            ":ibox:DNA\t3'-AGC CGT ATC-5'\n\nmRNA\t5'-TCG GCA TAG-3'",
+            ":ibox:DNA\t`3'-text(AGC CGT ATC)-5'`\n\nmRNA\t`5'-text(TCG GCA TAG)-3'`",
             "Another student found a mistake in the model.",
             "Which of the following best describes how to correct the model?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The thymine (T) nucleotides in the mRNA transcript should be replaced with uracil (U) nucleotides.",
+                "Choice": "The thymine `(T)` nucleotides in the mRNA transcript should be replaced with uracil `(U)` nucleotides.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -232,7 +232,7 @@
                 }
             },
             "B": {
-                "Choice": "The adenine (A) nucleotides in the mRNA transcript should be replaced with thymine (T) nucleotides.",
+                "Choice": "The adenine `(A)` nucleotides in the mRNA transcript should be replaced with thymine `(T)` nucleotides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -240,7 +240,7 @@
                 }
             },
             "C": {
-                "Choice": "The thymine (T) nucleotides in the mRNA transcript should be replaced with cytosine (C) nucleotides.",
+                "Choice": "The thymine `(T)` nucleotides in the mRNA transcript should be replaced with cytosine `(C)` nucleotides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -248,7 +248,7 @@
                 }
             },
             "D": {
-                "Choice": "The cytosine (C) nucleotides in the mRNA transcript should be replaced with guanine (G) nucleotides.",
+                "Choice": "The cytosine `(C)` nucleotides in the mRNA transcript should be replaced with guanine `(G)` nucleotides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -327,7 +327,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "An energy pyramid for an ecosystem is shown.",
             "problems/MA22HSB/media/6a.jpg"
         ],
@@ -343,7 +343,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "2,000 kcal",
+                        "Choice": "`2text(,)000` `text(kcal)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -351,7 +351,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "200 kcal",
+                        "Choice": "`200` `text(kcal)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -359,7 +359,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "20 kcal",
+                        "Choice": "`20` `text(kcal)`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -367,7 +367,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "2 kcal",
+                        "Choice": "`2` `text(kcal)`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -876,7 +876,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "Scientists studied reproduction in corn and teosinte."
         ],
         "AnswerChoices": {},
@@ -994,7 +994,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS THREE PARTS.",
+            ":ibox:THIS PROBLEM HAS THREE PARTS.",
             "Corn plants produce their own food through a chemical process."
         ],
         "AnswerChoices": {},
@@ -1006,10 +1006,10 @@
                 "Explain": false,
                 "Content": [
                     "Using the chemical symbols below, complete the equation below to show the chemical reaction corn plants use to make food. Each chemical symbol may be used once or not at all.",
-                    "\n\n6 :M-1: + 6 :M-2: → :M-3: + 6 :M-4:"
+                    "\n\n`6` :M-1: `+6` :M-2: `->` :M-3: `+6` :M-4:"
                 ],
                 "AnswerChoices": {
-                    "A:CO₂": {
+                    "A:`text(CO)_2`": {
                         "Choice": "1",
                         "Key": {
                             "Correct": true,
@@ -1017,7 +1017,7 @@
                             "Percent": 0
                         }
                     },
-                    "B:C₃H₈O₃": {
+                    "B:`text(C)_3text(H)_8text(O)_3`": {
                         "Choice": "",
                         "Key": {
                             "Correct": false,
@@ -1025,7 +1025,7 @@
                             "Percent": 0
                         }
                     },
-                    "C:C₆H₁₂O₆": {
+                    "C:`text(C)_6text(H)_12text(O)_6`": {
                         "Choice": "3",
                         "Key": {
                             "Correct": true,
@@ -1033,7 +1033,7 @@
                             "Percent": 0
                         }
                     },
-                    "D:H₂CO₃": {
+                    "D:`text(H)_2text(CO)_3`": {
                         "Choice": "",
                         "Key": {
                             "Correct": false,
@@ -1041,7 +1041,7 @@
                             "Percent": 0
                         }
                     },
-                    "E:H₂O": {
+                    "E:`text(H)_2text(O)`": {
                         "Choice": "2",
                         "Key": {
                             "Correct": true,
@@ -1049,7 +1049,7 @@
                             "Percent": 0
                         }
                     },
-                    "F:O₂": {
+                    "F:`text(O)_2`": {
                         "Choice": "4",
                         "Key": {
                             "Correct": true,
@@ -1111,7 +1111,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5 nucleotides",
+                "Choice": "`5` nucleotides",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1119,7 +1119,7 @@
                 }
             },
             "B": {
-                "Choice": "6 nucleotides",
+                "Choice": "`6` nucleotides",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1127,7 +1127,7 @@
                 }
             },
             "C": {
-                "Choice": "12 nucleotides",
+                "Choice": "`12` nucleotides",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1135,7 +1135,7 @@
                 }
             },
             "D": {
-                "Choice": "18 nucleotides",
+                "Choice": "`18` nucleotides",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1270,7 +1270,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS THREE PARTS.",
+            ":ibox:THIS PROBLEM HAS THREE PARTS.",
             "The diagram shows four monomers that make up organic macromolecules.",
             "problems/MA22HSB/media/20a.jpg"
         ],
@@ -1422,8 +1422,8 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS FOUR PARTS.",
-            "A man and a woman plan to have a biological child. They want to determine the likelihood that their child will inherit a genetic condition that runs in both of their families. One gene with two alleles is responsible for the condition. The dominant allele (A) produces the normal phenotype, and the recessive allele (a) produces the genetic condition. Both the man and the woman have the normal phenotype."
+            ":ibox:THIS PROBLEM HAS FOUR PARTS.",
+            "A man and a woman plan to have a biological child. They want to determine the likelihood that their child will inherit a genetic condition that runs in both of their families. One gene with two alleles is responsible for the condition. The dominant allele `(A)` produces the normal phenotype, and the recessive allele `(a)` produces the genetic condition. Both the man and the woman have the normal phenotype."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -1433,7 +1433,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Using the allele symbols A and a, identify all possible genotypes of the man and all possible genotypes of the woman for this genetic condition."
+                    "Using the allele symbols `Aanda`, identify all possible genotypes of the man and all possible genotypes of the woman for this genetic condition."
                 ],
                 "AnswerChoices": {}
             },
@@ -1443,7 +1443,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Using the allele symbols A and a, complete the Punnett square in Part B on the next page to show how the man and the woman can have a biological child with this genetic condition. Identify the percentage of offspring that are expected to have the genetic condition based on this Punnett square."
+                    "Using the allele symbols `Aanda`, complete the Punnett square to show how the man and the woman can have a biological child with this genetic condition. Identify the percentage of offspring that are expected to have the genetic condition based on this Punnett square."
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -1486,8 +1486,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "After doing some research, they determine the genetic condition is X-linked.",
-                    "Using the allele pairs XᴬXᴬ, XᴬXᵃ, XᵃXᵃ, XᴬY, and XᵃY, identify ALL possible genotypes of the man and ALL possible genotypes of the woman. Each allele pair may be used once, more than once, or not at all."
+                    "After doing some research, they determine the genetic condition is `Xtext(-linked)`.",
+                    "Using the allele pairs `X^AX^A,X^AX^a,X^aX^a,X^AY,andX^aY`, identify ALL possible genotypes of the man and ALL possible genotypes of the woman. Each allele pair may be used once, more than once, or not at all."
                 ],
                 "AnswerChoices": {}
             },
@@ -1497,7 +1497,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Complete the Punnett square in Part D on the next page with the parental genotypes identified in Part C that could produce a child with this X-linked genetic condition. Identify the percentage of males that are expected to have the genetic condition based on this Punnett square."
+                    "Complete the Punnett square with the parental genotypes identified in Part C that could produce a child with this `Xtext(-linked)` genetic condition. Identify the percentage of males that are expected to have the genetic condition based on this Punnett square."
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -1604,7 +1604,7 @@
         "Points": 2,
         "Explain": false,
        "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "The diagram represents the process of crossing over.",
             "problems/MA22HSB/media/23a.jpg"
         ],
@@ -1750,8 +1750,8 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS FOUR PARTS.",
-            "CYP1A is a protein in organisms that breaks down toxic substances such as those found in oil. The amount of CYP1A protein in an organism depends on the expression of the CYP1A gene. Prior to 2006, there was a large oil spill off the coast of Alaska that affected many organisms. From 2006 to 2014, scientists measured the amount of CYP1A protein in ducks sampled from two populations. One population was exposed to oil from the spill, and the other population was not exposed to oil. The results are shown.",
+            ":ibox:THIS PROBLEM HAS FOUR PARTS.",
+            "`text(CYP1A)` is a protein in organisms that breaks down toxic substances such as those found in oil. The amount of `text(CYP1A)` protein in an organism depends on the expression of the `text(CYP1A)` gene. Prior to `text(2006)`, there was a large oil spill off the coast of Alaska that affected many organisms. From `text(2006)` to `text(2014)`, scientists measured the amount of `text(CYP1A)` protein in ducks sampled from two populations. One population was exposed to oil from the spill, and the other population was not exposed to oil. The results are shown.",
             "problems/MA22HSB/media/25a.jpg"
         ],
         "AnswerChoices": {},
@@ -1762,11 +1762,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Which of the following best compares the amount of CYP1A protein in ducks exposed to oil to the amount in ducks not exposed to oil between 2006 and 2009?"
+                    "Which of the following best compares the amount of `text(CYP1A)` protein in ducks exposed to oil to the amount in ducks not exposed to oil between `text(2006)andtext(2009)`?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The ducks exposed to oil had a lower amount of CYP1A protein.",
+                        "Choice": "The ducks exposed to oil had a lower amount of `text(CYP1A)` protein.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1774,7 +1774,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The ducks exposed to oil had a higher amount of CYP1A protein.",
+                        "Choice": "The ducks exposed to oil had a higher amount of `text(CYP1A)` protein.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1782,7 +1782,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The ducks exposed to oil had the same amount of CYP1A protein.",
+                        "Choice": "The ducks exposed to oil had the same amount of `text(CYP1A)` protein.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1797,11 +1797,11 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Which of the following best compares the amount of CYP1A protein in ducks exposed to oil in 2014 to the amount in ducks exposed to oil in 2006?"
+                    "Which of the following best compares the amount of `text(CYP1A)` protein in ducks exposed to oil in `text(2014)` to the amount in ducks exposed to oil in `text(2006)`?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The amount of CYP1A protein in ducks exposed to oil was lower in 2014 because the amount of oil in the environment decreased.",
+                        "Choice": "The amount of `text(CYP1A)` protein in ducks exposed to oil was lower in `text(2014)` because the amount of oil in the environment decreased.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1809,7 +1809,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The amount of CYP1A protein in ducks exposed to oil was higher in 2014 because the amount of oil in the environment increased.",
+                        "Choice": "The amount of `text(CYP1A)` protein in ducks exposed to oil was higher in `text(2014)` because the amount of oil in the environment increased.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1817,7 +1817,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The amount of CYP1A protein in ducks exposed to oil was the same because the amount of oil in the environment stayed the same.",
+                        "Choice": "The amount of `text(CYP1A)` protein in ducks exposed to oil was the same because the amount of oil in the environment stayed the same.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1832,12 +1832,12 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The CYP1A gene codes for the CYP1A protein.",
-                    "How is mRNA produced from the CYP1A gene?"
+                    "The `text(CYP1A)` gene codes for the `text(CYP1A)` protein.",
+                    "How is mRNA produced from the `text(CYP1A)` gene?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The CYP1A gene is replicated into mRNA.",
+                        "Choice": "The `text(CYP1A)` gene is replicated into mRNA.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1845,7 +1845,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The CYP1A gene is translated into mRNA.",
+                        "Choice": "The `text(CYP1A)` gene is translated into mRNA.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1853,7 +1853,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The CYP1A gene is transcribed into mRNA.",
+                        "Choice": "The `text(CYP1A)` gene is transcribed into mRNA.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1868,11 +1868,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "How is the CYP1A protein produced from the mRNA?"
+                    "How is the `text(CYP1A)` protein produced from the mRNA?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "The mRNA is replicated to produce the CYP1A protein.",
+                        "Choice": "The mRNA is replicated to produce the `text(CYP1A)` protein.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1880,7 +1880,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "The mRNA is translated to produce the CYP1A protein.",
+                        "Choice": "The mRNA is translated to produce the `text(CYP1A)` protein.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1888,7 +1888,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "The mRNA is transcribed to produce the CYP1A protein.",
+                        "Choice": "The mRNA is transcribed to produce the `text(CYP1A)` protein.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1914,7 +1914,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Most people are born with two kidneys. However, it is possible to live with only one kidney. Doctors recommend that people with one kidney have their urine tested at least once a year.",
+            "Most people are born with two kidneys. However, it is possible to live with only one kidney. Doctors recommend that people with one kidney have their urine tested at least `text(once a year)`.",
             "Which of the following are doctors MOST LIKELY trying to determine when testing the urine of a person with only one kidney?"
         ],
         "AnswerChoices": {
@@ -1968,15 +1968,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Table 1 shows a section of DNA and the same section after four different single-base mutations.",
+            "Table `1` shows a section of DNA and the same section after four different single-base mutations.",
             "problems/MA22HSB/media/27a.jpg",
-            "Table 2 shows mRNA codons that code for some amino acids.",
+            "Table `2` shows mRNA codons that code for some amino acids.",
             "problems/MA22HSB/media/27b.jpg",
             "Which mutation would leave the phenotype of the organism unchanged?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "mutation 1",
+                "Choice": "mutation `1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1984,7 +1984,7 @@
                 }
             },
             "B": {
-                "Choice": "mutation 2",
+                "Choice": "mutation `2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1992,7 +1992,7 @@
                 }
             },
             "C": {
-                "Choice": "mutation 3",
+                "Choice": "mutation `3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2000,7 +2000,7 @@
                 }
             },
             "D": {
-                "Choice": "mutation 4",
+                "Choice": "mutation `4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2080,11 +2080,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In a sample of double-stranded DNA, 20% of the nitrogenous bases are adenine (A). What percentage of the nitrogenous bases in the sample are cytosine (C)?"
+            "In a sample of double-stranded DNA, `20%` of the nitrogenous bases are adenine `(A)`. What percentage of the nitrogenous bases in the sample are cytosine `(C)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10%",
+                "Choice": "`10%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2092,7 +2092,7 @@
                 }
             },
             "B": {
-                "Choice": "30%",
+                "Choice": "`30%`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2100,7 +2100,7 @@
                 }
             },
             "C": {
-                "Choice": "60%",
+                "Choice": "`60%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2108,7 +2108,7 @@
                 }
             },
             "D": {
-                "Choice": "80%",
+                "Choice": "`80%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2241,7 +2241,7 @@
         "Content": [
             "The diagram shows a pathway in the human body.",
             "problems/MA22HSB/media/32a.jpg",
-            "Which structure is most likely represented by the X in the pathway?"
+            "Which structure is most likely represented by the `X` in the pathway?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2461,7 +2461,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "A partial food web for the little brown bat's ecosystem is shown.",
             "problems/MA22HSB/media/36a.jpg"
         ],
@@ -2572,7 +2572,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "An energy pyramid for an ecosystem is shown.",
             "problems/MA22HSB/media/6a.jpg"
         ],
@@ -2584,7 +2584,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Describe how the genetic diversity of North American bats has most likely changed (increased, decreased, or stayed the same) since 2006. Explain your reasoning."
+                    "Describe how the genetic diversity of North American bats has most likely changed (increased, decreased, or stayed the same) since `text(2006)`. Explain your reasoning."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -2773,12 +2773,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A biologist conducts an experiment to determine whether a fish is infected with a virus or a bacterium. The biologist takes a sample of cells from the fish and isolates the infectious agent. Next, the biologist sets up two test tubes. Test tube X contains nutrients and fish cells. Test tube Y contains nutrients but no fish cells. The infectious agent is then placed in the two test tubes. The biologist determines the infectious agent reproduced in one of the test tubes.",
+            "A biologist conducts an experiment to determine whether a fish is infected with a virus or a bacterium. The biologist takes a sample of cells from the fish and isolates the infectious agent. Next, the biologist sets up two test tubes. Test tube `X` contains nutrients and fish cells. Test tube `Y` contains nutrients but no fish cells. The infectious agent is then placed in the two test tubes. The biologist determines the infectious agent reproduced in one of the test tubes.",
             "Which of the following will allow the biologist to determine whether the infectious agent is bacterial or viral?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Viruses can only reproduce in test tube X.",
+                "Choice": "Viruses can only reproduce in test tube `X`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2786,7 +2786,7 @@
                 }
             },
             "B": {
-                "Choice": "Viruses can only reproduce in test tube Y.",
+                "Choice": "Viruses can only reproduce in test tube `Y`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2794,7 +2794,7 @@
                 }
             },
             "C": {
-                "Choice": "Bacteria can only reproduce in test tube X.",
+                "Choice": "Bacteria can only reproduce in test tube `X`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2802,7 +2802,7 @@
                 }
             },
             "D": {
-                "Choice": "Bacteria can only reproduce in test tube Y.",
+                "Choice": "Bacteria can only reproduce in test tube `Y`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2827,7 +2827,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "Two populations of venomous snakes live in Central America. These two snake populations are the same species, but they are separated by a mountain range, as shown on the map.",
             "problems/MA22HSB/media/41a.jpg"
         ],
@@ -2839,7 +2839,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Describe how the genetic diversity of North American bats has most likely changed (increased, decreased, or stayed the same) since 2006. Explain your reasoning."
+                    "Describe how the genetic diversity of North American bats has most likely changed (increased, decreased, or stayed the same) since `text(2006)`. Explain your reasoning."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -2936,7 +2936,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "THIS PROBLEM HAS TWO PARTS.",
+            ":ibox:THIS PROBLEM HAS TWO PARTS.",
             "An invasive insect called the Asian longhorned beetle is threatening some forests in the United States. The beetle attacks and kills hardwood trees, including maple, elm, ash, poplar, willow, birch, and horse chestnut. The beetle larvae feed on the tissues inside the trees. As a result, the flow of water and nutrients in the trees is disrupted and the trees die. As adults, the beetles move to the outside of the trees."
         ],
         "AnswerChoices": {},
