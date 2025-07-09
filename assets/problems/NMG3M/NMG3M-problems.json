@@ -129,7 +129,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + [_] = 9",
+                "Choice": "`4+square=9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -137,7 +137,7 @@
                 }
             },
             "B": {
-                "Choice": "4 + 9 = [_]",
+                "Choice": "`4+9=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -145,7 +145,7 @@
                 }
             },
             "C": {
-                "Choice": "4 × [_] = 9",
+                "Choice": "`4xxsquare=9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -153,7 +153,7 @@
                 }
             },
             "D": {
-                "Choice": "4 × 9 = [_]",
+                "Choice": "`4xx9=square`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -171,7 +171,7 @@
             "Measurement & Data"
         ],
         "SubTopics": [
-            "Measure and estimate liquid volumes and masses of objects using standard units of grams (g), kilograms (kg), and liters (l). Add, subtract, multiply, or divide to solve one-step word problems involvingmasses or volumes that are given in the same units, e.g., by using drawings (such as a beaker with a measurement scale) to represent the problem."
+            "Measure and estimate liquid volumes and masses of objects using standard units of grams (g), kilograms (kg), and liters (l). Add, subtract, multiply, or divide to solve one-step word problems involving masses or volumes that are given in the same units, e.g., by using drawings (such as a beaker with a measurement scale) to represent the problem."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -886,7 +886,7 @@
         "Explain": false,
         "Content": [
             "Look at this number sentence.",
-            ":ibox:1 × 2 × [_] = 10 × 1 × 2",
+            ":ibox:`1xx2xxsquare=10xx1xx2`",
             "What number belongs in the box?"
         ],
         "AnswerChoices": {
@@ -997,7 +997,7 @@
         "Explain": false,
         "Content": [
             "Which fraction makes this number sentence true?",
-            ":ibox:2/4 < [_]"
+            ":ibox:`2/4<square`"
         ],
         "AnswerChoices": {
             "A": {
@@ -1056,8 +1056,8 @@
         "Content": [
             "The rectangles in this model are covered with 1-inch squares.",
             "problems/NMG3M/media/19a.jpg",
-            "The model shows the number sentence 6 × 6 + 6 × 2 = [_].",
-            "What goes in the [_] to make the number sentence true?"
+            "The model shows the number sentence `6xx6-:6xx2=square`.",
+            "What goes in the `square` to make the number sentence true?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1117,7 +1117,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6 × [_] = 48",
+                "Choice": "`6xxsquare=48`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1125,7 +1125,7 @@
                 }
             },
             "B": {
-                "Choice": "6 × 48 = [_]",
+                "Choice": "`6xx48=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1133,7 +1133,7 @@
                 }
             },
             "C": {
-                "Choice": "[_] ÷ 48 = 6",
+                "Choice": "`square-:48=6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1141,7 +1141,7 @@
                 }
             },
             "D": {
-                "Choice": "[_] ÷ 6 = 48",
+                "Choice": "`square-:6=48`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1438,7 +1438,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(5 + 10) × (5 + 3) = [_]",
+                "Choice": "`(5+10)xx(5+3)=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1446,7 +1446,7 @@
                 }
             },
             "B": {
-                "Choice": "(5 × 10) + (5 × 3) = [_]",
+                "Choice": "`(5xx10)+(5xx3)=square`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1454,7 +1454,7 @@
                 }
             },
             "C": {
-                "Choice": "(3 + 10) × (5 + 3) = [_]",
+                "Choice": "`(3+10)xx(5+3)=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1462,7 +1462,7 @@
                 }
             },
             "D": {
-                "Choice": "(3 × 10) + (5 × 3) = [_]",
+                "Choice": "`(3xx10)+(5xx3)=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1938,7 +1938,7 @@
             "Measurement & Data"
         ],
         "SubTopics": [
-            "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units — whole numbers, halves, or quarters."
+            "Generate measurement data by measuring lengths using rulers marked with `text(halves)andtext(fourths of an inch)`. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units — `text(whole numbers),text(halves),ortext(quarters)`."
         ],
         "SuppContent": [],
         "SuppTools": [

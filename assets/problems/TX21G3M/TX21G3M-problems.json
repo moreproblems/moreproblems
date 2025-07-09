@@ -321,14 +321,14 @@
         "Content": [
             "Workers at a school are covering a rectangular patio with square tiles. Each square tile has an area of 1 square yard. The figure shows the part of the patio that has already been covered with square tiles.",
             "problems/TX21G3M/media/7a.jpg",
-            "What is the area of the entire patio in square yards?"
+            "What is the area of the entire patio in `text(square yards)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "105 square yards",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the area of (amount of space covered by) the entire patio in square yards, the student should have determined the number of rows and the number of squares in each row of the figure representing the patio. The figure covers 7 rows, and each row is 15 squares long. The student then could have multiplied 15 by 7 (15 × 7 = 105). Because the figure can be filled with 105 squares, it represents an area of 105 square yards.",
+                    "Rationale": "To determine the area of (amount of space covered by) the entire patio in `text(square yards)`, the student should have determined the number of rows and the number of squares in each row of the figure representing the patio. The figure covers 7 rows, and each row is 15 squares long. The student then could have multiplied 15 by 7 (15 × 7 = 105). Because the figure can be filled with 105 squares, it represents an area of 105 square yards.",
                     "Percent": 61
                 }
             },
@@ -1121,7 +1121,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "172 + 263 = 435\n513 + 435 = [_]",
+                "Choice": "`172+263=435`\n`513+435=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely realized that addition was needed to find the number of bottles of apple juice and bottles of water that were sold but then determined that this sum needed to be added to the total drinks sold on Wednesday (513) instead of subtracted from it. The student needs to focus on understanding problem situations and the mathematical operations `(+,-,xx,div)` needed to solve them.",
@@ -1129,7 +1129,7 @@
                 }
             },
             "G": {
-                "Choice": "263 - 172 = 91\n513 - 91 = [_]",
+                "Choice": "`263-172=91`\n`513-91=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely realized that subtraction was needed to find the number of bottles of milk that was missing from the table but then determined that the number of bottles of apple juice should be subtracted from the number of bottles of water rather than adding the numbers. The student needs to focus on understanding problem situations and the mathematical operations `(+,-,xx,div)` needed to solve them.",
@@ -1137,7 +1137,7 @@
                 }
             },
             "H": {
-                "Choice": "513 - 172 = 341\n341 + 263 = [_]",
+                "Choice": "`513-172=341`\n`341+263=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely realized that the number of bottles of apple juice could be subtracted from the total number of drinks sold to find the missing number of bottles of milk but then added instead of subtracting in the second step. The student needs to focus on understanding problem situations and the mathematical operations `(+,-,xx,div)` needed to solve them.",
@@ -1145,7 +1145,7 @@
                 }
             },
             "J": {
-                "Choice": "172 + 263 = 435\n513 - 435 = [_]",
+                "Choice": "`172+263=435`\n`513-435=square`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the set of equations that can be used to find the number of bottles of milk sold, the student should have first identified the set of equations that shows the addition (+) of the number of bottles of apple juice and the number of bottles of water sold (172 + 263 = 435). Then the student should have chosen the set of equations that shows subtracting (-) the sum (total) of the bottles of apple juice and the bottles of water (435) from the total number of drinks sold (513 - 435 =).",

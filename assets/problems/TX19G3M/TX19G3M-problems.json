@@ -320,7 +320,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "256 - 50 - 87 = [_]",
+                "Choice": "`256-50-87=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account. The student needs to focus on understanding problem situations and the mathematical operations `(+,-,xx,div)` needed to solve them.",
@@ -328,7 +328,7 @@
                 }
             },
             "B": {
-                "Choice": "256 + 50 + 87 = [_]",
+                "Choice": "`256+50+87=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student likely thought that addition should be used instead of subtraction for the $87 Freddie took out of his account. The student needs to focus on understanding problem situations and the mathematical operations `(+,-,xx,div)` needed to solve them.",
@@ -336,7 +336,7 @@
                 }
             },
             "C": {
-                "Choice": "256 - 50 + 87 = [_]",
+                "Choice": "`256-50+87=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chose an equation that incorrectly has $250 as Freddie's starting amount. The student then likely thought that subtraction should be used instead of addition for the $50 Freddie put into his account and that addition should be used instead of subtraction for the $87 Freddie took out of the account. The student needs to focus on attending to details and understanding the mathematical operations `(+,-,xx,div)` needed to solve problem situations.",
@@ -344,7 +344,7 @@
                 }
             },
             "D": {
-                "Choice": "256 + 50 - 87 = [_]",
+                "Choice": "`256+50-87=square`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "To determine the equation that can be used to find the amount of money Freddie had in his bank account after taking out money on Tuesday, the student should have first identified the equations that began with Freddie's starting amount of $256. Then the student should have chosen the equation using addition (+) for the $50 Freddie put into his account and subtraction (-) for the $87 Freddie took out of his account (256 + 50 - 87 = _).",
@@ -783,7 +783,7 @@
         "Content": [
             "The shaded figure on the grid represents Erin's rectangular lawn.",
             "problems/TX19G3M/media/16a.jpg",
-            "What is the area in square meters of Erin\"s lawn?"
+            "What is the area in `text(square meters)` of Erin\"s lawn?"
         ],
         "AnswerChoices": {
             "F": {

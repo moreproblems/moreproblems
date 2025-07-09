@@ -965,12 +965,12 @@
         "Explain": false,
         "Content": [
             "Marco is using this equation to determine the quotient of two numbers, `aandb`.",
-            ":ibox:a ÷ b = [_]\n\nNeither a nor b is equal to zero.",
+            ":ibox:`a-:b=square`\n\nNeither a nor b is equal to zero.",
             "Which equation shows a way that Marco can check his answer?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "[_] + b = a",
+                "Choice": "`square+b=a`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -978,7 +978,7 @@
                 }
             },
             "B": {
-                "Choice": "[_] - b = a",
+                "Choice": "`square-b=a`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -986,7 +986,7 @@
                 }
             },
             "C": {
-                "Choice": "[_] × b = a",
+                "Choice": "`squarexxb=a`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -994,7 +994,7 @@
                 }
             },
             "D": {
-                "Choice": "[_] ÷ b = a",
+                "Choice": "`square-:b=a`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1271,7 +1271,7 @@
                 }
             },
             "C": {
-                "Choice": "The volume cannot be calculated, because the base area is not measured in cubic units.",
+                "Choice": "The volume cannot be calculated, because the base area is not measured in `text(cubic units)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

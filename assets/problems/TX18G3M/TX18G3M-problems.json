@@ -480,8 +480,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What number goes in the [_] to make the equation true?",
-            "[_] ÷ 11 = 9"
+            "What number goes in the `square` to make the equation true?",
+            ":ibox:`square-:11=9`"
         ],
         "AnswerChoices": {
             "F": {
@@ -594,7 +594,7 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "572 - [_] = 98",
+                "Choice": "`572-square=98`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student identified an equation that is true instead of NOT true as directed. This equation is true because the starting value of 572 minus the unknown number sold, represented by the empty box, is equal to the ending value of 98. The student needs to focus on understanding different ways to represent differences in subtraction and addition equations.",
@@ -602,7 +602,7 @@
                 }
             },
             "G": {
-                "Choice": "572 - 98 = [_]",
+                "Choice": "`572-98=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student identified an equation that is true instead of NOT true as directed. This equation is true because the starting value of 572 minus the ending value of 98 is equal to the number of cards sold, represented by the empty box. The student needs to focus on understanding different ways to represent differences in subtraction and addition equations.",
@@ -610,7 +610,7 @@
                 }
             },
             "H": {
-                "Choice": "98 + [_] = 572",
+                "Choice": "`98+square=572`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student interpreted “sold” cards to indicate subtraction, not recognizing this equation is true because it contains addition instead of subtraction. However, this equation is true because the ending value of 98 plus the number of cards sold, represented by the empty box, is equal to the starting value of 572. This method is similar to working the problem backwards. The student needs to focus on understanding different ways to represent differences in subtraction and addition equations.",
@@ -618,10 +618,10 @@
                 }
             },
             "J": {
-                "Choice": "98 + 572 = [_]",
+                "Choice": "`98+572=square`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which equation is NOT true (false), the student should have identified the addition or subtraction equation that does not fit the situation. The problem indicates that Tyrese sold some of his cards, so 572 was decreased. The equation 98 + 572 = [_] is NOT true because Tyrese started with 572 cards and ended with 98. The equation 98 + 572 = [_] indicates that Tyrese increased his number of cards. The other equations all have a solution of 474, the number of cards Tyrese sold.",
+                    "Rationale": "To determine which equation is NOT true (false), the student should have identified the addition or subtraction equation that does not fit the situation. The problem indicates that Tyrese sold some of his cards, so 572 was decreased. The equation `98+572=square` is NOT true because Tyrese started with 572 cards and ended with 98. The equation `98+572=square` indicates that Tyrese increased his number of cards. The other equations all have a solution of 474, the number of cards Tyrese sold.",
                     "Percent": 58
                 }
             }
@@ -800,7 +800,7 @@
                 "Choice": "80",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely added the numbers of adults and children correctly but then subtracted 8 instead of dividing by 8. The student needs to focus on understanding problem situations and the mathematical operations (-, +, ×, ÷) needed to solve them.",
+                    "Rationale": "The student likely added the numbers of adults and children correctly but then subtracted 8 instead of dividing by 8. The student needs to focus on understanding problem situations and the mathematical operations `(-,+,xx,-:)` needed to solve them.",
                     "Percent": 16
                 }
             },
@@ -816,7 +816,7 @@
                 "Choice": "5",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely subtracted the number of adults from the number of children, instead of adding, and then divided by 8 The student needs to focus on understanding problem situations and the mathematical operations (-, +, ×, ÷) needed to solve them.",
+                    "Rationale": "The student likely subtracted the number of adults from the number of children, instead of adding, and then divided by 8 The student needs to focus on understanding problem situations and the mathematical operations `(-,+,xx,-:)` needed to solve them.",
                     "Percent": 4
                 }
             }
@@ -898,7 +898,7 @@
                 "Choice": "problems/TX18G3M/media/18a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely added $6 to each regular price instead of subtracting $6 when calculating each sale price. The student needs to focus on understanding the operations (-, +, ×, ÷) needed to solve real-world problems.",
+                    "Rationale": "The student likely added $6 to each regular price instead of subtracting $6 when calculating each sale price. The student needs to focus on understanding the operations `(-,+,xx,-:)` needed to solve real-world problems.",
                     "Percent": 13
                 }
             },
@@ -922,7 +922,7 @@
                 "Choice": "problems/TX18G3M/media/18d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely divided each regular price by $6 to calculate each sale price. The student needs to focus on understanding the operations (-, +, ×, ÷) needed to solve real-world problems.",
+                    "Rationale": "The student likely divided each regular price by $6 to calculate each sale price. The student needs to focus on understanding the operations `(-,+,xx,-:)` needed to solve real-world problems.",
                     "Percent": 18
                 }
             }
@@ -1142,7 +1142,7 @@
                 "Choice": "He put (48 × 6) cookies into each of 8 bags and ate (2 + 6) of the cookies.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely used the number of cookies in each bag to set up the distribution of the cookies instead of using the number of bags. The student then likely misinterpreted the distribution as multiplication instead of division. The student also likely misinterpreted the two crossed-out bags of cookies as addition instead of multiplication. The student needs to focus on understanding how problems using different operations (-, +, ×, ÷) are represented in models.",
+                    "Rationale": "The student likely used the number of cookies in each bag to set up the distribution of the cookies instead of using the number of bags. The student then likely misinterpreted the distribution as multiplication instead of division. The student also likely misinterpreted the two crossed-out bags of cookies as addition instead of multiplication. The student needs to focus on understanding how problems using different operations `(-,+,xx,-:)` are represented in models.",
                     "Percent": 6
                 }
             }
@@ -1256,34 +1256,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × 3 = [_]\n3 + 3 = [_]",
+                "Choice": "`3xx3=square`\n`3+3=square`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized 2 groups of 3 stars but multiplied 3 × 3 = [_] because it visually matched the 3 + 3 = [_]The student needs to focus on understanding how to write the multiplication equation represented by a model.",
+                    "Rationale": "The student likely recognized 2 groups of 3 stars but multiplied `3xx3=square` because it visually matched the `3+3=square`. The student needs to focus on understanding how to write the multiplication equation represented by a model.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "3 × 2 = [_]\n3 + 3 = [_]",
+                "Choice": "`3xx2=square`\n`3+3=square`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which number sentences the model can represent, the student should have recognized the model to be 3 groups of 2 stars or 2 groups of 3 stars. The student should have formed equations using addition or multiplication to reflect the groupings. For addition, 3 groups of 2 is represented by 2 + 2 + 2 = [_], and 2 groups of 3 is represented by 3 + 3 = [_]. For multiplication, 3 groups of 2 is represented by 3 × 2 = [_] and 2 groups of 3 is represented by 2 × 3 = [_].This answer choice includes one of these addition equations and one of these multiplication equations.",
+                    "Rationale": "To determine which number sentences the model can represent, the student should have recognized the model to be 3 groups of 2 stars or 2 groups of 3 stars. The student should have formed equations using addition or multiplication to reflect the groupings. For addition, 3 groups of 2 is represented by `2+2+2=square`, and 2 groups of 3 is represented by `3+3=square`. For multiplication, 3 groups of 2 is represented by 3 × 2 = square and 2 groups of 3 is represented by 2 × 3 = square.This answer choice includes one of these addition equations and one of these multiplication equations.",
                     "Percent": 69
                 }
             },
             "C": {
-                "Choice": "2 × 3 = [_]\n2 × 2 × 2 = [_]",
+                "Choice": "`2xx3=square`\n`2xx2xx2=square`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that repeated addition (2 + 2 + 2 = [_]) could be represented by the model, but confused the operation (-, +, ×, ÷) needed in the equation. The student needs to focus on understanding how to write the repeated addition equation represented by a model.",
+                    "Rationale": "The student likely recognized that repeated addition `(2+2+2=square)` could be represented by the model, but confused the operation `(-,+,xx,-:)` needed in the equation. The student needs to focus on understanding how to write the repeated addition equation represented by a model.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "3 + 3 + 3 = [_]\n2 + 2 + 2 = [_]",
+                "Choice": "3 + 3 + 3 = square\n2 + 2 + 2 = square",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely recognized that multiple addition equations (3 + 3 = [_] and 2 + 2 + 2 = [_]) could be represented by the model, but confused the number of times 3 needed to be added in the first equation. The student needs to focus on understanding how to write multiple addition equations represented by a model.",
+                    "Rationale": "The student likely recognized that multiple addition equations `(3+3=squareand2+2+2=square)` could be represented by the model, but confused the number of times 3 needed to be added in the first equation. The student needs to focus on understanding how to write multiple addition equations represented by a model.",
                     "Percent": 4
                 }
             }

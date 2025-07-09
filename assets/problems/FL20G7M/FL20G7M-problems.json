@@ -14,12 +14,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The local weather report states that there is more than a 2/3 chance of rain for Saturday.",
-            "What is the likelihood that it will rain on Saturday?"
+            "The local weather report states that there is more than a `2/3` chance of rain for `text(Saturday)`.",
+            "What is the likelihood that it will rain on `text(Saturday)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "It is certain to rain on Saturday.",
+                "Choice": "It is certain to rain on `text(Saturday)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -27,7 +27,7 @@
                 }
             },
             "B": {
-                "Choice": "It is likely to rain on Saturday.",
+                "Choice": "It is likely to rain on `text(Saturday)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -35,7 +35,7 @@
                 }
             },
             "C": {
-                "Choice": "It is neither likely nor unlikely to rain on Saturday.",
+                "Choice": "It is neither likely nor unlikely to rain on `text(Saturday)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -43,7 +43,7 @@
                 }
             },
             "D": {
-                "Choice": "It is impossible that it will rain on Saturday.",
+                "Choice": "It is impossible that it will rain on `text(Saturday)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -68,27 +68,27 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The cost of a barrel of beans, b, fluctuates by 17% in both directions during a three-month period.",
+            "The cost of a barrel of beans, `b`, fluctuates by `17%` in both directions during a `text(three-month)` period.",
             "Match each verbal description of the high and low cost of a barrel of beans with all equivalent expressions."
         ],
         "AnswerChoices": {
-            "A:b + 0.17b": {
-                "Choice": "1:b is increased by 17%",
+            "A:`b+0.17b`": {
+                "Choice": "1:`b` is increased by `17%`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B:b - 0.17b": {
-                "Choice": "2:b is decreased by 17%",
+            "B:`b-0.17b`": {
+                "Choice": "2:`b` is decreased by `17%`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C:b - 1.17b": {
+            "C:`b-1.17b`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -96,7 +96,7 @@
                     "Percent": 0
                 }
             },
-            "D:-0.17b": {
+            "D:`-0.17b`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -104,16 +104,16 @@
                     "Percent": 0
                 }
             },
-            "E:0.83b": {
-                "Choice": "2:b is decreased by 17%",
+            "E:`0.83b`": {
+                "Choice": "2:`b` is decreased by `17%`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "F:1.17b": {
-                "Choice": "1:b is increased by 17%",
+            "F:`1.17b`": {
+                "Choice": "1:`b` is increased by `17%`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -138,7 +138,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A spinner is divided into blue, green, and red parts. George spins the spinner 300 times. A table of outcomes is shown.",
+            "A spinner is divided into blue, green, and red parts. George spins the spinner `300` times. A table of outcomes is shown.",
             "problems/FL20G7M/media/3a.jpg",
             "Based on this data, what is the estimated probability of the spinner landing on red?"
         ],
@@ -169,11 +169,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is 2/3 written as a decimal?"
+            "What is `2/3` written as a decimal?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.23",
+                "Choice": "`0.23`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -181,7 +181,7 @@
                 }
             },
             "B": {
-                "Choice": "0.6",
+                "Choice": "`0.6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -189,7 +189,7 @@
                 }
             },
             "C": {
-                "Choice": "0.6...",
+                "Choice": "`0.bar(6)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -197,7 +197,7 @@
                 }
             },
             "D": {
-                "Choice": "1.5",
+                "Choice": "`1.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -222,7 +222,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Tony has a bucket filled with green, blue, yellow, and red markers. He removes 3 markers from the bucket, with replacement.",
+            "Tony has a bucket filled with green, blue, yellow, and red markers. He removes `3` markers from the bucket, with replacement.",
             "Select all the outcomes that are possible."
         ],
         "AnswerChoices": {
@@ -235,7 +235,7 @@
                 }
             },
             "B": {
-                "Choice": "Only 1 marker of each color is removed.",
+                "Choice": "Only `1` marker of each color is removed.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -259,7 +259,7 @@
                 }
             },
             "E": {
-                "Choice": "There are only 2 colors of markers removed, and they were removed an equal number of times.",
+                "Choice": "There are only `2` colors of markers removed, and they were removed an equal number of times.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -284,13 +284,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Survey data involving two random samples of students at a law school are shown. The surveys were taken comparing the age of students in 1990 to the age of students in 2014.",
+            "Survey data involving two random samples of students at a law school are shown. The surveys were taken comparing the age of students in `text(1990)` to the age of students in `text(2014)`.",
             "problems/FL20G7M/media/6a.jpg",
             "Select all the statements that are true about the two samples of students."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "In 2014, the oldest student was 28 years old.",
+                "Choice": "In `text(2014)`, the oldest student was `28` `text(years)` old.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -298,7 +298,7 @@
                 }
             },
             "B": {
-                "Choice": "In 2014, 50% of students were over 28 years old.",
+                "Choice": "In `text(2014)`, `50%` of students were over `28` `text(years)` old.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -306,7 +306,7 @@
                 }
             },
             "C": {
-                "Choice": "In 1990, 75% of students were at least 24 years old.",
+                "Choice": "In `text(1990)`, `75%` of students were at least `24` `text(years)` old.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -314,7 +314,7 @@
                 }
             },
             "D": {
-                "Choice": "In 2014, the media age of students was greater than the median age in 1990.",
+                "Choice": "In `text(2014)`, the media age of students was greater than the median age in `text(1990)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -322,7 +322,7 @@
                 }
             },
             "E": {
-                "Choice": "In 1990, there was a 10-year age difference between the oldest and youngest students.",
+                "Choice": "In `1990`, there was a `10text(-year)` age difference between the oldest and youngest students.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -349,12 +349,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A company has three sales departments (local, regional, and national) at each of several locations across the United States. Each local sales department has 120 employees. The company wants to survey its employees to determine the most effective sales method.",
+            "A company has three sales departments (local, regional, and national) at each of several locations across the United States. Each local sales department has `120` employees. The company wants to survey its employees to determine the most effective sales method.",
             "Which sample should the company use to arrive at the most reliable conclusion?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "24 employees from one sales department at one location",
+                "Choice": "`24` employees from one sales department at one location",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -362,7 +362,7 @@
                 }
             },
             "B": {
-                "Choice": "24 employees from one sales department at each location",
+                "Choice": "`24` employees from one sales department at each location",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -370,7 +370,7 @@
                 }
             },
             "C": {
-                "Choice": "24 employees from each sales department at one location",
+                "Choice": "`24` employees from each sales department at one location",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -378,7 +378,7 @@
                 }
             },
             "D": {
-                "Choice": "24 employees from each sales department at each location",
+                "Choice": "`24` employees from each sales department at each location",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -405,10 +405,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ads Galore makes posters with standard dimensions of 8 1/2 inches by 11 inches as shown.",
+            "Ads Galore makes posters with standard dimensions of `8``1/2` `text(inches)` by `11` `text(inches)` as shown.",
             "problems/FL20G7M/media/8a.jpg",
-            "Both the length and width of the poster may vary by 1/20%, according to Ads Galore's regulations.",
-            "What is the smallest acceptable area of one poster, rounded to the nearest thousandth of a square inch?"
+            "Both the length and width of the poster may vary by `1/20%`, according to Ads Galore's regulations.",
+            "What is the smallest acceptable area of one poster, rounded to the nearest `text(thousandth of a square inch)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -439,8 +439,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The dimensions of a rectangular pool are 24.5 feet by 13 feet. The depth of the water is 4 feet. Each cubic foot contains 7.48 gallons of water.",
-            "How many gallons of water, to the nearest tenth, are needed to fill the pool to 80% capacity?"
+            "The dimensions of a rectangular pool are `24.5` `text(feet)` by `13` `text(feet)`. The depth of the water is `4` `text(feet)`. Each cubic foot contains `7.48` `text(gallons)` of water.",
+            "How many `text(gallons)` of water, to the nearest `text(tenth)`, are needed to fill the pool to `80%` capacity?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -553,8 +553,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The circumference of a circle is 53.38 centimeters.",
-            "What is the area in `text(square centimeters)`? Use 3.14 for π."
+            "The circumference of a circle is `53.38` `text(centimeters)`.",
+            "What is the area in `text(square centimeters)`? Use `3.14` for `pi`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -585,8 +585,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A recipe calls for 2/3 cup of sugar for every 1/2 teaspoon of vanilla.",
-            "What is the unit rate of cups per teaspoon?"
+            "A recipe calls for `2/3` `text(cup)` of sugar for every `1/2` `text(teaspoon)` of vanilla.",
+            "What is the unit rate of `text(cups per teaspoon)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -623,7 +623,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Batch 2",
+                "Choice": "Batch `2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -631,7 +631,7 @@
                 }
             },
             "B": {
-                "Choice": "Batch 3",
+                "Choice": "Batch `3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -639,7 +639,7 @@
                 }
             },
             "C": {
-                "Choice": "Batch 4",
+                "Choice": "Batch `4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -647,7 +647,7 @@
                 }
             },
             "D": {
-                "Choice": "Batch 5",
+                "Choice": "Batch `5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -655,7 +655,7 @@
                 }
             },
             "E": {
-                "Choice": "Batch 6",
+                "Choice": "Batch `6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -682,7 +682,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A bag contains 4 red, 4 blue, 4 green, and 4 yellow marbles. A marble is randomly pulled from the bag and replaced seven times. The table shows the outcome of the experiment.",
+            "A bag contains `4` red, `4` blue, `4` green, and `4` yellow marbles. A marble is randomly pulled from the bag and replaced seven times. The table shows the outcome of the experiment.",
             "problems/FL20G7M/media/14a.jpg",
             "Which marble color's observed frequency is closest to its expected frequency?"
         ],
@@ -741,7 +741,7 @@
         "Content": [
             "A figure is shown.",
             "problems/FL20G7M/media/15a.jpg",
-            "What is the measure, in degrees, of the shaded angle?"
+            "What is the measure, in `text(degrees)`, of the shaded angle?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -772,8 +772,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A company plans to ship 2,000 packages of chocolate. The company randomly selects 100 packages and finds that five packages have an incorrect weight.",
-            "Based on this data, how many packages out of the 2,000 should be predicted to have an incorrect weight?"
+            "A company plans to ship `2text(,)000` packages of chocolate. The company randomly selects `100` packages and finds that `text(five packages)` have an incorrect weight.",
+            "Based on this data, how many packages out of the `2text(,)000` should be predicted to have an incorrect weight?"
         ],
         "AnswerChoices": {
             "KEY": {

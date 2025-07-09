@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "An expression is shown.",
-            ":box:((4 × 10⁻⁵) + (2 × 10⁻⁵))/(3 × 10⁷)",
+            ":box:`((4xx10⁻^-5)+(2xx10^-5))/(3xx10^7)`",
             "Which expression is equivalent?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 × 10⁻¹⁷",
+                "Choice": "`2xx10^-17`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -28,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "2 × 10^-12",
+                "Choice": "`2xx10^-12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "2 × 10⁻²",
+                "Choice": "`2xx10^-2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "2 × 10^12",
+                "Choice": "`2xx10^12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -140,9 +140,9 @@
         "Content": [
             "An equation is shown.",
             ":box:`3^m*3^n=3^-2`",
-            "What are possible values for m and n?",
-            "\n\nm = :FR-1:",
-            "n = :FR-2:"
+            "What are possible values for `mandn`?",
+            "\n\n`m=` :FR-1:",
+            "`n=` :FR-2:"
         ],
         "AnswerChoices": {
             "1:KEY": {
@@ -182,7 +182,7 @@
             "Determine whether each number is rational or irrational."
         ],
         "AnswerChoices": {
-            "A:√81": {
+            "A:`sqrt(81)`": {
                 "Choice": "1:Rational",
                 "Key": {
                     "Correct": true,
@@ -190,7 +190,7 @@
                     "Percent": 0
                 }
             },
-            "B:√89": {
+            "B:`sqrt(89)`": {
                 "Choice": "2:Irrational",
                 "Key": {
                     "Correct": true,
@@ -198,7 +198,7 @@
                     "Percent": 0
                 }
             },
-            "C:√121": {
+            "C:`sqrt(121)`": {
                 "Choice": "1:Rational",
                 "Key": {
                     "Correct": true,
@@ -206,7 +206,7 @@
                     "Percent": 0
                 }
             },
-            "D:√131": {
+            "D:`sqrt(131)`": {
                 "Choice": "2:Irrational",
                 "Key": {
                     "Correct": true,
@@ -302,7 +302,7 @@
                     "Percent": 0
                 }
             },
-            "A::box:2x + 2y = 3\n4x + 4y = 6": {
+            "A::box:`2x+2y=3`\n`4x+4y=6`": {
                 "Choice": "3:Infinitely Many Solutions",
                 "Key": {
                     "Correct": true,
@@ -310,7 +310,7 @@
                     "Percent": 0
                 }
             },
-            "B::box:7x + 5y = 8\n7x + 7y = 8": {
+            "B::box:`7x+5y=8`\n`7x+7y=8`": {
                 "Choice": "2:One Solution",
                 "Key": {
                     "Correct": true,
@@ -318,7 +318,7 @@
                     "Percent": 0
                 }
             },
-            "C::box:-2x + 3y = 7\n2x - 3y = -7": {
+            "C::box:`-2x+3y=7`\n`2x-3y=-7`": {
                 "Choice": "3:Infinitely Many Solutions",
                 "Key": {
                     "Correct": true,
@@ -350,7 +350,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "90° clockwise rotation, translation 5 units to the left",
+                "Choice": "`90°` clockwise rotation, translation `5` `text(units)` to the left",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -358,7 +358,7 @@
                 }
             },
             "B": {
-                "Choice": "reflection across the `xtext(-axis)`, dilation with a factor of 1/2",
+                "Choice": "reflection across the `xtext(-axis)`, dilation with a factor of `1/2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -366,7 +366,7 @@
                 }
             },
             "C": {
-                "Choice": "translation 3 units down, reflection across the `ytext(-axis)`",
+                "Choice": "translation `3` `text(units)` down, reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -374,7 +374,7 @@
                 }
             },
             "D": {
-                "Choice": "reflections across the `xtext(-axis)`, translation 7 units to the left",
+                "Choice": "reflections across the `xtext(-axis)`, translation `7` `text(units)` to the left",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -401,7 +401,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function y = 3.50 x + 2 represents the total amount of money, y, saved over x weeks.",
+            "The function `y=3.50x+2` represents the total amount of money, `y`, saved over `x` `text(weeks)`.",
             "What is true about the function?"
         ],
         "AnswerChoices": {
@@ -457,8 +457,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cone has a height of 6.4 inches and a diameter of 6 inches.",
-            "What is the volume, in `text(cubic inches)`, of the cone? Use 3.14 for π."
+            "A cone has a height of `6.4` `text(inches)` and a diameter of `6` `text(inches)`.",
+            "What is the volume, in `text(cubic inches)`, of the cone? Use `3.14` for `pi`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -492,7 +492,7 @@
             "Select whether each equation has no solution, one solution, or infinitely many solutions."
         ],
         "AnswerChoices": {
-            "A:3x = 3x + 4": {
+            "A:`3x=3x+4`": {
                 "Choice": "1:No Solution",
                 "Key": {
                     "Correct": false,
@@ -500,7 +500,7 @@
                     "Percent": 0
                 }
             },
-            "B:3x + 4 = 3x + 4": {
+            "B:`3x+4=3x+4`": {
                 "Choice": "3:Infinitely Many Solutions",
                 "Key": {
                     "Correct": false,
@@ -508,7 +508,7 @@
                     "Percent": 0
                 }
             },
-            "C:3x + 4 = 4x + 3": {
+            "C:`3x+4=4x+3`": {
                 "Choice": "2:One Solution",
                 "Key": {
                     "Correct": false,
@@ -536,11 +536,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Select three side lengths, in `text(centimeters)` (cm), that can form a right triangle."
+            "Select three side lengths, in `text(centimeters)` `(text(cm))`, that can form a right triangle."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5 cm",
+                "Choice": "`5` `text(cm)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -548,7 +548,7 @@
                 }
             },
             "B": {
-                "Choice": "6 cm",
+                "Choice": "`6` `text(cm)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -556,7 +556,7 @@
                 }
             },
             "C": {
-                "Choice": "8 cm",
+                "Choice": "`8` `text(cm)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -564,7 +564,7 @@
                 }
             },
             "D": {
-                "Choice": "10 cm",
+                "Choice": "`10` `text(cm)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -572,7 +572,7 @@
                 }
             },
             "E": {
-                "Choice": "11 cm",
+                "Choice": "`11` cm",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -580,7 +580,7 @@
                 }
             },
             "F": {
-                "Choice": "12 cm",
+                "Choice": "`12` `text(cm)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -607,7 +607,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Five hundred students were asked whether they prefer apple juice or orange juice. The table shown displays the results.",
+            "`text(Five hundred)` students were asked whether they prefer apple juice or orange juice. The table shown displays the results.",
             "problems/FL20G8M/media/12a.jpg",
             "How many more girls were surveyed than boys?"
         ],
@@ -640,15 +640,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mary and Kim each take 15 minutes to ride their bikes to school. The graphs of the functions that model their rides are shown, where `x` is the time, in `text(minutes)`, and y is the distance, in `text(miles)`.",
+            "Mary and Kim each take `15` `text(minutes)` to ride their bikes to school. The graphs of the functions that model their rides are shown, where `x` is the time, in `text(minutes)`, and `y` is the distance, in `text(miles)`.",
             "problems/FL20G8M/media/13a.jpg",
             "problems/FL20G8M/media/13b.jpg",
-            "The graphs are divided into time intervals A, B, and C.",
+            "The graphs are divided into time intervals `A,B,andC`.",
             "Use the graphs to match each statement with the appropriate person or people."
         ],
         "AnswerChoices": {
             "A:Mary:3": {
-                "Choice": "3:rode slower in interval C than in interval B",
+                "Choice": "3:rode slower in interval `C` than in interval `B`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -656,7 +656,7 @@
                 }
             },
             "A:Mary:4": {
-                "Choice": "4:lives 0.7 miles from school",
+                "Choice": "4:lives `0.7` `text(miles)` from school",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -664,7 +664,7 @@
                 }
             },
             "B:Kim:1": {
-                "Choice": "1:rode her bike fastest in interval A, as compared to the rest of her ride",
+                "Choice": "1:rode her bike fastest in interval `A`, as compared to the rest of her ride",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -680,7 +680,7 @@
                 }
             },
             "B:Kim:4": {
-                "Choice": "4:lives 0.7 miles from school",
+                "Choice": "4:lives `0.7` `text(miles)` from school",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -707,9 +707,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A figure with parallel lines m and n is shown.",
+            "A figure with parallel lines `mandn` is shown.",
             "problems/FL20G8M/media/14a.jpg",
-            "What is the measure, in degrees, of /_b?"
+            "What is the measure, in `text(degrees)`, of `/_b`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -795,8 +795,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A square is cut in half on the diagonal, creating two equal triangles. Each triangle has an area of 0.32 square units.",
-            "What is the side length, in units, of the original square?"
+            "A square is cut in half on the diagonal, creating two equal triangles. Each triangle has an area of `0.32` `text(square units)`.",
+            "What is the side length, in `text(units)`, of the original square?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -827,7 +827,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Kayden creates a linear function where `x` is the input, y is the output, and m and b are constants."
+            "Kayden creates a linear function where `x` is the input, `y` is the output, and `mandb` are constants."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -841,7 +841,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "y = 1/x + mb",
+                        "Choice": "`y=1/x+mb`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -857,7 +857,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "x = my × by",
+                        "Choice": "`x=myxxby`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -872,7 +872,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Which statement about the graph of Kayden's function is true for all values of m and b?"
+                    "Which statement about the graph of Kayden's function is true for all values of `mandb`?"
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -928,7 +928,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The manager of an ice cream shop is considering which ice cream flavor to offer as the special flavor next month. She asks 175 people whether they like mint or strawberry ice cream.",
+            "The manager of an ice cream shop is considering which ice cream flavor to offer as the special flavor next month. She asks `175` people whether they like mint or strawberry ice cream.",
             "The two-way table shows the results.",
             "problems/FL20G8M/media/18a.jpg",
             "The manager wants to increase sales, so she is deciding whether to offer mint or strawberry ice cream.",

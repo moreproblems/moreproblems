@@ -1,8 +1,8 @@
 {
     "Title": "SUGAR AND WATER DATA TABLE",
-    "Headers": ["Substance", "0°C", "20°C", "100°C"],
+    "Headers": ["Substance", "`0text(°C)`", "`20text(°C)`", "`100text(°C)`"],
     "Rows": [
-        ["Table Sugar (C₁₂H₂₂O₁₁)", "• solid\n• volume is 50 mL", "• solid\n• volume is 50 mL", "• solid\n• volume is 50 mL"],
-        ["Water (H₂O)", "• solid\n• volume is greater than 50 mL", "• liquid\n• volume is 50 mL", "• substance is boiling, steam rises from beaker\n• volume is less than 50 mL"]
+        ["Table Sugar `(text(C)_12text(H)_22text(O)_11)`", "• solid\n• volume is `50` `text(mL)`", "• solid\n• volume is `50` `text(mL)`", "• solid\n• volume is `50` `text(mL)`"],
+        ["Water `(text(H)_2text(O))`", "• solid\n• volume is greater than `50` `text(mL)`", "• liquid\n• volume is `50` `text(mL)`", "• substance is boiling, steam rises from beaker\n• volume is less than `50` `text(mL)`"]
     ]
 }

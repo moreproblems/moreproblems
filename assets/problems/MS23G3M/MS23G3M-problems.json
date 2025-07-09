@@ -179,7 +179,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0 × 2 = [_]",
+                "Choice": "`0xx2=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -187,7 +187,7 @@
                 }
             },
             "B": {
-                "Choice": "[_] ÷ 2 = 4",
+                "Choice": "`square-:2=4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -195,7 +195,7 @@
                 }
             },
             "C": {
-                "Choice": "10 × [_] = 20",
+                "Choice": "`10xxsquare=20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -203,7 +203,7 @@
                 }
             },
             "D": {
-                "Choice": "10 ÷ [_] = 2",
+                "Choice": "`10-:square=2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -229,7 +229,7 @@
         "Explain": false,
         "Content": [
             "A teacher wrote an equation on the board.",
-            ":ibox:42 ÷ [_] = 7",
+            ":ibox:`42-:square=7`",
             "What number makes the equation true?"
         ],
         "AnswerChoices": {
@@ -427,7 +427,7 @@
         "Explain": false,
         "Content": [
             "Find the product.",
-            ":ibox:4 × 80 = [_]"
+            ":ibox:`4xx80=square`"
         ],
         "AnswerChoices": {
             "A": {
@@ -705,7 +705,7 @@
             "Measurement & Data"
         ],
         "SubTopics": [
-            "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units—whole numbers, halves, or quarters."
+            "Generate measurement data by measuring lengths using rulers marked with `text(halves)andtext(fourths of an inch)`. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units—`text(whole numbers),text(halves),ortext(quarters)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -791,14 +791,14 @@
             "Measurement & Data"
         ],
         "SubTopics": [
-            "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units)."
+            "Measure areas by counting unit squares (`text(square cm),text(square m),text(square in),text(square ft)`, and improvised units)."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the area, in square units, of the figure?",
+            "What is the area, in `text(square units)`, of the figure?",
             "problems/MS23G3M/media/18a.jpg"
         ],
         "AnswerChoices": {

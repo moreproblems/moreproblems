@@ -585,7 +585,7 @@
         "Explain": false,
         "Content": [
             "An incomplete comparison is shown.",
-            ":ibox:13,426 [_] 12,389",
+            ":ibox:`13text?(,)426square12text(,)389`",
             "Devin says 13,426 is greater. Bill says 12,389 is greater.",
             "Who is correct and why?"
         ],
@@ -1061,7 +1061,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5 + 3 = [_]",
+                "Choice": "`5+3=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1069,7 +1069,7 @@
                 }
             },
             "B": {
-                "Choice": "5 - 3 = [_]",
+                "Choice": "`5-3=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1077,7 +1077,7 @@
                 }
             },
             "C": {
-                "Choice": "5 × 3 = [_]",
+                "Choice": "`5xx3=square`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1085,7 +1085,7 @@
                 }
             },
             "D": {
-                "Choice": "5 ÷ 3 = [_]",
+                "Choice": "`5-:3=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

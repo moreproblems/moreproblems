@@ -701,11 +701,11 @@
         "Explain": false,
         "Content": [
             "Brent gave 8 colored pencils to each of his 4 friends.",
-            "Which number sentence can be used to find the total number of colored pencils ([_]) Brent gave to his friends?"
+            "Which number sentence can be used to find the total number of colored pencils `(square)` Brent gave to his friends?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 + 4 = [_]",
+                "Choice": "`8+4=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition.",
@@ -713,15 +713,15 @@
                 }
             },
             "B": {
-                "Choice": "8 - 4 = [_]",
+                "Choice": "`8-4=square`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses subraction.",
+                    "Rationale": "Uses subtraction.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "8 × 4 = [_]",
+                "Choice": "`8xx4=square`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -729,7 +729,7 @@
                 }
             },
             "D": {
-                "Choice": "8 ÷ 4 = [_]",
+                "Choice": "`8-:4=square`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses division.",
@@ -809,11 +809,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jill puts 24 brownies onto [_] plates.",
+            "Jill puts 24 brownies onto `square` plates.",
             "She put 4 brownies onto each plate.",
             "The number sentence below can be used to find how many plates Jill uses.",
-            "24 ÷ [_] = 4",
-            "How many plates ([_]) does Jill use for brownies?"
+            ":ibox:`24-:square=4`",
+            "How many plates `(square)` does Jill use for brownies?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1042,21 +1042,21 @@
             "There are 6 ponies for children to ride at the fair.",
             "In one hour, the ponies gave a total of 42 rides.",
             "Each pony gave the same number of rides.",
-            "The equation below shows how to find the number of rides ([_]) each pony gave.",
-            "42 ÷ 6 = [_]",
-            "Which equation shows another way to determine how many rides ([_]) each pony gave?"
+            "The equation below shows how to find the number of rides `(square)` each pony gave.",
+            ":ibox:`42-:6=square`",
+            "Which equation shows another way to determine how many rides `(square)` each pony gave?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "42 - [_] = 6",
+                "Choice": "`42-square=6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subracts.",
+                    "Rationale": "Subtracts.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "6 + [_] = 42",
+                "Choice": "`6+square=42`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds.",
@@ -1064,7 +1064,7 @@
                 }
             },
             "C": {
-                "Choice": "[_] ÷ 42 = 6",
+                "Choice": "`square-:42=6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reverses 42 and the unknown factor.",
@@ -1072,7 +1072,7 @@
                 }
             },
             "D": {
-                "Choice": "6 × [_] = 42",
+                "Choice": "`6xxsquare=42`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1207,14 +1207,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ed picked [_] baskets of berries.",
+            "Ed picked `square `baskets of berries.",
             "Jasmine picked 2 more baskets of berries than Ed picked.",
             "Ed and Jasmine picked a total of 8 baskets of berries.",
-            "Which equation can be used to find the number of baskets ([_]) Ed picked?"
+            "Which equation can be used to find the number of baskets `(square)` Ed picked?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "[_] + 2= 8",
+                "Choice": "`square+2=8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses 2 for total number of baskets picked by Jasmine instead of 2 more than “square”.",
@@ -1222,7 +1222,7 @@
                 }
             },
             "B": {
-                "Choice": "[_] × 2 = 8",
+                "Choice": "squarexx2=8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Same number of baskets picked by each.",
@@ -1230,7 +1230,7 @@
                 }
             },
             "C": {
-                "Choice": "[_] + [_] + 2= 8",
+                "Choice": "`square+square+2=8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1238,7 +1238,7 @@
                 }
             },
             "D": {
-                "Choice": "[_] + [_] × 2= 8",
+                "Choice": "`square+squarexx2=8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Wrong operation, multiplies for 2 more than “square”.",
@@ -1265,14 +1265,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Carlos volunteers [_] days at the library each month.",
+            "Carlos volunteers `square` days at the library each month.",
             "In March, he volunteered 3 extra days at the library.",
             "In January, February, and March, Carlos volunteered a total of 39 days at the library.",
-            "Which pair of equations shows the number of days ([_]) Carlos volunteers each month?"
+            "Which pair of equations shows the number of days `(square)` Carlos volunteers each month?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × [_] + 3 = 39\n[_] = 12",
+                "Choice": "`3xxsquare+3=39`\n`square=12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1280,7 +1280,7 @@
                 }
             },
             "B": {
-                "Choice": "3 × [_] = 39\n[_] = 13",
+                "Choice": "`3xxsquare=39`\n`square=13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Ignores the 3 extra days.",
@@ -1288,7 +1288,7 @@
                 }
             },
             "C": {
-                "Choice": "3 × [_] - 3 = 39\n[_] = 14",
+                "Choice": "`3xxsquare-3=39`\n`square=14`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts the 3 extra days.",
@@ -1296,7 +1296,7 @@
                 }
             },
             "D": {
-                "Choice": "3 + [_] = 39\n[_] = 36",
+                "Choice": "`3+square=39`\n`square=36`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds the total number of regular days.",
@@ -1326,11 +1326,11 @@
             "Last year, José subscribed to 4 different magazines.",
             "He received 6 issues of each magazine.",
             "He also bought 7 issues of other magazines at a bookstore.",
-            "Which pair of equations shows the total number of magazine issues ([_]) José got last year?"
+            "Which pair of equations shows the total number of magazine issues `(square)` José got last year?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + 6 + 7 = [_]\n[_] = 17",
+                "Choice": "`4+6+7=square`\n`square=17`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds all the numbers in the problem together.",
@@ -1338,7 +1338,7 @@
                 }
             },
             "B": {
-                "Choice": "4 × 6 + 7 = [_]\n[_] = 31",
+                "Choice": "`4xx6+7=square`\n`square=31`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1346,7 +1346,7 @@
                 }
             },
             "C": {
-                "Choice": "4 × 7 + 6 = [_]\n[_] = 34",
+                "Choice": "`4xx7+6=square`\n`square=34`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies 4 by 7 instead of 6.",
@@ -1354,7 +1354,7 @@
                 }
             },
             "D": {
-                "Choice": "4 + 7 × 6 = [_]\n[_] = 46",
+                "Choice": "`4+7xx6=square`\n`square=46`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies the wrong two numbers together.",
@@ -1380,8 +1380,8 @@
         "Explain": false,
         "Content": [
             "A number sentence is shown below.",
-            "2 × 4 [_] 9 = 72",
-            "Which symbol goes into the [_] to make the number sentence true?"
+            ":ibox:`2xx4square9=72`",
+            "Which symbol goes into the `square` to make the number sentence true?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2212,7 +2212,7 @@
             "Measurement & Data"
         ],
         "SubTopics": [
-            "Generate measurement data by measuring lengths using rulers marked with halves and fourths of an inch. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units — whole numbers, halves, or quarters."
+            "Generate measurement data by measuring lengths using rulers marked with `text(halves)andtext(fourths of an inch)`. Show the data by making a line plot, where the horizontal scale is marked off in appropriate units — `text(whole numbers),text(halves),ortext(quarters)`."
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2337,7 +2337,7 @@
         "Content": [
             "The drawing below shows Simone's bedroom floor.",
             "problems/PA15G3M/media/42a.jpg",
-            "What is the area, in square meters, of Simone's bedroom floor?"
+            "What is the area, in `text(square meters)`, of Simone's bedroom floor?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2384,7 +2384,7 @@
             "Geometry"
         ],
         "SubTopics": [
-            "Measure areas by counting unit squares (square cm, square m, square in, square ft, and improvised units).",
+            "Measure areas by counting unit squares (`text(square cm),text(square m),text(square in),text(square ft)`, and improvised units).",
             "Analyze characteristics of polygons."
         ],
         "SuppContent": [],

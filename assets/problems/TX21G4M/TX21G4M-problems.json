@@ -232,15 +232,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which fraction belongs in the [_] to make this comparison true?",
-            "3/7 > [_]"
+            "Which fraction belongs in the `square` to make this comparison true?",
+            ":ibox:`3/7>square`"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "1/4",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine which fraction belongs in [_] the to make the comparison true, the student could have found a common denominator (bottom number that is the same) for 3/7 and 4/1. Because 7 and 4 can both be multiplied by a number to get 28, 28 is the lowest common denominator for these fractions ((3 × 4)/(3 × 4) = 12/28 and (1 × 7)/(4 × 7) = 7/28). Using the fractions written with the same denominator of 28, the student should have found that 12/28 > 7/28, therefore 3/7 > 1/4. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
+                    "Rationale": "To determine which fraction belongs in `square` the to make the comparison true, the student could have found a common denominator (bottom number that is the same) for 3/7 and 4/1. Because 7 and 4 can both be multiplied by a number to get 28, 28 is the lowest common denominator for these fractions ((3 × 4)/(3 × 4) = 12/28 and (1 × 7)/(4 × 7) = 7/28). Using the fractions written with the same denominator of 28, the student should have found that 12/28 > 7/28, therefore 3/7 > 1/4. This is an efficient way to solve the problem; however, other methods could be used to solve the problem correctly.",
                     "Percent": 64
                 }
             },
@@ -643,7 +643,7 @@
         "Explain": false,
         "Content": [
             "The list shows the lengths in `text(centimeters)` of some toy boats. The length of one toy boat is missing.",
-            "5, 5, 6, 10, 8, 5, [_]",
+            ":ibox:`5,5,6,10,8,5,square`",
             "The toy boat that still needs to be measured is shown. Use the ruler provided to measure the length of the toy boat to the nearest centimeter.",
             "problems/TX21G4M/media/13a.jpg",
             "Which of these people have mowed greater than 3/4 of a lawn?"
