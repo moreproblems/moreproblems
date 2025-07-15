@@ -22,7 +22,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "one",
+                "Choice": "`text(one)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The great blue heron competes with the river otter for brown trout.",
@@ -30,26 +30,26 @@
                 }
             },
             "B": {
-                "Choice": "two",
+                "Choice": "`text(two)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The brown trout has two predators shown in the food web.",
+                    "Rationale": "The brown trout has `text(two)` predators shown in the food web.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "three",
+                "Choice": "`text(three)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The brown trout consumes three organisms shown in the food web.",
+                    "Rationale": "The brown trout consumes `text(three)` organisms shown in the food web.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "five",
+                "Choice": "`text(five)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The brown trout has interactions with five other organisms shown in the food web.",
+                    "Rationale": "The brown trout has interactions with `text(five)` other organisms shown in the food web.",
                     "Percent": 0
                 }
             }
@@ -73,7 +73,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Scientists monitor a stream and determine that the population of brown trout has declined. The scientists study the data below to investigate the role of dissolved oxygen in this population change. Brown trout require at least 6 milligrams per liter (mg/L) of dissolved oxygen to support normal bodily functions.",
+            "Scientists monitor a stream and determine that the population of brown trout has declined. The scientists study the data below to investigate the role of dissolved oxygen in this population change. Brown trout require at least `6` `text(milligrams per liter)` `(text(mg)/text(L))` of dissolved oxygen to support normal bodily functions.",
             "problems/WIG8S/media/2a.jpg",
             "The model below shows factors that can affect dissolved oxygen concentration in streams.",
             "problems/WIG8S/media/2b.jpg",
@@ -81,7 +81,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "change in dissolved oxygen concentration in stream: increased\nfactors contributing to population decline: 1 and 2",
+                "Choice": "change in dissolved oxygen concentration in stream: increased\nfactors contributing to population decline: `1and2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The dissolved oxygen concentration most likely decreased, not increased, in the stream; and photosynthesis adds oxygen to water, which would not cause the brown trout population to decline.",
@@ -89,7 +89,7 @@
                 }
             },
             "B": {
-                "Choice": "change in dissolved oxygen concentration in stream: increased\nfactors contributing to population decline: 2 and 3",
+                "Choice": "change in dissolved oxygen concentration in stream: increased\nfactors contributing to population decline: `2and3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The dissolved oxygen concentration most likely decreased, not increased, in the stream.",
@@ -97,7 +97,7 @@
                 }
             },
             "C": {
-                "Choice": "change in dissolved oxygen concentration in stream: decreased\nfactors contributing to population decline: 1 and 2",
+                "Choice": "change in dissolved oxygen concentration in stream: decreased\nfactors contributing to population decline: `1and2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Photosynthesis adds oxygen to water, which would not cause the brown trout population to decline.",
@@ -105,7 +105,7 @@
                 }
             },
             "D": {
-                "Choice": "change in dissolved oxygen concentration in stream: decreased\nfactors contributing to population decline: 2 and 3",
+                "Choice": "change in dissolved oxygen concentration in stream: decreased\nfactors contributing to population decline: `2and3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The dissolved oxygen concentration most likely decreased in the stream; and the factors that use up oxygen in streams most likely contributed to the decline in the brown trout population.",
@@ -138,34 +138,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Stream health in northern Wisconsin is most likely better than that in southern Wisconsin because the landscape in northern Wisconsin has more buffer-zone areas around streams and more acres of fragmented landscape.",
+                "Choice": "Stream health in `text(northern)` Wisconsin is most likely better than that in `text(southern)` Wisconsin because the landscape in `text(northern)` Wisconsin has more buffer-zone areas around streams and more acres of fragmented landscape.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Northern Wisconsin has a high landscape condition as shown on the map, which means more acres of undisturbed landscape, not fragmented landscape.",
+                    "Rationale": "`text(Northern)` Wisconsin has a high landscape condition as shown on the map, which means more acres of undisturbed landscape, not fragmented landscape.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "Stream health in northern Wisconsin is most likely better than that in southern Wisconsin because the landscape in northern Wisconsin has more buffer-zone areas around streams and more acres of undisturbed landscape.",
+                "Choice": "Stream health in `text(northern)` Wisconsin is most likely better than that in `text(southern)` Wisconsin because the landscape in `text(northern)` Wisconsin has more buffer-zone areas around streams and more acres of undisturbed landscape.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Northern Wisconsin has a high landscape condition as shown on the map, which means more buffer-zone areas around streams and more acres of undisturbed landscape.",
+                    "Rationale": "`text(Northern)` Wisconsin has a high landscape condition as shown on the map, which means more buffer-zone areas around streams and more acres of undisturbed landscape.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Stream health in northern Wisconsin is most likely worse than that in southern Wisconsin because the landscape in northern Wisconsin has fewer buffer-zone areas around streams and more acres of fragmented landscape.",
+                "Choice": "Stream health in `text(northern)` Wisconsin is most likely worse than that in `text(southern)` Wisconsin because the landscape in `text(northern)` Wisconsin has fewer buffer-zone areas around streams and more acres of fragmented landscape.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Northern Wisconsin has a high landscape condition as shown on the map, which means it most likely has better stream health and more buffer-zone areas, not fewer buffer-zone areas, and more acres of undisturbed landscape, not fragmented landscape.",
+                    "Rationale": "`text(Northern)` Wisconsin has a high landscape condition as shown on the map, which means it most likely has better stream health and more buffer-zone areas, not fewer buffer-zone areas, and more acres of undisturbed landscape, not fragmented landscape.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "Stream health in northern Wisconsin is most likely worse than that in southern Wisconsin because the landscape in northern Wisconsin has fewer buffer-zone areas around streams and more acres of undisturbed landscape.",
+                "Choice": "Stream health in `text(northern)` Wisconsin is most likely worse than that in `text(southern)` Wisconsin because the landscape in `text(northern)` Wisconsin has fewer buffer-zone areas around streams and more acres of undisturbed landscape.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Northern Wisconsin has a high landscape condition as shown on the map, which means it most likely has better stream health and more buffer-zone areas, not fewer buffer-zone areas.",
+                    "Rationale": "`text(Northern)` Wisconsin has a high landscape condition as shown on the map, which means it most likely has better stream health and more buffer-zone areas, not fewer buffer-zone areas.",
                     "Percent": 0
                 }
             }
@@ -246,7 +246,7 @@
         "Explain": false,
         "Content": [
             "A residential developer is planning to build some houses on a property next to a wetland with a pond and a stream. The criteria for the project are listed below:",
-            ":ibox:• six lots for houses\n• intact forested areas\n• forested area between wetland and lots for houses",
+            ":ibox:• `text(six)` lots for houses\n• intact forested areas\n• forested area between wetland and lots for houses",
             "The diagrams below show two designs for the project.",
             "problems/WIG8S/media/5a.jpg",
             "problems/WIG8S/media/5b.jpg",
@@ -254,23 +254,23 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Design 1 is more appropriate because it provides each house with access to the wetland.",
+                "Choice": "Design `1` is more appropriate because it provides each house with access to the wetland.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Design 2 is more appropriate; providing each house with access to the wetland is not a criterion for the project.",
+                    "Rationale": "Design `2` is more appropriate; providing each house with access to the wetland is not a criterion for the project.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "Design 1 is more appropriate because it provides larger lot sizes with more forest areas.",
+                "Choice": "Design `1` is more appropriate because it provides larger lot sizes with more forest areas.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Design 2 is more appropriate; providing from larger lot sizes with more forested areas is not a criterion for the project.",
+                    "Rationale": "Design `2` is more appropriate; providing from larger lot sizes with more forested areas is not a criterion for the project.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Design 2 is more appropriate because it provides each house with privacy on all sides.",
+                "Choice": "Design `2` is more appropriate because it provides each house with privacy on all sides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Providing each house with privacy on all sides is not a criterion for the project.",
@@ -278,10 +278,10 @@
                 }
             },
             "D": {
-                "Choice": "Design 2 is more appropriate because it provides wetland protection with uninterrupted forest areas.",
+                "Choice": "Design `2` is more appropriate because it provides wetland protection with uninterrupted forest areas.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Design 2 keeps more forested areas intact and provides forested area between the wetland and the house lots.",
+                    "Rationale": "Design `2` keeps more forested areas intact and provides forested area between the wetland and the house lots.",
                     "Percent": 0
                 }
             }
@@ -305,9 +305,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student observes that getting shocked after shuffling across carpet occurs more often in winter than in summer. The student researches some factors that can affect static electricity, and the findings are shown below.",
+            "A student observes that getting shocked after shuffling across carpet occurs more often in ``(text(CO)_2)`(winter)` than in ``(text(CO)_2)`(summer)`. The student researches some factors that can affect static electricity, and the findings are shown below.",
             ":box:Fact: Humidity (measure of moisture in the air) affects electron flow between objects.\nFact: Moisture in the air creates a path for electron flow between objects.",
-            ":box:Winter\t\tlower humidity\nSummer\t\thigher humidity",
+            ":box:`text(Winter)`\t\tlower humidity\n`text(Summer)`\t\thigher humidity",
             "The student wants to investigate the relationship between humidity and static electricity using a Van de Graaff generator and a discharge wand. Which question can the student investigate using a Van de Graaff generator and a discharge wand?"
         ],
         "AnswerChoices": {
@@ -529,13 +529,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Compare the two locations on the map of Iceland below with the Major Volcanoes in Iceland map in the scenario.",
+            "Compare the `text(two)` locations on the map of Iceland below with the Major Volcanoes in Iceland map in the scenario.",
             "problems/WIG8S/media/9a.jpg",
             "Which statement BEST compares the locations on the map?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Location 1 is more likely than location 2 to experience a volcanic eruption because it is surrounded by water.",
+                "Choice": "Location `1` is more likely than location `2` to experience a volcanic eruption because it is surrounded by water.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Proximity to a plate boundary, not water, is a factor affecting volcanic activity.",
@@ -543,7 +543,7 @@
                 }
             },
             "B": {
-                "Choice": "Location 1 is more likely than location 2 to experience an earthquake because it is on a plate moving to the west.",
+                "Choice": "Location `1` is more likely than location `2` to experience an earthquake because it is on a plate moving to the `text(west)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Proximity to a plate boundary, not direction of plate motion, is a major factor related to the effects of an earthquake.",
@@ -551,15 +551,15 @@
                 }
             },
             "C": {
-                "Choice": "Location 2 is more likely than location 1 to experience a volcanic eruption because it is closer to the Mid-Atlantic Ridge.",
+                "Choice": "Location `2` is more likely than location `1` to experience a volcanic eruption because it is closer to the Mid-Atlantic Ridge.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The closer proximity of location 2 to the Mid-Atlantic Ridge makes it more likely to experience a volcanic eruption.",
+                    "Rationale": "The closer proximity of location `2` to the Mid-Atlantic Ridge makes it more likely to experience a volcanic eruption.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "Location 2 is more likely than location 1 to experience an earthquake because it has a larger surrounding landmass.",
+                "Choice": "Location `2` is more likely than location `1` to experience an earthquake because it has a larger surrounding landmass.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Proximity to a plate boundary, not necessarily the size of the surrounding landmass, is a major factor related to the effects of an earthquake.",
@@ -586,7 +586,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "The model below shows a cross section of Earth layers beneath Iceland.",
+            "The model below shows a cross section of `text(Earth)` layers beneath Iceland.",
             "problems/WIG8S/media/10a.jpg",
             ":ibox:Answer Part A and Part B for this question."
         ],
@@ -641,39 +641,39 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    ":box:Heat energy from Earth's core is transferred to the mantle and causes rock in the mantle to  ͟ ͟ ͟ ͟ ͟1͟ ͟ ͟ ͟ ͟ . Molten rock rises, which its temperature  ͟ ͟ ͟ ͟ ͟2͟ ͟ ͟ ͟ ͟  from contact with Earth's crust. This temperature change causes the molten rock to become more dense.",
+                    ":box:Heat energy from Earth's core is transferred to the mantle and causes rock in the mantle to `ul(text( )1text( ))`. Molten rock rises, which its temperature `ul(text( )2text( ))` from contact with Earth's crust. This temperature change causes the molten rock to become more dense.",
                     "Which terms BEST complete the explanation for the process shown in the model from Part A?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "1. melt\n2. increases",
+                        "Choice": "`1`. melt\n`2`. increases",
                         "Key": {
                             "Correct": false,
-                            "Rationale": "When rising molten rock contacts Earth's crust, its temperature decreases, not increases.",
+                            "Rationale": "When rising molten rock contacts `text(Earth)`'s crust, its temperature decreases, not increases.",
                             "Percent": 0
                         }
                     },
                     "B": {
-                        "Choice": "1. crystallize\n2. increases",
+                        "Choice": "`1`. crystallize\n`2`. increases",
                         "Key": {
                             "Correct": false,
-                            "Rationale": "Heat energy from Earth's core causes rock in the mantle to melt, not crystallize; when rising molten rock contacts Earth's crust, its temperature decreases, not increases.",
+                            "Rationale": "Heat energy from `text(Earth)`'s core causes rock in the mantle to melt, not crystallize; when rising molten rock contacts `text(Earth)`'s crust, its temperature decreases, not increases.",
                             "Percent": 0
                         }
                     },
                     "C": {
-                        "Choice": "1. melt\n2. decreases",
+                        "Choice": "`1`. melt\n`2`. decreases",
                         "Key": {
                             "Correct": true,
-                            "Rationale": "Heat energy from Earth's core causes rock in the mantle to melt and flow; when rising molten rock contacts Earth's crust, its temperature decreases.",
+                            "Rationale": "Heat energy from `text(Earth)`'s core causes rock in the mantle to melt and flow; when rising molten rock contacts `text(Earth)`'s crust, its temperature decreases.",
                             "Percent": 0
                         }
                     },
                     "D": {
-                        "Choice": "1. crystallize\n2. decreases",
+                        "Choice": "`1`. crystallize\n`2`. decreases",
                         "Key": {
                             "Correct": false,
-                            "Rationale": "Heat energy from Earth's core causes rock in the mantle to melt, not crystallize.",
+                            "Rationale": "Heat energy from `text(Earth)`'s core causes rock in the mantle to melt, not crystallize.",
                             "Percent": 0
                         }
                     }
@@ -707,7 +707,7 @@
                 "Choice": "As the plates move apart, the oceanic crust gets older as the distance from the Mid-Atlantic Ridge increases.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the theory of sea floor spreading, oceanic crust that is formed at the Mid-Atlantic Ridge spreads away from the ridge in both and Interpret Data directions over time.",
+                    "Rationale": "According to the theory of sea floor spreading, oceanic crust that is formed at the Mid-Atlantic Ridge spreads away from the ridge in both directions over time.",
                     "Percent": 0
                 }
             },
@@ -759,7 +759,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1. electromagnetic waves\n2. carbon dioxide\n3. sugars\n4. oxygen",
+                "Choice": "`1`. electromagnetic waves\n`2`. carbon dioxide\n`3`. sugars\n`4`. oxygen",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The model is correctly labeled to show electromagnetic waves from the sun to the plant, carbon dioxide entering the leaves, sugars produced during photosynthesis, and oxygen released from the plant to the surrounding environment.",
@@ -767,7 +767,7 @@
                 }
             },
             "B": {
-                "Choice": "1. oxygen\n2. sugars\n3. carbon dioxide\n4. electromagnetic waves",
+                "Choice": "`1`. oxygen\n`2`. sugars\n`3`. carbon dioxide\n`4`. electromagnetic waves",
                 "Key": {
                     "Correct": false,
                     "Rationale": "None of the labels correctly indicate the energy transfer process for the plant shown in the model.",
@@ -775,7 +775,7 @@
                 }
             },
             "C": {
-                "Choice": "1. electromagnetic waves\n2. sugars\n3. carbon dioxide\n4. oxygen",
+                "Choice": "`1`. electromagnetic waves\n`2`. sugars\n`3`. carbon dioxide\n`4`. oxygen",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Only electromagnetic waves and oxygen are correctly labeled to indicate the energy transfer process for the plant shown in the model.",
@@ -783,7 +783,7 @@
                 }
             },
             "D": {
-                "Choice": "1. oxygen\n2. carbon dioxide\n3. sugars\n4. electromagnetic waves",
+                "Choice": "`1`. oxygen\n`2`. carbon dioxide\n`3`. sugars\n`4`. electromagnetic waves",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Only carbon dioxide and sugars are correctly labeled to indicate the energy transfer process for the plant shown in the model.",
@@ -833,7 +833,7 @@
                 "Choice": "a diagram comparing the locations of planets in the solar system",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The data table provides data about distance from the sun, which could be used to produce a diagram showing relative locations of planets in the solar system.",
+                    "Rationale": "The data table provides data about distance from the `text(sun)`, which could be used to produce a diagram showing relative locations of planets in the solar system.",
                     "Percent": 0
                 }
             },
@@ -865,8 +865,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students combined two reactants (baking soda and citric acid) to determine if a chemical reaction takes place. The steps in the investigation are described.",
-            ":ibox:1. Solid baking soda was dissolved in water.\n2. Solid citric acid was dissolved in water.\n3. The solutions of baking soda and citric acid were combined in an open flask, producing a gas.\n4. The temperature of the flask's contents decreased, and the mass decreased.",
+            "Students combined `text(two)` reactants (baking soda and citric acid) to determine if a chemical reaction takes place. The steps in the investigation are described.",
+            ":ibox:`1`. Solid baking soda was dissolved in water.\n`2`. Solid citric acid was dissolved in water.\n`3`. The solutions of baking soda and citric acid were combined in an open flask, producing a gas.\n`4`. The temperature of the flask's contents decreased, and the mass decreased.",
             "How can the information from the investigation be used to support the claim that a chemical reaction took place?"
         ],
         "AnswerChoices": {
@@ -927,7 +927,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1. increase the mass of the car\n2. increase the amount of carbon dioxide released\n3. increase the friction between the car and the ground",
+                "Choice": "`1`. increase the mass of the car\n`2`. increase the amount of carbon dioxide released\n`3`. increase the friction between the car and the ground",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Increasing the mass of the car would decrease the acceleration of the car. Increasing the friction between the car and the ground would decrease the acceleration of the car.",
@@ -935,7 +935,7 @@
                 }
             },
             "B": {
-                "Choice": "1. decrease the mass of the car\n2. decrease the amount of carbon dioxide released\n3. decrease the friction between the car and the ground",
+                "Choice": "`1`. decrease the mass of the car\n`2`. decrease the amount of carbon dioxide released\n`3`. decrease the friction between the car and the ground",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Decreasing the amount of carbon dioxide released would decrease the acceleration of the car.",
@@ -943,7 +943,7 @@
                 }
             },
             "C": {
-                "Choice": "1. increase the mass of the car\n2. decrease the amount of carbon dioxide released\n3. increase the friction between the car and the ground",
+                "Choice": "`1`. increase the mass of the car\n`2`. decrease the amount of carbon dioxide released\n`3`. increase the friction between the car and the ground",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Increasing the mass of the car would decrease the acceleration of the car. Decreasing the amount of carbon dioxide released would decrease the acceleration of the car. Increasing the friction between the car and the ground would decrease the acceleration of the car.",
@@ -951,7 +951,7 @@
                 }
             },
             "D": {
-                "Choice": "1. decrease the mass of the car\n2. increase the amount of carbon dioxide released\n3. decrease the friction between the car and the ground",
+                "Choice": "`1`. decrease the mass of the car\n`2`. increase the amount of carbon dioxide released\n`3`. decrease the friction between the car and the ground",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Decreasing the mass of the car would increase the acceleration of the car. Increasing the amount of carbon dioxide released would increase the acceleration of the car. Decreasing the friction between the car and the ground would increase the acceleration of the car.",
@@ -978,40 +978,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Carbon dioxide gas is generated when baking soda and citric acid are combined. The carbon dioxide gas escapes from the bottle, which is the action force. According to Newton's third law, a reaction force will follow. Students want their car to move farther across the floor.",
+            "Carbon dioxide gas is generated when baking soda and citric acid are combined. The carbon dioxide gas escapes from the bottle, which is the action force. According to Newton's `text(third)` law, a reaction force will follow. Students want their car to move farther across the floor.",
             "problems/WIG8S/media/16a.jpg",
-            "Which pair of solutions apply Newton's third law to this goal?"
+            "Which pair of solutions apply Newton's `text(third)` law to this goal?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "W and X",
+                "Choice": "`WandX`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solution W will not help the car move farther in a horizontal direction, because the action force would be upward.",
+                    "Rationale": "Solution `W` will not help the car move farther in a horizontal direction, because the action force would be upward.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "X and Y",
+                "Choice": "`XandY`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Solution X increases the action force by generating more gas inside the bottle. Solution Y increases the action force by increasing the gas pressure.",
+                    "Rationale": "Solution `X` increases the action force by generating more gas inside the bottle. Solution `Y` increases the action force by increasing the gas pressure.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Y and Z",
+                "Choice": "`YandZ`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solution Z decreases the action force and decreases the reaction force; by removing the stopper, the gas pressure inside the reaction vessel decreases.",
+                    "Rationale": "Solution `Z` decreases the action force and decreases the reaction force; by removing the stopper, the gas pressure inside the reaction vessel decreases.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "W and Z",
+                "Choice": "`WandZ`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solution W will not help the car move farther in a horizontal direction, because the action force would be upward. Solution Z decreases the action force and decreases the reaction force; by removing the stopper, the gas pressure inside the reaction vessel decreases.",
+                    "Rationale": "Solution `W` will not help the car move farther in a horizontal direction, because the action force would be upward. Solution `Z` decreases the action force and decreases the reaction force; by removing the stopper, the gas pressure inside the reaction vessel decreases.",
                     "Percent": 0
                 }
             }
@@ -1035,8 +1035,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Carbon dioxide (CO₂) gas is produced when baking soda and citric acid are combined. Solid CO₂ can be created from gaseous CO₂ when enough thermal energy is removed. A student wants to create a model of solid CO₂ using a computer simulation.",
-            "Select the THREE characteristics accurate model of solid CO₂ that should be included in the computer simulation."
+            "Carbon dioxide `(text(CO)_2)` gas is produced when baking soda and citric acid are combined. Solid `(text(CO)_2)` can be created from gaseous `(text(CO)_2)` when enough thermal energy is removed. A student wants to create a model of solid `(text(CO)_2)` using a computer simulation.",
+            "Select the THREE characteristics accurate model of solid `(text(CO)_2)` that should be included in the computer simulation."
         ],
         "AnswerChoices": {
             "A": {

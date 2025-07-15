@@ -1148,14 +1148,14 @@
         "Explain": false,
         "Content": [
             ":ibox:`-9x^2+ 30x+c=0`",
-            "In the given equation, `c` is a constant. The equation has exactly one solution. What is the value of `c`?"
+            "In the given equation, `c` is a constant. The equation has exactly `text(one)` solution. What is the value of `c`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the value of `c` is `3`, this would yield a discriminant that is greater than zero. Therefore, the given equation would have two solutions, rather than exactly one solution.",
+                    "Rationale": "If the value of `c` is `3`, this would yield a discriminant that is greater than zero. Therefore, the given equation would have two solutions, rather than exactly `text(one)` solution.",
                     "Percent": 0
                 }
             },
@@ -1163,7 +1163,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the value of `c` is `0`, this would yield a discriminant that is greater than zero. Therefore, the given equation would have two solutions, rather than exactly one solution.",
+                    "Rationale": "If the value of `c` is `0`, this would yield a discriminant that is greater than zero. Therefore, the given equation would have two solutions, rather than exactly `text(one)` solution.",
                     "Percent": 0
                 }
             },
@@ -1171,7 +1171,7 @@
                 "Choice": "`-25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the equation `-9x^2+30x+c=0` has exactly one solution. A quadratic equation of the form `ax^2+bx+c=0` has exactly one solution if and only if its discriminant,  `-4ac+b^2`, is equal to zero. It follows that for the given equation, a=-9 and b=30. Substituting `-9` for `aand30` for `b` into `b^2-4ac` yields `30^2-4(-9)c,or900+36c`. Since the discriminant must equal zero, `900+36c=0`. Subtracting `36c` from both sides of this equation yields `900=-36c`. Dividing each side of this equation by `-36` yields `-25=c`. Therefore, the value of `c` is `-25`.",
+                    "Rationale": "It's given that the equation `-9x^2+30x+c=0` has exactly `text(one)` solution. A quadratic equation of the form `ax^2+bx+c=0` has exactly `text(one)` solution if and only if its discriminant,  `-4ac+b^2`, is equal to zero. It follows that for the given equation, a=-9 and b=30. Substituting `-9` for `aand30` for `b` into `b^2-4ac` yields `30^2-4(-9)c,or900+36c`. Since the discriminant must equal zero, `900+36c=0`. Subtracting `36c` from both sides of this equation yields `900=-36c`. Dividing each side of this equation by `-36` yields `-25=c`. Therefore, the value of `c` is `-25`.",
                     "Percent": 0
                 }
             },
@@ -1179,7 +1179,7 @@
                 "Choice": "`-53`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If the value of `c` is `-53`, this would yield a discriminant that is less than zero. Therefore, the given equation would have no real solutions, rather than exactly one solution.",
+                    "Rationale": "If the value of `c` is `-53`, this would yield a discriminant that is less than zero. Therefore, the given equation would have no real solutions, rather than exactly `text(one)` solution.",
                     "Percent": 0
                 }
             }

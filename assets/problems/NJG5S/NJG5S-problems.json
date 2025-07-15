@@ -126,19 +126,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which observation provides evidence that student 1 threw the ball with more energy than student 2?"
+            "Which observation provides evidence that student `1` threw the ball with more energy than student `2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The ball bounced back closer to student 1 than student 2.",
+                "Choice": "The ball bounced back closer to student `1` than student `2`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "More energy will cause the ball to bounce farther away from the wall, which would cause the ball to land closer closer to Student 1, as shown in the figure.",
+                    "Rationale": "More energy will cause the ball to bounce farther away from the wall, which would cause the ball to land closer closer to Student `1`, as shown in the figure.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "The ball bounced back closer to student 2 than student 1.",
+                "Choice": "The ball bounced back closer to student `2` than student `1`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is invalid based on the diagram.",
@@ -146,7 +146,7 @@
                 }
             },
             "C": {
-                "Choice": "The ball hit the wall at a higher point for student 1 than student 2.",
+                "Choice": "The ball hit the wall at a higher point for student `1` than student `2`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is invalid based on the diagram; both students hit the ball against the wall at the same height.",
@@ -154,7 +154,7 @@
                 }
             },
             "D": {
-                "Choice": "The ball hit the wall at a higher point for student 2 than student 1.",
+                "Choice": "The ball hit the wall at a higher point for student `2` than student `1`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is invalid based on the diagram; both students hit the ball against the wall at the same height.",
@@ -304,27 +304,27 @@
             "For each road condition given, indicate whether sand or salt is the better treatment."
         ],
         "AnswerChoices": {
-            "A:Snow-covered roads with an air temperature of 0°F": {
+            "A:Snow-covered roads with an air temperature of `0text(°F)`": {
                 "Choice": "2:Sand",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Sand helps the tires grip the road and salt does not help melt snow-covered roads when the air temperature is below 10°F.",
+                    "Rationale": "Sand helps the tires grip the road and salt does not help melt snow-covered roads when the air temperature is below `10text(°F)`.",
                     "Percent": 0
                 }
             },
-            "B:Icy roads with air temperature of 20°F": {
+            "B:Icy roads with air temperature of `20text(°F)`": {
                 "Choice": "1:Salt",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Salt works when the temperature is above 10°F.",
+                    "Rationale": "Salt works when the temperature is above `10text(°F)`.",
                     "Percent": 0
                 }
             },
-            "C:Icy roads with air temperature of 5°C": {
+            "C:Icy roads with air temperature of `5text(°C)`": {
                 "Choice": "2:Sand",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Sand would be better, since the temperature is below 10°F, and salt only works when the temperature is above 10°F. Sand helps the tires grip the road.",
+                    "Rationale": "Sand would be better, since the temperature is below `10text(°F)`, and salt only works when the temperature is above `10text(°F)`. Sand helps the tires grip the road.",
                     "Percent": 0
                 }
             }
@@ -355,7 +355,7 @@
                 "Choice": "The less bright the street light appears, the closer the student is to it.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Table 1 shows street light X is closest to the student (1 km), and it appears the brightest (medium). This option is the opposite, therefore invalid.",
+                    "Rationale": "Table `1` shows street light `X` is closest to the student `(1` `text(km))`, and it appears the brightest (medium). This option is the opposite, therefore invalid.",
                     "Percent": 0
                 }
             },
@@ -371,7 +371,7 @@
                 "Choice": "The less bright the star appears, the closer it is to Earth.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Table 2 shows similar information as Table 1 for the relative distance and brightness of stars. The farther away the star is, the less bright it appears. This option is opposite of the information in the table, and therefore invalid.",
+                    "Rationale": "Table `2` shows similar information as Table `1` for the relative distance and brightness of stars. The farther away the star is, the less bright it appears. This option is opposite of the information in the table, and therefore invalid.",
                     "Percent": 0
                 }
             },
@@ -379,7 +379,7 @@
                 "Choice": "The brighter the star appears, the farther it is from Earth.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Table 2 shows similar information as Table 1 for the relative distance and brightness of stars. The farther away the star is, the less bright it appears. This option is opposite of the information in the table, and therefore invalid.",
+                    "Rationale": "Table `2` shows similar information as Table `1` for the relative distance and brightness of stars. The farther away the star is, the less bright it appears. This option is opposite of the information in the table, and therefore invalid.",
                     "Percent": 0
                 }
             }
@@ -405,7 +405,7 @@
         "Content": [
             "Describe how the brightness of a star appears to change because of distance.",
             "Complete the sentences by choosing the correct answers from the boxes.",
-            "\n\nBased on Tables 1 and 2, street light :DD-1: has the same brightness as Arcturus. If the student moves away from Arcturus, the brightness of this star would appear to :DD-2: ."
+            "\n\nBased on Tables `1and2`, street light :DD-1: has the same brightness as Arcturus. If the student moves away from Arcturus, the brightness of this star would appear to :DD-2: ."
         ],
         "AnswerChoices": {
             "1:A": {
@@ -428,7 +428,7 @@
                 "Choice": "Z",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Tables 1 and 2 show street light Z's brightness is “very low,” which is the same level of brightness as Arcturus.",
+                    "Rationale": "Tables `1and2` show street light `Z`'s brightness is “very low,” which is the same level of brightness as Arcturus.",
                     "Percent": 0
                 }
             },
@@ -444,7 +444,7 @@
                 "Choice": "decrease",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The farther away the star, the less bright it appears. The Sun is the closest star and its brightness is very high.",
+                    "Rationale": "The farther away the star, the less bright it appears. The `text(Sun)` is the closest star and its brightness is very high.",
                     "Percent": 0
                 }
             },
@@ -480,7 +480,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The Sun appears smaller and brighter than other stars because it is the closest star to Earth.",
+                "Choice": "The `text(Sun)` appears smaller and brighter than other stars because it is the closest star to `text(Earth)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -488,15 +488,15 @@
                 }
             },
             "B": {
-                "Choice": "The Sun appears larger and brighter than any other star because it is the closest star to Earth.",
+                "Choice": "The `text(Sun)` appears larger and brighter than any other star because it is the closest star to `text(Earth)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Table 2 shows that the Sun appears larger because it is the closest star to Earth and it is the brightest.",
+                    "Rationale": "Table `2` shows that the `text(Sun)` appears larger because it is the closest star to `text(Earth)` and it is the brightest.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The Sun appears larger and less bright than other stars because it is the farthest star from Earth.",
+                "Choice": "The `text(Sun)` appears larger and less bright than other stars because it is the farthest star from `text(Earth)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -504,7 +504,7 @@
                 }
             },
             "D": {
-                "Choice": "The Sun appears smaller and less bright than any other star because it is the farthest star from Earth.",
+                "Choice": "The `text(Sun)` appears smaller and less bright than any other star because it is the farthest star from `text(Earth)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -643,21 +643,21 @@
         "Explain": false,
         "Content": [
             "Locations where earthquakes occur are found around the world, but when viewed on a map, they are observed to follow a pattern.",
-            "The map shows five locations numbered 1 to 5. Identify the two locations where major earthquakes would MOST LIKELY occur in the future.",
+            "The map shows `text(five)` locations numbered `1` to `5`. Identify the two locations where major earthquakes would MOST LIKELY occur in the future.",
             "problems/NJG5S/media/12a.jpg",
             "Select the TWO correct locations from the five options."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Location 1",
+                "Choice": "Location `1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "As shown on the map, this area has experienced numerous major earthquakes since 1900. Also, it is along continental boundaries where two tectonic plates are colliding, making earthquakes occur.",
+                    "Rationale": "As shown on the map, this area has experienced numerous major earthquakes since `text(1900)`. Also, it is along continental boundaries where `text(two)` tectonic plates are colliding, making earthquakes occur.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "Location 2",
+                "Choice": "Location `2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is not located on or directly next to a continental plate boundary.",
@@ -665,7 +665,7 @@
                 }
             },
             "C": {
-                "Choice": "Location 3",
+                "Choice": "Location `3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is not located on or directly next to a continental plate boundary.",
@@ -673,15 +673,15 @@
                 }
             },
             "D": {
-                "Choice": "Location 4",
+                "Choice": "Location `4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "As shown on the map, this area has experienced numerous major earthquakes since 1900. Also, it is along continental boundaries where two tectonic plates are colliding, making earthquakes occur.",
+                    "Rationale": "As shown on the map, this area has experienced numerous major earthquakes since `text(1900)`. Also, it is along continental boundaries where `text(two)` tectonic plates are colliding, making earthquakes occur.",
                     "Percent": 0
                 }
             },
             "E": {
-                "Choice": "Location 5",
+                "Choice": "Location `5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is not located on or directly next to a continental plate boundary.",
@@ -718,7 +718,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Researchers count deer at the same time and same locations each year. Using the data in Table 1, choose the bar graph showing the number of deer recorded for each given year."
+                    "Researchers count deer at the same time and same locations each year. Using the data in Table `1`, choose the bar graph showing the number of deer recorded for each given year."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -741,7 +741,7 @@
                         "Choice": "problems/NJG5S/media/13c.jpg",
                         "Key": {
                             "Correct": true,
-                            "Rationale": "The table shows the following data: the population increased from 75,000 in 1850, to 85,000 in 1950, to 95,000 in 1970.",
+                            "Rationale": "The table shows the following data: the population increased from `75text(,)000` in `text(1850)`, to `85text(,)000` in `text(1950)`, to `95text(,000` in `text(1970)`.",
                             "Percent": 0
                         }
                     },
@@ -762,7 +762,7 @@
                 "Explain": false,
                 "Content": [
                     "Select from the boxes to describe the pattern shown in the deer population data.",
-                    "\n\nThe deer population :DD-1: until 1990 and then the population started :DD-2: ."
+                    "\n\nThe deer population :DD-1: until `text(1990)` and then the population started :DD-2: ."
                 ],
                 "AnswerChoices": {
                     "1:A": {
@@ -777,7 +777,7 @@
                         "Choice": "increased",
                         "Key": {
                             "Correct": true,
-                            "Rationale": "In 1990, the population reached the highest number at 190,000, but it then decreased to 115,000 in 2010.",
+                            "Rationale": "In `text(1990)`, the population reached the highest number at `190text(,)000`, but it then decreased to `115text(,)000` in `text(2010)`.",
                             "Percent": 0
                         }
                     },
@@ -793,7 +793,7 @@
                         "Choice": "decreasing",
                         "Key": {
                             "Correct": true,
-                            "Rationale": "In 1990, the population reached the highest number at 190,000, but it then decreased to 115,000 in 2010.",
+                            "Rationale": "In `text(1990)`, the population reached the highest number at `190text(,)000`, but it then decreased to `115text(,)000` in `text(2010)`.",
                             "Percent": 0
                         }
                     },
@@ -826,7 +826,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which questions should scientists study in order to best understand the changing deer populations throughout the last 25 years?",
+            "Which questions should scientists study in order to best understand the changing deer populations throughout the last `25` `text(years)`?",
             "Select the TWO of the five questions."
         ],
         "AnswerChoices": {
@@ -890,11 +890,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Town planners in New Jersey have created possible solutions to reduce the deer population. Based on the data in Table 1, in what year did these programs first start showing results"
+            "Town planners in New Jersey have created possible solutions to reduce the deer population. Based on the data in Table `1`, in what year did these programs first start showing results"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1980",
+                "Choice": "`text(1980)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -902,7 +902,7 @@
                 }
             },
             "B": {
-                "Choice": "1990",
+                "Choice": "`text(1990)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -910,15 +910,15 @@
                 }
             },
             "C": {
-                "Choice": "2000",
+                "Choice": "`text(2000)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The table shows the population of deer decreased from 190,000 in 1990 to 155,000 in 2000, so the decrease in population indicates the program showed results due to the decrease in the population.",
+                    "Rationale": "The table shows the population of deer decreased from `190text(,)000` in `text(1990)` to `155text(,)000` in `text(2000)`, so the decrease in population indicates the program showed results due to the decrease in the population.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "2010",
+                "Choice": "`text(2010)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -926,7 +926,7 @@
                 }
             },
             "E": {
-                "Choice": "2015",
+                "Choice": "`text(2015)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -953,9 +953,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The development of land has caused the deer populations in some parts of New Jersey to more than triple over the past years. Deer density is how many deer are counted in a specific area. Table 2 shows the deer density and land development levels for a location in Mercer County, NJ.",
+            "The development of land has caused the deer populations in some parts of New Jersey to more than triple over the past years. Deer density is how many deer are counted in a specific area. Table `2` shows the deer density and land development levels for a location in Mercer County, NJ.",
             "problems/NJG5S/media/16a.jpg",
-            "Based on Table 2, predict how deer populations and land development affect people and their environment.",
+            "Based on Table `2`, predict how deer populations and land development affect people and their environment.",
             "Complete the sentences by choosing the correct answers from the boxes.",
             "\n\nDeer density :DD-1: as land development increases. This is a result of :DD-2: deer in the specific area, which causes a(n) :DD-3: in problems for people and their environment."
         ],
@@ -964,7 +964,7 @@
                 "Choice": "increases",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The table shows as land development increases (high), the number of deer per acre also increases.",
+                    "Rationale": "The table shows as land development increases (high), the number of deer `text(per acre)` also increases.",
                     "Percent": 0
                 }
             },
@@ -988,7 +988,7 @@
                 "Choice": "more",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "As the number of deer per acre increases, there are more deer found on the same amount of land.",
+                    "Rationale": "As the number of deer `text(per acre)` increases, there are more deer found on the same amount of land.",
                     "Percent": 0
                 }
             },
@@ -1045,10 +1045,10 @@
         "Explain": true,
         "Content": [
             "Many New Jersey towns have started programs to decrease the deer population and reduce the negative effects that deer are having on people and the environment.",
-            "Some of the solutions to decrease deer populations are shown in Table 3.",
+            "Some of the solutions to decrease deer populations are shown in Table `3`.",
             "problems/NJG5S/media/17a.jpg",
             "Choose TWO solutions for reducing deer populations and explain why each of these solutions would be more effective than the solutions not chosen.",
-            "Also, explain why each of the other two solutions would be less effective."
+            "Also, explain why each of the other `text(two)` solutions would be less effective."
         ],
         "AnswerChoices": {
             "A": {
@@ -1113,7 +1113,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Using Table 1, select the option that shows the weight of the water for each 6-hour period."
+                    "Using Table `1`, select the option that shows the weight of the water for each `6text(-hour)` period."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -1136,7 +1136,7 @@
                         "Choice": "problems/NJG5S/media/18c.jpg",
                         "Key": {
                             "Correct": true,
-                            "Rationale": "The bar graph shows the weight of the water remains the same at 100 grams over the 24-hour time period.",
+                            "Rationale": "The bar graph shows the weight of the water remains the same at `100` `text(grams)` over the `24text(-hour)` time period.",
                             "Percent": 0
                         }
                     },
@@ -1206,16 +1206,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students want to conduct a new investigation using a larger bag of water. Using Table 1, predict the weight of 300 grams of water after 72 hours.",
+            "Students want to conduct a new investigation using a larger bag of water. Using Table `1`, predict the weight of `300` `text(grams)` of water after `72` `text(hours)`.",
             "Complete the sentences by choosing the correct answer from each box.",
-            "\n\nIn the new investigation, the weight of water is predicted to be :DD-1: grams after 72 hours. This demonstrates that :DD-2: in a system over time."
+            "\n\nIn the new investigation, the weight of water is predicted to be :DD-1: grams after `72` `text(hours)`. This demonstrates that :DD-2: in a system over time."
         ],
         "AnswerChoices": {
             "1:A": {
                 "Choice": "300",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Even though the water will remain in the freezer 72 hours instead of 24 hours, the weight of the water will still be 300 grams, showing the weight of matter is conserved.",
+                    "Rationale": "Even though the water will remain in the freezer `72` `text(hours)` instead of `24` `text(hours)`, the weight of the water will still be `300` `text(grams)`, showing the weight of matter is conserved.",
                     "Percent": 0
                 }
             },
@@ -1247,7 +1247,7 @@
                 "Choice": "weight of matter is conserved",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Even though the water will remain in the freezer 72 hours instead of 24 hours, the weight of the water will still be 300 grams, showing the weight of matter is conserved.",
+                    "Rationale": "Even though the water will remain in the freezer `72` `text(hours)` instead of `24` `text(hours)`, the weight of the water will still be `300` `text(grams)`, showing the weight of matter is conserved.",
                     "Percent": 0
                 }
             },
@@ -1297,14 +1297,14 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Using Table 1, select the option that shows the weight of the water for each 6-hour period."
+                    "Using Table `1`, select the option that shows the weight of the water for each `6text(-hour)` period."
                 ],
                 "AnswerChoices": {
                     "A": {
                         "Choice": "problems/NJG5S/media/20a.jpg",
                         "Key": {
                             "Correct": true,
-                            "Rationale": "According to the Age of Fossils table, archaeopteryx lived for 85 million years, ammonite lived for 175 million years, blastoid lived for 232 million years, and trilobite lived for 280 million years.",
+                            "Rationale": "According to the Age of Fossils table, archaeopteryx lived for `85` `text(million years)`, ammonite lived for `175` `text(million years)`, blastoid lived for `232` `text(million years)`, and trilobite lived for `280` `text(million years)`.",
                             "Percent": 0
                         }
                     },
@@ -1382,18 +1382,18 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Scientists discovered two additional fossils, Fossil X and Fossil Y, at Location 1. The approximate ages of the fossils were determined and are shown in Table 1.",
+            "Scientists discovered two additional fossils, Fossil `X` and Fossil `Y`, at Location `1`. The approximate ages of the fossils were determined and are shown in Table `1`.",
             "problems/NJG5S/media/21a.jpg",
-            "Based on Figure 1 and Table 1, describe how the environment changed at Location 1 over time.",
+            "Based on Figure `1` and Table `1`, describe how the environment changed at Location `1` over time.",
             "Complete the sentence by choosing the correct answer from each box.",
-            "\n\nBased on fossil evidence, Location 1 changed to a :DD-1: environment :DD-2: million years ago."
+            "\n\nBased on fossil evidence, Location `1` changed to a :DD-1: environment :DD-2: `text(million years)` ago."
         ],
         "AnswerChoices": {
             "1:A": {
                 "Choice": "land",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "According to the Age of Fossils table, ammonite was a marine organism in Location 1 that lived 65 million years ago. Looking at Table 1, Additional Fossil Information, fossils of a leaf and archaeopteryx, both land organisms, lived in Location 1 between 50 and 60 million years ago.",
+                    "Rationale": "According to the Age of Fossils table, ammonite was a marine organism in Location `1` that lived `65` `text(million years)` ago. Looking at Table `1`, Additional Fossil Information, fossils of a leaf and archaeopteryx, both land organisms, lived in Location `1` between `50and60` `text(million years)` ago.",
                     "Percent": 0
                 }
             },
@@ -1422,7 +1422,7 @@
                 }
             },
             "2:C": {
-                "Choice": "between 50- 55",
+                "Choice": "between 50-55",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1430,10 +1430,10 @@
                 }
             },
             "2:D": {
-                "Choice": "between 60- 65",
+                "Choice": "between 60-65",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Location 1 was land at least 60 million years ago. Somewhere between 60 and 65 million years ago, Location 1 changed from marine to land.",
+                    "Rationale": "Location `1` was land at least `60` `text(million years)` ago. Somewhere between `60and65` `text(million years)` ago, Location `1` changed from marine to land.",
                     "Percent": 0
                 }
             }
@@ -1457,7 +1457,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on Figure 1, identify which questions can be answered by analyzing the data."
+            "Based on Figure `1`, identify which questions can be answered by analyzing the data."
         ],
         "AnswerChoices": {
             "A:What was the environment at each location over time?": {
@@ -1521,7 +1521,7 @@
                 "Choice": "1",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The types of fossils (ammonite and trilobite) at Location 1 were both created from marine organisms.",
+                    "Rationale": "The types of fossils (ammonite and trilobite) at Location `1` were both created from marine organisms.",
                     "Percent": 0
                 }
             },
@@ -1545,7 +1545,7 @@
                 "Choice": "archaeopteryx and blastoid",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The fossils at Location 2 (archeopteryx and blastoid) were created from both terrestrial and marine organisms, therefore in that location the environment changed.",
+                    "Rationale": "The fossils at Location `2` (archeopteryx and blastoid) were created from both terrestrial and marine organisms, therefore in that location the environment changed.",
                     "Percent": 0
                 }
             },
@@ -1553,12 +1553,12 @@
                 "Choice": "were both marine and terrestrial",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The fossils at Location 2 (archeopteryx and blastoid) were created from both terrestrial and marine organisms, therefore in that location the environment changed.",
+                    "Rationale": "The fossils at Location `2` (archeopteryx and blastoid) were created from both terrestrial and marine organisms, therefore in that location the environment changed.",
                     "Percent": 0
                 }
             },
             "3:B": {
-                "Choice": "survived over 400 million years",
+                "Choice": "survived over `400` `text(million years)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1585,7 +1585,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on Table 1, select the option that shows cities that have been correctly paired with another city that has similar annual precipitation."
+            "Based on Table `1`, select the option that shows cities that have been correctly paired with another city that has similar annual precipitation."
         ],
         "AnswerChoices": {
             "A": {
@@ -1600,7 +1600,7 @@
                 "Choice": "Adak and Klaksvik\n\nRichland and Tehran\n\nNeedles and Riyadh\n\nLos Angeles and Athens",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Annual precipitation in Adak is 61 inches and annual precipitation in Klaksvik is 56 inches.\nAnnual precipitation in Richland is 7 inches and annual precipitation in Tehran is 9 inches.\nAnnual precipitation in Needles is 4 inches and annual precipitation in Riyadh is also 4 inches.\nAnnual precipitation in Los Angeles is 16 inches and annual precipitation in Athens is also 16 inches.",
+                    "Rationale": "Annual precipitation in Adak is `61` `text(inches)` and annual precipitation in Klaksvik is `56` `text(inches)`.\nAnnual precipitation in Richland is `7` `text(inches)` and annual precipitation in Tehran is `9` `text(inches)`.\nAnnual precipitation in Needles is `4` `text(inches)` and annual precipitation in Riyadh is also `4` `text(inches)`.\nAnnual precipitation in Los Angeles is `16` `text(inches)` and annual precipitation in Athens is also `16` `text(inches)`.",
                     "Percent": 0
                 }
             },
@@ -1647,7 +1647,7 @@
                 "Choice": "Adak and Tehran are far from each other and have similar temperatures.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adak and Tehran are far from each other, but their average highs are very different. Adak's average high temperature is 52°F and Tehran is 81°F.",
+                    "Rationale": "Adak and Tehran are far from each other, but their average highs are very different. Adak's average high temperature is `52text(°F)` and Tehran is `81text(°F)`.",
                     "Percent": 0
                 }
             },
@@ -1655,7 +1655,7 @@
                 "Choice": "Needles and Riyadh are far from each other and have similar temperatures.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Needles and Riyadah are far from each other. Their average high temperatures are the same at 95°F and their average low temperatures are similar at 54°F and 57°F respectively.",
+                    "Rationale": "Needles and Riyadah are far from each other. Their average high temperatures are the same at `95text(°F)` and their average low temperatures are similar at `54text(°F)` and `57text(°F)` respectively.",
                     "Percent": 0
                 }
             },
@@ -1695,14 +1695,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student makes claims about which cities have climates that are very similar to each other. Based on Table 1, identify which claims are supported by the data."
+            "A student makes claims about which cities have climates that are very similar to each other. Based on Table `1`, identify which claims are supported by the data."
         ],
         "AnswerChoices": {
             "A:Athens and Tehran, because they have the greatest amount of precipitation.": {
                 "Choice": "2:Not supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Neither Athens nor Tehran have the greatest amount of precipitation. Adak has the greatest amount of precipitation at 61 inches.",
+                    "Rationale": "Neither Athens nor Tehran have the greatest amount of precipitation. Adak has the greatest amount of precipitation at `61` `text(inches)`.",
                     "Percent": 0
                 }
             },
@@ -1710,7 +1710,7 @@
                 "Choice": "1:Supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Adak and Klaksvik both have the same average high temperature of 52°F.",
+                    "Rationale": "Adak and Klaksvik both have the same average high temperature of `52text(°F)`.",
                     "Percent": 0
                 }
             },
@@ -1718,7 +1718,7 @@
                 "Choice": "1:Supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Klaksvik and Tehran both have the same average low temperature of 37°F.",
+                    "Rationale": "Klaksvik and Tehran both have the same average low temperature of `37text(°F)`.",
                     "Percent": 0
                 }
             },
@@ -1726,7 +1726,7 @@
                 "Choice": "2:Not supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Neither Richland nor Los Angeles have the lowest amount of precipitation. Riyadh and Needles have the lowest amount of precipitation at 4 inches.",
+                    "Rationale": "Neither Richland nor Los Angeles have the lowest amount of precipitation. Riyadh and Needles have the lowest amount of precipitation at `4` `text(inches)`.",
                     "Percent": 0
                 }
             }
@@ -1750,20 +1750,20 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Figure 2 shows the location of Newark, NJ, in relation to the other eight cities.",
+            "Figure `2` shows the location of Newark, NJ, in relation to the other `text(eight)` cities.",
             "problems/NJG5S/media/S9a.jpg",
-            "Table 2 shows the average climate data for Newark, NJ.",
+            "Table `2` shows the average climate data for Newark, NJ.",
             "problems/NJG5S/media/S9b.jpg",
-            "Compare the climate data of Newark to the other eight cities. Based on the data, identify the two cities that have a climate most similar to Newark and describe their climate.",
+            "Compare the climate data of Newark to the other `text(eight)` cities. Based on the data, identify the `text(two)` cities that have a climate most similar to Newark and describe their climate.",
             "Complete the sentences by choosing the correct answer from each box.",
-            "\n\nThe two cities that have the most similar climate to Newark are :DD-1: . They are all similar because they all have :DD-2: conditions than other cities."
+            "\n\nThe `text(two)` cities that have the most similar climate to Newark are :DD-1: . They are all similar because they all have :DD-2: conditions than other cities."
         ],
         "AnswerChoices": {
             "1:A": {
                 "Choice": "Klaksvik and Adak",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The average high and low in Klaksvik are 52°F and 37°F, with 56 inches of precipitation per year. The average high and low in Adak are 52°F and 32°F, with 61 inches of precipitation per year. The average high and low in Newark are 63°F and 46°F, with 46 inches of precipitation per year. Even though the temperatures are similar, the precipitation for Newark is more similar to the precipitation in Klaksvik and Adak.",
+                    "Rationale": "The average high and low in Klaksvik are `52text(°F)and37text(°F)`, with `56` `text(inches)` of precipitation `text(per year)`. The average high and low in Adak are `52text(°F)and32text(°F)`, with `61` `text(inches)` of precipitation `text(per year)`. The average high and low in Newark are `63text(°F)and46text(°F)`, with `46` `text(inches)` of precipitation `text(per year)`. Even though the temperatures are similar, the precipitation for Newark is more similar to the precipitation in Klaksvik and Adak.",
                     "Percent": 0
                 }
             },
@@ -1843,7 +1843,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student claims that potatoes can be successfully grown without soil. Based on Table 1, which statements BEST support this claim?",
+            "A student claims that potatoes can be successfully grown without soil. Based on Table `1`, which statements BEST support this claim?",
             "Select TWO of the five statements."
         ],
         "AnswerChoices": {
@@ -1859,15 +1859,15 @@
                 "Choice": "The greatest number of potatoes were grown in air.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The greatest number of potatoes were grown in air (28), therefore soil is not needed.",
+                    "Rationale": "The greatest number of potatoes were grown in air `(28)`, therefore soil is not needed.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Both water and air produced the same average weight per potato.",
+                "Choice": "Both water and air produced the same average `text(weight per potato)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Both water and air produced the same average weight per potato (12 grams), which shows that potatoes can be successfully grown without soil.",
+                    "Rationale": "Both water and air produced the same average `text(weight per potato)` `(12` `text(grams))`, which shows that potatoes can be successfully grown without soil.",
                     "Percent": 0
                 }
             },
@@ -1963,9 +1963,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Figure 2 shows how plants use their leaves to make food for growth in a natural environment.",
+            "Figure `2` shows how plants use their leaves to make food for growth in a natural environment.",
             "problems/NJG5S/media/30a.jpg",
-            "Based on Figure 1 and Figure 2, explain what plants need in their natural environment for growth.",
+            "Based on Figure `1` and Figure `2`, explain what plants need in their natural environment for growth.",
             "Complete the sentence by choosing the correct answer from each box.",
             "\n\nIn their natural environment, plants need the energy from :DD-1: in order to use :DD-2: to make their own food for growth."
         ],
@@ -2062,7 +2062,7 @@
                 "Choice": "Does changing the height of the ramp affect the speed of the marble?",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The height of the ramp changes from 30 centimeters in Investigation 1 to 60 centimeters in Investigation 2, so this is a possible question.",
+                    "Rationale": "The height of the ramp changes from `30` `text(centimeters)` in Investigation `1` to `60` `text(centimeters)` in Investigation `2`, so this is a possible question.",
                     "Percent": 0
                 }
             },
@@ -2083,18 +2083,18 @@
                 }
             },
             "D": {
-                "Choice": "Does changing the height of the ramp affect how far the 0.1 `text(kg)` weight is pushed?",
+                "Choice": "Does changing the height of the ramp affect how far the `0.1` `text(kg)` weight is pushed?",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The height of the ramp changes from 30 centimeters in Investigation 1 to 60 centimeters in Investigation 2 and there is a measuring tape at the end of the ramp, so this is a possible question.",
+                    "Rationale": "The height of the ramp changes from `30` `text(centimeters)` in Investigation `1` to `60` `text(centimeters)` in Investigation `2` and there is a measuring tape at the end of the ramp, so this is a possible question.",
                     "Percent": 0
                 }
             },
             "E": {
-                "Choice": "Does changing the height of the ramp affect where the 0.1 `text(kg)` weight begins to move?",
+                "Choice": "Does changing the height of the ramp affect where the `0.1` `text(kg)` weight begins to move?",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Even though the height of the ramp changes from 30 centimeters in Investigation 1 to 60 centimeters in Investigation 2, the weight is placed at 0 centimeters on the tape for both investigations.",
+                    "Rationale": "Even though the height of the ramp changes from `30` `text(centimeters)` in Investigation `1` to `60` `text(centimeters)` in Investigation `2`, the weight is placed at `0` `text(centimeters)` on the tape for both investigations.",
                     "Percent": 0
                 }
             }
@@ -2118,8 +2118,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In Investigation 2, predict the results if the weight of the marble increases. Provide an explanation for the prediction.",
-            "In Investigation 2, the height of the ramp and the marble remain the same. Predict the results if a 0.2 `text(kg)` weight is used. Provide an explanation for the prediction."
+            "In Investigation `2`, predict the results if the weight of the marble increases. Provide an explanation for the prediction.",
+            "In Investigation `2`, the height of the ramp and the marble remain the same. Predict the results if a `0.2` `text(kg)` weight is used. Provide an explanation for the prediction."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2141,10 +2141,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe the results of Investigations 1 and 2.",
+            "Describe the results of Investigations `1and2`.",
             "Complete the sentences by choosing the correct answer from each box.",
-            "\n\nIn Investigation 1, the speed of the marble at the collision with the 0.1 `text(kg)` weight was :DD-1: the speed of the marble in Investigation 2.",
-            "\n\nIn Investigation 2, the energy transferred from the marble to the 0.1 `text(kg)` weight was :DD-2: the energy transferred from the marble to the 0.1 `text(kg)` weight in Investigation 1."
+            "\n\nIn Investigation `1`, the speed of the marble at the collision with the `0.1` `text(kg)` weight was :DD-1: the speed of the marble in Investigation `2`.",
+            "\n\nIn Investigation `2`, the energy transferred from the marble to the `0.1` `text(kg)` weight was :DD-2: the energy transferred from the marble to the `0.1` `text(kg)` weight in Investigation `1`."
         ],
         "AnswerChoices": {
             "1:A": {
@@ -2159,7 +2159,7 @@
                 "Choice": "less than",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The speed of the marble in Investigation 1 is less than Investigation 2 because the ramp is not as high.",
+                    "Rationale": "The speed of the marble in Investigation `1` is less than Investigation `2` because the ramp is not as high.",
                     "Percent": 0
                 }
             },
@@ -2191,7 +2191,7 @@
                 "Choice": "greater than",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The energy transferred from the marble to the weight in Investigation 2 was greater (shown by the weight being moved farther along) than in Investigation 1, because more speed means more energy transferred.",
+                    "Rationale": "The energy transferred from the marble to the weight in Investigation `2` was greater (shown by the weight being moved farther along) than in Investigation `1`, because more speed means more energy transferred.",
                     "Percent": 0
                 }
             }
@@ -2215,15 +2215,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Investigation 3 changes the ramp size. The new ramp will be 90 centimeters in length and 15 centimeters in height.",
-            "The students make four claims based on the results of Investigation 3. Based on Figure 1, identify if each claim is or is not supported by the data."
+            "Investigation `3` changes the ramp size. The new ramp will be `90` `text(centimeters)` in length and `15` `text(centimeters)` in height.",
+            "The students make `text(four)` claims based on the results of Investigation `3`. Based on Figure `1`, identify if each claim is or is not supported by the data."
         ],
         "AnswerChoices": {
             "A:The marble moves faster down the ramp.": {
                 "Choice": "2:Not supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The marble will make less noise in Investigation 3 because the marble will be moving slower, therefore less energy will be transferred and less noise created.",
+                    "Rationale": "The marble will make less noise in Investigation `3` because the marble will be moving slower, therefore less energy will be transferred and less noise created.",
                     "Percent": 0
                 }
             },
@@ -2231,7 +2231,7 @@
                 "Choice": "1:Supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The marble will have less energy in Investigation 3 because the marble will be moving slower.",
+                    "Rationale": "The marble will have less energy in Investigation `3` because the marble will be moving slower.",
                     "Percent": 0
                 }
             },
@@ -2239,7 +2239,7 @@
                 "Choice": "1:Supported by data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The marble will move slower down the ramp in Investigation 3 because the marble will have less energy.",
+                    "Rationale": "The marble will move slower down the ramp in Investigation `3` because the marble will have less energy.",
                     "Percent": 0
                 }
             },

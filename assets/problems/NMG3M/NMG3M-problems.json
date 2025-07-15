@@ -69,14 +69,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A model with base ten blocks is shown.",
+            "A model with base `text(ten)` blocks is shown.",
             "problems/NMG3M/media/2a.jpg",
             "problems/NMG3M/media/2b.jpg",
             "Which equation does this model show?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 × 60 = 240",
+                "Choice": "`4xx60=240`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -84,7 +84,7 @@
                 }
             },
             "B": {
-                "Choice": "6 × 40 = 240",
+                "Choice": "`6xx40=240`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -92,7 +92,7 @@
                 }
             },
             "C": {
-                "Choice": "4 × 50 = 200",
+                "Choice": "`4xx50=200`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -100,7 +100,7 @@
                 }
             },
             "D": {
-                "Choice": "5 × 40 = 200",
+                "Choice": "`5xx40=200`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -125,7 +125,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ms. Smith has 4 fish tanks. There are 9 fish in each tank. Which number sentence can be used to find how many fish Ms. Smith has in all?"
+            "Ms. Smith has `4` fish tanks. There are `9` fish in each tank. Which number sentence can be used to find how many fish Ms. Smith has in all?"
         ],
         "AnswerChoices": {
             "A": {
@@ -180,12 +180,12 @@
         "Content": [
             "Alex brought this amount of punch to the class party.",
             "problems/NMG3M/media/4a.jpg",
-            "Alex's classmates drank 3 liters of punch at the party.",
-            "How many liters of punch were left after the party?"
+            "Alex's classmates drank `3` `text(liters)` of punch at the party.",
+            "How many `text(liters)` of punch were left after the party?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 liters",
+                "Choice": "`2` `text(liters)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -193,7 +193,7 @@
                 }
             },
             "B": {
-                "Choice": "3 liters",
+                "Choice": "`3` `text(liters)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -201,7 +201,7 @@
                 }
             },
             "C": {
-                "Choice": "5 liters",
+                "Choice": "`5` `text(liters)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -209,7 +209,7 @@
                 }
             },
             "D": {
-                "Choice": "8 liters",
+                "Choice": "`8` `text(liters)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -224,8 +224,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand a fraction as a number on the number line; represent fractions on a number line diagram.",
@@ -242,7 +242,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Danny has 6 football cards and 2 baseball cards.",
+                "Choice": "Danny has `6` football cards and `2` baseball cards.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -250,7 +250,7 @@
                 }
             },
             "B": {
-                "Choice": "Danny has 8 football cards and 2 baseball cards.",
+                "Choice": "Danny has `8` football cards and `2` baseball cards.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -258,7 +258,7 @@
                 }
             },
             "C": {
-                "Choice": "Danny has 2 football cards and 6 baseball cards.",
+                "Choice": "Danny has `2` football cards and `6` baseball cards.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -266,7 +266,7 @@
                 }
             },
             "D": {
-                "Choice": "Danny has 2 football cards and 8 baseball cards.",
+                "Choice": "Danny has `2` football cards and `8` baseball cards.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -291,13 +291,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Kato sees 2 colors of paper plates at the store. There are 4 packs of plates of each color. Each pack has 50 plates.",
-            "Kato knows to find the total number of paper plates on the shelf he needs to multiply 2 × 4 × 50.",
+            "Kato sees `2` colors of paper plates at the store. There are `4` packs of plates of each color. Each pack has `50` plates.",
+            "Kato knows to find the total number of paper plates on the shelf he needs to multiply `2xx4xx50`.",
             "Select TWO other ways that can be used to find the total number of paper plates."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 × 4 × 5 × 10",
+                "Choice": "`2xx4xx5xx10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -305,7 +305,7 @@
                 }
             },
             "B": {
-                "Choice": "2 × 4 × 5 + 10",
+                "Choice": "`2xx4xx5+10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -313,7 +313,7 @@
                 }
             },
             "C": {
-                "Choice": "2 + 4 × 5 + 10",
+                "Choice": "`2+4xx5+10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -321,7 +321,7 @@
                 }
             },
             "D": {
-                "Choice": "50, 100, 150, 200, 250, 300",
+                "Choice": "`50,100,150,200,250,300`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -329,7 +329,7 @@
                 }
             },
             "E": {
-                "Choice": "50, 100, 150, 200, 250, 300, 350, 400",
+                "Choice": "`50,100,150,200,250,300,350,400`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -354,7 +354,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "A pet store has 150 fish in tanks. Each tank has 30 fish.",
+            "A pet store has `150` fish in tanks. Each tank has `30` fish.",
             ":ibox:THIS PROBLEM HAS TWO PARTS."
         ],
         "AnswerChoices": {},
@@ -414,11 +414,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Since 3 × 6 = 18, what is 6 × 3?"
+            "Since `3xx6=18`, what is `6xx3`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -426,7 +426,7 @@
                 }
             },
             "B": {
-                "Choice": "18",
+                "Choice": "`18`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -434,7 +434,7 @@
                 }
             },
             "C": {
-                "Choice": "36",
+                "Choice": "`36`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -442,7 +442,7 @@
                 }
             },
             "D": {
-                "Choice": "81",
+                "Choice": "`81`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -467,12 +467,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Danielle is going to add 312 + 285.",
+            "Danielle is going to add `312+285`.",
             "Which plan should Danielle use to add the numbers?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "She should add 15 to both numbers. Then find the sum.",
+                "Choice": "She should add `15` to both numbers. Then find the sum.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -480,7 +480,7 @@
                 }
             },
             "B": {
-                "Choice": "She should subtract 12 from both numbers. Then find the sum.",
+                "Choice": "She should subtract `12` from both numbers. Then find the sum.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -488,7 +488,7 @@
                 }
             },
             "C": {
-                "Choice": "She should subtract 12 from the first number and add 15 to the second number. Then find the sum.",
+                "Choice": "She should subtract `12` from the `text(first)` number and add `15` to the `text(second)` number. Then find the sum.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -496,7 +496,7 @@
                 }
             },
             "D": {
-                "Choice": "She should subtract 12 from the first number and add 12 to the second number. Then find the sum.",
+                "Choice": "She should subtract `12` from the `text(first)` number and add `12` to the `text(second)` number. Then find the sum.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -521,11 +521,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression shows another way to find 4 × 3 × 2?"
+            "Which expression shows another way to find `4xx3xx2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 × 5",
+                "Choice": "`4xx5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -533,7 +533,7 @@
                 }
             },
             "B": {
-                "Choice": "12 × 2",
+                "Choice": "`12xx2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -541,7 +541,7 @@
                 }
             },
             "C": {
-                "Choice": "7 × 2",
+                "Choice": "`7xx2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -549,7 +549,7 @@
                 }
             },
             "D": {
-                "Choice": "12 × 5",
+                "Choice": "`12xx5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -575,14 +575,14 @@
         "Explain": false,
         "Content": [
             "Look at this problem.",
-            ":box:Cami made a bracelet one week. Each week after that, she made 1 more bracelet than the week before. How many bracelets did Cami have after 6 weeks?",
-            "To solve this problem, Maretta decided to make a table. Maretta's answer to the problem was 20 bracelets.",
+            ":box:Cami made a bracelet one week. Each week after that, she made `1` more bracelet than the week before. How many bracelets did Cami have after `6` `text(weeks)`?",
+            "To solve this problem, Maretta decided to make a table. Maretta's answer to the problem was `20` bracelets.",
             "problems/NMG3M/media/11a.jpg",
             "Maretta made a mistake. What mistake did Maretta make?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Maretta needed to add 1 bracelet each week, so Cami made 6 bracelets in all.",
+                "Choice": "Maretta needed to add `1` bracelet each week, so Cami made `6` bracelets in all.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -590,7 +590,7 @@
                 }
             },
             "B": {
-                "Choice": "In week 2, Maretta added 1 instead of 2 to the total from the week before.",
+                "Choice": "In week 2, Maretta added `1` instead of `2` to the total from the week before.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -598,7 +598,7 @@
                 }
             },
             "C": {
-                "Choice": "Each week Maretta needed to add 6 bracelets to the total number of bracelets.",
+                "Choice": "Each week Maretta needed to add `6` bracelets to the total number of bracelets.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -606,7 +606,7 @@
                 }
             },
             "D": {
-                "Choice": "In week 5, Maretta needed to double the number of bracelets from week 4.",
+                "Choice": "In `text(week)` `5`, Maretta needed to double the number of bracelets from `text(week)` `4`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -631,12 +631,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jacob bought red balloons, white balloons, and blue balloons. He bought 8 red balloons and 12 white balloons. He bought 2 times as many blue balloons as red balloons.",
+            "Jacob bought red balloons, white balloons, and blue balloons. He bought `8` red balloons and `12` white balloons. He bought `2` times as many blue balloons as red balloons.",
             "How many balloons did Jacob buy in all?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -644,7 +644,7 @@
                 }
             },
             "B": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -652,7 +652,7 @@
                 }
             },
             "C": {
-                "Choice": "36",
+                "Choice": "`36`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -660,7 +660,7 @@
                 }
             },
             "D": {
-                "Choice": "44",
+                "Choice": "`44`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -685,12 +685,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 7 shelves in a bookcase. Each shelf has 8 books.",
+            "There are `7` shelves in a bookcase. Each shelf has `8` books.",
             "How many books are in the bookcase?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -698,7 +698,7 @@
                 }
             },
             "B": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -706,7 +706,7 @@
                 }
             },
             "C": {
-                "Choice": "54",
+                "Choice": "`54`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -714,7 +714,7 @@
                 }
             },
             "D": {
-                "Choice": "56",
+                "Choice": "`56`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -740,8 +740,8 @@
         "Explain": false,
         "Content": [
             "Wyatt is having a party. He bought",
-            ":ibox:• 3 packs of stickers,\n\n• a cake for $25,\n\n• balloons for $18, and\n\n• party hats for $10.",
-            "Each pack of stickers has 8 sheets of stickers. Wyatt will put the same number of sheets of stickers into each of 6 gift bags.",
+            ":ibox:• `3` packs of stickers,\n\n• a cake for `$25`,\n\n• balloons for `$18`, and\n\n• party hats for `$10`.",
+            "Each pack of stickers has `8` sheets of stickers. Wyatt will put the same number of sheets of stickers into each of `6` gift bags.",
             ":ibox:THIS PROBLEM HAS THREE PARTS."
         ],
         "AnswerChoices": {},
@@ -771,7 +771,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Wyatt wants to make 4 more gift bags with the same number of sheets of stickers as he used for the first 6 gift bags.",
+                    "Wyatt wants to make `4` more gift bags with the same number of sheets of stickers as he used for the first `6` gift bags.",
                     "How many more packs of stickers does Wyatt need to buy? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
@@ -791,7 +791,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Wyatt estimates he spent less than $40 on the cake and balloons.",
+                    "Wyatt estimates he spent less than `$40` on the cake and balloons.",
                     "Is Wyatt correct? If he is correct, use estimation to explain why Wyatt is correct. If he is NOT correct, use estimation to explain why Wyatt is not correct."
                 ],
                 "AnswerChoices": {
@@ -831,7 +831,7 @@
         "Explain": false,
         "Content": [
             "Bob and Carly are making number patterns.",
-            ":ibox:• Bob starts with an odd number, then adds 3 to find the next number.\n\n• Carly starts with an odd number, then adds 2 to find the next number.",
+            ":ibox:• Bob starts with an odd number, then adds `3` to find the next number.\n\n• Carly starts with an odd number, then adds `2` to find the next number.",
             "What is true about the patterns?"
         ],
         "AnswerChoices": {
@@ -891,7 +891,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -899,7 +899,7 @@
                 }
             },
             "B": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -907,7 +907,7 @@
                 }
             },
             "C": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -915,7 +915,7 @@
                 }
             },
             "D": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -940,12 +940,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "On Friday, students at a school sold 236 tickets to the school play.",
-            "What is the total number of tickets sold rounded to THE NEAREST TEN?"
+            "On `text(Friday)`, students at a school sold `236` tickets to the school play.",
+            "What is the total number of tickets sold rounded to the nearest `text(ten)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "200",
+                "Choice": "`200`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -953,7 +953,7 @@
                 }
             },
             "B": {
-                "Choice": "230",
+                "Choice": "`230`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -961,7 +961,7 @@
                 }
             },
             "C": {
-                "Choice": "235",
+                "Choice": "`235`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -969,7 +969,7 @@
                 }
             },
             "D": {
-                "Choice": "240",
+                "Choice": "`240`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -984,8 +984,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size.",
@@ -1001,7 +1001,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/8",
+                "Choice": "`2/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1009,7 +1009,7 @@
                 }
             },
             "B": {
-                "Choice": "1/4",
+                "Choice": "`1/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1017,7 +1017,7 @@
                 }
             },
             "C": {
-                "Choice": "2/6",
+                "Choice": "`2/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1025,7 +1025,7 @@
                 }
             },
             "D": {
-                "Choice": "3/4",
+                "Choice": "`3/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1054,14 +1054,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The rectangles in this model are covered with 1-inch squares.",
+            "The rectangles in this model are covered with `1text(-inch)` squares.",
             "problems/NMG3M/media/19a.jpg",
             "The model shows the number sentence `6xx6-:6xx2=square`.",
             "What goes in the `square` to make the number sentence true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6 + (6 + 2)",
+                "Choice": "`6+(6+2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1069,7 +1069,7 @@
                 }
             },
             "B": {
-                "Choice": "6 × (6 × 2)",
+                "Choice": "`6xx(6xx2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1077,7 +1077,7 @@
                 }
             },
             "C": {
-                "Choice": "6 + (6 × 2)",
+                "Choice": "`6+(6xx2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1085,7 +1085,7 @@
                 }
             },
             "D": {
-                "Choice": "6 × (6 + 2)",
+                "Choice": "`6xx(6+2)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1112,7 +1112,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Greta has 48 roses and 6 vases. She wants to put the same number of roses in each vase.",
+            "Greta has `48` roses and `6` vases. She wants to put the same number of roses in each vase.",
             "Which equation can Greta use to find how many roses to put in each vase?"
         ],
         "AnswerChoices": {
@@ -1156,8 +1156,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size.",
@@ -1172,11 +1172,11 @@
         "Content": [
             "A number line is shown.",
             "problems/NMG3M/media/21a.jpg",
-            "Which number is at the same point on the number line as 3/3?"
+            "Which number is at the same point on the number line as `3/3`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1184,7 +1184,7 @@
                 }
             },
             "B": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1192,7 +1192,7 @@
                 }
             },
             "C": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1200,7 +1200,7 @@
                 }
             },
             "D": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1236,7 +1236,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 × 8 plus 9",
+                "Choice": "`2xx8` plus `9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1244,7 +1244,7 @@
                 }
             },
             "B": {
-                "Choice": "2 × 8 plus 10",
+                "Choice": "`2xx8` plus `10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1252,7 +1252,7 @@
                 }
             },
             "C": {
-                "Choice": "9 × 2 plus 9 × 8",
+                "Choice": "`9xx2` plus `9xx8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1260,7 +1260,7 @@
                 }
             },
             "D": {
-                "Choice": "10 × 9 plus 2 × 9",
+                "Choice": "`10xx9` plus `2xx9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1275,7 +1275,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand a fraction `1/b` as the quantity formed by `1` part when a whole is partitioned into `b` equal parts; understand a fraction `a/b` as the quantity formed by a parts of size `1/b`."
@@ -1293,7 +1293,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/8",
+                "Choice": "`1/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1301,7 +1301,7 @@
                 }
             },
             "B": {
-                "Choice": "4/8",
+                "Choice": "`4/8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1309,7 +1309,7 @@
                 }
             },
             "C": {
-                "Choice": "4/4",
+                "Choice": "`4/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1317,7 +1317,7 @@
                 }
             },
             "D": {
-                "Choice": "8/4",
+                "Choice": "`8/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1346,7 +1346,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "Mrs. Martinez is making curtains for three windows in her home. Each window is in the shape of a rectangle.",
+            "Mrs. Martinez is making curtains for `text(three)` windows in her home. Each window is in the shape of a rectangle.",
             "problems/NMG3M/media/24a.jpg",
             "problems/NMG3M/media/24b.jpg",
             ":ibox:THIS PROBLEM HAS THREE PARTS."
@@ -1359,7 +1359,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the area, in `text(square feet)`, of window A? Use words or numbers to explain your answer."
+                    "What is the area, in `text(square feet)`, of window `A`? Use words or numbers to explain your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1378,7 +1378,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the TOTAL area, in `text(square feet)`, of windows B and C? Use words or numbers to explain your answer."
+                    "What is the TOTAL area, in `text(square feet)`, of windows `BandC`? Use words or numbers to explain your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1397,7 +1397,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Mrs. Martinez has another rectangular window in her home that is 3 feet wider than window A. It is the same height as window A.",
+                    "Mrs. Martinez has another rectangular window in her home that is `3` `text(feet)` wider than window `A`. It is the same height as window `A`.",
                     "What is the PERIMETER, in `text(feet)`, of this other window? Use words or numbers to explain your answer."
                 ],
                 "AnswerChoices": {
@@ -1495,7 +1495,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "18 feet",
+                "Choice": "`18` `text(feet)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1503,7 +1503,7 @@
                 }
             },
             "B": {
-                "Choice": "18 yards",
+                "Choice": "`18` `text(yards)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1511,7 +1511,7 @@
                 }
             },
             "C": {
-                "Choice": "36 feet",
+                "Choice": "`36` `text(feet)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1519,7 +1519,7 @@
                 }
             },
             "D": {
-                "Choice": "36 yards",
+                "Choice": "`36` `text(yards)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1534,8 +1534,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand a fraction as a number on the number line; represent fractions on a number line diagram.",
@@ -1548,13 +1548,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Look at point Q on this number line.",
+            "Look at point `Q` on this number line.",
             "problems/NMG3M/media/27a.jpg",
-            "What number does point Q stand for on the number line?"
+            "What number does point `Q` stand for on the number line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4/6",
+                "Choice": "`4/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1562,7 +1562,7 @@
                 }
             },
             "B": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1570,7 +1570,7 @@
                 }
             },
             "C": {
-                "Choice": "6/4",
+                "Choice": "`6/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1578,7 +1578,7 @@
                 }
             },
             "D": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1605,12 +1605,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jamal's garden is a rectangle. The perimeter is 88 feet. The garden is 24 feet long.",
+            "Jamal's garden is a rectangle. The perimeter is `88` `text(feet)`. The garden is `24` `text(feet)` long.",
             "What is the width of the garden?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20 feet",
+                "Choice": "`20` `text(feet)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1618,7 +1618,7 @@
                 }
             },
             "B": {
-                "Choice": "32 feet",
+                "Choice": "`32` `text(feet)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1626,7 +1626,7 @@
                 }
             },
             "C": {
-                "Choice": "40 feet",
+                "Choice": "`40` `text(feet)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1634,7 +1634,7 @@
                 }
             },
             "D": {
-                "Choice": "64 feet",
+                "Choice": "`64` `text(feet)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1649,8 +1649,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size.",
@@ -1663,12 +1663,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A tomato plant grew 4/6 inch in one week. It grew MORE than 4/6 inch the second week.",
-            "How much could the plant have grown the second week?"
+            "A tomato plant grew `4/6` `text(inch)` in `text(one week)`. It grew MORE than `4/6` inch the `text(second week)`.",
+            "How much could the plant have grown the `text(second week)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/6 inch",
+                "Choice": "`2/6` `text(inch)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1676,7 +1676,7 @@
                 }
             },
             "B": {
-                "Choice": "4/8 inch",
+                "Choice": "`4/8` `text(inch)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1684,7 +1684,7 @@
                 }
             },
             "C": {
-                "Choice": "3/6 inch",
+                "Choice": "`3/6` `text(inch)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1692,7 +1692,7 @@
                 }
             },
             "D": {
-                "Choice": "4/4 inch",
+                "Choice": "`4/4` `text(inch)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1719,8 +1719,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Bridget ran for 14 minutes. Then she walked for 7 minutes.",
-            "Which number line can be used to show how many minutes Bridget walked and ran?"
+            "Bridget ran for `14` `text(minutes)`. Then she walked for `7` `text(minutes)`.",
+            "Which number line can be used to show how many `text(minutes)` Bridget walked and ran?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1763,8 +1763,8 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size.",
@@ -1778,7 +1778,7 @@
         "Explain": false,
         "Content": [
             "Mason wants to compare these fractions.",
-            ":ibox:2/3 and 2/5",
+            ":ibox:`2/3and2/5`",
             ":ibox:THIS PROBLEM HAS TWO PARTS."
         ],
         "AnswerChoices": {},
@@ -1801,7 +1801,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Compare the fractions 2/3 and 2/5. Write a number sentence using `<,>,or=`.",
+                    "Compare the fractions `2/3and2/5`. Write a number sentence using `<,>,or=`.",
                     "Explain how you knew which symbol to use."
                 ],
                 "AnswerChoices": {
@@ -1834,12 +1834,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There were 1,382 tickets to the zoo sold in July. Callie will round this number to the nearest hundred.",
-            "Which of the digits in 1,382 will help Callie decide whether to round the number of tickets sold to 1,300 or 1,400?"
+            "There were `1text(,)382` tickets to the zoo sold in `text(July)`. Callie will round this number to the nearest `text(hundred)`.",
+            "Which of the digits in `1text(,)382` will help Callie decide whether to round the number of tickets sold to `1text(,)300or1text(,)400`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1847,7 +1847,7 @@
                 }
             },
             "B": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1855,7 +1855,7 @@
                 }
             },
             "C": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1863,7 +1863,7 @@
                 }
             },
             "D": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1891,7 +1891,7 @@
         "Explain": false,
         "Content": [
             "Lisa, Anthony, Brenda, and Vince collect rocks. This list shows the number of rocks each student has.",
-            ":ibox:• Lisa has 30 rocks.\n\n• Anthony has 27 rocks.\n\n• Brenda has 12 rocks.\n\n• Vince has 25 rocks.",
+            ":ibox:• Lisa has `30` rocks.\n\n• Anthony has `27` rocks.\n\n• Brenda has `12` rocks.\n\n• Vince has `25` rocks.",
             "Which graph matches the list?"
         ],
         "AnswerChoices": {
@@ -1956,7 +1956,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "He should have also shown a pencil at 2 1/4 inches.",
+                "Choice": "He should have also shown a pencil at `2``1/4` `text(inches)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1964,7 +1964,7 @@
                 }
             },
             "B": {
-                "Choice": "He included an extra pencil shown at 2 1/2 inches.",
+                "Choice": "He included an extra pencil shown at `2``1/2` `text(inches)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1972,7 +1972,7 @@
                 }
             },
             "C": {
-                "Choice": "One of the pencils shown at 2 inches should be shown at 2 1/4 inches.",
+                "Choice": "One of the pencils shown at `2` `text(inches)` should be shown at `2``1/4` `text(inches)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1980,7 +1980,7 @@
                 }
             },
             "D": {
-                "Choice": "One of the pencils shown at 3 inches should be shown at 2 3/4 inches.",
+                "Choice": "One of the pencils shown at `3` `text(inches)` should be shown at `2``3/4` `text(inches)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2007,10 +2007,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Lisa sorts some shapes into two groups.",
+            "Lisa sorts some shapes into `text(two)` groups.",
             "problems/NMG3M/media/35a.jpg",
             "problems/NMG3M/media/35b.jpg",
-            "Which shape could be placed with Group B but NOT with Group A?"
+            "Which shape could be placed with Group `B` but NOT with Group `A`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2065,12 +2065,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Abby has 24 flowers and 6 flowerpots. She wants to plant the same number of flowers in each flowerpot.",
+            "Abby has `24` flowers and `6` flowerpots. She wants to plant the same number of flowers in each flowerpot.",
             "Which expression gives the number of flowers she should plant in each flowerpot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "24 + 6",
+                "Choice": "`24+6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2078,7 +2078,7 @@
                 }
             },
             "B": {
-                "Choice": "24 - 6",
+                "Choice": "`24-6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2086,7 +2086,7 @@
                 }
             },
             "C": {
-                "Choice": "24 × 6",
+                "Choice": "`24xx6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2094,7 +2094,7 @@
                 }
             },
             "D": {
-                "Choice": "24 ÷ 6",
+                "Choice": "`24-:6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2121,14 +2121,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ms. Clark asked her students to draw a shape so that each part of the shape is 1/4 of the area of the shape. Here are four students' shapes.",
+            "Ms. Clark asked her students to draw a shape so that each part of the shape is `1/4` of the area of the shape. Here are `text(four)` students' shapes.",
             "problems/NMG3M/media/37a.jpg",
             "problems/NMG3M/media/37b.jpg",
             "Which child did NOT follow the directions?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Ashlyn, because the four parts of her triangle are different sizes",
+                "Choice": "Ashlyn, because the `text(four)` parts of her triangle are different sizes",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2136,7 +2136,7 @@
                 }
             },
             "B": {
-                "Choice": "Brian, because he drew a rectangle with four equal parts",
+                "Choice": "Brian, because he drew a rectangle with `text(four)` equal parts",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2144,7 +2144,7 @@
                 }
             },
             "C": {
-                "Choice": "Claire, because each part of her square is equal to one-fourth of the square",
+                "Choice": "Claire, because each part of her square is equal to `text(one-fourth)` of the square",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2152,7 +2152,7 @@
                 }
             },
             "D": {
-                "Choice": "Kip, because his circle is divided into fourths",
+                "Choice": "Kip, because his circle is divided into `text(fourths)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

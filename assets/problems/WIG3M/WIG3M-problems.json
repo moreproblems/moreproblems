@@ -20,34 +20,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "18 minutes",
+                "Choice": "`18` `text(minutes)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student adds 18 minutes from the start time to the end time.",
+                    "Rationale": "The student adds `18` `text(minutes)` from the start time to the end time.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "42 minutes",
+                "Choice": "`42` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student subtracts 5 from 47.",
+                    "Rationale": "The student subtracts `5` from `47`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "78 minutes",
+                "Choice": "`78` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds an extra hour.",
+                    "Rationale": "The student adds an extra `text(hour)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "102 minutes",
+                "Choice": "`102` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds an extra hour and subtracts 5 from 47.",
+                    "Rationale": "The student adds an extra `text(hour)` and subtracts `5` from `47`.",
                     "Percent": 0
                 }
             }
@@ -69,12 +69,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Andy needs to find the value of n in the division equation shown.",
-            ":ibox:n ÷ 9 = 3",
-            "Determine whether Andy could use each of the multiplication equations in the table to find the value of n."
+            "Andy needs to find the value of `n` in the division equation shown.",
+            ":ibox:`n-:9=3`",
+            "Determine whether Andy could use each of the multiplication equations in the table to find the value of `n`."
         ],
         "AnswerChoices": {
-            "A:n × 3 = 9": {
+            "A:`nxx3=9`": {
                 "Choice": "2:No",
                 "Key": {
                     "Correct": true,
@@ -82,7 +82,7 @@
                     "Percent": 0
                 }
             },
-            "B:3 × 9 = n": {
+            "B:`3xx9=n`": {
                 "Choice": "1:Yes",
                 "Key": {
                     "Correct": true,
@@ -90,7 +90,7 @@
                     "Percent": 0
                 }
             },
-            "C:n × 9 = 3": {
+            "C:`nxx9=3`": {
                 "Choice": "2:No",
                 "Key": {
                     "Correct": true,
@@ -98,7 +98,7 @@
                     "Percent": 0
                 }
             },
-            "D:9 × 3 = n": {
+            "D:`9xx3=n`": {
                 "Choice": "1:Yes",
                 "Key": {
                     "Correct": true,
@@ -124,7 +124,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is 604 - 286?"
+            "What is `604-286`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -143,7 +143,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand a unit fraction as the quantity formed when a whole is partitioned into equal parts and explain that a unit fraction is one of those parts (e.g., `1/4`). Understand fractions are composed of unit fractions"
@@ -159,7 +159,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/6",
+                "Choice": "`2/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student chooses a fraction that shows the unshaded area.",
@@ -167,7 +167,7 @@
                 }
             },
             "B": {
-                "Choice": "2/4",
+                "Choice": "`2/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student estimates the shaded area.",
@@ -175,15 +175,15 @@
                 }
             },
             "C": {
-                "Choice": "4/6",
+                "Choice": "`4/6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student chooses a fraction that shows the 4 shaded parts out of the 6 total parts.",
+                    "Rationale": "The student chooses a fraction that shows the `4` shaded parts out of the `6` total parts.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "4/2",
+                "Choice": "`4/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student compares the shaded parts to the parts not shaded.",
@@ -208,7 +208,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Three shapes are shown below. Determine whether each shape is a rhombus, a rectangle, and/or a quadrilateral. Be sure to select ALL of the names that describe each shape."
+            "`text(Three)` shapes are shown below. Determine whether each shape is a rhombus, a rectangle, and/or a quadrilateral. Be sure to select ALL of the names that describe each shape."
         ],
         "AnswerChoices": {
             "A:Rhombus:1": {
@@ -291,7 +291,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "13",
+                "Choice": "`13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student adds the length and width.",
@@ -299,7 +299,7 @@
                 }
             },
             "B": {
-                "Choice": "26",
+                "Choice": "`26`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student finds the perimeter of the rectangle.",
@@ -307,7 +307,7 @@
                 }
             },
             "C": {
-                "Choice": "36",
+                "Choice": "`36`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The student adds the unit cubes inside the rectangle.",
@@ -315,10 +315,10 @@
                 }
             },
             "D": {
-                "Choice": "40",
+                "Choice": "`40`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student finds the area by using a 4 by 10 rectangle.",
+                    "Rationale": "The student finds the area by using a `4` by `10` rectangle.",
                     "Percent": 0
                 }
             }
@@ -340,38 +340,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 48 students signed up for swimming lessons. The teacher splits the students into 8 equal groups. Which expression could the teacher use to find the number of students in each group?"
+            "There are `48` students signed up for swimming lessons. The teacher splits the students into `8` equal groups. Which expression could the teacher use to find the number of students in each group?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "48 + 8",
+                "Choice": "`48+8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds the two numbers.",
+                    "Rationale": "The student adds the `text(two)` numbers.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "48 - 8",
+                "Choice": "`48-8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student subtracts the two numbers.",
+                    "Rationale": "The student subtracts the `text(two)` numbers.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "48 × 8",
+                "Choice": "`48xx8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student multiplies the two numbers.",
+                    "Rationale": "The student multiplies the `text(two)` numbers.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "48 ÷ 8",
+                "Choice": "`48-:8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student divides the two numbers.",
+                    "Rationale": "The student divides the `text(two)` numbers.",
                     "Percent": 0
                 }
             }
@@ -383,7 +383,7 @@
         "Type": "FR",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand two fractions as equivalent (equal) if they are the same size or name the same point on a number line."
@@ -393,10 +393,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ben and Gini each drew a rectangle on the sidewalk with chalk. Each person's rectangle is the same size. Ben colored in 4/6 of his rectangle. Gini colored in the same amount of her rectangle, as shown.",
+            "Ben and Gini each drew a rectangle on the sidewalk with chalk. Each person's rectangle is the same size. Ben colored in `4/6` of his rectangle. Gini colored in the same amount of her rectangle, as shown.",
             "problems/WIG3M/media/8a.jpg",
             "problems/WIG3M/media/8b.jpg",
-            "What fraction equivalent to 4/6 represents the shaded part of Gini's whole rectangle?"
+            "What fraction equivalent to `4/6` represents the shaded part of Gini's whole rectangle?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -427,11 +427,11 @@
         "Content": [
             "Tom is putting a fence around his garden. A diagram of Tom's garden is shown.",
             "problems/WIG3M/media/9a.jpg",
-            "How many feet of fencing does Tom need for his garden?"
+            "How many `text(feet)` of fencing does Tom need for his garden?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "39",
+                "Choice": "`39`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The student adds the measurements in the diagram.",
@@ -439,26 +439,26 @@
                 }
             },
             "B": {
-                "Choice": "44",
+                "Choice": "`44`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds the measurements in the diagram and the missing side length of 5 feet.",
+                    "Rationale": "The student adds the measurements in the diagram and the missing side length of `5` `text(feet)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "59",
+                "Choice": "`59`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds the measurements in the diagram and the missing side length of 20 feet.",
+                    "Rationale": "The student adds the measurements in the diagram and the missing side length of `20` `text(feet)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "64",
+                "Choice": "`64`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student adds the measurements in the diagram and the missing side lengths of 20 feet and 5 feet.",
+                    "Rationale": "The student adds the measurements in the diagram and the missing side lengths of `20` `text(feet)and5` `text(feet)`.",
                     "Percent": 0
                 }
             }
@@ -480,7 +480,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 6 bookshelves in Miss Miller's classroom. Each bookshelf has 60 books on it. How many books are on the bookshelves in Miss Miller's classroom?"
+            "There are `6` bookshelves in Miss Miller's classroom. Each bookshelf has `60` books on it. How many books are on the bookshelves in Miss Miller's classroom?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -499,7 +499,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Represent fractions on a number line by iterating lengths of the unit fraction from `0`. Recognize that the resulting interval represents the size of the fraction and that its endpoint locates the fraction as a number on the number line."
@@ -515,34 +515,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/7",
+                "Choice": "`3/7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student counts the number of tick marks from 1 as the numerator and the number of tick marks between `0and1 as the denominator.",
+                    "Rationale": "The student counts the number of tick marks from `1` as the numerator and the number of tick marks between `0and1` as the denominator.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "3/8",
+                "Choice": "`3/8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student counts the number of tick marks from 1 as the numerator.",
+                    "Rationale": "The student counts the number of tick marks from `1` as the numerator.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "5/7",
+                "Choice": "`5/7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student counts the number of tick marks between `0and1 for the denominator.",
+                    "Rationale": "The student counts the number of tick marks between `0and1` for the denominator.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "5/8",
+                "Choice": "`5/8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student counts the number of tick marks after 0 as the numerator, and the total number of tick marks after 0 and to 1 as the denominator.",
+                    "Rationale": "The student counts the number of tick marks after `0` as the numerator, and the total number of tick marks after `0` and to `1` as the denominator.",
                     "Percent": 0
                 }
             }
@@ -633,38 +633,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Clara brings 5 boxes of cupcakes to school. Each box contains the same number of cupcakes. There are 3 cupcakes remaining after Clara shares 27 cupcakes with her classmates. How many cupcakes were in each of the boxes Clara brought to school?"
+            "Clara brings `5` boxes of cupcakes to school. Each box contains the same number of cupcakes. There are `3` cupcakes remaining after Clara shares `27` cupcakes with her classmates. How many cupcakes were in each of the boxes Clara brought to school?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student adds 27 plus 3 and divides the sum by 5.",
+                    "Rationale": "The student adds `27` plus `3` and divides the sum by `5`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds 5 and 3.",
+                    "Rationale": "The student adds `5and3`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student multiplies 5 and 3.",
+                    "Rationale": "The student multiplies `5and3`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student adds 27 and 3.",
+                    "Rationale": "The student adds `27and3`.",
                     "Percent": 0
                 }
             }
@@ -686,38 +686,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 185 books on a bookshelf. Rounded to the nearest ten, how many books are on the bookshelf?"
+            "There are `185` books on a bookshelf. Rounded to the nearest `text(ten)`, how many books are on the bookshelf?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "100",
+                "Choice": "`100`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student rounds down to the nearest hundred.",
+                    "Rationale": "The student rounds down to the nearest `text(hundred)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "180",
+                "Choice": "`180`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student rounds down to the nearest ten.",
+                    "Rationale": "The student rounds down to the nearest `text(ten)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "190",
+                "Choice": "`190`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student rounds up to the nearest ten.",
+                    "Rationale": "The student rounds up to the nearest `text(ten)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "200",
+                "Choice": "`200`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student rounds up to the nearest hundred.",
+                    "Rationale": "The student rounds up to the nearest `text(hundred)`.",
                     "Percent": 0
                 }
             }
@@ -739,9 +739,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Henry draws the shape of his classroom floor on a grid. He divides the shape into 2 rectangles. He then writes the expression shown to find the area of the shape, in `text(square units)`.",
-            ":ibox:(4 × 6) + (6 × 3)",
-            "Draw a line on the grid to divide the shape into Henry's 2 rectangles.",
+            "Henry draws the shape of his classroom floor on a grid. He divides the shape into `2` rectangles. He then writes the expression shown to find the area of the shape, in `text(square units)`.",
+            ":ibox:`(4xx6)+(6xx3)`",
+            "Draw a line on the grid to divide the shape into Henry's `2` rectangles.",
             "problems/WIG3M/media/15a.jpg"
         ],
         "AnswerChoices": {

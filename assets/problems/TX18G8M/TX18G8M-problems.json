@@ -360,7 +360,7 @@
                 "Choice": "V = π(6)^2 • h",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student used the formula `V=pir^2h`, where V represents the volume of the cylinder in `text(cubic units)`, r represents the radius (distance from the center to the circumference of a circle) of the cylinder in units, and h represents the height (vertical distance from top to bottom) of the cylinder in units. Because the length of the diameter (a straight line going through the center of a circle connecting two points on the circumference) of the cylinder is 12 feet, the radius of the cylinder would be half of 12 feet, or 6 feet. Substituting 6 for r in the formula results in V = π(6)^2 • h.",
+                    "Rationale": "To determine the volume (amount of three-dimensional space taken up) of the cylinder, the student used the formula `V=pir^2h`, where V represents the volume of the cylinder in `text(cubic units)`, r represents the radius (distance from the center to the circumference of a circle) of the cylinder in `text(units)`, and h represents the height (vertical distance from top to bottom) of the cylinder in `text(units)`. Because the length of the diameter (a straight line going through the center of a circle connecting two points on the circumference) of the cylinder is 12 feet, the radius of the cylinder would be half of 12 feet, or 6 feet. Substituting 6 for r in the formula results in V = π(6)^2 • h.",
                     "Percent": 75
                 }
             },
@@ -1431,14 +1431,14 @@
         "Content": [
             "The coordinates of the endpoints of QR are Q (8, 2) and R (5, 7).",
             "problems/TX18G8M/media/27a.jpg",
-            "Which measurement is closest to the length of QR in units?"
+            "Which measurement is closest to the length of QR in `text(units)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "5.8 units",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student should have determined that the line segment represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one 90 degree angle). The lengths in units of the two legs of the right triangle can be represented by subtracting the `xtext(-coordinates)` (horizontal position from 0) of the two endpoints of the line segment (the part of a line connecting two endpoints) and by subtracting the `ytext(-coordinates)` (vertical position from 0) of the two endpoints of the line segment. This means that the lengths in units of the legs are 8 - 5 = 3 and 7 - 2 = 5. Using the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`), the length in units of line segment QR can be represented by the expression sqrt(3^2 + 5^2), or √34, and has a value of approximately 5.8. Therefore, the approximate length of line segment QR is 5.8 units.",
+                    "Rationale": "The student should have determined that the line segment represents the hypotenuse (longest side) of a right triangle (a closed figure with three sides and one 90 degree angle). The lengths in `text(units)` of the two legs of the right triangle can be represented by subtracting the `xtext(-coordinates)` (horizontal position from 0) of the two endpoints of the line segment (the part of a line connecting two endpoints) and by subtracting the `ytext(-coordinates)` (vertical position from 0) of the two endpoints of the line segment. This means that the lengths in `text(units)` of the legs are 8 - 5 = 3 and 7 - 2 = 5. Using the Pythagorean theorem (in a right triangle, the square of the hypotenuse (longest side) is equal to the sum (total) of the squares of the other two sides; `a^2+b^2=c^2`), the length in `text(units)` of line segment QR can be represented by the expression sqrt(3^2 + 5^2), or √34, and has a value of approximately 5.8. Therefore, the approximate length of line segment QR is 5.8 units.",
                     "Percent": 57
                 }
             },

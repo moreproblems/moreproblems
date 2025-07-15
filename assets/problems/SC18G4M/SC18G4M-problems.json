@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "A number is shown with a digit underlined.",
-            ":ibox:193,͟5͟54",
-            "How many times greater is the value of the 5 that is underlined than the value of the 5 that is not underlined?"
+            ":ibox:`193text(,)ul(5)54`",
+            "How many times greater is the value of the `5` that is underlined than the value of the `5` that is not underlined?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -28,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "100",
+                "Choice": "`100`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "500",
+                "Choice": "`500`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -69,12 +69,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Caroline writes down the number of minutes since she was born. She notices the digit 6 shows up twice. The value of one 6 is 10 times the value of the other 6.",
-            "Which could be the number of minutes since Caroline was born?"
+            "Caroline writes down the number of `text(minutes)` since she was born. She notices the digit `6` shows up `text(twice)`. The value of one `6` is `10` times the value of the other `6`.",
+            "Which could be the number of `text(minutes)` since Caroline was born?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3,966,840",
+                "Choice": "`3text(,)966text(,)840`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -82,7 +82,7 @@
                 }
             },
             "B": {
-                "Choice": "4,600,060",
+                "Choice": "`4text(,)600text(,)060`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -90,7 +90,7 @@
                 }
             },
             "C": {
-                "Choice": "4,762,651",
+                "Choice": "`4text(,)762text(,)651`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -98,7 +98,7 @@
                 }
             },
             "D": {
-                "Choice": "5,106,846",
+                "Choice": "`5text(,)106text(,)846`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -113,7 +113,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number Sense - Fractions"
+            "Number Sense-Fractions"
         ],
         "SubTopics": [
             "Compare two given fractions (i.e., denominators `2,3,4,5,6,8,10,12,25,100`) by creating common denominators or numerators, or by comparing to a benchmark fraction such as `1/2` and represent the comparison using the symbols `>,=,or<`."
@@ -123,11 +123,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which number sentence correctly compares 11/12 and 3/4?"
+            "Which number sentence correctly compares `11/12and3/4`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "11/12 + 3/4",
+                "Choice": "`11/12+3/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -135,7 +135,7 @@
                 }
             },
             "B": {
-                "Choice": "11/12 = 3/4",
+                "Choice": "`11/12=3/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -143,7 +143,7 @@
                 }
             },
             "C": {
-                "Choice": "11/12 < 3/4",
+                "Choice": "`11/12<3/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -151,7 +151,7 @@
                 }
             },
             "D": {
-                "Choice": "11/12 > 3/4",
+                "Choice": "`11/12>3/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -166,7 +166,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number Sense - Fractions"
+            "Number Sense-Fractions"
         ],
         "SubTopics": [
             "Compare two given fractions (i.e., denominators `2,3,4,5,6,8,10,12,25,100`) by creating common denominators or numerators, or by comparing to a benchmark fraction such as `1/2` and represent the comparison using the symbols `>,=,or<`."
@@ -176,11 +176,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is a correct comparison for 5/6 and 5/8?"
+            "What is a correct comparison for `5/6and5/8`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20/6 < 15/8",
+                "Choice": "`20/6<15/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -188,7 +188,7 @@
                 }
             },
             "B": {
-                "Choice": "20/6 = 15/8",
+                "Choice": "`20/6=15/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -196,7 +196,7 @@
                 }
             },
             "C": {
-                "Choice": "20/24 < 15/24",
+                "Choice": "`20/24<15/24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -204,7 +204,7 @@
                 }
             },
             "D": {
-                "Choice": "20/24 > 15/24",
+                "Choice": "`20/24>15/24`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -219,7 +219,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number Sense - Fractions"
+            "Number Sense-Fractions"
         ],
         "SubTopics": [
             "Apply and extend an understanding of multiplication by multiplying a whole number and a fraction (i.e., denominators `2,3,4,5,6,8,10,12,25,100`)."
@@ -229,12 +229,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Kelvin cuts a loaf of bread into 12 equal pieces. He eats 5/12 of the loaf of bread.",
+            "Kelvin cuts a loaf of bread into `12` equal pieces. He eats `5/12` of the loaf of bread.",
             "How many pieces of bread does Kelvin eat?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -242,7 +242,7 @@
                 }
             },
             "B": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -250,7 +250,7 @@
                 }
             },
             "C": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -258,7 +258,7 @@
                 }
             },
             "D": {
-                "Choice": "17",
+                "Choice": "`17`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -273,7 +273,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number Sense - Fractions"
+            "Number Sense-Fractions"
         ],
         "SubTopics": [
             "Apply and extend an understanding of multiplication by multiplying a whole number and a fraction (i.e., denominators `2,3,4,5,6,8,10,12,25,100`)."
@@ -283,11 +283,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of 3/10 × 5?"
+            "What is the value of `3/10xx5`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/50",
+                "Choice": "`3/50`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -295,7 +295,7 @@
                 }
             },
             "B": {
-                "Choice": "15/50",
+                "Choice": "`15/50`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -303,7 +303,7 @@
                 }
             },
             "C": {
-                "Choice": "8/10",
+                "Choice": "`8/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -311,7 +311,7 @@
                 }
             },
             "D": {
-                "Choice": "15/10",
+                "Choice": "`15/10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -326,7 +326,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number Sense - Fractions"
+            "Number Sense-Fractions"
         ],
         "SubTopics": [
             "Compare and order decimal numbers to hundredths, and justify using concrete and visual models."
@@ -337,12 +337,12 @@
         "Explain": false,
         "Content": [
             "The shown list of numbers is ordered from least to greatest. The list is missing a number.",
-            ":ibox:42.7\t______\t42.83",
+            ":ibox:`42.7`\t`ul()`\t`42.83`",
             "Which number could be the missing number from the list?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "42.0",
+                "Choice": "`42.0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -350,7 +350,7 @@
                 }
             },
             "B": {
-                "Choice": "42.09",
+                "Choice": "`42.09`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -358,7 +358,7 @@
                 }
             },
             "C": {
-                "Choice": "42.79",
+                "Choice": "`42.79`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -366,7 +366,7 @@
                 }
             },
             "D": {
-                "Choice": "42.85",
+                "Choice": "`42.85`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -381,7 +381,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number Sense - Fractions"
+            "Number Sense-Fractions"
         ],
         "SubTopics": [
             "Compare and order decimal numbers to hundredths, and justify using concrete and visual models."
@@ -391,13 +391,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Sanup compares 45.29 and 45.08 using the chart shown.",
+            "Sanup compares `45.29and45.08` using the chart shown.",
             "problems/SC18G4M/media/8a.jpg",
-            "Sanup uses the chart to show 45.29 is greater than 45.08. Which statement best explains why 45.29 is greater than 45.08?"
+            "Sanup uses the chart to show `45.29` is greater than `45.08`. Which statement best explains why `45.29` is greater than `45.08`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The value of the 2 in the first number is greater than the value of the 0 in the second number.",
+                "Choice": "The value of the `2` in the `text(first)` number is greater than the value of the `0` in the `text(second)` number.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -405,7 +405,7 @@
                 }
             },
             "B": {
-                "Choice": "The value of the 9 in the first number is greater than the value of the 8 in the second number.",
+                "Choice": "The value of the `9` in the `text(first)` number is greater than the value of the `8` in the `text(second)` number.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -413,7 +413,7 @@
                 }
             },
             "C": {
-                "Choice": "The sum of the digits 9 and the 2 in the first number is greater than the sum of the digits 8 and the 0 in the second number.",
+                "Choice": "The sum of the digits `9` and the `2` in the `text(first)` number is greater than the sum of the digits `8` and the `0` in the `text(second)` number.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -421,7 +421,7 @@
                 }
             },
             "D": {
-                "Choice": "The first number has four digits greater than 0 and the second number has three digits greater than 0.",
+                "Choice": "The `text(first)` number has `text(four digits)` greater than `0` and the `text(second)` number has `text(three digits)` greater than `0`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -446,12 +446,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Drew starts a book that has 474 pages. He finishes the book in 6 days. He reads 48 pages on each of the first 2 days. He reads 125 pages on each of the next 2 days. He reads p pages on each of the last 2 days.",
-            "Which equation can be used to find p, the number of pages Drew reads on each of the last 2 days?"
+            "Drew starts a book that has `474` pages. He finishes the book in `6` `text(days)`. He reads `48` pages on each of the first `2` `text(days)`. He reads `125` pages on each of the next `2` `text(days)`. He reads `p` pages on each of the last `2` `text(days)`.",
+            "Which equation can be used to find `p`, the number of pages Drew reads on each of the last `2` `text(days)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "48 + 125 + p = 474",
+                "Choice": "`48+125+p=474`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -459,7 +459,7 @@
                 }
             },
             "B": {
-                "Choice": "(48 × 2) + (125 × 2) + p = 474",
+                "Choice": "`(48xx2)+(125xx2)+p=474`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -467,7 +467,7 @@
                 }
             },
             "C": {
-                "Choice": "(48 × 2) + (125 × 2) + (p × 2) = 474",
+                "Choice": "`(48xx2)+(125xx2)+(pxx2)=474`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -475,7 +475,7 @@
                 }
             },
             "D": {
-                "Choice": "(48 × 2) + (125 × 2) + (p × 2) = (474 × 2)",
+                "Choice": "`(48xx2)+(125xx2)+(pxx2)=(474xx2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -500,12 +500,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Edwards has 12 pink erasers. He buys 8 boxes of white erasers. Each box of white erasers has 10 erasers in it. He puts all his erasers together. Then, he separates them into 4 equal piles.",
+            "Mr. Edwards has `12` pink erasers. He buys `8` boxes of white erasers. Each box of white erasers has `10` erasers in it. He puts all his erasers together. Then, he separates them into `4` equal piles.",
             "How many erasers are in each pile?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -513,7 +513,7 @@
                 }
             },
             "B": {
-                "Choice": "23",
+                "Choice": "`23`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -521,7 +521,7 @@
                 }
             },
             "C": {
-                "Choice": "26",
+                "Choice": "`26`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -529,7 +529,7 @@
                 }
             },
             "D": {
-                "Choice": "32",
+                "Choice": "`32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -554,13 +554,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 48 people on a bus.",
-            ":ibox:• At the library, 24 people exit the bus.\n\n• Then, 3 people enter the bus at the library.\n\n• Next, 3 people in each of the first 2 rows exit the bus at the community center.\n\n• No people enter the bus at the community center.",
+            "There are `48` people on a bus.",
+            ":ibox:• At the library, `24` people exit the bus.\n\n• Then, `3` people enter the bus at the library.\n\n• Next, `3` people in each of the first `2` rows exit the bus at the community center.\n\n• No people enter the bus at the community center.",
             "How many people are on the bus after the stop at the community center?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -568,7 +568,7 @@
                 }
             },
             "B": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -576,7 +576,7 @@
                 }
             },
             "C": {
-                "Choice": "22",
+                "Choice": "`22`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -584,7 +584,7 @@
                 }
             },
             "D": {
-                "Choice": "33",
+                "Choice": "`33`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -609,9 +609,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A pattern starts with the five shapes shown.",
+            "A pattern starts with the `text(five)` shapes shown.",
             "problems/SC18G4M/media/12a.jpg",
-            "As the pattern continues, which shape will be the eighth shape in the pattern?"
+            "As the pattern continues, which shape will be the `text(eighth)` shape in the pattern?"
         ],
         "AnswerChoices": {
             "A": {
@@ -665,12 +665,12 @@
         "Explain": false,
         "Content": [
             "William is watching his favorite TV show online.",
-            ":ibox:• The first week, he watches 3 episodes.\n\n• Each week after that, he watches 2 episodes per week.",
+            ":ibox:• The `text(first week)`, he watches `3` episodes.\n\n• Each week after that, he watches `2` episodes `text(per week)`.",
             "Which sequence shows the total number of episodes he has watched at the end of each week?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3, 6, 9, 12, 15, 18, 21",
+                "Choice": "`3,6,9,12,15,18,21`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -678,7 +678,7 @@
                 }
             },
             "B": {
-                "Choice": "3, 5, 7, 9, 11, 13, 15",
+                "Choice": "`3,5,7,9,11,13,15`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -686,7 +686,7 @@
                 }
             },
             "C": {
-                "Choice": "3, 6, 12, 24, 48, 96, 192",
+                "Choice": "`3,6,12,24,48,96,192`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -694,7 +694,7 @@
                 }
             },
             "D": {
-                "Choice": "3, 5, 8, 13, 21, 34, 45",
+                "Choice": "`3,5,8,13,21,34,45`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -725,7 +725,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "W",
+                "Choice": "`W`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -733,7 +733,7 @@
                 }
             },
             "B": {
-                "Choice": "I",
+                "Choice": "`I`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -741,7 +741,7 @@
                 }
             },
             "C": {
-                "Choice": "R",
+                "Choice": "`R`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -749,7 +749,7 @@
                 }
             },
             "D": {
-                "Choice": "E",
+                "Choice": "`E`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -774,12 +774,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cat weighs 3 kilograms.",
-            "How many GRAMS does the cat weigh?"
+            "A cat weighs `3` `text(kilograms)`.",
+            "How many `text(grams)` does the cat weigh?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "103",
+                "Choice": "`103`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -787,7 +787,7 @@
                 }
             },
             "B": {
-                "Choice": "300",
+                "Choice": "`300`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -795,7 +795,7 @@
                 }
             },
             "C": {
-                "Choice": "1,003",
+                "Choice": "`1text(,)003`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -803,7 +803,7 @@
                 }
             },
             "D": {
-                "Choice": "3,000",
+                "Choice": "`3text(,)000`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -829,11 +829,11 @@
         "Explain": false,
         "Content": [
             "Kent buys a bag of potatoes. He knows the weight of the bag in `text(pounds)`.",
-            "How can Kent find the weight of the bag of potatoes in OUNCES?"
+            "How can Kent find the weight of the bag of potatoes in `text(ounces)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "multiply the weight of the bag in `text(pounds)` by 16",
+                "Choice": "multiply the weight of the bag in `text(pounds)` by `16`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -841,7 +841,7 @@
                 }
             },
             "B": {
-                "Choice": "divide the weight of the bag in `text(pounds)` by 16",
+                "Choice": "divide the weight of the bag in `text(pounds)` by `16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -849,7 +849,7 @@
                 }
             },
             "C": {
-                "Choice": "add 16 to the weight of the bag in `text(pounds)`",
+                "Choice": "add `16` to the weight of the bag in `text(pounds)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -857,7 +857,7 @@
                 }
             },
             "D": {
-                "Choice": "subtract 16 from the weight of the bag in `text(pounds)`",
+                "Choice": "subtract `16` from the weight of the bag in `text(pounds)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -882,12 +882,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Rachel drove from her house to the beach. It took her 3 hours and 14 minutes. Then, she drove from the beach to her friend's house. That took her 1 hour and 37 minutes.",
+            "Rachel drove from her house to the beach. It took her `3` `text(hours)and14` `text(minutes)`. Then, she drove from the beach to her friend's house. That took her `1` `text(hour)and37` `text(minutes)`.",
             "How much time did Rachel spend driving altogether?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 hours and 23 minutes",
+                "Choice": "`4` `text(hours)and23` `text(minutes)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -895,7 +895,7 @@
                 }
             },
             "B": {
-                "Choice": "4 hours and 51 minutes",
+                "Choice": "`4` `text(hours)and51` `text(minutes)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -903,7 +903,7 @@
                 }
             },
             "C": {
-                "Choice": "5 hours and 1 minute",
+                "Choice": "`5` `text(hours)and1` `text(minute)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -911,7 +911,7 @@
                 }
             },
             "D": {
-                "Choice": "5 hours and 13 minutes",
+                "Choice": "`5` `text(hours)and13` `text(minutes)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -936,12 +936,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Kathleen saves money to buy a shirt that costs $10.25. She saves $3.00 each week for 4 weeks. After the 4th week, Kathleen buys the shirt.",
+            "Kathleen saves money to buy a shirt that costs `$10.25`. She saves `$3.00` each week for `4` `text(weeks)`. After the `4^text(th)` `text(week)`, Kathleen buys the shirt.",
             "How much money does Kathleen have left after she buys the shirt?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$1.75",
+                "Choice": "`$1.75`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -949,7 +949,7 @@
                 }
             },
             "B": {
-                "Choice": "$2.25",
+                "Choice": "`$2.25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -957,7 +957,7 @@
                 }
             },
             "C": {
-                "Choice": "$2.75",
+                "Choice": "`$2.75`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -965,7 +965,7 @@
                 }
             },
             "D": {
-                "Choice": "$3.25",
+                "Choice": "`$3.25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -990,15 +990,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jacob correctly measures the lengths, in `text(inches)`, of 4 lightbulbs as shown.                                                                     ",
+            "Jacob correctly measures the lengths, in `text(inches)`, of `4` lightbulbs as shown.                                                                     ",
             "problems/SC18G4M/media/19a.jpg",
-            "The line plot shows the length of 3 lightbulbs.",
+            "The line plot shows the length of `3` lightbulbs.",
             "problems/SC18G4M/media/19b.jpg",
             "What is the length, in `text(inches)`, of the lightbulb NOT represented on the line plot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1 1/2",
+                "Choice": "`1``1/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1006,7 +1006,7 @@
                 }
             },
             "B": {
-                "Choice": "2 1/4",
+                "Choice": "`2``1/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1014,7 +1014,7 @@
                 }
             },
             "C": {
-                "Choice": "2 1/2",
+                "Choice": "`2``1/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1022,7 +1022,7 @@
                 }
             },
             "D": {
-                "Choice": "2 3/4",
+                "Choice": "`2``3/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1053,7 +1053,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1061,7 +1061,7 @@
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1069,7 +1069,7 @@
                 }
             },
             "C": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1077,7 +1077,7 @@
                 }
             },
             "D": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",

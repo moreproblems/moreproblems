@@ -23,7 +23,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "incoming sound waves → nerve impulses → jaw → inner ear →brain",
+                "Choice": "`text(incoming sound waves)->text(nerve impulses)->text(jaw)->text(inner ear)->text(brain)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The incoming sound waves move to the jaw before being sent as a nerve impulse.",
@@ -31,7 +31,7 @@
                 }
             },
             "B": {
-                "Choice": "incoming sound waves → jaw → inner ear → nerve impulses → brain",
+                "Choice": "`text(incoming sound waves)->text(jaw)->text(inner ear)->text(nerve impulses)->text(brain)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The student is asked to model the process of dolphins receiving and processing incoming sounds.",
@@ -39,7 +39,7 @@
                 }
             },
             "C": {
-                "Choice": "incoming sound waves → inner ear → nerve impulses → jaw → brain",
+                "Choice": "`text(incoming sound waves)->text(inner ear)->text(nerve impulses)->text(jaw)->text(brain)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The sound does not move directly to the inner ear when received and nerve impulses carry information to the brain, which is the last step of the system.",
@@ -47,7 +47,7 @@
                 }
             },
             "D": {
-                "Choice": "incoming sound waves → nerve impulses → inner ear → jaw → brain",
+                "Choice": "`text(incoming sound waves)->text(nerve impulses)->text(inner ear)->text(jaw)->text(brain)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The incoming sound waves move to the jaw before being sent as a nerve impulse.",
@@ -136,9 +136,9 @@
         "Explain": false,
         "Content": [
             "Dolphins cannot detect fishing nets using echolocation. Sometimes dolphins get caught in these nets. A student listed two possible solutions to improve the design of the nets.",
-            ":box:Possible Design Solutions\n\nSolution 1: increase the size of the openings in the net so dolphins can swim out\nSolution 2: attach a device to the net that reflects echolocation sounds from dolphins",
+            ":box:Possible Design Solutions\n\nSolution `1`: increase the size of the openings in the net so dolphins can swim out\nSolution `2`: attach a device to the net that reflects echolocation sounds from dolphins",
             "The goals for the new nets are listed below.",
-            ":ibox:Goals for the Nets\n\nGoal A: prevent dolphins from getting trapped\nGoal B: help dolphins to locate fishing nets",
+            ":ibox:Goals for the Nets\n\nGoal `A`: prevent dolphins from getting trapped\nGoal `B`: help dolphins to locate fishing nets",
             "Which table BEST identifies the goal(s) that each solution meets?"
         ],
         "AnswerChoices": {
@@ -146,7 +146,7 @@
                 "Choice": "problems/WIG4S/media/3a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solution 1 will prevent dolphins from getting trapped but not help dolphins to locate fishing nets. Solution 2 will also help dolphins to locate fishing nets.",
+                    "Rationale": "Solution `1` will prevent dolphins from getting trapped but not help dolphins to locate fishing nets. Solution `2` will also help dolphins to locate fishing nets.",
                     "Percent": 0
                 }
             },
@@ -154,7 +154,7 @@
                 "Choice": "problems/WIG4S/media/3b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solution 1 will not help dolphins to locate fishing nets. Solution 2 will also prevent dolphins from getting trapped.",
+                    "Rationale": "Solution `1` will not help dolphins to locate fishing nets. Solution `2` will also prevent dolphins from getting trapped.",
                     "Percent": 0
                 }
             },
@@ -162,7 +162,7 @@
                 "Choice": "problems/WIG4S/media/3c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Solution 1 can prevent dolphins from getting trapped. Solution 2 can help dolphins to locate fishing nets and hence also prevent dolphins from getting trapped.",
+                    "Rationale": "Solution `1` can prevent dolphins from getting trapped. Solution `2` can help dolphins to locate fishing nets and hence also prevent dolphins from getting trapped.",
                     "Percent": 0
                 }
             },
@@ -170,7 +170,7 @@
                 "Choice": "problems/WIG4S/media/3d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solution 2 will also prevent dolphins from getting trapped.",
+                    "Rationale": "Solution `2` will also prevent dolphins from getting trapped.",
                     "Percent": 0
                 }
             }
@@ -195,7 +195,7 @@
         "Explain": false,
         "Content": [
             "The Venn diagram below compares two applications of wave energy by humans.",
-            ":ibox:1. sonar (sound navigation and ranging)\n2. radar (radio detection and ranging)",
+            ":ibox:`1`. sonar (sound navigation and ranging)\n`2`. radar (radio detection and ranging)",
             "problems/WIG4S/media/4a.jpg",
             "A scientist wants to track the movement of songbirds as they migrate through Wisconsin.",
             "Which explanation BEST describes the technology the scientist should use to track songbird migration?"
@@ -364,39 +364,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The students decide to leave the rocks in the rock tumbler for a fourth day. One student claims that the mass of the sandstone sample on day 4 can be predicted since weathering conditions remained the same throughout the investigation.",
-            "What is the MOST LIKELY mass of the sandstone sample on day 4 of the investigation?"
+            "The students decide to leave the rocks in the rock tumbler for a `text(fourth day)`. `text(One)` student claims that the mass of the sandstone sample on `text(day)` `4` can be predicted since weathering conditions remained the same throughout the investigation.",
+            "What is the MOST LIKELY mass of the sandstone sample on `text(day)` `4` of the investigation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "120 grams",
+                "Choice": "`120` `text(grams)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The mass of the rock sample on day 4 will be less than the mass of the rock sample on day 1.",
+                    "Rationale": "The mass of the rock sample on `text(day)` `4` will be less than the mass of the rock sample on `text(day)` `1`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "60 grams",
+                "Choice": "`60` `text(grams)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The mass of the rock sample on day 4 will be less than the mass of the rock sample on day 3.",
+                    "Rationale": "The mass of the rock sample on `text(day)` `4` will be less than the mass of the rock sample on `text(day)` `3`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "30 grams",
+                "Choice": "`30` `text(grams)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Based on the pattern shown in the graph, the mass of the rock sample and on day 4 will be about 30 grams less than the mass of the rock sample on day 3.",
+                    "Rationale": "Based on the pattern shown in the graph, the mass of the rock sample and on `text(day)` `4` will be about `30` `text(grams)` less than the mass of the rock sample on `text(day)` `3`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "10 grams",
+                "Choice": "`10` `text(grams)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The mass of the rock sample on day 4 will more likely be about 30 grams less than the mass of the rock sample on day 3.",
+                    "Rationale": "The mass of the rock sample on `text(day)` `4` will more likely be about `30` `text(grams)` less than the mass of the rock sample on `text(day)` `3`.",
                     "Percent": 0
                 }
             }
@@ -420,7 +420,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students are studying characteristic rocks in Wisconsin. The students study two maps comparing the types of rocks in Wisconsin and the elevation across the state. One student observes a pattern between the rock type and elevation.",
+            "Students are studying characteristic rocks in Wisconsin. The students study `text(two)` maps comparing the types of rocks in Wisconsin and the elevation across the state. `text(One)` student observes a pattern between the rock type and elevation.",
             "problems/WIG4S/media/7a.jpg",
             "Which chart shows the pattern the student observed?"
         ],
@@ -479,40 +479,40 @@
         "Content": [
             "Engineers are exploring locations to construct a new building. They study a chart showing factors that affect rates of weathering.",
             "problems/WIG4S/media/8a.jpg",
-            "Next, the engineers study a chart showing characteristics of four locations in Wisconsin.",
+            "Next, the engineers study a chart showing characteristics of `text(four)` locations in Wisconsin.",
             "problems/WIG4S/media/8b.jpg",
             "Which location MOST LIKELY has the SLOWEST rate of rock weathering?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "location 1",
+                "Choice": "location `1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Location 1 most likely has the Slowest rate of rock weathering due to the relatively low yearly Precipitation, the thick soil layer, and the gentle slopes.",
+                    "Rationale": "Location `1` most likely has the slowest rate of rock weathering due to the relatively low yearly precipitation, the thick soil layer, and the gentle slopes.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "location 2",
+                "Choice": "location `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The higher amount of yearly precipitation and the thin soil layer indicate that location 2 likely does not have the slowest rate of rock weathering.",
+                    "Rationale": "The higher amount of yearly precipitation and the thin soil layer indicate that location `2` likely does not have the slowest rate of rock weathering.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "location 3",
+                "Choice": "location `3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The steep hills indicate that location 3 likely does not have the slowest rate of rock weathering.",
+                    "Rationale": "The steep hills indicate that location `3` likely does not have the slowest rate of rock weathering.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "location 4",
+                "Choice": "location `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The thin soil layer indicates that location 4 likely does not have the slowest rate of rock weathering.",
+                    "Rationale": "The thin soil layer indicates that location `4` likely does not have the slowest rate of rock weathering.",
                     "Percent": 0
                 }
             }
@@ -541,15 +541,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The collision in trial 1 would produce a sound that lasts for a longer time than the sound produced by the collision in trial 2.",
+                "Choice": "The collision in trial `1` would produce a sound that lasts for a longer time than the sound produced by the collision in trial `2`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There is no evidence that the collision in trial 1 would produce a sound that lasted longer than the collision in trial 2.",
+                    "Rationale": "There is no evidence that the collision in trial `1` would produce a sound that lasted longer than the collision in trial `2`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "The collisions in trial 1 and trial 2 would produce sounds that cannot be heard by the human ear.",
+                "Choice": "The collisions in trial `1` and trial `2` would produce sounds that cannot be heard by the human ear.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "There is no evidence that the collisions would produce sounds that cannot be heard by the human ear; the student is collecting data about sound.",
@@ -557,18 +557,18 @@
                 }
             },
             "C": {
-                "Choice": "The collisions in trial 1 and trial 2 would produce identical sounds.",
+                "Choice": "The collisions in trial `1` and trial `2` would produce identical sounds.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The collision in trial 2 would produce a slightly louder sound than, not an identical sound to, the collision in trial 1.",
+                    "Rationale": "The collision in trial `2` would produce a slightly louder sound than, not an identical sound to, the collision in trial `1`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "The collision in trial 2 would produce a louder sound than the sound produced by the collision in trial 1.",
+                "Choice": "The collision in trial `2` would produce a louder sound than the sound produced by the collision in trial `1`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The collision in trial 2 would produce a slightly louder sound; the dime in trial 2 was pushed harder, which means it transferred more energy to the other dime.",
+                    "Rationale": "The collision in trial `2` would produce a slightly louder sound; the dime in trial `2` was pushed harder, which means it transferred more energy to the other dime.",
                     "Percent": 0
                 }
             }
@@ -592,12 +592,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student claims that the dime that was pushed in trial 2 had more energy than the dime that was pushed in trial 1.",
+            "A student claims that the dime that was pushed in trial `2` had more energy than the dime that was pushed in trial `1`.",
             "Which explanation provides the BEST evidence from this investigation to support the claim?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The pushed dime in trial 2 had more energy because it moved forward in a straighter line than the pushed dime in trial 1.",
+                "Choice": "The pushed dime in trial `2` had more energy because it moved forward in a straighter line than the pushed dime in trial `1`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Moving in a straighter line does not indicate that the dime had more energy.",
@@ -605,26 +605,26 @@
                 }
             },
             "B": {
-                "Choice": "The pushed dime in trial 2 had more energy because it received a gentler push than the dime in trial 1 did.",
+                "Choice": "The pushed dime in trial `2` had more energy because it received a gentler push than the dime in trial `1` did.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The pushed dime in trial 2 received a stronger push than the pushed dime in trial 1.",
+                    "Rationale": "The pushed dime in trial `2` received a stronger push than the pushed dime in trial `1`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The pushed dime in trial 2 had more energy because it was pushed harder, and its faster motion caused the other dime to move farther after they collided than the pushed dime in trial 1 did.",
+                "Choice": "The pushed dime in trial `2` had more energy because it was pushed harder, and its faster motion caused the other dime to move farther after they collided than the pushed dime in trial `1` did.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The harder push in trial 2 means that the pushed dime had more energy of motion that was transferred to the other dime, causing it to move farther.",
+                    "Rationale": "The harder push in trial `2` means that the pushed dime had more energy of motion that was transferred to the other dime, causing it to move farther.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "The pushed dime in trial 2 had more energy because it moved more slowly than the pushed dime in trial 1 did, so it transferred more energy to the other dime when they collided.",
+                "Choice": "The pushed dime in trial `2` had more energy because it moved more slowly than the pushed dime in trial `1` did, so it transferred more energy to the other dime when they collided.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The pushed dime in trial 2 received a stronger push, so it moved faster than the pushed dime in trial 1.",
+                    "Rationale": "The pushed dime in trial `2` received a stronger push, so it moved faster than the pushed dime in trial `1`.",
                     "Percent": 0
                 }
             }
@@ -651,7 +651,7 @@
             "After observing the dimes collide, a student considers how energy transfer occurs in other objects. The student learns about a bike that is being used to provide electricity. The diagram below shows the bike.",
             "problems/WIG4S/media/11a.jpg",
             "Next, the student studies the flowchart below about how the bike works.",
-            ":ibox:pedal → freewheel system → generator → battery",
+            ":ibox:`text(pedal)->text(freewheel system)->text(generator)->text(battery)`",
             "Which option identifies an input and output in this system?"
         ],
         "AnswerChoices": {
@@ -706,11 +706,11 @@
         "Explain": false,
         "Content": [
             "Which words correctly complete the sentences to model how humans receive, understand, and react to information from a doorbell?",
-            ":box:1. The person's _______ detect(s) the sound that the doorbell makes.\n2. The information is interpreted in the person's _______.\n3. The person uses his or her _______ to move to the door."
+            ":box:`1`. The person's _______ detect(s) the sound that the doorbell makes.\n`2`. The information is interpreted in the person's _______.\n`3`. The person uses his or her _______ to move to the door."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1. ears\n2. brain\n3. body ",
+                "Choice": "`1`. ears\n`2`. brain\n`3`. body ",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The ears detect the doorbell's sound, the brain interprets the sound, and then the person's body moves toward the door.",
@@ -718,7 +718,7 @@
                 }
             },
             "B": {
-                "Choice": "1. ears\n2. eyes\n3. body",
+                "Choice": "`1`. ears\n`2`. eyes\n`3`. body",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The brain, not the eyes, interprets the sound from the doorbell.",
@@ -726,7 +726,7 @@
                 }
             },
             "C": {
-                "Choice": "1. body\n2. brain\n3. eyes",
+                "Choice": "`1`. body\n`2`. brain\n`3`. eyes",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The ears, not the body, detect the doorbell's sound, and the person uses the body, not the eyes, to move to the door.",
@@ -734,7 +734,7 @@
                 }
             },
             "D": {
-                "Choice": "1. brain\n2. ears\n3. eyes",
+                "Choice": "`1`. brain\n`2`. ears\n`3`. eyes",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The ears, not the brain, detect the doorbell's sound; the brain, not the ears, interprets the sound from the doorbell; and the person uses the body, not the eyes, to move to the door.",
@@ -997,7 +997,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1. The armadillo smells something.\n2. The armadillo realizes it is encountering another armadillo.\n3. The armadillo's brain identifies the scent from a previous experience.",
+                "Choice": "`1`. The armadillo smells something.\n`2`. The armadillo realizes it is encountering another armadillo.\n`3`. The armadillo's brain identifies the scent from a previous experience.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The armadillo's brain identifies the scent before the armadillo remembers the scent of another armadillo.",
@@ -1005,7 +1005,7 @@
                 }
             },
             "B": {
-                "Choice": "1. The armadillo smells something.\n2. The armadillo's brain identifies the scent from a previous experience.\n3. The armadillo realizes it is encountering another armadillo.",
+                "Choice": "`1`. The armadillo smells something.\n`2`. The armadillo's brain identifies the scent from a previous experience.\n`3`. The armadillo realizes it is encountering another armadillo.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The armadillo first smells the scent, then the brain identifies the scent, then the armadillo remembers the scent of another armadillo.",
@@ -1013,7 +1013,7 @@
                 }
             },
             "C": {
-                "Choice": "1. The armadillo realizes it is encountering another armadillo.\n2. The armadillo smells something.\n3. The armadillo's brain identifies the scent from a previous experience.",
+                "Choice": "`1`. The armadillo realizes it is encountering another armadillo.\n`2`. The armadillo smells something.\n`3`. The armadillo's brain identifies the scent from a previous experience.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The armadillo first smells the scent, before it remembers the scent of another armadillo or uses its brain to identify the scent.",
@@ -1021,7 +1021,7 @@
                 }
             },
             "D": {
-                "Choice": "1. The armadillo realizes it is encountering another armadillo.\n2. The armadillo's brain identifies the scent from a previous experience.\n3. The armadillo smells something.",
+                "Choice": "`1`. The armadillo realizes it is encountering another armadillo.\n`2`. The armadillo's brain identifies the scent from a previous experience.\n`3`. The armadillo smells something.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The armadillo first smells the scent, before its brain identifies the scent, then the armadillo remembers the scent of another armadillo.",
@@ -1048,17 +1048,17 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The three-banded armadillo has overlapping bones in its carapace that allow it to curl into a ball, tucking its face, legs, and tail inside the carapace. The picture on the left is a three-banded armadillo and the picture on the right is a backpack made of rubber tire pieces.",
+            "The `text(three-banded)` armadillo has overlapping bones in its carapace that allow it to curl into a ball, tucking its face, legs, and tail inside the carapace. The picture on the left is a `text(three-banded)` armadillo and the picture on the right is a backpack made of rubber tire pieces.",
             "problems/WIG4S/media/18a.jpg",
             "problems/WIG4S/media/18b.jpg",
-            "The backpack was designed based on the armadillo's body features. Which TWO features of the three-banded armadillo did engineers MOST LIKELY use to help develop this backpack?"
+            "The backpack was designed based on the armadillo's body features. Which TWO features of the `text(three-banded)` armadillo did engineers MOST LIKELY use to help develop this backpack?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "being flexible, so it can change shape",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The flexibility of the backpack allows it to change shape, like the carapace of a three-banded armadillo.",
+                    "Rationale": "The flexibility of the backpack allows it to change shape, like the carapace of a `text(three-banded)` armadillo.",
                     "Percent": 0
                 }
             },
@@ -1066,7 +1066,7 @@
                 "Choice": "being hard, so it protects items inside",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The hardness of the backpack material protects the items inside, like the carapace of a three-banded armadillo protects its internal organs.",
+                    "Rationale": "The hardness of the backpack material protects the items inside, like the carapace of a `text(three-banded)` armadillo protects its internal organs.",
                     "Percent": 0
                 }
             },
@@ -1074,7 +1074,7 @@
                 "Choice": "being dark, so it can absorb heat",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The backpack was not designed to have the same color as a three-banded armadillo.",
+                    "Rationale": "The backpack was not designed to have the same color as a `text(three-banded)` armadillo.",
                     "Percent": 0
                 }
             },
@@ -1082,7 +1082,7 @@
                 "Choice": "being rubber, so it is comfortable",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The comfort of the rubber backpack is not analogous to a structure-function relationship in the three-banded armadillo.",
+                    "Rationale": "The comfort of the rubber backpack is not analogous to a structure-function relationship in the `text(three-banded)` armadillo.",
                     "Percent": 0
                 }
             },
@@ -1090,7 +1090,7 @@
                 "Choice": "being made of many pieces, so it can come apart",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The backpack is not designed to come apart, and this is not analogous to a structure-function relationship in the three-banded armadillo.",
+                    "Rationale": "The backpack is not designed to come apart, and this is not analogous to a structure-function relationship in the `text(three-banded)` armadillo.",
                     "Percent": 0
                 }
             }
