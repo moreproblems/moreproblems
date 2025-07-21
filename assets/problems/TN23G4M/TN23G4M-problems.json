@@ -15,7 +15,7 @@
         "Explain": false,
         "Content": [
             "Find the difference.",
-            ":ibox:8,241 - 5,573 ="
+            ":ibox:`8text(,)241-5text(,)573=`"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -45,11 +45,11 @@
         "Explain": false,
         "Content": [
             "Which statement correctly describes the equation?",
-            ":ibox:4 × 6 = 24"
+            ":ibox:`4xx6=24`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "24 is 6 more than 4.",
+                "Choice": "`24` is `6` more than `4`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -57,7 +57,7 @@
                 }
             },
             "B": {
-                "Choice": "24 is 6 times as many as 4.",
+                "Choice": "`24` is `6` times as many as `4`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -65,7 +65,7 @@
                 }
             },
             "C": {
-                "Choice": "4 and 6 more is 24.",
+                "Choice": "`4and6` more is `24`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -73,7 +73,7 @@
                 }
             },
             "D": {
-                "Choice": "4 is 6 times as many as 24.",
+                "Choice": "`4` is `6` times as many as `24`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -98,7 +98,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ryan is 20 years old. His sister is 5 years old.",
+            "Ryan is `20` `text(years)` old. His sister is `5` `text(years)` old.",
             "How many times older is Ryan than his sister?"
         ],
         "AnswerChoices": {
@@ -132,11 +132,11 @@
         "Content": [
             "The shaded portion of each circle represents a fraction of the whole circle.",
             "problems/TN23G4M/media/4a.jpg",
-            "Which equation BEST shows why the first fraction is equivalent to the second fraction?"
+            "Which equation BEST shows why the `text(first)` fraction is equivalent to the `text(second)` fraction?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/4 = (3 × 2)/(4 × 2) = 6/8",
+                "Choice": "`3/4=(3xx2)/(4xx2)=6/8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -144,7 +144,7 @@
                 }
             },
             "B": {
-                "Choice": "3/4 = (3 × 3)/(4 × 3) = 9/12",
+                "Choice": "`3/4=(3xx3)/(4xx3)=9/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -152,7 +152,7 @@
                 }
             },
             "C": {
-                "Choice": "3/4 = (6 × 2)/(8 × 2) = 12/16",
+                "Choice": "`3/4=(6xx2)/(8xx2)=12/16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -160,7 +160,7 @@
                 }
             },
             "D": {
-                "Choice": "3/4 = (3 × 1)/(4 × 1) = 6/8",
+                "Choice": "`3/4=(3xx1)/(4xx1)=6/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -185,13 +185,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "This model represents the fraction 3/6.",
+            "This model represents the fraction `3/6`.",
             "problems/TN23G4M/media/5a.jpg",
-            "Which fraction is GREATER than 3/6?"
+            "Which fraction is GREATER than `3/6`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -199,7 +199,7 @@
                 }
             },
             "B": {
-                "Choice": "1/2",
+                "Choice": "`1/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -207,7 +207,7 @@
                 }
             },
             "C": {
-                "Choice": "4/8",
+                "Choice": "`4/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -215,7 +215,7 @@
                 }
             },
             "D": {
-                "Choice": "3/4",
+                "Choice": "`3/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -242,13 +242,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A store sells two different patterns of floor tiles. The tiles have gray and white triangular parts, as shown.",
+            "A store sells `text(two)` different patterns of floor tiles. The tiles have gray and white triangular parts, as shown.",
             "problems/TN23G4M/media/6a.jpg",
-            "What is the difference between the fraction of Tile 1 that is gray and the fraction of Tile 2 that is gray?"
+            "What is the difference between the fraction of Tile `1` that is gray and the fraction of Tile `2` that is gray?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6/16",
+                "Choice": "`6/16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -256,7 +256,7 @@
                 }
             },
             "B": {
-                "Choice": "2/16",
+                "Choice": "`2/16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -264,7 +264,7 @@
                 }
             },
             "C": {
-                "Choice": "6/8",
+                "Choice": "`6/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -272,7 +272,7 @@
                 }
             },
             "D": {
-                "Choice": "2/8",
+                "Choice": "`2/8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -297,13 +297,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The model shown is shaded to represent the fraction 8/5.",
+            "The model shown is shaded to represent the fraction `8/5`.",
             "problems/TN23G4M/media/7a.jpg",
-            "Which expression also represents 8/5?"
+            "Which expression also represents `8/5`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5/5 × 3/5",
+                "Choice": "`5/5xx3/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -311,7 +311,7 @@
                 }
             },
             "B": {
-                "Choice": "1/5 × 8/5",
+                "Choice": "`1/5xx8/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -319,7 +319,7 @@
                 }
             },
             "C": {
-                "Choice": "5 × 1/8",
+                "Choice": "`5xx1/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -327,7 +327,7 @@
                 }
             },
             "D": {
-                "Choice": "8 × 1/5",
+                "Choice": "`8xx1/5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -352,12 +352,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which numbers are factors of both 32 and 88?",
+            "Which numbers are factors of both `32and88`?",
             "Select the THREE correct answers."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -365,7 +365,7 @@
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -373,7 +373,7 @@
                 }
             },
             "C": {
-                "Choice": "22",
+                "Choice": "`22`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -381,7 +381,7 @@
                 }
             },
             "D": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -389,7 +389,7 @@
                 }
             },
             "E": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -397,7 +397,7 @@
                 }
             },
             "F": {
-                "Choice": "11",
+                "Choice": "`11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -424,13 +424,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The pattern shown starts with 42 and uses a subtraction rule to find the next number in the pattern.",
-            ":ibox:42, 37, 32, 27, 22, 17",
+            "The pattern shown starts with `42` and uses a subtraction rule to find the next number in the pattern.",
+            ":ibox:`42,37,32,27,22,17`",
             "Which statement about the number pattern is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Every number is an even number.",
+                "Choice": "Every number is an `text(even)` number.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -438,7 +438,7 @@
                 }
             },
             "B": {
-                "Choice": "Every number is a multiple of 7.",
+                "Choice": "Every number is a multiple of 7`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -446,7 +446,7 @@
                 }
             },
             "C": {
-                "Choice": "Every number has a tens digit of 2 or 7.",
+                "Choice": "Every number has a `text(tens)` digit of `2or7`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -454,7 +454,7 @@
                 }
             },
             "D": {
-                "Choice": "Every number has a ones digit of 2 or 7.",
+                "Choice": "Every number has a `text(ones)` digit of `2or7`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -481,12 +481,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to the value of the emphasized digit 6 in the number shown?",
-            ":ibox:4[6],650"
+            "Which expression is equivalent to the value of the underlined digit `6` in the number shown?",
+            ":ibox:`4ul(6),650`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6 × 10",
+                "Choice": "`6xx10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -494,7 +494,7 @@
                 }
             },
             "B": {
-                "Choice": "60 × 10",
+                "Choice": "`60xx10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -502,7 +502,7 @@
                 }
             },
             "C": {
-                "Choice": "600 × 10",
+                "Choice": "`600xx10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -510,7 +510,7 @@
                 }
             },
             "D": {
-                "Choice": "6,000 × 10",
+                "Choice": "`6text(,)000xx10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -535,12 +535,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which numbers round to 58,000 when rounded to the nearest HUNDRED?",
+            "Which numbers round to `58text(,)000` when rounded to the nearest `text(hundred)`?",
             "Select the TWO correct answers."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "57,900",
+                "Choice": "`57text(,)900`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -548,7 +548,7 @@
                 }
             },
             "B": {
-                "Choice": "57,981",
+                "Choice": "`57text(,)981`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -556,7 +556,7 @@
                 }
             },
             "C": {
-                "Choice": "58,023",
+                "Choice": "`58text(,)023`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -564,7 +564,7 @@
                 }
             },
             "D": {
-                "Choice": "58,050",
+                "Choice": "`58text(,)050`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -572,7 +572,7 @@
                 }
             },
             "E": {
-                "Choice": "58,133",
+                "Choice": "`58text(,)133`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -598,7 +598,7 @@
         "Explain": false,
         "Content": [
             "A rug is in the shape of a rectangle.",
-            ":ibox:• The width of the rug is 10 feet.\n\n• The perimeter of the rug is 50 feet.",
+            ":ibox:• The width of the rug is `10` `text(feet)`.\n\n• The perimeter of the rug is `50` `text(feet)`.",
             "What is the length, in `text(feet)`, of the rug?"
         ],
         "AnswerChoices": {
@@ -630,12 +630,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An angle turns through 110 one-degree angles.",
-            "What is the measure, in degrees, of the angle?"
+            "An angle turns through `110` `text(one-degree)` angles.",
+            "What is the measure, in `text(degrees)`, of the angle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "111",
+                "Choice": "`111`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -643,7 +643,7 @@
                 }
             },
             "B": {
-                "Choice": "110",
+                "Choice": "`110`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -651,7 +651,7 @@
                 }
             },
             "C": {
-                "Choice": "11",
+                "Choice": "`11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -659,7 +659,7 @@
                 }
             },
             "D": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -686,13 +686,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The two angles shown have a combined measure of 80 degrees. One of the angles has a measure of 60 degrees and the other has a measure of `n` `text(degrees)`.",
+            "The `text(two)` angles shown have a combined measure of `80` `text(degrees)`. `text(One)` of the angles has a measure of `60` `text(degrees)` and the other has a measure of `n` `text(degrees)`.",
             "problems/TN23G4M/media/14a.jpg",
-            "What is the value of n?"
+            "What is the value of `n`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "140",
+                "Choice": "`140`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -700,7 +700,7 @@
                 }
             },
             "B": {
-                "Choice": "80",
+                "Choice": "`80`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -708,7 +708,7 @@
                 }
             },
             "C": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -716,7 +716,7 @@
                 }
             },
             "D": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -749,7 +749,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -757,7 +757,7 @@
                 }
             },
             "B": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -765,7 +765,7 @@
                 }
             },
             "C": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -773,7 +773,7 @@
                 }
             },
             "D": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

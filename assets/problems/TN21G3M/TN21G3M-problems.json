@@ -17,12 +17,12 @@
         "Explain": false,
         "Content": [
             "Here is a number pattern.",
-            ":ibox:3, 9, 15, 21, ...",
+            ":ibox:`3,9,15,21,...`",
             "Which expression could be used to find the next number in the pattern?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × 5",
+                "Choice": "`3xx5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -30,7 +30,7 @@
                 }
             },
             "B": {
-                "Choice": "3 × 8",
+                "Choice": "`3xx8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -38,7 +38,7 @@
                 }
             },
             "C": {
-                "Choice": "21 + 3",
+                "Choice": "`21+3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -46,7 +46,7 @@
                 }
             },
             "D": {
-                "Choice": "21 + 6",
+                "Choice": "`21+6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -73,12 +73,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Maxine buys 5 packages of pins. There are 50 pins in each package.",
+            "Maxine buys `5` packages of pins. There are `50` pins in each package.",
             "What is the total number of pins Maxine buys?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -86,7 +86,7 @@
                 }
             },
             "B": {
-                "Choice": "55",
+                "Choice": "`55`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -94,7 +94,7 @@
                 }
             },
             "C": {
-                "Choice": "250",
+                "Choice": "`250`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -102,7 +102,7 @@
                 }
             },
             "D": {
-                "Choice": "550",
+                "Choice": "`550`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -129,12 +129,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A total of 10 children are on 2 teams. An equal number of children are on each team.",
+            "A total of `10` children are on `2` teams. An equal number of children are on each team.",
             "Which expression could be used to find the number of children on each team?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10 - 2",
+                "Choice": "`10-2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -142,7 +142,7 @@
                 }
             },
             "B": {
-                "Choice": "10 + 2",
+                "Choice": "`10+2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -150,7 +150,7 @@
                 }
             },
             "C": {
-                "Choice": "10 × 2",
+                "Choice": "`10xx2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -158,7 +158,7 @@
                 }
             },
             "D": {
-                "Choice": "10 ÷ 2",
+                "Choice": "`10-:2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -183,11 +183,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which quotients are equal to 4? Choose the TWO correct answers."
+            "Which quotients are equal to `4`? Choose the TWO correct answers."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "45 ÷ 9",
+                "Choice": "`45-:9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -195,7 +195,7 @@
                 }
             },
             "B": {
-                "Choice": "32 ÷ 8",
+                "Choice": "`32-:8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -203,7 +203,7 @@
                 }
             },
             "C": {
-                "Choice": "28 ÷ 4",
+                "Choice": "`28-:4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -211,7 +211,7 @@
                 }
             },
             "D": {
-                "Choice": "24 ÷ 3",
+                "Choice": "`24-:3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -219,7 +219,7 @@
                 }
             },
             "E": {
-                "Choice": "16 ÷ 4",
+                "Choice": "`16-:4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -246,12 +246,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Joan bought a total of 52 plants for her garden. She bought 9 boxes with 4 plants in each box. Joan also bought some single plants.",
-            "Which equation can be used to find the number of single plants, n, that Joan bought?"
+            "Joan bought a total of `52` plants for her garden. She bought `9` boxes with `4` plants in each box. Joan also bought some single plants.",
+            "Which equation can be used to find the number of single plants, `n`, that Joan bought?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "52 = 36 + n",
+                "Choice": "`52=36+n`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -259,7 +259,7 @@
                 }
             },
             "B": {
-                "Choice": "52 + 36 = n",
+                "Choice": "`52+36=n`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -267,7 +267,7 @@
                 }
             },
             "C": {
-                "Choice": "52 = 36 × n",
+                "Choice": "`52=36xxn`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -275,7 +275,7 @@
                 }
             },
             "D": {
-                "Choice": "52 - 13 = n",
+                "Choice": "`52-13=n`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -306,7 +306,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7:09",
+                "Choice": "`7:09`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -314,7 +314,7 @@
                 }
             },
             "B": {
-                "Choice": "7:44",
+                "Choice": "`7:44`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -322,7 +322,7 @@
                 }
             },
             "C": {
-                "Choice": "7:46",
+                "Choice": "`7:46`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -330,7 +330,7 @@
                 }
             },
             "D": {
-                "Choice": "8:46",
+                "Choice": "`8:46`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -355,11 +355,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of these shows another way to find the value of 4 × (8 + 1)?"
+            "Which of these shows another way to find the value of `4xx(8+1)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 × 8 × 1",
+                "Choice": "`4xx8xx1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -367,7 +367,7 @@
                 }
             },
             "B": {
-                "Choice": "4 × 8 × 9",
+                "Choice": "`4xx8xx9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -375,7 +375,7 @@
                 }
             },
             "C": {
-                "Choice": "(4 × 8) + (4 × 1)",
+                "Choice": "`(4xx8)+(4xx1)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -383,7 +383,7 @@
                 }
             },
             "D": {
-                "Choice": "(4 × 8) + (4 × 9)",
+                "Choice": "`(4xx8)+(4xx9)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -411,12 +411,12 @@
         "Explain": false,
         "Content": [
             "A hexagon has these side lengths.",
-            ":ibox:• 2 sides that are each 4 inches long\n• 4 sides that are each 2 inches long",
+            ":ibox:• `2` sides that are each `4` `text(inches)` long\n• `4` sides that are each `2` `text(inches)` long",
             "What is the perimeter in `text(inches)` of the hexagon?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -424,7 +424,7 @@
                 }
             },
             "B": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -432,7 +432,7 @@
                 }
             },
             "C": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -440,7 +440,7 @@
                 }
             },
             "D": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -522,8 +522,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Janice measures the lengths of 8 objects on her desk to the nearest quarter inch (in.). Here are the lengths.",
-            ":box:2 3/4 in. \t 5 1/2 in. \t 5 1/2 in. \t 2 in. \t 5 in. \t 5 1/4 in. \t 3 1/4 in. \t 4 1/4 in.",
+            "Janice measures the lengths of `8` objects on her desk to the nearest `text(quarter inch)` `(text(in.))`. Here are the lengths.",
+            ":box:`2``3/4` `text(in.)`\t`5``1/2` `text(in.)`\t`5``1/2` `text(in.)`\t`2` `text(in.)`\t`5` `text(in.)`\t`5``1/4` `text(in.)`\t`3``1/4` `text(in.)`\t`4``1/4` `text(in.)`",
             "Which line plot represents all of the information listed?"
         ],
         "AnswerChoices": {
@@ -577,12 +577,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Desmond made a rectangle using 17 tiles. Each tile is a unit square.",
+            "Desmond made a rectangle using `17` tiles. Each tile is a `text(unit square)`.",
             "What is the area, in `text(square units)`, of the rectangle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -590,7 +590,7 @@
                 }
             },
             "B": {
-                "Choice": "17",
+                "Choice": "`17`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -598,7 +598,7 @@
                 }
             },
             "C": {
-                "Choice": "32",
+                "Choice": "`32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -606,7 +606,7 @@
                 }
             },
             "D": {
-                "Choice": "34",
+                "Choice": "`34`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -631,7 +631,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which number line has a point that shows 1/3?"
+            "Which number line has a point that shows `1/3`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -693,7 +693,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/4",
+                "Choice": "`1/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -701,7 +701,7 @@
                 }
             },
             "B": {
-                "Choice": "2/4",
+                "Choice": "`2/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -709,7 +709,7 @@
                 }
             },
             "C": {
-                "Choice": "2/3",
+                "Choice": "`2/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -717,7 +717,7 @@
                 }
             },
             "D": {
-                "Choice": "4/6",
+                "Choice": "`4/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -725,7 +725,7 @@
                 }
             },
             "E": {
-                "Choice": "4/8",
+                "Choice": "`4/8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -733,7 +733,7 @@
                 }
             },
             "F": {
-                "Choice": "5/8",
+                "Choice": "`5/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -766,7 +766,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "26",
+                "Choice": "`26`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -774,7 +774,7 @@
                 }
             },
             "B": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -782,7 +782,7 @@
                 }
             },
             "C": {
-                "Choice": "38",
+                "Choice": "`38`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -790,7 +790,7 @@
                 }
             },
             "D": {
-                "Choice": "42",
+                "Choice": "`42`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -817,12 +817,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which numbers round to 200 when rounded to the nearest hundred?",
+            "Which numbers round to `200` when rounded to the nearest `text(hundred)`?",
             "Choose the THREE correct answers."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "215",
+                "Choice": "`215`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -830,7 +830,7 @@
                 }
             },
             "B": {
-                "Choice": "146",
+                "Choice": "`146`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -838,7 +838,7 @@
                 }
             },
             "C": {
-                "Choice": "243",
+                "Choice": "`243`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -846,7 +846,7 @@
                 }
             },
             "D": {
-                "Choice": "151",
+                "Choice": "`151`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -854,7 +854,7 @@
                 }
             },
             "E": {
-                "Choice": "278",
+                "Choice": "`278`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

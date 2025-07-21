@@ -20,7 +20,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "700 grams",
+                "Choice": "`700` `text(grams)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -28,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "725 grams",
+                "Choice": "`725` `text(grams)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "750 grams",
+                "Choice": "`750` `text(grams)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "775 grams",
+                "Choice": "`775` `text(grams)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -70,12 +70,12 @@
         "Explain": false,
         "Content": [
             "A coach used this equation to solve a problem.",
-            ":ibox:36 ÷ 9 = p",
+            ":ibox:`36-:9=p`",
             "Which of these could be the problem the coach solved?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "There were 36 players on each team. There were 9 teams. What was the total number of players on all the teams?",
+                "Choice": "There were `36` players on each team. There were `9` teams. What was the total number of players on all the teams?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -83,7 +83,7 @@
                 }
             },
             "B": {
-                "Choice": "There were 36 players on a team. Then, 9 players left the team. What is the total number of players on the team now?",
+                "Choice": "There were `36` players on a team. Then, `9` players left the team. What is the total number of players on the team now?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -91,7 +91,7 @@
                 }
             },
             "C": {
-                "Choice": "There were 36 players on a team. Then, 9 players joined the team. What is the total number of players on the team now?",
+                "Choice": "There were `36` players on a team. Then, `9` players joined the team. What is the total number of players on the team now?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -99,7 +99,7 @@
                 }
             },
             "D": {
-                "Choice": "There were 36 players on a team. The players were split equally into 9 groups. What was the total number of players in each group?",
+                "Choice": "There were `36` players on a team. The players were split equally into `9` groups. What was the total number of players in each group?",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -124,8 +124,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The heights, in `text(inches)`, of eight students are shown in this list.",
-            ":box:48 1/2, 50 1/2, 49, 50 1/2, 50, 48 1/2, 49 1/2, 50",
+            "The heights, in `text(inches)`, of `text(eight)` students are shown in this list.",
+            ":box:`48``1/2,50``1/2,49,50``1/2,50,48``1/2,49``1/2,50`",
             "Which line plot shows the heights, in `text(inches)`, of all the students?"
         ],
         "AnswerChoices": {
@@ -184,7 +184,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The number 324 rounded to the nearest hundred is 300.",
+                "Choice": "The number `324` rounded to the nearest `text(hundred)` is `300`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -192,7 +192,7 @@
                 }
             },
             "B": {
-                "Choice": "The number 324 rounded to the nearest hundred is 400.",
+                "Choice": "The number `324` rounded to the nearest `text(hundred)` is `400`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -200,7 +200,7 @@
                 }
             },
             "C": {
-                "Choice": "The number 186 rounded to the nearest hundred is 100.",
+                "Choice": "The number `186` rounded to the nearest `text(hundred)` is `100`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -208,7 +208,7 @@
                 }
             },
             "D": {
-                "Choice": "The number 186 rounded to the nearest hundred is 200.",
+                "Choice": "The number `186` rounded to the nearest `text(hundred)` is `200`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -216,7 +216,7 @@
                 }
             },
             "E": {
-                "Choice": "The number 242 rounded to the nearest hundred is 200.",
+                "Choice": "The number `242` rounded to the nearest `text(hundred)` is `200`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -224,7 +224,7 @@
                 }
             },
             "F": {
-                "Choice": "The number 242 rounded to the nearest hundred is 300.",
+                "Choice": "The number `242` rounded to the nearest `text(hundred)` is `300`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -239,7 +239,7 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand a fraction as a number on the number line; represent fractions on a number line diagram."
@@ -259,10 +259,10 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Plot the point that represents the location of 1/4 on this number line."
+                    "Plot the point that represents the location of `1/4` on this number line."
                 ],
                 "AnswerChoices": {
-                    "A:0": {
+                    "A:`0`": {
                         "Choice": "0",
                         "Key": {
                             "Correct": false,
@@ -294,7 +294,7 @@
                             "Percent": 0
                         }
                     },
-                    "E:1": {
+                    "E:`1`": {
                         "Choice": "1",
                         "Key": {
                             "Correct": false,
@@ -310,10 +310,10 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Plot the point that represents the location of 3/4 on this number line."
+                    "Plot the point that represents the location of `3/4` on this number line."
                 ],
                 "AnswerChoices": {
-                    "A:0": {
+                    "A:`0`": {
                         "Choice": "0",
                         "Key": {
                             "Correct": false,
@@ -345,7 +345,7 @@
                             "Percent": 0
                         }
                     },
-                    "E:1": {
+                    "E:`1`": {
                         "Choice": "1",
                         "Key": {
                             "Correct": false,
@@ -377,7 +377,7 @@
                             "Percent": 0
                         }
                     },
-                    "I:2": {
+                    "I:`2`": {
                         "Choice": "2",
                         "Key": {
                             "Correct": false,
@@ -393,11 +393,11 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Plot the point that represents the location of 7/4 on this number line and explain how you know your answer is correct.",
+                    "Plot the point that represents the location of `7/4` on this number line and explain how you know your answer is correct.",
                     "Enter your explanation in the space provided."
                 ],
                 "AnswerChoices": {
-                    "A:0": {
+                    "A:`0`": {
                         "Choice": "0",
                         "Key": {
                             "Correct": false,
@@ -429,7 +429,7 @@
                             "Percent": 0
                         }
                     },
-                    "E:1": {
+                    "E:`1`": {
                         "Choice": "1",
                         "Key": {
                             "Correct": false,
@@ -461,7 +461,7 @@
                             "Percent": 0
                         }
                     },
-                    "I:2": {
+                    "I:`2`": {
                         "Choice": "2",
                         "Key": {
                             "Correct": false,
@@ -493,7 +493,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "9 × 8 = 72",
+                "Choice": "`9xx8=72`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -501,7 +501,7 @@
                 }
             },
             "B": {
-                "Choice": "9 × 7 = 72",
+                "Choice": "`9xx7=72`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -509,7 +509,7 @@
                 }
             },
             "C": {
-                "Choice": "35 ÷ 5 = 8",
+                "Choice": "`35-:5=8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -517,7 +517,7 @@
                 }
             },
             "D": {
-                "Choice": "35 ÷ 5 = 7",
+                "Choice": "`35-:5=7`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -525,7 +525,7 @@
                 }
             },
             "E": {
-                "Choice": "9 × 7 = 56",
+                "Choice": "`9xx7=56`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -533,7 +533,7 @@
                 }
             },
             "F": {
-                "Choice": "8 × 7 = 56",
+                "Choice": "`8xx7=56`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -548,7 +548,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size."
@@ -558,11 +558,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of these fractions is equivalent to the number 4?"
+            "Which of these fractions is equivalent to the number `4`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/1",
+                "Choice": "`1/1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -570,7 +570,7 @@
                 }
             },
             "B": {
-                "Choice": "4/1",
+                "Choice": "`4/1`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -578,7 +578,7 @@
                 }
             },
             "C": {
-                "Choice": "1/4",
+                "Choice": "`1/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -586,7 +586,7 @@
                 }
             },
             "D": {
-                "Choice": "4/4",
+                "Choice": "`4/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -612,12 +612,12 @@
         "Explain": false,
         "Content": [
             "A student used multiplication to solve this division equation.",
-            ":ibox:18 ÷ 3 = n",
+            ":ibox:`18-:3=n`",
             "Which multiplication equation could the student have used to solve the division equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "18 × 3 = n",
+                "Choice": "`18xx3=n`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -625,7 +625,7 @@
                 }
             },
             "B": {
-                "Choice": "n × 18 = 3",
+                "Choice": "`nxx18=3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -633,7 +633,7 @@
                 }
             },
             "C": {
-                "Choice": "n = 3 × 18",
+                "Choice": "`n=3xx18`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -641,7 +641,7 @@
                 }
             },
             "D": {
-                "Choice": "18 = 3 × n",
+                "Choice": "`18=3xxn`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -666,9 +666,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student will shade 1/8 of this figure.",
+            "A student will shade `1/8` of this figure.",
             "problems/MA22G3M/media/9a.jpg",
-            "Which of these models have a shaded part that is 1/8 the area of the whole figure?",
+            "Which of these models have a shaded part that is `1/8` the area of the `text(whole)` figure?",
             "Select the TWO correct answers."
         ],
         "AnswerChoices": {
@@ -738,12 +738,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A science class collected rocks in a park. The students put all of the rocks into 5 buckets. They put 70 rocks into each bucket.",
+            "A science class collected rocks in a park. The students put all of the rocks into `5` buckets. They put `70` rocks into each bucket.",
             "What was the total number of rocks the students collected?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "350 rocks",
+                "Choice": "`350` rocks",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -751,7 +751,7 @@
                 }
             },
             "B": {
-                "Choice": "280 rocks",
+                "Choice": "`280` rocks",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -759,7 +759,7 @@
                 }
             },
             "C": {
-                "Choice": "35 rocks",
+                "Choice": "`35` rocks",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -767,7 +767,7 @@
                 }
             },
             "D": {
-                "Choice": "14 rocks",
+                "Choice": "`14` rocks",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -792,8 +792,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The first four numbers in a pattern are shown.",
-            ":ibox:84, 76, 68, 60,   ͟?͟",
+            "The `text(first four)` numbers in a pattern are shown.",
+            ":ibox:`84,76,68,60,ul(text( )?text( ))`",
             "What is the next number in the pattern?"
         ],
         "AnswerChoices": {
@@ -823,13 +823,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Cups of coffee were served at a parent meeting at a school. The number of cups served, rounded to the nearest HUNDRED, was 200.",
+            "Cups of coffee were served at a parent meeting at a school. The number of cups served, rounded to the nearest `text(hundred)`, was `200`.",
             "Which of these numbers could be the ACTUAL number of cups of coffee served?",
             "Select the TWO correct answers."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "109",
+                "Choice": "`109`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -837,7 +837,7 @@
                 }
             },
             "B": {
-                "Choice": "267",
+                "Choice": "`267`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -845,7 +845,7 @@
                 }
             },
             "C": {
-                "Choice": "152",
+                "Choice": "`152`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -853,7 +853,7 @@
                 }
             },
             "D": {
-                "Choice": "254",
+                "Choice": "`254`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -861,7 +861,7 @@
                 }
             },
             "E": {
-                "Choice": "231",
+                "Choice": "`231`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -888,11 +888,11 @@
         "Content": [
             "A circle is divided into equal parts, as shown.",
             "problems/MA22G3M/media/13a.jpg",
-            "Which fraction of the area of the whole circle is one part?"
+            "Which fraction of the area of the `text(whole)` circle is `text(one)` part?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -900,7 +900,7 @@
                 }
             },
             "B": {
-                "Choice": "2/3",
+                "Choice": "`2/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -908,7 +908,7 @@
                 }
             },
             "C": {
-                "Choice": "3/3",
+                "Choice": "`3/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -916,7 +916,7 @@
                 }
             },
             "D": {
-                "Choice": "4/3",
+                "Choice": "`4/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -931,7 +931,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain equivalence of fractions in special cases, and compare fractions by reasoning about their size."
@@ -941,13 +941,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four fractions are shown in the box.",
-            ":box:2/4\t2/6\t3/6\t4/8",
+            "`text(Four)` fractions are shown in the box.",
+            ":box:`2/4`\t`2/6`\t`3/6`\t`4/8`",
             "Which fraction in the box is not equal to the other fractions in the box?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/4",
+                "Choice": "`2/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -955,7 +955,7 @@
                 }
             },
             "B": {
-                "Choice": "2/6",
+                "Choice": "`2/6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -963,7 +963,7 @@
                 }
             },
             "C": {
-                "Choice": "3/6",
+                "Choice": "`3/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -971,7 +971,7 @@
                 }
             },
             "D": {
-                "Choice": "4/8",
+                "Choice": "`4/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -998,7 +998,7 @@
         "Content": [
             "This diagram shows the floors of a hallway and a closet.",
             "problems/MA22G3M/media/15a.jpg",
-            "The hallway floor is covered with square tiles, with no gaps or overlaps. Each tile has a side length of 1 foot.",
+            "The hallway floor is covered with square tiles, with no gaps or overlaps. Each tile has a side length of `1` `text(foot)`.",
             ":ibox:THIS PROBLEM HAS THREE PARTS."
         ],
         "AnswerChoices": {},
@@ -1029,13 +1029,13 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The closet floor is in the shape of a rectangle with a length of 3 feet and a width of 4 feet.",
-                    "Write an equation that can be used to find A, the area, in `text(square feet)`, of the closet floor.",
+                    "The closet floor is in the shape of a rectangle with a length of `3` `text(feet)` and a width of `4` `text(feet)`.",
+                    "Write an equation that can be used to find `A`, the area, in `text(square feet)`, of the closet floor.",
                     "Enter your equation in the space provided."
                 ],
                 "AnswerChoices": {
                     "KEY": {
-                        "Choice": "match:A=3×4",
+                        "Choice": "match:A=3*4",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1081,13 +1081,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student sold candy bars on Monday, Tuesday, and Wednesday.",
-            ":ibox:• She sold a total of 125 candy bars over the three days.\n\n• She sold 67 candy bars on Monday.\n\n• She sold 19 candy bars on Tuesday.",
-            "What is the total number of candy bars the student sold on Wednesday?"
+            "A student sold candy bars on `text(Monday),text(Tuesday),andtext(Wednesday)`.",
+            ":ibox:• She sold a total of `125` candy bars over the `text(three days)`.\n\n• She sold `67` candy bars on `text(Monday)`.\n\n• She sold `19` candy bars on `text(Tuesday)`.",
+            "What is the total number of candy bars the student sold on `text(Wednesday)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "39",
+                "Choice": "`39`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1095,7 +1095,7 @@
                 }
             },
             "B": {
-                "Choice": "58",
+                "Choice": "`58`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1103,7 +1103,7 @@
                 }
             },
             "C": {
-                "Choice": "86",
+                "Choice": "`86`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1111,7 +1111,7 @@
                 }
             },
             "D": {
-                "Choice": "211",
+                "Choice": "`211`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1136,12 +1136,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Evan used exactly 20 paper clips to make an array.",
+            "Evan used exactly `20` paper clips to make an array.",
             "Which of these could be the array Evan made?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 rows of 20 paper clips",
+                "Choice": "`2` rows of `20` paper clips",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1149,7 +1149,7 @@
                 }
             },
             "B": {
-                "Choice": "4 rows of 6 paper clips",
+                "Choice": "`4` rows of `6` paper clips",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1157,7 +1157,7 @@
                 }
             },
             "C": {
-                "Choice": "5 rows of 4 paper clips",
+                "Choice": "`5` rows of `4` paper clips",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1165,7 +1165,7 @@
                 }
             },
             "D": {
-                "Choice": "10 rows of 10 paper clips",
+                "Choice": "`10` rows of `10` paper clips",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1190,12 +1190,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 48 students in a library. The students are working in groups. Each group has 6 students.",
-            "Which equation can be used to find n, the number of groups of students working in the library?"
+            "There are `48` students in a library. The students are working in groups. Each group has `6` students.",
+            "Which equation can be used to find `n`, the number of groups of students working in the library?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "48 ÷ 6 = n",
+                "Choice": "`48-:6=n`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1203,7 +1203,7 @@
                 }
             },
             "B": {
-                "Choice": "n ÷ 6 = 48",
+                "Choice": "`n-:6=48`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1211,7 +1211,7 @@
                 }
             },
             "C": {
-                "Choice": "48 × 6 = n",
+                "Choice": "`48xx6=n`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1219,7 +1219,7 @@
                 }
             },
             "D": {
-                "Choice": "n × 48 = 6",
+                "Choice": "`nxx48=6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1234,7 +1234,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Understand a fraction `1/b` as the quantity formed by `1` part when a whole (a single unit) is partitioned into `b` equal parts; understand a fraction `a/b` as the quantity formed by a parts of size `1/b`."
@@ -1244,7 +1244,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of these fraction models shows 5/8 of the model shaded?"
+            "Which of these fraction models shows `5/8` of the model shaded?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1299,7 +1299,7 @@
         "Content": [
             "This diagram shows a piece of artwork made with square tiles.",
             "problems/MA22G3M/media/20a.jpg",
-            "What is the total area, in `text(square feet)`, of the 𝘀𝗵𝗮𝗱𝗲𝗱 part of the artwork?"
+            "What is the total area, in `text(square feet)`, of the `ul(text(shaded))` part of the artwork?"
         ],
         "AnswerChoices": {
             "KEY": {

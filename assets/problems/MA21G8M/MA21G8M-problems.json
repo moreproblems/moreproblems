@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "Consider this equation.",
-            ":ibox:x^3 = 27",
-            "Which of the following values of x makes the equation true?"
+            ":ibox:`x^3=27`",
+            "Which of the following values of `x` makes the equation true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -28,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "1/9",
+                "Choice": "`1/9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -69,11 +69,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Susan wants to hire one of two mechanics to repair her car. Each mechanic charges a one-time fee in addition to an hourly rate.",
-            "Mechanic A charges a one-time fee plus $35 per hour. A repair made by Mechanic A that takes 5 hours to complete will cost a total of $225.",
-            "This table shows the total cost, including the one-time fee, for repairs made by Mechanic B that take different numbers of hours to complete.",
+            "Susan wants to hire `text(one)` of `text(two)` mechanics to repair her car. Each mechanic charges a `text(one-time)` fee in addition to an `text(hourly)` rate.",
+            "Mechanic `A` charges a `text(one-time)` fee plus `$35` `text(per hour)`. A repair made by Mechanic `A` that takes `5` `text(hours)` to complete will cost a total of `$225`.",
+            "This table shows the total cost, including the `text(one-time)` fee, for repairs made by Mechanic `B` that take different numbers of `text(hours)` to complete.",
             "problems/MA21G8M/media/2a.jpg",
-            "How much more money, in `text(dollars)`, does Mechanic A charge for the one-time fee than Mechanic B charges?"
+            "How much more money, in `text(dollars)`, does Mechanic `A` charge for the `text(one-time)` fee than Mechanic `B` charges?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -102,13 +102,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Rectangle MNPQ is shown on this coordinate plane.",
+            "Rectangle `MNPQ` is shown on this coordinate plane.",
             "problems/MA21G8M/media/3a.jpg",
-            "Which of the following transformations of rectangle MNPQ would create an image that is similar but NOT congruent to rectangle MNPQ?"
+            "Which of the following transformations of rectangle `MNPQ` would create an image that is similar but NOT congruent to rectangle `MNPQ`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a translation 4 units up and 2 units right",
+                "Choice": "a translation `4` `text(units)` up and `2` `text(units)` right",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -124,7 +124,7 @@
                 }
             },
             "C": {
-                "Choice": "a dilation by a scale factor of 1 with the center at the origin, followed by a translation 5 units left",
+                "Choice": "a dilation by a scale factor of `1` with the center at the origin, followed by a translation `5` `text(units)` left",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -132,7 +132,7 @@
                 }
             },
             "D": {
-                "Choice": "a reflection over the `ytext(-axis)`, followed by a dilation by a scale factor of 2 with the center at the origin",
+                "Choice": "a reflection over the `ytext(-axis)`, followed by a dilation by a scale factor of `2` with the center at the origin",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -157,11 +157,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What number multiplied by the expression 5 × 10³ is equivalent to the expression 5 × 10⁶?"
+            "What number multiplied by the expression `5xx10^3` is equivalent to the expression `5xx10^6`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -169,7 +169,7 @@
                 }
             },
             "B": {
-                "Choice": "100",
+                "Choice": "`100`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -177,7 +177,7 @@
                 }
             },
             "C": {
-                "Choice": "1,000",
+                "Choice": "`1text(,)000`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -185,7 +185,7 @@
                 }
             },
             "D": {
-                "Choice": "5,000",
+                "Choice": "`5text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -215,7 +215,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = x^2- 1",
+                "Choice": "`y=x^2-1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -223,7 +223,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 2x + 1",
+                "Choice": "`y=2x+1`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -231,7 +231,7 @@
                 }
             },
             "C": {
-                "Choice": "y = (1/2)x - 5",
+                "Choice": "`y=1/2x-5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -239,7 +239,7 @@
                 }
             },
             "D": {
-                "Choice": "y = (1/3)x^2",
+                "Choice": "`y=1/3x^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -247,7 +247,7 @@
                 }
             },
             "E": {
-                "Choice": "y = -x",
+                "Choice": "`y=-x`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -273,8 +273,8 @@
         "Explain": false,
         "Content": [
             "Consider this system of equations.",
-            ":ibox:p = 2n\n\np - 5 = 1.5n",
-            "What value of n makes the system of equations true?"
+            ":ibox:`p=2n`\n\n`p-5=1.5n`",
+            "What value of `n` makes the system of equations true?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -304,7 +304,7 @@
         "Explain": false,
         "Content": [
             "Consider this number.",
-            ":ibox:4.0838383...",
+            ":ibox:`4.0bar(83)`",
             "Which of the following statements about the number is true?"
         ],
         "AnswerChoices": {
@@ -369,8 +369,8 @@
                 "Explain": true,
                 "Content": [
                     "Consider this equation.",
-                    ":ibox:x - 4 = 16",
-                    "What is the solution, x, to the equation? Show or explain how you got your answer."
+                    ":ibox:`x-4=16`",
+                    "What is the solution, `x`, to the equation? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -389,7 +389,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Write a linear equation in one variable that has infinitely many solutions. Show the process of simplifying the equation to prove that it has infinitely many solutions."
+                    "Write a linear equation in `text(one)` variable that has infinitely many solutions. Show the process of simplifying the equation to prove that it has infinitely many solutions."
                 ],
                 "AnswerChoices": {}
             },
@@ -400,7 +400,7 @@
                 "Explain": true,
                 "Content": [
                     "Consider this equation.",
-                    ":ibox:3(4 + x) = 7x - 2(2x + 3)",
+                    ":ibox:`3(4+x)=7x-2(2x+3)`",
                     "How many solutions does the equation have? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
@@ -421,7 +421,7 @@
                 "Explain": true,
                 "Content": [
                     "Consider this equation.",
-                    ":ibox:(3/8)x - 6 = (1/2)(4 - x)",
+                    ":ibox:`3/8x-6=1/2(4-x)`",
                     "How many solutions does the equation have? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
@@ -454,7 +454,7 @@
         "Content": [
             "This table represents a linear relationship between `xandy`.",
             "problems/MA21G8M/media/9a.jpg",
-            "What is the value of y when x = 2?"
+            "What is the value of `y` when `x=2`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -483,11 +483,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The lengths of three sides of a triangle are 3, π, and √5. Which list shows the lengths in order from least to greatest?"
+            "The lengths of `text(three)` sides of a triangle are `3,pi,andsqrt(5)`. Which list shows the lengths in order from least to greatest?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3, π, √5",
+                "Choice": "`3,pi,sqrt(5)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -495,7 +495,7 @@
                 }
             },
             "B": {
-                "Choice": "3, √5, π",
+                "Choice": "`3,sqrt(5),pi`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -503,7 +503,7 @@
                 }
             },
             "C": {
-                "Choice": "√5, 3, π",
+                "Choice": "`sqrt(5),3,pi`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -511,7 +511,7 @@
                 }
             },
             "D": {
-                "Choice": "√5, π, 3",
+                "Choice": "`sqrt(5),pi,3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -599,7 +599,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4.8^2 + 7.2^2 = 12^2",
+                "Choice": "`4.8^2+7.2^2=12^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -607,7 +607,7 @@
                 }
             },
             "B": {
-                "Choice": "4.8^2 + 9.6^2 = 15.4^2",
+                "Choice": "`4.8^2+9.6^2=15.4^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -615,7 +615,7 @@
                 }
             },
             "C": {
-                "Choice": "7.2^2 + 9.6^2 = 12^2",
+                "Choice": "`7.2^2+9.6^2=12^2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -623,7 +623,7 @@
                 }
             },
             "D": {
-                "Choice": "7.2^2 + 12^2 = 15.4^2",
+                "Choice": "`7.2^2+12^2=15.4^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -650,14 +650,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line segment UV is shown on this coordinate plane.",
+            "Line segment `bar(UV)` is shown on this coordinate plane.",
             "problems/MA21G8M/media/13a.jpg",
-            "Point W, not shown, lies on line segment UV. The coordinates `(x,y)` represent point W.",
-            "Line segment UV will be reflected over the `ytext(-axis)`. After the reflection, what will be the coordinates of the image of point W?"
+            "Point `W`, not shown, lies on line segment `bar(UV)`. The coordinates `(x,y)` represent point `W`.",
+            "Line segment `bar(UV)` will be reflected over the `ytext(-axis)`. After the reflection, what will be the coordinates of the image of point `W`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(-y, x)",
+                "Choice": "`(-y,x)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -665,7 +665,7 @@
                 }
             },
             "B": {
-                "Choice": "(y, -x)",
+                "Choice": "`(y,-x)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -673,7 +673,7 @@
                 }
             },
             "C": {
-                "Choice": "(x, -y)",
+                "Choice": "`(x,-y)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -681,7 +681,7 @@
                 }
             },
             "D": {
-                "Choice": "(-x, y)",
+                "Choice": "`(-x,y)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -708,12 +708,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A line passes through the point (2, 10) and has a `ytext(-intercept)` of 4.",
+            "A line passes through the point `(2,10)` and has a `ytext(-intercept)` of `4`.",
             "Which of the following equations represents the line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 2x + 4",
+                "Choice": "`y=2x+4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -721,7 +721,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 3x + 4",
+                "Choice": "`y=3x+4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -729,7 +729,7 @@
                 }
             },
             "C": {
-                "Choice": "y = 4x + 3",
+                "Choice": "`y=4x+3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -737,7 +737,7 @@
                 }
             },
             "D": {
-                "Choice": "y = 5x + 3",
+                "Choice": "`y=5x+3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -764,7 +764,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Pens cost $1.50 each at a school store. Which graph represents y, the cost, in `text(dollars)`, of purchasing x pens at the store?"
+            "Pens cost `$1.50` each at a school store. Which graph represents `y`, the cost, in `text(dollars)`, of purchasing `x` pens at the store?"
         ],
         "AnswerChoices": {
             "A": {
@@ -819,14 +819,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Parallel lines q and r are intersected by transversal line c, as shown in this diagram.",
+            "Parallel lines `qandr` are intersected by transversal line `c`, as shown in this diagram.",
             "problems/MA21G8M/media/16a.jpg",
-            "Based on the diagram, what are the measures of angles FGV, JGP, and GPT?",
+            "Based on the diagram, what are the measures of angles `FGV,JGP,andGPT`?",
             "Select the THREE correct answers."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The measure of angle FGV = 67°.",
+                "Choice": "The measure of angle `FGV=67°`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -834,7 +834,7 @@
                 }
             },
             "B": {
-                "Choice": "The measure of angle FGV = 73°.",
+                "Choice": "The measure of angle `FGV=73°`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -842,7 +842,7 @@
                 }
             },
             "C": {
-                "Choice": "The measure of angle JGP = 40°.",
+                "Choice": "The measure of angle `JGP=40°`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -850,7 +850,7 @@
                 }
             },
             "D": {
-                "Choice": "The measure of angle JGP = 73°.",
+                "Choice": "The measure of angle `JGP=73°`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -858,7 +858,7 @@
                 }
             },
             "E": {
-                "Choice": "The measure of angle GPT = 107°.",
+                "Choice": "The measure of angle `GPT=107°`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -866,7 +866,7 @@
                 }
             },
             "F": {
-                "Choice": "The measure of angle GPT = 140°.",
+                "Choice": "The measure of angle `GPT=140°`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -893,7 +893,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "Parallelogram EFGH was transformed to create its image, parallelogram E'F'G'H', as shown on this coordinate plane.",
+            "Parallelogram `EFGH` was transformed to create its image, parallelogram `E'F'G'H'`, as shown on this coordinate plane.",
             "problems/MA21G8M/media/17a.jpg",
             ":ibox:THIS PROBLEM HAS THREE PARTS."
         ],
@@ -905,7 +905,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Describe the transformation that was performed on parallelogram EFGH to create parallelogram E'F'G'H'. Show or explain how you got your answer."
+                    "Describe the transformation that was performed on parallelogram `EFGH` to create parallelogram `E'F'G'H'`. Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -924,7 +924,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Is parallelogram EFGH congruent to parallelogram E'F'G'H'? Explain your reasoning."
+                    "Is parallelogram `EFGH` congruent to parallelogram `E'F'G'H'`? Explain your reasoning."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -951,8 +951,8 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Parallelogram E'F'G'H' will be reflected over the `xtext(-axis)` to create its image, parallelogram E″F″G″H″.",
-                    "Will parallelogram E″F″G″H″ be congruent to parallelogram EFGH? Explain your reasoning."
+                    "Parallelogram `E'F'G'H'` will be reflected over the `xtext(-axis)` to create its image, parallelogram `E″F″G″H″`.",
+                    "Will parallelogram `E″F″G″H″` be congruent to parallelogram `EFGH`? Explain your reasoning."
                 ],
                 "AnswerChoices": {
                     "A": {
@@ -1011,7 +1011,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "Only Graph 1 and Graph 2 represent y as a function of x.",
+                        "Choice": "Only Graph `1` and Graph `2` represent `y` as a function of `x`.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1019,7 +1019,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "Only Graph 1 and Graph 4 represent y as a function of x.",
+                        "Choice": "Only Graph `1` and Graph `4` represent `y` as a function of `x`.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1027,7 +1027,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "Only Graph 2 and Graph 4 represent y as a function of x.",
+                        "Choice": "Only Graph `2` and Graph `4` represent `y` as a function of `x`.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1035,7 +1035,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "Only Graph 3 and Graph 4 represent y as a function of x.",
+                        "Choice": "Only Graph `3` and Graph `4` represent `y` as a function of `x`.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1051,9 +1051,9 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The relationship between the `xandy` values in this table is not a function. One of the values of x is missing from the table, as shown.",
+                    "The relationship between the `xandy` values in this table is not a function. `text(One)` of the values of `x` is missing from the table, as shown.",
                     "problems/MA21G8M/media/18e.jpg",
-                    "What is ONE value of x that could replace the missing value in the table to show that y is NOT a function of x?"
+                    "What is `text(one)` value of `x` that could replace the missing value in the table to show that `y` is NOT a function of `x`?"
                 ],
                 "AnswerChoices": {
                     "KEY1": {
@@ -1093,12 +1093,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A candle is in the shape of a cylinder. The candle has a diameter of 6 inches and a height of 5 inches.",
-            "What is the volume of the candle? (Use 3.14 for π.)"
+            "A candle is in the shape of a cylinder. The candle has a diameter of `6` `text(inches)` and a height of `5` `text(inches)`.",
+            "What is the volume of the candle? (Use `3.14` for `pi`.)"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "94.2 cubic inches",
+                "Choice": "`94.2` `text(cubic inches)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1106,7 +1106,7 @@
                 }
             },
             "B": {
-                "Choice": "141.3 cubic inches",
+                "Choice": "`141.3` `text(cubic inches)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1114,7 +1114,7 @@
                 }
             },
             "C": {
-                "Choice": "150.7 cubic inches",
+                "Choice": "`150.7` `text(cubic inches)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1122,7 +1122,7 @@
                 }
             },
             "D": {
-                "Choice": "188.4 cubic inches",
+                "Choice": "`188.4` `text(cubic inches)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1149,7 +1149,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "This scatter plot shows the total amount of money in a bank account at the end of each week for a period of 12 weeks.",
+            "This scatter plot shows the total amount of money in a bank account at the end of each week for a period of `12` `text(weeks)`.",
             "problems/MA21G8M/media/20a.jpg",
             "Which of the following statements is true about the scatter plot?"
         ],

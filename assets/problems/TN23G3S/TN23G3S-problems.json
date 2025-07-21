@@ -36,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "has no moons and is smaller than Earth",
+                "Choice": "has no moons and is smaller than `text(Earth)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -44,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "has two moons and is smaller than Earth",
+                "Choice": "has `text(two)` moons and is smaller than `text(Earth)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -69,12 +69,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Student 1 claims that Mars is an outer planet because it is farther away from the sun than Earth. Student 2 claims that Mars is an inner planet.",
-            "Which TWO pieces of evidence could Student 2 use to support the argument that Mars is an inner planet?"
+            "Student `1` claims that Mars is an outer planet because it is farther away from the `text(sun)` than `text(Earth)`. Student `2` claims that `text(Mars)` is an inner planet.",
+            "Which TWO pieces of evidence could Student `2` use to support the argument that `text(Mars)` is an inner planet?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Mars is red.",
+                "Choice": "`text(Mars)` is red.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -82,7 +82,7 @@
                 }
             },
             "B": {
-                "Choice": "Mars has a rocky surface.",
+                "Choice": "`text(Mars)` has a rocky surface.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -90,7 +90,7 @@
                 }
             },
             "C": {
-                "Choice": "Mars does not have water.",
+                "Choice": "`text(Mars)` does not have water.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -98,7 +98,7 @@
                 }
             },
             "D": {
-                "Choice": "Mars does not have rings.",
+                "Choice": "`text(Mars)` does not have rings.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -106,7 +106,7 @@
                 }
             },
             "E": {
-                "Choice": "Mars is much colder than Earth.",
+                "Choice": "`text(Mars)` is much colder than `text(Earth)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -131,13 +131,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table shows climate data from four different locations. Each location has a different climate. Both measurements listed are averages for a year.",
+            "The table shows climate data from `text(four)` different locations. Each location has a different climate. Both measurements listed are averages for a `text(year)`.",
             "problems/TN23G3S/media/3a.jpg",
             "Based on the data in the table, which location MOST LIKELY has a tropical climate?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Location 1",
+                "Choice": "Location `1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -145,7 +145,7 @@
                 }
             },
             "B": {
-                "Choice": "Location 2",
+                "Choice": "Location `2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -153,7 +153,7 @@
                 }
             },
             "C": {
-                "Choice": "Location 3",
+                "Choice": "Location `3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -161,7 +161,7 @@
                 }
             },
             "D": {
-                "Choice": "Location 4",
+                "Choice": "Location `4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -187,7 +187,7 @@
         "Explain": false,
         "Content": [
             "Students need a container to carry birdseed to a bird feeder. The students make a list of properties:",
-            ":box:• must be easy to carry\n• must not break easily\n• must last all year",
+            ":box:• must be easy to carry\n• must not break easily\n• must last all `text(year)`",
             "Which container BEST meets the students' needs?"
         ],
         "AnswerChoices": {
@@ -246,7 +246,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Glue has to work the same in outer space as it does on Earth.",
+                "Choice": "Glue has to work the same in outer space as it does on `text(Earth)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -262,7 +262,7 @@
                 }
             },
             "C": {
-                "Choice": "Two magnets can attract each other in outer space.",
+                "Choice": "`text(Two)` magnets can attract each other in outer space.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -278,7 +278,7 @@
                 }
             },
             "E": {
-                "Choice": "Objects move faster in outer space than on Earth.",
+                "Choice": "Objects move faster in outer space than on `text(Earth)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -490,7 +490,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1 book",
+                "Choice": "`1` book",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -498,7 +498,7 @@
                 }
             },
             "B": {
-                "Choice": "2 books",
+                "Choice": "`2` books",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -506,7 +506,7 @@
                 }
             },
             "C": {
-                "Choice": "3 books",
+                "Choice": "`3` books",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -514,7 +514,7 @@
                 }
             },
             "D": {
-                "Choice": "4 books",
+                "Choice": "`4` books",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -539,13 +539,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students are asked to make an electric candle that lights up. The picture shows one design.",
+            "Students are asked to make an electric candle that lights up. The picture shows `text(one)` design.",
             "problems/TN23G3S/media/10a.jpg",
             "Which change should the students make so the bulb will successfully light up?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Add a second battery.",
+                "Choice": "Add a `text(second)` battery.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

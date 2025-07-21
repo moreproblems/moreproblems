@@ -736,14 +736,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Juliene practiced her dance routine for twice as many minutes on Monday as she did on Tuesday. She practiced her routine those two days for a total of `2` `text(hours)and15` `text(minutes)`. For how many minutes did Juliene practice her dance routine on Monday?"
+            "Juliene practiced her dance routine for `text(twice)` as many `text(minutes)` on `text(Monday)` as she did on `text(Tuesday)`. She practiced her routine those `text(two days)` for a total of `2` `text(hours)and15` `text(minutes)`. For how many minutes did Juliene practice her dance routine on `text(Monday)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:90",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Juliene practiced twice as long on Monday as she did on Tuesday. Therefore, if `x` is the number of minutes Juliene practiced on Tuesday, then `2x` is the number of minutes she practiced on Monday. The total amount of time Juliene practiced on the two days is `2` `text(hours)and15` `text(minutes)`, which is equal to `135` `text(minutes)`. Thus, the equation `x+2x=135` must be true. This simplifies to `3x=135`, and so `x=45`. The number of minutes Juliene practiced on Monday is `2x`, which is equal to `2x=2(45)=90`.",
+                    "Rationale": "Juliene practiced twice as long on `text(Monday)` as she did on `text(Tuesday)`. Therefore, if `x` is the number of `text(minutes)` Juliene practiced on `text(Tuesday)`, then `2x` is the number of `text(minutes)` she practiced on `text(Monday)`. The total amount of time Juliene practiced on the `text(two days)` is `2` `text(hours)and15` `text(minutes)`, which is equal to `135` `text(minutes)`. Thus, the equation `x+2x=135` must be true. This simplifies to `3x=135`, and so `x=45`. The number of minutes Juliene practiced on `text(Monday)` is `2x`, which is equal to `2x=2(45)=90`.",
                     "Percent": 0
                 }
             }
