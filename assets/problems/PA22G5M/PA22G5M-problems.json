@@ -14,38 +14,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Multiply: 372 × 108"
+            "Multiply: `372xx108`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6,696",
+                "Choice": "`6text(,)696`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Aligns partial products incorrectly (2,976 + 3,720).",
+                    "Rationale": "Aligns partial products incorrectly `(2text(,)976+3text(,)720)`.",
                     "Percent": 21
                 }
             },
             "B": {
-                "Choice": "39,666",
+                "Choice": "`39text(,)666`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not regroup when multiplying (2,466 + 37,200).",
+                    "Rationale": "Does not regroup when multiplying `(2text(,)466+37text(,)200)`.",
                     "Percent": 11
                 }
             },
             "C": {
-                "Choice": "40,176",
+                "Choice": "`40text(,)176`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Using the standard algorithm, multiplies 372 by 8 and 372 by 100, and then adds the partial products (2,976 + 37,200).",
+                    "Rationale": "Using the standard algorithm, multiplies `372` by `8` and `372` by `100`, and then adds the partial products `(2text(,)976+37text(,)200)`.",
                     "Percent": 64
                 }
             },
             "D": {
-                "Choice": "282,816",
+                "Choice": "`282text(,)816`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Strings products together when multiplying 372 by 8 (245,616 + 37,200).",
+                    "Rationale": "Strings products together when multiplying `372` by `8` `(245text(,)616+37text(,)200)`.",
                     "Percent": 5
                 }
             }
@@ -69,40 +69,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The 10-by-10 grid shown below represents one whole.",
+            "The `10text(-by-)10` grid shown below represents `text(one whole)`.",
             "problems/PA22G5M/media/2a.jpg",
-            "The decimal number q is represented by the shaded part of the grid. Which statement correctly compares the value of q with two other numbers?"
+            "The decimal number `q` is represented by the shaded part of the grid. Which statement correctly compares the value of `q` with `text(two)` other numbers?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The value of q is greater than 0.1 and less than 0.305.",
+                "Choice": "The value of `q` is greater than `0.1` and less than `0.305`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 0.34 as the value of q, but thinks 0.34 < 0.305 because 34 < 305.",
+                    "Rationale": "Uses `0.34` as the value of `q`, but thinks `0.34<0.305` because `34<305`.",
                     "Percent": 31
                 }
             },
             "B": {
-                "Choice": "The value of q is greater than 0.305 and less than 0.35.",
+                "Choice": "The value of `q` is greater than `0.305` and less than `0.35`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies 0.34 as the value of q since 34 of `100` squares are shaded, compares 0.34 to 0.305 either by comparing the digits in the tenths place (3 = 3) and then the digits in the hundredths place (4 > 0) OR by expanding 0.34 to 0.340 and then comparing the digits after the decimal point (340 > 305), and compares 0.34 to 0.35 either by comparing the digits in the tenths place (3 = 3) and then the digits in the hundredths place (4 < 5) OR by comparing the digits after the decimal point (34 < 35).",
+                    "Rationale": "Identifies `0.34` as the value of `q` since `34` of `100` squares are shaded, compares `0.34` to `0.305` either by comparing the digits in the `text(tenths)` place `(3=3)` and then the digits in the `text(hundredths)` place `(4>0)` OR by expanding `0.34` to `0.340` and then comparing the digits after the decimal point `(340>305)`, and compares `0.34` to `0.35` either by comparing the digits in the `text(tenths)` place `(3=3)` and then the digits in the `text(hundredths)` place `(4<5)` OR by comparing the digits after the decimal point `(34<35)`.",
                     "Percent": 39
                 }
             },
             "C": {
-                "Choice": "The value of q is greater than 0.35 and less than 0.675.",
+                "Choice": "The value of `q` is greater than `0.35` and less than `0.675`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Counts unshaded instead of shaded and uses 0.66 as decimal.",
+                    "Rationale": "Counts unshaded instead of shaded and uses `0.66` as decimal.",
                     "Percent": 18
                 }
             },
             "D": {
-                "Choice": "The value of q is greater than 0.675 and less than 3.5.",
+                "Choice": "The value of `q` is greater than `0.675` and less than `3.5`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Interprets shaded as 3.4.",
+                    "Rationale": "Interprets shaded as `3.4`.",
                     "Percent": 12
                 }
             }
@@ -128,32 +128,32 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four number sentences are shown below, some of which are not true.",
-            "436.04 = 444.03",
-            "236.76 = 235.84",
-            "505.64 > 505.55",
-            "325.64 > 325.54",
-            "Each number is rounded to the nearest tenth. The comparison symbol in each number sentence remains the same. Which number sentence is rounded correctly and is true?"
+            "`text(Four)` number sentences are shown below, some of which are not true.",
+            ":ibox:`436.04=444.03`",
+            ":ibox:`236.76=235.84`",
+            ":ibox:`505.64>505.55`",
+            ":ibox:`325.64>325.54`",
+            "Each number is rounded to the nearest `text(tenth)`. The comparison symbol in each number sentence remains the same. Which number sentence is rounded correctly and is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The number sentence 436.04 = 444.03 becomes 440 = 440.",
+                "Choice": "The number sentence `436.04=444.03` becomes `440=440`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds to the nearest ten instead of to the nearest tenth.",
+                    "Rationale": "Rounds to the nearest `text(ten)` instead of to the nearest `text(tenth)`.",
                     "Percent": 23
                 }
             },
             "B": {
-                "Choice": "The number sentence 236.76 = 235.84 becomes 236.8 = 235.8.",
+                "Choice": "The number sentence `236.76=235.84` becomes `236.8=235.8`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After rounding correctly, compares only the digits in the tenths place and does not compare the whole number parts of the numbers.",
+                    "Rationale": "After rounding correctly, compares only the digits in the `text(tenths)` place and does not compare the `text(whole number)` parts of the numbers.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "The number sentence 505.64 > 505.55 becomes 505.6 > 505.5.",
+                "Choice": "The number sentence `505.64>505.55` becomes `505.6>505.5`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Rounds both numbers down.",
@@ -161,10 +161,10 @@
                 }
             },
             "D": {
-                "Choice": "The number sentence 325.64 > 325.54 becomes 325.6 > 325.5.",
+                "Choice": "The number sentence `325.64>325.54` becomes `325.6>325.5`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Rounds 325.64 down to 325.6 based on the 4 in the hundredths place, rounds 325.54 down to 325.5 based on the 4 in the hundredths place, and then compares 325.6 to 325.5 by comparing the digits in the hundreds place (3 = 3), then the digits in the tens place (2 = 2), then the digits in the ones place (5 = 5), and then the digits in the tenths place (6 > 5).",
+                    "Rationale": "Rounds `325.64` down to `325.6` based on the `4` in the `text(hundredths)` place, rounds `325.54` down to `325.5` based on the `4` in the `text(hundredths)` place, and then compares `325.6` to `325.5` by comparing the digits in the hundreds place `(3=3)`, then the digits in the tens place `(2=2)`, then the digits in the ones place `(5=5)`, and then the digits in the `text(tenths)` place `(6>5)`.",
                     "Percent": 39
                 }
             }
@@ -188,41 +188,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Serena has one large and one small beehive. Information about the hives and the bees living in each hive is listed below.",
-            ":box:• There are 1,050 bees living in the large hive.\n\n• The number of bees living in the small hive is 0.7 times the number of bees living in the large hive.\n\n• The bees living in the small hive visit 2,500 flowers each day.\n\n• The bees living in the large hive visit 0.8 times the number of flowers visited each day",
-            "by the bees living in the small hive.",
+            "Serena has `text(one)` large and `text(one)` small beehive. Information about the hives and the bees living in each hive is listed below.",
+            ":box:• There are `1text(,)050` bees living in the large hive.\n\n• The number of bees living in the small hive is `0.7` times the number of bees living in the large hive.\n\n• The bees living in the small hive visit `2text(,)500` flowers `text(each day)`.\n\n• The bees living in the large hive visit `0.8` times the number of flowers visited `text(each day)` by the bees living in the small hive.",
             "Which statement about the bees is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "There are 8,400 bees living in the two hives.",
+                "Choice": "There are `8text(,)400` bees living in the `text(two)` hives.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 1,050 × 7 + 1,050.",
+                    "Rationale": "Calculates `1text(,)050xx7+1text(,)050`.",
                     "Percent": 13
                 }
             },
             "B": {
-                "Choice": "There are 1,057 bees living in the small hive.",
+                "Choice": "There are `1text(,)057` bees living in the small hive.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 1,050 + 7.",
+                    "Rationale": "Calculates `1text(,)050+7`.",
                     "Percent": 13
                 }
             },
             "C": {
-                "Choice": "The bees living in the two hives visit 2,508 flowers each day.",
+                "Choice": "The bees living in the `text(two)` hives visit `2text(,)508` flowers `text(each day)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 2,500 + 8.",
+                    "Rationale": "Calculates `2text(,)500+8`.",
                     "Percent": 16
                 }
             },
             "D": {
-                "Choice": "The bees living in the large hive visit 2,000 flowers each day.",
+                "Choice": "The bees living in the large hive visit `2text(,)000` flowers `text(each day)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the number of flowers the bees living in the large hive visit each day by multiplying the number of flowers the bees living in the small hive visit each day by 0.8 (2,500 × 0.8).",
+                    "Rationale": "Determines the number of flowers the bees living in the large hive visit `text(each day)` by multiplying the number of flowers the bees living in the small hive visit `text(each day)` by `0.8` `(2text(,)500xx0.8)`.",
                     "Percent": 58
                 }
             }
@@ -234,7 +233,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Use equivalent fractions as a strategy to add and subtract fractions."
@@ -246,11 +245,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which step should be performed first when subtracting 1/5 from 5/7?"
+            "Which step should be performed first when subtracting `1/5` from `5/7`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Subtract 1 from 5.",
+                "Choice": "Subtract `1` from `5`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts the numerators without finding a common denominator.",
@@ -258,7 +257,7 @@
                 }
             },
             "B": {
-                "Choice": "Invert the fraction 1/5.",
+                "Choice": "Invert the fraction `1/5`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Confuses the process with division.",
@@ -266,7 +265,7 @@
                 }
             },
             "C": {
-                "Choice": "Find a common denominator by adding 5 and 7.",
+                "Choice": "Find a common denominator by adding `5and7`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds the given denominators.",
@@ -274,10 +273,10 @@
                 }
             },
             "D": {
-                "Choice": "Find a common denominator by multiplying 5 and 7.",
+                "Choice": "Find a common denominator by multiplying `5and7`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that fractions cannot be subtracted without first finding a common denominator and that a common denominator can be found by multiplying the two given denominators.",
+                    "Rationale": "Recognizes that fractions cannot be subtracted without `text(first)` finding a common denominator and that a common denominator can be found by multiplying the `text(two)` given denominators.",
                     "Percent": 74
                 }
             }
@@ -289,7 +288,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Add and subtract fractions (including mixed numbers) with unlike denominators. (May include multiple methods and representations.)"
@@ -301,38 +300,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Aaron's fish bowl contains 2 3/5 gallons of water. Bryan's fish bowl contains 1 7/8 gallons of water. How many more gallons of water does Aaron's fish bowl contain than Bryan's fish bowl?"
+            "Aaron's fish bowl contains `2``3/5` `text(gallons)` of water. Bryan's fish bowl contains `1``7/8` `text(gallons)` of water. How many more `text(gallons)` of water does Aaron's fish bowl contain than Bryan's fish bowl?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "11/40",
+                "Choice": "`11/40`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 3/5 from 7/8.",
+                    "Rationale": "Subtracts `3/5` from `7/8`.",
                     "Percent": 12
                 }
             },
             "B": {
-                "Choice": "2/3",
+                "Choice": "`2/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Changes to improper fractions and subtracts without a common denominator (15/8 - 13/5).",
+                    "Rationale": "Changes to improper fractions and subtracts without a common denominator `(15/8-13/5)`.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "29/40",
+                "Choice": "`29/40`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Converts 2 3/5 to an improper fraction by multiplying 2 by 5 and then adding 3 for the numerator (2 3/5 = (2 × 5 + 3)/5 = 13/5), converts 1 7/8 to an improper fraction by multiplying 1 by 8 and then adding 7 for the numerator (1 7/8 = (1 × 8 + 7)/8 = 15/8), multiplies 13/5 by 8/8 and multiplies 15/8 by 5/5 to get equivalent fractions with a common denominator ((13 × 8)/(5 × 8) = 104/40 and (15 × 5)/(8 × 5)) = 75/40), and then subtracts 75/40 from 104/40.",
+                    "Rationale": "Converts `2``3/5` to an improper fraction by multiplying `2` by `5` and then adding `3` for the numerator `(2``3/5=(2xx5+3)/5=13/5``)`, converts `1``7/8` to an improper fraction by multiplying `1` by `8` and then adding `7` for the numerator `(1``7/8=(1xx8+7)/8=15/8``)`, multiplies `13/5` by `8/8` and multiplies `15/8` by `5/5` to get equivalent fractions with a common denominator `((13xx8)/(5xx8)=104/40and(15xx5)/(8xx5)=75/40)`, and then subtracts `75/40` from `104/40`.",
                     "Percent": 71
                 }
             },
             "D": {
-                "Choice": "4/3",
+                "Choice": "`4/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 7/8 - 3/5.",
+                    "Rationale": "Calculates `7/8-3/5`.",
                     "Percent": 8
                 }
             }
@@ -356,11 +355,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which story matches the expression (18 - 3 × 4) ÷ 2?"
+            "Which story matches the expression `(18-3xx4)-:2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Ed had $18. He bought a pen for $3 and 4 pencils for $2 each.",
+                "Choice": "Ed had `$18`. He bought a pen for `$3` and `4` pencils for `$2` each.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Misinterprets the operation of the multiplication and division symbols.",
@@ -368,7 +367,7 @@
                 }
             },
             "B": {
-                "Choice": "Ed had $18. He bought 3 pens for $4 each and gave $2 to his sister.",
+                "Choice": "Ed had `$18`. He bought `3` pens for `$4` each and gave `$2` to his sister.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Misinterprets the operation of the division symbol.",
@@ -376,18 +375,18 @@
                 }
             },
             "C": {
-                "Choice": "Ed had $18. He gave half the money away and then bought 3 pens for $4 each.",
+                "Choice": "Ed had `$18`. He gave `text(half)` the money away and then bought `3` pens for `$4` each.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Tries to apply the division symbol first, then the multiplication symbol.",
+                    "Rationale": "Tries to apply the division symbol `text(first)`, then the multiplication symbol.",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "Ed had $18. He bought 3 pens for $4 each and then shared the rest of the money equally with his sister.",
+                "Choice": "Ed had `$18`. He bought `3` pens for `$4` each and then shared the rest of the money equally with his sister.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies a story in which 3 is multiplied by 4 (“3 pens for $4 each”) before subtracting the product from 18 (“Ed had $18 ... the rest of the money”), with the difference being divided by 2 (“shared ... equally with his sister”).",
+                    "Rationale": "Identifies a story in which `3` is multiplied by `4` (“`3` pens for `$4` each”) before subtracting the product from `18` (“Ed had `$18` ... the rest of the money”), with the difference being divided by `2` (“shared ... equally with his sister”).",
                     "Percent": 54
                 }
             }
@@ -411,11 +410,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When finding the value of the expression 81 - (24 ÷ 3 × 2) + 18, which operation should be completed first?"
+            "When finding the value of the expression `81-(24-:3xx2)+18`, which operation should be completed `text(first)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "81 - 24",
+                "Choice": "`81-24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Performs the operations from left to right and does not consider the grouping symbols.",
@@ -423,15 +422,15 @@
                 }
             },
             "B": {
-                "Choice": "24 ÷ 3",
+                "Choice": "`24-:3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that the operations inside the grouping symbols should be completed first, identifies that division and multiplication are equal in the order of operations, and performs the operations from left to right within the grouping symbols, starting with division.",
+                    "Rationale": "Recognizes that the operations inside the grouping symbols should be completed `text(first)`, identifies that division and multiplication are equal in the order of operations, and performs the operations from left to right within the grouping symbols, starting with division.",
                     "Percent": 61
                 }
             },
             "C": {
-                "Choice": "3 × 2",
+                "Choice": "`3xx2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Incorrectly considers that multiplication should be performed prior to division.",
@@ -439,10 +438,10 @@
                 }
             },
             "D": {
-                "Choice": "2 + 18",
+                "Choice": "`2+18`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses the order of operations (adds/subtracts first) and does not consider the grouping symbols.",
+                    "Rationale": "Reverses the order of operations (adds/subtracts `text(first)`) and does not consider the grouping symbols.",
                     "Percent": 3
                 }
             }
@@ -466,40 +465,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Andrew has 3 1/2 liters of juice. For a party, he needs 1 1/2 times the amount of juice he has already. The expression shown below represents the total amount of juice, in liters, Andrew needs, but one number is missing.",
+            "Andrew has `3``1/2` `text(liters)` of juice. For a party, he needs `1``1/2` times the amount of juice he has already. The expression shown below represents the total amount of juice, in `text(liters)`, Andrew needs, but `text(one)` number is missing.",
             ":ibox:`(3+1/2)(square+1/2)`",
-            "What number should go into the box so the expression represents the total amount of juice, in liters, Andrew needs?"
+            "What number should go into the box so the expression represents the total amount of juice, in `text(liters)`, Andrew needs?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/4",
+                "Choice": "`1/4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds the product of the two fractional parts of the mixed numbers.",
+                    "Rationale": "Finds the product of the `text(two)` fractional parts of the mixed numbers.",
                     "Percent": 8
                 }
             },
             "B": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that a mixed number is the sum of the whole part and the fractional part, identifying the second factor as 1 + 1/2.",
+                    "Rationale": "Recognizes that a mixed number is the sum of the whole part and the fractional part, identifying the `text(second)` factor as `1+1/2`.",
                     "Percent": 68
                 }
             },
             "C": {
-                "Choice": "1 1/2",
+                "Choice": "`1``1/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not notice that the 3 1/2 has been rewritten as a sum and selects the other mixed number.",
+                    "Rationale": "Does not notice that the `3``1/2` has been rewritten as a sum and selects the other mixed number.",
                     "Percent": 13
                 }
             },
             "D": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees the two 1/2s and thinks there should be two 3s as well.",
+                    "Rationale": "Sees the `text(two)` `1/2text(s)` and thinks there should be `text(two)` `3text(s)` as well.",
                     "Percent": 11
                 }
             }
@@ -523,40 +522,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The first five values in a number pattern are represented by the expressions below.",
-            "4 × 1\t4 × 2\t4 × 3\t4 × 4\t4 × 5",
-            "The pattern continues. How many values in the pattern are less than 100?"
+            "The `text(first five)` values in a number pattern are represented by the expressions below.",
+            ":ibox:`4xx1`\t`4xx2`\t`4xx3`\t`4xx4`\t`4xx5`",
+            "The pattern continues. How many values in the pattern are less than `100`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "19",
+                "Choice": "`19`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Focuses on 4 × 5 in last expression and uses “the term number times 5” rather than “4 times the term number,” identifies the value of the 20th term as 20 × 5 = 100, and determines that 19 values in the pattern are less than 100.",
+                    "Rationale": "Focuses on `4xx5` in last expression and uses “the term number times `5`” rather than “`4` times the term number,” identifies the value of the `20^text(th)` term as `20xx5=100`, and determines that `19` values in the pattern are less than `100`.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that each term is 4 times the term number, identifies the value of the 25th term as 4 × 25 = 100, and determines that 24 values in the pattern are less than 100.",
+                    "Rationale": "Recognizes that each term is `4` times the term number, identifies the value of the `25^text(th)` term as `4xx25=100`, and determines that `24` values in the pattern are less than `100`.",
                     "Percent": 51
                 }
             },
             "C": {
-                "Choice": "25",
+                "Choice": "`25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the value of the 25th term as 4 × 25 = 100 but does not consider “less than 100”.",
+                    "Rationale": "Identifies the value of the `25^text(th)` term as `4xx25=100` but does not consider “less than `100`”.",
                     "Percent": 23
                 }
             },
             "D": {
-                "Choice": "99",
+                "Choice": "`99`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes that 99 values from 1-99 are less than 100 and does not consider the pattern expressions and focuses on term 1, term 2, term 3, etc.",
+                    "Rationale": "Recognizes that `99` values from `1-99` are less than `100` and does not consider the pattern expressions and focuses on term `1`, term `2`, term `3`, etc.",
                     "Percent": 10
                 }
             }
@@ -580,38 +579,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Julian has 4 videos. Each video is the same length. The total time for all of the videos is 300 seconds. How many minutes long is each video?"
+            "Julian has `4` videos. Each video is the same length. The total time for all of the videos is `300` `text(seconds)`. How many `text(minutes)` long is each video?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.8 minute",
+                "Choice": "`0.8` `text(minute)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 4 × 60 ÷ 300.",
+                    "Rationale": "Calculates `4xx60-:300`.",
                     "Percent": 6
                 }
             },
             "B": {
-                "Choice": "1.25 minutes",
+                "Choice": "`1.25` `text(minutes)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the number of seconds per video by dividing the total time by the number of videos (300 ÷ 4 = 75) and then converts from seconds to minutes by dividing the time per video by 60 (75 ÷ 60 = 1.25) OR converts the total time from seconds to minutes by dividing the number of seconds by 60 (300 ÷ 60 = 5) and then determines the number of minutes per video by dividing the converted time by the number of videos (5 ÷ 4 = 1.25).",
+                    "Rationale": "Determines the number of `text(seconds per video)` by dividing the total time by the number of videos `(300-:4=75)` and then converts from `text(seconds)` to `text(minutes)` by dividing the `text(time per video)` by `60` `(75-:60=1.25)` OR converts the total time from `text(seconds)` to `text(minutes)` by dividing the number of `text(seconds)` by `60` `(300-:60=5)` and then determines the number of `text(minutes per video)` by dividing the converted time by the number of videos `(5-:4=1.25)`.",
                     "Percent": 36
                 }
             },
             "C": {
-                "Choice": "20 minutes",
+                "Choice": "`20` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 4 × 300 ÷ 60.",
+                    "Rationale": "Calculates `4xx300-:60`.",
                     "Percent": 23
                 }
             },
             "D": {
-                "Choice": "75 minutes",
+                "Choice": "`75` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides 300 by 4 but does not convert from seconds to minutes.",
+                    "Rationale": "Divides `300` by `4` but does not convert from `text(seconds)` to `text(minutes)`.",
                     "Percent": 35
                 }
             }
@@ -635,38 +634,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A runner drinks 1/2 pint of water during a race. How many gallons of water does the runner drink during the race?"
+            "A runner drinks `1/2` `text(pint)` of water during a race. How many `text(gallons)` of water does the runner drink during the race?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/16 gallon",
+                "Choice": "`1/16` `text(gallon)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Converts the amount of water from pints to quarts by dividing the number of pints by 2 (1/2 ÷ 2 = 1/4)and then converts the amount of water from quarts to gallons by dividing the number of quarts by 4 (1/4 ÷ 4 = 1/16) OR uses the reference sheet to identify that 2 pints = 1 quart and 4 quarts = 1 gallon to determine that 8 pints = 1 gallon and then converts the amount of water from pints to gallons by dividing the number of pints by 8 (1/2 ÷ 8 = 1/16).",
+                    "Rationale": "Converts the amount of water from `text(pints)` to `text(quarts)` by dividing the number of `text(pints)` by `2` `(1/2-:2=1/4)` and then converts the amount of water from `text(quarts)` to `text(gallons)` by dividing the number of `text(quarts)` by `4` `(1/4-:4=1/16)` OR uses the reference sheet to identify that `2` `text(pints)=1` `text(quart)and4` `text(quarts)=1` `text(gallon)` to determine that `8` `text(pints)=1` `text(gallon)` and then converts the amount of water from `text(pints)` to `text(gallons)` by dividing the number of `text(pints)` by `8` `(1/2-:8=1/16)`.",
                     "Percent": 34
                 }
             },
             "B": {
-                "Choice": "1/10 gallon",
+                "Choice": "`1/10` `text(gallon)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines that 8 pints = 1 gallon, which means 1 pint = 1/8 gallon, but converts from pints to gallons by adding the denominators (1/2 + 1/8 = 1/(2 + 8)).",
+                    "Rationale": "Determines that `8` `text(pints)=1` `text(gallon)`, which means `1` `text(pint)=1/8` `text(gallon)`, but converts from `text(pints)` to `text(gallons)` by adding the denominators `(1/2+1/8=1/(2+8))`.",
                     "Percent": 8
                 }
             },
             "C": {
-                "Choice": "1/8 gallon",
+                "Choice": "`1/8` `text(gallon)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides by 4 (converts from quarts to gallons or converts using 1/2 for each conversion).",
+                    "Rationale": "Divides by `4` (converts from `text(quarts)` to `text(gallons)` or converts using `1/2` for each conversion).",
                     "Percent": 29
                 }
             },
             "D": {
-                "Choice": "1/4 gallon",
+                "Choice": "`1/4` `text(gallon)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides by 2 (converts from pints to quarts).",
+                    "Rationale": "Divides by `2` (converts from `text(pints)` to `text(quarts)`).",
                     "Percent": 29
                 }
             }
@@ -690,7 +689,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below shows the recorded height of a bamboo plant after several days of growth.",
+            "The table below shows the recorded height of a bamboo plant after several `text(days)` of growth.",
             "problems/PA22G5M/media/13a.jpg",
             "The line graph below was made to display the data from the table, but not all the data fit on the graph.",
             "problems/PA22G5M/media/13b.jpg",
@@ -698,23 +697,23 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "for the `xtext(-axis)`, using a scale of 1 instead of a scale of 2",
+                "Choice": "for the `xtext(-axis)`, using a scale of `1` instead of a scale of `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not realize that less of the data would be displayed (the graph would not extend past day 5).",
+                    "Rationale": "Does not realize that less of the data would be displayed (the graph would not extend past `text(day)` `5`).",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "for the `xtext(-axis)`, using a scale of 3 instead of a scale of 2",
+                "Choice": "for the `xtext(-axis)`, using a scale of `3` instead of a scale of `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not realize that this would not change the amount of data displayed on the graph (the graph would extend to day 15, which is not necessary).",
+                    "Rationale": "Does not realize that this would not change the amount of data displayed on the graph (the graph would extend to `text(day)` `15`, which is not necessary).",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "for the `ytext(-axis)`, using a scale of 15 instead of a scale of 25",
+                "Choice": "for the `ytext(-axis)`, using a scale of `15` instead of a scale of `25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Recognizes that the `ytext(-axis)` should change but does not realize that less of the data would be displayed.",
@@ -722,10 +721,10 @@
                 }
             },
             "D": {
-                "Choice": "for the `ytext(-axis)`, using a scale of 35 instead of a scale of 25",
+                "Choice": "for the `ytext(-axis)`, using a scale of `35` instead of a scale of `25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that using a scale of 35 for the `ytext(-axis)` would change the values from 0, 25, 50, ..., 250 to 0, 35, 70, ..., 350, which would allow the greatest height from the table (348 cm) to be displayed on the graph without changing the size of the grid.",
+                    "Rationale": "Recognizes that using a scale of `35` for the `ytext(-axis)` would change the values from` 0,25,50,...,250` to `0,35,70,...,350`, which would allow the greatest height from the table `(348` `text(cm))` to be displayed on the graph without changing the size of the grid.",
                     "Percent": 48
                 }
             }
@@ -749,7 +748,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below shows the number of pizzas served during lunch at a school cafeteria over three days.",
+            "The table below shows the number of pizzas served during lunch at a school cafeteria over `text(three days)`.",
             "problems/PA22G5M/media/14a.jpg",
             "Which pictograph represents the data shown in the table?"
         ],
@@ -758,7 +757,7 @@
                 "Choice": "problems/PA22G5M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not apply the key (uses 1 “pizza” = 1 pizza).",
+                    "Rationale": "Does not apply the key (uses `1` “pizza”`=1` pizza).",
                     "Percent": 28
                 }
             },
@@ -766,7 +765,7 @@
                 "Choice": "problems/PA22G5M/media/14c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses a half “pizza” for both the odd number of pizzas (3) and the half pizza (2 1/2).",
+                    "Rationale": "Uses a `text(half)` “pizza” for both the odd number of pizzas `(3)` and the `text(half)` pizza `(2``1/2``)`.",
                     "Percent": 8
                 }
             },
@@ -774,7 +773,7 @@
                 "Choice": "problems/PA22G5M/media/14d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Switches the number of pizzas for Wednesday and Thursday.",
+                    "Rationale": "Switches the number of pizzas for `text(Wednesday)andtext(Thursday)`.",
                     "Percent": 18
                 }
             },
@@ -782,7 +781,7 @@
                 "Choice": "problems/PA22G5M/media/14e.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applies the key to each value in the table, using a half “pizza” for the odd number of pizzas (3) and a quarter “pizza” for the half pizza (2 1/2).",
+                    "Rationale": "Applies the key to each value in the table, using a `text(half)` “pizza” for the `text(odd)` number of pizzas `(3)` and a `text(quarter)` “pizza” for the `text(half)` pizza `(2``1/2``)`.",
                     "Percent": 46
                 }
             }
@@ -812,7 +811,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds the sum of the numbers shown.",
@@ -820,26 +819,26 @@
                 }
             },
             "B": {
-                "Choice": "65",
+                "Choice": "`65`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses a half “pizza” for both the odd number of pizzas (3) and the half pizza (2 1/2).",
+                    "Rationale": "Separates the figure into a `2text(-by-)5text(-by-)5` rectangular prism and a `1text(-by-)3text(-by-)5` rectangular prism, determines the partial volumes to be `2xx5xx5=50` `text(cubic feet)` and `1xx3xx5=15` `text(cubic feet)`, and then adds the partial volumes OR separates the figure into a `1text(-by-)5text(-by-)5` rectangular prism and a `1text(-by-)8text(-by-)5` rectangular prism, determines the partial volumes to be `1xx5xx5=25` `text(cubic feet)` and `1xx8xx5=40` `text(cubic feet)`, and then adds the partial volumes OR determines the volume of the “greater” rectangular prism to be `2xx8xx5=80` `text(cubic feet)` and then subtracts the volume of the upper-right `1text(-by-)3text(-by-)5` “missing” rectangular prism `(1xx3xx5=15` `text(cubic feet))`.",
                     "Percent": 36
                 }
             },
             "C": {
-                "Choice": "80",
+                "Choice": "`80`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines the volume of the “greater” rectangular prism (2 × 8 × 5).",
+                    "Rationale": "Determines the volume of the “greater” rectangular prism `(2xx8xx5)`.",
                     "Percent": 22
                 }
             },
             "D": {
-                "Choice": "120",
+                "Choice": "`120`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (8 × 2 × 5) + (8 × 1 × 5), using 8 as the length for both parts.",
+                    "Rationale": "Calculates (`8xx2xx5)+(8xx1xx5)`, using `8` as the length for both parts.",
                     "Percent": 13
                 }
             }
@@ -867,8 +866,8 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "Leon is selling candy bars for a school fundraiser. He raises $3.00 for each candy bar he sells. The graph shown below represents the total amount of money, in `text(dollars)`, Leon has raised based on the number of candy bars he has sold.",
-            "problems/PA2G5M/media/16a.jpg",
+            "Leon is selling candy bars for a school fundraiser. He raises `$3.00` for each candy bar he sells. The graph shown below represents the total amount of money, in `text(dollars)`, Leon has raised based on the number of candy bars he has sold.",
+            "problems/PA22G5M/media/16a.jpg",
             "The pattern continues."
         ],
         "AnswerChoices": {},
@@ -906,7 +905,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Write the ordered pair, in the form `(x,y)`, that represents the amount of money Leon raises for selling 6 candy bars."
+                    "Write the ordered pair, in the form `(x,y)`, that represents the amount of money Leon raises for selling `6` candy bars."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -925,7 +924,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Explain why it is NOT possible for any of the points on the graph to have a `ytext(-coordinate)` of 77."
+                    "Explain why it is NOT possible for any of the points on the graph to have a `ytext(-coordinate)` of `77`."
                 ],
                 "AnswerChoices": {}
             },
@@ -935,8 +934,8 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Last year, Leon raised a total of $240 from his candy bar sales. This year, his goal is to raise at least 2.5 times that amount.",
-                    "What is the FEWEST candy bars Leon needs to sell to reach his goal for this year? Show or explain all your work."
+                    "`text(Last year)`, Leon raised a total of `$240` from his candy bar sales. `text(This year)`, his goal is to raise at least `2.5` times that amount.",
+                    "What is the FEWEST candy bars Leon needs to sell to reach his goal for `text(this year)`? Show or explain all your work."
                 ],
                 "AnswerChoices": {
                     "KEY": {

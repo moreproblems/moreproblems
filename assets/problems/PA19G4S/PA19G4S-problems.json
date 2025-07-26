@@ -16,38 +16,38 @@
         "Content": [
             "Use the drawing below to answer the question.",
             "problems/PA19G4S/media/1a.jpg",
-            "How much did the plant grow in height from day 4 to day 6?"
+            "How much did the plant grow in height from `text(day)` `4` to `text(day)` `6`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1.0 cm",
+                "Choice": "`1.0` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The plant grew 1.0 cm from day 5 (5.5 cm) to day 6 (6.5 cm).",
+                    "Rationale": "The plant grew `1.0` `text(cm)` from `text(day)` `5` `(5.5` `text(cm))` to `text(day)` `6` `(6.5` `text(cm))`.",
                     "Percent": 6
                 }
             },
             "B": {
-                "Choice": "2.5 cm",
+                "Choice": "`2.5` `text(cm)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The plant grew 2.5 cm from day 4 (4.0 cm) to day 6 (6.5 cm).",
+                    "Rationale": "The plant grew `2.5` `text(cm)` from `text(day)` `4` `(4.0` `text(cm))` to `text(day)` `6` `(6.5` `text(cm))`.",
                     "Percent": 52
                 }
             },
             "C": {
-                "Choice": "4.0 cm",
+                "Choice": "`4.0` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The plant was 4.0 cm on day 4.",
+                    "Rationale": "The plant was `4.0` `text(cm)` on `text(day)` `4`.",
                     "Percent": 15
                 }
             },
             "D": {
-                "Choice": "6.5 cm",
+                "Choice": "`6.5` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The plant grew a total of 6.5 cm.",
+                    "Rationale": "The plant grew a total of `6.5` `text(cm)`.",
                     "Percent": 27
                 }
             }
@@ -76,7 +76,7 @@
                 "Choice": "The food supply is reduced as seasons change.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A regular yearly pattern of reduced food availability during the coldest months is most likely to result in migration behavior in certain animal species.",
+                    "Rationale": "A regular `text(yearly)` pattern of reduced food availability during the coldest `text(months)` is most likely to result in migration behavior in certain animal species.",
                     "Percent": 55
                 }
             },
@@ -84,12 +84,12 @@
                 "Choice": "A disease permanently reduces the food supply.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The animal is not likely to return each year to a location where the food supply is permanently reduced.",
+                    "Rationale": "The animal is not likely to return `text(each year)` to a location where the food supply is permanently reduced.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "The food supply gradually increases over several years.",
+                "Choice": "The food supply gradually increases over several `text(years)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "A long term increase in food supply is not likely to affect annual migration behavior.",
@@ -122,14 +122,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Many trees in Pennsylvania forests lose their leaves in autumn and regrow their leaves in spring. Which graph best shows a weather change that results in this pattern?"
+            "Many trees in Pennsylvania forests lose their leaves in `text(autumn)` and regrow their leaves in `text(spring)`. Which graph best shows a weather change that results in this pattern?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/PA19G4S/media/3a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph shows the normal average monthly temperature pattern of Pennsylvania, which gradually increases starting in spring and peaks in summer, and then gradually decreases through fall and into winter.",
+                    "Rationale": "The graph shows the normal average `text(monthly)` temperature pattern of Pennsylvania, which gradually increases starting in `text(spring)` and peaks in `text(summer)`, and then gradually decreases through `text(fall)` and into `text(winter)`.",
                     "Percent": 49
                 }
             },
@@ -137,7 +137,7 @@
                 "Choice": "problems/PA19G4S/media/3b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This graph shows the opposite of a normal pattern of monthly air temperature in Pennsylvania.",
+                    "Rationale": "This graph shows the opposite of a normal pattern of `text(monthly)` air temperature in Pennsylvania.",
                     "Percent": 20
                 }
             },
@@ -145,7 +145,7 @@
                 "Choice": "problems/PA19G4S/media/3c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This graph shows the average monthly air temperature consistently increasing from January through the end of the year.",
+                    "Rationale": "This graph shows the average `text(monthly)` air temperature consistently increasing from `text(January)` through the end of the `text(year)`.",
                     "Percent": 16
                 }
             },
@@ -153,7 +153,7 @@
                 "Choice": "problems/PA19G4S/media/3d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This graph shows the average monthly air temperature consistently decreasing from January through the end of the year.",
+                    "Rationale": "This graph shows the average `text(monthly)` air temperature consistently decreasing from `text(January)` through the end of the `text(year)`.",
                     "Percent": 15
                 }
             }
@@ -175,38 +175,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which characteristic of the Moon can a student best study using a telescope?"
+            "Which characteristic of the `text(Moon)` can a student best study using a telescope?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "the Moon's distance from Earth",
+                "Choice": "the `text(Moon)`'s distance from `text(Earth)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "An instrument such as a laser or camera and a measuring tool is needed to calculate the distance to the Moon from Earth.",
+                    "Rationale": "An instrument such as a laser or camera and a measuring tool is needed to calculate the distance to the `text(Moon)` from `text(Earth)`.",
                     "Percent": 26
                 }
             },
             "B": {
-                "Choice": "why the Moon has different phases",
+                "Choice": "why the `text(Moon)` has different phases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A telescope is not required to determine why the Moon has different phases.",
+                    "Rationale": "A telescope is not required to determine why the `text(Moon)` has different phases.",
                     "Percent": 16
                 }
             },
             "C": {
-                "Choice": "the shapes of the Moon's surface features",
+                "Choice": "the shapes of the `text(Moon)`'s surface features",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Surface features of the Moon, such as mountains and craters, can be observed with the use of a telescope.",
+                    "Rationale": "Surface features of the `text(Moon)`, such as mountains and craters, can be observed with the use of a telescope.",
                     "Percent": 48
                 }
             },
             "D": {
-                "Choice": "how the Moon's motion affects Earth's tides",
+                "Choice": "how the `text(Moon)`'s motion affects `text(Earth)`'s tides",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The study of gravitational forces is required to determine how the Moon's motion affects Earth's tides.",
+                    "Rationale": "The study of gravitational forces is required to determine how the `text(Moon)`'s motion affects `text(Earth)`'s tides.",
                     "Percent": 10
                 }
             }
@@ -298,7 +298,7 @@
                 "Choice": "problems/PA19G4S/media/6c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Sun is nonliving.",
+                    "Rationale": "The `text(Sun)` is nonliving.",
                     "Percent": 30
                 }
             },
@@ -389,22 +389,22 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which process follows a pattern that lasts about one year?"
+            "Which process follows a pattern that lasts about `text(one year)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "the change from a new moon to a full moon",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The phases of the Moon change throughout each month of the year.",
+                    "Rationale": "The phases of the `text(Moon)` change throughout `text(each month)` of the `text(year)`.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "the movement of Earth in its orbit around the Sun",
+                "Choice": "the movement of `text(Earth)` in its orbit around the `text(Sun)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Earth takes one year to complete its orbit around the Sun.",
+                    "Rationale": "Earth takes `text(one year)` to complete its orbit around the `text(Sun)`.",
                     "Percent": 67
                 }
             },
@@ -607,7 +607,7 @@
         "Content": [
             "Use the drawing below to answer the question.",
             "problems/PA19G4S/media/12a.jpg",
-            "A student places three objects in a glass with warm water. After a few minutes, the student touches the top of each object. Which characteristic of the objects is the student most likely investigating?"
+            "A student places three objects in a glass with warm water. After a few `text(minutes)`, the student touches the top of each object. Which characteristic of the objects is the student most likely investigating?"
         ],
         "AnswerChoices": {
             "A": {
@@ -770,38 +770,38 @@
         "Content": [
             "Use the table below to answer the question.",
             "problems/PA19G4S/media/15a.jpg",
-            "A student is given four statements about motion in the Sun-Earth-Moon system. The student is asked to arrange the statements in order of how long each motion takes to occur. Which list arranges the statements from shortest to longest amount of time?"
+            "A student is given `text(four)` statements about motion in the `text(Sun)`-`text(Earth)`-`text(Moon)` system. The student is asked to arrange the statements in order of how long each motion takes to occur. Which list arranges the statements from shortest to longest amount of time?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2, 1, 3, 4",
+                "Choice": "`2,1,3,4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Statement 4 should be first in the list and Statement 1 should be last in the list.",
+                    "Rationale": "Statement `4` should be `text(first)` in the list and Statement `1` should be `text(last)` in the list.",
                     "Percent": 25
                 }
             },
             "B": {
-                "Choice": "2, 4, 3, 1",
+                "Choice": "`2,4,3,1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Statements 2 and 4 should be switched with each other in the list.",
+                    "Rationale": "Statements `2and4` should be switched with each other in the list.",
                     "Percent": 20
                 }
             },
             "C": {
-                "Choice": "4, 1, 2, 3",
+                "Choice": "`4,1,2,3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Statement 1 should be last in the order.",
+                    "Rationale": "Statement `1` should be `text(last)` in the order.",
                     "Percent": 18
                 }
             },
             "D": {
-                "Choice": "4, 2, 3, 1",
+                "Choice": "`4,2,3,1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The Sun rises and sets each day. It takes Earth about 24 hours to spin on its axis. It takes the Moon about 27-28 days to orbit Earth. It takes Earth about 365 days to orbit the Sun.",
+                    "Rationale": "The `text(Sun)` rises and sets `text(each day)`. It takes `text(Earth)` about `24` `text(hours)` to spin on its axis. It takes the `text(Moon)` about `27-28` `text(days)` to orbit `text(Earth)`. It takes `text(Earth)` about `365` `text(days)` to orbit the `text(Sun)`.",
                     "Percent": 37
                 }
             }
@@ -823,38 +823,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "How does the tilt of Earth's axis cause seasonal change?"
+            "How does the tilt of `text(Earth)`'s axis cause seasonal change?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "by increasing the amount of energy produced by the Sun during summer",
+                "Choice": "by increasing the amount of energy produced by the `text(Sun)` during `text(summer)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Sun always produces about the same amount of energy throughout the year.",
+                    "Rationale": "The `text(Sun)` always produces about the same amount of energy throughout the `text(year)`.",
                     "Percent": 23
                 }
             },
             "B": {
-                "Choice": "by exposing some parts of Earth to fewer hours of sunlight during winter",
+                "Choice": "by exposing some parts of `text(Earth)` to fewer `text(hours)` of sunlight during `text(winter)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "During summer, Earth's Northern Hemisphere is tilted on an angle toward the Sun's direct rays. During winter, Earth's Northern Hemisphere is tilted on an angle away from the Sun's direct rays.",
+                    "Rationale": "During `text(summer)`, `text(Earth)`'s Northern Hemisphere is tilted on an angle toward the `text(Sun)`'s direct rays. During `text(winter)`, `text(Earth)`'s Northern Hemisphere is tilted on an angle away from the `text(Sun)`'s direct rays.",
                     "Percent": 40
                 }
             },
             "C": {
-                "Choice": "by making Earth travel greater distances around the Sun during some months",
+                "Choice": "by making `text(Earth)` travel greater distances around the `text(Sun)` during some `text(months)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Earth is always about 92.96 million miles from the Sun.",
+                    "Rationale": "`text(Earth)` is always about `92.96` `text(million miles)` from the `text(Sun)`.",
                     "Percent": 19
                 }
             },
             "D": {
-                "Choice": "by increasing the speed at which Earth rotates on its axis during some months",
+                "Choice": "by increasing the speed at which `text(Earth)` rotates on its axis during some `text(months)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Locations at various latitudes on Earth spin at a constant speed throughout the year.",
+                    "Rationale": "Locations at various latitudes on `text(Earth)` spin at a constant speed throughout the `text(year)`.",
                     "Percent": 18
                 }
             }
@@ -893,12 +893,12 @@
                 "AnswerChoices": {}
             },
             "B": {
-                "Type": "MC",
+                "Type": "MR",
                 "NumChoices": 4,
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Describe one way that people could reduce the amount of trash that ends up in dumps or landfills."
+                    "Describe `text(one)` way that people could reduce the amount of trash that ends up in dumps or landfills."
                 ],
                 "AnswerChoices": {}
             }

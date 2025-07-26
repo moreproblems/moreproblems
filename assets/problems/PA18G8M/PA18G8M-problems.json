@@ -14,11 +14,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which number is the closest approximation of √39?"
+            "Which number is the closest approximation of `sqrt(39)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6.2",
+                "Choice": "`6.2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -26,26 +26,26 @@
                 }
             },
             "B": {
-                "Choice": "6.5",
+                "Choice": "`6.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a number half way between 6 and 7.",
+                    "Rationale": "Selects a number `text(half)` way between `6and7`.",
                     "Percent": 33
                 }
             },
             "C": {
-                "Choice": "7.5",
+                "Choice": "`7.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Estimates √39 as √36 + √3, and calculates 5/2 instead of √3.",
+                    "Rationale": "Estimates `sqrt(39)` as `sqrt(36)+sqrt(3)`, and calculates `5/2` instead of `sqrt(3)`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "7.7",
+                "Choice": "`7.7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Estimates √39 as √36 + √3.",
+                    "Rationale": "Estimates `sqrt(39)` as `sqrt(36)+sqrt(3)`.",
                     "Percent": 7
                 }
             }
@@ -73,7 +73,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3√9",
+                "Choice": "`3sqrt(9)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize value of radical as rational.",
@@ -81,7 +81,7 @@
                 }
             },
             "B": {
-                "Choice": "9√3",
+                "Choice": "`9sqrt(3)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -89,7 +89,7 @@
                 }
             },
             "C": {
-                "Choice": "4√9",
+                "Choice": "`4sqrt(9)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize value of radical as rational.",
@@ -97,7 +97,7 @@
                 }
             },
             "D": {
-                "Choice": "9√4",
+                "Choice": "`9sqrt(4)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize value of radical as rational.",
@@ -124,13 +124,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four numbers are shown below.",
-            "π\t√π\t√3\t√8",
-            "What is the order of the four numbers from least to greatest?"
+            "`text(Four)` numbers are shown below.",
+            ":ibox:`pi`\t`sqrt(pi)`\t`sqrt(3)`\t`sqrt(8)`",
+            "What is the order of the `text(four)` numbers from least to greatest?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "π\t√π\t√3\t√8",
+                "Choice": "`pi`\t`sqrt(pi)`\t`sqrt(3)`\t`sqrt(8)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the order given.",
@@ -138,7 +138,7 @@
                 }
             },
             "B": {
-                "Choice": "√3\t√π\tπ\t√8",
+                "Choice": "`sqrt(3)`\t`sqrt(pi)`\t`pi`\t`sqrt(8)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Bases their choices on the numbers, regardless of the square roots involved.",
@@ -146,15 +146,15 @@
                 }
             },
             "C": {
-                "Choice": "√π\t√3\tπ\t√8",
+                "Choice": "`sqrt(pi)`\t`sqrt(3)`\t`pi`\t`sqrt(8)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does square roots by halving the number.",
+                    "Rationale": "Does square roots by `text(halving)` the number.",
                     "Percent": 8
                 }
             },
             "D": {
-                "Choice": "√3\t√π\t√8\tπ",
+                "Choice": "`sqrt(3)`\t`sqrt(pi)`\t`sqrt(8)`\t`pi`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -181,29 +181,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four points are graphed on the number line below.",
+            "`text(Four)` points are graphed on the number line below.",
             "problems/PA18G8M/media/4a.jpg",
-            "Which point is located closest to the value of -√5?"
+            "Which point is located closest to the value of `-sqrt(5)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "point W",
+                "Choice": "point `W`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not take the square root of 5.",
+                    "Rationale": "Does not take the square root of `5`.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "point X",
+                "Choice": "point `X`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses -√4 as -2, then since 5 is 1 more than 4 subtracts almost 1 from -2.",
+                    "Rationale": "Uses `-sqrt(4)` as `-2`, then since `5` is `1` more than `4` subtracts almost `1` from `-2`.",
                     "Percent": 6
                 }
             },
             "C": {
-                "Choice": "point Y",
+                "Choice": "point `Y`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -211,10 +211,10 @@
                 }
             },
             "D": {
-                "Choice": "point Z",
+                "Choice": "point `Z`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Estimates -√5 as less than -2, but chooses point on the incorrect side of -2.",
+                    "Rationale": "Estimates `-sqrt(5)` as less than `-2`, but chooses point on the incorrect side of `-2`.",
                     "Percent": 20
                 }
             }
@@ -239,12 +239,12 @@
         "Explain": false,
         "Content": [
             "The average distances between some objects in our solar system are described below.",
-            ":box:• The average distance from Earth to the Moon is 3.844 × 10⁵ kilometers (km).\n\n• The average distance from Jupiter to the Sun is approximately 2 × 10³ times the average distance from Earth to the Moon.",
-            "Based on this information, what is the average distance from Jupiter to the Sun?"
+            ":box:• The average distance from `text(Earth)` to the `text(Moon)` is `3.844xx10^5` `text(kilometers)` `(text(km))`.\n\n• The average distance from `text(Jupiter)` to the `text(Sun)` is approximately `2xx10^3` times the average distance from `text(Earth)` to the `text(Moon)`.",
+            "Based on this information, what is the average distance from `text(Jupiter)` to the `text(Sun)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7.688 × 10^2 km",
+                "Choice": "`7.688xx10^2` `text(km)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts exponents.",
@@ -252,15 +252,15 @@
                 }
             },
             "B": {
-                "Choice": "7.688 × 10⁵ km",
+                "Choice": "`7.688xx10^5` `text(km)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Forgets × 10³.",
+                    "Rationale": "Forgets `xx10^3`.",
                     "Percent": 16
                 }
             },
             "C": {
-                "Choice": "7.688 × 10⁸ km",
+                "Choice": "`7.688xx10^8` `text(km)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -268,7 +268,7 @@
                 }
             },
             "D": {
-                "Choice": "7.688 × 10¹⁵ km",
+                "Choice": "`7.688xx10^15` `text(km)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies the exponents.",
@@ -295,7 +295,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A system of two linear equations is represented by the graph below.",
+            "A system of `text(two)` linear equations is represented by the graph below.",
             "problems/PA18G8M/media/6a.jpg",
             "Which statement about the solution of the system of equations is true?"
         ],
@@ -304,12 +304,12 @@
                 "Choice": "`(0,0)` is the only solution.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Understands there is just one solution, but thinks it is origin.",
+                    "Rationale": "Understands there is just `text(one)` solution, but thinks it is origin.",
                     "Percent": 5
                 }
             },
             "B": {
-                "Choice": "(3, 2) is the only solution.",
+                "Choice": "`(3,2)` is the only solution.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -317,7 +317,7 @@
                 }
             },
             "C": {
-                "Choice": "`(0,0)` and (3, 2) are both solutions.",
+                "Choice": "`(0,0)and(3,2)` are both solutions.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Knows point of intersection is solution, but thinks origin is also solution.",
@@ -325,7 +325,7 @@
                 }
             },
             "D": {
-                "Choice": "`(0,0)`, (0, 6), and (3, 2) are all solutions.",
+                "Choice": "`(0,0),(0,6),and(3,2)` are all solutions.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Knows point of intersection is solution, but thinks `ytext(-intercepts)` are also solutions.",
@@ -353,28 +353,28 @@
         "Explain": false,
         "Content": [
             "Paul and Jacklyn are on a swim team.",
-            ":box:• Paul has completed 140 laps so far this season. He completes an additional 12 laps during each practice.\n\n• Jacklyn has completed 56 laps so far this season. She completes an additional 16 laps during each practice.",
+            ":box:• Paul has completed `140` laps so far this season. He completes an additional `12` laps during each practice.\n\n• Jacklyn has completed `56` laps so far this season. She completes an additional `16` laps during each practice.",
             "Paul and Jacklyn each attend the same number of practices. After how many more practices will Paul and Jacklyn have completed the same number of laps?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 140 + 12x and 56 + 16x, but solves as 28x = 84.",
+                    "Rationale": "Uses `140+12xand56+16x`, but solves as `28x=84`.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 140 + 12x and 56 + 16x, but solves as 28x = 196.",
+                    "Rationale": "Uses `140+12xand56+16x`, but solves as `28x=196`.",
                     "Percent": 15
                 }
             },
             "C": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -382,10 +382,10 @@
                 }
             },
             "D": {
-                "Choice": "49",
+                "Choice": "`49`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 140 + 12x and 56 + 16x, but solves as 4x = 196.",
+                    "Rationale": "Uses `140+12xand56+16x`, but solves as `4x=196`.",
                     "Percent": 10
                 }
             }
@@ -409,37 +409,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Three functions of x are represented below.",
+            "`text(Three)` functions of `x` are represented below.",
             "problems/PA18G8M/media/8a.jpg",
-            "For the function with the greatest rate of change, what is its value when x = 10?"
+            "For the function with the greatest rate of change, what is its value when `x=10`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "13",
+                "Choice": "`13`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines function 1 has greatest rate of change; adds `ytext(-intercept)` to 10.",
+                    "Rationale": "Determines function `1` has greatest rate of change; adds `ytext(-intercept)` to `10`.",
                     "Percent": 14
                 }
             },
             "B": {
-                "Choice": "17",
+                "Choice": "`17`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks function 3 has greatest rate of change; evaluates for x = 10.",
+                    "Rationale": "Thinks function `3` has greatest rate of change; evaluates for `x=10`.",
                     "Percent": 15
                 }
             },
             "C": {
-                "Choice": "25",
+                "Choice": "`25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines function 1 has greatest rate of change; multiplies that value by 10.",
+                    "Rationale": "Determines function `1` has greatest rate of change; multiplies that value by `10`.",
                     "Percent": 18
                 }
             },
             "D": {
-                "Choice": "28",
+                "Choice": "`28`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -467,7 +467,7 @@
         "Explain": false,
         "Content": [
             "The set of ordered pairs below represents a relation.",
-            "{(0, 2), (1, 3), (1, 4), (2, 5), (3, 5)}",
+            ":ibox:`{(0,2),(1,3),(1,4),(2,5),(3,5)}`",
             "Which statement about the relation is true?"
         ],
         "AnswerChoices": {
@@ -480,15 +480,15 @@
                 }
             },
             "B": {
-                "Choice": "The relation is not a function, but removing (1, 3) and replacing it with (2, 6) would make the new relation a function.",
+                "Choice": "The relation is not a function, but removing `(1,3)` and replacing it with `(2,6)` would make the new relation a function.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notices that 1 is repeated as an `xtext(-value)`, but the replacement also results in a repeated `xtext(-value)`.",
+                    "Rationale": "Notices that `1` is repeated as an `xtext(-value)`, but the replacement also results in a repeated `xtext(-value)`.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "The relation is not a function, but removing (1, 4) and replacing it with (4, 1) would make the new relation a function.",
+                "Choice": "The relation is not a function, but removing `(1,4)` and replacing it with `(4,1)` would make the new relation a function.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -496,7 +496,7 @@
                 }
             },
             "D": {
-                "Choice": "The relation is not a function, but removing (3, 5) and replacing it with (3, 6) would make the new relation a function.",
+                "Choice": "The relation is not a function, but removing `(3,5)` and replacing it with `(3,6)` would make the new relation a function.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks a repeated `ytext(-value)` makes the set of ordered pairs not a function.",
@@ -523,15 +523,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A carpenter is building cabinets. For each cabinet, she needs 8 sets of supplies. At store A, each set of supplies costs $3.75. The total cost (y), in `text(dollars)`, of the supplies she needs to buy at store A to build x cabinets is represented by the equation shown below.",
-            "y = 8(3.75x)",
-            "At store B, the total cost (y), in `text(dollars)`, of the supplies she needs to buy to build x cabinets is represented by the graph shown below.",
+            "A carpenter is building cabinets. For each cabinet, she needs `8` sets of supplies. At store `A`, each set of supplies costs `$3.75`. The total cost `(y)`, in `text(dollars)`, of the supplies she needs to buy at store `A` to build `x` cabinets is represented by the equation shown below.",
+            ":ibox:`y=8(3.75x)`",
+            "At store `B`, the total cost `(y)`, in `text(dollars)`, of the supplies she needs to buy to build `x` cabinets is represented by the graph shown below.",
             "problems/PA18G8M/media/10a.jpg",
-            "The carpenter spends a total of $180 on supplies. To which store did the carpenter go for supplies, and how many cabinets can she build?"
+            "The carpenter spends a total of `$180` on supplies. To which store did the carpenter go for supplies, and how many cabinets can she build?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The carpenter went to store A, and she can build 6 cabinets.",
+                "Choice": "The carpenter went to store `A`, and she can build `6` cabinets.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -539,26 +539,26 @@
                 }
             },
             "B": {
-                "Choice": "The carpenter went to store A, and she can build 15 cabinets.",
+                "Choice": "The carpenter went to store `A`, and she can build `15` cabinets.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Distributes only to 1.25.",
+                    "Rationale": "Distributes only to `1.25`.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "The carpenter went to store B, and she can build 5 cabinets.",
+                "Choice": "The carpenter went to store `B`, and she can build `5` cabinets.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Continued the graph to one more place.",
+                    "Rationale": "Continued the graph to `text(one)` more place.",
                     "Percent": 20
                 }
             },
             "D": {
-                "Choice": "The carpenter went to store B, and she can build 6 cabinets.",
+                "Choice": "The carpenter went to store `B`, and she can build `6` cabinets.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks the graph goes over 2 and up 2 more places.",
+                    "Rationale": "Thinks the graph goes over `2` and up `2` more places.",
                     "Percent": 13
                 }
             }
@@ -582,35 +582,35 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A linear function of x is graphed on a coordinate grid. The points (6, 34) and (18, 26) lie on the graph of the function. What are the rate of change of the function and the value of the function when x = 24?"
+            "A linear function of `x` is graphed on a coordinate grid. The points `(6, 34)and(18,26)` lie on the graph of the function. What are the rate of change of the function and the value of the function when `x=24`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "rate of change: -3/2\nvalue: -100 1/2",
+                "Choice": "rate of change: `-3/2`\nvalue: `-100``1/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Inverts rate of change; (-3/2)(24 + 43) as value of the function.",
+                    "Rationale": "Inverts rate of change; `(-3/2)(24+43)` as value of the function.",
                     "Percent": 13
                 }
             },
             "B": {
-                "Choice": "rate of change: -3/2\nvalue: 7",
+                "Choice": "rate of change: `-3/2`\nvalue: `7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Inverts rate of change; uses y = (-3/2)x + 43 to model the function.",
+                    "Rationale": "Inverts rate of change; uses `y=(-3/2)x+43` to model the function.",
                     "Percent": 24
                 }
             },
             "C": {
-                "Choice": "rate of change: -2/3\nvalue: -41 1/3",
+                "Choice": "rate of change: `-2/3`\nvalue: `-41``1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses correct rate of change; (-2/3)(24 + 38) as value of the function.",
+                    "Rationale": "Uses correct rate of change; `(-2/3)(24+38)` as value of the function.",
                     "Percent": 28
                 }
             },
             "D": {
-                "Choice": "rate of change: -2/3\nvalue: 22",
+                "Choice": "rate of change: `-2/3`\nvalue: `22`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -643,7 +643,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The water is draining at a constant rate of 1/2 gallon per minute, and the tank contained exactly 14 gallons when the drain was opened.",
+                "Choice": "The water is draining at a constant rate of `1/2` `text(gallon per minute)`, and the tank contained exactly `14` `text(gallons)` when the drain was opened.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -651,26 +651,26 @@
                 }
             },
             "B": {
-                "Choice": "The water is draining at a constant rate of 2 gallons per minute, and the tank contained exactly 14 gallons when the drain was opened.",
+                "Choice": "The water is draining at a constant rate of `2` `text(gallons per minute)`, and the tank contained exactly `14` `text(gallons)` when the drain was opened.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses the slope as -2.",
+                    "Rationale": "Confuses the slope as `-2`.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "The water is draining at a constant rate of 5 gallons per minute, and the tank contained exactly 14 gallons when the drain was opened.",
+                "Choice": "The water is draining at a constant rate of `5` `text(gallons per minute)`, and the tank contained exactly `14` `text(gallons)` when the drain was opened.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses where m and b go and confuses slope.",
+                    "Rationale": "Confuses where `mandb` go and confuses slope.",
                     "Percent": 5
                 }
             },
             "D": {
-                "Choice": "The water is draining at a constant rate of 14 gallons per minute, and the tank contained exactly 1/2 gallon when the drain was opened.",
+                "Choice": "The water is draining at a constant rate of `14` `text(gallons per minute)`, and the tank contained exactly `1/2` `text(gallon)` when the drain was opened.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses where m and b go in an equation.",
+                    "Rationale": "Confuses where `mandb` go in an equation.",
                     "Percent": 5
                 }
             }
@@ -694,7 +694,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle ABC has vertices located at A(1, -4), B(4, -5), and C(2, -1) on a coordinate grid. Triangle ABC undergoes a transformation, resulting in triangle DEF with vertices located at D(-1, -4), E(-4, -5), and F(-2, -1). Which pair of expressions describes a transformation of triangle ABC to triangle DEF and identifies the correct relationship between the two triangles?"
+            "Triangle `ABC` has vertices located at `A(1,-4),B(4,-5),andC(2,-1)` on a coordinate grid. Triangle `ABC` undergoes a transformation, resulting in triangle `DEF` with vertices located at `D(-1,-4),E(-4,-5),andF(-2,-1)`. Which pair of expressions describes a transformation of triangle `ABC` to triangle `DEF` and identifies the correct relationship between the `text(two)` triangles?"
         ],
         "AnswerChoices": {
             "A": {
@@ -714,18 +714,18 @@
                 }
             },
             "C": {
-                "Choice": "transformation: reflection across the line y = x\nrelationship: similar and congruent",
+                "Choice": "transformation: reflection across the line `y=x`\nrelationship: similar and congruent",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that `xtext(-coordinate)andytext(-coordinate)` in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x.",
+                    "Rationale": "Sees that `xtext(-coordinate)andytext(-coordinate)` in going from triangle `ABC` to `DEF` are “same,” so interprets to mean reflection across `y=x`.",
                     "Percent": 17
                 }
             },
             "D": {
-                "Choice": "transformation: reflection across the line y = x\nrelationship: similar, but not congruent",
+                "Choice": "transformation: reflection across the line `y=x`\nrelationship: similar, but not congruent",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that `xtext(-coordinate)andytext(-coordinate)` in going from triangle ABC to DEF are “same,” so interprets to mean reflection across y = x; confuses congruency with similarity.",
+                    "Rationale": "Sees that `xtext(-coordinate)andytext(-coordinate)` in going from triangle `ABC` to `DEF` are “same,” so interprets to mean reflection across `y=x`; confuses congruency with similarity.",
                     "Percent": 9
                 }
             }
@@ -749,37 +749,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle RST and triangle R'S'T' are congruent. Both triangles are graphed on the coordinate grid shown below.",
+            "Triangle `RST` and triangle `R'S'T'` are congruent. Both triangles are graphed on the coordinate grid shown below.",
             "problems/PA18G8M/media/14a.jpg",
             "Which sequence of transformations could be used to show the congruence between the triangles?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a translation 3 units up and then a translation 5 units to the right",
+                "Choice": "a translation `3` `text(units)` up and then a translation `5` `text(units)` to the right",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects translations that only align T and T'.",
+                    "Rationale": "Selects translations that only align `T andT'`.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "a translation 2 units to the right and then a reflection across the `ytext(-axis)`",
+                "Choice": "a translation `2` `text(units)` to the right and then a reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Aligns R with S'.",
+                    "Rationale": "Aligns `R` with `S`'.",
                     "Percent": 11
                 }
             },
             "C": {
-                "Choice": "a reflection across the `ytext(-axis)` and then a translation`1` `text(unit)` to the right and 3 units up",
+                "Choice": "a reflection across the `ytext(-axis)` and then a translation `1` `text(unit)` to the right and `3` `text(units)` up",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects first translation in wrong direction after reflection.",
+                    "Rationale": "Selects `text(first)` translation in wrong direction after reflection.",
                     "Percent": 23
                 }
             },
             "D": {
-                "Choice": "a translation`1` `text(unit)` to the right and 3 units up and then a reflection across the `ytext(-axis)`",
+                "Choice": "a translation `1` `text(unit)` to the right and `3` `text(units)` up and then a reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -812,7 +812,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "86 yards",
+                "Choice": "`86` `text(yards)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -820,7 +820,7 @@
                 }
             },
             "B": {
-                "Choice": "120 yards",
+                "Choice": "`120` `text(yards)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds dimensions.",
@@ -828,7 +828,7 @@
                 }
             },
             "C": {
-                "Choice": "3,500 yards",
+                "Choice": "`3text(,)500` `text(yards)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies dimensions.",
@@ -836,7 +836,7 @@
                 }
             },
             "D": {
-                "Choice": "7,400 yards",
+                "Choice": "`7text(,)400` `text(yards)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not take square root.",
@@ -865,19 +865,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A line segment is graphed on a coordinate grid. The endpoints of the line segment are located at (-2, 1) and (10, -4). The length, in `text(units)`, of the line segment is equivalent to the height, in `text(centimeters)`, of a cone. The radius of the circular base of the cone is 5 centimeters. Which approximation is closest to the volume, in `text(cubic centimeters)`, of the cone?"
+            "A line segment is graphed on a coordinate grid. The endpoints of the line segment are located at `(-2,1)and(10,-4)`. The length, in `text(units)`, of the line segment is equivalent to the height, in `text(centimeters)`, of a cone. The radius of the circular base of the cone is `5` `text(centimeters)`. Which approximation is closest to the volume, in `text(cubic centimeters)`, of the cone?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "183",
+                "Choice": "`183`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts lengths of legs instead of using Pythagorean theorem, so determines height to be 7 and uses 5 as radius in volume calculation.",
+                    "Rationale": "Subtracts lengths of legs instead of using Pythagorean theorem, so determines height to be `7` and uses `5` as radius in volume calculation.",
                     "Percent": 23
                 }
             },
             "B": {
-                "Choice": "340",
+                "Choice": "`340`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -885,18 +885,18 @@
                 }
             },
             "C": {
-                "Choice": "497",
+                "Choice": "`497`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds lengths of legs instead of using Pythagorean theorem; uses 19 as height in volume calculation, and uses 5 as radius.",
+                    "Rationale": "Adds lengths of legs instead of using Pythagorean theorem; uses `19` as height in volume calculation, and uses `5` as radius.",
                     "Percent": 21
                 }
             },
             "D": {
-                "Choice": "1,361",
+                "Choice": "`1text(,)361`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses Pythagorean theorem correctly and determines height of cone is 13, but uses diameter of `10` in volume calculation.",
+                    "Rationale": "Uses Pythagorean theorem correctly and determines height of cone is `13`, but uses diameter of `10` in volume calculation.",
                     "Percent": 7
                 }
             }
@@ -920,7 +920,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Audrey surveyed eight people about how many magazine subscriptions they have and how many books they read in the last month. The table shows the results of Audrey's survey.",
+            "Audrey surveyed `text(eight)` people about how many magazine subscriptions they have and how many books they read in the `text(last month)`. The table shows the results of Audrey's survey.",
             "problems/PA18G8M/media/17a.jpg"
         ],
         "AnswerChoices": {},

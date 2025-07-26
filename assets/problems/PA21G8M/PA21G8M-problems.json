@@ -14,19 +14,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The volume of Jupiter is approximately 10^14 cubic kilometers. The volume of Earth is approximately 10¹¹ cubic kilometers. How many planets the size of Earth does it take to equal the volume of Jupiter?"
+            "The volume of `text(Jupiter)` is approximately `10^14` `text(cubic kilometers)`. The volume of `text(Earth)` is approximately `10^11` `text(cubic kilometers)`. How many planets the size of `text(Earth)` does it take to equal the volume of `text(Jupiter)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10⁻³",
+                "Choice": "`10^-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts the exponents as 11 - 14 (reverses the order of the subtraction).",
+                    "Rationale": "Subtracts the exponents as `11-14` (reverses the order of the subtraction).",
                     "Percent": 5
                 }
             },
             "B": {
-                "Choice": "10³",
+                "Choice": "`10^3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Divides the volumes by subtracting the exponents.",
@@ -34,7 +34,7 @@
                 }
             },
             "C": {
-                "Choice": "10^2⁵",
+                "Choice": "`10^25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds the exponents.",
@@ -42,7 +42,7 @@
                 }
             },
             "D": {
-                "Choice": "10¹⁵⁴",
+                "Choice": "`10^154`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies the exponents.",
@@ -69,40 +69,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The Blue Ridge Mountains are rising at a rate of 1 × 10⁻⁴ feet per year. To determine how many feet the mountains will rise over the next 1 × 10⁶ years, a scientist performs the operation shown below.",
-            "(1 × 10⁻⁴) × (1 × 10⁶)",
-            "How many feet will the Blue Ridge Mountains rise over the next 1 × 10⁶ years?"
+            "The Blue Ridge Mountains are rising at a rate of `1xx10^-4` `text(feet per year)`. To determine how many `text(feet)` the mountains will rise over the next `1xx10^6` `text(years)`, a scientist performs the operation shown below.",
+            ":ibox:`(1xx10^-4)xx(1xx10^6)`",
+            "How many `text(feet)` will the Blue Ridge Mountains rise over the next `1xx10^6` `text(years)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.001",
+                "Choice": "`0.001`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly simplifies expression as 1 × 10⁻² and incorrectly applies the -2 in the exponent by placing two 0s between the decimal point and the 1.",
+                    "Rationale": "Incorrectly simplifies expression as `1xx10^-2` and incorrectly applies the `-2` in the exponent by placing `text(two)` `0text(s)` between the decimal point and the `1`.",
                     "Percent": 8
                 }
             },
             "B": {
-                "Choice": "0.01",
+                "Choice": "`0.01`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly simplifies expression as 1 × 10⁻².",
+                    "Rationale": "Incorrectly simplifies expression as `1xx10^-2`.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly applies the 2 in the exponent by making the value of the expression a 2-digit number.",
+                    "Rationale": "Incorrectly applies the `2` in the exponent by making the value of the expression a `2text(-digit)` number.",
                     "Percent": 11
                 }
             },
             "D": {
-                "Choice": "100",
+                "Choice": "`100`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplies the coefficients (1 × 1), multiplies the 10s by adding the exponents (-4 + 6), and then converts 1 × 10^2 to standard notation using 10^2 = 100.",
+                    "Rationale": "Multiplies the coefficients `(1xx1)`, multiplies the `10text(s)` by adding the exponents `(-4+6)`, and then converts `1xx10^2` to standard notation using `10^2=100`.",
                     "Percent": 72
                 }
             }
@@ -126,40 +126,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Trevor is riding his bicycle for a workout. The graph below shows the relationship between the amount of time, in `text(minutes)`, he rides and the distance, in `text(kilometers)`, he rides during his 25-minute workout.",
+            "Trevor is riding his bicycle for a workout. The graph below shows the relationship between the amount of time, in `text(minutes)`, he rides and the distance, in `text(kilometers)`, he rides during his `25text(-minute)` workout.",
             "problems/PA21G8M/media/3a.jpg",
             "Based on the graph, which statement about the rate at which Trevor rides during his workout is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Trevor's rate changes from 7.5 kilometers per minute to 2.5 kilometers per minute.",
+                "Choice": "Trevor's rate changes from `7.5` `text(kilometers per minute)` to `2.5` `text(kilometers per minute)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Inverts the slopes of the two line segments.",
+                    "Rationale": "Inverts the slopes of the `text(two)` line segments.",
                     "Percent": 12
                 }
             },
             "B": {
-                "Choice": "Trevor maintains a steady rate of 2 kilometers per 5 minutes during the workout.",
+                "Choice": "Trevor maintains a steady rate of `2` `text(kilometers per)` `5` `text(minutes)` during the workout.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the rate of change only from 15 minutes to 25 minutes.",
+                    "Rationale": "Identifies the rate of change only from `15` `text(minutes)` to `25` `text(minutes)`.",
                     "Percent": 14
                 }
             },
             "C": {
-                "Choice": "Trevor maintains a steady rate of 2.4 kilometers per 10 minutes during the workout.",
+                "Choice": "Trevor maintains a steady rate of `2.4` `text(kilometers per)` `10` `text(minutes)` during the workout.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the “average” rate of change from `(0,0)` to (25, 6).",
+                    "Rationale": "Uses the “average” rate of change from `(0,0)` to `(25,6)`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "Trevor's rate changes from 1 kilometer every 7.5 minutes to 1 kilometer every 2.5 minutes.",
+                "Choice": "Trevor's rate changes from `1` `text(kilometer)` every `7.5` `text(minutes)` to `1` `text(kilometer)` every `2.5` `text(minutes)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses the slope formula (`m=(y_2-y_1)/(x_2-x_1)`)to determine the first rate as m = (2 - 0)/(15 - 0) = 2/15 = 2 kilometers every 15 minutes and the second rate as m = (6 - 2)/(25 - 15) = 4/10 = 4 kilometers every 10 minutes, and then converts each rate to a unit rate by dividing the values in each rate by the number of kilometers (2 ÷ 2 = 1 and 15 ÷ 2 = 7.5; 4 ÷ 4 = 1 and 10 ÷ 4 = 2.5).",
+                    "Rationale": "Uses the slope formula `(m=(y_2-y_1)/(x_2-x_1))` to determine the `text(first)` rate as `m=(2-0)/(15-0)=2/15=2` `text(kilometers)` every `15` `text(minutes)` and the `text(second)` rate as `m=(6-2)/(25-15)=4/10=4` `text(kilometers)` every `10` `text(minutes)`, and then converts each rate to a unit rate by dividing the values in each rate by the number of `text(kilometers)` (`2-:2=1and15-:2=7.5`; `4-:4=1and10-:4=2.5`).",
                     "Percent": 64
                 }
             }
@@ -183,29 +183,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Davis is comparing the gas mileage for his old car with the gas mileage for his new car. His old car used 19 gallons of gas to travel 323 miles. The graph shown below represents the gas mileage for his new car.",
+            "Davis is comparing the gas mileage for his old car with the gas mileage for his new car. His old car used `19` `text(gallons)` of gas to travel `323` `text(miles)`. The graph shown below represents the gas mileage for his new car.",
             "problems/PA21G8M/media/4a.jpg",
-            "What is the difference in the gas mileages for the two cars?"
+            "What is the difference in the gas mileages for the `text(two)` cars?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 miles per gallon",
+                "Choice": "`8` `text(miles per gallon)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the new car, divides the `xtext(-scale)` by the `ytext(-scale)` (50 ÷ 2 = 25) and then subtracts 17 from 25.",
+                    "Rationale": "For the new car, divides the `xtext(-scale)` by the `ytext(-scale)` `(50-:2=25)` and then subtracts `17` from `25`.",
                     "Percent": 14
                 }
             },
             "B": {
-                "Choice": "11.2 miles per gallon",
+                "Choice": "`11.2` `text(miles per gallon)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines the difference in distance by subtracting the greatest value on the `xtext(-axis)` from 323, determines the difference in gas used by subtracting the greatest value on the `ytext(-axis)` from 19, and then divides the difference of the distances by the difference of the gas used (123 ÷ 11).",
+                    "Rationale": "Determines the difference in distance by subtracting the greatest value on the `xtext(-axis)` from `323`, determines the difference in gas used by subtracting the greatest value on the `ytext(-axis)` from `19`, and then divides the difference of the distances by the difference of the gas used `(123-:11)`.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "17 miles per gallon",
+                "Choice": "`17` `text(miles per gallon)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Calculates the gas mileage only for the old car.",
@@ -213,10 +213,10 @@
                 }
             },
             "D": {
-                "Choice": "20.5 miles per gallon",
+                "Choice": "`20.5` `text(miles per gallon)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the gas mileage for the old car by dividing 323 miles by 19 gallons to get 17 miles per gallon, determines the gas mileage for the new car by selecting a point on the line and dividing the `xtext(-value)` by the `ytext(-value)` (e.g., 150 ÷ 4) to get 37.5 miles per gallon, and then finds the difference between these two gas mileages.",
+                    "Rationale": "Determines the gas mileage for the old car by dividing `323` `text(miles)` by `19` `text(gallons)` to get `17` `text(miles per gallon)`, determines the gas mileage for the new car by selecting a point on the line and dividing the `xtext(-value)` by the `ytext(-value)` (e.g., `150-:4`) to get `37.5` `text(miles per gallon)`, and then finds the difference between these `text(two)` gas mileages.",
                     "Percent": 49
                 }
             }
@@ -240,40 +240,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Line j and line k are graphed on the same coordinate grid.",
-            ":box:• Line j has a slope of -2/3 and intersects the `ytext(-axis)` at -4.\n\n• Line k has a different negative slope than line j and intersects the `ytext(-axis)` above line j.",
-            "Which equation could describe line k?"
+            "Line `j` and line `k` are graphed on the same coordinate grid.",
+            ":box:• Line `j` has a slope of `-2/3` and intersects the `ytext(-axis)` at `-4`.\n\n• Line `k` has a different negative slope than line `j` and intersects the `ytext(-axis)` above line `j`.",
+            "Which equation could describe line `k`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = (-1/6)x",
+                "Choice": "`y=-1/6x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that -1/6 is a negative slope not equal to -2/3 and that the `ytext(-intercept)` (0) means the line intersects the `ytext(-axis)` above line j.",
+                    "Rationale": "Recognizes that `-1/6` is a `text(negative)` slope not equal to `-2/3` and that the `ytext(-intercept)` `(0)` means the line intersects the `ytext(-axis)` above line `j`.",
                     "Percent": 35
                 }
             },
             "B": {
-                "Choice": "y = (-2/3)x - 3",
+                "Choice": "`y=-2/3x-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the slope (-2/3)is the same as the slope for line j.",
+                    "Rationale": "Does not consider that the slope `(-2/3)` is the same as the slope for line `j`.",
                     "Percent": 33
                 }
             },
             "C": {
-                "Choice": "y = (-1/2)x - 5",
+                "Choice": "`y=-1/2x-5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the `ytext(-intercept)` (-5) means the line intersects the `ytext(-axis)` below line j.",
+                    "Rationale": "Does not consider that the `ytext(-intercept)` `(-5)` means the line intersects the `ytext(-axis)` below line `j`.",
                     "Percent": 24
                 }
             },
             "D": {
-                "Choice": "y = x + 1",
+                "Choice": "`y=x+1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the slope is supposed to be negative.",
+                    "Rationale": "Does not consider that the slope is supposed to be `text(negative)`.",
                     "Percent": 8
                 }
             }
@@ -303,7 +303,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not apply the distributive property when solving the equation.",
@@ -311,26 +311,26 @@
                 }
             },
             "B": {
-                "Choice": "14",
+                "Choice": "`14`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Interprets “infinite number of solutions” as meaning that the two sides of the equation must be equal, sets up the left side of the equation as 7x + 21 and the right side of the equation as `7x+35-square`, and then solves for the missing number by subtracting 7x and 21 from both sides to get` 0=14-square`.",
+                    "Rationale": "Interprets “infinite number of solutions” as meaning that the `text(two)` sides of the equation must be equal, sets up the left side of the equation as `7x+21` and the right side of the equation as `7x+35-square`, and then solves for the missing number by subtracting `7xand21` from both sides to get `0=14-square`.",
                     "Percent": 58
                 }
             },
             "C": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Correctly sets up the left side of the equation as 7x + 21 but then misidentifies the missing number as 21 to “cancel out” the 21.",
+                    "Rationale": "Correctly sets up the left side of the equation as `7x+21` but then misidentifies the missing number as `21` to “cancel out” the `21`.",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "35",
+                "Choice": "`35`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Correctly sets up the right side of the equation as 7x + 35 but then misidentifies the missing number as 35 to “cancel out” the 35 without considering the 7 • 3 value on the left side of the equation.",
+                    "Rationale": "Correctly sets up the right side of the equation as `7x+35` but then misidentifies the missing number as `35` to “cancel out” the `35` without considering the `7*3` value on the left side of the equation.",
                     "Percent": 6
                 }
             }
@@ -354,13 +354,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A system of two linear equations is graphed on the coordinate grid shown below.",
+            "A system of `text(two)` linear equations is graphed on the coordinate grid shown below.",
             "problems/PA21G8M/media/7a.jpg",
             "What ordered pair is the solution of the system of equations?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0, -4)",
+                "Choice": "`(0,-4)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Identifies the `ytext(-intercept)` of the “lower” line.",
@@ -376,7 +376,7 @@
                 }
             },
             "C": {
-                "Choice": "(3, -3)",
+                "Choice": "`(3,-3)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Identifies the point of intersection as the solution of the system of equations.",
@@ -384,10 +384,10 @@
                 }
             },
             "D": {
-                "Choice": "(3, -1)",
+                "Choice": "`(3,-1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies the correct `xtext(-coordinate)` but adds the two `ytext(-intercepts)` to determine the `ytext(-coordinate)`.",
+                    "Rationale": "Identifies the correct `xtext(-coordinate)` but adds the `text(two)` `ytext(-intercepts)` to determine the `ytext(-coordinate)`.",
                     "Percent": 5
                 }
             }
@@ -420,7 +420,7 @@
                 "Choice": "problems/PA21G8M/media/8a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes the table represents a function but incorrectly determines slope by subtracting the least value in the table from the greatest value. Using the slope formula (`m=(y_2-y_1)/(x_2-x_1)`) to determine that the slope of this choice is (5 - 3)/(3 - 0) = 2/3.",
+                    "Rationale": "Recognizes the table represents a function but incorrectly determines slope by subtracting the least value in the table from the greatest value. Using the slope formula `(m=(y_2-y_1)/(x_2-x_1))` to determine that the slope of this choice is `(5-3)/(3-0)=2/3`.",
                     "Percent": 14
                 }
             },
@@ -436,15 +436,15 @@
                 "Choice": "problems/PA21G8M/media/8c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes the line represents a function but incorrectly determines slope by subtracting the least value on the `xtext(-axis)` from the greatest value. The slope of this choice is 0 since the line is horizontal (“flat”).",
+                    "Rationale": "Recognizes the line represents a function but incorrectly determines slope by subtracting the least value on the `xtext(-axis)` from the greatest value. The slope of this choice is `0` since the line is horizontal (“flat”).",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "y = 5x + 1",
+                "Choice": "`y=5x+1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Using the slope formula (`m=(y_2-y_1)/(x_2-x_1)`), the slope of this choice is 5 since the equation is written in slope-intercept form `(y=mx+b)`. This choice contains the greatest slope among the options that represent functions.",
+                    "Rationale": "Using the slope formula `(m=(y_2-y_1)/(x_2-x_1))`, the slope of this choice is `5` since the equation is written in slope-intercept form `(y=mx+b)`. This choice contains the greatest slope among the options that represent functions.",
                     "Percent": 50
                 }
             }
@@ -468,16 +468,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A parking lot charges a monthly fee plus a charge per day for a car parked in the lot. The graph below shows the relationship between the total cost (y), in `text(dollars)`, and the number of days (x) the car is parked in the lot.",
+            "A parking lot charges a `text(monthly)` fee plus a charge `text(per day)` for a car parked in the lot. The graph below shows the relationship between the total cost `(y)`, in `text(dollars)`, and the number of `text(days)` `(x)` the car is parked in the lot.",
             "problems/PA21G8M/media/9a.jpg",
-            "Which equation could represent the relationship between the total cost (y), in `text(dollars)`, and the number of days (x) the car is parked in the lot?"
+            "Which equation could represent the relationship between the total cost `(y)`, in `text(dollars)`, and the number of `text(days)` `(x)` the car is parked in the lot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = mx",
+                "Choice": "`y=mx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not consider that the `ytext(-intercept)` is not 0 (i.e., the line does not pass through the origin).",
+                    "Rationale": "Does not consider that the `ytext(-intercept)` is not `0` (i.e., the line does not pass through the origin).",
                     "Percent": 12
                 }
             },
@@ -485,23 +485,23 @@
                 "Choice": "`y=mx+b`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that the relationship is linear (y = mx) and has a `ytext(-intercept)` other than 0 (+ b).",
+                    "Rationale": "Recognizes that the relationship is linear `(y=mx)` and has a `ytext(-intercept)` other than `0` `(+b)`.",
                     "Percent": 73
                 }
             },
             "C": {
-                "Choice": "y = x^2",
+                "Choice": "`y=x^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a nonlinear equation (y = x^2) and does not consider that the `ytext(-intercept)` is not 0 (i.e., the line does not pass through the origin).",
+                    "Rationale": "Selects a nonlinear equation `(y=x^2)` and does not consider that the `ytext(-intercept)` is not `0` (i.e., the line does not pass through the origin).",
                     "Percent": 8
                 }
             },
             "D": {
-                "Choice": "y = x^2+ b",
+                "Choice": "`y=x^2+b`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a nonlinear equation (y = x^2) that has a `ytext(-intercept)` other than 0 (+ b).",
+                    "Rationale": "Selects a nonlinear equation `(y=x^2)` that has a `ytext(-intercept)` other than `0` `(+b)`.",
                     "Percent": 7
                 }
             }
@@ -529,10 +529,10 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The number of butterflies `(y)` in a population doubles every month `(x)`.",
+                "Choice": "The number of butterflies `(y)` in a population `text(doubles)` every `text(month)` `(x)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Misidentifies “doubles every month” as `y=2x` instead of as `y=2^x`.",
+                    "Rationale": "Misidentifies “`text(doubles)` every `text(month)`” as `y=2x` instead of as `y=2^x`.",
                     "Percent": 15
                 }
             },
@@ -553,7 +553,7 @@
                 }
             },
             "D": {
-                "Choice": "The total income `(y)` of a worker who earns `8` `text(dollars per hour)` depends on the number of hours `(x)` worked.",
+                "Choice": "The total income `(y)` of a worker who earns `8` `text(dollars per hour)` depends on the number of `text(hours)` `(x)` worked.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Uses “`8` `text(dollars per hour)`” to write the equation `y=8x+0`.",
@@ -580,35 +580,35 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ben currently has $70 in his trip fund. He makes $45 per week doing yard work for his neighbors. He keeps $18 of the $45 for weekly expenses. The remaining amount goes into his trip fund. Which function can be used to determine the amount of money (y), in `text(dollars)`, that Ben has in his trip fund at the end of x weeks?"
+            "Ben currently has `$70` in his trip fund. He makes `$45` `text(per week)` doing yard work for his neighbors. He keeps `$18` of the `$45` for `text(weekly)` expenses. The remaining amount goes into his trip fund. Which function can be used to determine the amount of money `(y)`, in `text(dollars)`, that Ben has in his trip fund at the end of `x` `text(weeks)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 70 + 27x",
+                "Choice": "`y=70+27x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses 70 as the initial value and 45 - 18 = 27 as the rate of change.",
+                    "Rationale": "Uses `70` as the initial value and `45-18=27` as the rate of change.",
                     "Percent": 73
                 }
             },
             "B": {
-                "Choice": "y = 52 + 45x",
+                "Choice": "`y=52+45x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 70 - 18 = 52 as the initial value and 45 as the rate of change.",
+                    "Rationale": "Uses `70-18=52` as the initial value and `45` as the rate of change.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "y = 45 + 52x",
+                "Choice": "`y=45+52x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 45 as the initial value and 70 - 18 = 52 as the rate of change.",
+                    "Rationale": "Uses `45` as the initial value and `70-18=52` as the rate of change.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "y = 27 + 70x",
+                "Choice": "`y=27+70x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Switches the initial value and the rate of change.",
@@ -635,40 +635,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Zach is studying the school furnace's oil usage. He records the amount of oil remaining in the tank at 8 a.m. every day for a week. No additional oil is added to the tank during the week. The graph below shows his data.",
+            "Zach is studying the school furnace's oil usage. He records the amount of oil remaining in the tank at `8` `text(a.m.)` `text(every day)` for a `text(week)`. No additional oil is added to the tank during the `text(week)`. The graph below shows his data.",
             "problems/PA21G8M/media/12a.jpg",
-            "As the outdoor temperature gets colder, more oil is used to keep the indoor temperature constant. Based on the graph, which 24-hour time interval indicates the coldest period for the week?"
+            "As the outdoor temperature gets colder, more oil is used to keep the indoor temperature constant. Based on the graph, which `24text(-hour)` time interval indicates the coldest period for the `text(week)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Sunday to Monday",
+                "Choice": "`text(Sunday)` to `text(Monday)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the first decrease.",
+                    "Rationale": "Selects the `text(first)` decrease.",
                     "Percent": 17
                 }
             },
             "B": {
-                "Choice": "Tuesday to Wednesday",
+                "Choice": "`text(Tuesday)` to `text(Wednesday)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Interprets the greatest 1-day decrease (“drop”) in the amount of oil remaining in the tank (230 to 200 gallons) as representing the coldest 24-hour time interval for the week",
+                    "Rationale": "Interprets the greatest `1text(-day)` decrease (“drop”) in the amount of oil remaining in the tank (`230` to `200` `text(gallons)`) as representing the coldest `24text(-hour)` time interval for the `text(week)`",
                     "Percent": 47
                 }
             },
             "C": {
-                "Choice": "Friday to Saturday",
+                "Choice": "`text(Friday)` to `text(Saturday)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the second-largest decrease.",
+                    "Rationale": "Selects the `text(second-largest)` decrease.",
                     "Percent": 5
                 }
             },
             "D": {
-                "Choice": "Saturday to Sunday",
+                "Choice": "`text(Saturday)` to `text(Sunday)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the interval with the lowest levels in the tank for the week.",
+                    "Rationale": "Uses the interval with the lowest levels in the tank for the `text(week)`.",
                     "Percent": 31
                 }
             }
@@ -698,34 +698,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "reflection across }BC and reflection across }AC",
+                "Choice": "reflection across `bar(BC)` and reflection across `bar(AC)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies a potentially correct first transformation but the second transformation would move point B to quadrant II and points A and C would be 4 units from points A' and C', respectively.",
+                    "Rationale": "Identifies a potentially correct first transformation but the `text(second)` transformation would move point `B` to quadrant `II` and points `AandC` would be `4` units from points `A'andC'`, respectively.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "reflection across }BC and translation 4 units right",
+                "Choice": "reflection across `bar(BC)` and translation `4` `text(units)` right",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies a set of transformations that moves point A to point A' by reflecting point A from 4 units above point C to 4 units below point C and then translating it right 4 units, moves point B to point B' by reflecting point B onto itself (since it is on line segment BC) and then translating it right 4 units, and moves point C to point C' by reflecting point C onto itself (since it is on line segment BC) and then translating it right 4 units.",
+                    "Rationale": "Identifies a set of transformations that moves point `A` to point `A'` by reflecting point `A` from `4` `text(units)` above point `C` to `4` `text(units)` below point `C` and then translating it right `4` `text(units)`, moves point `B` to point `B'` by reflecting point `B` onto itself (since it is on line segment `bar(BC)`) and then translating it right `4` `text(units)`, and moves point `C` to point `C'` by reflecting point `C` onto itself (since it is on line segment `bar(BC)`) and then translating it right `4` `text(units)`.",
                     "Percent": 58
                 }
             },
             "C": {
-                "Choice": "translation 4 units right and translation 4 units down",
+                "Choice": "translation `4` `text(units)` right and translation `4` `text(units)` down",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies a potentially correct first transformation but the second transformation would move point A to point C', point C to point A', and point B 4 units below point B'.",
+                    "Rationale": "Identifies a potentially correct `text(first)` transformation but the `text(second)` transformation would move point `A` to point `C'`, point `C` to point `A'`, and point `B` `4` `text(units)` below point `B`'.",
                     "Percent": 11
                 }
             },
             "D": {
-                "Choice": "rotation 180 degrees clockwise about C and translation 4 units right",
+                "Choice": "rotation `180` `text(degrees)` clockwise about `C` and translation `4` `text(units)` right",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies a set of transformations that would move point A to point A' and point C to point C', but point B would move to quadrant II.",
+                    "Rationale": "Identifies a set of transformations that would move point `A` to point `A'` and point `C` to point `C'`, but point `B` would move to quadrant `II`.",
                     "Percent": 21
                 }
             }
@@ -749,38 +749,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagonal of Andre's rectangular TV screen is 39 inches. The width of his TV screen is 34 inches. Which measurement is closest to the height of Andre's TV screen?"
+            "The diagonal of Andre's rectangular TV screen is `39` `text(inches)`. The width of his TV screen is `34` `text(inches)`. Which measurement is closest to the height of Andre's TV screen?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8.5 inches",
+                "Choice": "`8.5` `text(inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines the square root of the sum 39 + 34.",
+                    "Rationale": "Determines the square root of the sum `39+34`.",
                     "Percent": 12
                 }
             },
             "B": {
-                "Choice": "19.1 inches",
+                "Choice": "`19.1` `text(inches)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses the Pythagorean theorem (`a^2+b^2=c^2`) to set up 34^2 + b^2 = 39^2, simplifies this to b^2 = 1,521 - 1,156 = 365, and then solves for b by determining the square root of 365 (19.104973...).",
+                    "Rationale": "Uses the Pythagorean theorem `(a^2+b^2=c^2)` to set up `34^2+b^2=39^2`, simplifies this to` b^2=1text(,)521-1text(,)156=365`, and then solves for `b` by determining the square root of `365` `(19.104973...)`.",
                     "Percent": 59
                 }
             },
             "C": {
-                "Choice": "36.5 inches",
+                "Choice": "`36.5` `text(inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides the sum 39 + 34 by 2.",
+                    "Rationale": "Divides the sum `39+34` by `2`.",
                     "Percent": 28
                 }
             },
             "D": {
-                "Choice": "51.7 inches",
+                "Choice": "`51.7` `text(inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Determines the square root of the sum 39^2 + 34^2 instead of the difference 39^2 - 34^2.",
+                    "Rationale": "Determines the square root of the sum `39^2+34^2` instead of the difference `39^2-34^2`.",
                     "Percent": 11
                 }
             }
@@ -804,21 +804,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the grid shown below, rectangle ABCD represents the location of a pool at a city park.",
+            "In the grid shown below, rectangle `ABCD` represents the location of a pool at a city park.",
             "problems/PA21G8M/media/15a.jpg",
-            "Anna swims in a straight line from corner A to corner C of the swimming pool. What is the distance, in `text(meters)`, Anna swims?"
+            "Anna swims in a straight line from corner `A` to corner `C` of the swimming pool. What is the distance, in `text(meters)`, Anna swims?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "√22",
+                "Choice": "`sqrt(22)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the square root of the sum 2(7) + 2(4) instead of the square root of the sum 7^2 + 4^2.",
+                    "Rationale": "Selects the square root of the sum `2(7)+2(4)` instead of the square root of the sum `7^2+4^2`.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Determines the length of the pool and does not consider the width.",
@@ -826,18 +826,18 @@
                 }
             },
             "C": {
-                "Choice": "√65",
+                "Choice": "`sqrt(65)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Determines the differences between the `xtext(-values)` and between the `ytext(-values)` for point A and point C (-1 - (-5) = 4 and 2 - (-5) = 7), uses the Pythagorean theorem (`a^2+b^2=c^2`) to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root OR uses the Pythagorean theorem (`a^2+b^2=c^2`) to set up (AB)^2 + (BC)^2 = (AC)^2, substitutes the lengths of sides AB and BC to get 4^2 + 7^2 = (AC)^2, and then simplifies this to (AC)^2 = 16 + 49 = 65 before taking the square root.",
+                    "Rationale": "Determines the differences between the `xtext(-values)` and between the `ytext(-values)` for point `A` and point `C` `(-1-(-5)=4and2-(-5)=7)`, uses the Pythagorean theorem `(a^2+b^2=c^2)` to get `4^2+7^2=(AC)^2,` and then simplifies this to `(AC)^2=16+49=65` before taking the square root OR uses the Pythagorean theorem `(a^2+b^2=c^2)` to set up `(AB)^2+(BC)^2=(AC)^2`, substitutes the lengths of sides `bar(AB)andbar(BC)` to get `4^2+7^2=(AC)^2`, and then simplifies this to `(AC)^2=16+49=65` before taking the square root.",
                     "Percent": 39
                 }
             },
             "D": {
-                "Choice": "11",
+                "Choice": "`11`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds the length and the width OR divides the sum 2(7) + 2(4) by 2.",
+                    "Rationale": "Adds the length and the width OR divides the sum `2(7)+2(4)` by `2`.",
                     "Percent": 16
                 }
             }
@@ -861,38 +861,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cone-shaped dispenser is filled with cake frosting. The cone has a radius of 1.5 inches and a height of 5 inches. Which measurement is closest to the volume of cake frosting that the cone-shaped dispenser holds?"
+            "A cone-shaped dispenser is filled with cake frosting. The cone has a radius of `1.5` `text(inches)` and a height of `5` `text(inches)`. Which measurement is closest to the volume of cake frosting that the cone-shaped dispenser holds?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3.75 cubic inches",
+                "Choice": "`3.75` `text(cubic inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Omits `pi` (i.e., uses V = (1/3)r^2h instead of `V=1/3pir^2h`).",
+                    "Rationale": "Omits `pi` (i.e., uses `V=1/3r^2h` instead of `V=1/3pir^2h`).",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "11.78 cubic inches",
+                "Choice": "`11.78` `text(cubic inches)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Uses the volume formula for a cone (`V=1/3pir^2h`) to set up V = (1/3)π(1.5)^2(5), simplifies this to V = 3.75π, and then uses either calculator `pi` or 3.14 to determine an approximation of the volume (either 11.780972... or 11.775).",
+                    "Rationale": "Uses the volume formula for a cone `(V=1/3pir^2h)` to set up `V=1/3pi(1.5)^2(5)`, simplifies this to `V=3.75pi`, and then uses either calculator `pi` or `3.14` to determine an approximation of the volume (either `11.780972...or11.775`).",
                     "Percent": 73
                 }
             },
             "C": {
-                "Choice": "47.12 cubic inches",
+                "Choice": "`47.12` `text(cubic inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the diameter (3) instead of the radius (1.5) in the volume formula.",
+                    "Rationale": "Uses the diameter `(3)` instead of the radius `(1.5)` in the volume formula.",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "141.37 cubic inches",
+                "Choice": "`141.37` `text(cubic inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the volume formula for a cylinder (V = 91/3)πr^2h) instead of the volume formula for a cone (`V=1/3pir^2h`) and uses the diameter (3) instead of the radius (1.5) in the volume formula.",
+                    "Rationale": "Uses the volume formula for a cylinder `(V=1/3pir^2h)` instead of the volume formula for a cone `(V=1/3pir^2h)` and uses the diameter `(3)` instead of the radius `(1.5)` in the volume formula.",
                     "Percent": 3
                 }
             }
@@ -916,8 +916,8 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "The locations of four points on a number line are described by the numbers listed below.",
-            ":ibox:point J: √12\tpoint K: 15/7\tpoint L: √16\tpoint M: 3π/2"
+            "The locations of `text(four)` points on a number line are described by the numbers listed below.",
+            ":ibox:point `J`: `sqrt(12)`\tpoint `K`: `15/7`\tpoint `L`: `sqrt(16)`\tpoint `M`: `(3pi)/2`"
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -927,7 +927,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "For ONLY the IRRATIONAL numbers that are listed, write the approximate value of each irrational number as a decimal rounded to the nearest tenth. Graph these approximate values on the number line below to show the locations of the irrational numbers. Label each graphed point with the correct letter."
+                    "For ONLY the IRRATIONAL numbers that are listed, write the approximate value of each irrational number as a decimal rounded to the nearest `text(tenth)`. Graph these approximate values on the number line below to show the locations of the irrational numbers. Label each graphed point with the correct letter."
                 ],
                 "AnswerChoices": {}
             },
@@ -937,10 +937,10 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "An integer is represented by x. A rational number is represented by √x. The value of √x is between 84/18 and √41.",
-                    "Explain why there are only two possible values of x. As part of the explanation, state the two possible values of x.",
-                    "Solution 1: x = :FR-1:",
-                    "Solution 2: x = :FR-2:"
+                    "An integer is represented by `x`. A rational number is represented by `sqrt(x)`. The value of `sqrt(x)` is between `84/18andsqrt(41)`.",
+                    "Explain why there are only `text(two)` possible values of `x`. As part of the explanation, state the `text(two)` possible values of `x`.",
+                    "\n\nSolution `1`: `x=` :FR-1:",
+                    "Solution `2`: `x=` :FR-2:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {

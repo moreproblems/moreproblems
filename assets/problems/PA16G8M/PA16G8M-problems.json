@@ -14,11 +14,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Simplify: 7⁻⁸xx7⁻⁴"
+            "Simplify: `7^-8xx7^-4`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/7^12",
+                "Choice": "`1/7^12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -26,23 +26,23 @@
                 }
             },
             "B": {
-                "Choice": "1/7⁴",
+                "Choice": "`1/7^4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Ignores the negative in the second exponent.",
+                    "Rationale": "Ignores the `text(negative)` in the `text(second)` exponent.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "7^12",
+                "Choice": "`7^12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 2 negatives make it positive.",
+                    "Rationale": "Thinks `2` `text(negatives)` make it `text(positive)`.",
                     "Percent": 29
                 }
             },
             "D": {
-                "Choice": "7³²",
+                "Choice": "`7^32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies the exponents.",
@@ -124,10 +124,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Carter is mapping the boundaries of a park on a coordinate grid. The park's headquarters are located at the origin. The equations shown below represent two boundaries of the park.",
-            "y = 2x -5",
-            "2x + 4y = 12",
-            "The park's entrance is located at the intersection of these two boundaries. Which coordinate grid correctly shows the two boundaries and the park's entrance?"
+            "Mr. Carter is mapping the boundaries of a park on a coordinate grid. The park's headquarters are located at the origin. The equations shown below represent `text(two)` boundaries of the park.",
+            ":ibox:`y=2x-5`",
+            ":ibox:`2x+4y=12`",
+            "The park's entrance is located at the intersection of these `text(two)` boundaries. Which coordinate grid correctly shows the `text(two)` boundaries and the park's entrance?"
         ],
         "AnswerChoices": {
             "A": {
@@ -142,7 +142,7 @@
                 "Choice": "problems/PA16G8M/media/3b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses a negative slope for the first equation and a positive slope for the second equation.",
+                    "Rationale": "Uses a `text(negative)` slope for the `text(first)` equation and a `text(positive)` slope for the `text(second)` equation.",
                     "Percent": 19
                 }
             },
@@ -150,7 +150,7 @@
                 "Choice": "problems/PA16G8M/media/3c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the correct first equation but reverses the intercepts for the second equation.",
+                    "Rationale": "Uses the correct `text(first)` equation but reverses the intercepts for the `text(second)` equation.",
                     "Percent": 22
                 }
             },
@@ -158,7 +158,7 @@
                 "Choice": "problems/PA16G8M/media/3d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses the reciprocal of the slope for the first equation and reverses the intercepts for the second equation.",
+                    "Rationale": "Uses the reciprocal of the slope for the `text(first)` equation and reverses the intercepts for the `text(second)` equation.",
                     "Percent": 13
                 }
             }
@@ -182,21 +182,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cleaning company charges x dollars per hour to clean floors and y dollars per hour to clean the rest of a house.",
-            ":box:• When the company spends 2 hours to clean floors and 3 hours to clean the rest of a house, the total charge is $84.\n\n• When the company spends 1 hour to clean floors and 4 hours to clean the rest of a house, the total charge is $87.",
-            "Which ordered pair represents the hourly charges to clean floors and to clean the rest of the house?"
+            "A cleaning company charges `x` `text(dollars per hour)` to clean floors and `y` `text(dollars per hour)` to clean the rest of a house.",
+            ":box:• When the company spends `2` `text(hours)` to clean floors and `3` `text(hours)` to clean the rest of a house, the total charge is `$84`.\n\n• When the company spends `1` `text(hour)` to clean floors and `4` `text(hours)` to clean the rest of a house, the total charge is `$87`.",
+            "Which ordered pair represents the `text(hourly)` charges to clean floors and to clean the rest of the house?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(12, 20)",
+                "Choice": "`(12,20)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Tries these values in the first example; 2xx12 + 3xx20 = 84.",
+                    "Rationale": "Tries these values in the first example; `2xx12+3xx20=84`.",
                     "Percent": 19
                 }
             },
             "B": {
-                "Choice": "(15, 18)",
+                "Choice": "`(15,18)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -204,7 +204,7 @@
                 }
             },
             "C": {
-                "Choice": "(18, 15)",
+                "Choice": "`(18,15)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reverses the solution.",
@@ -212,10 +212,10 @@
                 }
             },
             "D": {
-                "Choice": "(20, 12)",
+                "Choice": "`(20,12)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses the meaning of each value in the ordered pair and tries the values in the first example.",
+                    "Rationale": "Reverses the meaning of each value in the ordered pair and tries the values in the `text(first)` example.",
                     "Percent": 11
                 }
             }
@@ -239,22 +239,22 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Marianna has been adding $30 to her savings account every month. Which model could represent the money in Marianna's savings account (y) after x months?"
+            "Marianna has been adding `$30` to her savings account `text(every month)`. Which model could represent the money in Marianna's savings account `(y)` after `x` `text(months)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 10x + 30",
+                "Choice": "`y=10x+30`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees 30 is represented, but not as slope.",
+                    "Rationale": "Sees `30` is represented, but not as slope.",
                     "Percent": 28
                 }
             },
             "B": {
-                "Choice": "y = 10 - 30x",
+                "Choice": "`y=10-30x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees 30 and ignores the negative part of the slope.",
+                    "Rationale": "Sees `30` and ignores the `text(negative)` part of the slope.",
                     "Percent": 9
                 }
             },
@@ -270,7 +270,7 @@
                 "Choice": "problems/PA16G8M/media/5b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies slope as 30/1 instead of 10/3.",
+                    "Rationale": "Identifies slope as `30/1` instead of `10/3`.",
                     "Percent": 15
                 }
             }
@@ -298,14 +298,14 @@
         "Content": [
             "The graph below represents a function.",
             "problems/PA16G8M/media/6a.jpg",
-            "Which single transformation could be applied to the graph so that it no longer represents a function?"
+            "Which `text(single)` transformation could be applied to the graph so that it no longer represents a function?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "reflection across the `xtext(-axis)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks a function must have some positive `ytext(-values)`.",
+                    "Rationale": "Thinks a function must have some `text(positive)` `ytext(-values)`.",
                     "Percent": 14
                 }
             },
@@ -313,7 +313,7 @@
                 "Choice": "reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses this with a reflection across y = x.",
+                    "Rationale": "Confuses this with a reflection across `y=x`.",
                     "Percent": 22
                 }
             },
@@ -326,7 +326,7 @@
                 }
             },
             "D": {
-                "Choice": "translation 5 units to the left",
+                "Choice": "translation `5` `text(units)` to the left",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks all functions must go through the origin.",
@@ -355,37 +355,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two linear functions of x are shown below.",
+            "`text(Two)` linear functions of `x` are shown below.",
             "problems/PA16G8M/media/7a.jpg",
             "Which statement about the functions is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Function 2 can be described by the equation y = 35x - 109.",
+                "Choice": "Function `2` can be described by the equation `y=35x-109`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees 35x + 109 works for first pair in table, but writes as 35x - 109.",
+                    "Rationale": "Sees `35x+109` works for `text(first)` pair in table, but writes as `35x-109`.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "Function 2 can be described by the equation y = 100x - 11.",
+                "Choice": "Function `2` can be described by the equation `y=100x-11`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses difference of first two `ytext(-values)` as slope.",
+                    "Rationale": "Uses difference of `text(first two)` `ytext(-values)` as slope.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "The `ytext(-intercept)` of function 1 is less than the `ytext(-intercept)` of function 2.",
+                "Choice": "The `ytext(-intercept)` of function `1` is less than the `ytext(-intercept)` of function `2`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Misidentifies `ytext(-intercept)` of function 2.",
+                    "Rationale": "Misidentifies `ytext(-intercept)` of function `2`.",
                     "Percent": 30
                 }
             },
             "D": {
-                "Choice": "The rate of change of function 1 is greater than the rate of change of function 2.",
+                "Choice": "The rate of change of function `1` is greater than the rate of change of function `2`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -412,11 +412,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Luis is building a new deck and needs to have a slab of concrete poured. He knows the contractor charges an initial cost of $75 plus an additional $2.50 per square foot of concrete. Which equation can be used to determine the cost (y), in `text(dollars)`, to pour a concrete slab with an area of x square feet?"
+            "Luis is building a new deck and needs to have a slab of concrete poured. He knows the contractor charges an initial cost of `$75` plus an additional `$2.50` `text(per square foot)` of concrete. Which equation can be used to determine the cost `(y)`, in `text(dollars)`, to pour a concrete slab with an area of `x` `text(square feet)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 2.5x + 75",
+                "Choice": "`y=2.5x+75`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -424,15 +424,15 @@
                 }
             },
             "B": {
-                "Choice": "y = 7.5x + 2.5",
+                "Choice": "`y=7.5x+2.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Converts 75 to 7.5 and uses it as the rate.",
+                    "Rationale": "Converts `75` to `7.5` and uses it as the rate.",
                     "Percent": 8
                 }
             },
             "C": {
-                "Choice": "y = 75x + 2.5",
+                "Choice": "`y=75x+2.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reverses the rate and initial cost.",
@@ -440,10 +440,10 @@
                 }
             },
             "D": {
-                "Choice": "y = 77.5x",
+                "Choice": "`y=77.5x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 75 and 2.5 and assumes that is the rate per square foot.",
+                    "Rationale": "Adds `75and2.5` and assumes that is the `text(rate per square foot)`.",
                     "Percent": 5
                 }
             }
@@ -467,13 +467,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph below shows the relationship between the number of years after a car is purchased and the car's value.",
+            "The graph below shows the relationship between the number of `text(years)` after a car is purchased and the car's value.",
             "problems/PA16G8M/media/9a.jpg",
             "Which statement correctly describes the relationship shown in the graph?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The car's initial value is $2,000, and the car's value increases $30,000 each year.",
+                "Choice": "The car's initial value is `$2text(,)000`, and the car's value increases `$30text(,)000` `text(each year)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reverses meaning for slope and `ytext(-intercept)` and misreads direction of slope in graph.",
@@ -481,7 +481,7 @@
                 }
             },
             "B": {
-                "Choice": "The car's initial value is $18,000, and the car's value increases $2,000 each year.",
+                "Choice": "The car's initial value is `$18text(,)000`, and the car's value increases `$2text(,)000` `text(each year)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reads graph from right to left.",
@@ -489,7 +489,7 @@
                 }
             },
             "C": {
-                "Choice": "The car's initial value is $30,000, and the car's value decreases $2,000 each year.",
+                "Choice": "The car's initial value is `$30text(,)000`, and the car's value decreases `$2text(,)000` `text(each year)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -497,10 +497,10 @@
                 }
             },
             "D": {
-                "Choice": "The car's initial value is $30,000, and the car's value decreases $12,000 each year.",
+                "Choice": "The car's initial value is `$30text(,)000`, and the car's value decreases `$12text(,)000` `text(each year)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses change in value at end of 6 years as rate of change.",
+                    "Rationale": "Uses change in value at end of `6` `text(years)` as rate of change.",
                     "Percent": 13
                 }
             }
@@ -547,7 +547,7 @@
                 "Choice": "problems/PA16G8M/media/10c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses a translation, but thinks 90 degrees because of shifting from one quadrant to another.",
+                    "Rationale": "Uses a translation, but thinks `90` `text(degrees)` because of shifting from `text(one)` quadrant to another.",
                     "Percent": 7
                 }
             },
@@ -555,7 +555,7 @@
                 "Choice": "problems/PA16G8M/media/10d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 180-degree rotation.",
+                    "Rationale": "Uses `180text(-degree)` rotation.",
                     "Percent": 24
                 }
             }
@@ -581,13 +581,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the figure shown below, triangle PQR is transformed to create triangle P'Q'R'.",
+            "In the figure shown below, triangle `PQR` is transformed to create triangle `P'Q'R'`.",
             "problems/PA16G8M/media/11a.jpg",
-            "Point S will be transformed the same way as triangle PQR. Which sentence could describe how point S will be transformed?"
+            "Point `S` will be transformed the same way as triangle `PQR`. Which sentence could describe how point `S` will be transformed?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Point S will be translated to (6, 0) and then rotated to (0, 6).",
+                "Choice": "Point `S` will be translated to `(6,0)` and then rotated to `(0,6)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Picks an option that includes the axes.",
@@ -595,15 +595,15 @@
                 }
             },
             "B": {
-                "Choice": "Point S will be translated to (6, 0) and then rotated to (0, -6).",
+                "Choice": "Point `S` will be translated to `(6,0)` and then rotated to `(0,-6)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks the two triangles are rotations of one another.",
+                    "Rationale": "Thinks the `text(two)` triangles are rotations of `text(one)` another.",
                     "Percent": 20
                 }
             },
             "C": {
-                "Choice": "Point S will be translated to (4, 3) and then reflected to (-4, 3).",
+                "Choice": "Point `S` will be translated to `(4,3)` and then reflected to `(-4,3)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Reflects the point across the wrong axis.",
@@ -611,7 +611,7 @@
                 }
             },
             "D": {
-                "Choice": "Point S will be translated to (4, 3) and then reflected to (4, -3).",
+                "Choice": "Point `S` will be translated to `(4,3)` and then reflected to `(4,-3)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -644,7 +644,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "69.12",
+                "Choice": "`69.12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -652,7 +652,7 @@
                 }
             },
             "B": {
-                "Choice": "75.40",
+                "Choice": "`75.40`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses formula for volume of a cylinder instead of a cone.",
@@ -660,18 +660,18 @@
                 }
             },
             "C": {
-                "Choice": "138.23",
+                "Choice": "`138.23`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates 1 squared as 1 times 2.",
+                    "Rationale": "Calculates `1` squared as `1` times `2`.",
                     "Percent": 18
                 }
             },
             "D": {
-                "Choice": "276.46",
+                "Choice": "`276.46`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 2 inches as the radius.",
+                    "Rationale": "Uses `2` `text(inches)` as the radius.",
                     "Percent": 14
                 }
             }
@@ -695,11 +695,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Part of a sculpture is a stone sphere with a volume of 36π cubic feet. What is the radius, in `text(feet)`, of the stone sphere?"
+            "Part of a sculpture is a stone sphere with a volume of `36pi` `text(cubic feet)`. What is the radius, in `text(feet)`, of the stone sphere?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -707,26 +707,26 @@
                 }
             },
             "B": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds square root of 36.",
+                    "Rationale": "Finds square root of `36`.",
                     "Percent": 26
                 }
             },
             "C": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds value of r cubed and then divides by 3.",
+                    "Rationale": "Finds value of `r` cubed and then divides by `3`.",
                     "Percent": 15
                 }
             },
             "D": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Divides 36 by 3.",
+                    "Rationale": "Divides `36` by `3`.",
                     "Percent": 19
                 }
             }
@@ -752,7 +752,7 @@
         "Content": [
             "Christy created the scatter plot shown below.",
             "problems/PA16G8M/media/14a.jpg",
-            "Christy finds that the line of best fit for the data has the equation y = 0.51x + 1.48. Which statement best explains how removing the point (15, 7) would affect the slope of the line of best fit?"
+            "Christy finds that the line of best fit for the data has the equation `y=0.51x+1.48`. Which statement best explains how removing the point `(15,7)` would affect the slope of the line of best fit?"
         ],
         "AnswerChoices": {
             "A": {
@@ -807,21 +807,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The scatter plot below shows the temperatures (y), in `text(degrees Fahrenheit)` (°F), that were recorded at different altitudes (x), in thousands of feet.",
+            "The scatter plot below shows the temperatures `(y)`, in `text(degrees Fahrenheit)` `(text(°F))`, that were recorded at different altitudes `(x)`, in `text(thousands of feet)`.",
             "problems/PA16G8M/media/15a.jpg",
-            "Which equation could represent the line of best fit for the temperatures, in `text(degrees Fahrenheit)`, based on the altitudes, in thousands of feet?"
+            "Which equation could represent the line of best fit for the temperatures, in `text(degrees Fahrenheit)`, based on the altitudes, in `text(thousands of feet)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = (-9/4)x + 47",
+                "Choice": "`y=-9/4x+47`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses line that passes through data points (8, 29) and (12, 20).",
+                    "Rationale": "Chooses line that passes through data points `(8,29)and(12,20)`.",
                     "Percent": 20
                 }
             },
             "B": {
-                "Choice": "y = (-7/2)x + 59",
+                "Choice": "`y=-7/2x+59`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -829,18 +829,18 @@
                 }
             },
             "C": {
-                "Choice": "y = -5x + 69",
+                "Choice": "`y=-5x+69`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses line that passes through data points (6, 39) and (8, 29).",
+                    "Rationale": "Chooses line that passes through data points `(6,39)and(8,29)`.",
                     "Percent": 21
                 }
             },
             "D": {
-                "Choice": "y = -5x + 80",
+                "Choice": "`y=-5x+80`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses line that passes through data points (12, 20) and (14, 10).",
+                    "Rationale": "Chooses line that passes through data points `(12,20)and(14,10)`.",
                     "Percent": 13
                 }
             }
@@ -864,21 +864,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Blake interviewed 24 students to see whether they collected sports cards and whether they participated in sports. The table below shows his data.",
+            "Blake interviewed `24` students to see whether they collected sports cards and whether they participated in sports. The table below shows his data.",
             "problems/PA16G8M/media/16a.jpg",
             "How many of the students Blake interviewed participate in sports?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks both columns should be equal (6 + x = 3 + 7).",
+                    "Rationale": "Thinks both columns should be equal `(6+x=3+7)`.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds how many do not participate in sports.",
@@ -886,7 +886,7 @@
                 }
             },
             "C": {
-                "Choice": "14",
+                "Choice": "`14`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -894,7 +894,7 @@
                 }
             },
             "D": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds how many do not collect sports cards.",
@@ -921,7 +921,7 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "Bill used a rain gauge to measure how much rain fell, in `text(centimeters)` (cm), during a rainfall."
+            "Bill used a rain gauge to measure how much rain fell, in `text(centimeters)` `(text(cm))`, during a rainfall."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -931,8 +931,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The rain fell at the same rate throughout the first 180 minutes of the rainfall.",
-                    "Complete the table below with the number of minutes it took for 9 centimeters of rain to fall and the number of centimeters of rain that fell through 150 minutes.",
+                    "The rain fell at the same rate throughout the first `180` `text(minutes)` of the rainfall.",
+                    "Complete the table below with the number of `text(minutes)` it took for `9` `text(centimeters)` of rain to fall and the number of `text(centimeters)` of rain that fell through `150` `text(minutes)`.",
                     ":table:problems/PA16G8M/supps/PA16G8M-T1.json"
                 ],
                 "AnswerChoices": {
@@ -960,7 +960,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Write an equation to describe the relationship between the time (t), in `text(minutes)`, and the amount of rain (r), in `text(centimeters)`."
+                    "Write an equation to describe the relationship between the time `(t)`, in `text(minutes)`, and the amount of rain `(r)`, in `text(centimeters)`."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -979,9 +979,9 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The total amount of rain that fell from 180 minutes through 280 minutes is shown in the scatter plot below.",
+                    "The total amount of rain that fell from `180` `text(minutes)` through `280` `text(minutes)` is shown in the scatter plot below.",
                     "problems/PA16G8M/media/17a.jpg",
-                    "Describe the change in the slope between the first 180 minutes and the following 100 minutes, and explain what it means in terms of the total amount of rainfall."
+                    "Describe the change in the slope between the first `180` `text(minutes)` and the following `100` `text(minutes)`, and explain what it means in terms of the total amount of rainfall."
                 ],
                 "AnswerChoices": {}
             },
@@ -991,8 +991,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "After 280 minutes, the slope of the graph is 0.",
-                    "Explain what a slope of 0 means in this situation."
+                    "After `280` `text(minutes)`, the slope of the graph is `0`.",
+                    "Explain what a slope of `0` means in this situation."
                 ],
                 "AnswerChoices": {
                     "KEY": {

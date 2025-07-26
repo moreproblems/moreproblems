@@ -14,8 +14,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two friends shared a pie.",
-            ":ibox:• One friend ate 2/5 of the whole pie.\n\n• The other friend ate 40% of the whole pie.",
+            "`text(Two)` friends shared a pie.",
+            ":ibox:• `text(One)` friend ate `2/5` of the whole pie.\n\n• The other friend ate `40%` of the whole pie.",
             "In which fraction model does the shaded portion show the fraction of the pie that was NOT eaten?"
         ],
         "AnswerChoices": {
@@ -81,9 +81,9 @@
                 "Explain": false,
                 "Content": [
                     "The student writes these numbers on a sheet of paper.",
-                    ":box:-35, 5/7",
-                    "The student multiplies the two numbers.",
-                    "What is the value of -35 • (5/7)?"
+                    ":box:`-35,5/7`",
+                    "The student multiplies the `text(two)` numbers.",
+                    "What is the value of `-35*(5/7)`?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -103,9 +103,9 @@
                 "Explain": false,
                 "Content": [
                     "The student writes these numbers on another sheet of paper.",
-                    ":box:-35, -5/7",
-                    "The student multiplies the two numbers.",
-                    "What is the value of (-35) • (-5/7)?"
+                    ":box:`-35,-5/7`",
+                    "The student multiplies the `text(two)` numbers.",
+                    "What is the value of `(-35)*(-5/7)`?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -124,8 +124,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The student then divides the two numbers used in Part A.",
-                    "What is the value of (-35) ÷ (5/7)?"
+                    "The student then divides the `text(two)` numbers used in Part A.",
+                    "What is the value of `(-35)-:(5/7)`?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -183,11 +183,11 @@
         "Explain": false,
         "Content": [
             "Which of the following is equivalent to this expression?",
-            ":ibox:3(x - 1)"
+            ":ibox:`3(x-1)`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 + x + 3 - 1",
+                "Choice": "`3+x+3-1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -195,7 +195,7 @@
                 }
             },
             "B": {
-                "Choice": "3 + x - 1",
+                "Choice": "`3+x-1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -203,7 +203,7 @@
                 }
             },
             "C": {
-                "Choice": "3x - 3",
+                "Choice": "`3x-3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -211,7 +211,7 @@
                 }
             },
             "D": {
-                "Choice": "3x - 1",
+                "Choice": "`3x-1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -236,13 +236,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A recipe requires only blueberries and strawberries. This list shows the amounts required for 1/4 of the whole recipe:",
-            ":ibox:• 1/2 cup blueberries\n\n• 2/5 cup strawberries",
-            "What is the number of cups of blueberries and the number of cups of strawberries required for the whole recipe?"
+            "A recipe requires only blueberries and strawberries. This list shows the amounts required for `1/4` of the whole recipe:",
+            ":ibox:• `1/2` `text(cup)` blueberries\n\n• `2/5` `text(cup)` strawberries",
+            "What is the number of `text(cups)` of blueberries and the number of `text(cups)` of strawberries required for the whole recipe?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/8 cup of blueberries and 1/10 cup of strawberries",
+                "Choice": "`1/8` `text(cup)` of blueberries and `1/10` `text(cup)` of strawberries",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -250,7 +250,7 @@
                 }
             },
             "B": {
-                "Choice": "1/8 cup of blueberries and 1 3/5 cups of strawberries",
+                "Choice": "`1/8` `text(cup)` of blueberries and `1``3/5` `text(cups)` of strawberries",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -258,7 +258,7 @@
                 }
             },
             "C": {
-                "Choice": "2 cups of blueberries and 1/10 cup of strawberries",
+                "Choice": "`2` `text(cups)` of blueberries and `1/10` `text(cup)` of strawberries",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -266,7 +266,7 @@
                 }
             },
             "D": {
-                "Choice": "2 cups of blueberries and 1 3/5 cups of strawberries",
+                "Choice": "`2` `text(cups)` of blueberries and `1``3/5` `text(cups)` of strawberries",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -292,11 +292,11 @@
         "Explain": false,
         "Content": [
             "Which of the following is NOT equivalent to this expression?",
-            ":ibox:2m + 10m + 14 + 3"
+            ":ibox:`2m+10m+14+3`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "m + 12m + 8 + 9",
+                "Choice": "`m+12m+8+9`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -304,7 +304,7 @@
                 }
             },
             "B": {
-                "Choice": "2m + 10 + 10m + 7",
+                "Choice": "`2m+10+10m+7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,7 +312,7 @@
                 }
             },
             "C": {
-                "Choice": "6m + 6m - 1 + 18",
+                "Choice": "`6m+6m-1+18`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -320,7 +320,7 @@
                 }
             },
             "D": {
-                "Choice": "15m + 15 - 3m + 2",
+                "Choice": "`15m+15-3m+2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -345,13 +345,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "This table shows the relationship between h, the number of hours a car is parked at a parking meter, and q, the number of quarters it costs to park at the parking meter.",
+            "This table shows the relationship between `h`, the number of hours a car is parked at a parking meter, and `q`, the number of quarters it costs to park at the parking meter.",
             "problems/RI21G7M/media/6a.jpg",
-            "Which of the following equations BEST models the relationship between h and q?"
+            "Which of the following equations BEST models the relationship between `handq`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "q = h",
+                "Choice": "`q=h`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -359,7 +359,7 @@
                 }
             },
             "B": {
-                "Choice": "q = 2h",
+                "Choice": "`q=2h`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -367,7 +367,7 @@
                 }
             },
             "C": {
-                "Choice": "q = h + 1",
+                "Choice": "`q=h+1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -375,7 +375,7 @@
                 }
             },
             "D": {
-                "Choice": "q = h + 2",
+                "Choice": "`q=h+2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -400,13 +400,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A parking lot in the shape of a parallelogram has a length of 300 meters and a width of 150 meters. A scale drawing of the parking lot has a length of 10 centimeters and a width of 5 centimeters, as shown.",
+            "A parking lot in the shape of a parallelogram has a length of `300` `text(meters)` and a width of `150` `text(meters)`. A scale drawing of the parking lot has a length of `10` `text(centimeters)` and a width of `5` `text(centimeters)`, as shown.",
             "problems/RI21G7M/media/7a.jpg",
             "Which of the following is the scale used in the drawing?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1 centimeter = 10 meters",
+                "Choice": "`1` `text(centimeter)=10` `text(meters)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -414,7 +414,7 @@
                 }
             },
             "B": {
-                "Choice": "1 centimeter = 15 meters",
+                "Choice": "`1` `text(centimeter)=15` `text(meters)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -422,7 +422,7 @@
                 }
             },
             "C": {
-                "Choice": "1 centimeter = 30 meters",
+                "Choice": "`1` `text(centimeter)=30` `text(meters)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -430,7 +430,7 @@
                 }
             },
             "D": {
-                "Choice": "1 centimeter = 60 meters",
+                "Choice": "`1` `text(centimeter)=60` `text(meters)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -455,12 +455,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following expressions represents the distance, in `text(units)`, between the two points plotted on the number line?",
+            "Which of the following expressions represents the distance, in `text(units)`, between the `text(two)` points plotted on the number line?",
             "problems/RI21G7M/media/8a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 - |-4|",
+                "Choice": "`3-abs(-4)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -468,7 +468,7 @@
                 }
             },
             "B": {
-                "Choice": "3 + |-4|",
+                "Choice": "`3+abs(-4)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -476,7 +476,7 @@
                 }
             },
             "C": {
-                "Choice": "3 + (-4)",
+                "Choice": "`3+(-4)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -484,7 +484,7 @@
                 }
             },
             "D": {
-                "Choice": "|3 + (-4)|",
+                "Choice": "`abs(3+(-4))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -510,8 +510,8 @@
         "Explain": false,
         "Content": [
             "Consider this equation.",
-            ":ibox:(1/2)(x + 4) = -8",
-            "What value of x makes the equation true?"
+            ":ibox:`(1/2)(x+4)=-8`",
+            "What value of `x` makes the equation true?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -542,12 +542,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jacinta has 2 blue marbles, 4 red marbles, and 5 green marbles in a bag. All the marbles are the same size. She will select one marble from the bag without looking.",
-            "What is the probability that Jacinta will select a green marble?"
+            "Jacinta has `2` `text(blue)` marbles, `4` `text(red)` marbles, and `5` `text(green)` marbles in a bag. All the marbles are the same size. She will select `text(one)` marble from the bag without looking.",
+            "What is the probability that Jacinta will select a `text(green)` marble?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -555,7 +555,7 @@
                 }
             },
             "B": {
-                "Choice": "5/6",
+                "Choice": "`5/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -563,7 +563,7 @@
                 }
             },
             "C": {
-                "Choice": "5/11",
+                "Choice": "`5/11`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -571,7 +571,7 @@
                 }
             },
             "D": {
-                "Choice": "6/11",
+                "Choice": "`6/11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -598,11 +598,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A watermelon that weighed 12 pounds cost $5.76. What was the cost per OUNCE of the watermelon?"
+            "A watermelon that weighed `12` `text(pounds)` cost `$5.76`. What was the `text(cost per ounce)` of the watermelon?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$0.48",
+                "Choice": "`$0.48`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -610,7 +610,7 @@
                 }
             },
             "B": {
-                "Choice": "$0.36",
+                "Choice": "`$0.36`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -618,7 +618,7 @@
                 }
             },
             "C": {
-                "Choice": "$0.03",
+                "Choice": "`$0.03`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -626,7 +626,7 @@
                 }
             },
             "D": {
-                "Choice": "$0.02",
+                "Choice": "`$0.02`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -653,12 +653,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A grocery store manager wants to conduct a survey to determine the average number of items bought by shoppers in the express checkout lane weekly between 5:00 p.m. and 7:00 p.m.",
+            "A grocery store manager wants to conduct a survey to determine the average number of items bought by shoppers in the express checkout lane weekly between `5:00` `text(p.m.)` and `7:00` `text(p.m.)`",
             "Which of the following plans would obtain a random sample that BEST represents the population of shoppers during this time?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Count the number of items bought by each shopper in the express checkout lane on Monday night between 5:00 p.m. and 7:00 p.m.",
+                "Choice": "Count the number of items bought by each shopper in the express checkout lane on `text(Monday)` night between `5:00` `text(p.m.)` and `7:00` `text(p.m.)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -666,7 +666,7 @@
                 }
             },
             "B": {
-                "Choice": "Count the number of items bought by each shopper in the express checkout lane between 5:00 p.m. and 5:10 p.m. each evening for a week.",
+                "Choice": "Count the number of items bought by each shopper in the express checkout lane between `5:00` `text(p.m.)` and `5:10` `text(p.m.)` each evening for a `text(week)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -674,7 +674,7 @@
                 }
             },
             "C": {
-                "Choice": "Choose a day of the week at random, and count the number of items bought by each shopper in the express checkout lane between 5:00 p.m. and 7:00 p.m on that day.",
+                "Choice": "Choose a `text(day)` of the `text(week)` at random, and count the number of items bought by each shopper in the express checkout lane between `5:00` `text(p.m.)` and `7:00` `text(p.m.)` on that `text(day)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -682,7 +682,7 @@
                 }
             },
             "D": {
-                "Choice": "Choose eight random 10-minute intervals between 5:00 p.m. and 7:00 p.m. during a week, and count the number of items bought by each shopper in the express checkout lane during the intervals.",
+                "Choice": "Choose eight random `10text(-minute)` intervals between `5:00` `text(p.m.)` and `7:00` `text(p.m.)` during a `text(week)`, and count the number of items bought by each shopper in the express checkout lane during the intervals.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -709,12 +709,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A math teacher has a number cube with faces numbered 1 through 6. He will roll the number cube 400 times.",
-            "Which of the following ranges contains the BEST prediction for the number of times the number cube will land with a 1 or a 4 on the top face?"
+            "A math teacher has a number cube with faces numbered `1` through `6`. He will roll the number cube `400` times.",
+            "Which of the following ranges contains the BEST prediction for the number of times the number cube will land with a `1` or a `4` on the top face?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "30-35",
+                "Choice": "`30-35`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -722,7 +722,7 @@
                 }
             },
             "B": {
-                "Choice": "65-70",
+                "Choice": "`65-70`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -730,7 +730,7 @@
                 }
             },
             "C": {
-                "Choice": "130-135",
+                "Choice": "`130-135`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -738,7 +738,7 @@
                 }
             },
             "D": {
-                "Choice": "265-270",
+                "Choice": "`265-270`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -766,8 +766,8 @@
         "Explain": false,
         "Content": [
             "These lists show the ages of attendees in a yoga class and a dance class.",
-            ":ibox:Yoga: 18, 31, 17, 44, 20, 33, 36\n\nDance: 20, 47, 23, 38, 26, 42, 30",
-            "Which statements about the attendees in the two classes are true?",
+            ":ibox:Yoga: `18,31,17,44,20,33,36`\n\nDance: `20,47,23,38,26,42,30`",
+            "Which statements about the attendees in the `text(two)` classes are true?",
             "Select the TWO correct answers."
         ],
         "AnswerChoices": {
@@ -839,7 +839,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "A playground has two sandboxes. Each sandbox is in the shape of a right prism.",
+            "A playground has `text(two)` sandboxes. Each sandbox is in the shape of a right prism.",
             ":ibox:THIS PROBLEM HAS THREE PARTS."
         ],
         "AnswerChoices": {},
@@ -850,7 +850,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The first sandbox has a square base with a side length of 8 feet. What is the area, in `text(square feet)`, of the base of the first sandbox? Show or explain how you got your answer."
+                    "The `text(first)` sandbox has a square base with a side length of `8` `text(feet)`. What is the area, in `text(square feet)`, of the base of the `text(first)` sandbox? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -869,7 +869,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The groundskeeper filled the first sandbox with sand to a height of 6 inches. What is the volume, in cubic FEET, of the sand that was used to fill the first sandbox to a height of 6 inches? Show or explain how you got your answer."
+                    "The groundskeeper filled the `text(first)` sandbox with sand to a height of `6` `text(inches)`. What is the volume, in `text(cubic feet)`, of the sand that was used to fill the `text(first)` sandbox to a height of `6` `text(inches)`? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -888,11 +888,11 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "After filling the first sandbox to a height of 6 inches, the groundskeeper had 24 cubic feet of sand left over. She used all the leftover sand to fill the second sandbox.",
-                    ":ibox:• The second sandbox has a base in the shape of a rectangle.\n\n• The base of the second sandbox has a perimeter that is less than 35 feet.\n\n• The groundskeeper filled the second sandbox to a height of 6 inches.",
-                    "What could be the length and width, in `text(feet)`, of the second sandbox? Show or explain how you got your answers.",
-                    "\n\nLength = :FR-1:",
-                    "Width = :FR-2:"
+                    "After filling the `text(first)` sandbox to a height of `6` `text(inches)`, the groundskeeper had `24` `text(cubic feet)` of sand left over. She used all the leftover sand to fill the `text(second)` sandbox.",
+                    ":ibox:• The `text(second)` sandbox has a base in the shape of a rectangle.\n\n• The base of the `text(second)` sandbox has a perimeter that is less than `35` `text(feet)`.\n\n• The groundskeeper filled the `text(second)` sandbox to a height of `6` `text(inches)`.",
+                    "What could be the length and width, in `text(feet)`, of the `text(second)` sandbox? Show or explain how you got your answers.",
+                    "\n\n`text(Length)=` :FR-1:",
+                    "`text(Width)=` :FR-2:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -933,14 +933,14 @@
         "Explain": false,
         "Content": [
             "Some students are playing a game. They roll a number cube and spin the arrow on a spinner on each turn.",
-            ":ibox:• The number cube has sides numbered 1 through 6.\n\n• The spinner has 3 equal-sized sections colored red (R), yellow (Y), and blue (B).",
-            "This tree diagram shows the sample space for the possible outcomes of rolling a number cube one time and then spinning the arrow on the spinner once.",
+            ":ibox:• The number cube has sides numbered `1` through `6`.\n\n• The spinner has `3` equal-sized sections colored `text(red)` `(R)`, `text(yellow)` `(Y)`, and `text(blue)` `(B)`.",
+            "This tree diagram shows the sample space for the possible outcomes of rolling a number cube `text(one)` time and then spinning the arrow on the spinner `text(once)`.",
             "problems/RI21G7M/media/16a.jpg",
-            "What is the probability that, on a student's turn, the number cube will land with an even number on the top face and the arrow on the spinner will stop on the blue (B) section?"
+            "What is the probability that, on a student's turn, the number cube will land with an `text(even)` number on the top face and the arrow on the spinner will stop on the `text(blue)` `(B)` section?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -948,7 +948,7 @@
                 }
             },
             "B": {
-                "Choice": "3/6",
+                "Choice": "`3/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -956,7 +956,7 @@
                 }
             },
             "C": {
-                "Choice": "3/18",
+                "Choice": "`3/18`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -964,7 +964,7 @@
                 }
             },
             "D": {
-                "Choice": "9/16",
+                "Choice": "`9/16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1004,11 +1004,11 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Based on the table, what is the total cost, in `text(dollars)`, of 7 boxes of cookies?"
+                    "Based on the table, what is the total cost, in `text(dollars)`, of `7` boxes of cookies?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "$20.50",
+                        "Choice": "`$20.50`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1016,7 +1016,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "$21.00",
+                        "Choice": "`$21.00`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1024,7 +1024,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "$24.50",
+                        "Choice": "`$24.50`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1032,7 +1032,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "$28.00",
+                        "Choice": "`$28.00`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1047,11 +1047,11 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Which equation can be used to find c, the total cost in `text(dollars)` of n boxes of cookies?"
+                    "Which equation can be used to find `c`, the total cost in `text(dollars)` of `n` boxes of cookies?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "c = 3.50n",
+                        "Choice": "`c=3.50n`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1059,7 +1059,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "c = 7.00n",
+                        "Choice": "`c=7.00n`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1067,7 +1067,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "c = 10.50n",
+                        "Choice": "`c=10.50n`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1075,7 +1075,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "c = 21.00n",
+                        "Choice": "`c=21.00n`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1104,13 +1104,13 @@
         "Explain": false,
         "Content": [
             "Sharon has a patio in the shape of a rectangle.",
-            ":ibox:• The length of the patio is l feet.\n\n• The width of the patio is w feet.",
-            "Sharon plans to expand the patio by increasing the length by 50% and increasing the width by 20%.",
+            ":ibox:• The length of the patio is `l` `text(feet)`.\n\n• The width of the patio is `w` `text(feet)`.",
+            "Sharon plans to expand the patio by increasing the length by `50%` and increasing the width by `20%`.",
             "Which of the following expressions could be used to find the area, in `text(square feet)`, of the expanded patio?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(1.5l) × (1.2w)",
+                "Choice": "`(1.5l)xx(1.2w)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1118,7 +1118,7 @@
                 }
             },
             "B": {
-                "Choice": "(l + 0.5) × (w + 0.2)",
+                "Choice": "`(l+0.5)xx(w+0.2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1126,7 +1126,7 @@
                 }
             },
             "C": {
-                "Choice": "(l × w) + (0.5 + 0.2)",
+                "Choice": "`(lxxw)+(0.5+0.2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1134,7 +1134,7 @@
                 }
             },
             "D": {
-                "Choice": "(0.5l) × (0.2w)",
+                "Choice": "`(0.5l)xx(0.2w)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1161,9 +1161,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The population of a city is 10,000 people. A researcher wants to estimate how many people in the city own a car. The researcher surveys a random sample of 240 people and records these results.",
-            ":ibox:• 180 people own a car.\n\n• 60 people do not own a car.",
-            "Based on the sample results, which bar graph shows the BEST estimates, rounded to the nearest 500, of the number of people in the city's population that own a car and the number that do not own a car?"
+            "The population of a city is `10text(,)000` people. A researcher wants to estimate how many people in the city own a car. The researcher surveys a random sample of `240` people and records these results.",
+            ":ibox:• `180` people own a car.\n\n• `60` people do not own a car.",
+            "Based on the sample results, which bar graph shows the BEST estimates, rounded to the nearest `500`, of the number of people in the city's population that own a car and the number that do not own a car?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1218,8 +1218,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Paloma opened a savings account with a deposit of $750. She earns 2% simple interest per year on the account.",
-            "What will be the total amount of money, in `text(dollars)`, in Paloma's account after 1 year if there are no other deposits or withdrawals?"
+            "Paloma opened a savings account with a deposit of `$750`. She earns `2%` simple interest `text(per year)` on the account.",
+            "What will be the total amount of money, in `text(dollars)`, in Paloma's account after `1` `text(year)` if there are no other deposits or withdrawals?"
         ],
         "AnswerChoices": {
             "KEY": {

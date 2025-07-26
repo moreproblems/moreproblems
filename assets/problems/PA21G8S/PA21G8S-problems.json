@@ -184,34 +184,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Soil sample X has the most uniform particle size.",
+                "Choice": "Soil sample `X` has the most uniform particle size.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sample X has the largest average particle size.",
+                    "Rationale": "Sample `X` has the largest average particle size.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "Soil sample Y has the smallest average particle size.",
+                "Choice": "Soil sample `Y` has the smallest average particle size.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Soil sample Y has the smallest average particle size because it was completely sifted through the smallest screen.",
+                    "Rationale": "Soil sample `Y` has the smallest average particle size because it was completely sifted through the smallest screen.",
                     "Percent": 71
                 }
             },
             "C": {
-                "Choice": "Soil samples Y and Z are most similar in size.",
+                "Choice": "Soil samples `YandZ` are most similar in size.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Soil samples Y and Z are no more similar than soil samples X and Z.",
+                    "Rationale": "Soil samples `YandZ` are no more similar than soil samples `XandZ`.",
                     "Percent": 16
                 }
             },
             "D": {
-                "Choice": "Soil samples X and Y are most similar in size.",
+                "Choice": "Soil samples `XandY` are most similar in size.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Soil samples X and Y are least similar in size.",
+                    "Rationale": "Soil samples `XandY` are least similar in size.",
                     "Percent": 4
                 }
             }
@@ -237,34 +237,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "g",
+                "Choice": "`text(g)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Grams are used to measure mass, not volume.",
+                    "Rationale": "`text(Grams)` are used to measure mass, not volume.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "°C",
+                "Choice": "`text(°C)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Degrees Celsius are used to measure temperature, not volume.",
+                    "Rationale": "`text(Degrees Celsius)` are used to measure temperature, not volume.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "mL",
+                "Choice": "`text(mL)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Milliliters are used to measure volume, which is the amount of space occupied by matter.",
+                    "Rationale": "`text(Milliliters)` are used to measure volume, which is the amount of space occupied by matter.",
                     "Percent": 65
                 }
             },
             "D": {
-                "Choice": "mm",
+                "Choice": "`text(mm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Millimeters are used to measure length, not volume.",
+                    "Rationale": "`text(Millimeters)` are used to measure length, not volume.",
                     "Percent": 9
                 }
             }
@@ -341,19 +341,19 @@
         "Content": [
             "Use the data table below to answer the question.",
             "problems/PA21G8S/media/7a.jpg",
-            "A scientist examined a colorless gas, which had a density between 1.30 and 1.60 g/L and a boiling point between -190 and -180°C. The gas reacted with sodium (Na) metal. Based on the data in the table, what is the most likely identity of the gas?"
+            "A scientist examined a colorless gas, which had a density between `1.30and1.60` `text(g)/text(L)` and a boiling point between `-190and-180text(°C)`. The gas reacted with sodium `(text(Na))` metal. Based on the data in the table, what is the most likely identity of the gas?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "argon (Ar)",
+                "Choice": "argon `(text(Ar))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Unlike the test gas, argon is unreactive with sodium (Na) metal.",
+                    "Rationale": "Unlike the test gas, argon is unreactive with sodium `(text(Na))` metal.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "fluorine (F2)",
+                "Choice": "fluorine `(text(F)_2)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Unlike the colorless test gas, fluorine is pale yellow.",
@@ -361,15 +361,15 @@
                 }
             },
             "C": {
-                "Choice": "hydrochloric acid (HCl)",
+                "Choice": "hydrochloric acid `(text(HCl))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Unlike the test gas, hydrochloric acid has a boiling point of -85 degrees Celsius.",
+                    "Rationale": "Unlike the test gas, hydrochloric acid has a boiling point of `-85` `text(degrees Celsius)`.",
                     "Percent": 13
                 }
             },
             "D": {
-                "Choice": "oxygen (O₂)",
+                "Choice": "oxygen `(text(O)_2)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The characteristics of oxygen match the characteristics of the test gas.",
@@ -453,7 +453,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Wood is nonrenewable and forms in a few years, unlike coal, which is renewable and takes millions of years to form.",
+                "Choice": "Wood is nonrenewable and forms in a few `text(years)`, unlike coal, which is renewable and takes `text(millions of years)` to form.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Wood is renewable, and coal is nonrenewable.",
@@ -461,7 +461,7 @@
                 }
             },
             "B": {
-                "Choice": "Wood is renewable and forms in a few years, unlike coal, which is nonrenewable and takes millions of years to form.",
+                "Choice": "Wood is renewable and forms in a few `text(years)`, unlike coal, which is nonrenewable and takes `text(millions of years)` to form.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Wood is a renewable resource that forms rapidly compared to coal, which is nonrenewable.",
@@ -469,7 +469,7 @@
                 }
             },
             "C": {
-                "Choice": "Wood is nonrenewable and takes millions of years to form, unlike coal, which is renewable and forms in a few years.",
+                "Choice": "Wood is nonrenewable and takes `text(millions of years)` to form, unlike coal, which is renewable and forms in a few `text(years)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Wood is renewable, and coal is nonrenewable.",
@@ -477,10 +477,10 @@
                 }
             },
             "D": {
-                "Choice": "Wood is renewable and takes millions of years to form, unlike coal, which is nonrenewable and forms in a few years.",
+                "Choice": "Wood is renewable and takes `text(millions of years)` to form, unlike coal, which is nonrenewable and forms in a few `text(years)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Wood forms in a few years, and coal forms over millions of years.",
+                    "Rationale": "Wood forms in a few `text(years)`, and coal forms over `text(millions of years)`.",
                     "Percent": 7
                 }
             }
@@ -555,7 +555,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The acidity of the water in a stream is indicated by its `text(pH)`. Historically, a certain stream has had a `text(pH)` of 6.0. Acid rain has caused the stream's `text(pH)` to become 4.8. Which statement predicts how the stream's ecosystem will most likely be impacted?"
+            "The acidity of the water in a stream is indicated by its `text(pH)`. Historically, a certain stream has had a `text(pH)` of `6.0`. Acid rain has caused the stream's `text(pH)` to become `4.8`. Which statement predicts how the stream's ecosystem will most likely be impacted?"
         ],
         "AnswerChoices": {
             "A": {
@@ -615,7 +615,7 @@
                 "Choice": "a river",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A river is a lotic (flowing) water system that erodes Earth materials and can result, over time, in the formation of a canyon.",
+                    "Rationale": "A river is a lotic (flowing) water system that erodes `text(Earth)` materials and can result, over time, in the formation of a canyon.",
                     "Percent": 49
                 }
             },
@@ -636,7 +636,7 @@
                 }
             },
             "D": {
-                "Choice": "am estuary",
+                "Choice": "an estuary",
                 "Key": {
                     "Correct": false,
                     "Rationale": "An estuary is a type of lentic (still) water system.",
@@ -726,34 +726,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Maple tree sap has 2% less water than maple syrup.",
+                "Choice": "Maple tree sap has `2%` less water than maple syrup.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Maple tree sap has 2% sugar.",
+                    "Rationale": "Maple tree sap has `2%` sugar.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "Maple tree sap has 34% less water than maple syrup.",
+                "Choice": "Maple tree sap has `34%` less water than maple syrup.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This response incorrectly compares percentages in maple syrup.",
+                    "Rationale": "This response incorrectly compares `text(percentages)` in maple syrup.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Maple tree sap has 31% more water than maple syrup.",
+                "Choice": "Maple tree sap has `31%` more water than maple syrup.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This response incorrectly compares percent water in maple syrup with percent sugar in maple tree sap.",
+                    "Rationale": "This response incorrectly compares `text(percent)` water in maple syrup with `text(percent)` sugar in maple tree sap.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "Maple tree sap has 65% more water than maple syrup.",
+                "Choice": "Maple tree sap has `65%` more water than maple syrup.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "At 98% water, maple tree sap has 65% more water than maple syrup.",
+                    "Rationale": "At `98%` water, maple tree sap has `65%` more water than maple syrup.",
                     "Percent": 0
                 }
             }
@@ -885,7 +885,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Meteor Crater is a rimmed, bowl-shaped feature that lies in the desert of northern Arizona. The crater measures 1,200 meters (m) in diameter, with the crater floor lying 180 m beneath the rim. The rim rises about 60 m above the surrounding desert. In the early twentieth century, most scientists theorized that the crater formed as a result of volcanic activity (volcanism theory). However, Daniel Barringer proposed that a powerful meteor impact formed the crater (impact theory)."
+            "Meteor Crater is a rimmed, bowl-shaped feature that lies in the desert of `text(northern)` Arizona. The crater measures `1text(,)200` `text(meters)` `(text(m))` in diameter, with the crater floor lying `180` `text(m)` beneath the rim. The rim rises about `60` `text(m)` above the surrounding desert. In the early `text(twentieth)` century, most scientists theorized that the crater formed as a result of volcanic activity (volcanism theory). However, Daniel Barringer proposed that a powerful meteor impact formed the crater (impact theory)."
         ],
         "AnswerChoices": {},
         "Parts": {

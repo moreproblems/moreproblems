@@ -14,11 +14,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is 2.03 × 10¹¹ written in standard notation?"
+            "What is `2.03xx10^11` written in standard notation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20,300,000,000",
+                "Choice": "`20text(,)300text(,)000text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -26,7 +26,7 @@
                 }
             },
             "B": {
-                "Choice": "203,000,000,000",
+                "Choice": "`203text(,)000text(,)000text(,)000`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -34,7 +34,7 @@
                 }
             },
             "C": {
-                "Choice": "2,030,000,000,000",
+                "Choice": "`2text(,)030text(,)000text(,)000text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -42,7 +42,7 @@
                 }
             },
             "D": {
-                "Choice": "20,300,000,000,000",
+                "Choice": "`20,300text(,)000text(,)000text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -67,9 +67,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two rectangles and some of their dimensions are shown.",
+            "`text(Two)` rectangles and some of their dimensions are shown.",
             "problems/RI18G8M/media/4a.jpg",
-            "The rectangles are similar. What is r, the length in `text(feet)` of the smaller rectangle?"
+            "The rectangles are similar. What is `r`, the length in `text(feet)` of the smaller rectangle?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -98,7 +98,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jocinda determined that the diagonal of her laptop screen is 2√42 inches long. What is the approximate length, to the nearest inch, of the diagonal of her laptop screen?"
+            "Jocinda determined that the diagonal of her laptop screen is `2sqrt(42)` `text(inches)` long. What is the approximate length, to the nearest `text(inch)`, of the diagonal of her laptop screen?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -131,7 +131,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "√0",
+                "Choice": "`sqrt(0)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,7 +139,7 @@
                 }
             },
             "B": {
-                "Choice": "√3",
+                "Choice": "`sqrt(3)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -147,7 +147,7 @@
                 }
             },
             "C": {
-                "Choice": "1.363636...",
+                "Choice": "`1.bar(36)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -155,7 +155,7 @@
                 }
             },
             "D": {
-                "Choice": "-0.19",
+                "Choice": "`-0.19`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -192,7 +192,7 @@
                 }
             },
             "B": {
-                "Choice": "`y=(1/2)x^2`",
+                "Choice": "`y=1/2x^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -235,11 +235,11 @@
         "Content": [
             "This table represents a linear relationship between `xandy`.",
             "problems/RI18G8M/media/11a.jpg",
-            "Based on the linear relationship in this table, what is the value of y when x is 4?"
+            "Based on the linear relationship in this table, what is the value of `y` when `x` is `4`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -247,7 +247,7 @@
                 }
             },
             "B": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -255,7 +255,7 @@
                 }
             },
             "C": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -263,7 +263,7 @@
                 }
             },
             "D": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -289,7 +289,7 @@
         "Explain": false,
         "Content": [
             "A student wrote the equation shown.",
-            ":ibox:xʸ = z",
+            ":ibox:`x^y=z`",
             ":ibox:THIS PROBLEM HAS FOUR PARTS."
         ],
         "AnswerChoices": {},
@@ -300,7 +300,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the value of z in the equation when x = 3 and y = 4? Show or explain how you got your answer.",
+                    "What is the value of `z` in the equation when `x=3andy=4`? Show or explain how you got your answer.",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -320,7 +320,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the value of x in the equation when y = 3 and z = 125? Show or explain how you got your answer.",
+                    "What is the value of `x` in the equation when `y=3andz=125`? Show or explain how you got your answer.",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -341,8 +341,8 @@
                 "Explain": true,
                 "Content": [
                     "The student rewrote the equation as shown.",
-                    ":ibox:ʸ√z = x",
-                    "Is the value of x a rational number when y = 2 and z = 2? Explain your reasoning.",
+                    ":ibox:`root(y)(z)=x`",
+                    "Is the value of `x` a rational number when `y=2andz=2`? Explain your reasoning.",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -370,10 +370,10 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Write an integer value of y and an integer value of z that make the equation true when x = 8. Show or explain how you got your answers.",
+                    "Write an integer value of `y` and an integer value of `z` that make the equation true when `x=8`. Show or explain how you got your answers.",
                     "Enter your work or explanation in the space provided.",
-                    "\n\ny = :FR-1:",
-                    "z = :FR-2:"
+                    "\n\n`y=` :FR-1:",
+                    "`z=` :FR-2:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -412,11 +412,11 @@
         "Explain": false,
         "Content": [
             "Which pair of steps can be used to completely solve this equation?",
-            ":ibox:4x - 5 = 17"
+            ":ibox:`4x-5=17`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Add 5 to both sides. Then divide both sides by 4.",
+                "Choice": "Add `5` to both sides. Then divide both sides by `4`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -424,7 +424,7 @@
                 }
             },
             "B": {
-                "Choice": "Divide both sides by 4. Then add 5 to both sides.",
+                "Choice": "Divide both sides by `4`. Then add `5` to both sides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -432,7 +432,7 @@
                 }
             },
             "C": {
-                "Choice": "Subtract 5 from both sides. Then multiply both sides by 4.",
+                "Choice": "Subtract `5` from both sides. Then multiply both sides by `4`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -440,7 +440,7 @@
                 }
             },
             "D": {
-                "Choice": "Multiply both sides by 4. Then subtract 5 from both sides.",
+                "Choice": "Multiply both sides by `4`. Then subtract `5` from both sides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -469,7 +469,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 2x + 7",
+                "Choice": "`y=2x+7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -485,7 +485,7 @@
                 }
             },
             "C": {
-                "Choice": "A line rises 9 units for every 3 units it moves to the right.",
+                "Choice": "A line rises `9` `text(units)` for every `3` `text(units)` it moves to the right.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -518,13 +518,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "This diagram shows a cylinder that has a radius of 3 inches and a height of 5 inches.",
+            "This diagram shows a cylinder that has a radius of `3` `text(inches)` and a height of `5` `text(inches)`.",
             "problems/RI18G8M/media/18a.jpg",
             "What is the volume, in `text(cubic inches)`, of the cylinder?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "15π",
+                "Choice": "`15pi`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -532,7 +532,7 @@
                 }
             },
             "B": {
-                "Choice": "30π",
+                "Choice": "`30pi`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -540,7 +540,7 @@
                 }
             },
             "C": {
-                "Choice": "45π",
+                "Choice": "`45pi`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -548,7 +548,7 @@
                 }
             },
             "D": {
-                "Choice": "60π",
+                "Choice": "`60pi`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -574,11 +574,11 @@
         "Explain": false,
         "Content": [
             "Which of the following is equivalent to this expression?",
-            ":ibox:7^2 • 7⁻⁴"
+            ":ibox:`7^2*7^-4`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/7⁶",
+                "Choice": "`1/7^6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -586,7 +586,7 @@
                 }
             },
             "B": {
-                "Choice": "1/7^2",
+                "Choice": "`1/7^2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -594,7 +594,7 @@
                 }
             },
             "C": {
-                "Choice": "-7^2",
+                "Choice": "`-7^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -602,7 +602,7 @@
                 }
             },
             "D": {
-                "Choice": "7⁻⁸",
+                "Choice": "`7^-8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -629,13 +629,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The total cost of Gary's cell phone plan includes a one-time cost for a phone plus a monthly fee. This table shows the total cost of Gary's cell phone plan as it accumulates from month 1 through month 5.",
+            "The total cost of Gary's cell phone plan includes a `text(one-time)` cost for a phone plus a monthly fee. This table shows the total cost of Gary's cell phone plan as it accumulates from `text(month)` `1` through `text(month)` `5`.",
             "problems/RI18G8M/media/22a.jpg",
             "What is the monthly fee for Gary's cell phone plan?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$20",
+                "Choice": "`$20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -643,7 +643,7 @@
                 }
             },
             "B": {
-                "Choice": "$30",
+                "Choice": "`$30`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -651,7 +651,7 @@
                 }
             },
             "C": {
-                "Choice": "$80",
+                "Choice": "`$80`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -659,7 +659,7 @@
                 }
             },
             "D": {
-                "Choice": "$100",
+                "Choice": "`$100`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -686,13 +686,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle XYZ and some of its measurements are shown.",
+            "Triangle `XYZ` and some of its measurements are shown.",
             "problems/RI18G8M/media/24a.jpg",
-            "Triangle MNO, not shown, is similar to triangle XYZ. What is the measure, in degrees, of /_N?"
+            "Triangle `MNO`, not shown, is similar to triangle `XYZ`. What is the measure, in `text(degrees)`, of `/_N`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "30°",
+                "Choice": "`30°`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -700,7 +700,7 @@
                 }
             },
             "B": {
-                "Choice": "45°",
+                "Choice": "`45°`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -708,7 +708,7 @@
                 }
             },
             "C": {
-                "Choice": "60°",
+                "Choice": "`60°`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -716,7 +716,7 @@
                 }
             },
             "D": {
-                "Choice": "90°",
+                "Choice": "`90°`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -801,8 +801,8 @@
         "Explain": false,
         "Content": [
             "Amy and Simon each bought a pair of shorts and some T-shirts. Each pair of shorts cost the same amount, and each T-shirt cost the same amount.",
-            ":ibox:• Amy paid $60 for 1 pair of shorts and 2 T-shirts.\n\n• Simon paid $75 for 1 pair of shorts and 3 T-shirts.",
-            "What was the cost, in `text(dollars)`, of 1 pair of shorts?"
+            ":ibox:• Amy paid `$60` for `1` pair of shorts and `2` T-shirts.\n\n• Simon paid `$75` for `1` pair of shorts and `3` T-shirts.",
+            "What was the cost, in `text(dollars)`, of `1` pair of shorts?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -833,13 +833,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A rectangle and one of its diagonals are shown in this diagram.",
+            "A rectangle and `text(one)` of its diagonals are shown in this diagram.",
             "problems/RI18G8M/media/29a.jpg",
-            "Based on the dimensions in the diagram, what is the value of x?"
+            "Based on the dimensions in the diagram, what is the value of `x`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "17.5",
+                "Choice": "`17.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -847,7 +847,7 @@
                 }
             },
             "B": {
-                "Choice": "25",
+                "Choice": "`25`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -855,7 +855,7 @@
                 }
             },
             "C": {
-                "Choice": "35",
+                "Choice": "`35`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -863,7 +863,7 @@
                 }
             },
             "D": {
-                "Choice": "37.5",
+                "Choice": "`37.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -890,13 +890,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle JKL is shown on this coordinate plane.",
+            "Triangle `JKL` is shown on this coordinate plane.",
             "problems/RI18G8M/media/31a.jpg",
-            "Triangle JKL will be translated 2 units up and 5 units to the right. What will be the coordinates of the image of point K after the translation?"
+            "Triangle `JKL` will be translated `2` `text(units)` up and `5` `text(units)` to the right. What will be the coordinates of the image of point `K` after the translation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(-1, 4)",
+                "Choice": "`(-1,4)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -920,7 +920,7 @@
                 }
             },
             "D": {
-                "Choice": "(4, -1)",
+                "Choice": "`(4,-1)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -947,8 +947,8 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "Colton is heating a pot of water. He records the temperature of the water in the pot every minute. This equation models Colton's data, where x represents the number of minutes the water has been heated, and y represents the temperature of the water in `text(degrees Fahrenheit)`.",
-            ":ibox:y = 7.5x + 40",
+            "Colton is heating a pot of water. He records the temperature of the water in the pot every `text(minute)`. This equation models Colton's data, where `x` represents the number of `text(minutes)` the water has been heated, and `y` represents the temperature of the water in `text(degrees Fahrenheit)`.",
+            ":ibox:`y=7.5x+40`",
             ":ibox:THIS PROBLEM HAS FOUR PARTS."
         ],
         "AnswerChoices": {},
@@ -959,7 +959,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What does the coefficient 7.5 in the equation represent in the context of this situation?",
+                    "What does the coefficient `7.5` in the equation represent in the context of this situation?",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -979,7 +979,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What does the value 40 in the equation represent in the context of this situation?",
+                    "What does the value `40` in the equation represent in the context of this situation?",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -999,7 +999,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the temperature, in `text(degrees Fahrenheit)`, of Colton's pot of water after 16 minutes? Show or explain how you got your answer.",
+                    "What is the temperature, in `text(degrees Fahrenheit)`, of Colton's pot of water after `16` `text(minutes)`? Show or explain how you got your answer.",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -1019,8 +1019,8 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Water boils at a temperature of 212°F.",
-                    "After 16 minutes of heating, how much additional time, to the nearest minute, will be needed for the water to boil? Show or explain how you got your answer.",
+                    "Water boils at a temperature of `212text(°F)`.",
+                    "After `16` `text(minutes)` of heating, how much additional time, to the nearest `text(minute)`, will be needed for the water to boil? Show or explain how you got your answer.",
                     "Enter your work or explanation in the space provided."
                 ],
                 "AnswerChoices": {
@@ -1053,13 +1053,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Aaron drew a map showing the locations of two cities, Oden and Lundy, on a grid. The map and its scale are shown.",
+            "Aaron drew a map showing the locations of `text(two)` cities, Oden and Lundy, on a grid. The map and its scale are shown.",
             "problems/RI18G8M/media/36a.jpg",
             "Aaron drew a straight line from Oden to Lundy. Which of the following is closest to the distance between Oden and Lundy along the straight line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 miles",
+                "Choice": "`8` `text(miles)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1067,7 +1067,7 @@
                 }
             },
             "B": {
-                "Choice": "10 miles",
+                "Choice": "`10` `text(miles)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1075,7 +1075,7 @@
                 }
             },
             "C": {
-                "Choice": "12 miles",
+                "Choice": "`12` `text(miles)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1083,7 +1083,7 @@
                 }
             },
             "D": {
-                "Choice": "14 miles",
+                "Choice": "`14` `text(miles)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

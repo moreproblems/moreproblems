@@ -14,39 +14,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The Liberty Bell weighs 2,080 pounds.",
-            "What is the value of the 8 in 2,080?"
+            "The Liberty Bell weighs `2text(,)080` `text(pounds)`.",
+            "What is the value of the `8` in `2text(,)080`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 ones",
+                "Choice": "`8` `text(ones)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens with ones.",
+                    "Rationale": "Confuses `text(tens)` with `text(ones)`.",
                     "Percent": 4
                 }
             },
             "B": {
-                "Choice": "8 tens",
+                "Choice": "`8` `text(tens)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes the 8 is in the tens place.",
+                    "Rationale": "Recognizes the `8` is in the `text(tens)` place.",
                     "Percent": 79
                 }
             },
             "C": {
-                "Choice": "8 hundreds",
+                "Choice": "`8` `text(hundreds)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens with hundreds.",
+                    "Rationale": "Confuses `text(tens)` with `text(hundreds)`.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "8 thousands",
+                "Choice": "`8` `text(thousands)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses tens with thousands.",
+                    "Rationale": "Confuses `text(tens)` with `text(thousands)`.",
                     "Percent": 10
                 }
             }
@@ -69,12 +69,12 @@
         "Explain": false,
         "Content": [
             "A number sentence is shown below.",
-            "35 < 42",
+            ":ibox:`35<42`",
             "Which statement would require the symbol to change?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Add 150 to each number.",
+                "Choice": "Add `150` to each number.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize that addition of the same number does not change the relationship.",
@@ -82,7 +82,7 @@
                 }
             },
             "B": {
-                "Choice": "Divide each number by 7.",
+                "Choice": "Divide each number by `7`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize that division by the same number does not change the relationship.",
@@ -90,7 +90,7 @@
                 }
             },
             "C": {
-                "Choice": "Subtract 10 from each number.",
+                "Choice": "Subtract `10` from each number.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not recognize that subtraction by the same number does not change the relationship.",
@@ -98,10 +98,10 @@
                 }
             },
             "D": {
-                "Choice": "Round each number to the nearest 10.",
+                "Choice": "Round each number to the nearest 1`0.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Rounds the 35 up to 40, rounds the 42 down to 40, and recognizes the inequality symbol `(<)` would change to an equal sign `(=)`.",
+                    "Rationale": "Rounds the `35` up to `40`, rounds the `42` down to `40`, and recognizes the inequality symbol `(<)` would change to an equal sign `(=)`.",
                     "Percent": 71
                 }
             }
@@ -123,40 +123,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four numbers are shown below.",
-            "1,991\t1,199\t1,919\t1,999",
+            "`text(Four)` numbers are shown below.",
+            ":ibox:`1text(,)991`\t`1text(,)199`\t`1text(,)919`\t`1text(,)999`",
             "Which list shows the numbers in order from greatest to least?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1,999\t1,991\t1,199\t1,919",
+                "Choice": "`1text(,)999`\t`1text(,)991`\t`1text(,)199`\t`1text(,)919`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Compares the tens place but not the hundreds place in the last two numbers in the answer choice.",
+                    "Rationale": "Compares the tens place but not the `text(hundreds)` place in the last `text(two)` numbers in the answer choice.",
                     "Percent": 19
                 }
             },
             "B": {
-                "Choice": "1,991\t1,999\t1,919\t1,199",
+                "Choice": "`1text(,)991`\t`1text(,)999`\t`1text(,)919`\t`1text(,)199`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Makes an error comparing the ones place in the first two numbers in the answer choice.",
+                    "Rationale": "Makes an error comparing the `text(ones)` place in the `text(first two)` numbers in the answer choice.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "1,999\t1,991\t1,919\t1,199",
+                "Choice": "`1text(,)999`\t`1text(,)991`\t`1text(,)919`\t`1text(,)199`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Orders the numbers by comparing the digits in the thousands place, then the digits in the hundreds place, then the digits in the tens place, and then the digits in the ones place.",
+                    "Rationale": "Orders the numbers by comparing the digits in the `text(thousands)` place, then the digits in the `text(hundreds)` place, then the digits in the `text(tens)` place, and then the digits in the `text(ones)` place.",
                     "Percent": 60
                 }
             },
             "D": {
-                "Choice": "1,999\t1,919\t1,991\t1,199",
+                "Choice": "`1text(,)999`\t`1text(,)919`\t`1text(,)991`\t`1text(,)199`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Makes an error in the tens place for the two middle numbers in the answer choice.",
+                    "Rationale": "Makes an error in the `text(tens)` place for the `text(two)` middle numbers in the answer choice.",
                     "Percent": 12
                 }
             }
@@ -178,8 +178,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Gary pours all his milk into 4 glasses.",
-            "He fills each glass with 6 ounces of milk.",
+            "Gary pours all his milk into `4` glasses.",
+            "He fills each glass with `6` `text(ounces)` of milk.",
             "Sara has the same amount of milk as Gary has.",
             "She also has the same number of glasses as Gary has.",
             "She pours the same amount of milk into each of her glasses as Gary pours into each of his glasses.",
@@ -187,15 +187,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Sara pours a total of 24 ounces of milk into 4 glasses.",
+                "Choice": "Sara pours a total of `24` `text(ounces)` of milk into 4 glasses.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplies 4 by 6 to get 24 ounces of milk, and then identifies 4 as the divisor.",
+                    "Rationale": "Multiplies `4` by `6` to get `24` `text(ounces)` of milk, and then identifies `4` as the divisor.",
                     "Percent": 61
                 }
             },
             "B": {
-                "Choice": "Sara pours a total of 24 ounces of milk into 6 glasses.",
+                "Choice": "Sara pours a total of `24` `text(ounces)` of milk into `6` glasses.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Misunderstands the amount of milk in each glass.",
@@ -203,15 +203,15 @@
                 }
             },
             "C": {
-                "Choice": "Sara pours a total of 10 ounces of milk into 4 glasses.",
+                "Choice": "Sara pours a total of `10` `text(ounces)` of milk into `4` glasses.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Interprets 4 as a divisor but does not find the correct product.",
+                    "Rationale": "Interprets `4` as a divisor but does not find the correct product.",
                     "Percent": 17
                 }
             },
             "D": {
-                "Choice": "Sara pours a total of 10 ounces of milk into 6 glasses.",
+                "Choice": "Sara pours a total of `10` `text(ounces)` of milk into `6` glasses.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not find the correct product and confuses the amounts.",
@@ -239,41 +239,41 @@
         "Explain": false,
         "Content": [
             "Corey made a design using rectangles that are all the same size.",
-            "One of the rectangles is shown below.",
+            "`text(One)` of the rectangles is shown below.",
             "problems/PA22G3M/media/5a.jpg",
-            "Corey's design has a total area of 48 square inches.",
+            "Corey's design has a total area of `48` `text(square inches)`.",
             "How many rectangles are in Corey's design?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the area of one rectangle.",
+                    "Rationale": "Selects the area of `text(one)` rectangle.",
                     "Percent": 34
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Finds the area of one rectangle by multiplying side lengths (3 inches and 2 inches), and then divides 48 square inches by the area of one rectangle (6 square inches).",
+                    "Rationale": "Finds the area of `text(one)` rectangle by multiplying side lengths `(3` `text(inches)and2` `text(inches))`, and then divides `48` `text(square inches)` by the area of `text(one)` rectangle `(6` `text(square inches))`.",
                     "Percent": 38
                 }
             },
             "C": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses a divisor of 48.",
+                    "Rationale": "Chooses a divisor of `48`.",
                     "Percent": 20
                 }
             },
             "D": {
-                "Choice": "42",
+                "Choice": "`42`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts the area of one rectangle from the total area.",
+                    "Rationale": "Subtracts the area of `text(one)` rectangle from the total area.",
                     "Percent": 8
                 }
             }
@@ -295,14 +295,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Emma buys 7 packages of toy rings.",
-            "Each package contains 2 bags with 5 rings in each.",
-            "Emma uses the expression (7 × 2) × 5 to find the total number of rings.",
+            "Emma buys `7` packages of toy rings.",
+            "Each package contains `2` bags with `5` rings in each.",
+            "Emma uses the expression `(7xx2)xx5` to find the total number of rings.",
             "Which expression shows another way to find the total number of rings?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(7 + 2) × 5",
+                "Choice": "`(7+2)xx5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition instead of multiplication.",
@@ -310,7 +310,7 @@
                 }
             },
             "B": {
-                "Choice": "(7 × 2) + 5",
+                "Choice": "`(7xx2)+5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition instead of multiplication.",
@@ -318,7 +318,7 @@
                 }
             },
             "C": {
-                "Choice": "7 × (2 × 5)",
+                "Choice": "`7xx(2xx5)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Recognizes that, when multiplying, grouping symbols may be moved without changing the value of the expression (associative property of multiplication).",
@@ -326,10 +326,10 @@
                 }
             },
             "D": {
-                "Choice": "7 × (5 × 10)",
+                "Choice": "`7xx(5xx10)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 2 by 5 to get 10 but introduces a second 5.",
+                    "Rationale": "Multiplies `2` by `5` to get `10` but introduces a `text(second)` `5`.",
                     "Percent": 8
                 }
             }
@@ -365,7 +365,7 @@
                 }
             },
             "B": {
-                "Choice": "Because one side is curved, the shape is not a polygon.",
+                "Choice": "Because `text(one)` side is curved, the shape is not a polygon.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Recognizes that polygons cannot have any curved sides.",
@@ -407,8 +407,8 @@
         "Explain": false,
         "Content": [
             "Keenan makes a cardboard polygon.",
-            "Then he cuts it straight from one corner to another corner.",
-            "The result is two trapezoids.",
+            "Then he cuts it straight from `text(one)` corner to another corner.",
+            "The result is `text(two)` trapezoids.",
             "Which polygon could be Keenan's original polygon?"
         ],
         "AnswerChoices": {
@@ -416,7 +416,7 @@
                 "Choice": "problems/PA22G3M/media/8a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Focuses on one trapezoid but does not realize the other part would be a triangle.",
+                    "Rationale": "Focuses on `text(one)` trapezoid but does not realize the other part would be a triangle.",
                     "Percent": 25
                 }
             },
@@ -424,7 +424,7 @@
                 "Choice": "problems/PA22G3M/media/8b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that a cut from one corner to its opposite corner would result in two trapezoids.",
+                    "Rationale": "Recognizes that a cut from `text(one)` corner to its opposite corner would result in `text(two)` trapezoids.",
                     "Percent": 45
                 }
             },
@@ -432,7 +432,7 @@
                 "Choice": "problems/PA22G3M/media/8c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Focuses on one trapezoid but does not realize the other part would have 5 sides.",
+                    "Rationale": "Focuses on `text(one)` trapezoid but does not realize the other part would have `5` sides.",
                     "Percent": 11
                 }
             },
@@ -440,7 +440,7 @@
                 "Choice": "problems/PA22G3M/media/8d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Recognizes that a trapezoid can be taken from the top and bottom but neglects the third piece.",
+                    "Rationale": "Recognizes that a trapezoid can be taken from the top and bottom but neglects the `text(third)` piece.",
                     "Percent": 19
                 }
             }
@@ -470,7 +470,7 @@
                 "Choice": "problems/PA22G3M/media/9a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks that a shape is a quadrilateral as long as it has 4 or more sides.",
+                    "Rationale": "Thinks that a shape is a quadrilateral as long as it has `4` or more sides.",
                     "Percent": 9
                 }
             },
@@ -478,7 +478,7 @@
                 "Choice": "problems/PA22G3M/media/9b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks that a shape is a quadrilateral as long as it has no more than 4 sides.",
+                    "Rationale": "Thinks that a shape is a quadrilateral as long as it has no more than `4` sides.",
                     "Percent": 7
                 }
             },
@@ -494,7 +494,7 @@
                 "Choice": "problems/PA22G3M/media/9d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes that each shape has exactly 4 sides.",
+                    "Rationale": "Recognizes that each shape has exactly `4` sides.",
                     "Percent": 76
                 }
             }
@@ -516,7 +516,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The television weather report begins at 7:23 each day.",
+            "The television weather report begins at `7:23` `text(each day)`.",
             "Which clock shows the time when the weather report begins?"
         ],
         "AnswerChoices": {
@@ -524,7 +524,7 @@
                 "Choice": "problems/PA22G3M/media/10a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Counts minutes counterclockwise.",
+                    "Rationale": "Counts `text(minutes)` counterclockwise.",
                     "Percent": 2
                 }
             },
@@ -532,7 +532,7 @@
                 "Choice": "problems/PA22G3M/media/10b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Places the minute hand between 2 and 3 instead of at 23.",
+                    "Rationale": "Places the `text(minute)` hand between `2and3` instead of at `23`.",
                     "Percent": 9
                 }
             },
@@ -540,7 +540,7 @@
                 "Choice": "problems/PA22G3M/media/10c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Recognizes the hour (shorter) hand should be almost halfway between the 7 and the 8 and the minute (longer) hand should be a little over halfway between the 4 and the 5.",
+                    "Rationale": "Recognizes the `text(hour)` (shorter) hand should be almost `text(halfway)` between the `7` and the `8` and the `text(minute)` (longer) hand should be a little over `text(halfway)` between the `4` and the `5`.",
                     "Percent": 73
                 }
             },
@@ -548,7 +548,7 @@
                 "Choice": "problems/PA22G3M/media/10d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses the places of the hour and minute hands.",
+                    "Rationale": "Reverses the places of the `text(hour)` and `text(minute)` hands.",
                     "Percent": 16
                 }
             }
@@ -570,21 +570,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Arianna used 16 gallons of water taking a shower.",
-            "The shower lasted for 8 minutes.",
-            "How many gallons of water were used each minute?"
+            "Arianna used `16` `text(gallons)` of water taking a shower.",
+            "The shower lasted for `8` `text(minutes)`.",
+            "How many `text(gallons)` of water were used `text(each minute)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Divides the number of gallons (16) by the number of minutes (8) the shower lasted.",
+                    "Rationale": "Divides the number of `text(gallons)` `(16)` by the number of `text(minutes)` `(8)` the shower lasted.",
                     "Percent": 57
                 }
             },
             "B": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Divides incorrectly.",
@@ -592,7 +592,7 @@
                 }
             },
             "C": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts.",
@@ -600,7 +600,7 @@
                 }
             },
             "D": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds.",
@@ -631,39 +631,39 @@
         "Content": [
             "A rectangle is shown below.",
             "problems/PA22G3M/media/12a.jpg",
-            "Use your ruler to measure the lengths of the sides of the rectangle to the nearest centimeter.",
+            "Use your ruler to measure the lengths of the sides of the rectangle to the nearest `text(centimeter)`.",
             "Which measurement is closest to the area, in `text(square centimeters)`, of the rectangle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds both measurements down to 2 cm and to 6 cm.",
+                    "Rationale": "Rounds both measurements down to `2` `text(cm)` and to `6` `text(cm)`.",
                     "Percent": 34
                 }
             },
             "B": {
-                "Choice": "14",
+                "Choice": "`14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds the shorter side down to 2 cm and the longer side up to 7 cm.",
+                    "Rationale": "Rounds the shorter side down to `2` `text(cm)` and the longer side up to `7` `text(cm)`.",
                     "Percent": 11
                 }
             },
             "C": {
-                "Choice": "18",
+                "Choice": "`18`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Measures the shorter side as closer to 3 cm than to 2 cm, measures the longer side as closer to 6 cm than to 7 cm, and then multiplies the side lengths (3 cm and 6 cm).",
+                    "Rationale": "Measures the shorter side as closer to `3` `text(cm)` than to `2` `text(cm)`, measures the longer side as closer to `6` `text(cm)` than to `7` `text(cm)`, and then multiplies the side lengths `(3` `text(cm)and6` `text(cm))`.",
                     "Percent": 39
                 }
             },
             "D": {
-                "Choice": "21",
+                "Choice": "`21`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds both measurements up to 3 cm and to 7 cm.",
+                    "Rationale": "Rounds both measurements up to `3` `text(cm)` and to `7` `text(cm)`.",
                     "Percent": 16
                 }
             }
@@ -686,39 +686,39 @@
         "Explain": false,
         "Content": [
             "Cordelia and Reanna have different amounts of money.",
-            "When rounded to the nearest dollar, the amount they each have rounds to $4.",
+            "When rounded to the nearest `text(dollar)`, the amount they each have rounds to `$4`.",
             "Which amounts of money could Cordelia and Reanna each have?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$3.49 and $4.49",
+                "Choice": "`$3.49and$4.49`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly rounds $3.49 up to $4.",
+                    "Rationale": "Incorrectly rounds `$3.49` up to `$4`.",
                     "Percent": 19
                 }
             },
             "B": {
-                "Choice": "$3.49 and $4.50",
+                "Choice": "`$3.49and$4.50`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly rounds $3.49 up to $4 and incorrectly rounds $4.50 down to $4.",
+                    "Rationale": "Incorrectly rounds `$3.49` up to `$4` and incorrectly rounds `$4.50` down to `$4`.",
                     "Percent": 11
                 }
             },
             "C": {
-                "Choice": "$3.50 and $4.50",
+                "Choice": "`$3.50and$4.50`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly rounds $4.50 down to $4.",
+                    "Rationale": "Incorrectly rounds `$4.50` down to `$4`.",
                     "Percent": 22
                 }
             },
             "D": {
-                "Choice": "$3.50 and $4.49",
+                "Choice": "`$3.50and$4.49`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Identifies that $3.50 rounds up to $4 and that $4.49 rounds down to $4.",
+                    "Rationale": "Identifies that `$3.50` rounds up to `$4` and that `$4.49` rounds down to `$4`.",
                     "Percent": 48
                 }
             }
@@ -740,7 +740,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The bar graph below shows the numbers of rocks collected by three friends at a lake.",
+            "The bar graph below shows the numbers of rocks collected by `text(three)` friends at a lake.",
             "problems/PA22G3M/media/14a.jpg",
             "Which pictograph shows the same information as the bar graph?"
         ],
@@ -749,7 +749,7 @@
                 "Choice": "problems/PA22G3M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not apply the key (uses 1 “rock” = 1 rock).",
+                    "Rationale": "Does not apply the key (uses `1` “rock”`=1` rock).",
                     "Percent": 35
                 }
             },
@@ -765,7 +765,7 @@
                 "Choice": "problems/PA22G3M/media/14d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses only whole “rocks” (does not use the half “rock” for Hannah).",
+                    "Rationale": "Uses only `text(whole)` “rocks” (does not use the `text(half)` “rock” for Hannah).",
                     "Percent": 3
                 }
             },
@@ -773,7 +773,7 @@
                 "Choice": "problems/PA22G3M/media/14e.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Applies the key to each bar height, using a half “rock” for the odd height (5).",
+                    "Rationale": "Applies the key to each bar height, using a `text(half)` “rock” for the `text(odd)` height `(5)`.",
                     "Percent": 59
                 }
             }
@@ -851,14 +851,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which rectangle has an area of 24 square feet and a perimeter less than 25 feet?"
+            "Which rectangle has an area of `24` `text(square feet)` and a perimeter less than `25` `text(feet)`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/PA22G3M/media/16a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Switches the target values and identifies a rectangle with an area of 25 feet and a perimeter less than 24 feet.",
+                    "Rationale": "Switches the target values and identifies a rectangle with an area of `25` `text(feet)` and a perimeter less than `24` `text(feet)`.",
                     "Percent": 15
                 }
             },
@@ -866,7 +866,7 @@
                 "Choice": "problems/PA22G3M/media/16b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Identifies a rectangle with an area of 24 feet but determines the perimeter by adding the side lengths that are labeled without doubling the sum (12 + 2 < 25).",
+                    "Rationale": "Identifies a rectangle with an area of `24` `text(feet)` but determines the perimeter by adding the side lengths that are labeled without `text(doubling)` the sum `(12+2<25)`.",
                     "Percent": 26
                 }
             },
@@ -874,7 +874,7 @@
                 "Choice": "problems/PA22G3M/media/16c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Multiplies the side lengths to determine the area (8 × 3 = 24) and either adds all four side lengths (8 + 3 + 8 + 3 = 22) or adds the side lengths that are labeled and then doubles the sum (8 + 3 = 11, 11 × 2 = 22) to determine the perimeter is less than 25 feet.",
+                    "Rationale": "Multiplies the side lengths to determine the area `(8xx3=24)` and either adds all `text(four)` side lengths `(8+3+8+3=22)` or adds the side lengths that are labeled and then `text(doubles)` the sum `(8+3=11,11xx2=22)` to determine the perimeter is less than `25` `text(feet)`.",
                     "Percent": 46
                 }
             },
@@ -882,7 +882,7 @@
                 "Choice": "problems/PA22G3M/media/16d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Switches the target values, determines the area using the formula for the area of a triangle (1/2 × 10 × 5 = 25), and determines the perimeter by adding the side lengths that are labeled without doubling the sum (10 + 5 < 24).",
+                    "Rationale": "Switches the target values, determines the area using the formula for the area of a triangle `(1/2xx10xx5=25)`, and determines the perimeter by adding the side lengths that are labeled without `text(doubling)` the sum `(10+5<24)`.",
                     "Percent": 13
                 }
             }
@@ -894,8 +894,8 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions",
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions",
             "Measurement & Data"
         ],
         "SubTopics": [
@@ -938,11 +938,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Kaylee paints 2/8 of her picture with yellow paint.",
+                    "Kaylee paints `2/8` of her picture with yellow paint.",
                     "Plot a point on the number line shown below to represent the fraction of Kaylee's picture that is yellow."
                 ],
                 "AnswerChoices": {
-                    "A:0": {
+                    "A:`0`": {
                         "Choice": "0",
                         "Key": {
                             "Correct": false,
@@ -1006,7 +1006,7 @@
                             "Percent": 0
                         }
                     },
-                    "I:1": {
+                    "I:`1`": {
                         "Choice": "1",
                         "Key": {
                             "Correct": false,
@@ -1023,11 +1023,11 @@
                 "Explain": false,
                 "Content": [
                     "Kaylee painted a green rectangle and an orange rectangle on her picture.",
-                    "The green rectangle has side lengths of 3 inches and 4 inches.",
-                    "The orange rectangle has side lengths of 2 inches and 6 inches.",
+                    "The green rectangle has side lengths of `3` `text(inches)and4` `text(inches)`.",
+                    "The orange rectangle has side lengths of `2` `text(inches)and6` `text(inches)`.",
                     "Kaylee makes the incorrect claim shown below.",
-                    ":ibox:The area of the green rectangle is less than the area of the orange rectangle since 14 < 16.",
-                    "Explain the mistake Kaylee MOST LIKELY made when finding the areas of the two rectangles."
+                    ":ibox:The area of the green rectangle is less than the area of the orange rectangle since `14<16`.",
+                    "Explain the mistake Kaylee MOST LIKELY made when finding the areas of the `text(two)` rectangles."
                 ],
                 "AnswerChoices": {}
             },

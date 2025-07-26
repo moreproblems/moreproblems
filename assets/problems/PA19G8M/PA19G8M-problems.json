@@ -29,7 +29,7 @@
                 "Choice": "`1/4^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses negative exponent on second factor to move `(4^7)^2` to denominator, but then “cancels” exponents of `2`; evaluates as `(4^4)^2/(4^7)^2=(4^4)/(4^7)`.",
+                    "Rationale": "Uses `text(negative)` exponent on second factor to move `(4^7)^2` to denominator, but then “cancels” exponents of `2`; evaluates as `(4^4)^2/(4^7)^2=(4^4)/(4^7)`.",
                     "Percent": 13
                 }
             },
@@ -73,15 +73,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The value of x is zero, and the value of y is an integer less than zero.",
+                "Choice": "The value of `x` is `text(zero)`, and the value of `y` is an integer less than `text(zero)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks zero in numerator makes number irrational.",
+                    "Rationale": "Thinks `text(zero)` in numerator makes number irrational.",
                     "Percent": 22
                 }
             },
             "B": {
-                "Choice": "The value of x is the square root of an integer, and the value of y is an integer greater than zero.",
+                "Choice": "The value of `x` is the square root of an integer, and the value of `y` is an integer greater than `text(zero)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -89,7 +89,7 @@
                 }
             },
             "C": {
-                "Choice": "The value of x is an integer less than zero, and the value of y is an integer greater than zero.",
+                "Choice": "The value of `x` is an integer less than `text(zero)`, and the value of `y` is an integer greater than `text(zero)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Describes a rational number.",
@@ -97,7 +97,7 @@
                 }
             },
             "D": {
-                "Choice": "The value of x is a square root that can be simplified to an integer, and the value of y is an integer less than zero.",
+                "Choice": "The value of `x` is a square root that can be simplified to an integer, and the value of `y` is an integer less than `text(zero)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks square root in numerator makes number irrational.",
@@ -126,14 +126,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which number is positive, rational, and has a value between 0 and 1?"
+            "Which number is `text(positive)`, rational, and has a value between `0and1`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`-0.222...`",
+                "Choice": "`-0.bar(2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks repeating would mean irrational; disregards negative sign.",
+                    "Rationale": "Thinks repeating would mean irrational; disregards `text(negative)` sign.",
                     "Percent": 8
                 }
             },
@@ -141,7 +141,7 @@
                 "Choice": "`pi-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds a number between 0 and 1; disregards the fact that it is irrational.",
+                    "Rationale": "Finds a number between `0and1`; disregards the fact that it is irrational.",
                     "Percent": 14
                 }
             },
@@ -157,7 +157,7 @@
                 "Choice": "`3/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds a rational number; disregards the fact that it is not between 0 and 1.",
+                    "Rationale": "Finds a rational number; disregards the fact that it is not between `0and1`.",
                     "Percent": 13
                 }
             }
@@ -184,7 +184,7 @@
         "Explain": false,
         "Content": [
             "A number is shown below.",
-            ":box:0.565656...",
+            ":ibox:`0.bar(56)`",
             "Which statement about the number is true?"
         ],
         "AnswerChoices": {
@@ -240,21 +240,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In the expression below, c is an integer.",
-            "9ᶜ • 9⁻ᶜ",
+            "In the expression below, `c` is an integer.",
+            ":ibox:`9^c*9^-c`",
             "Which value is equivalent to the expression?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0",
+                "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes c + (-c) = 0, so assumes expression value is 0.",
+                    "Rationale": "Notes `c+(-c)=0`, so assumes expression value is `0`.",
                     "Percent": 14
                 }
             },
             "B": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -262,10 +262,10 @@
                 }
             },
             "C": {
-                "Choice": "1/9^2ᶜ",
+                "Choice": "`1/9^(2c)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Combines c and -c into -2c; writes as a fraction with a positive exponent.",
+                    "Rationale": "Combines `cand-c` into `-2c`; writes as a fraction with a `text(positive)` exponent.",
                     "Percent": 28
                 }
             },
@@ -273,7 +273,7 @@
                 "Choice": "9",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes c + (-c) = 0, so leaves 9.",
+                    "Rationale": "Notes `c+(-c)=0`, so leaves `9`.",
                     "Percent": 21
                 }
             }
@@ -297,19 +297,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Fran buys used DVDs. She pays $2.75 for each DVD she buys. She graphs a line to show the total amount (y), in `text(dollars)`, she pays to buy x used DVDs. Which equation correctly describes Fran's line?"
+            "Fran buys used DVDs. She pays `$2.75` for each DVD she buys. She graphs a line to show the total amount `(y)`, in `text(dollars)`, she pays to buy `x` used DVDs. Which equation correctly describes Fran's line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 2.75",
+                "Choice": "`y=2.75`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Interprets 2.75 as a constant instead of as a rate.",
+                    "Rationale": "Interprets `2.75` as a constant instead of as a rate.",
                     "Percent": 5
                 }
             },
             "B": {
-                "Choice": "y = 2.75x",
+                "Choice": "`y=2.75x`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -317,7 +317,7 @@
                 }
             },
             "C": {
-                "Choice": "y = x + 2.75",
+                "Choice": "`y=x+2.75`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the rate as the `ytext(-intercept)`.",
@@ -325,10 +325,10 @@
                 }
             },
             "D": {
-                "Choice": "y = 2.75x + 2.75",
+                "Choice": "`y=2.75x+2.75`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 2.75 as the slope and `ytext(-intercept)`.",
+                    "Rationale": "Uses `2.75` as the slope and `ytext(-intercept)`.",
                     "Percent": 4
                 }
             }
@@ -352,29 +352,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Hank's Bicycle Rentals charges an initial fee of $15 and an hourly rate of $5 to rent a bicycle. Maria's Bicycle Rentals has the same hourly rate but charges an initial fee of $12. To find the number of hours for which the two rental companies would charge the same amount to rent a bicycle, Cindy writes and solves the equation shown below.",
-            "15 + 5x = 12 + 5x",
-            "Which statement describes the number of hours for which the two rental companies charge the same amount to rent a bicycle?"
+            "Hank's Bicycle Rentals charges an initial fee of `$15` and an `text(hourly)` rate of `$5` to rent a bicycle. Maria's Bicycle Rentals has the same `text(hourly)` rate but charges an initial fee of `$12`. To find the number of `text(hours)` for which the `text(two)` rental companies would charge the same amount to rent a bicycle, Cindy writes and solves the equation shown below.",
+            ":ibox:`15+5x=12+5x`",
+            "Which statement describes the number of `text(hours)` for which the `text(two)` rental companies charge the same amount to rent a bicycle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The two companies charge the same amount to rent a bicycle for 3/5 hour.",
+                "Choice": "The `text(two)` companies charge the same amount to rent a bicycle for `3/5` `text(hour)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Eliminates one of the 5x terms and gets 15 = 12 + 5x.",
+                    "Rationale": "Eliminates one of the `5x` terms and gets `15=12+5x`.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "The two companies charge the same amount to rent a bicycle for 3 hours.",
+                "Choice": "The `text(two)` companies charge the same amount to rent a bicycle for `3` `text(hours)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Gets 0 = 3 and thinks the solution is 3.",
+                    "Rationale": "Gets `0=3` and thinks the solution is `3`.",
                     "Percent": 18
                 }
             },
             "C": {
-                "Choice": "The two companies never charge the same amount to rent a bicycle for the same number of hours.",
+                "Choice": "The `text(two)` companies never charge the same amount to rent a bicycle for the same number of `text(hours)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -382,10 +382,10 @@
                 }
             },
             "D": {
-                "Choice": "The two companies always charge the same amount to rent a bicycle for the same number of hours.",
+                "Choice": "The `text(two)` companies always charge the same amount to rent a bicycle for the same number of `text(hours)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Gets 0 = 3 and thinks that means there are infinite solutions.",
+                    "Rationale": "Gets `0=3` and thinks that means there are infinite solutions.",
                     "Percent": 10
                 }
             }
@@ -411,11 +411,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which statement describing a function of x is true?"
+            "Which statement describing a function of `x` is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The graph of y = 3x + 9 is linear and has a `ytext(-intercept)` of 9.",
+                "Choice": "The graph of `y=3x+9` is linear and has a `ytext(-intercept)` of `9`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -423,26 +423,26 @@
                 }
             },
             "B": {
-                "Choice": "The graph of y = 3x is nonlinear and passes through the origin.",
+                "Choice": "The graph of `y=3x` is nonlinear and passes through the origin.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes correctly that y = 3x passes through the origin, but misses that it is linear.",
+                    "Rationale": "Notes correctly that `y=3x` passes through the origin, but misses that it is linear.",
                     "Percent": 14
                 }
             },
             "C": {
-                "Choice": "The graph of y = 3x^2is linear and passes through the point `(0,0)`.",
+                "Choice": "The graph of `y=3x^2` is linear and passes through the point `(0,0)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Notes correctly that y = 3x^2passes through the origin, but misses that it is nonlinear.",
+                    "Rationale": "Notes correctly that `y=3x^2` passes through the origin, but misses that it is nonlinear.",
                     "Percent": 13
                 }
             },
             "D": {
-                "Choice": "The graph of y = 3^2x + 9 is nonlinear and passes through the point (0, 9).",
+                "Choice": "The graph of `y=3^2x+9` is nonlinear and passes through the point `(0,9)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Sees that y = 3^2x + 9 has a squared term, so assumes that it is nonlinear.",
+                    "Rationale": "Sees that `y=3^2x+9` has a squared term, so assumes that it is nonlinear.",
                     "Percent": 12
                 }
             }
@@ -466,13 +466,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle PQR is graphed on the coordinate grid shown below.",
+            "Triangle `PQR` is graphed on the coordinate grid shown below.",
             "problems/PA19G8M/media/9a.jpg",
-            "To form triangle P'Q'R', triangle PQR will be rotated `90°` clockwise about the origin. What will be the slope of side Q'R'?"
+            "To form triangle `P'Q'R'`, triangle `PQR` will be rotated `90°` clockwise about the origin. What will be the slope of side `bar(Q'R')`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-3",
+                "Choice": "`-3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the slope will not change.",
@@ -480,7 +480,7 @@
                 }
             },
             "B": {
-                "Choice": "-1/3",
+                "Choice": "`-1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the slope will be inverted.",
@@ -488,7 +488,7 @@
                 }
             },
             "C": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -496,7 +496,7 @@
                 }
             },
             "D": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the slope will be the opposite.",
@@ -523,13 +523,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Quadrilateral ABCD and quadrilateral A'B'C'D' are shown on the coordinate grid below.",
+            "Quadrilateral `ABCD` and quadrilateral `A'B'C'D'` are shown on the coordinate grid below.",
             "problems/PA19G8M/media/10a.jpg",
-            "Which sequence of transformations could be used to map quadrilateral ABCD onto quadrilateral A'B'C'D'?"
+            "Which sequence of transformations could be used to map quadrilateral `ABCD` onto quadrilateral `A'B'C'D'`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a reflection across the `xtext(-axis)`, followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Choice": "a reflection across the `xtext(-axis)`, followed by a dilation centered at the origin with a scale factor of `0.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Selects the wrong axis for the reflection.",
@@ -537,7 +537,7 @@
                 }
             },
             "B": {
-                "Choice": "a dilation centered at the origin with a scale factor of 0.5, followed by a reflection across the `ytext(-axis)`",
+                "Choice": "a dilation centered at the origin with a scale factor of `0.5`, followed by a reflection across the `ytext(-axis)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -545,18 +545,18 @@
                 }
             },
             "C": {
-                "Choice": "a translation 4 units to the right, followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Choice": "a translation `4` `text(units)` to the right, followed by a dilation centered at the origin with a scale factor of `0.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not notice the misalignment of A to B', B to A', C to D', and D to C'.",
+                    "Rationale": "Does not notice the misalignment of `A` to `B'`, `B` to `A'`, `C` to `D'`, and `D` to `C'`.",
                     "Percent": 15
                 }
             },
             "D": {
-                "Choice": "a rotation of `180°` about the point (0, -0.5), followed by a dilation centered at the origin with a scale factor of 0.5",
+                "Choice": "a rotation of `180°` about the point `(0,-0.5)`, followed by a dilation centered at the origin with a scale factor of `0.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not notice that the rotation causes the misalignment of A to D', B to C', C to B', and D to A'.",
+                    "Rationale": "Does not notice that the rotation causes the misalignment of `A` to `D'`, `B` to `C'`, `C` to `B'`, and `D` to `A'`.",
                     "Percent": 13
                 }
             }
@@ -580,37 +580,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The side lengths of triangle ABC are listed below.",
-            ":box:• AB = 7 mm\n\n• AC = 12 mm\n\n• BC = 6 mm",
-            "Which statement about triangle ABC is true?"
+            "The side lengths of triangle `ABC` are listed below.",
+            ":box:• `AB=7` `text(mm)`\n\n• `AC=12` `text(mm)`\n\n• `BC=6` `text(mm)`",
+            "Which statement about triangle `ABC` is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Angle A is a right angle.",
+                "Choice": "Angle `A` is a right angle.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle and that the right angle is always opposite the shortest side.",
+                    "Rationale": "Incorrectly assumes that triangle `ABC` is a right triangle and that the right angle is always opposite the shortest side.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "Angle B is a right angle.",
+                "Choice": "Angle `B` is a right angle.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle but knows that the right angle is always opposite the longest side.",
+                    "Rationale": "Incorrectly assumes that triangle `ABC` is a right triangle but knows that the right angle is always opposite the longest side.",
                     "Percent": 19
                 }
             },
             "C": {
-                "Choice": "Angle C is a right angle.",
+                "Choice": "Angle `C` is a right angle.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly assumes that triangle ABC is a right triangle and that angle C is always the right angle (`a^2+b^2=c^2`).",
+                    "Rationale": "Incorrectly assumes that triangle `ABC` is a right triangle and that angle `C` is always the right angle `(a^2+b^2=c^2)`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "Triangle ABC is not a right triangle.",
+                "Choice": "Triangle `ABC` is not a right triangle.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -637,27 +637,27 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Point R is located at `(1,2)` on a coordinate grid. Point S is located at (4, -5) on the same coordinate grid. What is the distance from point R to point S, rounded to the nearest tenth?"
+            "Point `R` is located at `(1,2)` on a coordinate grid. Point `S` is located at `(4,-5)` on the same coordinate grid. What is the distance from point `R` to point `S`, rounded to the nearest `text(tenth)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3.2 units",
+                "Choice": "`3.2` `text(units)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 7 + 3 = 10 and then determines the square root of 10.",
+                    "Rationale": "Adds `7+3=10` and then determines the square root of `10`.",
                     "Percent": 21
                 }
             },
             "B": {
-                "Choice": "4.6 units",
+                "Choice": "`4.6` `text(units)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 7 × 3 = 21 and then determines the square root of 21.",
+                    "Rationale": "Multiplies `7xx3=21` and then determines the square root of `21`.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "7.6 units",
+                "Choice": "`7.6` `text(units)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -665,10 +665,10 @@
                 }
             },
             "D": {
-                "Choice": "10.0 units",
+                "Choice": "`10.0` `text(units)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 7 + 3 = 10.",
+                    "Rationale": "Adds `7+3=10`.",
                     "Percent": 17
                 }
             }
@@ -692,21 +692,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Michael stacks 14 identical disks to form a cylinder.",
-            ":box:• Each disk is 1/4 inch thick.\n\n• The diameter of each disk is 3 inches.",
+            "Michael stacks `14` identical disks to form a cylinder.",
+            ":box:• Each disk is `1/4` `text(inch)` thick.\n\n• The diameter of each disk is `3` `text(inches)`.",
             "Which measurement is closest to the volume, in `text(cubic inches)`, of the stack of disks?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates the volume of only 1 disk using the diameter instead of the radius.",
+                    "Rationale": "Calculates the volume of only `1` disk using the diameter instead of the radius.",
                     "Percent": 24
                 }
             },
             "B": {
-                "Choice": "25",
+                "Choice": "`25`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -714,18 +714,18 @@
                 }
             },
             "C": {
-                "Choice": "99",
+                "Choice": "`99`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates the volume using the diameter instead of the radius OR does not multiply by 1/4.",
+                    "Rationale": "Calculates the volume using the diameter instead of the radius OR does not multiply by `1/4`.",
                     "Percent": 14
                 }
             },
             "D": {
-                "Choice": "296",
+                "Choice": "`296`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates the volume using the diameter instead of the radius and does not multiply by 1/4.",
+                    "Rationale": "Calculates the volume using the diameter instead of the radius and does not multiply by `1/4`.",
                     "Percent": 5
                 }
             }
@@ -749,21 +749,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The scatter plot below shows the rainfall, in millimeters, recorded each day during a 20-day period.",
+            "The scatter plot below shows the rainfall, in `text(millimeters)`, recorded `text(each day)` during a `20text(-day)` period.",
             "problems/PA19G8M/media/14a.jpg",
-            "On which day was the rainfall recorded an outlier?"
+            "On which `text(day)` was the rainfall recorded an outlier?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the first day.",
+                    "Rationale": "Selects the `text(first day)`.",
                     "Percent": 3
                 }
             },
             "B": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -771,18 +771,18 @@
                 }
             },
             "C": {
-                "Choice": "17",
+                "Choice": "`17`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the day on which the amount of rainfall was the lowest.",
+                    "Rationale": "Selects the `text(day)` on which the amount of rainfall was the lowest.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects the last day.",
+                    "Rationale": "Selects the `text(last day)`.",
                     "Percent": 6
                 }
             }
@@ -812,7 +812,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 0.8x + 8",
+                "Choice": "`y=0.8x+8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the opposite of the slope.",
@@ -820,7 +820,7 @@
                 }
             },
             "B": {
-                "Choice": "y = 8x + 0.8",
+                "Choice": "`y=8x+0.8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the opposite of the slope and switches the slope and `ytext(-intercept)`.",
@@ -828,7 +828,7 @@
                 }
             },
             "C": {
-                "Choice": "y = -0.8x + 8",
+                "Choice": "`y=-0.8x+8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -836,7 +836,7 @@
                 }
             },
             "D": {
-                "Choice": "y = -8x + 0.8",
+                "Choice": "`y=-8x+0.8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Switches the slope and `ytext(-intercept)` and switches their signs.",
@@ -869,15 +869,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Of all the families surveyed, more than 1/2 have neither a cat nor a dog.",
+                "Choice": "Of all the families surveyed, more than `1/2` have neither a cat nor a dog.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrectly uses 9/14 as the fraction of families who do not have a cat and 9/12 as the fraction of families who do not have a dog, and both are more than 1/2.",
+                    "Rationale": "Incorrectly uses `9/14` as the fraction of families who do not have a cat and `9/12` as the fraction of families who do not have a dog, and both are more than `1/2`.",
                     "Percent": 19
                 }
             },
             "B": {
-                "Choice": "Of all the families surveyed who do not have a dog, 3/4 do have a cat.",
+                "Choice": "Of all the families surveyed who do not have a dog, `3/4` do have a cat.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Misreads as “do not have a cat”.",
@@ -885,15 +885,15 @@
                 }
             },
             "C": {
-                "Choice": "Of all the families surveyed who do have a cat, 12% do not have a dog.",
+                "Choice": "Of all the families surveyed who do have a cat, `12%` do not have a dog.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Correctly identifies 3 as number of families who have a cat and not a dog, but uses 3/25 instead of 3/11 to determine percent.",
+                    "Rationale": "Correctly identifies `3` as number of families who have a cat and not a dog, but uses `3/25` instead of `3/11` to determine `text(percent)`.",
                     "Percent": 24
                 }
             },
             "D": {
-                "Choice": "Of all the families surveyed, 32% have either a cat or a dog, but not both a cat and a dog.",
+                "Choice": "Of all the families surveyed, `32%` have either a cat or a dog, but not both a cat and a dog.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -920,7 +920,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "The graph below shows the relationship between the number of pounds of beeswax purchased at a craft store and the cost of the beeswax.",
+            "The graph below shows the relationship between the number of `text(pounds)` of beeswax purchased at a craft store and the cost of the beeswax.",
             "problems/PA19G8M/media/17a.jpg"
         ],
         "AnswerChoices": {},
@@ -931,7 +931,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "What is the cost, in `text(dollars)`, of purchasing 15 pounds of beeswax at the craft store? Show or explain all your work."
+                    "What is the cost, in `text(dollars)`, of purchasing `15` `text(pounds)` of beeswax at the craft store? Show or explain all your work."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -950,9 +950,9 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "An online marketplace sells the same brand of beeswax that is sold at the craft store. At the online marketplace, 7 pounds of beeswax costs $78.75.",
-                    "• For the craft store, an equation in the form c = r p can be used to describe the relationship between the number of pounds (p) of beeswax purchased and the cost (c), in `text(dollars)`.\n\n• For the online marketplace, an equation in the form c = sp can be used to describe the relationship between the number of pounds (p) of beeswax purchased and the cost (c), in `text(dollars)`.",
-                    "Explain why the value of the expression r - s must be 1.14."
+                    "An online marketplace sells the same brand of beeswax that is sold at the craft store. At the online marketplace, `7` `text(pounds)` of beeswax costs `$78.75`.",
+                    "• For the craft store, an equation in the form `c=rp` can be used to describe the relationship between the number of `text(pounds)` `(p)` of beeswax purchased and the cost `(c)`, in `text(dollars)`.\n\n• For the online marketplace, an equation in the form `c=sp` can be used to describe the relationship between the number of `text(pounds)` `(p)` of beeswax purchased and the cost `(c)`, in `text(dollars)`.",
+                    "Explain why the value of the expression `r-s` must be `1.14`."
                 ],
                 "AnswerChoices": {}
             },
@@ -962,8 +962,8 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The online marketplace pays $175.00 for every 50 pounds of beeswax it buys from a manufacturer.",
-                    "Write an equation that can be used to determine the profit (t), in `text(dollars)`, that the online marketplace makes when it sells p pounds of beeswax. Show or explain all your work."
+                    "The online marketplace pays `$175.00` for every `50` `text(pounds)` of beeswax it buys from a manufacturer.",
+                    "Write an equation that can be used to determine the profit `(t)`, in `text(dollars)`, that the online marketplace makes when it sells `p` `text(pounds)` of beeswax. Show or explain all your work."
                 ],
                 "AnswerChoices": {
                     "KEY": {

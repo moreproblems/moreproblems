@@ -14,14 +14,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below shows the number of movie tickets that were sold each of four days.",
+            "The table below shows the number of movie tickets that were sold each of `text(four days)`.",
             "problems/PA24G3M/media/1a.jpg",
-            "The number of tickets sold each day is rounded to the nearest hundred.",
-            "On which two days do the numbers of tickets sold round to 600?"
+            "The number of tickets sold `text(each day)` is rounded to the nearest `text(hundred)`.",
+            "On which `text(two days)` do the numbers of tickets sold round to `600`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Thursday and Friday",
+                "Choice": "`text(Thursday)andtext(Friday)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice rounds all the numbers up.",
@@ -29,7 +29,7 @@
                 }
             },
             "B": {
-                "Choice": "Thursday and Saturday",
+                "Choice": "`text(Thursday)andtext(Saturday)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice misapplies rounding rules (rounds numbers up that should be rounded down and rounds numbers down that should be rounded up).",
@@ -37,18 +37,18 @@
                 }
             },
             "C": {
-                "Choice": "Friday and Sunday",
+                "Choice": "`text(Friday)andtext(Sunday)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice looks at the digit in the tens place and applies the rule “less than 5, round down; 5 or greater, round up” for each number, resulting in 500, 600, 700, 600, and then identifies that Friday and Sunday both round to 600.",
+                    "Rationale": "This choice looks at the digit in the `text(tens)` place and applies the rule “less than `5`, round down; `5` or greater, round up” for each number, resulting in `500,600,700,600`, and then identifies that `text(Friday)andtext(Sunday)` both round to `600`.",
                     "Percent": 60
                 }
             },
             "D": {
-                "Choice": "Saturday and Sunday",
+                "Choice": "`text(Saturday)andtext(Sunday)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects the numbers with a 6 in the hundreds place or truncates instead of rounds.",
+                    "Rationale": "This choice selects the numbers with a `6` in the `text(hundreds)` place or truncates instead of rounds.",
                     "Percent": 20
                 }
             }
@@ -70,40 +70,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "James makes 70 bookmarks.",
-            "He uses 6 inches of ribbon to make each bookmark.",
-            "How many inches of ribbon does James use to make all the bookmarks?"
+            "James makes `70` bookmarks.",
+            "He uses `6` `text(inches)` of ribbon to make each bookmark.",
+            "How many `text(inches)` of ribbon does James use to make all the bookmarks?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "64",
+                "Choice": "`64`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses subtraction rather than multiplication (interprets as James starts with 70 inches of ribbon and uses 6 inches to make a bookmark).",
+                    "Rationale": "This choice uses subtraction rather than multiplication (interprets as James starts with `70` `text(inches)` of ribbon and uses `6` `text(inches)` to make a bookmark).",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "76",
+                "Choice": "`76`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses addition rather than multiplication (interprets as James already used 70 inches of ribbon and uses 6 inches more to make another bookmark).",
+                    "Rationale": "This choice uses addition rather than multiplication (interprets as James already used `70` `text(inches)` of ribbon and uses `6` `text(inches)` more to make another bookmark).",
                     "Percent": 28
                 }
             },
             "C": {
-                "Choice": "420",
+                "Choice": "`420`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice multiplies 6 by 7, determines the product is 42, and then appends a 0 to the right side of the product since 70 is a 2-digit multiple of 10.",
+                    "Rationale": "This choice multiplies `6` by `7`, determines the product is `42`, and then appends a `0` to the right side of the product since `70` is a `2text(-digit)` multiple of `10`.",
                     "Percent": 48
                 }
             },
             "D": {
-                "Choice": "480",
+                "Choice": "`480`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice confuses the product of 6 times 7 with the product of 6 times 8 (48) before appending a 0 to the right side of the product since 70 is a 2-digit multiple of 10.",
+                    "Rationale": "This choice confuses the product of `6` times `7` with the product of `6` times `8` `(48)` before appending a `0` to the right side of the product since `70` is a `2text(-digit)` multiple of `10`.",
                     "Percent": 8
                 }
             }
@@ -126,39 +126,39 @@
         "Explain": false,
         "Content": [
             "The winner of a game is the person with the greatest number of points.",
-            ":ibox:• The winner of the game has a total of 2,341 points.\n\n• The person in third place has a total of 1,768 points.",
-            "How many points could the person in second place have?"
+            ":ibox:• The winner of the game has a total of `2text(,)341` points.\n\n• The person in `text(third)` place has a total of `1text(,)768` points.",
+            "How many points could the person in `text(second)` place have?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1,657",
+                "Choice": "`1text(,)657`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice compares 341, 657, and 768.",
+                    "Rationale": "This choice compares `341,657,and768`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "1,899",
+                "Choice": "`1text(,)899`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the number of points must be less than 2,341 and greater than 1,768; compares each of the answer choices to 2,341, identifies 1,657 and 1,899 are both less than 2,341 by comparing the digits in the thousands place (1,000 < 2,000) and eliminating 2,361 (2,000 = 2,000, 300 = 300, 60 > 40) and 2,543 (2,000 = 2,000, 500 > 300); and compares the two remaining choices to 1,768, identifies 1,899 is greater than 1,768 (1,000 = 1,000, 800 > 700) and eliminating 1,657 (1,000 = 1,000, 600 < 700), resulting in 1,899 being the only answer choice that is less than 2,341 and greater than 1,768.",
+                    "Rationale": "This choice recognizes that the number of points must be less than `2text(,)341` and greater than `1text(,)768`; compares each of the answer choices to `2text(,)341`, identifies `1text(,)657and1text(,)899` are both less than `2text(,)341` by comparing the digits in the `text(thousands)` place `(1text(,)000<2text(,)000)` and eliminating `2text(,)361` `(2text(,)000=2text(,)000,300=300,60>40)` and `2text(,)543` `(2text(,)000=2text(,)000,500>300)`; and compares the `text(two)` remaining choices to `1text(,)768`, identifies `1text(,)899` is greater than `1text(,)768` `(1text(,)000=1text(,)000,800>700)` and eliminating `1text(,)657` `(1text(,)000=1text(,)000,600<700)`, resulting in `1text(,)899` being the only answer choice that is less than `2text(,)341` and greater than `1text(,)768`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "2,361",
+                "Choice": "`2text(,)361`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice compares 41, 61, and 68.",
+                    "Rationale": "This choice compares `41,61,and68`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "2,543",
+                "Choice": "`2text(,)543`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice compares 341, 543, and 768.",
+                    "Rationale": "This choice compares `341,543,and768`.",
                     "Percent": 0
                 }
             }
@@ -170,7 +170,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Represent fractions on a number line (limit denominators to `2,3,4,6,and8`; limit numerators to whole numbers less than the denominator; and no simplification necessary)."
@@ -180,7 +180,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "On a field trip, 1/4 of the people are adults.",
+            "On a field trip, `1/4` of the people are adults.",
             "Which number line has a point at the fraction of people on the field trip who are adults?"
         ],
         "AnswerChoices": {
@@ -188,7 +188,7 @@
                 "Choice": "problems/PA24G3M/media/4a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice counts the tick mark at 0 as a part.",
+                    "Rationale": "This choice counts the tick mark at `0` as a part.",
                     "Percent": 9
                 }
             },
@@ -196,7 +196,7 @@
                 "Choice": "problems/PA24G3M/media/4b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice correctly identifies that the number line is divided into 4 equal parts and that the point is on the 1st tick mark (of 4) after 0, so this point represents 1/4.",
+                    "Rationale": "This choice correctly identifies that the number line is divided into `4` equal parts and that the point is on the `1^text(st)` tick mark (of `4`) after `0`, so this point represents `1/4`.",
                     "Percent": 49
                 }
             },
@@ -212,7 +212,7 @@
                 "Choice": "problems/PA24G3M/media/4d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects the point 1/4 from the right end.",
+                    "Rationale": "This choice selects the point `1/4` from the right end.",
                     "Percent": 27
                 }
             }
@@ -224,7 +224,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Recognize and generate simple equivalent fractions (limit the denominators to `1,2,3,4,6,and8` and limit numerators to whole numbers less than the denominator)."
@@ -234,7 +234,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table shows the distance, in `text(miles)`, four students walk to school.",
+            "The table shows the distance, in `text(miles)`, `text(four)` students walk to school.",
             "problems/PA24G3M/media/5a.jpg",
             "Which students walk an equal distance to school?"
         ],
@@ -243,7 +243,7 @@
                 "Choice": "Alberto and Nicole",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that 2/4 and 4/6 can both be simplified by dividing each numerator and each denominator by 2, resulting in 1/2 and 2/3, and then identifies that Alberto's distance and Nicole's distance are both 2/3 mile.",
+                    "Rationale": "This choice recognizes that `2/4and4/6` can both be simplified by dividing each numerator and each denominator by `2`, resulting in `1/2and2/3`, and then identifies that Alberto's distance and Nicole's distance are both `2/3` `text(mile)`.",
                     "Percent": 38
                 }
             },
@@ -267,7 +267,7 @@
                 "Choice": "Hailey and Nicole",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects fractions with the same difference between numerators (4 - 2 = 2) as between denominators (6 - 4 = 2).",
+                    "Rationale": "This choice selects fractions with the same difference between numerators `(4-2=2)` as between denominators `(6-4=2)`.",
                     "Percent": 14
                 }
             }
@@ -279,7 +279,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Express whole numbers as fractions, and/or generate fractions that are equivalent to whole numbers (limit denominators to `1,2,3,4,6,and8`)."
@@ -290,29 +290,29 @@
         "Explain": false,
         "Content": [
             "Mrs. Warren made sandwiches for a school activity.",
-            "She cut each sandwich in half and put all of them on a large plate.",
-            "There were 18 halves on the large plate.",
-            "What are two ways to represent the number of sandwiches Mrs. Warren made for the school activity?"
+            "She cut each sandwich in `text(half)` and put all of them on a large plate.",
+            "There were `18` `text(halves)` on the large plate.",
+            "What are `text(two)` ways to represent the number of sandwiches Mrs. Warren made for the school activity?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "18/2 and 9",
+                "Choice": "`18/2and9`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that “18 halves” is the same as 18/2, simplifies this fraction by dividing the numerator and the denominator by 2, resulting in 9/1, and then recognizes that a fraction with a 1 in the denominator can be rewritten as a whole number equal to the numerator.",
+                    "Rationale": "This choice recognizes that “`18` `text(halves)`” is the same as `18/2`, simplifies this fraction by dividing the numerator and the denominator by `2`, resulting in `9/1`, and then recognizes that a fraction with a `1` in the denominator can be rewritten as a whole number equal to the numerator.",
                     "Percent": 58
                 }
             },
             "B": {
-                "Choice": "18/2 and 16",
+                "Choice": "`18/2and16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that “18 halves” is the same as 18/2 but then subtracts rather than divides to simplify the fraction.",
+                    "Rationale": "This choice recognizes that “`18` `text(halves)`” is the same as `18/2` but then subtracts rather than divides to simplify the fraction.",
                     "Percent": 18
                 }
             },
             "C": {
-                "Choice": "18 - 2 and 16",
+                "Choice": "`18-2and16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice uses subtraction rather than setting up the numbers as a fraction.",
@@ -320,7 +320,7 @@
                 }
             },
             "D": {
-                "Choice": "18 × 2 and 36",
+                "Choice": "`18xx2and36`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice uses multiplication rather than setting up the numbers as a fraction.",
@@ -345,13 +345,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A waiter has 32 napkins.",
-            "He uses 4 napkins to set each table.",
+            "A waiter has `32` napkins.",
+            "He uses `4` napkins to set each table.",
             "Which expression shows the number of tables the waiter can set?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "32 + 4",
+                "Choice": "`32+4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice uses addition rather than division.",
@@ -359,7 +359,7 @@
                 }
             },
             "B": {
-                "Choice": "32 - 4",
+                "Choice": "`32-4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice uses subtraction rather than division.",
@@ -367,18 +367,18 @@
                 }
             },
             "C": {
-                "Choice": "32 × 4",
+                "Choice": "`32xx4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice identifies the keyword “each” but does not recognize that the total amount (32 napkins) is given, so uses multiplication rather than division.",
+                    "Rationale": "This choice identifies the keyword “each” but does not recognize that the total amount (`32` napkins) is given, so uses multiplication rather than division.",
                     "Percent": 11
                 }
             },
             "D": {
-                "Choice": "32 ÷ 4",
+                "Choice": "`32-:4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the total amount (32 napkins) is being divided into equal-sized groups (4 napkins to set each table), so uses division to write the expression.",
+                    "Rationale": "This choice recognizes that the total amount (`32` napkins) is being divided into equal-sized groups (`4` napkins to set each table), so uses division to write the expression.",
                     "Percent": 53
                 }
             }
@@ -400,43 +400,43 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Rikki walks 4 dogs each day.",
-            "She is paid $6 for walking each dog.",
-            "She walks dogs 5 days each week.",
-            "To determine the total amount, in `text(dollars)`, she will be paid for walking dogs 5 days each week, Rikki follows the rule shown below.",
-            ":ibox:multiply the total amount paid each day by the number of days",
+            "Rikki walks `4` dogs `text(each day)`.",
+            "She is paid `$6` for walking each dog.",
+            "She walks dogs `5` `text(days each week)`.",
+            "To determine the total amount, in `text(dollars)`, she will be paid for walking dogs `5` `text(days each week)`, Rikki follows the rule shown below.",
+            ":ibox:multiply the total amount paid `text(each day)` by the number of `text(days)`",
             "Which expression can also be used to determine the total amount, in `text(dollars)`, Rikki will be paid?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 × (6 × 5)",
+                "Choice": "`4xx(6xx5)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice determines a correct expression for 1 dog per week (6 × 5) and then multiplies the number of dogs (4) by this expression.",
+                    "Rationale": "This choice determines a correct expression for `1` dog `text(per week)` `(6xx5)` and then multiplies the number of dogs `(4)` by this expression.",
                     "Percent": 43
                 }
             },
             "B": {
-                "Choice": "4 + (6 × 5)",
+                "Choice": "`4+(6xx5)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice determines a correct expression for 1 dog per week (6 × 5) but then adds this expression to the number of dogs (4).",
+                    "Rationale": "This choice determines a correct expression for `1` dog `text(per week)` `(6xx5)` but then adds this expression to the number of dogs `(4)`.",
                     "Percent": 21
                 }
             },
             "C": {
-                "Choice": "(4 × 6) + 5",
+                "Choice": "`(4xx6)+5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice determines a correct expression for 1 day of pay (4 × 6) but then adds the number of days (5) to this expression.",
+                    "Rationale": "This choice determines a correct expression for `1` `text(day)` of pay `(4xx6)` but then adds the number of days `(5)` to this expression.",
                     "Percent": 24
                 }
             },
             "D": {
-                "Choice": "(4 + 6) × 5",
+                "Choice": "`(4+6)xx5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice determines an incorrect expression for 1 day of pay by using addition rather than multiplication and then multiplies this expression by the number of days (5).",
+                    "Rationale": "This choice determines an incorrect expression for `1` `text(day)` of pay by using addition rather than multiplication and then multiplies this expression by the number of `text(days)` `(5)`.",
                     "Percent": 12
                 }
             }
@@ -465,7 +465,7 @@
                 "Choice": "problems/PA24G3M/media/9a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that when the shapes are put together the resulting shape will have exactly 4 sides and that the 4 sides will all be equal in length.",
+                    "Rationale": "This choice recognizes that when the shapes are put together the resulting shape will have exactly `4` sides and that the `4` sides will all be equal in length.",
                     "Percent": 33
                 }
             },
@@ -481,7 +481,7 @@
                 "Choice": "problems/PA24G3M/media/9c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that the two triangles fit together to make a quadrilateral but does not consider that all the sides must be equal in length.",
+                    "Rationale": "This choice recognizes that the `text(two)` triangles fit together to make a quadrilateral but does not consider that all the sides must be equal in length.",
                     "Percent": 21
                 }
             },
@@ -489,7 +489,7 @@
                 "Choice": "problems/PA24G3M/media/9d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that the two trapezoids fit together to make a parallelogram but does not consider that all the sides must be equal in length.",
+                    "Rationale": "This choice recognizes that the `text(two)` trapezoids fit together to make a parallelogram but does not consider that all the sides must be equal in length.",
                     "Percent": 20
                 }
             }
@@ -518,7 +518,7 @@
                 "Choice": "They are all rhombi.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice does not recognize that not all rectangles have equal sides and that pentagons have 5 sides, whereas rhombi have only 4 sides.",
+                    "Rationale": "This choice does not recognize that not all rectangles have equal sides and that pentagons have `5` sides, whereas rhombi have only `4` sides.",
                     "Percent": 7
                 }
             },
@@ -539,10 +539,10 @@
                 }
             },
             "D": {
-                "Choice": "They all have exactly four sides.",
+                "Choice": "They all have exactly `text(four)` sides.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice does not recognize that pentagons have 5 sides.",
+                    "Rationale": "This choice does not recognize that pentagons have `5` sides.",
                     "Percent": 22
                 }
             }
@@ -565,16 +565,16 @@
         "Explain": false,
         "Content": [
             "Gabe has some shapes.",
-            "He puts them into two groups based on their properties as shown below.",
+            "He puts them into `text(two)` groups based on their properties as shown below.",
             "problems/PA24G3M/media/11a.jpg",
-            "Which shape should be placed into group A?"
+            "Which shape should be placed into group `A`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/PA24G3M/media/11b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the shapes in group A are all quadrilaterals and selects a shape that has exactly 4 sides.",
+                    "Rationale": "This choice recognizes that the shapes in group `A` are all quadrilaterals and selects a shape that has exactly `4` sides.",
                     "Percent": 62
                 }
             },
@@ -582,7 +582,7 @@
                 "Choice": "problems/PA24G3M/media/11c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects a figure that belongs in group B (a triangle) rather than in group A (a quadrilateral).",
+                    "Rationale": "This choice selects a figure that belongs in group `B` (a triangle) rather than in group `A` (a quadrilateral).",
                     "Percent": 7
                 }
             },
@@ -590,7 +590,7 @@
                 "Choice": "problems/PA24G3M/media/11d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects a figure that has equal side lengths, as do two figures in group A, but does not consider the shape that does not have equal side lengths.",
+                    "Rationale": "This choice selects a figure that has equal side lengths, as do `text(two)` figures in group `A`, but does not consider the shape that does not have equal side lengths.",
                     "Percent": 20
                 }
             },
@@ -598,7 +598,7 @@
                 "Choice": "problems/PA24G3M/media/11e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice selects a figure with right angles resembling a rectangle or square but does not recognize that the shape is 5-sided rather than `4text(-sided)`.",
+                    "Rationale": "This choice selects a figure with right angles resembling a rectangle or square but does not recognize that the shape is `5text(-sided)` rather than `4text(-sided)`.",
                     "Percent": 11
                 }
             }
@@ -625,34 +625,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6 cups",
+                "Choice": "`6` `text(cups)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice identifies cups as an appropriate unit for beverages but does not consider the value of the number.",
+                    "Rationale": "This choice identifies `text(cups)` as an appropriate unit for beverages but does not consider the value of the number.",
                     "Percent": 29
                 }
             },
             "B": {
-                "Choice": "6 gallons",
+                "Choice": "`6` `text(gallons)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice confuses ounces and gallons (amount is equivalent to 96 cups).",
+                    "Rationale": "This choice confuses `text(ounces)` and `text(gallons)` (amount is equivalent to `96` `text(cups)`).",
                     "Percent": 8
                 }
             },
             "C": {
-                "Choice": "6 ounces",
+                "Choice": "`6` `text(ounces)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that the amount is a little less than 1 cup, which would be an appropriate amount of juice to drink with breakfast.",
+                    "Rationale": "This choice recognizes that the amount is a little less than `1` `text(cup)`, which would be an appropriate amount of juice to drink with breakfast.",
                     "Percent": 49
                 }
             },
             "D": {
-                "Choice": "6 pints",
+                "Choice": "`6` `text(pints)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice confuses ounces and pints (amount is equivalent to 12 cups).",
+                    "Rationale": "This choice confuses `text(ounces)andtext(pints)` (amount is equivalent to `12` `text(cups)`).",
                     "Percent": 14
                 }
             }
@@ -674,8 +674,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Zavia buys a toy for $3.57.",
-            "She pays with a $5 bill.",
+            "Zavia buys a toy for `$3.57`.",
+            "She pays with a `$5` bill.",
             "Which group of coins and bills shows the amount of money Zavia should receive as change?"
         ],
         "AnswerChoices": {
@@ -683,7 +683,7 @@
                 "Choice": "problems/PA24G3M/media/13a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice either starts with $3.57, adds the 3 pennies to make this total $3.60, adds the dime ($0.10) and nickel ($0.05) to make this total $3.75, adds the quarter to make this total $4.00, and then adds the dollar to make the total $5.00 OR subtracts $3.57 from $5.00 by regrouping from the ones place (dollars) and from the tenths place (dimes), resulting in $0.10 - $0.07 = $0.03, $0.90 - $0.50 = $0.40, $4.00 - $3.00 = $1.00 for a total amount of $1.43, and then identifies a group of coins and bills with this value ($1.00 + $0.25 + $0.10 + $0.05 + $0.03 = $1.43).",
+                    "Rationale": "This choice either starts with `$3.57`, adds the `3` `text(pennies)` to make this total `$3.60`, adds the `text(dime)` `($0.10)` and `text(nickel)` `($0.05)` to make this total `$3.75`, adds the `text(quarter)` to make this total `$4.00`, and then adds the `text(dollar)` to make the total `$5.00` OR subtracts `$3.57` from `$5.00` by regrouping from the `text(ones)` place `(text(dollars))` and from the `text(tenths)` place `(text(dimes))`, resulting in `$0.10-$0.07=$0.03,$0.90-$0.50=$0.40,$4.00-$3.00=$1.00` for a total amount of `$1.43`, and then identifies a group of coins and bills with this value `($1.00+$0.25+$0.10+$0.05+$0.03=$1.43)`.",
                     "Percent": 45
                 }
             },
@@ -691,7 +691,7 @@
                 "Choice": "problems/PA24G3M/media/13b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes the change should be close to $1.45 but adds 2 pennies to $1.45 rather than subtracting 2 pennies from $1.45.",
+                    "Rationale": "This choice recognizes the change should be close to `$1.45` but adds `2` `text(pennies)` to `$1.45` rather than subtracting `2` `text(pennies)` from `$1.45`.",
                     "Percent": 12
                 }
             },
@@ -699,7 +699,7 @@
                 "Choice": "problems/PA24G3M/media/13c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that the change should include a $1 bill but does not reduce the tenths place (dimes) by 1 when subtracting $0.57 from $1.00, resulting in $0.53 for the coins.",
+                    "Rationale": "This choice recognizes that the change should include a `$1` bill but does not reduce the `text(tenths)` place `(text(dimes))` by `1` when subtracting `$0.57` from `$1.00`, resulting in `$0.53` for the coins.",
                     "Percent": 17
                 }
             },
@@ -707,7 +707,7 @@
                 "Choice": "problems/PA24G3M/media/13d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice recognizes that the change should include a $1 bill but subtracts the low digit from the high digit (5 - 0, 7 - 0) when determining the value of the coins needed.",
+                    "Rationale": "This choice recognizes that the change should include a `$1` bill but subtracts the low digit from the high digit `(5-0,7-0)` when determining the value of the coins needed.",
                     "Percent": 26
                 }
             }
@@ -729,9 +729,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Manny has 10 books in his book collection.",
-            "Nancy has 25 books in her book collection.",
-            "Rutger has 20 books in his book collection.",
+            "Manny has `10` books in his book collection.",
+            "Nancy has `25` books in her book collection.",
+            "Rutger has `20` books in his book collection.",
             "Which pictograph shows the number of books these children have in each of their collections?"
         ],
         "AnswerChoices": {
@@ -747,7 +747,7 @@
                 "Choice": "problems/PA24G3M/media/14b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice applies the key to each number of books (1 picture = 10 books, 2 pictures = 20 books) and uses a half picture for the 5 extra books in Nancy's collection.",
+                    "Rationale": "This choice applies the key to each number of books `(1` `text(picture)=10` `text(books),2` `text(pictures)=20` `text(books))` and uses a `text(half)` picture for the `5` extra books in Nancy's collection.",
                     "Percent": 77
                 }
             },
@@ -755,7 +755,7 @@
                 "Choice": "problems/PA24G3M/media/14c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses only whole pictures, rounding 25 up to 30 since Nancy has more books in her collection than Rutger has in his collection.",
+                    "Rationale": "This choice uses only `text(whole)` pictures, rounding `25` up to `30` since Nancy has more books in her collection than Rutger has in his collection.",
                     "Percent": 5
                 }
             },
@@ -763,7 +763,7 @@
                 "Choice": "problems/PA24G3M/media/14d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice uses a scale of 5 rather than 10 and includes 1 too many pictures for Rutger's collection.",
+                    "Rationale": "This choice uses a scale of `5` rather than `10` and includes `1` too many pictures for Rutger's collection.",
                     "Percent": 13
                 }
             }
@@ -792,34 +792,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice adds the two given measurements.",
+                    "Rationale": "This choice adds the `text(two)` given measurements.",
                     "Percent": 21
                 }
             },
             "B": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice recognizes that area of a rectangle is determined by multiplying the side lengths, resulting in 3 × 2 = 6.",
+                    "Rationale": "This choice recognizes that area of a rectangle is determined by multiplying the side lengths, resulting in `3xx2=6`.",
                     "Percent": 41
                 }
             },
             "C": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice determines the value, in `text(feet)`, of the perimeter (i.e., 2 + 3 + 2 + 3).",
+                    "Rationale": "This choice determines the value, in `text(feet)`, of the perimeter (i.e., `2+3+2+3`).",
                     "Percent": 32
                 }
             },
             "D": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice confuses the area formula with the perimeter formula and doubles the product of the side lengths.",
+                    "Rationale": "This choice confuses the area formula with the perimeter formula and `text(doubles)` the product of the side lengths.",
                     "Percent": 6
                 }
             }
@@ -841,40 +841,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Tami's rectangle has side lengths of 5 inches and 4 inches.",
-            "The perimeter of Ryan's rectangle is two times the perimeter of Tami's rectangle.",
+            "Tami's rectangle has side lengths of `5` `text(inches)and4` `text(inches)`.",
+            "The perimeter of Ryan's rectangle is `text(two)` times the perimeter of Tami's rectangle.",
             "Which measurements could describe Ryan's rectangle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "side lengths of 5 inches and 8 inches",
+                "Choice": "side lengths of `5` `text(inches)and8` `text(inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice doubles only the 4-inch side length, which would result in doubling the area rather than the perimeter.",
+                    "Rationale": "This choice `text(doubles)` only the `4text(-inch)` side length, which would result in `text(doubling)` the area rather than the perimeter.",
                     "Percent": 22
                 }
             },
             "B": {
-                "Choice": "side lengths of 7 inches and 6 inches",
+                "Choice": "side lengths of `7` `text(inches)and6` `text(inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice adds 2 to each side length.",
+                    "Rationale": "This choice adds `2` to each side length.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "side lengths of 10 inches and 2 inches",
+                "Choice": "side lengths of `10` `text(inches)and2` `text(inches)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This choice doubles the 5-inch side length and divides the 4-inch side length by 2 (i.e., considers larger perimeter with same area).",
+                    "Rationale": "This choice `text(doubles)` the `5text(-inch)` side length and divides the `4text(-inch)` side length by `2` (i.e., considers larger perimeter with same area).",
                     "Percent": 14
                 }
             },
             "D": {
-                "Choice": "side lengths of 10 inches and 8 inches",
+                "Choice": "side lengths of `10` `text(inches)and8` `text(inches)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This choice either recognizes that each side length of Ryan's rectangle should be two times as long as the side lengths of Tami's rectangle for the perimeter of Ryan's rectangle to be two times the perimeter of Tami's rectangle OR determines the perimeter of Tami's rectangle to be 18 inches (5 + 4 + 5 + 4 = 18) and identifies a perimeter that is two times this amount (10 + 8 + 10 + 8 = 18 + 18 = 36).",
+                    "Rationale": "This choice either recognizes that each side length of Ryan's rectangle should be `text(two)` times as long as the side lengths of Tami's rectangle for the perimeter of Ryan's rectangle to be `text(two)` times the perimeter of Tami's rectangle OR determines the perimeter of Tami's rectangle to be `18` `text(inches)` `(5+4+5+4=18)` and identifies a perimeter that is `text(two)` times this amount `(10+8+10+8=18+18=36)`.",
                     "Percent": 47
                 }
             }
@@ -899,7 +899,7 @@
         "Explain": false,
         "Content": [
             "Jon, Kara, Lyle, and Mandy are bowling at a local bowling alley.",
-            "For the first game, Jon scored 100 points, Lyle scored 29 more points than Jon scored, and Kara scored 162 points."
+            "For the `text(first)` game, Jon scored `100` points, Lyle scored `29` more points than Jon scored, and Kara scored `162` points."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -909,7 +909,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "WRITE a number sentence using `<,>,or=` to compare the number of points Kara scored to the number of points Jon scored for the first game."
+                    "WRITE a number sentence using `<,>,or=` to compare the number of points Kara scored to the number of points Jon scored for the `text(first)` game."
                 ],
                 "AnswerChoices": {
                     "KEY1": {
@@ -936,7 +936,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What was the total number of points all three players scored for the first game?"
+                    "What was the total number of points all `text(three)` players scored for the `text(first)` game?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -955,8 +955,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Lyle uses a one-dollar bill to buy a snack from a vending machine.",
-                    "The price of the snack is 70 cents.",
+                    "Lyle uses a `text(one-dollar)` bill to buy a snack from a vending machine.",
+                    "The price of the snack is `70` `text(cents)`.",
                     "CIRCLE a combination of coins that Lyle could receive as the correct amount of change.",
                     "problems/PA24G3M/media/17a.jpg"
                 ],
@@ -968,10 +968,10 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Mandy has $25 to spend at the bowling alley.",
-                    "She will pay $3 to rent bowling shoes for the day.",
-                    "She will pay $5 for each game she bowls.",
-                    "SHOW or EXPLAIN whether Mandy has enough money to rent bowling shoes and pay for 4 games at the bowling alley."
+                    "Mandy has `$25` to spend at the bowling alley.",
+                    "She will pay `$3` to rent bowling shoes for the `text(day)`.",
+                    "She will pay `$5` for `text(each game)` she bowls.",
+                    "SHOW or EXPLAIN whether Mandy has enough money to rent bowling shoes and pay for `4` games at the bowling alley."
                 ],
                 "AnswerChoices": {}
             }

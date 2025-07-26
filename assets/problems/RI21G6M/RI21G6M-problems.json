@@ -14,12 +14,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of this expression when n = 5?",
-            ":ibox:45/n + 10"
+            "What is the value of this expression when `n=5`?",
+            ":ibox:`45/n+10`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "9",
+                "Choice": "`9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -27,7 +27,7 @@
                 }
             },
             "B": {
-                "Choice": "11",
+                "Choice": "`11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -35,7 +35,7 @@
                 }
             },
             "C": {
-                "Choice": "15",
+                "Choice": "`15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -43,7 +43,7 @@
                 }
             },
             "D": {
-                "Choice": "19",
+                "Choice": "`19`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -73,7 +73,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "|4| > 7",
+                "Choice": "`abs(4)>7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -81,7 +81,7 @@
                 }
             },
             "B": {
-                "Choice": "|-4| < 4",
+                "Choice": "`abs(-4)<4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -89,7 +89,7 @@
                 }
             },
             "C": {
-                "Choice": "|-7| > |4|",
+                "Choice": "`abs(-7)>abs(4)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -97,7 +97,7 @@
                 }
             },
             "D": {
-                "Choice": "|7| > |-7|",
+                "Choice": "`abs(7)>abs(-7)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -105,7 +105,7 @@
                 }
             },
             "E": {
-                "Choice": "|-4| < |-7|",
+                "Choice": "`abs(-4)<abs(-7)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -131,7 +131,7 @@
         "Explain": false,
         "Content": [
             "Consider this expression.",
-            ":ibox:7110 ÷ 90",
+            ":ibox:`7110-:90`",
             "What is the value of this expression?"
         ],
         "AnswerChoices": {
@@ -162,13 +162,13 @@
         "Explain": false,
         "Content": [
             "An electrician will use the following wires for a project:",
-            ":ibox:• 4 red wires that are each 36 inches in length\n\n• 2 blue wires that are each 84 inches in length",
+            ":ibox:• `4` red wires that are each `36` `text(inches)` in length\n\n• `2` blue wires that are each `84` `text(inches)` in length",
             "The electrician wants to cut all the wires into equal-sized pieces of the greatest possible length.",
             "Which of the following is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The greatest length the electrician can cut the wires into is 6 inches. The total number of pieces the electrician will have after the wires are cut is 26.",
+                "Choice": "The greatest length the electrician can cut the wires into is `6` `text(inches)`. The total number of pieces the electrician will have after the wires are cut is `26`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -176,7 +176,7 @@
                 }
             },
             "B": {
-                "Choice": "The greatest length the electrician can cut the wires into is 6 inches. The total number of pieces the electrician will have after the wires are cut is 51.",
+                "Choice": "The greatest length the electrician can cut the wires into is `6` `text(inches)`. The total number of pieces the electrician will have after the wires are cut is `51`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -184,7 +184,7 @@
                 }
             },
             "C": {
-                "Choice": "The greatest length the electrician can cut the wires into is 12 inches. The total number of pieces the electrician will have after the wires are cut is 26.",
+                "Choice": "The greatest length the electrician can cut the wires into is `12` `text(inches)`. The total number of pieces the electrician will have after the wires are cut is `26`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -192,7 +192,7 @@
                 }
             },
             "D": {
-                "Choice": "The greatest length the electrician can cut the wires into is 12 inches. The total number of pieces the electrician will have after the wires are cut is 51.",
+                "Choice": "The greatest length the electrician can cut the wires into is `12` `text(inches)`. The total number of pieces the electrician will have after the wires are cut is `51`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -217,12 +217,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A new office building will have 640 workers. A construction code requires that new buildings have 2 restrooms for every 80 workers in the building.",
+            "A new office building will have `640` workers. A construction code requires that new buildings have `2` restrooms for every `80` workers in the building.",
             "Based on the construction code, what is the total number of restrooms the new office building must have?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -230,7 +230,7 @@
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -238,7 +238,7 @@
                 }
             },
             "C": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -246,7 +246,7 @@
                 }
             },
             "D": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -271,7 +271,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "A city planner is creating designs for two dog parks.",
+            "A city planner is creating designs for `text(two)` dog parks.",
             ":ibox:THIS PROBLEM HAS THREE PARTS."
         ],
         "AnswerChoices": {},
@@ -282,9 +282,9 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The city planner is using a coordinate plane to create the design for the first park. The park will be in the shape of a rectangle. These four points represent the corners of the park.",
-                    ":ibox:• point A: (4, 1)\n\n• point B: (4, -3)\n\n• point C: (-2, -3)\n\n• point D: (-2, 1)",
-                    "On the coordinate plane provided in your answer space, plot the four points and then connect them to create the rectangle."
+                    "The city planner is using a coordinate plane to create the design for the `text(first)` park. The park will be in the shape of a rectangle. These `text(four)` points represent the corners of the park.",
+                    ":ibox:• point `A`: `(4,1)`\n\n• point `B`: `(4,-3)`\n\n• point `C`: `(-2,-3)`\n\n• point `D`: `(-2,1)`",
+                    "On the coordinate plane provided in your answer space, plot the `text(four)` points and then connect them to create the rectangle."
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -328,8 +328,8 @@
                 "Explain": true,
                 "Content": [
                     "What are the length and the width, in `text(units)`, of the rectangle you created in Part A to represent the park? Show or explain how you got your answer.",
-                    "\n\nLength = :FR-1:",
-                    "Width = :FR-2:"
+                    "\n\n`text(Length)=` :FR-1:",
+                    "`text(Width)=` :FR-2:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -356,12 +356,12 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The city planner is using another coordinate plane to create the design for the second park.",
-                    ":ibox:• The perimeter of the second park will be the same as the perimeter of the first park.\n\n• One corner of the second park is represented by the point (1, -2).\n\n• The second park is in the shape of a square.",
-                    "What could be the coordinates of the other three corners of the second park? Show or explain how you got your answer.",
-                    "\n\nFirst corner: :FR-1:",
-                    "Second corner: :FR-2:",
-                    "Third corner: :FR-3:"
+                    "The city planner is using another coordinate plane to create the design for the `text(second)` park.",
+                    ":ibox:• The perimeter of the `text(second)` park will be the same as the perimeter of the `text(first)` park.\n\n• `text(One)` corner of the `text(second)` park is represented by the point `(1,-2)`.\n\n• The `text(second)` park is in the shape of a square.",
+                    "What could be the coordinates of the other `text(three)` corners of the `text(second)` park? Show or explain how you got your answer.",
+                    "\n\n`text(First)` corner: :FR-1:",
+                    "`text(Second)` corner: :FR-2:",
+                    "`text(Third)` corner: :FR-3:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -407,7 +407,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following number lines shows a point that represents -3.6?"
+            "Which of the following number lines shows a point that represents `-3.6`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -460,8 +460,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A volleyball team played twenty games this season. This list of data shows the number of people in attendance at each game.",
-            ":box:36, 37, 18, 20, 42, 43, 37, 41, 45, 27, 38, 29, 30, 27, 46, 47, 40, 19, 35, 23",
+            "A volleyball team played `text(twenty)` games this season. This list of data shows the number of people in attendance at each game.",
+            ":box:`36,37,18,20,42,43,37,41,45,27,38,29,30,27,46,47,40,19,35,23`",
             "Which of the following histograms represents the data?"
         ],
         "AnswerChoices": {
@@ -516,12 +516,12 @@
         "Explain": false,
         "Content": [
             "Consider this inequality.",
-            ":ibox:5c > 10",
+            ":ibox:`5c>10`",
             "Which of the following is a solution to the inequality?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0",
+                "Choice": "`0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -529,7 +529,7 @@
                 }
             },
             "B": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -537,7 +537,7 @@
                 }
             },
             "C": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -545,7 +545,7 @@
                 }
             },
             "D": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -591,7 +591,7 @@
                 }
             },
             "C": {
-                "Choice": "How many minutes long is math class?",
+                "Choice": "How many `text(minutes)` long is math class?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -607,7 +607,7 @@
                 }
             },
             "E": {
-                "Choice": "How many minutes do you spend on math homework each week?",
+                "Choice": "How many `text(minutes)` do you spend on math homework each `text(week)`?",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -632,11 +632,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A family drank 4 gallons of juice over 5 weeks. During this time period, at what rate did the family drink juice?"
+            "A family drank `4` `text(gallons)` of juice over `5` `text(weeks)`. During this time period, at what rate did the family drink juice?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4/5 gallon per week",
+                "Choice": "`4/5` `text(gallon per week)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -644,7 +644,7 @@
                 }
             },
             "B": {
-                "Choice": "5/4 gallons per week",
+                "Choice": "`5/4` `text(gallons per week)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -652,7 +652,7 @@
                 }
             },
             "C": {
-                "Choice": "1 gallon per week",
+                "Choice": "`1` `text(gallon per week)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -660,7 +660,7 @@
                 }
             },
             "D": {
-                "Choice": "9 gallons per week",
+                "Choice": "`9` `text(gallons per week)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -686,13 +686,13 @@
         "Explain": false,
         "Content": [
             "Consider this expression.",
-            ":ibox:6x + 24",
+            ":ibox:`6x+24`",
             "Which of the following are equivalent to the expression?",
             "Select the THREE equivalent expressions."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6(x + 4)",
+                "Choice": "`6(x+4)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -700,7 +700,7 @@
                 }
             },
             "B": {
-                "Choice": "6(x + 24)",
+                "Choice": "`6(x+24)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -708,7 +708,7 @@
                 }
             },
             "C": {
-                "Choice": "3(12 + 2x)",
+                "Choice": "`3(12+2x)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -716,7 +716,7 @@
                 }
             },
             "D": {
-                "Choice": "2(3x + 12)",
+                "Choice": "`2(3x+12)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -724,7 +724,7 @@
                 }
             },
             "E": {
-                "Choice": "3x + 3 + 20 + 4x",
+                "Choice": "`3x+3+20+4x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -732,7 +732,7 @@
                 }
             },
             "F": {
-                "Choice": "4x + 12 + 2x + 12",
+                "Choice": "`4x+12+2x+12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -758,12 +758,12 @@
         "Explain": false,
         "Content": [
             "Consider this expression.",
-            ":ibox:5/6 ÷ 2/3",
+            ":ibox:`5/6-:2/3`",
             "Which of the following is the quotient of the expression?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10/18",
+                "Choice": "`10/18`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -771,7 +771,7 @@
                 }
             },
             "B": {
-                "Choice": "12/15",
+                "Choice": "`12/15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -779,7 +779,7 @@
                 }
             },
             "C": {
-                "Choice": "15/12",
+                "Choice": "`15/12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -787,7 +787,7 @@
                 }
             },
             "D": {
-                "Choice": "18/10",
+                "Choice": "`18/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -812,7 +812,7 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "On Monday, there were 18 chickens and 12 sheep in a field. There were no other animals in the field.",
+            "On `text(Monday)`, there were `18` chickens and `12` sheep in a field. There were no other animals in the field.",
             ":ibox:THIS PROBLEM HAS FOUR PARTS."
         ],
         "AnswerChoices": {},
@@ -823,7 +823,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "What was the ratio of chickens to sheep in the field on Monday?"
+                    "What was the ratio of chickens to sheep in the field on `text(Monday)`?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -842,7 +842,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "For every 2 sheep in the field on Monday, how many chickens were in the field? Show or explain how you got your answer."
+                    "For every `2` sheep in the field on `text(Monday)`, how many chickens were in the field? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -861,7 +861,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "The ratio 3:5 can also be used to describe a relationship between the animals in the field on Monday. What relationship could this ratio describe? Show or explain how you got your answer."
+                    "The ratio `3:5` can also be used to describe a relationship between the animals in the field on `text(Monday)`. What relationship could this ratio describe? Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -880,7 +880,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "On Tuesday, there were 4 more sheep in the field. Write a ratio to show the relationship between the number of sheep and the total number of animals in the field on Tuesday. Show or explain how you got your answer."
+                    "On `text(Tuesday)`, there were `4` more sheep in the field. Write a ratio to show the relationship between the number of sheep and the total number of animals in the field on `text(Tuesday)`. Show or explain how you got your answer."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -910,7 +910,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The length of a yellow ribbon is 6.75 inches. The length of a green ribbon is greater than the length of the yellow ribbon.",
+            "The length of a yellow ribbon is `6.75` `text(inches)`. The length of a green ribbon is greater than the length of the yellow ribbon.",
             "Which of the following number lines shows the graph of an inequality that represents all the possible lengths, in `text(inches)`, of the green ribbon?"
         ],
         "AnswerChoices": {
@@ -965,12 +965,12 @@
         "Explain": false,
         "Content": [
             "A teenager is saving money to buy a snowboard.",
-            ":ibox:• The snowboard costs $132, including sales tax.\n\n• The teenager has already saved $23.",
-            "Which of the following equations could be used to find m, the remaining amount of money, in `text(dollars)`, the teenager must save to buy the snowboard?"
+            ":ibox:• The snowboard costs `$132`, including sales tax.\n\n• The teenager has already saved `$23`.",
+            "Which of the following equations could be used to find `m`, the remaining amount of money, in `text(dollars)`, the teenager must save to buy the snowboard?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "m/23 = 132",
+                "Choice": "`m/23=132`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -978,7 +978,7 @@
                 }
             },
             "B": {
-                "Choice": "23m = 132",
+                "Choice": "`23m=132`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -986,7 +986,7 @@
                 }
             },
             "C": {
-                "Choice": "m - 23 = 132",
+                "Choice": "`m-23=132`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -994,7 +994,7 @@
                 }
             },
             "D": {
-                "Choice": "m + 23 = 132",
+                "Choice": "`m+23=132`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1019,12 +1019,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A plumber charges a rate of $45 for each hour of work.",
+            "A plumber charges a rate of `$45` for `text(each hour)` of work.",
             "Which of the following is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for x hours of work is 45x. At this rate, for 2 hours of work the plumber will charge $47.",
+                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for `x` `text(hours)` of work is `45x`. At this rate, for `2` `text(hours)` of work the plumber will charge `$47`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1032,7 +1032,7 @@
                 }
             },
             "B": {
-                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for x hours of work is 45x. At this rate, for 2 hours of work the plumber will charge $90.",
+                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for `x` `text(hours)` of work is `45x`. At this rate, for `2` `text(hours)` of work the plumber will charge `$90`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1040,7 +1040,7 @@
                 }
             },
             "C": {
-                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for x hours of work is 45 + x. At this rate, for 2 hours of work the plumber will charge $47.",
+                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for `x` `text(hours)` of work is `45+x`. At this rate, for `2` `text(hours)` of work the plumber will charge `$47`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1048,7 +1048,7 @@
                 }
             },
             "D": {
-                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for x hours of work is 45 + x. At this rate, for 2 hours of work the plumber will charge $90.",
+                "Choice": "An expression that represents the amount, in `text(dollars)`, that the plumber will charge for `x` `text(hours)` of work is `45+x`. At this rate, for `2` `text(hours)` of work the plumber will charge `$90`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1061,7 +1061,7 @@
     "18": {
         "Number": 18,
         "Type": "MP",
-        "NumChoices": 2,
+        "NumChoices": 0,
         "Topics": [
             "Statistics & Probability"
         ],
@@ -1070,11 +1070,11 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "This list shows the number of countries outside the United States that 12 students in Mr. Miller's class have visited.",
-            ":box:3, 1, 9, 5, 2, 0, 0, 2, 6, 1, 6, 1",
+            "This list shows the number of countries outside the United States that `12` students in Mr. Miller's class have visited.",
+            ":box:`3,1,9,5,2,0,0,2,6,1,6,1`",
             ":ibox:THIS PROBLEM HAS TWO PARTS."
         ],
         "AnswerChoices": {},
@@ -1089,7 +1089,7 @@
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "1",
+                        "Choice": "`1`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1097,7 +1097,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "2",
+                        "Choice": "`2`",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1105,7 +1105,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "3",
+                        "Choice": "`3`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1113,7 +1113,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "9",
+                        "Choice": "`9`",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -1158,12 +1158,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The owner of a furniture store orders 6 chairs for every table she orders.",
-            "Which of the following equations can be used to find c, the total number of chairs she will order when she orders t tables?"
+            "The owner of a furniture store orders `6` chairs for every table she orders.",
+            "Which of the following equations can be used to find `c`, the total number of chairs she will order when she orders `t` tables?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6c = t",
+                "Choice": "`6c=t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1171,7 +1171,7 @@
                 }
             },
             "B": {
-                "Choice": "t + 6 = c",
+                "Choice": "`t+6=c`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1179,7 +1179,7 @@
                 }
             },
             "C": {
-                "Choice": "6t = c",
+                "Choice": "`6t=c`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1187,7 +1187,7 @@
                 }
             },
             "D": {
-                "Choice": "c + 6 = t",
+                "Choice": "`c+6=t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1216,7 +1216,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 = 2³",
+                "Choice": "`8=2^3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1224,7 +1224,7 @@
                 }
             },
             "B": {
-                "Choice": "9^2 = 18",
+                "Choice": "`9^2=18`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1232,7 +1232,7 @@
                 }
             },
             "C": {
-                "Choice": "12 = 6^2",
+                "Choice": "`12=6^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1240,7 +1240,7 @@
                 }
             },
             "D": {
-                "Choice": "7³ = 21",
+                "Choice": "`7^3=21`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

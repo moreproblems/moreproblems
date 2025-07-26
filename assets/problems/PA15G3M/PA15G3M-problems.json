@@ -14,21 +14,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Carla has a list of three numbers.",
-            ":box:• Carla's numbers are in order from least to greatest.\n\n• The first number in her list has the least tens.\n\n• Every number in her list has fewer tens than ones.",
+            "Carla has a list of `text(three)` numbers.",
+            ":box:• Carla's numbers are in order from least to greatest.\n\n• The `text(first)` number in her list has the least `text(tens)`.\n\n• Every number in her list has fewer `text(tens)` than `text(ones)`.",
             "Which list of numbers could be Carla's list?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "125\t146\t153",
+                "Choice": "`125`\t`146`\t`153`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not realize that 153 has fewer ones than tens.",
+                    "Rationale": "Does not realize that `153` has fewer `text(ones)` than `text(tens)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "127\t145\t234",
+                "Choice": "`127`\t`145`\t`234`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -36,15 +36,15 @@
                 }
             },
             "C": {
-                "Choice": "158\t176\t245",
+                "Choice": "`158`\t`176`\t`245`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Ignores that the second number has more tens than ones.",
+                    "Rationale": "Ignores that the `text(second)` number has more `text(tens)` than `text(ones)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "168\t235\t224",
+                "Choice": "`168`\t`235`\t`224`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not realize that the numbers are not listed from least to greatest.",
@@ -71,23 +71,23 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mrs. Jackson has 47 boxes of crayons.",
-            "There are 8 crayons in each box.",
+            "Mrs. Jackson has `47` boxes of crayons.",
+            "There are `8` crayons in each box.",
             "To estimate the total number of crayons, she uses the steps shown below.",
-            ":box:• round 47 to the nearest ten\n\n• multiply the new number by 8",
+            ":box:• round `47` to the nearest `text(ten)`\n\n• multiply the new number by `8`",
             "What is Mrs. Jackson's estimate of the total number of crayons?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "320",
+                "Choice": "`320`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds 47 down to 40.",
+                    "Rationale": "Rounds `47` down to `40`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "400",
+                "Choice": "`400`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -95,18 +95,18 @@
                 }
             },
             "C": {
-                "Choice": "450",
+                "Choice": "`450`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 5 x 8 = 45, not 40.",
+                    "Rationale": "Thinks `5xx8=45`, not `40`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "580",
+                "Choice": "`580`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds the 8 to 50 and then puts a 0 on the end.",
+                    "Rationale": "Adds the `8` to `50` and then puts a `0` on the end.",
                     "Percent": 0
                 }
             }
@@ -130,22 +130,22 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "George bought 9 cases of bottled water.",
-            "Each case had 18 bottles of water in it.",
-            "To estimate the number of bottles of water he bought, George rounded 18 to the nearest ten and then multiplied that number by 9.",
+            "George bought `9` cases of bottled water.",
+            "Each case had `18` bottles of water in it.",
+            "To estimate the number of bottles of water he bought, George rounded `18` to the nearest `text(ten)` and then multiplied that number by `9`.",
             "What is George's estimate of the number of bottles of water he bought?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "90",
+                "Choice": "`90`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds 18 down to 10.",
+                    "Rationale": "Rounds `18` down to `10`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "180",
+                "Choice": "`180`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -153,18 +153,18 @@
                 }
             },
             "C": {
-                "Choice": "209",
+                "Choice": "`209`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds correctly but then appends the 9 to the 20.",
+                    "Rationale": "Rounds correctly but then appends the `9` to the `20`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "290",
+                "Choice": "`290`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds correctly but then adds the 20 and 9 and puts a 0 on the end.",
+                    "Rationale": "Rounds correctly but then adds the `20and9` and puts a `0` on the end.",
                     "Percent": 0
                 }
             }
@@ -189,21 +189,21 @@
         "Explain": false,
         "Content": [
             "Kelly is planting groups of seeds.",
-            "She places 4 seeds into each group.",
-            "She plants 22 groups of carrot seeds and 38 groups of lettuce seeds.",
+            "She places `4` seeds into each group.",
+            "She plants `22` groups of carrot seeds and `38` groups of lettuce seeds.",
             "How many total seeds does Kelly plant?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "200",
+                "Choice": "`200`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "22 + 38 and gets 50, not carrying the 1.",
+                    "Rationale": "`22+38` and gets `50`, not carrying the `1`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "240",
+                "Choice": "`240`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -211,18 +211,18 @@
                 }
             },
             "C": {
-                "Choice": "300",
+                "Choice": "`300`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 6 x 4 = 30, not 24.",
+                    "Rationale": "Thinks `6xx4=30`, not `24`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "640",
+                "Choice": "`640`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 60 and 4 and then appends a 0.",
+                    "Rationale": "Adds `60and4` and then appends a `0`.",
                     "Percent": 0
                 }
             }
@@ -246,24 +246,24 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Three students were comparing how many times they each jumped on a trampoline.",
-            "Jorge jumped 345 times.",
-            "Keisha jumped 356 times.",
+            "`text(Three)` students were comparing how many times they each jumped on a trampoline.",
+            "Jorge jumped `345` times.",
+            "Keisha jumped `356` times.",
             "LeVar jumped more times than Jorge and fewer times than Keisha.",
-            "When each student's total was rounded to the nearest hundred, Jorge's total and LeVar's total were the same.",
+            "When each student's total was rounded to the nearest `text(hundred)`, Jorge's total and LeVar's total were the same.",
             "Which value could be the number of times LeVar jumped on the trampoline?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "305",
+                "Choice": "`305`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Picks a number that rounds correctly but is not greater than 345.",
+                    "Rationale": "Picks a number that rounds correctly but is not greater than `345`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "347",
+                "Choice": "`347`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -271,18 +271,18 @@
                 }
             },
             "C": {
-                "Choice": "350",
+                "Choice": "`350`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 350 rounds down, not up.",
+                    "Rationale": "Thinks `350` rounds down, not up.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "362",
+                "Choice": "`362`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 362 < 356 because of the 2 in the ones place.",
+                    "Rationale": "Thinks `362<356` because of the `2` in the ones place.",
                     "Percent": 0
                 }
             }
@@ -306,13 +306,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below shows the number of loaves of bread baked at a bakery on three days.",
+            "The table below shows the number of loaves of bread baked at a bakery on `text(three days)`.",
             "problems/PA15G3M/media/6a.jpg",
             "Which list shows the days in order of total number of loaves of bread baked from least to greatest?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Monday\tTuesday\tWednesday",
+                "Choice": "`text(Monday)`\t`text(Tuesday)`\t`text(Wednesday)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Days in week order.",
@@ -320,7 +320,7 @@
                 }
             },
             "B": {
-                "Choice": "Tuesday\tMonday\tWednesday",
+                "Choice": "`text(Tuesday)`\t`text(Monday)`\t`text(Wednesday)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Morning only.",
@@ -328,7 +328,7 @@
                 }
             },
             "C": {
-                "Choice": "Wednesday\tTuesday\tMonday",
+                "Choice": "`text(Wednesday)`\t`text(Tuesday)`\t`text(Monday)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Afternoon only.",
@@ -336,7 +336,7 @@
                 }
             },
             "D": {
-                "Choice": "Tuesday\tWednesday\tMonday",
+                "Choice": "`text(Tuesday)`\t`text(Wednesday)`\t`text(Monday)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -351,7 +351,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Represent fractions on a number line (limit denominators to `2,3,4,6,and8`; limit numerators to whole numbers less than the denominator; and no simplification necessary)."
@@ -361,7 +361,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In Sierra's third-grade class, 3/8 of the students are boys.",
+            "In Sierra's third-grade class, `3/8` of the students are boys.",
             "Which number line has a point on the fraction of the students that are boys?"
         ],
         "AnswerChoices": {
@@ -369,7 +369,7 @@
                 "Choice": "problems/PA15G3M/media/7a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows 3/8 is less than 1/2 but not able to compare to 1/4.",
+                    "Rationale": "Knows `3/8` is less than `1/2` but not able to compare to `1/4`.",
                     "Percent": 0
                 }
             },
@@ -385,7 +385,7 @@
                 "Choice": "problems/PA15G3M/media/7c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Moves 3 tick marks from the wrong end of the number line.",
+                    "Rationale": "Moves `3` tick marks from the wrong end of the number line.",
                     "Percent": 0
                 }
             },
@@ -393,7 +393,7 @@
                 "Choice": "problems/PA15G3M/media/7d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 3/8 is greater than 3/4 because 8 is greater than 4.",
+                    "Rationale": "Thinks `3/8` is greater than `3/4` because `8` is greater than `4`.",
                     "Percent": 0
                 }
             }
@@ -405,7 +405,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Compare two fractions with the same denominator (limit denominators to `1,2,3,4,6,and8`), using the symbols `>,=,or<`, and/or justify the conclusions."
@@ -416,8 +416,8 @@
         "Explain": false,
         "Content": [
             "Bill and Cindy ate some pieces from the same pie.",
-            "Bill ate 3/8 of the pie.",
-            "Cindy ate 1/8 of the pie.",
+            "Bill ate `3/8` of the pie.",
+            "Cindy ate `1/8` of the pie.",
             "Which statement is true?"
         ],
         "AnswerChoices": {
@@ -441,7 +441,7 @@
                 "Choice": "Bill and Cindy ate the whole pie.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks each person ate half the pie.",
+                    "Rationale": "Thinks each person ate `text(half)` the pie.",
                     "Percent": 0
                 }
             },
@@ -461,8 +461,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Demonstrate that when a whole or set is partitioned into `y` equal parts, the fraction `1/y` represents `1` part of the whole and/or the fraction `x/y` represents `x` equal parts of the whole (limit denominators to `2,3,4,6,and8`; limit numerators to whole numbers less than the denominator; and no simplification necessary).",
@@ -479,15 +479,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/10",
+                "Choice": "`2/10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Miscounts and thinks 1/5 is shaded.",
+                    "Rationale": "Miscounts and thinks `1/5` is shaded.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "2/8",
+                "Choice": "`2/8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -495,15 +495,15 @@
                 }
             },
             "C": {
-                "Choice": "2/6",
+                "Choice": "`2/6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Ratio equivalent to 1 shaded and 3 unshaded parts.",
+                    "Rationale": "Ratio equivalent to `1` shaded and `3` unshaded parts.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "3/1",
+                "Choice": "`3/1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Ratio of white to shaded.",
@@ -518,8 +518,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Recognize and generate simple equivalent fractions (limit the denominators to `1,2,3,4,6,and8` and limit numerators to whole numbers less than the denominator).",
@@ -530,37 +530,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 8 players on a basketball team.",
-            "There are 4 girls on the team.",
+            "There are `8` players on a basketball team.",
+            "There are `4` girls on the team.",
             "What fraction of the players on the team are girls?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/5",
+                "Choice": "`1/5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrect simplification of fraction, subtracts 3 from numerator and denominator.",
+                    "Rationale": "Incorrect simplification of fraction, subtracts `3` from numerator and denominator.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "1/4",
+                "Choice": "`1/4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrect simplification of fraction, divides numerator by 4 and denominator by 2.",
+                    "Rationale": "Incorrect simplification of fraction, divides numerator by `4` and denominator by `2`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Incorrect naming of original fraction, 4/12 (part/part+whole).",
+                    "Rationale": "Incorrect naming of original fraction, `4/12` `(text(part)/text(part)+text(whole))`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "1/2",
+                "Choice": "`1/2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -575,8 +575,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Recognize and generate simple equivalent fractions (limit the denominators to `1,2,3,4,6,and8` and limit numerators to whole numbers less than the denominator).",
@@ -587,21 +587,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Lou bought 6 doughnuts.",
-            "There were 2 doughnuts with sprinkles.",
+            "Lou bought `6` doughnuts.",
+            "There were `2` doughnuts with sprinkles.",
             "Which fraction represents the doughnuts Lou bought that had sprinkles?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/5",
+                "Choice": "`1/5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Starts with 2/6 and subtracts 1 from numerator and denominator.",
+                    "Rationale": "Starts with `2/6` and subtracts `1` from numerator and denominator.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -609,7 +609,7 @@
                 }
             },
             "C": {
-                "Choice": "2/4",
+                "Choice": "`2/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the number of unsprinkled doughnuts for the denominator.",
@@ -617,10 +617,10 @@
                 }
             },
             "D": {
-                "Choice": "6/10",
+                "Choice": "`6/10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Starts with 2/6 and adds 4 to the numerator and denominator.",
+                    "Rationale": "Starts with `2/6` and adds `4` to the numerator and denominator.",
                     "Percent": 0
                 }
             }
@@ -642,16 +642,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A pet store has a total of 24 fish tanks.",
+            "A pet store has a total of `24` fish tanks.",
             "A worker at the pet store puts the fish tanks in rows.",
-            "There are 6 fish tanks in each row.",
+            "There are `6` fish tanks in each row.",
             "The expression shown below can be used to find the number of rows.",
-            "24 ÷ 6",
+            ":ibox:`24-:6`",
             "Which sentence about the rows of fish tanks is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "There are 4 rows of fish tanks.",
+                "Choice": "There are `4` rows of fish tanks.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -659,7 +659,7 @@
                 }
             },
             "B": {
-                "Choice": "There are 6 rows of fish tanks.",
+                "Choice": "There are `6` rows of fish tanks.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the divisor as the number of rows.",
@@ -667,7 +667,7 @@
                 }
             },
             "C": {
-                "Choice": "There are 8 rows of fish tanks.",
+                "Choice": "There are `8` rows of fish tanks.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Divides incorrectly.",
@@ -675,7 +675,7 @@
                 }
             },
             "D": {
-                "Choice": "There are 24 rows of fish tanks.",
+                "Choice": "There are `24` rows of fish tanks.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the dividend represents the number of rows, not the total number of tanks.",
@@ -700,7 +700,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Brent gave 8 colored pencils to each of his 4 friends.",
+            "Brent gave `8` colored pencils to each of his `4` friends.",
             "Which number sentence can be used to find the total number of colored pencils `(square)` Brent gave to his friends?"
         ],
         "AnswerChoices": {
@@ -754,13 +754,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Kayla has 12 seeds.",
-            "She plants an equal number of seeds in each of 4 pots.",
+            "Kayla has `12` seeds.",
+            "She plants an equal number of seeds in each of `4` pots.",
             "How many seeds did Kayla plant in each pot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -768,7 +768,7 @@
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts.",
@@ -776,7 +776,7 @@
                 }
             },
             "C": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds.",
@@ -784,7 +784,7 @@
                 }
             },
             "D": {
-                "Choice": "48",
+                "Choice": "`48`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Multiplies.",
@@ -809,15 +809,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jill puts 24 brownies onto `square` plates.",
-            "She put 4 brownies onto each plate.",
+            "Jill puts `24` brownies onto `square` plates.",
+            "She put `4` brownies onto each plate.",
             "The number sentence below can be used to find how many plates Jill uses.",
             ":ibox:`24-:square=4`",
             "How many plates `(square)` does Jill use for brownies?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -825,26 +825,26 @@
                 }
             },
             "B": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Knows 8 is a factor of 24.",
+                    "Rationale": "Knows `8` is a factor of `24`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "24 - 4.",
+                    "Rationale": "`24-4`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "28",
+                "Choice": "`28`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "24 + 4.",
+                    "Rationale": "`24+4`.",
                     "Percent": 0
                 }
             }
@@ -868,14 +868,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 3 gorillas living in a zoo.",
-            "Each gorilla eats 40 pounds of food each day.",
-            "The expression 3 × 7 × 40 represents the total amount of food, in `text(pounds)`, the 3 gorillas eat in one week.",
-            "Which expression also represents the total amount of food, in `text(pounds)`, the 3 gorillas eat in one week?"
+            "There are `3` gorillas living in a zoo.",
+            "Each gorilla eats `40` `text(pounds)` of food `text(each day)`.",
+            "The expression `3xx7xx40` represents the total amount of food, in `text(pounds)`, the `3` gorillas eat in `text(one week)`.",
+            "Which expression also represents the total amount of food, in `text(pounds)`, the `3` gorillas eat in `text(one week)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × 47",
+                "Choice": "`3xx47`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds instead of multiplies.",
@@ -883,7 +883,7 @@
                 }
             },
             "B": {
-                "Choice": "7 × 43",
+                "Choice": "`7xx43`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds instead of multiplies.",
@@ -891,7 +891,7 @@
                 }
             },
             "C": {
-                "Choice": "28 × 40",
+                "Choice": "`28xx40`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Error in multiplication.",
@@ -899,7 +899,7 @@
                 }
             },
             "D": {
-                "Choice": "120 × 7",
+                "Choice": "`120xx7`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -927,14 +927,14 @@
         "Explain": false,
         "Content": [
             "There are `4` `text(tables)` in Cleo's classroom.",
-            "She puts 2 packages of crayons on each table.",
-            "Each package has 8 crayons.",
-            "Cleo finds the total number of crayons on the tables by multiplying 4 × 2 × 8.",
+            "She puts `2` packages of crayons on each table.",
+            "Each package has `8` crayons.",
+            "Cleo finds the total number of crayons on the tables by multiplying `4xx2xx8`.",
             "Which expression shows another way Cleo could find the total number of crayons on the tables?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + 2 + 8",
+                "Choice": "`4+2+8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition symbol instead of multiplication symbol.",
@@ -942,7 +942,7 @@
                 }
             },
             "B": {
-                "Choice": "4 × 8 + 2",
+                "Choice": "`4xx8+2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Applies commutative property, but with addition symbol.",
@@ -950,7 +950,7 @@
                 }
             },
             "C": {
-                "Choice": "2 × 4 × 8",
+                "Choice": "`2xx4xx8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -958,7 +958,7 @@
                 }
             },
             "D": {
-                "Choice": "2 × 4 + 8",
+                "Choice": "`2xx4+8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Applies commutative property, but with addition symbol.",
@@ -983,14 +983,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Joey has 27 toy cars.",
-            "He puts an equal number of cars on each of the 3 shelves in his room.",
+            "Joey has `27` toy cars.",
+            "He puts an equal number of cars on each of the `3` shelves in his room.",
             "He uses division to find the numbers of cars on each shelf.",
             "Which number sentence shows a way Joey could find the number of cars on each shelf?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 + ? = 27",
+                "Choice": "`3+?=27`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition instead of multiplication.",
@@ -998,7 +998,7 @@
                 }
             },
             "B": {
-                "Choice": "3 × ? = 27",
+                "Choice": "`3xx?=27`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1006,7 +1006,7 @@
                 }
             },
             "C": {
-                "Choice": "3 + 27 =?",
+                "Choice": "`3+27=?`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds the numbers given in the stem.",
@@ -1014,7 +1014,7 @@
                 }
             },
             "D": {
-                "Choice": "3 × 27 =?",
+                "Choice": "`3xx27=?`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses multiplication, but incorrect placement of numbers.",
@@ -1039,8 +1039,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 6 ponies for children to ride at the fair.",
-            "In one hour, the ponies gave a total of 42 rides.",
+            "There are `6` ponies for children to ride at the fair.",
+            "In `text(one hour)`, the ponies gave a total of `42` rides.",
             "Each pony gave the same number of rides.",
             "The equation below shows how to find the number of rides `(square)` each pony gave.",
             ":ibox:`42-:6=square`",
@@ -1067,7 +1067,7 @@
                 "Choice": "`square-:42=6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reverses 42 and the unknown factor.",
+                    "Rationale": "Reverses `42` and the unknown factor.",
                     "Percent": 0
                 }
             },
@@ -1097,13 +1097,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Eva buys 3 bags of balloons.",
-            "There are 4 red balloons and 5 blue balloons in each bag.",
+            "Eva buys `3` bags of balloons.",
+            "There are `4` red balloons and `5` blue balloons in each bag.",
             "Which expression shows how many red and blue balloons Eva buys?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 + 4 + 5",
+                "Choice": "`3+4+5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Only uses addition.",
@@ -1111,7 +1111,7 @@
                 }
             },
             "B": {
-                "Choice": "3 × 4 × 5",
+                "Choice": "`3xx4xx5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Only uses multiplication.",
@@ -1119,7 +1119,7 @@
                 }
             },
             "C": {
-                "Choice": "3 + 4 × 3 + 5",
+                "Choice": "`3+4xx3+5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition and multiplication but in incorrect locations.",
@@ -1127,7 +1127,7 @@
                 }
             },
             "D": {
-                "Choice": "3 × 4 + 3 × 5",
+                "Choice": "`3xx4+3xx5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1152,13 +1152,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A bathtub is filled with 50 gallons of water.",
-            "Each gallon of water weighs between 8 and 9 pounds.",
+            "A bathtub is filled with `50` `text(gallons)` of water.",
+            "Each `text(gallon)` of water weighs between `8and9` `text(pounds)`.",
             "Which weight, in `text(pounds)`, is closest to the weight of the water in the bathtub?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "42",
+                "Choice": "`42`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Place value error in multiplying.",
@@ -1166,7 +1166,7 @@
                 }
             },
             "B": {
-                "Choice": "420",
+                "Choice": "`420`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1174,7 +1174,7 @@
                 }
             },
             "C": {
-                "Choice": "4,200",
+                "Choice": "`4text(,)200`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Place value error in multiplying.",
@@ -1182,7 +1182,7 @@
                 }
             },
             "D": {
-                "Choice": "42,000",
+                "Choice": "`42text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Place value error in multiplying.",
@@ -1208,8 +1208,8 @@
         "Explain": false,
         "Content": [
             "Ed picked `square `baskets of berries.",
-            "Jasmine picked 2 more baskets of berries than Ed picked.",
-            "Ed and Jasmine picked a total of 8 baskets of berries.",
+            "Jasmine picked `2` more baskets of berries than Ed picked.",
+            "Ed and Jasmine picked a total of `8` baskets of berries.",
             "Which equation can be used to find the number of baskets `(square)` Ed picked?"
         ],
         "AnswerChoices": {
@@ -1217,12 +1217,12 @@
                 "Choice": "`square+2=8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses 2 for total number of baskets picked by Jasmine instead of 2 more than “square”.",
+                    "Rationale": "Uses `2` for total number of baskets picked by Jasmine instead of `2` more than “`square`”.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "squarexx2=8`",
+                "Choice": "`squarexx2=8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Same number of baskets picked by each.",
@@ -1241,7 +1241,7 @@
                 "Choice": "`square+squarexx2=8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Wrong operation, multiplies for 2 more than “square”.",
+                    "Rationale": "Wrong operation, multiplies for `2` more than “`square`”.",
                     "Percent": 0
                 }
             }
@@ -1265,10 +1265,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Carlos volunteers `square` days at the library each month.",
-            "In March, he volunteered 3 extra days at the library.",
-            "In January, February, and March, Carlos volunteered a total of 39 days at the library.",
-            "Which pair of equations shows the number of days `(square)` Carlos volunteers each month?"
+            "Carlos volunteers `square` `text(days)` at the library each month.",
+            "In `text(March)`, he volunteered `3` extra `text(days)` at the library.",
+            "In `text(January),text(February),andtext(March)`, Carlos volunteered a total of `39` `text(days)` at the library.",
+            "Which pair of equations shows the number of `text(days)` `(square)` Carlos volunteers each month?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1283,7 +1283,7 @@
                 "Choice": "`3xxsquare=39`\n`square=13`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Ignores the 3 extra days.",
+                    "Rationale": "Ignores the `3` extra `text(days)`.",
                     "Percent": 0
                 }
             },
@@ -1291,7 +1291,7 @@
                 "Choice": "`3xxsquare-3=39`\n`square=14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts the 3 extra days.",
+                    "Rationale": "Subtracts the `3` extra `text(days)`.",
                     "Percent": 0
                 }
             },
@@ -1299,7 +1299,7 @@
                 "Choice": "`3+square=39`\n`square=36`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds the total number of regular days.",
+                    "Rationale": "Finds the total number of regular `text(days)`.",
                     "Percent": 0
                 }
             }
@@ -1323,9 +1323,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Last year, José subscribed to 4 different magazines.",
-            "He received 6 issues of each magazine.",
-            "He also bought 7 issues of other magazines at a bookstore.",
+            "Last year, José subscribed to `4` different magazines.",
+            "He received `6` issues of each magazine.",
+            "He also bought `7` issues of other magazines at a bookstore.",
             "Which pair of equations shows the total number of magazine issues `(square)` José got last year?"
         ],
         "AnswerChoices": {
@@ -1349,7 +1349,7 @@
                 "Choice": "`4xx7+6=square`\n`square=34`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 4 by 7 instead of 6.",
+                    "Rationale": "Multiplies `4` by `7` instead of `6`.",
                     "Percent": 0
                 }
             },
@@ -1357,7 +1357,7 @@
                 "Choice": "`4+7xx6=square`\n`square=46`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies the wrong two numbers together.",
+                    "Rationale": "Multiplies the wrong `text(two)` numbers together.",
                     "Percent": 0
                 }
             }
@@ -1385,15 +1385,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "+",
+                "Choice": "`+`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks you add 9.",
+                    "Rationale": "Thinks you add `9`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "×",
+                "Choice": "`xx`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1401,18 +1401,18 @@
                 }
             },
             "C": {
-                "Choice": "÷",
+                "Choice": "`-:`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks since one symbol is ×, the other should be ÷.",
+                    "Rationale": "Thinks since one symbol is `xx`, the other should be `-:`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "<",
+                "Choice": "`<`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Only compares 4 and 9 (or 2 × 4 and 9).",
+                    "Rationale": "Only compares `4and9` (or `2xx4and9`).",
                     "Percent": 0
                 }
             }
@@ -1492,7 +1492,7 @@
         "Content": [
             "A map is drawn in the shape of a square.",
             "The map is then divided into parts.",
-            "Each part has an area equal to 1/4 the area of the entire map.",
+            "Each part has an area equal to `1/4` the area of the entire map.",
             "Each part is a rectangle but is not a square.",
             "Which figure could show how the map is divided?"
         ],
@@ -1501,7 +1501,7 @@
                 "Choice": "problems/PA15G3M/media/27a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a figure with 1/4 the area but divided into squares.",
+                    "Rationale": "Selects a figure with `1/4` the area but divided into squares.",
                     "Percent": 0
                 }
             },
@@ -1509,7 +1509,7 @@
                 "Choice": "problems/PA15G3M/media/27b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects a figure with areas equal to 1/9, not 1/4, of the total area.",
+                    "Rationale": "Selects a figure with areas equal to `1/9`, not `1/4`, of the total area.",
                     "Percent": 0
                 }
             },
@@ -1549,7 +1549,7 @@
         "Content": [
             "Carol draws a rhombus.",
             "It is not a square.",
-            "She divides it into three equal-size parts.",
+            "She divides it into `text(three)` equal-size parts.",
             "Which figure could be Carol's rhombus?"
         ],
         "AnswerChoices": {
@@ -1581,7 +1581,7 @@
                 "Choice": "problems/PA15G3M/media/28d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 non-equal areas.",
+                    "Rationale": "`3` non-equal areas.",
                     "Percent": 0
                 }
             }
@@ -1603,16 +1603,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Paul divides a shape into two parts by drawing one line as shown below.",
+            "Paul divides a shape into `text(two)` parts by drawing `text(one)` line as shown below.",
             "problems/PA15G3M/media/29a.jpg",
-            "Which term describes the two parts and the original shape?"
+            "Which term describes the `text(two)` parts and the original shape?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "octagon",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Counts 2 shapes with 4 sides each = 8 sides.",
+                    "Rationale": "Counts `2` shapes with `4` sides each `=8` sides.",
                     "Percent": 0
                 }
             },
@@ -1658,29 +1658,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four shapes are shown below.",
+            "`text(Four)` shapes are shown below.",
             "problems/PA15G3M/media/30a.jpg",
             "Which statement is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The four shapes are all trapezoids.",
+                "Choice": "The `text(four)` shapes are all trapezoids.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks trapezoids have at least 1 pair of parallel sides, not exactly 1 pair of parallel sides.",
+                    "Rationale": "Thinks trapezoids have at least `1` pair of parallel sides, not exactly `1` pair of parallel sides.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "The four shapes are all rectangles.",
+                "Choice": "The `text(four)` shapes are all rectangles.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses third shape for a rectangle.",
+                    "Rationale": "Confuses `text(third)` shape for a rectangle.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "The four shapes are all quadrilaterals.",
+                "Choice": "The `text(four)` shapes are all quadrilaterals.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1688,10 +1688,10 @@
                 }
             },
             "D": {
-                "Choice": "The four shapes are all parallelograms.",
+                "Choice": "The `text(four)` shapes are all parallelograms.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks parallelograms have at least 1 pair of parallel sides, not 2 pairs of parallel sides.",
+                    "Rationale": "Thinks parallelograms have at least `1` pair of parallel sides, not `2` pairs of parallel sides.",
                     "Percent": 0
                 }
             }
@@ -1714,14 +1714,14 @@
         "Explain": false,
         "Content": [
             "Lee has quilt patches.",
-            "Which quilt patch has 1/4 of its area shaded?"
+            "Which quilt patch has `1/4` of its area shaded?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/PA15G3M/media/31a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "1/5, ratio of 1 section shaded to 4 sections unshaded.",
+                    "Rationale": "`1/5`, ratio of `1` section shaded to `4` sections unshaded.",
                     "Percent": 0
                 }
             },
@@ -1729,7 +1729,7 @@
                 "Choice": "problems/PA15G3M/media/31b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "1 of 4 areas, but area is only 1/6 of the patch.",
+                    "Rationale": "`1` of `4` areas, but area is only `1/6` of the patch.",
                     "Percent": 0
                 }
             },
@@ -1737,7 +1737,7 @@
                 "Choice": "problems/PA15G3M/media/31c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "1 of 4 areas, but area is only 1/6 of the patch.",
+                    "Rationale": "`1` of `4` areas, but area is only `1/6` of the patch.",
                     "Percent": 0
                 }
             },
@@ -1767,29 +1767,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Dana has three coins in her pocket.",
-            "No two coins have the same value.",
+            "Dana has `text(three)` coins in her pocket.",
+            "No `text(two)` coins have the same value.",
             "What is the least amount of money Dana could have in her pocket?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3¢",
+                "Choice": "`3¢`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks all three are pennies.",
+                    "Rationale": "Thinks all `text(three)` are pennies.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "11¢",
+                "Choice": "`11¢`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Counts two nickels and a penny.",
+                    "Rationale": "Counts `text(two)` nickels and a penny.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "16¢",
+                "Choice": "`16¢`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1797,7 +1797,7 @@
                 }
             },
             "D": {
-                "Choice": "40¢",
+                "Choice": "`40¢`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses a quarter, dime, and nickel (no coins the same, but not least possible amount).",
@@ -1824,31 +1824,31 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Three friends ran in a race.",
-            "The race started at 12:55.",
+            "`text(Three)` friends ran in a race.",
+            "The race started at `12:55`.",
             "The pictograph below shows the time it took each friend to finish the race.",
             "problems/PA15G3M/media/33a.jpg",
             "At what time did Zack finish the race?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1:00",
+                "Choice": "`1:00`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses Val's row and forgets to multiply by 2.",
+                    "Rationale": "Uses Val's row and forgets to multiply by `2`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "1:01",
+                "Choice": "`1:01`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 6 minutes to 12:55.",
+                    "Rationale": "Adds `6` `text(minutes)` to `12:55`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "1:05",
+                "Choice": "`1:05`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses Val's row.",
@@ -1856,7 +1856,7 @@
                 }
             },
             "D": {
-                "Choice": "1:07",
+                "Choice": "`1:07`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1883,21 +1883,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Kelly went to bed 30 minutes after the time shown on the clock.",
+            "Kelly went to bed `30` `text(minutes)` after the time shown on the clock.",
             "problems/PA15G3M/media/34a.jpg",
             "At what time did Kelly go to bed?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8:40",
+                "Choice": "`8:40`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reads time as 8:10.",
+                    "Rationale": "Reads time as `8:10`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "9:20",
+                "Choice": "`9:20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1905,18 +1905,18 @@
                 }
             },
             "C": {
-                "Choice": "9:40",
+                "Choice": "`9:40`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reads time as 8:10.",
+                    "Rationale": "Reads time as `9:10`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "10:20",
+                "Choice": "`10:20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reads time as 8:10.",
+                    "Rationale": "Reads time as `9:50`.",
                     "Percent": 0
                 }
             }
@@ -1940,21 +1940,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Marco arrived at the beach between 10:30 a.m. and 10:35 a.m.",
-            "He left the beach between 11:10 a.m. and 11:15 a.m.",
+            "Marco arrived at the beach between `10:30` `text(a.m.)and10:35` `text(a.m.)`",
+            "He left the beach between `11:10` `text(a.m.)and11:15` `text(a.m.)`",
             "Which is a possible amount of time Marco was at the beach?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "25 minutes",
+                "Choice": "`25` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 35 - 10.",
+                    "Rationale": "Subtracts `35-10`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "40 minutes",
+                "Choice": "`40` `text(minutes)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -1962,18 +1962,18 @@
                 }
             },
             "C": {
-                "Choice": "60 minutes",
+                "Choice": "`60` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Only looks at the hours (11 - 10 = 1 hour = 60 minutes).",
+                    "Rationale": "Only looks at the hours `(11-10=1` `text(hour)=60` `text(minutes))`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "75 minutes",
+                "Choice": "`75` `text(minutes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 1110 - 1035.",
+                    "Rationale": "Subtracts `1110-1035`.",
                     "Percent": 0
                 }
             }
@@ -1998,13 +1998,13 @@
         "Explain": false,
         "Content": [
             "Ethan is knitting a blanket.",
-            "He will use 20 balls of yarn.",
-            "There are 8 ounces of yarn in each ball.",
-            "How many ounces of yarn will Ethan use to knit the blanket?"
+            "He will use `20` balls of yarn.",
+            "There are `8` `text(ounces)` of yarn in each ball.",
+            "How many `text(ounces)` of yarn will Ethan use to knit the blanket?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "28",
+                "Choice": "`28`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds.",
@@ -2012,15 +2012,15 @@
                 }
             },
             "B": {
-                "Choice": "100",
+                "Choice": "`100`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses addition instead of multiplication and incorrectly adds the 8 to the 2 in the tens place.",
+                    "Rationale": "Uses addition instead of multiplication and incorrectly adds the `8` to the `2` in the `text(tens)` place.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "160",
+                "Choice": "`160`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -2028,10 +2028,10 @@
                 }
             },
             "D": {
-                "Choice": "208",
+                "Choice": "`208`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses multiplication rules and incorrectly appends the 8 to the end of the 20.",
+                    "Rationale": "Confuses multiplication rules and incorrectly appends the `8` to the end of the `20`.",
                     "Percent": 0
                 }
             }
@@ -2053,8 +2053,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Dante bought a package of carrots that cost $3.76.",
-            "He used $4.00 to pay for the carrots.",
+            "Dante bought a package of carrots that cost `$3.76`.",
+            "He used `$4.00` to pay for the carrots.",
             "Which group of coins shows the correct amount of change Dante should receive after paying for the carrots?"
         ],
         "AnswerChoices": {
@@ -2078,7 +2078,7 @@
                 "Choice": "problems/PA15G3M/media/37c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtraction error, subtracts.25 and then adds.01 instead of subtracting.01.",
+                    "Rationale": "Subtraction error, subtracts `.25` and then adds `.01` instead of subtracting `.01`.",
                     "Percent": 0
                 }
             },
@@ -2109,20 +2109,20 @@
         "Explain": false,
         "Content": [
             "Megan buys a book.",
-            "Rounded to the nearest dollar, her book costs $8.",
+            "Rounded to the nearest `text(dollar)`, her book costs `$8`.",
             "Which amount could be the exact cost of the book?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$7.48",
+                "Choice": "`$7.48`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds the 4 to 5 and then the 7 to 8 (double rounding).",
+                    "Rationale": "Rounds the `4` to `5` and then the `7` to `8` (double rounding).",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "$7.61",
+                "Choice": "`$7.61`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -2130,7 +2130,7 @@
                 }
             },
             "C": {
-                "Choice": "$8.83",
+                "Choice": "`$8.83`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Rounds down.",
@@ -2138,10 +2138,10 @@
                 }
             },
             "D": {
-                "Choice": "$9.08",
+                "Choice": "`$9.08`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds down by subtracting 1 from the ones place.",
+                    "Rationale": "Rounds down by subtracting `1` from the `text(ones)` place.",
                     "Percent": 0
                 }
             }
@@ -2165,15 +2165,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 77 third graders at Tyler's school.",
-            "Which pictograph shows this number of third graders rounded to the nearest 10?"
+            "There are `77` third graders at Tyler's school.",
+            "Which pictograph shows this number of third graders rounded to the nearest `10`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/PA15G3M/media/39a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds down to 70 and uses a scale of 20.",
+                    "Rationale": "Rounds down to `70` and uses a scale of `20`.",
                     "Percent": 0
                 }
             },
@@ -2181,7 +2181,7 @@
                 "Choice": "problems/PA15G3M/media/39b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses a scale of 20.",
+                    "Rationale": "Uses a scale of `20`.",
                     "Percent": 0
                 }
             },
@@ -2189,7 +2189,7 @@
                 "Choice": "problems/PA15G3M/media/39c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds down to 70.",
+                    "Rationale": "Rounds down to `70`.",
                     "Percent": 0
                 }
             },
@@ -2224,9 +2224,9 @@
             "Kim measured the lengths of nails she found.",
             "She made the line plot shown below.",
             "problems/PA15G3M/media/40a.jpg",
-            "After making the line plot, she found two additional nails.",
+            "After making the line plot, she found `text(two)` additional nails.",
             "problems/PA15G3M/media/40b.jpg",
-            "Use your ruler to measure the lengths of the two nails.",
+            "Use your ruler to measure the lengths of the `text(two)` nails.",
             "Which line plot now shows the lengths of all the nails Kim found?"
         ],
         "AnswerChoices": {
@@ -2234,7 +2234,7 @@
                 "Choice": "problems/PA15G3M/media/40c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Measures the second nail as 2 inches, accidentally starting at 1/4.",
+                    "Rationale": "Measures the second nail as `2` `text(inches)`, accidentally starting at `1/4`.",
                     "Percent": 0
                 }
             },
@@ -2250,7 +2250,7 @@
                 "Choice": "problems/PA15G3M/media/40e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Measures the nails as 1 2/4 inches and 2 inches, off by 1/4 inch in both cases.",
+                    "Rationale": "Measures the nails as `1``2/4` `text(inches)` and `2` `text(inches)`, off by `1/4` `text(inch)` in both cases.",
                     "Percent": 0
                 }
             },
@@ -2258,7 +2258,7 @@
                 "Choice": "problems/PA15G3M/media/40f.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Includes only the second nail in the line plot.",
+                    "Rationale": "Includes only the `text(second)` nail in the line plot.",
                     "Percent": 0
                 }
             }
@@ -2280,9 +2280,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below shows how much time Sam practiced each week.",
+            "The table below shows how much time Sam practiced `text(each week)`.",
             "problems/PA15G3M/media/41a.jpg",
-            "Which bar graph shows how much time Sam practiced each week?"
+            "Which bar graph shows how much time Sam practiced `text(each week)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2305,7 +2305,7 @@
                 "Choice": "problems/PA15G3M/media/41d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds week 1 down to gridline.",
+                    "Rationale": "Rounds `text(week)` `1` down to gridline.",
                     "Percent": 0
                 }
             },
@@ -2313,7 +2313,7 @@
                 "Choice": "problems/PA15G3M/media/41e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Switches weeks 2 and 3.",
+                    "Rationale": "Switches `text(weeks)` `2and3`.",
                     "Percent": 0
                 }
             }
@@ -2341,15 +2341,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "17",
+                "Choice": "`17`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Counts the squares and adds 1 for the rectangle.",
+                    "Rationale": "Counts the squares and adds `1` for the rectangle.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "27",
+                "Choice": "`27`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Counts the squares and adds the dimensions of the rectangle.",
@@ -2357,7 +2357,7 @@
                 }
             },
             "C": {
-                "Choice": "40",
+                "Choice": "`40`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -2365,7 +2365,7 @@
                 }
             },
             "D": {
-                "Choice": "46",
+                "Choice": "`46`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds area of rectangle and counts the squares.",
@@ -2396,12 +2396,12 @@
             "Part of the map was torn off.",
             "The part of the map that Sara still has is shown.",
             "problems/PA15G3M/media/43a.jpg",
-            "Each small square on the map represents 1 square unit.",
-            "How many square units did Sara's map have before it was torn?"
+            "Each small square on the map represents `1` `text(square unit)`.",
+            "How many `text(square units)` did Sara's map have before it was torn?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Just determines the height of the map.",
@@ -2409,7 +2409,7 @@
                 }
             },
             "B": {
-                "Choice": "18",
+                "Choice": "`18`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Counts the full squares on the torn map.",
@@ -2417,7 +2417,7 @@
                 }
             },
             "C": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Counts the full squares and every partial square on the torn map.",
@@ -2425,7 +2425,7 @@
                 }
             },
             "D": {
-                "Choice": "36",
+                "Choice": "`36`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -2452,7 +2452,7 @@
         "Content": [
             "Natalie made a rug in the shape of the rectangle shown below.",
             "problems/PA15G3M/media/44a.jpg",
-            "Which rug has the same area as the one Natalie made?"
+            "Which rug has the same area as the `text(one)` Natalie made?"
         ],
         "AnswerChoices": {
             "A": {
@@ -2475,7 +2475,7 @@
                 "Choice": "problems/PA15G3M/media/44d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Value of perimeter (20) same as value of given area.",
+                    "Rationale": "Value of perimeter `(20)` same as value of given area.",
                     "Percent": 0
                 }
             },
@@ -2511,23 +2511,23 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "37",
+                "Choice": "`37`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 17 + 8 + 12, ignoring duplicated numbers.",
+                    "Rationale": "Adds `17+8+12`, ignoring duplicated numbers.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "40",
+                "Choice": "`40`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Forgets to include the 17 inches at the top.",
+                    "Rationale": "Forgets to include the `17` `text(inches)` at the top.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "57",
+                "Choice": "`57`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -2535,10 +2535,10 @@
                 }
             },
             "D": {
-                "Choice": "136",
+                "Choice": "`136`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 8 × 17 as if finding the area of the rectangular portion.",
+                    "Rationale": "Multiplies `8xx17` as if finding the area of the rectangular portion.",
                     "Percent": 0
                 }
             }
@@ -2550,7 +2550,7 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Develop and apply number theory concepts to compare quantities and magnitudes of fractions and whole numbers."
@@ -2560,7 +2560,7 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "A group of 8 customers ordered sundaes at an ice-cream shop.",
+            "A group of `8` customers ordered sundaes at an ice-cream shop.",
             "The table below shows the toppings ordered on each sundae.",
             "problems/PA15G8M/media/46a.jpg"
         ],
@@ -2591,7 +2591,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Selma says the fraction of the group of customers who ordered raspberry topping is 1/2.",
+                    "Selma says the fraction of the group of customers who ordered raspberry topping is `1/2`.",
                     "Explain why Selma's statement is correct."
                 ],
                 "AnswerChoices": {}
@@ -2602,7 +2602,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Clarence says the fraction of the group of customers who ordered caramel topping is 1/4 since caramel is 1 of the 4 toppings.",
+                    "Clarence says the fraction of the group of customers who ordered caramel topping is `1/4` since caramel is `1` of the `4` toppings.",
                     "Explain why Clarence's fraction is correct but his reasoning is NOT correct."
                 ],
                 "AnswerChoices": {}
@@ -2613,9 +2613,9 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Another group of 8 customers ordered sundaes at the ice-cream shop.",
-                    "All 8 of these customers ordered hot fudge topping.",
-                    "Write a number sentence comparing the fraction of customers from the first group who ordered hot fudge topping to the fraction of customers from the second group who ordered hot fudge topping."
+                    "Another group of `8` customers ordered sundaes at the ice-cream shop.",
+                    "All `8` of these customers ordered hot fudge topping.",
+                    "Write a number sentence comparing the fraction of customers from the `text(first)` group who ordered hot fudge topping to the fraction of customers from the `text(second)` group who ordered hot fudge topping."
                 ],
                 "AnswerChoices": {
                     "KEY1": {
@@ -2656,7 +2656,7 @@
         "Explain": false,
         "Content": [
             "Saul plays piano.",
-            "Each day in January, Saul played the piano for 30 minutes."
+            "Each day in `text(January)`, Saul played the piano for `30` `text(minutes)`."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -2666,7 +2666,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "How many minutes, in total, did Saul play the piano during one week in January?"
+                    "How many `text(minutes)`, in total, did Saul play the piano during `text(one week)` in `text(January)`?"
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2685,9 +2685,9 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "It took Saul 30 minutes to play 6 songs.",
+                    "It took Saul `30` `text(minutes)` to play `6` songs.",
                     "He played each song for the same amount of time.",
-                    "For how many minutes did Saul play each song?",
+                    "For how many `text(minutes)` did Saul play each song?",
                     "Show or explain all your work."
                 ],
                 "AnswerChoices": {
@@ -2707,10 +2707,10 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Each day in February, Saul played the piano for 12 minutes longer than he played the piano each day in January.",
-                    "One day in February, he started playing the piano at 3:15 p.m.",
+                    "`text(Each day)` in `text(February)`, Saul played the piano for `12` `text(minutes)` longer than he played the piano `text(each day)` in `text(January)`.",
+                    "`text(One day)` in `text(February)`, he started playing the piano at `3:15` `text(p.m.)`",
                     "He did not take a break.",
-                    "Write the time Saul finished playing the piano that day in February."
+                    "Write the time Saul finished playing the piano that day in `text(February)`."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2771,8 +2771,8 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Marco cut the cake into 8 equal pieces.",
-                    "Show two ways Marco could cut his cake into 8 equal pieces."
+                    "Marco cut the cake into `8` equal pieces.",
+                    "Show `text(two)` ways Marco could cut his cake into `8` equal pieces."
                 ],
                 "AnswerChoices": {
                     "KEY1": {
@@ -2801,7 +2801,7 @@
                 "Content": [
                     "The top of Nikki's cake is shown below.",
                     "problems/PA15G3M/media/48b.jpg",
-                    "She cut her cake into 16 equal pieces.",
+                    "She cut her cake into `16` equal pieces.",
                     "Nikki says that her cake is bigger than Marco's cake because it has more pieces.",
                     "Explain why Nikki is NOT correct."
                 ],
@@ -2824,10 +2824,10 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Kari collected data from 25 of her classmates. She asked her classmates to tell her how many different cities they have each lived in.",
-            "None of Kari's classmates have lived in more than 4 different cities.",
+            "Kari collected data from `25` of her classmates. She asked her classmates to tell her how many different cities they have each lived in.",
+            "None of Kari's classmates have lived in more than `4` different cities.",
             "She created the table shown below to represent her data.",
-            "She did not include the information for the number of classmates who lived in 4 different cities.",
+            "She did not include the information for the number of classmates who lived in `4` different cities.",
             "problems/PA15G8M/media/49a.jpg"
         ],
         "AnswerChoices": {},
@@ -2838,7 +2838,7 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "How many classmates lived in 4 different cities?",
+                    "How many classmates lived in `4` different cities?",
                     "Show or explain all your work."
                 ],
                 "AnswerChoices": {
@@ -2859,9 +2859,9 @@
                 "Explain": false,
                 "Content": [
                     "Kari also made a bar graph to represent her data.",
-                    "She only finished the bars for the students who lived in 1 city or 2 cities.",
+                    "She only finished the bars for the students who lived in `1` city or `2` cities.",
                     "Complete the bar graph shown below.",
-                    ":ibox:• Complete the scale for the number of classmates.\n\n• Draw the bars to represent the number of students who have lived in 3 different cities and 4 different cities."
+                    ":ibox:• Complete the scale for the number of classmates.\n\n• Draw the bars to represent the number of students who have lived in `3` different cities and `4` different cities."
                 ],
                 "AnswerChoices": {}
             }
@@ -2893,7 +2893,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Jake is painting a piece of wood that has side lengths of 2 feet and 6 feet.",
+                    "Jake is painting a piece of wood that has side lengths of `2` `text(feet)and6` `text(feet)`.",
                     "What is the area, in `text(square feet)`, of the piece of wood?"
                 ],
                 "AnswerChoices": {
@@ -2913,9 +2913,9 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Jake paints another piece of wood that has the same area as the first one.",
-                    "None of the side lengths of the piece of wood is 2 feet.",
-                    "Draw and shade in a rectangle on the grid below to represent one possible size of the second piece of wood."
+                    "Jake paints another piece of wood that has the same area as the `text(first one)`.",
+                    "None of the side lengths of the piece of wood is `2` `text(feet)`.",
+                    "Draw and shade in a rectangle on the grid below to represent `text(one)` possible size of the `text(second)` piece of wood."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -2934,7 +2934,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Using multiplication, explain how you know the rectangle you drew in Part B has the same area as the first piece of wood."
+                    "Using multiplication, explain how you know the rectangle you drew in Part B has the same area as the `text(first)` piece of wood."
                 ],
                 "AnswerChoices": {}
             },
@@ -2944,7 +2944,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Without using multiplication, explain how you know the rectangle you drew in Part B has the same area as the first piece of wood."
+                    "Without using multiplication, explain how you know the rectangle you drew in Part B has the same area as the `text(first)` piece of wood."
                 ],
                 "AnswerChoices": {}
             }

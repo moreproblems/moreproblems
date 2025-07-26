@@ -16,12 +16,12 @@
         "Content": [
             "Alden and his family go bowling.",
             "Alden's scores are listed below.",
-            "55\t79\t92",
-            "Which expression can be used to find Alden's total score when each score is rounded to the nearest ten?"
+            ":ibox:`55`\t`79`\t`92`",
+            "Which expression can be used to find Alden's total score when each score is rounded to the nearest `text(ten)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "50 + 70 + 90",
+                "Choice": "`50+70+90`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Rounds each number down.",
@@ -29,15 +29,15 @@
                 }
             },
             "B": {
-                "Choice": "50 + 80 + 90",
+                "Choice": "`50+80+90`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Rounds 55 down.",
+                    "Rationale": "Rounds `55` down.",
                     "Percent": 14
                 }
             },
             "C": {
-                "Choice": "60 + 80 + 90",
+                "Choice": "`60+80+90`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -45,7 +45,7 @@
                 }
             },
             "D": {
-                "Choice": "60 + 80 + 100",
+                "Choice": "`60+80+100`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Rounds each number up.",
@@ -70,37 +70,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Esther makes 40 bags of granola mix.",
-            "Each bag has 3 ounces of raisins.",
-            "How many ounces of raisins, in total, does Esther use to make 40 bags of granola mix?"
+            "Esther makes `40` bags of granola mix.",
+            "Each bag has `3` `text(ounces)` of raisins.",
+            "How many `text(ounces)` of raisins, in total, does Esther use to make `40` bags of granola mix?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "37",
+                "Choice": "`37`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 40 - 3.",
+                    "Rationale": "Subtracts `40-3`.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "43",
+                "Choice": "`43`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 40 + 3.",
+                    "Rationale": "Adds `40+3`.",
                     "Percent": 26
                 }
             },
             "C": {
-                "Choice": "80",
+                "Choice": "`80`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Doubles 40 + 40.",
+                    "Rationale": "Doubles `40+40`.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "120",
+                "Choice": "`120`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -128,10 +128,10 @@
         "Explain": false,
         "Content": [
             "Pablo lives in Hershey, Pennsylvania.",
-            "The distances to four cities from Hershey are listed in the table shown below.",
+            "The distances to `text(four)` cities from Hershey are listed in the table shown below.",
             "problems/PA18G3M/media/3a.jpg",
             "Pablo visits the cities in order from the greatest distance from Hershey to the least distance.",
-            "Which city will Pablo visit second?"
+            "Which city will Pablo visit `text(second)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -146,7 +146,7 @@
                 "Choice": "Bradford",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects fewest miles away.",
+                    "Rationale": "Selects fewest `text(miles)` away.",
                     "Percent": 17
                 }
             },
@@ -154,7 +154,7 @@
                 "Choice": "Butler",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects city visited third.",
+                    "Rationale": "Selects city visited `text(third)`.",
                     "Percent": 11
                 }
             },
@@ -162,7 +162,7 @@
                 "Choice": "Erie",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Selects city visited first.",
+                    "Rationale": "Selects city visited `text(first)`.",
                     "Percent": 14
                 }
             }
@@ -174,8 +174,8 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions",
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Demonstrate that when a whole or set is partitioned into `y` equal parts, the fraction `1/y` represents `1` part of the whole and/or the fraction `x/y` represents `x` equal parts of the whole (limit denominators to `2,3,4,6,and8`; limit numerators to whole numbers less than the denominator; and no simplification necessary).",
@@ -186,13 +186,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Craig has 8 flowers and 2 vases.",
+            "Craig has `8` flowers and `2` vases.",
             "He puts the same number of flowers into each vase.",
             "What fraction of the flowers does Craig put into each vase?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/8",
+                "Choice": "`1/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the total number of flowers as the denominator.",
@@ -200,23 +200,23 @@
                 }
             },
             "B": {
-                "Choice": "1/6",
+                "Choice": "`1/6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solves 8 - 2 and uses the answer as the denominator.",
+                    "Rationale": "Solves `8-2` and uses the answer as the denominator.",
                     "Percent": 6
                 }
             },
             "C": {
-                "Choice": "1/4",
+                "Choice": "`1/4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Solves 8 ÷ 2 and uses the answer as the denominator.",
+                    "Rationale": "Solves `8-:2` and uses the answer as the denominator.",
                     "Percent": 32
                 }
             },
             "D": {
-                "Choice": "1/2",
+                "Choice": "`1/2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -231,7 +231,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Recognize and generate simple equivalent fractions (limit the denominators to `1,2,3,4,6,and8` and limit numerators to whole numbers less than the denominator)."
@@ -241,12 +241,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ben notices that 6/8 of the shoes in a store window have laces.",
+            "Ben notices that `6/8` of the shoes in a store window have laces.",
             "Which also shows the fraction of the shoes that have laces?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/8",
+                "Choice": "`2/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses number of shoes without laces used for numerator.",
@@ -254,15 +254,15 @@
                 }
             },
             "B": {
-                "Choice": "4/6",
+                "Choice": "`4/6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts two for the two without laces from both numerator and denominator.",
+                    "Rationale": "Subtracts `text(two)` for the `text(two)` without laces from both numerator and denominator.",
                     "Percent": 27
                 }
             },
             "C": {
-                "Choice": "3/4",
+                "Choice": "`3/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -270,10 +270,10 @@
                 }
             },
             "D": {
-                "Choice": "12/8",
+                "Choice": "`12/8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Doubles the numerator.",
+                    "Rationale": "`text(Doubles)` the numerator.",
                     "Percent": 13
                 }
             }
@@ -285,7 +285,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Compare two fractions with the same denominator (limit denominators to `1,2,3,4,6,and8`), using the symbols `>,=,or<`, and/or justify the conclusions."
@@ -295,13 +295,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below lists the amounts of time, in `text(hours)`, it takes three students to go to school each morning.",
+            "The table below lists the amounts of time, in `text(hours)`, it takes `text(three)` students to go to school each morning.",
             "problems/PA18G3M/media/6a.jpg",
-            "Which statement correctly compares the amounts of time, in `text(hours)`, it takes two of the students to go to school?"
+            "Which statement correctly compares the amounts of time, in `text(hours)`, it takes `text(two)` of the students to go to school?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/6 > 3/6 because 1 is less than 3.",
+                "Choice": "`1/6>3/6` because `1` is less than `3`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses the incorrect comparison symbol.",
@@ -309,7 +309,7 @@
                 }
             },
             "B": {
-                "Choice": "4/6 > 3/6 because 4 is greater than 3.",
+                "Choice": "`4/6>3/6` because `4` is greater than `3`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -317,7 +317,7 @@
                 }
             },
             "C": {
-                "Choice": "1/6 < 4/6 because the numerators are less than the denominators.",
+                "Choice": "`1/6<4/6` because the numerators are less than the denominators.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Compares a numerator to a denominator.",
@@ -328,7 +328,7 @@
                 "Choice": "Compares denominators instead of numerators.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "4/6 < 3/6 because both fractions have the same denominator.",
+                    "Rationale": "`4/6<3/6` because both fractions have the same denominator.",
                     "Percent": 6
                 }
             }
@@ -350,13 +350,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "At a park, Calvin sees a total of 27 birds sitting in 3 trees.",
+            "At a park, Calvin sees a total of `27` birds sitting in `3` trees.",
             "He sees the same number of birds in each tree.",
             "Which number sentence correctly shows how many birds Calvin sees in each tree?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × 3 = 27",
+                "Choice": "`3xx3=27`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Chooses an incorrect sentence.",
@@ -364,15 +364,15 @@
                 }
             },
             "B": {
-                "Choice": "3 + 27 = 30",
+                "Choice": "`3+27=30`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses a correct sentence, but one that shows the sum of the number of birds and the number of trees.",
+                    "Rationale": "Chooses a correct sentence, but `text(one)` that shows the sum of the number of birds and the number of trees.",
                     "Percent": 16
                 }
             },
             "C": {
-                "Choice": "27 ÷ 3 = 9",
+                "Choice": "`27-:3=9`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -380,10 +380,10 @@
                 }
             },
             "D": {
-                "Choice": "27 - 3 = 24",
+                "Choice": "`27-3=24`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chooses a correct number sentence, but one that shows the difference between the number of birds and the number of trees.",
+                    "Rationale": "Chooses a correct number sentence, but `text(one)` that shows the difference between the number of birds and the number of trees.",
                     "Percent": 4
                 }
             }
@@ -405,13 +405,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mrs. Harris rode her bike 40 miles.",
-            "She biked 8 miles each day.",
-            "How many days did Mrs. Harris ride her bike?"
+            "Mrs. Harris rode her bike `40` `text(miles)`.",
+            "She biked `8` `text(miles each day)`.",
+            "How many `text(days)` did Mrs. Harris ride her bike?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5",
+                "Choice": "`5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -419,26 +419,26 @@
                 }
             },
             "B": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks that 40/8 = 6.",
+                    "Rationale": "Thinks that `40/8=6`.",
                     "Percent": 7
                 }
             },
             "C": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 40/8 = 7.",
+                    "Rationale": "Thinks `40/8=7`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks 40/8 = 8.",
+                    "Rationale": "Thinks `40/8=8`.",
                     "Percent": 19
                 }
             }
@@ -460,11 +460,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equal to 10 × 6?"
+            "Which expression is equal to `10xx6`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2 × 5 × 6",
+                "Choice": "`2xx5xx6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -472,7 +472,7 @@
                 }
             },
             "B": {
-                "Choice": "10 + 2 × 3",
+                "Choice": "`10+2xx3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition instead of multiplication.",
@@ -480,7 +480,7 @@
                 }
             },
             "C": {
-                "Choice": "2 + 5 + 2 + 3",
+                "Choice": "`2+5+2+3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds the correct factors, but adds instead of multiplies.",
@@ -488,10 +488,10 @@
                 }
             },
             "D": {
-                "Choice": "6 × 2 × 6 × 5",
+                "Choice": "`6xx2xx6xx5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Distributes the 6 and multiplies.",
+                    "Rationale": "Distributes the `6` and multiplies.",
                     "Percent": 12
                 }
             }
@@ -513,14 +513,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jason puts 28 cans of food into 4 bags.",
+            "Jason puts `28` cans of food into `4` bags.",
             "The equation below can be used to find the number of cans he puts into each bag.",
-            "28 ÷ 4 =?",
+            ":ibox:`28-:4=?`",
             "Which equation can also be used to find the number of cans Jason puts into each bag?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4 + ? = 28",
+                "Choice": "`4+?=28`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses addition instead of multiplication.",
@@ -528,7 +528,7 @@
                 }
             },
             "B": {
-                "Choice": "4 × ? = 28",
+                "Choice": "`4xx?=28`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -536,7 +536,7 @@
                 }
             },
             "C": {
-                "Choice": "4 × 28 =?",
+                "Choice": "`4xx28=?`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Changes the order and sign.",
@@ -544,7 +544,7 @@
                 }
             },
             "D": {
-                "Choice": "4 ÷ ? = 28",
+                "Choice": "`4-:?=28`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Keeps division and rearranges the numbers.",
@@ -569,14 +569,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Anya buys 6 packs of cards.",
-            "There are 35 cards in each pack.",
-            "Anya has a total of 210 cards.",
-            "Which sentence explains how many cards Anya would have if she had bought 12 packs of cards instead of 6 packs of cards?"
+            "Anya buys `6` packs of cards.",
+            "There are `35` cards in each pack.",
+            "Anya has a total of `210` cards.",
+            "Which sentence explains how many cards Anya would have if she had bought `12` packs of cards instead of `6` packs of cards?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Anya would have 6 more cards because 6 + 6 = 12.",
+                "Choice": "Anya would have `6` more cards because `6+6=12`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Uses an additive comparison.",
@@ -584,7 +584,7 @@
                 }
             },
             "B": {
-                "Choice": "Anya would have half as many cards because 12 ÷ 2 = 6.",
+                "Choice": "Anya would have `text(half)` as many cards because `12-:2=6`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Compares in the wrong direction.",
@@ -592,7 +592,7 @@
                 }
             },
             "C": {
-                "Choice": "Anya would have twice as many cards because 6 × 2 = 12.",
+                "Choice": "Anya would have `text(twice)` as many cards because `6xx2=12`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -600,7 +600,7 @@
                 }
             },
             "D": {
-                "Choice": "Anya would have 6 times as many cards because 6 + 6 = 12.",
+                "Choice": "Anya would have `6` times as many cards because `6+6=12`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Combines an additive and multiplicative comparison.",
@@ -625,13 +625,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Rosa bought 42 cups to use at her lemonade stand.",
-            "She used 17 cups for lemonade on Monday and 18 cups on Tuesday.",
+            "Rosa bought `42` cups to use at her lemonade stand.",
+            "She used `17` cups for lemonade on `text(Monday)` and `18` cups on `text(Tuesday)`.",
             "How many cups does Rosa have remaining?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -639,7 +639,7 @@
                 }
             },
             "B": {
-                "Choice": "13",
+                "Choice": "`13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Subtracts in the wrong direction.",
@@ -647,18 +647,18 @@
                 }
             },
             "C": {
-                "Choice": "24",
+                "Choice": "`24`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts number sold on Tuesday.",
+                    "Rationale": "Subtracts number sold on `text(Tuesday)`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "25",
+                "Choice": "`25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts number sold on Monday.",
+                    "Rationale": "Subtracts number sold on `text(Monday)`.",
                     "Percent": 19
                 }
             }
@@ -681,21 +681,21 @@
         "Explain": false,
         "Content": [
             "Mr. Hernandez is training for a race.",
-            "The table below shows the numbers of times he ran around a track on four different days.",
+            "The table below shows the numbers of times he ran around a track on `text(four)` different `text(days)`.",
             "problems/PA18G3M/media/13a.jpg",
             "Which statement describes the pattern shown by the numbers of times Mr. Hernandez ran around the track?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "add 1",
+                "Choice": "add `1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds the pattern in the days column.",
+                    "Rationale": "Finds the pattern in the `text(days)` column.",
                     "Percent": 7
                 }
             },
             "B": {
-                "Choice": "add 3",
+                "Choice": "add `3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -703,18 +703,18 @@
                 }
             },
             "C": {
-                "Choice": "add 4",
+                "Choice": "add `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 4 to day 2 to get 6 laps.",
+                    "Rationale": "Adds `4` to `text(day)` `2` to get `6` laps.",
                     "Percent": 11
                 }
             },
             "D": {
-                "Choice": "add 10",
+                "Choice": "add `10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 10 to day 5 to get 15 laps.",
+                    "Rationale": "Adds `10` to `text(day)` `5` to get `15` laps.",
                     "Percent": 12
                 }
             }
@@ -736,7 +736,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Terra leaves her house for soccer practice at 10 minutes to 5:00.",
+            "Terra leaves her house for soccer practice at `10` `text(minutes)` to `5:00`.",
             "Which clock shows the time Terra leaves her house for soccer practice?"
         ],
         "AnswerChoices": {
@@ -744,7 +744,7 @@
                 "Choice": "problems/PA18G3M/media/14a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds 5:10; ten minutes after 5:00.",
+                    "Rationale": "Finds `5:10`; `text(ten minutes)` after `5:00`.",
                     "Percent": 26
                 }
             },
@@ -752,7 +752,7 @@
                 "Choice": "problems/PA18G3M/media/14b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds 2:25; ten minutes after 5:00 and reverses hands.",
+                    "Rationale": "Finds `2:25`; `text(ten minutes)` after `5:00` and reverses hands.",
                     "Percent": 7
                 }
             },
@@ -768,7 +768,7 @@
                 "Choice": "problems/PA18G3M/media/14d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Finds 10:20; reverses hands.",
+                    "Rationale": "Finds `10:20`; reverses hands.",
                     "Percent": 9
                 }
             }
@@ -796,7 +796,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds how many more students prefer chicken nuggets than hot dogs.",
@@ -804,7 +804,7 @@
                 }
             },
             "B": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds number of hot dogs.",
@@ -812,7 +812,7 @@
                 }
             },
             "C": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Finds number of chicken nuggets.",
@@ -820,7 +820,7 @@
                 }
             },
             "D": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -830,13 +830,13 @@
         },
         "Parts": {}
     },
-    "17": {
-        "Number": 17,
+    "16": {
+        "Number": 16,
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
             "Geometry",
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explain that shapes in different categories may share attributes and that the shared attributes can define a larger category.",
@@ -847,7 +847,7 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "Dorie has the five shapes listed below.",
+            "Dorie has the `text(five)` shapes listed below.",
             ":ibox:octagon, pentagon, rectangle, square, triangle",
             "Dorie only wants quadrilateral shapes for an art project."
         ],
@@ -931,8 +931,8 @@
                 "Explain": false,
                 "Content": [
                     "Dorie draws the picture below for another part of her art project.",
-                    "problems/PA18G3M/media/17a.jpg",
-                    "Dorie states each section inside the shape is 1/8 of the whole shape.",
+                    "problems/PA18G3M/media/16a.jpg",
+                    "Dorie states each section inside the shape is `1/8` of the whole shape.",
                     "Explain why Dorie is NOT correct."
                 ],
                 "AnswerChoices": {}

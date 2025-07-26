@@ -15,12 +15,12 @@
         "Explain": false,
         "Content": [
             "An expression is shown below.",
-            "5 • (-7)^2 ÷ -7",
+            ":ibox:`5*(-7)^2-:-7`",
             "What is the value of the expression?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-35",
+                "Choice": "`-35`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -28,23 +28,23 @@
                 }
             },
             "B": {
-                "Choice": "-10",
+                "Choice": "`-10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses -7(2) instead of (-7)^2 and makes sign error.",
+                    "Rationale": "Uses `-7(2)` instead of `(-7)^2` and makes sign error.",
                     "Percent": 14
                 }
             },
             "C": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses -7(2) instead of (-7)^2.",
+                    "Rationale": "Uses `-7(2)` instead of `(-7)^2`.",
                     "Percent": 12
                 }
             },
             "D": {
-                "Choice": "35",
+                "Choice": "`35`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Makes sign error.",
@@ -71,21 +71,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Trenton and Maria record how much dry food their pets eat on average each day.",
-            ":box:• Trenton's pet: 4/5 cup of dry food\n\n• Maria's pet: 1.25 cups of dry food",
-            "Based on these averages, how many more cups of dry food will Maria's pet have eaten than Trenton's pet will have eaten over 2 seven-day weeks?"
+            "Trenton and Maria record how much dry food their pets eat on average `text(each day)`.",
+            ":box:• Trenton's pet: `4/5` `text(cup)` of dry food\n\n• Maria's pet: `1.25` `text(cups)` of dry food",
+            "Based on these averages, how many more `text(cups)` of dry food will Maria's pet have eaten than Trenton's pet will have eaten over `2` `text(seven-day weeks)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.9 cup",
+                "Choice": "`0.9` `text(cup)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates the difference after 2 days.",
+                    "Rationale": "Calculates the difference after `2` `text(days)`.",
                     "Percent": 13
                 }
             },
             "B": {
-                "Choice": "6 3/10 cups",
+                "Choice": "`6``3/10` `text(cups)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -93,18 +93,18 @@
                 }
             },
             "C": {
-                "Choice": "11 1/5 cups",
+                "Choice": "`11``1/5` `text(cups)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates the amount of dry food Trenton's pet eats after 2 weeks.",
+                    "Rationale": "Calculates the amount of dry food Trenton's pet eats after `2` `text(weeks)`.",
                     "Percent": 12
                 }
             },
             "D": {
-                "Choice": "17.5 cups",
+                "Choice": "`17.5` `text(cups)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates the amount of dry food Maria's pet eats after 2 weeks.",
+                    "Rationale": "Calculates the amount of dry food Maria's pet eats after `2` `text(weeks)`.",
                     "Percent": 14
                 }
             }
@@ -128,29 +128,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A tank contains 2,450 gallons of fuel. The changes in the number of gallons of fuel in the tank over three days are listed below.",
-            "-1,208\t+790\t-514",
-            "How many gallons of fuel are in the tank at the end of the three days?"
+            "A tank contains `2text(,)450` `text(gallons)` of fuel. The changes in the number of `text(gallons)` of fuel in the tank over `text(three days)` are listed below.",
+            ":ibox:`-1text(,)208`\t`+790`\t`-514`",
+            "How many `text(gallons)` of fuel are in the tank at the end of the `text(three days)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "62",
+                "Choice": "`62`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts all 3 values, resulting in -62; makes the answer positive, realizing the tank could not hold a negative quantity.",
+                    "Rationale": "Subtracts all `3` values, resulting in `-62`; makes the answer `text(positive)`, realizing the tank could not hold a `text(negative)` quantity.",
                     "Percent": 8
                 }
             },
             "B": {
-                "Choice": "728",
+                "Choice": "`728`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Tries to subtract all 3 values, but recognizes the negative result, so subtracts the sum of 1,208 and 514 from 2,450.",
+                    "Rationale": "Tries to subtract all `3` values, but recognizes the `text(negative)` result, so subtracts the sum of `1text(,)208and514` from `2text(,)450`.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "1,518",
+                "Choice": "`1text(,)518`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -158,10 +158,10 @@
                 }
             },
             "D": {
-                "Choice": "3,382",
+                "Choice": "`3text(,)382`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "uses the opposite operation of what each sign indicates, finding 2,450 + 1,208 - 790 + 514.",
+                    "Rationale": "Uses the opposite operation of what each sign indicates, finding `2text(,)450+1text(,)208-790+514`.",
                     "Percent": 8
                 }
             }
@@ -191,15 +191,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-5.75 + 4",
+                "Choice": "`-5.75+4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses +4 since the arrow stops at -4, but knows addition moves to the right.",
+                    "Rationale": "Uses `+4` since the arrow stops at `-4`, but knows addition moves to the right.",
                     "Percent": 13
                 }
             },
             "B": {
-                "Choice": "-5.75 + 1.75",
+                "Choice": "`-5.75+1.75`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -207,18 +207,18 @@
                 }
             },
             "C": {
-                "Choice": "-5.75 + (-4)",
+                "Choice": "`-5.75+(-4)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Uses -4 since that is where the arrow stops.",
+                    "Rationale": "Uses `-4` since that is where the arrow stops.",
                     "Percent": 129
                 }
             },
             "D": {
-                "Choice": "-5.75 + (-1.75)",
+                "Choice": "`-5.75+(-1.75)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Reasons that 1.75 is negative since the arrows are to the left of 0.",
+                    "Rationale": "Reasons that `1.75` is `text(negative)` since the arrows are to the left of `0`.",
                     "Percent": 8
                 }
             }
@@ -242,19 +242,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Lockhart is digging a trench to put in the new school sprinkler system. Every 1/4 hour, the length of his trench increases by 2/3 foot. By how much does the length, in `text(feet)`, of Mr. Lockhart's trench increase each hour?"
+            "Mr. Lockhart is digging a trench to put in the new school sprinkler system. Every `1/4` `text(hour)`, the length of his trench increases by `2/3` `text(foot)`. By how much does the length, in `text(feet)`, of Mr. Lockhart's trench increase `text(each hour)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/6",
+                "Choice": "`1/6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 1/4 and 2/3.",
+                    "Rationale": "Multiplies `1/4and2/3`.",
                     "Percent": 24
                 }
             },
             "B": {
-                "Choice": "3/7",
+                "Choice": "`3/7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds numerators and denominators.",
@@ -262,15 +262,15 @@
                 }
             },
             "C": {
-                "Choice": "11/12",
+                "Choice": "`11/12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds the two fractions.",
+                    "Rationale": "Adds the `text(two)` fractions.",
                     "Percent": 16
                 }
             },
             "D": {
-                "Choice": "8/3",
+                "Choice": "`8/3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -354,24 +354,24 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below shows the number of baskets Javier attempted and the number of baskets he made during his first three basketball games this season.",
+            "The table below shows the number of baskets Javier attempted and the number of baskets he made during his `text(first three)` basketball games this season.",
             "problems/PA19G7M/media/7a.jpg",
             "Which statement correctly describes the relationship between the number of baskets Javier attempted and the number of baskets he made during each game?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The relationship is proportional. For every 5 baskets Javier attempted each game, he made 2 baskets.",
+                "Choice": "The relationship is proportional. For every `5` baskets Javier attempted each game, he made `2` baskets.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Ignores game 3.",
+                    "Rationale": "Ignores game `3`.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "The relationship is proportional. For every 5 baskets Javier attempted each game, he made 3 baskets.",
+                "Choice": "The relationship is proportional. For every `5` baskets Javier attempted each game, he made `3` baskets.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Only considers game 3.",
+                    "Rationale": "Only considers game `3`.",
                     "Percent": 9
                 }
             },
@@ -411,37 +411,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Anna opened a bank account. She adds the same amount of money to her account each month. The table below shows the amounts of money in her account at the ends of certain numbers of months.",
+            "Anna opened a bank account. She adds the same amount of money to her account `text(each month)`. The table below shows the amounts of money in her account at the ends of certain numbers of `text(months)`.",
             "problems/PA19G7M/media/8a.jpg",
-            "How much money does Anna add to her bank account each month?"
+            "How much money does Anna add to her bank account `text(each month)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$10",
+                "Choice": "`$10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (75 - 45) ÷ 3.",
+                    "Rationale": "Calculates `(75-45)-:3`.",
                     "Percent": 4
                 }
             },
             "B": {
-                "Choice": "$12",
+                "Choice": "`$12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (225 - 45) ÷ 15.",
+                    "Rationale": "Calculates `(225-45)-:15`.",
                     "Percent": 3
                 }
             },
             "C": {
-                "Choice": "$14",
+                "Choice": "`$14`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Calculates (45 - 3) ÷ 3.",
+                    "Rationale": "Calculates `(45-3)-:3`.",
                     "Percent": 4
                 }
             },
             "D": {
-                "Choice": "$15",
+                "Choice": "`$15`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -468,11 +468,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ms. Garcia drove from her house to her sister's house. The distance (y), in `text(miles)`, she drove based on the time (x), in `text(hours)`, is graphed on a coordinate grid. Her drive is represented by the line segment with endpoints at `(0,0)` and (2 1/2, 120). Based on the point on the graph with an `xtext(-coordinate)` of 1, which statement must be true?"
+            "Ms. Garcia drove from her house to her sister's house. The distance `(y)`, in `text(miles)`, she drove based on the time `(x)`, in `text(hours)`, is graphed on a coordinate grid. Her drive is represented by the line segment with endpoints at `(0,0)and(2``1/2,120``)`. Based on the point on the graph with an `xtext(-coordinate)` of `1`, which statement must be true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Ms. Garcia drove 1 mile in 48% of an hour.",
+                "Choice": "Ms. Garcia drove `1` `text(mile)` in `48%` of an `text(hour)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Misinterprets constant of proportionality.",
@@ -480,7 +480,7 @@
                 }
             },
             "B": {
-                "Choice": "Ms. Garcia drove at a unit rate of 48 miles per hour.",
+                "Choice": "Ms. Garcia drove at a unit rate of `48` `text(miles per hour)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -488,15 +488,15 @@
                 }
             },
             "C": {
-                "Choice": "Ms. Garcia drove from her house to her sister's house in 1 hour.",
+                "Choice": "Ms. Garcia drove from her house to her sister's house in `1` `text(hour)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks the point at (1, 48) represents the total trip.",
+                    "Rationale": "Thinks the point at `(1,48)` represents the total trip.",
                     "Percent": 17
                 }
             },
             "D": {
-                "Choice": "Ms. Garcia drove 1/48 of the distance from her house to her sister's house.",
+                "Choice": "Ms. Garcia drove `1/48` of the distance from her house to her sister's house.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Misinterprets unit rate.",
@@ -523,35 +523,35 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An art dealer purchased a painting 5 years ago for $2,000. Now, the value of the painting has increased by 75%. What is the value of the painting now?"
+            "An art dealer purchased a painting `5` `text(years)` ago for `$2text(,)000`. Now, the value of the painting has increased by `75%`. What is the value of the painting now?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$2,375",
+                "Choice": "`$2text(,)375`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 75 × 5 to 2,000.",
+                    "Rationale": "Adds `75xx5` to `2text(,)000`.",
                     "Percent": 8
                 }
             },
             "B": {
-                "Choice": "$2,750",
+                "Choice": "`$2text(,)750`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 75% of 1,000 to 2,000.",
+                    "Rationale": "Adds `75%` of `1text(,)000` to `2text(,)000`.",
                     "Percent": 27
                 }
             },
             "C": {
-                "Choice": "$3,000",
+                "Choice": "`$3text(,)000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Multiplies 2,000 by 150%.",
+                    "Rationale": "Multiplies `2text(,)000` by `150%`.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "$3,500",
+                "Choice": "`$3text(,)500`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -578,11 +578,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Simplify: 4x - 5.2y + 6y + 7.9x - 8x"
+            "Simplify: `4x-5.2y+6y+7.9x-8x`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "4.7xy",
+                "Choice": "`4.7xy`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Adds all terms and multiplies variables.",
@@ -590,15 +590,15 @@
                 }
             },
             "B": {
-                "Choice": "-1.3x + 6y",
+                "Choice": "`-1.3x+6y`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subtracts 5.2 from the coefficient of the `xtext(-terms)` instead of subtracting it from the coefficients of the `ytext(-term)`.",
+                    "Rationale": "Subtracts `5.2` from the coefficient of the `xtext(-terms)` instead of subtracting it from the coefficients of the `ytext(-term)`.",
                     "Percent": 7
                 }
             },
             "C": {
-                "Choice": "3.9x + 0.8y",
+                "Choice": "`3.9x+0.8y`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -606,7 +606,7 @@
                 }
             },
             "D": {
-                "Choice": "19.9x + 11.2y",
+                "Choice": "`19.9x+11.2y`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Does not consider the signs of the coefficients of the `xtext(-terms)` and the `ytext(-terms)`.",
@@ -633,11 +633,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A painter charges $25 per hour plus $50 to paint a house. The painter painted a house for less than $725. Which inequality can be used to determine all the possible numbers of hours (x) it took the painter to paint the house?"
+            "A painter charges `$25` `text(per hour)` plus `$50` to paint a house. The painter painted a house for less than `$725`. Which inequality can be used to determine all the possible numbers of `text(hours)` `(x)` it took the painter to paint the house?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "25x + 50 < 725",
+                "Choice": "`25x+50<725`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -645,15 +645,15 @@
                 }
             },
             "B": {
-                "Choice": "25x + 50 > 725",
+                "Choice": "`25x+50>725`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses < with >.",
+                    "Rationale": "Confuses `<` with `>`.",
                     "Percent": 24
                 }
             },
             "C": {
-                "Choice": "50x + 25 < 725",
+                "Choice": "`50x+25<725`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Switches the rate and the fixed cost.",
@@ -661,10 +661,10 @@
                 }
             },
             "D": {
-                "Choice": "50x + 25 > 725",
+                "Choice": "`50x+25>725`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Confuses < with > and switches the rate and the fixed cost.",
+                    "Rationale": "Confuses `<` with `>` and switches the rate and the fixed cost.",
                     "Percent": 7
                 }
             }
@@ -692,15 +692,15 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Of all the students who are on the track team, the first three to finish a race are selected.",
+                "Choice": "Of all the students who are on the track team, the `text(first three)` to finish a race are selected.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Neither the selection process (three fastest) nor the pool of students (track team) is random.",
+                    "Rationale": "Neither the selection process (`text(three)` fastest) nor the pool of students (track team) is random.",
                     "Percent": 11
                 }
             },
             "B": {
-                "Choice": "Of all the students who are in the drama club, every third student on the roster is selected.",
+                "Choice": "Of all the students who are in the drama club, every `text(third)` student on the roster is selected.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The selection process is random, but the pool of students (drama club) is not random.",
@@ -708,7 +708,7 @@
                 }
             },
             "C": {
-                "Choice": "Of all the students who complete an assignment, the first, third, and tenth students are selected.",
+                "Choice": "Of all the students who complete an assignment, the `text(first),text(third),andtext(tenth)` students are selected.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The selection process is somewhat random (slightly favors the students who are quickest to finish), but the pool of students (those who complete an assignment) is not random.",
@@ -716,7 +716,7 @@
                 }
             },
             "D": {
-                "Choice": "Of all the students who attend a school-wide assembly, those sitting in every third seat are selected.",
+                "Choice": "Of all the students who attend a school-wide assembly, those sitting in every `text(third)` seat are selected.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -743,38 +743,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two teams sold the same item for a fundraiser. The number of sales by each team member is shown in the line plots below.",
+            "`text(Two)` teams sold the same item for a fundraiser. The number of sales by each team member is shown in the line plots below.",
             "problems/PA19G7M/media/14a.jpg",
             "problems/PA19G7M/media/14b.jpg",
             "Based on the line plots, which statement is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "No team member from team B had more sales than any team member from team A.",
+                "Choice": "No team member from team `B` had more sales than any team member from team `A`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Interprets the measure of center to be absolute comparisons (i.e., since the median/mean is lower, every data point must be lower) OR only compares data points based on “rank” (i.e., the first data point in B is lower than the first data point in A, etc.).",
+                    "Rationale": "Interprets the measure of center to be absolute comparisons (i.e., since the median/mean is lower, every data point must be lower) OR only compares data points based on “rank” (i.e., the `text(first)` data point in B is lower than the `text(first)` data point in `A`, etc.).",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "Every team member from team A had more sales than 50% of the team members from team B.",
+                "Choice": "Every team member from team `A` had more sales than `50%` of the team members from team `B`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Either incorrectly identifies the median for team B as less than 4 OR incorrectly interprets “more” as “at least”.",
+                    "Rationale": "Either incorrectly identifies the median for team `B` as less than `4` OR incorrectly interprets “more” as “at least”.",
                     "Percent": 15
                 }
             },
             "C": {
-                "Choice": "At least one team member from each team had the median number of sales for his or her team.",
+                "Choice": "At least `text(one)` team member from each team had the median number of sales for his or her team.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Does not recognize that the median for team A, which is 6.5, cannot be a number of sales for a team member.",
+                    "Rationale": "Does not recognize that the median for team `A`, which is `6.5`, cannot be a number of sales for a team member.",
                     "Percent": 29
                 }
             },
             "D": {
-                "Choice": "The range for the number of sales for team A is equal to the greatest number of sales for team B.",
+                "Choice": "The range for the number of sales for team `A` is equal to the greatest number of sales for team `B`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -803,11 +803,11 @@
         "Content": [
             "Pat is conducting a probability experiment using the spinner pictured below.",
             "problems/PA19G7M/media/15a.jpg",
-            "Pat spins the spinner one time. Which statement about the result of the spin is true?"
+            "Pat spins the spinner `text(one)` time. Which statement about the result of the spin is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Region 1 is certain.",
+                "Choice": "Region `1` is certain.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Confuses the most likely outcome with certainty.",
@@ -815,7 +815,7 @@
                 }
             },
             "B": {
-                "Choice": "Region 3 is impossible.",
+                "Choice": "Region `3` is impossible.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Thinks the least likely outcome is impossible.",
@@ -823,7 +823,7 @@
                 }
             },
             "C": {
-                "Choice": "Region 2 is more likely than region 3.",
+                "Choice": "Region `2` is more likely than region `3`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -831,10 +831,10 @@
                 }
             },
             "D": {
-                "Choice": "Region 1 and region 2 are equally likely.",
+                "Choice": "Region `1` and region `2` are equally likely.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Thinks region 2, which is most of one half, is equally likely as region 1, which is the other half.",
+                    "Rationale": "Thinks region `2`, which is most of `text(one half)`, is equally likely as region `1`, which is the other `text(half)`.",
                     "Percent": 11
                 }
             }
@@ -858,29 +858,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Using data from car sales, probabilities for the color of a car sold were calculated. The probabilities for two colors are listed below.",
-            ":box:• The probability a car sold is white is 0.21.\n\n• The probability a car sold is black is 0.19.",
-            "Based on these probabilities, how many of the next 200 cars sold are likely to be white and how many are likely to be black?"
+            "Using data from car sales, probabilities for the color of a car sold were calculated. The probabilities for `text(two)` colors are listed below.",
+            ":box:• The probability a car sold is white is `0.21`.\n\n• The probability a car sold is black is `0.19`.",
+            "Based on these probabilities, how many of the next `200` cars sold are likely to be white and how many are likely to be black?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "white: 11\nblack: 10",
+                "Choice": "white: `11`\nblack: `10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Takes 1/2 of 21 and 19 and rounds.",
+                    "Rationale": "Takes `1/2` of `21and19` and rounds.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "white: 21\nblack: 19",
+                "Choice": "white: `21`\nblack: `19`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "uses numbers from probabilities without applying them to 200.",
+                    "Rationale": "Uses numbers from probabilities without applying them to `200`.",
                     "Percent": 19
                 }
             },
             "C": {
-                "Choice": "white: 42\nblack: 38",
+                "Choice": "white: `42`\nblack: `38`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -888,10 +888,10 @@
                 }
             },
             "D": {
-                "Choice": "white: 80\nblack: 80",
+                "Choice": "white: `80`\nblack: `80`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Adds 0.21 and 0.19 to get 0.40, finds the probability out of 200, which is 80, and uses 80 for both colors.",
+                    "Rationale": "Adds `0.21and0.19` to get `0.40`, finds the probability out of `200`, which is `80`, and uses `80` for both colors.",
                     "Percent": 7
                 }
             }
@@ -915,7 +915,7 @@
         "Points": 3,
         "Explain": false,
         "Content": [
-            "A piece of steel is in the shape of a triangle. One side of the triangle is 8 inches long. The lengths of the other two sides are equal and each is less than 8 inches long."
+            "A piece of steel is in the shape of a triangle. `text(One)` side of the triangle is `8` `text(inches)` long. The lengths of the other `text(two)` sides are equal and each is less than `8` `text(inches)` long."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -968,10 +968,10 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "The triangle formed is a right triangle, where Angle 1 is across from the longest side. What are possible values for each of the three angle measures, in degrees, of the vertices of the triangle?",
-                    "Angle 1: :FR-1",
-                    "Angle 2: :FR-2",
-                    "Angle 3: :FR-3"
+                    "The triangle formed is a right triangle, where Angle `1` is across from the longest side. What are possible values for each of the `text(three)` angle measures, in `text(degrees)`, of the vertices of the triangle?",
+                    "\n\nAngle `1`: :FR-1",
+                    "Angle `2`: :FR-2",
+                    "Angle `3`: :FR-3"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
@@ -1006,10 +1006,10 @@
                 "Points": 1,
                 "Explain": true,
                 "Content": [
-                    "Another piece of steel is also in the shape of a triangle. One side of the triangle is 6 inches long. The lengths of the other two sides are equal and each is less than 6 inches long. The lengths of the unknown sides of the triangle are whole numbers of inches.",
+                    "Another piece of steel is also in the shape of a triangle. One side of the triangle is `6` `text(inches)` long. The lengths of the other `text(two)` sides are equal and each is less than `6` `text(inches)` long. The lengths of the unknown sides of the triangle are whole numbers of `text(inches)`.",
                     "What are all the possible lengths, in `text(inches)`, of the unknown sides of the triangle? Explain the process you used to find all the possible lengths.",
-                    "Possible length 1: :FR-1:",
-                    "Possible length 2: :FR-2"
+                    "\n\nPossible length `1`: :FR-1:",
+                    "Possible length `2`: :FR-2"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
