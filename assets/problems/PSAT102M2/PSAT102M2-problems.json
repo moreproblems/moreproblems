@@ -428,7 +428,7 @@
                 }
             },
             "C": {
-                "Choice": "Exponential, increasing by approximately `3%` each year",
+                "Choice": "Exponential, increasing by approximately `3%` `text(each year)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "From Year `0` to Year `1`, the salary increases by `$1,140`; from Year `1` to Year `2`, the salary increases by `$1,174`; from Year `2` to Year `3`, the salary increases by `$1,210`; and from Year `3` to Year `4`, the salary increases by `$1,245`. Because the dollar amount of the salary increases each year at a nonconstant rate, a linear model will not be a good fit to the data. However, the ratio of the salary in a certain year to the salary in the preceding year remains about the same from one year to the next. For example, the ratio of the salary in Year `1` to the salary in Year `0` is `(39,140)/(38,000)`, and the ratio of the salary in Year `2` to the salary in Year `1` is `(40,314)/(39,140)`. Both these ratios are approximately `1.03`, which corresponds to a `3%` increase each year. Therefore, an exponential model increasing by approximately `3%` each year would describe the data better than the models in the other choices.",
@@ -436,7 +436,7 @@
                 }
             },
             "D": {
-                "Choice": "Exponential, increasing by approximately 9% each year",
+                "Choice": "Exponential, increasing by approximately `9%` `text(each year)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The ratio of the salary in a certain year to the salary in the preceding year (for example, `(40,314)/(39,140)and(39,140)/(38,000)`) is approximately `1.03`, which corresponds to a `3%` increase each year, not a `9%` increase each year.",

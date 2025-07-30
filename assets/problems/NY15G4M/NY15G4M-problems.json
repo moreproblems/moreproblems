@@ -18,7 +18,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "376,425 > 367,419",
+                "Choice": "`376text(,)425>367text(,)419`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -26,7 +26,7 @@
                 }
             },
             "B": {
-                "Choice": "337,425 > 337,524",
+                "Choice": "`337text(,)425>337text(,)524`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -34,7 +34,7 @@
                 }
             },
             "C": {
-                "Choice": "336,425 < 335,426",
+                "Choice": "`336text(,)425<335text(,)426`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -42,7 +42,7 @@
                 }
             },
             "D": {
-                "Choice": "327,425 < 327,416",
+                "Choice": "`327text(,)425<327text(,)416`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -74,7 +74,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 1/4 inches",
+                "Choice": "`3``1/4` `text(inches)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -82,7 +82,7 @@
                 }
             },
             "B": {
-                "Choice": "3 1/2 inches",
+                "Choice": "`3``1/2` `text(inches)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -90,7 +90,7 @@
                 }
             },
             "C": {
-                "Choice": "4 1/4 inches",
+                "Choice": "`4``1/4` `text(inches)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -98,7 +98,7 @@
                 }
             },
             "D": {
-                "Choice": "4 1/2 inches",
+                "Choice": "`4``1/2` `text(inches)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -123,13 +123,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ryan folded a sheet of paper to make 12 equal-sized sections. He shaded 2 sections, as shown below.",
+            "Ryan folded a sheet of paper to make `12` equal-sized sections. He shaded `2` sections, as shown below.",
             "problems/NY15G4M/media/3a.jpg",
-            "Which fraction is equivalent to the one represented by the shaded part of the sheet of paper?"
+            "Which fraction is equivalent to the `text(one)` represented by the shaded part of the sheet of paper?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/12",
+                "Choice": "`1/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -137,7 +137,7 @@
                 }
             },
             "B": {
-                "Choice": "1/6",
+                "Choice": "`1/6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -145,7 +145,7 @@
                 }
             },
             "C": {
-                "Choice": "1/5",
+                "Choice": "`1/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -153,7 +153,7 @@
                 }
             },
             "D": {
-                "Choice": "6/5",
+                "Choice": "`6/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -174,16 +174,18 @@
             "Measure angles in whole-number degrees using a protractor. Sketch angles of specified measure."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Protractor"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the measure of angle DCE?",
+            "What is the measure of angle `DCE`?",
             "problems/NY15G4M/media/4a.jpg"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "40°",
+                "Choice": "`40°`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -191,7 +193,7 @@
                 }
             },
             "B": {
-                "Choice": "50°",
+                "Choice": "`50°`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -199,7 +201,7 @@
                 }
             },
             "C": {
-                "Choice": "90°",
+                "Choice": "`90°`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -207,7 +209,7 @@
                 }
             },
             "D": {
-                "Choice": "130°",
+                "Choice": "`130°`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -232,11 +234,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Estelle had 28 coins in her collection. Fred had 4 times as many coins as Estelle had. Which equation can be used to determine the number of coins Fred had?"
+            "Estelle had `28` coins in her collection. Fred had `4` times as many coins as Estelle had. Which equation can be used to determine the number of coins Fred had?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "28 × 4 = __",
+                "Choice": "`28xx4=ul(text( )text( ))`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -244,7 +246,7 @@
                 }
             },
             "B": {
-                "Choice": "28 ÷ 4 = __",
+                "Choice": "`28-:4=ul(text( )text( ))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -252,7 +254,7 @@
                 }
             },
             "C": {
-                "Choice": "28 + 4 = __",
+                "Choice": "`28+4=ul(text( )text( ))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -260,7 +262,7 @@
                 }
             },
             "D": {
-                "Choice": "28 - 4 = __",
+                "Choice": "`28-4=ul(text( )text( ))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -285,11 +287,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which number would be 16,000 when rounded to the nearest thousand?"
+            "Which number would be `16text(,)000` when rounded to the nearest `text(thousand)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "15,472",
+                "Choice": "`15text(,)472`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -297,7 +299,7 @@
                 }
             },
             "B": {
-                "Choice": "15,518",
+                "Choice": "`15text(,)518`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -305,7 +307,7 @@
                 }
             },
             "C": {
-                "Choice": "16,511",
+                "Choice": "`16text(,)511`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -313,7 +315,7 @@
                 }
             },
             "D": {
-                "Choice": "16,739",
+                "Choice": "`16text(,)739`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -340,7 +342,7 @@
         "Content": [
             "Students shaded the shapes below to represent fractions.",
             "problems/NY15G4M/media/11a.jpg",
-            "Which two students' shapes represent equivalent fractions?"
+            "Which `text(two)` students' shapes represent equivalent fractions?"
         ],
         "AnswerChoices": {
             "A": {
@@ -393,13 +395,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Carolina moved the hand of a spinner 270 degrees, as shown below.",
+            "Carolina moved the hand of a spinner `270` `text(degrees)`, as shown below.",
             "problems/NY15G4M/media/14a.jpg",
-            "What fraction of a complete turn through a circle is 270 degrees?"
+            "What fraction of a complete turn through a circle is `270` `text(degrees)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/360",
+                "Choice": "`3/360`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -407,7 +409,7 @@
                 }
             },
             "B": {
-                "Choice": "27/360",
+                "Choice": "`27/360`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -415,7 +417,7 @@
                 }
             },
             "C": {
-                "Choice": "90/360",
+                "Choice": "`90/360`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -423,7 +425,7 @@
                 }
             },
             "D": {
-                "Choice": "270/360",
+                "Choice": "`270/360`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -448,7 +450,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which model represents 3 × 1/2?"
+            "Which model represents `3xx1/2`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -502,11 +504,11 @@
         "Explain": false,
         "Content": [
             "What is the missing number in the equation below?",
-            ":box:5,600 ÷ 8 = __"
+            ":box:`5text(,)600-:8=ul(text( )text( ))`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -514,7 +516,7 @@
                 }
             },
             "B": {
-                "Choice": "70",
+                "Choice": "`70`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -522,7 +524,7 @@
                 }
             },
             "C": {
-                "Choice": "700",
+                "Choice": "`700`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -530,7 +532,7 @@
                 }
             },
             "D": {
-                "Choice": "7,000",
+                "Choice": "`7text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -560,7 +562,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/5 + 1/5",
+                "Choice": "`1/5+1/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -568,7 +570,7 @@
                 }
             },
             "B": {
-                "Choice": "1/5 + 1/5 + 1/5",
+                "Choice": "`1/5+1/5+1/5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -576,7 +578,7 @@
                 }
             },
             "C": {
-                "Choice": "3/5 + 3/5 + 3/5",
+                "Choice": "`3/5+3/5+3/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -584,7 +586,7 @@
                 }
             },
             "D": {
-                "Choice": "3/5 + 2/5",
+                "Choice": "`3/5+2/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -609,11 +611,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Rose uses instant lemonade powder to make 7 pitchers of lemonade. She uses 2/8 cup of powder for each pitcher. What is the total amount of powder that Rose uses?"
+            "Rose uses instant lemonade powder to make `7` pitchers of lemonade. She uses `2/8` `text(cup)` of powder for each pitcher. What is the total amount of powder that Rose uses?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "2/56 cups",
+                "Choice": "`2/56` `text(cups)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -621,7 +623,7 @@
                 }
             },
             "B": {
-                "Choice": "14/56 cups",
+                "Choice": "`14/56` `text(cups)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -629,7 +631,7 @@
                 }
             },
             "C": {
-                "Choice": "9/8 cups",
+                "Choice": "`9/8` `text(cups)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -637,7 +639,7 @@
                 }
             },
             "D": {
-                "Choice": "14/8 cups",
+                "Choice": "`14/8` `text(cups)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -664,11 +666,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A store ordered 28 boxes holding 12 banana muffins each and 5 boxes holding 6 blueberry muffins each. What was the total number of muffins the store ordered?"
+            "A store ordered `28` boxes holding `12` banana muffins each and `5` boxes holding `6` blueberry muffins each. What was the total number of muffins the store ordered?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "51",
+                "Choice": "`51`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -676,7 +678,7 @@
                 }
             },
             "B": {
-                "Choice": "366",
+                "Choice": "`366`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -684,7 +686,7 @@
                 }
             },
             "C": {
-                "Choice": "440",
+                "Choice": "`440`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -692,7 +694,7 @@
                 }
             },
             "D": {
-                "Choice": "10,080",
+                "Choice": "`10text(,)080`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -722,7 +724,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The figure has opposite sides that are perpendicular and angles that measure 135°.",
+                "Choice": "The figure has opposite sides that are perpendicular and angles that measure `135°`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -730,7 +732,7 @@
                 }
             },
             "B": {
-                "Choice": "The figure has opposite sides that are perpendicular and angles that measure 45°.",
+                "Choice": "The figure has opposite sides that are perpendicular and angles that measure `45°`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -738,7 +740,7 @@
                 }
             },
             "C": {
-                "Choice": "The figure has opposite sides that are parallel and angles that measure 135°.",
+                "Choice": "The figure has opposite sides that are parallel and angles that measure `135°`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -746,7 +748,7 @@
                 }
             },
             "D": {
-                "Choice": "The figure has opposite sides that are parallel and angles that measure 45°.",
+                "Choice": "The figure has opposite sides that are parallel and angles that measure `45°`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -771,11 +773,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The price of a board game is $24. The price of the board game is 2 times as much as the price of a jigsaw puzzle. What is the price of the jigsaw puzzle?"
+            "The price of a board game is `$24`. The price of the board game is `2` times as much as the price of a jigsaw puzzle. What is the price of the jigsaw puzzle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$12",
+                "Choice": "`$12`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -783,7 +785,7 @@
                 }
             },
             "B": {
-                "Choice": "$22",
+                "Choice": "`$22`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -791,7 +793,7 @@
                 }
             },
             "C": {
-                "Choice": "$26",
+                "Choice": "`$26`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -799,7 +801,7 @@
                 }
             },
             "D": {
-                "Choice": "$48",
+                "Choice": "`$48`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -879,11 +881,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The value of the 7 in 507,264 is 10 times the value of the 7 in which number?"
+            "The value of the `7` in `507text(,)264` is `10` times the value of the `7` in which number?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "493,725",
+                "Choice": "`493text(,)725`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -891,7 +893,7 @@
                 }
             },
             "B": {
-                "Choice": "587,921",
+                "Choice": "`587text(,)921`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -899,7 +901,7 @@
                 }
             },
             "C": {
-                "Choice": "672,439",
+                "Choice": "`672text(,)439`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -907,7 +909,7 @@
                 }
             },
             "D": {
-                "Choice": "714,093",
+                "Choice": "`714text(,)093`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -932,11 +934,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A gardener ordered 46 flowering bushes to plant in a park. Each bush cost $27. What was the total cost of the bushes?"
+            "A gardener ordered `46` flowering bushes to plant in a park. Each bush cost `$27`. What was the total cost of the bushes?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$1,102",
+                "Choice": "`$1text(,)102`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -944,7 +946,7 @@
                 }
             },
             "B": {
-                "Choice": "$1,142",
+                "Choice": "`$1text(,)142`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -952,7 +954,7 @@
                 }
             },
             "C": {
-                "Choice": "$1,202",
+                "Choice": "`$1text(,)202`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -960,7 +962,7 @@
                 }
             },
             "D": {
-                "Choice": "$1,242",
+                "Choice": "`$1text(,)242`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -985,11 +987,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Dennis wants to buy carpet for the rectangular floor of his living room. The room is 12 feet long and 16 feet wide. What is the area, in `text(square feet)`, of the living room floor?"
+            "Dennis wants to buy carpet for the rectangular floor of his living room. The room is `12` `text(feet)` long and `16` `text(feet)` wide. What is the area, in `text(square feet)`, of the living room floor?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "28",
+                "Choice": "`28`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -997,7 +999,7 @@
                 }
             },
             "B": {
-                "Choice": "56",
+                "Choice": "`56`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1005,7 +1007,7 @@
                 }
             },
             "C": {
-                "Choice": "182",
+                "Choice": "`182`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1013,7 +1015,7 @@
                 }
             },
             "D": {
-                "Choice": "192",
+                "Choice": "`192`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1038,11 +1040,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A rectangle has a width of 9 inches. The area of the rectangle is 648 square inches. What is the length, in `text(inches)`, of the rectangle?"
+            "A rectangle has a width of `9` `text(inches)`. The area of the rectangle is `648` `text(square inches)`. What is the length, in `text(inches)`, of the rectangle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "36",
+                "Choice": "`36`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1050,7 +1052,7 @@
                 }
             },
             "B": {
-                "Choice": "72",
+                "Choice": "`72`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1058,7 +1060,7 @@
                 }
             },
             "C": {
-                "Choice": "162",
+                "Choice": "`162`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1066,7 +1068,7 @@
                 }
             },
             "D": {
-                "Choice": "315",
+                "Choice": "`315`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1091,13 +1093,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The number below has the digit 6 in two different places.",
-            ":box:916,672",
-            "How many times greater is the value represented by the 6 in the thousands place than the value represented by the 6 in the hundreds place?"
+            "The number below has the digit `6` in `text(two)` different places.",
+            ":box:`916text(,)672`",
+            "How many times greater is the value represented by the `6` in the `text(thousands)` place than the value represented by the `6` in the `text(hundreds)` place?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1105,7 +1107,7 @@
                 }
             },
             "B": {
-                "Choice": "100",
+                "Choice": "`100`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1113,7 +1115,7 @@
                 }
             },
             "C": {
-                "Choice": "1,000",
+                "Choice": "`1text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1121,7 +1123,7 @@
                 }
             },
             "D": {
-                "Choice": "10,000",
+                "Choice": "`10text(,)000`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

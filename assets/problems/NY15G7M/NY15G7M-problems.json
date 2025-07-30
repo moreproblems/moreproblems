@@ -18,11 +18,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Yesterday, the temperature at noon was 11.4°F. By midnight, the temperature had decreased by 15.7 degrees. What was the temperature at midnight?"
+            "Yesterday, the temperature at `text(noon)` was `11.4text(°F)`. By `text(midnight)`, the temperature had decreased by `15.7` `text(degrees)`. What was the temperature at `text(midnight)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-4.3°F",
+                "Choice": "`-4.3text(°F)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -30,7 +30,7 @@
                 }
             },
             "B": {
-                "Choice": "-11.4°F",
+                "Choice": "`-11.4text(°F)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -38,7 +38,7 @@
                 }
             },
             "C": {
-                "Choice": "-15.7°F",
+                "Choice": "`-15.7text(°F)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -46,7 +46,7 @@
                 }
             },
             "D": {
-                "Choice": "- 27.1°F",
+                "Choice": "`-27.1text(°F)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -130,11 +130,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Altitude above sea level is given in positive values and below sea level is given in negative values. Which situation describes a hiker in Death Valley stopping at an altitude of 0 feet?"
+            "Altitude above sea level is given in `text(positive)` values and below sea level is given in `text(negative)` values. Which situation describes a hiker in Death Valley stopping at an altitude of `0` `text(feet)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The hiker starts at -10 feet then increases altitude by 10 feet.",
+                "Choice": "The hiker starts at `-10` `text(feet)` then increases altitude by `10` `text(feet)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -142,7 +142,7 @@
                 }
             },
             "B": {
-                "Choice": "The hiker starts at -10 feet then decreases altitude by 10 feet.",
+                "Choice": "The hiker starts at `-10` `text(feet)` then decreases altitude by `10` `text(feet)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -150,7 +150,7 @@
                 }
             },
             "C": {
-                "Choice": "The hiker starts at 10 feet then increases altitude by 10 feet.",
+                "Choice": "The hiker starts at `10` `text(feet)` then increases altitude by `10` `text(feet)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -158,7 +158,7 @@
                 }
             },
             "D": {
-                "Choice": "The hiker starts at 0 feet then decreases altitude by 10 feet.",
+                "Choice": "The hiker starts at `0` `text(feet)` then decreases altitude by `10` `text(feet)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -185,13 +185,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A cereal company puts a colored ring in each box of cereal. There are 6 different ring colors. The colors of the rings in each of 50 cereal boxes are shown in the table below.",
+            "A cereal company puts a colored ring in each box of cereal. There are `6` different ring colors. The colors of the rings in each of `50` cereal boxes are shown in the table below.",
             "problems/NY15G7M/media/6a.jpg",
-            "Based on the data, what is the probability that the next cereal box will contain a blue or a yellow ring?"
+            "Based on the data, what is the probability that the next cereal box will contain a `text(blue)` or a `text(yellow)` ring?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/6",
+                "Choice": "`1/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -199,7 +199,7 @@
                 }
             },
             "B": {
-                "Choice": "2/5",
+                "Choice": "`2/5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -207,7 +207,7 @@
                 }
             },
             "C": {
-                "Choice": "3/5",
+                "Choice": "`3/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -215,7 +215,7 @@
                 }
             },
             "D": {
-                "Choice": "2/3",
+                "Choice": "`2/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -242,13 +242,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The three steps shown below were used to find an expression equivalent to (2/5)(15x - 30y) + 10x.",
-            ":box:Step 1:  ͟?͟ \n\nStep 2: 16x - 12y\n\nStep 3: 4(4x - 3y)",
-            "Which expression could be used as Step 1?"
+            "The `text(three)` steps shown below were used to find an expression equivalent to `(2/5)(15x-30y)+10x`.",
+            ":box:Step `1`: `ul(text( )?text( ))`\n\nStep `2`: `16x-12y`\n\nStep `3`: `4(4x-3y)`",
+            "Which expression could be used as Step `1`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(2/5)(25x - 30y)",
+                "Choice": "`(2/5)(25x-30y)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -256,7 +256,7 @@
                 }
             },
             "B": {
-                "Choice": "6x - 12y + 10x",
+                "Choice": "`6x-12y+10x`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -264,7 +264,7 @@
                 }
             },
             "C": {
-                "Choice": "6x - 30y + 10x",
+                "Choice": "`6x-30y+10x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -272,7 +272,7 @@
                 }
             },
             "D": {
-                "Choice": "15(x -2y)+10x",
+                "Choice": "`15(x -2y)+10x`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -305,7 +305,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(0,0)",
+                "Choice": "`(0,0)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -313,7 +313,7 @@
                 }
             },
             "B": {
-                "Choice": "(1, 15)",
+                "Choice": "`(1,15)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -321,7 +321,7 @@
                 }
             },
             "C": {
-                "Choice": "(15, 1)",
+                "Choice": "`(15,1)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -329,7 +329,7 @@
                 }
             },
             "D": {
-                "Choice": "(8, 120)",
+                "Choice": "`(8,120)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -357,11 +357,11 @@
         "Explain": false,
         "Content": [
             "Evaluate.",
-            ":box:(-7/10 + 0.15) ÷ (-0.125)"
+            ":box:`(-7/10+0.15)-:(-0.125)`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-6.8",
+                "Choice": "`-6.8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -369,7 +369,7 @@
                 }
             },
             "B": {
-                "Choice": "-4.4",
+                "Choice": "`-4.4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -377,7 +377,7 @@
                 }
             },
             "C": {
-                "Choice": "4.4",
+                "Choice": "`4.4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -385,7 +385,7 @@
                 }
             },
             "D": {
-                "Choice": "6.8",
+                "Choice": "`6.8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -412,11 +412,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A recipe requires 1/3 cup of milk for each 1/4 cup of water. How many cups of water are needed for each cup of milk?"
+            "A recipe requires `1/3` `text(cup)` of milk for each `1/4` `text(cup)` of water. How many `text(cups)` of water are needed for `text(each cup)` of milk?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/12",
+                "Choice": "`1/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -424,7 +424,7 @@
                 }
             },
             "B": {
-                "Choice": "3/4",
+                "Choice": "`3/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -432,7 +432,7 @@
                 }
             },
             "C": {
-                "Choice": "11/12",
+                "Choice": "`11/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -440,7 +440,7 @@
                 }
             },
             "D": {
-                "Choice": "1 1/3",
+                "Choice": "`1``1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -467,11 +467,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "During a sale, a store offered a 40% discount on a particular camera that was originally priced at $450. After the sale, the discounted price of the camera was increased by 40%. What was the price of the camera after this increase?"
+            "During a sale, a store offered a `40%` discount on a particular camera that was originally priced at `$450`. After the sale, the discounted price of the camera was increased by `40%`. What was the price of the camera after this increase?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$252",
+                "Choice": "`$252`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -479,7 +479,7 @@
                 }
             },
             "B": {
-                "Choice": "$360",
+                "Choice": "`$360`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -487,7 +487,7 @@
                 }
             },
             "C": {
-                "Choice": "$378",
+                "Choice": "`$378`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -495,7 +495,7 @@
                 }
             },
             "D": {
-                "Choice": "$450",
+                "Choice": "`$450`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -522,11 +522,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the product of (-1/4) × (-3/7)?"
+            "What is the product of `(-1/4)xx(-3/7)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-7/12",
+                "Choice": "`-7/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -534,7 +534,7 @@
                 }
             },
             "B": {
-                "Choice": "-3/28",
+                "Choice": "`-3/28`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -542,7 +542,7 @@
                 }
             },
             "C": {
-                "Choice": "3/28",
+                "Choice": "`3/28`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -550,7 +550,7 @@
                 }
             },
             "D": {
-                "Choice": "7/12",
+                "Choice": "`7/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -577,11 +577,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Gary buys a 3 1/2-pound bag of cat food every 3 weeks. Gary feeds his cat the same amount of food each day. Which expression can Gary use to determine the number of pounds of cat food his cat eats each year? (1 year = 52 weeks)"
+            "Gary buys a `3``1/2text(-pound)` bag of cat food every `3` `text(weeks)`. Gary feeds his cat the same amount of food `text(each day)`. Which expression can Gary use to determine the number of `text(pounds)` of cat food his cat eats `text(each year)`? `(1` `text(year)=52` `text(weeks))`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "7/2 × 52/3",
+                "Choice": "`7/2xx52/3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -589,7 +589,7 @@
                 }
             },
             "B": {
-                "Choice": "7/2 × 3/52",
+                "Choice": "`7/2xx3/52`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -597,7 +597,7 @@
                 }
             },
             "C": {
-                "Choice": "3(1/2 × 3/52)",
+                "Choice": "`3(1/2xx3/52)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -605,7 +605,7 @@
                 }
             },
             "D": {
-                "Choice": "3(1/2 × 52/3)",
+                "Choice": "`3(1/2xx52/3)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -632,11 +632,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the decimal equivalent of 7/8?"
+            "What is the decimal equivalent of `7/8`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.780",
+                "Choice": "`0.780`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -644,7 +644,7 @@
                 }
             },
             "B": {
-                "Choice": "0.870",
+                "Choice": "`0.870`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -652,7 +652,7 @@
                 }
             },
             "C": {
-                "Choice": "0.875",
+                "Choice": "`0.875`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -660,7 +660,7 @@
                 }
             },
             "D": {
-                "Choice": "0.885",
+                "Choice": "`0.885`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -687,11 +687,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of (-1/4 - 1/2) ÷ (-4/7)?"
+            "What is the value of `(-1/4-1/2)-:(-4/7)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-1 5/16",
+                "Choice": "`-1``5/16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -699,7 +699,7 @@
                 }
             },
             "B": {
-                "Choice": "-3/7",
+                "Choice": "`-3/7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -707,7 +707,7 @@
                 }
             },
             "C": {
-                "Choice": "3/7",
+                "Choice": "`3/7`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -715,7 +715,7 @@
                 }
             },
             "D": {
-                "Choice": "1 5/16",
+                "Choice": "`1``5/16`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -742,13 +742,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The school bus Evie rides is scheduled to arrive at her stop at 8:20 a.m. each day. The table below shows the actual arrival times of the bus for several days that were randomly selected over the past few months.",
+            "The school bus Evie rides is scheduled to arrive at her stop at `8:20` `text(a.m.)` `text(each day)`. The table below shows the actual arrival times of the bus for several `text(days)` that were randomly selected over the past few `text(months)`.",
             "problems/NY15G7M/media/28a.jpg",
-            "Based on these data, what is the probability that the bus will arrive at Evie's stop before 8:20 a.m. tomorrow?"
+            "Based on these data, what is the probability that the bus will arrive at Evie's stop before `8:20` `text(a.m.)` tomorrow?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/10",
+                "Choice": "`3/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -756,7 +756,7 @@
                 }
             },
             "B": {
-                "Choice": "1/3",
+                "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -764,7 +764,7 @@
                 }
             },
             "C": {
-                "Choice": "7/20",
+                "Choice": "`7/20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -772,7 +772,7 @@
                 }
             },
             "D": {
-                "Choice": "13/20",
+                "Choice": "`13/20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -799,11 +799,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the radius, in `text(centimeters)`, of a circle that has a circumference of 16π centimeters?"
+            "What is the radius, in `text(centimeters)`, of a circle that has a circumference of `16pi` `text(centimeters)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -811,7 +811,7 @@
                 }
             },
             "B": {
-                "Choice": "16",
+                "Choice": "`16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -819,7 +819,7 @@
                 }
             },
             "C": {
-                "Choice": "32",
+                "Choice": "`32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -827,7 +827,7 @@
                 }
             },
             "D": {
-                "Choice": "64",
+                "Choice": "`64`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -854,13 +854,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Each sales associate at an electronics store has a choice of the two salary options shown below.",
-            ":box:• $115 per week plus 9.5% commission on the associate's total sales\n\n• $450 per week with no commission",
-            "The average of the total sales amount for each associate last year was $125,000. Based on this average, what is the difference between the two salary options each year? (52 weeks = 1 year)"
+            "Each sales associate at an electronics store has a choice of the `text(two)` salary options shown below.",
+            ":box:• `$115` `text(per week)` plus `9.5%` commission on the associate's total sales\n\n• `$450` `text(per week)` with no commission",
+            "The average of the total sales amount for each associate last year was `$125text(,)000`. Based on this average, what is the difference between the `text(two)` salary options `text(each year)`? `(52` `text(weeks)=1` `text(year))`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$4,262.11",
+                "Choice": "`$4text(,)262.11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -868,7 +868,7 @@
                 }
             },
             "B": {
-                "Choice": "$5,545.00",
+                "Choice": "`$5text(,)545.00`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -876,7 +876,7 @@
                 }
             },
             "C": {
-                "Choice": "$10,956.90",
+                "Choice": "`$10text(,)956.90`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -884,7 +884,7 @@
                 }
             },
             "D": {
-                "Choice": "$11,525.00",
+                "Choice": "`$11text(,)525.00`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -900,7 +900,7 @@
         "NumChoices": 4,
         "Topics": [
             "The Number System",
-            "Ratios & Proportinal Relationships"
+            "Ratios & Proportional Relationships"
         ],
         "SubTopics": [
             "Solve real-world and mathematical problems involving the four operations with rational numbers.",
@@ -913,11 +913,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Travis, Jessica, and Robin are collecting donations for the school band. Travis wants to collect 20% more than Jessica, and Robin wants to collect 35% more than Travis. If the students meet their goals and Travis collects $43, how much money did they collect in all?"
+            "Travis, Jessica, and Robin are collecting donations for the school band. Travis wants to collect `20%` more than Jessica, and Robin wants to collect `35%` more than Travis. If the students meet their goals and Travis collects `$43`, how much money did they collect in all?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$106.78",
+                "Choice": "`$106.78`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -925,7 +925,7 @@
                 }
             },
             "B": {
-                "Choice": "$128.60",
+                "Choice": "`$128.60`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -933,7 +933,7 @@
                 }
             },
             "C": {
-                "Choice": "$136.88",
+                "Choice": "`$136.88`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -941,7 +941,7 @@
                 }
             },
             "D": {
-                "Choice": "$144.99",
+                "Choice": "`$144.99`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -968,11 +968,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The mean radius of Earth is 6,371.0 kilometers and the mean radius of Earth's Moon is 1,737.5 kilometers. What is the approximate difference in the mean circumferences, in `text(kilometers)`, of Earth and Earth's Moon? Round your answer to the nearest tenth of a kilometer."
+            "The mean radius of `text(Earth)` is `6text(,)371.0` `text(kilometers)` and the mean radius of `text(Earth)`'s `text(Moon)` is `1text(,)737.5` `text(kilometers)`. What is the approximate difference in the mean circumferences, in `text(kilometers)`, of `text(Earth)` and `text(Earth)`'s `text(Moon)`? Round your answer to the nearest `text(tenth of a kilometer)`."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "40,030.2",
+                "Choice": "`40text(,)030.2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -980,7 +980,7 @@
                 }
             },
             "B": {
-                "Choice": "29,113.1",
+                "Choice": "`29text(,)113.1`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -988,7 +988,7 @@
                 }
             },
             "C": {
-                "Choice": "14,556.6",
+                "Choice": "`14text(,)556.6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -996,7 +996,7 @@
                 }
             },
             "D": {
-                "Choice": "10,917.0",
+                "Choice": "`10text(,)917.0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1023,11 +1023,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A dealer paid $10,000 for a boat at an auction. At the dealership, a salesperson sold the boat for 30% more than the auction price. The salesperson received a commission of 25% of the difference between the auction price and the dealership price. What was the salesperson's commission?"
+            "A dealer paid `$10text(,)000` for a boat at an auction. At the dealership, a salesperson sold the boat for `30%` more than the auction price. The salesperson received a commission of `25%` of the difference between the auction price and the dealership price. What was the salesperson's commission?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$750",
+                "Choice": "`$750`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1035,7 +1035,7 @@
                 }
             },
             "B": {
-                "Choice": "$1,750",
+                "Choice": "`$1text(,)750`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1043,7 +1043,7 @@
                 }
             },
             "C": {
-                "Choice": "$3,250",
+                "Choice": "`$3text(,)250`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1051,7 +1051,7 @@
                 }
             },
             "D": {
-                "Choice": "$5,500",
+                "Choice": "`$5text(,)500`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1078,11 +1078,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression represents a factorization of 32m + 56mp?"
+            "Which expression represents a factorization of `32m+56mp`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8(4m + 7p)",
+                "Choice": "`8(4m+7p)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1090,7 +1090,7 @@
                 }
             },
             "B": {
-                "Choice": "8(4 + 7)mp",
+                "Choice": "`8(4+7)mp`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1098,7 +1098,7 @@
                 }
             },
             "C": {
-                "Choice": "8p(4 + 7m)",
+                "Choice": "`8p(4+7m)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1106,7 +1106,7 @@
                 }
             },
             "D": {
-                "Choice": "8m(4 + 7p)",
+                "Choice": "`8m(4+7p)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1133,11 +1133,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Amber determined that the expression (-1/2)/(-41/15) is equivalent to 15/82. Which statement describes the process Amber could have used?"
+            "Amber determined that the expression `(-1/2)/(-41/15)` is equivalent to `15/82`. Which statement describes the process Amber could have used?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "She divided -1/2 by -15 and then divided the result by 41.",
+                "Choice": "She divided `-1/2` by `-15` and then divided the result by `41`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1145,7 +1145,7 @@
                 }
             },
             "B": {
-                "Choice": "She multiplied -1/2 by -15 and then divided the result by 41.",
+                "Choice": "She multiplied `-1/2` by `-15` and then divided the result by `41`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1153,7 +1153,7 @@
                 }
             },
             "C": {
-                "Choice": "She divided -1/2 by -15 and then multiplied the result by 41.",
+                "Choice": "She divided `-1/2` by `-15` and then multiplied the result by `41`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1161,7 +1161,7 @@
                 }
             },
             "D": {
-                "Choice": "She multiplied -1/2 by -15 and then multiplied the result by 41.",
+                "Choice": "She multiplied `-1/2` by `-15` and then multiplied the result by `41`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1188,11 +1188,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ben earns $9 per hour and $6 for each delivery he makes. He wants to earn more than $155 in an 8-hour workday. What is the least number of deliveries he must make to reach his goal?"
+            "Ben earns `$9` `text(per hour)` and `$6` for each delivery he makes. He wants to earn more than `$155` in an `8text(-hour)` workday. What is the least number of deliveries he must make to reach his goal?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "11",
+                "Choice": "`11`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1200,7 +1200,7 @@
                 }
             },
             "B": {
-                "Choice": "12",
+                "Choice": "`12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1208,7 +1208,7 @@
                 }
             },
             "C": {
-                "Choice": "13",
+                "Choice": "`13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1216,7 +1216,7 @@
                 }
             },
             "D": {
-                "Choice": "14",
+                "Choice": "`14`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1243,13 +1243,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Malika and Adrian prepared containers of potato salad at a deli. Each container was supposed to have a mass of one pound. The manager selected a random sample of containers prepared by each employee to check the mass of each container. The results are shown in the table below.",
+            "Malika and Adrian prepared containers of potato salad at a deli. Each container was supposed to have a mass of `text(one pound)`. The manager selected a random sample of containers prepared by each employee to check the mass of each container. The results are shown in the table below.",
             "problems/NY15G7M/media/45a.jpg",
             "Which inference is best supported by these data?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Malika will produce more containers with a mass of exactly one pound than Adrian will.",
+                "Choice": "Malika will produce more containers with a mass of exactly `text(one pound)` than Adrian will.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1257,7 +1257,7 @@
                 }
             },
             "B": {
-                "Choice": "Adrian will produce more containers with a mass of exactly one pound than Malika will.",
+                "Choice": "Adrian will produce more containers with a mass of exactly `text(one pound)` than Malika will.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1265,7 +1265,7 @@
                 }
             },
             "C": {
-                "Choice": "Most of Malika's containers will have a mass closer to one pound than most of Adrian's containers.",
+                "Choice": "Most of Malika's containers will have a mass closer to `text(one pound)` than most of Adrian's containers.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1273,7 +1273,7 @@
                 }
             },
             "D": {
-                "Choice": "Most of Adrian's containers will have a mass closer to one pound than most of Malika's containers.",
+                "Choice": "Most of Adrian's containers will have a mass closer to `text(one pound)` than most of Malika's containers.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1300,11 +1300,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 8c + 6 - 3c - 2?"
+            "Which expression is equivalent to `8c+6-3c-2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5c + 4",
+                "Choice": "`5c+4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1312,7 +1312,7 @@
                 }
             },
             "B": {
-                "Choice": "5c + 8",
+                "Choice": "`5c+8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1320,7 +1320,7 @@
                 }
             },
             "C": {
-                "Choice": "11c + 4",
+                "Choice": "`11c+4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1328,7 +1328,7 @@
                 }
             },
             "D": {
-                "Choice": "11c + 8",
+                "Choice": "`11c+8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1355,13 +1355,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A rhombus with side length s is shown below.",
+            "A rhombus with side length `s` is shown below.",
             "problems/NY15G7M/media/47a.jpg",
-            "The perimeter, P, of a rhombus is proportional to the length of each side, s. Which equation represents this relationship?"
+            "The perimeter, `P`, of a rhombus is proportional to the length of each side, `s`. Which equation represents this relationship?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "P = 4s",
+                "Choice": "`P=4s`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1369,7 +1369,7 @@
                 }
             },
             "B": {
-                "Choice": "s = 4P",
+                "Choice": "`s=4P`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1377,7 +1377,7 @@
                 }
             },
             "C": {
-                "Choice": "P = 4 + s",
+                "Choice": "`P=4+s`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1385,7 +1385,7 @@
                 }
             },
             "D": {
-                "Choice": "s = 4 + P",
+                "Choice": "`s=4+P`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1412,7 +1412,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Sara is playing a board game. The probability that Sara will score a point on her next turn is 1/3. Which statement describes the probability that Sara will score a point on her next turn?"
+            "Sara is playing a board game. The probability that Sara will score a point on her next turn is `1/3`. Which statement describes the probability that Sara will score a point on her next turn?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1467,11 +1467,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Salid bought 35 feet of window trim at a hardware store. The trim cost $1.75 per foot, including sales tax. If Salid paid with a $100.00 bill, how much change should he have received?"
+            "Salid bought `35` `text(feet)` of window trim at a hardware store. The trim cost `$1.75` `text(per foot)`, including sales tax. If Salid paid with a `$100.00` bill, how much change should he have received?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$20.00",
+                "Choice": "`$20.00`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1479,7 +1479,7 @@
                 }
             },
             "B": {
-                "Choice": "$38.75",
+                "Choice": "`$38.75`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1487,7 +1487,7 @@
                 }
             },
             "C": {
-                "Choice": "$61.25",
+                "Choice": "`$61.25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1495,7 +1495,7 @@
                 }
             },
             "D": {
-                "Choice": "$80.00",
+                "Choice": "`$80.00`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1522,11 +1522,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A pile of newspapers in Ms. McGrath's art class was 17 3/4 inches high. Each consecutive week, for the next 5 weeks, the height of the pile of newspapers increased by 8 7/12 inches. What was the height, in `text(inches)`, of the pile after 3 weeks?"
+            "A pile of newspapers in Ms. McGrath's art class was `17``3/4` `text(inches)` high. Each consecutive `text(week)`, for the next `5` `text(weeks)`, the height of the pile of newspapers increased by `8``7/12` `text(inches)`. What was the height, in `text(inches)`, of the pile after `3` `text(weeks)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "25 3/4",
+                "Choice": "`25``3/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1534,7 +1534,7 @@
                 }
             },
             "B": {
-                "Choice": "26 1/4",
+                "Choice": "`26``1/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1542,7 +1542,7 @@
                 }
             },
             "C": {
-                "Choice": "42 1/4",
+                "Choice": "`42``1/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1550,7 +1550,7 @@
                 }
             },
             "D": {
-                "Choice": "43 1/2",
+                "Choice": "`43``1/2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",

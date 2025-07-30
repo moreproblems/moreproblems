@@ -15,11 +15,11 @@
         "Explain": false,
         "Content": [
             "What part of the expression below should be calculated first?",
-            ":box:8 + {22 × [15 + (14 × 2)]}"
+            ":box:`8+{22xx[15+(14xx2)]}`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 + 22",
+                "Choice": "`8+22`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -27,7 +27,7 @@
                 }
             },
             "B": {
-                "Choice": "22 × 15",
+                "Choice": "`22xx15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -35,7 +35,7 @@
                 }
             },
             "C": {
-                "Choice": "14 × 2",
+                "Choice": "`14xx2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -43,7 +43,7 @@
                 }
             },
             "D": {
-                "Choice": "15 + 14",
+                "Choice": "`15+14`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -58,7 +58,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Add and subtract fractions with unlike denominators (including mixed numbers) by replacing given fractions with equivalent fractions in such a way as to produce an equivalent sum or difference of fractions with like denominators."
@@ -68,11 +68,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Tara baked 6 1/2 dozen cookies. She sold 3 2/6 dozen of the cookies she made. How many dozens of cookies does Tara have remaining?"
+            "Tara baked `6``1/2` `text(dozen)` cookies. She sold `3``2/6` `text(dozen)` of the cookies she made. How many `text(dozens)` of cookies does Tara have remaining?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 1/6",
+                "Choice": "`3``1/6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -80,7 +80,7 @@
                 }
             },
             "B": {
-                "Choice": "3 1/4",
+                "Choice": "`3``1/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -88,7 +88,7 @@
                 }
             },
             "C": {
-                "Choice": "3 3/8",
+                "Choice": "`3``3/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -96,7 +96,7 @@
                 }
             },
             "D": {
-                "Choice": "3 5/6",
+                "Choice": "`3``5/6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -121,13 +121,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Prism A is shown below. The height of Prism B is 2 times the height of Prism A. The length and width of both prisms are the same.",
+            "Prism `A` is shown below. The height of Prism `B` is `2` times the height of Prism `A`. The length and width of both prisms are the same.",
             "problems/NY17G5M/media/3a.jpg",
-            "What is the volume, in `text(cubic inches)`, of Prism B?"
+            "What is the volume, in `text(cubic inches)`, of Prism `B`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -135,7 +135,7 @@
                 }
             },
             "B": {
-                "Choice": "44",
+                "Choice": "`44`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -143,7 +143,7 @@
                 }
             },
             "C": {
-                "Choice": "45",
+                "Choice": "`45`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -151,7 +151,7 @@
                 }
             },
             "D": {
-                "Choice": "60",
+                "Choice": "`60`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -166,7 +166,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Use decimal notation for fractions with denominators `10or100`."
@@ -176,11 +176,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which decimal is equivalent to 41/100?"
+            "Which decimal is equivalent to `41/100`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "41.0",
+                "Choice": "`41.0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -188,7 +188,7 @@
                 }
             },
             "B": {
-                "Choice": "4.10",
+                "Choice": "`4.10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -196,7 +196,7 @@
                 }
             },
             "C": {
-                "Choice": "0.41",
+                "Choice": "`0.41`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -204,7 +204,7 @@
                 }
             },
             "D": {
-                "Choice": "0.041",
+                "Choice": "`0.041`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -230,11 +230,11 @@
         "Explain": false,
         "Content": [
             "What number is equivalent to the expanded form shown below?",
-            ":box:(2 × 100) + (3 × 1) + (4 × 1/10) + (3 × 1/1,000)"
+            ":box:`(2xx100)+(3xx1)+(4xx1/10)+(3xx1/(1text(,)000))`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "203.043",
+                "Choice": "`203.043`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -242,7 +242,7 @@
                 }
             },
             "B": {
-                "Choice": "203.403",
+                "Choice": "`203.403`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -250,7 +250,7 @@
                 }
             },
             "C": {
-                "Choice": "230.430",
+                "Choice": "`230.430`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -258,7 +258,7 @@
                 }
             },
             "D": {
-                "Choice": "230.403",
+                "Choice": "`230.403`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -283,11 +283,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which phrase is represented by the expression 5 × (36 + 9)?"
+            "Which phrase is represented by the expression `5xx(36+9)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "the product of 36 and 5, increased by 9",
+                "Choice": "the product of `36and5`, increased by `9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -295,7 +295,7 @@
                 }
             },
             "B": {
-                "Choice": "the product of 36 and 9, multiplied by 5",
+                "Choice": "the product of `36and9`, multiplied by `5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -303,7 +303,7 @@
                 }
             },
             "C": {
-                "Choice": "the sum of 36 and 9, multiplied by 5",
+                "Choice": "the sum of `36and9`, multiplied by `5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -311,7 +311,7 @@
                 }
             },
             "D": {
-                "Choice": "the sum of 36 and 5, increased by 9",
+                "Choice": "the sum of `36and5`, increased by `9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -336,11 +336,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The value of the digit in the hundreds place in the number 653,841 is 1/10 the value of the digit in the thousands place in which number?"
+            "The value of the digit in the `text(hundreds)` place in the number `653text(,)841` is `1/10` the value of the digit in the `text(thousands)` place in which number?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "748,917",
+                "Choice": "`748text(,)917`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -348,7 +348,7 @@
                 }
             },
             "B": {
-                "Choice": "749,817",
+                "Choice": "`749text(,)817`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -356,7 +356,7 @@
                 }
             },
             "C": {
-                "Choice": "784,917",
+                "Choice": "`784text(,)917`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -364,7 +364,7 @@
                 }
             },
             "D": {
-                "Choice": "797,481",
+                "Choice": "`797text(,)481`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -389,13 +389,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table below lists the number of layers of centimeter cubes, along with the number of cubes in each layer, in each of four rectangular prisms.",
+            "The table below lists the number of layers of `text(centimeter)` cubes, along with the number of cubes in each layer, in each of `text(four)` rectangular prisms.",
             "problems/NY17G5M/media/9a.jpg",
             "Which rectangular prism has the greatest volume?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Prism R",
+                "Choice": "Prism `R`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -403,7 +403,7 @@
                 }
             },
             "B": {
-                "Choice": "Prism S",
+                "Choice": "Prism `S`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -411,7 +411,7 @@
                 }
             },
             "C": {
-                "Choice": "Prism T",
+                "Choice": "Prism `T`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -419,7 +419,7 @@
                 }
             },
             "D": {
-                "Choice": "Prism U",
+                "Choice": "Prism `U`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -444,13 +444,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The decimal grid shown below is shaded and marked with Xs to model an expression.",
+            "The decimal grid shown below is shaded and marked with `Xtext(s)` to model an expression.",
             "problems/NY17G5M/media/12a.jpg",
             "Which expression could be modeled by this decimal grid?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.08 × 0.04",
+                "Choice": "`0.08xx0.04`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -458,7 +458,7 @@
                 }
             },
             "B": {
-                "Choice": "0.08 х 0.40",
+                "Choice": "`0.08xx0.40`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -466,7 +466,7 @@
                 }
             },
             "C": {
-                "Choice": "0.80 x 0.04",
+                "Choice": "`0.80xx0.04`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -474,7 +474,7 @@
                 }
             },
             "D": {
-                "Choice": "0.80 x 0.40",
+                "Choice": "`0.80xx0.40`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -489,7 +489,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Interpret division of a unit fraction by a non-zero whole number, and compute such quotients."
@@ -499,11 +499,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of the expression 1/5 ÷ 4?"
+            "What is the value of the expression `1/5-:4`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "20/1",
+                "Choice": "`20/1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -511,7 +511,7 @@
                 }
             },
             "B": {
-                "Choice": "5/4",
+                "Choice": "`5/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -519,7 +519,7 @@
                 }
             },
             "C": {
-                "Choice": "4/5",
+                "Choice": "`4/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -527,7 +527,7 @@
                 }
             },
             "D": {
-                "Choice": "1/20",
+                "Choice": "`1/20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -552,11 +552,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mia buys 5 yards of ribbon to make bracelets. She needs 18 inches of ribbon to make 1 bracelet. How many bracelets can Mia make if she uses all the ribbon she buys?"
+            "Mia buys `5` yards of ribbon to make bracelets. She needs `18` `text(inches)` of ribbon to make `1` bracelet. How many bracelets can Mia make if she uses all the ribbon she buys?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "90",
+                "Choice": "`90`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -564,7 +564,7 @@
                 }
             },
             "B": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -572,7 +572,7 @@
                 }
             },
             "C": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -580,7 +580,7 @@
                 }
             },
             "D": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -611,7 +611,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3.29",
+                "Choice": "`3.29`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -619,7 +619,7 @@
                 }
             },
             "B": {
-                "Choice": "3.32",
+                "Choice": "`3.32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -627,7 +627,7 @@
                 }
             },
             "C": {
-                "Choice": "4.10",
+                "Choice": "`4.10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -635,7 +635,7 @@
                 }
             },
             "D": {
-                "Choice": "4.13",
+                "Choice": "`4.13`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -650,7 +650,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Interpret a fraction as division of the numerator by the denominator `(a/b=a-:b)`. Solve word problems involving division of whole numbers leading to answers in the form of fractions or mixed numbers, e.g., by using visual fraction models or equations to represent the problem."
@@ -660,11 +660,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 3/5?"
+            "Which expression is equivalent to `3/5`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3 × 5",
+                "Choice": "`3xx5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -672,7 +672,7 @@
                 }
             },
             "B": {
-                "Choice": "3 + 5",
+                "Choice": "`3+5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -680,7 +680,7 @@
                 }
             },
             "C": {
-                "Choice": "3 ÷ 5",
+                "Choice": "`3-:5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -688,7 +688,7 @@
                 }
             },
             "D": {
-                "Choice": "3 - 5",
+                "Choice": "`3-5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -713,7 +713,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Tyler completely filled the box shown below with unit cubes, with no gaps or overlaps.",
+            "Tyler completely filled the box shown below with `text(unit cubes)`, with no gaps or overlaps.",
             "problems/NY17G5M/media/17a.jpg",
             "He then counted the number of cubes that he used to fill the box. What type of measurement is represented by the number of cubes Tyler counted?"
         ],
@@ -758,7 +758,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Solve word problems involving addition and subtraction of fractions referring to the same whole, including cases of unlike denominators, e.g., by using visual fraction models or equations to represent the problem. Use benchmark fractions and number sense of fractions to estimate mentally and assess the reasonableness of answers."
@@ -768,13 +768,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Each student in a class plays one of three sports: soccer, volleyball, or basketball.",
-            ":box:• 3/5 of the number of students play soccer\n\n• 1/4 of the number of students play voleybal",
+            "Each student in a class plays `text(one)` of `text(three)` sports: soccer, volleyball, or basketball.",
+            ":box:• `3/5` of the number of students play soccer\n\n• `1/4` of the number of students play volleybal",
             "What fraction of the number of students play basketball?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3/20",
+                "Choice": "`3/20`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -782,7 +782,7 @@
                 }
             },
             "B": {
-                "Choice": "4/9",
+                "Choice": "`4/9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -790,7 +790,7 @@
                 }
             },
             "C": {
-                "Choice": "5/9",
+                "Choice": "`5/9`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -798,7 +798,7 @@
                 }
             },
             "D": {
-                "Choice": "17/20",
+                "Choice": "`17/20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -823,11 +823,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the value of 0.1561 rounded to the nearest tenth?"
+            "What is the value of `0.1561` rounded to the nearest `text(tenth)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "0.15",
+                "Choice": "`0.15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -835,7 +835,7 @@
                 }
             },
             "B": {
-                "Choice": "0.16",
+                "Choice": "`0.16`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -843,7 +843,7 @@
                 }
             },
             "C": {
-                "Choice": "0.1",
+                "Choice": "`0.1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -851,7 +851,7 @@
                 }
             },
             "D": {
-                "Choice": "0.2",
+                "Choice": "`0.2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -876,13 +876,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The figure below is made of unit cubes.",
+            "The figure below is made of `text(unit cubes)`.",
             "problems/NY17G5M/media/23a.jpg",
-            "How many unit cubes need to be added to the figure so that it will have a total volume of 12 cubic units?"
+            "How many `text(unit cubes)` need to be added to the figure so that it will have a total volume of `12` `text(cubic units)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -890,7 +890,7 @@
                 }
             },
             "B": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -898,7 +898,7 @@
                 }
             },
             "C": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -906,7 +906,7 @@
                 }
             },
             "D": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -937,7 +937,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "× and 2",
+                "Choice": "`xxand2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -945,7 +945,7 @@
                 }
             },
             "B": {
-                "Choice": "÷ and 2",
+                "Choice": "`-:and2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -953,7 +953,7 @@
                 }
             },
             "C": {
-                "Choice": "× and 5",
+                "Choice": "`xxand5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -961,7 +961,7 @@
                 }
             },
             "D": {
-                "Choice": "÷ and 5",
+                "Choice": "`-:and5`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -988,7 +988,7 @@
         "Content": [
             "A square and a rhombus are shown below.",
             "problems/NY17G5M/media/25a.jpg",
-            "Which attribute is true of one of the shapes but not of both?"
+            "Which attribute is true of `text(one)` of the shapes but not of both?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1008,7 +1008,7 @@
                 }
             },
             "C": {
-                "Choice": "There are two sets of equal angles.",
+                "Choice": "There are `text(two)` sets of equal angles.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1016,7 +1016,7 @@
                 }
             },
             "D": {
-                "Choice": "There are two sets of parallel sides.",
+                "Choice": "There are `text(two)` sets of parallel sides.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1041,13 +1041,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Point K is shown on the number line below.",
+            "Point `K` is shown on the number line below.",
             "problems/NY17G5M/media/26a.jpg",
-            "Which number sentence best describes the value represented by point K?"
+            "Which number sentence best describes the value represented by point `K`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "К > 0.13",
+                "Choice": "`K>0.13`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1055,7 +1055,7 @@
                 }
             },
             "B": {
-                "Choice": "K < 0.13",
+                "Choice": "`K<0.13`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1063,7 +1063,7 @@
                 }
             },
             "C": {
-                "Choice": "К = 0.15",
+                "Choice": "`K=0.15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1071,7 +1071,7 @@
                 }
             },
             "D": {
-                "Choice": "К = 0.35",
+                "Choice": "`K=0.35`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1098,7 +1098,7 @@
         "Content": [
             "The table below shows the distance some players hit a softball.",
             "problems/NY17G5M/media/27a.jpg",
-            "Pablo hit the softball 2 yards. Which player or players hit the softball the same distance as Pablo?"
+            "Pablo hit the softball `2` `text(yards)`. Which player or players hit the softball the same distance as Pablo?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1151,13 +1151,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The line plot below shows the lengths of all the pieces of string Emma used for an art proejct. She cut all these pieces from one orginal piece of string.",
+            "The line plot below shows the lengths of all the pieces of string Emma used for an art project. She cut all these pieces from one original piece of string.",
             "problems/NY17G5M/media/28a.jpg",
-            "Emma had 1 foot of string left over. How long, in `text(feet)`, was the original piece of string?"
+            "Emma had `1` `text(foot)` of string left over. How long, in `text(feet)`, was the original piece of string?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1 6/8",
+                "Choice": "`1``6/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1165,7 +1165,7 @@
                 }
             },
             "B": {
-                "Choice": "1 7/8",
+                "Choice": "`1``7/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1173,7 +1173,7 @@
                 }
             },
             "C": {
-                "Choice": "3 7/8",
+                "Choice": "`3``7/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1181,7 +1181,7 @@
                 }
             },
             "D": {
-                "Choice": "6 1/8",
+                "Choice": "`6``1/8`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1196,7 +1196,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Explaining why multiplying a given number by a fraction greater than `1` results in a product greater than the given number (recognizing multiplication by whole numbers greater than `1` as a familiar case); explaining why multiplying a given number by a fraction less than `1` results in a product smaller than the given number; and relating the principle of fraction equivalence `a/b=(nxxa)/(nxxb)` to the effect of multiplying `a/b` by `1`."
@@ -1206,11 +1206,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "For which values of `k` would the product of k/3 x 12 be greater than 12?"
+            "For which values of `k` would the product of `k/3xx12` be greater than `12`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "for any value of `k` less than 1 but greater than 0",
+                "Choice": "for any value of `k` less than `1` but greater than `0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1218,7 +1218,7 @@
                 }
             },
             "B": {
-                "Choice": "for any value of `k` less than 3 but greater than 1",
+                "Choice": "for any value of `k` less than `3` but greater than `1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1226,7 +1226,7 @@
                 }
             },
             "C": {
-                "Choice": "for any value of `k` equal to 3",
+                "Choice": "for any value of `k` equal to `3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1234,7 +1234,7 @@
                 }
             },
             "D": {
-                "Choice": "for any value of `k` greater than 3",
+                "Choice": "for any value of `k` greater than `3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1249,7 +1249,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Apply and extend previous understandings of multiplication to multiply a fraction or whole number by a fraction."
@@ -1259,11 +1259,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Each day last week, Ms. Wilson walked 3/4 mile. What is the total distance, in `text(miles)`, that Ms. Wilson walked in 4 days?"
+            "`text(Each day)` `text(last week)`, Ms. Wilson walked `3/4` `text(mile)`. What is the total distance, in `text(miles)`, that Ms. Wilson walked in `4` `text(days)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1271,7 +1271,7 @@
                 }
             },
             "B": {
-                "Choice": "2",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1279,7 +1279,7 @@
                 }
             },
             "C": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1287,7 +1287,7 @@
                 }
             },
             "D": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1312,13 +1312,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A right rectangular prism is shown below. The volume of the prism is determined by using unit cubes.",
+            "A right rectangular prism is shown below. The volume of the prism is determined by using `text(unit cubes)`.",
             "problems/NY17G5M/media/33a.jpg",
             "Which statement describes how to determine the volume of the prism in `text(cubic units)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Add the length, width, and height: 4 + 3 + 2.",
+                "Choice": "Add the length, width, and height: `4+3+2`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1326,7 +1326,7 @@
                 }
             },
             "B": {
-                "Choice": "Add the length and width and then multiply by the height: (4 + 3) ×2.",
+                "Choice": "Add the length and width and then multiply by the height: `(4+3)xx2`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1334,7 +1334,7 @@
                 }
             },
             "C": {
-                "Choice": "Determine the area of the base and add the number of layers of cubes: (4 x 3) + 2.",
+                "Choice": "Determine the area of the base and add the number of layers of cubes: `(4xx3)+2`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1342,7 +1342,7 @@
                 }
             },
             "D": {
-                "Choice": "Determine the area of the base and multiply by the number of layers of cubes: (4 × 3) x 2.",
+                "Choice": "Determine the area of the base and multiply by the number of layers of cubes: `(4xx3)xx2`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1372,7 +1372,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1 cubic unit",
+                "Choice": "`1` `text(cubic unit)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1380,7 +1380,7 @@
                 }
             },
             "B": {
-                "Choice": "3 cubic unit",
+                "Choice": "`3` `text(cubic unit)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1388,7 +1388,7 @@
                 }
             },
             "C": {
-                "Choice": "4 cubic unit",
+                "Choice": "`4` `text(cubic unit)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1396,7 +1396,7 @@
                 }
             },
             "D": {
-                "Choice": "6 cubic unit",
+                "Choice": "`6` `text(cubic unit)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1411,7 +1411,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Apply and extend previous understandings of division to divide unit fractions by whole numbers and whole numbers by unit fractions."
@@ -1421,11 +1421,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "During a hike, 3 friends equaly shared 1/2 pound of trail mix. What amount of trail mix, in `text(pounds)`, did each friend receive?"
+            "During a hike, `3` friends equally shared `1/2` `text(pound)` of trail mix. What amount of trail mix, in `text(pounds)`, did each friend receive?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/6",
+                "Choice": "`1/6`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1433,7 +1433,7 @@
                 }
             },
             "B": {
-                "Choice": "3/2",
+                "Choice": "`3/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1441,7 +1441,7 @@
                 }
             },
             "C": {
-                "Choice": "3 1/2",
+                "Choice": "`3``1/2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1449,7 +1449,7 @@
                 }
             },
             "D": {
-                "Choice": "6",
+                "Choice": "`6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1464,7 +1464,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Comparing the size of a product to the size of one factor on the basis of the size of the other factor, without performing the indicated multiplication."
@@ -1478,7 +1478,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/2 × 4/5",
+                "Choice": "`1/2xx4/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1486,7 +1486,7 @@
                 }
             },
             "B": {
-                "Choice": "1/2 × 4/4",
+                "Choice": "`1/2xx4/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1494,7 +1494,7 @@
                 }
             },
             "C": {
-                "Choice": "1/2 × 5/5",
+                "Choice": "`1/2xx5/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1502,7 +1502,7 @@
                 }
             },
             "D": {
-                "Choice": "1/2 × 5/4",
+                "Choice": "`1/2xx5/4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1527,11 +1527,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A science teacher has 0.4 liter of seawater. She gives each of her 22 students a container and a 5-milliliter spoon. She then asks her students to put two spoonfuls of seawater into their containers. How many milliliters of seawater will be left after all 22 students have filled their containers?"
+            "A science teacher has `0.4` `text(liter)` of seawater. She gives each of her `22` students a container and a `5text(-milliliter)` spoon. She then asks her students to put `text(two)` spoonfuls of seawater into their containers. How many `text(milliliters)` of seawater will be left after all `22` students have filled their containers?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "70",
+                "Choice": "`70`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1539,7 +1539,7 @@
                 }
             },
             "B": {
-                "Choice": "180",
+                "Choice": "`180`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1547,7 +1547,7 @@
                 }
             },
             "C": {
-                "Choice": "290",
+                "Choice": "`290`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1555,7 +1555,7 @@
                 }
             },
             "D": {
-                "Choice": "780",
+                "Choice": "`780`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1570,7 +1570,7 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            "Number & Operations - Fractions"
+            "Number & Operations-Fractions"
         ],
         "SubTopics": [
             "Interpret division of a unit fraction by a non-zero whole number, and compute such quotients."
@@ -1581,11 +1581,11 @@
         "Explain": false,
         "Content": [
             "What is the value of the expression below?",
-            ":box:1/25 ÷ 74"
+            ":box:`1/25-:74`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "1/1,850",
+                "Choice": "`1/(1text(,)850)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1593,7 +1593,7 @@
                 }
             },
             "B": {
-                "Choice": "1,850",
+                "Choice": "`1text(,)850`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1601,7 +1601,7 @@
                 }
             },
             "C": {
-                "Choice": "25/74",
+                "Choice": "`25/74`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1609,7 +1609,7 @@
                 }
             },
             "D": {
-                "Choice": "2 24/25",
+                "Choice": "`2``24/25`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1634,11 +1634,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which phrase best describes a figure with dimensions of 2 unites by 2 unites by 4 unites and a volume of 16 cubic units?"
+            "Which phrase best describes a figure with dimensions of `2` `text(units)` by `2` `text(units)` by `4` `text(units)` and a volume of `16` `text(cubic units)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "a solid figure that can be filled with 16 cubes that each measure 1 cubic unit",
+                "Choice": "a solid figure that can be filled with `16` cubes that each measure `1` `text(cubic unit)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1646,7 +1646,7 @@
                 }
             },
             "B": {
-                "Choice": "a solid figure that can be filled with 1 cube that measures 16 units on each edge",
+                "Choice": "a solid figure that can be filled with `1` cube that measures `16` `text(units)` on each edge",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1654,7 +1654,7 @@
                 }
             },
             "C": {
-                "Choice": "a solid figure that can be covered with 16 squares that each measure 1 square unit",
+                "Choice": "a solid figure that can be covered with `16` squares that each measure `1` `text(square unit)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1662,7 +1662,7 @@
                 }
             },
             "D": {
-                "Choice": "a solid figure that can be covered with 1 square that measures 16 units on each edge",
+                "Choice": "a solid figure that can be covered with `1` square that measures `16` `text(units)` on each edge",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1687,13 +1687,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Susan determined that the expression below is equal to 7.59.",
-            ":box:15.91 - 8.32",
+            "Susan determined that the expression below is equal to `7.59`.",
+            ":box:`15.91-8.32`",
             "Which expression can Susan use to check her answer?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8.32 - 7.59",
+                "Choice": "`8.32-7.59`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1701,7 +1701,7 @@
                 }
             },
             "B": {
-                "Choice": "8.32 + 7.59",
+                "Choice": "`8.32+7.59`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1709,7 +1709,7 @@
                 }
             },
             "C": {
-                "Choice": "15.91 + 8.32",
+                "Choice": "`15.91+8.32`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1717,7 +1717,7 @@
                 }
             },
             "D": {
-                "Choice": "15.91 + 7.59",
+                "Choice": "`15.91+7.59`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
