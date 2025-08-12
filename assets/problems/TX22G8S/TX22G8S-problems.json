@@ -16,7 +16,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A photograph of a litter of six-week-old bulldog puppies shows that the puppies are not identical.",
+            "A photograph of a litter of `text(six-week-old)` bulldog puppies shows that the puppies are not identical.",
             "problems/TX22G8S/media/1a.jpg",
             "Even though these puppies have the same parents, they do not all look alike because —"
         ],
@@ -30,18 +30,18 @@
                 }
             },
             "B": {
-                "Choice": "some of the puppies have genetic material from only one of the parents",
+                "Choice": "some of the puppies have genetic material from only `text(one)` of the parents",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Offspring contain genetic material from both parents and not from only one parent.",
+                    "Rationale": "Offspring contain genetic material from both parents and not from only `text(one)` parent.",
                     "Percent": 11
                 }
             },
             "C": {
-                "Choice": "each puppy has a different combination of genetic material as a result of sexual reproduction",
+                "Choice": "`text(each puppy)` has a different combination of genetic material as a result of sexual reproduction",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Sexual reproduction causes variations in genetic makeup. Even though the puppies all have the same two parents, they each have different combinations of the parents' genes. This results in some differences in observable physical characteristics, such as fur color patterns.",
+                    "Rationale": "Sexual reproduction causes variations in genetic makeup. Even though the puppies all have the same `text(two)` parents, they each have different combinations of the parents' genes. This results in some differences in observable physical characteristics, such as fur color patterns.",
                     "Percent": 87
                 }
             },
@@ -49,7 +49,7 @@
                 "Choice": "all the puppies developed from the same fertilized egg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "It would be rare for seven puppies to come from the same fertilized egg. Puppies from the same fertilized egg would have nearly identical physical characteristics.",
+                    "Rationale": "It would be rare for `text(seven)` puppies to come from the same fertilized egg. Puppies from the same fertilized egg would have nearly identical physical characteristics.",
                     "Percent": 0
                 }
             }
@@ -77,10 +77,10 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Their atoms both have one valence electron.",
+                "Choice": "Their atoms both have `text(one)` valence electron.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Both lithium (Li) and sodium (Na) are in Group 1 of the Periodic Table (located in the first column of the Periodic Table). Elements in the same group have the same number of valence electrons that determine their bonding behavior. Both Li and Na have 1 valence electron in their outer energy level (or electron shell).",
+                    "Rationale": "Both lithium `(text(Li))` and sodium `(text(Na))` are in Group `1` of the Periodic Table (located in the `text(first column)` of the Periodic Table). Elements in the same group have the same number of valence electrons that determine their bonding behavior. Both `text(Li)` and `text(Na)` have `1` valence electron in their outer energy level (or electron shell).",
                     "Percent": 67
                 }
             },
@@ -96,7 +96,7 @@
                 "Choice": "Their atoms have the same number of energy levels.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Li and Na each have a different number of energy levels. Li has two energy levels (or electron shells) and is classified in Period 2 of the Periodic Table, while Na has three energy levels and is classified in Period 3. Periods are indicated by rows in the Periodic Table.",
+                    "Rationale": "`text(Li)` and `text(Na)` each have a different number of energy levels. `text(Li)` has `text(two)` energy levels (or electron shells) and is classified in Period `2` of the Periodic Table, while `text(Na)` has `text(three)` energy levels and is classified in Period `3`. Periods are indicated by rows in the Periodic Table.",
                     "Percent": 13
                 }
             },
@@ -136,7 +136,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Location W, because location W has the gentlest slope",
+                "Choice": "Location `W`, because location `W` has the gentlest slope",
                 "Key": {
                     "Correct": false,
                     "Rationale": "An area with little to no slope (or a gentle slope) would have less erosion.",
@@ -144,7 +144,7 @@
                 }
             },
             "B": {
-                "Choice": "Location X, because location X is near the bottom of a slope",
+                "Choice": "Location `X`, because location `X` is near the bottom of a slope",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The bottom of a slope would have some erosion, but not the most erosion, over time.",
@@ -152,15 +152,15 @@
                 }
             },
             "C": {
-                "Choice": "Location Y, because location Y has the steepest slope",
+                "Choice": "Location `Y`, because location `Y` has the steepest slope",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The lines in the map are called contour lines. Contour lines help indicate elevation and steepness. The closer the contour lines are together, the steeper the slope. The close contour lines around location Y indicate a steep slope. As the steepness of a slope increases, the rate of erosion increases.",
+                    "Rationale": "The lines in the map are called contour lines. Contour lines help indicate elevation and steepness. The closer the contour lines are together, the steeper the slope. The close contour lines around location `Y` indicate a steep slope. As the steepness of a slope increases, the rate of erosion increases.",
                     "Percent": 67
                 }
             },
             "D": {
-                "Choice": "Location Z, because location Z is the flattest slope",
+                "Choice": "Location `Z`, because location `Z` is the flattest slope",
                 "Key": {
                     "Correct": false,
                     "Rationale": "An area with little to no slope (or a flat slope) would have less erosion.",
@@ -189,7 +189,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student was given this partial dichotomous key and asked to determine in which of five orders the adult insect shown belongs.",
+            "A student was given this partial dichotomous key and asked to determine in which of `text(five)` orders the adult insect shown belongs.",
             "problems/TX22G8S/media/4a.jpg",
             "problems/TX22G8S/media/4b.jpg",
             "Based on the dichotomous key, in which order does the insect belong?"
@@ -199,7 +199,7 @@
                 "Choice": "Diptera",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "According to the dichotomous key, the insect would have one pair of wings, which is incorrect.",
+                    "Rationale": "According to the dichotomous key, the insect would have `text(one pair)` of wings, which is incorrect.",
                     "Percent": 4
                 }
             },
@@ -207,7 +207,7 @@
                 "Choice": "Isoptera",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The Isoptera is the insect identified when the dichotomous key is followed correctly. A dichotomous key is a tool that helps scientists classify organisms. It consists of a series of steps with descriptions of physical characteristics. The absence or presence of a given characteristic at each step directs the user closer to the identification of the organism.",
+                    "Rationale": "The Isoptera is the insect identified when the dichotomous key is followed correctly. A dichotomous key is a tool that helps scientists classify organisms. It consists of a series of steps with descriptions of physical characteristics. The absence or presence of a given characteristic at `text(each step)` directs the user closer to the identification of the organism.",
                     "Percent": 88
                 }
             },
@@ -249,40 +249,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram shows a model of an atom. The model contains three different subatomic particles. Particles X and Y are inside the nucleus, and particle Z is outside of the nucleus.",
+            "The diagram shows a model of an atom. The model contains `text(three)` different subatomic particles. Particles `XandY` are inside the nucleus, and particle `Z` is outside of the nucleus.",
             "problems/TX22G8S/media/5a.jpg",
             "Which statements best describe the charges on the particles in this model?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Both particles X and Y have a positive charge.\nParticle Z has a negative charge.",
+                "Choice": "Both particles `XandY` have a `text(positive)` charge.\nParticle `Z` has a `text(negative)` charge.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Three different types of particles are represented in the diagram. Particle X and particle Y represent different types of particles. Only protons and neutrons are bound in the nucleus of an atom. Neutrons have no charge. Therefore, both types of particles cannot have a positive charge. Either particle X or particle Y must be a neutron.",
+                    "Rationale": "`text(Three)` different types of particles are represented in the diagram. Particle `X` and particle `Y` represent different types of particles. Only protons and neutrons are bound in the nucleus of an atom. Neutrons have no charge. Therefore, both types of particles cannot have a `text(positive)` charge. Either particle `X` or particle `Y` must be a neutron.",
                     "Percent": 20
                 }
             },
             "B": {
-                "Choice": "Both particles X and Y have a negative charge.\nParticle Z has a positive charge.",
+                "Choice": "Both particles `XandY` have a `text(negative)` charge.\nParticle `Z` has a `text(positive)` charge.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Only electrons have a negative charge. Electrons are not found in the nucleus at the center of an atom. Electrons are found in orbitals outside the nucleus. Therefore, particles X and Y could not have negative charges. Also, only protons have a positive charge. Protons are not found in the orbitals outside of the nucleus at the center of the atom. Therefore, particle Z could not have a positive charge.",
+                    "Rationale": "Only electrons have a `text(negative)` charge. Electrons are not found in the nucleus at the center of an atom. Electrons are found in orbitals outside the nucleus. Therefore, particles `XandY` could not have `text(negative)` charges. Also, only protons have a `text(positive)` charge. Protons are not found in the orbitals outside of the nucleus at the center of the atom. Therefore, particle `Z` could not have a `text(positive)` charge.",
                     "Percent": 8
                 }
             },
             "C": {
-                "Choice": "Either particle X or particle Y has a positive charge.\nParticle Z has a negative charge.",
+                "Choice": "Either particle `X` or particle `Y` has a `text(positive)` charge.\nParticle `Z` has a `text(negative)` charge.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Particles X and Y must consist of one proton (positive charge) and one neutron (no charge). Protons and neutrons are found in the nucleus at the center of the atom. Particle Z represents electrons, which have a negative charge. Electrons are found in orbitals outside the nucleus.",
+                    "Rationale": "Particles `XandY` must consist of `text(one)` proton (`text(positive)` charge) and `text(one)` neutron (no charge). Protons and neutrons are found in the nucleus at the center of the atom. Particle `Z` represents electrons, which have a `text(negative)` charge. Electrons are found in orbitals outside the nucleus.",
                     "Percent": 62
                 }
             },
             "D": {
-                "Choice": "Either particle X or particle Y has a negative charge.\nParticle Z has a positive charge.",
+                "Choice": "Either particle `X` or particle `Y` has a `text(negative)` charge.\nParticle `Z` has a `text(positive)` charge.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Electrons are not found in the nucleus of an atom; therefore, neither particle X nor particle Y could have a negative charge. Also, since particle Z is outside the nucleus at the center of the atom, it could not have a positive charge. Only protons have a positive charge, and protons are not found outside the nucleus.",
+                    "Rationale": "Electrons are not found in the nucleus of an atom; therefore, neither particle `X` nor particle `Y` could have a `text(negative)` charge. Also, since particle `Z` is outside the nucleus at the center of the atom, it could not have a `text(positive)` charge. Only protons have a `text(positive)` charge, and protons are not found outside the nucleus.",
                     "Percent": 10
                 }
             }
@@ -339,7 +339,7 @@
                 "Choice": "Action: The force of the bird on the fence post\nReaction: The force of the fence post on the bird",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Based on Newton's third law, for every action, there is an opposite and equal reaction. Therefore, interacting forces occur as action-reaction pairs. In this scenario, the bird is exerting a downward force on the fence post, while the fence post is exerting an upward force on the bird.",
+                    "Rationale": "Based on Newton's `text(third)` law, for every action, there is an opposite and equal reaction. Therefore, interacting forces occur as action-reaction pairs. In this scenario, the bird is exerting a downward force on the fence post, while the fence post is exerting an upward force on the bird.",
                     "Percent": 67
                 }
             }
@@ -363,14 +363,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Farmers can best reduce negative effects on the water quality of nearby streams and lakes by planting crops that —"
+            "Farmers can best reduce `text(negative)` effects on the water quality of nearby streams and lakes by planting crops that —"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "produce less oxygen",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plants produce oxygen through photosynthesis. Plants would not produce less oxygen unless photosynthesis is disrupted. If less oxygen is produced, it could increase the negative effects of water quality. Low oxygen levels in the water bodies can have negative effects on many types of aquatic organisms.",
+                    "Rationale": "Plants produce oxygen through photosynthesis. Plants would not produce less oxygen unless photosynthesis is disrupted. If less oxygen is produced, it could increase the `text(negative)` effects of water quality. Low oxygen levels in the water bodies can have `text(negative)` effects on many types of aquatic organisms.",
                     "Percent": 6
                 }
             },
@@ -378,7 +378,7 @@
                 "Choice": "produce less carbon dioxide",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Although plants produce carbon dioxide during respiration, the carbon dioxide produced by plants does not have a negative effect on water quality.",
+                    "Rationale": "Although plants produce carbon dioxide during respiration, the carbon dioxide produced by plants does not have a `text(negative)` effect on water quality.",
                     "Percent": 22
                 }
             },
@@ -386,7 +386,7 @@
                 "Choice": "need less fertilizer",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Planting a crop that requires fewer supplemental nutrients to grow would result in less fertilizer use and fewer nutrients in agricultural runoff that can flow into nearby waterways. Excess nutrients from fertilizers in agricultural runoff can negatively affect nearby waterways by causing harmful algal blooms.",
+                    "Rationale": "Planting a crop that requires fewer supplemental nutrients to grow would result in less fertilizer use and fewer nutrients in agricultural runoff that can flow into nearby waterways. Excess nutrients from fertilizers in agricultural runoff can `text(negatively)` affect nearby waterways by causing harmful algal blooms.",
                     "Percent": 67
                 }
             },
@@ -394,7 +394,7 @@
                 "Choice": "need less solar energy",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plants convert sunlight (solar energy) into chemical energy through photosynthesis. Needing less solar energy will not decrease the negative effects of water quality.",
+                    "Rationale": "Plants convert sunlight (solar energy) into chemical energy through photosynthesis. Needing less solar energy will not decrease the `text(negative)` effects of water quality.",
                     "Percent": 5
                 }
             }
@@ -477,40 +477,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two students record the distance they each traveled in 60 seconds in the data table shown.",
+            "`text(Two)` students record the distance they each traveled in `60` `text(seconds)` in the data table shown.",
             "problems/TX22G8S/media/9a.jpg",
-            "If the students continue at the same speed, which statement describes the total distance traveled after 90 seconds?"
+            "If the students continue at the same speed, which statement describes the total distance traveled after `90` `text(seconds)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Student 1 traveled 40 m, and student 2 traveled 20 m.",
+                "Choice": "Student `1` traveled `40` `text(m)`, and student `2` traveled `20` `text(m)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This response describes the distance traveled by each student after 60 seconds, not 90 seconds.",
+                    "Rationale": "This response describes the distance traveled by `text(each student)` after `60` `text(seconds)`, not `90` `text(seconds)`.",
                     "Percent": 10
                 }
             },
             "B": {
-                "Choice": "Student 1 traveled 50 m, and student 2 traveled 30 m.",
+                "Choice": "Student `1` traveled `50` `text(m)`, and student `2` traveled `30` `text(m)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Moving at a constant speed of 40 meters per 60 seconds, student 1 would move more than an additional 10 meters in 30 seconds.",
+                    "Rationale": "Moving at a constant speed of `40` `text(meters per)` `60` `text(seconds)`, student `1` would move more than an additional `10` `text(meters)` in `30` `text(seconds)`.",
                     "Percent": 15
                 }
             },
             "C": {
-                "Choice": "Student 1 traveled 60 m, and student 2 traveled 30 m.",
+                "Choice": "Student `1` traveled `60` `text(m)`, and student `2` traveled `30` `text(m)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Speed is a measure of distance over time. Student 1 travels 40 meters in 60 seconds. Student 2 travels 20 meters in 60 seconds. After an additional 30 seconds (90 seconds total), student 1 would travel another 20 meters for a total of 60 meters, and student 2 would travel another 10 meters for a total of 30 meters.",
+                    "Rationale": "Speed is a measure of distance over time. Student `1` travels `40` `text(meters)` in `60` `text(seconds)`. Student `2` travels `20` `text(meters)` in `60` `text(seconds)`. After an additional `30` `text(seconds)` (`90` `text(seconds)` total), student `1` would travel another `20` `text(meters)` for a total of `60` `text(meters)`, and student `2` would travel another `10` `text(meters)` for a total of `30` `text(meters)`.",
                     "Percent": 68
                 }
             },
             "D": {
-                "Choice": "Student 1 traveled 70 m, and student 2 traveled 25 m.",
+                "Choice": "Student `1` traveled `70` `text(m)`, and student `2` traveled `25` `text(m)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Both students are moving at a constant speed. Therefore, for student 1 to travel 70 meters and student 2 to travel 25 meters in 90 seconds, student 1 would have to increase speed and student 2 would have to decrease speed.",
+                    "Rationale": "Both students are moving at a constant speed. Therefore, for student `1` to travel `70` `text(meters)` and student `2` to travel `25` `text(meters)` in `90` `text(seconds)`, student `1` would have to increase speed and student `2` would have to decrease speed.",
                     "Percent": 7
                 }
             }
@@ -538,7 +538,7 @@
         "Content": [
             "A Hertzsprung-Russell (H-R) diagram is shown.",
             "problems/TX22G8S/media/10a.jpg",
-            "A star that has a luminosity of 10-2 and a temperature of 20,000 K is most likely a —"
+            "A star that has a luminosity of `10^-2` and a temperature of `20text(,)000` `text(K)` is most likely a —"
         ],
         "AnswerChoices": {
             "F": {
@@ -553,7 +553,7 @@
                 "Choice": "White dwarf",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "White dwarf stars are found to be around 20,000 K and 10-2 luminosity. The student correctly interpreted the H-R diagram to identify the white dwarfs.",
+                    "Rationale": "White dwarf stars are found to be around `20text(,)000` `text(K)` and `10^-2` luminosity. The student correctly interpreted the H-R diagram to identify the white dwarfs.",
                     "Percent": 87
                 }
             },
@@ -569,7 +569,7 @@
                 "Choice": "Red giant",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student likely referred to the incorrect luminosity (10^2 instead of 10⁻²) and not to the temperature.",
+                    "Rationale": "The student likely referred to the incorrect luminosity (`10^2` instead of `10^-2`) and not to the temperature.",
                     "Percent": 1
                 }
             }
@@ -593,14 +593,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A sledgehammer has a mass of 3.5 kilograms. What net force, to the nearest whole newton, will a person need to apply to accelerate the sledgehammer at a rate of 4.0 `text(m)/text(s)^2`?"
+            "A sledgehammer has a mass of `3.5` `text(kilograms)`. What net force, to the nearest `text(whole newton)`, will a person need to apply to accelerate the sledgehammer at a rate of `4.0` `text(m)/text(s)^2`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:14",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The force was obtained by multiplying 3.5 kg x 4.0 `text(m)/text(s)^2` using the formula:\nF = ma\nF = (3.5 kg) x (4.0 `text(m)/text(s)^2`)\nF = 14 N",
+                    "Rationale": "The force was obtained by multiplying `3.5` `text(kg)xx4.0` `text(m)/text(s)^2` using the formula:\n`F=ma`\n`F=3.5` `text(kg)xx4.0` `text(m)/text(s)^2`\n`F=14` `text(N)`",
                     "Percent": 68
                 }
             }
@@ -626,7 +626,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students collected data on five elements. Their data are shown in the table.",
+            "Students collected data on `text(five)` elements. Their data are shown in the table.",
             "problems/TX22G8S/media/12a.jpg",
             "Which element has the same number of energy levels as lithium?"
         ],
@@ -687,38 +687,38 @@
         "Content": [
             "Maps of predicted weather conditions are shown.",
             "problems/TX22G8S/media/13a.jpg",
-            "Which answer choice best describes the weather at location X on Day 1 and Day 2?"
+            "Which answer choice best describes the weather at location `X` on Day `1` and Day `2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Day 1: warm and rainy\nDay 2: cool with more rain",
+                "Choice": "Day `1`: warm and rainy\nDay `2`: cool with more rain",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A cold front does not result in warm weather on Day 1. On Day 2, once the cold front has passed, the rain should stop.",
+                    "Rationale": "A cold front does not result in warm weather on Day `1`. On Day `2`, `text(once)` the cold front has passed, the rain should stop.",
                     "Percent": 12
                 }
             },
             "B": {
-                "Choice": "Day 1: warm and windy\nDay 2: cloudy and cold",
+                "Choice": "Day `1`: warm and windy\nDay `2`: cloudy and cold",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A cold front does not result in warm weather on Day 1. On Day 2, once the cold front has passed, the weather is clear, not cloudy.",
+                    "Rationale": "A cold front does not result in warm weather on Day `1`. On Day `2`, `text(once)` the cold front has passed, the weather is clear, not cloudy.",
                     "Percent": 19
                 }
             },
             "C": {
-                "Choice": "Day 1: clear and cool\nDay 2: warm and rainy",
+                "Choice": "Day `1`: clear and cool\nDay `2`: warm and rainy",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A cold front does not result in clear skies. On Day 2, once the cold front has passed, the temperature is cool, not warm, and the rain stops.",
+                    "Rationale": "A cold front does not result in clear skies. On Day `2`, `text(once)` the cold front has passed, the temperature is cool, not warm, and the rain stops.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "Day 1: cold and rainy\nDay 2: clear and sunny",
+                "Choice": "Day `1`: cold and rainy\nDay `2`: clear and sunny",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A cold front results in cold, rainy weather. Location X is on a cold front on Day 1. On Day 2, once the cold front has passed, the weather is clear and sunny. A high pressure (H) area, as shown behind the front on the map, is typically associated with clear and settled weather.",
+                    "Rationale": "A cold front results in cold, rainy weather. Location `X` is on a cold front on Day `1`. On Day `2`, `text(once)` the cold front has passed, the weather is clear and sunny. A high pressure `(H)` area, as shown behind the front on the map, is typically associated with clear and settled weather.",
                     "Percent": 59
                 }
             }
@@ -744,38 +744,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Oxygen and oxygen-containing compounds are involved in many different reactions. Which balanced equation represents a reaction that involves 14 atoms of oxygen?"
+            "Oxygen and oxygen-containing compounds are involved in many different reactions. Which balanced equation represents a reaction that involves `14` atoms of oxygen?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "NH₄Cl + KOH ⇒ NH₃ + H₂O + KCl",
+                "Choice": "`text(NH)_4text(Cl)+text(KOH)->text(NH)_3+text(H)_2text(O)+text(KCl)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There is only 1 atom of oxygen on each side of this equation.",
+                    "Rationale": "There is only `1` atom of oxygen on `text(each side)` of this equation.",
                     "Percent": 7
                 }
             },
             "G": {
-                "Choice": "2Na + 2H₂O ⇒ 2NaOH + H₂",
+                "Choice": "`2text(Na)+2text(H)_2text(O)->2text(NaOH)+text(H)_2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are only 2 atoms of oxygen on each side of this equation.",
+                    "Rationale": "There are only `2` atoms of oxygen on `text(each side)` of this equation.",
                     "Percent": 11
                 }
             },
             "H": {
-                "Choice": "2C₂H₆ + 7O₂ ⇒ 4CO₂ + 6H₂O",
+                "Choice": "`2text(C)_2text(H)_6+7text(O)_2->4text(CO)_2+6text(H)_2text(O)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "There are 14 atoms of oxygen balanced on each side of this equation.",
+                    "Rationale": "There are `14` atoms of oxygen balanced on `text(each side)` of this equation.",
                     "Percent": 64
                 }
             },
             "J": {
-                "Choice": "4Fe + 3O₂ ⇒ 2Fe₂O₃",
+                "Choice": "`4text(Fe)+3text(O)_2->2text(Fe)_2text(O)_3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are only 6 atoms of oxygen on each side of this equation.",
+                    "Rationale": "There are only `6` atoms of oxygen on `text(each side)` of this equation.",
                     "Percent": 17
                 }
             }
@@ -801,40 +801,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two plant species that grow in the same area are shown.",
+            "`text(Two)` plant species that grow in the same area are shown.",
             "problems/TX22G8S/media/15a.jpg",
-            "Which statement best explains a difference between Plant 1 and Plant 2?"
+            "Which statement best explains a difference between Plant `1` and Plant `2`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Plant 1 obtains more water from the soil because of its root surface area and root depth.",
+                "Choice": "Plant `1` obtains more water from the soil because of its root surface area and root depth.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Plant 1 has a larger root system than Plant 2 and will therefore be able to absorb a greater amount of water from the soil.",
+                    "Rationale": "Plant `1` has a larger root system than Plant `2` and will therefore be able to absorb a greater amount of water from the soil.",
                     "Percent": 78
                 }
             },
             "B": {
-                "Choice": "Plant 1 obtains more sunlight because of its root surface area and root depth.",
+                "Choice": "Plant `1` obtains more sunlight because of its root surface area and root depth.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plant 1 obtains more sunlight than Plant 2 because it has more leaves and stems available to perform photosynthesis, not because of its greater root surface area and root depth. The root system is not responsible for capturing sunlight.",
+                    "Rationale": "Plant `1` obtains more sunlight than Plant `2` because it has more leaves and stems available to perform photosynthesis, not because of its greater root surface area and root depth. The root system is not responsible for capturing sunlight.",
                     "Percent": 10
                 }
             },
             "C": {
-                "Choice": "Plant 2 obtains more water from the soil because of its root surface area and root depth.",
+                "Choice": "Plant `2` obtains more water from the soil because of its root surface area and root depth.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plant 2 would not obtain more water than Plant 1 because Plant 2 has a smaller root surface area and root depth than Plant 1.",
+                    "Rationale": "Plant `2` would not obtain more water than Plant `1` because Plant `2` has a smaller root surface area and root depth than Plant `1`.",
                     "Percent": 8
                 }
             },
             "D": {
-                "Choice": "Plant 2 obtains more sunlight because of its root surface area and root depth.",
+                "Choice": "Plant `2` obtains more sunlight because of its root surface area and root depth.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Plant 2 would not obtain more sunlight because it has fewer leaves and stems available to perform photosynthesis. Additionally, the root system is not responsible for capturing sunlight.",
+                    "Rationale": "Plant `2` would not obtain more sunlight because it has fewer leaves and stems available to perform photosynthesis. Additionally, the root system is not responsible for capturing sunlight.",
                     "Percent": 3
                 }
             }
@@ -860,7 +860,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A Texas Gulf Coast energy pyramid is shown with representative organisms at each trophic level.",
+            "A Texas Gulf Coast energy pyramid is shown with representative organisms at `text(each trophic level)`.",
             "problems/TX22G8S/media/16a.jpg",
             "Which statement best describes the flow of energy through this pyramid?"
         ],
@@ -885,7 +885,7 @@
                 "Choice": "The trophic level represented by redfish and flounder receives energy directly from the secondary consumers.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "An energy pyramid represents feeding relationships in a community by showing the amount of energy transferred from one feeding position in a food web (trophic level) to the next. The efficiency of energy transfer typically decreases from the base (bottom) of the pyramid (producers) to the top of the pyramid (top consumers). In this energy pyramid, the secondary consumers are the catfish and gobies, which are below the redfish and flounder. Therefore, the redfish and flounder receive energy directly from them.",
+                    "Rationale": "An energy pyramid represents feeding relationships in a community by showing the amount of energy transferred from `text(one)` feeding position in a food web (trophic level) to the next. The efficiency of energy transfer typically decreases from the base (bottom) of the pyramid (producers) to the top of the pyramid (top consumers). In this energy pyramid, the secondary consumers are the catfish and gobies, which are below the redfish and flounder. Therefore, the redfish and flounder receive energy directly from them.",
                     "Percent": 73
                 }
             },
@@ -893,7 +893,7 @@
                 "Choice": "The trophic level represented by wire grass and phytoplankton receives energy directly from the primary consumers.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The wire grass and phytoplankton do not receive energy directly from the primary consumers. Instead, as producers, they receive energy directly from the sun.",
+                    "Rationale": "The wire grass and phytoplankton do not receive energy directly from the primary consumers. Instead, as producers, they receive energy directly from the `text(sun)`.",
                     "Percent": 10
                 }
             }
@@ -919,38 +919,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student is building a model of a solar eclipse. Solar eclipses occur only during a new moon phase. Which motion best demonstrates a solar eclipse?"
+            "A student is building a model of a solar eclipse. Solar eclipses occur only during a new `text(moon)` phase. Which motion best demonstrates a solar eclipse?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The moon moves between the sun and Earth, casting a shadow of the moon on Earth.",
+                "Choice": "The `text(moon)` moves between the `text(sun)` and `text(Earth)`, casting a shadow of the `text(moon)` on `text(Earth)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A solar eclipse occurs when the moon moves between the sun and Earth and casts a shadow of the moon on Earth.",
+                    "Rationale": "A solar eclipse occurs when the `text(moon)` moves between the `text(sun)` and `text(Earth)` and casts a shadow of the `text(moon)` on `text(Earth)`.",
                     "Percent": 73
                 }
             },
             "B": {
-                "Choice": "The sun moves between the moon and Earth, casting a shadow of the sun on Earth.",
+                "Choice": "The `text(sun)` moves between the `text(moon)` and `text(Earth)`, casting a shadow of the `text(sun)` on `text(Earth)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The sun does not move between the moon and Earth. The sun is in a fixed location and has planets and various celestial bodies orbiting it. Also, the sun is a light source, which neither Earth nor the moon can cast a shadow on.",
+                    "Rationale": "The `text(sun)` does not move between the `text(moon)` and `text(Earth)`. The `text(sun)` is in a fixed location and has planets and various celestial bodies orbiting it. Also, the `text(sun)` is a light source, which neither `text(Earth)` nor the `text(moon)` can cast a shadow on.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "Earth moves between the sun and the moon, casting a shadow of Earth on the moon.",
+                "Choice": "`text(Earth)` moves between the `text(sun)` and the `text(moon)`, casting a shadow of `text(Earth)` on the `text(moon)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A lunar eclipse occurs when Earth moves between the sun and the moon and Earth casts its shadow on the moon.",
+                    "Rationale": "A lunar eclipse occurs when `text(Earth)` moves between the `text(sun)` and the `text(moon)` and `text(Earth)` casts its shadow on the `text(moon)`.",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "Earth moves between the sun and the moon, casting a shadow of the moon on the sun.",
+                "Choice": "`text(Earth)` moves between the `text(sun)` and the `text(moon)`, casting a shadow of the `text(moon)` on the `text(sun)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A lunar eclipse occurs when Earth moves between the sun and the moon. As the sun is a light source, neither the moon nor Earth can cast a shadow on the sun.",
+                    "Rationale": "A lunar eclipse occurs when `text(Earth)` moves between the `text(sun)` and the `text(moon)`. As the `text(sun)` is a light source, neither the `text(moon)` nor `text(Earth)` can cast a shadow on the `text(sun)`.",
                     "Percent": 9
                 }
             }
@@ -1049,10 +1049,10 @@
                 }
             },
             "C": {
-                "Choice": "A solid forms when two clear solutions are mixed.",
+                "Choice": "A solid forms when `text(two)` clear solutions are mixed.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formation of a solid or precipitate by mixing two clear solutions indicates that a chemical (nonreversible) change has occurred.",
+                    "Rationale": "The formation of a solid or precipitate by mixing `text(two)` clear solutions indicates that a chemical (nonreversible) change has occurred.",
                     "Percent": 60
                 }
             },
@@ -1084,38 +1084,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which statement best explains why the sun appears brighter to people on Earth than any other star?"
+            "Which statement best explains why the `text(sun)` appears brighter to people on `text(Earth)` than any other star?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Sunlight reaches Earth's atmosphere at an angle that causes the sun's light rays to intensify.",
+                "Choice": "Sunlight reaches `text(Earth)`'s atmosphere at an angle that causes the `text(sun)`'s light rays to intensify.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "When the sun's light rays reach Earth's atmosphere, they do not intensify. The rays are absorbed, and some are reflected.",
+                    "Rationale": "When the `text(sun)`'s light rays reach `text(Earth)`'s atmosphere, they do not intensify. The rays are absorbed, and some are reflected.",
                     "Percent": 16
                 }
             },
             "G": {
-                "Choice": "Unique chemical reactions in the sun's core produce a high-energy wavelength of light.",
+                "Choice": "Unique chemical reactions in the `text(sun)`'s core produce a high-energy wavelength of light.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The sun's core does produce energy (heat and light), but this is not the reason why the sun appears brighter than any other star to people on Earth. Other stars have chemical reactions similar to those in the sun.",
+                    "Rationale": "The `text(sun)`'s core does produce energy (heat and light), but this is not the reason why the `text(sun)` appears brighter than any other star to people on `text(Earth)`. Other stars have chemical reactions similar to those in the `text(sun)`.",
                     "Percent": 8
                 }
             },
             "H": {
-                "Choice": "The sun burns at a higher temperature than any other star.",
+                "Choice": "The `text(sun)` burns at a higher temperature than any other star.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The sun does not burn at a higher temperature than any other stars. There are many stars in the universe that burn at much higher temperatures than the sun.",
+                    "Rationale": "The `text(sun)` does not burn at a higher temperature than any other stars. There are many stars in the universe that burn at much higher temperatures than the `text(sun)`.",
                     "Percent": 7
                 }
             },
             "J": {
-                "Choice": "The sun is closer to Earth than any other star.",
+                "Choice": "The `text(sun)` is closer to `text(Earth)` than any other star.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The sun is a closer distance to Earth than any other star, which results in it appearing brighter to people on Earth.",
+                    "Rationale": "The `text(sun)` is a closer distance to `text(Earth)` than any other star, which results in it appearing brighter to people on `text(Earth)`.",
                     "Percent": 69
                 }
             }
@@ -1141,9 +1141,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Students jump rope for one minute to determine changes in heart rate and breathing rate. Their data are shown in the table.",
+            "Students jump rope for `text(one minute)` to determine changes in heart rate and breathing rate. Their data are shown in the table.",
             "problems/TX22G8S/media/21a.jpg",
-            "Which table explains the functions of the two body systems that the students investigated?"
+            "Which table explains the functions of the `text(two)` body systems that the students investigated?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1174,7 +1174,7 @@
                 "Choice": "problems/TX22G8S/media/21e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Both the skeletal system and nervous system functions are correct, but these two body systems are not the ones that the students investigated.",
+                    "Rationale": "Both the skeletal system and nervous system functions are correct, but these `text(two)` body systems are not the `text(ones)` that the students investigated.",
                     "Percent": 17
                 }
             }
@@ -1209,7 +1209,7 @@
                 "Choice": "The chemical energy in the fuel-air mixture is converted to thermal energy, which is then converted to mechanical energy.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The fuel-air mixture stores chemical potential energy, which is then converted into thermal energy (by the spark plug igniting in step 2). This energy is then converted to mechanical energy (in steps 3 and 4) when the hot gases push the piston down, which turns the crankshaft.",
+                    "Rationale": "The fuel-air mixture stores chemical potential energy, which is then converted into thermal energy (by the spark plug igniting in step `2`). This energy is then converted to mechanical energy (in steps `3and4`) when the hot gases push the piston down, which turns the crankshaft.",
                     "Percent": 62
                 }
             },
@@ -1259,40 +1259,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The model shows Earth in four different positions in its orbit around the sun.",
+            "The model shows `text(Earth)` in `text(four)` different positions in its orbit around the `text(sun)`.",
             "problems/TX22G8S/media/23a.jpg",
-            "Which statement correctly explains which position of Earth represents summer in the United States?"
+            "Which statement correctly explains which position of `text(Earth)` represents summer in the United States?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Position 1, because the Western Hemisphere is facing the sun",
+                "Choice": "Position `1`, because the `text(Western)` Hemisphere is facing the `text(sun)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Position 1 has the United States being in the spring season. It shows all hemispheres facing the sun, not just the Western Hemisphere.",
+                    "Rationale": "Position `1` has the United States being in the `text(spring)` season. It shows all hemispheres facing the `text(sun)`, not just the `text(Western)` Hemisphere.",
                     "Percent": 16
                 }
             },
             "B": {
-                "Choice": "Position 2, because the Northern Hemisphere tilts toward the sun",
+                "Choice": "Position `2`, because the `text(Northern)` Hemisphere tilts toward the `text(sun)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "When the Northern Hemisphere tilts toward the sun, the United States is in the summer season.",
+                    "Rationale": "When the `text(Northern)` Hemisphere tilts toward the `text(sun)`, the United States is in the `text(summer)` season.",
                     "Percent": 66
                 }
             },
             "C": {
-                "Choice": "Position 3, because Earth is at its closest point to the sun in its orbit",
+                "Choice": "Position `3`, because `text(Earth)` is at its closest point to the `text(sun)` in its orbit",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Position 3 has the United States being in the fall season. Earth is at its closest point to the sun (perihelion) during the winter season, not summer; therefore, this does not explain the occurrence of the summer season in the United States.",
+                    "Rationale": "Position `3` has the United States being in the `text(fall)` season. `text(Earth)` is at its closest point to the `text(sun)` (perihelion) during the `text(winter)` season, not summer; therefore, this does not explain the occurrence of the `text(summer)` season in the United States.",
                     "Percent": 13
                 }
             },
             "D": {
-                "Choice": "Position 4, because Earth is traveling at its fastest rate in its orbit",
+                "Choice": "Position `4`, because `text(Earth)` is traveling at its fastest rate in its orbit",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Position 4 has the United States being in the winter season. Earth travels at the same rate as it orbits the sun.",
+                    "Rationale": "Position `4` has the United States being in the `text(winter)` season. `text(Earth)` travels at the same rate as it orbits the `text(sun)`.",
                     "Percent": 6
                 }
             }
@@ -1376,7 +1376,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A car initially traveling at 8.0 meters per second doubles its speed while traveling in a northeast direction.",
+            "A car initially traveling at `8.0` `text(meters per second)` `text(doubles)` its speed while traveling in a `text(northeast)` direction.",
             "Students used a table to record the initial and final conditions for speed and velocity. Which table is correct?"
         ],
         "AnswerChoices": {
@@ -1384,7 +1384,7 @@
                 "Choice": "problems/TX22G8S/media/25a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Speed does not include the direction of an object's movement, while velocity includes the direction of an object's movement. Since the speed of the car is doubled, its velocity is also doubled in a northeast direction.",
+                    "Rationale": "Speed does not include the direction of an object's movement, while velocity includes the direction of an object's movement. Since the speed of the car is `text(doubled)`, its velocity is also `text(doubled)` in a `text(northeast)` direction.",
                     "Percent": 60
                 }
             },
@@ -1400,7 +1400,7 @@
                 "Choice": "problems/TX22G8S/media/25c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The velocity includes acceleration calculations and units (m/s",
+                    "Rationale": "The velocity includes acceleration calculations and units `(text(m)/text(s)^2)`.",
                     "Percent": 15
                 }
             },
@@ -1432,38 +1432,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which element has chemical properties that are most similar to the chemical properties of sulfur, S?"
+            "Which element has chemical properties that are most similar to the chemical properties of sulfur, `text(S)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Silicon, Si",
+                "Choice": "Silicon, `text(Si)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Silicon (Si) is a metalloid found in Group 14 of the Periodic Table, while sulfur (S) is in Group 16. Si contains 4 valence electrons in its outermost shell, while S contains 6 valence electrons. A difference in the number of valence electrons indicates that these two elements are chemically dissimilar",
+                    "Rationale": "Silicon `(text(Si))` is a metalloid found in Group `14` of the Periodic Table, while sulfur `(text(S))` is in Group `16`. `text(Si)` contains `4` valence electrons in its outermost shell, while `text(S)` contains `6` valence electrons. A difference in the number of valence electrons indicates that these `text(two)` elements are chemically dissimilar",
                     "Percent": 7
                 }
             },
             "G": {
-                "Choice": "Chlorine, Cl",
+                "Choice": "Chlorine, `text(Cl)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Chlorine (Cl) is a nonmetal found in Group 17 of the Periodic Table, while sulfur (S) is in Group 16. Cl contains 7 valence electrons in its outermost shell, while S contains 6 valence electrons. A difference in the number of valence electrons indicates that these two elements are chemically dissimilar.",
+                    "Rationale": "Chlorine `(text(Cl))` is a nonmetal found in Group `17` of the Periodic Table, while sulfur `(text(S))` is in Group `16`. `text(Cl)` contains `7` valence electrons in its outermost shell, while `text(S)` contains `6` valence electrons. A difference in the number of valence electrons indicates that these `text(two)` elements are chemically dissimilar.",
                     "Percent": 12
                 }
             },
             "H": {
-                "Choice": "Selenium, Se",
+                "Choice": "Selenium, `text(Se)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Selenium (Se) and sulfur (S) are both nonmetals found in Group 16 of the Periodic Table. They have similar chemical properties because they have the same number of electrons (6) in their outermost (valence) shell. Valence electrons in the outermost shell of an atom determines how it will bond with other atoms.",
+                    "Rationale": "Selenium `(text(Se))` and sulfur `(text(S))` are both nonmetals found in Group `16` of the Periodic Table. They have similar chemical properties because they have the same number of electrons `(6)` in their outermost (valence) shell. Valence electrons in the outermost shell of an atom determines how it will bond with other atoms.",
                     "Percent": 62
                 }
             },
             "J": {
-                "Choice": "Phosphorus, P",
+                "Choice": "Phosphorus, `text(P)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Phosphorus (P) is a nonmetal found in Group 15 of the Periodic Table, while sulfur (S) is in Group 16. P contains 5 valence electrons in its outermost shell, while S contains 6 valence electrons. A difference in the number of valence electrons indicates that these two elements are chemically dissimilar.",
+                    "Rationale": "Phosphorus `(text(P))` is a nonmetal found in Group `15` of the Periodic Table, while sulfur `(text(S))` is in Group `16`. `text(P)` contains `5` valence electrons in its outermost shell, while `text(S)` contains `6` valence electrons. A difference in the number of valence electrons indicates that these `text(two)` elements are chemically dissimilar.",
                     "Percent": 18
                 }
             }
@@ -1489,16 +1489,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Early one morning students observed the moon as it appeared from Earth.",
+            "Early `text(one morning)` students observed the `text(moon)` as it appeared from `text(Earth)`.",
             "problems/TX22G8S/media/27a.jpg",
-            "Which diagram shows the correct relative positions of the sun, the moon, and Earth when the moon was in the observed phase?"
+            "Which diagram shows the correct relative positions of the `text(sun)`, the `text(moon)`, and `text(Earth)` when the `text(moon)` was in the observed phase?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/TX22G8S/media/27b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This diagram shows the moon as a full moon, which is not the moon phase observed by the students.",
+                    "Rationale": "This diagram shows the `text(moon)` as a full `text(moon)`, which is not the `text(moon)` phase observed by the students.",
                     "Percent": 8
                 }
             },
@@ -1506,7 +1506,7 @@
                 "Choice": "problems/TX22G8S/media/27c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This diagram shows the moon as a waxing gibbous, which is not the moon phase observed by the students.",
+                    "Rationale": "This diagram shows the `text(moon)` as a waxing gibbous, which is not the `text(moon)` phase observed by the students.",
                     "Percent": 27
                 }
             },
@@ -1514,7 +1514,7 @@
                 "Choice": "problems/TX22G8S/media/27d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This diagram shows the moon as a new moon, which is not the moon phase observed by the students.",
+                    "Rationale": "This diagram shows the `text(moon)` as a new `text(moon)`, which is not the `text(moon)` phase observed by the students.",
                     "Percent": 11
                 }
             },
@@ -1522,7 +1522,7 @@
                 "Choice": "problems/TX22G8S/media/27e.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "This diagram shows a waning crescent, which is the moon phase observed by the students.",
+                    "Rationale": "This diagram shows a waning crescent, which is the `text(moon)` phase observed by the students.",
                     "Percent": 53
                 }
             }
@@ -1557,7 +1557,7 @@
                 "Choice": "problems/TX22G8S/media/28b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "On a speed versus time graph, when there is a positive slope, the object's speed is increasing. When there is no slope (flat line), the object's speed is constant, and when there is a negative slope, the object's speed is slowing down (decreasing).",
+                    "Rationale": "On a speed versus time graph, when there is a `text(positive)` slope, the object's speed is increasing. When there is no slope (flat line), the object's speed is constant, and when there is a `text(negative)` slope, the object's speed is slowing down (decreasing).",
                     "Percent": 59
                 }
             },
@@ -1565,7 +1565,7 @@
                 "Choice": "problems/TX22G8S/media/28c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The object is not at rest during the 3-second to 18-second time interval. A negative direction implies that the object is moving backward, which is not the case based on the speed versus time graph.",
+                    "Rationale": "The object is not at rest during the `3text(-second)` to `18text(-second)` time interval. A `text(negative)` direction implies that the object is moving backward, which is not the case based on the speed versus time graph.",
                     "Percent": 7
                 }
             },
@@ -1573,7 +1573,7 @@
                 "Choice": "problems/TX22G8S/media/28d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The object is not at rest during the 3-second to 18-second time interval.",
+                    "Rationale": "The object is not at rest during the `3text(-second)` to `18text(-second)` time interval.",
                     "Percent": 23
                 }
             },
@@ -1581,7 +1581,7 @@
                 "Choice": "problems/TX22G8S/media/28e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The object is not moving at a constant speed during the zero- to 3-second time interval and from the 18-second to 23-second time interval. The object is also not at rest from the 3-second to 18-second time interval.",
+                    "Rationale": "The object is not moving at a constant speed during the `text(zero-)` to `3text(-second)` time interval and from the `18text(-second)` to `23text(-second)` time interval. The object is also not at rest from the `3text(-second)` to `18text(-second)` time interval.",
                     "Percent": 11
                 }
             }
@@ -1609,23 +1609,23 @@
         "Content": [
             "The photograph shows a satellite view of the desert coast of Egypt and the Red Sea.",
             "problems/TX22G8S/media/29a.jpg",
-            "Researchers predict that in the future, the land area of point X will be reduced by erosion.",
-            "Which event will cause the most weathering and erosion to the land area at point X?"
+            "Researchers predict that in the future, the land area of point `X` will be reduced by erosion.",
+            "Which event will cause the most weathering and erosion to the land area at point `X`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "Increasing salinity of seawater near the land",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The salinity of the seawater near the land area at point X is not likely to have a significant impact on the future rate of weathering and erosion.",
+                    "Rationale": "The salinity of the seawater near the land area at point `X` is not likely to have a significant impact on the future rate of weathering and erosion.",
                     "Percent": 30
                 }
             },
             "B": {
-                "Choice": "Intense rays from the sun striking the land",
+                "Choice": "Intense rays from the `text(sun)` striking the land",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The intense rays from the sun in this desert region would contribute to weathering over time. However, the strong storm winds would cause both weathering and a significant amount of erosion as they move pieces of rock and sand from the desert at point X.",
+                    "Rationale": "The intense rays from the ``text(sun)`` in this desert region would contribute to weathering over time. However, the strong storm winds would cause both weathering and a significant amount of erosion as they move pieces of rock and sand from the desert at point `X`.",
                     "Percent": 6
                 }
             },
@@ -1641,7 +1641,7 @@
                 "Choice": "Strong storm winds blowing across the land",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Strong storm winds would cause the most weathering and erosion to the desert land area at point X.",
+                    "Rationale": "Strong storm winds would cause the most weathering and erosion to the desert land area at point `X`.",
                     "Percent": 49
                 }
             }
@@ -1665,7 +1665,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Humans depend upon food that comes from the ocean. Some human activities negatively impact these food supplies.",
+            "Humans depend upon food that comes from the ocean. Some human activities `text(negatively)` impact these food supplies.",
             "Which statement provides the best evidence that human activities contribute to this impact?"
         ],
         "AnswerChoices": {
@@ -1673,7 +1673,7 @@
                 "Choice": "Human visitors to coral reef systems break corals growing on rocks.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Breaking corals is destructive to local marine ecosystems, but it does not provide direct evidence that food supplies that humans depend on from the ocean are being negatively impacted.",
+                    "Rationale": "Breaking corals is destructive to local marine ecosystems, but it does not provide direct evidence that food supplies that humans depend on from the ocean are being `text(negatively)` impacted.",
                     "Percent": 9
                 }
             },
@@ -1681,7 +1681,7 @@
                 "Choice": "Humans catch marine fish at a faster rate than the fish are able to reproduce.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If fish are being caught at a faster rate than they can reproduce, then the food supply will decrease over time. The numerical data gathered to calculate this rate could provide evidence that human activities are having a negative impact on food supplies from the ocean.",
+                    "Rationale": "If fish are being caught at a faster rate than they can reproduce, then the food supply will decrease over time. The numerical data gathered to calculate this rate could provide evidence that human activities are having a `text(negative)` impact on food supplies from the ocean.",
                     "Percent": 77
                 }
             },
@@ -1689,7 +1689,7 @@
                 "Choice": "Humans raise fish in a hatchery for commercial sale.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Humans raising fish in a hatchery could positively impact the food supply from the ocean, as it could decrease the demand to harvest certain fish species for food from the ocean.",
+                    "Rationale": "Humans raising fish in a hatchery could `text(positively)` impact the food supply from the ocean, as it could decrease the demand to harvest certain fish species for food from the ocean.",
                     "Percent": 8
                 }
             },
@@ -1697,7 +1697,7 @@
                 "Choice": "Humans construct artificial reefs to attract tourists.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Humans constructing artificial reefs could positively impact the food supply by potentially creating habitat for marine life that would ultimately increase the food supply from the ocean. Regardless, data related to harvestable marine life present before and after the artificial reef construction would need to be evaluated.",
+                    "Rationale": "Humans constructing artificial reefs could `text(positively)` impact the food supply by potentially creating habitat for marine life that would ultimately increase the food supply from the ocean. Regardless, data related to harvestable marine life present before and after the artificial reef construction would need to be evaluated.",
                     "Percent": 6
                 }
             }
@@ -1723,40 +1723,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A student prepared diagrams to model atoms of two elements.",
+            "A student prepared diagrams to model atoms of `text(two)` elements.",
             "problems/TX22G8S/media/31a.jpg",
-            "Atoms of which two elements are represented by these models?"
+            "Atoms of which `text(two)` elements are represented by these models?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Oxygen‚ O, and neon, Ne",
+                "Choice": "Oxygen, `text(O)`, and neon, `text(Ne)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Oxygen has an atomic number of 8 and neon has an atomic number of 10, which means the elements would have 8 and 10 protons respectively.",
+                    "Rationale": "Oxygen has an atomic number of `8` and neon has an atomic number of `10`, which means the elements would have `8and10` protons respectively.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "Fluorine, F, and neon, Ne",
+                "Choice": "Fluorine, `text(F)`, and neon, `text(Ne)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Fluorine has an atomic number of 9 and neon has an atomic number of 10, which means the elements would have 9 and 10 protons respectively.",
+                    "Rationale": "Fluorine has an atomic number of `9` and neon has an atomic number of `10`, which means the elements would have `9and10` protons respectively.",
                     "Percent": 13
                 }
             },
             "C": {
-                "Choice": "Silicon, Si, and phosphorus, P",
+                "Choice": "Silicon, `text(Si)`, and phosphorus, `text(P)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Silicon has an atomic number of 14 and phosphorus has an atomic number of 15, which means the elements would have 14 and 15 protons respectively.",
+                    "Rationale": "Silicon has an atomic number of `14` and phosphorus has an atomic number of `15`, which means the elements would have `14and15` protons respectively.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "Beryllium, Be, and boron, B",
+                "Choice": "Beryllium, `text(Be)`, and boron, `text(B)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Beryllium has an atomic number of 4, which means it has 4 protons. The element on the left side of the diagram has 4 protons (positively charged circles in the model). Boron has an atomic number of 5, which means it has 5 protons. The element on the right side of the diagram has 5 protons.",
+                    "Rationale": "Beryllium has an atomic number of `4`, which means it has `4` protons. The element on the left side of the diagram has `4` protons (`text(positively)` charged circles in the model). Boron has an atomic number of `5`, which means it has `5` protons. The element on the right side of the diagram has `5` protons.",
                     "Percent": 68
                 }
             }
@@ -1780,14 +1780,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If a fluorine atom has a mass number of 19, how many neutrons are in the atom?"
+            "If a fluorine atom has a mass number of `19`, how many neutrons are in the atom?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:10",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Fluorine has an atomic number of 9. The stem provides the mass number of 19.\nTo get the number of neutrons, the atomic number is subtracted from the mass number:\n19 - 9 = 10 neutrons",
+                    "Rationale": "Fluorine has an atomic number of `9`. The stem provides the mass number of `19`.\nTo get the number of neutrons, the atomic number is subtracted from the mass number:\n`19-9=10` neutrons",
                     "Percent": 50
                 }
             }
@@ -1813,40 +1813,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Four students designed and built air propelled rockets that were launched into the air. Their data are recorded in the table.",
+            "`text(Four)` students designed and built air propelled rockets that were launched into the air. Their data are recorded in the table.",
             "problems/TX22G8S/media/33a.jpg",
             "Which rocket had the greatest acceleration?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Rocket 1",
+                "Choice": "Rocket `1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student calculated the acceleration of Rocket 1 to be 22.727 `text(m)/text(s)^2`, which is not the largest acceleration of all the rockets recorded.\nF = ma\n12.0 N = (0.528 kg) x a\na = 22.727 `text(m)/text(s)^2`",
+                    "Rationale": "The student calculated the acceleration of Rocket `1` to be `22.727` `text(m)/text(s)^2`, which is not the largest acceleration of all the rockets recorded.\n`F=ma`\n`12.0` `text(N)=(0.528` `text(kg))xxa`\n`a=22.727` `text(m)/text(s)^2`",
                     "Percent": 25
                 }
             },
             "B": {
-                "Choice": "Rocket 2",
+                "Choice": "Rocket `2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student calculated the acceleration of Rocket 2 to be 18.779 `text(m)/text(s)^2`, which is not the largest acceleration of all the rockets recorded.\nF = ma\n8.0 N = (0.426 kg) x a\na = 18.779 `text(m)/text(s)^2`",
+                    "Rationale": "The student calculated the acceleration of Rocket `2` to be `18.779` `text(m)/text(s)^2`, which is not the largest acceleration of all the rockets recorded.\n`F=ma`\n`8.0` `text(N)=(0.426` `text(kg))xxa`\n`a=18.779` `text(m)/text(s)^2`",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "Rocket 3",
+                "Choice": "Rocket `3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The student calculated the acceleration of Rocket 3 to be about 23.301 `text(m)/text(s)^2`. This is the largest acceleration of all the rockets recorded.\nF = ma\n12.0 N = (0.515 kg) x a\na = 23.301 `text(m)/text(s)^2`",
+                    "Rationale": "The student calculated the acceleration of Rocket `3` to be about `23.301` `text(m)/text(s)^2`. This is the largest acceleration of all the rockets recorded.\n`F=ma`\n`12.0` `text(N)=(0.515` `text(kg))xxa`\n`a=23.301` `text(m)/text(s)^2`",
                     "Percent": 55
                 }
             },
             "D": {
-                "Choice": "Rocket 4",
+                "Choice": "Rocket `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The student calculated the acceleration of Rocket 4 to be 16.771 `text(m)/text(s)^2`, which is not the largest acceleration of all the rockets recorded.\nF = ma\n8.0 N = (0.477 kg) x a\na = 16.771 `text(m)/text(s)^2`",
+                    "Rationale": "The student calculated the acceleration of Rocket `4` to be `16.771` `text(m)/text(s)^2`, which is not the largest acceleration of all the rockets recorded.\n`F=ma`\n`8.0` `text(N)(=0.477` `text(kg))xxa`\n`a=16.771` `text(m)/text(s)^2`",
                     "Percent": 8
                 }
             }
@@ -1872,7 +1872,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Sea anemones and clown fish live together in the ocean. Which statement best describes one way sea anemones depend on clown fish for an abiotic factor in an ecosystem?"
+            "Sea anemones and clown fish live together in the ocean. Which statement best describes `text(one)` way sea anemones depend on clown fish for an abiotic factor in an ecosystem?"
         ],
         "AnswerChoices": {
             "F": {
@@ -1985,13 +1985,12 @@
         "Explain": false,
         "Content": [
             "Trees lose water through transpiration, when water evaporates from leaves. The list describes types of tree leaves that help reduce the amount of transpiration.",
-            "Tree Leaves That Reduce Transpiration",
-            ":box:• Small leaves\n\n• Needlelike leaves, such as on conifers\n\n• Leaves with hairlike structures\n\n• Leaves with waxy coverings",
+            ":box:Tree Leaves That Reduce Transpiration\n\n• Small leaves\n\n• Needle-like leaves, such as on conifers\n\n• Leaves with hairlike structures\n\n• Leaves with waxy coverings",
             "Which of these is most likely observed in an area experiencing a long-term drought?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Trees with broad leaves will be more healthy than trees with needlelike leaves.",
+                "Choice": "Trees with broad leaves will be more healthy than trees with needle-like leaves.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Broader leaves provide trees with a greater surface area to absorb more sunlight, but these leaves could also provide more surface area to lose water. Therefore, it is likely that there would be a smaller number of trees with broad leaves living in an area experiencing a long-term drought.",
@@ -2044,7 +2043,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two oceanic plates are shown in the image.",
+            "`text(Two)` oceanic plates are shown in the image.",
             "problems/TX22G8S/media/37a.jpg",
             "Which type of boundary results in the spreading of the oceanic ridge?"
         ],
@@ -2061,7 +2060,7 @@
                 "Choice": "Subduction boundary",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Subduction boundaries occur when one plate moves below another plate.",
+                    "Rationale": "Subduction boundaries occur when `text(one)` plate moves below another plate.",
                     "Percent": 6
                 }
             },
@@ -2101,14 +2100,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When a coin is tossed in the air, it travels upward, gradually slows down, momentarily reaches zero speed, then moves back downward with increasing speed. Which statement best explains this change in the coin's motion?"
+            "When a coin is tossed in the air, it travels upward, gradually slows down, momentarily reaches `text(zero)` speed, then moves back downward with increasing speed. Which statement best explains this change in the coin's motion?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "The force of gravity causes the coin to change its velocity.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Gravity is the force that causes the coin to fall toward the center of Earth. Gravity causes the coin to change direction while in the air and fall back down.",
+                    "Rationale": "Gravity is the force that causes the coin to fall toward the center of `text(Earth)`. Gravity causes the coin to change direction while in the air and fall back down.",
                     "Percent": 48
                 }
             },
@@ -2156,8 +2155,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Alpha Centauri appears as a bright object visible in the Milky Way galaxy. Alpha Centauri is actually a system of three objects. Each object produces light and rotates on its own axis. The system is an average of 4 light-years from Earth.",
-            "Based on this information, the three objects that make up the Alpha Centauri system are all —"
+            "Alpha Centauri appears as a bright object visible in the Milky Way galaxy. Alpha Centauri is actually a system of `text(three)` objects. `text(Each object)` produces light and rotates on its own axis. The system is an average of `4` `text(light-years)` from `text(Earth)`.",
+            "Based on this information, the `text(three)` objects that make up the Alpha Centauri system are all —"
         ],
         "AnswerChoices": {
             "A": {
@@ -2213,17 +2212,12 @@
         "Explain": false,
         "Content": [
             "Students performed a lab investigation on chemical reactions. The students put on goggles and plastic gloves and then followed these steps.",
-            "1. Pour 150 milliliters of vinegar into a beaker.",
-            "2. Place a thermometer in the vinegar and record measurements.",
-            "3. Add a piece of steel wool to the beaker.",
-            "4. Observe and record thermometer measurements.",
-            "5. Remove the steel wool from the beaker.",
-            "6. Use tweezers to pull strands of the steel wool apart and observe changes.",
+            ":ibox:`1`. Pour `150` `text(milliliters)` of vinegar into a beaker.\n`2`. Place a thermometer in the vinegar and record measurements.\n`3`. Add a piece of steel wool to the beaker.\n`4`. Observe and record thermometer measurements.\n`5`. Remove the steel wool from the beaker.\n`6`. Use tweezers to pull strands of the steel wool apart and observe changes.",
             "Which observation would indicate that a chemical reaction occurred?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "The vinegar took the shape of the container in step 1.",
+                "Choice": "The vinegar took the shape of the container in step `1`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Vinegar taking the shape of the container is a physical property and is not indicative of a chemical change.",
@@ -2231,7 +2225,7 @@
                 }
             },
             "G": {
-                "Choice": "The steel wool sank into the vinegar in step 3.",
+                "Choice": "The steel wool sank into the vinegar in step `3`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The steel wool sinking into the vinegar is not indicative of a chemical change. It is still steel wool and has not changed properties.",
@@ -2239,7 +2233,7 @@
                 }
             },
             "H": {
-                "Choice": "The temperature of the vinegar increased during step 4.",
+                "Choice": "The temperature of the vinegar increased during step `4`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "A change in the temperature of the reacting substance without the addition of an external heat source is indicative of a chemical change.",
@@ -2247,7 +2241,7 @@
                 }
             },
             "J": {
-                "Choice": "The steel wool changed shape during step 6.",
+                "Choice": "The steel wool changed shape during step `6`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The steel wool changing shape is a physical change and is not indicative of a chemical change.",
@@ -2290,10 +2284,10 @@
                 }
             },
             "B": {
-                "Choice": "Raccoon and Eastern cottontail rabbit",
+                "Choice": "Raccoon and `text(Eastern)` cottontail rabbit",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The raccoon is consumed by only the bobcat. Therefore, the diamondback rattlesnake and the bobcat would not be competing for this organism. The Eastern cottontail rabbit is consumed by both though.",
+                    "Rationale": "The raccoon is consumed by only the bobcat. Therefore, the diamondback rattlesnake and the bobcat would not be competing for this organism. The `text(Eastern)` cottontail rabbit is consumed by both though.",
                     "Percent": 12
                 }
             },
@@ -2306,10 +2300,10 @@
                 }
             },
             "D": {
-                "Choice": "Sparrow and Eastern cottontail rabbit",
+                "Choice": "Sparrow and `text(Eastern)` cottontail rabbit",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Like the mouse and swamp rabbit, both the sparrow and the Eastern cottontail rabbit are consumed by the bobcat and diamondback rattlesnake. Therefore, when the mouse and swamp rabbit populations decrease, the bobcat and diamondback rattlesnake will compete for these two organisms.",
+                    "Rationale": "Like the mouse and swamp rabbit, both the sparrow and the `text(Eastern)` cottontail rabbit are consumed by the bobcat and diamondback rattlesnake. Therefore, when the mouse and swamp rabbit populations decrease, the bobcat and diamondback rattlesnake will compete for these `text(two)` organisms.",
                     "Percent": 76
                 }
             }
@@ -2335,40 +2329,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The chart shows properties of four elements.",
+            "The chart shows properties of `text(four)` elements.",
             "problems/TX22G8S/media/42a.jpg",
             "Based on these properties, which element is most likely a nonmetal?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Element 1",
+                "Choice": "Element `1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Element 1 does not fit the characteristics of a nonmetal because it is shiny and conducts heat and electricity.",
+                    "Rationale": "Element `1` does not fit the characteristics of a nonmetal because it is shiny and conducts heat and electricity.",
                     "Percent": 4
                 }
             },
             "G": {
-                "Choice": "Element 2",
+                "Choice": "Element `2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Characteristics of a nonmetal include a dull luster, an inability to conduct electricity and/or heat, and a low melting point. Element 2 fits this description.",
+                    "Rationale": "Characteristics of a nonmetal include a dull luster, an inability to conduct electricity and/or heat, and a low melting point. Element `2` fits this description.",
                     "Percent": 84
                 }
             },
             "H": {
-                "Choice": "Element 3",
+                "Choice": "Element `3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Element 3 does not fit the characteristics of a nonmetal because it is shiny, conducts heat and electricity, and has a high melting point.",
+                    "Rationale": "Element `3` does not fit the characteristics of a nonmetal because it is shiny, conducts heat and electricity, and has a high melting point.",
                     "Percent": 7
                 }
             },
             "J": {
-                "Choice": "Element 4",
+                "Choice": "Element `4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Element 4 does not fit the characteristics of a nonmetal because it conducts heat and electricity and has a high melting point.",
+                    "Rationale": "Element `4` does not fit the characteristics of a nonmetal because it conducts heat and electricity and has a high melting point.",
                     "Percent": 5
                 }
             }

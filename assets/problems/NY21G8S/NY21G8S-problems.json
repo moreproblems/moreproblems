@@ -124,7 +124,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "organ → organ system → cell → tissue",
+                "Choice": "`text(organ)->text(organ system)->text(cell)->text(tissue)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -132,7 +132,7 @@
                 }
             },
             "2": {
-                "Choice": "organ → cell → organ system → tissue",
+                "Choice": "`text(organ)->text(cell)->text(organ system)->text(tissue)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -140,7 +140,7 @@
                 }
             },
             "3": {
-                "Choice": "cell → tissue → organ → organ system",
+                "Choice": "`text(cell)->text(tissue)->text(organ)->text(organ system)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -148,7 +148,7 @@
                 }
             },
             "4": {
-                "Choice": "cell → organ → tissue → organ system",
+                "Choice": "`text(cell)->text(organ)->text(tissue)->text(organ system)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -385,9 +385,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The sequence below represents the organization of the genetic information in the nucleus of a cell. One term in the sequence is represented by X.",
-            ":box:DNA → X → chromosome",
-            "The X in the sequence most likely represents a"
+            "The sequence below represents the organization of the genetic information in the nucleus of a cell. One term in the sequence is represented by `text(X)`.",
+            ":box:`text(DNA)->text(X)->text(chromosome)`",
+            "The `text(X)` in the sequence most likely represents a"
         ],
         "AnswerChoices": {
             "1": {
@@ -603,7 +603,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "fewer Calories per day than required",
+                "Choice": "fewer `text(Calories per day)` than required",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -611,7 +611,7 @@
                 }
             },
             "2": {
-                "Choice": "more Calories per day than required",
+                "Choice": "more `text(Calories per day)` than required",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -619,7 +619,7 @@
                 }
             },
             "3": {
-                "Choice": "the same number of Calories per day as required",
+                "Choice": "the same number of `text(Calories per day)` as required",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -758,7 +758,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "plants → deer → birds → mountain lions",
+                "Choice": "`text(plants)->text(deer)->text(birds)->text(mountain lions)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -766,7 +766,7 @@
                 }
             },
             "2": {
-                "Choice": "plants → deer → coyotes → mountain lions",
+                "Choice": "`text(plants)->text(deer)->text(coyotes)->text(mountain lions)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -774,7 +774,7 @@
                 }
             },
             "3": {
-                "Choice": "plants → grasshoppers → frogs → mountain lions",
+                "Choice": "`text(plants)->text(grasshoppers)->text(frogs)->text(mountain lions)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -782,7 +782,7 @@
                 }
             },
             "4": {
-                "Choice": "plants → grasshoppers → birds → mountain lions",
+                "Choice": "`text(plants)->text(grasshoppers)->text(birds)->text(mountain lions)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1041,7 +1041,7 @@
                 }
             },
             "2": {
-                "Choice": "Sun",
+                "Choice": "`text(Sun)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1084,11 +1084,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on the data table, the next year when Halley's Comet will most likely be visible to an observer on Earth would be"
+            "Based on the data table, the next `text(year)` when Halley's Comet will most likely be visible to an observer on `text(Earth)` would be"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "2022",
+                "Choice": "`text(2022)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1096,7 +1096,7 @@
                 }
             },
             "2": {
-                "Choice": "2043",
+                "Choice": "`text(2043)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1104,7 +1104,7 @@
                 }
             },
             "3": {
-                "Choice": "2061",
+                "Choice": "`text(2061)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1112,7 +1112,7 @@
                 }
             },
             "4": {
-                "Choice": "2136",
+                "Choice": "`text(2136)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1139,7 +1139,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The reason that Halley's Comet can be seen during specific years is that"
+            "The reason that Halley's Comet can be seen during specific `text(years)` is that"
         ],
         "AnswerChoices": {
             "1": {
@@ -1151,7 +1151,7 @@
                 }
             },
             "2": {
-                "Choice": "the orbit of Halley's Comet is controlled by Earth's gravity",
+                "Choice": "the orbit of Halley's Comet is controlled by `text(Earth)`'s gravity",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1159,7 +1159,7 @@
                 }
             },
             "3": {
-                "Choice": "Halley's Comet orbits Earth in a cyclic and predictable pattern",
+                "Choice": "Halley's Comet orbits `text(Earth)` in a cyclic and predictable pattern",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1167,7 +1167,7 @@
                 }
             },
             "4": {
-                "Choice": "Halley's Comet orbits the Sun in a cyclic and predictable pattern",
+                "Choice": "Halley's Comet orbits the `text(Sun)` in a cyclic and predictable pattern",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1192,11 +1192,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The Moon completes the cycle of phases from one Full Moon to the next Full Moon in approximately one"
+            "The `text(Moon)` completes the cycle of phases from one Full `text(Moon)` to the next Full `text(Moon)` in approximately `text(one)`"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "day",
+                "Choice": "`text(day)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1204,7 +1204,7 @@
                 }
             },
             "2": {
-                "Choice": "week",
+                "Choice": "`text(week)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1212,7 +1212,7 @@
                 }
             },
             "3": {
-                "Choice": "month",
+                "Choice": "`text(month)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1220,7 +1220,7 @@
                 }
             },
             "4": {
-                "Choice": "year",
+                "Choice": "`text(year)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1245,9 +1245,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents Earth's polar and equatorial diameters, measured in `text(kilometers)` `(text(km))`.",
+            "The diagram below represents `text(Earth)`'s polar and equatorial diameters, measured in `text(kilometers)` `(text(km))`.",
             "problems/NY21G8S/media/24a.jpg",
-            "The shape of Earth is best described as"
+            "The shape of `text(Earth)` is best described as"
         ],
         "AnswerChoices": {
             "1": {
@@ -1353,13 +1353,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents Earth's layers, labeled A through D.",
+            "The diagram below represents `text(Earth)`'s layers, labeled `A` through `D`.",
             "problems/NY21G8S/media/26a.jpg",
             "Which letter represents the outer core?"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "A",
+                "Choice": "`A`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1367,7 +1367,7 @@
                 }
             },
             "2": {
-                "Choice": "B",
+                "Choice": "`B`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1375,7 +1375,7 @@
                 }
             },
             "3": {
-                "Choice": "C",
+                "Choice": "`C`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1383,7 +1383,7 @@
                 }
             },
             "4": {
-                "Choice": "D",
+                "Choice": "`D`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1573,7 +1573,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "A",
+                "Choice": "`A`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1581,7 +1581,7 @@
                 }
             },
             "2": {
-                "Choice": "B",
+                "Choice": "`B`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1589,7 +1589,7 @@
                 }
             },
             "3": {
-                "Choice": "C",
+                "Choice": "`C`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1597,7 +1597,7 @@
                 }
             },
             "4": {
-                "Choice": "D",
+                "Choice": "`D`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1628,7 +1628,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "glacial ice due to unequal heating of Earth's surface",
+                "Choice": "glacial ice due to unequal heating of `text(Earth)`'s surface",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1636,7 +1636,7 @@
                 }
             },
             "2": {
-                "Choice": "shorelines due to faulting of rock layers on Earth's crust",
+                "Choice": "shorelines due to faulting of rock layers on `text(Earth)`'s crust",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1644,7 +1644,7 @@
                 }
             },
             "3": {
-                "Choice": "lithospheric plates due to convection cells in Earth's mantle",
+                "Choice": "lithospheric plates due to convection cells in `text(Earth)`'s mantle",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1652,7 +1652,7 @@
                 }
             },
             "4": {
-                "Choice": "continents due to increased greenhouse gases entering Earth's atmosphere",
+                "Choice": "continents due to increased greenhouse gases entering `text(Earth)`'s atmosphere",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1734,11 +1734,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the latitude and longitude of point A?"
+            "What is the latitude and longitude of point `A`?"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "30° N 90° W",
+                "Choice": "`30°` `text(N)` `90°` `text(W)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1746,7 +1746,7 @@
                 }
             },
             "2": {
-                "Choice": "30° N 90° E",
+                "Choice": "`30°` `text(N)` `90°` `text(E)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1754,7 +1754,7 @@
                 }
             },
             "3": {
-                "Choice": "90° N 30° W",
+                "Choice": "`90°` `text(N)` `30°` `text(W)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1762,7 +1762,7 @@
                 }
             },
             "4": {
-                "Choice": "90° N 30° E",
+                "Choice": "`90°` `text(N)` `30°` `text(E)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1789,11 +1789,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If the time at point A is 2:00 p.m., then the time at point B is"
+            "If the time at point `A` is `2:00` `text(p.m.)`, then the time at point `B` is"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "before 2:00 p.m.",
+                "Choice": "before `2:00` `text(p.m.)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1801,7 +1801,7 @@
                 }
             },
             "2": {
-                "Choice": "2:00 p.m.",
+                "Choice": "`2:00` `text(p.m.)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1809,7 +1809,7 @@
                 }
             },
             "3": {
-                "Choice": "after 2:00 p.m.",
+                "Choice": "after `2:00` `text(p.m.)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1834,7 +1834,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Under which set of conditions would the greatest additional amount of sugar dissolve in 100 grams of water?"
+            "Under which set of conditions would the greatest additional amount of sugar dissolve in `100` `text(grams)` of water?"
         ],
         "AnswerChoices": {
             "1": {
@@ -1997,7 +1997,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A comparison of the three phases shows that in the sample of the liquid, the atoms have a"
+            "A comparison of the `text(three)` phases shows that in the sample of the liquid, the atoms have a"
         ],
         "AnswerChoices": {
             "1": {
@@ -2050,9 +2050,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents a roller coaster at two positions on the roller coaster track.",
+            "The diagram below represents a roller coaster at `text(two)` positions on the roller coaster track.",
             "problems/NY21G8S/media/39a.jpg",
-            "Compared to the potential energy of the roller coaster at the top of hill 1, the potential energy of the roller coaster at the top of hill 2 is"
+            "Compared to the potential energy of the roller coaster at the top of hill `1`, the potential energy of the roller coaster at the top of hill `2` is"
         ],
         "AnswerChoices": {
             "1": {
@@ -2105,9 +2105,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents a simple machine, labeled A, that is being used to move a barrel up the stairs.",
+            "The diagram below represents a simple machine, labeled `A`, that is being used to move a barrel up the stairs.",
             "problems/NY21G8S/media/40a.jpg",
-            "Which simple machine is represented by letter A in the diagram?"
+            "Which simple machine is represented by letter `A` in the diagram?"
         ],
         "AnswerChoices": {
             "1": {
@@ -2215,7 +2215,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In this circuit, one function of the switch is to"
+            "In this circuit, `text(one)` function of the switch is to"
         ],
         "AnswerChoices": {
             "1": {
@@ -2325,7 +2325,7 @@
         "Content": [
             "The diagram below represents a triple-beam balance with a rock on it.",
             "problems/NY21G8S/media/44a.jpg",
-            "A student finds the mass of the rock to be 55.0 grams. The student is making"
+            "A student finds the mass of the rock to be `55.0` `text(grams)`. The student is making"
         ],
         "AnswerChoices": {
             "1": {
@@ -2378,9 +2378,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The weather map below shows the location of Hurricane Irene [🌀] on August 24, 2011, and its predicted path of travel over the next five days. The predictions for the maximum wind speed in `text(miles per hour)` (mph) and category (CAT) classification of the hurricane for each date are shown. The greater the category, the stronger the hurricane.",
+            "The weather map below shows the location of Hurricane Irene [🌀] on `text(August 24, 2011)`, and its predicted path of travel over the next `text(five days)`. The predictions for the maximum wind speed in `text(miles per hour)` `(text(mph))` and category (CAT) classification of the hurricane for each date are shown. The greater the category, the stronger the hurricane.",
             "problems/NY21G8S/media/45a.jpg",
-            "What was predicted to happen to this hurricane between August 25 and August 29?"
+            "What was predicted to happen to this hurricane between `text(August 25)andtext(August 29)`?"
         ],
         "AnswerChoices": {
             "1": {
@@ -2435,7 +2435,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Plot the data for the land covered by forests for the years shown."
+            "Plot the data for the land covered by forests for the `text(years)` shown."
         ],
         "AnswerChoices": {
             "1:KEY": {
@@ -2506,7 +2506,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on the data, state the general relationship between the approximate number of people and the percentage of land covered by forests in Thailand."
+            "Based on the data, state the general relationship between the approximate number of people and the `text(percentage)` of land covered by forests in Thailand."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2528,7 +2528,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe one benefit forested areas have on the environment."
+            "Describe `text(one)` benefit forested areas have on the environment."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -2591,7 +2591,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify TWO factors that were kept constant in this experiment."
+            "Identify `text(TWO)` factors that were kept constant in this experiment."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2682,7 +2682,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Scientists found saltwater fish fossils in rock layers in Montana, an inland state in the western United States. Describe what this might indicate about past environmental conditions in Montana."
+            "Scientists found saltwater fish fossils in rock layers in Montana, an inland state in the `text(western)` United States. Describe what this might indicate about past environmental conditions in Montana."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2706,7 +2706,7 @@
         ],
         "AnswerChoices": {
             "A:Ecological Succession": {
-                "Choice": "3:A forest now stands where there was once just a grassy field.",
+                "Choice": "3:A forest now stands where there was `text(once)` just a grassy field.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2714,7 +2714,7 @@
                 }
             },
             "B:Evolution": {
-                "Choice": "2:The modern horse is much larger than its ancestors that lived thirty-million years ago.",
+                "Choice": "2:The modern horse is much larger than its ancestors that lived `text(thirty-million years)` ago.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2722,7 +2722,7 @@
                 }
             },
             "C:Interference by Humans": {
-                "Choice": "1:A high mountain pond has fewer trout than it had fifty years ago, due to acid rain.",
+                "Choice": "1:A high mountain pond has fewer trout than it had `text(fifty years)` ago, due to acid rain.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2749,7 +2749,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe TWO safety procedures that the student in the diagram should be following in order to separate this mixture."
+            "Describe `text(TWO)` safety procedures that the student in the diagram should be following in order to separate this mixture."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2771,7 +2771,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Besides pouring off the hot water as shown in the diagram, describe one other way the student can separate the sand and water mixture."
+            "Besides pouring off the hot water as shown in the diagram, describe `text(one)` other way the student can separate the sand and water mixture."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2815,7 +2815,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe one way the human body protects itself from an infectious disease."
+            "Describe `text(one)` way the human body protects itself from an infectious disease."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2837,7 +2837,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe how the labels indicate that one tablespoon of mayonnaise contains more energy than one tablespoon of ketchup."
+            "Describe how the labels indicate that `text(one tablespoon)` of mayonnaise contains more energy than `text(one tablespoon)` of ketchup."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2859,7 +2859,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Calculate the total number of `text(milligrams)` (mg) of sodium that would be found in three servings of ketchup."
+            "Calculate the total number of `text(milligrams)` `(text(mg))` of sodium that would be found in `text(three)` servings of ketchup."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2890,7 +2890,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify the cell at A."
+            "Identify the cell at `A`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2921,7 +2921,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Complete the diagram below by drawing the number of chromosomes (lines) that would be found in cell D.",
+            "Complete the diagram below by drawing the number of chromosomes (lines) that would be found in cell `D`.",
             "problems/NY21G8S/media/61a.jpg"
         ],
         "AnswerChoices": {
@@ -2954,7 +2954,7 @@
             "The diagrams below represent sexual reproduction and asexual reproduction.",
             "problems/NY21G8S/media/62a.jpg",
             "problems/NY21G8S/media/62b.jpg",
-            "Using evidence shown in the diagram, identify TWO ways asexual reproduction is different from sexual reproduction."
+            "Using evidence shown in the diagram, identify `text(TWO)` ways asexual reproduction is different from sexual reproduction."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2976,7 +2976,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify the bird represented by the foot labeled W."
+            "Identify the bird represented by the foot labeled `W`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3007,7 +3007,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Explain how the webbing between the toes of bird Y could help a coastal bird survive."
+            "Explain how the webbing between the toes of bird `Y` could help a coastal bird survive."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3029,7 +3029,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Locomotion is necessary for many activities of the rabbit's daily life. Other than escaping danger, describe another way that locomotion is helpful to the rabbit."
+            "Locomotion is necessary for many activities of the rabbit's `text(daily)` life. Other than escaping danger, describe another way that locomotion is helpful to the rabbit."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3051,7 +3051,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "As the rabbit's environment changes from fall to winter, describe one way that the rabbit's body may change in order to survive the winter."
+            "As the rabbit's environment changes from `text(fall)` to `text(winter)`, describe `text(one)` way that the rabbit's body may change in order to survive the `text(winter)`."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3098,7 +3098,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify one cause for the three coat-color variations in cheetahs."
+            "Identify `text(one)` cause for the `text(three)` coat-color variations in cheetahs."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3145,7 +3145,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Cheetahs normally hunt their prey on the open grasslands of Africa during the day. Explain why the king cheetah and melanistic cheetah would have a better chance of catching prey at sunrise or sunset."
+            "Cheetahs normally hunt their prey on the open grasslands of Africa during the `text(day)`. Explain why the king cheetah and melanistic cheetah would have a better chance of catching prey at sunrise or sunset."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3167,7 +3167,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Determine the number of meters (m) the car traveled in the first 2 seconds."
+            "Determine the number of `text(meters)` `(text(m))` the car traveled in the first `2` `text(seconds)`."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3206,7 +3206,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe one piece of evidence from the diagram which indicates that the car was accelerating."
+            "Describe `text(one)` piece of evidence from the diagram which indicates that the car was accelerating."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3228,7 +3228,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "On the map below, place an X where a front is located relative to the two air masses shown.",
+            "On the map below, place an `X` where a front is located relative to the `text(two)` air masses shown.",
             "problems/NY21G8S/media/S19a.jpg"
         ],
         "AnswerChoices": {
@@ -3260,7 +3260,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the most likely direction that air mass B will move over the next few days?"
+            "What is the most likely direction that air mass `B` will move over the next few `text(days)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3291,7 +3291,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe one piece of evidence represented in the diagram which shows that a chemical change occurred in the flask."
+            "Describe `text(one)` piece of evidence represented in the diagram which shows that a chemical change occurred in the flask."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3344,7 +3344,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify the name of the organism that lived on all five labeled landmasses."
+            "Identify the name of the organism that lived on all `text(five)` labeled landmasses."
         ],
         "AnswerChoices": {
             "A": {
@@ -3399,7 +3399,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe evidence from the map, other than the fossil record, that suggests that continents were once together as one landmass millions of years ago."
+            "Describe evidence from the map, other than the fossil record, that suggests that continents were `text(once)` together as `text(one)` landmass `text(millions of years)` ago."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3421,7 +3421,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The choices below represent different phases of the Moon as viewed from Earth. Select the phase of the Moon that would be seen from Earth when the Moon is at position A."
+            "The choices below represent different phases of the `text(Moon)` as viewed from `text(Earth)`. Select the phase of the `text(Moon)` that would be seen from `text(Earth)` when the `text(Moon)` is at position `A`."
         ],
         "AnswerChoices": {
             "A": {
@@ -3508,7 +3508,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify the general compass direction in which both the Moon and the Sun appear to rise, due to Earth's rotation, as viewed by an observer on Earth."
+            "Identify the general compass direction in which both the `text(Moon)` and the `text(Sun)` appear to rise, due to `text(Earth)`'s rotation, as viewed by an observer on `text(Earth)`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3539,7 +3539,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Betelgeuse and Rigel are at least seventy-five times larger than the Sun. Explain why these two stars seen in the constellation Orion look like small points of light in the night sky."
+            "Betelgeuse and Rigel are at least `text(seventy-five)` times larger than the `text(Sun)`. Explain why these `text(two)` stars seen in the constellation Orion look like small points of light in the night sky."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3561,7 +3561,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify the labeled star in the constellation Orion that is closest to Earth."
+            "Identify the labeled star in the constellation Orion that is closest to `text(Earth)`."
         ],
         "AnswerChoices": {
             "A": {
@@ -3638,7 +3638,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below shows three bar magnets. Magnets A and B are attracting each other. Magnets B and C are repelling each other. The north pole (N) and south pole (S) are labeled on magnet A. Identify the positions of the north and south poles on magnets B and C."
+            "The diagram below shows `text(three)` bar magnets. Magnets `AandB` are attracting each other. Magnets `BandC` are repelling each other. The `text(north)` pole `(text(N))` and `text(south)` pole `(text(S))` are labeled on magnet `A`. Identify the positions of the `text(north)andtext(south)` poles on magnets `BandC`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3669,7 +3669,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify TWO conditions that will change granite into gneiss."
+            "Identify `text(TWO)` conditions that will change granite into gneiss."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3761,7 +3761,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe one benefit to the environment of using solar radiation instead of fossil fuels to heat the water used in the house."
+            "Describe `text(one)` benefit to the environment of using solar radiation instead of fossil fuels to heat the water used in the house."
         ],
         "AnswerChoices": {},
         "Parts": {}

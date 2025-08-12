@@ -18,23 +18,23 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-10°F\t8°F\t-5°F\t0°F",
+                "Choice": "`-10text(°F)`\t`8text(°F)`\t`-5text(°F)`\t`0text(°F)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "8°F is warmer than 0°F.",
+                    "Rationale": "`8text(°F)` is warmer than `0text(°F)`.",
                     "Percent": 5
                 }
             },
             "B": {
-                "Choice": "-5°F\t-10°F\t0°F\t8°F",
+                "Choice": "`-5text(°F)`\t`-10text(°F)`\t`0text(°F)`\t`8text(°F)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-5°F is warmer than -10°F.",
+                    "Rationale": "`-5text(°F)` is warmer than `-10text(°F)`.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "-10°F\t-5°F\t0°F\t8°F",
+                "Choice": "`-10text(°F)`\t`-5text(°F)`\t`0text(°F)`\t`8text(°F)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The temperatures are listed in order from coldest to warmest.",
@@ -42,10 +42,10 @@
                 }
             },
             "D": {
-                "Choice": "0°F\t-5°F\t8°F\t-10°F",
+                "Choice": "`0text(°F)`\t`-5text(°F)`\t`8text(°F)`\t`-10text(°F)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-10°F is colder than 0°F.",
+                    "Rationale": "`-10text(°F)` is colder than `0text(°F)`.",
                     "Percent": 8
                 }
             }
@@ -69,38 +69,38 @@
         "Content": [
             "A coordinate grid is shown below.",
             "problems/TX17G6M/media/2a.jpg",
-            "Which ordered pair describes a point that is located 4 units to the left of the origin and 2 units below the `xtext(-axis)`?"
+            "Which ordered pair describes a point that is located `4` `text(units)` to the left of the origin and `2` `text(units)` below the `xtext(-axis)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(4,2)",
+                "Choice": "`(4,2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ordered pair (4, 2) describes a point that is 4 units to the right of the origin and 2 units above the `xtext(-axis)`.",
+                    "Rationale": "The ordered pair `(4,2)` describes a point that is `4` `text(units)` to the right of the origin and `2` `text(units)` above the `xtext(-axis)`.",
                     "Percent": 4
                 }
             },
             "G": {
-                "Choice": "(-4, -2)",
+                "Choice": "`(-4,-2)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The ordered pair (-4, -2) describes a point that is 4 units to the left of the origin and 2 units below the `xtext(-axis)`.",
+                    "Rationale": "The ordered pair `(-4,-2)` describes a point that is `4` `text(units)` to the left of the origin and `2` `text(units)` below the `xtext(-axis)`.",
                     "Percent": 74
                 }
             },
             "H": {
-                "Choice": "(-4, 2)",
+                "Choice": "`(-4,2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Te ordered pair (-4, 2) describes a point that is 4 units to the left of the origin and 2 units above the `xtext(-axis)`.",
+                    "Rationale": "Te ordered pair `(-4,2)` describes a point that is `4` `text(units)` to the left of the origin and `2` `text(units)` above the `xtext(-axis)`.",
                     "Percent": 7
                 }
             },
             "J": {
-                "Choice": "(4, -2)",
+                "Choice": "`(4,-2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ordered pair (4, -2) describes a point that is 4 units to the right of the origin and 2 units below the `xtext(-axis)`.",
+                    "Rationale": "The ordered pair `(4,-2)` describes a point that is `4` `text(units)` to the right of the origin and `2` `text(units)` below the `xtext(-axis)`.",
                     "Percent": 15
                 }
             }
@@ -122,38 +122,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A housepainter mixed 5 gal of blue paint with every 9 gal of yellow paint in order to make a green paint. Which ratio of gallons of blue paint to gallons of yellow paint will make the same shade of green paint?"
+            "A housepainter mixed `5` `text(gal)` of blue paint with every `9` `text(gal)` of yellow paint in order to make a green paint. Which ratio of `text(gallons)` of blue paint to `text(gallons)` of yellow paint will make the same shade of green paint?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "30 : 54",
+                "Choice": "`30:54`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "30 : 54 is equivalent to 5 : 9.",
+                    "Rationale": "`30:54` is equivalent to `5:9`.",
                     "Percent": 56
                 }
             },
             "B": {
-                "Choice": "6 : 10",
+                "Choice": "`6:10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "6 : 10 is not equivalent to 5 : 9.",
+                    "Rationale": "`6:10` is not equivalent to `5:9`.",
                     "Percent": 15
                 }
             },
             "C": {
-                "Choice": "10 : 45",
+                "Choice": "`10:45`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "10 : 45 is not equivalent to 5 : 9.",
+                    "Rationale": "`10:45` is not equivalent to `5:9`.",
                     "Percent": 22
                 }
             },
             "D": {
-                "Choice": "27 : 15",
+                "Choice": "`27:15`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "27 : 15 is not equivalent to 5 : 9.",
+                    "Rationale": "`27:15` is not equivalent to `5:9`.",
                     "Percent": 7
                 }
             }
@@ -184,7 +184,7 @@
                 "Choice": "problems/TX17G6M/media/4b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Te values for Breakfast; 3/17 ≠ 30%, Lunch; 4/17 ≠ 10%, and Supper; 10/17 ≠ 60%, do not match the percentage bar graph shown.",
+                    "Rationale": "The values for Breakfast; `3/17!=30%`, Lunch; `4/17!=10%`, and Supper; `10/17!=60%`, do not match the percentage bar graph shown.",
                     "Percent": 37
                 }
             },
@@ -192,7 +192,7 @@
                 "Choice": "problems/TX17G6M/media/4c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Te values for Breakfast; 4/20 ≠ 30%, Lunch; 4/20 ≠ 10%, and Supper; 12/20 ≠ 60%, do not match the percentage bar graph shown.",
+                    "Rationale": "The values for Breakfast; `4/20!=30%`, Lunch; `4/20!=10%`, and Supper; `12/20!=60%`, do not match the percentage bar graph shown.",
                     "Percent": 5
                 }
             },
@@ -200,7 +200,7 @@
                 "Choice": "problems/TX17G6M/media/4d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Te values for Breakfast; 9/30 = 30%, Lunch; 3/30 = 10%, and Supper; 18/30 = 60% match the percentage bar graph shown.",
+                    "Rationale": "The values for Breakfast; `9/30=30%`, Lunch; `3/30=10%`, and Supper; `18/30=60%` match the percentage bar graph shown.",
                     "Percent": 56
                 }
             },
@@ -208,7 +208,7 @@
                 "Choice": "problems/TX17G6M/media/4e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Te values for Breakfast; 0/7 ≠ 30%, Lunch; 3/7 ≠ 10%, and Supper; 4/7 ≠ 60%, do not match the percentage bar graph shown.",
+                    "Rationale": "The values for Breakfast; `0/7!=30%`, Lunch; `3/7!=10%`, and Supper; `4/7!=60%`, do not match the percentage bar graph shown.",
                     "Percent": 2
                 }
             }
@@ -230,39 +230,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What value of x makes this equation true?",
-            "-90 = -100 + x"
+            "What value of `x` makes this equation true?",
+            ":ibox:`-90=-100+x`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "-10",
+                "Choice": "`-10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-100 + ­ 10 is -110, not -90.",
+                    "Rationale": "-`100+(-10)` is `-110`, not `-90`.",
                     "Percent": 15
                 }
             },
             "B": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "-100 + 10 = -90.",
+                    "Rationale": "`-100+10=-90`.",
                     "Percent": 66
                 }
             },
             "C": {
-                "Choice": "-190",
+                "Choice": "`-190`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-100 + ­ 190 = -290, not -90.",
+                    "Rationale": "`-100+(-190)=-290`, not `-90`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "190",
+                "Choice": "`190`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-100 + 190 = 90, not -90.",
+                    "Rationale": "`-100+190=90`, not `-90`.",
                     "Percent": 8
                 }
             }
@@ -284,39 +284,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "team of workers took 167.3 hours to complete a task. A smaller team of workers will complete the same task, but it will take them 1.25 times as long as it took the first team.",
+            "A team of workers took `167.3` `text(hours)` to complete a task. A smaller team of workers will complete the same task, but it will take them `1.25` times as long as it took the `text(first)` team.",
             "Based on this information, which statement is true?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "The task will take the smaller team of workers 168.55 hours to complete, because 167.3 + 1.25 = 168.55.",
+                "Choice": "The task will take the smaller team of workers `168.55` `text(hours)` to complete, because `167.3+1.25=168.55`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "167.3 should be multiplied by 1.25, not added.",
+                    "Rationale": "`167.3` should be multiplied by `1.25`, not added.",
                     "Percent": 16
                 }
             },
             "G": {
-                "Choice": "The task will take the smaller team of workers 179.8 hours to complete, because 167.3 + 1.25 = 179.8.",
+                "Choice": "The task will take the smaller team of workers `179.8` `text(hours)` to complete, because `167.3+1.25=179.8`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "167.3 should be multiplied by 1.25, not added.",
+                    "Rationale": "`167.3` should be multiplied by `1.25`, not added.",
                     "Percent": 6
                 }
             },
             "H": {
-                "Choice": "The task will take the smaller team of workers 198.825 hours to complete, because 167.3 × 1.25 = 198.825.",
+                "Choice": "The task will take the smaller team of workers `198.825` `text(hours)` to complete, because `167.3xx1.25=198.825`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "167.3 should be multiplied by 1.25, which equals 209.125, not 198.825.",
+                    "Rationale": "`167.3` should be multiplied by `1.25`, which equals `209.125`, not `198.825`.",
                     "Percent": 14
                 }
             },
             "J": {
-                "Choice": "The task will take the smaller team of workers 209.125 hours to complete, because 167.3 × 1.25 = 209.125.",
+                "Choice": "The task will take the smaller team of workers `209.125` `text(hours)` to complete, because `167.3xx1.25=209.125`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "167.3 should be multiplied by 1.25, which equals 209.125.",
+                    "Rationale": "`167.3` should be multiplied by `1.25`, which equals `209.125`.",
                     "Percent": 64
                 }
             }
@@ -344,34 +344,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3,120 `text(ft)^2`",
+                "Choice": "`3text(,)120` `text(ft)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so A = (1/2)(68 + 36)(30) = 1,560, not 3,120.",
+                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so `A=(1/2)(68+36)(30)=1text(,)560`, not `3text(,)120`.",
                     "Percent": 17
                 }
             },
             "B": {
-                "Choice": "1,560 `text(ft)^2`",
+                "Choice": "`1text(,)560` `text(ft)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so A = (1/2)(68 + 36)(30) = 1,560.",
+                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so `A=(1/2)(68+36)(30)=1text(,)560`.",
                     "Percent": 56
                 }
             },
             "C": {
-                "Choice": "1,768 `text(ft)^2`",
+                "Choice": "`1text(,)768` `text(ft)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so A = (1/2)(68 + 36)(30) = 1,560, not 1,768.",
+                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so `A=(1/2)(68+36)(30)=1text(,)560`, not `1text(,)768`.",
                     "Percent": 15
                 }
             },
             "D": {
-                "Choice": "3,536 `text(ft)^2`",
+                "Choice": "`3text(,)536` `text(ft)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so A = (1/2)(68 + 36)(30) = 1,560, not 3,536.",
+                    "Rationale": "The formula for the area of a trapezoid is `A=1/2(b_1+b_2)h`, so `A=(1/2)(68+36)(30)=1text(,)560`, not `3text(,)536`.",
                     "Percent": 11
                 }
             }
@@ -393,38 +393,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Liang has a goal of walking at least 18 miles. She walks at a rate of 4 miles per hour. Which inequality can Liang use to find h, the number of hours she should walk in order to meet or exceed her goal?"
+            "Liang has a goal of walking at least `18` `text(miles)`. She walks at a rate of `4` `text(miles per hour)`. Which inequality can Liang use to find `h`, the number of `text(hours)` she should walk in order to meet or exceed her goal?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "4h ≥ 18",
+                "Choice": "`4h>=18`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The rate Liang walks, 4 miles/hour, multiplied by the time she walks, h hours, is at least 18 miles which is represented by 4h ≥ 18.",
+                    "Rationale": "The rate Liang walks, `4` `text(miles)/text(hour)`, multiplied by the time she walks, `h` `text(hours)`, is at least `18` `text(miles)` which is represented by `4h>=18`.",
                     "Percent": 47
                 }
             },
             "G": {
-                "Choice": "4h ≤ 18",
+                "Choice": "`4h<=18`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The rate Liang walks, 4 miles/hour, multiplied by the time she walks, h hours, is at least 18 miles which is represented by 4h ≥ 18, not 4h ≤ 18.",
+                    "Rationale": "The rate Liang walks, `4` `text(miles)/text(hour)`, multiplied by the time she walks, `h` `text(hours)`, is at least `18` `text(miles)` which is represented by `4h>=18`, not `4h<=18`.",
                     "Percent": 32
                 }
             },
             "H": {
-                "Choice": "h + 4 ≥ 18",
+                "Choice": "`h+4>=18`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The rate Liang walks, 4 miles/hour, multiplied by the time she walks, h hours, is at least 18 miles which is represented by 4h ≥ 18, not h + 4 ≥ 18.",
+                    "Rationale": "The rate Liang walks, `4` `text(miles)/text(hour)`, multiplied by the time she walks, `h` `text(hours)`, is at least `18` `text(miles)` which is represented by `4h>=18`, not `h+4>=18`.",
                     "Percent": 10
                 }
             },
             "J": {
-                "Choice": "h + 4 ≤ 18",
+                "Choice": "`h+4<=18`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The rate Liang walks, 4 miles/hour, multiplied by the time she walks, h hours, is at least 18 miles which is represented by 4h ≥ 18, not h + 4 ≤ 18.",
+                    "Rationale": "The rate Liang walks, `4` `text(miles)/text(hour)`, multiplied by the time she walks, `h` `text(hours)`, is at least `18` `text(miles)` which is represented by `4h>=18`, not `h+4<=18`.",
                     "Percent": 10
                 }
             }
@@ -446,38 +446,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Leon wrote an expression that is equivalent to (30 + 6) ÷ 12. Which expression could be the one Leon wrote?"
+            "Leon wrote an expression that is equivalent to `(30+6)-:12`. Which expression could be the `text(one)` Leon wrote?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "36 ÷ 3 • 4",
+                "Choice": "`36-:3*4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "36 ÷ 3 • 4 = 48, not 36 ÷ 12 = 3.",
+                    "Rationale": "`36-:3*4=48`, not `36-:12=3`.",
                     "Percent": 23
                 }
             },
             "B": {
-                "Choice": "(3 • 3 • 4) ÷ 4 • 3",
+                "Choice": "`(3*3*4)-:4*3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(3 • 3 • 4) ÷ 4 • 3 = 27, not 36 ÷ 12 = 3.",
+                    "Rationale": "`(3*3*4)-:4*3=27`, not `36-:12=3`.",
                     "Percent": 19
                 }
             },
             "C": {
-                "Choice": "5 • 6 + 2 • 3 ÷3 • 2 • 2",
+                "Choice": "`5*6+2*3 ÷3*2*2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "5 • 6 + 2 • 3 ÷ 3 • 2 • 2 = 38, not 36 ÷ 12 = 3.",
+                    "Rationale": "`5*6+2*3-:3*2*2=38`, not `36-:12=3`.",
                     "Percent": 13
                 }
             },
             "D": {
-                "Choice": "(3 • 3 • 2 • 2) ÷ (3 • 2 • 2)",
+                "Choice": "`(3*3*2*2)-:(3*2*2)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "(3 • 3 • 2 • 2) ÷ (3 • 2 • 2) = 3 which is equivalent to 36 ÷ 12 = 3.",
+                    "Rationale": "`(3*3*2*2)-:(3*2*2)=3` which is equivalent to `36-:12=3`.",
                     "Percent": 45
                 }
             }
@@ -499,14 +499,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "In triangle XYZ the measure of angle YXZ is 50°, and the measure of angle XYZ is 75°. What is the measure of angle XZY in degrees?"
+            "In triangle `XYZ` the measure of angle `YXZ` is `50°`, and the measure of angle `XYZ` is `75°`. What is the measure of angle `XZY` in `text(degrees)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:55",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "180° - (75° + 50°) = 55°.",
+                    "Rationale": "`180°-(75°+50°)=55°`.",
                     "Percent": 48
                 }
             }
@@ -528,39 +528,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Customers at an ice-cream shop took a survey. The results showed that 144 customers rated the shop as being “very satisfactory.” This number represented 45% of the total number of customers who took the survey.",
+            "Customers at an ice-cream shop took a survey. The results showed that `144` customers rated the shop as being “very satisfactory.” This number represented `45%` of the total number of customers who took the survey.",
             "What was the total number of customers who took the survey?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "189",
+                "Choice": "`189`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "144 should be divided by 0.45, not added to 45.",
+                    "Rationale": "`144` should be divided by `0.45`, not added to `45`.",
                     "Percent": 20
                 }
             },
             "B": {
-                "Choice": "65",
+                "Choice": "`65`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "144 should be divided by 0.45, not multiplied by 0.45.",
+                    "Rationale": "`144` should be divided by `0.4`5, not multiplied by `0.45`.",
                     "Percent": 17
                 }
             },
             "C": {
-                "Choice": "99",
+                "Choice": "`99`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "144 should be divided by 0.45, not subtracted by 45.",
+                    "Rationale": "`144` should be divided by `0.45`, not subtracted by `45`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "320",
+                "Choice": "`320`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "144 ÷ 0.45 = 320.",
+                    "Rationale": "`144-:0.45=320`.",
                     "Percent": 52
                 }
             }
@@ -582,7 +582,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Lloyd wants to buy a new television, but he does not have enough money in his bank account to pay for one. Which of these is NOT an option for Mr. Lloyd?"
+            "Mr. Lloyd wants to buy a new television, but he does not have enough money in his bank account to pay for `text(one)`. Which of these is NOT an option for Mr. Lloyd?"
         ],
         "AnswerChoices": {
             "F": {
@@ -635,40 +635,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph shows the number of points, y, a player earns in a balloon game based on the number of balloons the player pops, x.",
+            "The graph shows the number of points, `y`, a player earns in a balloon game based on the number of balloons the player pops, `x`.",
             "problems/TX17G6M/media/13a.jpg",
             "Which equation best represents the relationship between `xandy`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = x + 25",
+                "Choice": "`y=x+25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows that a player receives 25 points for each balloon popped, which is represented by y = 25x, not y = x + 25.",
+                    "Rationale": "The graph shows that a player receives `25` points for `text(each balloon)` popped, which is represented by `y=25x`, not `y=x+25`.",
                     "Percent": 20
                 }
             },
             "B": {
-                "Choice": "x = y + 25",
+                "Choice": "`x=y+25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows that a player receives 25 points for each balloon popped, which is represented by y = 25x, not x = y + 25.",
+                    "Rationale": "The graph shows that a player receives `25` points for `text(each balloon)` popped, which is represented by `y=25x`, not `x=y+25`.",
                     "Percent": 20
                 }
             },
             "C": {
-                "Choice": "x = 25y",
+                "Choice": "`x=25y`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows that a player receives 25 points for each balloon popped, which is represented by y = 25x, not x = 25y.",
+                    "Rationale": "The graph shows that a player receives `25` points for `text(each balloon)` popped, which is represented by `y=25x`, not `x=25y`.",
                     "Percent": 12
                 }
             },
             "D": {
-                "Choice": "y = 25x",
+                "Choice": "`y=25x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph shows that a player receives 25 points for each balloon popped, which is represented by y = 25x.",
+                    "Rationale": "The graph shows that a player receives `25` points for `text(each balloon)` popped, which is represented by `y=25x`.",
                     "Percent": 48
                 }
             }
@@ -690,40 +690,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The box plots summarize the attendance for the spring musical and the fall musical. Each musical was performed for six evenings.",
+            "The box plots summarize the attendance for the `text(spring)` musical and the `text(fall)` musical. `text(Each musical)` was performed for `text(six)` evenings.",
             "problems/TX17G6M/media/14a.jpg",
             "Which statement best describes the data represented in the box plots?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "The range in attendance for the fall musical is 85.",
+                "Choice": "The range in attendance for the `text(fall)` musical is `85`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "225 - 140 = 85.",
+                    "Rationale": "`225-140=85`.",
                     "Percent": 42
                 }
             },
             "G": {
-                "Choice": "The interquartile range for the spring musical is 45.",
+                "Choice": "The interquartile range for the `text(spring)` musical is `45`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "195 ­ 135 = 60, not 45.",
+                    "Rationale": "`195-135=60`, not `45`.",
                     "Percent": 11
                 }
             },
             "H": {
-                "Choice": "For half the evenings at the fall musical, the attendance was less than 160 people.",
+                "Choice": "For `text(half)` the evenings at the `text(fall)` musical, the attendance was less than `160` people.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The median attendance at the fall musical was 165.",
+                    "Rationale": "The median attendance at the `text(fall)` musical was `165`.",
                     "Percent": 18
                 }
             },
             "J": {
-                "Choice": "For half the evenings at the spring musical, the attendance was between 155 and 200 people.",
+                "Choice": "For `text(half)` the evenings at the `text(spring)` musical, the attendance was between `155and200` people.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The lower and upper quartiles for the attendance at the spring musical are 135 and 195.",
+                    "Rationale": "The lower and upper quartiles for the attendance at the `text(spring)` musical are `135and195`.",
                     "Percent": 30
                 }
             }
@@ -745,38 +745,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Jamal wrote the inequality x/16 ≤ 6. Which situation is best represented by this inequality?"
+            "Jamal wrote the inequality `x/16<=6`. Which situation is best represented by this inequality?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Jamal divided x pieces of paper among 16 students, and each student received fewer than 6 pieces of paper.",
+                "Choice": "Jamal divided `x` pieces of paper among `16` students, and `text(each student)` received fewer than `6` pieces of paper.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "x pieces of paper divided by 16 students is fewer than 6 pieces for each student can be represented by x/16 < 6, not x/16 ≤ 6.",
+                    "Rationale": "`x` pieces of paper divided by `16` students is fewer than `6` pieces for `text(each student)` can be represented by `x/16<6`, not `x/16<=6`.",
                     "Percent": 30
                 }
             },
             "B": {
-                "Choice": "Jamal placed x cards in 16 stacks, and there were no more than 6 cards in each stack.",
+                "Choice": "Jamal placed `x` cards in `16` stacks, and there were no more than `6` cards in `text(each stack)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "x cards divided by 16 stacks is no more than 6 cards in each stack can be represented by x/16 ≤ 6.",
+                    "Rationale": "`x` cards divided by `16` stacks is no more than `6` cards in `text(each stack)` can be represented by `x/16<=6`.",
                     "Percent": 42
                 }
             },
             "C": {
-                "Choice": "Jamal separated x shirts into 6 stacks, and each stack had at least 16 shirts.",
+                "Choice": "Jamal separated `x` shirts into `6` stacks, and `text(each stack)` had at least `16` shirts.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "x shirts divided by 16 stacks is at least 6 shirts for each stack can be represented by x/16 ≥ 6, not x/16 ≤ 6.",
+                    "Rationale": "`x` shirts divided by `16` stacks is at least `6` shirts for `text(each stack)` can be represented by `x/16>=6`, not `x/16<=6`.",
                     "Percent": 14
                 }
             },
             "D": {
-                "Choice": "Jamal shared 16 markers with x classmates, and each classmate had fewer than 6 markers.",
+                "Choice": "Jamal shared `16` markers with `x` classmates, and each classmate had fewer than `6` markers.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "16 markers divided by x classmates is fewer than 6 markers for each classmate can be represented by 16/x < 6, not x/16 ≤ 6.",
+                    "Rationale": "16 markers divided by `x` classmates is fewer than `6` markers for `text(each classmate)` can be represented by `16/x<6`, not `x/16<=6`.",
                     "Percent": 14
                 }
             }
@@ -798,38 +798,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to y × 48?"
+            "Which expression is equivalent to `yxx48`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(y × 40) + 8",
+                "Choice": "`(yxx40)+8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(y × 40) + 8 = 40 × y + 8, not y × 48.",
+                    "Rationale": "`(yxx40)+8=40xxy+8`, not `yxx48`.",
                     "Percent": 38
                 }
             },
             "G": {
-                "Choice": "(y × 4) × 8",
+                "Choice": "`(yxx4)xx8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(y × 4) × 8 = y × 32, not y × 48.",
+                    "Rationale": "`(yxx4)xx8=yxx32`, not `yxx48`.",
                     "Percent": 6
                 }
             },
             "H": {
-                "Choice": "(y × 40) + (y × 8)",
+                "Choice": "`(yxx40)+(yxx8)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "(y × 40) + (y × 8) = y × 48.",
+                    "Rationale": "`(yxx40)+(yxx8)=yxx48`.",
                     "Percent": 46
                 }
             },
             "J": {
-                "Choice": "(y × 4) + 8",
+                "Choice": "`(yxx4)+8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "(y × 4) + 8 = 4 × y + 8, not y × 48.",
+                    "Rationale": "`(yxx4)+8=4xxy+8`, not `yxx48`.",
                     "Percent": 10
                 }
             }
@@ -851,39 +851,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Megan and Desmond each added the same amount of water to their aquariums. Megan mixed 5 mL of a chemical solution with every gallon of water for her aquarium. Desmond mixed 8 mL of the chemical solution with every 2 gallons of water for his aquarium.",
+            "Megan and Desmond each added the same amount of water to their aquariums. Megan mixed `5` `text(mL)` of a chemical solution with `text(every gallon)` of water for her aquarium. Desmond mixed `8` `text(mL)` of the chemical solution with every `2` `text(gallons)` of water for his aquarium.",
             "Which of these statements is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Megan used more solution per gallon of water than Desmond, because 5 : 1 is greater than 8 : 2.",
+                "Choice": "Megan used more solution `text(per gallon)` of water than Desmond, because `5:1` is greater than `8:2`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Megan used more solution per gallon than Desmond because 5 : 1 is greater than 8 : 2, which is equivalent to 4 : 1.",
+                    "Rationale": "Megan used more solution `text(per gallon)` than Desmond because `5:1` is greater than `8:2`, which is equivalent to `4:1`.",
                     "Percent": 45
                 }
             },
             "B": {
-                "Choice": "Megan used more solution per gallon of water than Desmond, because 5 mL is greater than 2 mL.",
+                "Choice": "Megan used more solution `text(per gallon)` of water than Desmond, because `5` `text(mL)` is greater than `2` `text(mL)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Megan used more solution per gallon than Desmond because 5 : 1 is greater than 8 : 2, which is equivalent to 4 : 1, not because 5 mL is greater than 2 mL.",
+                    "Rationale": "Megan used more solution `text(per gallon)` than Desmond because `5:1` is greater than `8:2`, which is equivalent to `4:1`, not because `5` `text(mL)` is greater than `2` `text(mL)`.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "Desmond used more solution per gallon of water than Megan, because 8 mL is greater than 5 mL.",
+                "Choice": "Desmond used more solution `text(per gallon)` of water than Megan, because `8` `text(mL)` is greater than `5` `text(mL)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Megan used more solution per gallon than Desmond because 5 : 1 is greater than 8 : 2, which is equivalent to 4 : 1.",
+                    "Rationale": "Megan used more solution `text(per gallon)` than Desmond because `5:1` is greater than `8:2`, which is equivalent to `4:1`.",
                     "Percent": 21
                 }
             },
             "D": {
-                "Choice": "Desmond used more solution per gallon of water than Megan, because 8 : 2 is greater than 5 : 1.",
+                "Choice": "Desmond used more solution `text(per gallon)` of water than Megan, because `8:2` is greater than `5:1`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Megan used more solution per gallon than Desmond because 5 : 1 is greater than 8 : 2, which is equivalent to 4 : 1.",
+                    "Rationale": "Megan used more solution `text(per gallon)` than Desmond because `5:1` is greater than `8:2`, which is equivalent to `4:1`.",
                     "Percent": 26
                 }
             }
@@ -906,40 +906,40 @@
         "Explain": false,
         "Content": [
             "Dana placed the following points on a number line.",
-            ":box:• Point P at -24/3\n\n• Point Q at -9/2\n\n• Point R at 7/2\n\n• Point S at 15/3",
+            ":box:• Point `P` at `-24/3`\n\n• Point `Q` at `-9/2`\n\n• Point `R` at `7/2`\n\n• Point `S` at `15/3`",
             "problems/TX17G6M/media/18a.jpg",
             "Which point is NOT correctly placed on this number line?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Point P",
+                "Choice": "Point `P`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Point P is correctly placed at -24/3 on the number line.",
+                    "Rationale": "Point `P` is correctly placed at `-24/3` on the number line.",
                     "Percent": 12
                 }
             },
             "G": {
-                "Choice": "Point Q",
+                "Choice": "Point `Q`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Point Q is NOT correctly placed at -9/2 = ­ 4.5 on the number line. The number line shows point Q at ­ 3.5.",
+                    "Rationale": "Point `Q` is NOT correctly placed at `-9/2=-4.5` on the number line. The number line shows point `Q` at `-3.5`.",
                     "Percent": 66
                 }
             },
             "H": {
-                "Choice": "Point R",
+                "Choice": "Point `R`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Point R is correctly placed at 7/2 on the number line.",
+                    "Rationale": "Point `R` is correctly placed at `7/2` on the number line.",
                     "Percent": 15
                 }
             },
             "J": {
-                "Choice": "Point S",
+                "Choice": "Point `S`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Point S is correctly placed at 15/3 on the number line.",
+                    "Rationale": "Point `S` is correctly placed at `15/3` on the number line.",
                     "Percent": 7
                 }
             }
@@ -961,38 +961,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which statement about 3 multiplied by 2/3 must be true?"
+            "Which statement about `3` multiplied by `2/3` must be true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The product is between 3 and 4.",
+                "Choice": "The product is between `3and4`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is not between 3 and 4.",
+                    "Rationale": "`3` multiplied by `2/3` is equal to `1`, and `1` is not between `3and4`.",
                     "Percent": 11
                 }
             },
             "B": {
-                "Choice": "The product is less than 2/3.",
+                "Choice": "The product is less than `2/3`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is not less than 2/3.",
+                    "Rationale": "`3` multiplied by `2/3` is equal to `1`, and `1` is not less than `2/3`.",
                     "Percent": 13
                 }
             },
             "C": {
-                "Choice": "The product is between 2/3 and 3.",
+                "Choice": "The product is between `2/3and3`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is between 2/3 and 3.",
+                    "Rationale": "`3` multiplied by `2/3` is equal to `1`, and `1` is between `2/3and3`.",
                     "Percent": 54
                 }
             },
             "D": {
-                "Choice": "The product is greater than 4.",
+                "Choice": "The product is greater than `4`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "3 multiplied by 2/3 is equal to `1,and1` is not greater than 4.",
+                    "Rationale": "`3` multiplied by `2/3` is equal to `1`, and `1` is not greater than `4`.",
                     "Percent": 21
                 }
             }
@@ -1014,37 +1014,37 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Elida will use six different wires for a science project. The fractions represent the diameters of these wires in `text(inches)`.",
-            "7/16, 1/2, 3/8, 9/32, 5/16, 15/32",
+            "Elida will use `text(six)` different wires for a science project. The fractions represent the diameters of these wires in `text(inches)`.",
+            ":ibox:`7/16,1/2,3/8,9/32,5/16,15/32`",
             "Which list shows the diameters of the wires in order from least to greatest?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "1/2, 3/8, 7/16, 5/16, 15/32, 9/32",
+                "Choice": "`1/2,3/8,7/16,5/16,15/32,9/32`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The list is not in order from least to greatest; 1/2 is greater than 3/8.",
+                    "Rationale": "The list is not in order from least to greatest; `1/2` is greater than `3/8`.",
                     "Percent": 6
                 }
             },
             "G": {
-                "Choice": "9/32, 15/32, 5/16, 7/16, 3/8, 1/2",
+                "Choice": "`9/32,15/32,5/16,7/16,3/8,1/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The list is not in order from least to greatest; 15/32 is greater than 5/16.",
+                    "Rationale": "The list is not in order from least to greatest; `15/32` is greater than `5/16`.",
                     "Percent": 21
                 }
             },
             "H": {
-                "Choice": "1/2, 3/8, 5/16, 7/16, 9/32, 15/32",
+                "Choice": "`1/2,3/8,5/16,7/16,9/32,15/32`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The list is not in order from least to greatest; 1/2 is greater than 3/8.",
+                    "Rationale": "The list is not in order from least to greatest; `1/2` is greater than `3/8`.",
                     "Percent": 30
                 }
             },
             "J": {
-                "Choice": "9/32, 5/16, 3/8, 7/16, 15/32, 1/2",
+                "Choice": "`9/32,5/16,3/8,7/16,15/32,1/2`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The list is in order from least to greatest.",
@@ -1069,8 +1069,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Gonzales showed students part of the prime factorization of 90. One factor is missing.",
-            "2 • 3^2 • __",
+            "Mr. Gonzales showed students part of the prime factorization of `90`. `text(One)` factor is missing.",
+            ":ibox:`2*3^2*ul(text( )text( ))`",
             "What number completes this prime factorization?"
         ],
         "AnswerChoices": {
@@ -1078,7 +1078,7 @@
                 "Choice": "equal:5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "90 = 2 • 3^2 • 5.",
+                    "Rationale": "`90=2*3^2*5`.",
                     "Percent": 61
                 }
             }
@@ -1100,38 +1100,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A rectangular computer screen has an area of A square inches. The width of the computer screen is 7 inches. Which equation represents x, the length of the computer screen in `text(inches)`?"
+            "A rectangular computer screen has an area of `A` `text(square inches)`. The width of the computer screen is `7` `text(inches)`. Which equation represents `x`, the length of the computer screen in `text(inches)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "x = 7/A",
+                "Choice": "`x=7/A`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The length of the screen, x, can be found by dividing the area, A, by 7, as represented by x = A/7, not x = 7/A.",
+                    "Rationale": "The length of the screen, `x`, can be found by dividing the area, `A`, by `7`, as represented by `x=A/7`, not `x=7/A`.",
                     "Percent": 28
                 }
             },
             "G": {
-                "Choice": "x = A + 27",
+                "Choice": "`x=A+27`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The length of the screen, x, can be found by dividing the area, A, by 7, as represented by x = A/7, not x = A + 27.",
+                    "Rationale": "The length of the screen, `x`, can be found by dividing the area, `A`, by `7`, as represented by `x=A/7`, not `x=A+27`.",
                     "Percent": 12
                 }
             },
             "H": {
-                "Choice": "x = A - 2(7)",
+                "Choice": "`x=A-2(7)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The length of the screen, x, can be found by dividing the area, A, by 7, as represented by x = A/7, not x = A - 2(7).",
+                    "Rationale": "The length of the screen, `x`, can be found by dividing the area, `A`, by `7`, as represented by `x=A/7`, not `x=A-2(7)`.",
                     "Percent": 13
                 }
             },
             "J": {
-                "Choice": "x = A/7",
+                "Choice": "`x=A/7`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The length of the screen, x, can be found by dividing the area, A, by 7, as represented by x = A/7.",
+                    "Rationale": "The length of the screen, `x`, can be found by dividing the area, `A`, by `7`, as represented by `x=A/7`.",
                     "Percent": 48
                 }
             }
@@ -1153,40 +1153,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "vonne is researching the effect of education on annual income. A summary of her research is shown in the table.",
+            "Yvonne is researching the effect of education on `text(annual)` income. A summary of her research is shown in the table.",
             "problems/TX17G6M/media/23a.jpg",
-            "Based on the data in the table, how much more does a person with an associate's degree earn than a person with only a high school diploma over 10 years?"
+            "Based on the data in the table, how much more does a person with an associate's degree earn than a person with only a high school diploma over `10` `text(years)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$6,916",
+                "Choice": "`$6text(,)916`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "40,820 ­ 33,904 = 6,916, multiplied over 10 years is equal to 69,160, not 6,916.",
+                    "Rationale": "`40text(,)820-33text(,)904=6text(,)916`, multiplied over `10` `text(years)` is equal to `69text(,)160`, not `6text(,)916`.",
                     "Percent": 28
                 }
             },
             "B": {
-                "Choice": "$74,724",
+                "Choice": "`$74text(,)724`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "40,820 ­ 33,904 = 6,916, multiplied over 10 years is equal to 69,160, not 74,724.",
+                    "Rationale": "`40text(,)820-33text(,)904=6text(,)916`, multiplied over `10` `text(years)` is equal to `69text(,)160`, not `74text(,)724`.",
                     "Percent": 13
                 }
             },
             "C": {
-                "Choice": "$747,240",
+                "Choice": "`$747text(,)240`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "40,820 ­ 33,904 = 6,916, multiplied over 10 years is equal to 69,160, not 747,240.",
+                    "Rationale": "`40text(,)820-33text(,)904=6text(,)916`, multiplied over `10` `text(years)` is equal to `69text(,)160`, not `747text(,)240`.",
                     "Percent": 8
                 }
             },
             "D": {
-                "Choice": "$69,160",
+                "Choice": "`$69text(,)160`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "40,820 ­ 33,904 = 6,916, multiplied over 10 years is equal to 69,160.",
+                    "Rationale": "`40text(,)820-33text(,)904=6text(,)916`, multiplied over `10` `text(years)` is equal to `69text(,)160`.",
                     "Percent": 51
                 }
             }
@@ -1208,40 +1208,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The list shows the number of viewers of an online music video each day for 5 consecutive days.",
-            "5\t35\t245\t1,715\t12,005",
-            "By what factor did the number of viewers change each day from the first day to the fifth day?"
+            "The list shows the number of viewers of an online music video `text(each day)` for `5` consecutive `text(days)`.",
+            ":ibox:`5`\t`35`\t`245`\t`1text(,)715`\t`12text(,)005`",
+            "By what factor did the number of viewers change `text(each day)` from the `text(first day)` to the `text(fifth day)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "7",
+                "Choice": "`7`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Each day's number of viewers is multiplied by the factor 7 to get the next day's number of viewers.",
+                    "Rationale": "`text(Each day)`'s number of viewers is multiplied by the factor `7` to get the `text(next day)`'s number of viewers.",
                     "Percent": 48
                 }
             },
             "G": {
-                "Choice": "12,000",
+                "Choice": "`12text(,)000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Each day's number of viewers is multiplied by the factor 7 to get the next day's number of viewers, not 12,000.",
+                    "Rationale": "`text(Each day)`'s number of viewers is multiplied by the factor `7` to get the `text(next day)`'s number of viewers, not `12text(,)000`.",
                     "Percent": 28
                 }
             },
             "H": {
-                "Choice": "2,401",
+                "Choice": "`2text(,)401`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Each day's number of viewers is multiplied by the factor 7 to get the next day's number of viewers, not 2,401.",
+                    "Rationale": "`text(Each day)`'s number of viewers is multiplied by the factor `7` to get the `text(next day)`'s number of viewers, not `2text(,)401`.",
                     "Percent": 13
                 }
             },
             "J": {
-                "Choice": "30",
+                "Choice": "`30`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Each day's number of viewers is multiplied by the factor 7 to get the next day's number of viewers, not 30.",
+                    "Rationale": "`text(Each day)`'s number of viewers is multiplied by the factor `7` to get the `text(next day)`'s number of viewers, not `30`.",
                     "Percent": 11
                 }
             }
@@ -1263,38 +1263,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression has a value of -22?"
+            "Which expression has a value of `-22`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "8 - (-3) + 33 ÷ (-3)",
+                "Choice": "`8-(-3)+33-:(-3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "8 - (-3) + 33 ÷ (-3) = 0, not -22.",
+                    "Rationale": "`8-(-3)+33-:(-3)=0`, not `-22`.",
                     "Percent": 24
                 }
             },
             "B": {
-                "Choice": "-3 + (-2) - (-8) - 1",
+                "Choice": "`-3+(-2)-(-8)-1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-3 + (­ 2) - (-8) - 1 = 2, not -22.",
+                    "Rationale": "`-3+(-2)-(-8)-1=2`, not `-22`.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "-6 • 2 - (-15)",
+                "Choice": "`-6*2-(-15)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "-6 • 2 ­ (-15) = 3, not -22.",
+                    "Rationale": "`-6*2-(-15)=3`, not `-22`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "-5 • 2 - 12",
+                "Choice": "`-5*2-12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "-5 • 2 ­ 12 = -22.",
+                    "Rationale": "`-5*2-12=-22`.",
                     "Percent": 53
                 }
             }
@@ -1318,40 +1318,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The rectangle shown represents the base of a rectangular prism. Use the ruler provided to measure the length and width of the rectangle to the nearest 1/4 inch.",
+            "The rectangle shown represents the base of a rectangular prism. Use the ruler provided to measure the length and width of the rectangle to the nearest `1/4` `text(inch)`.",
             "problems/TX17G6M/media/26a.jpg",
-            "The height of the prism is 2 inches. Which measurement is closest to the volume of the prism in `text(cubic inches)`?"
+            "The height of the prism is `2` `text(inches)`. Which measurement is closest to the volume of the prism in `text(cubic inches)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "27 in³",
+                "Choice": "`27` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The length is about 4 and the width is about 2 3/4. The formula for volume of a rectangular prism is `V=Bh`, so V = (4)(2 3/4)(2) which is closest to 22, not 27.",
+                    "Rationale": "The length is about `4` and the width is about `2``3/4`. The formula for volume of a rectangular prism is `V=Bh`, so `V=(4)(2 3/4)(2)` which is closest to `22`, not `27`.",
                     "Percent": 17
                 }
             },
             "G": {
-                "Choice": "22 in³",
+                "Choice": "`22` `text(in)^3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The length is about 4 and the width is about 2 3/4. The formula for volume of a rectangular prism is `V=Bh`, so V = (4)(2 3/4)(2) which is closest to 22.",
+                    "Rationale": "The length is about `4` and the width is about `2``3/4`. The formula for volume of a rectangular prism is `V=Bh`, so `V=(4)(2 3/4)(2)` which is closest to `22`.",
                     "Percent": 40
                 }
             },
             "H": {
-                "Choice": "11 in³",
+                "Choice": "`11` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The length is about 4 and the width is about 2 3/4. The formula for volume of a rectangular prism is `V=Bh`, so V = (4)(2 3/4)(2) which is closest to 22, not 11.",
+                    "Rationale": "The length is about `4` and the width is about `2``3/4`. The formula for volume of a rectangular prism is `V=Bh`, so `V=(4)(2 3/4)(2)` which is closest to `22`, not `11`.",
                     "Percent": 17
                 }
             },
             "J": {
-                "Choice": "12 in³",
+                "Choice": "`12` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The length is about 4 and the width is about 2 3/4. The formula for volume of a rectangular prism is `V=Bh`, so V = (4)(2 3/4)(2) which is closest to 22, not 12.",
+                    "Rationale": "The length is about `4` and the width is about `2``3/4`. The formula for volume of a rectangular prism is `V=Bh`, so `V=(4)(2 3/4)(2)` which is closest to `22`, not `12`.",
                     "Percent": 26
                 }
             }
@@ -1379,34 +1379,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Rachel had six dollars and then started to save one dollar each week.",
+                "Choice": "Rachel had `text(six dollars)` and then started to save `text(one dollar)` `text(each week)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "A dollar saved each week multiplied by the number of weeks, x, and added to six dollars will give the correct y values in the table.",
+                    "Rationale": "A `text(dollar)` saved `text(each week)` multiplied by the number of `text(weeks)`, `x`, and added to `text(six dollars)` will give the correct `y` values in the table.",
                     "Percent": 60
                 }
             },
             "B": {
-                "Choice": "Beatriz ran one mile the first week and one mile each week after that.",
+                "Choice": "Beatriz ran `text(one mile)` the `text(first week)` and `text(one mile)` `text(each week)` after that.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "One mile each week multiplied by the number of weeks, x, and added to one mile will not give the correct y values in the table.",
+                    "Rationale": "`text(One mile)` `text(each week)` multiplied by the number of `text(weeks)`, `x`, and added to `text(one mile)` will not give the correct `y` values in the table.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "James read zero books in six months and then started to read one book each week.",
+                "Choice": "James read `text(zero)` books in `text(six months)` and then started to read `text(one)` book `text(each week)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "One book read each week multiplied by the number of weeks, x, and added to zero books will not give the correct y values in the table.",
+                    "Rationale": "`text(One)` book read `text(each week)` multiplied by the number of `text(weeks)`, `x`, and added to `text(zero)` books will not give the correct `y` values in the table.",
                     "Percent": 21
                 }
             },
             "D": {
-                "Choice": "Marion has six times the number of toy trains that Tony has.",
+                "Choice": "Marion has `text(six)` times the number of toy trains that Tony has.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Six multiplied by the number of toy trains, x, will not give the correct y values in the table.",
+                    "Rationale": "`text(Six)` multiplied by the number of toy trains, `x`, will not give the correct `y` values in the table.",
                     "Percent": 10
                 }
             }
@@ -1428,40 +1428,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The total number of items sold by each student who participated in a fund-raiser is shown in the stem and leaf plot.",
+            "The total number of items sold by `text(each student)` who participated in a fund-raiser is shown in the stem and leaf plot.",
             "problems/TX17G6M/media/28a.jpg",
             "Which statement is best supported by the data in the stem and leaf plot?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "The number of students who sold between 10 and 20 items is greater than the number of students who sold more than 40 items.",
+                "Choice": "The number of students who sold between `10and20` items is greater than the number of students who sold more than `40` items.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "6 students sold more than 40 items, which is greater than 5 students who sold between 10 and 20 items.",
+                    "Rationale": "`6` students sold more than `40` items, which is greater than `5` students who sold between `10and20` items.",
                     "Percent": 12
                 }
             },
             "G": {
-                "Choice": "The number of students who sold more than 30 items is greater than the number of students who sold fewer than 30 items.",
+                "Choice": "The number of students who sold more than `30` items is greater than the number of students who sold fewer than `30` items.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "11 students sold less than 30 items, which is greater than 10 students who sold more than 30 items.",
+                    "Rationale": "`11` students sold less than `30` items, which is greater than `10` students who sold more than `30` items.",
                     "Percent": 23
                 }
             },
             "H": {
-                "Choice": "The most common number of items sold is 30.",
+                "Choice": "The most common number of items sold is `30`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The most common number of items sold is 15, not 30.",
+                    "Rationale": "The most common number of items sold is `15`, not `30`.",
                     "Percent": 5
                 }
             },
             "J": {
-                "Choice": "The most common number of items sold is 15.",
+                "Choice": "The most common number of items sold is `15`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The most common number of items sold is 15.",
+                    "Rationale": "The most common number of items sold is `15`.",
                     "Percent": 60
                 }
             }
@@ -1483,14 +1483,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "n Austin, Texas, 8 bats ate 40 grams of insects in one night. At this rate, how many grams of insects could 64 bats eat in one night?"
+            "In Austin, Texas, `8` bats ate `40` `text(grams)` of insects in `text(one night)`. At this rate, how many `text(grams)` of insects could `64` bats eat in `text(one night)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:320",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If 8 bats ate 40 grams, then each bat ate 8 grams, multiply 8 by 64 bats equals 320.",
+                    "Rationale": "If `8` bats ate `40` `text(grams)`, then each bat ate `8` `text(grams)`, multiply `8` by `64` bats equals `320`.",
                     "Percent": 56
                 }
             }
@@ -1512,38 +1512,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which expression is equivalent to 30 ÷ (3 + x)?"
+            "Which expression is equivalent to `30-:(3+x)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(3 + x) ÷ 30",
+                "Choice": "`(3+x)-:30`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "30 ÷ (3 + x) is not equivalent to (3 + x) ÷ 30.",
+                    "Rationale": "`30-:(3+x)` is not equivalent to `(3+x)-:30`.",
                     "Percent": 26
                 }
             },
             "G": {
-                "Choice": "30 ÷ (x + 3)",
+                "Choice": "`30-:(x+3)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "30 ÷ (3 + x) = 30 ÷ (x + 3).",
+                    "Rationale": "`30-:(3+x)=30-:(x+3)`.",
                     "Percent": 55
                 }
             },
             "H": {
-                "Choice": "(3 ÷ 30) + x",
+                "Choice": "`(3-:30)+x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "30 ÷ (3 + x) is not equivalent to (3 ÷ 30) + x.",
+                    "Rationale": "`30-:(3+x)` is not equivalent to `(3-:30)+x`.",
                     "Percent": 13
                 }
             },
             "J": {
-                "Choice": "30 ÷ 3 + 30 ÷ x",
+                "Choice": "`30-:3+30-:x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "30 ÷ (3 + x) is not equivalent to 30 ÷ 3 + 30 ÷ x.",
+                    "Rationale": "`30-:(3+x)` is not equivalent to `30-:3+30-:x`.",
                     "Percent": 6
                 }
             }
@@ -1565,38 +1565,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Saritha will construct a rectangle that has a height of 4 units and an area of up to 48 square units. Which inequality represents all the possible lengths in `text(units)` of the bases, b, that Saritha can use to construct this rectangle?"
+            "Saritha will construct a rectangle that has a height of `4` `text(units)` and an area of up to `48` `text(square units)`. Which inequality represents all the possible lengths in `text(units)` of the bases, `b`, that Saritha can use to construct this rectangle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "b ≤ 44",
+                "Choice": "`b<=44`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a rectangle is A = bh, so 4b ≤ 48, divide both sides by 4 to get b ≤ 12, not b ≤ 44.",
+                    "Rationale": "The formula for the area of a rectangle is `A=bh`, so `4b<=48`, divide both sides by `4` to get `b<=12`, not `b<=44`.",
                     "Percent": 17
                 }
             },
             "B": {
-                "Choice": "b ≥ 52",
+                "Choice": "`b>=52`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a rectangle is A = bh, so 4b ≤ 48, divide both sides by 4 to get b ≤ 12, b ≥ 52.",
+                    "Rationale": "The formula for the area of a rectangle is `A=bh`, so `4b<=48`, divide both sides by `4` to get `b<=12`, `b>=52`.",
                     "Percent": 16
                 }
             },
             "C": {
-                "Choice": "b ≤ 12",
+                "Choice": "`b<=12`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the area of a rectangle is A = bh, so 4b ≤ 48, divide both sides by 4 to get b ≤ 12.",
+                    "Rationale": "The formula for the area of a rectangle is `A=bh`, so `4b<=48`, divide both sides by `4` to get `b<=12`.",
                     "Percent": 52
                 }
             },
             "D": {
-                "Choice": "b ≥ 192",
+                "Choice": "`b>=192`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a rectangle is A = bh, so 4b ≤ 48, divide both sides by 4 to get b ≤ 12, not b ≥ 192.",
+                    "Rationale": "The formula for the area of a rectangle is `A=bh`, so `4b<=48`, divide both sides by `4` to get `b<=12`, not `b>=192`.",
                     "Percent": 16
                 }
             }
@@ -1618,38 +1618,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "There are 90 girls and 60 boys in the sixth grade at a middle school. Of these students, 9 girls and 3 boys write left-handed. What percentage of the sixth graders at this middle school write left-handed?"
+            "There are `90` girls and `60` boys in the sixth grade at a middle school. Of these students, `9` girls and `3` boys write left-handed. What `text(percentage)` of the sixth graders at this middle school write left-handed?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "10%",
+                "Choice": "`10%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ratio of sixth graders who write left- handed to all sixth graders is 12/150 = 0.08 = 8%, not 10%.",
+                    "Rationale": "The ratio of sixth graders who write left-handed to all sixth graders is `12/150=0.08=8%`, not `10%`.",
                     "Percent": 18
                 }
             },
             "G": {
-                "Choice": "8%",
+                "Choice": "`8%`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The ratio of sixth graders who write left- handed to all sixth graders is 12/150 = 0.08 = 8%.",
+                    "Rationale": "The ratio of sixth graders who write left-handed to all sixth graders is `12/150=0.08=8%`.",
                     "Percent": 43
                 }
             },
             "H": {
-                "Choice": "5%",
+                "Choice": "`5%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ratio of sixth graders who write left-handed to all sixth graders is 12/150 = 0.08 = 8%, not 5%.",
+                    "Rationale": "The ratio of sixth graders who write left-handed to all sixth graders is `12/150=0.08=8%`, not `5%`.",
                     "Percent": 16
                 }
             },
             "J": {
-                "Choice": "15%",
+                "Choice": "`15%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ratio of sixth graders who write left- handed to all sixth graders is 12/150 = 0.08 = 8%, not 15%.",
+                    "Rationale": "The ratio of sixth graders who write left-handed to all sixth graders is `12/150=0.08=8%`, not `15%`.",
                     "Percent": 22
                 }
             }
@@ -1671,8 +1671,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The list shows the area in `text(square feet)` of each apartment available for rent in a building.",
-            "565, 961, 867, 517, 627, 714, 517, 728",
+            "The list shows the area in `text(square feet)` of `text(each apartment)` available for rent in a building.",
+            ":ibox:`565,961,867,517,627,714,517,728`",
             "What is the range of these areas in `text(square feet)`?"
         ],
         "AnswerChoices": {
@@ -1680,7 +1680,7 @@
                 "Choice": "equal:444",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The largest number is 961 and the smallest number is 517 and 961 - 517 = 444.",
+                    "Rationale": "The largest number is `961` and the smallest number is `517` and `961-517=444`.",
                     "Percent": 45
                 }
             }
@@ -1702,38 +1702,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Amy has 5 yd of border to put around a garden. She uses all the border to make four sections that are the same length. Which expression does NOT equal the length of one of these sections in `text(yards)`?"
+            "Amy has `5` `text(yd)` of border to put around a garden. She uses all the border to make `text(four)` sections that are the same length. Which expression does NOT equal the length of `text(one)` of these sections in `text(yards)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "4 ÷ 5",
+                "Choice": "`4-:5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "4 ÷ 5 is NOT a true expression that represents 5 yd of border divided by 4 sections.",
+                    "Rationale": "`4-:5` is NOT a true expression that represents `5` `text(yd)` of border divided by `4` sections.",
                     "Percent": 46
                 }
             },
             "G": {
-                "Choice": "4√5",
+                "Choice": "`4sqrt(5)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "4√5 is a true expression that represents 5 yd of border divided by 4 sections.",
+                    "Rationale": "`4sqrt(5)` is a true expression that represents `5` `text(yd)` of border divided by `4` sections.",
                     "Percent": 10
                 }
             },
             "H": {
-                "Choice": "5/4",
+                "Choice": "`5/4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "5/4 is a true expression that represents 5 yd of border divided by 4 sections.",
+                    "Rationale": "`5/4` is a true expression that represents `5` `text(yd)` of border divided by `4` sections.",
                     "Percent": 23
                 }
             },
             "J": {
-                "Choice": "5 ÷ 4",
+                "Choice": "`5-:4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "5 ÷ 4 is a true expression that represents 5 yd of border divided by 4 sections.",
+                    "Rationale": "`5-:4` is a true expression that represents `5` `text(yd)` of border divided by `4` sections.",
                     "Percent": 20
                 }
             }
@@ -1755,14 +1755,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which model shows two equal expressions when the value of x is 4?"
+            "Which model shows `text(two)` equal expressions when the value of `x` is `4`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/TX17G6M/media/35a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If x is 4, 4(4) = 16, not 4.",
+                    "Rationale": "If `x` is `4`, `4(4)=16`, not `4`.",
                     "Percent": 42
                 }
             },
@@ -1770,7 +1770,7 @@
                 "Choice": "problems/TX17G6M/media/35b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If x is 4, 4(4) = 16, not `1`.",
+                    "Rationale": "If `x` is `4`, `4(4)=16`, not `1`.",
                     "Percent": 9
                 }
             },
@@ -1778,7 +1778,7 @@
                 "Choice": "problems/TX17G6M/media/35c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "If x is 4, 4 + 2 = 6, not 5.",
+                    "Rationale": "If `x` is `4`, `4+2=6`, not `5`.",
                     "Percent": 3
                 }
             },
@@ -1786,7 +1786,7 @@
                 "Choice": "problems/TX17G6M/media/35d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If x is 4, 2(4) = 8.",
+                    "Rationale": "If `x` is `4`, `2(4)=8`.",
                     "Percent": 46
                 }
             }
@@ -1808,38 +1808,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A company spent 32% of its annual budget developing a new machine. What fraction of the company's budget was spent developing the new machine?"
+            "A company spent `32%` of its `text(annual)` budget developing a new machine. What fraction of the company's budget was spent developing the new machine?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "1/32",
+                "Choice": "`1/32`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "32% = 32/100 = 8/25, not 1/32.",
+                    "Rationale": "`32%=32/100=8/25`, not `1/32`.",
                     "Percent": 23
                 }
             },
             "G": {
-                "Choice": "5/16",
+                "Choice": "`5/16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "32% = 32/100 = 8/25, not 5/16.",
+                    "Rationale": "`32%=32/100=8/25`, not `5/16`.",
                     "Percent": 16
                 }
             },
             "H": {
-                "Choice": "8/25",
+                "Choice": "`8/25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "32% = 32/100 = 8/25.",
+                    "Rationale": "`32%=32/100=8/25`.",
                     "Percent": 55
                 }
             },
             "J": {
-                "Choice": "4/125",
+                "Choice": "`4/125`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "32% = 32/100 = 8/25, not 4/125.",
+                    "Rationale": "`32%=32/100=8/25`, not `4/125`.",
                     "Percent": 6
                 }
             }
@@ -1861,24 +1861,24 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The dot plot shows the number of touchdowns a football team scored in 10 games last season.",
+            "The dot plot shows the number of touchdowns a football team scored in `10` games last season.",
             "problems/TX17G6M/media/37a.jpg",
             "Which statement best describes the data shown in the dot plot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The peak of the data is at 5.",
+                "Choice": "The peak of the data is at `5`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The peak of the data is at 2.",
+                    "Rationale": "The peak of the data is at `2`.",
                     "Percent": 26
                 }
             },
             "B": {
-                "Choice": "The data are clustered from 0 to 2.",
+                "Choice": "The data are clustered from `0` to `2`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Most of the points are grouped from 0 to 2.",
+                    "Rationale": "Most of the points are grouped from `0` to `2`.",
                     "Percent": 57
                 }
             },
@@ -1886,7 +1886,7 @@
                 "Choice": "The data distribution has no gaps.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The data distribution has a gap from 3 to 4.",
+                    "Rationale": "The data distribution has a gap from `3` to `4`.",
                     "Percent": 4
                 }
             },
@@ -1916,38 +1916,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A warehouse floor has a perimeter of 6,615 feet. What is the perimeter of the floor in `text(yards)`?"
+            "A warehouse floor has a perimeter of `6text(,)615` `text(feet)`. What is the perimeter of the floor in `text(yards)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "2,205 yd",
+                "Choice": "`2text(,)205` `text(yd)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "There are 3 feet in 1 yard and 6,615 divided by 3 = 2,205.",
+                    "Rationale": "There are `3` `text(feet)` in `1` `text(yard)` and `6text(,)615` divided by `3=2text(,)205`.",
                     "Percent": 65
                 }
             },
             "G": {
-                "Choice": "19,845 yd",
+                "Choice": "`19text(,)845` `text(yd)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are 3 feet in 1 yard and 6,615 should be divided by 3, not multiplied by 3.",
+                    "Rationale": "There are `3` `text(feet)` in `1` `text(yard)` and `6text(,)615` should be divided by `3`, not multiplied by `3`.",
                     "Percent": 23
                 }
             },
             "H": {
-                "Choice": "78,380 yd",
+                "Choice": "`78text(,)380` `text(yd)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are 3 feet in 1 yard and 6,615 should be divided by 3, not multiplied by 12.",
+                    "Rationale": "There are `3` `text(feet)` in `1` `text(yard)` and `6text(,)615` should be divided by `3`, not multiplied by `12`.",
                     "Percent": 6
                 }
             },
             "J": {
-                "Choice": "735 yd",
+                "Choice": "`735` `text(yd)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "There are 3 feet in 1 yard and 6,615 should be divided by 3, not divided by 9.",
+                    "Rationale": "There are `3` `text(feet)` in `1` `text(yard)` and `6text(,)615` should be divided by `3`, not divided by `9`.",
                     "Percent": 5
                 }
             }

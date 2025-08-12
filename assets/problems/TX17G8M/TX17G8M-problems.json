@@ -71,40 +71,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The coordinate grid shows a pentagon. The pentagon is translated`1` `text(unit)` to the left and 10 units down to create a new pentagon.",
+            "The coordinate grid shows a pentagon. The pentagon is translated `1` `text(unit)` to the left and `10` `text(units)` down to create a new pentagon.",
             "problems/TX17G8M/media/2a.jpg",
             "Which rule describes this transformation?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x, y) ⇒ (x - 1, y - 10)",
+                "Choice": "`(x,y)->(x-1,y-10)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The pentagon is translated`1` `text(unit)` to the left and 10 units down, which is described by the transformation rule (x - 1, y ­ 10).",
+                    "Rationale": "The pentagon is translated `1` `text(unit)` to the left and `10` `text(units)` down, which is described by the transformation rule `(x-1,y-10)`.",
                     "Percent": 75
                 }
             },
             "G": {
-                "Choice": "(x, y) ⇒ (x + 1, y - 10)",
+                "Choice": "`(x,y)->(x+1,y-10)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The pentagon is translated`1` `text(unit)` to the left and 10 units down, which is described by the transformation rule (x - 1, y ­ 10), not (x + 1, y - 10).",
+                    "Rationale": "The pentagon is translated `1` `text(unit)` to the left and `10` `text(units)` down, which is described by the transformation rule `(x-1,y-10)`, not `(x+1,y-10)`.",
                     "Percent": 14
                 }
             },
             "H": {
-                "Choice": "(x, y) ⇒ (x - 1, y + 10)",
+                "Choice": "`(x,y)->(x-1,y+10)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The pentagon is translated`1` `text(unit)` to the left and 10 units down, which is described by the transformation rule (x - 1, y ­ 10), not (x - 1, y + 10).",
+                    "Rationale": "The pentagon is translated `1` `text(unit)` to the left and `10` `text(units)` down, which is described by the transformation rule `(x-1,y-10)`, not `(x-1,y+10)`.",
                     "Percent": 8
                 }
             },
             "J": {
-                "Choice": "(x, y) ⇒ (x + 1, y + 10)",
+                "Choice": "`(x,y)->(x+1,y+10)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The pentagon is translated`1` `text(unit)` to the left and 10 units down, which is described by the transformation rule (x - 1, y ­ 10), not (x + 1, y + 10).",
+                    "Rationale": "The pentagon is translated `1` `text(unit)` to the left and `10` `text(units)` down, which is described by the transformation rule `(x-1,y-10)`, not `(x+1,y+10)`.",
                     "Percent": 3
                 }
             }
@@ -128,40 +128,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two numbers are shown on the number line.",
+            "`text(Two)` numbers are shown on the number line.",
             "problems/TX17G8M/media/3a.jpg",
-            "Which value is NOT located between these two numbers on the number line?"
+            "Which value is NOT located between these `text(two)` numbers on the number line?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "π",
+                "Choice": "`pi`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "π is between the √9/3 and 2π. This comparison is true.",
+                    "Rationale": "`pi` is between the `sqrt(9)/3` and `2pi`. This comparison is true.",
                     "Percent": 5
                 }
             },
             "B": {
-                "Choice": "√9",
+                "Choice": "`sqrt(9)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "√9 is between the √9/3 and 2π. This comparison is true.",
+                    "Rationale": "`sqrt(9)` is between the `sqrt(9)/3` and `2pi`. This comparison is true.",
                     "Percent": 5
                 }
             },
             "C": {
-                "Choice": "π/9",
+                "Choice": "`pi/9`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "π/9 is not between the √9/3 and 2π. This comparison is NOT true.",
+                    "Rationale": "`pi/9` is not between the `sqrt(9)/3` and `2pi`. This comparison is NOT true.",
                     "Percent": 80
                 }
             },
             "D": {
-                "Choice": "(`pi^2`)/9",
+                "Choice": "`pi^2/9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "π²/9 is between the √9/3 and 2π. This comparison is true.",
+                    "Rationale": "`pi^2/9` is between the `sqrt(9)/3` and `2pi`. This comparison is true.",
                     "Percent": 11
                 }
             }
@@ -185,14 +185,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A water hose discharges water at a rate of 45 gallons per minute. Which graph has a slope that best represents this rate?"
+            "A water hose discharges water at a rate of `45` `text(gallons per minute)`. Which graph has a slope that best represents this rate?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "problems/TX17G8M/media/4a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph represents a line with a slope of 45 gallons per minute.",
+                    "Rationale": "The graph represents a line with a slope of `45` `text(gallons per minute)`.",
                     "Percent": 86
                 }
             },
@@ -200,7 +200,7 @@
                 "Choice": "problems/TX17G8M/media/4b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph represents a line with a slope of 15 gallons per minute.",
+                    "Rationale": "The graph represents a line with a slope of `15` `text(gallons per minute)`.",
                     "Percent": 6
                 }
             },
@@ -208,7 +208,7 @@
                 "Choice": "problems/TX17G8M/media/4c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph represents a line with a slope of 0 gallons per minute.",
+                    "Rationale": "The graph represents a line with a slope of `0` `text(gallons per minute)`.",
                     "Percent": 6
                 }
             },
@@ -216,7 +216,7 @@
                 "Choice": "problems/TX17G8M/media/4d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph represents a line with a slope of 60 gallons per minute.",
+                    "Rationale": "The graph represents a line with a slope of `60` `text(gallons per minute)`.",
                     "Percent": 2
                 }
             }
@@ -240,39 +240,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle MNP is graphed on a coordinate grid with vertices at M (-3,-6), N (0, 3) and P (6, -3). Triangle MNP is dilated by a scale factor of u with the origin as the center of dilation to create triangle M'N'P'.",
-            "Which ordered pair represents the coordinates of the vertex P'?"
+            "Triangle `MNP` is graphed on a coordinate grid with vertices at `M(-3,-6)`, `N(0,3)` and `P(6,-3)`. Triangle `MNP` is dilated by a scale factor of `u` with the origin as the center of dilation to create triangle `M'N'P'`.",
+            "Which ordered pair represents the coordinates of the vertex `P'`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(6 + u, -3 + u)",
+                "Choice": "`(6+u,-3+u)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule for P' can be found by multiplying each of the coordinates of (6, -3) by the scale factor, u, which is represented by (6u, -3u), not (6 + u, -3 + u).",
+                    "Rationale": "The dilation rule for `P'` can be found by multiplying each of the coordinates of `(6,-3)` by the scale factor, `u`, which is represented by `(6u,-3u)`, not `(6+u,-3+u)`.",
                     "Percent": 20
                 }
             },
             "B": {
-                "Choice": "(6/u, -3/u)",
+                "Choice": "`(6/u,-3/u)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule for P' can be found by multiplying each of the coordinates of (6, -3) by the scale factor, u, which is represented by (6u, -3u), not (6/u, -3/u).",
+                    "Rationale": "The dilation rule for `P'` can be found by multiplying each of the coordinates of `(6,-3)` by the scale factor, `u`, which is represented by `(6u,-3u)`, not `(6/u,-3/u)`.",
                     "Percent": 16
                 }
             },
             "C": {
-                "Choice": "(6 + 1/u, -3 + 1/u)",
+                "Choice": "`(6+1/u,-3+1/u)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule for P' can be found by multiplying each of the coordinates of (6, -3) by the scale factor, u, which is represented by (6u, -3u), not (6 + 1/u, -3 + 1/u).",
+                    "Rationale": "The dilation rule for `P'` can be found by multiplying each of the coordinates of `(6,-3)` by the scale factor, `u`, which is represented by `(6u,-3u)`, not `(6+1/u,-3+1/u)`.",
                     "Percent": 15
                 }
             },
             "D": {
-                "Choice": "(6u, -3u)",
+                "Choice": "`(6u,-3u)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The dilation rule for P' can be found by multiplying each of the coordinates of (6, -3) by the scale factor, u, which is represented by (6u, -3u).",
+                    "Rationale": "The dilation rule for `P'` can be found by multiplying each of the coordinates of `(6,-3)` by the scale factor, `u`, which is represented by `(6u,-3u)`.",
                     "Percent": 48
                 }
             }
@@ -296,40 +296,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The table shows the number of gallons of gasoline in a car's gas tank after the car has been driven x miles.",
+            "The table shows the number of `text(gallons)` of gasoline in a car's gas tank after the car has been driven `x` `text(miles)`.",
             "problems/TX17G8M/media/6a.jpg",
             "When these data are graphed on a coordinate grid, the points all lie on the same line. What are the slope and `ytext(-intercept)` of this line?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Slope = 1/25, `ytext(-intercept)` = 375",
+                "Choice": "`text(Slope)=1/25`, `ytext(-intercept)=375`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The slope can be found by the change in the gallons of gasoline, y, divided by the change in the number of miles driven, x, which is -1/25, not 1/25. The `ytext(-intercept)` is 15, the number of gallons of gasoline when 0 miles were driven, not 375.",
+                    "Rationale": "The slope can be found by the change in the `text(gallons)` of gasoline, `y`, divided by the change in the number of `text(miles)` driven, `x`, which is `-1/25`, not `1/25`. The `ytext(-intercept)` is `15`, the number of `text(gallons)` of gasoline when `0` `text(miles)` were driven, not `375`.",
                     "Percent": 6
                 }
             },
             "G": {
-                "Choice": "Slope = -1/25, `ytext(-intercept)` = 15",
+                "Choice": "`text(Slope)=-1/25`, `ytext(-intercept)=15`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The slope can be found by the change in the gallons of gasoline, y, divided by the change in the number of miles driven, x, which is -1/25. The `ytext(-intercept)` is 15, the number of gallons of gasoline when 0 miles were driven.",
+                    "Rationale": "The slope can be found by the change in the `text(gallons)` of gasoline, `y`, divided by the change in the number of `text(miles)` driven, `x`, which is `-1/25`. The `ytext(-intercept)` is `15`, the number of `text(gallons)` of gasoline when `0` `text(miles)` were driven.",
                     "Percent": 66
                 }
             },
             "H": {
-                "Choice": "Slope = 25, `ytext(-intercept)` = 375",
+                "Choice": "`text(Slope)=25`, `ytext(-intercept)=375`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The slope can be found by the change in the gallons of gasoline, y, divided by the change in the number of miles driven, x, which is -1/25, not 25. The `ytext(-intercept)` is 15, the number of gallons of gasoline when 0 miles were driven.",
+                    "Rationale": "The slope can be found by the change in the `text(gallons)` of gasoline, `y`, divided by the change in the number of `text(miles)` driven, `x`, which is `-1/25`, not `25`. The `ytext(-intercept)` is `15`, the number of `text(gallons)` of gasoline when `0` `text(miles)` were driven.",
                     "Percent": 8
                 }
             },
             "J": {
-                "Choice": "Slope = -25, `ytext(-intercept)` = 15",
+                "Choice": "`text(Slope)=-25`, `ytext(-intercept)=15`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The slope can be found by the change in the gallons of gasoline, y, divided by the change in the number of miles driven, x, which is -1/25, not ­ 25. The `ytext(-intercept)` is 15, the number of gallons of gasoline when 0 miles were driven, not 15.",
+                    "Rationale": "The slope can be found by the change in the `text(gallons)` of gasoline, `y`, divided by the change in the number of `text(miles)` driven, `x`, which is `-1/25`, not `-25`. The `ytext(-intercept)` is `15`, the number of `text(gallons)` of gasoline when `0` `text(miles)` were driven, not `15`.",
                     "Percent": 19
                 }
             }
@@ -355,38 +355,38 @@
         "Content": [
             "A cylinder and its dimensions are shown in the diagram.",
             "problems/TX17G8M/media/7a.jpg",
-            "Which equation can be used to find V, the volume of the cylinder in `text(cubic inches)`?"
+            "Which equation can be used to find `V`, the volume of the cylinder in `text(cubic inches)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "V = π(2.5h)^2",
+                "Choice": "`V=pi(2.5h)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h` and the radius = 2.5, so V = π(2.5)^2 • h, not V = π(2.5h)^2.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h` and the `text(radius)=2.5`, so `V=pi(2.5)^2*h`, not `V=pi(2.5h)^2`.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "V = π(5h)^2",
+                "Choice": "`V=pi(5h)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h` and the radius = 2.5, so V = π(2.5)^2 • h, not V = π(5h)^2.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h` and the `text(radius)=2.5`, so `V=pi(2.5)^2*h`, not `V=pi(5h)^2`.",
                     "Percent": 12
                 }
             },
             "C": {
-                "Choice": "V = π(2.5)^2 • h",
+                "Choice": "`V=pi(2.5)^2*h`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the volume of a cylinder is `V=pir^2h` and the radius = 2.5, so V = π(2.5)^2 • h, the radius = 2.5.",
+                    "Rationale": "The formula for the volume of a cylinder is `V=pir^2h` and the `text(radius)=2.5`, so `V=pi(2.5)^2*h`, the `text(radius)=2.5`.",
                     "Percent": 64
                 }
             },
             "D": {
-                "Choice": "V=π(5)^2 • h",
+                "Choice": "`V=pi(5)^2*h`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h` and the radius = 2.5, so V = π(2.5)^2 • h, not V = π(5)^2 • h.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h` and the `text(radius)=2.5`, so `V=pi(2.5)^2*h`, not `V=pi(5)^2*h`.",
                     "Percent": 15
                 }
             }
@@ -410,14 +410,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The approximate volume in `text(milliliters)`, m, for a volume of f fluid ounces is equal to 29.57 times the value of f. Which table represents this relationship?"
+            "The approximate volume in `text(milliliters)`, `m`, for a volume of `f` `text(fluid ounces)` is equal to `29.57` times the value of `f`. Which table represents this relationship?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "problems/TX17G8M/media/8a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "It shows the values in the milliliters column, m, to be 29.57 divided by the corresponding values in the fluid ounces column, f, not multiplied.",
+                    "Rationale": "It shows the values in the `text(milliliters)` column, `m`, to be `29.57` divided by the corresponding values in the `text(fluid ounces)` column, `f`, not multiplied.",
                     "Percent": 26
                 }
             },
@@ -425,7 +425,7 @@
                 "Choice": "problems/TX17G8M/media/8b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "It does not show the values in the milliliters column, m, to be 29.57 multiplied by the corresponding values in the fluid ounces column, f.",
+                    "Rationale": "It does not show the values in the `text(milliliters)` column, `m`, to be `29.57` multiplied by the corresponding values in the `text(fluid ounces)` column, `f`.",
                     "Percent": 5
                 }
             },
@@ -433,7 +433,7 @@
                 "Choice": "problems/TX17G8M/media/8c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "It does not show the values in the milliliters column, m, to be 29.57 multiplied by the corresponding values in the fluid ounces column, f.",
+                    "Rationale": "It does not show the values in the `text(milliliters)` column, `m`, to be `29.57` multiplied by the corresponding values in the `text(fluid ounces)` column, `f`.",
                     "Percent": 8
                 }
             },
@@ -441,7 +441,7 @@
                 "Choice": "problems/TX17G8M/media/8d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It shows the values in the milliliters column, m, to be 29.57 multiplied by the corresponding values in the fluid ounces column, f.",
+                    "Rationale": "It shows the values in the `text(milliliters)` column, `m`, to be `29.57` multiplied by the corresponding values in the `text(fluid ounces)` column, `f`.",
                     "Percent": 60
                 }
             }
@@ -474,7 +474,7 @@
                 "Choice": "equal:32.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Using the Pythagorean Theorem, `a^2+b^2=c^2` gives, 262 + 19.52 = 1056.25 and the square root of 1056.25 is 32.5.",
+                    "Rationale": "Using the Pythagorean Theorem, `a^2+b^2=c^2` gives, `26^2+19.5^2=1056.25` and the square root of `1056.25` is `32.5`.",
                     "Percent": 60
                 }
             }
@@ -498,40 +498,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The scatterplot shows the number of people in each of 8 different households and the average amount of money each household spent on groceries.",
+            "The scatterplot shows the number of people in each of `8` different households and the average amount of money `text(each household)` spent on groceries.",
             "problems/TX17G8M/media/10a.jpg",
-            "Based on the scatterplot, what is the best prediction of the average amount of money spent on groceries for a household that has 7 people?"
+            "Based on the scatterplot, what is the best prediction of the average amount of money spent on groceries for a household that has `7` people?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "$240",
+                "Choice": "`$240`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for 7 people is closest to 240.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for `7` people is closest to `240`.",
                     "Percent": 54
                 }
             },
             "G": {
-                "Choice": "$190",
+                "Choice": "`$190`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for 7 people is closest to 240, not 190.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for `7` people is closest to `240`, not `190`.",
                     "Percent": 15
                 }
             },
             "H": {
-                "Choice": "$210",
+                "Choice": "`$210`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for 7 people is closest to 240, not 210.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for `7` people is closest to `240`, not `210`.",
                     "Percent": 11
                 }
             },
             "J": {
-                "Choice": "$300",
+                "Choice": "`$300`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for 7 people is closest to 240, not 300.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the average amount of money spent on groceries for `7` people is closest to `240`, not `300`.",
                     "Percent": 19
                 }
             }
@@ -555,14 +555,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which graph does NOT represent y as a function of x?"
+            "Which graph does NOT represent `y` as a function of `x`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "problems/TX17G8M/media/11a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Each value of x is paired more than once with a corresponding value of y. This graph does NOT represent y as a function of x.",
+                    "Rationale": "Each value of `x` is paired more than `text(once)` with a corresponding value of `y`. This graph does NOT represent `y` as a function of `x`.",
                     "Percent": 54
                 }
             },
@@ -570,7 +570,7 @@
                 "Choice": "problems/TX17G8M/media/11b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Each x value is paired only once with a corresponding y value. This graph represents y as a function of x.",
+                    "Rationale": "Each `x` value is paired only `text(once)` with a corresponding `y` value. This graph represents `y` as a function of `x`.",
                     "Percent": 15
                 }
             },
@@ -578,7 +578,7 @@
                 "Choice": "problems/TX17G8M/media/11c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Each x value is paired only once with a corresponding y value. This graph represents y as a function of x.",
+                    "Rationale": "Each `x` value is paired only `text(once)` with a corresponding `y` value. This graph represents `y` as a function of `x`.",
                     "Percent": 11
                 }
             },
@@ -586,7 +586,7 @@
                 "Choice": "problems/TX17G8M/media/11d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Each x value is paired only once with a corresponding y value. This graph represents y as a function of x.",
+                    "Rationale": "Each `x` value is paired only `text(once)` with a corresponding `y` value. This graph represents `y` as a function of `x`.",
                     "Percent": 19
                 }
             }
@@ -610,39 +610,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What value of x makes this equation true?",
-            "x/3 - 3 = x/9 + 3"
+            "What value of `x` makes this equation true?",
+            ":ibox:`x/3-3=x/9+3`"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "3",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "x/3 - 3 = x/9 + 3, this simplifies to 2x = 54, and dividing both sides by 2 simplifies to x = 27, not 3.",
+                    "Rationale": "`x/3-3=x/9+3`, this simplifies to `2x=54`, and dividing both sides by `2` simplifies to `x=27`, not `3`.",
                     "Percent": 15
                 }
             },
             "G": {
-                "Choice": "-9",
+                "Choice": "`-9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "x/3 - 3 = x/9 + 3, this simplifies to 2x = 54, and dividing both sides by 2 simplifies to x = 27, not ­ 9.",
+                    "Rationale": "`x/3-3=x/9+3`, this simplifies to `2x=54`, and dividing both sides by `2` simplifies to `x=27`, not `-9`.",
                     "Percent": 8
                 }
             },
             "H": {
-                "Choice": "-1",
+                "Choice": "`-1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "x/3 - 3 = x/9 + 3, this simplifies to 2x = 54, and dividing both sides by 2 simplifies to x = 27, not ­ 1.",
+                    "Rationale": "`x/3-3=x/9+3`, this simplifies to `2x=54`, and dividing both sides by `2` simplifies to `x=27`, not `-1`.",
                     "Percent": 8
                 }
             },
             "J": {
-                "Choice": "27",
+                "Choice": "`27`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "x/3 - 3 = x/9 + 3, this simplifies to 2x = 54, and dividing both sides by 2 simplifies to x = 27.",
+                    "Rationale": "`x/3-3=x/9+3`, this simplifies to `2x=54`, and dividing both sides by `2` simplifies to `x=27`.",
                     "Percent": 69
                 }
             }
@@ -666,40 +666,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An eighth-grade student estimated that she needs $8,800 for tuition and fees for each year of college. She already has $5,000 in a savings account. The table shows the projected future value of the account in five years based on different monthly deposits.",
+            "An eighth-grade student estimated that she needs `$8text(,)800` for tuition and fees for `text(each year)` of college. She already has `$5text(,)000` in a savings account. The table shows the projected future value of the account in `text(five years)` based on different `text(monthly)` deposits.",
             "problems/TX17G8M/media/13a.jpg",
-            "The student wants to have enough money saved in five years to pay the tuition and fees for her first two years of college. Based on the table, what is the minimum amount she should deposit in the savings account every month?"
+            "The student wants to have enough money saved in `text(five years)` to pay the tuition and fees for her `text(first two years)` of college. Based on the table, what is the minimum amount she should deposit in the savings account `text(every month)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$200",
+                "Choice": "`$200`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The cost for two years of college is 2(8,800) = 17,600, so the amount the student still needs is 17,600 - 5,000 = 12,600. A monthly deposit of $200 is the smallest option from the table that will result in at least $12,600 at the end of five years.",
+                    "Rationale": "The cost for `text(two years)` of college is `2(8text(,)800)=17text(,)600`, so the amount the student still needs is `17text(,)600-5text(,)000=12text(,)600`. A `text(monthly)` deposit of `$200` is the smallest option from the table that will result in at least `$12text(,)600` at the end of `text(five years)`.",
                     "Percent": 43
                 }
             },
             "B": {
-                "Choice": "$300",
+                "Choice": "`$300`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The cost for two years of college is 2(8,800) = 17,600, so the amount the student still needs is 17,600 - 5,000 = 12,600. A monthly deposit of $300 is not the smallest option from the table that will result in at least $12,600 at the end of five years.",
+                    "Rationale": "The cost for `text(two years)` of college is `2(8text(,)800)=17text(,)600`, so the amount the student still needs is `17text(,)600-5text(,)000=12text(,)600`. A `text(monthly)` deposit of `$300` is not the smallest option from the table that will result in at least `$12text(,)600` at the end of `text(five years)`.",
                     "Percent": 19
                 }
             },
             "C": {
-                "Choice": "$100",
+                "Choice": "`$100`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The cost for two years of college is 2(8,800) = 17,600, so the amount the student still needs is 17,600 - 5,000 = 12,600. A monthly deposit of $100 will result in $12,273 according to the table, which is less than $12,600 the student needs at the end of five years.",
+                    "Rationale": "The cost for `text(two years)` of college is `2(8text(,)800)=17text(,)600`, so the amount the student still needs is `17text(,)600-5text(,)000=12text(,)600`. A `text(monthly)` deposit of `$100` will result in `$12text(,)273` according to the table, which is less than `$12text(,)600` the student needs at the end of `text(five years)`.",
                     "Percent": 25
                 }
             },
             "D": {
-                "Choice": "$400",
+                "Choice": "`$400`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The cost for two years of college is 2(8,800) = 17,600, so the amount the student still needs is 17,600 - 5,000 = 12,600. A monthly deposit of $400 is not the smallest option from the table that will result in at least $12,600 at the end of five years.",
+                    "Rationale": "The cost for `text(two years)` of college is `2(8text(,)800)=17text(,)600`, so the amount the student still needs is `17text(,)600-5text(,)000=12text(,)600`. A `text(monthly)` deposit of `$400` is not the smallest option from the table that will result in at least `$12text(,)600` at the end of `text(five years)`.",
                     "Percent": 14
                 }
             }
@@ -729,34 +729,34 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "575.3 `text(cm)^2`",
+                "Choice": "`575.3` `text(cm)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for lateral surface area of a cylinder is S = 2πrh and the radius = 4.2, not 8.4, so S = 2(π)(4.2)(10.9), which is closest to 287.6, not 575.3.",
+                    "Rationale": "The formula for lateral surface area of a cylinder is `S=2pirh` and the `text(radius)=4.2`, not `8.4`, so `S=2(pi)(4.2)(10.9)`, which is closest to `287.6`, not `575.3`.",
                     "Percent": 11
                 }
             },
             "G": {
-                "Choice": "287.6 `text(cm)^2`",
+                "Choice": "`287.6` `text(cm)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for lateral surface area of a cylinder is S = 2πrh and the radius = 4.2, so S = 2(π)(4.2)(10.9), which is closest to 287.6.",
+                    "Rationale": "The formula for lateral surface area of a cylinder is `S=2pirh` and the `text(radius)=4.2`, so `S=2(pi)(4.2)(10.9)`, which is closest to `287.6`.",
                     "Percent": 74
                 }
             },
             "H": {
-                "Choice": "398.5 `text(cm)^2`",
+                "Choice": "`398.5` `text(cm)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for lateral surface area of a cylinder is S = 2πrh and the radius = 4.2, so S = 2(π)(4.2)(10.9) which is closest to 287.6, not 398.5.",
+                    "Rationale": "The formula for lateral surface area of a cylinder is `S=2pirh` and the `text(radius)=4.2`, so `S=2(pi)(4.2)(10.9)` which is closest to `287.6`, not `398.5`.",
                     "Percent": 8
                 }
             },
             "J": {
-                "Choice": "604.1 `text(cm)^2`",
+                "Choice": "`604.1` `text(cm)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for lateral surface area of a cylinder is S = 2πrh and the radius = 4.2, so S = 2(π)(4.2)(10.9) which is closest to 287.6, not 604.1.",
+                    "Rationale": "The formula for lateral surface area of a cylinder is `S=2pirh` and the `text(radius)=4.2`, so `S=2(pi)(4.2)(10.9)` which is closest to `287.6`, not `604.1`.",
                     "Percent": 7
                 }
             }
@@ -780,32 +780,32 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Two eighth-grade classes are selling raffle tickets to raise money.",
-            ":box:• One class is selling tickets for $2.50 each and has already raised $350.\n\n• The other class is selling tickets for $3.00 each and has already raised $225.",
-            "Which equation can be used to find t, the number of tickets each class needs to sell so that the total amount raised is the same for both classes?"
+            "`text(Two)` eighth-grade classes are selling raffle tickets to raise money.",
+            ":box:• `text(One)` class is selling tickets for `$2.50` each and has already raised `$350`.\n\n• The other class is selling tickets for `$3.00` each and has already raised `$225`.",
+            "Which equation can be used to find `t`, the number of tickets `text(each class)` needs to sell so that the total amount raised is the same for both classes?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "3t + 350 = 2.50t + 225",
+                "Choice": "`3t+350=2.50t+225`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The situation is represented by the equation 2.50t + 350 = 3t + 225, not 3t + 350 = 2.50t + 225.",
+                    "Rationale": "The situation is represented by the equation `2.50t+350=3t+225`, not `3t+350=2.50t+225`.",
                     "Percent": 9
                 }
             },
             "B": {
-                "Choice": "350t + 2.50 = 225t + 3",
+                "Choice": "`350t+2.50=225t+3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The situation is represented by the equation 2.50t + 350 = 3t + 225, not 350t + 2.5 = 225t + 3.",
+                    "Rationale": "The situation is represented by the equation `2.50t+350=3t+225`, not `350t+2.5=225t+3`.",
                     "Percent": 8
                 }
             },
             "C": {
-                "Choice": "2.50t + 350 = 3t + 225",
+                "Choice": "`2.50t+350=3t+225`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The situation is represented by the equation 2.50t + 350 = 3t + 225.",
+                    "Rationale": "The situation is represented by the equation `2.50t+350=3t+225`.",
                     "Percent": 67
                 }
             },
@@ -813,7 +813,7 @@
                 "Choice": "Not here",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The situation is represented by the equation 2.50t + 350 = 3t + 225, which is not this choice.",
+                    "Rationale": "The situation is represented by the equation `2.50t+350=3t+225`, which is not this choice.",
                     "Percent": 16
                 }
             }
@@ -837,40 +837,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Wilkins deposited $2,500 in a new account at his bank.",
-            ":box:• The bank pays 6.5% interest compounded annually on this account.\n\n• Mr. Wilkins makes no additional deposits or withdrawals.",
-            "Which amount is closest to the balance of the account at the end of 2 years?"
+            "Mr. Wilkins deposited `$2text(,)500` in a new account at his bank.",
+            ":box:• The bank pays `6.5%` interest compounded `text(annually)` on this account.\n\n• Mr. Wilkins makes no additional deposits or withdrawals.",
+            "Which amount is closest to the balance of the account at the end of `2` `text(years)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "$2,835.56",
+                "Choice": "`$2text(,)835.56`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for compound interest is A = P(1 + r)^t, so A = 2,500(1 + 0.065)^2 which is closest to 2,835.56.",
+                    "Rationale": "The formula for compound interest is `A=P(1+r)^t`, so `A=2text(,)500(1+0.065)^2` which is closest to `2text(,)835.56`.",
                     "Percent": 58
                 }
             },
             "G": {
-                "Choice": "$2,513.00",
+                "Choice": "`$2text(,)513.00`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for compound interest is A = P(1 + r)^t, so A = 2,500(1 + 0.065)^2 which is closest to 2,835.56, not 2,513.00.",
+                    "Rationale": "The formula for compound interest is `A=P(1+r)^t`, so `A=2text(,)500(1+0.065)^2` which is closest to `2text(,)835.56`, not `2text(,)513.00`.",
                     "Percent": 15
                 }
             },
             "H": {
-                "Choice": "$2,662.50",
+                "Choice": "`$2text(,)662.50`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for compound interest is A = P(1 + r)^t, so A = 2,500(1 + 0.065)^2 which is closest to 2,835.56, not 2,662.50.",
+                    "Rationale": "The formula for compound interest is `A=P(1+r)^t`, so `A=2text(,)500(1+0.065)^2` which is closest to `2text(,)835.56`, not `2text(,)662.50`.",
                     "Percent": 13
                 }
             },
             "J": {
-                "Choice": "$2,825.00",
+                "Choice": "`$2text(,)825.00`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for compound interest is A = P(1 + r)^t, so A = 2,500(1 + 0.065)^2 which is closest to 2,835.56, not 2,825.00.",
+                    "Rationale": "The formula for compound interest is `A=P(1+r)^t`, so `A=2text(,)500(1+0.065)^2` which is closest to `2text(,)835.56`, not `2text(,)825.00`.",
                     "Percent": 14
                 }
             }
@@ -894,40 +894,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Figure ABCDE is similar to figure VWXYZ.",
+            "Figure `ABCDE` is similar to figure `VWXYZ`.",
             "problems/TX17G8M/media/17a.jpg",
             "Which proportion must be true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "AE/XY = CD/VZ",
+                "Choice": "`(AE)/(XY)=(CD)/(VZ)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "AE/XY = CD/VZ does not represent a true proportion of the lengths of the corresponding sides of the given similar figures.",
+                    "Rationale": "`(AE)/(XY)=(CD)/(VZ)` does not represent a true proportion of the lengths of the corresponding sides of the given similar figures.",
                     "Percent": 24
                 }
             },
             "B": {
-                "Choice": "AB/VW = CD/XY",
+                "Choice": "`(AB)/(VW)=(CD)/(XY)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "AB/VW = YZ/DE does not represent a true proportion of the lengths of the corresponding sides of the given similar figures.",
+                    "Rationale": "`(AB)/(VW)=(YZ)/(DE)` does not represent a true proportion of the lengths of the corresponding sides of the given similar figures.",
                     "Percent": 21
                 }
             },
             "C": {
-                "Choice": "BC/XY = DE/YZ",
+                "Choice": "`(BC)/(XY)=(DE)/(YZ)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "BC/XY = DE/YZ does not represent a true proportion of the lengths of the corresponding sides of the given similar figures.",
+                    "Rationale": "`(BC)/(XY)=(DE)/(YZ)` does not represent a true proportion of the lengths of the corresponding sides of the given similar figures.",
                     "Percent": 5
                 }
             },
             "D": {
-                "Choice": "AB/VW = CD/XY",
+                "Choice": "`(AB)/(VW)=(CD)/(XY)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "AB/VW = CD/XY represents a true proportion of the lengths of the corresponding sides of the given similar figures.",
+                    "Rationale": "`(AB)/(VW)=(CD)/(XY)` represents a true proportion of the lengths of the corresponding sides of the given similar figures.",
                     "Percent": 51
                 }
             }
@@ -951,38 +951,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The mass of a textbook is approximately 0.00165 metric ton. How is this number written in scientific notation?"
+            "The mass of a textbook is approximately `0.00165` `text(metric ton)`. How is this number written in scientific notation?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "165 × 10⁻⁵",
+                "Choice": "`165xx10^-5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "0.00165 is written as 1.65 x 10⁻³ in scientific notation, not 165 x 10⁻⁵.",
+                    "Rationale": "`0.00165` is written as `1.65xx10^-3` in scientific notation, not `165xx10^-5`.",
                     "Percent": 16
                 }
             },
             "G": {
-                "Choice": "1.65 × 10⁻³",
+                "Choice": "`1.65xx10^-3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "0.00165 is written as 1.65 x 10⁻³ in scientific notation.",
+                    "Rationale": "`0.00165` is written as `1.65xx10^-3` in scientific notation.",
                     "Percent": 61
                 }
             },
             "H": {
-                "Choice": "16.5 × 10⁻⁴",
+                "Choice": "`16.5xx10^-4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "0.00165 is written as 1.65 x 10⁻³ in scientific notation, not 16.5 x 10⁻⁴.",
+                    "Rationale": "`0.00165` is written as `1.65xx10^-3` in scientific notation, not `16.5xx10^-4`.",
                     "Percent": 11
                 }
             },
             "J": {
-                "Choice": "0.165 × 10⁻²",
+                "Choice": "`0.165xx10^-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "0.00165 is written as 1.65 x 10⁻³ in scientific notation, not 0.165 x 10⁻².",
+                    "Rationale": "`0.00165` is written as `1.65xx10^-3` in scientific notation, not `0.165xx10^-2`.",
                     "Percent": 11
                 }
             }
@@ -1012,34 +1012,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "y = 5x",
+                "Choice": "`y=5x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph shows the cost of 5 dollars for every pound of pecan, which is represented by the function y = 5x.",
+                    "Rationale": "The graph shows the cost of `5` `text(dollars)` for `text(every pound)` of pecan, which is represented by the function `y=5x`.",
                     "Percent": 61
                 }
             },
             "B": {
-                "Choice": "y = x/5",
+                "Choice": "`y=x/5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows the cost of 5 dollars for every pound of pecan, which is represented by the function y = 5x, not y = 1/5 x.",
+                    "Rationale": "The graph shows the cost of `5` `text(dollars)` for `text(every pound)` of pecan, which is represented by the function `y=5x`, not `y=1/5x`.",
                     "Percent": 9
                 }
             },
             "C": {
-                "Choice": "y = 2x",
+                "Choice": "`y=2x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows the cost of 5 dollars for every pound of pecan, which is represented by the function y = 5x, not y = 2x.",
+                    "Rationale": "The graph shows the cost of `5` `text(dollars)` for `text(every pound)` of pecan, which is represented by the function `y=5x`, not `y=2x`.",
                     "Percent": 14
                 }
             },
             "D": {
-                "Choice": "y = x/2",
+                "Choice": "`y=x/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows the cost of 5 dollars for every pound of pecan, which is represented by the function y = 5x, not y = 1/2x.",
+                    "Rationale": "The graph shows the cost of `5` `text(dollars)` for `text(every pound)` of pecan, which is represented by the function `y=5x`, not `y=1/2x`.",
                     "Percent": 16
                 }
             }
@@ -1063,40 +1063,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Pentagon MNPQR is shown on the coordinate grid. Pentagon MNPQR is dilated with the origin as the center of dilation using the rule (x, y) ⇒ (x/4, y/4) to create pentagon M'N'P'Q'R'.",
+            "Pentagon `MNPQR` is shown on the coordinate grid. Pentagon `MNPQR` is dilated with the origin as the center of dilation using the rule `(x,y)->(x/4,y/4)` to create pentagon `M'N'P'Q'R'`.",
             "problems/TX17G8M/media/20a.jpg",
             "Which statement is true?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Pentagon M'N'P'Q'R' is larger than pentagon MNPQR, because the scale factor is greater than `1`.",
+                "Choice": "Pentagon `M'N'P'Q'R'` is larger than pentagon `MNPQR`, because the scale factor is greater than `1`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The 1/4 scale factor is less than 1, not greater than `1`.",
+                    "Rationale": "The dilation rule `(x/4,y/4)` creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The `1/4` scale factor is less than `1`, not greater than `1`.",
                     "Percent": 12
                 }
             },
             "G": {
-                "Choice": "Pentagon M'N'P'Q'R' is smaller than pentagon MNPQR, because the scale factor is less than 1.",
+                "Choice": "Pentagon `M'N'P'Q'R'` is smaller than pentagon `MNPQR`, because the scale factor is less than `1`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon. The 1/4 scale factor is less than 1.",
+                    "Rationale": "The dilation rule `(x/4,y/4)` creates a pentagon that is smaller than the original pentagon. The `1/4 `scale factor is less than `1`.",
                     "Percent": 70
                 }
             },
             "H": {
-                "Choice": "Pentagon M'N'P'Q'R' is smaller than pentagon MNPQR, because the scale factor is greater than `1`.",
+                "Choice": "Pentagon `M'N'P'Q'R'` is smaller than pentagon `MNPQR`, because the scale factor is greater than `1`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon. The 1/4 scale factor is less than 1, not greater than `1`.",
+                    "Rationale": "The dilation rule `(x/4,y/4)` creates a pentagon that is smaller than the original pentagon. The `1/4` scale factor is less than `1`, not greater than `1`.",
                     "Percent": 10
                 }
             },
             "J": {
-                "Choice": "Pentagon M'N'P'Q'R' is larger than pentagon MNPQR, because the scale factor is less than 1.",
+                "Choice": "Pentagon `M'N'P'Q'R'` is larger than pentagon `MNPQR`, because the scale factor is less than `1`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The dilation rule (x/4, y/4) creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The 1/4 scale factor is less than 1.",
+                    "Rationale": "The dilation rule `(x/4,y/4)` creates a pentagon that is smaller than the original pentagon, not a larger pentagon. The `1/4` scale factor is less than `1`.",
                     "Percent": 7
                 }
             }
@@ -1120,38 +1120,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Clarissa needs a $2,500 loan in order to buy a car. Which loan option would allow her to pay the least amount of interest?"
+            "Clarissa needs a `$2text(,)500` loan in order to buy a car. Which loan option would allow her to pay the least amount of interest?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "An 18-month loan with a 4.75% annual simple interest rate",
+                "Choice": "An `18text(-month)` loan with a `4.75%` `text(annual)` simple interest rate",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for simple interest is I = Prt, so I = 2,500(0.0475) (1.5), which is about 178.13. This option has the least amount of interest for the loan.",
+                    "Rationale": "The formula for simple interest is `I=Prt`, so `I=2text(,)500(0.0475)(1.5)`, which is about `178.13`. This option has the least amount of interest for the loan.",
                     "Percent": 57
                 }
             },
             "B": {
-                "Choice": "A 30-month loan with a 4.00% annual simple interest rate",
+                "Choice": "A `30text(-month)` loan with a `4.00%` `text(annual)` simple interest rate",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for simple interest is I = Prt, so I = 2,500(0.0475) (1.5), which is about 178.13. This option has the least amount of interest for the loan, not 2,500(0.04)(2.5) = 250.",
+                    "Rationale": "The formula for simple interest is `I=Prt`, so `I=2text(,)500(0.0475)(1.5)`, which is about `178.13`. This option has the least amount of interest for the loan, not `2text(,)500(0.04)(2.5)=250`.",
                     "Percent": 18
                 }
             },
             "C": {
-                "Choice": "A 24-month loan with a 4.25% annual simple interest rate",
+                "Choice": "A `24text(-month)` loan with a `4.25%` `text(annual)` simple interest rate",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for simple interest is I = Prt, so I = 2,500(0.0475) (1.5), which is about 178.13. This option has the least amount of interest for the loan, not 2,500(0.0425)(2) = 212.5.",
+                    "Rationale": "The formula for simple interest is `I=Prt`, so `I=2text(,)500(0.0475)(1.5)`, which is about `178.13`. This option has the least amount of interest for the loan, not `2text(,)500(0.0425)(2)=212.5`.",
                     "Percent": 17
                 }
             },
             "D": {
-                "Choice": "A 36-month loan with a 4.50% annual simple interest rate",
+                "Choice": "A `36text(-month)` loan with a `4.50%` `text(annual)` simple interest rate",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for simple interest is I = Prt, so I = 2,500(0.0475) (1.5), which is about 178.13. This option has the least amount of interest for the loan, not 2,500(0.0450)(3) = 337.5.",
+                    "Rationale": "The formula for simple interest is `I=Prt`, so `I=2text(,)500(0.0475)(1.5)`, which is about `178.13`. This option has the least amount of interest for the loan, not `2text(,)500(0.0450)(3)=337.5`.",
                     "Percent": 8
                 }
             }
@@ -1177,38 +1177,38 @@
         "Content": [
             "Point `J(-4,-6)` and point `K(4,4)` are located on a coordinate grid.",
             "problems/TX17G8M/media/22a.jpg",
-            "Which measurement is closest to the distance between point `J` and point K in `text(units)`?"
+            "Which measurement is closest to the distance between point `J` and point `K` in `text(units)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "18 units",
+                "Choice": "`18` `text(units)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 10^2 + 8^2 = c^2, which simplifies to 164 = c^2, and the square root of 164 is closest to 13, not 18.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `10^2+8^2=c^2`, which simplifies to `164=c^2`, and the square root of `164` is closest to `13`, not `18`.",
                     "Percent": 24
                 }
             },
             "G": {
-                "Choice": "6 units",
+                "Choice": "`6` `text(units)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 10^2 + 8^2 = c^2, which simplifies to 164 = c^2, and the square root of 164 is closest to 13, not 6.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `10^2+8^2=c^2`, which simplifies to `164=c^2`, and the square root of `164` is closest to `13`, not `6`.",
                     "Percent": 6
                 }
             },
             "H": {
-                "Choice": "13 units",
+                "Choice": "`13` `text(units)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 10^2 + 8^2 = c^2, which simplifies to 164 = c^2, and the square root of 164 is closest to 13.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `10^2+8^2=c^2`, which simplifies to `164=c^2`, and the square root of `164` is closest to `13`.",
                     "Percent": 45
                 }
             },
             "J": {
-                "Choice": "9 units",
+                "Choice": "`9` `text(units)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 10^2 + 8^2 = c^2, which simplifies to 164 = c^2, and the square root of 164 is closest to 13, not 9.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `10^2+8^2=c^2`, which simplifies to `164=c^2`, and the square root of `164` is closest to `13`, not `9`.",
                     "Percent": 25
                 }
             }
@@ -1232,14 +1232,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A rectangle's perimeter and its area have the same numerical value. The width of the rectangle is 3 units. What is the length of the rectangle in `text(units)`?"
+            "A rectangle's perimeter and its area have the same numerical value. The width of the rectangle is `3` `text(units)`. What is the length of the rectangle in `text(units)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:6",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If the perimeter is equal to the area then 2l + 2w = lw, so 2l + 2(3) = l(3), which simplifies to 6 = l.",
+                    "Rationale": "If the perimeter is equal to the area then `2l+2w=lw`, so `2l+2(3)=l(3)`, which simplifies to `6=l`.",
                     "Percent": 35
                 }
             }
@@ -1269,34 +1269,34 @@
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "186.38 in³",
+                "Choice": "`186.38` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so V =(1/3)(π)(2.8125)^2 • (7.5) which is closest to 62.13, not 186.38.",
+                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so `V=(1/3)(pi)(2.8125)^2*(7.5)` which is closest to `62.13`, not `186.38`.",
                     "Percent": 16
                 }
             },
             "G": {
-                "Choice": "248.50 in³",
+                "Choice": "`248.50` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so V = (1/3)(π)(2.8125)^2 • (7.5) which is closest to 62.13, not 248.50.",
+                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so `V=(1/3)(pi)(2.8125)^2*(7.5)` which is closest to `62.13`, not `248.50`.",
                     "Percent": 22
                 }
             },
             "H": {
-                "Choice": "248.50 in³",
+                "Choice": "`745.51` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so V = (1/3)(π)(2.8125)^2 • (7.5) which is closest to 62.13, not 745.51.",
+                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so `V=(1/3)(pi)(2.8125)^2*(7.5)` which is closest to `62.13`, not `745.51`.",
                     "Percent": 7
                 }
             },
             "J": {
-                "Choice": "62.13 in³",
+                "Choice": "`62.13` `text(in)^3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so V = (1/3)(π)(2.8125)^2 • (7.5) which is closest to 62.13.",
+                    "Rationale": "The formula for the volume of a cone is `V=1/3pir^2h`, so `V=(1/3)(pi)(2.8125)^2*(7.5)` which is closest to `62.13`.",
                     "Percent": 55
                 }
             }
@@ -1320,38 +1320,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which set of ordered pairs represents y as a function of x?"
+            "Which set of ordered pairs represents `y` as a function of `x`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "{(2, 5), (3, 1), (2, 1), (4, 7)}",
+                "Choice": "`{(2,5),(3,1),(2,1),(4,7)}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Two of the ordered pairs have the same x value. To be a function, every x value is paired with exactly one y value.",
+                    "Rationale": "`text(Two)` of the ordered pairs have the same `x` value. To be a function, every `x` value is paired with exactly `text(one)` `y` value.",
                     "Percent": 5
                 }
             },
             "B": {
-                "Choice": "{(3, 2), (4, 3), (5, 2), (2, 6)}",
+                "Choice": "`{(3,2),(4,3),(5,2),(2,6)}`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Each x value is paired only once with a corresponding y value. To be a function, every x value is paired with exactly one y value.",
+                    "Rationale": "Each `x` value is paired only `text(once)` with a corresponding `y` value. To be a function, every `x` value is paired with exactly `text(one)` `y` value.",
                     "Percent": 68
                 }
             },
             "C": {
-                "Choice": "{(1, 3), (3, 5), (2, 5), (1, 6)}",
+                "Choice": "`{(1,3),(3,5),(2,5),(1,6)}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Two of the ordered pairs have the same x value. To be a function, every x value is paired with exactly one y value.",
+                    "Rationale": "`text(Two)` of the ordered pairs have the same `x` value. To be a function, every `x` value is paired with exactly `text(one)` `y` value.",
                     "Percent": 8
                 }
             },
             "D": {
-                "Choice": "{(4, 7), (4, 6), (4, 4), (4, 1)}",
+                "Choice": "`{(4,7),(4,6),(4,4),(4,1)}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "All of the ordered pairs have the same x value. To be a function, every x value is paired with exactly one y value.",
+                    "Rationale": "All of the ordered pairs have the same `x` value. To be a function, every `x` value is paired with exactly `text(one)` `y` value.",
                     "Percent": 19
                 }
             }
@@ -1375,15 +1375,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When three squares are joined at their vertices to form a right triangle, the combined area of the two smaller squares is the same as the area of the largest square.",
-            "Which three squares do NOT support this statement?"
+            "When `text(three)` squares are joined at their vertices to form a right triangle, the combined area of the `text(two)` smaller squares is the same as the area of the largest square.",
+            "Which `text(three)` squares do NOT support this statement?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "problems/TX17G8M/media/26a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The combined area of the smaller squares, 3^2 + 4^2, is the same as the area of the largest square, 25. These squares support this statement.",
+                    "Rationale": "The combined area of the smaller squares, `3^2+4^2`, is the same as the area of the largest square, `25`. These squares support this statement.",
                     "Percent": 20
                 }
             },
@@ -1391,7 +1391,7 @@
                 "Choice": "problems/TX17G8M/media/26b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The combined area of the smaller squares, 5^2 + 12^2, is the same as the area of the largest square, 13^2. These squares support this statement.",
+                    "Rationale": "The combined area of the smaller squares, `5^2+12^2`, is the same as the area of the largest square, `13^2`. These squares support this statement.",
                     "Percent": 16
                 }
             },
@@ -1399,7 +1399,7 @@
                 "Choice": "problems/TX17G8M/media/26c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The combined area of the smaller squares, 9^2 + 144, is not the same as the area of the largest square, 21^2. These squares do NOT support this statement.",
+                    "Rationale": "The combined area of the smaller squares, `9^2+144`, is not the same as the area of the largest square, `21^2.` These squares do NOT support this statement.",
                     "Percent": 54
                 }
             },
@@ -1407,7 +1407,7 @@
                 "Choice": "problems/TX17G8M/media/26d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The combined area of the smaller squares, 6^2 + 64, is the same as the area of the largest square, 100. These squares support this statement.",
+                    "Rationale": "The combined area of the smaller squares, `6^2+64`, is the same as the area of the largest square, `100`. These squares support this statement.",
                     "Percent": 10
                 }
             }
@@ -1435,34 +1435,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "(x, y)",
+                "Choice": "`(x,y)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After the reflection across the y- axis, the center of the new circle will be at (-x, y), not `(x,y)`.",
+                    "Rationale": "After the reflection across the `ytext(-axis)`, the center of the new circle will be at `(-x,y)`, not `(x,y)`.",
                     "Percent": 6
                 }
             },
             "B": {
-                "Choice": "(x, -y)",
+                "Choice": "`(x,-y)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After the reflection across the y- axis, the center of the new circle will be at (-x, y), not (x, ­ y).",
+                    "Rationale": "After the reflection across the `ytext(-axis)`, the center of the new circle will be at `(-x,y)`, not `(x,-y)`.",
                     "Percent": 20
                 }
             },
             "C": {
-                "Choice": "(-x, y)",
+                "Choice": "`(-x,y)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "After a reflection across the `ytext(-axis)`, the center of the new circle will be at (-x, y).",
+                    "Rationale": "After a reflection across the `ytext(-axis)`, the center of the new circle will be at `(-x,y)`.",
                     "Percent": 62
                 }
             },
             "D": {
-                "Choice": "(-x, -y)",
+                "Choice": "`(-x,-y)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "After the reflection across the y- axis, the center of the new circle will be at (-x, y), not (-x, ­ y).",
+                    "Rationale": "After the reflection across the `ytext(-axis)`, the center of the new circle will be at `(-x,y)`, not `(-x,-y)`.",
                     "Percent": 12
                 }
             }
@@ -1486,14 +1486,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Leanor pays a total of $16.50 for every 6 shirts she has dry-cleaned. Which graph models a relationship with the same unit rate?"
+            "Leanor pays a total of `$16.50` for every `6` shirts she has dry-cleaned. Which graph models a relationship with the same unit rate?"
         ],
         "AnswerChoices": {
             "F": {
                 "Choice": "problems/TX17G8M/media/28a.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph shows a unit rate of 2.75, which models the same rate as the cost to dry-clean each shirt, 16.50/6 = 2.75.",
+                    "Rationale": "The graph shows a unit rate of `2.75`, which models the same rate as the cost to dry-clean `text(each shirt)`, `16.50/6=2.75`.",
                     "Percent": 78
                 }
             },
@@ -1501,7 +1501,7 @@
                 "Choice": "problems/TX17G8M/media/28b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows a unit rate of 16.50, which does not model the same rate as the cost to dry-clean each shirt, 16.50/6 = 2.75.",
+                    "Rationale": "The graph shows a unit rate of `16.50`, which does not model the same rate as the cost to dry-clean `text(each shirt)`, `16.50/6=2.75`.",
                     "Percent": 15
                 }
             },
@@ -1509,7 +1509,7 @@
                 "Choice": "problems/TX17G8M/media/28c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows a unit rate of 10.50, which does not model the same rate as the cost to dry-clean each shirt, 16.50/6 = 2.75.",
+                    "Rationale": "The graph shows a unit rate of `10.50`, which does not model the same rate as the cost to dry-clean `text(each shirt)`, `16.50/6=2.75`.",
                     "Percent": 5
                 }
             },
@@ -1517,7 +1517,7 @@
                 "Choice": "problems/TX17G8M/media/28d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph shows a unit rate of 22.50, which does not model the same rate as the cost to dry-clean each shirt, 16.50/6 = 2.75.",
+                    "Rationale": "The graph shows a unit rate of `22.50`, which does not model the same rate as the cost to dry-clean `text(each shirt)`, `16.50/6=2.75`.",
                     "Percent": 2
                 }
             }
@@ -1543,14 +1543,14 @@
         "Content": [
             "An inequality is shown.",
             ":ibox:`1/8<x<18%`",
-            "Which value of x makes the inequality true?"
+            "Which value of `x` makes the inequality true?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`1/5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "√0.02 is about 0.141, which is between 1/8 = 0.125 and 18% = 0.18, not 1/5 = 0.2.",
+                    "Rationale": "`sqrt(0.02)` is about `0.141`, which is between `1/8=0.125` and `18%=0.18`, not `1/5=0.2`.",
                     "Percent": 12
                 }
             },
@@ -1558,7 +1558,7 @@
                 "Choice": "`1.6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "√0.02 is about 0.141, which is between 1/8 = 0.125 and 18% = 0.18, not 1.6.",
+                    "Rationale": "`sqrt(0.02)` is about `0.141`, which is between `1/8=0.125` and `18%=0.18`, not `1.6`.",
                     "Percent": 19
                 }
             },
@@ -1566,7 +1566,7 @@
                 "Choice": "`0.09`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "√0.02 is about 0.141, which is between 1/8 = 0.125 and 18% = 0.18, not 0.09.",
+                    "Rationale": "`sqrt(0.02)` is about `0.141`, which is between `1/8=0.125` and `18%=0.18`, not `0.09`.",
                     "Percent": 15
                 }
             },
@@ -1574,7 +1574,7 @@
                 "Choice": "`sqrt(0.02)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "√0.02 is about 0.141, which is between 1/8 = 0.125 and 18% = 0.18.",
+                    "Rationale": "`sqrt(0.02)` is about `0.141`, which is between `1/8=0.125` and `18%=0.18`.",
                     "Percent": 54
                 }
             }
@@ -1598,40 +1598,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Triangle MNP and triangle JKL are similar right triangles.",
+            "Triangle `MNP` and triangle `JKL` are similar right triangles.",
             "problems/TX17G8M/media/30a.jpg",
-            "Which proportion can be used to show that the slope of JL is equal to the slope of MP?"
+            "Which proportion can be used to show that the slope of `bar(JL)` is equal to the slope of `bar(MP)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(0 - (-7))/(4 - (-4)) = (-4 - (-10))/(8 - (-1))",
+                "Choice": "`(0-(-7))/(4-(-4))=(-4-(-10))/(8-(-1))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ratios simplify to 7/8 = 6/9, which do not show the correct slope for segments JL and MP.",
+                    "Rationale": "The ratios simplify to `7/8=6/9`, which do not show the correct slope for segments `bar(JL)andbar(MP)`.",
                     "Percent": 11
                 }
             },
             "G": {
-                "Choice": "(0 - 4)/(-4 - (-7)) = (-4 - 8)/(-1 - (-10))",
+                "Choice": "`(0-4)/(-4-(-7))=(-4-8)/(-1-(-10))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The ratios simplify to -4/3 = -12/9, which show the correct slope for segments JL and MP.",
+                    "Rationale": "The ratios simplify to `-4/3=-12/9`, which show the correct slope for segments `bar(JL)andbar(MP)`.",
                     "Percent": 41
                 }
             },
             "H": {
-                "Choice": "(0 - (-4))/(4 - (-7)) = (-4 - (-1))/(8 - (-10))",
+                "Choice": "`(0-(-4))/(4-(-7))=(-4-(-1))/(8-(-10))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ratios simplify to 4/11 ≠ -3/18, which do not show the correct slope for segments JL and MP.",
+                    "Rationale": "The ratios simplify to `4/11!=-3/18`, which do not show the correct slope for segments `bar(JL)andbar(MP)`.",
                     "Percent": 29
                 }
             },
             "J": {
-                "Choice": "(-4 - (-7))/(0 - 4) = (-1 - (-10))/(-4 - 8)",
+                "Choice": "`(-4-(-7))/(0-4)=(-1-(-10))/(-4-8)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The ratios simplify to 3/-4 ≠ 9/-12, which do not show the correct slope for segments JL and MP.",
+                    "Rationale": "The ratios simplify to `3/-4!=9/-12`, which do not show the correct slope for segments `bar(JL)andbar(MP)`.",
                     "Percent": 19
                 }
             }
@@ -1655,38 +1655,38 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Paula completely covered a square wall using 87.5 `text(ft)^2` of wallpaper without any overlap. Which measurement is closest to the side length of this wall in `text(feet)`?"
+            "Paula completely covered a square wall using `87.5` `text(ft)^2` of wallpaper without any overlap. Which measurement is closest to the side length of this wall in `text(feet)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "22 ft",
+                "Choice": "`22` `text(ft)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a square is A = s², so 87.5 = s², the side length is the square root of 87.5, which is closest to 9, not 22.",
+                    "Rationale": "The formula for the area of a square is `A=s^2`, so `87.5=s^2`, the side length is the square root of `87.5`, which is closest to `9`, not `22`.",
                     "Percent": 35
                 }
             },
             "B": {
-                "Choice": "44 ft",
+                "Choice": "`44` `text(ft)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a square is A = s², so 87.5 = s², the side length is the square root of 87.5, which is closest to 9, not 44.",
+                    "Rationale": "The formula for the area of a square is `A=s^2`, so `87.5=s^2`, the side length is the square root of `87.5`, which is closest to `9`, not `44`.",
                     "Percent": 23
                 }
             },
             "C": {
-                "Choice": "9 ft",
+                "Choice": "`9` `text(ft)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the area of a square is A = s², so 87.5 = s², the side length is the square root of 87.5, which is closest to 9.",
+                    "Rationale": "The formula for the area of a square is `A=s^2`, so `87.5=s^2`, the side length is the square root of `87.5`, which is closest to `9`.",
                     "Percent": 35
                 }
             },
             "D": {
-                "Choice": "7 ft",
+                "Choice": "`7` `text(ft)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for the area of a square is A = s², so 87.5 = s², the side length is the square root of 87.5, which is closest to 9, not 7.",
+                    "Rationale": "The formula for the area of a square is `A=s^2`, so `87.5=s^2`, the side length is the square root of `87.5`, which is closest to `9`, not `7`.",
                     "Percent": 6
                 }
             }
@@ -1710,40 +1710,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Ben collected data from a group of 12 people. He measured each person's resting heart rate and recorded the average number of hours each person exercised per week. He created a scatterplot to show the data he collected.",
+            "Ben collected data from a group of `12` people. He measured `text(each person)`'s resting heart rate and recorded the average number of `text(hours)` `text(each person)` exercised `text(per week)`. He created a scatterplot to show the data he collected.",
             "problems/TX17G8M/media/32a.jpg",
-            "Based on the scatterplot, what is the best prediction of the resting heart rate, in beats per minute, of a person who exercises an average of 8 hours each week?"
+            "Based on the scatterplot, what is the best prediction of the resting heart rate, in `text(beats per minute)`, of a person who exercises an average of `8` `text(hours each week)`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "30 beats per minute",
+                "Choice": "`30` `text(beats per minute)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of 8 hours each week is 50 beats per minute, not 30 beats per minute.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of `8` `text(hours each week)` is `50` `text(beats per minute)`, not `30` `text(beats per minute)`.",
                     "Percent": 16
                 }
             },
             "G": {
-                "Choice": "50 beats per minute",
+                "Choice": "`50` `text(beats per minute)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of 8 hours each week is 50 beats per minute.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of `8` `text(hours each week)` is `50` `text(beats per minute)`.",
                     "Percent": 64
                 }
             },
             "H": {
-                "Choice": "55 beats per minute",
+                "Choice": "`55` `text(beats per minute)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of 8 hours each week is 50 beats per minute, not 55 beats per minute.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of `8` `text(hours each week)` is `50` `text(beats per minute)`, not `55` `text(beats per minute)`.",
                     "Percent": 12
                 }
             },
             "J": {
-                "Choice": "60 beats per minute",
+                "Choice": "`60` `text(beats per minute)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of 8 hours each week is 50 beats per minute, not 60 beats per minute.",
+                    "Rationale": "Based on the scatterplot, the best prediction of the resting heart of a person exercising at an average of `8` `text(hours each week)` is `50` `text(beats per minute)`, not `60` `text(beats per minute)`.",
                     "Percent": 8
                 }
             }
@@ -1767,40 +1767,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A right triangle and two of its side lengths are shown in the diagram.",
+            "A right triangle and `text(two)` of its side lengths are shown in the diagram.",
             "problems/TX17G8M/media/33a.jpg",
-            "Which measurement is closest to the value of x in `text(centimeters)`?"
+            "Which measurement is closest to the value of `x` in `text(centimeters)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "37.1 cm",
+                "Choice": "`37.1` `text(cm)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 12^2 + x^2= 39^2 which simplifies to x^2= 1,377 and the square root of 1,377 is closest to 37.1.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `12^2+x^2=39^2` which simplifies to `x^2=1text(,)377` and the square root of `1text(,)377` is closest to `37.1`.",
                     "Percent": 69
                 }
             },
             "B": {
-                "Choice": "40.8 cm",
+                "Choice": "`40.8` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 12^2 + x^2= 39^2 which simplifies to x^2= 1,377 and the square root of 1,377 is closest to 37.1, not 40.8.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `12^2+x^2=39^2` which simplifies to `x^2=1text(,)377` and the square root of `1text(,)377` is closest to `37.1`, not `40.8`.",
                     "Percent": 14
                 }
             },
             "C": {
-                "Choice": "27 cm",
+                "Choice": "`27` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 12^2 + x^2= 39^2 which simplifies to x^2= 1,377 and the square root of 1,377 is closest to 37.1, not 27.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `12^2+x^2=39^2` which simplifies to `x^2=1text(,)377` and the square root of `1text(,)377` is closest to `37.1`, not `27`.",
                     "Percent": 10
                 }
             },
             "D": {
-                "Choice": "51 cm",
+                "Choice": "`51` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so 12^2 + x^2= 39^2 which simplifies to x^2= 1,377 and the square root of 1,377 is closest to 37.1, not 51.",
+                    "Rationale": "The Pythagorean Theorem is `a^2+b^2=c^2`, so `12^2+x^2=39^2` which simplifies to `x^2=1text(,)377` and the square root of `1text(,)377` is closest to `37.1`, not `51`.",
                     "Percent": 6
                 }
             }
@@ -1824,15 +1824,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The number of gift baskets Nikki can make varies directly with the amount of time she spends making the baskets. She can make 4 baskets in 1/2 hour.",
-            "How many baskets can Nikki make in 5 hours?"
+            "The number of gift baskets Nikki can make varies directly with the amount of time she spends making the baskets. She can make `4` baskets in `1/2` `text(hour)`.",
+            "How many baskets can Nikki make in `5` `text(hours)`?"
         ],
         "AnswerChoices": {
             "KEY": {
                 "Choice": "equal:40",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "If Nicki can make 4 baskets in 1/2 hour, she can make 40 baskets in 8 hours.",
+                    "Rationale": "If Nicki can make `4` baskets in `1/2` `text(hour)`, she can make `40` baskets in `8` `text(hours)`.",
                     "Percent": 66
                 }
             }
@@ -1856,40 +1856,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Mr. Flores opened an account with a deposit of $5,000.",
-            ":box:• The account earned annual simple interest.\n\n• He did not make any additional deposits or withdrawals.\n\n• At the end of 4 years, the balance of the account was $6,500.",
-            "What is the annual interest rate on this account?"
+            "Mr. Flores opened an account with a deposit of `$5text(,)000`.",
+            ":box:• The account earned `text(annual)` simple interest.\n\n• He did not make any additional deposits or withdrawals.\n\n• At the end of `4` `text(years)`, the balance of the account was `$6text(,)500`.",
+            "What is the `text(annual)` interest rate on this account?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "5.8%",
+                "Choice": "`5.8%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for simple interest is I = Prt and the interest is 6,500 ­ 5,000 = 1,500, so 1,500 = 5,000(r)(4), and dividing both sides by 20,000 gives r = 0.075 = 7.5%, not 5.8%.",
+                    "Rationale": "The formula for simple interest is `I=Prt` and the interest is `6text(,)500-5text(,)000=1text(,)500`, so `1text(,)500=5text(,)000(r)(4)`, and dividing both sides by `20text(,)000` gives `r=0.075=7.5%`, not `5.8%`.",
                     "Percent": 13
                 }
             },
             "B": {
-                "Choice": "7.5%",
+                "Choice": "`7.5%`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for simple interest is I = Prt and the interest is 6,500 ­ 5,000 = 1,500, so 1,500 = 5,000(r)(4), and dividing both sides by 20,000 gives r = 0.075 = 7.5%.",
+                    "Rationale": "The formula for simple interest is `I=Prt` and the interest is `6text(,)500-5text(,)000=1text(,)500`, so `1text(,)500=5text(,)000(r)(4)`, and dividing both sides by `20text(,)000` gives `r=0.075=7.5%`.",
                     "Percent": 51
                 }
             },
             "C": {
-                "Choice": "3.3%",
+                "Choice": "`3.3%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for simple interest is I = Prt and the interest is 6,500 ­ 5,000 = 1,500, so 1,500 = 5,000(r)(4), and dividing both sides by 20,000 gives r = 0.075 = 7.5%, not 3.3%.",
+                    "Rationale": "The formula for simple interest is `I=Prt` and the interest is `6text(,)500-5text(,)000=1text(,)500`, so `1text(,)500=5text(,)000(r)(4)`, and dividing both sides by `20text(,)000` gives `r=0.075=7.5%`, not `3.3%`.",
                     "Percent": 26
                 }
             },
             "D": {
-                "Choice": "1.9%",
+                "Choice": "`1.9%`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for simple interest is I = Prt and the interest is 6,500 ­ 5,000 = 1,500, so 1,500 = 5,000(r)(4), and dividing both sides by 20,000 gives r = 0.075 = 7.5%, not 1.9%.",
+                    "Rationale": "The formula for simple interest is `I=Prt` and the interest is `6text(,)500-5text(,)000=1text(,)500`, so `1text(,)500=5text(,)000(r)(4)`, and dividing both sides by `20text(,)000` gives `r=0.075=7.5%`, not `1.9%`.",
                     "Percent": 10
                 }
             }
@@ -1913,40 +1913,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Quadrilateral FGHJ was dilated with the origin as the center of dilation to create quadrilateral F'G'H'J'.",
+            "Quadrilateral `FGHJ` was dilated with the origin as the center of dilation to create quadrilateral `F'G'H'J'`.",
             "problems/TX17G8M/media/36a.jpg",
-            "Which rule best represents the dilation that was applied to quadrilateral FGHJ to create quadrilateral F'G'H'J'?"
+            "Which rule best represents the dilation that was applied to quadrilateral `FGHJ` to create quadrilateral `F'G'H'J'`?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "(x, y) ⇒ (5x/7, 5y/7)",
+                "Choice": "`(x,y)->(5/7x,5/7y)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The coordinates of F'G'H'J' are found by multiplying the coordinates of FGHJ by 1/4 which is described by the dilation rule (x, y) ⇒ (1.4x, 1.4y), not (x, y) ⇒ (5x/7, 5y/7).",
+                    "Rationale": "The coordinates of `F'G'H'J'` are found by multiplying the coordinates of `FGHJ` by `1/4` which is described by the dilation rule `(x,y)->(1.4x,1.4y)`, not `(x,y)->(5/7x,5/7y)`.",
                     "Percent": 15
                 }
             },
             "G": {
-                "Choice": "(x, y) ⇒ (x + 1, y + 2)",
+                "Choice": "`(x,y)->(x+1,y+2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The coordinates of F'G'H'J' are found by multiplying the coordinates of FGHJ by 1/4 which is described by the dilation rule (x, y) ⇒ (1.4x, 1.4y), not (x, y) ⇒ (x + 1, y + 2).",
+                    "Rationale": "The coordinates of `F'G'H'J'` are found by multiplying the coordinates of `FGHJ` by `1/4` which is described by the dilation rule `(x,y)->(1.4x,1.4y)`, not `(x,y)->(x+1,y+2)`.",
                     "Percent": 17
                 }
             },
             "H": {
-                "Choice": "(x, y) ⇒ (1.4x, 1.4y)",
+                "Choice": "`(x,y)->(1.4x,1.4y)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The coordinates of F'G'H'J' are found by multiplying the coordinates of FGHJ by 1/4 which is described by the dilation rule (x, y) ⇒ (1.4x, 1.4y).",
+                    "Rationale": "The coordinates of `F'G'H'J'` are found by multiplying the coordinates of `FGHJ` by `1/4` which is described by the dilation rule `(x,y)->(1.4x,1.4y)`.",
                     "Percent": 56
                 }
             },
             "J": {
-                "Choice": "(x, y) ⇒ (x - 2, y + 1)",
+                "Choice": "`(x,y)->(x-2,y+1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The coordinates of F'G'H'J' are found by multiplying the coordinates of FGHJ by 1/4 which is described by the dilation rule (x, y) ⇒ (1.4x, 1.4y), not (x, y) ⇒ (x - 2, y + 1).",
+                    "Rationale": "The coordinates of `F'G'H'J'` are found by multiplying the coordinates of `FGHJ` by `1/4` which is described by the dilation rule `(x,y)->(1.4x,1.4y)`, not `(x,y)->(x-2,y+1)`.",
                     "Percent": 12
                 }
             }
@@ -1970,39 +1970,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Melissa is saving $25 that she earned for washing her mom's car. She earns $10 every week for doing chores, which she also saves.",
-            "Which function can be used to find t, the amount of money Melissa will have saved at the end of n weeks of doing chores?"
+            "Melissa is saving `$25` that she earned for washing her mom's car. She earns `$10` `text(every week)` for doing chores, which she also saves.",
+            "Which function can be used to find `t`, the amount of money Melissa will have saved at the end of `n` `text(weeks)` of doing chores?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "t = 10n + 25",
+                "Choice": "`t=10n+25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The amount of money can be found by multiplying 10 times the number of weeks, n, and adding her saving of 25, which is represented by the function t = 10n + 25.",
+                    "Rationale": "The amount of money can be found by multiplying `10` times the number of `text(weeks)`, `n`, and adding her saving of `25`, which is represented by the function `t=10n+25`.",
                     "Percent": 78
                 }
             },
             "B": {
-                "Choice": "t = 25n + 10",
+                "Choice": "`t=25n+10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The amount of money can be found by multiplying 10 times the number of weeks, n, and adding her saving of 25, which is represented by the function t = 10n + 25, not t = 25n + 10.",
+                    "Rationale": "The amount of money can be found by multiplying `10` times the number of `text(weeks)`, `n`, and adding her saving of `25`, which is represented by the function `t=10n+25`, not `t=25n+10`.",
                     "Percent": 13
                 }
             },
             "C": {
-                "Choice": "t = 35n",
+                "Choice": "`t=35n`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The amount of money can be found by multiplying 10 times the number of weeks, n, and adding her saving of 25, which is represented by the function t = 10n + 25, not t = 35n.",
+                    "Rationale": "The amount of money can be found by multiplying `10` times the number of `text(weeks)`, `n`, and adding her saving of `25`, which is represented by the function `t=10n+25`, not `t=35n`.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "t = 15n",
+                "Choice": "`t=15n`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The amount of money can be found by multiplying 10 times the number of weeks, n, and adding her saving of 25, which is represented by the function t = 10n + 25, not t = 15n.",
+                    "Rationale": "The amount of money can be found by multiplying `10` times the number of `text(weeks)`, `n`, and adding her saving of `25`, which is represented by the function `t=10n+25`, not `t=15n`.",
                     "Percent": 2
                 }
             }
@@ -2035,7 +2035,7 @@
                 "Choice": "equal:237.5",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for the total surface area of a rectangular prism is S = Ph + 2B which is 25(6.5) + 2(37.5) = 237.5.",
+                    "Rationale": "The formula for the total surface area of a rectangular prism is `S=Ph+2B` which is `25(6.5)+2(37.5)=237.5`.",
                     "Percent": 31
                 }
             }
@@ -2065,34 +2065,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "$7.50 per box",
+                "Choice": "`$7.50` `text(per box)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The graph describes the profit to be $7.50 for each box.",
+                    "Rationale": "The graph describes the profit to be `$7.50` for `text(each box)`.",
                     "Percent": 80
                 }
             },
             "B": {
-                "Choice": "$10.00 per box",
+                "Choice": "`$10.00` `text(per box)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph describes the profit to be $7.50 for each box, not 10.00 for each box.",
+                    "Rationale": "The graph describes the profit to be `$7.50` for `text(each box)`, not `10.00` for `text(each box)`.",
                     "Percent": 6
                 }
             },
             "C": {
-                "Choice": "$4.00 per 30 boxes",
+                "Choice": "`$4.00` `text(per)` `30` `text(boxes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph describes the profit to be $7.50 for each box, not 4.00 for 30 boxes.",
+                    "Rationale": "The graph describes the profit to be `$7.50` for `text(each box)`, not `4.00` for `30` boxes.",
                     "Percent": 7
                 }
             },
             "D": {
-                "Choice": "$43.00 per 4 boxes",
+                "Choice": "`$43.00` `text(per)` `4` `text(boxes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The graph describes the profit to be $7.50 for each box, not 3.00 for 4 boxes.",
+                    "Rationale": "The graph describes the profit to be `$7.50` for `text(each box)`, not `3.00` for `4` boxes.",
                     "Percent": 6
                 }
             }
@@ -2116,7 +2116,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The daily attendance at a bowling alley was recorded for 15 days. The scatterplot shows the number of lanes rented each day and the number of people who bowled that day.",
+            "The daily attendance at a bowling alley was recorded for `15` `text(days)`. The scatterplot shows the number of lanes rented `text(each day)` and the number of people who bowled `text(that day)`.",
             "problems/TX17G8M/media/40a.jpg",
             "Which statement is best supported by the scatterplot?"
         ],
@@ -2125,15 +2125,15 @@
                 "Choice": "There is a non-linear association between the number of lanes rented and the number of people who bowl.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The scatterplot models a positive linear association, not a non-linear association, between the lanes rented and the number of people who bowl.",
+                    "Rationale": "The scatterplot models a `text(positive)` linear association, not a non-linear association, between the lanes rented and the number of people who bowl.",
                     "Percent": 11
                 }
             },
             "G": {
-                "Choice": "There is a negative linear association between the number of lanes rented and the number of people who bowl.",
+                "Choice": "There is a `text(negative)` linear association between the number of lanes rented and the number of people who bowl.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The scatterplot models a positive linear association, not a negative linear association, between the lanes rented and the number of people who bowl.",
+                    "Rationale": "The scatterplot models a `text(positive)` linear association, not a `text(negative)` linear association, between the lanes rented and the number of people who bowl.",
                     "Percent": 7
                 }
             },
@@ -2141,15 +2141,15 @@
                 "Choice": "There is no apparent association between the number of lanes rented and the number of people who bowl.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The scatterplot models a positive linear association, not a no apparent association, between the lanes rented and the number of people who bowl.",
+                    "Rationale": "The scatterplot models a `text(positive)` linear association, not a no apparent association, between the lanes rented and the number of people who bowl.",
                     "Percent": 8
                 }
             },
             "J": {
-                "Choice": "There is a positive linear association between the number of lanes rented and the number of people who bowl.",
+                "Choice": "There is a `text(positive)` linear association between the number of lanes rented and the number of people who bowl.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The scatterplot models a positive linear association between the lanes rented and the number of people who bowl.",
+                    "Rationale": "The scatterplot models a `text(positive)` linear association between the lanes rented and the number of people who bowl.",
                     "Percent": 74
                 }
             }
@@ -2173,39 +2173,39 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A container that holds sugar is shaped like a cylinder. The radius of the container is 3 inches, and the height of the container is 10.5 inches.",
+            "A container that holds sugar is shaped like a cylinder. The radius of the container is `3` `text(inches)`, and the height of the container is `10.5` `text(inches)`.",
             "Which measurement is closest to the volume of the container in `text(cubic inches)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "254.47 in³",
+                "Choice": "`254.47` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so V = π(3)^2 • (10.5) which is closest to 296.88, not 254.47.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so `V=pi(3)^2*(10.5)` which is closest to `296.88`, not `254.47`.",
                     "Percent": 8
                 }
             },
             "B": {
-                "Choice": "296.88 in³",
+                "Choice": "`296.88` `text(in)^3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so V = π(3)^2 • (10.5) which is closest to 296.88.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so `V=pi(3)^2*(10.5)` which is closest to `296.88`.",
                     "Percent": 66
                 }
             },
             "C": {
-                "Choice": "395.84 in³",
+                "Choice": "`395.84` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so V = π(3)^2 • (10.5) which is closest to 296.88, not 395.84.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so `V=pi(3)^2*(10.5)` which is closest to `296.88`, not `395.84`.",
                     "Percent": 9
                 }
             },
             "D": {
-                "Choice": "197.92 in³",
+                "Choice": "`197.92` `text(in)^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so V = π(3)^2 • (10.5) which is closest to 296.88, not 197.92.",
+                    "Rationale": "The formula for volume of a cylinder is `V=pir^2h`, so `V=pi(3)^2*(10.5)` which is closest to `296.88`, not `197.92`.",
                     "Percent": 16
                 }
             }
@@ -2229,40 +2229,40 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Frank and Erica are selling ribbons to raise money for the football team. The graph shows the linear relationship between the number of ribbons each of them has left to sell and the number of days that they have been selling ribbons.",
+            "Frank and Erica are selling ribbons to raise money for the football team. The graph shows the linear relationship between the number of ribbons each of them has left to sell and the number of `text(days)` that they have been selling ribbons.",
             "problems/TX17G8M/media/42a.jpg",
-            "On which day does it appear that Frank and Erica will have the same number of ribbons left to sell?"
+            "On which `text(day)` does it appear that Frank and Erica will have the same number of ribbons left to sell?"
         ],
         "AnswerChoices": {
             "F": {
-                "Choice": "Day 15",
+                "Choice": "`text(Day)` `15`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The two lines appear to intersect at day 18, not day 15.",
+                    "Rationale": "The `text(two)` lines appear to intersect at `text(day)` `18`, not `text(day)` `15`.",
                     "Percent": 8
                 }
             },
             "G": {
-                "Choice": "Day 48",
+                "Choice": "`text(Day)` `48`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The two lines appear to intersect at day 18, not day 48.",
+                    "Rationale": "The `text(two)` lines appear to intersect at `text(day)` `18`, not `text(day)` `48`.",
                     "Percent": 3
                 }
             },
             "H": {
-                "Choice": "Day 33",
+                "Choice": "`text(Day)` `33`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The two lines appear to intersect at day 18, not day 33.",
+                    "Rationale": "The `text(two)` lines appear to intersect at `text(day)` `18`, not `text(day)` `33`.",
                     "Percent": 4
                 }
             },
             "J": {
-                "Choice": "Day 18",
+                "Choice": "`text(Day)` `18`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The two lines appear to intersect at day 18.",
+                    "Rationale": "The `text(two)` lines appear to intersect at `text(day)` `18`.",
                     "Percent": 85
                 }
             }

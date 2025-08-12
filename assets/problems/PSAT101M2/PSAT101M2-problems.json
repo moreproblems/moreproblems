@@ -1302,30 +1302,30 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on the model, what is the velocity, in `text(kilometers per second)`, of a galaxy that is `15` `text(Mpc)` from Earth?"
+            "Based on the model, what is the velocity, in `text(kilometers per second)`, of a galaxy that is `15` `text(Mpc)` from `text(Earth)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`7,500` `text(km/s)`",
+                "Choice": "`7text(,)500` `text(km/s)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The model indicates that the relationship between the velocities of the galaxies, in `text(km/s)`, and their distance from Earth, in `text(Mpc)`, is `v=500d`. Therefore, the velocity of a galaxy that is `15` `text(Mpc)` from Earth is `v = 500(15)` `text(km/s),or7,500` `text(km/s)`.",
+                    "Rationale": "The model indicates that the relationship between the velocities of the galaxies, in `text(km/s)`, and their distance from `text(Earth)`, in `text(Mpc)`, is `v=500d`. Therefore, the velocity of a galaxy that is `15` `text(Mpc)` from Earth is `v = 500(15)` `text(km/s),or7,500` `text(km/s)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "`5,000` `text(km/s)`",
+                "Choice": "`5text(,)000` `text(km/s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the model, this choice is the speed of a galaxy that is `10` `text(Mpc)` from Earth.",
+                    "Rationale": "Based on the model, this choice is the speed of a galaxy that is `10` `text(Mpc)` from `text(Earth)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`1,100` `text(km/s)`",
+                "Choice": "`1text(,)100` `text(km/s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the model, this choice is the speed of a galaxy that is `2.2` `text(Mpc)` from Earth.",
+                    "Rationale": "Based on the model, this choice is the speed of a galaxy that is `2.2` `text(Mpc)` from `text(Earth)`.",
                     "Percent": 0
                 }
             },
@@ -1333,7 +1333,7 @@
                 "Choice": "`750` `text(km/s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Based on the model, this choice is the speed of a galaxy that is `1.5` `text(Mpc)` from Earth.",
+                    "Rationale": "Based on the model, this choice is the speed of a galaxy that is `1.5` `text(Mpc)` from `text(Earth)`.",
                     "Percent": 0
                 }
             }

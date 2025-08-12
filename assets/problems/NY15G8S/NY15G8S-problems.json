@@ -18,7 +18,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "cell → organ → tissue → organ system",
+                "Choice": "`text(cell)->text(organ)->text(tissue)->text(organ system)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -26,7 +26,7 @@
                 }
             },
             "2": {
-                "Choice": "organ system → cell → tissue → organ",
+                "Choice": "`text(organ system)->text(cell)->text(tissue)->text(organ)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -34,7 +34,7 @@
                 }
             },
             "3": {
-                "Choice": "tissue → organ → organ system → cell",
+                "Choice": "`text(tissue)->text(organ)->text(organ system)->text(cell)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -42,7 +42,7 @@
                 }
             },
             "4": {
-                "Choice": "cell → tissue → organ → organ system",
+                "Choice": "`text(cell)->text(tissue)->text(organ)->text(organ system)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -120,7 +120,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Dogs and cats are animals that have many similar body structures but they do not mate with each other. These two animals are classified in"
+            "Dogs and cats are animals that have many similar body structures but they do not mate with each other. These `text(two)` animals are classified in"
         ],
         "AnswerChoices": {
             "1": {
@@ -173,9 +173,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagrams below represent two systems of the human body.",
+            "The diagrams below represent `text(two)` systems of the human body.",
             "problems/NY15G8S/media/4a.jpg",
-            "Which two systems are represented in the diagrams?"
+            "Which `text(two)` systems are represented in the diagrams?"
         ],
         "AnswerChoices": {
             "1": {
@@ -334,7 +334,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The photograph below shows three cats with differences in their fur length and patterns.",
+            "The photograph below shows `text(three)` cats with differences in their fur length and patterns.",
             "problems/NY15G8S/media/7a.jpg",
             "These differences are most likely due to"
         ],
@@ -442,7 +442,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "One function of a plant's seed is to"
+            "`text(One)` function of a plant's seed is to"
         ],
         "AnswerChoices": {
             "1": {
@@ -495,13 +495,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents four organisms.",
+            "The diagram below represents `text(four)` organisms.",
             "problems/NY15G8S/media/10a.jpg",
             "How many of the organisms represented are multicellular?"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "one",
+                "Choice": "`text(one)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -509,7 +509,7 @@
                 }
             },
             "2": {
-                "Choice": "two",
+                "Choice": "`text(two)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -517,7 +517,7 @@
                 }
             },
             "3": {
-                "Choice": "three",
+                "Choice": "`text(three)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -525,7 +525,7 @@
                 }
             },
             "4": {
-                "Choice": "four",
+                "Choice": "`text(four)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -611,7 +611,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "one",
+                "Choice": "`text(one)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -619,7 +619,7 @@
                 }
             },
             "2": {
-                "Choice": "seven",
+                "Choice": "`text(seven)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -627,7 +627,7 @@
                 }
             },
             "3": {
-                "Choice": "three",
+                "Choice": "`text(three)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -635,7 +635,7 @@
                 }
             },
             "4": {
-                "Choice": "four",
+                "Choice": "`text(four)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -666,7 +666,7 @@
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "A",
+                "Choice": "`A`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -674,7 +674,7 @@
                 }
             },
             "2": {
-                "Choice": "B",
+                "Choice": "`B`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -682,7 +682,7 @@
                 }
             },
             "3": {
-                "Choice": "C",
+                "Choice": "`C`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -690,7 +690,7 @@
                 }
             },
             "4": {
-                "Choice": "E",
+                "Choice": "`E`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -717,11 +717,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Between which two stages does cell division first occur?"
+            "Between which `text(two)` stages does cell division `text(first)` occur?"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "A and B",
+                "Choice": "`AandB`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -729,7 +729,7 @@
                 }
             },
             "2": {
-                "Choice": "B and C",
+                "Choice": "`BandC`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -737,7 +737,7 @@
                 }
             },
             "3": {
-                "Choice": "C and D",
+                "Choice": "`CandD`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -745,7 +745,7 @@
                 }
             },
             "4": {
-                "Choice": "D and E",
+                "Choice": "`DandE`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1147,11 +1147,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "One positive effect of recycling aluminum cans to manufacture new beverage containers is"
+            "`text(One)` `text(positive)` effect of recycling aluminum cans to manufacture new beverage containers is"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "conserving Earth's resources",
+                "Choice": "conserving `text(Earth)`'s resources",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1167,7 +1167,7 @@
                 }
             },
             "3": {
-                "Choice": "warming Earth's atmosphere",
+                "Choice": "warming `text(Earth)`'s atmosphere",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1200,13 +1200,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents a portion of Earth's latitude/longitude system. A and B are locations on Earth's surface. The arrows show the direction of Earth's rotation.",
+            "The diagram below represents a portion of `text(Earth)`'s latitude/longitude system. `AandB` are locations on `text(Earth)`'s surface. The arrows show the direction of `text(Earth)`'s rotation.",
             "problems/NY15G8S/media/23a.jpg",
-            "If it is noon at location A, then at location B it is"
+            "If it is `text(noon)` at location `A`, then at location `B` it is"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "morning",
+                "Choice": "`text(morning)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1214,7 +1214,7 @@
                 }
             },
             "2": {
-                "Choice": "noon",
+                "Choice": "`text(noon)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1222,7 +1222,7 @@
                 }
             },
             "3": {
-                "Choice": "afternoon",
+                "Choice": "`text(afternoon)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1230,7 +1230,7 @@
                 }
             },
             "4": {
-                "Choice": "midnight",
+                "Choice": "`text(midnight)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1255,11 +1255,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The length of one day on Earth is determined by how long it takes"
+            "The length of `text(one day)` on `text(Earth)` is determined by how long it takes"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "the Moon to revolve once",
+                "Choice": "the `text(Moon)` to revolve `text(once)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1267,7 +1267,7 @@
                 }
             },
             "2": {
-                "Choice": "the Moon to rotate once",
+                "Choice": "the `text(Moon)` to rotate `text(once)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1275,7 +1275,7 @@
                 }
             },
             "3": {
-                "Choice": "Earth to rotate once",
+                "Choice": "`text(Earth)` to rotate `text(once)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1283,7 +1283,7 @@
                 }
             },
             "4": {
-                "Choice": "Earth to revolve once",
+                "Choice": "`text(Earth)` to revolve `text(once)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1308,7 +1308,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "When Earth's shadow falls on the Moon, the shadow causes a"
+            "When `text(Earth)`'s shadow falls on the `text(Moon)`, the shadow causes a"
         ],
         "AnswerChoices": {
             "1": {
@@ -1336,7 +1336,7 @@
                 }
             },
             "4": {
-                "Choice": "Moon phase",
+                "Choice": "`text(Moon)` phase",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1361,7 +1361,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Earth's hydrosphere is a layer of"
+            "`text(Earth)`'s hydrosphere is a layer of"
         ],
         "AnswerChoices": {
             "1": {
@@ -1414,13 +1414,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The map below shows the current positions of South America and Africa. Points A and B represent areas on the two continents where scientists have discovered fossils of the same animal species.",
+            "The map below shows the current positions of South America and Africa. Points `AandB` represent areas on the `text(two)` continents where scientists have discovered fossils of the same animal species.",
             "problems/NY15G8S/media/27a.jpg",
             "How does the Theory of Plate Tectonics explain the location of these fossils?"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "The continents were once joined together.",
+                "Choice": "The continents were `text(once)` joined together.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1428,7 +1428,7 @@
                 }
             },
             "2": {
-                "Choice": "The animals were able to swim from one continent to the other.",
+                "Choice": "The animals were able to swim from `text(one)` continent to the other.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1436,7 +1436,7 @@
                 }
             },
             "3": {
-                "Choice": "Humans transported the animals from point A to point B.",
+                "Choice": "Humans transported the animals from point `A` to point `B`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2001,7 +2001,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagrams below represent three phases of matter, labeled A, B, and C.",
+            "The diagrams below represent `text(three)` phases of matter, labeled `A,B,andC`.",
             "problems/NY15G8S/media/38a.jpg",
             "problems/NY15G8S/media/38b.jpg",
             "problems/NY15G8S/media/38c.jpg",
@@ -2088,7 +2088,7 @@
                 }
             },
             "4": {
-                "Choice": "Sodium chloride is composed of only one atom.",
+                "Choice": "Sodium chloride is composed of only `text(one)` atom.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2168,10 +2168,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The arrows in the diagram below represent the forces acting on a moving bicycle at two different times, time 1 and time 2. The length of each arrow represents the amount of force being applied.",
+            "The arrows in the diagram below represent the forces acting on a moving bicycle at `text(two)` different times, time `1` and time `2`. The length of each arrow represents the amount of force being applied.",
             "problems/NY15G8S/media/41a.jpg",
             "problems/NY15G8S/media/41b.jpg",
-            "As a result of the change in the forces from time 1 to time 2, the bicyclist will"
+            "As a result of the change in the forces from time `1` to time `2`, the bicyclist will"
         ],
         "AnswerChoices": {
             "1": {
@@ -2224,15 +2224,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The sequence of diagrams 1, 2, and 3 below represents different levers being used to lift a 100-newton (N) weight. The distance in `text(meters)` (m) from the fulcrum to the applied force is different in each diagram.",
+            "The sequence of diagrams `1,2,and3` below represents different levers being used to lift a `100text(-newton)` `(text(N))` weight. The distance in `text(meters)` `(text(m))` from the fulcrum to the applied force is different in each diagram.",
             "problems/NY15G8S/media/42a.jpg",
             "problems/NY15G8S/media/42b.jpg",
             "problems/NY15G8S/media/42c.jpg",
-            "How many meters from the fulcrum to the applied force would allow this weight to be lifted using only 10 N of applied force?"
+            "How many `text(meters)` from the fulcrum to the applied force would allow this weight to be lifted using only `10` `text(N)` of applied force?"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "20",
+                "Choice": "`20`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2240,7 +2240,7 @@
                 }
             },
             "2": {
-                "Choice": "10",
+                "Choice": "`10`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2248,7 +2248,7 @@
                 }
             },
             "3": {
-                "Choice": "8",
+                "Choice": "`8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2256,7 +2256,7 @@
                 }
             },
             "4": {
-                "Choice": "4",
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2336,13 +2336,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph below shows the relative sizes and surface temperatures of four groups of stars. The surface temperature of the stars is measured in Kelvin (K). The Sun is part of the main sequence group.",
+            "The graph below shows the relative sizes and surface temperatures of `text(four)` groups of stars. The surface temperature of the stars is measured in `text(Kelvin)` `(text(K))`. The `text(Sun)` is part of the main sequence group.",
             "problems/NY15G8S/media/44a.jpg",
-            "According to the graph, the Sun is best described as"
+            "According to the graph, the `text(Sun)` is best described as"
         ],
         "AnswerChoices": {
             "1": {
-                "Choice": "massive sized, with a surface temperature of approximately 20,000K",
+                "Choice": "massive sized, with a surface temperature of approximately `20text(,)000text(K)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2350,7 +2350,7 @@
                 }
             },
             "2": {
-                "Choice": "massive sized, with a surface temperature of approximately 10,000K",
+                "Choice": "massive sized, with a surface temperature of approximately `10text(,)000text(K)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2358,7 +2358,7 @@
                 }
             },
             "3": {
-                "Choice": "average sized, with a surface temperature of approximately 8,000K",
+                "Choice": "average sized, with a surface temperature of approximately `8text(,)000text(K)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2366,7 +2366,7 @@
                 }
             },
             "4": {
-                "Choice": "average sized, with a surface temperature of approximately 6,000K",
+                "Choice": "average sized, with a surface temperature of approximately `6text(,)000text(K)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2448,8 +2448,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Determine the mass (in kg) of the cart, using the equation below.",
-            ":ibox:Force (newton) mass (kg) acceleration (m/s²)"
+            "Determine the mass (in `text(kg)`) of the cart, using the equation below.",
+            ":ibox:`text(Force )(text(newton))=text(mass )(text(kg))xxtext(acceleration )(text(m)/text(s)^2)`"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2543,7 +2543,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Based on the graph, predict the acceleration (in `text(m)/text(s)^2`) of the cart if the student were to perform the same experiment again using 2 N of force."
+            "Based on the graph, predict the acceleration (in `text(m)/text(s)^2`) of the cart if the student were to perform the same experiment again using `2` `text(N)` of force."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2574,7 +2574,7 @@
         "Content": [
             "The diagram below represents part of a science classroom. Several items are labeled.",
             "problems/NY15G8S/media/49a.jpg",
-            "Choose TWO labeled items from the diagram and explain how each is used to keep students safe."
+            "Choose `text(TWO)` labeled items from the diagram and explain how each is used to keep students safe."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2690,7 +2690,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify one way the students could have measured their heart rates."
+            "Identify `text(one)` way the students could have measured their heart rates."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2743,7 +2743,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify one source of error that might have influenced the results of this investigation."
+            "Identify `text(one)` source of error that might have influenced the results of this investigation."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2763,9 +2763,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The graph below shows the solubility of three substances in 100 grams of water at various temperatures.",
+            "The graph below shows the solubility of `text(three)` substances in `100` `text(grams)` of water at various temperatures.",
             "problems/NY15G8S/media/55a.jpg",
-            "How many grams of KBr will dissolve in 100 grams of water at 60°C?"
+            "How many `text(grams)` of `text(KBr)` will dissolve in `100` `text(grams)` of water at `60text(°C)`?"
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -2866,7 +2866,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which process in the water cycle is represented by arrow X, where water flows over land to the ocean?"
+            "Which process in the water cycle is represented by arrow `X`, where water flows over land to the ocean?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2897,7 +2897,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What percentage of the offspring will have a round shape?"
+            "What `text(percentage)` of the offspring will have a round shape?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -2928,7 +2928,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Complete the Punnett square below to show the probability of the results of crossing two Rr parents."
+            "Complete the Punnett square below to show the probability of the results of crossing `text(two)` `Rr` parents."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2948,10 +2948,10 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagrams below represent different types of metamorphosis (complete and incomplete) occurring in the life cycles of two insects. The stages of development are labeled in both life cycles.",
+            "The diagrams below represent different types of metamorphosis (complete and incomplete) occurring in the life cycles of `text(two)` insects. The stages of development are labeled in both life cycles.",
             "problems/NY15G8S/media/61a.jpg",
             "problems/NY15G8S/media/61b.jpg",
-            "Based on the diagrams, describe one way complete metamorphosis is different from incomplete metamorphosis."
+            "Based on the diagrams, describe `text(one)` way complete metamorphosis is different from incomplete metamorphosis."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -2971,9 +2971,9 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "The diagram below represents a plant. Three plant structures are labeled A, B, and C.",
+            "The diagram below represents a plant. `text(Three)` plant structures are labeled `A,B,andC`.",
             "problems/NY15G8S/media/62a.jpg",
-            "Complete the chart below by identifying the structures and describing one function of each. The structure and function for A is shown.",
+            "Complete the chart below by identifying the structures and describing `text(one)` function of each. The structure and function for `A` is shown.",
             ":table:problems/NY15G8S/supps/NY15G8S-T2.json"
         ],
         "AnswerChoices": {
@@ -3027,9 +3027,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The diagram below represents a simple animal cell. To the right of the cell, two cell structures have been enlarged and labeled A and B. A portion of structure B has been enlarged and labeled C.",
+            "The diagram below represents a simple animal cell. To the right of the cell, `text(two)` cell structures have been enlarged and labeled `AandB`. A portion of structure `B` has been enlarged and labeled `C`.",
             "problems/NY15G8S/media/63a.jpg",
-            "A description of each cell structure is provided in the chart below. Complete the chart by identifying each cell structure. The name for structure A is shown.",
+            "A description of each cell structure is provided in the chart below. Complete the chart by identifying each cell structure. The name for structure `A` is shown.",
             ":table:problems/NY15G8S/supps/NY15G8S-T3.json"
         ],
         "AnswerChoices": {
@@ -3069,7 +3069,7 @@
         "Content": [
             "The diagram below represents a bird, fertilized eggs, and a nest.",
             "problems/NY15G8S/media/64a.jpg",
-            "Do birds exhibit mainly internal development or external development? Give one piece of evidence to support your answer."
+            "Do birds exhibit mainly internal development or external development? Give `text(one)` piece of evidence to support your answer."
         ],
         "AnswerChoices": {
             "A": {
@@ -3108,18 +3108,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which evidence from the diagram indicates that all four of the organisms shown are reproducing asexually?"
+            "Which evidence from the diagram indicates that all `text(four)` of the organisms shown are reproducing asexually?"
         ],
-        "AnswerChoices": {
-            "KEY": {
-                "Choice": "",
-                "Key": {
-                    "Correct": true,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "66": {
@@ -3139,7 +3130,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If the parent hydra has 32 chromosomes, how many chromosomes does the hydra offspring have?"
+            "If the parent hydra has `32` chromosomes, how many chromosomes does the hydra offspring have?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3201,7 +3192,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify one factor that has caused some species to become extinct."
+            "Identify `text(one)` factor that has caused some species to become extinct."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3272,7 +3263,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Identify one producer labeled in this food web."
+            "Identify `text(one)` producer labeled in this food web."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3333,8 +3324,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "List TWO objects NOT shown in the diagram that are also part of our solar system.",
-            ":FR: and :FR:"
+            "List `text(TWO)` objects NOT shown in the diagram that are also part of our `text(solar system)`.",
+            ":FR-1: and :FR-2:"
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3397,7 +3388,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Explain why Uranus takes longer than Mars to revolve around the Sun."
+            "Explain why `text(Uranus)` takes longer than `text(Mars)` to revolve around the `text(Sun)`."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3419,7 +3410,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Earth is closer to the Sun in December than it is in June. Explain why warmer air temperatures and summer occur in the Northern Hemisphere in June rather than in December."
+            "`text(Earth)` is closer to the `text(Sun)` in `text(December)` than it is in `text(June)`. Explain why warmer air temperatures and `text(summer)` occur in the `text(Northern)` Hemisphere in `text(June)` rather than in `text(December)`."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3441,11 +3432,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Select one motion of the Moon and one motion of Earth that allow an observer in New York State to see one cycle of the phases of the Moon."
+            "Select `text(one)` motion of the `text(Moon)` and `text(one)` motion of `text(Earth)` that allow an observer in New York State to see `text(one)` cycle of the phases of the `text(Moon)`."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "Moon's rotation",
+                "Choice": "`text(Moon)`'s rotation",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -3453,7 +3444,7 @@
                 }
             },
             "B": {
-                "Choice": "Moon's revolution",
+                "Choice": "`text(Moon)`'s revolution",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3461,7 +3452,7 @@
                 }
             },
             "C": {
-                "Choice": "Earth's rotation",
+                "Choice": "`text(Earth)`'s rotation",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -3469,7 +3460,7 @@
                 }
             },
             "D": {
-                "Choice": "Earth's revolution",
+                "Choice": "`text(Earth)`'s revolution",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -3496,7 +3487,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Select the Moon phase that would be visible to an observer in New York State at night when the Moon is in the position shown in the diagram above."
+            "Select the `text(Moon)` phase that would be visible to an observer in New York State at `text(night)` when the `text(Moon)` is in the position shown in the diagram above."
         ],
         "AnswerChoices": {
             "A": {
@@ -3583,7 +3574,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Explain why the Moon at this position is visible in the sky, even though it does not emit its own light."
+            "Explain why the `text(Moon)` at this position is visible in the sky, even though it does not emit its own light."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3605,7 +3596,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What is the approximate amount of time the Moon takes to complete one cycle of phases and return to the same phase as shown in the diagram? Include units in your answer."
+            "What is the approximate amount of time the `text(Moon)` takes to complete `text(one)` cycle of phases and return to the same phase as shown in the diagram? Include `text(units)` in your answer."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3652,7 +3643,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "If it takes 5 seconds for the sound of thunder to travel 1 mile, how many miles was the person from the lightning bolt?"
+            "If it takes `5` `text(seconds)` for the sound of thunder to travel `1` `text(mile)`, how many `text(miles)` was the person from the lightning bolt?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -3705,7 +3696,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Describe one action a person should take to stay safe from the approaching thunderstorm."
+            "Describe `text(one)` action a person should take to stay safe from the approaching thunderstorm."
         ],
         "AnswerChoices": {},
         "Parts": {}
@@ -3725,9 +3716,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The map below shows the center of a low-pressure system (L) over the United States and the fronts associated with the low-pressure system.",
+            "The map below shows the center of a low-pressure system `(L)` over the United States and the fronts associated with the low-pressure system.",
             "problems/NY15G8S/media/81a.jpg",
-            "Identify one weather condition likely to occur along the fronts of this low-pressure system."
+            "Identify `text(one)` weather condition likely to occur along the fronts of this low-pressure system."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -3813,7 +3804,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Draw an X centered on one location on Earth's surface where volcanoes are most likely to form."
+            "Draw an `X` centered on `text(one)` location on `text(Earth)`'s surface where volcanoes are most likely to form."
         ],
         "AnswerChoices": {
             "KEY": {
