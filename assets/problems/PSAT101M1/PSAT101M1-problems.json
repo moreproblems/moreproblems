@@ -443,11 +443,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A truck enters a stretch of road that drops `4` `text(meters)` in elevation for every `100` `text(meters)` along the length of the road. The road is at `1,300` `text(meters)` elevation where the truck entered, and the truck is traveling at `16` `text(meters per second)` along the road. What is the elevation of the road, in `text(meters)`, at the point where the truck passes `t` `text(seconds)` after entering the road?"
+            "A truck enters a stretch of road that drops `4` `text(meters)` in elevation for every `100` `text(meters)` along the length of the road. The road is at `1text(,)300` `text(meters)` elevation where the truck entered, and the truck is traveling at `16` `text(meters per second)` along the road. What is the elevation of the road, in `text(meters)`, at the point where the truck passes `t` `text(seconds)` after entering the road?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`1,300-0.04t`",
+                "Choice": "`1text(,)300-0.04t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "`(4t)/100` would be the number of meters that the elevation drops `t` `text(seconds)` after the truck enters the road if its speed were `1` `text(meter per second)`.",
@@ -455,15 +455,15 @@
                 }
             },
             "B": {
-                "Choice": "`1,300-0.64t`",
+                "Choice": "`1text(,)300-0.64t`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since the truck is traveling at `16` `text(meters per second)` along the road, the distance it has traveled `t` `text(seconds)` after entering the road is `16t` `text(meters)`. Since the elevation of the road drops `4` `text(meters)` for every `100` `text(meters)` along the length of the road, it follows that for `16t` `text(meters)` along the road, the elevation drops `(4/100)16tor0.64t`. Therefore, the elevation of the road at the point where the truck passes t seconds after entering the road is `1,300-0.64t` `text(meters)`.",
+                    "Rationale": "Since the truck is traveling at `16` `text(meters per second)` along the road, the distance it has traveled `t` `text(seconds)` after entering the road is `16t` `text(meters)`. Since the elevation of the road drops `4` `text(meters)` for every `100` `text(meters)` along the length of the road, it follows that for `16t` `text(meters)` along the road, the elevation drops `(4/100)16tor0.64t`. Therefore, the elevation of the road at the point where the truck passes t seconds after entering the road is `1text(,)300-0.64t` `text(meters)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`1,300-4t`",
+                "Choice": "`1text(,)300-4t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "`4t` `text(meters)` does not give the number of meters the elevation of the road drops.",
@@ -471,7 +471,7 @@
                 }
             },
             "D": {
-                "Choice": "`1,300-16t`",
+                "Choice": "`1text(,)300-16t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The drop rate of `4` `text(meters)` for every `100` `text(meters)` along the road is not used.",

@@ -360,7 +360,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`text(First)` find the product of `d` and `$2.25` and the product of `t` and `$0.75`. Then find the sum of the products.",
+                "Choice": "`text(First)` find the product of `dand$2.25` and the product of `tand$0.75`. Then find the sum of the products.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Correct.",
@@ -368,7 +368,7 @@
                 }
             },
             "B": {
-                "Choice": "`text(First)` find the sum of `d` and `$2.25` and the sum of `t` and `$0.75`. Then find the product of the sums.",
+                "Choice": "`text(First)` find the sum of `dand$2.25` and the sum of `tand$0.75`. Then find the product of the sums.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Solves `(d+2.25)xx(t+0.75)`.",
@@ -376,7 +376,7 @@
                 }
             },
             "C": {
-                "Choice": "`text(First)` find the product of `d` and `$2.25` and the sum of `t` and `$0.75`. Then find the sum of the product and the sum.",
+                "Choice": "`text(First)` find the product of `dand$2.25` and the sum of `tand$0.75`. Then find the sum of the product and the sum.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Solves `(d xx2.25)+(t+0.75)`.",
@@ -384,7 +384,7 @@
                 }
             },
             "D": {
-                "Choice": "`text(First)` find the product of `d` and `$2.25` and the sum of `t` and `$0.75`. Then find the product of the product and the sum.",
+                "Choice": "`text(First)` find the product of `dand$2.25` and the sum of `tand$0.75`. Then find the product of the product and the sum.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "Solves `(d xx2.25)xx(t+0.75)`.",
