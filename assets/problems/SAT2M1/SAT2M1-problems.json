@@ -469,19 +469,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A rocket contained `467,000` `text(kilograms)` (`text(kg)`) of propellant before launch. Exactly `21` `text(seconds)` after launch, `362,105` `text(kg)` of this propellant remained. On average, approximately how much propellant, in `text(kg)`, did the rocket burn each second after launch?"
+            "A rocket contained `467text(,)000` `text(kilograms)` (`text(kg)`) of propellant before launch. Exactly `21` `text(seconds)` after launch, `362text(,)105` `text(kg)` of this propellant remained. On average, approximately how much propellant, in `text(kg)`, did the rocket burn each second after launch?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`4,995`",
+                "Choice": "`4text(,)995`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the rocket contained `467,000` `text(kilograms)` (`text(kg)`) of propellant before launch and had `362,105` `text(kg)` remaining exactly `21` `text(seconds)` after launch. Finding the difference between the amount, in `text(kg)`, of propellant before launch and the remaining amount, in `text(kg)`, of propellant after launch gives the amount, in `text(kg)`, of propellant burned during the `21` `text(seconds)`: `467,000-362,105=104,895`. Dividing the amount of propellant burned by the number of seconds yields `(104,895)/21=4,995`. Thus, an average of `4,995` `text(kg)` of propellant burned each second after launch.",
+                    "Rationale": "It's given that the rocket contained `467text(,)000` `text(kilograms)` (`text(kg)`) of propellant before launch and had `362text(,)105` `text(kg)` remaining exactly `21` `text(seconds)` after launch. Finding the difference between the amount, in `text(kg)`, of propellant before launch and the remaining amount, in `text(kg)`, of propellant after launch gives the amount, in `text(kg)`, of propellant burned during the `21` `text(seconds)`: `467text(,)000-362text(,)105=104text(,)895`. Dividing the amount of propellant burned by the number of seconds yields `(104text(,)895)/21=4text(,)995`. Thus, an average of `4text(,)995` `text(kg)` of propellant burned each second after launch.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "`17,243`",
+                "Choice": "`17text(,)243`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -489,7 +489,7 @@
                 }
             },
             "C": {
-                "Choice": "`39,481`",
+                "Choice": "`39text(,)481`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -497,7 +497,7 @@
                 }
             },
             "D": {
-                "Choice": "`104,895`",
+                "Choice": "`104text(,)895`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
