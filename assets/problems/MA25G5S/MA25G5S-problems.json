@@ -4,24 +4,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Use evidence from a given landscape that includes simple landforms and rock layers to support a claim about the role of erosion or deposition in the formation of the landscape over long periods of time."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
+            "A rock formation with a hole is shown in the diagram.",
             "problems/MA25G5S/media/1a.jpg",
-            ""
+            "Which of the following describes how the hole in the rock most likely formed?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Lava turned into rock.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Deposition of sediment occurred.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -37,15 +36,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Weathering and erosion occurred.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Heat and pressure were applied to rock layers.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -60,31 +59,30 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Life Science"
         ],
         "SubTopics": [
-            ""
+            "Use evidence to construct an explanation for how the variations in characteristics among individuals within the same species may provide advantages to these individuals in their survival and reproduction."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G5S/media/2a.jpg",
-            ""
+            "A gardener wants to plant a flower garden in an area where a large number of deer live. Deer eat the flowers, leaves, and stems of many types of garden plants.",
+            "Which of the following plants is most likely to survive in this garden?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/2a.jpg",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/2b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -92,7 +90,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/2c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -100,7 +98,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/2d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -115,23 +113,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Technology/Engineering"
         ],
         "SubTopics": [
-            ""
+            "Generate several possible solutions to a given design problem. Compare each solution based on how well each is likely to meet the criteria and constraints of the design problem."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "Storm drains are put in city streets to keep streets from flooding during heavy rain. Storm drain covers allow water to pass through them but keep large objects out. The diagrams show `text(two)` storm drain cover designs: design `X` and design `Y`.",
             "problems/MA25G5S/media/3a.jpg",
-            ""
+            "problems/MA25G5S/media/3b.jpg",
+            "A city council is discussing the benefits of each storm drain cover design. Which of the following is a benefit of using design `Y` instead of design `X`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Water will flow more slowly through design `Y`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,7 +138,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Less material is needed to manufacture design `Y`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -147,15 +146,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Design `Y` will block more trash from going into the drain.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Design `Y` will block more water from going into the drain.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -170,23 +169,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Use graphs and tables of local weather data to describe and predict typical weather during a particular season in an area."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G5S/supps/MA25G5S-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The table shows weather data for the `text(first three days)` of a `text(month)` for `text(one)` of the `text(two)` cities.",
             "problems/MA25G5S/media/4a.jpg",
-            ""
+            "In which city and `text(month)` were the data most likely collected?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Boston in `text(May)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -194,7 +195,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Boston in `text(August)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -202,15 +203,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Phoenix in `text(June)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Phoenix in `text(October)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -225,23 +226,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Make observations and collect data to provide evidence that rocks, soils, and sediments are broken into smaller pieces through mechanical weathering and moved around through erosion."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G5S/supps/MA25G5S-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G5S/media/5a.jpg",
-            ""
+            "Erosion plays a role in the landscapes of both Boston and Phoenix.",
+            "Based on the climate data, which of the following tables correctly shows the city where `text(each weather event)` would most likely occur and the type of erosion that would occur there?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/5a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,7 +251,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/5b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -257,15 +259,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/5c.jpg",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/MA25G5S/media/5d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -277,136 +279,155 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Obtain information to describe that energy and fuels humans use are derived from natural resources and that some energy and fuel sources are renewable and some are not."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G5S/supps/MA25G5S-S1.json"
+        ],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G5S/media/6a.jpg",
-            ""
+            "The students want to know whether solar panels would be more effective for generating electricity in Phoenix or in Boston."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 2,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following describes the energy resource used by solar panels?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "renewable",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "nonrenewable",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following best explains why more electricity can be generated from solar panels in Phoenix than in Boston?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Phoenix is farther from the ocean than Boston.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Phoenix has warmer temperatures than Boston.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Phoenix has more hours of sunshine than Boston.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Obtain and summarize information about the climate of different regions of the world to illustrate that typical weather conditions over a year vary by region."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G5S/supps/MA25G5S-S1.json"
+        ],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G5S/media/7a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS.",
+            "The students compared the climates of Boston and Phoenix in `text(summer)andtext(winter)`."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Compare the low temperatures in both cities in `text(January)` to the low temperatures in both cities in `text(July)`. Use climate data from the graphs to support your answer."
+                ],
+                "AnswerChoices": {}
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Describe `text(two)` ways `text(July)andtext(August)` in Boston are different from `text(July)andtext(August)` in Phoenix. Use climate data from the graphs to support your answer."
+                ],
+                "AnswerChoices": {}
             }
-        },
-        "Parts": {}
+        }
     },
     "8": {
         "Number": 8,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Apply scientific principles of energy and motion to test and refine a device that converts kinetic energy to electrical energy or uses stored energy to cause motion or produce light or sound."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A device is designed to spin a fan. A weight moves downward, as shown, and causes the fan to spin until the weight hits the ground.",
             "problems/MA25G5S/media/8a.jpg",
-            ""
+            "Which of the following changes would cause the fan to spin for a longer time?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "making the rod longer",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -414,7 +435,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "making the fan blades larger",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -422,7 +443,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "tying a thicker rope to the weight",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -430,9 +451,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "dropping the weight from a greater height",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -445,23 +466,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Provide evidence to explain the effect of multiple forces, including friction, on an object. Include balanced forces that do not change the motion of the object and unbalanced forces that do change the motion of the object."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A group of students conducted an investigation using the following steps:",
+            ":ibox:`1`. Put a long string through a straw.\n`2`. Tape the ends of the string to opposite walls of the classroom.\n`3`. Blow up a balloon and hold it closed.\n`4`. Tape the balloon to the straw.\n`5`. Let go of the balloon.",
+            "Air was released from the balloon, as shown, and the balloon moved to the left.",
             "problems/MA25G5S/media/9a.jpg",
-            ""
+            "What caused the balloon to move left?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The forces on the balloon were balanced.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -469,15 +492,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The forces on the balloon were unbalanced.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The force of gravity on the balloon was equal to the force of friction.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -485,7 +508,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The force of friction on the balloon was equal to the force from the moving air.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -497,136 +520,222 @@
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Use a model to describe that the food animals digest (a) contains energy that was once energy from the Sun, and (b) provides energy and nutrients for life processes, including body repair, growth, motion, body warmth, and reproduction."
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS.",
+            "In an ecosystem, birds prey on snails, and snails eat grass. Mice also eat grass. These organisms are shown in the pictures.",
             "problems/MA25G5S/media/10a.jpg",
-            ""
+            "problems/MA25G5S/media/10b.jpg"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Identify the original source of energy in this ecosystem."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "match:Sun",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "C",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Categorize `text(each organism)` from to represent the flow of energy."
+                ],
+                "AnswerChoices": {
+                    "A:Bird": {
+                        "Choice": "3:Secondary Consumer",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B:Grass": {
+                        "Choice": "1:Producer",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C:Snail": {
+                        "Choice": "2:Primary Consumer",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D:Mouse": {
+                        "Choice": "2:Primary Consumer",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "11": {
         "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Evaluate different solutions to reduce the impacts of a natural event such as an earthquake, blizzard, or flood on humans."
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS.",
+            "The diagrams show `text(two)` structures used to control flooding: a flood wall and a levee. The flood wall is made of concrete. The levee is a low area with trees and a bank made of soil.",
             "problems/MA25G5S/media/11a.jpg",
-            ""
+            "problems/MA25G5S/media/11b.jpg"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following is an advantage of using the levee instead of the flood wall to control flooding?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "The levee is built using natural materials.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "The levee changes the landscape over time.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "The levee takes up more space than the flood wall.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "The levee takes longer to build than the flood wall.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "A flood wall can be made of stone, brick, or concrete. An engineer wants to determine whether concrete is the most effective construction material for a flood wall.",
+                    "Which of the following describes the best way for the engineer to determine whether concrete is more effective than stone or brick?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "The engineer builds a concrete flood wall and observes what happens when the river floods.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "The engineer interviews people to learn how to build flood walls using either concrete, brick, or stone.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "The engineer builds concrete flood walls on several rivers and observes what happens when the rivers flood.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "The engineer compares what happens during flooding on rivers that have concrete walls and rivers that have brick or stone flood walls.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "12": {
         "Number": 12,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Conduct an experiment to determine whether the mixing of two or more substances results in new substances with new properties (a chemical reaction) or not (a mixture)."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G5S/media/12a.jpg",
-            ""
+            "A student stirred salt into a beaker of water. The student observed the color, smell, and temperature of the contents of the beaker before and after the salt was added.",
+            "Which of the following questions was the student most likely investigating?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Can gases have a color?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -634,7 +743,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Did the water gain stored energy?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -642,15 +751,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Did a chemical reaction take place?",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "How does temperature affect smell?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -665,23 +774,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Technology/Engineering"
         ],
         "SubTopics": [
-            ""
+            "Use sketches or drawings to show how each part of a product or device relates to other parts in the product or device."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The diagram shows a view of the bottom of a toy car that is powered by energy from a stretched rubber band.",
             "problems/MA25G5S/media/13a.jpg",
-            ""
+            "Based on the diagram, which of the following describes the main function of the axle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The axle holds the car body together.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -689,15 +798,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The axle spins and turns the rear wheels.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The axle keeps the car body on the ground.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -705,7 +814,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The axle adds extra weight to the bottom of the car.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -720,23 +829,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Develop and compare multiple ways to transfer information through encoding, sending, receiving, and decoding a pattern."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "People on different ships can communicate with each other using combinations of flags with colorful symbols. `text(Each combination)` represents a different message. To send a message, a person on `text(one)` ship raises the flags so people on other ships can see them. The diagram shows a ship with a message that means “Our ship is moving toward your ship.”",
             "problems/MA25G5S/media/14a.jpg",
-            ""
+            "Which of the following `text(best)` describes `text(one)` advantage of using flags for communication instead of talking over a radio?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The messages can be sent and received at night.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -744,7 +853,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Encoding the messages is the fastest way to send the messages.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -752,7 +861,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The messages sent do not need to be decoded to be understood.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -760,9 +869,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The people encoding and decoding the messages do not have to speak the same language.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -772,146 +881,63 @@
     },
     "15": {
         "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/MA25G5S/media/15a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "16": {
-        "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/MA25G5S/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Use a particle model of matter to explain common phenomena involving gases, and phase changes between gas and liquid and between liquid and solid."
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/MA25G5S/media/17a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS.",
+            "A student conducted a demonstration using a dry sheet of paper, a cup, and a container of water. The diagram shows `text(four steps)` in the demonstration.",
+            "problems/MA25G5S/media/15a.jpg",
+            "problems/MA25G5S/media/15b.jpg",
+            "problems/MA25G5S/media/15c.jpg",
+            "problems/MA25G5S/media/15d.jpg"
         ],
         "AnswerChoices": {},
         "Parts": {
             "A": {
-                "Type": "FR",
-                "NumChoices": 0,
+                "Type": "MC",
+                "NumChoices": 4,
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    ""
+                    "Which of the following `text(best)` explains why the paper stayed dry in the demonstration?"
                 ],
                 "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
+                    "A": {
+                        "Choice": "A force pulled the water away from the paper.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Electrical forces in the paper repelled the water.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "The paper filled the cup so the water could not enter.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Air in the cup prevented the water from touching the paper.",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -926,19 +952,19 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    ""
+                    "Which of the following is a property of matter that supports your answer to Part A?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "",
+                        "Choice": "All matter takes up space.",
                         "Key": {
-                            "Correct": false,
+                            "Correct": true,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
                     "B": {
-                        "Choice": "",
+                        "Choice": "All matter expands to fill its container.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -946,7 +972,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "",
+                        "Choice": "All matter can be pushed apart by a force.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -954,7 +980,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "",
+                        "Choice": "All matter is pulled toward Earth by gravity.",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -965,28 +991,28 @@
             }
         }
     },
-    "18": {
-        "Number": 18,
+    "16": {
+        "Number": 16,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Physical Science"
         ],
         "SubTopics": [
-            ""
+            "Make observations to show that energy can be transferred from place to place by sound, light, heat, and electric currents."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G5S/media/18a.jpg",
-            ""
+            "Wind turbines convert kinetic energy from wind into electrical energy. A wind turbine is shown.",
+            "problems/MA25G5S/media/16a.jpg",
+            "Under which of the following conditions will a wind turbine produce the most electrical energy?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "temperatures of `20-30text(°F)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -994,7 +1020,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "temperatures of `70-80text(°F)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1002,7 +1028,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "wind speeds of `5-10` `text(miles per hour)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1010,9 +1036,128 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "wind speeds of `15-20` `text(miles per hour)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Life Science"
+        ],
+        "SubTopics": [
+            "Compare at least two designs for a composter to determine which is most likely to encourage decomposition of materials."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 3,
+        "Explain": false,
+        "Content": [
+            ":ibox:THIS QUESTION HAS `bbtext(THREE)` PARTS.",
+            "Students tested a composter to determine how well it worked. The students added waste material to the composter. The composter is shown.",
+            "problems/MA25G5S/media/17a.jpg",
+            "After several `text(weeks)`, the students observed how well the composter worked."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Identify what the students should have measured to determine how well the composter worked."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "match:volume",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "After their observation, the students added bacteria to the composter.",
+                    "Explain how adding bacteria could make the composter work better."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Describe `text(one)` way, other than adding more bacteria, the students could make the composter work better."
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Physical Science"
+        ],
+        "SubTopics": [
+            "Use evidence to construct an explanation relating the speed of an object to the energy of that object."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The diagram shows a person riding a bicycle at `text(three)` positions on a trail that goes up and down a hill. The speed of the bicycle at `text(each position)` is shown in `text(kilometers per hour)` `(text(km)/text(hr))`.",
+            "problems/MA25G5S/media/18a.jpg",
+            "A student claims that the bicycle has the most kinetic energy when it is at the top of the hill. What piece of evidence shows that the student's claim is `text(incorrect)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The bicycle has to be pedaled when going up the hill.",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The bicycle has a constant mass at the top of the hill.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The bicycle can move down the hill without being pedaled.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The bicycle is moving the slowest when at the top of the hill.",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1025,31 +1170,31 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Earth & Space Sciences"
         ],
         "SubTopics": [
-            ""
+            "Evaluate the merit of a design solution that reduces the damage caused by weather."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A lightning rod is a pole placed on the top of a building. If struck by lightning, the rod conducts electricity away from the building. The electricity travels through a wire to the ground so the building is not damaged. The diagram shows lightning striking a lightning rod on top of a building.",
             "problems/MA25G5S/media/19a.jpg",
-            ""
+            "What material should be used for the lightning rod?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "metal",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "plastic",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1057,7 +1202,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "rubber",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1065,7 +1210,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "wood",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1077,42 +1222,42 @@
     },
     "20": {
         "Number": 20,
-        "Type": "MC",
+        "Type": "MS",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Life Science"
         ],
         "SubTopics": [
-            ""
+            "Distinguish between inherited characteristics and those characteristics that result from a direct interaction with the environment. Give examples of characteristics of living organisms that are influenced by both inheritance and the environment."
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A male dog and a female dog are shown in the picture. The dogs are bred and produce puppies.",
             "problems/MA25G5S/media/20a.jpg",
-            ""
+            "Select `text(two)` traits or behaviors that the puppies most likely inherit from the parents."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "color of fur",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "length of tail",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "catching a ball",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1120,7 +1265,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "sitting on command",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

@@ -1,59 +1,95 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.2"
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/MA25G8C/media/1a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS.",
+            "The following questions focus on the role of individuals in a democracy."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Individuals have many rights and responsibilities as citizens of the United States. Which of the following activities best describes a right of citizens?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "paying taxes",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "obeying traffic laws",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "practicing a religion",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following pairs of activities best describes responsibilities of citizens?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "paying taxes and obeying traffic laws",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "practicing a religion and paying taxes",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "obeying traffic laws and practicing a religion",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "2": {
         "Number": 2,
@@ -63,52 +99,90 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.12"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/2a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following best describes the actions of the individuals in Source `1`?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "They are voting.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "They are protesting.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "They are celebrating.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following best explains why the individuals in Source `1` are participating in the `text(1963)` March on Washington?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "to elect a candidate",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "to show support for a cause",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "to raise money for an election",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "3": {
         "Number": 3,
@@ -118,20 +192,22 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.8"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/3a.jpg",
-            ""
+            "Part of a civil rights group's report about the `text(1964)` Civil Rights Bill is shown.",
+            ":box:Plans for successful Senate consideration of the Civil Rights Bill have been completed. . . . At this time, there is no reason to believe that the promise to take up the Civil Rights Bill will be broken. . . . Senators . . . have agreed upon an effective and continuous [communication] with civil rights organizations. . . . A great many statements are being made about whether the House passed bill should or should not be amended.",
+            "Which of the following sentences from the report `text(best)` shows that citizens and legislators worked together?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "“Plans for successful Senate consideration of the Civil Rights Bill have been completed.”",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,7 +215,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "“At this time, there is no reason to believe that the promise to take up the Civil Rights Bill will be broken.”",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -147,15 +223,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "“Senators . . . have agreed upon an effective and continuous [communication] with civil rights organizations.”",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "“A great many statements are being made about whether the House passed bill should or should not be amended.”",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -167,113 +243,118 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "SR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.7"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
-        "Explain": false,
+        "Explain": true,
         "Content": [
-            "",
-            "problems/MA25G8C/media/4a.jpg",
-            ""
+            "Based on the information in Source `3`, identify `text(one)` leadership quality demonstrated by Representative Powell. Explain your reasoning."
         ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.9"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S2.json"
+        ],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/5a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Based on Source `1`, Gerald Ford and Jimmy Carter both had experience in which of the following types of jobs before running for president of the United States?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "public service jobs",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "private service jobs",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "educational service jobs",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following best explains why this experience is important for a U.S. president?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "It involves making decisions with politicians.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "It involves hiring workers for many companies.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "It involves carrying out policies that help citizens.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "6": {
         "Number": 6,
@@ -283,20 +364,20 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T3.5"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/6a.jpg",
-            ""
+            "Based on Sources `1and2`, which of the following policies would Gerald Ford most likely have supported in the `text(1976)` presidential campaign?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "creating new federal rules to regulate the economy",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +385,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "providing funding for more train and bus routes in cities",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,7 +393,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "raising taxes on companies that sell products in multiple states",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -320,9 +401,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "allowing each state to make its own laws to prevent air and water pollution",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -332,57 +413,26 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.5"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The following table shows some of the states that Gerald Ford and Jimmy Carter visited during the `text(1976)` presidential campaign and the number of times they visited `text(each state)`.",
             "problems/MA25G8C/media/7a.jpg",
-            ""
+            "Using the information in Source `3`, explain `text(one)` reason it was important for the candidates to visit different states during the presidential campaign."
         ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "8": {
@@ -393,20 +443,20 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.5"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/8a.jpg",
-            ""
+            "Based on the sources, which of the following best describes the role of citizens when the new nutritional guideline rules were proposed?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Citizens created additional rules.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -414,7 +464,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Citizens protested against the rules.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -422,15 +472,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Citizens provided opinions that influenced the rules.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Citizens became government workers to change the rules.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -448,20 +498,22 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.13"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The following diagram shows some steps in the process of creating the nutritional guideline rules for school meals. The diagram is incomplete.",
             "problems/MA25G8C/media/9a.jpg",
-            ""
+            "Which of the following `text(best)` completes the diagram?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Interest groups support legislation to help farmers grow healthier foods.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -469,7 +521,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Citizens vote to increase the amount of money schools can spend on healthy meals.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -477,7 +529,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The judicial branch declares laws about school nutrition programs unconstitutional.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -485,9 +537,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Organizations advocate for better nutrition in school meals to promote healthy lifestyles.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -497,162 +549,133 @@
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.13"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/10a.jpg",
-            ""
+            "It is important to a democracy for policy organizations, such as the `text(ones)` mentioned in Source `3`, to provide information they collect to the federal government.",
+            "Explain `text(one)` reason it is important to a democracy for these organizations to provide this information to the federal government."
         ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     },
     "11": {
         "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T4.10"
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 4,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/11a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(FOUR)` PARTS.",
+            "A group of students gathered in front of city hall to protest budget cuts to the school's music department. Students brought instruments, microphones, and speakers. They started playing music to show support for the school's music department.",
+            "A city official approached `text(one)` of the students, and they had the following conversation.",
+            ":box:`bbtext(Official)`: Protests that make loud noise require a city permit by law. Does your group have a permit?\n\n`bbtext(Student)`: I did not know that we needed a permit. Since our actions are peaceful, we want to continue protesting.\n\n`bbtext(Official)`: It is after `8:00` `text(p.m.)`, and many people that live in the area are complaining about the loud noise your group is making. You can come back to protest on another `text(day)` when your group has a permit to do so.\n\n`bbtext(Student)`: Tonight is the city council meeting where the school's music department budget will be voted on. It is important that we continue to protest now. We will apply for a permit if we protest again.\n\n`bbtext(Official)`: The fine for protesting without the required permit is `$500.00`. Your group will be required to pay the fine or appear in court to argue your case if you continue to protest tonight."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Some students in the group thought that a law requiring a permit to protest restricted individual rights.",
+                    "Explain why this law might restrict individual rights."
+                ],
+                "AnswerChoices": {}
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Based on the principle of the common good, some students in the group thought that the government should require a permit to protest.",
+                    "Explain why a law requiring a permit to protest might support the common good."
+                ],
+                "AnswerChoices": {}
             },
             "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Explain why democratic governments need to balance individual rights with the common good."
+                ],
+                "AnswerChoices": {}
             },
             "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "The students decide that they want to change the law requiring a permit to protest.",
+                    "Describe `text(one)` action, besides protesting, that the students could take to promote changing the law."
+                ],
+                "AnswerChoices": {}
             }
-        },
-        "Parts": {}
+        }
     },
     "12": {
         "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 3,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T1.2"
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 3,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/12a.jpg",
-            ""
+            "Political characteristics of the ancient Roman Republic influenced the Founders of the U.S. government when they created the `text(three)` branches of government.",
+            "Which branch of the U.S. government was most influenced by each political characteristic?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`text(Two)` consuls were elected to lead the military and government.": {
+                "Choice": "2:the executive branch",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:Citizens participated in assemblies where they voted to create laws.": {
+                "Choice": "1:the legislative branch",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`text(Eight)` men were chosen `text(each year)` to make decisions about disagreements between Roman citizens.": {
+                "Choice": "3:the judicial branch",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -662,58 +685,112 @@
     },
     "13": {
         "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T3.1"
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/13a.jpg",
-            ""
+            ":ibox:THIS QUESTION HAS `bbtext(TWO)` PARTS.",
+            "The Department of Homeland Security is a part of the federal government responsible for public safety. This Department is part of the executive branch."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "The U.S. Congress passes a law related to public safety and the Department of Homeland Security carries out the law.",
+                    "This scenario is an example of which of the following?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "federalism",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "judicial review",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "individual rights",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "separation of powers",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following parts of the federal government includes the Secretary of Homeland Security?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "the Cabinet",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "the Supreme Court",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "a Senate committee",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "a House of Representatives committee",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "14": {
         "Number": 14,
@@ -723,20 +800,20 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T6.10"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/14a.jpg",
-            ""
+            "Which form of government is best illustrated by the information in the timeline?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "oligarchy",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -744,7 +821,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "monarchy",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -752,15 +829,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "democracy",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "confederacy",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -778,28 +855,28 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T6.9"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/15a.jpg",
-            ""
+            "The new school in the timeline was most likely built using funds from which of the following?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "taxes",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "loans",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -807,7 +884,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "donations",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -815,7 +892,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "corporations",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -833,20 +910,20 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T6.10"
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/MA25G8C/supps/MA25G8C-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/16a.jpg",
-            ""
+            "Middle school students could have had the most direct involvement in the decision-making process during which of the following parts of the timeline?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`text(November 2017)`: A town proposes a project to build a new school.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -854,15 +931,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`text(January 2019)`: A town meeting is held to discuss the project with the community.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`text(March 2019)`: A special town election is held at polling locations.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -870,7 +947,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`text(February 2020)`: Construction on the school begins.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -882,88 +959,58 @@
     },
     "17": {
         "Number": 17,
-        "Type": "MP",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 4,
         "Topics": [
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T5.6"
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/MA25G8C/media/17a.jpg",
-            ""
+            "The following text describes the U.S. Supreme Court case Tinker v. Des Moines.",
+            ":box:In the `text(1960s)`, students at a public school in Des Moines, Iowa, wore black armbands in school to protest the Vietnam War. As a result, the students were suspended from school. Their parents then sued the school. The case went to the Supreme Court, which ruled in favor of the students.",
+            "Which of the following parts of the U.S. Constitution `text(best)` supports the Supreme Court's decision in this case?"
         ],
-        "AnswerChoices": {},
-        "Parts": {
+        "AnswerChoices": {
             "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
+                "Choice": "the commerce clause, because it allows students to purchase armbands",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
                 }
             },
             "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
+                "Choice": "the First Amendment, because it provides protections for free speech",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "the elastic clause, because it enables schools to create new rules to protect students",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "the Fifth Amendment, because it protects the rights of individuals to assemble peacefully",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
                 }
             }
-        }
+        },
+        "Parts": {}
     },
     "18": {
         "Number": 18,
@@ -973,28 +1020,28 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T5.1"
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The following political cartoon shows an idea about the U.S. Constitution.",
             "problems/MA25G8C/media/18a.jpg",
-            ""
+            "Which part of the Constitution `text(best)` supports the idea illustrated in this cartoon?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "“The Congress shall have the Power . . . To make all Laws which shall be necessary and proper . . .” (Article `1`)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "“The executive Power shall be vested in a President of the United States of America. . . .” (Article `2`)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1002,7 +1049,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "“The judicial Power of the United States, shall be vested in `text(one)` supreme Court. . . .” (Article `3`)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1010,7 +1057,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "“This Constitution . . . shall be the supreme Law of the Land . . .” (Article `6`)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1028,20 +1075,20 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T1.4"
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/19a.jpg",
-            ""
+            "The following excerpt describes some of the rights outlined in the Magna Carta.",
+            ":box:No [person] shall be taken or imprisoned or [deprived] or exiled* or in any way destroyed . . . except by the lawful judgment of his peers or by the law of the land. . . .\n\nTo no one will we . . . refuse or delay, right or justice. . . .\n\n*exiled — forced out",
+            "Which of the following rights in the U.S. Constitution is `text(most)` related to the protections described in this excerpt?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "right to vote",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1049,7 +1096,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "right to free speech",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1057,15 +1104,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "right to due process",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "right to own property",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1083,20 +1130,19 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "8.T2.1"
         ],
         "SuppContent": [],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/MA25G8C/media/20a.jpg",
-            ""
+            "During the American Revolution, enslaved people used key ideas from the Declaration of Independence to argue for their freedom. James Armistead Lafayette was an enslaved person who petitioned for his freedom in `text(1786)`, after serving as a spy for the Continental Army during the Revolution.",
+            "Which of the following is an idea from the Declaration of Independence that was most likely used in Lafayette's petition?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Governments must show courage.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1104,7 +1150,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Governments depend on war heroes.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1112,7 +1158,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "All people have the right to change their constitution.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1120,7 +1166,61 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "All people have natural rights that they are born with.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "21": {
+        "Number": 21,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "8.T3.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The U.S. Constitution gives the government the power to make an agreement with another country, known as a treaty. In `text(1918)`, during World War I, the president of the United States signed a peace treaty with other countries to end the war. The peace treaty was never ratified.",
+            "Which of the following is a check on the powers of the president that explains why the peace treaty was not ratified?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The Senate voted to reject the peace treaty.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Citizens rejected the peace treaty in an election.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The Supreme Court declared the treaty unconstitutional.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "State governments created a new peace treaty with other nations.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
