@@ -1,85 +1,57 @@
 {
     "Variable": {
         "Definition": [
-            "A symbol for a number is not known yet."
+            "A variable is symbol or placeholder - usually a letter like `x` or `y` - that represents an unknown number or quantity whose value can change. The value a variable takes on determines the value of the expression that contains the variable."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding variables is essential for solving many types of problems - including solving equations for an unknown quantity and describing relationships between two related quantities."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Constant": {
         "Definition": [
-            "A fixed number."
+            "A constant is a value that is fixed and does not change within an expression. Constants can represented as stand-alone numbers that are added or subtracted to other terms, coefficients that are multiplied or divided with variables, or even letters that are unknown but remain the same."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding variables is essential for solving many types of problems - including solving equations for an unknown quantity and describing relationships between two related quantities."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Expression": {
         "Definition": [
-            "A combination of variables, constants, and operations `(+,-,xx,-:)`, without an equal sign `(=)`."
+            "An expression is a mathematical statement that combines variables, constants, and operations (such as `+,-,xx,and-:`). Expressions represent a single value, so they do not contain equal signs (`=`) or inequality symbols (such as `<,>,<=,and>=`). Expressions can be compared to each other to form equations.",
+            "When manipulating an expression, it is important to follow the correct order of operations so that any new expressions are equivalent."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Manipulating expressions is essential for solving many types of problems - including simplifying or expanding expressions to find other expressions that are equivalent."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Equation": {
         "Definition": [
-            "A statement that compares two expressions with an equal sign `(=)`."
+            "An equation is a mathematical statement that compares two expressions with an equal sign `(=)`, meaning they have the same value.",
+            "When manipulating an equation, it is important to keep both sides of the equation balanced. This means that any operation performed on one side of the equation should also be performed on the other side."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding and manipulating equations is essential for solving many types of problems - including solving equations for an unknown value or defining an equation that describes a real-world situation."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Solution": {
         "Definition": [
-            "A value for a variable that makes an equation true or, for a system, a set of values for the variables that satisfies all equations simultaneously."
+            "A solution is a value (or set of values) for a variable that makes an equation, inequality, or system true. Solutions for an equation are specific values that satisfy the equality; solutions for an inequality are ranges of values that satisfy the comparison; and solutions for a system are sets of specific values that satisfy all equations at the same time."
         ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [],
-        "Related": []
-    },
-    "Order Of Operations": {
-        "Definition": [
-            "Describes the correct sequence for calculations. The acronym PEMDAS describes this sequence - Parentheses, then Exponents, then Multiplication and Division, then Addition and Subtraction"
+        "Relevance": [
+            "Understanding and finding solutions is essential for solving many types of problems - including solving equations that represent real-world situations, interpreting graphs for points of intersections, and identifying special cases where equations, inequalities, or systems might have no solutions or infinitely many solutions."
         ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [],
-        "Related": []
-    },
-    "Equivalent Expressions": {
-        "Definition": [
-            "Two expression that are equal to each other for all possible variable values."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [
-            "`2(x+1)=2x+2`"
-        ],
-        "Related": []
-    },
-    "Equivalent Equations": {
-        "Definition": [
-            "Two equations that have the same solution set."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [
-            "`x+1=2and2x+2=4`"
-        ],
-        "Related": []
-    },
-    "Absolute Value": {
-        "Definition": [
-            "The distance that a number is from zero on the number line. Written as `abs(x)`."
-        ],
-        "Relevance": [],
         "Category": "",
         "Examples": [],
         "Related": []
@@ -166,20 +138,52 @@
     },
     "Linear Function": {
         "Definition": [
-            "A function described by an equation that can be written as y=mx+b (slope-intercept form). Its graph is a straight line."
+            "A linear function is a relationship between two variables - usually `x` and `y` - with a constant rate of change, or slope. The graph of a linear function will always produce a straight line.",
+            "Equations for linear functions are commonly written as `y=mx+b` (slope-intercept form), where `m` represents the slope and `b` represents the `ytext(-intercept)`."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding and manipulating linear functions is essential for solving many types of problems. - including identifying what variables represent, determining the rate of change or initial value, modeling relationships based on real-world situations, and interpreting information from graphs or tables."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Polynomial Function": {
         "Definition": [
-            "A function that involves sums of terms with non-negative integer exponents on variables. Examples include linear `(n=1)`, quadratic `(n=2)`, and cubic `(n=3)` functions."
+            "A polynomial function is a mathematical expression that consists of variables with non-negative integer exponents and their coefficients, combined by addition, subtraction, and multiplication.",
+            "Equations for polynomial functions are generally written as `f(x)=a_nx^n+a_(n-1)x^(n-1)+...+a_1x+a_0` (general form), where `n` represents the highest exponent, or degree, and `a`'s represent coefficients.",
+            "Common examples of polynomial functions include linear functions (where the degree is `n=1`), quadratic functions (where the degree is `n=2`), and cubic functions (where the degree is `n=3`)."
+        ],
+        "Relevance": [
+            "Understanding and manipulating polynomial functions is useful for solving many types of problems - including factoring or expanding expressions to find equivalent forms, finding unknown solutions to equations, and interpreting graphical features such as zeros (roots) or end behavior."
+        ],
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Root (X-Intercept)": {
+        "Definition": [
+            "A root, or `xtext(-intercept)`, is the value of a variable that makes a function equal to zero. It represents the solution to an equation of the form `f(x)=0` and the `xtext(-coordinate)` of the point where a graph crosses or touches the `xtext(-axis)`."
         ],
         "Relevance": [],
         "Category": "",
         "Examples": [],
+        "Related": [
+            "Understanding and finding roots is useful for solving many types of problems - including interpreting graphs of various polynomial functions, solving real-world situations where a quantity becomes zero, and determining the number of solutions to an equation."
+        ]
+    },
+    "Exponent": {
+        "Definition": [
+            "An exponent, or power, is an operation that that describes repeated multiplication of the same expression. In an expression of the form `a^n`, the base (`a`) represents the value being multiplied and the exponent (`n`) represents how many times to multiply the base by itself.",
+            "When working with exponents, there are many rules that help simplify expressions. This includes the Product Rule, the Quotient rule, the Power Rule, the Zero Exponent Rule, the Negative Exponent Rule, and the Fractional Exponent Rule."
+        ],
+        "Relevance": [
+            "Understanding exponents is essential for solving many types of problems - including simplifying or expanding expressions to find other expressions that are equivalent and understanding the rate of growth or decay for functions that represent real-life situations."
+        ],
+        "Category": "",
+        "Examples": [
+            "`2^3=2xx2xx2=8`"
+        ],
         "Related": []
     },
     "Quadratic Function": {
@@ -211,28 +215,6 @@
         "Examples": [],
         "Related": []
     },
-    "X-Intercept": {
-        "Definition": [
-            "A point where the line crosses the `xtext(-axis)` (where `y=0`)."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [],
-        "Related": [
-            "Root"
-        ]
-    },
-    "Root": {
-        "Definition": [
-            "A solution for a quadratic equation."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [],
-        "Related": [
-            "X-Intercept"
-        ]
-    },
     "Cubic Function": {
         "Definition": [
             "A polynomial function of degree `3`. It's an S-shaped curve."
@@ -242,20 +224,18 @@
         "Examples": [],
         "Related": []
     },
-    "Exponent": {
-        "Definition": [
-            "An operation that that describes repeated multiplication of the same expression."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [
-            "`2^3=2xx2xx2=8`"
-        ],
-        "Related": []
-    },
     "Exponential Function": {
         "Definition": [
             "A function that has the form `f(x)=ab^x`, where `a` is the initial value and `b` (the base) is positive and not `1`."
+        ],
+        "Relevance": [],
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Absolute Value Function": {
+        "Definition": [
+            "The distance that a number is from zero on the number line. Written as `abs(x)`."
         ],
         "Relevance": [],
         "Category": "",
@@ -296,6 +276,37 @@
         "Relevance": [],
         "Category": "",
         "Examples": [],
+        "Related": []
+    },
+    "Order Of Operations": {
+        "Definition": [
+            "Describes the correct sequence for calculations. The acronym PEMDAS describes this sequence - Parentheses, then Exponents, then Multiplication and Division, then Addition and Subtraction"
+        ],
+        "Relevance": [],
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Equivalent Expressions": {
+        "Definition": [
+            "Two expression that are equal to each other for all possible variable values."
+        ],
+        "Relevance": [],
+        "Category": "",
+        "Examples": [
+            "`2(x+1)=2x+2`"
+        ],
+        "Related": []
+    },
+    "Equivalent Equations": {
+        "Definition": [
+            "Two equations that have the same solution set."
+        ],
+        "Relevance": [],
+        "Category": "",
+        "Examples": [
+            "`x+1=2and2x+2=4`"
+        ],
         "Related": []
     },
     "Substitution": {
