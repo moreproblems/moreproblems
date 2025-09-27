@@ -1,0 +1,995 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CON-1.A.1"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tt(text(int )a=5;)`\n`tt(text(int )b=2;)`\n`tt(text(double )c=3.0;)`\n`tt(text(System.out.println)(5+a//b**c-1);)`",
+            "What is printed when the code segment is executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(0.666666666666667)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(9.0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(10.0)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(11.5)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(14.0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-1.E.b.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the `tt(text(processWords))` method. Assume that each of its `text(two parameters)` is a `tt(text(String))` of length `text(two)` or more.",
+            ":ibox:`tt(text(public void processWords)(text(String word)1,text(String word)2))`\t`tt({`\n\t`tt(text(String str)1=text(word)1.text(substring)(0, 2);)`\n\t`tt(text(String str)2=text(word)2.text(substring)(text(word)2.text(length)()-1);)`\n\t`tt(text(String result)=text(str)2+text(str)1;)`\n\t`tt(text(System.out.println)(text(result.indexOf)(text(str)2));)`\n`tt}`",
+            "Which of the following best describes the value printed when `tt(text(processWords))` is called?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The value `tt(0)` is always printed.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The value `tt(1)` is always printed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The value `tt(text(result.length)()-1)` is printed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A substring containing the last character of `tt(text(word)2)` is printed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "A substring containing the last `text(two)` characters of `tt(text(word)2)` is printed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CON-1.D.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following statements assigns a random integer between `25and60`, inclusive, to `tt(text(rn))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(text(int rn)=(text(int))(text(Math.random)()**25)+36;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(text(int rn)=(text(int))(text(Math.random)()**25)+60;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(text(int rn)=(text(int))(text(Math.random)()**26)+60;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(text(int rn)=(text(int))(text(Math.random)()**36)+25;)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(text(int rn)=(text(int))(text(Math.random)()**60)+25;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CON-2.A.3"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Vehicles are classified based on their total interior volume. The `tt(text(classify))` method is intended to return a vehicle classification `tt(text(String))` total interior volume, in `text(cubic feet)`, as shown in the table below.",
+            "problems/APCSA/media/4a.jpg",
+            "The `tt(text(classify))` method, which does not work as intended, is shown below.",
+            ":ibox:`tt(text(public static String classify)(text(int volume)))`\n`tt({`\n\t`tt(text(String carClass)=text(“”))`;\n\t`tt(text(if)(text(volume)>=120))`\n\t`tt({`\n\t\t`tt(text(carClass)=text(“Large”);)`\n\t`tt}`\n\t`tt(text(else if)(text(volume)<120))`\n\t`tt({`\n\t\t`tt(text(carClass)=text(“Mid-Size”);)`\n\t`tt}`\n\t`tt(text(else if)(text(volume)<110))`\n\t`tt({`\n\t\t`tt(text(carClass)=text(“Compact”);)`\n\t`tt}`\n\t`tt(text(else if)(text(volume)<100))`\n\t`tt({`\n\t\t`tt(text(carClass)=text(“Subcompact”);)`\n\t`tt}`\n\t`tt(text(else))`\n\t`tt({`\n\t\t`tt(text(carClass)=text(“Minicompact”);)`\n\t`tt}`\n\t`tt(text(return carClass);)`\n`tt}`",
+            "The `tt(text(classify))` method works as intended for some but not all values of the parameter `tt(text(volume))`. For which of the following values of `tt(text(volume))` would the correct value be returned when the `tt(text(classify))` method is executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(80)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(90)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(105)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(109)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(115)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CON-1.G.3"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following best describes the value of the Boolean expression shown below?",
+            ":ibox:`tt(a&&!(b||a))`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The value is always `tt(text(true))`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The value is always `tt(text(false))`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The value is `tt(text(true))` when `tt(a)` has the value `tt(text(false))`, and is `tt(text(false))` otherwise.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The value is `tt(text(true))` when `tt(b)` has the value `tt(text(false))`, and is `tt(text(false))` otherwise.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The value is `tt(text(true))` when either `tt(a)` or `tt(b)` has the value `tt(text(true))`, and is `tt(text(false))` otherwise.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CON-2.C.4"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tt(text(int val)=48;)`\n`tt(text(int div)=6;)`\n`tt(text(while)((text(val)%2==0)&&text(div)>0))`\n`tt({`\n\t`tt(if (text(val)%text(div)==0))`\n\t`tt({`\n\t\t`tt(text(System.out.print)(text(val)+text(“ ”));)`\n\t`tt}`\n\t`tt(text(val)//=2;)`\n\t`tt(text(div)--;)`\n`tt}`",
+            "What is printed when the code segment is executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(text(48 12 6))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(text(48 12 6 3))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(text(48 12 6 3 1))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(text(48 24 12 6))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(text(48 24 12 6 3))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "MOD-2.D.5"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following class definition.",
+            ":ibox:`tt(text(public class Example))`\n`tt({`\n\t`tt(text(private int )x;)`\n\t`////text( Constructor not shown.)`\n`tt}`",
+            "Which of the following is a correct header for a method of the `tt(text(Example))` class that would return the value of the `tt(text(private))` instance variable `tt(x)` so that it can be used in a class other than `tt(text(Example))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(text(private int getX)())`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(text(private void getX)())`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(text(public int getX)())`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(text(public void getX)())`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(text(public void getX)(text(int x)))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-2.B.6"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the following code segment, assume that the string `tt(text(str))` has been properly declared and initialized. The code segment is intended to print the number of strings in the array `tt(text(animals))` that have `tt(text(str))` as a substring.",
+            ":ibox:`tt(text(String)[]text(animals)={text(“horse”),text(“cow”),text(“goat”),text(“dog”),text(“cat”),text(“mouse”)};)`\n`tt(text(int count)=0;)`\n`tt(text(for)(text(int )i=0;i<=text(animals.length);i++))`\n`tt({`\n\t`tt(if (text(animals)[i].text(indexOf)(text(str))>=0))`\n\t`tt({`\n\t\t`tt(text(count)++;)`\n\t`tt}`\n`tt}`\n`tt(text(System.out.println)(text(count));)`",
+            "Which of the following changes should be made so the code segment works as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The Boolean expression in the for loop header should be changed to `tt(i<text(animals.length))`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The Boolean expression in the for loop header should be changed to `tt(i<text(animals.length)-1)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The Boolean expression in the for loop header should be changed to `tt(i<text(animals)[i].text(length))`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The condition in the `tt(text(if))` statement should be changed to `tt(text(animals)[i].text(equals)(text(str)))`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The condition in the `tt(text(if))` statement should be changed to `tt(text(animals)[i].text(substring)(text(str)))`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-2.C.6"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider an integer array, `tt(text(nums))`, which has been declared and initialized with `text(one)` or more integer values. Which of the following code segments updates `tt(text(nums))` so that `text(each element)` contains the square of its original value?",
+            ":ibox:`bb(I).`\n\t`tt(text(int )k=0;)`\n\t`tt(text(while)(k<text(nums.length)))`\n\t`tt({`\n\t\t`tt(text(nums)[k]=text(nums)[k]**text(nums)[k];)`\n\t`tt}`",
+            ":ibox:`bb(II).`\n\t`tt(text(for)(text(int )k=0;k<text(nums.length);k++))`\n\t`tt({`\n\t\t`tt(text(nums)[k]=text(nums)[k]**text(nums)[k];)`\n\t`tt}`",
+            ":ibox:`bb(III).`\n\t`tt(text(for)(text(int )n:text(nums)))`\n\t`tt({`\n\t\t`tt(n=n**n;)`\n\t`tt}`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`bb(II)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`bb(I)andbb(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`bb(I)andbb(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`bb(II)andbb(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`I,II,andIII`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-2.D.7"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tt(text(ArrayList)<text(String)>text( numbers)=text(new ArrayList)<text(String)>();)`\n`tt(text(numbers.add)(text(“one”));)`\n`tt(text(numbers.add)(text(“two”));)`\n`tt(text(numbers.add)(0,text(“three”));)`\n`tt(text(numbers.set)(2,text(“four”));)`\n`tt(text(numbers.add)(text(“five”));)`\n`tt(text(numbers.remove)(1);)`",
+            "Which of the following represents the contents of `tt(text(numbers))` after the code segment has been executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt([text(“one”),text(“four”),text(“five”)])`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt([text(“three”),text(“two”),text(“five”)])`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt([text(“three”),text(“four”),text(“two”)])`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt([text(“three”),text(“four”),text(“five”)])`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt([text(“one”),text(“two”),text(“three”),text(“four”),text(“five”)])`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-2.E.7"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method, which is intended to return a list containing the elements of the parameter `tt(text(myList))` with all `text(even)` elements removed.",
+            ":ibox:`tt(text(public static ArrayList)<text(Integer)>text( removeEvens)(text(ArrayList)<text(Integer)>text( myList)))`\n`tt({`\n\t`tt(text(for)(text(int )i=0;i<text(myList.size)();i++))`\n\t`tt({`\n\t\t`tt(if(text(myList.get)(i)%2==0))`\n\t\t`tt({`\n\t\t\t`tt(text(myList.remove)(i);)`\n\t\t`tt}`\n\t`tt}`\n\t`tt(text(return myList);)`\n`tt}`",
+            "W hich of the following best explains why the code segment does not work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The code segment causes an `tt(text(IndexOutOfBoundsException))` for all lists because of an incorrect Boolean expression in the for loop.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The code segment causes an `tt(text(IndexOutOfBoundsException))` for lists with at least `text(one even)` element because the indexes of all subsequent elements change by `text(one)` when a list element is removed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The code segment returns a list with fewer elements than intended because it fails to consider the last element of `tt(text(myList))`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The code segment removes the wrong elements of `tt(text(myList))` because the condition in the `tt(text(if))` statement to test whether an element is even is incorrect.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The code segment skips some elements of `tt(text(myList))` because the indexes of all subsequent elements change by `text(one)` when a list element is removed.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-2.G.a.8"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tt(text(int)[][]text( points)={{11,12,13,14,15},{21,22,23,24,25},{31,32,33,34,35},{41,42,43,44,45}};)`\n`tt(text(for)(text(int row)=0;text(row)<text(points.length);text(row)++))`\n`tt({`\n\t`tt(text(for)(text(int col)=text(points)[0].text(length)-1;text(col)>=row;text(col)--))`\n\t`tt({`\n\t\t`tt(text(System.out.print)(text(points)[text(row)][text(col)]+“ ”);)`\n\t`tt}`\n\t`tt(text(System.out.println)();)`\n`tt}`",
+            "What is printed when this code segment is executed"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(text(15 14))`\n`tt(text(25 24 23))`\n`tt(text(35 34 33 32))`\n`tt(text(45 44 43 42 41))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(text(15 14 13 12))`\n`tt(text(25 24 23))`\n`tt(text(35 34))`\n`tt(text(45))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(text(11 12 13 14 15))`\n`tt(text(21 22 23 24))`\n`tt(text(31 32 33))`\n`tt(text(41 42))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(text(15 14 13 12 11))`\n`tt(text(25 24 23 22))`\n`tt(text(35 34 33))`\n`tt(text(45 44))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(text(15 14 13 12 11))`\n`tt(text(25 24 23 22 21))`\n`tt(text(35 34 33 32 31))`\n`tt(text(45 44 43 42 41))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "VAR-2.G.b.8"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tt(text(int)[][]text( arr)={{1,2,3,4},{5,6,7,8},{9,10,11,12}};)`\n`tt(text(int sum)=0;)`\n`tt(text(for)(text(int)[]text( x):text(arr)))`\n`tt({`\n\t`tt(text(for)(text(int )y=0;y<x.text(length)-1;y++))`\n\t`tt({`\n\t\t`tt(text(sum)+=x[y];)`\n\t`tt}`\n`tt}`",
+            "What is the value of `tt(text(sum))` as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(36)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(54)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(63)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(68)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(78)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "MOD-3.B.9"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following class definitions.",
+            ":ibox:`tt(text(public class Thing))1`\n`tt({`\n\t`tt(text(public void calc)(text(int )n))`\n\t`tt({`\n\t\t`tt(n**=3;)`\n\t\t`tt(text(System.out.print)(n);)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tt(text(public class Thing)2text( extends Thing)1)`\n`tt({`\n\t`tt(text(public void calc)(text(int )n))`\n\t`tt({`\n\t\t`tt(n+=2;)`\n\t\t`tt(text(super.calc)(n);)`\n\t\t`tt(text(System.out.print)(n);)`\n\t`tt}`\n`tt}`",
+            "The following code segment appears in a class other than `tt(text(Thing)1)` or `tt(text(Thing)2)`.",
+            ":ibox:`tt(text(Thing)1text( t)=text(new Thing)2();)`\n`tt(t.text(calc)(2);)`",
+            "What is printed as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(4)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(68)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(124)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt(1212)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CON-2.O.10"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following `text(two methods)`, which are intended to return the same values when they are called with the same `text(positive)` integer parameter `tt(n)`.",
+            ":ibox:`tt(text(public static int mystery)1(text(int )n))`\n`tt({`\n\t`tt(if (n>1))`\n\t`tt({`\n\t\t`tt(text(return )5+text(mystery)1(n-1);)`\n\t`tt}`\n\t`tt(text(else))`\n\t`tt({`\n\t\t`tt(text(return )1;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tt(text(public static int mystery)2(text(int )n))`\n`tt({`\n\t`tt(text(int total)=0;)`\n\t`tt(text(int )x=1;)`\n\t`tt(text(while) (x<n))`\n\t`tt({`\n\t\t`tt(text(total)+=5)`;\n\t\t`tt(x++;)`\n\t`tt}`\n\t`tt(text(return total);)`\n`tt}`",
+            "Which, if any, of the following changes to `tt(text(mystery)2)` is required so that the `text(two methods)` work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The variable `tt(text(total))` should be initialized to `tt(1)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The variable `tt(x)` should be initialized to `tt(0)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The condition in the `tt(text(while))` loop header should be `tt(x<n-1)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The condition in the `tt(text(while))` loop header should be `tt(x<=n)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "No change is required; the methods, as currently written, return the same values when they are called with the same `text(positive)` integer parameter `tt(n)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 9,
+        "Explain": false,
+        "Content": [
+            "",
+            "problems/APCSA/media/16a.jpg",
+            ""
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 9,
+        "Explain": false,
+        "Content": [
+            "Answer Part A and Part B for this question.",
+            "problems/APCSA/media/17a.jpg",
+            ""
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    }
+}

@@ -1,0 +1,1054 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CSN-1.C"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following best explains how data is typically assembled in packets for transmission over the Internet?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(Each packet)` contains data to be transmitted, along with metadata containing information used for routing the data.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(Each packet)` contains an encrypted version of the data to be transmitted, along with metadata containing the key needed to decrypt the data.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(Each packet)` contains only the metadata used to establish a direct connection so that the data can be transmitted.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(Each packet)` contains multiple data files bundled together, along with metadata describing how to categorize `text(each data file)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "DAT-1.C.b"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "`text(Each student)` that enrolls at a school is assigned a unique ID number, which is stored as a binary number. The ID numbers increase sequentially by `1` with each newly enrolled student. If the ID number assigned to the last student who enrolled was the binary number `1001` `0011`, what binary number will be assigned to the next student who enrolls?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`1001` `0100`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`1001` `0111`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`1101` `0100`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`1101` `0111`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "AAP-2.K.a"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The following grid contains a robot represented as a triangle. The robot is initially facing right.",
+            "problems/APCSP/media/3a.jpg",
+            "Which of the following code segments can be used to move the robot to the gray square along the path indicated by the arrows?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/APCSP/media/3b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/APCSP/media/3c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/APCSP/media/3d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/APCSP/media/3e.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "IOC-2.C"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A user purchased a new smart home device with embedded software and connected the device to a home network. The user then registered the device with the manufacturer, setting up an account using a personal e-mail and password. Which of the following explains how a phishing attack could occur against the user of the smart home device?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A vulnerability in the device's software is exploited to gain unauthorized access to other devices on the user's home network.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A vulnerability in the device's software is exploited to install software that reveals the user's password to an unauthorized individual.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The user is sent an e-mail appearing to be from the manufacturer, asking the user to confirm the account password by clicking on a link in the e-mail and entering the password on the resulting page.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The user's account is sent an overwhelming number of messages in an attempt to disrupt service on the user's home network.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "IOC-1.C"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following school policies is most likely to have a `text(positive)` impact on the digital divide?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A school allows students to bring a graphing calculator from home to complete in-class mathematics assignments.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A school allows students to bring a tablet computer to class `text(every day)` to participate in graded quizzes.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A school provides a laptop or tablet computer to all students enrolled at the school.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A school recommends that all students purchase a computer with as much processing speed as possible so that projects run faster.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "AAP-2.F.b"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In a certain country, a person must be at least `16` `text(years)` old to drive a car and must be at least `18` `text(years)` old to vote. The variable `tttext(age)` represents the age of a person as an integer.",
+            "Which of the following expressions evaluates to `tttext(true)` if the person is old enough to drive but not old enough to vote, and evaluates to `tttext(false)` otherwise?",
+            ":ibox:`bb(I). tt((text(age)>=16)text( AND )(text(age)<=18))`\n`bb(II). tt((text(age)>=16)text( AND )(text(NOT)(text(age)>=18)))`\n`bb(III). tt((text(age)<18)text( AND )(text(NOT)(text(age)<16)))`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`bb(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`bb(I)andbb(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`bb(I)andbb(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`bb(II)andbb(III)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "IOC-2.B"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A Web site uses several strategies to prevent unauthorized individuals from accessing user accounts. Which of the following is NOT an example of multifactor authentication?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(Each employee)` for a company is issued a USB device that contains a unique token code. To log into a company computer, an employee must insert the USB device into the computer and provide a correct password.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "After logging into an account from a new device, a user must enter a code that is sent via e-mail to the e-mail address on file with the account.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "In order to log into an account, a user must provide both a password and a fingerprint that is captured using the user's device.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "When a user enters an incorrect password more than `text(two)` times in a row, the user is locked out of the account for `24` `text(hours)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "AAP-2.J"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A list of numbers has `tt(n)` elements, indexed from `tt(1)` to `tt(n)`. The following algorithm is intended to display the number of elements in the list that have a value greater than `tt(100)`. The algorithm uses the variables `tttext(count)` and `tttext(position)`. Steps `3and4` are missing.",
+            ":ibox:Step `1`: Set count to `tt(0)` and `tttext(position)` to `tt(1)`.\nStep `2`: If the value of the element at index `tttext(position)` is greater than `tt(100)`, increase the value of count by `tt(1)`.\nStep `3`: (missing step)\nStep `4`: (missing step)\nStep `5`: Display the value of `tttext(count)`.",
+            "Which of the following could be used to replace steps `3and4` so that the algorithm works as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Step `3`: Increase the value of `tttext(position)` by `tt(1)`.\nStep `4`: Repeat steps `2and3` until the value of `tttext(count)` is greater than `tt(100)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Step `3`: Increase the value of `tttext(position)` by `tt(1)`.\nStep `4`: Repeat steps `2and3` until the value of `tttext(position)` is greater than `tt(n)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Step `3`: Repeat step `2` until the value of `tttext(count)` is greater than `tt(100)`.\nStep `4`: Increase the value of `tttext(position)` by `tt(1)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Step `3`: Repeat step `2` until the value of `tttext(position)` is greater than `tt(n)`.\nStep `4`: Increase the value of `tttext(count)` by `tt(1)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CRD-2.J"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The following code segment is intended to set `tttext(max)` equal to the maximum value among the integer variables `tt(x),tt(y),andtt(z)`. The code segment does not work as intended in all cases.",
+            "problems/APCSP/media/9a.jpg",
+            "Which of the following initial values for `tt(x),tt(y),andtt(z)` can be used to show that the code segment does not work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(x=1,y=2,z=3)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(x=1,y=3,z=2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(x=2,y=3,z=1)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(x=3,y=2,z=1)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "DAT-2.B"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A digital photo file contains data representing the level of red, green, and blue for `text(each pixel)` in the photo. The file also contains metadata that describe the date and geographic location where the photo was taken. For which of the following goals would analyzing the metadata be more appropriate than analyzing the data?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Determining the likelihood that the photo is a picture of the sky",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Determining the likelihood that the photo was taken at a particular public event",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Determining the number of people that appear in the photo",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Determining the usability of the photo for projection onto a particular color background",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CRD-2.I.b"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The following procedure is intended to return the number of times the value `tttext(val)` appears in the list `tttext(myList)`. The procedure does not work as intended.",
+            ":ibox:`tt(text(Line )1: )` `tt(text(PROCEDURE countNumOccurences)(text(myList),text(val))))`\n`tt(text(Line )2: )` `tt({`\n`tt(text(Line )3: )` \t`tttext(FOR EACH item IN myList)`\n`tt(text(Line )4: )` \t`tt({`\n`tt(text(Line )5: )` \t\t`tt(text(count)larr0)`\n`tt(text(Line )6: )` \t\t`tt(text(IF)(text(item)=text(val)))`\n`tt(text(Line )7: )` \t\t`tt({`\n`tt(text(Line )8: )` \t\t\t`tt(text(count)larrtext(count)+1)`\n`tt(text(Line )9: )` \t\t`tt}`\n`tt(text(Line )10: )` \t`tt}`\n`tt(text(Line )11: )` \t`tt(text(RETURN)(text(count)))`\n`tt(text(Line )12: )` `tt}`",
+            "Which of the following changes can be made so that the procedure will work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Changing line `6` to `tt(text(IF)(text(item)=text(count)))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Changing line `6` to `tt(text(IF)(text(myList)[text(item)]=text(val)))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Moving the statement in line `5` so that it appears between lines `2and3`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Moving the statement in line `11` so that it appears between lines `9and10`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CSN-2.A.b"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A certain computer has `text(two)` identical processors that are able to run in parallel. `text(Each processor)` can run only `text(one)` process at a time, and `text(each process)` must be executed on a `text(single)` processor. The following table indicates the amount of time it takes to execute each of `text(three processes)` on a `text(single)` processor. Assume that none of the processes are dependent on any of the other processes.",
+            "problems/APCSP/media/12a.jpg",
+            "Which of the following best approximates the minimum possible time to execute all `text(three processes)` when the `text(two processors)` are run in parallel?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`60` `text(seconds)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`70` `text(seconds)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`80` `text(seconds)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`90` `text(seconds)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "AAP-2.P.a"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A sorted list of numbers contains `500` elements. Which of the following is closest to the maximum number of list elements that will be examined when performing a binary search for a value in the list?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`10`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`50`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`250`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`500`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "CRD-2.C"
+        ],
+        "SuppContent": [
+            "problems/APCSP/supps/APCSP-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The upgraded system uses a directory containing additional information not supplied by the customer. The directory is used to help direct calls effectively. Which of the following is `bbtext(LEAST)` likely to be included in the directory?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A list of common issues and whether `text(each issue)` requires a human representative",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A list of common keywords or phrases and a corresponding issue for `text(each keyword or phrase)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A list of computers the company owns and the computers' corresponding IP addresses",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A list of human representatives and the corresponding department for `text(each representative)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "IOC-1.A"
+        ],
+        "SuppContent": [
+            "problems/APCSP/supps/APCSP-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Of the following potential benefits, which is `bbtext(LEAST)` likely to be provided by the upgraded system?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Human representatives will not be needed to respond to some inquiries.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The company will be able to provide a human representative for any incoming call.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Customers are likely to spend less time listening to information not relevant to their issue.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Customers will be unable to mistakenly select the incorrect department for their particular issue.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "IOC-2.A"
+        ],
+        "SuppContent": [
+            "problems/APCSP/supps/APCSP-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is the most likely data privacy concern of the upgraded system?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Customers' personal information could be compromised if an unauthorized individual gains access to the call session database.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Storing information in the call session database makes it easy for individuals to trick the system using malicious links.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The system design increases the chance that customers will unknowingly install malware on their devices that will share their data with unauthorized individuals.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The system design makes it easy for unauthorized individuals to acquire customers' private encryption keys.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "AAP-3.A.a"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following procedure.",
+            "problems/APCSP/media/17a.jpg",
+            "The `tttext(drawCircle)` procedure is to be used to draw the following figure on a coordinate grid.",
+            "problems/APCSP/media/17b.jpg",
+            "Which of the following code segments can be used to draw the figure?",
+            "Select `ul(text(TWO))` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":box:`tt(xlarr4)`\n`tt(ylarr1)`\n`tt(rlarr0)`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tt(text(drawCircle)(x,y,r))`\n\t`tt(rlarrr+1)`\n\t`tt(ylarry+1)`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":box:`tt(xlarr4)`\n`tt(ylarr1)`\n`tt(rlarr0)`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tt(rlarrr+1)`\n\t`tt(ylarry+1)`\n\t`tt(text(drawCircle)(x,y,r))`\n`tt}`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":box:`tt(xlarr4)`\n`tt(ylarr4)`\n`tt(rlarr3)`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tt(text(drawCircle)(x,y,r))`\n\t`tt(ylarry-1)`\n\t`tt(rlarrr-1)`\n`tt}`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":box:`tt(xlarr4)`\n`tt(ylarr4)`\n`tt(rlarr3)`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tt(rlarrr-1)`\n\t`tt(ylarry-1)`\n\t`tt(text(drawCircle)(x,y,r))`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "AAP-2.L"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the following statement, `tt(text(val)1),tt(text(val)2),and tttext(result)` are Boolean variables.",
+            "problems/APCSP/media/18a.jpg",
+            "Which of the following code segments produce the same result as the statement above for all possible values of `tt(text(val)1)andtt(text(val)2)`?",
+            "Select `ul(text(TWO))` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/APCSP/media/18b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/APCSP/media/18c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/APCSP/media/18d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/APCSP/media/18e.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 3,
+        "Explain": false,
+        "Content": [
+            "Write a response that demonstrate understanding of their personal Create performance task. You will have access to their student-authored Personalized Project Reference, as long as it was submitted as final via the AP Digital Portfolio.",
+            "Identify an expected user of your program. Describe `text(one way)` your program's design meets the needs of this user."
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 3,
+        "Explain": false,
+        "Content": [
+            "Write a response that demonstrate understanding of their personal Create performance task. You will have access to their student-authored Personalized Project Reference, as long as it was submitted as final via the AP Digital Portfolio."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Consider the `text(first)` iteration statement included in the Procedure section of your Personalized Project Reference. Identify the number of times the body of your iteration statement will execute. Describe a condition or error that would cause your iteration statement to not terminate and cause an infinite loop. If no such condition or error exists, explain how the loop could be modified to cause an infinite loop."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Consider the procedure included in part (A) of the Procedure section of your Personalized Project Reference. Describe a change to your procedure that will result in a run-time error. Explain why this change will result in a run-time error."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Suppose you are provided with a procedure called `tttext(isEqual)(tt(text(value)1,text(value)2))`. The procedure returns `tttext(true)` if the `text(two parameters)` `tt(text(value)1)` and `tt(text(value)2)` are equal in value and returns `tttext(false)` otherwise. Using the list you identified in the List section of your Personalized Project Reference, explain in detailed steps an algorithm that uses `tttext(isEqual)` count the number of times a certain value appears in your list. Your explanation must be detailed enough for someone else to write the program code."
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    }
+}

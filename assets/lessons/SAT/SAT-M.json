@@ -151,7 +151,7 @@
     "Polynomial Function": {
         "Definition": [
             "A polynomial function is a mathematical expression that consists of variables with non-negative integer exponents and their coefficients, combined by addition, subtraction, and multiplication.",
-            "Equations for polynomial functions are generally written as `f(x)=a_nx^n+a_(n-1)x^(n-1)+...+a_1x+a_0` (general form), where `n` represents the highest exponent, or degree, and `a`'s represent coefficients.",
+            "Equations for polynomial functions are usually written as `f(x)=a_nx^n+a_(n-1)x^(n-1)+...+a_1x+a_0` (general form), where `n` represents the highest exponent, or degree, and `a`'s represent coefficients.",
             "Common examples of polynomial functions include linear functions (where the degree is `n=1`), quadratic functions (where the degree is `n=2`), and cubic functions (where the degree is `n=3`)."
         ],
         "Relevance": [
@@ -188,9 +188,12 @@
     },
     "Quadratic Function": {
         "Definition": [
-            "A polynomial function of degree `2`."
+            "A quadratic function is a polynomial function where the highest power, or degree, of the variable is `2`. The graph of a quadratic function will produce a U-shaped curve, which is called a parabola.",
+            "Equations for quadratic functions are usually written as `f(x)=ax^2+bx+c` (standard form), where `a,b,andc` are constants and `a!=0`. Quadratic functions can also be described in factored form (`f(x)=a(x-p)(x-q)`) to highlight the roots or vertex form (`f(x)=a(x-h)^2+k`) to highlight the vertex."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding quadratic functions is essential for solving many types of problems - including interpreting the graphs of equations in various forms, finding the roots of equations by factoring or using the quadratic formula, identifying the number of solutions for functions, and modeling real-world situations such as projectile motion."
+        ],
         "Category": "",
         "Examples": [],
         "Related": [
@@ -199,36 +202,71 @@
     },
     "Parabola": {
         "Definition": [
-            "The graph of a quadratic equation. It's a U-shaped curve."
+            "A parabola is a U-shaped curve formed by graphing a quadratic equation A parabola can either open upward or downward and will always have a vertical axis of symmetry that passes through the vertex. A parabola can have either zero, one, or two real roots."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding parabolas is useful for solving many types of problems - including interpreting or identifying key features of graphs of quadratic equations and modeling real-world situations such as projectile motion."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Vertex": {
         "Definition": [
-            "The highest or lowest point of a parabola."
+            "The vertex is the turning point of a parabola, which is formed by graphing a quadratic equation. If a parabola opens upward, the vertex will be the lowest point or minimum value; if a parabola opens downward, the vertex will be the highest point or maximum value.",
+            "When a quadratic function is described in vertex form (`y=a(x-h)^2+k`), then the vertex can be identified simply as the point `(h,k)`."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding and finding vertices is useful for solving many types of problems - including finding the minimum or maximum value for graphs of quadratic functions or real-world situations described by quadratic functions such as projectile motion or profit."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Cubic Function": {
         "Definition": [
-            "A polynomial function of degree `3`. It's an S-shaped curve."
+            "A cubic function is a polynomial function where the highest power, or degree, of the variable is `3`. The graph of a quadratic function will typically produce an S-shaped curve with either one or three real roots.",
+            "Equations for cubic functions are usually written as `f(x)=ax^3+bx^2+cx+d` (standard form), where `a,b,c,andd` are constants and `a!=0`. Cubic functions can also be described in factored form (`f(x)=a(x-p)(x-q)(x-r)`) to highlight the roots `x=p`, `x=q`, and `x=r`."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding cubic functions is helpful for solving many types of problems - including interpreting the graphs of equations in various forms, finding the roots of equations by factoring, identifying the number of solutions for functions, and modeling real-world situations with varying rates of change."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
     },
     "Exponential Function": {
         "Definition": [
-            "A function that has the form `f(x)=ab^x`, where `a` is the initial value and `b` (the base) is positive and not `1`."
+            "An exponential function is a function where the variable appears in the exponent. An exponential function describes a situation of rapid growth or decay, where a change in the input value multiplies the output value by a constant factor.",
+            "Equations for exponential functions are usually written as `f(x)=ab^x` (general form), where `a` is the initial value and `b` (the base) is the growth factor if `b>1` or decay factor if `0<b<1`. Since exponential functions model growth or decay, it is common for `x` to represent an amount of time or number of intervals."
         ],
-        "Relevance": [],
+        "Relevance": [
+            "Understanding exponential functions is helpful for solving many types of problems - including distinguishing between linear and exponential relationships, interpreting or identifying key features of graphs of exponential equations, solving exponential equations by finding a common base, and modeling real-world situations such as population growth or compound interest."
+        ],
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exponential Growth": {
+        "Definition": [
+            "Exponential growth describes a quantity that increases over time by being repeatedly multiplied by a constant factor, resulting in rapid change that is proportional to the current amount. Exponential growth is modeled by an exponential function, where `b>1`.",
+            "The standard formula for exponential growth is `A(t)=a(1+r)^t`, where `A(t)` is the final amount after time `t`, `a` is the initial amount, and `r` is the growth rate."
+        ],
+        "Relevance": [
+            "Understanding exponential growth is helpful for solving many types of problems - including interpreting or identifying key features of graphs of exponential equations, converting growth rates between different time units, and modeling real-world situations such as population growth or compound interest."
+        ],
+        "Category": "",
+        "Examples": [],
+        "Related": []
+    },
+    "Exponential Decay": {
+        "Definition": [
+            "Exponential decay describes a quantity that decreases over time by being repeatedly multiplied by a constant factor, resulting in rapid change that is proportional to the current amount. Exponential decay is modeled by an exponential function, where `0<b<1`.",
+            "The standard formula for exponential decay is `A(t)=a(1-r)^t`, where `A(t)` is the final amount after time `t`, `a` is the initial amount, and `r` is the decay rate."
+        ],
+        "Relevance": [
+            "Understanding exponential decay is helpful for solving many types of problems - including interpreting or identifying key features of graphs of exponential equations, converting decay rates between different time units, and modeling real-world situations such as half-life of radioactive substances."
+        ],
         "Category": "",
         "Examples": [],
         "Related": []
@@ -236,24 +274,6 @@
     "Absolute Value Function": {
         "Definition": [
             "The distance that a number is from zero on the number line. Written as `abs(x)`."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [],
-        "Related": []
-    },
-    "Exponential Growth": {
-        "Definition": [
-            "Describes an exponential function, where `b>1`."
-        ],
-        "Relevance": [],
-        "Category": "",
-        "Examples": [],
-        "Related": []
-    },
-    "Exponential Decay": {
-        "Definition": [
-            "Describes an exponential function, where `0<b<1`."
         ],
         "Relevance": [],
         "Category": "",
