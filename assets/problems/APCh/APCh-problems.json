@@ -35,7 +35,7 @@
                 }
             },
             "C": {
-                "Choice": "`text(K)^(+)`",
+                "Choice": "`text(K)^+`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -43,7 +43,7 @@
                 }
             },
             "D": {
-                "Choice": "`text(Cl)^(+)`",
+                "Choice": "`text(Cl)^+`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -395,12 +395,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":ibox:`text(Ag)^(+)(aq)+2text(NH)_3(aq)hArr[text(Ag)(text(NH)_3)_2]^(+)(aq)`\n`K=1xx10^7`",
-            "Equal volumes of `0.1` `text(M)` `text(AgNO)_3(aq)` and `0.4` `text(M)` `text(NH)_3(aq)` are mixed and allowed to reach the equilibrium represented above. Which of the following correctly lists the equilibrium concentrations of the `text(Ag)^(+)(aq)`, `text(NH)_3(aq)`, and `[text(Ag)(text(NH)_3)_2]^(+)(aq)` in order from least to greatest?"
+            ":ibox:`text(Ag)^+(aq)+2text(NH)_3(aq)hArr[text(Ag)(text(NH)_3)_2]^+(aq)`\n`K=1xx10^7`",
+            "Equal volumes of `0.1` `text(M)` `text(AgNO)_3(aq)` and `0.4` `text(M)` `text(NH)_3(aq)` are mixed and allowed to reach the equilibrium represented above. Which of the following correctly lists the equilibrium concentrations of the `text(Ag)^+(aq)`, `text(NH)_3(aq)`, and `[text(Ag)(text(NH)_3)_2]^+(aq)` in order from least to greatest?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`[text(Ag)^(+)]_text(eq)<[text(NH)_3]_text(eq)<[[text(Ag)(text(NH)_3)_2]^(+)]_text(eq)`",
+                "Choice": "`[text(Ag)^+]_text(eq)<[text(NH)_3]_text(eq)<[[text(Ag)(text(NH)_3)_2]^+]_text(eq)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -408,7 +408,7 @@
                 }
             },
             "B": {
-                "Choice": "`[text(NH)_3]_text(eq)<[text(Ag)^(+)]_text(eq)<[[text(Ag)(text(NH)_3)_2]^(+)]_text(eq)`",
+                "Choice": "`[text(NH)_3]_text(eq)<[text(Ag)^+]_text(eq)<[[text(Ag)(text(NH)_3)_2]^+]_text(eq)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -416,7 +416,7 @@
                 }
             },
             "C": {
-                "Choice": "`[[text(Ag)(text(NH)_3)_2]^(+)]_text(eq)<[text(Ag)^(+)]_text(eq)<[text(NH)_3]_text(eq)`",
+                "Choice": "`[[text(Ag)(text(NH)_3)_2]^+]_text(eq)<[text(Ag)^+]_text(eq)<[text(NH)_3]_text(eq)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -424,7 +424,7 @@
                 }
             },
             "D": {
-                "Choice": "`[text(Ag)^(+)]_text(eq)<[[text(Ag)(text(NH)_3)_2]^(+)]_text(eq)<[text(NH)_3]_text(eq)`",
+                "Choice": "`[text(Ag)^+]_text(eq)<[[text(Ag)(text(NH)_3)_2]^+]_text(eq)<[text(NH)_3]_text(eq)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -511,7 +511,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`[text(Ag)^(+)]` is `text(zero)` in both beakers.",
+                "Choice": "`[text(Ag)^+]` is `text(zero)` in both beakers.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -519,7 +519,7 @@
                 }
             },
             "B": {
-                "Choice": "`[text(Ag)^(+)]` is the same, but not `text(zero)`, in both beakers.",
+                "Choice": "`[text(Ag)^+]` is the same, but not `text(zero)`, in both beakers.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -527,7 +527,7 @@
                 }
             },
             "C": {
-                "Choice": "`[text(Ag)^(+)]` is greater in beaker `X`.",
+                "Choice": "`[text(Ag)^+]` is greater in beaker `X`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -535,7 +535,7 @@
                 }
             },
             "D": {
-                "Choice": "`[text(Ag)^(+)]` is greater in beaker `Y`.",
+                "Choice": "`[text(Ag)^+]` is greater in beaker `Y`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -614,7 +614,7 @@
         "Explain": false,
         "Content": [
             "problems/APCh/media/12a.jpg",
-            "Based on the standard reduction potentials in the table above, what is the value of `E°` for a standard galvanic cell made with `text(Ag/Ag)^(+)` and `text(Cr/Cr)^(3+)` `text(half-cells)`?"
+            "Based on the standard reduction potentials in the table above, what is the value of `E°` for a standard galvanic cell made with `text(Ag/Ag)^+` and `text(Cr/Cr)^(3+)` `text(half-cells)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -673,7 +673,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`text(Mg)(s)+2text(H)^(+)(aq)->text(Mg)^(2+)(aq)+text(H)_2(g)`",
+                "Choice": "`text(Mg)(s)+2text(H)^+(aq)->text(Mg)^(2+)(aq)+text(H)_2(g)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -689,7 +689,7 @@
                 }
             },
             "C": {
-                "Choice": "`text(Mg)(s)+2text(HCl)(aq)->text(MgCl)_2(s)+2text(H)^(+)(aq)`",
+                "Choice": "`text(Mg)(s)+2text(HCl)(aq)->text(MgCl)_2(s)+2text(H)^+(aq)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

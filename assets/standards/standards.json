@@ -1,4 +1,148 @@
 {
+    "AAS-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "African American Studies",
+        "Curriculum": "Advanced Placement"
+    },
+    "B-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Biology",
+        "Curriculum": "Advanced Placement"
+    },
+    "Ca-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Calculus AB/BC",
+        "Curriculum": "Advanced Placement"
+    },
+    "CGP-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Comparative Government & Politics",
+        "Curriculum": "Advanced Placement"
+    },
+    "Ch-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Chemistry",
+        "Curriculum": "Advanced Placement"
+    },
+    "CSA-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Computer Science A",
+        "Curriculum": "Advanced Placement"
+    },
+    "CSP-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Computer Science Principles",
+        "Curriculum": "Advanced Placement"
+    },
+    "EH-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "European History",
+        "Curriculum": "Advanced Placement"
+    },
+    "ELaC-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "English Language & Composition",
+        "Curriculum": "Advanced Placement"
+    },
+    "ELiC-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "English Literature & Composition",
+        "Curriculum": "Advanced Placement"
+    },
+    "ES-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Environment Science",
+        "Curriculum": "Advanced Placement"
+    },
+    "HG-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Human Geography",
+        "Curriculum": "Advanced Placement"
+    },
+    "MaE-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Macroeconomics",
+        "Curriculum": "Advanced Placement"
+    },
+    "MiE-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Microeconomics",
+        "Curriculum": "Advanced Placement"
+    },
+    "P-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Psychology",
+        "Curriculum": "Advanced Placement"
+    },
+    "P1AB-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Physics 1: Algebra-Based",
+        "Curriculum": "Advanced Placement"
+    },
+    "P2AB-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Physics 2: Algebra-Based",
+        "Curriculum": "Advanced Placement"
+    },
+    "PC-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Precalculus",
+        "Curriculum": "Advanced Placement"
+    },
+    "PCEM-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Physics C: Electricity & Magnetism",
+        "Curriculum": "Advanced Placement"
+    },
+    "PCM-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Physics C: Mechanics",
+        "Curriculum": "Advanced Placement"
+    },
+    "S-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "Statistics",
+        "Curriculum": "Advanced Placement"
+    },
+    "USGP-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "U.S. Government & Politics",
+        "Curriculum": "Advanced Placement"
+    },
+    "USH-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "U.S. History",
+        "Curriculum": "Advanced Placement"
+    },
+    "WHM-AP": {
+        "State": "United States",
+        "Grades": ["Grade 9", "Grade 10", "Grade 11", "Grade 12"],
+        "Subject": "World History: Modern",
+        "Curriculum": "Advanced Placement"
+    },
     "KE-CC": {
         "State": "United States",
         "Grades": ["Kindergarten"],
@@ -2395,17 +2539,17 @@
         "Subject": "Mathematics - Statistics & Probability",
         "Curriculum": "Rhode Island Core Standards"
     },
-    "SAT-M": {
-        "State": "SAT Suite",
+    "M-SAT": {
+        "State": "United States",
         "Grades": ["Grade 11"],
         "Subject": "Mathematics",
-        "Curriculum": "College Readiness"
+        "Curriculum": "The SAT Suite"
     },
-    "SAT-RW": {
-        "State": "SAT Suite",
+    "RW-SAT": {
+        "State": "United States",
         "Grades": ["Grade 11"],
         "Subject": "Reading & Writing",
-        "Curriculum": "College Readiness"
+        "Curriculum": "The SAT Suite"
     },
     "KE-SC": {
         "State": "South Carolina",

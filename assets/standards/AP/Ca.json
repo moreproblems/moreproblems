@@ -1,0 +1,2810 @@
+{
+    "Title": "Advanced Placement > Calculus AB/BC > High School",
+    "Overview": "",
+    "Goals": [],
+    "Standards": [
+        {
+            "Key": "AP.Ca.1",
+            "Label": "Limits & Continuity",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.1.1",
+                    "Label": "Introducing Calculus: Can Change Occur At An Instant?",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.1.A",
+                            "Label": "Interpret the rate of change at an instant in terms of average rates of change over intervals containing that instant.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.1.A.1",
+                                    "Label": "Calculus uses limits to understand and model dynamic change.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.1.A.2",
+                                    "Label": "Because an average rate of change divides the change in one variable by the change in another, the average rate of change is undefined at a point where the change in the independent variable would be zero.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.1.A.3",
+                                    "Label": "The limit concept allows us to define instantaneous rate of change in terms of average rates of change.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.2",
+                    "Label": "Defining Limits & Using Limit Notation",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.2.A",
+                            "Label": "Represent limits analytically using correct notation.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.2.A.1",
+                                    "Label": "Given a function `f`, the limit of `f(x)` as `x` approaches `c` is a real number `R` if `f(x)` can be made arbitrarily close to `R` by taking `x` sufficiently close to `c` (but not equal to `c`). If the limit exists and is a real number, then the common notation is `lim_(x->c)f(x)=R`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.1.2.B",
+                            "Label": "Interpret limits expressed in analytic notation.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.2.B.1",
+                                    "Label": "A limit can be expressed in multiple ways, including graphically, numerically, and analytically.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.3",
+                    "Label": "Estimating Limit Values From Graphs",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.3.A",
+                            "Label": "Estimate limits of functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.3.A.1",
+                                    "Label": "The concept of a limit includes one sided limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.3.A.2",
+                                    "Label": "Graphical information about a function can be used to estimate limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.3.A.3",
+                                    "Label": "Because of issues of scale, graphical representations of functions may miss important function behavior.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.3.A.4",
+                                    "Label": "A limit might not exist for some functions at particular values of `x`. Some ways that the limit might not exist are if the function is unbounded, if the function is oscillating near this value, or if the limit from the left does not equal the limit from the right.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.4",
+                    "Label": "Estimating Limit Values From Tables",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.4.A",
+                            "Label": "Estimate limits of functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.4.A.1",
+                                    "Label": "Numerical information can be used to estimate limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.5",
+                    "Label": "Determining Limits Using Algebraic Properties Of Limits",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.5.A",
+                            "Label": "Determine the limits of functions using limit theorems.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.5.A.1",
+                                    "Label": "One-sided limits can be determined analytically or graphically.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.5.A.2",
+                                    "Label": "Limits of sums, differences, products, quotients, and composite functions can be found using limit theorems.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.6",
+                    "Label": "Determining Limits Using Algebraic Manipulation",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.6.A",
+                            "Label": "Determine the limits of functions using equivalent expressions for the function or the squeeze theorem.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.6.A.1",
+                                    "Label": "It may be necessary or helpful to rearrange expressions into equivalent forms before evaluating limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.7",
+                    "Label": "Selecting Procedures For Determining Limits",
+                    "Examples": [],
+                    "Subs": []
+                },
+                {
+                    "Key": "AP.Ca.1.8",
+                    "Label": "Determining Limits Using The Squeeze Theorem",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.8.A",
+                            "Label": "Determine the limits of functions using equivalent expressions for the function or the squeeze theorem.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.8.A.1",
+                                    "Label": "The limit of a function may be found by using the squeeze theorem.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.9",
+                    "Label": "Connecting Multiple Representations Of Limits",
+                    "Examples": [],
+                    "Subs": []
+                },
+                {
+                    "Key": "AP.Ca.1.10",
+                    "Label": "Exploring Types Of Discontinuities",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.10.A",
+                            "Label": "Justify conclusions about continuity at a point using the definition.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.10.A.1",
+                                    "Label": "Types of discontinuities include removable discontinuities, jump discontinuities, and discontinuities due to vertical asymptotes.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.11",
+                    "Label": "Defining Continuity At A Point",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.11.A",
+                            "Label": "Justify conclusions about continuity at a point using the definition.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.11.A.1",
+                                    "Label": "A function `f` is continuous at `x=c` provided that `f(c)` exists, `lim_(x->c)f(x)` exists, and `lim_(x->c)f(x)=f(c)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.12",
+                    "Label": "Confirming Continuity Over An Interval",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.12.A",
+                            "Label": "Determine intervals over which a function is continuous.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.12.A.1",
+                                    "Label": "A function is continuous on an interval if the function is continuous at each point in the interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.12.A.2",
+                                    "Label": "Polynomial, rational, power, exponential, logarithmic, and trigonometric functions are continuous on all points in their domains.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.13",
+                    "Label": "Removing Discontinuities",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.13.A",
+                            "Label": "Determine values of `x` or solve for parameters that make discontinuous functions continuous, if possible.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.13.A.1",
+                                    "Label": "If the limit of a function exists at a discontinuity in its graph, then it is possible to remove the discontinuity by defining or redefining the value of the function at that point, so it equals the value of the limit of the function as `x` approaches that point.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.13.A.2",
+                                    "Label": "In order for a piecewise-defined function to be continuous at a boundary to the partition of its domain, the value of the expression defining the function on one side of the boundary must equal the value of the expression defining the other side of the boundary, as well as the value of the function at the boundary.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.14",
+                    "Label": "Connecting Infinite Limits & Vertical Asymptotes",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.14.A",
+                            "Label": "Interpret the behavior of functions using limits involving infinity.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.14.A.1",
+                                    "Label": "The concept of a limit can be extended to include infinite limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.14.A.2",
+                                    "Label": "Asymptotic and unbounded behavior of functions can be described and explained using limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.15",
+                    "Label": "Connecting Limits At Infinity & Horizontal Asymptotes",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.15.A",
+                            "Label": "Interpret the behavior of functions using limits involving infinity.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.15.A.1",
+                                    "Label": "The concept of a limit can be extended to include limits at infinity.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.15.A.2",
+                                    "Label": "Limits at infinity describe end behavior.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.1.15.A.3",
+                                    "Label": "Relative magnitudes of functions and their rates of change can be compared using limits.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.1.16",
+                    "Label": "Working With The Intermediate Value Theorem (IVT)",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.1.16.A",
+                            "Label": "Explain the behavior of a function on an interval using the Intermediate Value Theorem.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.1.16.A.1",
+                                    "Label": "If `f` is a continuous function on the closed interval `[a,b]` and `d` is a number between `f(a)` and `f(b)`, then the Intermediate Value Theorem guarantees that there is at least one number `c` between `a` and `b`, such that `f(c)=d`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.2",
+            "Label": "Differentiation: Definition & Fundamental Properties",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.2.1",
+                    "Label": "Defining Average & Instantaneous Rates Of Change At A Point",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.1.A",
+                            "Label": "Determine average rates of change using difference quotients.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.1.A.1",
+                                    "Label": "The difference quotients `(f(a+h)-f(a))/h` and `(f(x)-f(a))/(x-a)` express the average rate change of a function over an interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.2.1.B",
+                            "Label": "Represent the derivative of a function as the limit of a difference quotient.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.1.B.1",
+                                    "Label": "The instantaneous rate of change of a function at `x=a` can be expressed by `lim_(h->0)(f(a+h)-f(a))/h` or `lim_(x->a)(f(x)-f(a))/(x-a)`, provided the limit exists. These are equivalent forms of the definition of the derivative and are denoted `f'(a)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.2",
+                    "Label": "Defining The Derivative Of A Function & Using Derivative Notation",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.2.A",
+                            "Label": "Represent the derivative of a function as the limit of a difference quotient.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.2.A.1",
+                                    "Label": "The derivative of `f` is the function whose value at `x` is `lim_(h->0)(f(x+h)-f(x))/h`, provided this limit exists.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.2.2.A.2",
+                                    "Label": "For `y=f(x)`, notations for the derivative include `dy/dx`, `f'(x)`, and `y'`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.2.2.A.3",
+                                    "Label": "The derivative can be represented graphically, numerically, analytically, and verbally.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.2.2.B",
+                            "Label": "Determine the equation of a line tangent to a curve at a given point.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.2.B.1",
+                                    "Label": "The derivative of a function at a point is the slope of the line tangent to a graph of the function at that point.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.3",
+                    "Label": "Estimating Derivatives Of A Function At A Point",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.3.A",
+                            "Label": "Estimate derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.3.A.1",
+                                    "Label": "The derivative at a point can be estimated from information given in tables or graphs.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.2.3.A.2",
+                                    "Label": "Technology can be used to calculate or estimate the value of a derivative of a function at a point.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.4",
+                    "Label": "Connecting Differentiability & Continuity: Determining When Derivatives Do & Do Not Exist",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.4.A",
+                            "Label": "Explain the relationship between differentiability and continuity.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.4.A.1",
+                                    "Label": "If a function is differentiable at a point, then it is continuous at that point. In particular, if a point is not in the domain of `f`, then it is not in the domain of `f'`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.2.4.A.2",
+                                    "Label": "A continuous function may fail to be differentiable at a point in its domain.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.5",
+                    "Label": "Applying The Power Rule",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.5.A",
+                            "Label": "Calculate derivatives of familiar functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.5.A.1",
+                                    "Label": "Direct application of the definition of the derivative and specific rules can be used to calculate the derivative for functions of the form `f(x)=x'`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.6",
+                    "Label": "Derivative Rules: Constant, Sum, Difference & Constant Multiple",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.6.A",
+                            "Label": "Calculate derivatives of familiar functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.6.A.1",
+                                    "Label": "Sums, differences, and constant multiples of functions can be differentiated using derivative rules.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.2.6.A.2",
+                                    "Label": "The power rule combined with sum, difference, and constant multiple properties can be used to find the derivatives for polynomial functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.7",
+                    "Label": "Derivatives Of `cos(x)`, `sin(x)`, `e^x` & `ln(x)`",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.7.A",
+                            "Label": "Calculate derivatives of familiar functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.7.A.1",
+                                    "Label": "Specific rules can be used to find the derivatives for sine, cosine, exponential, and logarithmic functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.2.7.B",
+                            "Label": "Interpret a limit as a definition of a derivative.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.7.B.1",
+                                    "Label": "In some cases, recognizing an expression for the definition of the derivative of a function whose derivative is known offers a strategy for determining a limit.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.8",
+                    "Label": "The Product Rule",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.8.A",
+                            "Label": "Calculate derivatives of products and quotients of differentiable functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.8.A.1",
+                                    "Label": "Derivatives of products of differentiable functions can be found using the product rule.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.9",
+                    "Label": "The Quotient Rule",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.9.A",
+                            "Label": "Calculate derivatives of products and quotients of differentiable functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.9.A.1",
+                                    "Label": "Derivatives of quotients of differentiable functions can be found using the quotient rule.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.2.10",
+                    "Label": "Finding The Derivatives of Tangent, Cotangent, Secant & Cosecant Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.2.10.A",
+                            "Label": "Calculate derivatives of products and quotients of differentiable functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.2.10.A.1",
+                                    "Label": "Rearranging tangent, cotangent, secant, and cosecant functions using identities allows differentiation using derivative rules.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.3",
+            "Label": "Differentiation: composite, Implicit & Inverse Functions",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.3.1",
+                    "Label": "The Chain Rule",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.3.1.A",
+                            "Label": "Calculate derivatives of compositions of differentiable functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.3.1.A.1",
+                                    "Label": "The chain rule provides a way to differentiate composite functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.3.2",
+                    "Label": "Implicit Differentiation",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.3.2.A",
+                            "Label": "Calculate derivatives of implicitly defined functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.3.2.A.1",
+                                    "Label": "The chain rule is the basis for implicit differentiation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.3.3",
+                    "Label": "Differentiating Inverse Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.3.3.A",
+                            "Label": "Calculate derivatives of inverse and inverse trigonometric functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.3.3.A.1",
+                                    "Label": "The chain rule and definition of an inverse function can be used to find the derivative of an inverse function, provided the derivative exists.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.3.4",
+                    "Label": "Differentiating Inverse Trigonometric Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.3.4.A",
+                            "Label": "Calculate derivatives of inverse and inverse trigonometric functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.3.4.A.1",
+                                    "Label": "The chain rule applied with the definition of an inverse function, or the formula for the derivative of an inverse function, can be used to find the derivatives of inverse trigonometric functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.3.5",
+                    "Label": "Selecting Procedures For Calculating Derivatives",
+                    "Examples": [],
+                    "Subs": []
+                },
+                {
+                    "Key": "AP.Ca.3.6",
+                    "Label": "Calculating Higher - Order Derivatives",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.3.6.A",
+                            "Label": "Determine higher order derivatives of a function.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.3.6.A.1",
+                                    "Label": "Differentiating `f'` produces the second derivative `f''`, provided the derivative of `f'` exists; repeating this process produces higher-order derivatives of `f'`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.3.6.A.2",
+                                    "Label": "Higher-order derivatives are represented with a variety of notations. For `y=f(x)`, notations for the second derivative include `(d^2y)/(dx^2)`, `f''(x)`, and `y''`. Higher-order derivatives can be denoted `(d''y)/(dx'')` or `f^((n))(x)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.4",
+            "Label": "Contextual Applications Of Differentiation",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.4.1",
+                    "Label": "Interpreting The Meaning Of The Derivative In Context",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.1.A",
+                            "Label": "Interpret the meaning of a derivative in context.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.1.A.1",
+                                    "Label": "The derivative of a function can be interpreted as the instantaneous rate of change with respect to its independent variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.4.1.A.2",
+                                    "Label": "The derivative can be used to express information about rates of change in applied contexts.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.4.1.A.3",
+                                    "Label": "The unit for `f'(x)` is the unit for `f` divided by the unit for `x`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.4.2",
+                    "Label": "Straight-Line Motion: Connecting Position, Velocity & Acceleration",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.2.A",
+                            "Label": "Calculate rates of change in applied contexts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.2.A.1",
+                                    "Label": "The derivative can be used to solve rectilinear motion problems involving position, speed, velocity, and acceleration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.4.3",
+                    "Label": "Rates of Change In Applied Contexts Other Than Motion",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.3.A",
+                            "Label": "Interpret rates of change in applied contexts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.3.A.1",
+                                    "Label": "The derivative can be used to solve problems involving rates of change in applied contexts.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.4.4",
+                    "Label": "Introduction To Related Rates",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.4.A",
+                            "Label": "Calculate related rates in applied contexts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.4.A.1",
+                                    "Label": "The chain rule is the basis for differentiating variables in a related rates problem with respect to the same independent variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.4.4.A.2",
+                                    "Label": "Other differentiation rules, such as the product rule and the quotient rule, may also be necessary to differentiate all variables with respect to the same independent variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.4.5",
+                    "Label": "Solving Related Rates Problems",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.5.A",
+                            "Label": "Interpret related rates in applied contexts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.5.A.1",
+                                    "Label": "The derivative can be used to solve related rates problems; that is, finding a rate at which one quantity is changing by relating it to other quantities whose rates of change are known.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.4.6",
+                    "Label": "Approximating Values Of A Function Using Local Linearity & Linearization",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.6.A",
+                            "Label": "Approximate a value on a curve using the equation of a tangent line.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.6.A.1",
+                                    "Label": "The tangent line is the graph of a locally linear approximation of the function near the point of tangency.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.4.6.A.2",
+                                    "Label": "For a tangent line approximation, the function's behavior near the point of tangency may determine whether a tangent line value is an underestimate or an overestimate of the corresponding function value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.4.7",
+                    "Label": "Using L'Hospital's Rule For Determining Limits Of Indeterminate Forms",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.4.7.A",
+                            "Label": "Determine limits of functions that result in indeterminate forms.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.4.7.A.1",
+                                    "Label": "When the ratio of two functions tends to `0/0` or `oo/oo` in the limit, such forms are said to be indeterminate.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.4.7.A.2",
+                                    "Label": "Limits of the indeterminate forms `0/0` or `oo/oo` may be evaluated using L'Hospital's Rule.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.5",
+            "Label": "Analytical Applications Of Differentiation",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.5.1",
+                    "Label": "Using The Mean Value Theorem",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.1.A",
+                            "Label": "Justify conclusions about functions by applying the Mean Value Theorem over an interval.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.1.A.1",
+                                    "Label": "If a function `f` is continuous over the interval `[a,b]` and differentiable over the interval `(a,b)`, then the Mean Value Theorem guarantees a point within that open interval where the instantaneous rate of change equals the average rate of change over the interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.2",
+                    "Label": "Extreme Value Theorem, Global Versus Local Extrema & Critical Points",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.2.A",
+                            "Label": "Justify conclusions about functions by applying the Extreme Value Theorem.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.2.A.1",
+                                    "Label": "If a function `f` is continuous over the interval `(a,b)`, then the Extreme Value Theorem guarantees that `f` has at least one minimum value and at least one maximum value on `[a,b]`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.5.2.A.2",
+                                    "Label": "A point on a function where the first derivative equals zero or fails to exist is a critical point of the function.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.5.2.A.3",
+                                    "Label": "All local (relative) extrema occur at critical points of a function, though not all critical points are local extrema.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.3",
+                    "Label": "Determining Intervals On Which A Function Is Increasing Or Decreasing",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.3.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.3.A.1",
+                                    "Label": "The first derivative of a function can provide information about the function and its graph, including intervals where the function is increasing or decreasing.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.4",
+                    "Label": "Using The First Derivative Test To Determine Relative (Local) Extrema",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.4.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.4.A.1",
+                                    "Label": "The first derivative of a function can determine the location of relative (local) extrema of the function.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.5",
+                    "Label": "Using The Candidates Test To Determine Absolute (Global) Extrema",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.5.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.5.A.1",
+                                    "Label": "Absolute (global) extrema of a function on a closed interval can only occur at critical points or at endpoints.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.6",
+                    "Label": "Determining Concavity Of Functions Over Their Domains",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.6.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.6.A.1",
+                                    "Label": "The graph of a function is concave up (down) on an open interval if the function's derivative is increasing (decreasing) on that interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.5.6.A.2",
+                                    "Label": "The second derivative of a function provides information about the function and its graph, including intervals of upward or downward concavity.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.5.6.A.3",
+                                    "Label": "The second derivative of a function may be used to locate points of inflection for the graph of the original function.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.7",
+                    "Label": "Using The Second Derivative Test To Determine Extrema",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.7.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.7.A.1",
+                                    "Label": "The second derivative of a function may determine whether a critical point is the location of a relative (local) maximum or minimum.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.5.7.A.2",
+                                    "Label": "When a continuous function has only one critical point on an interval on its domain and the critical point corresponds to a relative (local) extremum of the function on the interval, then that critical point also corresponds to the absolute (global) extremum of the function on the interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.8",
+                    "Label": "Sketching Graphs Of Functions & Their Derivatives",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.8.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.8.A.1",
+                                    "Label": "Key features of functions and their derivatives can be identified and related to their graphical, numerical, and analytical representations.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.5.8.A.2",
+                                    "Label": "Graphical, numerical, and analytical information from `f'` and `f''` can be used to predict and explain the behavior of `f`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.9",
+                    "Label": "Connecting A Function, Its First Derivative & Its Second Derivative",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.9.A",
+                            "Label": "Justify conclusions about the behavior of a function based on the behavior of its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.9.A.1",
+                                    "Label": "Key features of the graphs of `f`, `f'`, and `f''` are related to one another.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.10",
+                    "Label": "Introduction To Optimization Problems",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.10.A",
+                            "Label": "Calculate minimum and maximum values in applied contexts or analysis of functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.10.A.1",
+                                    "Label": "The derivative can be used to solve optimization problems; that is, finding a minimum or maximum value of a function on a given interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.11",
+                    "Label": "Solving Optimization Problems",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.11.A",
+                            "Label": "Interpret minimum and maximum values calculated in applied contexts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.11.A.1",
+                                    "Label": "Minimum and maximum values of a function take on specific meanings in applied contexts.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.5.12",
+                    "Label": "Exploring Behaviors Of Implicit Relations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.5.12.A",
+                            "Label": "Determine critical points of implicit relations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.5.12.A.1",
+                                    "Label": "A point on an implicit relation where the first derivative equals zero or does not exist is a critical point of the function.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.5.12.B",
+                            "Label": "Justify conclusions about the behavior of an implicitly defined function based on evidence from its derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                            {
+                                "Key": "AP.Ca.5.12.B.1",
+                                "Label": "Applications of derivatives can be extended to implicitly defined functions.",
+                                "Examples": [],
+                                "Subs": []
+                            },
+                            {
+                                "Key": "AP.Ca.5.12.B.2",
+                                "Label": "Second derivatives involving implicit differentiation may be relations of `x`, `y`, and `dy/dx`.",
+                                "Examples": [],
+                                "Subs": []
+                            }
+                        ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.6",
+            "Label": "Integration & Accumulation Of Change",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.6.1",
+                    "Label": "Exploring Accumulations Of Change",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.1.A",
+                            "Label": "Interpret the meaning of areas associated with the graph of a rate of change in context.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.1.A.1",
+                                    "Label": "The area of the region between the graph of a rate of change function and the x axis gives the accumulation of change.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.1.A.2",
+                                    "Label": "In some cases, accumulation of change can be evaluated by using geometry.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.1.A.3",
+                                    "Label": "If a rate of change is positive (negative) over an interval, then the accumulated change is positive (negative).",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.1.A.4",
+                                    "Label": "The unit for the area of a region defined by rate of change is the unit for the rate of change multiplied by the unit for the independent variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.2",
+                    "Label": "Approximating Areas With Riemann Sums",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.2.A",
+                            "Label": "Approximate a definite integral using geometric and numerical methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.2.A.1",
+                                    "Label": "Definite integrals can be approximated for functions that are represented graphically, numerically, analytically, and verbally.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.2.A.2",
+                                    "Label": "Definite integrals can be approximated using a left Riemann sum, a right Riemann sum, a midpoint Riemann sum, or a trapezoidal sum; approximations can be computed using either uniform or nonuniform partitions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.2.A.3",
+                                    "Label": "Definite integrals can be approximated using numerical methods, with or without technology.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.2.A.4",
+                                    "Label": "Depending on the behavior of a function, it may be possible to determine whether an approximation for a definite integral is an underestimate or overestimate for the value of the definite integral.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.3",
+                    "Label": "Riemann Sums, Summation Notation & Definite Integral Notation",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.3.A",
+                            "Label": "Interpret the limiting case of the Riemann sum as a definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.3.A.1",
+                                    "Label": "The limit of an approximating Riemann sum can be interpreted as a definite integral.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.3.A.2",
+                                    "Label": "A Riemann sum, which requires a partition of an interval I, is the sum of products, each of which is the value of the function at a point in a subinterval multiplied by the length of that subinterval of the partition.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.6.3.B",
+                            "Label": "Represent the limiting case of the Riemann sum as a definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.3.B.1",
+                                    "Label": "The definite integral of a continuous function `f` over the interval `[a,b]`, denoted by `int_a^bf(x)dx`, is the limit of Riemann sums as the widths of the subintervals approach `0`. That is, `int_a^bf(x)dx=lim_(text(max)Deltax_i->0)sum_(i=1)^nf(x_i^(**))Deltax_i`, where `n` is the number of subintervals, `Deltax_i` is the width of the `i^text(th)` subinterval, and `x_i^(**)` is a value in the `i^text(th)` subinterval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.3.B.2",
+                                    "Label": "A definite integral can be translated into the limit of a related Riemann sum, and the limit of a Riemann sum can be written as a definite integral.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.4",
+                    "Label": "The Fundamental Theorem Of Calculus & Accumulation Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.4.A",
+                            "Label": "Represent accumulation functions using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.4.A.1",
+                                    "Label": "The definite integral can be used to define new functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.4.A.2",
+                                    "Label": "If f is a continuous function on an interval containing `a`, then `d/dx(int_a^xf(t)dt)=f(x)`, where `x` is in the interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.5",
+                    "Label": "Interpreting The Behavior Of Accumulation Functions Involving Area",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.5.A",
+                            "Label": "Represent accumulation functions using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.5.A.1",
+                                    "Label": "Graphical, numerical, analytical, and verbal representations of a function `f` provide information about the function `g` defined as `g(x)=int_a^xf(t)dt`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.6",
+                    "Label": "Applying Properties Of Definite Integrals",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.6.A",
+                            "Label": "Calculate a definite integral using areas and properties of definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.6.A.1",
+                                    "Label": "In some cases, a definite integral can be evaluated by using geometry and the connection between the definite integral and area.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.6.A.2",
+                                    "Label": "Properties of definite integrals include the integral of a constant times a function, the integral of the sum of two functions, reversal of limits of integration, and the integral of a function over adjacent intervals.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.6.A.3",
+                                    "Label": "The definition of the definite integral may be extended to functions with removable or jump discontinuities.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.7",
+                    "Label": "The Fundamental Theorem Of Calculus & Definite Integrals",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.7.A",
+                            "Label": "Evaluate definite integrals analytically using the Fundamental Theorem of Calculus.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.7.A.1",
+                                    "Label": "An antiderivative of a function `f` is a function `g` whose derivative is `f`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.7.A.2",
+                                    "Label": "If a function `f` is continuous on an interval containing `a`, the function defined by `F(x)=int_a^xf(t)dt` is an antiderivative of `f` for `x` in the interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.7.A.3",
+                                    "Label": "If `f` is continuous on the interval `[a,b]` and `F` is an antiderivative of `f`, then `int_a^bf(x)dx=F(b)-F(a)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.8",
+                    "Label": "Finding Antiderivatives & Indefinite Integrals: Basic Rules & Notation",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.8.A",
+                            "Label": "Determine antiderivatives of functions and indefinite integrals, using knowledge of derivatives.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.8.A.1",
+                                    "Label": "`intf(x)dx` is an indefinite integral of the function `f` and can be expressed as `intf(x)dx=F(x)+C`, where `F'(x)=f(x)` and `C` is any constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.8.A.2",
+                                    "Label": "Differentiation rules provide the foundation for finding antiderivatives.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.8.A.3",
+                                    "Label": "Many functions do not have closed-form antiderivatives.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.9",
+                    "Label": "Integrating Using Substitution",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.9.A",
+                            "Label": "For integrands requiring substitution or rearrangements into equivalent forms, determine indefinite integrals and evaluate definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.9.A.1",
+                                    "Label": "Substitution of variables is a technique for finding antiderivatives.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.9.A.2",
+                                    "Label": "For a definite integral, substitution of variables requires corresponding changes to the limits of integration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.10",
+                    "Label": "Integrating Functions Using Long Division & Completing The Square",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.10.A",
+                            "Label": "For integrands requiring substitution or rearrangements into equivalent forms, determine indefinite integrals and evaluate definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.10.A.1",
+                                    "Label": "Techniques for finding antiderivatives include rearrangements into equivalent forms, such as long division and completing the square.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.11",
+                    "Label": "Integrating Using Integration By Parts",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.11.A",
+                            "Label": "For integrands requiring integration by parts, determine indefinite integrals and evaluate definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.11.A.1",
+                                    "Label": "Integration by parts is a technique for finding antiderivatives.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.12",
+                    "Label": "Integrating Using Linear Partial Fractions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.12.A",
+                            "Label": "For integrands requiring integration by linear partial fractions, determine indefinite integrals and evaluate definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.12.A.1",
+                                    "Label": "Some rational functions can be decomposed into sums of ratios of linear, nonrepeating factors to which basic integration techniques can be applied.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.13",
+                    "Label": "Evaluating Improper Integrals",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.6.13.A",
+                            "Label": "Evaluate an improper integral or determine that the integral diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.6.13.A.1",
+                                    "Label": "An improper integral is an integral that has one or both limits infinite or has an integrand that is unbounded in the interval of integration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.6.13.A.2",
+                                    "Label": "Improper integrals can be determined using limits of definite integrals.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.6.14",
+                    "Label": "Selecting Techniques For Antidifferentiation",
+                    "Examples": [],
+                    "Subs": []
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.7",
+            "Label": "Differential Equations",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.7.1",
+                    "Label": "Modeling Situations With Differential Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.1.A",
+                            "Label": "Interpret verbal statements of problems as differential equations involving a derivative expression.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.1.A.1",
+                                    "Label": "Differential equations relate a function of an independent variable and the function's derivatives.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.2",
+                    "Label": "Verifying Solutions For Differential Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.2.A",
+                            "Label": "Verify solutions to differential equations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.2.A.1",
+                                    "Label": "Derivatives can be used to verify that a function is a solution to a given differential equation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.2.A.2",
+                                    "Label": "There may be infinitely many general solutions to a differential equation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.3",
+                    "Label": "Sketching Slope Fields",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.3.A",
+                            "Label": "Estimate solutions to differential equations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.3.A.1",
+                                    "Label": "A slope field is a graphical representation of a differential equation on a finite set of points in the plane.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.3.A.2",
+                                    "Label": "Slope fields provide information about the behavior of solutions to first-order differential equations.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.4",
+                    "Label": "Reasoning Using Slope Fields",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.4.A",
+                            "Label": "Estimate solutions to differential equations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.4.A.1",
+                                    "Label": "Solutions to differential equations are functions or families of functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.5",
+                    "Label": "Approximating Solutions Using Euler's Method",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.5.A",
+                            "Label": "Estimate solutions to differential equations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.5.A.1",
+                                    "Label": "Euler's method provides a procedure for approximating a solution to a differential equation or a point on a solution curve.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.6",
+                    "Label": "Finding General Solutions Using Separation Of Variables",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.6.A",
+                            "Label": "Determine general solutions to differential equations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.6.A.1",
+                                    "Label": "Some differential equations can be solved by separation of variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.6.A.2",
+                                    "Label": "Antidifferentiation can be used to find general solutions to differential equations.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.7",
+                    "Label": "Finding Particular Solutions Using Initial Conditions & Separation of Variables",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.7.A",
+                            "Label": "Determine particular solutions to differential equations.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.7.A.1",
+                                    "Label": "A general solution may describe infinitely many solutions to a differential equation. There is only one particular solution passing through a given point.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.7.A.2",
+                                    "Label": "The function `F` defined by `F(x)=y_0+int_a^xf(t)dt` is a particular solution to the differential equation `dy/dx=f(x)`, satisfying `F(a)=y_0`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.7.A.3",
+                                    "Label": "Solutions to differential equations may be subject to domain restrictions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.8",
+                    "Label": "Exponential Models With Differential Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.8.A",
+                            "Label": "Interpret the meaning of a differential equation and its variables in context.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.8.A.1",
+                                    "Label": "Specific applications of finding general and particular solutions to differential equations include motion along a line and exponential growth and decay.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.8.A.2",
+                                    "Label": "The model for exponential growth and decay that arises from the statement “The rate of change of a quantity is proportional to the size of the quantity” is `dy/(dt)=ky`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.7.8.B",
+                            "Label": "Determine general and particular solutions for problems involving differential equations in context.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.8.B.1",
+                                    "Label": "The exponential growth and decay model, `dy/(dt)=ky`, with initial condition `y=y_0` when `t=0`, has solutions of the form `y=y_0e^(kt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.7.9",
+                    "Label": "Logistic Models With Differential Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.7.9.A",
+                            "Label": "Interpret the meaning of the logistic growth model in context.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.7.9.A.1",
+                                    "Label": "The model for logistic growth that arises from the statement “The rate of change of a quantity is jointly proportional to the size of the quantity and the difference between the quantity and the carrying capacity” is `dy/(dt)=ky(a-y)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.9.A.2",
+                                    "Label": "The logistic differential equation and initial conditions can be interpreted without solving the differential equation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.9.A.3",
+                                    "Label": "The limiting value (carrying capacity) of a logistic differential equation as the independent variable approaches infinity can be determined using the logistic growth model and initial conditions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.7.9.A.4",
+                                    "Label": "The value of the dependent variable in a logistic differential equation at the point when it is changing fastest can be determined using the logistic growth model and initial conditions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.8",
+            "Label": "Applications Of Integration",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.8.1",
+                    "Label": "Finding The Average Value Of A Function On An Interval",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.1.A",
+                            "Label": "Determine the average value of a function using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.1.A.1",
+                                    "Label": "The average value of a continuous function `f` over an interval `[a,b]` is `1/(b-a)int_a^bf(x)dx`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.2",
+                    "Label": "Connecting Position, Velocity & Acceleration Of Functions Using Integrals",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.2.A",
+                            "Label": "Determine values for positions and rates of change using definite integrals in problems involving rectilinear motion.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.2.A.1",
+                                    "Label": "For a particle in rectilinear motion over an interval of time, the definite integral of velocity represents the particle's displacement over the interval of time, and the definite integral of speed represents the particle's total distance traveled over the interval of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.3",
+                    "Label": "Using Accumulation Functions & Definite Integrals In Applied Contexts",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.3.A",
+                            "Label": "Interpret the meaning of a definite integral in accumulation problems.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.3.A.1",
+                                    "Label": "A function defined as an integral represents an accumulation of a rate of change.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.8.3.A.2",
+                                    "Label": "The definite integral of the rate of change of a quantity over an interval gives the net change of that quantity over that interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.8.3.B",
+                            "Label": "Determine net change using definite integrals in applied contexts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.3.B.1",
+                                    "Label": "The definite integral can be used to express information about accumulation and net change in many applied contexts.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.4",
+                    "Label": "Finding The Area Between Curves Expressed As Functions Of `x`",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.4.A",
+                            "Label": "Calculate areas in the plane using the definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.4.A.1",
+                                    "Label": "Areas of regions in the plane can be calculated with definite integrals.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.5",
+                    "Label": "Finding The Area Between Curves Expressed As Functions Of `y`",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.5.A",
+                            "Label": "Calculate areas in the plane using the definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.5.A.1",
+                                    "Label": "Areas of regions in the plane can be calculated using functions of either `x` or `y`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.6",
+                    "Label": "Finding The Area Between Curves That Intersect At More Than Two Points",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.6.A",
+                            "Label": "Calculate areas in the plane using the definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.6.A.1",
+                                    "Label": "Areas of certain regions in the plane may be calculated using a sum of two or more definite integrals or by evaluating a definite integral of the absolute value of the difference of two functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.7",
+                    "Label": "Volumes With Cross Sections: Squares & Rectangles",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.7.A",
+                            "Label": "Calculate volumes of solids with known cross sections using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.7.A.1",
+                                    "Label": "Volumes of solids with square and rectangular cross sections can be found using definite integrals and the area formulas for these shapes.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.8",
+                    "Label": "Volumes With Cross Sections: Triangles & Semicircles",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.8.A",
+                            "Label": "Calculate volumes of solids with known cross sections using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.8.A.1",
+                                    "Label": "Volumes of solids with triangular cross sections can be found using definite integrals and the area formulas for these shapes.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.8.8.A.2",
+                                    "Label": "Volumes of solids with semicircular and other geometrically defined cross sections can be found using definite integrals and the area formulas for these shapes.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.9",
+                    "Label": "Volume With Disc Method: Revolving Around The `x`- or `y`-Axis",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.9.A",
+                            "Label": "Calculate volumes of solids of revolution using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.9.A.1",
+                                    "Label": "Volumes of solids of revolution around the `x`- or `y`-axis may be found by using definite integrals with the disc method.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.10",
+                    "Label": "Volume With Disc Method: Revolving Around Other Axes",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.10.A",
+                            "Label": "Calculate volumes of solids of revolution using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.10.A.1",
+                                    "Label": "Volumes of solids of revolution around any horizontal or vertical line in the plane may be found by using definite integrals with the disc method.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.11",
+                    "Label": "Volume With Washer Method: Revolving Around The `x`- or `y`-Axis",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.11.A",
+                            "Label": "Calculate volumes of solids of revolution using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.11.A.1",
+                                    "Label": "Volumes of solids of revolution around the `x`- or `y`-axis whose cross sections are ring shaped may be found using definite integrals with the washer method.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.12",
+                    "Label": "Volume With Washer Method: Revolving Around Other Axes",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.12.A",
+                            "Label": "Calculate volumes of solids of revolution using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.12.A.1",
+                                    "Label": "Volumes of solids of revolution around any horizontal or vertical line whose cross sections are ring shaped may be found using definite integrals with the washer method.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.8.13",
+                    "Label": "The Arc Length Of A Smooth, Planar Curve & Distance Traveled",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.8.13.A",
+                            "Label": "Determine the length of a curve in the plane defined by a function, using a definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.8.13.A.1",
+                                    "Label": "The length of a planar curve defined by a function can be calculated using a definite integral.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.9",
+            "Label": "Parametric Equations, Polar Coordinates & Vector-Valued Functions",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.9.1",
+                    "Label": "Defining & Differentiating Parametric Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.1.A",
+                            "Label": "Calculate derivatives of parametric functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.1.A.1",
+                                    "Label": "Methods for calculating derivatives of real-valued functions can be extended to parametric functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.9.1.A.2",
+                                    "Label": "For a curve defined parametrically, the value of `dy/dx` at a point on the curve is the slope of the line tangent to the curve at that point. `dy/dx`, the slope of the line tangent to a curve defined using parametric equations, can be determined by dividing `dy/(dt)` by `dx/(dt)`, provided `dx/(dt)` does not equal zero.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.2",
+                    "Label": "Second Derivatives Of Parametric Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.2.A",
+                            "Label": "Calculate derivatives of parametric functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.2.A.1",
+                                    "Label": "`(d^2y)/(dx^2)` can be calculated by dividing `d/(dt)(dy/dx)` by `dx/(dt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.3",
+                    "Label": "Finding Arc Lengths Of Curves Given By Parametric Equations",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.3.A",
+                            "Label": "Determine the length of a curve in the plane defined by parametric functions, using a definite integral.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.3.A.1",
+                                    "Label": "The length of a parametrically defined curve can be calculated using a definite integral.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.4",
+                    "Label": "Defining & Differentiating Vector-Valued Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.4.A",
+                            "Label": "Calculate derivatives of vector-valued functions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.4.A.1",
+                                    "Label": "Methods for calculating derivatives of real-valued functions can be extended to vector-valued functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.5",
+                    "Label": "Integrating Vector-Valued Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.5.A",
+                            "Label": "Determine a particular solution given a rate vector and initial conditions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.5.A.1",
+                                    "Label": "Methods for calculating integrals of real-valued functions can be extended to parametric or vector-valued functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.6",
+                    "Label": "Solving Motion Problems Using Parametric & Vector-Valued Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.6.A",
+                            "Label": "Determine values for positions and rates of change in problems involving planar motion.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.6.A.1",
+                                    "Label": "Derivatives can be used to determine velocity, speed, and acceleration for a particle moving along a curve in the plane defined using parametric or vector-valued functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.9.6.A.2",
+                                    "Label": "For a particle in planar motion over an interval of time, the definite integral of the velocity vector represents the particle's displacement (net change in position) over the interval of time, from which we might determine its position. The definite integral of speed represents the particle's total distance traveled over the interval of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.7",
+                    "Label": "Defining Polar Coordinates & Differentiating In Polar Form",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.7.A",
+                            "Label": "Calculate derivatives of functions written in polar coordinates.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.7.A.1",
+                                    "Label": "Methods for calculating derivatives of real- valued functions can be extended to functions in polar coordinates.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.9.7.A.2",
+                                    "Label": "For a curve given by a polar equation `r=f(theta)`, derivatives of `r`, `x`, and `y` with respect to `theta`, and first and second derivatives of `y` with respect to `x` can provide information about the curve.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.8",
+                    "Label": "Find The Area Of A Polar Region Or The Area Bounded By A Single Polar Curve",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.8.A",
+                            "Label": "Calculate areas of regions defined by polar curves using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.8.A.1",
+                                    "Label": "The concept of calculating areas in rectangular coordinates can be extended to polar coordinates.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.9.9",
+                    "Label": "Finding The Area Of The Region Bounded By Two Polar Curves",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.9.9.A",
+                            "Label": "Calculate areas of regions defined by polar curves using definite integrals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.9.9.A.1",
+                                    "Label": "Areas of regions bounded by polar curves can be calculated with definite integrals.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.Ca.10",
+            "Label": "Infinite Sequences & Series",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.Ca.10.1",
+                    "Label": "Defining Convergent & Divergent Infinite Series",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.1.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.1.A.1",
+                                    "Label": "The `n^text(th)` partial sum is defined as the sum of the first `n` terms of a series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.1.A.2",
+                                    "Label": "An infinite series of numbers converges to a real number `S` (or has sum `S`), if and only if the limit of its sequence of partial sums exists and equals `S`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.2",
+                    "Label": "Working With Geometric Series",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.2.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.2.A.1",
+                                    "Label": "A geometric series is a series with a constant ratio between successive terms.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.2",
+                                    "Label": "If `a` is a real number and `r` is a real number such that `abs(r)<1`, then the geometric series `sum_(n=0)^ooar^n=a/(1-r)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.3",
+                    "Label": "The `n^text(th)` Term Test For Divergence",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.3.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.3.A.1",
+                                    "Label": "The `n^text(th)` term test is a test for divergence of a series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.4",
+                    "Label": "Integral Test For Convergence",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.4.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.4.A.1",
+                                    "Label": "The integral test is a method to determine whether a series converges or diverges.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.5",
+                    "Label": "Harmonic Series & `p`-Series",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.5.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.5.A.1",
+                                    "Label": "In addition to geometric series, common series of numbers include the harmonic series, the alternating harmonic series, and `p`-series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.6",
+                    "Label": "Comparison Tests For Convergence",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.6.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.6.A.1",
+                                    "Label": "The comparison test is a method to determine whether a series converges or diverges.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.6.A.2",
+                                    "Label": "The limit comparison test is a method to determine whether a series converges or diverges.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.7",
+                    "Label": "Alternating Series Test For Convergence",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.7.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.7.A.1",
+                                    "Label": "The alternating series test is a method to determine whether an alternating series converges.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.8",
+                    "Label": "Ratio Test For Convergence",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.8.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.8.A.1",
+                                    "Label": "The ratio test is a method to determine whether a series of numbers converges or diverges.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.9",
+                    "Label": "Determining Absolute Or Conditional Convergence",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.9.A",
+                            "Label": "Determine whether a series converges or diverges.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.9.A.1",
+                                    "Label": "A series may be absolutely convergent, conditionally convergent, or divergent.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.9.A.2",
+                                    "Label": "If a series converges absolutely, then it converges.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.9.A.3",
+                                    "Label": "If a series converges absolutely, then any series obtained from it by regrouping or rearranging the terms has the same value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.10",
+                    "Label": "Alternating Series Error Bound",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.10.A",
+                            "Label": "Approximate the sum of a series.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.10.A.1",
+                                    "Label": "If an alternating series converges by the alternating series test, then the alternating series error bound can be used to bound how far a partial sum is from the value of the infinite series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.11",
+                    "Label": "Finding Taylor Polynomial Approximations Of Functions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.11.A",
+                            "Label": "Represent a function at a point as a Taylor polynomial.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.11.A.1",
+                                    "Label": "The coefficient of the `n^text(th)` degree term in a Taylor polynomial for a function `f` centered at `x=a` is `(f^((n))(a))/(n!)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.11.A.2",
+                                    "Label": "In many cases, as the degree of a Taylor polynomial increases, the `n^text(th)` degree polynomial will approach the original function over some interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.10.11.B",
+                            "Label": "Approximate function values using a Taylor polynomial.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.11.B.1",
+                                    "Label": "Taylor polynomials for a function `f` centered at `x=a` can be used to approximate function values of `f` near `x=a`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.12",
+                    "Label": "Lagrange Error Bound",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.12.A",
+                            "Label": "Determine the error bound associated with a Taylor polynomial approximation.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.12.A.1",
+                                    "Label": "The Lagrange error bound can be used to determine a maximum interval for the error of a Taylor polynomial approximation to a function.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.12.A.2",
+                                    "Label": "In some situations, the alternating series error bound can be used to bound the error of a Taylor polynomial approximation to the value of a function.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.13",
+                    "Label": "Radius & Interval Of Convergence Of Power Series",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.13.A",
+                            "Label": "Determine the radius of convergence and interval of convergence for a power series.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.13.A.1",
+                                    "Label": "A power series is a series of the form `sum_(n=0)^ooa_n(x-r)`, where `n` is a non-negative integer, `{a_n}` is a sequence of real numbers, and `r` is a real number.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.13.A.2",
+                                    "Label": "If a power series converges, it either converges at a single point or has an interval of convergence.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.13.A.3",
+                                    "Label": "The ratio test can be used to determine the radius of convergence of a power series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.13.A.4",
+                                    "Label": "The radius of convergence of a power series can be used to identify an open interval on which the series converges, but it is necessary to test both endpoints of the interval to determine the interval of convergence.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.13.A.5",
+                                    "Label": "If a power series has a positive radius of convergence, then the power series is the Taylor series of the function to which it converges over the open interval.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.13.A.6",
+                                    "Label": "The radius of convergence of a power series obtained by term-by-term differentiation or term-by-term integration is the same as the radius of convergence of the original power series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.14",
+                    "Label": "Finding Taylor Or Maclaurin Series For A Function",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.14.A",
+                            "Label": "Represent a function as a Taylor series or a Maclaurin series.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.14.A.1",
+                                    "Label": "A Taylor polynomial for `f(x)` is a partial sum of the Taylor series for `f(x)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.Ca.10.14.B",
+                            "Label": "Interpret Taylor series and Maclaurin series.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.14.B.1",
+                                    "Label": "The Maclaurin series for `1/(1-x)` is a geometric series.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.Ca.10.14.B.2",
+                                    "Label": "The Maclaurin series for `sinx`, `cosx`, and `e^x` provides the foundation for constructing the Maclaurin series for other functions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.Ca.10.15",
+                    "Label": "Representing Functions As Power Series",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.Ca.10.15.A",
+                            "Label": "Represent a given function as a power series.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.Ca.10.15.A.1",
+                                    "Label": "Using a known series, a power series for a given function can be derived using operations such as term-by-term differentiation or term-by-term integration, and by various methods (e.g., algebraic processes, substitutions, or using properties of geometric series).",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "References": []
+}

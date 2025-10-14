@@ -1,0 +1,2799 @@
+{
+    "Title": "Advanced Placement > Physics C: Mechanics > High School",
+    "Overview": "",
+    "Goals": [],
+    "Standards": [
+        {
+            "Key": "AP.PCM.1",
+            "Label": "Kinematics",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.1.1",
+                    "Label": "Scalars & Vectors",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.1.1.A",
+                            "Label": "Describe a scalar or vector quantity using magnitude and direction, as appropriate.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.1.A.1",
+                                    "Label": "Scalars are quantities described by magnitude only; vectors are quantities described by both magnitude and direction.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.1.A.2",
+                                    "Label": "Vectors can be visually modeled as arrows with appropriate direction and lengths proportional to their magnitude.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.1.A.3",
+                                    "Label": "Distance and speed are examples of scalar quantities, while position, displacement, velocity, and acceleration are examples of vector quantities.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.1.A.4",
+                                    "Label": "Vectors can be expressed in unit vector notation or as a magnitude and a direction.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.1.1.A.4.i",
+                                            "Label": "Unit vector notation can be used to represent vectors as the sum of their constituent components in the `x`-, `y`-, and `z`-directions, denoted by `hat(i)`, `hat(j)`, and `hat(k)`, respectively. Relevant equation: `vec(r)=(Ahat(i)+Bhat(j)+Chat(k))`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.1.A.4.ii",
+                                            "Label": "The position vector of a point is given by  `vec(r)`, and the unit vector in the direction of the position vector is denoted `hat(r)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.1.A.4.iii",
+                                            "Label": "A resultant vector is the vector sum of the addend vectors' components. Relevant equations: `vec(C)=vec(A)+vec(B)` and `vec(C)=(A_x+B_x)hat(i)+(A_y+B_y)hat(j)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.1.1.A.5",
+                                    "Label": "In a given one-dimensional coordinate system, opposite directions are denoted by opposite signs.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.1.2",
+                    "Label": "Displacement, Velocity & Acceleration",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.1.2.A",
+                            "Label": "Describe a change in an object's position.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.2.A.1",
+                                    "Label": "When using the object model, the size, shape, and internal configuration are ignored. The object may be treated as a single point with extensive properties such as mass and charge.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.2.A.2",
+                                    "Label": "Displacement is the change in an object's position. Relevant equation: `Deltax=x-x_0`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.1.2.B",
+                            "Label": "Describe the average velocity and acceleration of an object.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.2.B.1",
+                                    "Label": "Averages of velocity and acceleration are calculated considering the initial and final states of an object over an interval of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.2.B.2",
+                                    "Label": "Average velocity is the displacement of an object divided by the interval of time in which that displacement occurs: `vec(v)_text(avg)=(Deltavec(x))/(Deltat)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.2.B.3",
+                                    "Label": "Average acceleration is the change in velocity divided by the interval of time in which that change in velocity occurs: `vec(a)_text(avg)=(Deltavec(v))/(Deltat)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.2.B.4",
+                                    "Label": "An object is accelerating if either the magnitude and/or direction of the object's velocity are changing.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.2.B.5",
+                                    "Label": "Calculating average velocity or average acceleration over a very small time interval yields a value that is very close to the instantaneous velocity or instantaneous acceleration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.1.2.C",
+                            "Label": "Describe the instantaneous position, velocity, and acceleration of an object as a function of time.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.2.C.1",
+                                    "Label": "As the time interval used to calculate the average value of a quantity approaches zero, the average value of that quantity approaches the value of the quantity at that instant, called the instantaneous value.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.1.2.C.1.i",
+                                            "Label": "Instantaneous velocity is the rate of change of the object's position, which is equal to the derivative of position with respect to time. Relevant equations: `vec(v)=(dvec(r))/(dt)` and `v_x=(dx)/(dt)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.2.C.1.ii",
+                                            "Label": "Instantaneous acceleration is the rate of change of the object's velocity, which is equal to the derivative of velocity with respect to time. Relevant equations: `vec(a)=(dvec(v))/(dt)` and `a_x=(dv_x)/(dt)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.1.2.C.2",
+                                    "Label": "Time-dependent functions and instantaneous values of position, velocity, and acceleration can be determined using differentiation and integration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.1.3",
+                    "Label": "Representing Motion",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.1.3.A",
+                            "Label": "Describe the position, velocity, and acceleration of an object using representations of that object's motion.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.3.A.1",
+                                    "Label": "Motion can be represented by motion diagrams, figures, graphs, equations, and narrative descriptions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.3.A.2",
+                                    "Label": "For constant acceleration, three kinematic equations can be used to describe instantaneous linear motion in one dimension: `v_x=v_(x0)+a_xt`, `x=x_0+v_(x0)t+1/2at^2`, and `v_x^2=v_(x0)^2+2a_x(x-x_0)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.3.A.3",
+                                    "Label": "Near the surface of Earth, the vertical acceleration caused by the force of gravity is downward, constant, and has a measured value approximately equal to `a_g=g~~10` `text(m)//text(s)^2`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.3.A.4",
+                                    "Label": "Graphs of position, velocity, and acceleration as functions of time can be used to find the relationships between those quantities.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.1.3.A.4.i",
+                                            "Label": "An object's instantaneous velocity is the rate of change of the object's position, which is equal to the slope of a line tangent to a point on a graph of the object's position as a function of time. Relevant equation: `v_x=(dx)/(dt)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.3.A.4.ii",
+                                            "Label": "An object's instantaneous acceleration is the rate of change of the object's velocity, which is equal to the slope of a line tangent to a point on a graph of the object's velocity as a function of time. Relevant equation: `a_x=(dv_x)/(dt)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.3.A.4.iii",
+                                            "Label": "The displacement of an object during a time interval is equal to the area under the curve of a graph of the object's velocity as a function of time (i.e., the area bounded by the function and the horizontal axis for the appropriate interval). Relevant equation: `Deltax=int_(t_1)^(t_2)v_x(t)dt`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.3.A.4.iv",
+                                            "Label": "The change in velocity of an object during a time interval is equal to the area under the curve of a graph of the acceleration of the object as a function of time. Relevant equation: `Deltav_x=int_(t_1)^(t_2)a_x(t)dt`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.1.4",
+                    "Label": "Reference Frames & Relative Motion",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.1.4.A",
+                            "Label": "Describe the reference frame of a given observer.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.4.A.1",
+                                    "Label": "The choice of reference frame will determine the direction and magnitude of quantities measured by an observer in that reference frame.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.1.4.B",
+                            "Label": "Describe the motion of objects as measured by observers in different inertial reference frames.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.4.B.1",
+                                    "Label": "Measurements from a given reference frame may be converted to measurements from another reference frame.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.4.B.2",
+                                    "Label": "The observed velocity of an object results from the combination of the object's velocity and the velocity of the observer's reference frame.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.1.4.B.2.i",
+                                            "Label": "Combining the motion of an object and the motion of an observer in a given reference frame involves the addition or subtraction of vectors.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.1.4.B.2.ii",
+                                            "Label": "The acceleration of any object is the same as measured from all inertial reference frames.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.1.5",
+                    "Label": "Motion In Two Or Three Dimensions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.1.5.A",
+                            "Label": "Describe the motion of an object moving in two or three dimensions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.1.5.A.1",
+                                    "Label": "Motion in two or three dimensions can be analyzed using one-dimensional kinematic relationships if the motion is separated into components.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.5.A.2",
+                                    "Label": "Velocity and acceleration may be different in each dimension and may be nonuniform.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.5.A.3",
+                                    "Label": "Motion in one dimension may be changed without causing a change in a perpendicular dimension.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.1.5.A.4",
+                                    "Label": "Projectile motion is a special case of two-dimensional motion that has zero acceleration in one dimension and constant, nonzero acceleration in the second dimension.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.PCM.2",
+            "Label": "Force & Translational Dynamics",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.2.1",
+                    "Label": "Systems & Center Of Mass",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.1.A",
+                            "Label": "Describe the properties and interactions of a system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.1.A.1",
+                                    "Label": "System properties are determined by the interactions between objects within the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.A.2",
+                                    "Label": "If the properties or interactions of the constituent objects within a system are not important in modeling the behavior of the macroscopic system, the system can itself be treated as a single object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.A.3",
+                                    "Label": "Systems may allow interactions between constituent parts of the system and the environment, which may result in the transfer of energy or mass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.A.4",
+                                    "Label": "Individual objects within a chosen system may behave differently from each other as well as from the system as a whole.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.A.5",
+                                    "Label": "The internal structure of a system affects the analysis of that system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.A.6",
+                                    "Label": "As variables external to a system are changed, the system's substructure may change.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.1.B",
+                            "Label": "Describe the location of a system's center of mass with respect to the system's constituent parts.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.1.B.1",
+                                    "Label": "For objects or systems with symmetrical mass distributions, the center of mass is located on lines of symmetry.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.B.2",
+                                    "Label": "The location of a system's center of mass along a given axis can be calculated using the equation: `vec(x)_text(cm)=(summ_ivec(x)_i)/(summ_i)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.B.3",
+                                    "Label": "For a nonuniform solid that can be considered as a collection of differential masses, `dm`, the solid's center of mass can be calculated using the equation: `vec(r)_text(cm)=(intvec(r)dm)/(intdm)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.1.B.3.i",
+                                            "Label": "The linear mass density of a rod or other linear rigid body is the derivative of the rod's mass with respect to the position of the differential mass element on the rigid body. Relevant equation: `lambda=d/(dl)m(l)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.1.B.3.ii",
+                                            "Label": "If a function of mass density is given for a solid, the total mass can be determined by integrating the mass density over the length (one dimension), area (two dimensions), or volume (three dimensions) of the solid. For example: `M_text(total)=intrho(r)dV`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.1.B.4",
+                                    "Label": "A system can be modeled as a singular object that is located at the system's center of mass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.2",
+                    "Label": "Forces & Free-Body Diagrams",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.2.A",
+                            "Label": "Describe a force as an interaction between two objects or systems",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.2.A.1",
+                                    "Label": "Forces are vector quantities that describe the interactions between objects or systems.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.2.A.1.i",
+                                            "Label": "A force exerted on an object or system is always due to the interaction of that object or system with another object or system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.2.A.1.ii",
+                                            "Label": "An object or system cannot exert a net force on itself.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.2.A.2",
+                                    "Label": "Contact forces describe the interaction of an object or system touching another object or system and are macroscopic effects of interatomic electric forces.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.2.B",
+                            "Label": "Describe the forces exerted on an object or system using a free-body diagram.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.2.B.1",
+                                    "Label": "Free-body diagrams are useful tools for visualizing forces being exerted on a single object or system and for determining the equations that represent a physical situation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.2.B.2",
+                                    "Label": "The free-body diagram of an object or system shows each of the forces exerted on the object or system by the environment.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.2.B.3",
+                                    "Label": "Forces exerted on an object or system are represented as vectors originating from the representation of the center of mass, such as a dot. A system is treated as though all of its mass is located at the center of mass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.2.B.4",
+                                    "Label": "A coordinate system with one axis parallel to the direction of acceleration of the object or system simplifies the translation from free-body diagram to algebraic representation. For example, in a free-body diagram of an object on an inclined plane, it is useful to set one axis parallel to the surface of the incline.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.3",
+                    "Label": "Newton's Third Law",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.3.A",
+                            "Label": "Describe the interaction of two objects or systems using Newton's third law and a representation of paired forces exerted on each object or system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.3.A.1",
+                                    "Label": "Newton's third law describes the interaction of two objects or systems in terms of the paired forces that each exerts on the other: `vec(F)_text(A on B)=-vec(F)_text(B on A)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.3.A.2",
+                                    "Label": "Interactions between objects within a system (internal forces) do not influence the motion of a system's center of mass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.3.A.3",
+                                    "Label": "Tension is the macroscopic net result of forces that infinitesimal segments of a string, cable, chain, or similar system exert on each other in response to an external force.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.3.A.3.i",
+                                            "Label": "An ideal string has negligible mass and does not stretch when under tension.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.3.A.3.ii",
+                                            "Label": "The tension in an ideal string is the same at all points within the string.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.3.A.3.iii",
+                                            "Label": "In a string with nonnegligible mass, tension may not be the same at all points within the string.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.3.A.3.iv",
+                                            "Label": "An ideal pulley is a pulley that has negligible mass and rotates about an axle through its center of mass with negligible friction.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.4",
+                    "Label": "Newton's First Law",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.4.A",
+                            "Label": "Describe the conditions under which a system's velocity remains constant.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.4.A.1",
+                                    "Label": "The net force on a system is the vector sum of all forces exerted on the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.4.A.2",
+                                    "Label": "Translational equilibrium is the configuration of forces such that the net force exerted on a system is zero. Derived equation: `sumvec(F)_i=0`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.4.A.3",
+                                    "Label": "Newton's first law states that if the net force exerted on a system is zero, the velocity of that system will remain constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.4.A.4",
+                                    "Label": "Forces may be balanced in one dimension but unbalanced in another. The system's velocity will change only in the direction of the unbalanced force.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.4.A.5",
+                                    "Label": "An inertial reference frame is one from which an observer would verify Newton's first law of motion.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.5",
+                    "Label": "Newton's Second Law",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.5.A",
+                            "Label": "Describe the conditions under which a system's velocity changes.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.5.A.1",
+                                    "Label": "Unbalanced forces are a configuration of forces such that the net force exerted on a system is not equal to zero.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.5.A.2",
+                                    "Label": "Newton's second law of motion states that the acceleration of a system's center of mass has a magnitude proportional to the magnitude of the net force exerted on the system and is in the same direction as that net force. Relevant equation: `vec(a)_text(sys)=(sumvec(F))/m_text(sys)=vec(F)_text(net)/m_text(sys)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.5.A.3",
+                                    "Label": "The velocity of a system's center of mass will only change if a nonzero net external force is exerted on that system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.6",
+                    "Label": "Gravitational Force",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.6.A",
+                            "Label": "Describe the gravitational interaction between two objects or systems with mass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.6.A.1",
+                                    "Label": "Newton's law of universal gravitation describes the gravitational force between two objects or systems as directly proportional to each of their masses and inversely proportional to the square of the distance between the systems' centers of mass. Relevant equation: `abs(vec(F)_g)=G(m_1m_2)/r^2`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.6.A.1.i",
+                                            "Label": "The gravitational force is attractive.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.6.A.1.ii",
+                                            "Label": "The gravitational force is always exerted along the line connecting the center of mass of the two interacting systems.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.6.A.1.iii",
+                                            "Label": "The gravitational force on a system can be considered to be exerted on the system's center of mass.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.A.2",
+                                    "Label": "A field models the effects of a noncontact force exerted on an object at various positions in space.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.6.A.2.i",
+                                            "Label": "The magnitude of the gravitational field created by a system of mass `M` at a point in space is equal to the ratio of the gravitational force exerted by the system on a test object of mass `m` to the mass of the test object. Derived equation: `abs(vec(g))=abs(vec(F)_g)/m=GM/r^2`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.6.A.2.ii",
+                                            "Label": "If the gravitational force is the only force exerted on an object, the observed acceleration of the object (in `text(m)//text(s)^2`) is numerically equal to the magnitude of the gravitational field strength (in `text(N)//text(kg)`) at that location.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.A.3",
+                                    "Label": "The gravitational force exerted by an astronomical body on a relatively small nearby object is called weight. Derived equation: `text(Weight)=F_g=mg`",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.6.B",
+                            "Label": "Describe situations in which the gravitational force can be considered constant.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.6.B.1",
+                                    "Label": "If the gravitational force between two systems' centers of mass has a negligible change as the relative position of the two systems changes, the gravitational force can be considered constant at all points between the initial and final positions of the systems.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.B.2",
+                                    "Label": "Near the surface of Earth, the strength of the gravitational field is `g~~10` `text(N)//text(kg)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.6.C",
+                            "Label": "Describe the conditions under which the magnitude of a system's apparent weight is different from the magnitude of the gravitational force exerted on that system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.6.C.1",
+                                    "Label": "The magnitude of the apparent weight of a system is the magnitude of the normal force exerted on the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.C.2",
+                                    "Label": "If the system is accelerating, the apparent weight of the system is not equal to the magnitude of the gravitational force exerted on the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.C.3",
+                                    "Label": "A system appears weightless when there are no forces exerted on the system or when the force of gravity is the only force exerted on the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.C.4",
+                                    "Label": "The equivalence principle states that an observer in a noninertial reference frame is unable to distinguish between an object's apparent weight and the gravitational force exerted on the object by a gravitational field.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.6.D",
+                            "Label": "Describe inertial and gravitational mass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.6.D.1",
+                                    "Label": "Objects have inertial mass, or inertia, a property that determines how much an object's motion resists changes when interacting with another object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.D.2",
+                                    "Label": "Gravitational mass is related to the force of attraction between two systems with mass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.D.3",
+                                    "Label": "Inertial mass and gravitational mass have been experimentally verified to be equivalent.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.6.E",
+                            "Label": "Describe the gravitational force exerted on an object by a uniform spherical distribution of mass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.6.E.1",
+                                    "Label": "The net gravitational force exerted on an object by a uniform spherical distribution of mass is the sum of the individual forces from small differential masses that comprise the distribution.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.E.2",
+                                    "Label": "Newton's shell theorem describes the net gravitational force exerted on an object by a uniform spherical shell of mass.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.6.E.2.i",
+                                            "Label": "The net gravitational force exerted on an object inside a thin spherical shell is zero.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.6.E.2.ii",
+                                            "Label": "The net gravitational force exerted on an object outside a thin spherical shell can be determined by treating the shell as a single massive object located at the center of the shell.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.6.E.2.iii",
+                                            "Label": "An object inside a sphere of uniform density experiences a net gravitational force from only a partial mass of the sphere.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.6.E.2.iv",
+                                            "Label": "The partial mass of a sphere that contributes to the net gravitational force exerted on an object within that sphere is the portion of the sphere's mass located a distance less than or equal to the object's distance from the center of the sphere and can be calculated using the density of the sphere. Derived equation: `m_text(partial)=rho4/3pi(r_text(partial))^3`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.6.E.3",
+                                    "Label": "The gravitational force exerted on an object within a uniform sphere can be shown to be proportional to the object's distance from the sphere's center. Derived equation: `F_text(g,partial)=-kr_text(partial)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.7",
+                    "Label": "Kinetic & Static Friction",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.7.A",
+                            "Label": "Describe kinetic friction between two surfaces.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.7.A.1",
+                                    "Label": "Kinetic friction occurs when two surfaces in contact move relative to each other.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.7.A.1.i",
+                                            "Label": "The kinetic friction force is exerted in a direction opposite the motion of each surface relative to the other surface.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.7.A.1.ii",
+                                            "Label": "The force of friction between two surfaces does not depend on the size of the surface area of contact.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.7.A.2",
+                                    "Label": "The magnitude of the kinetic friction force exerted on an object is the product of the normal force the surface exerts on the object and the coefficient of kinetic friction. Relevant equation: `abs(vec(F)_(f,k))=abs(mu_kvec(F)_N)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.7.A.2.i",
+                                            "Label": "The coefficient of kinetic friction depends on the material properties of the surfaces that are in contact.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.7.A.2.ii",
+                                            "Label": "Normal force is the perpendicular component of the force exerted on an object by the surface with which it is in contact; it is directed away from the surface.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.7.B",
+                            "Label": "Describe static friction between two surfaces.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.7.B.1",
+                                    "Label": "Static friction may occur between the contacting surfaces of two objects that are not moving relative to each other.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.7.B.2",
+                                    "Label": "Static friction adopts the value and direction required to prevent an object from slipping or sliding on a surface. Relevant equation: `abs(vec(F)_(f,s))<=abs(mu_svec(F)_n)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.7.B.2.i",
+                                            "Label": "Slipping and sliding refer to situations in which two surfaces are moving relative to each other.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.7.B.2.ii",
+                                            "Label": "There exists a maximum value for which static friction will prevent an object from slipping on a given surface. Derived equation: `F_text(f,s,max)=mu_sF_N`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.7.B.3",
+                                    "Label": "The coefficient of static friction is typically greater than the coefficient of kinetic friction for a given pair of surfaces.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.8",
+                    "Label": "Spring Forces",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.8.A",
+                            "Label": "Describe the force exerted on an object by an ideal spring.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.8.A.1",
+                                    "Label": "An ideal spring has negligible mass and exerts a force that is proportional to the change in its length as measured from its relaxed length. A nonideal spring either has nonnegligible mass or exerts a force that is not proportional to the change in its length as measured from its relaxed length.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.8.A.2",
+                                    "Label": "The magnitude of the force exerted by an ideal spring on an object is given by Hooke's law: `vec(F)_s=-kDeltavec(x)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.8.A.3",
+                                    "Label": "The force exerted on an object by a spring is always directed toward the equilibrium position of the object–spring system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.8.B",
+                            "Label": "Describe the equivalent spring constant of a combination of springs exerting forces on an object.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.8.B.1",
+                                    "Label": "A collection of springs that exert forces on an object may behave as though they were a single spring with an equivalent spring constant `k_text(eq)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.8.B.1.i",
+                                            "Label": "The inverse of the equivalent spring constant of a set of springs in series is equal to the sum of the inverses of the individual spring constants. Derived equation: `1/k_text(eq,series)=sum1/k_i=1/k_1+1/k_2+...`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.8.B.1.ii",
+                                            "Label": "The equivalent spring constant of a set of springs arranged in series is smaller than the smallest constituent spring constant.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.8.B.1.iii",
+                                            "Label": "The equivalent spring constant of a set of springs arranged in parallel is the sum of the individual spring constants. Derived equation: `k_text(eq,parallel)=sumk_i=k_1+k_2+...`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.9",
+                    "Label": "Resistive Forces",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.9.A",
+                            "Label": "Describe the motion of an object subject to a resistive force.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.9.A.1",
+                                    "Label": "A resistive force is defined as a velocity-dependent force in the opposite direction of an object's velocity, for example: `vec(F)_r=-kvec(v)`",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.9.A.2",
+                                    "Label": "Applying Newton's second law to an object upon which a resistive force is exerted results in a differential equation for velocity.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.9.A.2.i",
+                                            "Label": "Using the method of separation of variables, the velocity can be determined by integrating over the proper limits of integration.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.9.A.2.ii",
+                                            "Label": "The acceleration or position of a moving object that is subject to a velocity-dependent force may be determined using initial conditions of the object and methods of calculus, once a function for velocity is determined.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.9.A.2.iii",
+                                            "Label": "The position, velocity, and acceleration as functions of time of an object under the influence of a resistive force of the form `vec(F)_r=-kvec(v)` are exponential and have asymptotes that are determined by the initial conditions of the object and the forces exerted on the object.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.9.A.3",
+                                    "Label": "Terminal velocity is defined as the maximum speed achieved by an object moving under the influence of a constant force and a resistive force that are exerted on the object in opposite directions. The terminal condition is reached when the net force exerted on the object is zero.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.2.10",
+                    "Label": "Circular Motion",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.2.10.A",
+                            "Label": "Describe the motion of an object traveling in a circular path.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.10.A.1",
+                                    "Label": "Centripetal acceleration is the component of an object's acceleration directed toward the center of the object's circular path.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.10.A.1.i",
+                                            "Label": "The magnitude of centripetal acceleration for an object moving in a circular path is the ratio of the object's tangential speed squared to the radius of the circular path. Relevant equation: `a_c=v^2/r`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.10.A.1.ii",
+                                            "Label": "Centripetal acceleration is directed toward the center of an object's circular path.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.10.A.2",
+                                    "Label": "Centripetal acceleration can result from a single force, more than one force, or components of forces that are exerted on an object in circular motion.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.10.A.2.i",
+                                            "Label": "At the top of a vertical, circular loop, an object requires a minimum speed to maintain circular motion. At this point, and with this minimum velocity, the gravitational force is the only force that causes the centripetal acceleration. Derived equation: `v=sqrt(gr)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.10.A.2.ii",
+                                            "Label": "Components of the static friction force and the normal force can contribute to the net force producing centripetal acceleration of an object traveling in a circle on a banked surface.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.10.A.2.iii",
+                                            "Label": "A component of tension contributes to the net force producing centripetal acceleration experienced by a conical pendulum.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.2.10.A.3",
+                                    "Label": "Tangential acceleration is the rate at which an object's speed changes and is directed tangent to the object's circular path.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.10.A.4",
+                                    "Label": "The net acceleration of an object moving in a circle is the vector sum of the centripetal acceleration and tangential acceleration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.2.10.A.5",
+                                    "Label": "The revolution of an object traveling in a circular path at a constant speed (uniform circular motion) can be described using period and frequency.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.2.10.A.5.i",
+                                            "Label": "The time to complete one full circular path, one full rotation, or a full cycle of oscillatory motion is defined as period, `T`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.10.A.5.ii",
+                                            "Label": "The rate at which an object is completing revolutions is defined as frequency, `f`. Relevant equation: `T=1/f`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.2.10.A.5.iii",
+                                            "Label": "For an object traveling at a constant speed in a circular path, the period is given by the derived equation: `T=(2pir)/v`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.2.10.B",
+                            "Label": "Describe circular orbits using Kepler's third law.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.2.10.B.1",
+                                    "Label": "For a satellite in circular orbit around a central body, the satellite's centripetal acceleration is caused only by gravitational attraction. The period and radius of the circular orbit are related to the mass of the central body. Derived equation: `T^2=(4pi^2)/(GM) R^3`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.PCM.3",
+            "Label": "Work, Energy & Power",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.3.1",
+                    "Label": "Translational Kinetic Energy",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.3.1.A",
+                            "Label": "Describe the translational kinetic energy of an object in terms of the object's mass and velocity.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.1.A.1",
+                                    "Label": "An object's translational kinetic energy is given by the equation: `K=1/2mv^2`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.1.A.2",
+                                    "Label": "Translational kinetic energy is a scalar quantity.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.1.A.3",
+                                    "Label": "Different observers may measure different values of the translational kinetic energy of an object, depending on the observer's frame of reference.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.3.2",
+                    "Label": "Work",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.3.2.A",
+                            "Label": "Describe the work done on an object or system by a given force or collection of forces.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.2.A.1",
+                                    "Label": "Work is the amount of energy transferred into or out of a system by a force exerted on that system over a distance.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.3.2.A.1.i",
+                                            "Label": "The work done by a conservative force exerted on a system is path-independent and only depends on the initial and final configurations of that system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.1.ii",
+                                            "Label": "The work done by a conservative force on a system — or the change in the potential energy of the system — will be zero if the system returns to its initial configuration.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.1.iii",
+                                            "Label": "Potential energies are associated only with conservative forces.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.1.iv",
+                                            "Label": "The work done by a nonconservative force is path-dependent.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.1.v",
+                                            "Label": "The most common nonconservative forces are friction and air resistance.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.3.2.A.2",
+                                    "Label": "Work is a scalar quantity that may be positive, negative, or zero.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.2.A.3",
+                                    "Label": "The work done on an object by a variable force is calculated using `W=int_a^bvec(F)(r)*dvec(r)`, where the integral is taken over the path from point `a` to point `b`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.3.2.A.3.i",
+                                            "Label": "The dot product between two vectors, `vec(A)` and `vec(B`, results in a scalar quantity of magnitude `vec(A)*vec(B)=ABcos(theta)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.3.ii",
+                                            "Label": "Only the component of the force exerted on a system that is parallel to the displacement of the point of application of the force will change the system's total energy.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.3.iii",
+                                            "Label": "If the component of the force exerted on a system that is parallel to the displacement is constant, the work done on the system by the force is given by the derived equation `W=F_(||)d=Fdcos(theta)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.3.iv",
+                                            "Label": "The component of the force exerted on a system perpendicular to the direction of the displacement of the system's center of mass can change the direction of the system's motion without changing the system's kinetic energy.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.3.2.A.4",
+                                    "Label": "The work–energy theorem states that the change in an object's kinetic energy is equal to the sum of the work (net work) being done by all forces exerted on the object. Relevant equation: `DeltaK=sumW_i=sumF_(||,i)d_i`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.3.2.A.4.i",
+                                            "Label": "An external force may change the configuration of a system. The component of the external force parallel to the displacement times the displacement of the point of application of the force gives the change in kinetic energy of the system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.4.ii",
+                                            "Label": "If the system's center of mass and the point of application of the force move the same distance when a force is exerted on a system, then the system may be modeled as an object, and only the system's kinetic energy can change.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.2.A.4.iii",
+                                            "Label": "The energy dissipated by friction is typically equated to the force of friction times the length of the path over which the force is exerted: `DeltaE_text(mech)=F_fdcos(theta)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.3.2.A.5",
+                                    "Label": "Work is equal to the area under the curve of a graph of `F_(||)` as a function of displacement.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.3.3",
+                    "Label": "Potential Energy",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.3.3.A",
+                            "Label": "Describe the potential energy of a system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.3.A.1",
+                                    "Label": "A system composed of two or more objects has potential energy if the objects within that system only interact with each other through conservative forces.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.2",
+                                    "Label": "Potential energy is a scalar quantity associated with the position of objects within a system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.3",
+                                    "Label": "The definition of zero potential energy for a given system is a decision made by the observer considering the situation to simplify or otherwise assist in analysis.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.4",
+                                    "Label": "The relationship between conservative forces exerted on a system and the system's potential energy is `DeltaU=-int_a^bvec(F)_(cf)(r)*dvec(r)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.5",
+                                    "Label": "The conservative forces exerted on a system in a single dimension can be determined using the slope of the system's potential energy with respect to position in that dimension; these forces point in the direction of decreasing potential energy. Relevant equation: `F_x=-(dU(x))/(dx)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.6",
+                                    "Label": "Graphs of a system's potential energy as a function of its position can be useful in determining physical properties of that system.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.3.3.A.6.i",
+                                            "Label": "Stable equilibrium is a location at which a small displacement in an object's position results in a force exerted on the object opposite to the direction of the small displacement, accelerating the object back toward the equilibrium position.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.3.A.6.ii",
+                                            "Label": "Unstable equilibrium is a location at which a small displacement in an object's position results in a force exerted on the object in the same direction as the small displacement, accelerating the object away from the equilibrium position.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.3.A.6.iii",
+                                            "Label": "In a given dimension, stable equilibrium positions exist at locations where the potential energy as a function of position in that dimension has a local minimum.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.3.A.6.iv",
+                                            "Label": "In a given dimension, unstable equilibrium positions occur at locations where the potential energy as a function of position in that dimension has a local maximum.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.7",
+                                    "Label": "The potential energy of common physical systems can be described using the physical properties of that system.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.3.3.A.7.i",
+                                            "Label": "The elastic potential energy of an ideal spring is given by the following equation, where `Deltax` is the distance the spring has been stretched or compressed from its equilibrium length. Relevant equation: `U_s=1/2k(Deltax)^2`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.3.A.7.ii",
+                                            "Label": "The general form for the gravitational potential energy of a system consisting of two approximately spherical distributions of mass (e.g., moons, planets, or stars) is given by the equation: `U_g=- G(m_1m_2)/r`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.3.3.A.7.iii",
+                                            "Label": "Because the gravitational field near the surface of a planet is nearly constant, the change in gravitational potential energy in a system consisting of an object with mass `m` and a planet with gravitational field of magnitude g when the object is near the surface of the planet may be approximated by the equation: `DeltaU_g=mgDeltay`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.3.3.A.8",
+                                    "Label": "The total potential energy of a system containing more than two objects is the sum of the potential energy of each pair of objects within the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.3.4",
+                    "Label": "Conservation Of Energy",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.3.4.A",
+                            "Label": "Describe the energies present in a system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.4.A.1",
+                                    "Label": "A system composed of only a single object can only have kinetic energy.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.4.A.2",
+                                    "Label": "A system that contains objects that interact via conservative forces or that can change its shape reversibly may have both kinetic and potential energies.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.3.4.B",
+                            "Label": "Describe the behavior of a system using conservation of mechanical energy principles.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.4.B.1",
+                                    "Label": "Mechanical energy is the sum of a system's kinetic and potential energies.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.4.B.2",
+                                    "Label": "Any change to a type of energy within a system must be balanced by an equivalent change of other types of energies within the system or by a transfer of energy between the system and its surroundings.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.4.B.3",
+                                    "Label": "A system may be selected so that the total energy of that system is constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.4.B.4",
+                                    "Label": "If the total energy of a system changes, that change will be equivalent to the energy transferred into or out of the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.3.4.C",
+                            "Label": "Describe how the selection of a system determines whether the energy of that system changes.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.4.C.1",
+                                    "Label": "Energy is conserved in all interactions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.4.C.2",
+                                    "Label": "If the work done on a selected system is zero and there are no nonconservative interactions within the system, the total mechanical energy of the system is constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.4.C.3",
+                                    "Label": "If the work done on a selected system is nonzero, energy is transferred between the system and the environment.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.3.5",
+                    "Label": "Power",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.3.5.A",
+                            "Label": "Describe the transfer of energy into, out of, or within a system in terms of power.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.3.5.A.1",
+                                    "Label": "Power is the rate at which energy changes with respect to time, either by transfer into or out of a system or by conversion from one type to another within a system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.5.A.2",
+                                    "Label": "Average power is the amount of energy being transferred or converted, divided by the time it took for that transfer or conversion to occur. Relevant equation: `P_text(avg)=(DeltaE)/(Deltat)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.5.A.3",
+                                    "Label": "Because work is the change in energy of an object or system due to a force, average power is the total work done, divided by the time during which that work was done. Relevant equation: `P_text(avg)=(dW)/(dt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.5.A.4",
+                                    "Label": "The instantaneous power delivered to an object by a force is given by the equation: `P_text(inst)=(dW)/(dt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.3.5.A.5",
+                                    "Label": "The instantaneous power delivered to an object by the component of a constant force parallel to the object's velocity can be described with the derived equation: `P_text(inst)=F_(||)v=Fvcos(theta)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.PCM.4",
+            "Label": "Linear Momentum",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.4.1",
+                    "Label": "Linear Momentum",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.4.1.A",
+                            "Label": "Describe the linear momentum of an object or system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.4.1.A.1",
+                                    "Label": "Linear momentum is defined by the equation: `vec(p)=mvec(v)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.1.A.2",
+                                    "Label": "Momentum is a vector quantity and has the same direction as the velocity.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.1.A.3",
+                                    "Label": "Momentum can be used to analyze collisions and explosions.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.4.1.A.3.i",
+                                            "Label": "A collision is a model for an interaction where the forces exerted between the involved objects in the system are much larger than the net external force exerted on those objects during the interaction.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.1.A.3.ii",
+                                            "Label": "As only the initial and final states of a collision are analyzed, the object model may be used to analyze collisions.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.1.A.3.iii",
+                                            "Label": "An explosion is a model for an interaction in which forces internal to the system move objects within that system apart.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.4.2",
+                    "Label": "Change In Momentum & Impulse",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.4.2.A",
+                            "Label": "Describe the impulse delivered to an object or system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.4.2.A.1",
+                                    "Label": "The rate of change of a system's momentum is equal to the net external force exerted on that system. Relevant equation: `vec(F)_text(net)=(dvec(p))/(dt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.2.A.2",
+                                    "Label": "Impulse is defined as the integral of a force exerted on an object or system over a time interval. Relevant equation: `vec(J)=int_(t_1)^(t_2)vec(F)_text(net)(t)dt`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.2.A.3",
+                                    "Label": "Impulse is a vector quantity and has the same direction as the net force exerted on the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.2.A.4",
+                                    "Label": "The impulse delivered to a system by a net external force is equal to the area under the curve of a graph of the net external force exerted on the system as a function of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.2..5",
+                                    "Label": "The net external force exerted on a system is equal to the slope of a graph of the momentum of the system as a function of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.4.2.B",
+                            "Label": "Describe the relationship between the impulse exerted on an object or system and the change in momentum of the object or system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.4.2.B.1",
+                                    "Label": "Change in momentum is the difference between a system's final momentum and its initial momentum. Relevant equation: `Deltavec(p)=vec(p)-vec(p)_0`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.2.B.2",
+                                    "Label": "The impulse–momentum theorem relates the impulse delivered to an object and the object's change in momentum.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.4.2.B.2.i",
+                                            "Label": "The impulse exerted on an object is equal to the object's change in momentum. Relevant equation: `vec(J)=int_(t_1)^(t_2)vec(F)_text(net)(t)dt=Deltavec(p)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.2.B.2.ii",
+                                            "Label": "Newton's second law of motion is a direct result of the impulse–momentum theorem applied to systems with constant mass: `vec(F)_text(net)=(dvec(p))/(dt)=m(dvec(v))/(dt)=mvec(a)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.2.B.2.iii",
+                                            "Label": "The impulse–momentum theorem also describes the behavior of a system in which the velocity is constant but the mass changes with respect to time: `vec(F)_text(net)=(dvec(p))/(dt)=(dm)/(dt)vec(v)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.4.3",
+                    "Label": "Conservation Of Linear Momentum",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.4.3.A",
+                            "Label": "Describe the behavior of a system using conservation of linear momentum.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.4.3.A.1",
+                                    "Label": "A collection of objects with individual momenta can be described as one system with one center-of-mass velocity.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.4.3.A.1.i",
+                                            "Label": "For a collection of objects, the velocity of a system's center of mass can be calculated using the equation: `vec(v)_text(cm)=(sumvec(p)_i)/(summ_i)=(sum(m_ivec(v)_i))/(summ_i)`.",
+                                           "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.3.A.1.ii",
+                                            "Label": "The velocity of a system's center of mass is constant in the absence of a net external force.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.4.3.A.2",
+                                    "Label": "The total momentum of a system is the sum of the momenta of the system's constituent parts.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.3.A.3",
+                                    "Label": "In the absence of net external forces, any change to the momentum of an object within a system must be balanced by an equivalent and opposite change of momentum elsewhere within the system. Any change to the momentum of a system is due to a transfer of momentum between the system and its surroundings.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.4.3.A.3.i",
+                                            "Label": "The impulse exerted by one object on a second object is equal and opposite to the impulse exerted by the second object on the first. This is a direct result of Newton's third law.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.3.A.3.ii",
+                                            "Label": "A system may be selected so that the total momentum of that system is constant.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.4.3.A.3.iii",
+                                            "Label": "If the total momentum of a system changes, that change will be equivalent to the impulse exerted on the system. Relevant equation: `vec(J)=Deltavec(p)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.4.3.A.4",
+                                    "Label": "Correct application of conservation of momentum can be used to determine the velocity of a system immediately before and immediately after collisions or explosions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.4.3.B",
+                            "Label": "Describe how the selection of a system determines whether the momentum of that system changes.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.4.3.B.1",
+                                    "Label": "Momentum is conserved in all interactions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.3.B.2",
+                                    "Label": "If the net external force on the selected system is zero, the total momentum of the system is constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.3.B.3",
+                                    "Label": "If the net external force on the selected system is nonzero, momentum is transferred between the system and the environment.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.4.4",
+                    "Label": "Elastic & Inelastic Collisions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.4.4.A",
+                            "Label": "Describe whether an interaction between objects is elastic or inelastic.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.4.4.A.1",
+                                    "Label": "An elastic collision between objects is one in which the initial kinetic energy of the system is equal to the final kinetic energy of the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.4.A.2",
+                                    "Label": "In an elastic collision, the final kinetic energies of each of the objects within the system may be different from their initial kinetic energies.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.4.A.3",
+                                    "Label": "An inelastic collision between objects is one in which the total kinetic energy of the system decreases.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.4.A.4",
+                                    "Label": "In an inelastic collision, some of the initial kinetic energy is not restored to kinetic energy but is transformed by nonconservative forces into other forms of energy.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.4.4.A.5",
+                                    "Label": "In a perfectly inelastic collision, the objects stick together and move with the same velocity after the collision.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.PCM.5",
+            "Label": "Torque & Rotational Dynamics",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.5.1",
+                    "Label": "Rotational Kinematics",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.5.1.A",
+                            "Label": "Describe the rotation of a system with respect to time using angular displacement, angular velocity, and angular acceleration.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.1.A.1",
+                                    "Label": "Angular displacement is the measurement of the angle, in radians, through which a point on a rigid system rotates about a specified axis. Relevant equation: `Deltatheta=theta-theta_0`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.5.1.A.1.i",
+                                            "Label": "A rigid system is one that holds its shape but in which different points on the system move in different directions during rotation. A rigid system cannot be modeled as an object.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.1.A.1.ii",
+                                            "Label": "One direction of angular displacement about an axis of rotation — clockwise or counterclockwise — is typically indicated as mathematically positive, with the other direction becoming mathematically negative.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.1.A.1.iii",
+                                            "Label": "If the rotation of a system about an axis may be well described using the motion of the system's center of mass, the system may be treated as a single object. For example, the rotation of Earth about its axis may be considered negligible when considering the revolution of Earth about the center of mass of the Earth–Sun system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.5.1.A.2",
+                                    "Label": "Angular velocity is the rate at which angular position changes with respect to time. Relevant equation: `omega=(dtheta)/(dt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.1.A.3",
+                                    "Label": "Angular acceleration is the rate at which angular velocity changes with respect to time. Relevant equation: `alpha=(domega)/(dt)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.1.A.4",
+                                    "Label": "Angular displacement, angular velocity, and angular acceleration around one axis are analogous to linear displacement, velocity, and acceleration in one dimension and demonstrate the same mathematical relationships.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.5.1.A.4.i",
+                                            "Label": "For constant angular acceleration, the mathematical relationships between angular displacement, angular velocity, and angular acceleration can be described with the following equations: `omega=omega_0+alphat`, `theta=theta_0+omega_0t+1/2alphat^2`, and `omega^2=omega_0^2+2alpha(theta-theta_0)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.1.A.4.ii",
+                                            "Label": "Graphs of angular displacement, angular velocity, and angular acceleration as functions of time can be used to find the relationships between those quantities.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.5.2",
+                    "Label": "Connecting Linear & Rotational Motion",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.5.2.A",
+                            "Label": "Describe the linear motion of a point on a rotating rigid system that corresponds to the rotational motion of that point, and vice versa.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.2.A.1",
+                                    "Label": "For a point at a distance `r` from a fixed axis of rotation, the linear distance s traveled by the point as the system rotates through an angle `Deltatheta` is given by the equation: `Deltas=rDeltatheta`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.2.A.2",
+                                    "Label": "Derived relationships of linear velocity and of the tangential component of acceleration to their respective angular quantities are given by the following equations: `s=rtheta`, `v=romega`, and `a_T=ralpha`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.2.A.3",
+                                    "Label": "For a rigid system, all points within that system have the same angular velocity and angular acceleration.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.5.3",
+                    "Label": "Torque",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.5.3.A",
+                            "Label": "Identify the torques exerted on a rigid system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.3.A.1",
+                                    "Label": "Torque results only from the force component perpendicular to the position vector from the axis of rotation to the point of application of the force.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.3.A.2",
+                                    "Label": "The lever arm is the perpendicular distance from the axis of rotation to the line of action of the exerted force.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.5.3.B",
+                            "Label": "Describe the torques exerted on a rigid system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.3.B.1",
+                                    "Label": "Torques can be described using force diagrams.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.5.3.B.1.i",
+                                            "Label": "Force diagrams are similar to free-body diagrams and are used to analyze the torques exerted on a rigid system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.3.B.1.ii",
+                                            "Label": "Similar to free-body diagrams, force diagrams represent the relative magnitude and direction of the forces exerted on a rigid system. Force diagrams also depict the location at which those forces are exerted relative to the axis of rotation.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.5.3.B.2",
+                                    "Label": "The torque exerted on a rigid system about a chosen pivot point by a given force is described by `vec(tau)=vec(r)xxvec(F)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.5.3.B.2.i",
+                                            "Label": "The cross-product between two vectors, `vec(A)` and `vec(B)`, results in a vector quantity of magnitude `vec(A)xxvec(B)=ABsin(theta)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.3.B.2.ii",
+                                            "Label": "The direction of the vector resulting from the cross-product of vectors `vec(A)` and `vec(B)` is perpendicular to both vectors `vec(A)` and `vec(B)` and therefore is normal to the plane defined by vectors `vec(A)` and `vec(B)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.3.B.2.iii",
+                                            "Label": "The direction of the vector resulting from the cross-product of vectors `vec(A)` and `vec(B)` can be qualitatively determined by applying the appropriate right-hand rule.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.5.4",
+                    "Label": "Rotational Inertia",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.5.4.A",
+                            "Label": "Describe the rotational inertia of a rigid system relative to a given axis of rotation.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.4.A.1",
+                                    "Label": "Rotational inertia measures a rigid system's resistance to changes in rotation and is related to the mass of the system and the distribution of that mass relative to the axis of rotation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.4.A.2",
+                                    "Label": "The rotational inertia of an object rotating a perpendicular distance `r` from an axis is described by the equation: `I=mr^2`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.4.A.3",
+                                    "Label": "The total rotational inertia of a collection of objects about an axis is the sum of the rotational inertias of each object about that axis: `I_text(tot)=sumI_i=summ_ir_i^2`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.4.A.4",
+                                    "Label": "For a solid that can be considered as a collection of differential masses, `dm`, the solid's rotational inertia can be calculated using the equation `I=intr^2dm`, where `r` is the perpendicular distance from `dm` to the axis of rotation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.5.4.B",
+                            "Label": "Describe the rotational inertia of a rigid system rotating about an axis that does not pass through the system's center of mass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.4.B.1",
+                                    "Label": "A rigid system's rotational inertia in a given plane is at a minimum when the rotational axis passes through the system's center of mass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.4.B.2",
+                                    "Label": "The parallel axis theorem uses the following equation to relate the rotational inertia of a rigid system about any axis that is parallel to an axis through its center of mass: `I'=I_text(cm)+md^2`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.5.5",
+                    "Label": "Rotational Equilibrium & Newton's First Law In Rotational Form",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.5.5.A",
+                            "Label": "Describe the conditions under which a system's angular velocity remains constant.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.5.A.1",
+                                    "Label": "A system may exhibit rotational equilibrium (constant angular velocity) without being in translational equilibrium, and vice versa.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.5.5.A.1.i",
+                                            "Label": "Free-body and force diagrams describe the nature of the forces and torques exerted on an object or rigid system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.5.A.1.ii",
+                                            "Label": "Rotational equilibrium is a configuration of torques such that the net torque exerted on the system is zero. Relevant equation: `sumtau_i=0`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.5.5.A.1.iii",
+                                            "Label": "The rotational analog of Newton's first law is that a system will have a constant angular velocity only if the net torque exerted on the system is zero.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.5.5.A.2",
+                                    "Label": "A rotational corollary to Newton's second law states that if the torques exerted on a rigid system are not balanced, the system's angular velocity must be changing.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.5.6",
+                    "Label": "Newton's Second Law In Rotational Form",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.5.6.A",
+                            "Label": "Describe the conditions under which a system's angular velocity changes.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.5.6.A.1",
+                                    "Label": "Angular velocity changes when the net torque exerted on the object or system is not equal to zero.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.6.A.2",
+                                    "Label": "The rate at which the angular velocity of a rigid system changes is directly proportional to the net torque exerted on the rigid system and is in the same direction. The angular acceleration of the rigid system is inversely proportional to the rotational inertia of the rigid system. Relevant equation: `alpha_text(sys)=(sumtau)/I_text(sys)=tau_text(net)/I_text(sys)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.5.6.A.3",
+                                    "Label": "To fully describe a rotating rigid system, linear and rotational analyses may need to be performed independently.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.PCM.6",
+            "Label": "Energy & Momentum Of Rotating Systems",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.6.1",
+                    "Label": "Rotational Kinetic Energy",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.6.1.A",
+                            "Label": "Describe the rotational kinetic energy of a rigid system in terms of the rotational inertia and angular velocity of that rigid system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.1.A.1",
+                                    "Label": "The rotational kinetic energy of an object or rigid system is related to the rotational inertia and angular velocity of the rigid system and is given by the equation: `K_text(rot)=1/2Iomega^2`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.6.1.A.1.i",
+                                            "Label": "The rotational inertia of an object about a fixed axis can be used to show that the rotational kinetic energy of that object is equivalent to its translational kinetic energy, which is its total kinetic energy.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.1.A.1.ii",
+                                            "Label": "The total kinetic energy of a rigid system is the sum of its rotational kinetic energy due to its rotation about its center of mass and the translational kinetic energy due to the linear motion of its center of mass.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.6.1.A.2",
+                                    "Label": "A rigid system can have rotational kinetic energy while its center of mass is at rest due to the individual points within the rigid system having linear speed and, therefore, kinetic energy.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.1.A.3",
+                                    "Label": "Rotational kinetic energy is a scalar quantity.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.6.2",
+                    "Label": "Torque & Work",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.6.2.A",
+                            "Label": "Describe the work done on a rigid system by a given torque or collection of torques.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.2.A.1",
+                                    "Label": "A torque can transfer energy into or out of an object or rigid system if the torque is exerted over an angular displacement.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.2.A.2",
+                                    "Label": "The amount of work done on a rigid system by a torque is related to the magnitude of that torque and the angular displacement through which the rigid system rotates during the interval in which that torque is exerted. Relevant equation: `W=int_(theta_1)^(theta_2)taudtheta`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.2.A.3",
+                                    "Label": "Work done on a rigid system by a given torque can be found from the area under the curve of a graph of the torque as a function of angular position.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.6.3",
+                    "Label": "Angular Momentum & Angular Impulse",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.6.3.A",
+                            "Label": "Describe the angular momentum of an object or rigid system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.3.A.1",
+                                    "Label": "The magnitude of the angular momentum of a rigid system about a specific axis can be described with the equation: `L=Iomega`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.3.A.2",
+                                    "Label": "The angular momentum of an object about a given point is `vec(L)=vec(r)xxvec(p)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.6.3.A.2.i",
+                                            "Label": "The selection of the axis about which an object is considered to rotate influences the determination of the angular momentum of that object.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.3.A.2.ii",
+                                            "Label": "The measured angular momentum of an object traveling in a straight line depends on the distance between the reference point and the object, the mass of the object, the speed of the object, and the angle between the radial distance and the velocity of the object.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.6.3.B",
+                            "Label": "Describe the angular impulse delivered to an object or rigid system by a torque.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.3.B.1",
+                                    "Label": "Angular impulse is defined as the product of the torque exerted on an object or rigid system and the time interval during which the torque is exerted. Relevant equation: `text(angular impulse)=inttaudt`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.3.B.2",
+                                    "Label": "Angular impulse has the same direction as the torque imparting it.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.3.B.3",
+                                    "Label": "The angular impulse delivered to an object or rigid system by a torque can be found from the area under the curve of a graph of the torque as a function of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.6.3.C",
+                            "Label": "Relate the change in angular momentum of an object or rigid system to the angular impulse given to that object or rigid system.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.3.C.1",
+                                    "Label": "The magnitude of the change in angular momentum can be described by comparing the magnitudes of the final and initial momenta of the object or rigid system: `DeltaL=L-L_0`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.3.C.2",
+                                    "Label": "A rotational form of the impulse–momentum theorem relates the angular impulse delivered to an object or rigid system and the change in angular momentum of that object or rigid system.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.6.3.C.2.i",
+                                            "Label": "The angular impulse exerted on an object or rigid system is equal to the change in angular momentum of that object or rigid system. Relevant equation: `DeltaL=in_(t_1)^(t_2)taudt`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.3.C.2.ii",
+                                            "Label": "The rotational form of the impulse–momentum theorem is a direct result of Newton's second law of motion for cases in which rotational inertia is constant: `tau_text(net)=(dL)/(dt)=I(domega)/(dt)=Ialpha`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.6.3.C.3",
+                                    "Label": "The net torque exerted on an object or rigid system is equal to the slope of the graph of the angular momentum of an object as a function of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.3.C.4",
+                                    "Label": "The angular impulse delivered to an object or rigid system is equal to the area under the curve of a graph of the net external torque exerted on an object as a function of time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.6.4",
+                    "Label": "Conservation Of Angular Momentum",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.6.4.A",
+                            "Label": "Describe the behavior of a system using conservation of angular momentum.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.4.A.1",
+                                    "Label": "The total angular momentum of a system about a rotational axis is the sum of the angular momenta of the system's constituent parts about that rotational axis.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.4.A.2",
+                                    "Label": "Any change to a system's angular momentum must be due to an interaction between the system and its surroundings.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.6.4.A.2.i",
+                                            "Label": "The angular impulse exerted by one object or system on a second object or system is equal and opposite to the angular impulse exerted by the second object or system on the first. This is a direct result of Newton's third law.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.4.A.2.ii",
+                                            "Label": "A system may be selected so that the total angular momentum of that system is constant.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.4.A.2.iii",
+                                            "Label": "The angular speed of a nonrigid system may change without the angular momentum of the system changing if the system changes shape by moving mass closer to or farther from the rotational axis.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.4.A.2.iv",
+                                            "Label": "If the total angular momentum of a system changes, that change will be equivalent to the angular impulse exerted on the system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.6.4.B",
+                            "Label": "Describe how the selection of a system determines whether the angular momentum of that system changes.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.4.B.1",
+                                    "Label": "Angular momentum is conserved in all interactions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.4.B.2",
+                                    "Label": "If the net external torque exerted on a selected object or rigid system is zero, the total angular momentum of that system is constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.4.B.3",
+                                    "Label": "If the net external torque exerted on a selected object or rigid system is nonzero, angular momentum is transferred between the system and the environment.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.6.5",
+                    "Label": "Rolling",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.6.5.A",
+                            "Label": "Describe the kinetic energy of a system that has translational and rotational motion.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.5.A.1",
+                                    "Label": "The total kinetic energy of a system is the sum of the system's translational and rotational kinetic energies. Relevant equation: `K_text(tot)=K_text(trans)+K_text(rot)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.6.5.B",
+                            "Label": "Describe the motion of a system that is rolling without slipping.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.5.B.1",
+                                    "Label": "While rolling without slipping, the translational motion of a system's center of mass is related to the rotational motion of the system itself with the following equations: `Deltax_text(cm)=rDeltatheta`, `v_text(cm)=romega`, and `a_text(cm)=ralpha`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.5.B.2",
+                                    "Label": "For ideal cases, rolling without slipping implies that the frictional force does not dissipate any energy from the rolling system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.PCM.6.5.C",
+                            "Label": "Describe the motion of a system that is rolling while slipping.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.5.C.1",
+                                    "Label": "When slipping, the motion of a system's center of mass and the system's rotational motion cannot be directly related.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.5.C.2",
+                                    "Label": "When a rotating system is slipping relative to another surface, the point of application of the force of kinetic friction exerted on the system moves with respect to the surface, so the force of kinetic friction will dissipate energy from the system.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.6.6",
+                    "Label": "Motion Of Orbiting Satellites",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.6.6.A",
+                            "Label": "Describe the motions of a system consisting of two objects or systems interacting only via gravitational forces.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.6.6.A.1",
+                                    "Label": "In a system consisting only of a massive central object and an orbiting satellite with mass that is negligible in comparison to the central object's mass, the motion of the central object itself is negligible.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.6.A.2",
+                                    "Label": "The motion of satellites in orbits is constrained by conservation laws.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.6.6.A.2.i",
+                                            "Label": "In circular orbits, the system's total mechanical energy, the system's gravitational potential energy, and the satellite's angular momentum and kinetic energy are constant.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.6.A.2.ii",
+                                            "Label": "In elliptical orbits, the system's total mechanical energy and the satellite's angular momentum are constant, but the system's gravitational potential energy and the satellite's kinetic energy can each change.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.6.A.2.iii",
+                                            "Label": "The gravitational potential energy of a system consisting of a satellite and a massive central object is defined to be zero when the satellite is an infinite distance from the central object. Relevant equation: `U_g=-G(m_1m_2)/r`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.6.6.A.3",
+                                    "Label": "The total energy of a system consisting of a satellite orbiting a central object in a circular path can be written in terms of the gravitational potential energy of that system or the kinetic energy of the satellite. Derived equations: `K=-1/2U` and `E_text(total)=1/2U=-(GMm)/(2r)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.6.6.A.4",
+                                    "Label": "The escape velocity of a satellite is the satellite's velocity such that the mechanical energy of the satellite–central-object system is equal to zero.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.6.6.A.4.i",
+                                            "Label": "When the only force exerted on a satellite is gravity from a central object, a satellite that reaches escape velocity will move away from the central body until its speed reaches zero at an infinite distance from the central body.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.6.6.A.4.ii",
+                                            "Label": "The escape velocity of a satellite from a central body of mass `M` can be derived using conservation of energy laws. Derived equation: `v_text(esc)=sqrt((2GM)/r)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "Key": "AP.PCM.7",
+            "Label": "Oscillations",
+            "Examples": [],
+            "Subs": [
+                {
+                    "Key": "AP.PCM.7.1",
+                    "Label": "Defining Simple Harmonic Motion (SHM)",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.7.1.A",
+                            "Label": "Describe simple harmonic motion.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.7.1.A.1",
+                                    "Label": "Simple harmonic motion is a special case of periodic motion.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.1.A.2",
+                                    "Label": "SHM results when the magnitude of the restoring force exerted on an object is proportional to that object's displacement from its equilibrium position. Derived equation: `ma_x=-kDeltax`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.1.A.2.i",
+                                            "Label": "A restoring force is a force that is exerted in a direction opposite to the object's displacement from an equilibrium position.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.1.A.2.ii",
+                                            "Label": "An equilibrium position is a location at which the net force exerted on an object or system is zero.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.7.2",
+                    "Label": "Frequency & Period Of SHM",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.7.2.A",
+                            "Label": "Describe the frequency and period of an object exhibiting SHM.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.7.2.A.1",
+                                    "Label": "The period of SHM is related to the angular frequency, `omega`, of the object's motion by the following equation: `T=(2pi)/omega=1/f`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.2.A.1.i",
+                                            "Label": "The period of an object–ideal-spring oscillator is given by the equation: `T_s=2pisqrt(m/k)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.2.A.1.ii",
+                                            "Label": "The period of a simple pendulum displaced by a small angle is given by the equation: `T_p=2pisqrt(l/g)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.7.3",
+                    "Label": "Representing & Analyzing SHM",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.7.3.A",
+                            "Label": "Describe the displacement, velocity, and acceleration of an object exhibiting SHM.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.7.3.A.1",
+                                    "Label": "For an object exhibiting SHM, the displacement of that object measured from its equilibrium position can be represented by the equations: `x=Acos(2pift)` or `x=Asin(2pift)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.3.A.1.i",
+                                            "Label": "Minima, maxima, and zeros of displacement, velocity, and acceleration are features of harmonic motion.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.3.A.1.ii",
+                                            "Label": "Recognizing the positions or times at which the displacement, velocity, and acceleration for SHM have extrema or zeros can help in qualitatively describing the behavior of the motion.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.7.3.A.2",
+                                    "Label": "The position as a function of time for an object exhibiting SHM is a solution of the second-order differential equation derived from the application of Newton's second law. Derived equation: `(d^2x)/(dt^2)==omega^2x`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.3.A.3",
+                                    "Label": "Characteristics of SHM, such as velocity and acceleration, can be determined by or derived from the equation: `x=Acos(omegat+phi)`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.3.A.3.i",
+                                            "Label": "The acceleration of an object exhibiting SHM is related to the object's angular frequency and position. Derived equation: `a=-omega^2x`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.3.A.3.ii",
+                                            "Label": "It can be shown that the maximum velocity and acceleration of an object exhibiting SHM are related to the angular frequency of the object's motion. Derived equations: `v_text(max)=Aomega` and `a_text(max)=Aomega^2`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.7.3.A.4",
+                                    "Label": "In the presence of a sinusoidal external force, a system may exhibit resonance.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.3.A.4.i",
+                                            "Label": "Resonance occurs when an external force is exerted at the natural frequency of an oscillating system.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.3.A.4.ii",
+                                            "Label": "Resonance increases the amplitude of oscillating motion.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.3.A.4.iii",
+                                            "Label": "The natural frequency of a system is the frequency at which the system will oscillate when it is displaced from its equilibrium position.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.7.3.A.5",
+                                    "Label": "Changing the amplitude of a system exhibiting SHM will not change its period.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.3.A.6",
+                                    "Label": "Properties of SHM can be determined and analyzed using graphical representations.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.7.4",
+                    "Label": "Energy Of Simple Harmonic Oscillators",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.7.4.A",
+                            "Label": "Describe the mechanical energy of a system exhibiting SHM.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.7.4.A.1",
+                                    "Label": "The total energy of a system exhibiting SHM is the sum of the system's kinetic and potential energies. Relevant equation: `E_text(total)=U+K`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.4.A.2",
+                                    "Label": "Conservation of energy indicates that the total energy of a system exhibiting SHM is constant.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.4.A.3",
+                                    "Label": "The kinetic energy of a system exhibiting SHM is at a maximum when the system's potential energy is at a minimum.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.4.A.4",
+                                    "Label": "The potential energy of a system exhibiting SHM is at a maximum when the system's kinetic energy is at a minimum.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.4.A.4.i",
+                                            "Label": "The minimum kinetic energy of a system exhibiting SHM is zero.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.4.A.4.ii",
+                                            "Label": "hanging the amplitude of a system exhibiting SHM will change the maximum potential energy of the system and, therefore, the total energy of the system. Relevant equation for a spring–object system: `E_text(total)=1/2kA^2`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.PCM.7.5",
+                    "Label": "Simple & Physical Pendulums",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.PCM.7.5.A",
+                            "Label": "Describe the properties of a physical pendulum.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.PCM.7.5.A.1",
+                                    "Label": "A physical pendulum is a rigid body that undergoes oscillation about a fixed axis.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.5.A.2",
+                                    "Label": "For small amplitudes of motion, the period of a physical pendulum is derived from the application of Newton's second law in rotational form. Relevant equation: `T_text(phys)=2pisqrt(I/(mgd))`.",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.PCM.7.5.A.2.i",
+                                            "Label": "When displaced from equilibrium, the gravitational force exerted on a physical pendulum's center of mass provides a restoring torque. Derived equation: `tau=-mgdsin(theta)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.5.A.2.ii",
+                                            "Label": "For small amplitudes of motion, the small-angle approximation can be applied to the restoring torque. Derived equation: `sin(theta)~~theta` and `tau=-mgdtheta=Ialpha`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.PCM.7.5.A.2.iii",
+                                            "Label": "The small-angle approximation and Newton's second law in rotational form yield a second-order differential equation that describes SHM: `(d^2theta)/(dt^2)=-omega^2theta`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.PCM.7.5.A.3",
+                                    "Label": "A simple pendulum is a special case of physical pendulums in which the hanging object can be modeled as a point mass at a distance, `l`, from the pivot point. Relevant equation: `T_p=2pisqrt(l/g)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.PCM.7.5.A.4",
+                                    "Label": "A torsion pendulum is a case of SHM where the restoring torque is proportional to the angular displacement of a rotating system. For example, a horizontal disk that is suspended from a wire attached to its center of mass may undergo rotational oscillations about the wire in the horizontal plane. Derived equation: `Ialpha=-kDeltatheta`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "References": []
+}
