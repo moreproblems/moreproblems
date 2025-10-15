@@ -2233,7 +2233,7 @@
                             "Key": "FL.M9-12.C.1.2",
                             "Label": "Determine the value of a limit if it exists algebraically using limits of sums, differences, products, quotients and compositions of continuous functions.",
                             "Examples": [
-                                "Find lim(x→π) sin(x)cos(x) + tan(x)."
+                                "Find lim(x→π) sinxcosx + tanx."
                             ],
                             "Subs": []
                         },
@@ -2302,7 +2302,7 @@
                             "Label": "Apply the Intermediate Value Theorem and the Extreme Value Theorem.",
                             "Examples": [
                                 "Use the Intermediate Value Theorem to show that `g(x)=x^3+3x^2-9x-2` has a zero between x = 0 and x = 3.",
-                                "Use the Extreme Value Theorem to decide whether `f(x)=tan(x)` has a minimum and maximum on the interval [-π/4, π/4]. What about on the  interval [-π, π]?"
+                                "Use the Extreme Value Theorem to decide whether `f(x)=tanx` has a minimum and maximum on the interval [-π/4, π/4]. What about on the  interval [-π, π]?"
                             ],
                             "Subs": []
                         }
@@ -2338,7 +2338,7 @@
                             "Label": "Apply the rules for finding derivatives of constants, sums, products, quotients and the Chain Rule to solve problems with functions limited to algebraic, trigonometric, inverse trigonometric, logarithmic and exponential.",
                             "Examples": [
                                 "Find dy/dx for the function `y=ln(x)`.",
-                                "Show that the derivative of `f(x)=tan(x)` is f'(x) = sec^2x using the quotient rule for derivatives.",
+                                "Show that the derivative of `f(x)=tanx` is f'(x) = sec^2x using the quotient rule for derivatives.",
                                 "Find f'(x) for `f(x)=(x^2+2)^(1/2)`."
                             ],
                             "Subs": []
@@ -2491,7 +2491,7 @@
                             "Label": "Interpret a definite integral as a limit of Riemann sums. Calculate the values of Riemann sums over equal subdivisions using left, right and midpoint evaluation points.",
                             "Examples": [
                                 "Find the values of the Riemann sums over the interval [0, 1] using 12 and 24 subintervals of equal width for `f(x)=e^x` evaluated at the midpoint of each subinterval. Write an expression for the Riemann sums using n intervals of equal width. Find the limit of this Riemann Sums as n goes to infinity.",
-                                "Estimate `int_0^pisin(x)dx` using a Riemann midpoint sum with 4 subintervals.",
+                                "Estimate `int_0^pisinxdx` using a Riemann midpoint sum with 4 subintervals.",
                                 "Find an approximate value for `int_0^3x^2dx` using 6 rectangles of equal width 0 under the graph of `f(x)=x^2` between x = 0 and x = 3. How did you form your rectangles? Compute this approximation three times using at least three different methods to form the rectangles."
                             ],
                             "Subs": []

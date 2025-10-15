@@ -31,7 +31,7 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.9.1.A.1.ii",
-                                            "Label": "The pressure exerted by a gas on a surface is the ratio of the sum of the magnitudes of the perpendicular components of the forces exerted by the gas's atoms on the surface to the area of the surface. Relevant equation: `P=F_(_|_).A`.",
+                                            "Label": "The pressure exerted by a gas on a surface is the ratio of the sum of the magnitudes of the perpendicular components of the forces exerted by the gas's atoms on the surface to the area of the surface. Relevant equation: `P=F_(_|_)/A`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -57,13 +57,13 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.9.1.B.1.i",
-                                            "Label": "The Maxwell–Boltzmann distribution provides a graphical representation of the energies and speeds of atoms at a given temperature.",
+                                            "Label": "The Maxwell-Boltzmann distribution provides a graphical representation of the energies and speeds of atoms at a given temperature.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.P2AB.9.1.B.1.ii",
-                                            "Label": "The root-mean-square speed corresponding to the average kinetic energy for an ideal gas is related to the temperature of the gas by `K_text(avg)=3/2K_BT=1/2mv_text(rms)^2`.",
+                                            "Label": "The root-mean-square speed corresponding to the average kinetic energy for an ideal gas is related to the temperature of the gas by `K_text(avg)=3/2k_BT=1/2mv_text(rms)^2`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1139,7 +1139,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.P2AB.11.4.A.1",
-                                    "Label": "The rate at which energy is transferred, converted, or dissipated by a circuit element depends on the current in the element and the electric potential difference across it. Relevant equation: `P=IDeltaV`.  Derived equation: `P=I^2R=(DeltaV)^2`",
+                                    "Label": "The rate at which energy is transferred, converted, or dissipated by a circuit element depends on the current in the element and the electric potential difference across it. Relevant equation: `P=IDeltaV`.  Derived equation: `P=I^2R=(DeltaV)^2/R`",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1387,7 +1387,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.11.8.A.1.i",
-                                            "Label": "The inverse of the equivalent capacitance of a set of capacitors connected in series is equal to the sum of the inverses of the individual capacitances. Relevant equation: `1/C_text(eq,s)=sum1/C_i`.",
+                                            "Label": "The inverse of the equivalent capacitance of a set of capacitors connected in series is equal to the sum of the inverses of the individual capacitances. Relevant equation: `1/C_text(eq,s)=sum_ i1/C_i`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1399,7 +1399,7 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.11.8.A.1.iii",
-                                            "Label": "The equivalent capacitance of a set of capacitors in parallel is the sum of the individual capacitances. Relevant equation: `C_text(eq,p)=sumC_i`.",
+                                            "Label": "The equivalent capacitance of a set of capacitors in parallel is the sum of the individual capacitances. Relevant equation: `C_text(eq,p)=sum_iC_i`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1431,13 +1431,13 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.11.8.B.1.ii",
-                                            "Label": "For a charging capacitor, the time constant represents the time required for the capacitor's charge to increase from zero to approximately `63` percent of its final asymptotic value.",
+                                            "Label": "For a charging capacitor, the time constant represents the time required for the capacitor's charge to increase from zero to approximately `63` `text(percent)` of its final asymptotic value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.P2AB.11.8.B.1.iii",
-                                            "Label": "For a discharging capacitor, the time constant represents the time required for the capacitor's charge to decrease from fully charged to approximately `37` percent of its initial value.",
+                                            "Label": "For a discharging capacitor, the time constant represents the time required for the capacitor's charge to decrease from fully charged to approximately `37` `text(percent)` of its initial value.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1710,7 +1710,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.12.2.B.2.i",
-                                            "Label": "The magnitude of the force exerted by a magnetic field on a moving charged object is proportional to the magnitude of the charge, the magnitude of the charged object's velocity, and the magnitude of the magnetic field and also depends on the angle between the velocity and magnetic field vectors. Relevant equation: `F_B=qvBsin(theta)`.",
+                                            "Label": "The magnitude of the force exerted by a magnetic field on a moving charged object is proportional to the magnitude of the charge, the magnitude of the charged object's velocity, and the magnitude of the magnetic field and also depends on the angle between the velocity and magnetic field vectors. Relevant equation: `F_B=qvBsintheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1799,7 +1799,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.12.3.B.1.i",
-                                            "Label": "The magnitude of the force exerted by a magnetic field on a current-carrying wire is proportional to the current, the length of the portion of the wire within the magnetic field, and the magnitude of the magnetic field, and also depends on the angle between the direction of the current in the wire and the direction of the magnetic field. Relevant equation: `F_B=IlBsin(theta)`.",
+                                            "Label": "The magnitude of the force exerted by a magnetic field on a current-carrying wire is proportional to the current, the length of the portion of the wire within the magnetic field, and the magnitude of the magnetic field, and also depends on the angle between the direction of the current in the wire and the direction of the magnetic field. Relevant equation: `F_B=IlBsintheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1833,7 +1833,7 @@
                                 },
                                 {
                                     "Key": "AP.P2AB.12.4.A.2",
-                                    "Label": "Magnetic flux through a surface is proportional to the magnitude of the component of the magnetic field perpendicular to the surface and to the cross-sectional area of the surface. Relevant equation: `Phi_B=BAcos(theta)`.",
+                                    "Label": "Magnetic flux through a surface is proportional to the magnitude of the component of the magnetic field perpendicular to the surface and to the cross-sectional area of the surface. Relevant equation: `Phi_B=BAcostheta`.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -1858,7 +1858,7 @@
                                 },
                                 {
                                     "Key": "AP.P2AB.12.4.A.4",
-                                    "Label": "Lenz's law is used to determine the direction of an induced emf resulting from a changing magnetic flux. Relevant equation: `varepsilon=-(DeltaPhi_B)/(Deltat)=-(Delta(BAcos(theta)))/(Deltat)`.",
+                                    "Label": "Lenz's law is used to determine the direction of an induced emf resulting from a changing magnetic flux. Relevant equation: `varepsilon=-(DeltaPhi_B)/(Deltat)=-(Delta(BAcostheta))/(Deltat)`.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -2092,7 +2092,7 @@
                                 },
                                 {
                                     "Key": "AP.P2AB.13.3.A.4",
-                                    "Label": "Snell's law relates the angles of incidence and refraction of a light ray passing from one medium into another to the indices of refraction of the two media. Relevant equation: `n_1sin(theta_1)=n_2sin(theta_2)`.",
+                                    "Label": "Snell's law relates the angles of incidence and refraction of a light ray passing from one medium into another to the indices of refraction of the two media. Relevant equation: `n_1sintheta_1=n_2sintheta_2`.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -2122,13 +2122,13 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.13.3.A.5.i",
-                                            "Label": "Total internal reflection of light occurs beyond a critical angle of incidence. Derived equation: `theta_text(critical)=sin^(-1)(n_2/n_1)`.",
+                                            "Label": "Total internal reflection of light occurs beyond a critical angle of incidence. Derived equation: `theta_text(critical)=sin^-1(n_2/n_1)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.P2AB.13.3.A.5.ii",
-                                            "Label": "For incident rays at the critical angle, the ray refracts at `90` degrees and travels along the surface of the material.",
+                                            "Label": "For incident rays at the critical angle, the ray refracts at `90` `text(degrees)` and travels along the surface of the material.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -2281,7 +2281,7 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.14.1.A.3.ii",
-                                            "Label": "The speed at which a wave pulse or wave propagates along a string is dependent upon the tension in the string, `F_T`, and the mass per length of the string. Relevant equation: `v_text(string)=sqrt(F_T)/(m//l)`.",
+                                            "Label": "The speed at which a wave pulse or wave propagates along a string is dependent upon the tension in the string, `F_T`, and the mass per length of the string. Relevant equation: `v_text(string)=sqrt(F_T/(m//l))`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -2787,13 +2787,13 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.14.7.A.4.iii",
-                                            "Label": "The path length difference `DeltaD` can be described in terms of the opening width `a` and the angle `theta` between the direction of propagation of the wavefront and the normal to the opening by the equation `DeltaD=asin(theta)`.",
+                                            "Label": "The path length difference `DeltaD` can be described in terms of the opening width `a` and the angle `theta` between the direction of propagation of the wavefront and the normal to the opening by the equation `DeltaD=asintheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.P2AB.14.7.A.4.iv",
-                                            "Label": "For small angles, where `theta=10°`, the small angle approximation can be used to relate `lambda`, `a`, and `L` to `y_text(min)`, the distance from the middle of the central bright fringe to the `m^text(th)` order of minimum brightness on the screen. Relevant equation: `a(y_text(min)/L)~~mlambda`.",
+                                            "Label": "For small angles, where `theta<10°`, the small angle approximation can be used to relate `lambda`, `a`, and `L` to `y_text(min)`, the distance from the middle of the central bright fringe to the `m^text(th)` order of minimum brightness on the screen. Relevant equation: `a(y_text(min)/L)~~mlambda`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -2850,13 +2850,13 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.14.8.A.1.iv",
-                                            "Label": "The path length difference `DeltaD` can be described in terms of the slit separation `d` and the angle `theta` between the direction of propagation of the wavefront and the normal to the opening by the equation `DeltaD=dsin(theta)`.",
+                                            "Label": "The path length difference `DeltaD` can be described in terms of the slit separation `d` and the angle `theta` between the direction of propagation of the wavefront and the normal to the opening by the equation `DeltaD=dsintheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.P2AB.14.8.A.1.v",
-                                            "Label": "For small angles, where `theta=10°`, the small angle approximation can be used to relate `lambda`, `d`, and `L` to `y_text(min)`, the distance from the middle of the central bright fringe to the `m^text(th)` order of maximum brightness on the screen. Relevant equation: `d(y_text(min)/L)~~mlambda`.",
+                                            "Label": "For small angles, where `theta<10°`, the small angle approximation can be used to relate `lambda`, `d`, and `L` to `y_text(max)`, the distance from the middle of the central bright fringe to the `m^text(th)` order of maximum brightness on the screen. Relevant equation: `d(y_text(max)/L)~~mlambda`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -2919,7 +2919,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.14.9.A.2.i",
-                                            "Label": "A phase change of `180` degrees occurs when a light ray is reflected from a medium with a greater index of refraction than the medium through which the ray is traveling.",
+                                            "Label": "A phase change of `180` `text(degrees)` occurs when a light ray is reflected from a medium with a greater index of refraction than the medium through which the ray is traveling.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -3047,7 +3047,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P2AB.15.1.A.3.i",
-                                            "Label": "The speed of all photons in free space is equal to the speed of light, `c=3.00xx10^8 `text(m)//text(s)`.",
+                                            "Label": "The speed of all photons in free space is equal to the speed of light, `c=3.00xx10^8` `text(m)//text(s)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -3411,7 +3411,7 @@
                                 },
                                 {
                                     "Key": "AP.P2AB.15.6.A.3",
-                                    "Label": "The change in wavelength experienced by a photon after colliding with an electron is related to how much the photon's direction changes. Relevant equation: `Deltalambda=h/(m_ec)(1-cos(theta))`.",
+                                    "Label": "The change in wavelength experienced by a photon after colliding with an electron is related to how much the photon's direction changes. Relevant equation: `Deltalambda=h/(m_ec)(1-costheta)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -3497,13 +3497,13 @@
                                         },
                                         {
                                             "Key": "AP.P2AB.15.7.B.1.ii",
-                                            "Label": "The half-life, `t_(1//2), of a radioactive material is the time it takes for half of the initial number of radioactive nuclei to have spontaneously decayed.",
+                                            "Label": "The half-life, `t_(1//2)`, of a radioactive material is the time it takes for half of the initial number of radioactive nuclei to have spontaneously decayed.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.P2AB.15.7.B.1.iii",
-                                            "Label": "The decay constant can be related to the half-life of a radioactive material with the equation `lambda=ln(2).t_(1//2)`.",
+                                            "Label": "The decay constant can be related to the half-life of a radioactive material with the equation `lambda=ln2/t_(1//2)`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -3568,7 +3568,7 @@
                                 },
                                 {
                                     "Key": "AP.P2AB.15.8.A.2",
-                                    "Label": "Nuclei can undergo radioactive decay via alpha decay, beta-minus decay (beta^(-)), beta-plus decay (`beta^+`), and gamma decay (`lambda`).",
+                                    "Label": "Nuclei can undergo radioactive decay via alpha decay, beta-minus decay (`beta^-`), beta-plus decay (`beta^+`), and gamma decay (`lambda`).",
                                     "Examples": [],
                                     "Subs": [
                                         {

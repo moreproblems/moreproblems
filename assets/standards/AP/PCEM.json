@@ -426,13 +426,13 @@
                                 },
                                 {
                                     "Key": "AP.PCEM.8.6.A.5",
-                                    "Label": "If a function of charge density is given for a charge distribution, the total charge can be determined by integrating the charge density over the length (one dimension), area (two dimensions), or volume (three dimensions) of the charge distribution. For example: `Q_text(total)=intrho(vec(r)dV)`.",
+                                    "Label": "If a function of charge density is given for a charge distribution, the total charge can be determined by integrating the charge density over the length (one dimension), area (two dimensions), or volume (three dimensions) of the charge distribution. For example: `Q_text(total)=intrho(vec(r))dV`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PCEM.8.6.A.6",
-                                    "Label": "Maxwell's equations are the collection of equations that fully describe electromagnetism. Gauss's law is Maxwell's first equation. Relevant equation: `ointvec(E)*dvec(A)=q_Text(enc)/epsilon_0`.",
+                                    "Label": "Maxwell's equations are the collection of equations that fully describe electromagnetism. Gauss's law is Maxwell's first equation. Relevant equation: `ointvec(E)*dvec(A)=q_text(enc)/epsilon_0`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -502,7 +502,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.PCEM.9.2.A.2.i",
-                                            "Label": "The electric potential for single point charge is `V=q/(4piepsilon_0)`.",
+                                            "Label": "The electric potential for single point charge is `V=q/(4piepsilon_0r)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -827,7 +827,7 @@
                                 },
                                 {
                                     "Key": "AP.PCEM.10.4.A.2",
-                                    "Label": "The dielectric constant of a material relates the electric permittivity of that material to the permittivity of free space. Relevant equation: `kappa=epsilong/epsilon_0`.",
+                                    "Label": "The dielectric constant of a material relates the electric permittivity of that material to the permittivity of free space. Relevant equation: `kappa=epsilon/epsilon_0`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1170,7 +1170,7 @@
                                         },
                                         {
                                             "Key": "AP.PCEM.11.5.A.2.ii",
-                                            "Label": "The inverse of the equivalent resistance of a set of resistors connected in parallel is equal to the sum of the inverses of the individual resistances. Relevant equation: `1/R_text(eq,p)=sum`/R_i`.",
+                                            "Label": "The inverse of the equivalent resistance of a set of resistors connected in parallel is equal to the sum of the inverses of the individual resistances. Relevant equation: `1/R_text(eq,p)=sum_i1/R_i`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1222,7 +1222,7 @@
                                 },
                                 {
                                     "Key": "AP.PCEM.11.5.B.3",
-                                    "Label": "When there is current in a nonideal battery with internal resistance `r`, the potential difference across the terminals of the battery is reduced relative to the potential difference when there is no current in the battery. Derived equation: `DeltaV_text(terminal)=epsilong-Ir`.",
+                                    "Label": "When there is current in a nonideal battery with internal resistance `r`, the potential difference across the terminals of the battery is reduced relative to the potential difference when there is no current in the battery. Derived equation: `DeltaV_text(terminal)=epsilon-Ir`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1413,13 +1413,13 @@
                                         },
                                         {
                                             "Key": "AP.PCEM.11.8.B.2.ii",
-                                            "Label": "For a charging capacitor, the time constant represents the time required for the capacitor's charge to increase from zero to approximately `63` percent of its final asymptotic value.",
+                                            "Label": "For a charging capacitor, the time constant represents the time required for the capacitor's charge to increase from zero to approximately `63` `text(percent)` of its final asymptotic value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.PCEM.11.8.B.2.iii",
-                                            "Label": "For a discharging capacitor, the time constant represents the time required for the capacitor's charge to decrease from fully charged to approximately `37` percent of its initial value.",
+                                            "Label": "For a discharging capacitor, the time constant represents the time required for the capacitor's charge to decrease from fully charged to approximately `37` `text(percent)` of its initial value.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1801,7 +1801,7 @@
                                 },
                                 {
                                     "Key": "AP.PCEM.12.4.A.4",
-                                    "Label": "Maxwell's equations are the collection of equations that fully describe electromagnetism. Maxwell's fourth equation is Ampère's law with Maxwell's addition; it states that magnetic fields can be generated by electric current (Ampère's law) and that a changing electric field creates a magnetic field, similar to the way a moving charge creates a magnetic field (Maxwell's addition). Relevant equations: `ointvec(B)*dvec(l)=mu_0I+mu_0epsilon_9(dPhi_E)/(dt)`.",
+                                    "Label": "Maxwell's equations are the collection of equations that fully describe electromagnetism. Maxwell's fourth equation is Ampère's law with Maxwell's addition; it states that magnetic fields can be generated by electric current (Ampère's law) and that a changing electric field creates a magnetic field, similar to the way a moving charge creates a magnetic field (Maxwell's addition). Relevant equations: `ointvec(B)*dvec(l)=mu_0I+mu_0epsilon_0(dPhi_E)/(dt)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1847,7 +1847,7 @@
                                 },
                                 {
                                     "Key": "AP.PCEM.13.1.A.2",
-                                    "Label": "The total magnetic flux passing through a surface is defined by the surface integral of the magnetic field over the surface area. Relevant equation: `Phi_B=intbec(B)*dvec(A)`.",
+                                    "Label": "The total magnetic flux passing through a surface is defined by the surface integral of the magnetic field over the surface area. Relevant equation: `Phi_B=intvec(B)*dvec(A)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2068,13 +2068,13 @@
                                         },
                                         {
                                             "Key": "AP.PCEM.13.5.A.3.iii",
-                                            "Label": "For an inductor that has zero initial current, the time constant represents the time required for the current in the inductor to reach approximately `63` percent of its final asymptotic value.",
+                                            "Label": "For an inductor that has zero initial current, the time constant represents the time required for the current in the inductor to reach approximately `63` `text(percent)` of its final asymptotic value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.PCEM.13.5.A.3.iv",
-                                            "Label": "For an inductor with an initial current, the time constant represents the time required for the current in the inductor to reach approximately `37` percent of its initial value.",
+                                            "Label": "For an inductor with an initial current, the time constant represents the time required for the current in the inductor to reach approximately `37` `text(percent)` of its initial value.",
                                             "Examples": [],
                                             "Subs": []
                                         }

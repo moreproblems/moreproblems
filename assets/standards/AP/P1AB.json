@@ -103,7 +103,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.1.2.B.2",
-                                    "Label": "Average velocity is the displacement of an object divided by the interval of time in which that displacement occurs. Relevant equation: `vec(v)_(text(avg))=(Deltavec(v))/(Deltat)`.",
+                                    "Label": "Average velocity is the displacement of an object divided by the interval of time in which that displacement occurs. Relevant equation: `vec(v)_(text(avg))=(Deltavec(x))/(Deltat)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -153,7 +153,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.1.3.A.3",
-                                    "Label": "Near the surface of Earth, the vertical acceleration caused by the force of gravity is downward, constant, and has a measured value approximately equal to `a_g=g~~10` `text(m)//text(s)^2`.",
+                                    "Label": "Near the surface of `text(Earth)`, the vertical acceleration caused by the force of gravity is downward, constant, and has a measured value approximately equal to `a_g=g~~10` `text(m)//text(s)^2`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -268,7 +268,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.1.5.A.3",
-                                    "Label": "Vectors can be resolved into perpendicular components using trigonometric functions and relationships. Relevant equations: `sin(theta)=a/c`, `cos(theta)=b/c`, `tan(theta)=a/b`, and `a^2+b^2=c^2`.",
+                                    "Label": "Vectors can be resolved into perpendicular components using trigonometric functions and relationships. Relevant equations: `sintheta=a/c`, `costheta=b/c`, `tantheta=a/b`, and `a^2+b^2=c^2`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -655,7 +655,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.2.6.B.2",
-                                    "Label": "Near the surface of Earth, the strength of the gravitational field is `g~~10` `text(N)//text(kg)`.",
+                                    "Label": "Near the surface of `text(Earth)`, the strength of the gravitational field is `g~~10` `text(N)//text(kg)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -833,7 +833,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.2.8..3",
-                                    "Label": "The force exerted on an object by a spring is always directed toward the equilibrium position of the object–spring system.",
+                                    "Label": "The force exerted on an object by a spring is always directed toward the equilibrium position of the object-spring system.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -941,7 +941,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.P1AB.2.9.B.1",
-                                    "Label": "For a satellite in circular orbit around a central body, the satellite's centripetal acceleration is caused only by gravitational attraction. The period and radius of the circular orbit are related to the mass of the central body. Derived equation: `T^2=(4pio^2)/(GM)R^3`.",
+                                    "Label": "For a satellite in circular orbit around a central body, the satellite's centripetal acceleration is caused only by gravitational attraction. The period and radius of the circular orbit are related to the mass of the central body. Derived equation: `T^2=(4pi^2)/(GM)R^3`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1048,7 +1048,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P1AB.3.2.A.3.i",
-                                            "Label": "Only the component of the force exerted on a system that is parallel to the displacement of the point of application of the force will change the system's total energy. Relevant equation: `W=F_(||)d=Fdcos(theta)`.",
+                                            "Label": "Only the component of the force exerted on a system that is parallel to the displacement of the point of application of the force will change the system's total energy. Relevant equation: `W=F_(||)d=Fdcostheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1079,7 +1079,7 @@
                                         },
                                         {
                                             "Key": "AP.P1AB.3.2.A.4.iii",
-                                            "Label": "The energy dissipated by friction is typically equated to the force of friction times the length of the path over which the force is exerted `DeltaE_text(mech)=F_fdcos(theta)`.",
+                                            "Label": "The energy dissipated by friction is typically equated to the force of friction times the length of the path over which the force is exerted `DeltaE_text(mech)=F_fdcostheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1270,7 +1270,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.3.5.A.4",
-                                    "Label": "The instantaneous power delivered to an object by the component of a constant force parallel to the object's velocity can be described with the derived equation: `P_text(inst)=F_(||)v=Fvcos(theta)`.",
+                                    "Label": "The instantaneous power delivered to an object by the component of a constant force parallel to the object's velocity can be described with the derived equation: `P_text(inst)=F_(||)v=Fvcostheta`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1348,7 +1348,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.P1AB.4.2.A.1",
-                                    "Label": "The rate of change of momentum is equal to the net external force exerted on an object or system. Relevant equation: `vec(F)_texet(net)=(Deltavec(p))/(Deltat)`.",
+                                    "Label": "The rate of change of momentum is equal to the net external force exerted on an object or system. Relevant equation: `vec(F)_text(net)=(Deltavec(p))/(Deltat)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1391,13 +1391,13 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.4.2.B.2",
-                                    "Label": "The impulse–momentum theorem relates the impulse exerted on a system and the system's change in momentum. Relevant equation: `vec(J)=vec(F)_text(avg)Deltat=Deltavec(p)`.",
+                                    "Label": "The impulse-momentum theorem relates the impulse exerted on a system and the system's change in momentum. Relevant equation: `vec(J)=vec(F)_text(avg)Deltat=Deltavec(p)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.P1AB.4.2.B.3",
-                                    "Label": "Newton's second law of motion is a direct result of the impulse–momentum theorem applied to systems with constant mass. Relevant equation: `vec(F)_text(net)=(Deltavec(p))/(Deltat)=mv(Deltavec(v))/(Deltat)=mvec(a)`.",
+                                    "Label": "Newton's second law of motion is a direct result of the impulse-momentum theorem applied to systems with constant mass. Relevant equation: `vec(F)_text(net)=(Deltavec(p))/(Deltat)=mv(Deltavec(v))/(Deltat)=mvec(a)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1580,7 +1580,7 @@
                                         },
                                         {
                                             "Key": "AP.P1AB.5.1.A.1.iii",
-                                            "Label": "If the rotation of a system about an axis may be well described using the motion of the system's center of mass, the system may be treated as a single object. For example, the rotation of Earth about its axis may be considered negligible when considering the revolution of Earth about the center of mass of the Earth–Sun system.",
+                                            "Label": "If the rotation of a system about an axis may be well described using the motion of the system's center of mass, the system may be treated as a single object. For example, the rotation of `text(Earth)` about its axis may be considered negligible when considering the revolution of `text(Earth)` about the center of mass of the `text(Earth)`-Sun system.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1623,12 +1623,12 @@
                 },
                 {
                     "Key": "AP.P1AB.5.2",
-                    "Label": "",
+                    "Label": "Connecting Linear & Rotational Motion",
                     "Examples": [],
                     "Subs": [
                         {
                             "Key": "AP.P1AB.5.2.A",
-                            "Label": "",
+                            "Label": "Describe the linear motion of a point on a rotating rigid system that corresponds to the rotational motion of that point, and vice versa.",
                             "Examples": [],
                             "Subs": [
                                 {
@@ -1703,7 +1703,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.5.3.B.2",
-                                    "Label": "The magnitude of the torque exerted on a rigid system by a force is described by the following equation, where `theta` is the angle between the force vector and the position vector from the axis of rotation to the point of application of the force: `tau=rF_(_|_)=rFsin(theta)`.",
+                                    "Label": "The magnitude of the torque exerted on a rigid system by a force is described by the following equation, where `theta` is the angle between the force vector and the position vector from the axis of rotation to the point of application of the force: `tau=rF_(_|_)=rFsintheta`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1825,7 +1825,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.5.6.A.2",
-                                    "Label": "The rate at which the angular velocity of a rigid system changes is directly proportional to the net torque exerted on the rigid system and is in the same direction. The angular acceleration of the rigid system is inversely proportional to the rotational inertia of the rigid system. Relevant equation: `alpha_text(sys)=(sumtau)/I_text(sys)=tau_text(net)/Itext(sys)`.",
+                                    "Label": "The rate at which the angular velocity of a rigid system changes is directly proportional to the net torque exerted on the rigid system and is in the same direction. The angular acceleration of the rigid system is inversely proportional to the rotational inertia of the rigid system. Relevant equation: `alpha_text(sys)=(sumtau)/I_text(sys)=tau_text(net)/I_text(sys)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1941,7 +1941,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.6.3.A.2",
-                                    "Label": "The magnitude of the angular momentum of an object about a given point is `L=rmvsin(theta)`.",
+                                    "Label": "The magnitude of the angular momentum of an object about a given point is `L=rmvsintheta`.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -1998,7 +1998,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.6.3.C.2",
-                                    "Label": "A rotational form of the impulse–momentum theorem relates the angular impulse delivered to an object or rigid system and the change in angular momentum of that object or rigid system.",
+                                    "Label": "A rotational form of the impulse-momentum theorem relates the angular impulse delivered to an object or rigid system and the change in angular momentum of that object or rigid system.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -2009,7 +2009,7 @@
                                         },
                                         {
                                             "Key": "AP.P1AB.6.3.C.2.ii",
-                                            "Label": "The rotational form of the impulse– momentum theorem is a direct result of the rotational form of Newton's second law of motion for cases in which rotational inertia is constant: `tau_text(net)=(DeltaL)/(Deltat)=I(Deltaomega)/(Deltat)=Ialpha`.",
+                                            "Label": "The rotational form of the impulse- momentum theorem is a direct result of the rotational form of Newton's second law of motion for cases in which rotational inertia is constant: `tau_text(net)=(DeltaL)/(Deltat)=I(Deltaomega)/(Deltat)=Ialpha`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -2119,7 +2119,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.P1AB.6.5.A.1",
-                                    "Label": "The total kinetic energy of a system is the sum of the system's translational and rotational kinetic energies. Relevant equation:. `K_text(tot)=K_text(trans)+_K_text(rot)`.",
+                                    "Label": "The total kinetic energy of a system is the sum of the system's translational and rotational kinetic energies. Relevant equation:. `K_text(tot)=K_text(trans)+K_text(rot)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2208,7 +2208,7 @@
                                 },
                                 {
                                     "Key": "AP.P1AB.6.6.A.3",
-                                    "Label": "The escape velocity of a satellite is the satellite's velocity such that the mechanical energy of the satellite–central-object system is equal to zero.",
+                                    "Label": "The escape velocity of a satellite is the satellite's velocity such that the mechanical energy of the satellite-central-object system is equal to zero.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -2298,7 +2298,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.P1AB.7.2.A.1.i",
-                                            "Label": "The period of an object–ideal-spring oscillator is given by the equation: `T_s=2pisqrt(m/k)`.",
+                                            "Label": "The period of an object-ideal-spring oscillator is given by the equation: `T_s=2pisqrt(m/k)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -2400,7 +2400,7 @@
                                         },
                                         {
                                             "Key": "AP.P1AB.7.4.A.4.ii",
-                                            "Label": "Changing the amplitude of a system exhibiting SHM will change the maximum potential energy of the system and, therefore, the total energy of the system. Relevant equation for a spring–object system: `E_text(total)=1/2kA^2`.",
+                                            "Label": "Changing the amplitude of a system exhibiting SHM will change the maximum potential energy of the system and, therefore, the total energy of the system. Relevant equation for a spring-object system: `E_text(total)=1/2kA^2`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -2602,7 +2602,7 @@
                         },
                         {
                             "Key": "AP.P1AB.8.4.B",
-                            "Label": "Describe the flow of a fluid as a result of a difference in energy between two locations within the fluid–Earth system",
+                            "Label": "Describe the flow of a fluid as a result of a difference in energy between two locations within the `text(fluid)-text(Earth)` system",
                             "Examples": [],
                             "Subs": [
                                 {

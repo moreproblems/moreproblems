@@ -302,7 +302,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.1.5.B.2",
-                                    "Label": "An odd function is graphically symmetric about the point `(0,0)` and analytically has the property `f(-x)=-f(x). If `n` is odd, then a polynomial of the form `p(x)=a_nx^n`, where `n>=1` and `a_n!=0`, is an odd function.",
+                                    "Label": "An odd function is graphically symmetric about the point `(0,0)` and analytically has the property `f(-x)=-f(x)`. If `n` is odd, then a polynomial of the form `p(x)=a_nx^n`, where `n>=1` and `a_n!=0`, is an odd function.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -436,7 +436,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.1.9.A.2",
-                                    "Label": "Near a vertical asymptote, `x=a`, of a rational function, the values of the polynomial function in the denominator are arbitrarily close to zero, so the values of the rational function `r` increase or decrease without bound. The corresponding mathematical notation is `lim_(x->a^+)r(x)=oo` or `lim_(x->a^+)r(x)=-oo` for input values near `a` and greater than `a` and `lim_(x->a^(-))r(x)=oo` or `lim_(x->a^(-))r(x)=-oo` for input values near `a` and less than `a`.",
+                                    "Label": "Near a vertical asymptote, `x=a`, of a rational function, the values of the polynomial function in the denominator are arbitrarily close to zero, so the values of the rational function `r` increase or decrease without bound. The corresponding mathematical notation is `lim_(x->a^+)r(x)=oo` or `lim_(x->a^+)r(x)=-oo` for input values near `a` and greater than `a` and `lim_(x->a^-)r(x)=oo` or `lim_(x->a^-)r(x)=-oo` for input values near `a` and less than `a`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -462,7 +462,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.1.10.A.2",
-                                    "Label": "If the graph of a rational function `r` has a hole at `x=c`, then the location of the hole can be determined by examining the output values corresponding to input values sufficiently close to `c`. If input values sufficiently close to `c` correspond to output values arbitrarily close to `L`, then the hole is located at the point with coordinates `(c,L)`. The corresponding mathematical notation is `lim_(x->c)r(x)=L`. It should be noted that `lim_(x->c^(-))r(x)=lim_(x->c^+)r(x)=lim_(x->c)r(x)=L`.",
+                                    "Label": "If the graph of a rational function `r` has a hole at `x=c`, then the location of the hole can be determined by examining the output values corresponding to input values sufficiently close to `c`. If input values sufficiently close to `c` correspond to output values arbitrarily close to `L`, then the hole is located at the point with coordinates `(c,L)`. The corresponding mathematical notation is `lim_(x->c)r(x)=L`. It should be noted that `lim_(x->c^-)r(x)=lim_(x->c^+)r(x)=lim_(x->c)r(x)=L`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -766,7 +766,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.2.1.A.3",
-                                    "Label": "The general term of an arithmetic sequence with a common difference `d` is denoted by `a_n` and is given by `a_n=a_0+dn`, where `a_0` is the initial value, or by `a_n=a_k+d(n-k)`, where `a_k` is the kth term of the sequence.",
+                                    "Label": "The general term of an arithmetic sequence with a common difference `d` is denoted by `a_n` and is given by `a_n=a_0+dn`, where `a_0` is the initial value, or by `a_n=a_k+d(n-k)`, where `a_k` is the `k^text(th)` term of the sequence.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -817,7 +817,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.2.2.A.2",
-                                    "Label": "Similar to arithmetic sequences of the form `a_n=a_k+d(n-k)`, which are based on a known difference, `d`, and a `k^text(th)` term, linear functions can be expressed in the form `f(x)=y_i+m(x-x_i) based on a known slope, `m`, and a point, `(x_i,y_i)`.",
+                                    "Label": "Similar to arithmetic sequences of the form `a_n=a_k+d(n-k)`, which are based on a known difference, `d`, and a `k^text(th)` term, linear functions can be expressed in the form `f(x)=y_i+m(x-x_i)` based on a known slope, `m`, and a point, `(x_i,y_i)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -930,7 +930,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.2.4.A.2",
-                                    "Label": "The power property for exponents states that `(b^m)^n=b^(mn)`. Graphically, this property implies that every horizontal dilation of an exponential function, `f(x)=b^(cx), is equivalent to a change of the base of an exponential function, f(x)=(b^c)^x`, where `b^c` is a constant and `c!=0`.",
+                                    "Label": "The power property for exponents states that `(b^m)^n=b^(mn)`. Graphically, this property implies that every horizontal dilation of an exponential function, `f(x)=b^(cx)`, is equivalent to a change of the base of an exponential function, `f(x)=(b^c)^x`, where `b^c` is a constant and `c!=0`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1005,7 +1005,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.2.5.B.1",
-                                    "Label": "For an exponential model in general form `f(x)=ab^x, the base of the exponent, `b`, can be understood as a growth factor in successive unit changes in the input values and is related to a percent change in context.",
+                                    "Label": "For an exponential model in general form `f(x)=ab^x`, the base of the exponent, `b`, can be understood as a growth factor in successive unit changes in the input values and is related to a percent change in context.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1082,19 +1082,19 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.2.7.A.1",
-                                    "Label": "If `f` and `g` are functions, the composite function `fdotg` maps a set of input values to a set of output values such that the output values of g are used as input values of `f`. For this reason, the domain of the composite function is restricted to those input values of g for which the corresponding output value is in the domain of `f`. `(fdotg)(x)` can also be represented as `f(g(x))`.",
+                                    "Label": "If `f` and `g` are functions, the composite function `f@g` maps a set of input values to a set of output values such that the output values of g are used as input values of `f`. For this reason, the domain of the composite function is restricted to those input values of g for which the corresponding output value is in the domain of `f`. `(f@g)(x)` can also be represented as `f(g(x))`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.2.7.A.2",
-                                    "Label": "Values for the composite function `fdotg` can be calculated or estimated from the graphical, numerical, analytical, or verbal representations of `f` and `g` by using output values from `g` as input values for `f`.",
+                                    "Label": "Values for the composite function `f@g` can be calculated or estimated from the graphical, numerical, analytical, or verbal representations of `f` and `g` by using output values from `g` as input values for `f`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.2.7.A.3",
-                                    "Label": "The composition of functions is not commutative; that is, `fdotg` and `gdotf` are typically different functions; therefore, `f(g(x))` and g(f(x))` are typically different values.",
+                                    "Label": "The composition of functions is not commutative; that is, `f@g` and `g@f` are typically different functions; therefore, `f(g(x))` and `g(f(x))` are typically different values.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1125,7 +1125,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.2.7.B.3",
-                                    "Label": "A numerical or graphical representation of `fdotg` can often be constructed by calculating or estimating values for `(x,f(g(x)))`.",
+                                    "Label": "A numerical or graphical representation of `f@g` can often be constructed by calculating or estimating values for `(x,f(g(x)))`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1176,7 +1176,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.2.8.A.2",
-                                    "Label": "An inverse function can be thought of as a reverse mapping of the function. An inverse function, `f^(-1)`, maps the output values of a function, `f`, on its invertible domain to their corresponding input values; that is, if `f(a)=b`, then `f^(-1)(b)=a`. Alternately, on its invertible domain, if a function consists of input-output pairs `(a,b)`, then the inverse function consists of input-output pairs `(b,a)`.",
+                                    "Label": "An inverse function can be thought of as a reverse mapping of the function. An inverse function, `f^-1`, maps the output values of a function, `f`, on its invertible domain to their corresponding input values; that is, if `f(a)=b`, then `f^-1(b)=a`. Alternately, on its invertible domain, if a function consists of input-output pairs `(a,b)`, then the inverse function consists of input-output pairs `(b,a)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1189,7 +1189,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.2.8.B.1",
-                                    "Label": "The composition of a function, `f`, and its inverse function, `f^(-1)`, is the identity function; that is, `f(f^(-1)(x))=f^(-1)(f(x))=x.",
+                                    "Label": "The composition of a function, `f`, and its inverse function, `f^-1`, is the identity function; that is, `f(f^-1(x))=f^-1(f(x))=x`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1207,7 +1207,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.2.8.B.4",
-                                    "Label": "The inverse of the function can be found by determining the inverse operations to reverse the mapping. One method for finding the inverse of the function `f` is reversing the roles of x and y in the equation `y=f(x)`, then solving for `y=f^(-1)(x)`.",
+                                    "Label": "The inverse of the function can be found by determining the inverse operations to reverse the mapping. One method for finding the inverse of the function `f` is reversing the roles of x and y in the equation `y=f(x)`, then solving for `y=f^-1(x)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1633,7 +1633,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.3.A.1",
-                                    "Label": "Given an angle of measure `theta` in standard position and a circle with radius `r` centered at the origin, there is a point, `P`, where the terminal ray intersects the circle. The coordinates of point `P` are `(rcos(theta),rsin(theta))`.",
+                                    "Label": "Given an angle of measure `theta` in standard position and a circle with radius `r` centered at the origin, there is a point, `P`, where the terminal ray intersects the circle. The coordinates of point `P` are `(rcostheta,rsintheta)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1659,7 +1659,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.4.A.1",
-                                    "Label": "Given an angle of measure `theta` in standard position and a unit circle centered at the origin, there is a point, `P`, where the terminal ray intersects the circle. The sine function, `f(theta)=sin(theta)`, gives the y-coordinate, or vertical displacement from the `x`-axis, of point `P`. The domain of the sine function is all real numbers.",
+                                    "Label": "Given an angle of measure `theta` in standard position and a unit circle centered at the origin, there is a point, `P`, where the terminal ray intersects the circle. The sine function, `f(theta)=sintheta`, gives the y-coordinate, or vertical displacement from the `x`-axis, of point `P`. The domain of the sine function is all real numbers.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1671,7 +1671,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.4.A.3",
-                                    "Label": "Given an angle of measure `theta` in standard position and a unit circle centered at the origin, there is a point, `P`, where the terminal ray intersects the circle. The cosine function, `f(theta)=cos(theta)`, gives the `x`-coordinate, or horizontal displacement from the `y`-axis, of point `P`. The domain of the cosine function is all real numbers.",
+                                    "Label": "Given an angle of measure `theta` in standard position and a unit circle centered at the origin, there is a point, `P`, where the terminal ray intersects the circle. The cosine function, `f(theta)=costheta`, gives the `x`-coordinate, or horizontal displacement from the `y`-axis, of point `P`. The domain of the cosine function is all real numbers.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1697,25 +1697,25 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.5.A.1",
-                                    "Label": "A sinusoidal function is any function that involves additive and multiplicative transformations of `f(theta)=sin(theta)`. The sine and cosine functions are both sinusoidal functions, with `cos(theta)=sin(theta+pi/2)`.",
+                                    "Label": "A sinusoidal function is any function that involves additive and multiplicative transformations of `f(theta)=sintheta`. The sine and cosine functions are both sinusoidal functions, with `costheta=sin(theta+pi/2)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.5.A.2",
-                                    "Label": "The period and frequency of a sinusoidal function are reciprocals. The period of `f(theta)=sin(theta)` and `g(theta)=cos(theta)` is `2pi`, and the frequency is `1/(2pi)`.",
+                                    "Label": "The period and frequency of a sinusoidal function are reciprocals. The period of `f(theta)=sintheta` and `g(theta)=costheta` is `2pi`, and the frequency is `1/(2pi)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.5.A.3",
-                                    "Label": "The amplitude of a sinusoidal function is half the difference between its maximum and minimum values. The amplitude of `f(theta)=sin(theta)` and `g(theta)=cos(theta)` is `1`.",
+                                    "Label": "The amplitude of a sinusoidal function is half the difference between its maximum and minimum values. The amplitude of `f(theta)=sintheta` and `g(theta)=costheta` is `1`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.5.A.4",
-                                    "Label": "The midline of the graph of a sinusoidal function is determined by the average, or arithmetic mean, of the maximum and minimum values of the function. The midline of the graphs of `y=sin(theta)` and `y=cos(theta)` is `y=0`.",
+                                    "Label": "The midline of the graph of a sinusoidal function is determined by the average, or arithmetic mean, of the maximum and minimum values of the function. The midline of the graphs of `y=sintheta` and `y=costheta` is `y=0`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1727,7 +1727,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.5.A.6",
-                                    "Label": "The graph of `y=sin(theta)` has rotational symmetry about the origin and is therefore an odd function. The graph of `y=cos(theta)` has reflective symmetry over the `y`-axis and is therefore an even function.",
+                                    "Label": "The graph of `y=sintheta` has rotational symmetry about the origin and is therefore an odd function. The graph of `y=costheta` has reflective symmetry over the `y`-axis and is therefore an even function.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1753,25 +1753,25 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.6.A.2",
-                                    "Label": "The graph of the additive transformation `g(theta)=sin(theta)+d` of the sine function `f(theta)=sin(theta)` is a vertical translation of the graph of `f`, including its midline, by `d` units. The same transformation of the cosine function yields the same result.",
+                                    "Label": "The graph of the additive transformation `g(theta)=sintheta+d` of the sine function `f(theta)=sintheta` is a vertical translation of the graph of `f`, including its midline, by `d` units. The same transformation of the cosine function yields the same result.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.6.A.3",
-                                    "Label": "The graph of the additive transformation `g(theta)=sin(theta+c)` of the sine function `f(theta)=sin(theta)` is a horizontal translation, or phase shift, of the graph of f by `-c` units. The same transformation of the cosine function yields the same result.",
+                                    "Label": "The graph of the additive transformation `g(theta)=sin(theta+c)` of the sine function `f(theta)=sintheta` is a horizontal translation, or phase shift, of the graph of f by `-c` units. The same transformation of the cosine function yields the same result.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.6.A.4",
-                                    "Label": "The graph of the multiplicative transformation `g(theta)=asin(theta)` of the sine function `f(theta)=sin(theta)` is a vertical dilation of the graph of `f` and differs in amplitude by a factor of `abs(a)`. The same transformation of the cosine function yields the same result.",
+                                    "Label": "The graph of the multiplicative transformation `g(theta)=asintheta` of the sine function `f(theta)=sintheta` is a vertical dilation of the graph of `f` and differs in amplitude by a factor of `abs(a)`. The same transformation of the cosine function yields the same result.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.6.A.5",
-                                    "Label": "The graph of the multiplicative transformation `g(theta)=sin(btheta)` of the sine function `f(theta)=sin(theta)` is a horizontal dilation of the graph of `f` and differs in period by a factor of `abs(1/b)`. The same transformation of the cosine function yields the same result.",
+                                    "Label": "The graph of the multiplicative transformation `g(theta)=sin(btheta)` of the sine function `f(theta)=sintheta` is a horizontal dilation of the graph of `f` and differs in period by a factor of `abs(1/b)`. The same transformation of the cosine function yields the same result.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1841,13 +1841,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.8.A.1",
-                                    "Label": "Given an angle of measure `theta` in standard position and a unit circle centered at theorigin, there is a point, `P`, where the terminal ray intersects the circle. The tangent function, `f(theta)=tan(theta)`, gives the slope of the terminal ray.",
+                                    "Label": "Given an angle of measure `theta` in standard position and a unit circle centered at theorigin, there is a point, `P`, where the terminal ray intersects the circle. The tangent function, `f(theta)=tantheta`, gives the slope of the terminal ray.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.8.A.2",
-                                    "Label": "Because the slope of the terminal ray is the ratio of the change in the `y`-values to the change in the `x`-values between any two points on the ray, the tangent function is also the ratio of the sine function to the cosine function. Therefore, `tan(theta)=(sin(theta))/(cos(theta))`, where `cos(theta)!=0.`",
+                                    "Label": "Because the slope of the terminal ray is the ratio of the change in the `y`-values to the change in the `x`-values between any two points on the ray, the tangent function is also the ratio of the sine function to the cosine function. Therefore, `tantheta=(sintheta)/(costheta)`, where `costheta!=0.`",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1866,7 +1866,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.8.B.2",
-                                    "Label": "The tangent function demonstrates periodic asymptotic behavior at input values `theta=pi/2+kpi`, for integer values of `k`, because `cos(theta)=0` at those values.",
+                                    "Label": "The tangent function demonstrates periodic asymptotic behavior at input values `theta=pi/2+kpi`, for integer values of `k`, because `costheta=0` at those values.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1885,31 +1885,31 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.8.C.1",
-                                    "Label": "The graph of the additive transformation `g(theta)=tan(theta)+d` of the tangent function `f(theta)=tan(theta)` is a vertical translation of the graph of `f` and the line containing its points of inflection by `d` units.",
+                                    "Label": "The graph of the additive transformation `g(theta)=tantheta+d` of the tangent function `f(theta)=tantheta` is a vertical translation of the graph of `f` and the line containing its points of inflection by `d` units.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.8.C.2",
-                                    "Label": "The graph of the additive transformation g(theta)=tan(theta+c)` of the tangent function `f(theta)=tan(theta)` is a horizontal translation, or phase shift, of the graph of f by `-c` units.",
+                                    "Label": "The graph of the additive transformation `g(theta)=tan(theta+c)` of the tangent function `f(theta)=tantheta` is a horizontal translation, or phase shift, of the graph of f by `-c` units.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.8.C.3",
-                                    "Label": "The graph of the multiplicative transformation `g(theta)=atan(theta)` of the tangent function `f(theta)=tan(theta)` is a vertical dilation of the graph of `f` by a factor of `abs(a)`. If `a<0`, the transformation involves a reflection over the `x`-axis.",
+                                    "Label": "The graph of the multiplicative transformation `g(theta)=atantheta` of the tangent function `f(theta)=tantheta` is a vertical dilation of the graph of `f` by a factor of `abs(a)`. If `a<0`, the transformation involves a reflection over the `x`-axis.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.8.C.4",
-                                    "Label": "The graph of the multiplicative transformation `g(theta)=tan(btheta)` of the tangent function `f(theta)=tan(theta)` is a horizontal dilation of the graph of `f` and differs in period by a factor of `abs(1/b)`. If `b<0`, the transformation involves a reflection over the `y`-axis.",
+                                    "Label": "The graph of the multiplicative transformation `g(theta)=tan(btheta)` of the tangent function `f(theta)=tantheta` is a horizontal dilation of the graph of `f` and differs in period by a factor of `abs(1/b)`. If `b<0`, the transformation involves a reflection over the `y`-axis.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.8.C.5",
-                                    "Label": "The graph of `y=f(theta)=atan(b(theta+c))+d` is a vertical dilation of the graph of `y=tan(theta)` by a factor of `abs(a)`, has a period of `abs(1/b)pi` units, is a vertical shift of the line containing the points of inflection of the graph of `y=tan(theta)` by `d` units, and is a phase shift of `-c` units.",
+                                    "Label": "The graph of `y=f(theta)=atan(b(theta+c))+d` is a vertical dilation of the graph of `y=tantheta` by a factor of `abs(a)`, has a period of `abs(1/b)pi` units, is a vertical shift of the line containing the points of inflection of the graph of `y=tantheta` by `d` units, and is a phase shift of `-c` units.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1935,7 +1935,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.9.A.2",
-                                    "Label": "The inverse trigonometric functions are called arcsine, arccosine, and arctangent (also represented as `sin^(-1)(x)`, `cos^(-1)(x)`, and `tan^(-1)(x)`).Because the corresponding trigonometric functions are periodic, they are only invertible if they have restricted domains.",
+                                    "Label": "The inverse trigonometric functions are called arcsine, arccosine, and arctangent (also represented as `sin^-1x`, `cos^-1x`, and `tan^-1x`).Because the corresponding trigonometric functions are periodic, they are only invertible if they have restricted domains.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1993,13 +1993,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.11.A.1",
-                                    "Label": "The secant function, `f(theta)=sec(theta)`, is the reciprocal of the cosine function, where `cos(theta)!=0.",
+                                    "Label": "The secant function, `f(theta)=sectheta`, is the reciprocal of the cosine function, where `costheta!=0.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.11.A.2",
-                                    "Label": "The cosecant function, `f(theta)=csc(theta)`, is the reciprocal of the sine function, where `sin(theta)!=0`.",
+                                    "Label": "The cosecant function, `f(theta)=csctheta`, is the reciprocal of the sine function, where `sintheta!=0`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2011,13 +2011,13 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.11.A.4",
-                                    "Label": "The cotangent function, `f(theta)=cot(theta)`, is the reciprocal of the tangent function, where `tan(theta)!=0`. Equivalently, `cot(theta)=(cos(theta))/(sin(theta))`, where `sin(theta)!=0`.",
+                                    "Label": "The cotangent function, `f(theta)=cottheta`, is the reciprocal of the tangent function, where `tantheta!=0`. Equivalently, `cottheta=(costheta)/(sintheta)`, where `sintheta!=0`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.11.A.5",
-                                    "Label": "The graph of the cotangent function has vertical asymptotes for domain values where `tan(theta)=theta` and is decreasing between consecutive asymptotes.",
+                                    "Label": "The graph of the cotangent function has vertical asymptotes for domain values where `tantheta=theta` and is decreasing between consecutive asymptotes.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2027,7 +2027,7 @@
                 },
                 {
                     "Key": "AP.PC.3.12",
-                    "Label": "Equivalent Representations OOf Trigonometric Functions",
+                    "Label": "Equivalent Representations Of Trigonometric Functions",
                     "Examples": [],
                     "Subs": [
                         {
@@ -2037,13 +2037,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.3.12.A.1",
-                                    "Label": "The Pythagorean Theorem can be applied to right triangles with points on the unit circle at coordinates `(cos(theta),sin(theta))`, resulting in the Pythagorean identity: `sin^2(theta)+cos^2(theta)=1`.",
+                                    "Label": "The Pythagorean Theorem can be applied to right triangles with points on the unit circle at coordinates `(costheta,sintheta)`, resulting in the Pythagorean identity: `sin^2theta+cos^2theta=1`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.3.12.A.2",
-                                    "Label": "The Pythagorean identity can be algebraically manipulated into other forms involving trigonometric functions, such as `tan^2(theta)=sec^2(theta)-1`, and can be used to establish other trigonometric relationships, such as arcsin(x)=arccos(sqrt(1-x^2))`, with appropriate domain restrictions.",
+                                    "Label": "The Pythagorean identity can be algebraically manipulated into other forms involving trigonometric functions, such as `tan^2theta=sec^2theta-1`, and can be used to establish other trigonometric relationships, such as `arcsinx=arccos(sqrt(1-x^2))`, with appropriate domain restrictions.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2119,7 +2119,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.13.A.2",
-                                    "Label": "The coordinates of a point in the polar coordinate system, `(r,theta)`, can be converted to coordinates in the rectangular coordinate system, `(x,y)`, using `x=rcos(theta)` and `y=rsin(theta)`.",
+                                    "Label": "The coordinates of a point in the polar coordinate system, `(r,theta)`, can be converted to coordinates in the rectangular coordinate system, `(x,y)`, using `x=rcostheta` and `y=rsintheta`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2131,7 +2131,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.3.13.A.4",
-                                    "Label": "A complex number can be understood as a point in the complex plane and can be determined by its corresponding rectangular or polar coordinates. When the complex number has the rectangular coordinates `(a,b)`, it can be expressed as `a+bi`. When the complex number has polar coordinates `(r,theta)`, it can be expressed as `(rcos(theta))+i(rsin(theta))`.",
+                                    "Label": "A complex number can be understood as a point in the complex plane and can be determined by its corresponding rectangular or polar coordinates. When the complex number has the rectangular coordinates `(a,b)`, it can be expressed as `a+bi`. When the complex number has polar coordinates `(r,theta)`, it can be expressed as `(rcostheta)+i(rsintheta)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2278,7 +2278,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.4.2.A.1",
-                                    "Label": "A parametric function given by `f(t)=(x(t),y(t)) can be used to model particle motion in the plane. The graph of this function indicates the position of a particle at time `t`.",
+                                    "Label": "A parametric function given by `f(t)=(x(t),y(t))` can be used to model particle motion in the plane. The graph of this function indicates the position of a particle at time `t`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2348,13 +2348,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.4.4.A.1",
-                                    "Label": "A complete counterclockwise revolution around the unit circle that starts and ends at `(1,0)` and is centered at the origin can be modeled by `(x(t),y(t))=(cos(t),sin(t))` with domain `0<=t<=2pi`.",
+                                    "Label": "A complete counterclockwise revolution around the unit circle that starts and ends at `(1,0)` and is centered at the origin can be modeled by `(x(t),y(t))=(cost,sint)` with domain `0<=t<=2pi`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.4.4.A.2",
-                                    "Label": "Transformations of the parametric function `(x(t),y(t))=(cos(t),sin(t))` can model any circular path traversed in the plane.",
+                                    "Label": "Transformations of the parametric function `(x(t),y(t))=(cost,sint)` can model any circular path traversed in the plane.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2463,7 +2463,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.PC.4.7.A.1",
-                                    "Label": "A parametrization `(x(t),y(t))` for an implicitly defined function will, when `x(t)` and `y(t)` are substituted for `x` `and `y`, respectively, satisfy the corresponding equation for every value of `t` in the domain.",
+                                    "Label": "A parametrization `(x(t),y(t))` for an implicitly defined function will, when `x(t)` and `y(t)` are substituted for `x` and `y`, respectively, satisfy the corresponding equation for every value of `t` in the domain.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2488,13 +2488,13 @@
                                 },
                                 {
                                     "Key": "AP.PC.4.7.B.2",
-                                    "Label": "An ellipse can be parametrized using the trigonometric functions `x(t)=h+acos(t)` and `y(t)=k+bsin(t)` for `0<=t<=2pi`.",
+                                    "Label": "An ellipse can be parametrized using the trigonometric functions `x(t)=h+acost` and `y(t)=k+bsint` for `0<=t<=2pi`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.PC.4.7.B.3",
-                                    "Label": "A hyperbola can be parametrized using trigonometric functions. For a hyperbola that opens left and right, the functions are `x(t)=h+asec(t)` and `y(t)=k+btan(t)` for `0<=t<=2pi`. For a hyperbola that opens up and down, the functions are `x(t)=h+atan(t)` and `y(t)=k+bsec(t)` for `0<=t<=2pi`.",
+                                    "Label": "A hyperbola can be parametrized using trigonometric functions. For a hyperbola that opens left and right, the functions are `x(t)=h+asect` and `y(t)=k+btant` for `0<=t<=2pi`. For a hyperbola that opens up and down, the functions are `x(t)=h+atant` and `y(t)=k+bsect` for `0<=t<=2pi`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2786,7 +2786,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.4.13.A.3",
-                                    "Label": "The matrix `[[cos(theta),-sin(theta)],[sin(theta),cos(theta)]]` is associated with a linear transformation of vectors that rotates every vector an angle `theta` counterclockwise about the origin.",
+                                    "Label": "The matrix `[[costheta,-sintheta],[sintheta,costheta]]` is associated with a linear transformation of vectors that rotates every vector an angle `theta` counterclockwise about the origin.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2830,7 +2830,7 @@
                                 },
                                 {
                                     "Key": "AP.PC.4.13.C.2",
-                                    "Label": "If a linear transformation, `L`, is given by `L(vec(v))=A(vec(v))`, then its inverse transformation is given by `L^(-1)(vec(v))=A^(-1)(vec(v))`, where `A^(-1)` is the inverse of the matrix `A`.",
+                                    "Label": "If a linear transformation, `L`, is given by `L(vec(v))=A(vec(v))`, then its inverse transformation is given by `L^-1(vec(v))=A^-1(vec(v))`, where `A^-1` is the inverse of the matrix `A`.",
                                     "Examples": [],
                                     "Subs": []
                                 }

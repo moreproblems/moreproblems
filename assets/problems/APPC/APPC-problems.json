@@ -869,7 +869,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Which of the following is the graph of the polar function `r=f(theta)`, where `f(theta)=3cos(theta)+2`, in the polar coordinate system for `0<=theta<=2pi`?"
+            "Which of the following is the graph of the polar function `r=f(theta)`, where `f(theta)=3costheta+2`, in the polar coordinate system for `0<=theta<=2pi`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -922,7 +922,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "What are all values of `theta`, `-pi<=theta<=pi`, for which `2cos(theta)> -1` and `2sin(theta)>sqrt(3)`?"
+            "What are all values of `theta`, `-pi<=theta<=pi`, for which `2costheta> -1` and `2sintheta>sqrt(3)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -975,7 +975,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A polar function is given by `r=f(theta)=-1+sin(theta)`. As `theta` increases on the interval `0<theta<pi/2`, which of the following is true about the points on the graph of `r=f(theta)` in the `xytext(-plane)`?"
+            "A polar function is given by `r=f(theta)=-1+sintheta`. As `theta` increases on the interval `0<theta<pi/2`, which of the following is true about the points on the graph of `r=f(theta)` in the `xytext(-plane)`?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1196,7 +1196,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function `g` is given by `g(x)=sin(x)-cos(x)` and has a period of `2pi`. In order to define the inverse function of `g`, which of the following specifies a restricted domain for `g` and provides a rationale for why `g` is invertible on that domain?"
+            "The function `g` is given by `g(x)=sinx-cosx` and has a period of `2pi`. In order to define the inverse function of `g`, which of the following specifies a restricted domain for `g` and provides a rationale for why `g` is invertible on that domain?"
         ],
         "AnswerChoices": {
             "A": {
@@ -1337,7 +1337,7 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Find the value of `f^(-1)(4)`, or indicate that it is not defined."
+                    "Find the value of `f^-1(4)`, or indicate that it is not defined."
                 ],
                 "AnswerChoices": {
                     "KEY": {
@@ -1788,7 +1788,7 @@
         "Points": 6,
         "Explain": false,
         "Content": [
-            ":ibox:• Unless otherwise specified, the domain of a function `f` is assumed to be the set of all real numbers `x` for which `f(x)` is a real number. Angle measures for trigonometric functions are assumed to be in radians.\n• Solutions to equations must be real numbers. Determine the exact value of any expression that can be obtained without a calculator. For example, `log_2(8)`, `cos(pi/2)`, and `sin^(-1)(1)` can be evaluated without a calculator.\n• Unless otherwise specified, combine terms using algebraic methods and rules for exponents and logarithms, where applicable. For example, `2x+3x`, `5^2*5^3`, `x^5/x^2`, and `ln(3)+ln(5)` should be rewritten in equivalent forms.\n• For `text(each part)` of the question, show the work that leads to your answers."
+            ":ibox:• Unless otherwise specified, the domain of a function `f` is assumed to be the set of all real numbers `x` for which `f(x)` is a real number. Angle measures for trigonometric functions are assumed to be in radians.\n• Solutions to equations must be real numbers. Determine the exact value of any expression that can be obtained without a calculator. For example, `log_2(8)`, `cos(pi/2)`, and `sin^-1(1)` can be evaluated without a calculator.\n• Unless otherwise specified, combine terms using algebraic methods and rules for exponents and logarithms, where applicable. For example, `2x+3x`, `5^2*5^3`, `x^5/x^2`, and `ln(3)+ln(5)` should be rewritten in equivalent forms.\n• For `text(each part)` of the question, show the work that leads to your answers."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -1799,7 +1799,7 @@
                 "Explain": false,
                 "Content": [
                     "The functions `gandh` are given by",
-                    ":ibox:`g(x)=3ln(x)-1/2ln(x)`\n`h(x)=(sin^2(x)-1)/(cos(x))`",
+                    ":ibox:`g(x)=3ln(x)-1/2ln(x)`\n`h(x)=(sin^2(x)-1)/(cosx)`",
                     "Rewrite `g(x)` as a `text(single)` natural logarithm without `text(negative)` exponents in any part of the expression. Your result should be of the form `ln(text(expression))`."
                 ],
                 "AnswerChoices": {
@@ -1819,11 +1819,11 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    "Rewrite `h(x)` as an expression in which `cos(x)` appears `text(once)` and no other trigonometric functions are involved."
+                    "Rewrite `h(x)` as an expression in which `cosx` appears `text(once)` and no other trigonometric functions are involved."
                 ],
                 "AnswerChoices": {
                     "KEY": {
-                        "Choice": "match:-cos(x)",
+                        "Choice": "match:-cosx",
                         "Key": {
                             "Correct": true,
                             "Rationale": "",
@@ -1839,7 +1839,7 @@
                 "Explain": false,
                 "Content": [
                     "The functions `jandk` are given by",
-                    ":ibox:`j(x)=2(sin(x))(cos(x))-cos(x)`\n`k(x)=8e^(3x)-e`",
+                    ":ibox:`j(x)=2(sinx)(cosx)-cosx`\n`k(x)=8e^(3x)-e`",
                     "Solve `j(x)=0` for a value of `x` in the interval `[0,pi/2]`."
                 ],
                 "AnswerChoices": {

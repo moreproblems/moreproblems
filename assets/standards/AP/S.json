@@ -492,7 +492,7 @@
                                 },
                                 {
                                     "Key": "AP.S.1.10.A.3",
-                                    "Label": "For a normal distribution, approximately `68%` of the observations are within 1 standard deviation of the mean, approximately `95%` of observations are within 2 standard deviations of the mean, and approximately `99.7%` of observations are within 3 standard deviations of the mean. This is called the empirical rule.",
+                                    "Label": "For a normal distribution, approximately `68%` of the observations are within `1` standard deviation of the mean, approximately `95%` of observations are within `2` standard deviations of the mean, and approximately `99.7%` of observations are within `3` standard deviations of the mean. This is called the empirical rule.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -511,7 +511,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.1.10.B.1",
-                                    "Label": "A standardized score for a particular data value is calculated as (data value – mean)/(standard deviation), and measures the number of standard deviations a data value falls above or below the mean.",
+                                    "Label": "A standardized score for a particular data value is calculated as (data value - mean)/(standard deviation), and measures the number of standard deviations a data value falls above or below the mean.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -542,7 +542,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.1.10.C.1",
-                                    "Label": "Percentiles and z-scores may be used to compare relative positions of points within a data set or between data sets.",
+                                    "Label": "Percentiles and `z`-scores may be used to compare relative positions of points within a data set or between data sets.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -747,7 +747,7 @@
                                 },
                                 {
                                     "Key": "AP.S.2.5.A.2",
-                                    "Label": "The correlation coefficient can be calculated by: `r-1/(n-1)sum((x_i-bar(x))/s_x)((y_i-bar(y))/s_y)`. However, the most common way to determine `r` is by using technology.",
+                                    "Label": "The correlation coefficient can be calculated by: `r=1/(n-1)sum((x_i-bar(x))/s_x)((y_i-bar(y))/s_y)`. However, the most common way to determine `r` is by using technology.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -869,7 +869,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.2.8.A.1",
-                                    "Label": "The least-squares regression model minimizes the sum of the squares of the residuals and contains the point `(bar(x),bar(y)`.",
+                                    "Label": "The least-squares regression model minimizes the sum of the squares of the residuals and contains the point `(bar(x),bar(y))`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -912,7 +912,7 @@
                                 },
                                 {
                                     "Key": "AP.S.2.8.B.3",
-                                    "Label": "The y-intercept value is the predicted value of the response variable when the explanatory variable is equal to `0` . The formula for the `y`-intercept, `a`, is `a=bar(y)-b bar(x)",
+                                    "Label": "The `y`-intercept value is the predicted value of the response variable when the explanatory variable is equal to `0` . The formula for the `y`-intercept, `a`, is `a=bar(y)-b bar(x)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1541,7 +1541,7 @@
                                 },
                                 {
                                     "Key": "AP.S.4.5.A.2",
-                                    "Label": "The multiplication rule states that the probability that events `A` and `B` both will occur is equal to the probability that event `A` will occur multiplied by the probability that event `B` will occur, given that `A` has occurred. This is denoted `P(AnnB)=P(a)*P(B|A)`.",
+                                    "Label": "The multiplication rule states that the probability that events `A` and `B` both will occur is equal to the probability that event `A` will occur multiplied by the probability that event `B` will occur, given that `A` has occurred. This is denoted `P(AnnB)=P(A)*P(B|A)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1656,7 +1656,7 @@
                                 },
                                 {
                                     "Key": "AP.S.4.8.A.2",
-                                    "Label": "The mean, or expected value, for a discrete random variable `X` is `mu_x=sumx_i*P(x_i)`.",
+                                    "Label": "The mean, or expected value, for a discrete random variable `X` is `mu_X=sumx_i*P(x_i)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1695,7 +1695,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.4.9.A.1",
-                                    "Label": "For random variables `X` and `Y` and real numbers a and b, the mean of `aX_bY` is `amu_x+bmu_y`.",
+                                    "Label": "For random variables `X` and `Y` and real numbers a and b, the mean of `aX+bY` is `amu_x+bmu_y`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1707,7 +1707,7 @@
                                 },
                                 {
                                     "Key": "AP.S.4.9.A.3",
-                                    "Label": "For independent random variables `X` and `Y` and real numbers `a` and `b`, the mean of `aX+bY` is `amu_x+bmu_y`, and the variance of `aX+bY` is `a^2sigma^2_x+b^2sigma^2_y`.",
+                                    "Label": "For independent random variables `X` and `Y` and real numbers `a` and `b`, the mean of `aX+bY` is `amu_x+bmu_y`, and the variance of `aX+bY` is `a^2sigma_x^2+b^2sigma_y^2`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1720,7 +1720,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.4.9.B.1",
-                                    "Label": "For `Y=a+bX`, the probability distribution of the transformed random variable, `Y`, has the same shape as the probability distribution for `X`, so long as `a>0` and `b>0`. The mean of `Y` is `mu_y=a+bmu_x`. The standard deviation of Y is `sigma_y=abs(b)sigma_x`.",
+                                    "Label": "For `Y=a+bX`, the probability distribution of the transformed random variable, `Y`, has the same shape as the probability distribution for `X`, so long as `a>0` and `b>0`. The mean of `Y` is `mu_y=a+bmu_x`. The standard deviation of `Y` is `sigma_y=abs(b)sigma_x`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2063,7 +2063,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.5.5.A.1",
-                                    "Label": "For independent samples (sampling with replacement) of a categorical variable from a population with population proportion, `p`, the sampling distribution of the sample proportion, `hat(p)`, has a mean, `hat(mu)=p` and a standard deviation, `sigma_hat(p)=sqrt((p(1-p))/n)`",
+                                    "Label": "For independent samples (sampling with replacement) of a categorical variable from a population with population proportion, `p`, the sampling distribution of the sample proportion, `hat(p)`, has a mean, `mu_hat(p)=p` and a standard deviation, `sigma_hat(p)=sqrt((p(1-p))/n)`",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2082,7 +2082,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.5.5.B",
-                                    "Label": "For a categorical variable, the sampling distribution of the sample proportion, `hat(p)`, will have an approximate normal distribution, provided the sample size is large enough: `np>=10` and n(1-p)>=10`.",
+                                    "Label": "For a categorical variable, the sampling distribution of the sample proportion, `hat(p)`, will have an approximate normal distribution, provided the sample size is large enough: `np>=10` and `n(1-p)>=10`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2115,7 +2115,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.5.6.A.1",
-                                    "Label": "For a categorical variable, when randomly sampling with replacement from two independent populations with population proportions `p_1` and `p_2`, the sampling distribution of the difference in sample proportions `hat(p_1)-hat(p_2)` has mean, `mu_(hat(p_1)-hat(p_2))=p_1-p_2` and standard deviation `sigma_(hat(p_1)-hat(p_2))=sqrt((p_1(1-p_1))/n_1+(p_2(1-p_2))/n_2)`",
+                                    "Label": "For a categorical variable, when randomly sampling with replacement from two independent populations with population proportions `p_1` and `p_2`, the sampling distribution of the difference in sample proportions `hat(p)_1-hat(p)_2` has mean, `mu_(hat(p)_1-hat(p)_2)=p_1-p_2` and standard deviation `sigma_(hat(p)_1-hat(p)_2)=sqrt((p_1(1-p_1))/n_1+(p_2(1-p_2))/n_2)`",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2134,7 +2134,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.5.6.B.1",
-                                    "Label": "The sampling distribution of the difference in sample proportions `hat(p_1)-hat(p_2)` will have an approximate normal distribution provided the sample sizes are large enough: `n_1p_1>=10n_1(1-p_1)>=10n_2p_2>=10n_2(1-p_2)>=10`.",
+                                    "Label": "The sampling distribution of the difference in sample proportions `hat(p)_1-hat(p)_2` will have an approximate normal distribution provided the sample sizes are large enough: `n_1p_1>=10n_1(1-p_1)>=10n_2p_2>=10n_2(1-p_2)>=10`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2173,7 +2173,7 @@
                                 },
                                 {
                                     "Key": "AP.S.5.7.A.2",
-                                    "Label": "If sampling without replacement, the standard deviation of the sample mean is smaller than what is given by the formula above. If the sample size is less than 10% of the population size, the difference is negligible.",
+                                    "Label": "If sampling without replacement, the standard deviation of the sample mean is smaller than what is given by the formula above. If the sample size is less than `10%` of the population size, the difference is negligible.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2225,7 +2225,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.5.8.A.1",
-                                    "Label": "For a numerical variable, when randomly sampling with replacement from two independent populations with population means `mu_1` and `mu_2` and population standard deviations `sigma_1` and `sigma_2`, the sampling distribution of the difference in sample means `bar(x_1)-bar(x_2)` has mean `mu_(bar(x_1)-bar(x_2))=mu_1-mu_2` and standard deviation, `sigma_(bar(x_1)-bar(x_2))=sqrt(sigma_1^2/n_1+sigma_2^2/n_2)`.",
+                                    "Label": "For a numerical variable, when randomly sampling with replacement from two independent populations with population means `mu_1` and `mu_2` and population standard deviations `sigma_1` and `sigma_2`, the sampling distribution of the difference in sample means `bar(x)_1-bar(x)_2` has mean `mu_(bar(x)_1-bar(x)_2)=mu_1-mu_2` and standard deviation, `sigma_(bar(x)_1-bar(x)_2)=sqrt(sigma_1^2/n_1+sigma_2^2/n_2)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2244,13 +2244,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.5.8.B.1",
-                                    "Label": "The sampling distribution of the difference in sample means `bar(x_1)-bar(x_2)` can be modeled with a normal distribution if the two population distributions can be modeled with a normal distribution.",
+                                    "Label": "The sampling distribution of the difference in sample means `bar(x)_1-bar(x)_2` can be modeled with a normal distribution if the two population distributions can be modeled with a normal distribution.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.S.5.8.B.2",
-                                    "Label": "The sampling distribution of the difference in sample means `bar(x_1)-bar(x_2)` can be modeled approximately by a normal distribution if the two population distributions cannot be modeled with a normal distribution but both sample sizes are greater than or equal to `30`.",
+                                    "Label": "The sampling distribution of the difference in sample means `bar(x)_1-bar(x)_2` can be modeled approximately by a normal distribution if the two population distributions cannot be modeled with a normal distribution but both sample sizes are greater than or equal to `30`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2387,7 +2387,7 @@
                                 },
                                 {
                                     "Key": "AP.S.6.2.C.3",
-                                    "Label": "For categorical variables, the margin of error is the critical value (`z^(*)`) times the standard error (SE) of the relevant statistic, which equals `z^(*)sqrt((hat(p)(1-hat(p)))/n)` for a one sample proportion.",
+                                    "Label": "For categorical variables, the margin of error is the critical value (`z^(***)`) times the standard error (SE) of the relevant statistic, which equals `z^(***)sqrt((hat(p)(1-hat(p)))/n)` for a one sample proportion.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2406,7 +2406,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.6.2.D.1",
-                                    "Label": "In general, an interval estimate can be constructed as point estimate `+-` (margin of error). For a one-sample proportion, the interval estimate is `hat(p)+-z^(*)sqrt((hat(p)(1-hat(p)))/n)`",
+                                    "Label": "In general, an interval estimate can be constructed as point estimate `+-` (margin of error). For a one-sample proportion, the interval estimate is `hat(p)+-z^(***)sqrt((hat(p)(1-hat(p)))/n)`",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2527,7 +2527,7 @@
                                 },
                                 {
                                     "Key": "AP.S.6.4.A.2",
-                                    "Label": "For hypotheses about parameters, the null hypothesis contains an equality reference `(=,>=,or<=)`, while the alternative hypothesis contains a strict inequality `(<,>,or!=)`. The type of inequality in the alternative hypothesis is based on the question of interest. Alternative hypotheses with `<` or `>` are called one-sided, and alternative hypotheses with `!= are called two-sided. Although the null hypothesis for a one-sided test may include an inequality symbol, it is still tested at the boundary of equality.",
+                                    "Label": "For hypotheses about parameters, the null hypothesis contains an equality reference `(=,>=,or<=)`, while the alternative hypothesis contains a strict inequality `(<,>,or!=)`. The type of inequality in the alternative hypothesis is based on the question of interest. Alternative hypotheses with `<` or `>` are called one-sided, and alternative hypotheses with `!=` are called two-sided. Although the null hypothesis for a one-sided test may include an inequality symbol, it is still tested at the boundary of equality.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2539,7 +2539,7 @@
                                 },
                                 {
                                     "Key": "AP.S.6.4.A.4",
-                                    "Label": "A one-sided alternative hypothesis for a proportion is either `H?_a:p<p_0` or `H_a:p>p_0`. A two-sided alternate hypothesis is `H_a:p_1!=p_2`.",
+                                    "Label": "A one-sided alternative hypothesis for a proportion is either `H_a:p<p_0` or `H_a:p>p_0`. A two-sided alternate hypothesis is `H_a:p_1!=p_2`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2636,7 +2636,7 @@
                                 },
                                 {
                                     "Key": "AP.S.6.5.A.3",
-                                    "Label": "The test statistic for a population proportion is: `z=()/sqrt((p_0(1-p_0))/n)`.",
+                                    "Label": "The test statistic for a population proportion is: `z=(hat(p)-p_0)/sqrt((p_0(1-p_0))/n)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2799,7 +2799,7 @@
                                 },
                                 {
                                     "Key": "AP.S.6.7.B.3",
-                                    "Label": "The probability of making a Type II error `=1-text(power)`",
+                                    "Label": "The probability of making a Type II error `=1-text(power)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2913,12 +2913,12 @@
                                         },
                                         {
                                             "Key": "AP.S.6.8.B.1.b",
-                                            "Label": "To check that sampling distribution of `hat(p_1)-hat(p_2)` is approximately normal (shape).",
+                                            "Label": "To check that sampling distribution of `hat(p)_1-hat(p)_2` is approximately normal (shape).",
                                             "Examples": [],
                                             "Subs": [
                                                 {
                                                     "Key": "AP.S.6.8.B.1.b.i",
-                                                    "Label": "For categorical variables, check that `n_1hat(p_1)`, `n_1(1-hat(p_1))`, `n_2hat(p_2))`, and `n_2(1-hat(p_2))` are all greater than or equal to some predetermined value, typically either `5` or `10`.",
+                                                    "Label": "For categorical variables, check that `n_1hat(p)_1`, `n_1(1-hat(p)_1)`, `n_2hat(p)_2)`, and `n_2(1-hat(p)_2)` are all greater than or equal to some predetermined value, typically either `5` or `10`.",
                                                     "Examples": [],
                                                     "Subs": []
                                                 }
@@ -2935,7 +2935,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.6.8.C.1",
-                                    "Label": "For a comparison of proportions, the interval estimate is `(hat(p)_1-hat(p)_2)+-z^(*)sqrt((hat(p)_1(1-hat(p)_1))/n_1+(hat(p)_2(1-hat(p)_2))/n_2)`.",
+                                    "Label": "For a comparison of proportions, the interval estimate is `(hat(p)_1-hat(p)_2)+-z^(***)sqrt((hat(p)_1(1-hat(p)_1))/n_1+(hat(p)_2(1-hat(p)_2))/n_2)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -3069,7 +3069,7 @@
                                         },
                                         {
                                             "Key": "AP.S.6.10.C.1.b",
-                                            "Label": "To check that the sampling distribution of `hat(p_1)-hat(p_2)` is approximately normal (shape):",
+                                            "Label": "To check that the sampling distribution of `hat(p)_1-hat(p)_2` is approximately normal (shape):",
                                             "Examples": [],
                                             "Subs": [
                                                 {
@@ -3124,7 +3124,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.6.11.C.1",
-                                    "Label": "A formal decision explicitly compares the `p`-value to the significance . If the `ptext(-value)<=alpha`, then reject the null hypothesis, `H_0:p_1=p_2`, or `H_0:p_1-p_2=0`. If the `ptext(-value)>alpha`, then fail to reject the null hypothesis.",
+                                    "Label": "A formal decision explicitly compares the `p`-value to the significance `alpha`. If the `ptext(-value)<=alpha`, then reject the null hypothesis, `H_0:p_1=p_2`, or `H_0:p_1-p_2=0`. If the `ptext(-value)>alpha`, then fail to reject the null hypothesis.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -3202,7 +3202,7 @@
                                 },
                                 {
                                     "Key": "AP.S.7.2.B.2",
-                                    "Label": "For one quantitative variable, X , that is normally distributed, the distribution of `t=(bar(x)-mu)/(s/sqrt(n))` is a `t`-distribution with `n-1` degrees of freedom.",
+                                    "Label": "For one quantitative variable, `X`, that is normally distributed, the distribution of `t=(bar(x)-mu)/(s/sqrt(n))` is a `t`-distribution with `n-1` degrees of freedom.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -3273,7 +3273,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.7.2.D.1",
-                                    "Label": "The critical value `t^(*)` with n-1` degrees of freedom can be found using a table or computer-generated output.",
+                                    "Label": "The critical value `t^(***)` with n-1` degrees of freedom can be found using a table or computer-generated output.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -3285,7 +3285,7 @@
                                 },
                                 {
                                     "Key": "AP.S.7.2.D.3",
-                                    "Label": "For a one-sample `t`-interval for a mean, the margin of error is the critical value (`t^(*)`) times the standard error (SE), which equals `t^(*)(s/sqrt(n))`.",
+                                    "Label": "For a one-sample `t`-interval for a mean, the margin of error is the critical value (`t^(***)`) times the standard error (SE), which equals `t^(***)(s/sqrt(n))`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -3304,7 +3304,7 @@
                                 },
                                 {
                                     "Key": "AP.S.7.2.E.2",
-                                    "Label": "For the population mean for one sample with unknown population standard deviation, the confidence interval is `bar(x)+-t^(*)(s/sqrt(n))`.",
+                                    "Label": "For the population mean for one sample with unknown population standard deviation, the confidence interval is `bar(x)+-t^(***)(s/sqrt(n))`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -3413,7 +3413,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.7.4.B.1",
-                                    "Label": "The null hypothesis for a one-sample `t`-test for a population mean is `H_): mu=mu_0`, where `mu_0` is the hypothesized value. Depending upon the situation, the alternative hypothesis is `H_a: mu<mu_0`, or `H_a: mu>mu_0`, or `H_a: mu~=mu_0`.",
+                                    "Label": "The null hypothesis for a one-sample `t`-test for a population mean is `H_0: mu=mu_0`, where `mu_0` is the hypothesized value. Depending upon the situation, the alternative hypothesis is `H_a: mu<mu_0`, or `H_a: mu>mu_0`, or `H_a: mu!=mu_0`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -3517,7 +3517,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.7.5.C.1",
-                                    "Label": "A formal decision explicitly compares the `ptext(-value)` to the significance `alpha`. If the `ptext(-value)<=alpha`, then reject the null hypothesis, `H_0:mu=mu_0. If the `ptext(-value)>alpha`, then fail to reject the null hypothesis.",
+                                    "Label": "A formal decision explicitly compares the `ptext(-value)` to the significance `alpha`. If the `ptext(-value)<=alpha`, then reject the null hypothesis, `H_0:mu=mu_0`. If the `ptext(-value)>alpha`, then fail to reject the null hypothesis.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -3586,7 +3586,7 @@
                                         },
                                         {
                                             "Key": "AP.S.7.6.B.1.b",
-                                            "Label": "To check that the sampling distribution of `(bar(x_1),-bar(x_2))` should be approximately normal (shape):",
+                                            "Label": "To check that the sampling distribution of `(bar(x)_1,-bar(x)_2)` should be approximately normal (shape):",
                                             "Examples": [],
                                             "Subs": [
                                                 {
@@ -3608,7 +3608,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.7.6.C.1",
-                                    "Label": "For the difference of two sample means, the margin of error is the critical value (`t^(*)`) times the standard error (SE) of the difference of two means.",
+                                    "Label": "For the difference of two sample means, the margin of error is the critical value (`t^(***)`) times the standard error (SE) of the difference of two means.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -3627,13 +3627,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.7.6.D.1",
-                                    "Label": "The point estimate for the difference of two population means is the difference in sample means, `bar(x_1)-bar(x_2)`.",
+                                    "Label": "The point estimate for the difference of two population means is the difference in sample means, `bar(x)_1-bar(x)_2`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.S.7.6.D.2",
-                                    "Label": "For a difference of two population means where the population standard deviations are not known, the confidence interval is `(bar(x)_1-bar(x)_2)+-t^(*)sqrt((s_1^2)/n_1)+(s_2^2)/n_2` where `+-t^(*)` are the critical values for the central `C%` of a t-distribution with appropriate degrees of freedom that can be found using technology.",
+                                    "Label": "For a difference of two population means where the population standard deviations are not known, the confidence interval is `(bar(x)_1-bar(x)_2)+-t^(***)sqrt((s_1^2)/n_1+(s_2^2)/n_2)` where `+-t^(***)` are the critical values for the central `C%` of a t-distribution with appropriate degrees of freedom that can be found using technology.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -3755,7 +3755,7 @@
                                         },
                                         {
                                             "Key": "AP.S.7.8.C.1.b",
-                                            "Label": "The sampling distribution of `bar(x_1)-bar(x_2)` should be approximately normal (shape).",
+                                            "Label": "The sampling distribution of `bar(x)_1-bar(x)_2` should be approximately normal (shape).",
                                             "Examples": [],
                                             "Subs": [
                                                 {
@@ -4284,13 +4284,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.9.2.A.1",
-                                    "Label": "Consider a response variable, `y`, that is linearly related to an explanatory variable, `x`. For a simple random sample of n observations, the sample regression line, `hat(y)=a+bx`, is an estimate of the population regression line `mu_y=alpha+betax`. For a particular observation, `(x_i,y_i)`, the residual from the sample regression line, `y_i-hat(y)_i=y_i-(a+bx_i)`, is an estimate of `y_i-(alpha+betax_i)`, the deviation of the response variable from the population regression line. For all points `(x,y)` in the population, the standard deviation of all of the deviations of the response variable from the population regression line, `sigma`, can be estimated by the standard deviation of the residuals from the sample regression line, `s=sqrt((sum(y_i-hat(y)_i)^2)/(n-2))`.",
+                                    "Label": "Consider a response variable, `y`, that is linearly related to an explanatory variable, `x`. For a simple random sample of `n` observations, the sample regression line, `hat(y)=a+bx`, is an estimate of the population regression line `mu_y=alpha+betax`. For a particular observation, `(x_i,y_i)`, the residual from the sample regression line, `y_i-hat(y)_i=y_i-(a+bx_i)`, is an estimate of `y_i-(alpha+betax_i)`, the deviation of the response variable from the population regression line. For all points `(x,y)` in the population, the standard deviation of all of the deviations of the response variable from the population regression line, `sigma`, can be estimated by the standard deviation of the residuals from the sample regression line, `s=sqrt((sum(y_i-hat(y)_i)^2)/(n-2))`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.S.9.2.A.2",
-                                    "Label": "For a simple random sample of `n` observations, let `b` represent the slope of a sample regression line. Then the mean of the sampling distribution for `b` equals the population slope: `mu_B=beta`. The standard deviation of the sampling distribution for `b` is `sigma_b=sigma/(sigma_xsqrt(n))`, where `sigma_x=sqrt((sum(x_i-bar(x))^2)/n)`.",
+                                    "Label": "For a simple random sample of `n` observations, let `b` represent the slope of a sample regression line. Then the mean of the sampling distribution for `b` equals the population slope: `mu_b=beta`. The standard deviation of the sampling distribution for `b` is `sigma_b=sigma/(sigma_xsqrt(n))`, where `sigma_x=sqrt((sum(x_i-bar(x))^2)/n)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -4367,7 +4367,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.S.9.2.C.1",
-                                    "Label": "For the slope of a regression line, the margin of error is the critical value (`t^(*)`) times the standard error (SE) of the slope.",
+                                    "Label": "For the slope of a regression line, the margin of error is the critical value (`t^(***)`) times the standard error (SE) of the slope.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -4392,7 +4392,7 @@
                                 },
                                 {
                                     "Key": "AP.S.9.2.D.2",
-                                    "Label": "For the slope of a regression model, the interval estimate is `b+-t^(*)(SE_b)`.",
+                                    "Label": "For the slope of a regression model, the interval estimate is `b+-t^(***)(SE_b)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }

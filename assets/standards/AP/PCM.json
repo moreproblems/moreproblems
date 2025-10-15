@@ -49,7 +49,7 @@
                                         },
                                         {
                                             "Key": "AP.PCM.1.1.A.4.ii",
-                                            "Label": "The position vector of a point is given by  `vec(r)`, and the unit vector in the direction of the position vector is denoted `hat(r)`.",
+                                            "Label": "The position vector of a point is given by `vec(r)`, and the unit vector in the direction of the position vector is denoted `hat(r)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -926,7 +926,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.2.8.A.3",
-                                    "Label": "The force exerted on an object by a spring is always directed toward the equilibrium position of the object–spring system.",
+                                    "Label": "The force exerted on an object by a spring is always directed toward the equilibrium position of the object-spring system.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1224,7 +1224,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.PCM.3.2.A.3.i",
-                                            "Label": "The dot product between two vectors, `vec(A)` and `vec(B`, results in a scalar quantity of magnitude `vec(A)*vec(B)=ABcos(theta)`.",
+                                            "Label": "The dot product between two vectors, `vec(A)` and `vec(B`, results in a scalar quantity of magnitude `vec(A)*vec(B)=ABcostheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1236,7 +1236,7 @@
                                         },
                                         {
                                             "Key": "AP.PCM.3.2.A.3.iii",
-                                            "Label": "If the component of the force exerted on a system that is parallel to the displacement is constant, the work done on the system by the force is given by the derived equation `W=F_(||)d=Fdcos(theta)`.",
+                                            "Label": "If the component of the force exerted on a system that is parallel to the displacement is constant, the work done on the system by the force is given by the derived equation `W=F_(||)d=Fdcostheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -1250,7 +1250,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.3.2.A.4",
-                                    "Label": "The work–energy theorem states that the change in an object's kinetic energy is equal to the sum of the work (net work) being done by all forces exerted on the object. Relevant equation: `DeltaK=sumW_i=sumF_(||,i)d_i`.",
+                                    "Label": "The work-energy theorem states that the change in an object's kinetic energy is equal to the sum of the work (net work) being done by all forces exerted on the object. Relevant equation: `DeltaK=sumW_i=sumF_(||,i)d_i`.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -1267,7 +1267,7 @@
                                         },
                                         {
                                             "Key": "AP.PCM.3.2.A.4.iii",
-                                            "Label": "The energy dissipated by friction is typically equated to the force of friction times the length of the path over which the force is exerted: `DeltaE_text(mech)=F_fdcos(theta)`.",
+                                            "Label": "The energy dissipated by friction is typically equated to the force of friction times the length of the path over which the force is exerted: `DeltaE_text(mech)=F_fdcostheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1495,7 +1495,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.3.5.A.3",
-                                    "Label": "Because work is the change in energy of an object or system due to a force, average power is the total work done, divided by the time during which that work was done. Relevant equation: `P_text(avg)=(dW)/(dt)`.",
+                                    "Label": "Because work is the change in energy of an object or system due to a force, average power is the total work done, divided by the time during which that work was done. Relevant equation: `P_text(avg)=(W)/(Deltat)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1507,7 +1507,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.3.5.A.5",
-                                    "Label": "The instantaneous power delivered to an object by the component of a constant force parallel to the object's velocity can be described with the derived equation: `P_text(inst)=F_(||)v=Fvcos(theta)`.",
+                                    "Label": "The instantaneous power delivered to an object by the component of a constant force parallel to the object's velocity can be described with the derived equation: `P_text(inst)=F_(||)v=Fvcostheta`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1628,7 +1628,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.4.2.B.2",
-                                    "Label": "The impulse–momentum theorem relates the impulse delivered to an object and the object's change in momentum.",
+                                    "Label": "The impulse-momentum theorem relates the impulse delivered to an object and the object's change in momentum.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -1639,13 +1639,13 @@
                                         },
                                         {
                                             "Key": "AP.PCM.4.2.B.2.ii",
-                                            "Label": "Newton's second law of motion is a direct result of the impulse–momentum theorem applied to systems with constant mass: `vec(F)_text(net)=(dvec(p))/(dt)=m(dvec(v))/(dt)=mvec(a)`.",
+                                            "Label": "Newton's second law of motion is a direct result of the impulse-momentum theorem applied to systems with constant mass: `vec(F)_text(net)=(dvec(p))/(dt)=m(dvec(v))/(dt)=mvec(a)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.PCM.4.2.B.2.iii",
-                                            "Label": "The impulse–momentum theorem also describes the behavior of a system in which the velocity is constant but the mass changes with respect to time: `vec(F)_text(net)=(dvec(p))/(dt)=(dm)/(dt)vec(v)`.",
+                                            "Label": "The impulse-momentum theorem also describes the behavior of a system in which the velocity is constant but the mass changes with respect to time: `vec(F)_text(net)=(dvec(p))/(dt)=(dm)/(dt)vec(v)`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1830,7 +1830,7 @@
                                         },
                                         {
                                             "Key": "AP.PCM.5.1.A.1.iii",
-                                            "Label": "If the rotation of a system about an axis may be well described using the motion of the system's center of mass, the system may be treated as a single object. For example, the rotation of Earth about its axis may be considered negligible when considering the revolution of Earth about the center of mass of the Earth–Sun system.",
+                                            "Label": "If the rotation of a system about an axis may be well described using the motion of the system's center of mass, the system may be treated as a single object. For example, the rotation of Earth about its axis may be considered negligible when considering the revolution of Earth about the center of mass of the Earth-Sun system.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1838,7 +1838,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.5.1.A.2",
-                                    "Label": "Angular velocity is the rate at which angular position changes with respect to time. Relevant equation: `omega=(dtheta)/(dt)`.",
+                                    "Label": "Angular velocity is the rate at which angular position changes with respect to time. Relevant equation: `omega=(d theta)/(dt)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1958,7 +1958,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.PCM.5.3.B.2.i",
-                                            "Label": "The cross-product between two vectors, `vec(A)` and `vec(B)`, results in a vector quantity of magnitude `vec(A)xxvec(B)=ABsin(theta)`.",
+                                            "Label": "The cross-product between two vectors, `vec(A)` and `vec(B)`, results in a vector quantity of magnitude `vec(A)xxvec(B)=ABsintheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -2029,7 +2029,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.5.4.B.2",
-                                    "Label": "The parallel axis theorem uses the following equation to relate the rotational inertia of a rigid system about any axis that is parallel to an axis through its center of mass: `I'=I_text(cm)+md^2`.",
+                                    "Label": "The parallel axis theorem uses the following equation to relate the rotational inertia of a rigid system about any axis that is parallel to an axis through its center of mass: `I'=I_text(cm)+Md^2`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2184,7 +2184,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.6.2.A.2",
-                                    "Label": "The amount of work done on a rigid system by a torque is related to the magnitude of that torque and the angular displacement through which the rigid system rotates during the interval in which that torque is exerted. Relevant equation: `W=int_(theta_1)^(theta_2)taudtheta`.",
+                                    "Label": "The amount of work done on a rigid system by a torque is related to the magnitude of that torque and the angular displacement through which the rigid system rotates during the interval in which that torque is exerted. Relevant equation: `W=int_(theta_1)^(theta_2)taud theta`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2273,18 +2273,18 @@
                                 },
                                 {
                                     "Key": "AP.PCM.6.3.C.2",
-                                    "Label": "A rotational form of the impulse–momentum theorem relates the angular impulse delivered to an object or rigid system and the change in angular momentum of that object or rigid system.",
+                                    "Label": "A rotational form of the impulse-momentum theorem relates the angular impulse delivered to an object or rigid system and the change in angular momentum of that object or rigid system.",
                                     "Examples": [],
                                     "Subs": [
                                         {
                                             "Key": "AP.PCM.6.3.C.2.i",
-                                            "Label": "The angular impulse exerted on an object or rigid system is equal to the change in angular momentum of that object or rigid system. Relevant equation: `DeltaL=in_(t_1)^(t_2)taudt`.",
+                                            "Label": "The angular impulse exerted on an object or rigid system is equal to the change in angular momentum of that object or rigid system. Relevant equation: `DeltaL=int_(t_1)^(t_2)taudt`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.PCM.6.3.C.2.ii",
-                                            "Label": "The rotational form of the impulse–momentum theorem is a direct result of Newton's second law of motion for cases in which rotational inertia is constant: `tau_text(net)=(dL)/(dt)=I(domega)/(dt)=Ialpha`.",
+                                            "Label": "The rotational form of the impulse-momentum theorem is a direct result of Newton's second law of motion for cases in which rotational inertia is constant: `tau_text(net)=(dL)/(dt)=I(domega)/(dt)=Ialpha`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -2489,7 +2489,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.6.6.A.4",
-                                    "Label": "The escape velocity of a satellite is the satellite's velocity such that the mechanical energy of the satellite–central-object system is equal to zero.",
+                                    "Label": "The escape velocity of a satellite is the satellite's velocity such that the mechanical energy of the satellite-central-object system is equal to zero.",
                                     "Examples": [],
                                     "Subs": [
                                         {
@@ -2573,7 +2573,7 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.PCM.7.2.A.1.i",
-                                            "Label": "The period of an object–ideal-spring oscillator is given by the equation: `T_s=2pisqrt(m/k)`.",
+                                            "Label": "The period of an object-ideal-spring oscillator is given by the equation: `T_s=2pisqrt(m/k)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
@@ -2620,7 +2620,7 @@
                                 },
                                 {
                                     "Key": "AP.PCM.7.3.A.2",
-                                    "Label": "The position as a function of time for an object exhibiting SHM is a solution of the second-order differential equation derived from the application of Newton's second law. Derived equation: `(d^2x)/(dt^2)==omega^2x`.",
+                                    "Label": "The position as a function of time for an object exhibiting SHM is a solution of the second-order differential equation derived from the application of Newton's second law. Derived equation: `(d^2x)/(dt^2)=-omega^2x`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2725,7 +2725,7 @@
                                         },
                                         {
                                             "Key": "AP.PCM.7.4.A.4.ii",
-                                            "Label": "hanging the amplitude of a system exhibiting SHM will change the maximum potential energy of the system and, therefore, the total energy of the system. Relevant equation for a spring–object system: `E_text(total)=1/2kA^2`.",
+                                            "Label": "hanging the amplitude of a system exhibiting SHM will change the maximum potential energy of the system and, therefore, the total energy of the system. Relevant equation for a spring-object system: `E_text(total)=1/2kA^2`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -2758,13 +2758,13 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.PCM.7.5.A.2.i",
-                                            "Label": "When displaced from equilibrium, the gravitational force exerted on a physical pendulum's center of mass provides a restoring torque. Derived equation: `tau=-mgdsin(theta)`.",
+                                            "Label": "When displaced from equilibrium, the gravitational force exerted on a physical pendulum's center of mass provides a restoring torque. Derived equation: `tau=-mgdsintheta`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.PCM.7.5.A.2.ii",
-                                            "Label": "For small amplitudes of motion, the small-angle approximation can be applied to the restoring torque. Derived equation: `sin(theta)~~theta` and `tau=-mgdtheta=Ialpha`.",
+                                            "Label": "For small amplitudes of motion, the small-angle approximation can be applied to the restoring torque. Derived equation: `sintheta~~theta` and `tau=-mgd theta=Ialpha`.",
                                             "Examples": [],
                                             "Subs": []
                                         },

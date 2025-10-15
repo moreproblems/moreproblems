@@ -856,7 +856,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.3.7.A.2",
-                                    "Label": "Solution composition can be expressed in a variety of ways; molarity is the most common method used in the laboratory. `M-n_text(solute)//L_text(solution)`.",
+                                    "Label": "Solution composition can be expressed in a variety of ways; molarity is the most common method used in the laboratory. `M=n_text(solute)//L_text(solution)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1400,7 +1400,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.5.3.A.4",
-                                    "Label": "If a reaction is second order with respect to a reactant being monitored, a plot of the reciprocal of the concentration of that reactant versus time will be linear. Zeroth order: `[A]_t-[A]_0=-kt`. First order: `ln[A]_t-ln[A]_0=-kt`. Second order: `1//([A]_t)-1//([A]_0)=kt`.",
+                                    "Label": "If a reaction is second order with respect to a reactant being monitored, a plot of the reciprocal of the concentration of that reactant versus time will be linear. Zeroth order: `[A]_t-[A]_0=-kt`. First order: `ln[A]_t-ln[A]_0=-kt`. Second order: `1//[A]_t-1//[A]_0=kt`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2206,7 +2206,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.7.9.A.2",
-                                    "Label": "Le Châtelier's principle can be used to predict the effect that a stress will have on experimentally measurable properties such as pH, temperature, and color of a solution.",
+                                    "Label": "Le Châtelier's principle can be used to predict the effect that a stress will have on experimentally measurable properties such as `text(pH)`, temperature, and color of a solution.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2312,12 +2312,12 @@
                     "Subs": [
                         {
                             "Key": "AP.Ch.8.1.A",
-                            "Label": "Calculate the values of `text(pH)` and pOH, based on `K_w` and the concentration of all species present in a neutral solution of water.",
+                            "Label": "Calculate the values of `text(pH)` and `text(pOH)`, based on `K_w` and the concentration of all species present in a neutral solution of water.",
                             "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "AP.Ch.8.1.A.1",
-                                    "Label": "The concentrations of hydronium ion and hydroxide ion are often reported as `text(pH)` and pOH, respectively: `text(pH)=-log[text(H)_3text(O)^+]` and `text(pOH)=-log[text(OH)^-]`.",
+                                    "Label": "The concentrations of hydronium ion and hydroxide ion are often reported as `text(pH)` and `text(pOH)`, respectively: `text(pH)=-log[text(H)_3text(O)^+]` and `text(pOH)=-log[text(OH)^-]`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2361,7 +2361,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.2.A.2",
-                                    "Label": "When dissolved in solution, strong bases (e.g., group I and II hydroxides) completely dissociate to produce hydroxide ions. As such, the concentration of `text(OH)^-` in a strong base solution is equal to the initial concentration of a group I hydroxide and double the initial concentration of a group II hydroxide, and thus the `text(pOH)` (and pH) of the strong base solution is easily calculated.",
+                                    "Label": "When dissolved in solution, strong bases (e.g., group I and II hydroxides) completely dissociate to produce hydroxide ions. As such, the concentration of `text(OH)^-` in a strong base solution is equal to the initial concentration of a group I hydroxide and double the initial concentration of a group II hydroxide, and thus the `text(pOH)` (and `text(pH)`) of the strong base solution is easily calculated.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2376,7 +2376,7 @@
                     "Subs": [
                         {
                             "Key": "AP.Ch.8.3.A",
-                            "Label": "Explain the relationship among pH, pOH, and concentrations of all species in a solution of a monoprotic weak acid or weak base.",
+                            "Label": "Explain the relationship among `text(pH)`, `text(pOH)`, and concentrations of all species in a solution of a monoprotic weak acid or weak base.",
                             "Examples": [],
                             "Subs": [
                                 {
@@ -2387,7 +2387,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.3.A.2",
-                                    "Label": "A solution of a weak acid involves equilibrium between an un-ionized acid and its conjugate base. The equilibrium constant for this reaction is `K_a`, often reported as p`K_a`. The `text(pH)` of a weak acid solution can be determined from the initial acid concentration and the p`K_a`: `K_a=([text(H)_3text(O)^+][text(A)^-])/([text(HA)])` and `pK_a=-logK_a`.",
+                                    "Label": "A solution of a weak acid involves equilibrium between an un-ionized acid and its conjugate base. The equilibrium constant for this reaction is `K_a`, often reported as `text(pK)_a`. The `text(pH)` of a weak acid solution can be determined from the initial acid concentration and the `text(pK)_a`: `K_a=([text(H)_3text(O)^+][text(A)^-])/([text(HA)])` and `pK_a=-logK_a`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2399,13 +2399,13 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.3.A.4",
-                                    "Label": "A solution of a weak base involves equilibrium between an un-ionized base and its conjugate acid. The equilibrium constant for this reaction is `K_b`, often reported as p`K_b`. The `text(pH)` of a weak base solution can be determined from the initial base concentration and the p`K_b`: `K_b=([text(OH^-)][text(HB)^+])/([text(B)])` and `pK_b=-logK_b`.",
+                                    "Label": "A solution of a weak base involves equilibrium between an un-ionized base and its conjugate acid. The equilibrium constant for this reaction is `K_b`, often reported as `text(pK)_b`. The `text(pH)` of a weak base solution can be determined from the initial base concentration and the `text(pK)_b`: `K_b=([text(OH)^-][text(HB)^+])/([text(B)])` and `pK_b=-logK_b`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.Ch.8.3.A.5",
-                                    "Label": "The percent ionization of a weak acid (or base) can be calculated from its p`K_a` (p`K_b`) and the initial concentration of the acid (base). The percent ionization can also be calculated from the initial concentration of the acid (base) and the equilibrium concentration of any of the species in the equilibrium expression.",
+                                    "Label": "The percent ionization of a weak acid (or base) can be calculated from its `text(pK)_a` (`text(pK)_b`) and the initial concentration of the acid (base). The percent ionization can also be calculated from the initial concentration of the acid (base) and the equilibrium concentration of any of the species in the equilibrium expression.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2431,13 +2431,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.Ch.8.4.A.1",
-                                    "Label": "When a strong acid and a strong base are mixed, they react quantitatively in a reaction represented by the equation: `text(H)^+(aq)+text(OH)^-(aq)->text(H)_2text(O)()l`. The `text(pH)` of the resulting solution may be determined from the concentration of excess reagent.",
+                                    "Label": "When a strong acid and a strong base are mixed, they react quantitatively in a reaction represented by the equation: `text(H)^+(aq)+text(OH)^- (aq)->text(H)_2text(O)(l)`. The `text(pH)` of the resulting solution may be determined from the concentration of excess reagent.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.Ch.8.4.A.2",
-                                    "Label": "When a weak acid and a strong base are mixed, they react quantitatively in a reaction represented by the equation: `text(HA)(aq)+text(OH)^-(aq)hArrtext(A)^-(aq)text(H)_2text(O)(l)`. If the weak acid is in excess, then a buffer solution is formed, and the `text(pH)` can be determined from the Henderson-Hasselbalch (`text(H)-text(H)`) equation. If the strong base is in excess, then the `text(pH)` can be determined from the moles of excess hydroxide ion and the total volume of solution. If they are equimolar, then the (slightly basic) `text(pH)` can be determined from the equilibrium represented by the equation: `text(A)^-(aq)text(H)_2text(O)(l)hArrtext(HA)(aq)+text(OH)^-(aq)`.",
+                                    "Label": "When a weak acid and a strong base are mixed, they react quantitatively in a reaction represented by the equation: `text(HA)(aq)+text(OH)^- (aq)hArrtext(A)^- (aq)text(H)_2text(O)(l)`. If the weak acid is in excess, then a buffer solution is formed, and the `text(pH)` can be determined from the Henderson-Hasselbalch (`text(H)-text(H)`) equation. If the strong base is in excess, then the `text(pH)` can be determined from the moles of excess hydroxide ion and the total volume of solution. If they are equimolar, then the (slightly basic) `text(pH)` can be determined from the equilibrium represented by the equation: `text(A)^- (aq)text(H)_2text(O)(l)hArrtext(HA)(aq)+text(OH)^- (aq)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2449,7 +2449,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.4.A.4",
-                                    "Label": "When a weak acid and a weak base are mixed, they will react to an equilibrium state whose reaction may be represented by the equation: `text(HA)(aq)+text(B)(aq)hArrtext(A)^-(aq)+text(HB)^+(aq)`.",
+                                    "Label": "When a weak acid and a weak base are mixed, they will react to an equilibrium state whose reaction may be represented by the equation: `text(HA)(aq)+text(B)(aq)hArrtext(A)^- (aq)+text(HB)^+(aq)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2481,7 +2481,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.5.A.3",
-                                    "Label": "For titrations of weak acids/bases, it is useful to consider the point halfway to the equivalence point, that is, the half-equivalence point. At this point, there are equal concentrations of each species in the conjugate acid-base pair, for example, for a weak acid `[text(HA)]=[text(A)^-]`. Because `pH=pK_a` when the conjugate acid and base have equal concentrations, the p`K_a` can be determined from the `text(pH)` at the half-equivalence point in a titration.",
+                                    "Label": "For titrations of weak acids/bases, it is useful to consider the point halfway to the equivalence point, that is, the half-equivalence point. At this point, there are equal concentrations of each species in the conjugate acid-base pair, for example, for a weak acid `[text(HA)]=[text(A)^-]`. Because `pH=pK_a` when the conjugate acid and base have equal concentrations, the `text(pK)_a` can be determined from the `text(pH)` at the half-equivalence point in a titration.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2493,7 +2493,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.5.A.5",
-                                    "Label": "For polyprotic acids, titration curves can be used to determine the number of acidic protons. In doing so, the major species present at any point along the curve can be identified, along with the p`K_a` associated with each proton in a weak polyprotic acid.",
+                                    "Label": "For polyprotic acids, titration curves can be used to determine the number of acidic protons. In doing so, the major species present at any point along the curve can be identified, along with the `text(pK)_a` associated with each proton in a weak polyprotic acid.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2554,17 +2554,17 @@
                 },
                 {
                     "Key": "AP.Ch.8.7",
-                    "Label": "pH and p`K_a`",
+                    "Label": "`text(pH)` & `text(pK)_a`",
                     "Examples": [],
                     "Subs": [
                         {
                             "Key": "AP.Ch.8.7.A",
-                            "Label": "Explain the relationship between the predominant form of a weak acid or base in solution at a given `text(pH)` and the p`K_a` of the conjugate acid or the p`K_b` of the conjugate base.",
+                            "Label": "Explain the relationship between the predominant form of a weak acid or base in solution at a given `text(pH)` and the `text(pK)_a` of the conjugate acid or the `text(pK)_b` of the conjugate base.",
                             "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "AP.Ch.8.7.A.1",
-                                    "Label": "The protonation state of an acid or base (i.e., the relative concentrations of `text(HA)` and `text(A)^-`) can be predicted by comparing the `text(pH)` of a solution to the p`K_a` of the acid in that solution. When solution `pH>text(acid )pK_a`, the acid form has a higher concentration than the base form. When solution `pH>text(acid )pK_a`, the base form has a higher concentration than the acid form.",
+                                    "Label": "The protonation state of an acid or base (i.e., the relative concentrations of `text(HA)` and `text(A)^-`) can be predicted by comparing the `text(pH)` of a solution to the `text(pK)_a` of the acid in that solution. When solution `pH>text(acid )pK_a`, the acid form has a higher concentration than the base form. When solution `pH>text(acid )pK_a`, the base form has a higher concentration than the acid form.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2576,7 +2576,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.8.7.A.3",
-                                    "Label": "To ensure accurate results in a titration experiment, acid-base indicators should be selected that have a p`K_a` close to the `text(pH)` at the equivalence point.",
+                                    "Label": "To ensure accurate results in a titration experiment, acid-base indicators should be selected that have a `text(pK)_a` close to the `text(pH)` at the equivalence point.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2596,7 +2596,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.Ch.8.8.A.1",
-                                    "Label": "Abuffer solution contains a large concentration of both members in a conjugate acid-base pair. The conjugate acid reacts with added base and the conjugate base reacts with added acid. These reactions are responsible for the ability of a buffer to stabilize pH.",
+                                    "Label": "Abuffer solution contains a large concentration of both members in a conjugate acid-base pair. The conjugate acid reacts with added base and the conjugate base reacts with added acid. These reactions are responsible for the ability of a buffer to stabilize `text(pH)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2616,7 +2616,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.Ch.8.9.A.1",
-                                    "Label": "The `text(pH)` of the buffer is related to the p`K_a` of the acid and the concentration ratio of the conjugate acid-base pair. This relation is a consequence of the equilibrium expression associated with the dissociation of a weak acid, and is described by the Henderson-Hasselbalch equation. Adding small amounts of acid or base to a buffered solution does not significantly change the ratio of `[text(A)^-]//[text(HA)] and thus does not significantly change the solution pH. The change in `text(pH)` on addition of acid or base to a buffered solution is therefore much less than it would have been in the absence of the buffer: `pH=pK_a+log([text(A)^-])/([text(HA)])`.",
+                                    "Label": "The `text(pH)` of the buffer is related to the `text(pK)_a` of the acid and the concentration ratio of the conjugate acid-base pair. This relation is a consequence of the equilibrium expression associated with the dissociation of a weak acid, and is described by the Henderson-Hasselbalch equation. Adding small amounts of acid or base to a buffered solution does not significantly change the ratio of `[text(A)^-]//[text(HA)]` and thus does not significantly change the solution `text(pH)`. The change in `text(pH)` on addition of acid or base to a buffered solution is therefore much less than it would have been in the absence of the buffer: `pH=pK_a+log([text(A)^-])/([text(HA)])`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2652,7 +2652,7 @@
                 },
                 {
                     "Key": "AP.Ch.8.11",
-                    "Label": "pH & Solubility",
+                    "Label": "`text(pH)` & Solubility",
                     "Examples": [],
                     "Subs": [
                         {
@@ -2715,7 +2715,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.Ch.9.2.A.1",
-                                    "Label": "The entropy change for a process can be calculated from the absolute entropies of the species involved before and after the process occurs: `DeltaS^@_text(reaction)=sumS^@_text(products)-sumS^@_text(reactants)`.",
+                                    "Label": "The entropy change for a process can be calculated from the absolute entropies of the species involved before and after the process occurs: `DeltaS_text(reaction)^@=sumS_text(products)^@-sumS_text(reactants)^@`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2747,7 +2747,7 @@
                                 },
                                 {
                                     "Key": "AP.Ch.9.3.A.3",
-                                    "Label": "The standard Gibbs free energy change for a physical or chemical process may also be determined from the standard Gibbs free energy of formation of the reactants and products: `DeltaG^@_text(reaction)=sumDeltaG^@_text(f products)-sumDeltaG^@_text(f reactants)`.",
+                                    "Label": "The standard Gibbs free energy change for a physical or chemical process may also be determined from the standard Gibbs free energy of formation of the reactants and products: `DeltaG_text(reaction)^@=sumDeltaG_text(f products)^@-sumDeltaG_text(f reactants)^@`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
