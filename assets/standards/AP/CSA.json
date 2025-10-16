@@ -5,63 +5,2632 @@
     "Standards": [
         {
             "Key": "AP.CSA.1",
-            "Label": "",
+            "Label": "Primitive Types",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.1.1",
+                    "Label": "Why Programming? Why Java?",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.1.1.A",
+                            "Label": "Call `tttext(System)` class methods to generate output to the console.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.1.A.1",
+                                    "Label": "`tttext(System.out.print)` and `tttext(System.out.println)` display information on the computer monitor.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.1.A.2",
+                                    "Label": "`tttext(System.out.println)` moves the cursor to a new line after the information has been displayed, while `tttext(System.out.print)` does not.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.1.1.B",
+                            "Label": "Create string literals.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.1.B.1",
+                                    "Label": "A string literal is enclosed in double quotes.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.1.2",
+                    "Label": "Variables & Data Types",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.1.2.A",
+                            "Label": "Identify the most appropriate data type category for a particular specification.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.2.A.1",
+                                    "Label": "A type is a set of values (a domain) and a set of operations on them.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.2.A.2",
+                                    "Label": "Data types can be categorized as either primitive or reference.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.2.A.3",
+                                    "Label": "The primitive data types used in this course define the set of operations for numbers and Boolean values.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.1.2.B",
+                            "Label": "Declare variables of the correct types to represent primitive data.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.2.B.1",
+                                    "Label": "The three primitive data types used in this course are `tttext(int)`, `tttext(double)`, and `tttext(boolean)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.2.B.2",
+                                    "Label": "Each variable has associated memory that is used to hold its value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.2.B.3",
+                                    "Label": "The memory associated with a variable of a primitive type holds an actual primitive value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.2.B.4",
+                                    "Label": "When a variable is declared `tttext(final)`, its value cannot be changed once it is initialized.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.1.3",
+                    "Label": "Expressions & Assignment Statements",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.1.3.A",
+                            "Label": "Evaluate arithmetic expressions in a program code.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.3.A.1",
+                                    "Label": "A literal is the source code representation of a fixed value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.2",
+                                    "Label": "Arithmetic expressions include expressions of type `tttext(int)` and `tttext(double)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.3",
+                                    "Label": "The arithmetic operators consist of `tt(+)`, `tt(-)`, `tt(**)`, `tt(//)`, and `tt(%)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.4",
+                                    "Label": "An arithmetic operation that uses two `tttext(int)` values will evaluate to an `tttext(int)` value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.5",
+                                    "Label": "An arithmetic operation that uses a `tttext(double)` value will evaluate to a `tttext(double)` value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.6",
+                                    "Label": "Operators can be used to construct compound expressions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.7",
+                                    "Label": "During evaluation, operands are associated with operators according to operator precedence to determine how they are grouped.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.A.8",
+                                    "Label": "An attempt to divide an integer by zero will result in an `tttext(ArithmeticException)` to occur.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.1.3.B",
+                            "Label": "Evaluate what is stored in a variable as a result of an expression with an assignment statement.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.3.B.1",
+                                    "Label": "The assignment operator (`tt(=)`) allows a program to initialize or change the value stored in a variable. The value of the expression on the right is stored in the variable on the left.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.B.2",
+                                    "Label": "During execution, expressions are evaluated to produce a single value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.3.B.3",
+                                    "Label": "The value of an expression has a type based on the evaluation of the expression.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.1.4",
+                    "Label": "Compound Assignment Operators",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.1.4.A",
+                            "Label": "Evaluate what is stored in a variable as a result of an expression with an assignment statement.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.4.A.1",
+                                    "Label": "Compound assignment operators (`tt(+=)`, `tt(- =)`, `tt(**=,)` `tt(//=)`, `tt(%=)`) can be used in place of the assignment operator.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.4.A.2",
+                                    "Label": "The increment operator (`tt(++)`) and decrement operator (`tt(--)`) are used to add `1` or subtract `1` from the stored value of a variable or an array element. The new value is assigned to the variable or array element.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.1.5",
+                    "Label": "Casting & Ranges Of Variables",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.1.5.A",
+                            "Label": "Evaluate arithmetic expressions that use casting.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.1.5.A.1",
+                                    "Label": "The casting operators (`tttext(int)`) and (`tttext(double)`) can be used to create a temporary value converted to a different data type.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.5.A.2",
+                                    "Label": "Casting a `tttext(double)` value to an `tttext(int)` causes the digits to the right of the decimal point to be truncated.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.5.A.3",
+                                    "Label": "Some programming code causes `tttext(int)` values to be automatically cast (widened) to `tttext(double)` values.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.5.A.4",
+                                    "Label": "Values of type `tttext(double)` can be rounded to the nearest integer by `tt((text(int))(x+0.5))` or `tt((text(int))(x-0.5))` for negative numbers.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.5.A.5",
+                                    "Label": "Integer values in Java are represented by values of type `tttext(int)`, which are stored using a finite amount (`4` bytes) of memory. Therefore, an `tttext(int)` value must be in the range from `tttext(Integer.MIN_VALUE)` to `tttext(Integer.MAX_VALUE)` inclusive.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.1.5.A.6",
+                                    "Label": "If an expression would evaluate to an `tttext(int)` value outside of the allowed range, an integer overflow occurs. This could result in an incorrect value within the allowed range.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.2",
-            "Label": "",
+            "Label": "Using Objects",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.2.1",
+                    "Label": "Objects: Instances Of Classes",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.1.A",
+                            "Label": "Explain the relationship between a class and an object.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.1.A.1",
+                                    "Label": "An object is a specific instance of a class with defined attributes.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.1.A.2",
+                                    "Label": "A class is the formal implementation, or blueprint, of the attributes and behaviors of an object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.2",
+                    "Label": "Creating & Storing Objects (Instantiation)",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.2.A",
+                            "Label": "Identify, using its signature, the correct constructor being called.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.2.A.1",
+                                    "Label": "A signature consists of the constructor name and the parameter list.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.A.2",
+                                    "Label": "The parameter list, in the header of a constructor, lists the types of the values that are passed and their variable names. These are often referred to as formal parameters.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.A.3",
+                                    "Label": "A parameter is a value that is passed into a constructor. These are often referred to as actual parameters.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.A.4",
+                                    "Label": "Constructors are said to be overloaded when there are multiple constructors with the same name but a different signature.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.A.5",
+                                    "Label": "The actual parameters passed to a constructor must be compatible with the types identified in the formal parameter list.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.A.6",
+                                    "Label": "Parameters are passed using call by value. Call by value initializes the formal parameters with copies of the actual parameters.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.2.2.B",
+                            "Label": "For creating objects, create objects by calling constructors without parameters and create objects by calling constructors with parameters.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.2.B.1",
+                                    "Label": "Every object is created using the keyword `tttext(new)` followed by a call to one of the class’s constructors.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.B.2",
+                                    "Label": "A class contains constructors that are invoked to create objects. They have the same name as the class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.B.3",
+                                    "Label": "Existing classes and class libraries can be utilized as appropriate to create objects.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.B.4",
+                                    "Label": "Parameters allow values to be passed to the constructor to establish the initial state of the object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.2.2.C",
+                            "Label": "Define variables of the correct types to represent reference data.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.2.C.1",
+                                    "Label": "The keyword `tttext(null)` is a special value used to indicate that a reference is not associated with any object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.2.C.2",
+                                    "Label": "The memory associated with a variable of a reference type holds an object reference value or, if there is no object, `tttext(null)`. This value is the memory address of the referenced object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.3",
+                    "Label": "Calling A Void Method",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.3.A",
+                            "Label": "Call non-static void methods without parameters.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.3.A.1",
+                                    "Label": "An object’s behavior refers to what the object can do (or what can be done to it) and is defined by methods.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.2",
+                                    "Label": "Procedural abstraction allows a programmer to use a method by knowing what the method does even if they do not know how the method was written.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.3",
+                                    "Label": "A method signature for a method without parameters consists of the method name and an empty parameter list.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.4",
+                                    "Label": "A method or constructor call interrupts the sequential execution of statements, causing the program to first execute the statements in the method or constructor before continuing. Once the last statement in the method or constructor has executed or a return statement is executed, flow of control is returned to the point immediately following where the method or constructor was called.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.5",
+                                    "Label": "Non-static methods are called through objects of the class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.6",
+                                    "Label": "The dot operator is used along with the object name to call non-static methods.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.7",
+                                    "Label": "Void methods do not have return values and are therefore not called as part of an expression.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.3.A.8",
+                                    "Label": "Using a `tttext(null)` reference to call a method or access an instance variable causes a `tttext(NullPointerException)` to be thrown.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.4",
+                    "Label": "Calling A Void Method With Parameters",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.4.A",
+                            "Label": "Call non-static void methods with parameters.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.4.A.1",
+                                    "Label": "A method signature for a method with parameters consists of the method name and the ordered list of parameter types.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.4.A.2",
+                                    "Label": "Values provided in the parameter list need to correspond to the order and type in the method signature.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.4.A.3",
+                                    "Label": "Methods are said to be overloaded when there are multiple methods with the same name but a different signature.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.5",
+                    "Label": "Calling A Non-Void Method",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.5.A",
+                            "Label": "Call non-static non-void methods with or without parameters.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.5.A.1",
+                                    "Label": "Non-void methods return a value that is the same type as the return type in the signature. To use the return value when calling a non-void method, it must be stored in a variable or used as part of an expression.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.6",
+                    "Label": "`tttext(String)` Objects: Concatenation, Literals & More",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.6.A",
+                            "Label": "For `tttext(String)` class, create `tttext(String)` objects and call `tttext(String)` methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.6.A.1",
+                                    "Label": "`tttext(String)` objects can be created by using string literals or by calling the `tttext(String)` class constructor.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.6.A.2",
+                                    "Label": "`tttext(String)` objects are immutable, meaning that `tttext(String)` methods do not change the `tttext(String)` object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.6.A.3",
+                                    "Label": "`tttext(String)` objects can be concatenated using the `tttext(+)` or `tttext(+=)` operator, resulting in a new `tttext(String)` object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.6.A.4",
+                                    "Label": "Primitive values can be concatenated with a `tttext(String)` object. This causes implicit conversion of the values to `tttext(String)` objects.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.6.A.5",
+                                    "Label": "Escape sequences start with a `tttext(\\)` and have a special meaning in Java. Escape sequences used in this course include `tttext(\\”)`, `tttext(\\\\)`, and `tttext(\\n)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.7",
+                    "Label": "`tttext(String)` Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.7.A",
+                            "Label": "For `tttext(String)` class, create `tttext(String)` objects and call `tttext(String)` methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.7.A.1",
+                                    "Label": "Application program interfaces (APIs) and libraries simplify complex programming tasks.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.2",
+                                    "Label": "Documentation for APIs and libraries are essential to understanding the attributes and behaviors of an object of a class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.3",
+                                    "Label": "Classes in the APIs and libraries are grouped into packages.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.4",
+                                    "Label": "The `tttext(String)` class is part of the `tttext(java.lang)` package. Classes in the `tttext(java.lang)` package are available by default.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.5",
+                                    "Label": "A `tttext(String)` object has index values from `tt(0)` to `tt(text(length)-1)`. Attempting to access indices outside this range will result in an `tttext(IndexOutOfBoundsException)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.6",
+                                    "Label": "A `tttext(String)` object can be concatenated with an object reference, which implicitly calls the referenced object’s `tttext(toString)` method.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.7",
+                                    "Label": "The following `tttext(String)` methods and constructors — including what they do and when they are used—are part of the Java Quick Reference:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.a",
+                                            "Label": "`tt(text(String)(text(String str)))` — Constructs a new `tttext(String)` object that represents the same sequence of characters as `tttext(str)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.b",
+                                            "Label": "`tt(text(int length)())` — Returns the number of characters in a `tttext(String)` object.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.c",
+                                            "Label": "`tt(text(String substring)(text(int from),text(int to)))` — Returns the substring beginning at index `tttext(from)` and ending at index `tt(text(to)-1)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.d",
+                                            "Label": "`tt(text(String substring)(text(int from)))` — Returns `tt(text(substring)(text(from),text(length)()))`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.e",
+                                            "Label": "`tt(text(int indexOf)(text(String str)))` — Returns the index of the first occurrence of `tttext(str)`; returns `tt(-1)` if not found.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.f",
+                                            "Label": "`tt(text(boolean equals)(text(String other)))` — Returns `tttext(true)` if `tttext(this)` is equal to other; returns `tttext(false)` otherwise.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.7.A.7.g",
+                                            "Label": "`tt(text(int compareTo)(text(String other)))` — Returns a value `tt(<0)` if `tttext(this)` is less than `tttext(other)`; returns zero if `tttext(this)` is equal to `tttext(other)`; returns a value `tt(>0)` if `tttext(this)` is greater than `tttext(other)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.CSA.2.7.A.8",
+                                    "Label": "A string identical to the single element substring at position `tttext(index)` can be created by calling `tt(text(substring)(text(index),text(index)+1))`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.8",
+                    "Label": "Wrapper Classes: `tttext(Integer)` & `tttext(Double)`",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.8.A",
+                            "Label": "For wrapper classes, create `tttext(Integer)` objects, call `tttext(Integer)` methods, create `tttext(Double)` objects, and call `tttext(Double)` methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.8.A.1",
+                                    "Label": "The `tttext(Integer)` class and `tttext(Double)` class are part of the `tttext(java.lang)` package.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.8.A.2",
+                                    "Label": "The following `tttext(Integer)` methods and constructors—including what they do and when they are used—are part of the Java Quick Reference:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSA.2.8.A.2.a",
+                                            "Label": "`tt(text(Integer)(text(int value)))` — Constructs a new `tttext(Integer)` object that represents the specified `tttext(int)` value.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.8.A.2.b",
+                                            "Label": "`tttext(Integer.MIN_VALUE)` — The minimum value represented by an `tttext(int)` or `tttext(Integer)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.8.A.2.c",
+                                            "Label": "`tttext(Integer.MAX_VALUE)` — The maximum value represented by an `tttext(int)` or `tttext(Integer)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.8.A.2.d",
+                                            "Label": "`tt(text(int intValue)())` — Returns the value of this `tttext(Integer)` as an `tttext(int)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.CSA.2.8.A.3",
+                                    "Label": "The following `tttext(Double)` methods and constructors—including what they do and when they are used — are part of the Java Quick Reference:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSA.2.8.A.3.a",
+                                            "Label": "`tt(text(Double)(text(double value)))` — Constructs a new `tttext(Double)` object that represents the specified `tttext(double)` value.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.8.A.3.b",
+                                            "Label": "`tt(text(double doubleValue)())` — Returns the value of this `tttext(Double)` as a `tttext(double)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.CSA.2.8.A.4",
+                                    "Label": "Autoboxing is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes. This includes converting an `tttext(int)` to an `tttext(Integer)` and a `tttext(double)` to a `tttext(Double)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.8.A.5",
+                                    "Label": "The Java compiler applies autoboxing when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class and assigned to a variable of the corresponding wrapper class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.8.A.6",
+                                    "Label": "Unboxing is the automatic conversion that the Java compiler makes from the wrapper class to the primitive type. This includes converting an `tttext(Integer)` to an `tttext(int)` and a `tttext(Double)` to a `tttext(double)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.8.A.7",
+                                    "Label": "The Java compiler applies unboxing when a wrapper class object is passed as a parameter to a method that expects a value of the corresponding primitive type and assigned to a variable of the corresponding primitive type.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.2.9",
+                    "Label": "Using The `tttext(Math)` Class",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.2.9.A",
+                            "Label": "Call static methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.9.A.1",
+                                    "Label": "Static methods are called using the dot operator along with the class name unless they are defined in the enclosing class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.2.9.B",
+                            "Label": "Evaluate expressions that use the `tttext(Math)` class methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.2.9.B.1",
+                                    "Label": "The `tttext(Math)` class is part of the `tttext(java.lang)` package.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.9.B.2",
+                                    "Label": "The `tttext(Math)` class contains only static methods.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.2.9.B.3",
+                                    "Label": "The following static `tttext(Math)` methods—including what they do and when they are used—are part of the Java Quick Reference:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSA.2.9.B.3.a",
+                                            "Label": "`tt(text(int abs)(text(int x)))` — Returns the absolute value of an `tttext(int)` value.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.9.B.3.b",
+                                            "Label": "`tt(text(double abs)(text(double x)))` — Returns the absolute value of a `tttext(double)` value.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.9.B.3.c",
+                                            "Label": "`tt(text(double pow)(text(double base),text(double exponent)))` — Returns the value of the first parameter raised to the power of the second parameter.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.9.B.3.d",
+                                            "Label": "`tt(text(double sqrt)(text(double x)))` — Returns the positive square root of a `tttext(double)` value.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.2.9.B.3.e",
+                                            "Label": "`tt(text(double random)())` — Returns a `tttext(double)` value greater than or equal to `0.0` and less than `1.0`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.CSA.2.9.B.4",
+                                    "Label": "The values returned from `tttext(Math.random)` can be manipulated to produce a random `tttext(int)` or `tttext(double)` in a defined range.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.3",
-            "Label": "",
+            "Label": "Boolean Expressions & `tttext(if)` Statements",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.3.1",
+                    "Label": "Boolean Expressions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.1.A",
+                            "Label": "Evaluate Boolean expressions that use relational operators in program code.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.1.A.1",
+                                    "Label": "Primitive values and reference values can be compared using relational operators (i.e., `tt(==)` and `tt(! =)`).",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.1.A.2",
+                                    "Label": "Arithmetic expression values can be compared using relational operators (i.e., `tt(<)`, `tt(>)`, `tt(< =)`, `tt(> =)`).",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.1.A.3",
+                                    "Label": "An expression involving relational operators evaluates to a Boolean value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.3.2",
+                    "Label": "`tttext(if)` Statements and Control Flow",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.2.A",
+                            "Label": "Represent branching logical processes by using conditional statements.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.2.A.1",
+                                    "Label": "Conditional statements interrupt the sequential execution of statements.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.2.A.2",
+                                    "Label": "`tttext(if)` statements affect the flow of control by executing different statements based on the value of a Boolean expression.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.2.A.3",
+                                    "Label": "A one-way selection (`tttext(if)` statement) is written when there is a set of statements to execute under a certain condition. In this case, the body is executed only when the Boolean condition is `tttext(true)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.3.3",
+                    "Label": "`tttext(if-else)` Statements",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.3.A",
+                            "Label": "Represent branching logical processes by using conditional statements.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.3.A.1",
+                                    "Label": "A two-way selection is written when there are two sets of statements— one to be executed when the Boolean condition is `tttext(true)`, and another set for when the Boolean condition is `tttext(false)`. In this case, the body of the “if” is executed when the Boolean condition is `tttext(true)`, and the body of the “else” is executed when the Boolean condition is `tttext(false)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.3.4",
+                    "Label": "`tttext(else if)` Statements",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.4.A",
+                            "Label": "Represent branching logical processes by using conditional statements.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.4.A.1",
+                                    "Label": "A multi-way selection is written when there are a series of conditions with different statements for each condition. Multi-way selection is performed using `tttext(if-else-if)` statements such that exactly one section of code is executed based on the first condition that evaluates to true.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.3.5",
+                    "Label": "Compound Boolean Expressions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.5.A",
+                            "Label": "Represent branching logical processes by using nested conditional statements.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.5.A.1",
+                                    "Label": "Nested `tttext(if)` statements consist of `tttext(if)` statements within `tttext(if)` statements.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.3.5.B",
+                            "Label": "Evaluate compound Boolean expressions in program code.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.5.B.1",
+                                    "Label": "Logical operators `tt(!)`(not), `tt(&&)`(and), and `tt(||)`(or) are used with Boolean values. This represents the order these operators will be evaluated.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.5.B.2",
+                                    "Label": "An expression involving logical operators evaluates to a Boolean value.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.5.B.3",
+                                    "Label": "When the result of a logical expression using `tt(&&)` or `tt(||)` can be determined by evaluating only the first Boolean operand, the second is not evaluated. This is known as short-circuited evaluation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.3.6",
+                    "Label": "Equivalent Boolean Expressions",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.6.A",
+                            "Label": "Compare and contrast equivalent Boolean expressions.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.6.A.1",
+                                    "Label": "De Morgan’s Laws can be applied to Boolean expressions.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.6.A.2",
+                                    "Label": "Truth tables can be used to prove Boolean identities.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.6.A.3",
+                                    "Label": "Equivalent Boolean expressions will evaluate to the same value in all cases.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.3.7",
+                    "Label": "Comparing Objects",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.3.7.A",
+                            "Label": "Compare object references using Boolean expressions in program code.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.3.7.A.1",
+                                    "Label": "Two object references are considered aliases when they both reference the same object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.7.A.2",
+                                    "Label": "Object reference values can be compared, using `tt(==)` and `tt(! =)`, to identify aliases.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.7.A.3",
+                                    "Label": "A reference value can be compared with `tttext(null)`, using `tt(==)` or `tt(! =)`, to determine if the reference actually references an object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.3.7.A.4",
+                                    "Label": "Often classes have their own `tttext(equals)` method, which can be used to determine whether two objects of the class are equivalent.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.4",
-            "Label": "",
+            "Label": "Iteration",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.4.1",
+                    "Label": "`tttext(while)` Loops ",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.4.1.A",
+                            "Label": "Represent iterative processes using a `tttext(while)` loop.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.4.1.A.1",
+                                    "Label": "Iteration statements change the flow of control by repeating a set of statements zero or more times until a condition is met.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.1.A.2",
+                                    "La bel": "In loops, the Boolean expression is evaluated before each iteration of the loop body,including the first. When the expression evaluates to `tttext(true)`, the loop body is executed.This continues until the expression evaluates to `tttext(false)`, whereupon the iteration ceases.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.1.A.3",
+                                    "Label": "A loop is an infinite loop when the Boolean expression always evaluates to `tttext(true)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.1.A.4",
+                                    "Label": "If the Boolean expression evaluates to `tttext(false)` initially, the loop body is not executed at all.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.1.A.5",
+                                    "Label": "Executing a return statement inside an iteration statement will halt the loop and exit the method or constructor.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.4.1.B",
+                            "Label": "For algorithms in the context of a particular specification that does not require the use of traversals, identify standard algorithms, modify standard algorithms, and develop an algorithm.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.4.1.B.1",
+                                    "Label": "There are standard algorithms to identify if an integer is or is not evenly divisible by another integer,identify the individual digits in an integer, and determine the frequency with which a specific criterion is met.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.1.B.2",
+                                    "Label": "There are standard algorithms to determine a minimum or maximum value and compute a sum, average, or mode.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.4.2",
+                    "Label": "`tttext(for)` Loops",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.4.2.A",
+                            "Label": "Represent iterative processes using a `tttext(for)` loop.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.4.2.A.1",
+                                    "Label": "There are three parts in a `tttext(for)` loop header: the initialization, the Boolean expression, and the increment. The increment statement can also be a decrement statement.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.2.A.2",
+                                    "Label": "In a `tttext(for)` loop, the initialization statement is only executed once before the first Boolean expression evaluation. The variable being initialized is referred to as a loop control variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.2.A.3",
+                                    "Label": "In each iteration of a `tttext(for)` loop, the increment statement is executed after the entire loop body is executed and before the Boolean expression is evaluated again.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.2.A.4",
+                                    "Label": "A `tttext(for)` loop can be rewritten into an equivalent `tttext(while)` loop and vice versa.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.2.A.5",
+                                    "Label": "“Off by one” errors occur when the iteration statement loops one time too many or one time too few.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.4.3",
+                    "Label": "Developing Algorithms Using Strings",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.4.3.A",
+                            "Label": "For algorithms in the context of a particular specification that involves `tttext(String)` objects, identify standard algorithms, modify standard algorithms, and develop an algorithm.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.4.3.A.1",
+                                    "Label": "There are standard algorithms that utilize String traversals to, find if one or more substrings has a particular property, determine the number of substrings that meet specific criteria, and create a new string with the characters reversed.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.4.4",
+                    "Label": "Nested Iteration",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.4.4.A",
+                            "Label": "Represent nested iterative processes.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.4.4.A.1",
+                                    "Label": "Nested iteration statements are iteration statements that appear in the body of another iteration statement.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.4.4.A.2",
+                                    "Label": "When a loop is nested inside another loop, the inner loop must complete all its iterations before the outer loop can continue.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.4.5",
+                    "Label": "Informal Code Analysis",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.4.5.A",
+                            "Label": "Compute statement execution counts and informal run-time comparison of iterative statements.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.4.5.A.1",
+                                    "Label": "A statement execution count indicates the number of times a statement is executed by the program.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.5",
-            "Label": "",
+            "Label": "Writing Classes",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.5.1",
+                    "Label": "Anatomy Of A Class",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.1.A",
+                            "Label": "Designate access and visibility constraints to classes, data, constructors, and methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.1.A.1",
+                                    "Label": "The keywords `tttext(public)` and `tttext(private)` affect the access of classes, data, constructors, and methods.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.A.2",
+                                    "Label": "The keyword `tttext(private)` restricts access to the declaring class, while the keyword `tttext(public)` allows access from classes outside the declaring class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.A.3",
+                                    "Label": "Classes are designated `tttext(public)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.A.4",
+                                    "Label": "Access to attributes should be kept internal to the class. Therefore, instance variables are designated as `tttext(private)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.A.5",
+                                    "Label": "Constructors are designated `tttext(public)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.A.6",
+                                    "Label": "Access to behaviors can be internal or external to the class. Therefore, methods can be designated as either `tttext(public)` or `tttext(private)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.5.1.B",
+                            "Label": "Designate private visibility of instance variables to encapsulate the attributes of an object.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.1.B.1",
+                                    "Label": "Data encapsulation is a technique in which the implementation details of a class are kept hidden from the user.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.B.2",
+                                    "Label": "When designing a class, programmers make decisions about what data to make accessible and modifiable from an external class. Data can be either accessible or modifiable, or it can be both or neither.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.B.3",
+                                    "Label": "Instance variables are encapsulated by using the `tttext(private)` access modifier.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.1.B.4",
+                                    "Label": "The provided accessor and mutator methods in a class allow client code to use and modify data.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.2",
+                    "Label": "Constructors",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.2.A",
+                            "Label": "Define instance variables for the attributes to be initialized through the constructors of a class",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.2.A.1",
+                                    "Label": "An object’s state refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This creates a “has-a” relationship between the object and its instance variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.2.A.2",
+                                    "Label": "Constructors are used to set the initial state of an object, which should include initial values for all instance variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.2.A.3",
+                                    "Label": "Constructor parameters are local variables to the constructor and provide data to initialize instance variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.2.A.4",
+                                    "Label": "When a mutable object is a constructor parameter, the instance variable should be initialized with a copy of the referenced object. In this way, the instance variable is not an alias of the original object, and methods are prevented from modifying the state of the original object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.2.A.5",
+                                    "Label": "When no constructor is written, Java provides a no-argument constructor, and the instance variables are set to default values.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.3",
+                    "Label": "Documentation With Comments",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.3.A",
+                            "Label": "Describe the functionality and use of program code through comments.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.3.A.1",
+                                    "Label": "Comments are ignored by the compiler and are not executed when the program is run.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.3.A.2",
+                                    "Label": "Three types of comments in Java include `tt(//**)` `tt(**//)`, which generates a block of comments, `tt(////)`, which generates a comment on one line, and `tt(//** **)` `tt(**//)`, which are Javadoc comments and are used to create API documentation.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.3.A.3",
+                                    "Label": "A precondition is a condition that must be true just prior to the execution of a section of program code in order for the method to behave as expected. There is no expectation that the method will check to ensure preconditions are satisfied.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.3.A.4",
+                                    "Label": "A postcondition is a condition that must always be true after the execution of a section of program code. Postconditions describe the outcome of the execution in terms of what is being returned or the state of an object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.3.A.5",
+                                    "Label": "Programmers write method code to satisfy the postconditions when preconditions are met.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.4",
+                    "Label": "Accessor Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.4.A",
+                            "Label": "Define behaviors of an object through non-void methods without parameters written in a class.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.4.A.1",
+                                    "Label": "An accessor method allows other objects to obtain the value of instance variables or static variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.4.A.2",
+                                    "Label": "A non-void method returns a single value. Its header includes the return type in place of the keyword `tttext(void)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.4.A.3",
+                                    "Label": "In non-void methods, a return expression compatible with the return type is evaluated, and a copy of that value is returned. This is referred to as “return by value.”",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.4.A.4",
+                                    "Label": "When the return expression is a reference to an object, a copy of that reference is returned, not a copy of the object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.4.A.5",
+                                    "Label": "The `tttext(return)` keyword is used to return the flow of control to the point immediately following where the method or constructor was called.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.4.A.6",
+                                    "Label": "The `tttext(toString)` method is an overridden method that is included in classes to provide a description of a specific object. It generally includes what values are stored in the instance data of the object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.4.A.7",
+                                    "Label": "If `tttext(System.out.print)` or `tttext(System.out.println)` is passed an object, that object’s `tttext(toString)` method is called, and the returned string is printed.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.5",
+                    "Label": "Mutator Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.5.A",
+                            "Label": "Define behaviors of an object through void methods with or without parameters written in a class.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.5.A.1",
+                                    "Label": "A void method does not return a value. Its header contains the keyword `tttext(void)` before the method name.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.5.A.2",
+                                    "Label": "A mutator (modifier) method is often a void method that changes the values of instance variables or static variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.6",
+                    "Label": "Writing Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.6.A",
+                            "Label": "Define behaviors of an object through non-void methods with parameters written in a class.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.6.A.1",
+                                    "Label": "Methods can only access the private data and methods of a parameter that is a reference to an object when the parameter is the same type as the method’s enclosing class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.6.A.2",
+                                    "Label": "Non-void methods with parameters receive values through parameters, use those values, and return a computed value of the specified type.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.6.A.3",
+                                    "Label": "It is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.6.A.4",
+                                    "Label": "When an actual parameter is a primitive value, the formal parameter is initialized with a copy of that value. Changes to the formal parameter have no effect on the corresponding actual parameter.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.6.A.5",
+                                    "Label": "When an actual parameter is a reference to an object, the formal parameter is initialized with a copy of that reference, not a copy of the object. If the reference is to a mutable object, the method or constructor can use this reference to alter the state of the object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.6.A.6",
+                                    "Label": "Passing a reference parameter results in the formal parameter and the actual parameter being aliases. They both refer to the same object.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.7",
+                    "Label": "Static Variables & Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.7.A",
+                            "Label": "Define behaviors of a class through static methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.7.A.1",
+                                    "Label": "Static methods are associated with the class, not objects of the class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.7.A.2",
+                                    "Label": "Static methods include the keyword `tttext(static)` in the header before the method name.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.7.A.3",
+                                    "Label": "Static methods cannot access or change the values of instance variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.7.A.4",
+                                    "Label": "Static methods can access or change the values of static variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.7.A.5",
+                                    "Label": "Static methods do not have a `tttext(this)` reference and are unable to use the class’s instance variables or call non-static methods.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.5.7.B",
+                            "Label": "Define the static variables that belong to the class.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.7.B.1",
+                                    "Label": "Static variables belong to the class, with all objects of a class sharing a single static variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.7.B.2",
+                                    "Label": "Static variables can be designated as either `tttext(public)` or `tttext(private)` and are designated with the `tttext(static)` keyword before the variable type.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.7.B.3",
+                                    "Label": "Static variables are used with the class name and the dot operator, since they are associated with a class, not objects of a class.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.8",
+                    "Label": "Scope & Access",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.8.A",
+                            "Label": "Explain where variables can be used in the program code.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.8.A.1",
+                                    "Label": "Local variables can be declared in the body of constructors and methods. These variables may only be used within the constructor or method and cannot be declared to be `tttext(public)` or `tttext(private)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.8.A.2",
+                                    "Label": "When there is a local variable with the same name as an instance variable, the variable name will refer to the local variable instead of the instance variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.8.A.3",
+                                    "Label": "Formal parameters and variables declared in a method or constructor can only be used within that method or constructor.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.8.A.4",
+                                    "Label": "Through method decomposition, a programmer breaks down a large problem into smaller subproblems by creating methods to solve each individual subproblem.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.9",
+                    "Label": "`tttext(this)` Keyword",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.9.A",
+                            "Label": "Evaluate object reference expressions that use the keyword `tttext(this)`.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.9.A.1",
+                                    "Label": "Within a non-static method or a constructor, the keyword `tttext(this)` is a reference to the current object — the object whose method or constructor is being called.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.9.A.2",
+                                    "Label": "The keyword `tttext(this)` can be used to pass the current object as an actual parameter in a method call.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.5.10",
+                    "Label": "Ethical & Social Implications Of Computing Systems",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.5.10.A",
+                            "Label": "Explain the ethical and social implications of computing systems.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.5.10.A.1",
+                                    "Label": "System reliability is limited. Programmers should make an effort to maximize system reliability.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.10.A.2",
+                                    "Label": "Legal issues and intellectual property concerns arise when creating programs.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.5.10.A.3",
+                                    "Label": "The creation of programs has impacts on society, economies, and culture. These impacts can be beneficial and/or harmful.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.6",
-            "Label": "",
+            "Label": "Array",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.6.1",
+                    "Label": "Array Creation & Access",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.6.1.A",
+                            "Label": "Represent collections of related primitive or object reference data using one-dimensional (1D) array objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.6.1.A.1",
+                                    "Label": "The use of array objects allows multiple related items to be represented using a single variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.1.A.2",
+                                    "Label": "The size of an array is established at the time of creation and cannot be changed.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.1.A.3",
+                                    "Label": "Arrays can store either primitive data or object reference data.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.1.A.4",
+                                    "Label": "When an array is created using the keyword new, all of its elements are initialized with a specific value based on the type of elements. Elements of type `tttext(int)` are initialized to `0`, elements of type `tttext(double)` are initialized to `0.0`, elements of type `tttext(boolean)` are initialized to `tttext(false)`, and elements of a reference type are initialized to the reference value `tttext(null)` and no objects are automatically created.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.1.A.5",
+                                    "Label": "Initializer lists can be used to create and initialize arrays.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.1.A.6",
+                                    "Label": "Square brackets (`tt([` `tt]`) are used to access and modify an element in a 1D array using an index.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.1.A.7",
+                                    "Label": "The valid index values for an array are `0` through one less than the number of elements in the array, inclusive. Using an index value outside of this range will result in an `tttext(ArrayIndexOutOfBoundsException)` being thrown.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.6.2",
+                    "Label": "Traversing Arrays",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.6.2.A",
+                            "Label": "Traverse the elements in a 1D array.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.6.2.A.1",
+                                    "Label": "Iteration statements can be used to access all the elements in an array. This is called traversing the array.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.2.A.2",
+                                    "Label": "Traversing an array with an indexed `tttext(for)` loop or `tttext(while)` loop requires elements to be accessed using their indices.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.2.A.3",
+                                    "Label": "Since the indices for an array start at `tt(0)` and end at the number of elements `tt(-1)`, “off by one” errors are easy to make when traversing an array, resulting in an `tttext(ArrayIndexOutOfBoundsException)` being thrown.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.6.3",
+                    "Label": "Enhanced `tttext(for)` Loop For Arrays",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.6.3.A",
+                            "Label": "Traverse the elements in a 1D array object using an enhanced `tttext(for)` loop.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.6.3.A.1",
+                                    "Label": "An enhanced `tttext(for)` loop header includes a variable, referred to as the enhanced for loop variable.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.3.A.2",
+                                    "Label": "For each iteration of the enhanced `tttext(for)` loop, the enhanced `tttext(for)` loop variable is assigned a copy of an element without using its index.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.3.A.3",
+                                    "Label": "Assigning a new value to the enhanced `tttext(for)` loop variable does not change the value stored in the array.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.3.A.4",
+                                    "Label": "Program code written using an enhanced for loop to traverse and access elements in an array can be rewritten using an indexed `tttext(for)` loop or a `tttext(while)` loop.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.6.4",
+                    "Label": "Developing Algorithms Using Arrays",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.6.4.A",
+                            "Label": "For algorithms in the context of a particular specification that requires the use of array traversals, identify standard algorithms, modify standard algorithms, and develop an algorithm.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.6.4.A.1",
+                                    "Label": "There are standard algorithms that utilize array traversals to determine a minimum or maximum value, compute a sum, average, or mode, determine if at least one element has a particular property, determine if all elements have a particular property, access all consecutive pairs of elements, determine the presence or absence of duplicate elements, and determine the number of elements meeting specific criteria.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.6.4.A.2",
+                                    "Label": "There are standard array algorithms that utilize traversals to shift or rotate elements left or right and reverse the order of the elements.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.7",
-            "Label": "",
+            "Label": "`tttext(ArrayList)`",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.7.1",
+                    "Label": "Introduction To `tttext(ArrayList)`",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.1.A",
+                            "Label": "Represent collections of related object reference data using `tttext(ArrayList)` objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.1.A.1",
+                                    "Label": "An `tttext(ArrayList)` object is mutable and contains object references.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.1.A.2",
+                                    "Label": "The `tttext(ArrayList)` constructor `tt(text(ArrayList)())` constructs an empty list.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.1.A.3",
+                                    "Label": "Java allows the generic type `tt(text(ArrayList)<text(E)>)`, where the generic type `tttext(E)` specifies the type of the elements.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.1.A.4",
+                                    "Label": "When `tt(text(ArrayList)<text(E)>)` is specified, the types of the reference parameters and return type when using the methods are type `tttext(E)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.1.A.5",
+                                    "Label": "`tt(text(ArrayList)<text(E)>)` is preferred over `tttext(ArrayList)` because it allows the compiler to find errors that would otherwise be found at run-time.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.7.2",
+                    "Label": "`tttext(ArrayList)` Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.2.A",
+                            "Label": "Represent collections of related object reference data using `tttext(ArrayList)` objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.2.A.1",
+                                    "Label": "The `tttext(ArrayList)` class is part of the `tttext(java.util)` package. An import statement can be used to make this class available for use in the program.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.2.A.2",
+                                    "Label": "The following `tttext(ArrayList)` methods — including what they do and when they are used — are part of the Java Quick Reference:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSA.7.2.A.2.a",
+                                            "Label": "`tt(text(int size)())` - Returns the number of elements in the list.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.7.2.A.2.b",
+                                            "Label": "`tt(text(boolean add)(text(E obj)))` - Appends `tttext(obj)` to end of list; returns `tttext(true)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.7.2.A.2.c",
+                                            "Label": "`tt(text(void add)(text(int index),text(E obj)))` - Inserts `tttext(obj)` at position `tttext(index)` (`tt(0< =text(index)< =text(size))`), moving elements at position `tttext(index)` and higher to the right (adds `1` to their indices) and adds `1` to size.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.7.2.A.2.d",
+                                            "Label": "`tt(text(E get)(text(int index)))` - Returns the element at position `tttext(index)` in the list.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.7.2.A.2.e",
+                                            "Label": "`tt(text(E set)(text(int index),text(E obj)))` — Replaces the element at position `tttext(index)` with `tttext(obj)`; returns the element formerly at position `tttext(index)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.7.2.A.2.f",
+                                            "Label": "`tt(text(E remove)(text(int index)))` — Removes element from position `tttext(index)`, moving elements at position `tt(text(index)+1)` and higher to the left (subtracts `1` from their indices) and subtracts `1` from size; returns the element formerly at position `tttext(index)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.7.3",
+                    "Label": "Traversing ArrayLists",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.3.A",
+                            "Label": "For `tttext(ArrayList)` objects, traverse using a for or `tttext(while)` loop and traverse using an enhanced `tttext(for)` loop.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.3.A.1",
+                                    "Label": "Iteration statements can be used to access all the elements in an `tttext(ArrayList)`. This is called traversing the `tttext(ArrayList)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.3.A.2",
+                                    "Label": "Deleting elements during a traversal of an `tttext(ArrayList)` requires using special techniques to avoid skipping elements.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.3.A.3",
+                                    "Label": "Since the indices for an `tttext(ArrayList)` start at `tt(0)` and end at the number of elements `tt(-1)`, accessing an index value outside of this range will result in an `tttext(ArrayIndexOutOfBoundsException)` being thrown.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.3.A.4",
+                                    "Label": "Changing the size of an `tttext(ArrayList)` while traversing it using an enhanced `tttext(for)` loop can result in a `tttext(ConcurrentModificationException)` being thrown. Therefore, when using an enhanced `tttext(for)` loop to traverse an `tttext(ArrayList)`, you should not add or remove elements.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.7.4",
+                    "Label": "Developing Algorithms Using ArrayLists",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.4.A",
+                            "Label": "For algorithms in the context of a particular specification that requires the use of `tttext(ArrayList)` traversals, identify standard algorithms, modify standard algorithms, and develop an algorithm.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.4.A.1",
+                                    "Label": "There are standard `tttext(ArrayList)` algorithms that utilize traversals to insert elements, delete elements, and apply the same standard algorithms that are used with 1D arrays.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.4.A.2",
+                                    "Label": "Some algorithms require multiple `tttext(String)`, array, or `tttext(ArrayList)` objects to be traversed simultaneously.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.7.5",
+                    "Label": "Searching ",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.5.A",
+                            "Label": "Apply sequential/linear search algorithms to search for specific information in array or `tttext(ArrayList)` objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.5.A.1",
+                                    "Label": "There are standard algorithms for searching.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.5.A.2",
+                                    "Label": "Sequential/linear search algorithms check each element in order until the desired value is found or all elements in the array or `tttext(ArrayList)` have been checked.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.7.6",
+                    "Label": "Sorting",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.6.A",
+                            "Label": "Apply selection sort and insertion sort algorithms to sort the elements of array or `tttext(ArrayList)` objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.6.A.1",
+                                    "Label": "Selection sort and insertion sort are iterative sorting algorithms that can be used to sort elements in an array or `tttext(ArrayList)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.7.6.B",
+                            "Label": "Compute statement execution counts and informal run-time comparison of sorting algorithms.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.6.B.1",
+                                    "Label": "Informal run-time comparisons of program code segments can be made using statement execution counts.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.7.7",
+                    "Label": "Ethical Issues Around Data Collection",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.7.7.A",
+                            "Label": "Explain the risks to privacy from collecting and storing personal data on computer systems.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.7.7.A.1",
+                                    "Label": "When using the computer, personal privacy is at risk. Programmers should attempt to safeguard personal privacy.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.7.7.A.2",
+                                    "Label": "Computer use and the creation of programs have an impact on personal security. These impacts can be beneficial and/or harmful.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.8",
-            "Label": "",
+            "Label": "2D Array",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.8.1",
+                    "Label": "2D Arrays",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.8.1.A",
+                            "Label": "Represent collections of related primitive or object reference data using two-dimensional (2D) array objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.8.1.A.1",
+                                    "Label": "2D arrays are stored as arrays of arrays. Therefore, the way 2D arrays are created and indexed is similar to 1D array objects.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.1.A.2",
+                                    "Label": "For the purposes of the exam, when accessing the element at `tt(text(arr)[text(first)][text(second)])`, the first index is used for rows, the second index is used for columns.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.1.A.3",
+                                    "Label": "The initializer list used to create and initialize a 2D array consists of initializer lists that represent 1D arrays.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.1.A.4",
+                                    "Label": "The square brackets `tt([text(row)][text(col)])` are used to access and modify an element in a 2D array.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.1.A.5",
+                                    "Label": "“Row-major order” refers to an ordering of 2D array elements where traversal occurs across each row, while “column-major order” traversal occurs down each column.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.8.2",
+                    "Label": "Traversing 2D Arrays",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.8.2.A",
+                            "Label": "For 2D array objects, traverse using nested `tttext(for)` loops and traverse using nested enhanced `tttext(for)` loops.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.8.2.A.1",
+                                    "Label": "Nested iteration statements are used to traverse and access all elements in a 2D array. Since 2D arrays are stored as arrays of arrays, the way 2D arrays are traversed using for loops and enhanced for loops is similar to 1D array objects.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.2.A.2",
+                                    "Label": "Nested iteration statements can be written to traverse the 2D array in “row-major order” or “column-major order.”",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.2.A.3",
+                                    "Label": "The outer loop of a nested enhanced for loop used to traverse a 2D array traverses the rows. Therefore, the enhanced for loop variable must be the type of each row, which is a 1D array. The inner loop traverses a single row. Therefore, the inner enhanced for loop variable must be the same type as the elements stored in the 1D array.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.8.2.B",
+                            "Label": "For algorithms in the context of a particular specification that requires the use of 2D array traversals, identify standard algorithms, modify standard algorithms, and develop an algorithm.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.8.2.B.1",
+                                    "Label": "When applying sequential/linear search algorithms to 2D arrays, each row must be accessed then sequential/linear search applied to each row of a 2D array.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.8.2.B.2",
+                                    "Label": "All standard 1D array algorithms can be applied to 2D array objects.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.9",
-            "Label": "",
+            "Label": "Inheritance",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.9.1",
+                    "Label": "Creating Superclasses & Subclasses",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.1.A",
+                            "Label": "Create an inheritance relationship from a subclass to the superclass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.1.A.1",
+                                    "Label": "A class hierarchy can be developed by putting common attributes and behaviors of related classes into a single class called a superclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.1.A.2",
+                                    "Label": "Classes that extend a superclass, called subclasses, can draw upon the existing attributes and behaviors of the superclass without repeating these in the code.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.1.A.3",
+                                    "Label": "Extending a subclass from a superclass creates an “is-a” relationship from the subclass to the superclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.1.A.4",
+                                    "Label": "The keyword `tttext(extends)` is used to establish an inheritance relationship between a subclass and a superclass. A class can extend only one superclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.9.2",
+                    "Label": "Writing Constructors For Subclasses",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.2.A",
+                            "Label": "Create an inheritance relationship from a subclass to the superclass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.2.A.1",
+                                    "Label": "Constructors are not inherited.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.2.A.2",
+                                    "Label": "The superclass constructor can be called from the first line of a subclass constructor by using the keyword `tttext(super)` and passing appropriate parameters.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.2.A.3",
+                                    "Label": "The actual parameters passed in the call to the superclass constructor provide values that the constructor can use to initialize the object’s instance variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.2.A.4",
+                                    "Label": "When a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.2.A.5",
+                                    "Label": "Regardless of whether the superclass constructor is called implicitly or explicitly, the process of calling superclass constructors continues until the `tttext(Object)` constructor is called. At this point, all of the constructors within the hierarchy execute beginning with the `tttext(Object)` constructor.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.9.3",
+                    "Label": "Overriding Methods",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.3.A",
+                            "Label": "Create an inheritance relationship from a subclass to the superclass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.3.A.1",
+                                    "Label": "Method overriding occurs when a public method in a subclass has the same method signature as a public method in the superclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.3.A.2",
+                                    "Label": "Any method that is called must be defined within its own class or its superclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.3.A.3",
+                                    "Label": "A subclass is usually designed to have modified (overridden) or additional methods or instance variables.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.3.A.4",
+                                    "Label": "A subclass will inherit all public methods from the superclass; these methods remain public in the subclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.9.4",
+                    "Label": "`tttext(super)` Keyword",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.4.A",
+                            "Label": "Create an inheritance relationship from a subclass to the superclass.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.4.A.1",
+                                    "Label": "The keyword `tttext(super)` can be used to call a superclass’s constructors and methods.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.4.A.2",
+                                    "Label": "The superclass method can be called in a subclass by using the keyword `tttext(super)` with the method name and passing appropriate parameters.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.9.5",
+                    "Label": "Creating References Using Inheritance Hierarchies",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.5.A",
+                            "Label": "Define reference variables of a superclass to be assigned to an object of a subclass in the same hierarchy.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.5.A.1",
+                                    "Label": "When a class `tt(S)` “is-a” class `tt(T)`, `tt(T)` is referred to as a superclass, and `tt(S)` is referred to as a subclass.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.5.A.2",
+                                    "Label": "If `tt(S)` is a subclass of `tt(T)`, then assigning an object of type `tt(S)` to a reference of type `tt(T)` facilitates polymorphism.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.5.A.3",
+                                    "Label": "If `tt(S)` is a subclass of `tt(T)`, then a reference of type `tt(T)` can be used to refer to an object of type `tt(T)` or `tt(S)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.5.A.4",
+                                    "Label": "Declaring references of type `tt(T)`, when `tt(S)` is a subclass of `tt(T)`, is useful in the following declarations: formal method parameters and arrays — `tt(T[] text(var ArrayList)<T> text(var))`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.9.6",
+                    "Label": "Polymorphism",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.6.A",
+                            "Label": "Call methods in an inheritance relationship.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.6.A.1",
+                                    "Label": "Utilize the `tttext(Object)` class through inheritance.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.6.A.2",
+                                    "Label": "At compile time, methods in or inherited by the declared type determine the correctness of a non-static method call.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.6.A.3",
+                                    "Label": "At run-time, the method in the actual object type is executed for a non-static method call.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.9.7",
+                    "Label": "`tttext(Object)` Superclass",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.9.7.A",
+                            "Label": "Call `tttext(Object)` class methods through inheritance.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.9.7.A.1",
+                                    "Label": "The `tttext(Object)` class is the superclass of all other classes in Java.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.7.A.2",
+                                    "Label": "The `tttext(Object)` class is part of the `tttext(java.lang)` package.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.9.7.A.3",
+                                    "Label": "The following `tttext(Object)` class methods and constructors — including what they do and when they are used — are part of the Java Quick Reference:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSA.9.7.A.3.a",
+                                            "Label": "`tt(text(boolean equals)(text(Object other)))`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSA.9.7.A.3.b",
+                                            "Label": "`tt(text(String toString)())`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.CSA.9.7.A.4",
+                                    "Label": "Subclasses of `tttext(Object)` often override the `tttext(equals)` and `tttext(toString)` methods with class-specific implementations.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         },
         {
             "Key": "AP.CSA.10",
-            "Label": "",
+            "Label": "Recursion",
             "Examples": [],
-            "Subs": []
+            "Subs": [
+                {
+                    "Key": "AP.CSA.10.1",
+                    "Label": "Recursion",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.10.1.A",
+                            "Label": "Determine the result of executing recursive methods.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.10.1.A.1",
+                                    "Label": "A recursive method is a method that calls itself.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.1.A.2",
+                                    "Label": "Recursive methods contain at least one base case, which halts the recursion, and at least one recursive call.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.1.A.3",
+                                    "Label": "Each recursive call has its own set of local variables, including the formal parameters.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.1.A.4",
+                                    "Label": "Parameter values capture the progress of a recursive process, much like loop control variable values capture the progress of a loop.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.1.A.5",
+                                    "Label": "Any recursive solution can be replicated through the use of an iterative approach.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.1.A.6",
+                                    "Label": "Recursion can be used to traverse `tttext(String)`, array, and `tttext(ArrayList)` objects.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "Key": "AP.CSA.10.2",
+                    "Label": "Recursive Searching & Sorting",
+                    "Examples": [],
+                    "Subs": [
+                        {
+                            "Key": "AP.CSA.10.2.A",
+                            "Label": "Apply recursive search algorithms to information in `tttext(String)`, 1D array, or `tttext(ArrayList)` objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.10.2.A.1",
+                                    "Label": "Data must be in sorted order to use the binary search algorithm.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.2.A.2",
+                                    "Label": "The binary search algorithm starts at the middle of a sorted array or `tttext(ArrayList)` and eliminates half of the array or `tttext(ArrayList)` in each iteration until the desired value is found or all elements have been eliminated.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.2.A.3",
+                                    "Label": "Binary search can be more efficient than sequential/linear search.",
+                                    "Examples": [],
+                                    "Subs": []
+                                },
+                                {
+                                    "Key": "AP.CSA.10.2.A.4",
+                                    "Label": "The binary search algorithm can be written either iteratively or recursively.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        },
+                        {
+                            "Key": "AP.CSA.10.2.B",
+                            "Label": "Apply recursive algorithms to sort elements of array or `tttext(ArrayList)` objects.",
+                            "Examples": [],
+                            "Subs": [
+                                {
+                                    "Key": "AP.CSA.10.2.B.1",
+                                    "Label": "Merge sort is a recursive sorting algorithm that can be used to sort elements in an array or `tttext(ArrayList)`.",
+                                    "Examples": [],
+                                    "Subs": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
         }
     ],
     "References": []

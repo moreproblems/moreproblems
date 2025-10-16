@@ -405,10 +405,10 @@
     "Inequality": {
         "Definition": [
             "An inequality is a statement that compares two expressions that are not always equal - such as less than `(<)`, greater than `(>)`, less than or equal to (`<=`), and greater than or equal to (`>=`).The solution to an inequality is a range of values, rather than a single value.",
-            "Solving an inequality is mostly the same process as solving an equation, except that multiply or dividing by a negative number requires reversing the direction of the inequality sign."
+            "Solving an inequality is mostly the same process as solving an equation, except that multiplying or dividing by a negative number requires reversing the direction of the inequality sign."
         ],
         "Relevance": [
-            "Understanding inequalities is essential for solving many types of problems - including finding ranges of solutions for equations and systems of equations and describing real-world situations that include phrases such as 'at least' or 'no more than'."
+            "Understanding inequalities is essential for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'at least' or 'no more than'."
         ],
         "Category": "",
         "Examples": [],
@@ -420,7 +420,7 @@
             "On a number line, a strict inequality is represented by an open circle at the boundary point."
         ],
         "Relevance": [
-            "Understanding strict inequalities is helpful for solving many types of problems - including finding ranges of solutions for equations and systems of equations and describing real-world situations that include phrases such as 'less than' or 'more than'."
+            "Understanding strict inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'less than' or 'more than'."
         ],
         "Category": "",
         "Examples": [],
@@ -432,7 +432,7 @@
             "On a number line, a strict inequality is represented by an closed circle at the boundary point."
         ],
         "Relevance": [
-            "Understanding slack inequalities is helpful for solving many types of problems - including finding ranges of solutions for equations and systems of equations and describing real-world situations that include phrases such as 'at least' or 'at most'."
+            "Understanding slack inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'at least' or 'at most'."
         ],
         "Category": "",
         "Examples": [],
@@ -440,10 +440,10 @@
     },
     "Literal Inequality": {
         "Definition": [
-            "An inequality that includes variables."
+            "A literal inequality is an inequality that includes variables. Literal inequalities can be solved or simplified using the same algebraic process used when working with equations."
         ],
         "Relevance": [
-            "Understanding literal inequalities is helpful for solving many types of problems - including"
+            "Understanding literal inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations."
         ],
         "Category": "",
         "Examples": [],
@@ -451,10 +451,10 @@
     },
     "Double Inequality": {
         "Definition": [
-            "An inequality created by combining two inequalities into one."
+            "A double inequality is the combination of two inequalities into one. A double inequality typically places an expression between two boundary values, meaning that the expression in the middle satisfies both of the inequalities at the same time."
         ],
         "Relevance": [
-            "Understanding double inequalities is helpful for solving many types of problems - including"
+            "Understanding double inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'between'."
         ],
         "Category": "",
         "Examples": [
@@ -464,10 +464,10 @@
     },
     "Solution Set": {
         "Definition": [
-            "Describes all values that make an inequality true."
+            "A solution set is the collection of all values that make an equation, inequality, or system of equations true. Depending on what is being solved, the solutions set could be a single number (for an equation), a range (for an inequality), an ordered pair (for a system), or empty if no solution exists."
         ],
         "Relevance": [
-            "Understanding solution sets is helpful for solving many types of problems - including"
+            "Understanding solution sets is essential for solving many types of problems - including solving equations that represent real-world situations, interpreting graphs for points of intersections, and identifying special cases where equations, inequalities, or systems might have no solutions or infinitely many solutions."
         ],
         "Category": "",
         "Examples": [],
@@ -475,10 +475,12 @@
     },
     "Point": {
         "Definition": [
-            "A specific location in space, no dimension."
+            "A point is a specific location in a coordinate system, which is represented by an ordered pair of numbers such as `(x,y)`. Although points can exist within any number of dimension, they are typically graphed in the xy-plane (2-D).",
+            "A point `(x,y)` is composed of an `x`-coordinate and `y`-coordinate, which describe its distance from `(0,0)` (the origin) along the horizontal axis and vertical axis respectively.",
+            "Any pair of two points will always form a straight line - where the distance between them, their midpoint, and the slope of their line can be calculated with formulas."
         ],
         "Relevance": [
-            "Understanding points is helpful for solving many types of problems - including"
+            "Understanding points is essential for solving many types of problems - including identifying coordinates that satisfy an equation, understanding the relationship between variables when points are graphed, and understanding how transformation like reflections or translations affect coordinates."
         ],
         "Category": "",
         "Examples": [],
@@ -486,10 +488,13 @@
     },
     "Line": {
         "Definition": [
-            "An infinite, straight path extending in two opposite directions."
+            "A line is an infinite, straight path extending in two opposite directions with a constant slope. A line is the visual representation of a linear equation in the `xy`-plane, which shows all the points that satisfy a relationship between the variables `xandy`.",
+            "A line will have the same slope `(m)` at every point, which determines the steepness and direction of the line. Lines with positive slopes increase from left to right; lines with negative slopes decrease from left to right; lines with zero slope are horizontal; lines with undefined slope are vertical.",
+            "A line will always have a `y`-intercept `(b)` - a point that crosses over the `y`-axis - as long as its slope is not undefined. An equation for any line can be identified as long as its slope and `y`-intercept - or any other point on the line - are known.",
+            "It is common to describe the equation for a line in slope-intercept form `y-mx+b`. The equation for a line can also be described in point-slope form `y-y_1=m(x-x_1)`, where `(x_1,y_1)` is a point on the line."
         ],
         "Relevance": [
-            "Understanding lines is helpful for solving many types of problems - including"
+            "Understanding lines is essential for solving many types of problems - including identifying the equation for a line from its graph or a set of coordinates, identifying the line that describes a real-world situation, and solving for the point(s) of intersection between multiple lines."
         ],
         "Category": "",
         "Examples": [],
@@ -1633,6 +1638,19 @@
         ],
         "Relevance": [
             "Understanding distance formula is helpful for solving many types of problems - including"
+        ],
+        "Category": "",
+        "Examples": [],
+        "Related": [
+            "Pythagorean Theorem"
+        ]
+    },
+    "Midpoint Formula": {
+        "Definition": [
+            "The equation that defines the halfway point between pairs of points in terms of their coordinates."
+        ],
+        "Relevance": [
+            "Understanding midpoint formula is helpful for solving many types of problems - including"
         ],
         "Category": "",
         "Examples": [],
