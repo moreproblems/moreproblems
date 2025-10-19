@@ -458,7 +458,7 @@
                                 },
                                 {
                                     "Key": "AP.CSP.2.1.A.3",
-                                    "Label": "Bit is shorthand for binary digit and is either 0 or 1.",
+                                    "Label": "Bit is shorthand for binary digit and is either `tt(0)` or `tt(1)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -550,7 +550,7 @@
                                 },
                                 {
                                     "Key": "AP.CSP.2.1.C.3",
-                                    "Label": "Decimal (base 10) uses only combinations of the digits 0 - 9.",
+                                    "Label": "Decimal (base 10) uses only combinations of the digits `tt(0-9)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -562,7 +562,7 @@
                                 },
                                 {
                                     "Key": "AP.CSP.2.1.C.5",
-                                    "Label": "The place value of each position is determined by the base raised to the power of the position. Positions are numbered starting at the rightmost position with 0 and increasing by 1 for each subsequent position to the left.",
+                                    "Label": "The place value of each position is determined by the base raised to the power of the position. Positions are numbered starting at the rightmost position with `tt(0)` and increasing by `tt(1)` for each subsequent position to the left.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -905,13 +905,13 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.1.B.2",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides the “tt(larr)” operator to use for assignment. For example, `tt(text(a)larrtext(expression))` evaluates `tttext(expression)` and then assigns a copy of the result to the variable `tttext(a).",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.1.B.3",
-                                    "Label": "",
+                                    "Label": "The value stored in a variable will be the most recent value assigned. For example: `tt(text(a)larr1)`; `tt(text(b)larrtext(a))`; `tt(text(a)larr2)`; `tt(text(display)(text(b)))` still displays `tt(1)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -931,7 +931,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSP.3.2.A.1",
-                                    "Label": "",
+                                    "Label": "A list is an ordered sequence of elements. For example, `tt([text(value1),text(value2),text(value3),...])` describes a list where `tttext(value1)` is the first element, `tttext(value2)` is the second element, `tttext(value3)` is the third element, and so on.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -998,9 +998,28 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.2.B.7",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides the notation `tt([text(value1,value2,value3,...)])` to create a list with those values as the first, second, third, and so on items.",
                                     "Examples": [],
-                                    "Subs": []
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSP.3.2.B.7.a",
+                                            "Label": "`tt(text(aList)larr[text(value1),text(value2),text(value3),...])` creates a new list that contains the values `tttext(value1)`, `tttext(value2)`, `tttext(value3)`, and `tt(...)` at indices `tt(1)`, `tt(2)`, `tt(3)`, and `tt(...)` respectively and assigns it to `tttext(aList)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.2.B.7.b",
+                                            "Label": "`tt(text(aList)larr[])` creates a new empty list and assigns it to `tttext(aList)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.2.B.7.c",
+                                            "Label": "`tt(text(aList)larrtext(bList))` assigns a copy of the list `tttext(bList)` to the list `tttext(aList)`. For example, if `tttext(bList)` contains `tt([text(20,40,60)])`, then `tttext(aList)` will also contain `tt([text(20,40,60)])` after the assignment.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
                                 },
                                 {
                                     "Key": "AP.CSP.3.2.B.8",
@@ -1116,7 +1135,7 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.3.C.3",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides the arithmetic operators `tt(+)`, `tt(-)`, `tt(**)`, `tt(//)`, and `tttext(MOD)`: `tt(text(a)+text(b))`, `tt(text(a)-text(b))`, `tt(text(a)**text(b))`, `tt(text(a)//text(b))`, and `tttext(a MOD b)`. These are used to perform arithmetic on a and b. For example, `tt(17//5)` evaluates to `tt(3.4)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1174,7 +1193,7 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.5.A.2",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides the following relational operators: `tt(=)`, `tt(!=)`, `tt(>)`, `tt(<)`, `tt(>=)`, and `tt(<=)`: `tt(text(a)=text(b))`, `tt(text(a)!=text(b))`, `tt(text(a)>text(b))`, `tt(text(a)<text(b))`, `tt(text(a)>=text(b))`, and `tt(text(a)<=text(b))`. These are used to test the relationship between two variables, expressions, or values. A comparison using a relational operator evaluates to a Boolean value. For example, `tt(text(a)=text(b))` evaluates to `tttext(true)` if `tttext(a)` and `tttext(b)` are equal; otherwise, it evaluates to `tttext(false)`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1182,7 +1201,7 @@
                         },
                         {
                             "Key": "AP.CSP.3.5.B",
-                            "Label": "",
+                            "Label": "For relationships between Boolean values, write expressions using logical operators and evaluate expressions that use logic operators.",
                             "Examples": [],
                             "Subs": [
                                 {
@@ -1193,19 +1212,19 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.5.B.2",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tttext(NOT condition)` which evaluates to `tttext(true)` if `tttext(condition)` is `tttext(false)`; otherwise it evaluates to `tttext(false)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.5.B.3",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tttext(condition1 AND condition2)` which evaluates to `tttext(true)` if both `tttext(condition1)` and `tttext(condition2)` are `tttext(true)`; otherwise it evaluates to `tttext(false)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.5.B.4",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tttext(condition1 OR condition2)` which evaluates to `tttext(true)` if `tttext(condition1)` is `tttext(true)` or if `tttext(condition2)` is `tttext(true)` or if both `tttext(condition1)` and `tttext(condition2)` are `tttext(true)`; otherwise it evaluates to `tttext(false)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1250,13 +1269,13 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.6.B.2",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(IF)(text(condition)) { <text(block of statements)> })` in which the code in `tttext(block of statements)` is executed if the Boolean expression `tttext(condition)` evaluates to `tttext(true)`; no action is taken if `tttext(condition)` evaluates to `tttext(false)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.6.B.3",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(IF)(text(condition)) { <text(first block of statements)> }; text(ELSE) { <text(second block of statements)> })` in which the code in `tttext(first block of statements)` is executed if the Boolean expression `tttext(condition)` evaluates to `tttext(true)`; otherwise, the code in `tttext(second block of statements)` is executed.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1315,25 +1334,25 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.8.B.2",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(REPEAT n TIMES) { <text(block of statements)> })` in which the `tttext(block of statements)` is executed `tttext(n)` times.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.8.B.3",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(REPEAT UNTIL)(text(condition)) { <text(block of statements)> })` in which the code in `tttext(block of statements)` is repeated until the Boolean expression `tttext(condition)` evaluates to `tttext(true)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.8.B.4",
-                                    "Label": "",
+                                    "Label": "In `tt(text(REPEAT UNTIL)(text(condition)))` iteration, an infinite loop occurs when the ending condition will never evaluate to `tttext(true)`. ",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.8.B.5",
-                                    "Label": "",
+                                    "Label": "In `tt(text(REPEAT UNTIL)(text(condition)))` iteration, if the conditional evaluates to `tttext(true)` initially, the loop body is not executed at all, due to the condition being checked before the loop.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1417,12 +1436,61 @@
                     "Subs": [
                         {
                             "Key": "AP.CSP.3.10.A",
-                            "Label": "For list operations, write expressions that use list indexing and list procedures and evaluate expressions that use list indexing and list procedures. 4.B",
+                            "Label": "For list operations, write expressions that use list indexing and list procedures and evaluate expressions that use list indexing and list procedures.",
                             "Examples": [],
                             "Subs": [
                                 {
                                     "Key": "AP.CSP.3.10.A.1",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides basic operations on lists, including:",
+                                    "Examples": [],
+                                    "Subs": [
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.a",
+                                            "Label": "Accessing an element by index. `tt(text(aList)[text(i)])` accesses the element of `tttext(aList)` at index `tttext(i)`. The first element of `tttext(aList)` is at index `tt(1)` and is accessed using the notation `tt(text(aList)[1])`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.b",
+                                            "Label": "Assigning a value of an element of a list to a variable. `tt(text(x)larrtext(aList)[text(i)])` assigns the value of `tt(text(aList)[text(i)])` to the variable `tttext(x)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.c",
+                                            "Label": "Assigning a value to an element of a list. `tt(text(aList)[text(i)]larrtext(x))` assigns the value of `tttext(x)` to `tt(text(aList)[text(i)])` and `tt(text(aList)[text(i)]larrtext(aList)[text(j)])` assigns the value of `tt(text(aList)[text(j)])` to `tt(text(aList)[text(i)])`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.d",
+                                            "Label": "Inserting elements at a given index. `tt(text(INSERT)(text(aList),text(i),text(value)))` shifts to the right any values in `tttext(aList)` at indices greater than or equal to `tttext(i)`. The length of the list is increased by `tt(1)`, and `tttext(value)` is placed at index `tttext(i)` in `tttext(aList)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.e",
+                                            "Label": "Adding elements to the end of the list. `tt(text(APPEND)(text(aList),text(value)))` increases the length of `tttext(aList)` by `tt(1)`, and `tttext(value)` is placed at the end of `tttext(aList)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.f",
+                                            "Label": "Removing elements. `tt(text(REMOVE)(text(aList),text(i)))` removes the item at index `tttext(i)` in `tttext(aList)` and shifts to the left any values at indices greater than `tttext(i)`. The length of `tttext(aList)` is decreased by `tt(1)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        },
+                                        {
+                                            "Key": "AP.CSP.3.10.A.1.g",
+                                            "Label": "Determining the length of a list. `tt(text(LENGTH)(text(aList)))` evaluates to the number of elements currently in `tttext(aList)`.",
+                                            "Examples": [],
+                                            "Subs": []
+                                        }
+                                    ]
+                                },
+                                {
+                                    "Key": "AP.CSP.3.10.A.2",
+                                    "Label": "List procedures are implemented in accordance with the syntax rules of the programming language.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1447,7 +1515,7 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.10.B.3",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(FOR EACH item IN aList) { <text(block of statements)> })`. The variable `tttext(item)` is assigned the value of each element of `tttext(aList)` sequentially, in order, from the first element to the last element. The code in `tttext(block of statements)` is executed once for each assignment of `tttext(item)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1535,31 +1603,31 @@
                                 },
                                 {
                                     "Key": "AP.CSP.3.12.A.5",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(procName)(text(arg1),text(arg2),...))` as a way to call `tt(text(PROCEDURE procName)(text(parameter1),text(parameter2),...) { <text(block of statements)> })` which takes zero or more arguments; `tttext(arg1)` is assigned to `tttext(parameter1)`, `tttext(arg2)` is assigned to `tttext(parameter2)`, and so on.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.12.A.6",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides the procedure `tt(text(DISPLAY)(text(expression)))` to display the value of `tttext(expression)`, followed by a space.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.12.A.7",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides the `tt(text(RETURN)(text(expression)))` statement, which is used to return the flow of control to the point where the procedure was called and to return the value of `tttext(expression)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.12.A.8",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(result procName)(text(arg1),text(arg2),...))` to assign to `tttext(result)` the “value of the procedure” being returned by calling `tt(text(PROCEDURE procName)(text(parameter1),text(parameter2),...) { <text(block of statements)>; text(RETURN)(text(expression)) })`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.12.A.9",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides procedure `tt(text(INPUT)())` which accepts a value from the user and returns the input value.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1628,13 +1696,13 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSP.3.13.B.1",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(PROCEDURE procName)(text(parameter1),text(parameter2),...) { <text(block of statements)> })` which is used to define a procedure that takes zero or more arguments. The procedure contains `tttext(block of statements)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSP.3.13.B.2",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(PROCEDURE procName)(text(parameter1),text(parameter2),...) { <text(block of statements)>; text(RETURN)(text(expression)) })` which is used to define a procedure that takes zero or more arguments. The procedure contains `tttext(block of statements)` and returns the value of `tttext(expression)`. The `tttext(RETURN)` statement may appear at any point inside the procedure and causes an immediate return from the procedure back to the calling statement.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1698,7 +1766,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSP.3.15.A.1",
-                                    "Label": "",
+                                    "Label": "The exam reference sheet provides `tt(text(RANDOM)(text(a),text(b)))` which generates and returns a random integer from `tttext(a)` to `tttext(b)`, inclusive. Each result is equally likely to occur. For example, `tt(text(RANDOM)(1,3))` could return `tt(1)`, `tt(2)`, or `tt(3)`.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1786,7 +1854,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSP.3.17.A.1",
-                                    "Label": "A problem is a general description of a task that can (or cannot) be solved algorithmically. An instance of a problem also includes specific input. For example, sorting is a problem; sorting the list (2,3,1,7) is an instance of the problem.",
+                                    "Label": "A problem is a general description of a task that can (or cannot) be solved algorithmically. An instance of a problem also includes specific input. For example, sorting is a problem; sorting the list (`2`,`3`,`1`,`7`) is an instance of the problem.",
                                     "Examples": [],
                                     "Subs": []
                                 },
