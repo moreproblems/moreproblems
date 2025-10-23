@@ -4,10 +4,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electromagnetic Induction"
         ],
         "SubTopics": [
-            "13.2.A.1"
+            "Faraday's law describes the relationship between changing magnetic flux and the resulting induced emf in a system. Relevant equation: `epsilon=-(dPhi_B)/(dt)=-(d(vec(B)*vec(A)))/(dt)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -58,10 +58,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Circuits"
         ],
         "SubTopics": [
-            "11.4.A.1"
+            "The rate at which energy is transferred, converted, or dissipated by a circuit element depends on the current in the element and the electric potential difference across it. Relevant equation: `P=IDeltaV`. Derived equation: `P=I^2R=(DeltaV^2)/R`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -111,10 +111,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Charges, Fields & Gauss's Law"
         ],
         "SubTopics": [
-            "8.1.A.3"
+            "The direction of the electrostatic force depends on the signs of the charges of the interacting objects and is along the line of separation between the objects."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -165,10 +165,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Magnetic Fields & Electromagnetism"
         ],
         "SubTopics": [
-            "12.4.A.1"
+            "Ampère's law relates the magnitude of the magnetic field to the current enclosed by a closed imaginary path called an Amperian loop. Relevant equation: `ointvec(B)*dvec(l)=mu_0I_text(enc)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -219,10 +219,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Potential"
         ],
         "SubTopics": [
-            "9.2.B.2"
+            "The change in electric potential between two points can be determined by integrating the dot product of the electric field and the displacement along the path connecting the points. Relevant equation: `DeltaV=V_b-V_a=-int_a^bvec(E)*dvec(r)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -274,10 +274,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Conductors & Capacitors"
         ],
         "SubTopics": [
-            "10.4.A.5"
+            "The insertion of a dielectric into a capacitor may change the capacitance of the capacitor. Derived equation: `C=kappaC_0`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -328,10 +328,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electromagnetic Induction"
         ],
         "SubTopics": [
-            "13.5.A.3"
+            "The time constant is a significant feature of the behavior of an LR circuit."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -383,10 +383,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Potential"
         ],
         "SubTopics": [
-            "9.3.A.1"
+            "When a charged object moves between two locations with different electric potentials, the resulting change in the electric potential energy of the object-field system is given by the following equation. Relevant equation: `DeltaU_E=qDeltaV`."
         ],
         "SuppContent": [
             "problems/APPCEM/supps/APPCEM-S1.json"
@@ -438,10 +438,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Charges, Fields & Gauss's Law"
         ],
         "SubTopics": [
-            "8.6.A.1"
+            "Gauss's law relates electric flux through a Gaussian surface to the charge enclosed by that surface. Relevant equations: `Phi_E=q_text(enc)/epsilon_0` and `ointvec(E)*dvec(A)=q_text(enc)/epsilon_0`."
         ],
         "SuppContent": [
             "problems/APPCEM/supps/APPCEM-S1.json"
@@ -493,10 +493,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Circuits"
         ],
         "SubTopics": [
-            "11.7.A.2"
+            "Kirchhoff's junction rule states that the total amount of charge entering a junction per unit time must equal the total amount of charge exiting that junction per unit time. Relevant equation: `sumI_text(in)=sumI_text(out)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -546,10 +546,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electromagnetic Induction"
         ],
         "SubTopics": [
-            "13.2.A.2"
+            "Lenz's law is used to determine the direction of an induced emf resulting from a changing magnetic flux."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -601,10 +601,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Charges, Fields & Gauss's Law"
         ],
         "SubTopics": [
-            "8.5.A.2"
+            "For an electric field `vec(E)` that is constant across an area `vec(A)`, the electric flux through the area is defined as `Phi_E=vec(E)*vec(A)`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -655,10 +655,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Magnetic Fields & Electromagnetism"
         ],
         "SubTopics": [
-            "12.3.B.1"
+            "A magnetic field will exert a force on a current-carrying wire. Relevant equation: `vec(F)_B=intI(dvec(l)xxvec(B))`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -709,10 +709,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Circuits"
         ],
         "SubTopics": [
-            "11.5.B.2"
+            "1The internal resistance of a nonideal battery may be treated as the resistance of a resistor in series with an ideal battery and the remainder of the circuit."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -764,10 +764,10 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Electric Charges, Fields & Gauss's Law"
         ],
         "SubTopics": [
-            "8.3.A.2"
+            "The electric field at a given point is the ratio of the electric force exerted on a test charge at the point to the charge of the test charge. Relevant equation: `vec(E)=vec(F)_E/q`."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -818,10 +818,16 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Electric Charges, Fields & Gauss's Law",
+            "Electric Potential",
+            "Electric Potential",
+            "Electric Potential"
         ],
         "SubTopics": [
-            ""
+            "Describe the electric field resulting from a given charge distribution.",
+            "Describe the electric potential due to a configuration of charged objects.",
+            "Describe the relationship between electric potential and electric field.",
+            "Describe changes in a system due to a difference in electric potential between two locations."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -906,10 +912,14 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Magnetic Fields & Electromagnetism",
+            "Electromagnetic Induction",
+            "Electromagnetic Induction"
         ],
         "SubTopics": [
-            ""
+            "Use Ampère's law to describe the magnetic field created by a moving charge carrier.",
+            "Describe the magnetic flux through an arbitrary area or geometric shape.",
+            "Describe the induced electric potential difference resulting from a change in magnetic flux."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1049,10 +1059,14 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Electric Circuits",
+            "Magnetic Fields & Electromagnetism",
+            "Magnetic Fields & Electromagnetism"
         ],
         "SubTopics": [
-            ""
+            "Describe the electrical characteristics of elements of a circuit.",
+            "Describe the force exerted on current-carrying wires by a magnetic field.",
+            "Use Ampère's law to describe the magnetic field created by a moving charge carrier."
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1180,10 +1194,18 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Conductors & Capacitors",
+            "Electric Circuits",
+            "Electric Circuits",
+            "Electric Circuits",
+            "Electric Circuits"
         ],
         "SubTopics": [
-            ""
+            "Describe the physical properties of a parallel-plate capacitor.",
+            "Describe the movement of electric charges through a medium.",
+            "Describe a circuit or elements of a circuit by applying Kirchhoff's junction rule.",
+            "Describe the electrical characteristics of elements of a circuit.",
+            "Describe the behavior of a circuit containing combinations of resistors and capacitors."
         ],
         "SuppContent": [],
         "SuppTools": [],

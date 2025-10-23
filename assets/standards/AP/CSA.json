@@ -361,7 +361,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.2.2.B.1",
-                                    "Label": "Every object is created using the keyword `tttext(new)` followed by a call to one of the class’s constructors.",
+                                    "Label": "Every object is created using the keyword `tttext(new)` followed by a call to one of the class's constructors.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -418,7 +418,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.2.3.A.1",
-                                    "Label": "An object’s behavior refers to what the object can do (or what can be done to it) and is defined by methods.",
+                                    "Label": "An object's behavior refers to what the object can do (or what can be done to it) and is defined by methods.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -606,7 +606,7 @@
                                 },
                                 {
                                     "Key": "AP.CSA.2.7.A.6",
-                                    "Label": "A `tttext(String)` object can be concatenated with an object reference, which implicitly calls the referenced object’s `tttext(toString)` method.",
+                                    "Label": "A `tttext(String)` object can be concatenated with an object reference, which implicitly calls the referenced object's `tttext(toString)` method.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1013,7 +1013,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.3.6.A.1",
-                                    "Label": "De Morgan’s Laws can be applied to Boolean expressions.",
+                                    "Label": "De Morgan's Laws can be applied to Boolean expressions.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1351,7 +1351,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.5.2.A.1",
-                                    "Label": "An object’s state refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This creates a “has-a” relationship between the object and its instance variables.",
+                                    "Label": "An object's state refers to its attributes and their values at a given time and is defined by instance variables belonging to the object. This creates a “has-a” relationship between the object and its instance variables.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1475,7 +1475,7 @@
                                 },
                                 {
                                     "Key": "AP.CSA.5.4.A.7",
-                                    "Label": "If `tttext(System.out.print)` or `tttext(System.out.println)` is passed an object, that object’s `tttext(toString)` method is called, and the returned string is printed.",
+                                    "Label": "If `tttext(System.out.print)` or `tttext(System.out.println)` is passed an object, that object's `tttext(toString)` method is called, and the returned string is printed.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -1521,7 +1521,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.5.6.A.1",
-                                    "Label": "Methods can only access the private data and methods of a parameter that is a reference to an object when the parameter is the same type as the method’s enclosing class.",
+                                    "Label": "Methods can only access the private data and methods of a parameter that is a reference to an object when the parameter is the same type as the method's enclosing class.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1595,7 +1595,7 @@
                                 },
                                 {
                                     "Key": "AP.CSA.5.7.A.5",
-                                    "Label": "Static methods do not have a `tttext(this)` reference and are unable to use the class’s instance variables or call non-static methods.",
+                                    "Label": "Static methods do not have a `tttext(this)` reference and are unable to use the class's instance variables or call non-static methods.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2317,13 +2317,13 @@
                                 },
                                 {
                                     "Key": "AP.CSA.9.2.A.3",
-                                    "Label": "The actual parameters passed in the call to the superclass constructor provide values that the constructor can use to initialize the object’s instance variables.",
+                                    "Label": "The actual parameters passed in the call to the superclass constructor provide values that the constructor can use to initialize the object's instance variables.",
                                     "Examples": [],
                                     "Subs": []
                                 },
                                 {
                                     "Key": "AP.CSA.9.2.A.4",
-                                    "Label": "When a subclass’s constructor does not explicitly call a superclass’s constructor using super, Java inserts a call to the superclass’s no-argument constructor.",
+                                    "Label": "When a subclass's constructor does not explicitly call a superclass's constructor using super, Java inserts a call to the superclass's no-argument constructor.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -2387,7 +2387,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.9.4.A.1",
-                                    "Label": "The keyword `tttext(super)` can be used to call a superclass’s constructors and methods.",
+                                    "Label": "The keyword `tttext(super)` can be used to call a superclass's constructors and methods.",
                                     "Examples": [],
                                     "Subs": []
                                 },
