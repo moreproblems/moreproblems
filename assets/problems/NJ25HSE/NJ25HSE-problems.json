@@ -1,23 +1,23 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IMC",
+        "NumChoices": 7,
         "Topics": [
-            ""
+            "Reading Literature - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite a range of thorough textual evidence and make relevant connections to strongly support analysis of multiple aspects of what a literary text says explicitly and inferentially, as well as including determining where the text leaves matters uncertain."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25HSE/supps/NJ25HSE-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/NJ25HSE/media/1a.jpg",
-            ""
+            "Select `bbtext(before)` a detail from the passage that supports the idea that Mr. Bennet's daughters are curious about Mr. Bingley.",
+            ":ibox:\t :MC-A: In a few days Mr. Bingley returned Mr. Bennet's visit, :MC-B: and sat about ten minutes with him in his library. :MC-C: He had entertained hopes of being admitted to a sight of the young ladies, :MC-D: of whose beauty he had heard much; :MC-E: but he saw only the father. :MC-F: The ladies were somewhat more fortunate, for they had the advantage of ascertaining from an upper window, :MC-G: that he wore a blue coat and rode a black horse."
         ],
         "AnswerChoices": {
             "A": {
@@ -45,6 +45,30 @@
                 }
             },
             "D": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "G": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -60,23 +84,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite a range of thorough textual evidence and make relevant connections to strongly support analysis of multiple aspects of what a literary text says explicitly and inferentially, as well as including determining where the text leaves matters uncertain."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25HSE/supps/NJ25HSE-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSE/media/2a.jpg",
-            ""
+            "What is Elizabeth's impression of Mr. Darcy by the end of the passage?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "She feels sorry for him.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -84,7 +108,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "She feels friendly toward him.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -92,15 +116,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "She finds his poor behavior amusing.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "She thinks he is the most eligible of the men.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -115,23 +139,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grades 9-10 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25HSE/supps/NJ25HSE-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSE/media/3a.jpg",
-            ""
+            "What is the contextual meaning of the word `ul(text(grieved))` as it appears in the passage?",
+            ":ibox:“. . . and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly. The girls `ul(text(grieved))` over such a number of ladies; but were comforted the day before the ball by hearing, that instead of twelve, he had brought only six with him from London, his five sisters and a cousin.” (paragraph 2)"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The girls were sad that Mr. Bingley had so many lady friends.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,7 +164,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The girls were upset that the ball might have too many people.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -147,15 +172,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The girls were distressed that so many ladies decided to come to the ball.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The girls were hurt that Mr. Bingley felt the need to bring strangers to the ball.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -170,23 +195,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Text Structure"
         ],
         "SubTopics": [
-            ""
+            "Analyze how an author's choices concerning the structure of a text, order of the events within it (e.g., parallel plots), and manipulation of time (e.g., pacing, flashbacks) create specific effects (e.g., mystery, tension, or surprise)."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25HSE/supps/NJ25HSE-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSE/media/4a.jpg",
-            ""
+            "How does the dynamic between Mr. Bingley, Mr. Darcy, and the Bennets at the ball create tension in the plot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The focus on the importance of Mr. Darcy's larger income suggests a social-class conflict is forthcoming.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -194,15 +219,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The Bennets' new relationship with Mr. Bingley is threatened by their extreme dislike of his friend Mr. Darcy.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "A competition arises between Mr. Darcy and Mr. Bingley when they both seek the attention of the same Bennet daughter.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -210,7 +235,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The differences in the behaviors of Mr. Darcy and Mr. Bingley cause the Bennets to be unsure of how to conduct themselves.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -225,23 +250,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Interpretative Meaning"
         ],
         "SubTopics": [
-            ""
+            "Demonstrate understanding of figurative language, word relationships, and nuances in word meanings, including connotative meanings."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25HSE/supps/NJ25HSE-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSE/media/5a.jpg",
-            ""
+            "What is the meaning of the phrase `ul(text(turned the tide of his popularity))`?",
+            ":ibox:“The gentlemen pronounced him to be a fine figure of a man, the ladies declared he was much handsomer than Mr. Bingley, and he was looked at with great admiration for about half the evening, till his manners gave a disgust which `ul(text(turned the tide of his popularity))`; for he was discovered to be proud, to be above his company, and above being pleased; and not all his large estate in Derbyshire could then save him from having a most forbidding, disagreeable countenance, and being unworthy to be compared with his friend.” (paragraph 3)"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "charmed others",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,15 +275,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "changed everyone's mind",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "informed others of his reputation",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -265,7 +291,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "disregarded what others thought",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -277,1407 +303,31 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/6a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "7": {
-        "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/7a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "8": {
-        "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/8a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "9": {
-        "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/9a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "10": {
-        "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/10a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "12": {
-        "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/12a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "13": {
-        "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/13a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "14": {
-        "Number": 14,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/14a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "15": {
-        "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/15a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "16": {
-        "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
-        "Type": "MP",
+        "Type": "LR",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Informative & Explanatory Writing"
         ],
         "SubTopics": [
-            ""
+            "Write informative/explanatory texts (including the narration of historical events, scientific procedures/ experiments, or technical processes) to examine and convey complex ideas, concepts, and information clearly and accurately through the effective selection, organization, and analysis of content."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25HSE/supps/NJ25HSE-S2.json",
+            "problems/NJ25HSE/supps/NJ25HSE-S3.json",
+            "problems/NJ25HSE/supps/NJ25HSE-S4.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/NJ25HSE/media/17a.jpg",
-            ""
+            "Write an explanatory essay to inform fellow citizens about the advantages of limiting car usage. Your essay must be based on ideas and information that can be found in the source set.",
+            "Manage your time carefully so that you can",
+            ":ibox:• read the sources;\n• plan your response;\n• write your response; and\n• revise and edit your response.",
+            "Be sure to",
+            ":ibox:• use evidence from multiple sources; and\n• avoid overly relying on one source",
+            "Your response should be in the form of a multiparagraph essay. Write your essay in the space provided."
         ],
         "AnswerChoices": {},
-        "Parts": {
-            "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            },
-            "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "18": {
-        "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/18a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "19": {
-        "Number": 19,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/19a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "20": {
-        "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/20a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "21": {
-        "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/21a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "22": {
-        "Number": 22,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/22a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "23": {
-        "Number": 23,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/23a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "24": {
-        "Number": 24,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/24a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "25": {
-        "Number": 25,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/25a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "26": {
-        "Number": 26,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/26a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "27": {
-        "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/27a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "28": {
-        "Number": 28,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/28a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "29": {
-        "Number": 29,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/29a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "30": {
-        "Number": 30,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSE/media/30a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
         "Parts": {}
     }
 }

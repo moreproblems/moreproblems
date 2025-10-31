@@ -4,24 +4,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Analysis Of An Argument"
         ],
         "SubTopics": [
-            ""
+            "Describe and evaluate the argument and specific claims in an informational text, assessing whether the reasoning is valid and the evidence is relevant and sufficient; identify false statements and reasoning."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/NJ25G9E/media/1a.jpg",
-            ""
+            "How do the authors support the claim that conservation practices have changed as a result of sea turtle research?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "with scientific data",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "with expert testimony",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -37,15 +36,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "with a practical example",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "with close-up observation",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -57,26 +56,26 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 7,
         "Topics": [
-            ""
+            "Reading Information - Central Ideas & Themes Of Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine one or more central ideas of an informational text and analyze how it is developed and refined over the course of a text, including how it emerges and is shaped by specific details; provide an objective summary of the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/2a.jpg",
-            ""
+            "Select `bbtext(three)` details from the passage that should be included in a summary."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "“'There's no off-the-shelf . . . turtle bathing suit that we know about,' laughed biologist Ken Lohmann, as he attached a soft cloth harness, or bathing suit, to a three-month-old loggerhead turtle.” (paragraph 1)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -84,23 +83,47 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "“But the hatchlings seem to be programmed with an astonishing 'Survival To Do List.'” (paragraph 3)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "“'We've found over the years that one of the turtles' main tricks for navigation is that they are exquisitely sensitive to the Earth's magnetic field,' said Lohmann.” (paragraph 6)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "“For example, there's a magnetic field off Portugal that triggers the turtles to turn south.” (paragraph 8)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "“'The turtles will actually act out their swimming behavior in air,' said Lohmann.” (paragraph 17)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "“The dramatic connection between turtles and magnetic fields is already altering conservation efforts for these reptiles.” (paragraph 23)",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "G": {
+                "Choice": "“'The people who are involved in our research usually are passionate about both science and conservation.'” (paragraph 27)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -115,23 +138,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite a range and thorough textual evidence and make clear and relevant connections, to strongly support an analysis of multiple aspects of what an informational text says explicitly and inferentially, as well as interpretations of the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/3a.jpg",
-            ""
+            "What evidence do the authors provide to support the claim that sea turtle hatchlings are born with survival skills?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "the similarity of sea turtles to other animals",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,7 +162,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "the way the egg yolk sac can be used for nutrition",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -147,7 +170,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "the amount of time it takes eggs to hatch after they are buried",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -155,9 +178,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "the absence of interaction between baby turtles and their parents",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -167,26 +190,26 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
-            ""
+            "Reading Information - Text Structure"
         ],
         "SubTopics": [
-            ""
+            "Analyze in detail the author's choices concerning the structure of ideas or claims of a text, and how they are developed and refined by particular sentences, paragraphs, or larger portions of a text (e.g., a section or chapter)."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/4a.jpg",
-            ""
+            "Select `bbtext(two)` ways paragraphs 7 and 8 help the reader understand Lohmann's scientific findings."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "by explaining why sea turtles prefer shallow waters",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -194,15 +217,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "by highlighting the importance of magnetic field triggers",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "by comparing the strength of each of the magnetic fields",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -210,9 +233,17 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "by showing how sea turtles decide where to lay their eggs",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "by describing the scope of the migration route of sea turtles",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -225,23 +256,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grades 9-10 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/5a.jpg",
-            ""
+            "Read the sentence from the passage.",
+            ":ibox:“Outfitted in their 'bathing suits' and suspended on a mechanical wave `ul(text(simulator))` that moves them in circles, the turtles 'swim'—without any water!” (paragraph 16)",
+            "What does the word `ul(text(simulator))` mean as it is used in the sentence?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "a method used for tracking",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,15 +282,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "a machine used for imitation",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "a device used for encouragement",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -265,7 +298,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "a tool used for long-distance transportation",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -280,23 +313,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grades 9-10 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/6a.jpg",
-            ""
+            "Read the sentence from the passage.",
+            ":ibox:“'But when you learn more about particular species, you discover that the list of criteria for what `ul(text(constitutes))` an environment may be somewhat different.'” (paragraph 24)",
+            "What does `ul(text(constitutes))` mean as it is used in the sentence?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "controls",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +339,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "empowers",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,15 +347,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "makes up",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "protects",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -335,23 +370,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Text Structure"
         ],
         "SubTopics": [
-            ""
+            "Analyze in detail the author's choices concerning the structure of ideas or claims of a text, and how they are developed and refined by particular sentences, paragraphs, or larger portions of a text (e.g., a section or chapter)."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/7a.jpg",
-            ""
+            "How does paragraph 24 develop the author's ideas about sea turtles?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "It describes the major threats to sea turtle habitats.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -359,15 +394,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "It demonstrates the practical relevance of research on sea turtles.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "It lists the difficulties of conducting scientific research on sea turtles.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -375,7 +410,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "It compares the advantages of different sea turtle conservation methods.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -387,81 +422,135 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Reading Information - Central Ideas & Themes Of Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine one or more central ideas of an informational text and analyze how it is developed and refined over the course of a text, including how it emerges and is shaped by specific details; provide an objective summary of the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/8a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is a central idea of the passage?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Sea turtles change their migration patterns as they age.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Sea turtles can be rehabilitated using newly discovered methods.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Sea turtles use magnetic fields to navigate along their migration routes.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Sea turtles are taught to swim at an early age in order to escape predators.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which sentence from the passage develops the central idea in Part A?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“'Their entire survival strategy seems to be predicated on the idea that the faster you get away from land, the better,' he said.” (paragraph 4)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“'In effect, sea turtles have a crude global positioning system that is based on the Earth's magnetic field,' said Lohmann.” (paragraph 14)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“Older turtles might spend an hour to an hour and a half swimming (or 'air swimming') for this navigation research.” (paragraph 19)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“Lohmann's study of animals and magnetism began when he was studying neurobiology, working with sea slugs as a graduate student.” (paragraph 22)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "9": {
         "Number": 9,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Analyze how an author unfolds and develops ideas throughout a text, including how complex characters (e.g., those with multiple or conflicting motivations) develop, interact with other characters, and advance the plot or develop the theme."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/9a.jpg",
-            ""
+            "In “Narcissus Myth,” how does the prayer Nemesis answers affect Narcissus?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "He reflects on the life he could have led.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -469,7 +558,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "He sees the reflection of Echo in the pool.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -477,7 +566,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "He looks to Echo in his final moments of life.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -485,9 +574,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "He understands how he is perceived by others.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -500,23 +589,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Analyze how an author unfolds and develops ideas throughout a text, including how complex characters (e.g., those with multiple or conflicting motivations) develop, interact with other characters, and advance the plot or develop the theme."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/10a.jpg",
-            ""
+            "In “Narcissus Myth,” what does Hera's treatment of Echo reveal about Hera?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "She is upset with Zeus.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -524,15 +613,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "She is an unfair goddess.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "She is an enemy of Artemis.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -540,7 +629,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "She is friends with many nymphs.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -552,132 +641,262 @@
     },
     "11": {
         "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grades 9-10 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S2.json",
+            "problems/NJ25G9E/supps/NJ25G9E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/11a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Read the sentence from paragraph 2 of “Narcissus Myth.”",
+                    "“He was calling his companions, 'Is anyone here?' and she called back in `ul(text(rapture))`, 'Here—Here.'”",
+                    "What does the phrase in `ul(text(rapture))` mean as it is used in the sentence?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "with delight",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "at a slow pace",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "with confusion",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "at a low volume",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MS",
+                "NumChoices": 6,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Select `bbtext(two)` phrases from paragraph 2 that support the answer in Part A."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“called back”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“still hidden”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“did not see her”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“answered joyfully”",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "E": {
+                        "Choice": "“from the woods”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "F": {
+                        "Choice": "“arms outstretched”",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "12": {
         "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Reading Literature - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Analyze how an author unfolds and develops ideas throughout a text, including how complex characters (e.g., those with multiple or conflicting motivations) develop, interact with other characters, and advance the plot or develop the theme."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S2.json",
+            "problems/NJ25G9E/supps/NJ25G9E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/12a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "In “Narcissus Myth,” how is the reader's understanding of Echo different from Narcissus's understanding of Echo?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "The reader does not know that Echo admires the beauty of Narcissus, but Narcissus knows this.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "The reader knows the feelings that Echo wants to express, but Narcissus does not know this.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "The reader does not know Echo has a limited power to speak, but Narcissus knows this.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "The reader knows that Echo is a nymph, but Narcissus does not know this.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "How does the difference described in Part A affect the tone of the passage?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "It creates a humorous tone because of Narcissus's love of himself.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "It creates an inspiring tone because of Echo's determination to speak.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "It creates an angry tone because of Narcissus's negative attitude toward others.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "It creates a hopeless tone because of Echo's inability to speak in her own words.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "13": {
         "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IMC",
+        "NumChoices": 10,
         "Topics": [
-            ""
+            "Reading Literature - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite a range of thorough textual evidence and make relevant connections to strongly support analysis of multiple aspects of what a literary text says explicitly and inferentially, as well as including determining where the text leaves matters uncertain."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S2.json",
+            "problems/NJ25G9E/supps/NJ25G9E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/13a.jpg",
-            ""
+            "Select `bbtext(before)` the sentence from paragraph 3 of “Narcissus Myth” that `bbtext(best)` explains what causes Narcissus to become obsessed with looking at himself.",
+            ":ibox:\t :MC-A: So Narcissus went on his cruel way, a scorner of love. :MC-B: But at last one of those he wounded prayed a prayer and it was answered by the gods: “May he who loves not others love himself.” :MC-C: The great goddess Nemesis, which means righteous anger, undertook to bring this about. :MC-D: As Narcissus bent over a clear pool for a drink and saw there his own reflection, on the moment he fell in love with it. :MC-E: “Now I know,” he cried, “what others have suffered from me, for I burn with love of my own self—and yet how can I reach that loveliness I see mirrored in the water? :MC-F: But I cannot leave it. G Only death can set me free.” :MC-H: And so it happened. :MC-I: He pined away, leaning perpetually over the pool, fixed in one long gaze. :MC-J: Echo was near him, but she could do nothing; only when, dying, he called to his image, “Farewell—farewell,” she could repeat the words as a last good-by to him. (paragraph 3)"
         ],
         "AnswerChoices": {
             "A": {
@@ -691,7 +910,7 @@
             "B": {
                 "Choice": "",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -699,12 +918,60 @@
             "C": {
                 "Choice": "",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "G": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "H": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "I": {
+                "Choice": "",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "J": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -720,23 +987,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Perspective & Purpose In Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine an author's lens in a text (including cultural experience reflected in a work of literature from outside the United States, drawing on a wide reading of world literature) and analyze how an author uses rhetorical devices to advance a point of view."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S2.json",
+            "problems/NJ25G9E/supps/NJ25G9E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G9E/media/14a.jpg",
-            ""
+            "Which statement accurately explains why the Oreads are surprised by the pool's reaction to Narcissus's death in “The Disciple”?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The Oreads had thought that the pool did not know that Narcissus died, but the pool does know this.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -744,7 +1012,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The Oreads had thought that the pool was filled with Narcissus's tears, but the tears are not from Narcissus.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -752,7 +1020,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The Oreads had thought that the pool would need to be comforted because Narcissus died, but the pool does not know Narcissus.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -760,9 +1028,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The Oreads had thought that the pool was sad about losing Narcissus's beauty, but the pool is sad about losing the opportunity to view itself.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -772,912 +1040,31 @@
     },
     "15": {
         "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/15a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "16": {
-        "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
-        "Type": "MP",
+        "Type": "LR",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Argumentative Writing"
         ],
         "SubTopics": [
-            ""
+            "Write arguments to support claims in an analysis of substantive topics or texts, using valid reasoning and relevant and sufficient textual and non-textual evidence."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G9E/supps/NJ25G9E-S4.json",
+            "problems/NJ25G9E/supps/NJ25G9E-S5.json",
+            "problems/NJ25G9E/supps/NJ25G9E-S6.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/NJ25G9E/media/17a.jpg",
-            ""
+            "Write a letter to your state senator in which you argue in favor of keeping the Electoral College or changing to election by popular vote for the president of the United States. Use information from the sources in your essay.",
+            "Manage your time carefully so that you can",
+            ":ibox:• read the sources;\n• plan your response;\n• write your response; and\n• revise and edit your response.",
+            "Be sure to",
+            ":ibox:• include a claim;\n• address counterclaims;\n• use evidence from multiple sources; and\n• avoid overly relying on one source.",
+            "Your response should be in the form of a multiparagraph essay. Write your response in the space provided."
         ],
         "AnswerChoices": {},
-        "Parts": {
-            "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            },
-            "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "18": {
-        "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/18a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "19": {
-        "Number": 19,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/19a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "20": {
-        "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/20a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "21": {
-        "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/21a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "22": {
-        "Number": 22,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/22a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "23": {
-        "Number": 23,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/23a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "24": {
-        "Number": 24,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/24a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "25": {
-        "Number": 25,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/25a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "26": {
-        "Number": 26,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/26a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "27": {
-        "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/27a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "28": {
-        "Number": 28,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/28a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "29": {
-        "Number": 29,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/29a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "30": {
-        "Number": 30,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G9E/media/30a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
         "Parts": {}
     }
 }

@@ -4,24 +4,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite textual evidence and make relevant connections to support analysis of what a literary text says explicitly as well as inferences drawn from the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/NJ25G6E/media/1a.jpg",
-            ""
+            "Which sentence supports the idea that the narrator is a careful observer?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "“Most people realize the sea covers two thirds of the planet, but few take the time to understand even a gallon of it.” (paragraph 2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,7 +28,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "“People look at you as if you're making it up as you go.” (paragraph 2)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -37,7 +36,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "“I rounded the oyster beds, to the far side, relieved to find it relatively crab free.” (paragraph 6)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -45,9 +44,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "“It was low tide by then, and I saw the water hesitating at its apex, neither leaving nor returning, patiently waiting for the gravitational gears to shift.” (paragraph 6)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -57,81 +56,135 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Reading Literature - Perspective & Purpose In Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine how an author conveys or develops perspective in a text (through the narrator or speaker when appropriate)."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/2a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is the narrator's point of view about most people's relationship with the ocean?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "He is critical of people who fail to accurately educate themselves about ocean life.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "He believes that people should spend more time enjoying nature than reading about it.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "He thinks that people should rely on personal experience rather than charts to explore nature.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "He is disappointed that so few people understand the work of fishermen, oystermen, and sailors.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which detail from paragraph 2 shows how the author develops the narrator's point of view?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“. . . few take the time to understand even a gallon of it.”",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“Anyone can tell you where the sun is . . . “",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“. . . only fishermen, oystermen and deep-keeled sailors will know without looking.”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“We'd point to charts that showed the Strait of Juan de Fuca inhaling the Pacific . . .”",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "3": {
         "Number": 3,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite textual evidence and make relevant connections to support analysis of what a literary text says explicitly as well as inferences drawn from the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/3a.jpg",
-            ""
+            "Which phrase shows that the narrator has a particular goal in searching the bay?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "“Most of the time I understated what I saw because I couldn't find words powerful enough” (paragraph 1)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,15 +192,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "“Almost everything had a market, I was discovering” (paragraph 4)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "“I saw a purple ochre star, then fifteen more strewn higher on the beach” (paragraph 5)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -155,7 +208,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "“I stopped and waited with them, to actually see the moment when the tide started returning” (paragraph 6)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -167,42 +220,42 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
-            ""
+            "Reading Literature - Perspective & Purpose In Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine how an author conveys or develops perspective in a text (through the narrator or speaker when appropriate)."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/4a.jpg",
-            ""
+            "Select `bbtext(two)` ways in which paragraphs 3-5 help to develop the narrator's point of view."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The description of the value of different animals shows the narrator's interest in making a profit.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The details about the beauty of the cove at night show the narrator's admiration for the scenery.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The list of materials that the narrator needs shows how hard he is willing to work for his discovery.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -210,7 +263,15 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The focus on the stress that the narrator feels shows how much he needs to succeed in his search.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The number of animals that the narrator lists shows how much scientific research he thinks is needed.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -225,23 +286,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Text Structure"
         ],
         "SubTopics": [
-            ""
+            "Analyze how a particular piece (e.g., sentence, chapter, scene, stanza, or section) fits into the overall structure of a text and contributes to the development of the ideas, theme, setting, or plot."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/5a.jpg",
-            ""
+            "How does paragraph 4 contribute to the reader's understanding of the passage?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "It describes which marine specimens are best for the narrator's market.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,15 +310,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "It provides background for the narrator's reason for being in Chatham Cove.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "It describes the next event in the narrator's night to explain his research process.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -265,7 +326,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "It provides scientific information about tides in Chatham Cove to highlight the narrator's skill.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -280,23 +341,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grade 6 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/6a.jpg",
-            ""
+            "Read the sentence from paragraph 6.",
+            ":ibox:“I stopped and waited with them, to actually see the moment when the tide started returning with its invisible `ul(text(buffet))` of plankton for the clams, oysters, mussels and other filter feeders.”",
+            "What is the meaning of the word `ul(text(buffet))` as it is used in the sentence?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "hidden area",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +367,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "rich nutrients",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,7 +375,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "strange shells",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -320,9 +383,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "plentiful supply",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -335,23 +398,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Describe how a particular text's structure unfolds in a series of episodes and use textual evidence to describe how the characters respond or change as the plot moves toward a resolution."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/7a.jpg",
-            ""
+            "How is the narrator affected by his discovery of the nudibranch?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "His excitement upon finding a nudibranch causes him to calculate its worth.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -359,15 +422,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "His surprise at seeing a nudibranch in the wild interrupts his routine search.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "His confusion about the nudibranch's position leads him to search for others.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -375,7 +438,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "His amazement at the nudibranch's colors distracts him from catching other creatures.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -387,89 +450,143 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Reading Literature - Central Ideas & Themes Of Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine the theme of a literary text (e.g., stories, plays or poetry) and explain how it is supported by key details; provide a summary of the text distinct from personal opinions or judgments."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/8a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is a theme of the passage?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "acting courageously while on an adventure",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "learning to accept the shortcomings of others",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "feeling wonder about the treasures of the ocean",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "understanding that humans and nature need each other",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which detail supports the theme in Part A?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“You'd have to be a scientist, a poet and a comedian to hope to describe it all accurately, and even then you'd often fall short.” (paragraph 1)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“There was no way to make them understand they were tromping across the roofs of clam condos.” (paragraph 2)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“Most people don't want to invest a moment contemplating something like that unless they happen to stroll low tide alone at night with a flashlight . . .” (paragraph 2)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“I loaded up my kayak with a short shovel, a backpack and Ziploc sacks and paddled north out of Skookumchuck Bay . . .” (paragraph 3)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "9": {
         "Number": 9,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Analyze how a particular text's (e.g., article, brochure, technical manual, procedural text) structure unfolds by using textual evidence to describe how a key individual, event, or idea is introduced, illustrated, and elaborated in a text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/9a.jpg",
-            ""
+            "How do paragraphs 1-3 introduce the ideas of Passage 1?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "by listing the steps taken to test the students' rockets",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "by describing the weather's effect on the rocket experiment",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -477,7 +594,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "by comparing the rocket experiment to other outdoor activities",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -485,7 +602,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "by contrasting the materials used by students to build their rockets",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -500,31 +617,33 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grade 6 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/10a.jpg",
-            ""
+            "Read the sentences from Passage 1.",
+            ":ibox:“They set up a test. They `ul(text(analyze))` the results. Then they adjust their strategy.” (paragraph 5)",
+            "What is the meaning of the word `ul(text(analyze))` as it is used in the sentences?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "study",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "recite",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -532,7 +651,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "work hard on",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -540,7 +659,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "try to change",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -555,23 +674,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Analysis Of An Argument"
         ],
         "SubTopics": [
-            ""
+            "Trace the development of and evaluate the argument and specific claims in a text, distinguishing claims that are supported by reasons and evidence from claims that are not."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S2.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/11a.jpg",
-            ""
+            "How do the quotations from Ryan Lei in paragraphs 9-11 support the author's central claim in Passage 1?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "They provide evidence for why students enjoy having class in the park.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -579,7 +698,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "They reveal a different point of view on why science classes can be unpopular.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -587,7 +706,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "They give reasons why students can be scientists if they are willing to work hard enough.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -595,9 +714,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "They support the idea that science should be presented to students in a more approachable way.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -607,26 +726,26 @@
     },
     "12": {
         "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
-            ""
+            "Reading Information - Analysis Of An Argument"
         ],
         "SubTopics": [
-            ""
+            "Trace the development of and evaluate the argument and specific claims in a text, distinguishing claims that are supported by reasons and evidence from claims that are not."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/12a.jpg",
-            ""
+            "How does the author support the claim that the bee study in Passage 2 benefited the students who participated? Select `bbtext(two)`."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "by pointing out how experiments will help students in careers outside science",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -634,15 +753,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "by quoting a student whose opinion about science changed after the experiment",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "by mentioning similar projects in the past that led students to become scientists",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -650,9 +769,17 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "by describing challenges the students overcame when planning their experiment",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "by referring to a comment about how interesting the experiment was for the students",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -665,23 +792,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Analyze how a particular text's (e.g., article, brochure, technical manual, procedural text) structure unfolds by using textual evidence to describe how a key individual, event, or idea is introduced, illustrated, and elaborated in a text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/13a.jpg",
-            ""
+            "How do paragraphs 14 and 15 add to the structure of Passage 2?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "by comparing the student research to similar scientific conclusions",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -689,15 +816,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "by listing some ways that students were a major part of the experiment",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "by listing the types of data the students used to make their conclusions",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -705,7 +832,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "by comparing the steps the students followed to complete their experiment",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -720,23 +847,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite textual evidence and make relevant connections to support analysis of what an informational text says explicitly as well as inferences drawn from the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/14a.jpg",
-            ""
+            "Which sentence from Passage 2 supports the inference that learning about nature can be done through creative thinking?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "“'We discovered that bumblebees can use a combination of colour and spatial relationships in deciding which colour of flower to forage from,' the students wrote in the paper's abstract.” (paragraph 14)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -744,7 +871,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "“Eventually they focused their questions on bumblebees.” (paragraph 19)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -752,15 +879,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "“'If you want to ask a question of a bumblebee, you have to put yourself in the perspective of bumblebees,' Lotto said.” (paragraph 20)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "“Misha Lotto, now 10, says his view of science changed thanks to the bees.” (paragraph 21)",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -775,23 +902,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Information - Comparison Of Texts"
         ],
         "SubTopics": [
-            ""
+            "Compare and contrast informational texts in different forms, by different authors, or from different genres (e.g., a memoir written by and a biography on the same person, historical novels and primary source documents, infographics and scientific journals) in terms of their approaches to similar themes and topics."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S2.json",
+            "problems/NJ25G6E/supps/NJ25G6E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G6E/media/15a.jpg",
-            ""
+            "How do Passage 1 and Passage 2 focus on scientific education in the same way?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "by encouraging students to focus on scientific writing",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -799,7 +927,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "by describing ways to guide students toward scientific careers",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -807,15 +935,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "by explaining different ways to get students interested in science",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "by emphasizing how spending more time outdoors inspires students",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -827,857 +955,30 @@
     },
     "16": {
         "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
-        "Type": "MP",
+        "Type": "LR",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Informative & Explanatory Writing"
         ],
         "SubTopics": [
-            ""
+            "Write informative/explanatory texts (including the narration of historical events, scientific procedures/ experiments, or technical processes) to examine a topic and convey ideas, concepts, and information through the selection, organization, and analysis of relevant content."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G6E/supps/NJ25G6E-S4.json",
+            "problems/NJ25G6E/supps/NJ25G6E-S5.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/NJ25G6E/media/17a.jpg",
-            ""
+            "Your art teacher has asked that you write a paper about a specific kind of art. Write an explanatory essay about art created from found or recycled items. Your essay must be based on ideas and information that can be found in the sources.",
+            "Manage your time carefully so that you can",
+            ":ibox:• read the sources;\n• plan your response;\n• write your response; and\n• revise and edit your response.",
+            "Be sure to",
+            ":ibox:• use evidence from multiple sources; and\n• avoid overly relying on one source.",
+            "Your response should be in the form of a multiparagraph essay. Write your response in the space provided."
         ],
         "AnswerChoices": {},
-        "Parts": {
-            "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            },
-            "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "18": {
-        "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/18a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "19": {
-        "Number": 19,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/19a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "20": {
-        "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/20a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "21": {
-        "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/21a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "22": {
-        "Number": 22,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/22a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "23": {
-        "Number": 23,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/23a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "24": {
-        "Number": 24,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/24a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "25": {
-        "Number": 25,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/25a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "26": {
-        "Number": 26,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/26a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "27": {
-        "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/27a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "28": {
-        "Number": 28,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/28a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "29": {
-        "Number": 29,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/29a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "30": {
-        "Number": 30,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G6E/media/30a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
         "Parts": {}
     }
 }

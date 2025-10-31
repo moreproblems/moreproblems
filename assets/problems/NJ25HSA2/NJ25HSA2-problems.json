@@ -1,53 +1,30 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Arithmetic With Polynomials & Rational Expressions"
         ],
         "SubTopics": [
-            ""
+            "Know and apply the Remainder Theorem: For a polynomial `p(x)` and a number `a`, the remainder on division by `x-a` is `p(a)`, so `p(a)=0` if and only if `(x-a)` is a factor of `p(x)`."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/NJ25HSA2/media/1a.jpg",
-            ""
+            "A function with a factor of `x-4` is shown.",
+            ":ibox:`f(x)=x^4-3x^3-7x^2+ax+8`",
+            "What is the value of `a`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:10",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -57,52 +34,30 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Linear, Quadratic & Exponential Models"
         ],
         "SubTopics": [
-            ""
+            "For exponential models, express as a logarithm the solution to `ab^(ct)=d` where `a,c,andd` are numbers and the base `b` is `2,10,ore`; evaluate the logarithm using technology."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/2a.jpg",
-            ""
+            "A logarithmic equation is shown.",
+            ":ibox:`log_2(17)=n-5`",
+            "Create an equivalent equation in exponential form."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:2^(n-5)=17",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -112,52 +67,45 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 2,
         "Topics": [
-            ""
+            "Arithmetic With Polynomials & Rational Expressions"
         ],
         "SubTopics": [
-            ""
+            "Understand that polynomials form a system analogous to the integers, namely, they are closed under the operations of addition, subtraction, and multiplication; add, subtract, and multiply polynomials."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/3a.jpg",
-            ""
+            "Both `f(x)` and `g(x)` are polynomial functions.",
+            "Determine whether each expression must be a polynomial."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`f(x)+g(x)`": {
+                "Choice": "1:Must Be a Polynomial",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:`g(x)[f(x)-g(x)]`": {
+                "Choice": "1:Must Be a Polynomial",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`(f(x)-g(x))/(f(x))`": {
+                "Choice": "2:May Not Be a Polynomial",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -167,52 +115,30 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "SR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Building Functions"
         ],
         "SubTopics": [
-            ""
+            "Combine standard function types using arithmetic operations."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/4a.jpg",
-            ""
+            "The results of a country's transportation study for the year `text(2010)` are shown.",
+            ":ibox:• The average fuel efficiency of all the vehicles, which is the average `text(miles)` traveled `text(per gallon)` of gasoline (MPG), was `m` `text(miles per gallon)`.\n• The total `text(miles)` traveled can be estimated as `135` `text(billion miles)`.\n• The average cost of gasoline in `text(2010)` was `$2.84` `text(per gallon)`.",
+            "Create a function `S(m)` to show how much money, in `text(billions of dollars)`, would have been saved if the MPG was `m+1` `text(miles per gallon)` in the year `text(2010)`. Assume the same values for total `text(miles)` traveled and cost of gasoline."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:2.84(135/m-135/(m+1))",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -222,52 +148,30 @@
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Interpreting Categorical & Quantitative Data"
         ],
         "SubTopics": [
-            ""
+            "Use the mean and standard deviation of a data set to fit it to a normal distribution and to estimate population percentages. Recognize that there are data sets for which such a procedure is not appropriate. Use calculators, spreadsheets, and tables to estimate areas under the normal curve."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/5a.jpg",
-            ""
+            "A store manager records the number of customers at the store `text(each week)` for several `text(years)`. The data are approximately normally distributed with a mean of `1245` and a standard deviation of `35`.",
+            "The manager wants to predict future customer totals.",
+            "Using these data, what `text(percentage)` of weeks will have between `1280` and `1315` customers?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:13.5",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -280,23 +184,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Interpreting Functions"
         ],
         "SubTopics": [
-            ""
+            "Graph polynomial functions, identifying zeros when suitable factorizations are available, and showing end behavior."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/6a.jpg",
-            ""
+            "A function is shown.",
+            ":ibox:`f(x)=x^3-5x^2-4x+20`",
+            "What is the end behavior of the graph of `f(x)` as `x` increases?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`f(x)` approaches `text(zero)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +210,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`f(x)` approaches `20`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,7 +218,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`f(x)` approaches `text(negative)` infinity.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -320,9 +226,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`f(x)` approaches `text(positive)` infinity.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -332,52 +238,38 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "The Complex Number System"
         ],
         "SubTopics": [
-            ""
+            "Solve quadratic equations with real coefficients that have complex solutions."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/7a.jpg",
-            ""
+            "A quadratic equation is shown.",
+            ":ibox:`0=2m^2+3m+7`",
+            "What is `text(one)` exact solution to the equation?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "match:(-3+isqrt(47))/4",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "KEY2": {
+                "Choice": "match:(-3-isqrt(47))/4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -387,52 +279,30 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "The Complex Number System"
         ],
         "SubTopics": [
-            ""
+            "Use the relation `i^2=-1` and the commutative, associative, and distributive properties to add, subtract, and multiply complex numbers."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/8a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`3i^2+sqrt(-121)-49`",
+            "Create an equivalent expression in the form `a+bi`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:-10+11i",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -442,34 +312,36 @@
     },
     "9": {
         "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [
-            ""
+            "Arithmetic With Polynomials & Rational Expressions"
         ],
         "SubTopics": [
-            ""
+            "Identify zeros of polynomials when suitable factorizations are available, and use the zeros to construct a rough graph of the function defined by the polynomial."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/9a.jpg",
-            ""
+            "A function is shown.",
+            ":ibox:`g(c)=c(4c+8)(c-1)`",
+            "Select all of the values of `c` that are `text(zeros)` of the function."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`-2`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`-1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -477,15 +349,31 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`0`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`1`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "F": {
+                "Choice": "`4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -497,52 +385,29 @@
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Building Functions"
         ],
         "SubTopics": [
-            ""
+            "Identify the effect on the graph of replacing `f(x)` by `f(x)+k,kf(x),f(kx),andf(x+k)`  for specific values of `k` (both positive and negative); find the value of `k` given the graphs. Experiment with cases and illustrate an explanation of the effects on the graph using technology. Include recognizing even and odd functions from their graphs and algebraic expressions for them."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/10a.jpg",
-            ""
+            "Julian graphs the function `f(x)=2^x+5`. He then moves the graph down `8` `text(units)` to create function `g(x)`.",
+            "Create an equation that represents `g(x)`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:2^x-3",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -555,31 +420,31 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Arithmetic With Polynomials & Rational Expressions"
         ],
         "SubTopics": [
-            ""
+            "Understand that polynomials form a system analogous to the integers, namely, they are closed under the operations of addition, subtraction, and multiplication; add, subtract, and multiply polynomials."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/11a.jpg",
-            ""
+            "Which expression is equivalent to `(2r^2+r-1)-(3r^2+4r-5)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`-r^2-3r+4`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`-r^2+5r-6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -587,7 +452,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`5r^2-3r+4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -595,7 +460,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`5r^2+5r-6`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -607,52 +472,87 @@
     },
     "12": {
         "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "T",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Seeing Structure In Expressions"
         ],
         "SubTopics": [
-            ""
+            "Use the structure of an expression to identify ways to rewrite it."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/12a.jpg",
-            ""
+            "A survey of `525` people was conducted to determine whether they have brothers and sisters.",
+            ":ibox:• The results showed that `24%` of the people surveyed do not have a sister and `68%` of the people surveyed have a brother.\n• The results also showed that `93` of the people surveyed do not have a sister and do not have a brother.",
+            "Complete the two-way frequency table to show the results of the survey.",
+            ":table:problems/NJ25HSA2/supps/NJ25HSA2-T1.json"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "324",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "75",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "3:KEY": {
+                "Choice": "399",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "4:KEY": {
+                "Choice": "33",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "5:KEY": {
+                "Choice": "93",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "6:KEY": {
+                "Choice": "126",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "7:KEY": {
+                "Choice": "357",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "8:KEY": {
+                "Choice": "168",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -665,23 +565,26 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Interpreting Categorical & Quantitative Data"
         ],
         "SubTopics": [
-            ""
+            "Summarize categorical data for two categories in two-way frequency tables. Interpret relative frequencies in the context of the data (including joint, marginal, and conditional relative frequencies). Recognize possible associations and trends in the data."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSA2/media/13a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`64x^2-196`",
+            "Michael rewrites this expression in a different form.",
+            "Which form could Michael have used, where `a` and `b` are integers?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`(ax-b)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -689,7 +592,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`(ax+b)^2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -697,980 +600,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`(ax+b)(ax-b)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "14": {
-        "Number": 14,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/14a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "15": {
-        "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/15a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "16": {
-        "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
-        "Type": "MP",
-        "NumChoices": 0,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/NJ25HSA2/media/17a.jpg",
-            ""
-        ],
-        "AnswerChoices": {},
-        "Parts": {
-            "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            },
-            "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "18": {
-        "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/18a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "19": {
-        "Number": 19,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/19a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "20": {
-        "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/20a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "21": {
-        "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/21a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "22": {
-        "Number": 22,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/22a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "23": {
-        "Number": 23,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/23a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "24": {
-        "Number": 24,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/24a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "25": {
-        "Number": 25,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/25a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "26": {
-        "Number": 26,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/26a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "27": {
-        "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/27a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "28": {
-        "Number": 28,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/28a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "29": {
-        "Number": 29,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/29a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "30": {
-        "Number": 30,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSA2/media/30a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
+                "Choice": "`(ax+b)(bx-a)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

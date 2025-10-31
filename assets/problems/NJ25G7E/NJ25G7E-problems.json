@@ -4,24 +4,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Interactions Among Text Elements"
         ],
         "SubTopics": [
-            ""
+            "Analyze how particular elements of a text interact including how particular lines of dialogue or incidents in a story or drama propel the action, reveal aspects of a character, or provoke a decision."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/NJ25G7E/media/1a.jpg",
-            ""
+            "How does the passage's setting affect the plot?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Being outside helps Rebecca to relax despite her concerns about leaving home.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,15 +28,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Being in the treehouse makes Rebecca consider what she will miss after moving away.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Being alone with her father leads Rebecca to confess her frustration with her mother's actions.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -45,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Being around her sketchbooks causes Rebecca to question whether she should pursue architecture.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -60,31 +59,31 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Literal Meaning"
         ],
         "SubTopics": [
-            ""
+            "Determine or clarify the meaning of unknown and multiple-meaning words and phrases based on grade 7 reading and content, including technical meanings, choosing flexibly from a range of strategies."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G7E/media/2a.jpg",
-            ""
+            "What does the phrase `ul(text(act of futility))` mean as it is used in paragraph 3?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "useless effort",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "exciting activity",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -92,7 +91,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "satisfying event",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -100,7 +99,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "hopeless decision",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -112,81 +111,143 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Reading Literature - Close Reading Of Text"
         ],
         "SubTopics": [
-            ""
+            "Cite several pieces of textual evidence and make relevant connections to support analysis of what a literary text says explicitly as well as inferences drawn from the text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G7E/media/3a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which sentence describes Rebecca and her father?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "They are often apart.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "They like to joke around.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "They enjoy a close relationship.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "They share a dream for the future.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MS",
+                "NumChoices": 5,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Select `bbtext(two)` sentences from the passage that support the answer in Part A."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "“The only change in our fifteen-year tradition had been to swap our old, dark tent for a newly built treehouse . . .” (paragraph 1)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "“I woke this morning to Dad waving the remains of our half-eaten bag of Cheetos under my nose.” (paragraph 2)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "“Ninety-nine percent of the time, I agreed with Dad, but on the topic of my treehouse, we disagreed.” (paragraph 5)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "“I cleared my throat to ward off the threat of tears and managed a wry smile for my father.” (paragraph 6)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "E": {
+                        "Choice": "“'No offense, but I would have been more excited if I was going to college by myself.'” (paragraph 6)",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "4": {
         "Number": 4,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reading Literature - Perspective & Purpose In Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine how an author conveys or develops perspective or purpose in a text through contrasting the points of view of different characters or narrators in a text."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G7E/media/4a.jpg",
-            ""
+            "How does the author contrast Rebecca's and her father's points of view?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "by showing that Rebecca feels guilty for wanting to be far from her parents while her father wishes they could be closer",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -194,7 +255,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "by showing that Rebecca's father wants to continue their camping tradition while Rebecca is less concerned about the change",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -202,7 +263,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "by showing how Rebecca thinks her father wants to move but then revealing that he would actually prefer to remain in their current house",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -210,9 +271,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "by showing that Rebecca's father understands that Rebecca wants independence but underestimates how much she will miss her current house",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -225,23 +286,23 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Vocabulary Acquisition, Use & Interpretative Meaning"
         ],
         "SubTopics": [
-            ""
+            "Demonstrate understanding of figurative language, word relationships, and nuances in word meanings."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G7E/media/5a.jpg",
-            ""
+            "What does the phrase “breathing room” in paragraph 8 express?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Rebecca hopes to have better air quality.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,15 +310,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Rebecca needs distance from her parents.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Rebecca appreciates her new independence.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -265,7 +326,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Rebecca wants more space in her college room.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -277,26 +338,26 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [
-            ""
+            "Reading Literature - Central Ideas & Themes Of Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine a theme in a literary text (e.g., stories, plays or poetry) and explain how it is conveyed through particular details; provide a summary of the text distinct from personal opinions or judgments."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G7E/media/6a.jpg",
-            ""
+            "Select `bbtext(three)` statements that should be included in a summary of the passage."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Rebecca attempts to go stargazing.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +365,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Rebecca enjoys a snack with her father.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,15 +373,31 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Rebecca discusses missing her treehouse.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Rebecca reflects on her camping tradition.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Rebecca surveys the items in her treehouse fondly.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "Rebecca wonders where her family will live next year.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -332,588 +409,62 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/7a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "8": {
-        "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/8a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "9": {
-        "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/9a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "10": {
-        "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/10a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "12": {
-        "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/12a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "13": {
-        "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/13a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "14": {
-        "Number": 14,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/14a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "15": {
-        "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/15a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "16": {
-        "Number": 16,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/16a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "17": {
-        "Number": 17,
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Reading Literature - Central Ideas & Themes Of Texts"
         ],
         "SubTopics": [
-            ""
+            "Determine a theme in a literary text (e.g., stories, plays or poetry) and explain how it is conveyed through particular details; provide a summary of the text distinct from personal opinions or judgments."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S1.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/NJ25G7E/media/17a.jpg",
-            ""
+            "This question has `bbtext(two)` parts. First, answer Part A. Then, answer Part B."
         ],
         "AnswerChoices": {},
         "Parts": {
             "A": {
-                "Type": "FR",
-                "NumChoices": 0,
+                "Type": "MC",
+                "NumChoices": 4,
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    ""
+                    "Which theme is developed in the passage?"
                 ],
                 "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
+                    "A": {
+                        "Choice": "Leaving the familiar behind can make a person sad.",
                         "Key": {
                             "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Accepting family members as they are can be a relief.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Students can be proud after setting and achieving a goal.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "People should rely on others for help in challenging times.",
+                        "Key": {
+                            "Correct": false,
                             "Rationale": "",
                             "Percent": 0
                         }
@@ -926,19 +477,19 @@
                 "Points": 1,
                 "Explain": false,
                 "Content": [
-                    ""
+                    "Which sentence from the passage helps to develop the theme in Part A?"
                 ],
                 "AnswerChoices": {
                     "A": {
-                        "Choice": "",
+                        "Choice": "“It probably sounds stupid, but we hadn't even moved and I was already homesick for this tiny nest that housed all my architecture books and sketchbooks.” (paragraph 5)",
                         "Key": {
-                            "Correct": false,
+                            "Correct": true,
                             "Rationale": "",
                             "Percent": 0
                         }
                     },
                     "B": {
-                        "Choice": "",
+                        "Choice": "“And best of all, the models I'd constructed at the summer camp I attended two years ago through the architecture school at the University of Washington . . .” (paragraph 5)",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -946,7 +497,7 @@
                         }
                     },
                     "C": {
-                        "Choice": "",
+                        "Choice": "“'At least I talked your mom into moving to New Jersey instead of New York.'” (paragraph 8)",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -954,7 +505,7 @@
                         }
                     },
                     "D": {
-                        "Choice": "",
+                        "Choice": "“'You have no idea how much I appreciate that,' I said fervently . . .” (paragraph 9)",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",
@@ -965,719 +516,32 @@
             }
         }
     },
-    "18": {
-        "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
+    "8": {
+        "Number": 8,
+        "Type": "LR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Argumentative Writing"
         ],
         "SubTopics": [
-            ""
+            "Write arguments on discipline-specific content (e.g., social studies, science, technical subjects, English/Language Arts) to support claims with clear reasons and relevant evidence."
         ],
-        "SuppContent": [],
+        "SuppContent": [
+            "problems/NJ25G7E/supps/NJ25G7E-S2.json",
+            "problems/NJ25G7E/supps/NJ25G7E-S3.json"
+        ],
         "SuppTools": [],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25G7E/media/18a.jpg",
-            ""
+            "Write an essay for your school newspaper arguing whether playing video games significantly affects physical health. Your essay must be based on the ideas, concepts, and information that can be determined through analysis of the “Do Video Games Have a Major Effect on Players' Physical Health?” sources.",
+            "Manage your time carefully so that you can",
+            ":ibox:• read the sources;\n• plan your response;\n• write your response; and\n• revise and edit your response.",
+            "Be sure to",
+            ":ibox:• include a claim;\n• address counterclaims;\n• use evidence from multiple sources; and\n• avoid overly relying on one source.",
+            "Your response should be in the form of a multiparagraph essay. Write your response in the space provided."
         ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "19": {
-        "Number": 19,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/19a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "20": {
-        "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/20a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "21": {
-        "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/21a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "22": {
-        "Number": 22,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/22a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "23": {
-        "Number": 23,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/23a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "24": {
-        "Number": 24,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/24a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "25": {
-        "Number": 25,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/25a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "26": {
-        "Number": 26,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/26a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "27": {
-        "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/27a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "28": {
-        "Number": 28,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/28a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "29": {
-        "Number": 29,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/29a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "30": {
-        "Number": 30,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25G7E/media/30a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
+        "AnswerChoices": {},
         "Parts": {}
     }
 }
