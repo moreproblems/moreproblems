@@ -416,7 +416,7 @@
         "Explain": false,
         "Content": [
             "Use `text(the sources)` to answer the question.",
-            "Select `bbtext(four)` correct phrases for the Federalist Party and `bbtext(four)` correct phrases for the Democratic-Republican Party to compare the views o each party."
+            "Select `bbtext(four)` correct phrases for the Federalist Party and `bbtext(four)` correct phrases for the Democratic-Republican Party to compare the views of `text(each party)`."
         ],
         "AnswerChoices": {
             "A:supported a strong federal government and executive": {
@@ -531,7 +531,7 @@
             "Select the `bbtext(best)` answer from `text(each list)` to complete the sentences about the causes and effects of the Indian Removal Act.",
             "In `text(1830)`, President Andrew Jackson signed the Indian Removal Act into law.",
             "Its passage was motivated by a desire for :DD-1:",
-            "The act led to the first major :DD-2: of Native Americans by the U.S. federal government."
+            "The act led to the `text(first)` major :DD-2: of Native Americans by the U.S. federal government."
         ],
         "AnswerChoices": {
             "1:A": {
@@ -725,7 +725,7 @@
         "Explain": false,
         "Content": [
             "Use `text(the excerpt)` to answer the questions.",
-            ":ibox:`bbtext([Adapted from] “The Necessity of Education” (1839))`\nby Horace Mann\n\nI hardly need to say that by the word “Education,” I mean much more than an ability to read, write, and do arithmetic. I also mean to include a cultivation of intellect that shall enable us to understand those permanent and mighty laws that involve all parts o the universe. . . . We live in a republic. Under our political system, the proper training of the next generation is the highest duty."
+            ":ibox:`bbtext([Adapted from] “The Necessity of Education” (1839))`\nby Horace Mann\n\nI hardly need to say that by the word “Education,” I mean much more than an ability to read, write, and do arithmetic. I also mean to include a cultivation of intellect that shall enable us to understand those permanent and mighty laws that involve all parts of the universe. . . . We live in a republic. Under our political system, the proper training of the next generation is the highest duty."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -883,8 +883,8 @@
     },
     "12": {
         "Number": 12,
-        "Type": "MP",
-        "NumChoices": 0,
+        "Type": "MC",
+        "NumChoices": 4,
         "Topics": [
             ""
         ],
@@ -955,7 +955,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Use `text(Source )`1 and `text(Source 2)` to answer the questions."
+            "Use `text(Source 1)` and `text(Source 2)` to answer the questions."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -977,7 +977,7 @@
                         }
                     },
                     "B": {
-                        "Choice": "B. to encourage U.S. settlement in North America",
+                        "Choice": "to encourage U.S. settlement in North America",
                         "Key": {
                             "Correct": false,
                             "Rationale": "",

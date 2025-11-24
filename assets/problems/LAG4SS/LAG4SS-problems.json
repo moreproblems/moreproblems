@@ -380,7 +380,7 @@
                 }
             },
             "B": {
-                "Choice": "It led to the invention of the first stone tools, allowing people to do important tasks more easily.",
+                "Choice": "It led to the invention of the `text(first)` stone tools, allowing people to do important tasks more easily.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -457,6 +457,7 @@
         "Explain": false,
         "Content": [
             "Use `ultext(the map)` to answer the question.",
+            "problems/LAG4SS/media/8a.jpg",
             "Select the circle on the map that shows the location of the Mississippi River."
         ],
         "AnswerChoices": {
@@ -510,7 +511,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Select the best answer from each list to complete the sentence about the people who first lived in the area that became Louisiana.",
+            "Select the best answer from `text(each list)` to complete the sentence about the people who `text(first)` lived in the area that became Louisiana.",
             "The earliest people to live in the southern part of North America were :DD-1: people who mostly got food by :DD-2:"
         ],
         "AnswerChoices": {
@@ -731,7 +732,7 @@
     },
     "12": {
         "Number": 12,
-        "Type": "MO",
+        "Type": "MP",
         "NumChoices": 0,
         "Topics": [
             ""
@@ -745,7 +746,7 @@
         "Explain": false,
         "Content": [
             "Use `text(the picture)` to answer the questions.",
-            ":ibox:`bbtext(Maya Lintel)`\n\nThis picture shows part of an ancient Maya lintel. A lintel is a beam used above a doorway when building.This lintel shows a Maya king, Bird Jaguar IV, in warrior clothing on the right and a person taken as a prisoner in battle on the left. The lintel has glyphs in the top left and bottom right.",
+            ":ibox:`bbtext(Maya Lintel)`\n\nThis picture shows part of an ancient Maya lintel. A lintel is a beam used above a doorway when building. This lintel shows a Maya king, Bird Jaguar IV, in warrior clothing on the right and a person taken as a prisoner in battle on the left. The lintel has glyphs in the top left and bottom right.",
             "problems/LAG4SS/media/12a.jpg"
         ],
         "AnswerChoices": {},
@@ -1079,7 +1080,7 @@
         "Explain": false,
         "Content": [
             "Use `text(Source 3)` and `text(Source 4)` to answer the question.",
-            "What was the purpose o mummification by ancient Egyptians?"
+            "What was the purpose of mummification by ancient Egyptians?"
         ],
         "AnswerChoices": {
             "A": {
