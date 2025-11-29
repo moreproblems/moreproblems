@@ -1,0 +1,1245 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Thermodynamics"
+        ],
+        "SubTopics": [
+            "The temperature of a system is characterized by the average kinetic energy of the atoms within that system."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The root-mean-square speed of the atoms of a monatomic ideal gas at a temperature of `200` `text(K)` is `v_text(rms)`. At a later time, the root-mean-square speed of the atoms is `2v_text(rms)`. What is the temperature of the gas at this later time?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`800` `text(K)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`400` `text(K)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`200` `text(K)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`50` `text(K)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Waves, Sound & Physical Optics"
+        ],
+        "SubTopics": [
+            "A greater relative velocity results in a greater measured difference between the observed and rest frequencies."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/2a.jpg",
+            "A truck is traveling to the `text(east)` with a speed of `25` `text(m)/text(s)` relative to the road while emitting a loud sound with a `text(single)` frequency. The figure shows `text(four)` different observers and indicates their locations and velocities relative to the road. Which observer hears a sound with the highest frequency?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Observer`A`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Observer`B`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Observer`C`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Observer`D`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Electric Force, Field & Potential"
+        ],
+        "SubTopics": [
+            "Capacitance relates the magnitude of the charge stored on each plate to the electric potential difference created by the separation of those charges. Relevant equation: `C=Q/(DeltaV)`."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/3a.jpg",
+            "problems/APP2/media/3b.jpg",
+            "The figures show `text(two)` different capacitors made of identical parallel conducting plates. In Capacitor `1`, the plates are separated by a distance `d` and a block of material with dielectric constant `kappa` is inserted between the plates. In Capacitor `2`, the plates are separated by a distance `2d` and `text(two)` identical blocks of material with dielectric constant `kappa` are inserted between the plates. A student claims that the capacitance of Capacitor `2` is the same as that of Capacitor `1`. Which of the following indicates whether the claim is correct or incorrect, and provides a valid justification?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Correct, because the effects of `text(doubling)` the distance between the plates and `text(doubling)` the volume of the dielectric cancel each other.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Correct, because the capacitance is a property of the plates and the plates have not changed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Incorrect, because `text(doubling)` the thickness of the dielectric material will cause the capacitance to `text(double)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Incorrect, because `text(doubling)` the distance between the plates will reduce the capacitance by `text(half)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Modern Physics"
+        ],
+        "SubTopics": [
+            "A material's decay constant may be used to predict the number of nuclei remaining in a sample after a period of time, or the age of a material if the initial amount of material is known. Relevant equation: `N=N_0e^(-lambdat)`. Derived equation: `ln(N/N_0)=-lambdat`."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "At time `t=0`, a sample of radioactive material with decay constant `lambda` has `N_0` nuclei. At time `t=t_1`, there are `N_1` nuclei remaining. At a later time  `t=t_2`, there are `text(N)_2` nuclei remaining. Which of the following correctly relates `text(N)_2` to `N_1`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`N_2=N_1e^(-lambda(t_2-t_1))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`N_2=N_1e^(-lambda(t_2+t_1))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`N_2=N_1/N_0e^(-lambda(t_2-t_1))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`N_2=N_1/N_0e^(-lambda(t_2+t_1))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometric Optics"
+        ],
+        "SubTopics": [
+            "For a thin lens, the magnification of an image is the ratio of the size of the image produced to the size of the object itself and depends on the locations of the object and image relative to the lens. Relevant equation: `abs(M)=abs(h_i/h_o)=abs(s_i/s_o)`."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A student places a lens `40` `text(cm)` from an object and observes an enlarged image on a screen on the opposite side of the lens. Which of the following could be the type of lens and the focal length of the lens?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A diverging lens with a focal length of `30` `text(cm)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A diverging lens with a focal length of `50` `text(cm)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A converging lens with a focal length of `30` `text(cm)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A converging lens with a focal length of `50` `text(cm)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Electric Force, Field & Potential"
+        ],
+        "SubTopics": [
+            "Electric field vector maps and equipotential lines are tools to describe the field produced by a charge or configuration of charges and can be used to predict the motion of charged objects in the field."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/6a.jpg",
+            "The figure shows equipotential lines in a particular region. The value of the potential along `text(each line)` is indicated. `text(Two)` points, `AandB`, lie along the `xtext(-axis)`. The electric field at Point `A` is `vec(E_A)` and the electric field at Point `B` is `vec(E_B)`. Which of the following correctly compares the magnitudes of `vec(E_A)andvec(E_B)`, and indicates whether the vectors are in the same or opposite direction?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Magnitudes: `E_A<E_B`\nDirections: Same direction",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Magnitudes: `E_A<E_B`\nDirections: Opposite directions",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Magnitudes: `E_A>E_B`\nDirections: Same direction",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Magnitudes: `E_A>E_B`\nDirections: Opposite directions",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Electric Circuits"
+        ],
+        "SubTopics": [
+            "The rate at which energy is transferred, converted, or dissipated by a circuit element depends on the current in the element and the electric potential difference across it. Relevant equation: `P=IDeltaV`.  Derived equation: `P=I^2R=(DeltaV)^2/R`."
+        ],
+        "SuppContent": [
+            "problems/APP2/supps/APP2-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "When the switch is open, which of the following correctly compares the powers `P_1,P_2,andP_3` dissipated by the resistors with resistances `R_1,R_2,andR_3`, respectively?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`P_1=P_2=P_3`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`P_3>(P_1=P_2)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`(P_1=P_2)>P_3>0`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`(P_1=P_2)>(P_3=0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Electric Circuits"
+        ],
+        "SubTopics": [
+            "The potential difference across a capacitor and the current in the branch of the circuit containing the capacitor each change over time as the capacitor charges and discharges, but both will reach a steady state after a long time interval."
+        ],
+        "SuppContent": [
+            "problems/APP2/supps/APP2-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The switch is closed at time `t=t_1`. A long time later, at `t=t_2`, the circuit reaches steady state conditions. Which of the following correctly indicates how the current `I_s` in the switch and the magnitude of the potential difference `abs(DeltaV_C)` across the capacitor change between `t_1andt_2`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`I_s`: Increases\n`abs(DeltaV_C)`: Increases",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`I_s`: Increases\n`abs(DeltaV_C)`: Decreases",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`I_s`: Decreases\n`abs(DeltaV_C)`: Increases",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`I_s`: Decreases\n`abs(DeltaV_C)`: Decreases",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Thermodynamics"
+        ],
+        "SubTopics": [
+            "The amount of energy required to change the temperature of a material is related to the material's specific heat. Relevant equation: `Q=mcDeltaT`."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A `0.050` `text(kg)` piece of an unknown metal is initially at a temperature of `373` `text(K)`. The metal is then quickly moved into an insulated container with `0.100` `text(kg)` of water at a temperature of `295` `text(K)`. The water and the metal come to equilibrium at a temperature of `300` `text(K)`. The specific heat of water is `4184` `text(J)/(text(kg)*text(K))`. What is the specific heat of the unknown metal?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`287` `text(J)/(text(kg)*text(K))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`573` `text(J)/(text(kg)*text(K))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`2090` `text(J)/(text(kg)*text(K))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`6620` `text(J)/(text(kg)*text(K))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Magnetism & Electromagnetism"
+        ],
+        "SubTopics": [
+            "A current-carrying wire produces a magnetic field."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/10a.jpg",
+            "`text(Two)` long parallel wires, each in the plane of the page, are separated by a distance `3d`, as shown. The top wire carries current `4I` directed to the right, and the bottom wire carries current `I` directed to the left. Point `A` is also in the plane of the page, located a distance `d` above the bottom wire. Which of the following correctly represents the magnitude of the magnetic field due to the wires at Point `A`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`1/2(mu_0I)/(pid)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`3/4(mu_0I)/(pid)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`3/2(mu_0I)/(pid)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`5/2(mu_0I)/(pid)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Modern Physics"
+        ],
+        "SubTopics": [
+            "A blackbody will emit a continuous spectrum that only depends on the body's temperature. The radiation emitted by a blackbody is often modeled by plotting intensity per unit wavelength as a function of wavelength."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A blackbody of temperature `T_0` emits a spectrum of light with a peak wavelength `lambda_0`. The rate at which energy is emitted by the blackbody is `P_0`. The temperature of the blackbody is then changed so that the new peak wavelength emitted by the blackbody is `lambda_0/2`. Which of the following correctly indicates the rate at which energy is emitted by the blackbody at this new temperature?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`P_0/2`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`P_0/16`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`2P_0`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`16P_0`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Magnetism & Electromagnetism"
+        ],
+        "SubTopics": [
+            "Faraday's law describes the relationship between changing magnetic flux and the resulting induced emf in a system. Relevant equation: `abs(varepsilon)=abs((DeltaPhi_B)/(Deltat))`."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/12a.jpg",
+            "A metal bar of mass `M` and resistance `R` is pushed to the right at a constant speed along `text(two)` horizontal, parallel, conducting rails, as shown in the top view diagram. The rails are separated by a distance `l`, and are connected at the left end by a wire. The rails and wire have negligible resistance. The entire apparatus is in a uniform magnetic field of magnitude `B` that is directed into the page.",
+            "At time `t_i` the bar is at position `x_i`, and a short time later at time `t_f` the bar is at position `x_f`. Which of the following expressions is equal to the average force exerted on the bar by the magnetic field between `t_iandt_f`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`(lB)/R((x_f-x_i)/(t_f-t_i))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`(l^2B^2)/R((x_f-x_i)/(t_f-t_i))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`(x_iB)/R((x_f-x_i)/(t_f-t_i))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`(x_ilB^2)/R((x_f-x_i)/(t_f-t_i))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Waves, Sound & Physical Optics"
+        ],
+        "SubTopics": [
+            "Beats arise from the addition of two waves of slightly different frequency."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Pairs of tuning forks are struck near a microphone, which is connected to a computer that creates graphs of the resulting gauge pressure (the difference between the pressure and atmospheric pressure) as functions of time. Graphs for `text(four pairs)` of tuning forks are shown, where `text(each pair)` consists of tuning forks that vibrate at different frequencies. Which pair of tuning forks has the greatest difference in frequencies?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/APP2/media/13a.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/APP2/media/13b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/APP2/media/13c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/APP2/media/13d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Electric Circuits"
+        ],
+        "SubTopics": [
+            "The potential difference across a capacitor and the current in the branch of the circuit containing the capacitor each change over time as the capacitor charges and discharges, but both will reach a steady state after a long time interval."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/14a.jpg",
+            "A `10` `text(V)` battery, resistors with resistances of `100` `Omega`, `200` `Omega`, and `400` `Omega`, a `12` `mutext(F)` capacitor, and a switch are connected as shown. The capacitor is initially uncharged and the switch is initially open. What is the current in the battery immediately after the switch is closed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(Zero)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`14` `text(mA)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`25` `text(mA)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`33` `text(mA)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            "Geometric Optics"
+        ],
+        "SubTopics": [
+            "Total internal reflection may occur when light passes from one medium into another medium with a lower index of refraction."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/15a.jpg",
+            "A diver is swimming underwater in a pool filled with water. An observer is standing at the edge of the pool, as shown. Will the observer always be able to see the diver no matter where the diver is in the pool? Why or why not?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Yes, because there will always be a light ray originating from the diver that will refract toward the observer and reach the observer.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Yes, because for every position of the diver, there is a straight-line path connecting the diver and the observer.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "No, because light passing from a medium with high index of refraction to low index of refraction will always totally reflect at the boundary between the `text(two)` media.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "No, because for some positions of the diver some of the light rays from the diver will totally reflect at the water-air boundary.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Electric Circuits",
+            "Magnetism & Electromagnetism",
+            "Magnetism & Electromagnetism"
+        ],
+        "SubTopics": [
+            "Describe the transfer of energy into, out of, or within an electric circuit, in terms of power.",
+            "Describe the force exerted on a current-carrying wire by a magnetic field.",
+            "Describe the induced electric potential difference resulting from a change in magnetic flux."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 10,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/16a.jpg",
+            "A circular conducting loop of radius `r` is held at rest in the `xytext(-plane)`, as shown in Figure `1`. The resistance of the loop is `R`. `text(Half)` of the loop is in a region with a uniform magnetic field of magnitude `B_0` that is directed into the page `(-ztext(-direction))`. During a time interval `Deltat`, the magnitude of the magnetic field is increased at a constant rate from `B_0` to `4B_0`."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A(i)": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Points": 3,
+                "Explain": true,
+                "Content": [
+                    "Derive an expression for the emf `epsilon` induced in the loop during the interval `Deltat`. Begin your derivation by writing a fundamental physics principle or an equation from the reference information.",
+                    "Express your answer in terms of `r,R,B_0,Deltat`, and physical constants, as appropriate."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "A(ii)": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": true,
+                "Content": [
+                    "Derive an expression for the total energy dissipated by the loop during the interval `Deltat`. Begin your derivation by writing a fundamental physics principle or an equation from the reference information.",
+                    "Express your answer in terms of `r,R,B_0,Deltat`, and physical constants, as appropriate."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "A(iii)": {
+                "Type": "FD",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "Complete the following tasks on Figure `2`:",
+                    ":ibox:• Draw an arrow labeled `I` to indicate the direction of the current in the loop during the interval `Deltat`.\n• Draw an arrow labeled `F` to indicate the direction of the net magnetic force exerted on the loop during the interval `Deltat`.",
+                    "problems/APP2/media/16b.jpg"
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "C",
+                "NumChoices": 2,
+                "Points": 3,
+                "Explain": true,
+                "Content": [
+                    "problems/APP2/media/16c.jpg",
+                    "The magnitude of the magnetic field is now held `ul(text(constant))` while the loop is pulled in the `-xtext(-direction)` by an external force until the loop is completely inside the region with the magnetic field, as indicated by the dashed line in Figure `3`.",
+                    "Indicate whether an emf is induced in the loop when the loop is partially in the region with the magnetic field and when the loop is completely in the region."
+                ],
+                "AnswerChoices": {
+                    "A:When the loop is partially in the region": {
+                        "Choice": "1:Yes",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B:When the loop is completely in the region": {
+                        "Choice": "2:No",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Geometric Optics",
+            "Waves, Sound & Physical Optics",
+            "Waves, Sound & Physical Optics"
+        ],
+        "SubTopics": [
+            "Describe the refraction of light between two media.",
+            "Describe the physical properties of a periodic wave.",
+            "Describe the interaction between a wave and a boundary."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 12,
+        "Explain": false,
+        "Content": [
+            "problems/APP2/media/17a.jpg",
+            "A glass block has a semicircular section removed, as shown in Figure `1`. The air has an index of refraction `n_a=1` and the glass has an index of refraction `n_g>1`. `text(Two)` rays of monochromatic light of frequency `f_0` travel parallel to each other in the glass block and are incident on the glass-air boundary at points `AandB`, as shown. Both rays refract at the glass-air boundary."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FD",
+                "NumChoices": 0,
+                "Points": 3,
+                "Explain": false,
+                "Content": [
+                    "On the diagram of the block in Figure `2` below, sketch the paths of the rays in the air after the rays exit the glass at points `AandB`.",
+                    "problems/APP2/media/17b.jpg"
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Points": 4,
+                "Explain": true,
+                "Content": [
+                    "Derive an equation for the change in wavelength `Deltalambda` of the light when it passes from the glass into the air. Express your answer in terms of `f_0,n_g`, and fundamental constants, as appropriate. Begin your derivation by writing a fundamental physics principle or an equation from the reference information."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "FD",
+                "NumChoices": 0,
+                "Points": 3,
+                "Explain": false,
+                "Content": [
+                    "problems/APP2/media/17c.jpg",
+                    "A laser is used to shine a horizontal beam of light on the glass block, as shown in Figure `3`. The height `h` of the beam is varied and the angle `theta_r` of the refracted beam to the normal is measured for several values of `h`, and the value of `sin(theta_r)` is calculated.",
+                    "On the axes below in Figure `4`, sketch `sin(theta_r)` as a function of `h`.",
+                    "problems/APP2/media/17d.jpg"
+                ],
+                "AnswerChoices": {}
+            },
+            "D": {
+                "Type": "MC",
+                "NumChoices": 2,
+                "Points": 2,
+                "Explain": true,
+                "Content": [
+                    "Indicate whether the sketch drawn in part (C) is consistent with the rays drawn in part (A). Briefly justify your response."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Yes",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "No",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Electric Circuits",
+            "Electric Circuits",
+            "Electric Circuits"
+        ],
+        "SubTopics": [
+            "Describe the behavior of a circuit.",
+            "Describe the electrical characteristics of elements of a circuit.",
+            "Describe a circuit with resistive wires and a battery with internal resistance."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 10,
+        "Explain": false,
+        "Content": [
+            "A student is provided with several resistors with different known resistances, an ideal battery, a voltmeter, an ammeter, and connecting wires. The student is given an additional resistive component `R_X`."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A(i)": {
+                "Type": "FD",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "The student is asked to design an experimental procedure to determine whether `R_X` is ohmic using the equipment provided.",
+                    "Using the symbols shown, draw a diagram of a circuit that the student could use to determine whether `R_X` is ohmic, including the appropriate placement of the measurement devices.",
+                    "problems/APP2/media/18a.jpg"
+                ],
+                "AnswerChoices": {}
+            },
+            "A(ii)": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Referring to your diagram, describe the overall procedure, providing enough detail so that students could replicate the experiment, including any steps necessary to reduce experimental uncertainty."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "Describe how the data collected in part (A) could be graphed and how that graph would be analyzed to determine whether `R_X` is ohmic."
+                ],
+                "AnswerChoices": {}
+            },
+            "C(i)": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "problems/APP2/media/18b.jpg",
+                    "In a different experiment, the student uses the same resistors of known resistance, a battery of emf `epsilon` with internal resistance `r`, and an ammeter connected as shown in Figure `1`. The student is asked to determine the internal resistance `r` of the battery. For `text(each value)` of the resistance `R` of the known resistors, the student measures the current in the ammeter. The student's data are represented in the following table.",
+                    "problems/APP2/media/18c.jpg",
+                    "Indicate `text(two)` quantities that could be graphed to yield a straight line that could be used to determine the internal resistance `r` of the battery. Use the blank columns in the table to list any calculated quantities you will graph other than the data provided.",
+                    "Vertical Axis: :FR-1:",
+                    "Horizontal Axis: :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "R",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "1/I",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C(ii)": {
+                "Type": "MGP",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "Plot the data points for the quantities indicated in part (C)(i) on the graph provided. Clearly scale and label all axes, including units, as appropriate."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C(iii)": {
+                "Type": "FD",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Draw a best-fit line to the data graphed in part (C)(ii)."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "D": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "Using the best-fit line, calculate the internal resistance of the battery, in `Omega`."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:12",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            "Modern Physics",
+            "Modern Physics"
+        ],
+        "SubTopics": [
+            "Describe the properties and behavior of an object that exhibits both particle-like and wave-like behavior.",
+            "Describe an interaction between photons and matter using the photoelectric effect."
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 8,
+        "Explain": false,
+        "Content": [
+            "Monochromatic light of wavelength `lambda_0` is incident on a metal with work function `phi`. Electrons are ejected from the metal and have a maximum speed `v_0`."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MC",
+                "NumChoices": 3,
+                "Points": 3,
+                "Explain": true,
+                "Content": [
+                    "When monochromatic light with wavelength greater than `lambda_0` is incident on the metal, electrons are still ejected. Indicate whether the maximum speed of the ejected electrons will be less than, equal to, or greater than `v_0`. Justify your response."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Less Than",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Equal To",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Greater Than",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "SR",
+                "NumChoices": 0,
+                "Points": 3,
+                "Explain": true,
+                "Content": [
+                    "Derive an expression for the maximum speed `v_0` of the electrons when the original light of wavelength `lambda_0` is incident on the metal in terms of `lambda_0,phi`, and physical constants, as appropriate. Begin your derivation by writing a fundamental physics principle or an equation from the reference information."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MC",
+                "NumChoices": 2,
+                "Points": 2,
+                "Explain": true,
+                "Content": [
+                    "Indicate whether the equation derived in part (B) agrees with the justification in part (A). Briefly justify your reasoning."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Yes",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "No",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

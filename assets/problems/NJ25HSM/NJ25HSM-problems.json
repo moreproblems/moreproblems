@@ -4,24 +4,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Seeing Structure In Expressions"
         ],
         "SubTopics": [
-            ""
+            "Interpret parts of an expression, such as terms, factors, and coefficients."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/NJ25HSM/media/1a.jpg",
-            ""
+            "The number of visitors, in `text(millions)`, to Bryce Canyon National Park from `text(2010)` to `text(2014)` can be modeled by the expression `1.281(1.024)^t`, where `t` is the number of `text(years)` since `text(2010)`.",
+            "What is the factor, after `t` `text(years)`, by which the number of visitors has grown since `text(2010)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`1.281`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,7 +29,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`1.024`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -37,15 +37,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`(1.024)^t`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`1.281(1.024)^t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -57,52 +57,30 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "SR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Modeling With Geometry"
         ],
         "SubTopics": [
-            ""
+            "Use geometric shapes, their measures, and their properties to describe objects (e.g., modeling a tree trunk or a human torso as a cylinder)."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A popcorn container is made from a cone with a portion of the cone removed and sealed, as shown. The removed portion of the cone has a height of `1/3` `text(m)`.",
             "problems/NJ25HSM/media/2a.jpg",
-            ""
+            "Create an expression, using `m`, that represents the volume, in `text(cubic centimeters)`, of the popcorn container."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:m/3(m/4)^2pi-1/3(m/12)^2(m/3)pi",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -112,81 +90,91 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Creating Equations"
         ],
         "SubTopics": [
-            ""
+            "Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales."
         ],
         "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/3a.jpg",
-            ""
+            "This item has `bbtext(TWO)` parts.",
+            "Some friends spent a total of `$12.00` on popcorn and drinks at the movie theater. A bucket of popcorn cost `$2.00` and a drink cost `$1`.50."
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Create an equation to represent the relationship between the number of buckets of popcorn, `x`, and the number of drinks, `y`, the friends bought for `$12.00`."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "match:2x+1.5y=12",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "The friends bought `4` drinks.",
+                    "How many buckets of popcorn did they buy?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:3",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "4": {
         "Number": 4,
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Reasoning With Equations & Inequalities"
         ],
         "SubTopics": [
-            ""
+            "Solve quadratic equations by inspection (e.g., for `x^2=49`), taking square roots, completing the square, the quadratic formula and factoring, as appropriate to the initial form of the equation. Recognize when the quadratic formula gives complex solutions and write them as `a+-bi` for real numbers `aandb`."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/4a.jpg",
-            ""
+            "A quadratic equation is shown.",
+            ":ibox:`0=x^2-3x-4`",
+            "Which value is a solution to this equation?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`1`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -194,7 +182,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -202,7 +190,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -210,9 +198,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`4`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -225,23 +213,26 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Geometric Measurement & Dimension"
         ],
         "SubTopics": [
-            ""
+            "Give an informal argument for the formulas for the circumference of a circle, area of a circle, volume of a cylinder, pyramid, and cone. Use dissection arguments, Cavalieri's principle, and informal limit arguments."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "`text(Two)` cylinders, `X` and `Y`, are shown. `text(Each cylinder)` has a height of `10` `text(feet)`.",
             "problems/NJ25HSM/media/5a.jpg",
-            ""
+            "problems/NJ25HSM/media/5b.jpg",
+            "Which statement about these cylinders is true?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The volumes of the `text(two)` cylinders are always equal because they have the same height.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,7 +240,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The volume of cylinder `Y` is always greater because the slant height of cylinder `Y` is greater than the height of cylinder `X`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -257,7 +248,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The relationship between the volumes of the `text(two)` cylinders cannot be determined because the slant height of cylinder `Y` is not given.a",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -265,9 +256,9 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "The relationship between the volumes of the `text(two)` cylinders cannot be determined because the radii of the `text(two)` cylinders are not given.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -280,23 +271,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Interpreting Functions"
         ],
         "SubTopics": [
-            ""
+            "For a function that models a relationship between two quantities, interpret key features of graphs and tables in terms of the quantities, and sketch graphs showing key features given a verbal description of the relationship. Key features include: intercepts; intervals where the function is increasing, decreasing, positive, or negative; relative maximums and minimums; symmetries; end behavior; and periodicity."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/6a.jpg",
-            ""
+            "A function is shown.",
+            ":ibox:`h(t)=-t^2+10t-16`",
+            "For which interval of `t text(-values)` is the function both `text(positive)` and increasing?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`t<5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +297,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`t>8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,15 +305,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`2<t<5`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`5<t<8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -332,52 +325,30 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Similarity, Right Triangles & Trigonometry"
         ],
         "SubTopics": [
-            ""
+            "Use trigonometric ratios and the Pythagorean Theorem to solve right triangles in applied problems."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "`text(Two)` boats are traveling toward a lighthouse that is `200` `text(feet)` (`text(ft)`) above sea level at its top. When the `text(two)` boats and the lighthouse are collinear, the boats are exactly `250` `text(feet)` apart and the boat closest to the lighthouse has an angle of elevation to the top of the lighthouse of `15°`, as shown.",
             "problems/NJ25HSM/media/7a.jpg",
-            ""
+            "What is the value of `x`, rounded to the nearest `text(hundredth)`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "between:11.349:11.355",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -387,52 +358,30 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Modeling With Geometry"
         ],
         "SubTopics": [
-            ""
+            "Apply concepts of density based on area and volume in modeling situations (e.g., `text(persons per square mile),text(BTUs per cubic foot)`)."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/8a.jpg",
-            ""
+            "Hannah has a cone made of steel and a cone made of granite.",
+            ":ibox:• `text(Each cone)` has a height of `10` `text(centimeters)` and a radius of `4` `text(centimeters)`.\n• The density of steel is approximately `7.75` `text(grams per cubic centimeter)`.\n• The density of granite is approximately `2.75` `text(grams per cubic centimeter)`.",
+            "What is the difference, to the nearest `text(gram)`, of the masses of the cones?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "between:837:838.1",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -445,23 +394,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Linear, Quadratic & Exponential Models"
         ],
         "SubTopics": [
-            ""
+            "Construct linear and exponential functions, including arithmetic and geometric sequences, given a graph, a description of a relationship, or two input-output pairs (include reading these from a table)."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/9a.jpg",
-            ""
+            "In `text(2015)`, Macon County had a population of `53text(,)792`. The population increases by `2.5%` `text(annually)`.",
+            "Which function can be used to model the population `t` `text(years)` after `text(2015)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`f(t)=1.025t+53text(,)792`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -469,7 +419,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`f(t)=1.25t+53text(,)792`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -477,15 +427,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`f(t)=53text(,)792(1.025)^t`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`f(t)=53text(,)792(1.25)^t`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -500,23 +450,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Congruence"
         ],
         "SubTopics": [
-            ""
+            "Construct an equilateral triangle, a square, and a regular hexagon inscribed in a circle."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/10a.jpg",
-            ""
+            "Steven constructs an equilateral triangle inscribed in circle `P`. His `text(first three)` steps are shown.",
+            ":ibox:`1`. He creates radius `bar(PQ)` using a point `Q` on the circle.\n`2`. Using point `Q` as the center and the length of `bar(PQ)` as a radius, he uses a compass to construct an arc that intersects the circle at `R`.\n`3`. Using point `R` as the center and the length of `bar(PQ)` as a radius, he uses a compass to construct an arc that intersects the circle at `S`.",
+            "What should be Steven's next step in constructing the equilateral triangle?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "Draw line segments connecting the points `Q`, `R`, and `S` to construct `triangleQRS`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -524,7 +476,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "Draw line segments connecting the points `P`, `R`, and `S` to construct `trianglePRS`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -532,15 +484,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "Construct an arc intersecting the circle by using point `S` as the center and the length of `bar(PQ)` as a radius.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "Construct an arc intersecting the circle by using point `P` as the center and the length of `bar(PQ)` as a radius.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -552,52 +504,29 @@
     },
     "11": {
         "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Creating Equations"
         ],
         "SubTopics": [
-            ""
+            "Create equations and inequalities in one variable and use them to solve problems. Include equations arising from linear and quadratic functions, and simple rational and exponential functions."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/11a.jpg",
-            ""
+            "A rectangular park has an area of `250` `text(square feet)`. The length of the park is `7` `text(feet)` more than `text(twice)` the width, `w`, of the park.",
+            "Create an equation in terms of `w` to model this situation."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:2w^2+7w=250",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -607,52 +536,30 @@
     },
     "12": {
         "Number": 12,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Similarity, Right Triangles & Trigonometry"
         ],
         "SubTopics": [
-            ""
+            "Use congruence and similarity criteria for triangles to solve problems and to prove relationships in geometric figures."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "Lainie wants to calculate the height of a sculpture. She places a mirror on the ground so that when she looks into the mirror she sees the top of the sculpture, as shown.",
             "problems/NJ25HSM/media/12a.jpg",
-            ""
+            "What is the height, in `text(feet)`, of the sculpture?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:20",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -662,52 +569,38 @@
     },
     "13": {
         "Number": 13,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Interpreting Functions"
         ],
         "SubTopics": [
-            ""
+            "Use the process of factoring and completing the square in a quadratic function to show zeros, extreme values, and symmetry of the graph, and interpret these in terms of a context."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/13a.jpg",
-            ""
+            "A function is shown, where `b` is a real number.",
+            "The minimum value of the function is `80`.",
+            "Create an equation for an equivalent function in the form `f(x)=(x-h)^2+k`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "match:(x-8)^2+80",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "KEY2": {
+                "Choice": "match:(x+8)^2+80",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -720,31 +613,32 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Interpreting Functions"
         ],
         "SubTopics": [
-            ""
+            "Use function notation, evaluate functions for inputs in their domains, and interpret statements that use function notation in terms of a context."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/14a.jpg",
-            ""
+            "The model `n(t)=2^t` represents the number of bacteria in a petri dish after `t` `text(hours)`, where `t=0` represents the time when the bacteria were first put into the dish.",
+            "What is the correct value and interpretation of `n(8)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`n(8)=256`, so after `8` `text(hours)` there are `256` bacteria.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`n(8)=256`, so after `256` `text(hours)` there are `8` bacteria.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -752,7 +646,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`n(8)=3`, so after `8` `text(hours)` there are `3` bacteria.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -760,7 +654,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`n(8)=3`, so after `3` `text(hours)` there are `8` bacteria.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -772,52 +666,30 @@
     },
     "15": {
         "Number": 15,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Similarity, Right Triangles & Trigonometry"
         ],
         "SubTopics": [
-            ""
+            "The dilation of a line segment is longer or shorter in the ratio given by the scale factor."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "Triangle `ABC` is dilated with a scale factor of `k` and a center of dilation at the origin to obtain triangle `A'B'C'`.",
             "problems/NJ25HSM/media/15a.jpg",
-            ""
+            "What is the scale factor?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:2.5",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -830,23 +702,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Creating Equations"
         ],
         "SubTopics": [
-            ""
+            "Rearrange formulas to highlight a quantity of interest, using the same reasoning as in solving equations."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/16a.jpg",
-            ""
+            "The gravitational potential energy of an object is given by the formula `P=mgh`.",
+            "Which equation is correctly solved for the height, `h`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`h=P+mg`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -854,7 +727,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`h=P-mg`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -862,15 +735,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`h=P/(mg)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`h=Pmg`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -882,137 +755,76 @@
     },
     "17": {
         "Number": 17,
-        "Type": "MP",
+        "Type": "FR",
         "NumChoices": 0,
         "Topics": [
-            ""
+            "Interpreting Functions"
         ],
         "SubTopics": [
-            ""
+            "Calculate and interpret the average rate of change of a function (presented symbolically or as a table) over a specified interval. Estimate the rate of change from a graph."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "Answer Part A and Part B for this question.",
-            "problems/NJ25HSM/media/17a.jpg",
-            ""
+            "The function `f(t)=-16t2+20t+4` gives the height of a ball, in `text(feet)`, `t` `text(seconds)` after it is tossed.",
+            "What is the average rate of change, in `text(feet per second)`, over the interval `[0.75,1.25]`?"
         ],
-        "AnswerChoices": {},
-        "Parts": {
-            "A": {
-                "Type": "FR",
-                "NumChoices": 0,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
-            },
-            "B": {
-                "Type": "MC",
-                "NumChoices": 4,
-                "Points": 1,
-                "Explain": false,
-                "Content": [
-                    ""
-                ],
-                "AnswerChoices": {
-                    "A": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "B": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "C": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    },
-                    "D": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": false,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:-12",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
                 }
             }
-        }
+        },
+        "Parts": {}
     },
     "18": {
         "Number": 18,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Expressing Geometric Properties With Equations"
         ],
         "SubTopics": [
-            ""
+            "Use coordinates to compute perimeters of polygons and areas of triangles and rectangles, e.g., using the distance formula."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/18a.jpg",
-            ""
+            "What is the exact perimeter of a parallelogram with vertices at `(3,2)`, `(4,4)` and `(6,1)`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "match:2sqrt(10)+2sqrt(5)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "KEY2": {
+                "Choice": "match:2sqrt(13)+2sqrt(5)",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "KEY3": {
+                "Choice": "match:2sqrt(10)+2sqrt(13)",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1025,23 +837,24 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Interpreting Functions"
         ],
         "SubTopics": [
-            ""
+            "Relate the domain of a function to its graph and, where applicable, to the quantitative relationship it describes."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/19a.jpg",
-            ""
+            "The function `h(p)` represents the cost for a company to manufacture `p` posters.",
+            "What is the domain of the function?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "all integers",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1049,7 +862,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "all real numbers",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1057,15 +870,15 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "all `text(non-negative)` integers",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "all `text(positive)` rational numbers",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1077,26 +890,27 @@
     },
     "20": {
         "Number": 20,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [
-            ""
+            "Congruence"
         ],
         "SubTopics": [
-            ""
+            "Given a rectangle, parallelogram, trapezoid, or regular polygon, describe the rotations and reflections that carry it onto itself."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/20a.jpg",
-            ""
+            "A square is rotated about its center.",
+            "Select all of the angles of rotation that will map the square onto itself."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`45` `text(degrees)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1104,7 +918,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`60` `text(degrees)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1112,17 +926,33 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`90` `text(degrees)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`120` `text(degrees)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "`180` `text(degrees)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "`270` `text(degrees)`",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1132,52 +962,30 @@
     },
     "21": {
         "Number": 21,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Similarity, Right Triangles & Trigonometry"
         ],
         "SubTopics": [
-            ""
+            "Use congruence and similarity criteria for triangles to solve problems and to prove relationships in geometric figures."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A `9text(-foot)` (`text(ft)`) ladder and a `4text(-foot)` ladder are leaning against a house. The `text(two)` ladders create angles of the same measure with the ground. The `4text(-foot)` ladder has a height of `3.8` `text(feet)` against the house.",
             "problems/NJ25HSM/media/21a.jpg",
-            ""
+            "What is the height, in `text(feet)`, of the `9text(-foot)` ladder against the house?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:8.55",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1187,34 +995,34 @@
     },
     "22": {
         "Number": 22,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
-            ""
+            "Interpreting Categorical & Quantitative Data"
         ],
         "SubTopics": [
-            ""
+            "Compute (using technology) and interpret the correlation coefficient of a linear fit."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/22a.jpg",
-            ""
+            "Select all of the values of a correlation coefficient that suggest a strong linear relationship between `text(two)` variables."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`0.8`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`0.4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1222,7 +1030,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`0`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1230,9 +1038,17 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`-0.1`",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`-0.9`",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1242,52 +1058,40 @@
     },
     "23": {
         "Number": 23,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MFR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Reasoning With Equations & Inequalities"
         ],
         "SubTopics": [
-            ""
+            "Solve systems of linear equations exactly and approximately (e.g., with graphs), focusing on pairs of linear equations in two variables."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/23a.jpg",
-            ""
+            "A system of equations is shown.",
+            ":ibox:`4c+2d=11`\n\n`7/2d=41-22c`",
+            "What is the solution to the system?",
+            "`c=` :FR-1:",
+            "`d=` :FR-2:"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "1.45",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "2.6",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1297,52 +1101,30 @@
     },
     "24": {
         "Number": 24,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Circles"
         ],
         "SubTopics": [
-            ""
+            "Derive using similarity the fact that the length of the arc intercepted by an angle is proportional to the radius, and define the radian measure of the angle as the constant of proportionality; derive the formula for the area of a sector."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "Circle `E` is shown, where `/_E` measures `0.44` `text(radians)` and `EF=7` `text(inches)`.",
             "problems/NJ25HSM/media/24a.jpg",
-            ""
+            "What is the area of the shaded region, to the nearest `text(hundredth of a square inch)`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:10.78",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1352,26 +1134,27 @@
     },
     "25": {
         "Number": 25,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
-            ""
+            "Congruence"
         ],
         "SubTopics": [
-            ""
+            "Use the definition of congruence in terms of rigid motions to show that two triangles are congruent if and only if corresponding pairs of sides and corresponding pairs of angles are congruent."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/25a.jpg",
-            ""
+            "All corresponding sides and angles of `triangleRST` and `triangleDEF` are congruent.",
+            "Select all of the statements that must be true."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "There is a reflection that maps `bar(RS)` to `bar(DE)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1379,7 +1162,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "There is a dilation that maps `triangleRST` to `triangleDEF`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1387,15 +1170,23 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "There is a translation followed by a rotation that maps `bar(RT)` to `bar(DF)`.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "There is a sequence of transformations that maps `triangleRST` to `triangleDEF`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "There is not necessarily a sequence of rigid motions that maps `triangleRST` to `triangleDEF`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1407,52 +1198,29 @@
     },
     "26": {
         "Number": 26,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Creating Equations"
         ],
         "SubTopics": [
-            ""
+            "Create equations in two or more variables to represent relationships between quantities; graph equations on coordinate axes with labels and scales."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/26a.jpg",
-            ""
+            "Joshua draws `text(two)` squares. The area of square `M` is `3/4` the area of square `N`.",
+            "Create an equation that relates the side length of square `M`, `s`, and the area of square `N`, `A`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:s^2=3A/4",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1462,52 +1230,28 @@
     },
     "27": {
         "Number": 27,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
-            ""
+            "Expressing Geometric Properties With Equations"
         ],
         "SubTopics": [
-            ""
+            "Prove the slope criteria for parallel and perpendicular lines and use them to solve geometric problems (e.g., find the equation of a line parallel or perpendicular to a given line that passes through a given point)."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/NJ25HSM/media/27a.jpg",
-            ""
+            "Create the equation of a line that is perpendicular to `2y=14+2/3x` and passes through the point `(-2,8)`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:y=-3x+2",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1520,23 +1264,25 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
-            ""
+            "Interpreting Categorical & Quantitative Data"
         ],
         "SubTopics": [
-            ""
+            "Distinguish between correlation and causation."
         ],
         "SuppContent": [],
-        "SuppTools": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "Juan records the number of hot dogs sold and the number of cars that drive by a hot dog stand `text(each hour)`. His data are shown in the table.",
             "problems/NJ25HSM/media/28a.jpg",
-            ""
+            "Based on his data, which conclusion can Juan make?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "An increase in cars is associated with a decrease in hot dog sales.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1544,15 +1290,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "An increase in cars is associated with an increase in hot dog sales.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "An increase in cars causes a decrease in hot dog sales.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1560,117 +1306,7 @@
                 }
             },
             "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "29": {
-        "Number": 29,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSM/media/29a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "30": {
-        "Number": 30,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/NJ25HSM/media/30a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
+                "Choice": "An increase in cars causes an increase in hot dog sales.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
