@@ -1,0 +1,14 @@
+{
+    "Directions": "Refer to the following information, then answer each question that follows.",
+    "Context": [],
+    "Title": "",
+    "Subtitle": "",
+    "Author": "",
+    "LabelType": "P",
+    "Content": [
+        [" ", "Consider the following `tttext(binarySearch)` method. The method correctly performs a binary search."],
+        [" ", ":ibox:`tttext(/**)` Precondition: `tttext(data)` is sorted in increasing order. `tttext(*/)`\n`tttext(public static int binarySearch(int[] data, int target))`\n`tt({`\n\t`tttext(int start = 0;)`\n\t`tttext(int end = data.length - 1;)`\n\t`tttext(while (start <= end))`\n\t`tt({`\n\t\t`tttext(int mid = (start + end))tttext( / 2; if (target < data[mid]))`\t`tttext(/* Calculate midpoint */)`\n\t\t`tt({`\n\t\t\t`tttext(end = mid - 1;)`\n\t\t`tt}`\n\t\t`tttext(else if (target > data[mid]))`\n\t\t`tt({`\n\t\t\t`tttext(start = mid + 1;)`\n\t\t`tt}`\n\t\t`tttext(else)`\n\t\t`tt({`\n\t\t\t`tttext(return mid;)`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(return -1;)`\n`tt}`"]
+    ],
+    "Copyright": "",
+    "References": []
+}

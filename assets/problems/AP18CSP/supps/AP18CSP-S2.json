@@ -1,0 +1,14 @@
+{
+    "Directions": "Refer to the information below, then answer each question that follows.",
+    "Context": [],
+    "Title": "",
+    "Subtitle": "",
+    "Author": "",
+    "LabelType": "P",
+    "Content": [
+        [" ", "`text(Byte)` pair encoding is a data encoding technique. The encoding algorithm looks for pairs of characters that appear in the string more than `text(once)` and replaces `text(each instance)` of that pair with a corresponding character that does not appear in the string. The algorithm saves a list containing the mapping of character pairs to their corresponding replacement characters."],
+        [" ", "For example, the string `tttext(“THIS_IS_THE_BEST_WISH”)` can be encoded as `tttext(“%#_#_%E_BEST_W#H”)` by replacing all instances of `tttext(“TH”)` with `tttext(“%”)` and replacing all instances of `tttext(“IS”)` with `tttext(“#”)`."]
+    ],
+    "Copyright": "",
+    "References": []
+}

@@ -243,7 +243,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "I only",
+                "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The ordered pair `(2,5)` also satisfies the inequality.",
@@ -251,7 +251,7 @@
                 }
             },
             "B": {
-                "Choice": "II only",
+                "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The ordered pair `(1,1)` also satisfies the inequality.",
@@ -259,7 +259,7 @@
                 }
             },
             "C": {
-                "Choice": "I and II only",
+                "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Substituting `(1,1)` into the inequality gives `5(1)-3(1)lt4,or2lt4`, which is a true statement. Substituting `(2,5)` into the inequality gives `5(2)-3(5)lt4,or-5lt4`, which is a true statement. Substituting `(3,2)` into the inequality gives `5(3)-3(2)lt4,or9lt4`, which is not a true statement. Therefore, `(1,1)and(2,5)` are the only ordered pairs that satisfy the given inequality.",
@@ -267,7 +267,7 @@
                 }
             },
             "D": {
-                "Choice": "I and III only",
+                "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The ordered pair `(3,2)` does not satisfy the inequality.",

@@ -1149,11 +1149,11 @@
         "Content": [
             ":ibox:`x-29=(x-a)(x-29)`",
             "Which of the following are solutions to the given equation, where `a` is a constant and `agt30`?",
-            ":ibox:I. `a`\nII. `a+1`\nII. `29`"
+            ":ibox:`text(I)`. `a`\n`text(II)`. `a+1`\n`text(III)`. `29`"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "I and II only",
+                "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1161,7 +1161,7 @@
                 }
             },
             "B": {
-                "Choice": "I and III only",
+                "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1169,7 +1169,7 @@
                 }
             },
             "C": {
-                "Choice": "II and III only",
+                "Choice": "`text(II)` and `text(III)` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Subtracting the expression `(x-29)` from both sides of the given equation yields `0=(x-a)(x-29)-(x-29)`, which can be rewritten as `0=(x-a)(x-29)+(-1)(x-29)`. Since the two terms on the right-hand side of this equation have a common factor of `(x-29)`, it can be rewritten as `0=(x-29)(x-a+(-1)),or0=(x-29)(x-a-1)`. Since `x-a-1` is equivalent to `x-(a+1)`, the equation `0=(x-29)(x-a-1)` can be rewritten as `0=(x-29)(x-(a+1))`. By the zero product property, it follows that `x-29=0orx-(a+1)=0`. Adding `29` to both sides of the equation `x-29=0` yields `x=29`. Adding `a+1` to both sides of the equation `x-(a+1)=0h` yields `x=a+1`. Therefore, the two solutions to the given equation are `29anda+1`. Thus, only `a+1and29`, not a, are solutions to the given equation.",
@@ -1177,7 +1177,7 @@
                 }
             },
             "D": {
-                "Choice": "I, II, and III",
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1264,7 +1264,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "I only",
+                "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1272,7 +1272,7 @@
                 }
             },
             "B": {
-                "Choice": "II only",
+                "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "For the function `f`, since the base of the exponent, `1.25`, is greater than `1` , the value of `(1.25)^x` increases as `x` increases. Therefore, the value of `18(1.25)^x` and the value of `18(1.25)^x+41` also increase as `x` increases. Since `f` is therefore an increasing function where `xge0`, the function `f` has no maximum value. For the function `g`, since the base of the exponent, `0.73`, is less than `1`, the value of `(0.73)^x` decreases as `x` increases. Therefore, the value of `9(0.73)^x` also decreases as `x` increases. It follows that the maximum value of `g(x)` for `xge0` occurs when `x=0`. Substituting 0 for x in the function `g` yields `g(0)=9(0.73)^0` which is equivalent to `g(0)=9(1),org(0)=9`. Therefore, the maximum value of `g(x)` for `xge0` is `9`, which appears as a coefficient in equation II. So, of the two equations given, only II displays, as a constant or coefficient, the maximum value of the function it defines, where `xge0`.",

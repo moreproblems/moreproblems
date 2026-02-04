@@ -1,0 +1,4019 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment, which uses the variables `ttr`, `tts`, and `ttt`.",
+            ":ibox:`tt(rlarr1)`\n`tt(slarr2)`\n`tt(tlarr3)`\n`tt(rlarrs)`\n`tt(slarrt)`\n`tt(text(DISPLAY (r)))`\n`tt(text(DISPLAY (s)))`",
+            "What is displayed as a result of running the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(1 1)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(1 2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(2 3)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(3 2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is a true statement about program documentation?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Program documentation should not be changed after it is `text(first)` written.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Program documentation is only needed for programs in development; it is not needed after a program is completed.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Program documentation is useful when programmers collaborate but not when a programmer works individually on a project.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Program documentation is useful during initial program development and also when modifications are made to existing programs.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following best explains what happens when a new device is connected to the Internet?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A device driver is assigned to the device.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "An Internet Protocol (IP) address is assigned to the device.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A packet number is assigned to the device.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A Web site is assigned to the device.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            "problems/AP16CSP/media/4a.jpg",
+            "Which of the following replacements for `tttext(<MISSING CONDITION>)` will result in an infinite loop?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(j=6)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(j>=6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(j=7)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(j>7)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The algorithm below is used to simulate the results of flipping a coin `4` times. Consider the goal of determining whether the simulation resulted in an equal number of heads and tails.",
+            ":ibox:Step `1` : Initialize the variables `tttext(heads_counter)` and `tttext(flip_counter)` to `0`.\n\nStep `2` : A variable `tttext(coin_flip)` is randomly assigned a value of either `0` or `1`. If `tttext(coin_flip)` has the value `0`, the coin flip result is heads, so `tttext(heads_counter)` is incremented by `1`.\n\nStep `3` : Increment the value of `tttext(flip_counter)` by `1`.\n\nStep `4` : Repeat steps `2` and `3` until `tttext(flip_counter)` equals `4`.",
+            "Following execution of the algorithm, which of the following expressions indicates that the simulation resulted in an equal number of heads and tails?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt(text(coin_flip)=1)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt(text(flip_counter)=1)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt(text(flip_counter)=2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt(text(heads_counter)=2)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An algorithm has been developed to compute the sum of all the elements in a list of integers. Which of the following programming structures must be added to the existing algorithm so that the new algorithm computes the sum of only the even integers in the list?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Iteration",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Searching",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Selection",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Sequencing",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following activities poses the greatest personal cybersecurity risk?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Making a purchase at an online store that uses public key encryption to transmit credit card information",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Paying a bill using a secure electronic payment system",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Reserving a hotel room by e-mailing a credit card number to a hotel",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Withdrawing money from a bank account using an automated teller machine (ATM)",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The code segment below uses the procedure `tttext(IsFound (list, item))`, which returns `tttext(true)` if `tttext(item)` appears in list and returns `tttext(false)` otherwise. The list `tttext(resultList)` is initially empty.",
+            ":ibox:`tttext(FOR EACH item IN inputList1)`\n`tt({`\n\t`tttext(IF (IsFound (inputList2, item))`\n\t`tt({`\n\t\t`tttext(APPEND (resultList, item))`\n\t`tt}`\n`tt}`",
+            "Which of the following best describes the contents of `tttext(resultList)` after the code segment is executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "All elements in `tttext(inputList1)` followed by all elements in `tttext(inputList2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Only elements that appear in both `tttext(inputList1)` and `tttext(inputList2)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Only elements that appear in either `tttext(inputList1)` or `tttext(inputList2)` but not in both lists",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Only elements that appear in `tttext(inputList1)` but not in `tttext(inputList2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A programmer is writing a program that is intended to be able to process large amounts of data. Which of the following considerations is `text(LEAST)` likely to affect the ability of the program to process larger data sets?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "How long the program takes to run",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "How many programming statements the program contains",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "How much memory the program requires as it runs",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "How much storage space the program requires as it runs",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is `text(LEAST)` likely to indicate a phishing attack?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "An e-mail from your bank asks you to call the number on your card to verify a transaction",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "An e-mail from a merchant asks that you click on a link to reset your password",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "An e-mail from a utility company asks you to enter your date of birth and social security number for verification purposes",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "An e-mail indicates that you have won a large sum of money and asks you to enter your bank account number so that the money can be transferred to you",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is considered an `ultext(unethical)` use of computer resources?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Downloading freeware or shareware onto your home computer",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Purchasing a game from an app store and downloading it directly to a mobile device",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Purchasing a `text(single-user)` copy of photo editing software and installing it on all the computers in a computer lab",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Searching online for an electronic version of a school textbook",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following statements are true about using a high-level programming language instead of a lower-level language?",
+            ":ibox:`text(I)`. Programs written in a high-level language are generally easier for people to read than programs written in a low-level language.\n\n`text(II)`. A high-level language provides programmers with more abstractions than a low-level language.\n\n`text(III)`. Programs written in a high-level language are generally easier to debug than programs written in a low-level language."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(I)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(II)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A student is recording a song on her computer. When the recording is finished, she saves a copy on her computer. The student notices that the saved copy is of lower sound quality than the original recording. Which of the following could be a possible explanation for the difference in sound quality?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The song was saved using fewer `text(bits per second)` than the original song.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The song was saved using more `text(bits per second)` than the original song.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The song was saved using a lossless compression technique.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Some information is lost every time a file is saved from `text(one)` location on a computer to another location.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following program, which is intended to display the number of times a number `tttext(target)` appears in a list.",
+            "problems/AP16CSP/media/14a.jpg",
+            "Which of the following best describes the behavior of the program?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The program correctly displays the number of times `tttext(target)` appears in the list.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The program does not work as intended when `tttext(target)` does not appear in the list.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The program does not work as intended when `tttext(target)` appears in the list more than `text(once)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The program does not work as intended when `tttext(target)` appears as the last element of the list.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the program below, the initial value of `ttx` is `5` and the initial value of `tty` is `10`.",
+            ":ibox:`tttext(IF (x < 0))`\n`tt({`\n\t`tttext(DISPLAY (“Foxtrot”))`\n`tt}`\n`tttext(ELSE)`\n`tt({`\n\t`tttext(IF (x > y))`\n\t`tt({`\n\t\t`tttext(DISPLAY (“Hotel”))`\n\t`tt}`\n\t`tttext(ELSE)`\n\t`tt({`\n\t\t`tttext(IF (y > 0))`\n\t\t`tt({`\n\t\t\t`tttext(DISPLAY (“November”))`\n\t\t`tt}`\n\t\t`tttext(ELSE)`\n\t\t`tt({`\n\t\t\t`tttext(DISPLAY (“Yankee”))`\n\t\t`tt}`\n\t`tt}`\n`tt}`",
+            "What is displayed as a result of running the program?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(Foxtrot)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(Hotel)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(November)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(Yankee)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The procedure `tttext(Draw (length, direction))` is used to draw a line segment `tttext(length)` `text(units)` long in a given `tttext(direction)` (left, right, up, or down), starting at the current cursor position. The cursor is then repositioned at the end of the line segment that was drawn. Consider the following program, where the cursor starts in the upper left corner of a grid of dots. The dots are spaced `text(one unit)` apart.",
+            ":ibox:`tttext(Draw (1, right))`\n`tttext(Draw (2, down))`\n`tttext(Draw (1, left))`\n`tttext(Draw (1, right))`\n`tttext(Draw (1, up))`\n`tttext(Draw (1, left))`",
+            "Which of the following represents the figure that is drawn by the program?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/AP16CSP/media/16a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/AP16CSP/media/16b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/AP16CSP/media/16c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/AP16CSP/media/16d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Central High School keeps a database of information about `text(each student)`, including the numeric variables `tttext(numberOfAbsences)` and `tttext(gradePointAverage)`. The expression below is used to determine whether a student is eligible to receive an academic award.",
+            ":ibox:`tt(text((numberOfAbsences)<=text(5)))tttext( AND (gradePointAverage > 3.5))`",
+            "Which of the following pairs of values indicates that a student is eligible to receive an academic award?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(numberOfAbsences = 3)`, `tttext(gradePointAverage = 3.5)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(numberOfAbsences = 5)`, `tttext(gradePointAverage = 3.8)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(numberOfAbsences = 6)`, `tttext(gradePointAverage = 3.4)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(numberOfAbsences = 6)`, `tttext(gradePointAverage = 3.6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Computers are often used to search through large sets of data to find useful patterns in the data. Which of the following tasks is NOT an example where searching for patterns is needed to produce useful information?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A credit card company analyzing credit card purchases to identify potential fraudulent charges",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A grocery store analyzing customers' past purchases to suggest new products the customer may be interested in",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A high school analyzing student grades to identify the students with the top `text(ten)` highest grade point averages",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "An online retailer analyzing customers' viewing habits to suggest other products based on the purchasing history of other customers",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The code fragment below is intended to display `tttext(“odd”)` if the positive number `tttext(num)` is odd.",
+            "problems/AP16CSP/media/19a.jpg",
+            "Which of the following can be used to replace `tttext(<MISSING CONDITION>)` so that the code fragment will work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext((num MOD 1) = 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext((num MOD 1) = 1)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext((num MOD 2) = 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext((num MOD 2) = 1)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [
+            "problems/AP16CSP/supps/AP16CSP-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "What is the minimum number of connections that must be broken or removed in the network before computer `text(E)` can no longer communicate with computer `text(F)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`1`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`2`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`3`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`4`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "21": {
+        "Number": 21,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [
+            "problems/AP16CSP/supps/AP16CSP-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following statements about security in the network is true?",
+            ":ibox:`text(I)`. Computers `text(A)` and `text(D)` need to communicate with at least `text(two)` additional computers in the network in order to communicate with each other.\n\n`text(II)`. Computers `text(B)` and `text(C)` can communicate with each other without additional computers being aware of the communication."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(I)` and `text(II)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Neither `text(I)` nor `text(II)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "22": {
+        "Number": 22,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "ASCII is a character-encoding scheme that uses `7` `text(bits)` to represent `text(each character)`. The decimal (base `10`) values `65` through `90` represent the capital letters `text(A)` through `text(Z)`, as shown in the table below.",
+            "problems/AP16CSP/media/22a.jpg",
+            "problems/AP16CSP/media/22b.jpg",
+            "What ASCII character is represented by the binary (base `2`) number `1001010` ?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(H)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(I)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(J)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(K)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "23": {
+        "Number": 23,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A user enters a Web address in a browser, and a request for a file is sent to a Web server. Which of the following best describes how the file is sent to the user"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The file is broken into packets for transmission. The packets must be reassembled upon receipt.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The file is broken into packets for transmission. The user's browser must request `text(each packet)` in order until all packets are received.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The server attempts to connect directly to the user's computer. If the connection is successful, the entire file is sent. If the connection is unsuccessful, an error message is sent to the user.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The server repeatedly attempts to connect directly to the user's computer until a connection is made. Once the connection is made, the entire file is sent.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "24": {
+        "Number": 24,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Some programming languages use constants, which are variables that are initialized at the beginning of a program and never changed. Which of the following are good uses for a constant?",
+            ":ibox:`text(I)`. To represent the mathematical value `pi` (pi) as `3.14`\n\n`text(II)`. To represent the current score in a game\n\n`text(III)`. To represent a known value such as the number of `text(days)` in a `text(week)`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` and `text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(I)` and `text(III)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(II)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "25": {
+        "Number": 25,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A cable television company stores information about movie purchases made by subscribers. `text(Each day)`, the following information is summarized and stored in a publicly available database.",
+            ":ibox:• The `text(day)` and date `text(each movie)` was purchased\n\n• The title of `text(each movie)` purchased\n\n• The cities where subscribers purchased `text(each movie)`\n\n• The number of times `text(each movie)` was purchased by subscribers in a given city",
+            "A sample portion of the database is shown below. The database is sorted by date and movie title.",
+            "problems/AP16CSP/media/25a.jpg",
+            "Which of the following CANNOT be determined using only the information in the database?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The date when a certain movie was purchased the greatest number of times",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The number of movies purchased by an individual subscriber for a particular `text(month)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The total number of cities in which a certain movie was purchased",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The total number of movies purchased in a certain city during a particular `text(month)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "26": {
+        "Number": 26,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The question below uses a robot in a grid of squares. The robot is represented as a triangle, which is initially in the bottom-left square of the grid and facing toward the top of the grid.",
+            "problems/AP16CSP/media/26a.jpg",
+            "Code for the procedure `tttext(Mystery)` is shown below. Assume that the parameter `ttp` has been assigned a positive integer value (e.g., `1`, `2`, `3`, ...).",
+            "problems/AP16CSP/media/26b.jpg",
+            "Which of the following shows a possible result of calling the procedure?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/AP16CSP/media/26c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/AP16CSP/media/26d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/AP16CSP/media/26e.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/AP16CSP/media/26f.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "27": {
+        "Number": 27,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A new bank plans to make customer convenience a priority by minimizing the amount of time a customer waits in line. The bank is considering `text(two)` options: a `text(single)` line where the customer at the front waits for the next available teller, or separate lines for `text(each teller)`. The bank decides to use a computer simulation of these `text(two)` options to determine the average wait time for customers.",
+            "Which of the following is NOT true about the bank's plan?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The bank can incorporate other factors, such as the number of tellers, in the simulation.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The bank can use the simulation to investigate these `text(two)` options without causing inconvenience for customers.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The bank may consider new alternatives based on the simulation results.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The simulation will not produce usable results because actual customer data are not available.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "28": {
+        "Number": 28,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the code segment below.",
+            ":ibox:`tttext(Line 1:)`\t`tttext(IF (a = 0))`\n`tttext(Line 2:)`\t`tt({`\n`tttext(Line 3:)`\t\t`tt(blarra+10)`\n`tttext(Line 4:)`\t`tt}`\n`tttext(Line 5:)`\t`tttext(ELSE)`\n`tttext(Line 6:)`\t`tt({`\n`tttext(Line 7:)`\t\t`tt(blarra+20)`\n`tttext(Line 8:)`\t`tt}`",
+            "Which of the following changes will `text(NOT)` affect the results when the code segment is executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Changing line `3` to `tt(blarr10)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Changing line `3` to `tt(alarrb+10)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Changing line `7` to `tt(blarr20)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Changing line `7` to `tt(alarrb+20)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "29": {
+        "Number": 29,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A programmer wrote the program below. The program uses a list of numbers called `tttext(numList)`. The program is intended to display the sum of the numbers in the list.",
+            "problems/AP16CSP/media/29a.jpg",
+            "In order to test the program, the programmer initializes `tttext(numList)` to `tttext([0, 1, 4, 5])`. The program displays `tt10`, and the programmer concludes that the program works as intended. Which of the following is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The conclusion is correct; the program works as intended.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The conclusion is incorrect; the program does not display the correct value for the test case `tttext([0, 1, 4, 5])`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The conclusion is incorrect; using the test case `tttext([0, 1, 4, 5])` is not sufficient to conclude the program is correct.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The conclusion is incorrect; using the test case `tttext([0, 1, 4, 5])` only confirms that the program works for lists in increasing order.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "30": {
+        "Number": 30,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A flowchart is a way to visually represent an algorithm. The flowchart below uses the following building blocks.",
+            "problems/AP16CSP/media/30a.jpg",
+            "problems/AP16CSP/media/30b.jpg",
+            "What is displayed as a result of executing the algorithm in the flowchart?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt5`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt15`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(1 2 3 4)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(1 2 3 4 5)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "31": {
+        "Number": 31,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "`text(Two)` lists, `tttext(list1)` and `tttext(list2)`, contain the names of books found in `text(two)` different collections. A librarian wants to create `tttext(newList)`, which will contain the names of all books found in either list, in alphabetical order, with duplicate entries removed.",
+            ":ibox:For example, if `tttext(list1)` contains\n`tttext([“Macbeth”, “Frankenstein”, “Jane Eyre”])`\n\nand `tttext(list2)` contains\n`tttext([“Frankenstein”, “Dracula”, “Macbeth”, “Hamlet”])`\n\nthen `tttext(newList)` will contain\n`tttext([“Dracula”, “Frankenstein”, “Hamlet”, “Jane Eyre”, “Macbeth”])`.",
+            "The following procedures are available to create `tttext(newList)`.",
+            "problems/AP16CSP/media/31a.jpg",
+            "Which of the following code segments will correctly create `tttext(newList)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":ibox:`tt(text(newList)larrtext(Combine (list1, list2)))`\n`tt(text(newList)larrtext(Sort (newList)))`\n`tt(text(newList)larrtext(RemoveDuplicates (newList)))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":ibox:`tt(text(list1)larrtext(Sort (list1)))`\n`tt(text(list2)larrtext(Sort (list2)))`\n`tt(text(newList)larrtext(Combine (list1, list2)))`\n`tt(text(newList)larrtext(RemoveDuplicates (newList)))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tt(text(list1)larrtext(RemoveDuplicates (list1)))`\n`tt(text(list2)larrtext(RemoveDuplicates (list2)))`\n`tt(text(newList)larrtext(Combine (list1, list2)))`\n`tt(text(newList)larrtext(Sort (newList)))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tt(text(list1)larrtext(RemoveDuplicates (list1)))`\n`tt(text(list1)larrtext(Sort (list1)))`\n`tt(text(list2)larrtext(RemoveDuplicates (list2)))`\n`tt(text(list2)larrtext(Sort (list2)))`\n`tt(text(newList)larrtext(Combine (list1, list2)))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "32": {
+        "Number": 32,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An Internet service provider (ISP) is considering an update to its servers that would save copies of the Web pages most frequently visited by `text(each user)`. Which of the following is `text(LEAST)` likely to occur as a result of the update?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Average response time for user requests might decrease.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Privacy of users might be negatively affected.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Storage requirements for the servers might increase.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Web sites that are not visited frequently might no longer be accessible to users.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "33": {
+        "Number": 33,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is a characteristic of the fault-tolerant nature of routing on the Internet?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The ability to use a hierarchical naming system to avoid naming conflicts",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The ability to provide data transmission even when some connections have failed",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The ability to resolve errors in domain name system (DNS) lookups",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The ability to use multiple protocols such as hypertext transfer protocol (HTTP), Internet protocol (IP), and simple mail transfer protocol (SMTP) to transfer data",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "34": {
+        "Number": 34,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A car manufacturer uses simulation software during the design process for a new car. Which of the following are reasons to use simulation software in this context?",
+            ":ibox:`text(I)`. Using simulation software can save the company money by helping to compare designs early in the process, before prototype cars are built.\n\n`text(II)`. Using simulation software can help to identify safety issues by providing data about how different mechanical components will interact in a wide variety of situations.\n\n`text(III)`. The manufacturer can present simulation software to customers to demonstrate different design possibilities."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` and `text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(I)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(II)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "35": {
+        "Number": 35,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "`text(Two)` computers are built by different manufacturers. `text(One)` is running a Web server and the other is running a Web browser. Which of the following best describes the ability of the `text(two)` computers to communicate with each other across the Internet?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The computers cannot communicate because different manufacturers use different communication protocols.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The computers can communicate, but additional hardware is needed to convert data packets from `text(one)` computer's protocol to the other computer's protocol.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The computers can communicate directly only if the messages consist of text; other formats cannot be interpreted across computers.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The computers can communicate directly because Internet communication uses standard protocols.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "36": {
+        "Number": 36,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Programs `text(I)` and `text(II)` below are each intended to calculate the sum of the integers from `1` to `ttn`. Assume that `ttn` is a positive integer (e.g., `1`, `2`, `3`, ...).",
+            "problems/AP16CSP/media/36a.jpg",
+            "problems/AP16CSP/media/36b.jpg",
+            "Which of the following best describes the behavior of the `text(two)` programs?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Program `text(I)` displays the correct sum, but program `text(II)` does not.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Program `text(II)` displays the correct sum, but program `text(I)` does not.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Both program `text(I)` and program `text(II)` display the correct sum.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Neither program `text(I)` nor program `text(II)` displays the correct sum.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "37": {
+        "Number": 37,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A large data set contains information about all students majoring in computer science in colleges across the United States. The data set contains the following information about `text(each student)`.",
+            ":ibox:• The student's gender\n\n• The state in which the student attends college\n\n• The student's grade point average on a `4.0` scale",
+            "Which of the following questions could be answered by analyzing only information in the data set?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Do students majoring in computer science tend to have higher grade point averages than students majoring in other subjects?",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "How many states have a higher `text(percentage)` of female computer science majors than male computer science majors attending college in that state?",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "What `text(percent)` of students attending college in a certain state are majoring in computer science?",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Which college has the highest number of students majoring in computer science?",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "38": {
+        "Number": 38,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following is a true statement about cloud computing?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Cloud computing is convenient to implement but has a negative effect on the scalability of systems.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Cloud computing is useful for large businesses but is not useful for individuals.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Storing data using cloud computing can help ensure that data are not lost if a user's computer stops functioning.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Storing data using cloud computing improves security over storing data on a personal computer.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "39": {
+        "Number": 39,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following statements is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Every problem can be solved with an algorithm for all possible inputs, in a reasonable amount of time, using a modern computer.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Every problem can be solved with an algorithm for all possible inputs, but some will take more than `100` `text(years)`, even with the fastest possible computer.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Every problem can be solved with an algorithm for all possible inputs, but some of these algorithms have not been discovered yet.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "There exist problems that no algorithm will ever be able to solve for all possible inputs.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "40": {
+        "Number": 40,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following numbers.",
+            ":ibox:• Binary `1100`\n\n• Decimal `11`\n\n• Hexadecimal `text(D)`",
+            "Which of the following lists the numbers in order from least to greatest?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Binary `1100`, Decimal `11`, Hexadecimal `text(D)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Decimal `11`, Binary `1100`, Hexadecimal `text(D)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Decimal `11`, Hexadecimal `text(D)`, Binary `1100`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Hexadecimal `text(D)`, Decimal `11`, Binary `1100`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "41": {
+        "Number": 41,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An algorithm will be used to identify the maximum value in a list of `text(one)` or more integers. Consider the `text(two)` versions of the algorithm below.",
+            ":ibox:Algorithm `text(I)`: Set the value of a variable `tttext(max)` to `-1`. Iterate through the list of integer values. If a data value is greater than the value of the variable `tttext(max)`, set `tttext(max)` to the data value.\n\nAlgorithm `text(II)`: Set the value of a variable `tttext(max)` to the `text(first)` data value. Iterate through the remaining values in the list of integers. If a data value is greater than the value of the variable `tttext(max)`, set `tttext(max)` to the data value.",
+            "Which of the following statements best describes the behavior of the `text(two)` algorithms?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Both algorithms work correctly on all input values.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Algorithm `text(I)` always works correctly, but Algorithm `text(II)` only works correctly when the maximum value is not the `text(first)` value in the list.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Algorithm `text(II)` always works correctly, but Algorithm `text(I)` only works correctly when the maximum value is greater than or equal to `-1`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Neither algorithm will correctly identify the maximum value when the input contains both positive and negative input values.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "42": {
+        "Number": 42,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A search engine has a trend-tracking feature that provides information on how popular a search term is. The data can be filtered by geographic region, date, and category. Categories include arts and entertainment, computers and electronics, games, news, people and society, shopping, sports, and travel. Which of the following questions is `text(LEAST)` likely to be answerable using the trends feature?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "In what `text(month)` does a particular sport receive the most searches?",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "In which political candidates are people interested?",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "What is the cost of a certain electronics product?",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Which region of the country has the greatest number of people searching for opera performances?",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "43": {
+        "Number": 43,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A retailer that sells footwear maintains a `text(single)` database containing records with the following information about `text(each item)` for sale in the retailer's store.",
+            ":ibox:• Item identification number\n• Footwear type (sneakers, boots, sandals, etc.)\n• Selling price (in `text(dollars)`)\n• Size\n• Color\n• Quantity available",
+            "Using only the database, which of the following can be determined?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Which items listed in the database are not currently in the store",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Which colors are more popular among men than women",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Which type of footwear is most popular among adults",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The total number of shoes sold in a particular `text(month)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "44": {
+        "Number": 44,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following programs is most likely to benefit from the use of a heuristic?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A program that calculates a student's grade based on the student's quiz and homework scores",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A program that encrypts a folder of digital files",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A program that finds the shortest driving route between `text(two)` locations on a map",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A program that sorts a list of numbers in order from least to greatest",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "45": {
+        "Number": 45,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An author is considering publishing an e-book using a Creative Commons license. In which of the following situations would it be better for the author to use a Creative Commons license instead of a traditional copyright?",
+            ":ibox:`text(I)`. The author wants to make the e-book available as a free download.\n\n`text(II)`. The author wants to prevent people from sharing copies of the e-book on peer-to-peer networks.\n\n`text(III)`. The author wants to allow people permission to use and modify the e-book."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(I)` and `text(III)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(II)` and `text(III)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "46": {
+        "Number": 46,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A city government is attempting to reduce the digital divide between groups with differing access to computing and the Internet. Which of the following activities is `text(LEAST)` likely to be effective in this purpose?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Holding basic computer classes at community centers",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Providing free wireless Internet connections at locations in low-income neighborhoods",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Putting all government forms on the city Web site",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Requiring that every city school has computers that meet a minimum hardware and software standard",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "47": {
+        "Number": 47,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An online store uses `text(6-bit)` binary sequences to identify `text(each unique item)` for sale. The store plans to increase the number of items it sells and is considering using `text(7-bit)` binary sequences. Which of the following best describes the result of using `text(7-bit)` sequences instead of `text(6-bit)` sequences?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`2` more items can be uniquely identified.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`10` more items can be uniquely identified.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`2` times as many items can be uniquely identified.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`10` times as many items can be uniquely identified.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "48": {
+        "Number": 48,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following has the greatest potential for compromising a user's personal privacy?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A group of cookies stored by the user's Web browser",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The Internet Protocol (IP) address of the user's computer",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The user's e-mail address",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The user's public key used for encryption",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "49": {
+        "Number": 49,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The procedure below is intended to display the index in a list of unique names (`tttext(nameList)`) where a particular name (`tttext(targetName)`) is found. If `tttext(targetName)` is not found in `tttext(nameList)`, the code should display `tt0`.",
+            ":ibox:`tttext(PROCEDURE FindName (nameList, targetName))`\n`tt({`\n\t`tt(text(index)larrtext(0))`\n\t`tttext(FOR EACH name IN nameList)`\n\t`tt({`\n\t\t`tt(text(index)larrtext(index + 1))`\n\t\t`tttext(IF (name = targetName))`\n\t\t`tt({`\n\t\t\t`tt(text(foundIndex)larrtext(index))`\n\t\t`tt}`\n\t\tELSE\n\t\t`tt({`\n\t\t\t`tt(text(foundIndex)larrtext(0))`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(DISPLAY (foundIndex))`\n`tt}`",
+            "Which of the following procedure calls can be used to demonstrate that the procedure does `text(NOT)` work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(FindName ([“Andrea”, “Ben”], “Ben”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(FindName ([“Andrea”, “Ben”], “Diane”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(FindName ([“Andrea”, “Ben”, “Chris”], “Ben”))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(FindName ([“Andrea”, “Chris”, “Diane”], “Ben”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "50": {
+        "Number": 50,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Both online newspapers and social media sites are used to distribute information on the Internet. Which of the following best describes an advantage that online newspapers have over social media sites?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The ability to distribute information instantaneously",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The ability to provide credibility to the information distributed",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The ability to provide information that is widely accessible",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The ability to provide media-rich content for low cost",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "51": {
+        "Number": 51,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "When a cellular telephone user places a call, the carrier transmits the caller's voice as well as the voice of the person who is called. The encoded voices are the data of the call. In addition to transmitting the data, the carrier also stores metadata. The metadata of the call include information such as the time the call is placed and the phone numbers of both participants. For which of the following goals would it be more useful to computationally analyze the metadata instead of the data?",
+            ":ibox:`text(I)`. To determine if a caller frequently uses a specific word\n\n`text(II)`. To estimate the number of phone calls that will be placed next `text(Monday)` between `10:30` `text(A.M.)` and `text(noon)`.\n\n`text(III)`. To generate a list of criminal suspects when given the telephone number of a known criminal"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(II)` and `text(III)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "52": {
+        "Number": 52,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the procedure `tttext(Mystery)` below, the parameter number is a positive integer.",
+            ":ibox:`tttext(PROCEDURE Mystery (number))`\n`tt({`\n\t\t`tt(text(REPEAT UNTIL (number)<=text(0)))`\n\t\t`tt({`\n\t\t\t`tt(text(number)larrtext(number - 2))`\n\t\t`tt}`\n\t\t`tttext(IF (number = 0))`\n\t\t`tt({`\n\t\t\t`tttext(RETURN (true))`\n\t\t`tt}`\n\t\t`tttext(ELSE)`\n\t\t`tt({`\n\t\t\t`tttext(RETURN (false))`\n\t\t`tt}`\n`tt}`",
+            "Which of the following best describes the result of running the procedure `tttext(Mystery)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The procedure returns `tttext(true)` when the initial value of number is `2`, and it otherwise returns `tttext(false)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The procedure returns `tttext(true)` when the initial value of number is greater than `2`, and it otherwise returns `tttext(false)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The procedure returns `tttext(true)` when the initial value of number is even, and it otherwise returns `tttext(false)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The procedure returns `tttext(true)` when the initial value of number is odd, and it otherwise returns `tttext(false)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "53": {
+        "Number": 53,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "`text(Two)` grids are shown below. `text(Each grid)` contains a robot represented as a triangle. Both robots are initially facing left. `text(Each robot)` can move into a white or gray square, but cannot move into a black region.",
+            "problems/AP16CSP/media/53a.jpg",
+            "problems/AP16CSP/media/53b.jpg",
+            "For `text(each grid)`, the program below is intended to move the robot to the gray square. The program uses the procedure `tttext(Goal_Reached ())`, which evaluates to `tttext(true)` if the robot is in the gray square and evaluates to `tttext(false)` otherwise.",
+            ":ibox:`tttext(REPEAT UNTIL (Goal_Reached ()))`\n`tt({`\n\t`tttext(IF (CAN_MOVE (right)))`\n\t`tt({`\n\t\t`tttext(ROTATE_RIGHT ())`\n\t`tt}`\n\t`tttext(ELSE)`\n\t`tt({`\n\t\t`tttext(IF (CAN_MOVE (left)))`\n\t\t`tt({`\n\t\t\t`tttext(ROTATE_LEFT ())`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(IF (CAN_MOVE (forward)))`\n\t`tt({`\n\t\t`tttext(MOVE_FORWARD ())`\n\t`tt}`\n`tt}`",
+            "For which of the grids does the program correctly move the robot to the gray square?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Grid `text(I)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Grid `text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Both grid `text(I)` and grid `text(II)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Neither grid `text(I)` nor grid `text(II)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "54": {
+        "Number": 54,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Historically, it has been observed that computer processing speeds tend to `text(double)` every `text(two years)`. Which of the following best describes how technology companies can use this observation for planning purposes?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Technology companies can accurately predict the dates when new computing innovations will be available to use.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Technology companies can plan to `text(double)` the costs of new products `text(each time)` advances in processing speed occur.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Technology companies can set research and development goals based on anticipated processing speeds.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Technology companies can spend less effort developing new processors because processing speed will always improve at the observed rate.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "55": {
+        "Number": 55,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A computer program uses `3` `text(bits)` to represent integers. When the program adds the decimal (base `10`) numbers `5` and `3`, the result is `0`. Which of the following is the best explanation for the result?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "An overflow error occurred.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A round-off error occurred.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The result was affected by lossy data compression.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The result was approximated by a floating-point representation.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "56": {
+        "Number": 56,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A programmer wrote the code segment below to display the average of all the elements in a list called `tttext(numbers)`. There is always at least `text(one)` number in the list.",
+            ":ibox: `tttext(Line 1):`\t`tt(text(count)larrtext(0))`\n `tttext(Line 2):`\t`tt(text(sum)larrtext(0))`\n `tttext(Line 3):`\t`tttext(FOR EACH value IN numbers)`\n `tttext(Line 4):`\t`tt({`\n `tttext(Line 5):`\t\t`tt(count)larrtext(count + 1))`\n `tttext(Line 6):`\t\t`tt(text(sum)larrtext(sum + value))`\n `tttext(Line 7):`\t\t`tt(text(average)larrtext(sum / count))`\n `tttext(Line 8):`\t`tt}`\n `tttext(Line 9):`\t`tttext(DISPLAY (average))`",
+            "The programmer wants to reduce the number of operations that are performed when the program is run. Which change will result in a correct program with a reduced number of operations performed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Interchanging line `1` and line `2`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Interchanging line `5` and line `6`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Interchanging line `6` and line `7`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Interchanging line `7` and line `8`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "57": {
+        "Number": 57,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The diagram below shows a circuit composed of `text(two)` logic gates labeled `tttext(OR)` and `tttext(AND)`. `text(Each gate)` takes `text(two)` inputs and produces a `text(single)` output.",
+            "problems/AP16CSP/media/57a.jpg",
+            "If the inputs `tttext(A)` and `tttext(C)` are both `tttext(true)`, which of the following best describes the output of the `tttext(AND)` gate?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The output will be `tttext(true)` no matter what the value of input `tttext(B)` is.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The output will be `tttext(false)` no matter what the value of input `tttext(B)` is.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The output will be `tttext(true)` if input `tttext(B)` is `tttext(true)`; otherwise it will be `tttext(false)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The output will be `tttext(false)` if input `tttext(B)` is `tttext(true)`; otherwise it will be `tttext(true)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "58": {
+        "Number": 58,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A certain computer game is played between a human player and a computer-controlled player. Every time the computer-controlled player has a turn, the game runs slowly because the computer evaluates all potential moves and selects the best `text(one)`. Which of the following best describes the possibility of improving the running speed of the game?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The game's running speed can only be improved if the game is played between `text(two)` human players instead of with the computer-controlled player.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The game's running speed might be improved by using a process that finds approximate solutions every time the computer-controlled player has a turn.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The game's running speed cannot be improved because computers can only be programmed to find the best possible solution.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The game's running speed cannot be improved because the game is an example of an algorithm that does not run in a reasonable time.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "59": {
+        "Number": 59,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Many Web browsers allow users to open anonymous windows. During a browsing session in an anonymous window, the browser does not record a browsing history or a list of downloaded files. When the anonymous window is exited, cookies created during the session are deleted. Which of the following statements about browsing sessions in an anonymous window is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The activities of a user browsing in an anonymous window will not be visible to people who monitor the user's network, such as the system administrator.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Items placed in a Web store's shopping cart for future purchase during the anonymous browsing session will not be saved on the user's computer.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A user will not be able to log in to e-mail or social media accounts during the anonymous browsing session.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A user browsing in an anonymous window will be protected from viruses launched from any Web sites visited or files downloaded.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "60": {
+        "Number": 60,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following best describes a Distributed Denial of Service (DDoS) attack?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "An attempt by a country to deny its citizens access to the Internet",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "An attempt to deny users access to a Web site's resources by flooding the Web site with requests from multiple systems",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "An attempt by `text(one)` user to deny service to another user by posting material on a social network",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "An attempt by a user of the Internet to get private information from a secure database",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "61": {
+        "Number": 61,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A program is expressed in a programming language. Which of the following is true of the program?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The program can also be expressed as binary code, but will be more easily understood by humans when expressed in a higher-level programming language.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The program can also be expressed as binary code, which will reduce the likelihood of errors.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The program cannot be expressed as binary code, because binary code can only be used to represent data.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Some parts of the program can be expressed as binary code, but operations must be expressed using a higher-level programming language.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "62": {
+        "Number": 62,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A programmer is deciding between using a linear or binary search to find a target value in a sorted list. Which of the following is true?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "In all cases, a binary search of a sorted list requires fewer comparisons than a linear search.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Generally, the advantage of using a binary search over a linear search increases as the size of the list increases.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A linear search will generally run faster than a binary search because a linear search requires fewer lines of code to implement.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Using a linear search is preferable to using a binary search if there is a chance that the target may not be found in the list.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "63": {
+        "Number": 63,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A code segment will be used to swap the values of the variables `tta` and `ttb` using the temporary variable temp.",
+            "Which of the following code segments correctly swaps the values of `tta` and `ttb`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/AP16CSP/media/63a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/AP16CSP/media/63b.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/AP16CSP/media/63c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/AP16CSP/media/63d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "64": {
+        "Number": 64,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The question below uses a robot in a grid of squares. The robot is represented as a triangle, which is initially in the center square of the grid and facing toward the top of the grid.",
+            "problems/AP16CSP/media/64a.jpg",
+            "The following code segment is used to move the robot within the grid.",
+            ":ibox:`tt(text(x)larrtext(RANDOM (1, 3)))`\n`tttext(REPEAT x TIMES)`\n`tt({`\n\t`tttext(ROTATE_RIGHT ())`\n`tt}`\n`tt(text(y)larrtext(RANDOM (1, 2)))`\n`tttext(REPEAT y TIMES)`\n`tt({`\n\t`tttext(MOVE_FORWARD ())`\n`tt}`",
+            "A gray square represents a possible final location of the robot after the code segment is executed. Which of the following represents all possible final locations for the robot?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/AP16CSP/media/64b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/AP16CSP/media/64c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/AP16CSP/media/64d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/AP16CSP/media/64e.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "65": {
+        "Number": 65,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Digital images are often represented by the red, green, and blue values (an RGB triplet) of `text(each individual pixel)` in the image. A photographer is manipulating a digital image and overwriting the original image. Which of the following describes a lossless transformation of the digital image?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Compressing the image in a way that may lose information but will suffer only a small loss of image quality.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Creating the gray scale of an image by averaging the amounts of red, green, and blue in `text(each pixel)` and assigning this new value to the corresponding pixel in the new image. The new value of `text(each pixel)` represents a shade of gray, ranging from white to black.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Creating the negative of an image by creating a new RGB triplet for `text(each pixel)` in which `text(each value)` is calculated by subtracting the original value from `255`. The negative of an image is reversed from the original; light areas appear dark, and colors are reversed.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Modifying part of the image by taking the pixels in `text(one)` part of the picture and copying them to the pixels in another part of the picture.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "66": {
+        "Number": 66,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In the program below, `y` is a positive integer (e.g., `1`, `2`, `3`, ...).",
+            "problems/AP16CSP/media/66a.jpg",
+            "What is the value of `tttext(result)` after running the program?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`y+3`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`3y`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`y^3`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`3^y`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "67": {
+        "Number": 67,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A local government uses Short Message Service (SMS) text messages to alert local residents when roads are closed.",
+            "Which of the following are true statements regarding the benefits of using SMS text messages for the purpose described?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "SMS text messages are guaranteed to reach all residents affected by the road closures.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "SMS text messages are likely to reach recipients quickly.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "SMS text messages are useful for providing detailed detour instructions.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "SMS text messages can be sent to multiple recipients.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "68": {
+        "Number": 68,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following can be represented by a `text(single)` binary digit?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The position of the `text(minute)` hand of a clock",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The remainder when dividing a whole number by `2`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The value of a Boolean variable",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The volume of a car radio",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "69": {
+        "Number": 69,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following Boolean expressions are equivalent to the expression `tt(text(num)>=text(15))`?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext((num > 15))tttext( AND (num = 15))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext((num > 15))tttext( OR (num = 15))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(NOT (num < 15))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(NOT (num < 16))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "70": {
+        "Number": 70,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Researchers have developed a simulation of packets traveling between server computers and client computers in a network. Of the following, which `text(two)` outcomes are most likely to be results of the simulation?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Better understanding of the effect of temporarily unavailable network connections",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Better understanding of the effect of using hexadecimal representations for binary data",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Better understanding of the impact of access to public data in identifying solutions to problems",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Better understanding of the impact of increased connection speeds for frequently visited servers",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "71": {
+        "Number": 71,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The question below uses a robot in a grid of squares. The robot is represented as a triangle, which is initially in the bottom-right square of the grid and facing toward the top of the grid.",
+            "problems/AP16CSP/media/71a.jpg",
+            "Which of the following code segments can be used to move the robot to the gray square?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":ibox:`tttext(REPEAT 4 TIMES)`\n`tt({`\n\t`tttext(MOVE_FORWARD ())`\n\t`tttext(ROTATE_LEFT ())`\n\t`tttext(MOVE_FORWARD ())`\n\t`tttext(ROTATE_RIGHT ())`\n`tt}`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":ibox:`tttext(REPEAT 4 TIMES)`\n`tt({`\n\t`tttext(ROTATE_LEFT ())`\n\t`tttext(MOVE_FORWARD ())`\n\t`tttext(MOVE_FORWARD ())`\n\t`tttext(ROTATE_RIGHT ())`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tttext(REPEAT 2 TIMES)`\n`tt({`\n\t`tttext(REPEAT 4 TIMES)`\n\t`tt({`\n\t\t`tttext(MOVE_FORWARD ())`\n\t`tt}`\n\t`tttext(ROTATE_LEFT ())`\n`tt}`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tttext(REPEAT 2 TIMES)`\n`tt({`\n\t`tttext(REPEAT 2 TIMES)`\n\t`tt({`\n\t\t`tttext(MOVE_FORWARD ())`\n\t\t`tttext(MOVE_FORWARD ())`\n\t\t`tttext(ROTATE_LEFT ())`\n\t`tt}`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "72": {
+        "Number": 72,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following are benefits of using well-named variables in a computer program?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The program will run faster.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The program will be easier for people to read.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The program will have a greater data storage capacity.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The program will be easier to modify in the future.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "73": {
+        "Number": 73,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A school library allows students to borrow laptops. A computer program is used to count the number of times a particular laptop has been borrowed from the library (`tttext(borrows)`) and the number of times the same laptop has been returned to the library (`tttext(returns)`). Which of the following indicate that a particular laptop is `ultext(not)` currently borrowed?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The difference between `tttext(borrows)` and `tttext(returns)` is `text(zero)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The product of `tttext(borrows)` and `tttext(returns)` is a positive even number.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The quotient when `tttext(borrows)` is divided by `tttext(returns)` is greater than `1`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The sum of `tttext(borrows)` and `tttext(returns)` is a positive even number.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "74": {
+        "Number": 74,
+        "Type": "MS",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "In a certain district, `20` `text(percent)` of the voters are expected to vote for Candidate `text(A)` in an election. The computer program below is intended to simulate the result of the election with `ttn` voters, and display the number of votes received by Candidate `text(A)`.",
+            ":ibox:`tttext(Line 1:)`\t`tt(text(sum) larrtext( 0))`\n`tttext(Line 2:)`\t`tttext(REPEAT n TIMES)`\n`tttext(Line 3:)`\t`tt({`\n`tttext(Line 4:)`\t\t`tttext(IF (<MISSING CONDITION>))`\n`tttext(Line 5:)`\t\t`tt({`\n`tttext(Line 6:)`\t\t\t`tt(text(sum)larrtext(sum + 1))`\n`tttext(Line 7:)`\t\t`tt}`\n`tttext(Line 8:)`\t`tt}`\n`tttext(Line 9:)`\t`tttext(DISPLAY (sum))`",
+            "Which of the following can be used to replace `tttext(<MISSING CONDITION>)` in line `4` so that the program works as intended?",
+            "Select `ultext(two)` answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(RANDOM (1, 5))tttext( = 1)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(RANDOM (1, 5))text( )<=tttext( 2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(RANDOM (1, 5))tttext( = 2)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(RANDOM (1, 10))text( )<=tttext( 2)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}

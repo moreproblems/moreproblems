@@ -1162,7 +1162,7 @@
                 }
             },
             "B": {
-                "Choice": "I only",
+                "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1170,7 +1170,7 @@
                 }
             },
             "C": {
-                "Choice": "II only",
+                "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that the dot plot represents a data set of the number of bursts for `13` eruptions of a steam vent. The median of a data set with an odd number of elements is the middle element when the elements are in numerical order. For `13` elements in numerical order, this is the `7^text(th)` element. For this data set, the first `4` elements have a value of `1`, and the next `5` elements have a value of `2`. Thus, the `7^text(th)` element in the ordered data set is `2` and the median number of bursts for the original data set is `2`. If an additional eruption with `11` bursts is added to this data set to create a new data set of `14` eruptions, the median of the new data set will be between the `7^text(th)and8^text(th)` elements in the ordered set, which will also be `2`. Therefore, the median number of bursts for the new data set will be the same as the median number of bursts for the original data set. The mean number of bursts for the original data set is found by adding the values of all `13` elements and dividing that sum by the number of elements, `13`. Since the data is shown in a dot plot, the sum of the values of the elements can be found by multiplying each element's value by its frequency: `1(4)+2(5)+3(2)+4(1)+5(1),or29`. Therefore, the mean number of bursts for the original data set is `29/13`. If an additional eruption with `11` bursts is added to this data set to create a new data set of `14` bursts, the mean number of bursts for the new data set is `(29+11)/14,or40/14`. Since `40/14gt29/13`, the mean number of bursts for the new data set is greater than the mean number of bursts for the original data set. Therefore, of the median number of bursts and the mean number of bursts, only the mean number of bursts is greater for the new data set than for the original data set.",

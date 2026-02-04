@@ -1264,7 +1264,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "I only",
+                "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1272,7 +1272,7 @@
                 }
             },
             "B": {
-                "Choice": "II only",
+                "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Functions `fandg` are both exponential functions with a base of `0.40`. Since `0.40` is less than `1`, functions `fandg` are both decreasing exponential functions. This means that `f(x)andg(x)` decrease as `x` increases. Since `f(x)andg(x)` decrease as `x` increases, the maximum value of each function occurs at the least value of `x` for which the function is defined. It's given that functions `fandg` are defined for `xge0`. Therefore, the maximum value of each function occurs at `x=0`. Substituting `0` for `x` in the equation defining `f` yields  `f(x)=33(0.4)^(0+3)`, which is equivalent to `f(x)=33(0.4)^3,orf(0)=2.112`. Therefore, the maximum value of `f` is `2.112`. Since the equation `f(x)=33(0.4)^(x+3)` doesn't display the value `2.112`, the equation defining `f` doesn't display the maximum value of `f`. Substituting `0` for `x` in the equation defining `g` yields `g(0)=33(0.16)(0.4)^(0-2)`, which can be rewritten as `g(0)=33(0.16)(1/0.4^2),org(0)=33(0.16)(1/0.16)`, which is equivalent to `g(0)=33`. Therefore, the maximum value of `g` is `33`. Since the equation `g(x)=33(0.16)(0.4)^(x-2)` displays the value `33`, the equation defining `g` displays the maximum value of `g`. Thus, only equation II displays, as a constant or coefficient, the maximum value of the function it defines.",

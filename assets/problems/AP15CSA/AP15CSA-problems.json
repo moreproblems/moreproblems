@@ -1,0 +1,2760 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following incomplete method, which is intended to return the number of integers that evenly divide the integer `tttext(inputVal)`. Assume that `tttext(inputVal)` is greater than `0`.",
+            ":ibox:`tttext(public static int numDivisors(int inputVal))`\n`tt({`\n\t`tttext(int count = 0;)`\n\t`tttext(for (int k = 1; k <= inputVal; k++))`\n\t`tt({`\n\t\t`tttext(if ( /* condition */ ))`\n\t\t`tt({`\n\t\t`tttext(count++;)`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(return count;)`\n`tt}`",
+            "Which of the following can be used to replace `tttext(/* condition */)` so that `tttext(numDivisors)` will work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(inputVal % k == 0)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(k % inputVal == 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(inputVal % k != 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(inputVal / k == 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(k / inputVal > 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(for (int r = 3; r > 0; r--))`\n`tt({`\n`tttext(int c;)`\n\n\t`tttext(for (c = 1; c < r; c++))`\n\t`tt({`\n\t\t`tttext(System.out.print(“-”))tttext(;)`\n\t`tt}`\n\t`tttext(for (c = r ; c <= 3; c++))`\n\t`tt({`\n\t\t`tttext(System.out.print(“*”))tttext(;)`\n\t`tt}`\n\n\t`tttext(System.out.println())tttext(;)`\n`tt}`",
+            "What is printed as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(--*)`\n`tttext(-**)`\n`tttext(***)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(*--)`\n`tttext(**-)`\n`tttext(***)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(***)`\n`tttext(-**)`\n`tttext()--*`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(***)`\n`tttext(**-)`\n`tttext(*--)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(--*)`\n`tttext(***)`\n`tttext(--*)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following `text(two)` classes.",
+            ":ibox:`tttext(public class A)`\n`tt({`\n\t`tttext(public void show())`\n\t`tt({`\n\t\t`tttext(System.out.print(“A”))tttext(;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(public class B extends A)`\n`tt({`\n\t`tttext(public void show())`\n\t`tt({`\n\t\t`tttext(System.out.print(“B”))tttext(;)`\n\t`tt}`\n`tt}`",
+            "What is printed as a result of executing the following code segment?",
+            ":ibox:`tttext(A obj = new B())tttext(;)`\n`tttext(obj.show())tttext(;)`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`ttA`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`ttB`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(AB)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(BA)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The code results in a runtime error.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following instance variable and method.",
+            ":ibox:`tttext(private int[] arr;)`\n\n`tttext(/**)` Precondition: `tttext(arr.length > 0)`\n `tttext(* @return)` the largest value in array `tttext(arr)`\n `tttext(*/)`\n`tttext(public int findMax())`\n`tt({`\n\t`tttext(int maxVal = 0;)`\n\t`tttext(for (int val : arr))`\n\t`tt({`\n\t\t`tttext(if (val > maxVal))`\n\t\t`tt({`\n\t\t\t`tttext(maxVal = val;)`\n\t\t`tt}`\n\t`tt}`\n\n\t`tttext(return maxVal;)`\n`tt}`",
+            "Method `tttext(findMax)` is intended to return the largest value in the array `tttext(arr)`. Which of the following best describes the conditions under which the method `tttext(findMax)` will `ultext(not)` work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The largest value in `tttext(arr)` occurs only `text(once)` and is in `tttext(arr[0])`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The largest value in `tttext(arr)` occurs only `text(once)` and is in `tttext(arr[arr.length - 1])`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The largest value in `tttext(arr)` is negative.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The largest value in `tttext(arr)` is `text(zero)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The largest value in `tttext(arr)` occurs more than `text(once)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Assume that `ttx` and `tty` are `tttext(boolean)` variables and have been properly initialized.",
+            ":ibox:`tttext((x || y))tttext( && x)`",
+            "Which of the following always evaluates to the same value as the expression above?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`ttx`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tty`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(x && y)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(x || y)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(x != y)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method, which is intended to return `tttext(true)` if at least `text(one)` of the `text(three)` strings `tttext(s1)`, `tttext(s2)`, or `tttext(s3)` contains the substring `tttext(“art”)`. Otherwise, the method should `tttext(return)` false.",
+            ":ibox:`tttext(public static boolean containsArt(String s1, String s2, String s3))`\n`tt({`\n\n\t`tttext(String all = s1 + s2 + s3;)`\n\n\t`tttext(return (all.indexOf(“art”))tttext( != -1))tttext(;)`\n\n`tt}`",
+            "Which of the following method calls demonstrates that the method does `ultext(not)` work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(containsArt(“rattrap”, “similar”, “today”))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(containsArt(“start”, “article”, “Bart”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(containsArt(“harm”, “chortle”, “crowbar”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(containsArt(“matriculate”, “carat”, “arbitrary”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(containsArt(“darkroom”, “cartoon”, “articulate”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(for (int outer = 1; outer <= 6; outer++))`\n`tt({`\n\t`tttext(for (int inner = outer; inner <= 6; inner++))`\n\t`tt({`\n\t\t`tttext(if (inner % 2 == 0))`\n\t\t`tt({`\n\t\t\t`tttext(System.out.print(inner + “ ”))tttext(;)`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(System.out.println())tttext(;)`\n`tt}`",
+            "What will be printed as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":ibox:`tttext(2 4 6)`\n`tttext(4 6)`\n`tttext(6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":ibox:`tttext(2 4 6)`\n`tttext(2 4 6)`\n`tttext(2 4 6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tttext(2 4 6)`\n`tttext(2 4 6)`\n`tttext(4 6)`\n`tttext(4 6)`\n`tttext(6)`\n`tttext(6)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tttext(2 4 6)`\n`tttext(2 4 6)`\n`tttext(2 4 6)`\n`tttext(2 4 6)`\n`tttext(2 4 6)`\n`tttext(2 4 6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": ":ibox:`tttext(2 4)`\n`tttext(2 4)`\n`tttext(4)`\n`tttext(4)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method.",
+            ":ibox:`tttext(public static int[] operation(int[][] matrix, int r, int c))`\n`tt({`\n\t`tttext(int[] result = new int[matrix.length];)`\n\n\t`tttext(for (int j = 0 ; j < matrix.length ; j++))`\n\t`tt({`\n\t\t`tttext(result[j] = matrix[r][j] * matrix[j][c];)`\n\t`tt}`\n\t`tttext(return result;)`\n`tt}`",
+            "The following code segment appears in another method in the same class.",
+            ":ibox:`tttext(int[][] mat = {{3, 2, 1, 4},)`\n\t\t\t\t`tttext({1, 2, 3, 4},)`\n\t\t\t\t`tttext({2, 2, 1, 2},)`\n\t\t\t\t`tttext({1, 1, 1, 1}};)`\n\n`tttext(int[] arr = operation(mat, 1, 2))tttext(;)`",
+            "Which of the following represents the contents of `tttext(arr)` as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext({6, 4, 2, 4})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext({1, 6, 3, 4})`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext({4, 3, 6, 1})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext({4, 4, 2, 2})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext({2, 2, 4, 4})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A pair of number cubes is used in a game of chance. `text(Each number)` cube has `text(six)` sides, numbered from `1` to `6`, inclusive, and there is an equal probability for each of the numbers to appear on the top side (indicating the cube's value) when the number cube is rolled. The following incomplete statement appears in a program that computes the sum of the values produced by rolling `text(two)` number cubes.",
+            ":ibox:`tttext(int sum = /* missing code */ ;)`",
+            "Which of the following replacements for `tttext(/* missing code */)` would best simulate the value produced as a result of rolling `text(two)` number cubes?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(2 * (int))tttext( (Math.random())tttext( * 6))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(2 * (int))tttext( (Math.random())tttext( * 7))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext((int))tttext( (Math.random())tttext( * 6))tttext( + (int))tttext( (Math.random())tttext( * 6))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext((int))tttext( (Math.random())tttext( * 13))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(2 + (int))tttext( (Math.random())tttext( * 6))tttext( + (int))tttext( (Math.random())tttext( * 6))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following interface and class declarations.",
+            ":ibox:`tttext(public interface Student)`\n`tttext({ /* implementation not shown */ })`\n\n`tttext(public class Athlete)`\n`tttext({ /* implementation not shown */ })`\n\n`tttext(public class TennisPlayer extends Athlete implements Student)`\n`tttext({ /* implementation not shown */ })`",
+            "Assume that `text(each class)` has a `text(zero-parameter)` constructor. Which of the following is `text(NOT)` a valid declaration?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(Student a = new TennisPlayer())tttext(;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(TennisPlayer b = new TennisPlayer())tttext(;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(Athlete c = new TennisPlayer())tttext(;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(Student d = new Athlete())tttext(;)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(Athlete e = new Athlete())tttext(;)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method.",
+            ":ibox:`tttext(public static boolean mystery(String str))`\n`tt({`\n\t`tttext(String temp = “”;)`\n\n\t`tttext(for (int k = str.length())tttext(; k > 0; k--))`\n\t`tt({`\n\t\t`tttext(temp = temp + str.substring(k - 1, k))tttext(;)`\n\t`tt}`\n\n\t`tttext(return temp.equals(str))tttext(;)`\n`tt}`",
+            "Which of the following calls to `tttext(mystery)` will return `tttext(true)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(mystery(“no”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(mystery(“on”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(mystery(“nnoo”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(mystery(“nono”))`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(mystery(“noon”))`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Assume that `ttx` and `tty` are `tttext(boolean)` variables and have been properly initialized.",
+            ":ibox:`tttext((x && y))tttext( && !(x || y))`",
+            "Which of the following best describes the result of evaluating the expression above?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(true)` always",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(false)` always",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(true)` only when `ttx` is `tttext(true)` and `tty` is `tttext(true)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(true)` only when `ttx` and `tty` have the same value",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(true)` only when `ttx` and `tty` have different values",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following instance variable and method.",
+            ":ibox:`tttext(private int[] numbers;)`\n\n`tttext(public void mystery(int x))`\n`tt({`\n\t`tttext(for (int k = 1; k < numbers.length; k = k + x))`\n\t`tt({`\n\t\t`tttext(numbers[k] = numbers[k - 1] + x;)`\n\t`tt}`\n`tt}`",
+            "Assume that `tttext(numbers)` has been initialized with the following values.",
+            ":ibox:`tttext({17, 34, 21, 42, 15, 69, 48, 25, 39})`",
+            "Which of the following represents the order of the values in `tttext(numbers)` as a result of the call `tttext(mystery(3))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext({17, 20, 21, 42, 45, 69, 48, 51, 39})`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext({17, 20, 23, 26, 29, 32, 35, 38, 41})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext({17, 37, 21, 42, 18, 69, 48, 28, 39})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext({20, 23, 21, 42, 45, 69, 51, 54, 39})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext({20, 34, 21, 45, 15, 69, 51, 25, 39})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method, `tttext(biggest)`, which is intended to return the greatest of `text(three)` integers. It does not always work as intended.",
+            ":ibox:`tttext(public static int biggest(int a, int b, int c))`\n`tt({`\n\t`tttext(if ((a > b))tttext( && (a > c)))`\n\t`tt({`\n\t\t`tttext(return a;)`\n\t`tt}`\n\t`tttext(else if ((b > a))tttext( && (b > c)))`\n\t`tt({`\n\t\t`tttext(return b;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(return c;)`\n\t`tt}`\n`tt}`",
+            "Which of the following best describes the error in the method?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(biggest)` always returns the value of `tta`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(biggest)` may not work correctly when `ttc` has the greatest value.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(biggest)` may not work correctly when `tta` and `ttb` have equal values.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(biggest)` may not work correctly when `tta` and `ttc` have equal values.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(biggest)` may not work correctly when `ttb` and `ttc` have equal values.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method.",
+            ":ibox:`tttext(public static void showMe(int arg))`\n`tt({`\n\t`tttext(if (arg < 10))`\n\t`tt({`\n\t\t`tttext(showMe(arg + 1))tttext(;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(System.out.print(arg + “ ”))tttext(;)`\n\t`tt}`\n`tt}`",
+            "What will be printed as a result of the call `tttext(showMe(0))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(10)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(11)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(0 1 2 3 4 5 6 7 8 9)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(9 8 7 6 5 4 3 2 1 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(0 1 2 3 4 5 6 7 8 9 10)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following best describes what is returned by the calculate method?",
+            ":ibox:`tttext(/**)` Precondition: `tttext(values)` has at least `text(one)` row `tttext(*/)`\n`tttext(public static int calculate(int[][] values))`\n`tt({`\n\t`tttext(int found = values[0][0];)`\n\t`tttext(int result = 0;)`\n\t`tttext(for (int[] row : values))`\n\t`tt({`\n\t\t`tttext(for (int y = 0; y < row.length; y++))`\n\t\t`tt({`\n\t\t\t`tttext(if (row[y] > found))`\n\t\t\t`tt({`\n\t\t\t\t`tttext(found = row[y];)`\n\t\t\t\t`tttext(result = y;)`\n\t\t\t`tt}`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(return result;)`\n`tt}`",
+            "Which of the following best describes what is returned by the `tttext(calculate)` method?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The largest value in the `text(two-dimensional)` array",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The smallest value in the `text(two-dimensional)` array",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The row index of an element with the largest value in the `text(two-dimensional)` array",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The row index of an element with the smallest value in the `text(two-dimensional)` array",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The column index of an element with the largest value in the `text(two-dimensional)` array",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method.",
+            ":ibox:`tttext(//*)` Precondition: `tttext(num > 0 */)`\n`tttext(public static int doWhat(int num))`\n`tt({`\n\t`tttext(int var = 0;)`\n\n\t`tttext(for (int loop = 1; loop <= num; loop = loop + 2))`\n\t`tt({`\n\t\t`tttext(var += loop;)`\n\t`tt}`\n\n\t`tttext(return var;)`\n`tt}`",
+            "Which of the following best describes the value returned from a call to `tttext(doWhat)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(num)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The sum of all integers between `tt1` and `tttext(num)`, inclusive",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The sum of all even integers between `tt1` and `tttext(num)`, inclusive",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The sum of all odd integers between `tt1` and `tttext(num)`, inclusive",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "No value is returned because of an infinite loop.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "What is printed as a result of executing the following statement?",
+            ":ibox:`tttext(System.out.println(404 / 10 * 10 + 1))tttext(;)`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tt4`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tt5`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tt41`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tt401`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tt405`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(int x = 1;)`\n`tttext(while ( /* condition */ ))`\n`tt({`\n\t`tttext(if (x % 2 == 0))`\n\t`tt({`\n\t\t`tttext(System.out.print(x + “ ”))tttext(;)`\n\t`tt}`\n\t`tttext(x = x + 2;)`\n`tt}`",
+            "The following conditions have been proposed to replace `tttext(/* condition */)` in the code segment.",
+            ":ibox:`text(I)`. `tttext(x < 0)`\n\n`text(II)`. `tttext(x <= 1)`\n\n`text(III)`. `tttext(x < 10)`",
+            "For which of the conditions will nothing be printed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(I)` and `text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method.",
+            ":ibox:`tttext(/**)` Precondition: `tttext(arr.length > 0 */)`\n`tttext(public static int mystery(int[] arr))`\n`tt({`\n\t`tttext(int index = 0;)`\n\t`tttext(int count = 0;)`\n\t`tttext(int m = -1;)`\n\n\t`tttext(for (int outer = 0; outer < arr.length; outer++))`\n\t`tt({`\n\t\t`tttext(count = 0;)`\n\t\t`tt({`\n\t\t`tttext(for (int inner = outer + 1; inner < arr.length; inner++))`\n\t\t\t`tttext(if (arr[outer] == arr[inner]))`\n\t\t\t`tt({`\n\t\t\t\t`tttext(count++;)`\n\t\t\t`tt}`\n\t\t`tt}`\n\n\t\t`tttext(if (count > m))`\n\t\t`tt({`\n\t\t\t`tttext(index = outer;)`\n\t\t\t`tttext(m = count;)`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(return index;)`\n`tt}`",
+            "Assume that `tttext(nums)` has been declared and initialized as an array of integer values. Which of the following best describes the value returned by the call `tttext(mystery(nums))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The maximum value that occurs in `tttext(nums)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "An index of the maximum value that occurs in `tttext(nums)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The number of times that the maximum value occurs in `tttext(nums)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A value that occurs most often in `tttext(nums)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "An index of a value that occurs most often in `tttext(nums)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "21": {
+        "Number": 21,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following recursive method.",
+            ":ibox:`tttext(public static void whatsItDo(String str))`\n`tt({`\n\t`tttext(int len = str.length())tttext(;)`\n\t`tttext(if (len > 1))`\n\t`tt({`\n\t\t`tttext(String temp = str.substring(0, len - 1))tttext(;)`\n\t\t`tttext(System.out.println(temp))tttext(;)`\n\t\t`tttext(whatsItDo(temp))tttext(;)`\n\t`tt}`\n`tt}`",
+            "What is printed as a result of the call `tttext(whatsItDo(“WATCH”))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(H)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(WATC)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tttext(ATCH)`\n`tttext(ATC)`\n`tttext(AT)`\n`tttext(A)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tttext(WATC)`\n`tttext(WAT)`\n`tttext(WA)`\n`tttext(W)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": ":ibox:`tttext(WATCH)`\n`tttext(WATC)`\n`tttext(WAT)`\n`tttext(WA)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "22": {
+        "Number": 22,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following definition.",
+            ":ibox:`tttext(int[][] numbers = {{1, 2, 3},)`\n\t\t\t\t\t\t`tttext({4, 5, 6}};)`",
+            "Which of the following code segments produces the output `tt123456`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":ibox:`tttext(for (int[] row : numbers))`\n`tt({`\n\t`tttext(for (int n : row))`\n\t`tt({`\n\t\t`tttext(System.out.print(n))tttext(;)`\n\t`tt}`\n`tt}`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":ibox:`tttext(for (int[] row : numbers))`\n`tt({`\n\t`tttext(for (int n : row))`\n\t`tt({`\n\t\t`tttext(System.out.print(row[n]))tttext(;)`\n\t`tt}`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tttext(for (int rc = 0; rc < numbers.length; rc++))`\n`tt({`\n\t`tttext(System.out.print(numbers[rc]))tttext(;)`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tttext(for (int r = 0; r < numbers[0].length; r++))`\n`tt({`\n\t`tttext(for (int c = 0; c < numbers.length; c++))`\n\t`tt({`\n\t\t`tttext(System.out.print(numbers[r][c]))tttext(;)`\n\t`tt}`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": ":ibox:`tttext(for (int c = 0; c < numbers[0].length; c++))`\n`tt({`\n\t`tttext(for (int r = 0; r < numbers.length; r++))`\n\t`tt({`\n\t\t`tttext(System.out.print(numbers[r][c]))tttext(;)`\n\t`tt}`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "23": {
+        "Number": 23,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment from an insertion sort program.",
+            ":ibox:`tttext(for (int j = 1; j < arr.length; j++))`\n`tt({`\n\t`tttext(int insertItem = arr[j];)`\n\t`tttext(int k = j - 1;)`\n\n\t`tttext(while (k >= 0 && insertItem < arr[k]))`\n\t`tt({`\n\t\t`tttext(arr[k + 1] = arr[k];)`\n\t\t`tttext(k--;)`\n\t`tt}`\n\n\t`tttext(arr[k + 1] = insertItem;)`\n\n\t`tttext(/* end of for loop */)`\n`tt}`",
+            "Assume that array `tttext(arr)` has been defined and initialized with the values `tttext({5, 4, 3, 2, 1})`. What are the values in array `tttext(arr)` after `text(two)` passes of the `tttext(for)` loop (i.e., when `tttext(j = 2)` at the point indicated by `tttext(/* end of for loop */)`)?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext({2, 3, 4, 5, 1})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext({3, 2, 1, 4, 5})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext({3, 4, 5, 2, 1})`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext({3, 5, 2, 3, 1})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext({5, 3, 4, 2, 1})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "24": {
+        "Number": 24,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following class.",
+            ":ibox:`tttext(public class SomeMethods)`\n`tt({`\n\t`tttext(public void one(int first))`\n\t`tttext({ /* implementation not shown */ })`\n\n\t`tttext(public void one(int first, int second))`\n\t`tttext({ /* implementation not shown */ })`\n\n\t`tttext(public void one(int first, String second))`\n\t`tttext({ /* implementation not shown */ })`\n`tt}`",
+            "Which of the following methods can be added to the `tttext(SomeMethods)` class without causing a compile-time error?",
+            ":ibox:`text(I)`. `tttext(public void one(int value))`\n\t`tttext({ /* implementation not shown */ })`\n\n`text(II)`. `tttext(public void one(String first, int second))`\n\t`tttext({ /* implementation not shown */ })`\n\n`text(III)`. `tttext(public void one(int first, int second, int third))`\n\t`tttext({ /* implementation not shown */ })`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(I)` and `text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(I)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(II)` and `text(III)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "25": {
+        "Number": 25,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(int count = 0;)`\n\n`tttext(for (int x = 0; x < 4; x++))`\n`tt({`\n\t`tttext(for (int y = x; y < 4; y++))`\n\t`tt({`\n\t\t`tttext(count++;)`\n\t`tt}`\n`tt}`\n`tttext(System.out.println(count))tttext(;)`",
+            "What is printed as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`4`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`8`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`10`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`16`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`20`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "26": {
+        "Number": 26,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following `text(two)` methods, which appear within a `text(single)` class.",
+            ":ibox:`tttext(public static void changeIt(int[] arr, int val, String word))`\n`tt({`\n\t`tttext(arr = new int[5];)`\n\t`tttext(val = 0;)`\n\t`tttext(word = word.substring(0, 5))tttext(;)`\n\n\t`tttext(for (int k = 0; k < arr.length; k++))`\n\t`tt({`\n\t\t`tttext(arr[k] = 0;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(public static void start())`\n`tt({`\n\t`tttext(int[] nums = {1, 2, 3, 4, 5};)`\n\t`tttext(int value = 6;)`\n\t`tttext(String name = “blackboard”;)`\n\n\t`tttext(changeIt(nums, value, name))tttext(;)`\n\n\t`tttext(for (int k = 0; k < nums.length; k++))`\n\t`tt({`\n\t\t`tttext(System.out.print(nums[k] + “ ”))tttext(;)`\n\t`tt}`\n\n\t`tttext(System.out.print(value + “ ”))tttext(;)`\n\t`tttext(System.out.print(name))tttext(;)`\n`tt}`",
+            "What is printed as a result of the call `tttext(start())`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext(0 0 0 0 0 0 black)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext(0 0 0 0 0 6 blackboard)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext(1 2 3 4 5 6 black)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext(1 2 3 4 5 0 black)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext(1 2 3 4 5 6 blackboard)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "27": {
+        "Number": 27,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [
+            "problems/AP15CSA/supps/AP15CSA-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Assume that `tttext(sort)` is called with the array `tttext({6, 3, 2, 5, 4, 1})`. What will the value of `tttext(data)` be after `text(three)` passes of the outer loop (i.e., when `tttext(j = 2)` at the point indicated by `tttext(/* End of outer loop */)`) ?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`tttext({1, 2, 3, 4, 5, 6})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`tttext({1, 2, 3, 5, 4, 6})`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`tttext({1, 2, 3, 6, 5, 4})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`tttext({1, 3, 2, 4, 5, 6})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`tttext({1, 3, 2, 5, 4, 6})`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "28": {
+        "Number": 28,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [
+            "problems/AP15CSA/supps/AP15CSA-S1.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Assume that `tttext(sort)` is called with the array `tttext({1, 2, 3, 4, 5, 6})`. How many times will the expression indicated by `tttext(/* Compare values */)` and the statement indicated by `tttext(/* Assign to temp */)` execute?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`ultext(Compare values)`: `15`\n`ultext(Assign to temp)`: `0`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`ultext(Compare values)`: `15`\n`ultext(Assign to temp)`: `5`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`ultext(Compare values)`: `15`\n`ultext(Assign to temp)`: `6`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`ultext(Compare values)`: `21`\n`ultext(Assign to temp)`: `5`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`ultext(Compare values)`: `21`\n`ultext(Assign to temp)`: `6`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "29": {
+        "Number": 29,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following recursive method.",
+            ":ibox:`tttext(/**)` Precondition: `tttext(num ≥ 0 */)`\n`tttext(public static int what(int num))`\n`tt({`\n\t`tttext(if (num < 10))`\n\t`tt({`\n\t\t`tttext(return 1;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(return 1 + what(num / 10))tttext(;)`\n\t`tt}`\n`tt}`",
+            "Assume that `tttext(int val)` has been declared and initialized with a value that satisfies the precondition of the method. Which of the following best describes the value returned by the call `tttext(what(val))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The number of digits in the decimal representation of `tttext(val)` is returned.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The sum of the digits in the decimal representation of `tttext(val)` is returned.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Nothing is returned. A run-time error occurs because of infinite recursion.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The value `1` is returned.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The value `tttext(val/10)` is returned.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "30": {
+        "Number": 30,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "The `text(price per box)` of ink pens advertised in an office supply catalog is based on the number of boxes ordered. The following table shows the pricing.",
+            "problems/AP15CSA/media/30a.jpg",
+            "The following incomplete method is intended to return the total cost of an order based on the value of the parameter `tttext(numBoxes)`.",
+            ":ibox:`tttext(/**)` Precondition: `tttext(numBoxes > 0 */)`\n`tttext(public static double getCost(int numBoxes))`\n`tt({`\n\t`tttext(double totalCost = 0.0;)`\n\n\t`tttext(/* missing code */)`\n\n\t`tttext(return totalCost;)`\n`tt}`",
+            "Which of the following code segments can be used to replace `tttext(/* missing code */)` so that method `tttext(getCost)` will work as intended?",
+            ":ibox:`text(I)`. `tttext(if (numBoxes >= 10))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 1.50;)`\n\t`tt}`\n\t`tttext(if (numBoxes >= 5))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 3.00;)`\n\t`tt}`\n\t`tttext(if (numBoxes > 0))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 5.00;)`\n\t`tt}`\n\n`text(II)`. `tttext(if (numBoxes >= 10))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 1.50;)`\n\t`tt}`\n\t`tttext(else if (numBoxes >= 5))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 3.00;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 5.00;)`\n\t`tt}`\n\n`text(III)`. `tttext(if (numBoxes > 0))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 5.00;)`\n\t`tt}`\n\t`tttext(else if (numBoxes >= 5))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 3.00;)`\n\t`tt}`\n\t`tttext(else if (numBoxes >= 10))`\n\t`tt({`\n\t\t`tttext(totalCost = numBoxes * 1.50;)`\n\t`tt}`"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)` and `text(II)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`text(II)` and `text(III)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "31": {
+        "Number": 31,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(String[][] board = new String[5][5];)`\n\n`tttext(for (int row = 0; row < 5; row++))`\n`tt({`\n\t`tttext(for (int col = 0; col < 5; col++))`\n\t`tt({`\n\t\t`tttext(board[row][col] = “O”;)`\n\t`tt}`\n`tt}`\n\n`tttext(for (int val = 0; val < 5; val++))`\n`tt({`\n\t`tttext(if (val % 2 == 1))`\n\t`tt({`\n\t\t`tttext(int row = val;)`\n\t\t`tttext(int col = 0;)`\n\t\t`tttext(while (col < 5 && row >= 0))`\n\t\t`tt({`\n\t\t\t`tttext(board[row][col] = “X”;)`\n\t\t\t`tttext(col++;)`\n\t\t\t`tttext(row--;)`\n\t\t`tt}`\n\t`tt}`\n`tt}`",
+            "Which of the following represents `tttext(board)` after this code segment is executed?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "problems/AP15CSA/media/31a.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "problems/AP15CSA/media/31b.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "problems/AP15CSA/media/31c.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/AP15CSA/media/31d.jpg",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "problems/AP15CSA/media/31e.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "32": {
+        "Number": 32,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following class declaration.",
+            ":ibox:`tttext(public class StudentInfo)`\n`tt({`\n\t`tttext(private String major;)`\n\t`tttext(private int age;)`\n\n\t`tttext(public String getMajor())`\n\t`tttext({ return major; })`\n\n\t`tttext(public int getAge())`\n\t`tttext({ return age; })`\n\n\t`tttext(//)` There may be instance variables, constructors, and methods that are not shown.\n`tt}`",
+            "The following instance variable and method appear in another class.",
+            ":ibox:`tttext(private List<StudentInfo> students;)`\n\n`tttext(/** @return)` the average age of students with the given major;\n `tttext(*)`\t\t`tttext(-1.0)` if no such students exist\n `tttext(*/)`\n`tttext(public double averageAgeInMajor(String theMajor))`\n`tt({`\n\t`tttext(double sum = 0.0;)`\n\t`tttext(int count = 0;)`\n\t`tttext(for (StudentInfo k : students))`\n\t`tt({`\n\t\t`tttext(/* missing code */)`\n\t`tt}`\n\n\t`tttext(if (count > 0))`\n\t`tt({`\n\t\t`tttext(return sum / count;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(return -1.0;)`\n\t`tt}`\n`tt}`",
+            "Which of the following could be used to replace `tttext(/* missing code */)` so that `tttext(averageAgeInMajor)` will compile without error?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":ibox:`tttext(if (theMajor.equals(k.major)))`\n`tt({`\n\t`tttext(sum += k.age;)`\n\t`tttext(count++;)`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":ibox:`tttext(if (theMajor.equals(k.getMajor())))`\n`tt({`\n\t`tttext(sum += k.getAge())tttext(;)`\n\t`tttext(count++;)`\n`tt}`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tttext(if (theMajor.equals(k.major)))`\n`tt({`\n\t`tttext(sum += k.getAge())tttext(;)`\n\t`tttext(count++;)`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tttext(if (theMajor.equals(students[k].getMajor())))`\n`tt({`\n\t`tttext(sum += students[k].getAge())tttext(;)`\n\t`tttext(count++;)`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": ":ibox:`tttext(if (theMajor.equals(getMajor(k))))`\n`tt({`\n\t`tttext(sum += getAge(k))tttext(;)`\n\t`tttext(count++;)`\n`tt}`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "33": {
+        "Number": 33,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following statements regarding interfaces is `text(FALSE)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "All methods in an interface are public.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "An interface cannot be instantiated.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "An interface can declare an instance variable.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A non-abstract class can implement an interface.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "An abstract class can implement an interface.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "34": {
+        "Number": 34,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the problem of finding the maximum value in an array of integers. The following code segments are proposed solutions to the problem. Assume that the variable `tttext(arr)` has been defined as an array of `tttext(int)` values and has been initialized with `text(one)` or more values.",
+            ":ibox:`text(I)`. `tttext(int max = Integer.MIN_VALUE;)`\n\t`tttext(for (int value : arr))`\n\t`tt({`\n\t\t`tttext(if (max < value))`\n\t\t`tt({`\n\t\t\t`tttext(max = value;)`\n\t\t`tt}`\n\t`tt}`\n\n`text(II)`. `tttext(int max = 0;)`\n\t`tttext(boolean first = true;)`\n\t`tttext(for (int value : arr))`\n\t`tt({`\n\t\t`tttext(if (first))`\n\t\t`tt({`\n\t\t\t`tttext(max = value;)`\n\t\t\t`tttext(first = false;)`\n\t\t`tt}`\n\t\t`tttext(else if (max < value))`\n\t\t`tt({`\n\t\t\t`tttext(max = value;)`\n\t\t`tt}`\n\t`tt}`\n\n`text(III)`. `tttext(int max = arr[0];)`\n\t`tttext(for (int k = 1; k < arr.length; k++))`\n\t`tt({`\n\t\t`tttext(if (max < arr[k]))`\n\t\t`tt({`\n\t\t\t`tttext(max = arr[k];)`\n\t\t`tt}`\n\t`tt}`",
+            "Which of the code segments will always correctly assign the maximum element of the array to the variable `tttext(max)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(II)` and `text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`text(I)`, `text(II)`, and `text(III)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "35": {
+        "Number": 35,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following instance variable and method. Method `tttext(wordsWithCommas)` is intended to return a string containing all the words in `tttext(listOfWords)` separated by commas and enclosed in braces. For example, if `tttext(listOfWords)` contains `tttext([“one”, “two”, “three”])`, the string returned by the call `tttext(wordsWithCommas())` should be `tttext(“{one, two, three}”)`.",
+            ":ibox:`tttext(private List<String> listOfWords;)`\n\n`tttext(public String wordsWithCommas())`\n`tt({`\n\t`tttext(String result = “{”;)`\n\n\t`tttext(int sizeOfList = /* expression */ ;)`\n\n\t`tttext(for (int k = 0; k < sizeOfList; k++))`\n\t`tt({`\n\t\t`tttext(result = result + listOfWords.get(k))tttext(;)`\n\n\t\t`tttext(if ( /* condition */ ))`\n\t\t`tt({`\n\t\t\t`tttext(result = result + “, ”;)`\n\t\t`tt}`\n\t`tt}`\n\n\t`tttext(result = result + “}”;)`\n\t`tttext(return result;)`\n`tt}`",
+            "Which of the following can be used to replace `tttext(/* expression */)` and `tttext(/* condition */)` so that `tttext(wordsWithCommas)` will work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size() - 1 )`\n`ultttext(/* condition */)`: `tttext(k != 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size())`\n`ultttext(/* condition */)`: `tttext(k != 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size() - 1 )`\n`ultttext(/* condition */)`: `tttext(k != sizeOfList - 1)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size())`\n`ultttext(/* condition */)`: `tttext(k != sizeOfList - 1)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`ultttext(/* expression */)`: `tttext(result.length())`\n`ultttext(/* condition */)`: `tttext(k != 0)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "36": {
+        "Number": 36,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [
+            "problems/AP15CSA/supps/AP15CSA-S2.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(int[] values = {1, 2, 3, 4, 5, 8, 8, 8};)`\n`tttext(int target = 8;)`",
+            "What value is returned by the call `tttext(binarySearch(values, target))`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`-1`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`3`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`5`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`6`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`8`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "37": {
+        "Number": 37,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [
+            "problems/AP15CSA/supps/AP15CSA-S2.json"
+        ],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Suppose the `tttext(binarySearch)` method is called with an array containing `2text(,)000` elements sorted in increasing order. What is the maximum number of times that the statement indicated by `tttext(/* Calculate midpoint */)` could execute?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`2text(,)000`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`1text(,)000`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`20`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`11`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`1`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "38": {
+        "Number": 38,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following incomplete method that is intended to return a string formed by concatenating elements from the parameter `tttext(words)`. The elements to be concatenated start with `tttext(startIndex)` and continue through the last element of `tttext(words)` and should appear in reverse order in the resulting string.",
+            ":ibox:`tttext(/**)` Precondition: `tttext(words.length > 0;)`\n `tttext(*)`\t\t`tttext(startIndex >= 0)`\n `tttext(*/)`\n`tttext(public static String concatWords(String[] words, int startIndex))`\n`tt({`\n\t`tttext(String result = “”;)`\n\n\t`tttext(/* missing code */)`\n\n\t`tttext(return result;)`\n`tt}`",
+            "For example, the following code segment uses a call to the `tttext(concatWords)` method.",
+            ":ibox:`tttext(String[] things = {“Bear”, “Apple”, “Gorilla”, “House”, “Car”};)`\n`tttext(System.out.println(concatWords(things, 2)))tttext(;)`",
+            "When the code segment is executed, the string `tttext(“CarHouseGorilla”)` is printed.",
+            "The following `text(three)` code segments have been proposed as replacements for `tttext(/* missing code */)`.",
+            ":ibox:`text(I)`. `tttext(for (int k = startIndex; k < words.length; k++))`\n`tt({`\n\t`tttext(result += words[k] + words[words.length - k - 1];)`\n`tt}`\n\n`text(II)`. `tttext(int k = words.length - 1;)`\n`tttext(while (k >= startIndex))`\n`tt({`\n\t`tttext(result += words[k];)`\n\t`tttext(k--;)`\n`tt}`\n\n`text(III)`. `tttext(String[] temp = new String[words.length];)`\n`tttext(for (int k = 0; k <= words.length / 2; k++))`\n`tt({`\n\t`tttext(temp[k] = words[words.length - k - 1];)`\n\t`tttext(temp[words.length - k - 1] = words[k];)`\n`tt}`\n`tttext(for (int k = 0; k < temp.length - startIndex; k++))`\n`tt({`\n\t`tttext(result += temp[k];)`\n`tt}`",
+            "Which of these code segments can be used to replace `tttext(/* missing code */)` so that `tttext(concatWords)` will work as intended?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(I)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(II)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(III)` only",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(I)` and `text(II)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`text(II)` and `text(III)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "39": {
+        "Number": 39,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following method.",
+            ":ibox:`tttext(/**)` Precondition: `tttext(0 < numVals <= nums.length */)`\n`tttext(public static int mystery(int[] nums, int v, int numVals))`\n`tt({`\n\t`tttext(int k = 0;)`\n\n\t`tttext(if (v == nums[numVals - 1]))`\n\t`tt({`\n\t\t`tttext(k = 1;)`\n\t`tt}`\n\n\t`tttext(if (numVals == 1))`\n\t`tt({`\n\t\t`tttext(return k;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(return k + mystery(nums, v, numVals - 1))tttext(;)`\n\t`tt}`\n`tt}`",
+            "Which of the following best describes what the call `tttext(mystery(numbers, val, numbers.length))` does? You may assume that variables `tttext(numbers)` and `tttext(val)` have been declared and initialized."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Returns `1` if the last element in `tttext(numbers)` is equal to `tttext(val)`; otherwise, returns `0`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Returns the index of the last element in `tttext(numbers)` that is equal to `tttext(val)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Returns the number of elements in `tttext(numbers)` that are equal to `tttext(val)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Returns the number of elements in `tttext(numbers)` that are not equal to `tttext(val)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Returns the maximum number of adjacent elements that are not equal to `tttext(val)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "40": {
+        "Number": 40,
+        "Type": "MC",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider the following code segment.",
+            ":ibox:`tttext(List<String> students = new ArrayList<String>())tttext(;)`\n\n`tttext(students.add(“Alex”))tttext(;)`\n`tttext(students.add(“Bob”))tttext(;)`\n`tttext(students.add(“Carl”))tttext(;)`\n\n`tttext(for (int k = 0; k < students.size())tttext(; k++))`\n`tt({`\n\t`tttext(System.out.print(students.set(k, “Alex”))tttext( + “ ”))tttext(;)`\n`tt}`\n\n`tttext(System.out.println())tttext(;)`\n\n`tttext(for (String str : students))`\n`tt({`\n\t`tttext(System.out.print(str + “ ”))tttext(;)`\n`tt}`",
+            "What is printed as a result of executing the code segment?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": ":ibox:`tttext(Alex Alex Alex)`\n`tttext(Alex Alex Alex)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": ":ibox:`tttext(Alex Alex Alex)`\n`tttext(Alex Bob Carl)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": ":ibox:`tttext(Alex Bob Carl)`\n`tttext(Alex Alex Alex)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": ":ibox:`tttext(Alex Bob Carl)`\n`tttext(Alex Bob Carl)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Nothing is printed because the `text(first)` print statement will cause a runtime exception to be thrown.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "41": {
+        "Number": 41,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 9,
+        "Explain": false,
+        "Content": [
+            "This question involves reasoning about `text(one-dimensional)` and `text(two-dimensional)` arrays of integers. You will write `text(three)` static methods, all of which are in a `text(single)` enclosing class, named `tttext(DiverseArray)` (not shown). The `text(first)` method returns the sum of the values of a `text(one-dimensional)` array; the `text(second)` method returns an array that represents the sums of the rows of a `text(two-dimensional)` array; and the `text(third)` method analyzes row sums."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "Write a `tttext(static)` method `tttext(arraySum)` that calculates and returns the sum of the entries in a specified `text(one-dimensional)` array. The following example shows an array `tttext(arr1)` and the value returned by a call to `tttext(arraySum)`.",
+                    "problems/AP15CSA/media/41a.jpg",
+                    "Complete method `tttext(arraySum)` below.",
+                    ":ibox:`tttext(/**)` Returns the sum of the entries in the `text(one-dimensional)` array `tttext(arr)`.\n `tttext(*/)`\n`tttext(public static int arraySum(int[] arr))`"
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 4,
+                "Explain": false,
+                "Content": [
+                    "Write a `tttext(static)` method `tttext(rowSums)` that calculates the sums of each of the rows in a given `text(two-dimensional)` array and returns these sums in a `text(one-dimensional)` array. The method has `text(one)` parameter, a `text(two-dimensional)` array `tttext(arr2D)` of `tttext(int)` values. The array is in row-major order: `tttext(arr2D[r][c])` is the entry at row `ttr` and column `ttc`. The method returns a `text(one-dimensional)` array with `text(one)` entry for `text(each row)` of `tttext(arr2D)` such that `text(each entry)` is the sum of the corresponding row in `tttext(arr2D)`. As a reminder, `text(each row)` of a `text(two-dimensional)` array is a `text(one-dimensional)` array.",
+                    "For example, if `tttext(mat1)` is the array represented by the following table, the call `tttext(rowSums(mat1))` returns the array `tttext({16, 32, 28, 20})`.",
+                    "problems/AP15CSA/media/41b.jpg",
+                    ":box:Methods written in this question\n\n`tttext(public static int arraySum(int[] arr))`\n`tttext(public static int[] rowSums(int[][] arr2D))`\n`tttext(public static boolean isDiverse(int[][] arr2D))`",
+                    "Assume that `tttext(arraySum)` works as specified, regardless of what you wrote in part (A). You must use `tttext(arraySum)` appropriately to receive full credit.",
+                    "Complete method rowSums below.",
+                    ":ibox:`tttext(/**)` Returns a `text(one-dimensional)` array in which the entry at index `ttk` is the sum of\n `tttext(*)`\tthe entries of row `ttk` of the `text(two-dimensional)` array `tttext(arr2D)`.\n `tttext(*/)`\n`tttext(public static int[] rowSums(int[][] arr2D))`"
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 3,
+                "Explain": false,
+                "Content": [
+                    "A `text(two-dimensional)` array is diverse if no `text(two)` of its rows have entries that sum to the same value. In the following examples, the array `tttext(mat1)` is diverse because `text(each row sum)` is different, but the array `tttext(mat2)` is not diverse because the `text(first)` and `text(last)` rows have the same sum.",
+                    "problems/AP15CSA/media/41c.jpg",
+                    "problems/AP15CSA/media/41d.jpg",
+                    "Write a `tttext(static)` method `tttext(isDiverse)` that determines whether or not a given `text(two-dimensional)` array is diverse. The method has `text(one)` parameter: a `text(two-dimensional)` array `tttext(arr2D)` of `tttext(int)` values. The method should return `tttext(true)` if all the row sums in the given array are unique; otherwise, it should return `tttext(false)`. In the arrays shown above, the call `tttext(isDiverse(mat1))` returns `tttext(true)` and the call `tttext(isDiverse(mat2))` returns `tttext(false)`.",
+                    ":box:Methods written in this question\n\n`tttext(public static int arraySum(int[] arr))`\n`tttext(public static int[] rowSums(int[][] arr2D))`\n`tttext(public static boolean isDiverse(int[][] arr2D))`",
+                    "Assume that `tttext(arraySum)` and `tttext(rowSums)` work as specified, regardless of what you wrote in parts (A) and (B). You must use `tttext(rowSums)` appropriately to receive full credit.",
+                    "Complete method `tttext(isDiverse)` below.",
+                    ":ibox:`tttext(/**)` Returns `tttext(true)` if all rows in `tttext(arr2D)` have different row sums;\n `tttext(*)`\t\t`tttext(false)` otherwise.\n `tttext(*/)`\n`tttext(public static boolean isDiverse(int[][] arr2D))`"
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    },
+    "42": {
+        "Number": 42,
+        "Type": "MR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 9,
+        "Explain": false,
+        "Content": [
+            "Consider a guessing game in which a player tries to guess a hidden word. The hidden word contains only capital letters and has a length known to the player. A guess contains only capital letters and has the same length as the hidden word.",
+            "After a guess is made, the player is given a hint that is based on a comparison between the hidden word and the guess. `text(Each position)` in the hint contains a character that corresponds to the letter in the same position in the guess. The following rules determine the characters that appear in the hint.",
+            "problems/AP15CSA/media/42a.jpg",
+            "The `tttext(HiddenWord)` class will be used to represent the hidden word in the game. The hidden word is passed to the constructor. The class contains a method, `tttext(getHint)`, that takes a guess and produces a hint.",
+            "For example, suppose the variable puzzle is declared as follows.",
+            ":ibox:`tttext(HiddenWord puzzle = new HiddenWord(“HARPS”))tttext(;)`",
+            "The following table shows several guesses and the hints that would be produced.",
+            "problems/AP15CSA/media/42b.jpg",
+            "Write the complete `tttext(HiddenWord)` class, including any necessary instance variables, its constructor, and the method, `tttext(getHint)`, described above. You may assume that the length of the guess is the same as the length of the hidden word."
+        ],
+        "AnswerChoices": {},
+        "Parts": {}
+    },
+    "43": {
+        "Number": 43,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 9,
+        "Explain": false,
+        "Content": [
+            "A `text(two-dimensional)` array of integers in which most elements are `text(zero)` is called a sparse array. Because most elements have a value of `text(zero)`, memory can be saved by storing only the `text(non-zero)` values along with their row and column indexes. The following complete `tttext(SparseArrayEntry)` class is used to represent `text(non-zero)` elements in a sparse array. A `tttext(SparseArrayEntry)` object cannot be modified after it has been constructed.",
+            ":ibox:`tttext(public class SparseArrayEntry)`\n`tt({`\n\t`tttext(/**)` The row index and column index for this entry in the sparse array `tttext(*/)`\n\t`tttext(private int row;)`\n\t`tttext(private int col;)`\n\n\t`tttext(/**)` The value of this entry in the sparse array `tttext(*/)`\n\t`tttext(private int value;)`\n\n\t`tttext(/**)` Constructs a `tttext(SparseArrayEntry)` object that represents a sparse array element\n\t `tttext(*)` with row index `ttr` and column index `ttc`, containing value `ttv`.\n\t `tttext(*/)`\n\t`tttext(public SparseArrayEntry(int r, int c, int v))`\n\t`tt({`\n\t\t`tttext(row = r;)`\n\t\t`tttext(col = c;)`\n\t\t`tttext(value = v;)`\n\t`tt}`\n\n\t`tttext(/**)` Returns the row index of this sparse array element. `tttext(*/)`\n\t`tttext(public int getRow())`\n\t`tttext({ return row; })`\n\n\t`tttext(/**)` Returns the column index of this sparse array element. `tttext(*/)`\n\t`tttext(public int getCol())`\n\t`tttext({ return col; })`\n\n\t`tttext(/**)` Returns the value of this sparse array element. `tttext(*/)`\n\t`tttext(public int getValue())`\n\t`tttext({ return value; })`\n`tt}`",
+            "The `tttext(SparseArray)` class represents a sparse array. It contains a list of `tttext(SparseArrayEntry)` objects, each of which represents `text(one)` of the `text(non-zero)` elements in the array. The entries representing the `text(non-zero)` elements are stored in the list in no particular order. `text(Each)` `text(non-zero)` `text(element)` is represented by exactly `text(one)` entry in the list.",
+            ":ibox:`tttext(public class SparseArray)`\n`tt({`\n\t`tttext(/**)` The number of rows and columns in the sparse array. `tttext(*/)`\n\t`tttext(private int numRows;)`\n\t`tttext(private int numCols;)`\n\n\t`tttext(/**)` The list of entries representing the `text(non-zero )`elements of the sparse array. Entries are stored in the\n\t `tttext(*)`\tlist in no particular order. Each `text(non-zero)` element is represented by exactly `text(one)` entry in the list.\n\t `tttext(*/)`\n\t`tttext(private List<SparseArrayEntry> entries;)`\n\n\t`tttext(/**)` Constructs an empty `tttext(SparseArray)`. `tttext(*/)`\n\t`tttext(public SparseArray())`\n\t`tttext({ entries = new ArrayList<SparseArrayEntry>(); })`\n\n\t`tttext(/**)` Returns the number of rows in the sparse array. `tttext(*/)`\n\t`tttext(public int getNumRows())`\n\t`tttext({ return numRows; })`\n\n\t`tttext(/**)` Returns the number of columns in the sparse array. `tttext(*/)`\n\t`tttext(public int getNumCols())`\n\t`tttext({ return numCols; })`\n\n\t`tttext(/**)` Returns the value of the element at row index `tttext(row)` and column index `tttext(col)` in the sparse array.\n\t `tttext(*)`\tPrecondition: `tttext(0 ≤ row < getNumRows())`\n\t `tttext(*)`\t\t`tttext(0 ≤ col < getNumCols())`\n\t `tttext(*/)`\n\t`tttext(public int getValueAt(int row, int col))`\n\t`tttext({ /* to be implemented in part (A))tttext( */ })`\n\n\t`tttext(/**)` Removes the column `tttext(col)` from the sparse array.\n\t `tttext(*)`\tPrecondition: `tttext(0 ≤ col < getNumCols())`\n\t `tttext(*/)`\n\t`tttext(public void removeColumn(int col))`\n\t`tttext({ /* to be implemented in part (B))tttext( */ })`\n\n\t`tttext(//)` There may be instance variables, constructors, and methods that are not shown.\n`tt}`",
+            "The following table shows an example of a `text(two-dimensional)` sparse array. Empty cells in the table indicate `text(zero)` values.",
+            "problems/AP15CSA/media/43a.jpg",
+            "The sample array can be represented by a `tttext(SparseArray)` object, `tttext(sparse)`, with the following instance variable values. The items in `tttext(entries)` are in no particular order; `text(one)` possible ordering is shown below.",
+            "problems/AP15CSA/media/43b.jpg"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 3,
+                "Explain": false,
+                "Content": [
+                    "Write the `tttext(SparseArray)` method `tttext(getValueAt)`. The method returns the value of the sparse array element at a given row and column in the sparse array. If the list `tttext(entries)` contains an entry with the specified row and column, the value associated with the entry is returned. If there is no entry in `tttext(entries)` corresponding to the specified row and column, `0` is returned.",
+                    "In the example above, the call `tttext(sparse.getValueAt(3, 1))` would return `-9`, and `tttext(sparse.getValueAt(3, 3))` would return `0`.",
+                    "Complete method `tttext(getValueAt)` below.",
+                    ":ibox:`tttext(/**)` Returns the value of the element at row index `tttext(row)` and column index `tttext(col)` in the sparse array.\n `tttext(*)`\tPrecondition: `tttext(0 ≤ row < getNumRows())`\n `tttext(*)`\t\t\t\t`tttext(0 ≤ col < getNumCols())`\n `tttext(*/)`\n`tttext(public int getValueAt(int row, int col))`"
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 6,
+                "Explain": false,
+                "Content": [
+                    "Write the `tttext(SparseArray)` method `tttext(removeColumn)`. After removing a specified column from a sparse array:",
+                    ":ibox:• All entries in the list `tttext(entries)` with column indexes matching `tttext(col)` are removed from the list.\n\n• All entries in the list `tttext(entries)` with column indexes greater than `tttext(col)` are replaced by entries with column indexes that are decremented by `text(one)` (moved `text(one)` column to the left).\n\n• The number of columns in the sparse array is adjusted to reflect the column removed.",
+                    "The sample object `tttext(sparse)` from the beginning of the question is repeated for your convenience.",
+                    "problems/AP15CSA/media/43c.jpg",
+                    "The shaded entries in `tttext(entries)`, below, correspond to the shaded column above.",
+                    "problems/AP15CSA/media/43d.jpg",
+                    "When `tttext(sparse)` has the state shown above, the call `tttext(sparse.removeColumn(1))` could result in `tttext(sparse)` having the following values in its instance variables (since `tttext(entries)` is in no particular order, it would be equally valid to reverse the order of its `text(two)` items). The shaded areas below show the changes.",
+                    "problems/AP15CSA/media/43e.jpg",
+                    ":box:Class information repeated from the beginning of the question\n\n`ultttext(public class SparseArrayEntry)`\n\n`tttext(public SparseArrayEntry(int r, int c, int v))`\n`tttext(public int getRow())`\n`tttext(public int getCol())`\n`tttext(public int getValue())`\n\n`ultttext(public class SparseArray)`\n\n`tttext(private int numRows)`\n`tttext(private int numCols)`\n`tttext(private List<SparseArrayEntry> entries)`\n`tttext(public int getNumRows())`\n`tttext(public int getNumCols())`\n`tttext(public int getValueAt(int row, int col))`\n`tttext(public void removeColumn(int col))`",
+                    "Complete method `tttext(removeColumn)` below.",
+                    ":ibox:`tttext(/**)` Removes the column `tttext(col)` from the sparse array.\n `tttext(*)` Precondition: `tttext(0 ≤ col < getNumCols())`\n `tttext(*/)`\n`tttext(public void removeColumn(int col))`"
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    },
+    "44": {
+        "Number": 44,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 9,
+        "Explain": false,
+        "Content": [
+            "This question involves the design of an interface, writing a class that implements the interface, and writing a method that uses the interface."
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "A number group represents a group of integers defined in some way. It could be empty, or it could contain `text(one)` or more integers.",
+                    "Write an interface named `tttext(NumberGroup)` that represents a group of integers. The interface should have a `text(single)` `tttext(contains)` method that determines if a given integer is in the group. For example, if `tttext(group1)` is of type `tttext(NumberGroup)`, and it contains only the `text(two)` numbers `tt(-5)` and `tt3`, then `tttext(group1.contains(-5))` would return `tttext(true)`, and `tttext(group1.contains(2))` would return `tttext(false)`.",
+                    "Write the complete `tttext(NumberGroup)` interface. It must have exactly `text(one)` method."
+                ],
+                "AnswerChoices": {}
+            },
+            "B": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 5,
+                "Explain": false,
+                "Content": [
+                    "A range represents a number group that contains all (and only) the integers between a minimum value and a maximum value, inclusive.",
+                    "Write the `tttext(Range)` class, which is a `tttext(NumberGroup)`. The `tttext(Range)` class represents the group of `tttext(int)` values that range from a given minimum value up through a given maximum value, inclusive. For example, the declaration",
+                    ":ibox:`tttext(NumberGroup range1 = new Range(-3, 2))tttext(;)`",
+                    "represents the group of integer values `-3`, `-2`, `-1`, `0`, `1`, `2`.",
+                    "Write the complete `tttext(Range)` class. Include all necessary instance variables and methods as well as a constructor that takes `text(two)` `tttext(int)` parameters. The `text(first)` parameter represents the minimum value, and the `text(second)` parameter represents the maximum value of the range. You may assume that the minimum is less than or equal to the maximum."
+                ],
+                "AnswerChoices": {}
+            },
+            "C": {
+                "Type": "MR",
+                "NumChoices": 0,
+                "Points": 2,
+                "Explain": false,
+                "Content": [
+                    "The `tttext(MultipleGroups)` class (not shown) represents a collection of `tttext(NumberGroup)` objects and is a `tttext(NumberGroup)`. The `tttext(MultipleGroups)` class stores the number groups in the instance variable `tttext(groupList)` (shown below), which is initialized in the constructor.",
+                    ":ibox:`tttext(private List<NumberGroup> groupList;)`",
+                    "Write the `tttext(MultipleGroups)` method `tttext(contains)`. The method takes an integer and returns `tttext(true)` if and only if the integer is contained in `text(one)` or more of the number groups in `tttext(groupList)`.",
+                    "For example, suppose `tttext(multiple1)` has been declared as an instance of `tttext(MultipleGroups)` and consists of the `text(three)` ranges created by the calls `tttext(new Range(5, 8))`, `tttext(new Range(10, 12))`, and `tttext(new Range(1, 6))`. The following table shows the results of several calls to `tttext(contains)`.",
+                    "problems/AP15CSA/media/44a.jpg",
+                    "Complete method `tttext(contains)` below.",
+                    ":ibox:/** Returns `tttext(true)` if at least `text(one)` of the number groups in this multiple group contains `tttext(num)`;\n `tttext(*)`\t\t`tttext(false)` otherwise.\n `tttext(*/)`\n`tttext(public boolean contains(int num))`"
+                ],
+                "AnswerChoices": {}
+            }
+        }
+    }
+}

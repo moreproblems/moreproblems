@@ -1,0 +1,14 @@
+{
+    "Directions": "Refer to the following information, then answer each question that follows.",
+    "Context": [],
+    "Title": "",
+    "Subtitle": "",
+    "Author": "",
+    "LabelType": "P",
+    "Content": [
+        [" ", "Consider the following `tttext(sort)` method. This method correctly sorts the elements of array `tttext(data)` into increasing order."],
+        [" ", ":ibox:`tttext(public static void sort(int[] data))`\n`tt({`\n\t`tttext(for (int j = 0; j < data.length - 1; j++))`\n\t`tt({`\n\t\t`tttext(int m = j;)`\n\t\t`tttext(for (int k = j + 1; k < data.length; k++))`\n\t\t`tt({`\n\t\t\t`tttext(if (data[k] < data[m]))`\t\t`tttext(/* Compare values */)`\n\t\t\t`tt({`\n\t\t\t\t`tttext(m = k;)`\n\t\t\t`tt}`\n\t\t`tt}`\n\t\t`tttext(int temp = data[m]; data[m] = data[j];)`\t`tttext(/* Assign to temp */)`\n\t\t`tttext(data[j] = temp;)`\n\n\t\t`tttext(/* End of outer loop */)`\n\t`tt}`\n`tt}`"]
+    ],
+    "Copyright": "",
+    "References": []
+}

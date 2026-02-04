@@ -718,7 +718,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "I only",
+                "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
                     "Rationale": "`x=1` doesn't satisfy the given equation: `sqrt(4x)` represents the principal square root of `4x`, which can't be negative.",
@@ -726,7 +726,7 @@
                 }
             },
             "B": {
-                "Choice": "II only",
+                "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": true,
                     "Rationale": "Squaring both sides of the equation `sqrt(4x)=x-3` yields `4x=(x-3)^2,or4x=(x-3)(x-3)`. Applying the distributive property on the right-hand side of the equation `4x=(x-3)(x-3)` yields `4x=x^2-3x-3x+9`. Subtracting `4x` from both sides of `4x=x^2-3x-3x+9` yields `0=x^2-3x-3x-4x+9`, which can be rewritten as `0=x^2-10x+9`. Factoring the right-hand side of `0=x^2-10x+9` gives `0=(x-1)(x-9)`. By the zero product property, if `0=(x-1)(x-9)`, then `0=x-1or0=x-9`. Adding `1` to both sides of `0=x-1` gives `x=1`. Adding `9` to both sides of `0=x-9` gives `x=9`. Substituting these values for `x` into the given equation will determine whether they satisfy the equation. Substituting `1` for `x` in the given equation yields `sqrt(4(1))=1-3,orsqrt4=-2`, which is false. Therefore, `x=1` doesn't satisfy the given equation. Substituting `9` for `x` in the given equation yields `sqrt(4(9))=9-3orsqrt(36)=6`, which is true. Therefore, `x=9` satisfies the given equation.",
