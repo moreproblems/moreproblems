@@ -22,7 +22,7 @@
                 "Choice": "`text(Zero)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the lines of the velocity graph meeting at `t=8text(s)` to indicate that the cars are at the same location at `t=8text(s)`. However, the area under the curve must be used to analyze this situation.",
                     "Percent": 0
                 }
             },
@@ -30,7 +30,7 @@
                 "Choice": "`24` `text(m)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the difference in the initial velocities as the distance between the cars at `t=8text(s)`. However, the area under the curve must be used to analyze this situation.",
                     "Percent": 0
                 }
             },
@@ -38,7 +38,7 @@
                 "Choice": "`48` `text(m)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the displacement of only one of the cars as the distance between the cars at `t=8text(s)`. However, the area under the curve must be used to analyze this situation.",
                     "Percent": 0
                 }
             },
@@ -46,7 +46,7 @@
                 "Choice": "`96` `text(m)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The area under the velocity curve is displacement; thus, at `t=8text(s)`, Car `text(A)` has a displacement of `text(Area)=1/2bh=(1/2)(8text(s))(12text(m)//text(s))=48text(m)` in the positive direction, and Car `text(B)` has a displacement of `text(Area)=1/2bh=(1/2)(8text(s))(12text(m)//text(s))=48text(m)` in the negative direction. Therefore, the distance between the cars is `48text(m)+48text(m)=96text(m)`.",
                     "Percent": 74
                 }
             },
@@ -54,7 +54,7 @@
                 "Choice": "`192` `text(m)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses `d=vt` and sets `v=12text(m)//text(s)` for both cars. However, the area under the curve must be used to analyze this situation.",
                     "Percent": 0
                 }
             }
@@ -83,7 +83,7 @@
                 "Choice": "`6.0` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the `text(second)` derivative of position but substitutes `t=1text(s)` instead of `t=3text(s)`.",
                     "Percent": 0
                 }
             },
@@ -91,7 +91,7 @@
                 "Choice": "`9.0` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the `text(second)` derivative of position but substitutes `t=1text(s)` instead of `t=3text(s)` and adds the value of `phi`.",
                     "Percent": 0
                 }
             },
@@ -99,7 +99,7 @@
                 "Choice": "`18` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This option uses `a=(d^2y)/(dt^2)=d^2/(dt^2)(3alphat^2-beta)=6alphat`. Substituting `t=3text(s)` yields `a=6alphat=(6)(1)(3)=18text(m)//text(s)^2`.",
                     "Percent": 92
                 }
             },
@@ -107,7 +107,7 @@
                 "Choice": "`23` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the speed, instead of the acceleration, at `t=3text(s)`.",
                     "Percent": 0
                 }
             },
@@ -115,7 +115,7 @@
                 "Choice": "`27` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the speed, instead of the acceleration, at `t=3text(s)`. It also does not include the `beta` term when solving for speed.",
                     "Percent": 0
                 }
             }
@@ -145,7 +145,7 @@
                 "Choice": "The `text(two)` stones will reach the ground at the same time with the same speed.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option assumes that since the initial speeds are the same, the stones reach the ground at the same time, ignoring the different directions for the initial velocities.",
                     "Percent": 0
                 }
             },
@@ -153,7 +153,7 @@
                 "Choice": "The `text(two)` stones will reach the ground at the same time but with different speeds.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option assumes that since the initial speeds are the same, the stones reach the ground at the same time, ignoring the different directions for the initial velocities. It also assumes that since stone `text(B)` is not moving downward initially, it will reach the ground with a different speed.",
                     "Percent": 0
                 }
             },
@@ -161,7 +161,7 @@
                 "Choice": "Stone `A` will reach the ground `text(first)`, but stone `B` will have the greater speed just before hitting the ground.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option can be obtained by incorrectly assuming that, because t is shorter for stone `text(A)` , stone `text(B)` will therefore have greater speed just before hitting the ground.",
                     "Percent": 0
                 }
             },
@@ -169,7 +169,7 @@
                 "Choice": "Stone `A` will reach the ground `text(first)`, but the `text(two)` stones will have the same speed just before they hit the ground.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Both stone `text(A)` and stone `text(B)` initially have the same potential energy `U_i` and kinetic energy `K_i`. Both stones therefore have the same `K_f` at ground level, when `U_f=0`. Substituting into conservation of energy to solve for the speeds of the stones when they reach the ground yields `U_i+K_i=U_f+K_f`; `mgh+1/2mv_0^2=0+1/2mv_f^2`; `v_f=sqrt(v_0^2+2gh)`; thus, because both stones have the same initial speed, they will both have the same speed when they reach the ground.",
                     "Percent": 30
                 }
             },
@@ -177,7 +177,7 @@
                 "Choice": "Stone `A` will reach the ground `text(first)`, and will have the greater speed just before hitting the ground.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option can be obtained by incorrectly assuming that `g t` is the same for both rock `text(A)` and rock `text(B)`. For stone `text(A)` , the vertical `g t` would be added simply to the vertical `v_0`, yielding `v_f=sqrt(v_0^2_(g t)^2)`. However, for stone `text(B)` , the vertical `g t` would be added to horizontal `v_0` using vector addition, yielding ``. However, the times are not the same; thus, this analysis is not correct",
                     "Percent": 0
                 }
             }
@@ -208,7 +208,7 @@
                 "Choice": "due east",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The direction of velocity is tangent to the circle and in the direction in which the object is moving.",
                     "Percent": 89
                 }
             },
@@ -216,7 +216,7 @@
                 "Choice": "south of east",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option can be obtained by using the vector sum of the car's velocity and the centripetal acceleration. It is not the direction of the car's velocity.",
                     "Percent": 0
                 }
             },
@@ -224,7 +224,7 @@
                 "Choice": "due south",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the direction of centripetal acceleration, not the direction of the car's velocity.",
                     "Percent": 0
                 }
             },
@@ -232,7 +232,7 @@
                 "Choice": "south of west",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the vector sum of the car's linear acceleration and centripetal acceleration. It is not the direction of the car's velocity.",
                     "Percent": 0
                 }
             },
@@ -240,7 +240,7 @@
                 "Choice": "due west",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the direction of linear acceleration, not the direction of the car's velocity.",
                     "Percent": 0
                 }
             }
@@ -271,7 +271,7 @@
                 "Choice": "due east",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the direction of the car's velocity, not its acceleration.",
                     "Percent": 0
                 }
             },
@@ -279,7 +279,7 @@
                 "Choice": "south of east",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the vector sum of the velocity and the centripetal acceleration. It is not the car's acceleration.",
                     "Percent": 0
                 }
             },
@@ -287,7 +287,7 @@
                 "Choice": "due south",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the direction of the car's centripetal acceleration, not its acceleration.",
                     "Percent": 0
                 }
             },
@@ -295,7 +295,7 @@
                 "Choice": "south of west",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The direction of acceleration is the direction of the vector sum of the linear acceleration and the centripetal acceleration.",
                     "Percent": 35
                 }
             },
@@ -303,7 +303,7 @@
                 "Choice": "due west",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the direction of the car's linear acceleration, not its acceleration.",
                     "Percent": 0
                 }
             }
@@ -334,7 +334,7 @@
                 "Choice": "`0.30` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the difference between the magnitudes of the centripetal and linear accelerations. The `text(two)` accelerations should be added as vectors.",
                     "Percent": 0
                 }
             },
@@ -342,7 +342,7 @@
                 "Choice": "`0.90` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the magnitude of the centripetal acceleration. It should be added as a vector to the car's linear acceleration.",
                     "Percent": 0
                 }
             },
@@ -350,7 +350,7 @@
                 "Choice": "`1.2` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the magnitude of the linear acceleration. It should be added as a vector to the car's centripetal acceleration.",
                     "Percent": 0
                 }
             },
@@ -358,7 +358,7 @@
                 "Choice": "`1.5` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The magnitude of acceleration is determined by adding the linear and centripetal accelerations as vectors. The linear acceleration is `a_L=-1.20text(m)//text(s)`. The centripetal acceleration is given by substituting into the equation `a_C=v^2/r=(36.0text(m)//text(s))^2/(1440text(m))=0.90text(m)//text(s)^2`. Adding the `text(two)` accelerations as vectors yields `a=sqrt(a_L^2+a_C^2)=sqrt((-1.20text(m)//text(s)^2)^2+(0.90text(m)//text(s)^2)^2)=1.50text(m)//text(s)^2`.",
                     "Percent": 34
                 }
             },
@@ -366,7 +366,7 @@
                 "Choice": "`2.1` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option adds the magnitudes of the centripetal and linear accelerations as scalars instead of as vectors.",
                     "Percent": 0
                 }
             }
@@ -397,7 +397,7 @@
                 "Choice": "`-2.0` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the maximum acceleration, not the average acceleration.",
                     "Percent": 0
                 }
             },
@@ -405,7 +405,7 @@
                 "Choice": "`-0.40` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The average acceleration is the average rate of velocity change over a time interval. For a velocity-time graph, that will be the slope of the straight line connecting the starting and ending points. Solving for the slope yields `a_text(avg)=text(slope)=(2text(m)//text(s)-6text(m)//text(s))/(10text(s)-0text(s))=0/40text(m)//text(s)^2`.",
                     "Percent": 83
                 }
             },
@@ -413,7 +413,7 @@
                 "Choice": "`+0.40` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option calculates the correct magnitude for the average acceleration, but it has the wrong sign for the answer.",
                     "Percent": 0
                 }
             },
@@ -421,7 +421,7 @@
                 "Choice": "`+1.0` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the final acceleration, not the average acceleration.",
                     "Percent": 0
                 }
             },
@@ -429,7 +429,7 @@
                 "Choice": "`+2.0` `text(m)//text(s)^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the maximum acceleration, not the average acceleration. This option also has the wrong sign.",
                     "Percent": 0
                 }
             }
@@ -460,7 +460,7 @@
                 "Choice": "`-1.4` `text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the area under the curve to determine the displacement, but it makes the area from `t=0` to  `t=3text(s)` negative instead of positive.",
                     "Percent": 0
                 }
             },
@@ -468,7 +468,7 @@
                 "Choice": "`+0.40` `text(m)//text(s)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "By definition, the average velocity is the average rate of position change over an interval. Mathematically, this is `(Deltax)/(Deltat)` Therefore, using the velocity graph's `Deltax` value, which is the sum of the signed areas under the curve, `v_(xtext(avg))=(1/2(3text(s))(6text(m)//text(s))+1/2(1text(s))(-2text(m)//text(s))+(2text(s))(-2text(m)//text(s))+1/2(2text(s))(-2text(m)//text(s))+1/2(2text(s))(2text(m)//text(s)))/(10text(s))`.",
                     "Percent": 52
                 }
             },
@@ -476,7 +476,7 @@
                 "Choice": "`+1.4` `text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the area under the curve to determine the displacement, but it makes the area from `t=3text(s)` to `t=8text(s)` positive instead of negative and the area from `t=8text(s)` to `t=10text(s)` negative instead of positive.",
                     "Percent": 0
                 }
             },
@@ -484,7 +484,7 @@
                 "Choice": "`+1.8` `text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the area under the curve to determine the displacement, but it makes all the areas positive, and the area from `t=3text(s)` to `t=8text(s)` is negative.",
                     "Percent": 0
                 }
             },
@@ -492,7 +492,7 @@
                 "Choice": "`+4.0` `text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the equation for constant acceleration, `1/2(v_0+v_f)` to calculate the average velocity. However, the acceleration, which is the slope of this graph, is not constant for this graph.",
                     "Percent": 0
                 }
             }
@@ -522,7 +522,7 @@
                 "Choice": "The top block will land directly below where it starts because objects at rest tend to stay at rest.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Objects at rest tend to stay at rest only when the net force exerted on them is `text(zero)`.",
                     "Percent": 0
                 }
             },
@@ -530,7 +530,7 @@
                 "Choice": "The top block will land to the left of where it starts because of the static friction between the blocks.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option assumes that static friction on an object is always in the direction opposing the object's motion. However, static friction opposes the potential motion between the `text(two)` surfaces, which is not always the direction opposing the object's motion.",
                     "Percent": 0
                 }
             },
@@ -538,7 +538,7 @@
                 "Choice": "The top block will land to the left of where it starts because of the kinetic friction between the blocks.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option assumes that kinetic friction on an object is always in the direction opposite the object's motion. However, kinetic friction opposes the motion between the `text(two)` surfaces, which is not always the direction opposing the object's motion.",
                     "Percent": 0
                 }
             },
@@ -546,7 +546,7 @@
                 "Choice": "The top block will land to the right of where it starts because of the static friction between the blocks.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The frictional force would not even momentarily be static friction, because, the moment `vec(F)` is applied to the lower block, the lower block instantly accelerates. If static friction caused this acceleration, then the top block would move together with the bottom block. As described in the problem, the blocks do not move together; thus, it is not static friction between the top block and bottom block.",
                     "Percent": 0
                 }
             },
@@ -554,7 +554,7 @@
                 "Choice": "The top block will land to the right of where it starts because of the kinetic friction between the blocks.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The top block accelerates to the right, but does not move as fast as the bottom block. The force exerted on the top block is friction from the bottom block. Since the blocks do not move together, the friction is kinetic friction. Since the blocks are moving toward the right, the top block will land to the right of where it started.",
                     "Percent": 48
                 }
             }
@@ -583,7 +583,7 @@
                 "Choice": "`ultext(Magnitude of Velocity)`: Increases\n`ultext(Magnitude of Acceleration)`: Increases\n`ultext(Distance of Fall Each Second)`: Increases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option shows that the magnitude of acceleration increases as the sphere gets closer to the ground. However, if the sphere is speeding up, the resistive force increases, and the net force and acceleration decrease as the stone gets closer to the ground.",
                     "Percent": 0
                 }
             },
@@ -591,7 +591,7 @@
                 "Choice": "`ultext(Magnitude of Velocity)`: Increases\n`ultext(Magnitude of Acceleration)`: Decreases\n`ultext(Distance of Fall Each Second)`: Increases",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If the sphere never reaches terminal velocity, the resistive force will always be less than the force of gravity; thus, the net force and the acceleration will always be downward. Therefore, the magnitude of the sphere's velocity will always be increasing. If the magnitude of the sphere's velocity is always increasing, the distance fallen `text(each second)` will be increasing. Also, if the sphere is speeding up, the resistive force increases, and the net force and acceleration decrease as the stone gets closer to the ground.",
                     "Percent": 65
                 }
             },
@@ -599,7 +599,7 @@
                 "Choice": "`ultext(Magnitude of Velocity)`: Increases\n`ultext(Magnitude of Acceleration)`: Decreases\n`ultext(Distance of Fall Each Second)`: Decreases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option can be obtained by not recognizing that the magnitude of velocity is the same as the distance fallen `text(each second)`; thus, if the magnitude of the velocity is increasing, the distance fallen `text(each second)` must also increase.",
                     "Percent": 0
                 }
             },
@@ -607,7 +607,7 @@
                 "Choice": "`ultext(Magnitude of Velocity)`: Decreases\n`ultext(Magnitude of Acceleration)`: Increases\n`ultext(Distance of Fall Each Second)`: Decreases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option shows that the magnitude of acceleration increases as the sphere gets closer to the ground. However, if the sphere is speeding up, the resistive force increases, and the net force and acceleration decrease as the stone gets closer to the ground. It also indicates that the magnitude of the velocity and the distance fallen `text(each second)` are decreasing. However, the resistive force will always be less than the force of gravity; thus, the net force and the acceleration will always be downward; thus, the magnitude of the sphere's velocity and the distance fallen `text(each second)` are increasing.",
                     "Percent": 0
                 }
             },
@@ -615,7 +615,7 @@
                 "Choice": "`ultext(Magnitude of Velocity)`: Decreases\n`ultext(Magnitude of Acceleration)`: Decreases\n`ultext(Distance of Fall Each Second)`: Increases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the magnitude of the velocity is decreasing. However, the resistive force will always be less than the force of gravity; thus, the net force and the acceleration will always be downward; thus, the magnitude of the sphere's velocity is increasing.",
                     "Percent": 0
                 }
             }
@@ -646,7 +646,7 @@
                 "Choice": "`-6e^(-3t)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the acceleration of the object, not the force.",
                     "Percent": 0
                 }
             },
@@ -654,7 +654,7 @@
                 "Choice": "`-3e^(-3t)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The acceleration is the derivative of the velocity, `a=(dv)/dt=d/dt(alphae^(-betat))=-betaalphae^(-betat)`. Substituting into an equation for Newton's `text(second)` law yields `F_text(net)=ma=m(-betaalphae^(-betat))`; `F_text(net)=(0.5text(kg))(-3text(s)^-1)(2text(m)//text(s))e^()=-3e^(-3t)`.",
                     "Percent": 71
                 }
             },
@@ -662,7 +662,7 @@
                 "Choice": "`e^(-3t)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the exponential part of the equation for force. It does not include the coefficient.",
                     "Percent": 0
                 }
             },
@@ -670,7 +670,7 @@
                 "Choice": "`3e^(-3t)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the velocity of the object, not the force.",
                     "Percent": 0
                 }
             },
@@ -678,7 +678,7 @@
                 "Choice": "`2/(3(1-e^(-3t)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option integrates the equation for velocity instead of taking the derivative.",
                     "Percent": 0
                 }
             }
@@ -709,7 +709,7 @@
                 "Choice": "`0.5` `text(J)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the work-energy theorem to calculate the energy dissipated but does not square the initial speed.",
                     "Percent": 0
                 }
             },
@@ -717,7 +717,7 @@
                 "Choice": "`1` `text(J)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The object will eventually come to rest; thus, the energy dissipated will be equal to initial kinetic energy. Using `t=0` and substituting into the kinetic energy equation yields `E=DeltaK=1/2m(v_f^2-v_i^2)=-1/2(0-v_i^2)`; `E=-1/2m(alphae^(-betat))^2=-(1/2)(0.50text(kg))[(2text(m)//text(s))(e^0)]^2=1text(J)`.",
                     "Percent": 34
                 }
             },
@@ -725,7 +725,7 @@
                 "Choice": "`2` `text(J)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the work-energy theorem to calculate the energy dissipated but does not include the mass of the object.",
                     "Percent": 0
                 }
             },
@@ -733,7 +733,7 @@
                 "Choice": "`4` `text(J)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the work-energy theorem to calculate the energy dissipated but sets the kinetic energy equal to the square of the function for speed.",
                     "Percent": 0
                 }
             },
@@ -741,7 +741,7 @@
                 "Choice": "`text(infinity)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the object will move forever and then assumes the energy dissipated will be `text(infinite)`.",
                     "Percent": 0
                 }
             }
@@ -772,7 +772,7 @@
                 "Choice": "`22°`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "During the collision, momentum is conserved. Momentum is a vector; thus, the horizontal and vertical directions can be analyzed independently. Substituting into conservation of momentum in the horizontal direction yields `m_Av_(Ai)=(m_A+m_B)v_(fx)`; `v_(fx)=(m_Av_(Ai))/(m_A+m_B)=((3.05text(kg))(2.5text(m)//text(s)))/(3.05text(kg)+2.10text(kg))=1.48text(m)//text(s)` and in the vertical direction yields `m_Bv_(Bi)=(m_A+m_B)v_(fx)`; `v_(fx)=(m_Av_(Ai))/(m_A+m_B)=((2.10text(kg))(1.5text(m)//text(s)))/(3.05text(kg)+2.10text(kg))=0.61text(m)//text(s)`. Substituting into the trigonometric function for tangent yields `0=tan^-1(v_(fy)/v_(fx))=tan^-1((0.61text(m)//text(s))/(1.48text(m)//text(s)))=`22°`.",
                     "Percent": 60
                 }
             },
@@ -780,7 +780,7 @@
                 "Choice": "`36°`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the initial velocities instead of the final velocities to find the angle.",
                     "Percent": 0
                 }
             },
@@ -788,7 +788,7 @@
                 "Choice": "`45°`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the final direction is the average of the initial directions of the `text(two)` carts. However, this would only be the result if the `text(two)` carts had equal initial momentums.",
                     "Percent": 0
                 }
             },
@@ -796,7 +796,7 @@
                 "Choice": "`54°`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the initial velocities instead of the final velocities to find the angle. Also, it reverse the `text(two)` components in the equation for tangent.",
                     "Percent": 0
                 }
             },
@@ -804,7 +804,7 @@
                 "Choice": "`62°`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option calculates the final velocity of `text(each cart)` but then reverses the `text(two)` components in the equation for tangent.",
                     "Percent": 0
                 }
             }
@@ -835,7 +835,7 @@
                 "Choice": "`0.08`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Setting the energy dissipated equal to the change in kinetic `E=fd=DeltaK=1/2m(v_f^2-v_i^2)=1/2m(0-v_i^2)` energy yields `-mumgd=-1/2mv_i^2`; `mu=v_i^2/(2gd)=(0.6text(m)//text(s))^2/(2(9.81text(m)//text(s)^2)(0.24text(m)))-0.08`.",
                     "Percent": 39
                 }
             },
@@ -843,7 +843,7 @@
                 "Choice": "`0.13`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option sets the energy dissipated equal to the change in kinetic energy but does not square the speed of the carts.",
                     "Percent": 0
                 }
             },
@@ -851,7 +851,7 @@
                 "Choice": "`0.19`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option sets the energy dissipated equal to the change in kinetic energy but does not include the `text(one-half)` from the kinetic energy equation.",
                     "Percent": 0
                 }
             },
@@ -859,7 +859,7 @@
                 "Choice": "`0.25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option sets the energy dissipated equal to the change in kinetic energy but does not square the speed of the carts. It also does not include the `text(one-half)` from the kinetic energy equation.",
                     "Percent": 0
                 }
             },
@@ -867,7 +867,7 @@
                 "Choice": "`0.75`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option sets the energy dissipated equal to the change in kinetic energy but does not include `g` in the calculation.",
                     "Percent": 0
                 }
             }
@@ -898,7 +898,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the elastic potential energy, not the kinetic energy, at `x=0`.",
                     "Percent": 0
                 }
             },
@@ -906,7 +906,7 @@
                 "Choice": "`kx_0^2//2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the kinetic energy at `x=0`.",
                     "Percent": 0
                 }
             },
@@ -914,7 +914,7 @@
                 "Choice": "`kx_0^2//2-mumgx_0`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The kinetic energy at `x=0` is equal to the difference of the initial elastic potential energy of the spring-block system and the energy dissipated by friction. Substituting into an energy equation yields `U_(Si)+fd=K_f`; `K_f=1/2kA^2-fd=1/2kx_0^2-mumdx_0`.",
                     "Percent": 67
                 }
             },
@@ -922,7 +922,7 @@
                 "Choice": "`kx_0^2//2-3mumgx_0//2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option calculates the energy dissipated by friction from the initial position to the position where the block stops, `x=1/2x_0`.",
                     "Percent": 0
                 }
             },
@@ -930,7 +930,7 @@
                 "Choice": "`kx_0^2//2-2mumgx_0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option calculates the energy dissipated by friction from the initial position to a position equal to the amplitude on the negative side of equilibrium where `x=x_0`",
                     "Percent": 0
                 }
             }
@@ -961,7 +961,7 @@
                 "Choice": "`(kx_0)/(4mg)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Setting the energy dissipated by friction equal to the difference in the elastic potential energy of the spring-block system `E=fd=U(Sf)-U_(Si)=1/2k(-1/2x_0)^2=1/2k(x_0)^2`; `mumgd=mumg(3/2x_0)=3/8kx_0^2`; `mu=(kx_0^2)/(4mg)`.",
                     "Percent": 18
                 }
             },
@@ -969,7 +969,7 @@
                 "Choice": "`(kx_0)/(2mg)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the energy equation but sets the final elastic potential energy equal to `text(zero)` instead of using the elastic potential energy when the block is at `x=1/2x_0`.",
                     "Percent": 0
                 }
             },
@@ -977,7 +977,7 @@
                 "Choice": "`(3kx_0)/(4mg)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the energy equation but sets the distance moved by the block equal to `1/2x_0` instead of `3/2x_0`.",
                     "Percent": 0
                 }
             },
@@ -985,7 +985,7 @@
                 "Choice": "`(kx_0)/(mg)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the energy equation but sets the final elastic potential energy equal to `text(zero)` instead of using the elastic potential energy when the block is at `x=-1/2x_0`.It also does not include the `text(one-half)` in the elastic potential energy equation.",
                     "Percent": 0
                 }
             },
@@ -993,7 +993,7 @@
                 "Choice": "`(2kx_0)/(mg)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the energy equation but sets the final elastic potential energy equal to `text(zero)` instead of using the elastic potential energy when the block is at `x=-1/2x_0`. It also does not include the `text(one-half)` in the elastic potential energy equation and includes the `text(one-half)` on the energy lost side of the equation",
                     "Percent": 0
                 }
             }
@@ -1024,7 +1024,7 @@
                 "Choice": "`m(d^2x)/(dt^2)=kx+mumg`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In this option, the spring force is in the same direction as the position of when `x>0`.",
                     "Percent": 0
                 }
             },
@@ -1032,7 +1032,7 @@
                 "Choice": "`m(d^2x)/(dt^2)=kx-mumg`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In this option, the spring force is in the same direction as the position of the block.",
                     "Percent": 0
                 }
             },
@@ -1040,7 +1040,7 @@
                 "Choice": "`m(d^2x)/(dt^2)=-kx+mumg`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substituting into a Newton's `text(second)` law equation yields `F_text(net)=F_S+f=ma`; `m(d^2x)/(dt^2)=-kx+mumg`.",
                     "Percent": 38
                 }
             },
@@ -1048,7 +1048,7 @@
                 "Choice": "`m(d^2x)/(dt^2)=-kx-mumg`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In this option, the spring force is in the same direction as the friction when `x>0`.",
                     "Percent": 0
                 }
             },
@@ -1056,7 +1056,7 @@
                 "Choice": "`m(d^2x)/(dt^2)=kx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In this option, the effect of friction is ignored.",
                     "Percent": 0
                 }
             }
@@ -1087,7 +1087,7 @@
                 "Choice": "`sqrt(gh)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses conservation of energy going up the hill to solve for `v_f` instead of using conservation of momentum for the collision. It also omits the `text(one-half)` in the kinetic energy equation.",
                     "Percent": 0
                 }
             },
@@ -1095,7 +1095,7 @@
                 "Choice": "`sqrt(v_i^2+2gh)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the kinematics equation for going up the hill to solve for the velocity at a height h up the hill. However, `v_f` is the final speed for the collision, not the final speed going up the hill to a height . ",
                     "Percent": 0
                 }
             },
@@ -1103,7 +1103,7 @@
                 "Choice": "`m/(m+M)v_i`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substituting into the conservation of momentum equation for the collision yields `p_i=p_f`; `mv_i=(m+M)v_f`; `v_f=m/(m+M)v_i`.",
                     "Percent": 88
                 }
             },
@@ -1111,7 +1111,7 @@
                 "Choice": "`m/Mv_i`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the conservation of momentum equation but does not include the mass of the projectile in the final momentum.",
                     "Percent": 0
                 }
             },
@@ -1119,7 +1119,7 @@
                 "Choice": "`M/mv_i`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the conservation of momentum equation but uses the mass of the block instead of the mass of the projectile for the initial momentum. It also does not include the mass of the block in the final momentum.",
                     "Percent": 0
                 }
             }
@@ -1150,7 +1150,7 @@
                 "Choice": "`v_f^2/(2g)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substituting into the conservation of energy equation for when the block and projectile go up the hill yields `K+U_(gi)=K_f+U_(gf)`; `K_i+0=0+U_(gf)`; `1/2(m+M)v_f^2=(m+M)gh`; `h=v_f^2/(2g)`.",
                     "Percent": 77
                 }
             },
@@ -1158,7 +1158,7 @@
                 "Choice": "`v_f/sqrt(2g)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the conservation of energy equation but uses `h^2` for gravitational potential energy instead of `h`.",
                     "Percent": 0
                 }
             },
@@ -1166,7 +1166,7 @@
                 "Choice": "`(Mv_f^2)/(2mg)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the conservation of energy equation but only uses the mass of the block for the initial kinetic energy and only uses the mass of the projectile for the final potential energy.",
                     "Percent": 0
                 }
             },
@@ -1174,7 +1174,7 @@
                 "Choice": "`(2g)/v_f^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the conservation of energy equation but finds the reciprocal of the correct answer.",
                     "Percent": 0
                 }
             },
@@ -1182,7 +1182,7 @@
                 "Choice": "`(2g)/v_f`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the conservation of energy equation but finds the reciprocal of the correct answer. It also does not square the speed in the kinetic energy equation.",
                     "Percent": 0
                 }
             }
@@ -1211,7 +1211,7 @@
                 "Choice": "`6` `text(kg)*text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option takes the derivative of the force instead of integrating the equation for the force.",
                     "Percent": 0
                 }
             },
@@ -1219,7 +1219,7 @@
                 "Choice": "`10` `text(kg)*text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into the equation for the net force instead of `text(first)` integrating the equation.",
                     "Percent": 0
                 }
             },
@@ -1227,7 +1227,7 @@
                 "Choice": "`12` `text(kg)*text(m)//text(s)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Integrating the equation for the net force and substituting the given values yields `J=Deltap=int(Kt^2+tau)dt`; `Deltap=int_(t=0)^(t=3)(t^2+1)=[t^3/3+t]_(t=0)^(t=3)`; `Deltap=(1/3(3)^3+3)-0=12text(kg)*text(m)//text(s)`.",
                     "Percent": 72
                 }
             },
@@ -1235,7 +1235,7 @@
                 "Choice": "`30` `text(kg)*text(m)//text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option integrates the equation for the net force, but it does not divide the terms by the new powers on the variables.",
                     "Percent": 0
                 }
             },
@@ -1243,7 +1243,7 @@
                 "Choice": "It cannot be determined without knowing the initial momentum of the object.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The values of momentum are not needed to determine the change in momentum because the change in momentum can be determined by integrating the equation for the net force.",
                     "Percent": 0
                 }
             }
@@ -1273,7 +1273,7 @@
                 "Choice": "Cart `A` is moving to the left, and cart `B` is moving to the right.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Only if `m_(text(cart)A)<m_(text(cart)B)` would cart `text(A)` move off to the left.",
                     "Percent": 0
                 }
             },
@@ -1281,7 +1281,7 @@
                 "Choice": "Cart `A` is moving to the left, and cart `B` remains stationary.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Only if `m_(text(cart)A)<m_(text(cart)B)` would cart `text(A)` move off to the left. Moreover, cart `text(B)` would not remain stationary. Even if `m_(text(cart)A)< <m_(text(cart)B)`, the collision would give cart `text(B)` a little velocity to the right.",
                     "Percent": 0
                 }
             },
@@ -1289,7 +1289,7 @@
                 "Choice": "Cart `A` is stationary, and cart `B` is moving to the right.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Only if `m_(text(cart)A)=m_(text(cart)B)` would cart `text(A)` be stopped by the collision.",
                     "Percent": 0
                 }
             },
@@ -1297,7 +1297,7 @@
                 "Choice": " Both carts move to the right, and they are stuck together.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The carts would be stuck together only if the collision was inelastic, not elastic.",
                     "Percent": 0
                 }
             },
@@ -1305,7 +1305,7 @@
                 "Choice": "Both carts move to the right, but they are not stuck together.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "For elastic collisions, when an object with a larger mass collides with a stationary object that has a smaller mass, both objects will move in the direction of motion of the first object. In elastic collision, the objects do not stick together; thus, the carts will move to the right and will not be stuck together.",
                     "Percent": 43
                 }
             }
@@ -1334,7 +1334,7 @@
                 "Choice": "`text(Zero)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the net impulse exerted on the ball is `text(zero)` because the magnitude of the ball's momentum does not change during the collisions with the floor. However, this does not take into account the change in direction of the ball's momentum.",
                     "Percent": 0
                 }
             },
@@ -1342,7 +1342,7 @@
                 "Choice": "`msqrt(gh)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the impulse as the ball falls to the floor instead of during the collision with the floor. It also does not include the `text(one-half)` in the kinetic energy equation when solving for the speed of the ball when it reaches the floor.",
                     "Percent": 0
                 }
             },
@@ -1350,7 +1350,7 @@
                 "Choice": "`msqrt(2gh)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the impulse as the ball falls to the floor instead of during the collision with the floor.",
                     "Percent": 0
                 }
             },
@@ -1358,7 +1358,7 @@
                 "Choice": "`msqrt(4gh)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option can result from a math error, simplifying `2msqrt(2gh)` as `msqrt(4gh)`.",
                     "Percent": 0
                 }
             },
@@ -1366,7 +1366,7 @@
                 "Choice": "`msqrt(8gh)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The net impulse is the change in momentum of the ball during its collision with the floor. `text(First)`, substituting into the conservation of energy equation to calculate the speed of the ball when it reaches the floor yields `K_i=U_(gf)`; `1/2mv_i^2=mgh`; `v=sqrt(2gh)`. The ball returns to the same height when it leaves the floor; thus, the final speed for the ball during the collision with the floor is the same as the speed when the ball reaches the floor, but it will be moving in the opposite direction. Therefore, `text(one)` of the velocities must be negative. Then, substituting into the equation for change in momentum yields `Deltap=p_f-p_i=m(v_f-v_i)`; `Deltap=m(sqrt(2gh)-(-sqrt(2gh)))`; `Deltap=m(sqrt(2gh))=msqrt(8gh)`;.",
                     "Percent": 25
                 }
             }
@@ -1396,7 +1396,7 @@
                 "Choice": "Its rotational kinetic energy equals the initial potential energy of the `text(sphere-Earth)` system.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option ignores the translational kinetic energy of the sphere.",
                     "Percent": 0
                 }
             },
@@ -1404,7 +1404,7 @@
                 "Choice": "Its translational kinetic energy equals the initial potential energy of the `text(sphere-Earth)` system.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option ignores the rotational kinetic energy of the sphere.",
                     "Percent": 0
                 }
             },
@@ -1412,7 +1412,7 @@
                 "Choice": "Its translational kinetic energy and rotational kinetic energy are equal.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While the sphere will have both translational and rotational kinetic energy at the bottom of the ramp, these `text(two)` energies will not be equal.",
                     "Percent": 0
                 }
             },
@@ -1420,7 +1420,7 @@
                 "Choice": "The sum of its translational kinetic energy and rotational kinetic energy equals the initial potential energy of the `text(sphere-Earth)` system.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The mechanical energy of the `text(sphere-Earth)` system will be conserved as the sphere rolls down the incline; thus, the kinetic energy of the sphere at the bottom of the ramp must be equal to the potential energy of the `text(sphere-Earth)` system when the sphere is at the top of the ramp, and the kinetic energy of the sphere is the sum of its translational kinetic energy and rotational kinetic energy.",
                     "Percent": 82
                 }
             },
@@ -1428,7 +1428,7 @@
                 "Choice": "The sum of its translational kinetic energy and rotational kinetic energy equals the energy lost because of friction.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There is no energy lost due to friction as the sphere rolls down the hill, because the sphere rolls without slipping.",
                     "Percent": 0
                 }
             }
@@ -1458,7 +1458,7 @@
                 "Choice": "`1/3omega_0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into conservation of angular momentum but uses `L=mR_text(total)omega` instead of `L=Iomega`.",
                     "Percent": 0
                 }
             },
@@ -1466,7 +1466,7 @@
                 "Choice": "`1/2omega_0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into conservation of angular momentum but uses `L=momega` instead of `L=Iomega`.",
                     "Percent": 0
                 }
             },
@@ -1474,7 +1474,7 @@
                 "Choice": "`2/3omega_0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option substitutes into conservation of angular momentum but uses `L=mR_text(avg)omega` instead of `L=Iomega`.",
                     "Percent": 0
                 }
             },
@@ -1482,7 +1482,7 @@
                 "Choice": "`4/5omega_0`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substituting into the equation for conservation of angular momentum yields `L_i=L_f`; `I_iomega_i=I_fomega_f`; `I_Aomega_A=(I_A+I_B)omega_f`; `omega_f=(I_Aomega_A)/(I_A+I_B)=(1/2M(2R)^2omega_0)/(1/2M(2R)^2+1/2MR^2)=(2MR^2omega_0)/(2MR^2+1/2MR^2)`; `4/5omega_0`.",
                     "Percent": 37
                 }
             },
@@ -1490,7 +1490,7 @@
                 "Choice": "`2/sqrt5omega_0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses conservation of rotational kinetic energy instead of conservation of angular momentum to solve for the final angular speed.",
                     "Percent": 0
                 }
             }
@@ -1520,7 +1520,7 @@
                 "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "When setting the centripetal force on the satellite equal to the gravitational force between the satellite and `text(Earth)`, the mass of the satellite cancels out of the equation; thus, the mass of the satellite is not a factor in its orbit.",
                     "Percent": 0
                 }
             },
@@ -1528,7 +1528,7 @@
                 "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While the satellite must be at a specific altitude, it must also have a specific angular velocity.",
                     "Percent": 0
                 }
             },
@@ -1536,7 +1536,7 @@
                 "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While the satellite must have a specific angular velocity, the mass of the satellite is not a factor. When setting the centripetal force on the satellite equal to the gravitational force between the satellite and `text(Earth)`, the mass of the satellite cancels out of the equation.",
                     "Percent": 0
                 }
             },
@@ -1544,7 +1544,7 @@
                 "Choice": "`text(II)` and `text(III)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Setting the centripetal force on the satellite equal to the gravitational force between the satellite and `text(Earth)` and substituting into the equation yields `F_C=F_g`; `(mv^2)/r=G(Mm)/r^2`; `(romega)^2/r=GM/r^2`; `omega^2=GM/r^3`. The mass cancels out of the equation, and the angular velocity of the satellite depends on the radius of orbit; thus, the satellite must be at a specific altitude and must also have a specific angular velocity, but the mass of the satellite is not a factor.",
                     "Percent": 47
                 }
             },
@@ -1552,7 +1552,7 @@
                 "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While the satellite must be at a specific altitude and must have a specific angular velocity, the mass of the satellite is not a factor. When setting the centripetal force on the satellite equal to the gravitational force between the satellite and `text(Earth)`, the mass of the satellite cancels out of the equation.",
                     "Percent": 0
                 }
             }
@@ -1582,7 +1582,7 @@
                 "Choice": "`(Gm^2)/(2r^2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the net force on sphere `text(X)` but makes the distance of sphere `text(Z)` as `2r`.",
                     "Percent": 0
                 }
             },
@@ -1590,7 +1590,7 @@
                 "Choice": "`(Gm^2)/r^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option is the force due to only sphere `text(Y)`, not the net force on sphere `text(X)`.",
                     "Percent": 0
                 }
             },
@@ -1598,7 +1598,7 @@
                 "Choice": "`(11Gm^2)/(9r^2)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Both sphere `text(Y)` and `text(Z)` will attract sphere `text(X)` to the right. Adding the force of gravity from both spheres together and substituting into the equation for gravitational force yields `F_g=F_(gy)+F_(gz)=(GM_Xm_Y)/(r_(XY)^2)+(GM_Xm_Z)/(r_(XZ)^2)=(Gm^2)/r^2+(Gm(2m))/(3r)^2=(11Gm^2)/(9r^2)`.",
                     "Percent": 61
                 }
             },
@@ -1606,7 +1606,7 @@
                 "Choice": "`(5Gm^2)/(4r^2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option adds the force of gravity from spheres `text(Y)` and `text(Z)` together but uses `2r` instead of `3r` for the distance for sphere `text(Z)` and uses `m` instead of `2m` as the mass for `text(Z)`.",
                     "Percent": 0
                 }
             },
@@ -1614,7 +1614,7 @@
                 "Choice": "`(2Gm^2)/r^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option adds the force of gravity from spheres `text(Y)` and `text(Z)` together but uses `r` and `m` for the distance and mass of both spheres.",
                     "Percent": 0
                 }
             }
@@ -1645,7 +1645,7 @@
                 "Choice": "`F_A=2F_C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the gravitational force equation to solve for the `text(two)` forces, but it uses the square root of the distance instead of the square of the distance in the equation.",
                     "Percent": 0
                 }
             },
@@ -1653,7 +1653,7 @@
                 "Choice": "`F_A=3F_C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the gravitational force equation to solve for the `text(two)` forces, but it does not square the distance in the equation. It also compares the radius of orbit for satellite `text(A)` to the radius of the planet instead of the radius of orbit for satellite `text(C)`.",
                     "Percent": 0
                 }
             },
@@ -1661,7 +1661,7 @@
                 "Choice": "`F_A=4F_C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the gravitational force equation to solve for the `text(two)` forces, but it does not square the distance in the equation.",
                     "Percent": 0
                 }
             },
@@ -1669,7 +1669,7 @@
                 "Choice": "`F_A=12F_C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses the gravitational force equation to solve for the `text(two)` forces, but it does not square the distance in the equation. It also uses the radius of the planet instead of the radius of orbit for the distance for satellite `text(A)`.",
                     "Percent": 0
                 }
             },
@@ -1677,7 +1677,7 @@
                 "Choice": "`F_A=16F_C`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substituting into the equation for the gravitational force on the satellite in orbit `text(A)` yields `F_A=(Gm_Sm_A)/r_A^2=(Gm_Sm)/(3R)^2=1/9(Gm_Sm)/R^2`. Substituting into the equation for the gravitational force on the satellite in orbit `text(C)` yields `F_C=(Gm_Sm_A)/r_A^2=(Gm_Sm)/(12R)^2=1/144(Gm_Sm)/R^2`. Combing the `text(two)` equations yields `(Gm_Sm)/R^2=(Gm_Sm)/R^2`; `9F_A=144F_C`; `F_A=16F_C`.",
                     "Percent": 69
                 }
             }
@@ -1708,7 +1708,7 @@
                 "Choice": "`1//2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the ratio of the speeds of satellite `text(C)` to satellite `text(A)` instead of the ratio of the speeds of satellite `text(A)` to satellite `text(C)`.",
                     "Percent": 0
                 }
             },
@@ -1716,7 +1716,7 @@
                 "Choice": "`1//1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the radius of orbit does not affect the speed of the satellite. However, as the radius of orbit increases, the speed of the satellite will decrease.",
                     "Percent": 0
                 }
             },
@@ -1724,7 +1724,7 @@
                 "Choice": "`2//1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Setting the centripetal force equal to the gravitational force and solving for the speed of satellite `text(A)` yields `F_C=F_g`; `(m_Av_A^2)/r_A=(GMm_A)/r_A^2`; `v_A=sqrt((GM)/r_A)`. Repeating for satellite `text(C)` yields `F_C=F_g`; `(m_Cv_C^2)/r_C=(GMm_C)/r_C^2`; `v_C=sqrt((GM)/r_C)`. Taking the ratio of the `text(two)` speeds yields `v_A/v_C=sqrt((GM)/r_A)/sqrt((GM)/r_C)=sqrt(r_C/r_A)=sqrt((12R)/(3R))=2/1`.",
                     "Percent": 25
                 }
             },
@@ -1732,7 +1732,7 @@
                 "Choice": "`4//1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the ratio of the square of the speeds instead of the ratio of the speeds.",
                     "Percent": 0
                 }
             },
@@ -1740,7 +1740,7 @@
                 "Choice": "`12//1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the speed of the satellite is inversely proportional to the radius of orbit instead of the square root of the radius.",
                     "Percent": 0
                 }
             }
@@ -1770,7 +1770,7 @@
                 "Choice": "`T_H//2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the tension on `text(Earth)` in terms of the tension on the new planet.",
                     "Percent": 0
                 }
             },
@@ -1778,7 +1778,7 @@
                 "Choice": "`T_H//4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option solves for the tension on the planet with the assumption that the mass of the new planet is the same with `text(Earth's)`, but it has `text(twice)` the radius. Thus, the weight of the object will be `text(quarter)` of its value on `text(Earth)`.",
                     "Percent": 0
                 }
             },
@@ -1786,7 +1786,7 @@
                 "Choice": "`T_H`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the force does not depend on the planet. However, if the value of the acceleration is different on the new planet, the tension in the string will also be different.",
                     "Percent": 0
                 }
             },
@@ -1794,7 +1794,7 @@
                 "Choice": "`2T_H`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The tension in the string will depend on the weight of the block; thus, it will depend on the value of the acceleration due to gravity. Setting the weight of an object equal to the force of gravity on an object and substituting for density yields `F_W=F_g`; `mg=G(Mm)/R^2`; `g=G(rhoV)/R^2=G(rho(4/3piR^3))/R^2=4/3GrhopiR`; thus, if the density of the new planet is the same and the radius is `text(twice)` the radius of `text(Earth)`, the acceleration due to gravity and the tension in the string will both `text(double)`.",
                     "Percent": 15
                 }
             },
@@ -1802,7 +1802,7 @@
                 "Choice": "`4T_H`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option does not square the distance in the equation for tension.",
                     "Percent": 0
                 }
             }
@@ -1831,7 +1831,7 @@
                 "Choice": "`30` `text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This solution uses impulse-momentum to solve for time and then divides by `6` in an incorrect attempt to convert to `text(minutes)`.",
                     "Percent": 0
                 }
             },
@@ -1839,7 +1839,7 @@
                 "Choice": "`60` `text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This  solution sets the impulse equal to the change in momentum, but it substitutes the force for the mass and the mass for the force in the equation.",
                     "Percent": 0
                 }
             },
@@ -1847,7 +1847,7 @@
                 "Choice": "`120` `text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This solution sets the impulse equal to the change in momentum, but it substitutes the force for the mass and the mass for the force in the equation. It also includes a `text(one-half)` term in the equation similar to the kinetic energy equation.",
                     "Percent": 0
                 }
             },
@@ -1855,7 +1855,7 @@
                 "Choice": "`180` `text(s)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Setting the impulse equal to the change in momentum of the shuttle and solving for time yields `J=Deltap`; `Ft=m(v_f-v_i)`; `t=(m(v_f-v_i))/F=((90000text(kg))(8000text(m)//text(s)-7900text(m)//text(s)))/(50000text(N))-180text(s)`.",
                     "Percent": 55
                 }
             },
@@ -1863,7 +1863,7 @@
                 "Choice": "`240` `text(s)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This  solution sets the impulse equal to the change in momentum, but it substitutes the force for the mass and the mass for the force in the equation. It also includes a `text(one-fourth)` term in the equation similar to the squaring of the speed in the kinetic energy equation.",
                     "Percent": 0
                 }
             }
@@ -1893,7 +1893,7 @@
                 "Choice": "`ultext(Pendulum)`: Remains the same\n`ultext(Spring)`: Decreases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While the period of oscillation for the pendulum will remain the same, according to the equation for the period of oscillation of a spring is proportional to the square root of the mass. Thus, as the mass of the block increases, the period of oscillation increases. It does not decrease.",
                     "Percent": 0
                 }
             },
@@ -1901,7 +1901,7 @@
                 "Choice": "`ultext(Pendulum)`: Remains the same\n`ultext(Spring)`: Increases",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "According to the equation for the period of a pendulum, `T_P=2pisqrt(L/g)`, mass is not a factor; thus, the period of oscillation will remain the same. According to the equation for the period of a spring, `T_S=2pisqrt(m/k)`, as the mass of the block increases, the period of oscillation increases.",
                     "Percent": 68
                 }
             },
@@ -1909,7 +1909,7 @@
                 "Choice": "`ultext(Pendulum)`: Remains the same\n`ultext(Spring)`: Remains the same",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The period of oscillation for the pendulum does not depend on mass, so it will remain the same. However, the period of oscillation of a spring is mass dependent, and it cannot not remain the same when the mass is `text(doubled)`.",
                     "Percent": 0
                 }
             },
@@ -1917,7 +1917,7 @@
                 "Choice": "`ultext(Pendulum)`: Increases\n`ultext(Spring)`: Remains the same",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "According to the equation for the period of oscillation of a pendulum, as the mass of the block increases, the period of oscillation remains the same. It does not increase. According to the equation for the period of oscillation of a spring, as the mass of the block increases, the period of oscillation increases, not decreases.",
                     "Percent": 0
                 }
             },
@@ -1925,7 +1925,7 @@
                 "Choice": "`ultext(Pendulum)`: Increases\n`ultext(Spring)`: Increases",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While the period of oscillation for the spring increases, according to the equation for the period of oscillation of a pendulum, the period of oscillation remains the same. It does not increase.",
                     "Percent": 0
                 }
             }
@@ -1956,7 +1956,7 @@
                 "Choice": "`Deltat_A`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since orientation does not affect the period of oscillation of the spring-block system, the time to reach maximum speed will be the same for system `text(B)` as it was for system `text(A)`.",
                     "Percent": 13
                 }
             },
@@ -1964,7 +1964,7 @@
                 "Choice": "`Deltat_A(sintheta)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the component of the weight of the block that is parallel to the incline will affect the acceleration of the block, causing a decrease in the period of oscillation of the spring-block system. However, the orientation of the system does not affect the period of oscillation; thus, the time to reach maximum speed is not affected by the orientation of the system.",
                     "Percent": 0
                 }
             },
@@ -1972,7 +1972,7 @@
                 "Choice": "`Deltat_A//(sintheta)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the component of the weight of the block that is parallel to the incline will slow down the block as it moves up the incline which will increase the period of `text(one)` oscillation of the spring-block system. However, the orientation of the system does not affect the period of oscillation; thus, the time to reach maximum speed is not affected by the orientation of the system.",
                     "Percent": 0
                 }
             },
@@ -1980,7 +1980,7 @@
                 "Choice": "`Deltat_A(costheta)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that only the component of the weight of the block that is perpendicular to the incline is significant, and it reduces the period of oscillation of the spring-block system. However, the orientation of the system does not affect the period of oscillation; thus, the time to reach maximum speed is not affected by the orientation of the system.",
                     "Percent": 0
                 }
             },
@@ -1988,7 +1988,7 @@
                 "Choice": "`Deltat_A//(costheta)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the component of the weight of the block that is perpendicular to the incline will increase the period of oscillation of the spring-block system. However, the orientation of the system does not affect the period of oscillation; thus, the time to reach maximum speed is not affected by the orientation of the system.",
                     "Percent": 0
                 }
             }
@@ -2019,7 +2019,7 @@
                 "Choice": "`1//3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that the ratio of the energies is `3` to `1`. However, it also indicates that the potential energy is greater than the kinetic energy. Because the potential energy is proportional to the square of the position, it will have `text(one-fourth)` its maximum value; thus, it will be less than, not greater than, the kinetic energy.",
                     "Percent": 0
                 }
             },
@@ -2027,7 +2027,7 @@
                 "Choice": "`1//2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that because the block is `text(halfway)` between its release and equilibrium positions, the potential energy has `text(twice)` the value of the kinetic energy. However, because the potential energy is proportional to the square of the position, it will have `text(one-fourth)` its maximum value; thus, it will be less than, not greater than, the kinetic energy.",
                     "Percent": 0
                 }
             },
@@ -2035,7 +2035,7 @@
                 "Choice": "`1//1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that because the block is `text(halfway)` between its release and equilibrium positions, both the kinetic energy and potential energy must be `text(half)` their maximum value, and they would be equal to each other. However, because the potential energy is proportional to the square of the position, it will not have `text(half)` the maximum value when the block is in this position.",
                     "Percent": 0
                 }
             },
@@ -2043,7 +2043,7 @@
                 "Choice": "`2//1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option indicates that because the block is `text(halfway)` between its release and equilibrium positions, the potential energy is `text(half)` its maximum value; thus, the kinetic energy has `text(twice)` the value of the potential energy. However, because the potential energy is proportional to  the square of the position, it will not have `text(half)` the maximum value when the block is in this position.",
                     "Percent": 0
                 }
             },
@@ -2051,7 +2051,7 @@
                 "Choice": "`3//1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The total mechanical energy of the system is the sum of the elastic potential energy of the spring-block system and the kinetic energy of the block. When the block is at its maximum displacement, the kinetic energy is `text(zero)` and all the energy is elastic potential energy. Substituting into the equation for elastic potential energy yields `E=U_(Stext(max))=1/2kx_text(max)^2=1/2kd^2`. Substituting into the equation for the elastic potential energy equation when the block is `text(halfway)` from its maximum displacement yields `U_S=1/2k(1/2d)^2=1/8kd^2`. Substituting into conservation of energy to calculate the kinetic energy of the block yields `E=U_S+K`; `1/2kd^2=1/8kd^2+K`; `K=3/8kd^2`; thus, the ratio of the kinetic energy to the elastic potential energy is `K/U=(3/8kd^2)/(1/8kd^2)=3/1`.",
                     "Percent": 14
                 }
             }
@@ -2083,7 +2083,7 @@
                 "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substitution into a Newton's `text(second)` law equation for the block at equilibrium in system `text(B)` yields `F_text(net)=0-F_S-Wsintheta`; `k(Deltax)=mgsintheta`; `g=(k(Deltax))/(msintheta)`; thus, in addition to the spring constant, the mass of the block, and the angle of the incline, the stretch `Deltax` of the spring must be known to determine a value for `g`.",
                     "Percent": 22
                 }
             },
@@ -2091,7 +2091,7 @@
                 "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Newton's `text(second)` law equation for the block at equilibrium in system `text(B)` yields `g=(k(Deltax))/(msintheta)`; thus, the speed of the block is not necessary to determine a value for `g`.",
                     "Percent": 0
                 }
             },
@@ -2099,7 +2099,7 @@
                 "Choice": "`text(I)` and `text(II)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Newton's `text(second)` law equation for the block at equilibrium in system `text(B)` yields `g=(k(Deltax))/(msintheta)`; thus, the stretch `Deltax` of the spring must be known, but the speed of the block is not necessary to determine a value for `g`.",
                     "Percent": 0
                 }
             },
@@ -2107,7 +2107,7 @@
                 "Choice": "`text(II)` and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Newton's `text(second)` law equation for the block at equilibrium in system `text(B)` yields `g=(k(Deltax))/(msintheta)`; thus, neither the speed of the block nor the time interval between `text(two)` consecutive passes through the equilibrium position is necessary to determine a value for `g`.",
                     "Percent": 0
                 }
             },
@@ -2115,7 +2115,7 @@
                 "Choice": "`text(I)` and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Newton's `text(second)` law equation for the block at equilibrium in system `text(B)` yields `g=(k(Deltax))/(msintheta)`; thus, the stretch `Deltax` of the spring must be known, but the time interval between `text(two)` consecutive passes through the equilibrium position is not necessary to determine a value for `g`.",
                     "Percent": 0
                 }
             }
@@ -2145,7 +2145,7 @@
                 "Choice": "`4.0` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses Newton's `text(second)` law to determine the amplitude of oscillation but includes the `text(one-half)` term similar to the equation for the elastic potential energy. It also does not include the acceleration due to gravity in the calculation.",
                     "Percent": 0
                 }
             },
@@ -2153,7 +2153,7 @@
                 "Choice": "`2.0` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses Newton's `text(second)` law to determine the amplitude of oscillation but does not include the acceleration due to gravity in the calculation.",
                     "Percent": 0
                 }
             },
@@ -2161,23 +2161,23 @@
                 "Choice": "`10` `text(cm)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option uses Newton's `text(second)` law to determine the amplitude of oscillation but then divides the answer by `text(two)`, because the block moves the same distance on both sides of the equilibrium position. However, the solution from the equation is the amplitude of oscillation.",
                     "Percent": 0
                 }
             },
             "D": {
                 "Choice": "`20` `text(cm)`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The spring begins unstretched. To determine the amplitude of oscillation, Newton's `text(second)` law can be used to determine how far the block will now stretch the spring to the equilibrium position. Substituting into Newton's `text(second)` law yields `F_text(net)=0=F_S-F_W`; `kx_text(max)=mg`; `x_text(max)=(mg)/k=((2.0text(kg))(9.8text(m)//text(s)^2))/(100text(N)//text(m))=0.20text(m)`.",
                     "Percent": 0
                 }
             },
             "E": {
                 "Choice": "`40` `text(cm)`",
                 "Key": {
-                    "Correct": true,
-                    "Rationale": "",
+                    "Correct": false,
+                    "Rationale": "This option uses Newton's `text(second)` law to determine the amplitude of oscillation but then `text(doubles)` the answer, because the block moves this distance on both sides of the equilibrium position. However, the solution from the equation is the amplitude of oscillation.",
                     "Percent": 38
                 }
             }

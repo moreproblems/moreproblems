@@ -4,10 +4,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.2A",
+            "4.1.2B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -23,7 +25,7 @@
                 "Choice": "problems/AP18CSP/media/1b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment assigns the initial value of `tttext(first)` to `tttext(temp)`, then assigns the initial value of `tttext(second)` to `tttext(first)`. The initial value of `tttext(second)`, which has been stored in `tttext(first)`, is then assigned to `tttext(second)`. Therefore, the value of `tttext(second)` has not changed from its initial value.",
                     "Percent": 0
                 }
             },
@@ -31,7 +33,7 @@
                 "Choice": "problems/AP18CSP/media/1c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The code segment assigns the initial value of `tttext(first)` to `tttext(temp)`, then assigns the initial value of `tttext(second)` to `tttext(first)`. The initial value of `tttext(first)`, which has been stored in `tttext(temp)`, is then assigned to `tttext(second)`. Therefore, the initial values of `tttext(first)` and `tttext(second)` have been interchanged.",
                     "Percent": 0
                 }
             },
@@ -39,7 +41,7 @@
                 "Choice": "problems/AP18CSP/media/1d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment never changes the value of `tttext(second)`.",
                     "Percent": 0
                 }
             },
@@ -47,7 +49,7 @@
                 "Choice": "problems/AP18CSP/media/1e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment never changes the value of `tttext(second)`.",
                     "Percent": 0
                 }
             }
@@ -59,10 +61,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.3.1C",
+            "6.3.1D",
+            "6.3.1F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -76,7 +82,7 @@
                 "Choice": "Calling the bank at its official phone number to ask whether the request for personal information is legitimate",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Contacting the bank at its official phone number would help verify whether or not the e-mail was legitimate.",
                     "Percent": 0
                 }
             },
@@ -84,7 +90,7 @@
                 "Choice": "Calling the phone number given in the e-mail and providing the personal information over the phone",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Providing personal information to a person using an unverified phone number is a privacy risk.",
                     "Percent": 0
                 }
             },
@@ -92,7 +98,7 @@
                 "Choice": "Checking that the domain name of the sender's e-mail address is associated with the bank",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Checking the domain name of the sender's email address would help verify whether or not the e-mail was legitimate.",
                     "Percent": 0
                 }
             },
@@ -100,7 +106,7 @@
                 "Choice": "Conducting a Web search to see if other people have received similar requests for personal information",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Performing a Web search would help indicate whether the message is a common phishing scam.",
                     "Percent": 0
                 }
             }
@@ -112,10 +118,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "7.1.2A",
+            "7.1.2B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -129,7 +137,7 @@
                 "Choice": "An experiment that requires all participants to be working in the same laboratory",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the participants must all be in the same location, there would be no need to use a distributed approach.",
                     "Percent": 0
                 }
             },
@@ -137,7 +145,7 @@
                 "Choice": "An experiment that requires expensive equipment to conduct",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Requiring expensive equipment may prevent most members of the general public from participating in the experiment.",
                     "Percent": 0
                 }
             },
@@ -145,7 +153,7 @@
                 "Choice": "An experiment that requires data measurements to be taken in many different locations",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If data measurements need to be taken from many locations, it would be beneficial to have participants from around the world collect the data.",
                     "Percent": 0
                 }
             },
@@ -153,7 +161,7 @@
                 "Choice": "An experiment that requires specialized knowledge and training to conduct",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Requiring specialized knowledge and training may prevent most members of the general public from participating in the experiment.",
                     "Percent": 0
                 }
             }
@@ -165,10 +173,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.3A",
+            "2.1.3B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -182,7 +192,7 @@
                 "Choice": "A simulation of flipping a fair coin",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "There are only `text(two)` possible results of a coin flip, which can be stored in a Boolean variable as `tttext(true)` or `tttext(false)`.",
                     "Percent": 0
                 }
             },
@@ -190,7 +200,7 @@
                 "Choice": "A simulation of rolling a fair die (with sides numbered `1` through `6`)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are `text(six)` possible results of rolling a die, which is more than can be stored in a Boolean variable.",
                     "Percent": 0
                 }
             },
@@ -198,7 +208,7 @@
                 "Choice": "A simulation of the temperature in a location over time",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are many possible temperature values, which would require `text(each temperature)` to be stored as a numerical value instead of a Boolean value",
                     "Percent": 0
                 }
             },
@@ -206,7 +216,7 @@
                 "Choice": "A simulation of traffic patterns on a road",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Traffic patterns are too complicated to be stored as a Boolean value.",
                     "Percent": 0
                 }
             }
@@ -218,10 +228,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.1A",
+            "4.1.1B",
+            "4.1.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -238,7 +252,7 @@
                 "Choice": "problems/AP18CSP/media/5b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment will set `tttext(ticketPrice)` to `tt(17)` for all 3-D movies, regardless of the age of the purchaser.",
                     "Percent": 0
                 }
             },
@@ -246,7 +260,7 @@
                 "Choice": "problems/AP18CSP/media/5c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment will set `tttext(ticketPrice)` to `tt(17)` for all purchasers between the ages of `12` and `60`, regardless of whether or not the movie is 3-D.",
                     "Percent": 0
                 }
             },
@@ -254,7 +268,7 @@
                 "Choice": "problems/AP18CSP/media/5d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This code segment initially sets `tttext(ticketPrice)` to `tt(12)`, and then changes the price to `tt(9)` only for children and seniors. The code segment then increases `tttext(ticketPrice)` by `tt(5)` for 3-D movies.",
                     "Percent": 0
                 }
             },
@@ -262,7 +276,7 @@
                 "Choice": "problems/AP18CSP/media/5e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment will set `tttext(ticketPrice)` to `tt(17)` for all purchasers between the ages of `12` and `60`, regardless of whether or not the movie is 3-D.",
                     "Percent": 0
                 }
             }
@@ -277,7 +291,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "6.1.1I"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -291,7 +305,7 @@
                 "Choice": "Developing standards and protocols for Internet communication",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The IETF develops and oversees standards such as hypertext transfer protocol (HTTP), Internet protocol (IP), and simple mail transfer protocol (SMTP).",
                     "Percent": 0
                 }
             },
@@ -299,7 +313,7 @@
                 "Choice": "Preventing copyrighted materials from being illegally distributed online",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The IETF does not prevent copyrighted materials from being distributed online.",
                     "Percent": 0
                 }
             },
@@ -307,7 +321,7 @@
                 "Choice": "Preventing malicious software from being distributed online",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The IETF does not prevent malware from being distributed online.",
                     "Percent": 0
                 }
             },
@@ -315,7 +329,7 @@
                 "Choice": "Verifying the ownership of encrypted keys used in secured messages",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The ownership of encrypted keys is verified by certificate authorities, not the IETF.",
                     "Percent": 0
                 }
             }
@@ -327,10 +341,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.2.1B",
+            "5.2.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -346,7 +362,7 @@
                 "Choice": "`tttext(1 3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The values `tt(1)` and `tt(3)` are the original values of `tttext(start)` and `tttext(current)`, not the final values.",
                     "Percent": 0
                 }
             },
@@ -354,7 +370,7 @@
                 "Choice": "`tttext(3 3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The value `tt(3)` is the final value of `tttext(start)`, but not the final value of `tttext(current)`.",
                     "Percent": 0
                 }
             },
@@ -362,7 +378,7 @@
                 "Choice": "`tttext(3 4)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The code segment initially sets `tttext(start)` to `tt(1)`, `tttext(end)` to `tt(20)`, and `tttext(current)` to `tt(3)`. Next, the code segment sets `tttext(start)` to the value of current, which is `tt(3)`. Then `tttext(current)` is increased from `tt(3)` to `tt(4)`. The final values of `tttext(start)` and `tttext(current)` are `tt(3)` and `tt(4)`, respectively.",
                     "Percent": 0
                 }
             },
@@ -370,7 +386,7 @@
                 "Choice": "`tttext(4 4)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The value `tt(4)` is the final value of `tttext(current)`, but not the final value of `tttext(start)`.",
                     "Percent": 0
                 }
             }
@@ -382,10 +398,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2.3A",
+            "2.2.3B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -399,7 +417,7 @@
                 "Choice": "A language comprised entirely of hardware logic gates",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Hardware logic gates are low-level abstractions but are not part of high-level programming languages.",
                     "Percent": 0
                 }
             },
@@ -407,7 +425,7 @@
                 "Choice": "A language in which `text(each instruction)` corresponds directly to an instruction in a computer's machine code",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Machine languages (in which instructions correspond directly to machine instructions) are not high-level programming languages.",
                     "Percent": 0
                 }
             },
@@ -415,7 +433,7 @@
                 "Choice": "A language that is easy for a computer to interpret but difficult for humans to interpret",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A language that is hard for a human to understand would be considered a low-level language. High-level languages are generally easier for humans to understand.",
                     "Percent": 0
                 }
             },
@@ -423,7 +441,7 @@
                 "Choice": "A language that uses multiple abstractions to manage complexity",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "High-level languages provide abstractions that make it easy for humans to read and write programs without needing to understand the low-level details of how programming instructions are processed by a computer.",
                     "Percent": 0
                 }
             }
@@ -435,10 +453,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2.1A",
+            "3.2.1B",
+            "3.2.1C",
+            "3.2.1H"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -455,7 +479,7 @@
                 "Choice": "`text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The name of the person who took a photo is not captured in the photo data.",
                     "Percent": 0
                 }
             },
@@ -463,7 +487,7 @@
                 "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The number of photos taken at a particular geographic location can be determined from the geographic data stored with `text(each photo)`. The number of photos taken in the `text(last year)` can be determined from the data and time data stored with `text(each photo)`. The name of the person who took a photo is not captured in the photo data.",
                     "Percent": 0
                 }
             },
@@ -471,7 +495,7 @@
                 "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of photos taken at a particular geographic location can be determined, but the name of the person who took the most recent photo cannot be determined.",
                     "Percent": 0
                 }
             },
@@ -479,7 +503,7 @@
                 "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of photos taken at a particular geographic location and the number of photos that were taken in the `text(last year)` can be determined, but the name of the person who took the most recent photo cannot be determined.",
                     "Percent": 0
                 }
             }
@@ -491,10 +515,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.1.2A",
+            "5.1.2B",
+            "5.1.2C",
+            "5.1.2J"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -508,7 +538,7 @@
                 "Choice": "It allows programmers to implement algorithmic solutions to otherwise unsolvable problems.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Unsolvable problems cannot be solved with an algorithm.",
                     "Percent": 0
                 }
             },
@@ -516,7 +546,7 @@
                 "Choice": "It eliminates the need for programmers to test completed programs.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Programs that were developed with an iterative and incremental process still typically require testing.",
                     "Percent": 0
                 }
             },
@@ -524,7 +554,7 @@
                 "Choice": "It enables programmers to create programs that use the lowest-level abstractions available.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The use of low-level abstractions is unrelated to the development process used.",
                     "Percent": 0
                 }
             },
@@ -532,7 +562,7 @@
                 "Choice": "It helps programmers identify errors as components are added to a working program.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Incrementally adding code segments to correct, working programs can help programmers identify new errors that are introduced.",
                     "Percent": 0
                 }
             }
@@ -544,10 +574,18 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.1A",
+            "4.1.1B",
+            "4.1.1D",
+            "4.1.1E",
+            "4.1.1F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -563,7 +601,7 @@
                 "Choice": ":ibox:`tt(text(xPos)larrtext(3))`\n`tt(text(yPos)larrtext(6))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos + 2))`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment draws a circle centered at the coordinates `(3,6)`, then moves to the right and up, drawing circles centered at `(5,8)` and `(7,10)`.",
                     "Percent": 0
                 }
             },
@@ -571,7 +609,7 @@
                 "Choice": ":ibox:`tt(text(xPos)larrtext(3))`\n`tt(text(yPos)larrtext(6))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos - 2))`\n`tt}`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The code segment draws a circle centered at the coordinates `(3,6)`, then moves to the right and down, drawing circles centered at `(5,4)` and `(7,2)`.",
                     "Percent": 0
                 }
             },
@@ -579,7 +617,7 @@
                 "Choice": ":ibox:`tt(text(xPos)larrtext(7))`\n`tt(text(yPos)larrtext(2))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos + 2))`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment draws a circle centered at the coordinates `(7,2)`, then moves to the right and up, drawing circles centered at `(9,4)` and `(11,6)`.",
                     "Percent": 0
                 }
             },
@@ -587,7 +625,7 @@
                 "Choice": ":ibox:`tt(text(xPos)larrtext(7))`\n`tt(text(yPos)larrtext(2))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos - 2))`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment draws a circle centered at the coordinates `(7,2)`, then moves to the right and down, drawing circles centered at `(9,0)` and `(11,-2)`.",
                     "Percent": 0
                 }
             }
@@ -602,7 +640,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3.1B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -620,7 +658,7 @@
                 "Choice": "problems/AP18CSP/media/12c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment simulates a spinner in which selecting each of `text(three)` sections is equally likely.",
                     "Percent": 0
                 }
             },
@@ -628,7 +666,7 @@
                 "Choice": "problems/AP18CSP/media/12d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment simulates a spinner in which selecting each of `text(three)` sections is equally likely.",
                     "Percent": 0
                 }
             },
@@ -636,7 +674,7 @@
                 "Choice": "problems/AP18CSP/media/12e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The code segment selects `tttext(“Red”)` `text(one-sixth)` of the time, `tttext(“Yellow”)` `text(one-sixth)` of the time, and `tttext(“Blue”)` the remaining `text(two-thirds)` of the time.",
                     "Percent": 0
                 }
             },
@@ -644,7 +682,7 @@
                 "Choice": "problems/AP18CSP/media/12f.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The code segment selects `tttext(“Yellow”)` `text(one-sixth)` of the time, `tttext(“Blue”)` `text(one-sixth)` of the time, and `tttext(“Red”)` the remaining `text(two-thirds)` of the time.",
                     "Percent": 0
                 }
             }
@@ -656,10 +694,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.1.1D",
+            "3.1.1E"
         ],
         "SuppContent": [
             "problems/AP18CSP/supps/AP18CSP-S1.json"
@@ -675,7 +715,7 @@
                 "Choice": "`30.6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The approximation `text(30.6 million)` would be a better estimate for `text(year 11)`.",
                     "Percent": 0
                 }
             },
@@ -683,7 +723,7 @@
                 "Choice": "`31.2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The total number of registered users appears to be increasing by about `text(0.5 million each year)`, so in `text(year 12)`, the number of users can be approximated at `text(31.2 million)` (`30.2+0.5+0.5`).",
                     "Percent": 0
                 }
             },
@@ -691,7 +731,7 @@
                 "Choice": "`31.8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The approximation `text(31.8 million)` would be a better estimate for `text(year 13)`.",
                     "Percent": 0
                 }
             },
@@ -699,7 +739,7 @@
                 "Choice": "`32.4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The approximation `text(32.4 million)` would be a better estimate for `text(year 14)`.",
                     "Percent": 0
                 }
             }
@@ -711,10 +751,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.1.1D",
+            "3.1.1E"
         ],
         "SuppContent": [
             "problems/AP18CSP/supps/AP18CSP-S1.json"
@@ -730,7 +772,7 @@
                 "Choice": "The mobile app release did not have any effect on the average number of `text(daily)` messages sent `text(per user)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The average number of `text(daily)` messages sent `text(per user)` appears to increase after the mobile app was released.",
                     "Percent": 0
                 }
             },
@@ -738,7 +780,7 @@
                 "Choice": "The mobile app release discouraged new user registration on the site.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of registered users continued to increase after the mobile app was released.",
                     "Percent": 0
                 }
             },
@@ -746,7 +788,7 @@
                 "Choice": "The mobile app release led to users being less frequently active on the site.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The average number of active `text(daily)` users appears to increase after the mobile app was released.",
                     "Percent": 0
                 }
             },
@@ -754,7 +796,7 @@
                 "Choice": "The mobile app release led to users tending to write shorter messages.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The average number of characters `text(per message)` appears to decrease after the mobile app was released.",
                     "Percent": 0
                 }
             }
@@ -766,10 +808,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.2.1B",
+            "5.2.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -786,7 +830,7 @@
                 "Choice": "Program `text(A)` and program `text(B)` display identical values.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The programs display different values.",
                     "Percent": 0
                 }
             },
@@ -794,7 +838,7 @@
                 "Choice": "Program `text(A)` and program `text(B)` display the same values in different orders.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The programs display different values.",
                     "Percent": 0
                 }
             },
@@ -802,7 +846,7 @@
                 "Choice": "Program `text(A)` and program `text(B)` display the same number of values, but the values differ.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The programs each display `text(ten)` values, but `text(each value)` displayed by program `text(B)` is `text(one)` greater than the corresponding value from program `text(A)`. Program `text(A)` displays `tttext(1 2 3 4 5 6 7 8 9 10)` and program `text(B)` displays `tttext(2 3 4 5 6 7 8 9 10 11)`.",
                     "Percent": 0
                 }
             },
@@ -810,7 +854,7 @@
                 "Choice": "Program `text(A)` and program `text(B)` display a different number of values.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Both programs display `text(ten)` values.",
                     "Percent": 0
                 }
             }
@@ -822,10 +866,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.1.1C",
+            "6.1.1E",
+            "6.1.1F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -839,31 +887,31 @@
                 "Choice": "Devices from different manufacturers are required to run the same operating system to communicate over the Internet.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Devices running different operating systems can communicate over the Internet.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "Every device connected to the Internet is assigned a digital certificate by a certificate authority.",
+                "Choice": "`text(Every device)` connected to the Internet is assigned a digital certificate by a certificate authority.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Digital certificates are used to verify encrypted keys. They are not assigned to `text(every device)` connected to the Internet.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "Every device connected to the Internet is assigned an Internet protocol (IP) address.",
+                "Choice": "`text(Every device)` connected to the Internet is assigned an Internet protocol (IP) address.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Connecting new devices to the Internet is enabled by assignment of an IP address.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "Every device connected to the Internet requires a high-bandwidth connection to enable redundant routing to `text(each device)`.",
+                "Choice": "`text(Every device)` connected to the Internet requires a high-bandwidth connection to enable redundant routing to `text(each device)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Redundant routing on the Internet is not dependent on the bandwidth of a connection.",
                     "Percent": 0
                 }
             }
@@ -875,10 +923,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "7.3.1G",
+            "7.3.1H",
+            "7.3.1M",
+            "7.3.1P"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -892,7 +946,7 @@
                 "Choice": "Advertisements for the artist's other albums will be displayed when the user visits a different Web site.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Details of a user's browsing history can be stored in cookies, which could be used to deliver targeted advertisements on another Web site.",
                     "Percent": 0
                 }
             },
@@ -900,7 +954,7 @@
                 "Choice": "Album reviews from other people who live nearby will be displayed to the user.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Geolocation data can be accessed by the Web site, which can use this information to provide album reviews from nearby users.",
                     "Percent": 0
                 }
             },
@@ -908,7 +962,7 @@
                 "Choice": "Similar artists will be recommended to the user based on the user's download selection.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The user's download history can be used to recommend similar artists based on aggregated data from many users.",
                     "Percent": 0
                 }
             },
@@ -916,7 +970,7 @@
                 "Choice": "The user will be in violation of the Digital Millennium Copyright Act (DMCA).",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If the album was purchased and downloaded through a licensed music store, the user will not be in violation of the DMCA.",
                     "Percent": 0
                 }
             }
@@ -928,10 +982,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "7.4.1A",
+            "7.4.1B",
+            "7.4.1C",
+            "7.4.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -946,7 +1006,7 @@
                 "Choice": "`text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A lack of access to devices contributes to the digital divide. This issue could be addressed by providing free or low-cost devices. Providing networks and infrastructure would address a lack of access to networks which also contributes to the digital divide.",
                     "Percent": 0
                 }
             },
@@ -954,7 +1014,7 @@
                 "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A lack of access to networks contributes to the digital divide. This issue could be addressed by providing networks and infrastructure.",
                     "Percent": 0
                 }
             },
@@ -962,7 +1022,7 @@
                 "Choice": "`text(II)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Free education and training would address digital literacy and would reduce the digital divide.",
                     "Percent": 0
                 }
             },
@@ -970,7 +1030,7 @@
                 "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Free education and training would address digital literacy. Providing free or low-cost devices would address a lack of access to devices. Providing networks and infrastructure would address a lack of access to networks.",
                     "Percent": 0
                 }
             }
@@ -982,10 +1042,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3.1A",
+            "2.3.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -999,7 +1061,7 @@
                 "Choice": "Gathering data for additional `text(years)` to try to identify patterns in birth rates",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Gathering additional data may help the simulation to provide a more accurate prediction.",
                     "Percent": 0
                 }
             },
@@ -1007,7 +1069,7 @@
                 "Choice": "Refining the model used in the computer simulation to more closely reflect the data from the past `text(ten years)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Refining the model used in the simulation may help provide a more accurate prediction.",
                     "Percent": 0
                 }
             },
@@ -1015,7 +1077,7 @@
                 "Choice": "Removing as many details from the model as possible so that calculations can be performed quickly",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Removing details from the model may help it run quickly, but is unlikely to provide more accurate results.",
                     "Percent": 0
                 }
             },
@@ -1023,7 +1085,7 @@
                 "Choice": "Taking into consideration more information about the community, such as the ages of residents",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Gathering additional data may help the simulation provide a more accurate prediction.",
                     "Percent": 0
                 }
             }
@@ -1035,10 +1097,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2.1G",
+            "3.2.1H",
+            "3.2.1I"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1052,7 +1118,7 @@
                 "Choice": "An archive containing previous versions of the e-book",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Metadata for an e-book would typically be used to provide descriptive information about the book. Previous versions of the e-book would likely be considered data, not metadata.",
                     "Percent": 0
                 }
             },
@@ -1060,7 +1126,7 @@
                 "Choice": "The author and title of the e-book",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The author and title of an e-book are examples of descriptive metadata that would help support the search feature.",
                     "Percent": 0
                 }
             },
@@ -1068,7 +1134,7 @@
                 "Choice": "The date the e-book was `text(first)` published",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The date an e-book was published is an example of descriptive metadata that would help support the search feature.",
                     "Percent": 0
                 }
             },
@@ -1076,7 +1142,7 @@
                 "Choice": "The genre of the e-book (e.g., comedy, fantasy, romance, etc.)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The genre of an e-book is an examples of descriptive metadata that would help support the search feature.",
                     "Percent": 0
                 }
             }
@@ -1088,10 +1154,26 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.3.1A",
+            "5.3.1B",
+            "5.3.1C",
+            "5.3.1D",
+            "5.3.1E",
+            "5.3.1G",
+            "5.3.1M",
+            "5.3.1N",
+            "5.3.1O"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1106,7 +1188,7 @@
                 "Choice": "`tttext(Max (Max (a, b))tttext(, c))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This expression will `text(first)` determine the maximum of `tt(a)` and `tt(b)` and then determine the maximum of the resulting value and `tt(c)`. This will result in the maximum of all `text(three)` values.",
                     "Percent": 0
                 }
             },
@@ -1114,7 +1196,7 @@
                 "Choice": "`tttext(Max (a, b))tttext( - Max (b, c))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression produces the difference between the maximum of `tt(a)` and `tt(b)` and the maximum of `tt(b)` and `tt(c)`.",
                     "Percent": 0
                 }
             },
@@ -1122,7 +1204,7 @@
                 "Choice": "`tttext(Max (a, b))tttext( + Max (b, c))tttext( - Max (a, c))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression produces the maximum of `tt(a)` and `tt(c)` subtracted from the sum of the maximum of `tt(a)` and `tt(b)` and the maximum of `tt(b)` and `tt(c)`.",
                     "Percent": 0
                 }
             },
@@ -1130,7 +1212,7 @@
                 "Choice": "`tttext((Max (a, b))tttext( + Max (b, c)))tttext( / 2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression produces the average of the maximum of `tt(a)` and `tt(b)` and the maximum of `tt(b)` and `tt(c)`.",
                     "Percent": 0
                 }
             }
@@ -1142,10 +1224,22 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.3.1A",
+            "5.3.1B",
+            "5.3.1C",
+            "5.3.1D",
+            "5.3.1E",
+            "5.3.1F",
+            "5.3.1G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1164,7 +1258,7 @@
                 "Choice": "problems/AP18CSP/media/22d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment moves the robot forward `text(two)` squares, rotates it right `text(one)` time so that the robot faces the bottom of the grid, and then moves the robot forward `text(three)` squares.",
                     "Percent": 0
                 }
             },
@@ -1172,7 +1266,7 @@
                 "Choice": "problems/AP18CSP/media/22e.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This code segment moves the robot forward `text(two)` squares, rotates it right `text(three)` times so that the robot faces the top of the grid, and then moves the robot forward `text(three)` squares to the gray square.",
                     "Percent": 0
                 }
             },
@@ -1180,7 +1274,7 @@
                 "Choice": "problems/AP18CSP/media/22f.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment moves the robot forward `text(three)` squares, rotates it right `text(one)` time so that the robot faces the bottom of the grid, and then moves the robot forward `text(three)` squares.",
                     "Percent": 0
                 }
             },
@@ -1188,7 +1282,7 @@
                 "Choice": "problems/AP18CSP/media/22g.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment moves the robot forward `text(three)` squares, rotates it right `text(three)` times so that the robot faces the top of the grid, and then moves the robot forward `text(three)` squares.",
                     "Percent": 0
                 }
             }
@@ -1200,10 +1294,22 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.3.1A",
+            "5.3.1B",
+            "5.3.1C",
+            "5.3.1D",
+            "5.3.1E",
+            "5.3.1F",
+            "5.3.1G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1219,7 +1325,7 @@
                 "Choice": "`tttext(counter < 0.5 * total)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This Boolean expression evaluates to `tttext(true)` when `tttext(counter)` (the number of temperatures greater than or equal to `90`) is less than `50%` of `tttext(total)` (the number of entries in the list).",
                     "Percent": 0
                 }
             },
@@ -1227,7 +1333,7 @@
                 "Choice": "`tttext(counter > 0.5 * total)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This Boolean expression evaluates to `tttext(true)` when `tttext(counter)` (the number of temperatures greater than or equal to `90`) is greater than `50%` of `tttext(total)` (the number of entries in the list).",
                     "Percent": 0
                 }
             },
@@ -1235,7 +1341,7 @@
                 "Choice": "`tttext(total < 0.5 * counter)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This Boolean expression will never evaluate to `tttext(true)` because `tttext(total)` (the number of temperatures in the list) will never be less than `50%` of `tttext(counter)` (the number of temperatures greater than or equal to `90`).",
                     "Percent": 0
                 }
             },
@@ -1243,7 +1349,7 @@
                 "Choice": "`tttext(total > 0.5 * counter)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This Boolean expression will always evaluate to `tttext(true)` because `tttext(total)` (the number of temperatures in the list) will always be greater than `50%` of `tttext(counter)` (the number of temperatures greater than or equal to `90`).",
                     "Percent": 0
                 }
             }
@@ -1255,10 +1361,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.2.1A",
+            "6.2.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1272,7 +1380,7 @@
                 "Choice": "problems/AP18CSP/media/24a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are multiple paths from `text(P)` to `text(S)` (for example, `text(P)` to `text(R)` to `text(S)` and `text(P)` to `text(Q)` to `text(S)`).",
                     "Percent": 0
                 }
             },
@@ -1280,7 +1388,7 @@
                 "Choice": "problems/AP18CSP/media/24b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Redundant routing is impossible if there is only `text(one)` possible path from `text(one)` device to another. There is only `text(one)` possible path from `text(P)` to `text(S)` (`text(P)` to `text(R)` to `text(Q)` to `text(S)`).",
                     "Percent": 0
                 }
             },
@@ -1288,7 +1396,7 @@
                 "Choice": "problems/AP18CSP/media/24c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are multiple paths from `text(P)` to `text(S)` (for example, `text(P)` to `text(S)` and `text(P)` to `text(Q)` to `text(S)`).",
                     "Percent": 0
                 }
             },
@@ -1296,7 +1404,7 @@
                 "Choice": "problems/AP18CSP/media/24d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are multiple paths from `text(P)` to `text(S)` (for example, `text(P)` to `text(R)` to `text(S)`, `text(P)` to `text(Q)` to `text(S)`, `text(P)` to `text(R)` to `text(Q)` to `text(S)`, and `text(P)` to `text(Q)` to `text(R)` to `text(S)`).",
                     "Percent": 0
                 }
             }
@@ -1308,10 +1416,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3.1A",
+            "3.3.1C",
+            "3.3.1D",
+            "3.3.1E"
         ],
         "SuppContent": [
             "problems/AP18CSP/supps/AP18CSP-S2.json"
@@ -1327,7 +1441,7 @@
                 "Choice": "`text(Byte)` pair encoding is an example of a lossy transformation because it discards some of the data in the original string.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While some of the characters of the original string do not appear in the encoded string, this transformation is not lossy because the original version can be restored.",
                     "Percent": 0
                 }
             },
@@ -1335,7 +1449,7 @@
                 "Choice": "`text(Byte)` pair encoding is an example of a lossy transformation because some pairs of characters are replaced by a `text(single)` character.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While some pairs of characters of the original string are replaced in the encoded string with a `text(single)` character, this transformation is not lossy because the original version can be restored.",
                     "Percent": 0
                 }
             },
@@ -1343,7 +1457,7 @@
                 "Choice": "`text(Byte)` pair encoding is an example of a lossless transformation because an encoded string can be restored to its original version.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The transformation is lossless because an encoded string can be restored to its original version. For example, `tttext(“%#_#_%E_BEST_W#H”)` can be restored to `tttext(“THIS_IS_THE_BEST_WISH”)` by replacing all instances of `tttext(“%”)` with `tttext(“TH”)` and by replacing all instances of `tttext(“#”)` with `tttext(“IS”)`.",
                     "Percent": 0
                 }
             },
@@ -1351,7 +1465,7 @@
                 "Choice": "`text(Byte)` pair encoding is an example of a lossless transformation because it can be used to transmit messages securely.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Whether a transformation is lossy or lossless is not related to whether or not it can be used in secure communications.",
                     "Percent": 0
                 }
             }
@@ -1363,10 +1477,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3.1A",
+            "3.3.1C",
+            "3.3.1D",
+            "3.3.1E"
         ],
         "SuppContent": [
             "problems/AP18CSP/supps/AP18CSP-S2.json"
@@ -1382,7 +1502,7 @@
                 "Choice": "`tttext(“BANANA”)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This string can be shortened using byte pair encoding. For example, `tttext(“BANANA”)` can be shortened to `tttext(“B**A”)` by replacing each instance of `tttext(“AN”)` with `tttext(“*”)`.",
                     "Percent": 0
                 }
             },
@@ -1390,7 +1510,7 @@
                 "Choice": "`tttext(“LEVEL_UP”)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "It is not possible to use `text(byte)` pair encoding in the string `tttext(“LEVEL_UP”)` because no pair of characters appears in the string more than `text(once)`.",
                     "Percent": 0
                 }
             },
@@ -1398,7 +1518,7 @@
                 "Choice": "`tttext(“MEET_ME_LATER”)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This string can be shortened using byte pair encoding. For example, `tttext(“MEET_ME_LATER”)` can be shortened to `tttext(“*ET_*_LATER”)` by replacing each instance of `tttext(“ME”)` with `tttext(“*”)`.",
                     "Percent": 0
                 }
             },
@@ -1406,7 +1526,7 @@
                 "Choice": "`tttext(“NEITHER_HERE_NOR_THERE”)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This string can be shortened using byte pair encoding. For example, `tttext(“NEITHER_HERE_NOR_THERE”)` can be shortened to `tttext(“NEIT*R_*&_NOR_T*&”)` by replacing each instance of `tttext(“HE”)` with `tttext(“*”)` and each instance of `tttext(“RE”)` with `tttext(“&”)`.",
                     "Percent": 0
                 }
             }
@@ -1418,10 +1538,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.1A",
+            "4.1.1B",
+            "4.1.1C",
+            "4.1.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1439,7 +1565,7 @@
                 "Choice": ":ibox:`tttext(IF (CAN_MOVE (right)))`\n`tt({`\n\t`tttext(ROTATE_RIGHT ())`\n`tt}`\n`tttext(MOVE_FORWARD ())`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This code segment rotates right whenever there is an open square to the right. The robot will move forward from its initial location to the upper-left corner of the grid, then rotate right, then move forward to the upper-right corner of the grid, then rotate right, then move down `text(two)` squares, then rotate right, then move forward to the gray square.",
                     "Percent": 0
                 }
             },
@@ -1447,7 +1573,7 @@
                 "Choice": ":ibox:`tttext(IF (CAN_MOVE (right)))`\n`tt({`\n\t`tttext(ROTATE_RIGHT ())`\n\t`tttext(MOVE_FORWARD ())`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment does not move the robot at all. The robot cannot move right from its initial position, so the body of the `tttext(IF)` statement is never executed.",
                     "Percent": 0
                 }
             },
@@ -1455,7 +1581,7 @@
                 "Choice": ":ibox:`tttext(IF (CAN_MOVE (forward)))`\n`tt({`\n\t`tttext(MOVE_FORWARD ())`\n`tt}`\n`tttext(ROTATE_RIGHT ())`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment moves the robot up and down between its initial location and the square above its initial location.",
                     "Percent": 0
                 }
             },
@@ -1463,7 +1589,7 @@
                 "Choice": ":ibox:`tttext(IF (CAN_MOVE (right)))`\n`tt({`\n\t`tttext(MOVE_FORWARD ())`\n\t`tttext(ROTATE_RIGHT ())`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This code segment moves the robot `text(one)` square forward from its initial location and then rotates the robot right. From there, the robot cannot move forward and the body of the `tttext(IF)` statement is never executed again.",
                     "Percent": 0
                 }
             }
@@ -1478,7 +1604,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "6.1.1G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1492,7 +1618,7 @@
                 "Choice": "A digital certificate",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Digital certificates are used to verify the ownership of encrypted keys.",
                     "Percent": 0
                 }
             },
@@ -1500,7 +1626,7 @@
                 "Choice": "The domain name system (DNS)",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The domain name system translates names to IP addresses.",
                     "Percent": 0
                 }
             },
@@ -1508,7 +1634,7 @@
                 "Choice": "The hypertext transfer protocol (HTTP)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The hypertext transfer protocol is a set of rules for transferring files on the Web.",
                     "Percent": 0
                 }
             },
@@ -1516,7 +1642,7 @@
                 "Choice": "The simple mail transfer protocol (SMTP)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The simple mail transfer protocol is a set of rules for transmitting e-mail.",
                     "Percent": 0
                 }
             }
@@ -1531,7 +1657,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "7.2.1F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1545,7 +1671,7 @@
                 "Choice": "As computer hardware improves, the algorithms used in programs will become more efficient.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The efficiency of algorithms is independent of the hardware used to run the algorithms.",
                     "Percent": 0
                 }
             },
@@ -1553,7 +1679,7 @@
                 "Choice": "As computer hardware improves, developers will become more skilled at writing code.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The ability of software developers is independent of the hardware used to run the software.",
                     "Percent": 0
                 }
             },
@@ -1561,7 +1687,7 @@
                 "Choice": "As computer hardware improves, future computers will be able to run faster than current computers.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Moore's law assumes that computing power will increase over time.",
                     "Percent": 0
                 }
             },
@@ -1569,7 +1695,7 @@
                 "Choice": "As computer hardware improves, the number of cybersecurity concerns will increase.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Cybersecurity concerns are not related to Moore's law.",
                     "Percent": 0
                 }
             }
@@ -1581,10 +1707,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.4.1E",
+            "5.4.1F",
+            "5.4.1I"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1600,7 +1730,7 @@
                 "Choice": "Between line `6` and line `7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Inserting `tt(text(win)larrtext(true))` between line `6` and line `7` will cause the loop to terminate regardless of whether the guess is correct.",
                     "Percent": 0
                 }
             },
@@ -1608,7 +1738,7 @@
                 "Choice": "Between line `9` and line `10`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Inserting `tt(text(win)larrtext(true))` between line `9` and line `10` will cause the loop to terminate when the guess is correct.",
                     "Percent": 0
                 }
             },
@@ -1616,7 +1746,7 @@
                 "Choice": "Between line `20` and line `21`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Inserting `tt(text(win)larrtext(true))` between line `20` and line `21` will cause the loop to terminate when the guess is incorrect.",
                     "Percent": 0
                 }
             },
@@ -1624,7 +1754,7 @@
                 "Choice": "Between line `21` and line `22`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Inserting `tt(text(win)larrtext(true))` between line `21` and line `22` will cause the loop to terminate after checking the `text(first)` guess, regardless of whether the guess is correct.",
                     "Percent": 0
                 }
             }
@@ -1636,10 +1766,18 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.1B",
+            "2.1.1C",
+            "2.1.1D",
+            "2.1.1E",
+            "2.1.1G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1653,7 +1791,7 @@
                 "Choice": "`4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using `text(4 bits)` will only allow for up to `16` characters (`2^4=16`).",
                     "Percent": 0
                 }
             },
@@ -1661,7 +1799,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using `text(6 bits)` will only allow for up to `64` characters (`2^6=64`).",
                     "Percent": 0
                 }
             },
@@ -1669,7 +1807,7 @@
                 "Choice": "`7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using `text(7 bits)` will only allow for up to `128` characters (`2^7=128`).",
                     "Percent": 0
                 }
             },
@@ -1677,7 +1815,7 @@
                 "Choice": "`8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Using `text(8 bits)` will only allow for up to `256` characters (`2^8=256`).",
                     "Percent": 0
                 }
             }
@@ -1689,10 +1827,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2.3E",
+            "2.2.3F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1708,7 +1848,7 @@
                 "Choice": "`tttext(A = true)`, `tttext(B = false)`, `tttext(C = false)`, `tttext(D = false)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "With these inputs, the `tttext(AND)` gate will produce an output of `tttext(false)` and the `text(first)` `tttext(OR)` gate will produce an output of `tttext(false)`. Since both inputs to the `text(second)` `tttext(OR)` gate will be `tttext(false)`, the circuit will have an output of `tttext(false)`.",
                     "Percent": 0
                 }
             },
@@ -1716,7 +1856,7 @@
                 "Choice": "`tttext(A = true)`, `tttext(B = true)`, `tttext(C = false)`, `tttext(D = false)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "With these inputs, the `tttext(AND)` gate will produce an output of `tttext(true)` and the `text(first)` `tttext(OR)` gate will produce an output of `tttext(false)`. The `text(second)` `tttext(OR)` gate will have `text(one)` `tttext(true)` input and `text(one)` `tttext(false)` input, causing the circuit to have an output of `tttext(true)`.",
                     "Percent": 0
                 }
             },
@@ -1724,7 +1864,7 @@
                 "Choice": "`tttext(A = false)`, `tttext(B = false)`, `tttext(C = true)`, `tttext(D = true)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "With these inputs, the `tttext(AND)` gate will produce an output of `tttext(false)` and the `text(first)` `tttext(OR)` gate will produce an output of `tttext(true)`. The `text(second)` `tttext(OR)` gate will have `text(one)` `tttext(false)` input and `text(one)` `tttext(true)` input, causing the circuit to have an output of `tttext(true)`.",
                     "Percent": 0
                 }
             },
@@ -1732,7 +1872,7 @@
                 "Choice": "`tttext(A = false)`, `tttext(B = false)`, `tttext(C = false)`, `tttext(D = true)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "With these inputs, the `tttext(AND)` gate will produce an output of `tttext(false)` and the `text(first)` `tttext(OR)` gate will produce an output of `tttext(true)`. The `text(second)` `tttext(OR)` gate will have `text(one)` `tttext(false)` input and `text(one)` `tttext(true)` input, causing the circuit to have an output of `tttext(true)`.",
                     "Percent": 0
                 }
             }
@@ -1744,10 +1884,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.4A",
+            "4.2.4G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1764,7 +1906,7 @@
                 "Choice": "`1` `text(hour)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This approximation assumes that the `tttext(Analysis)` procedure is called only `text(once)`.",
                     "Percent": 0
                 }
             },
@@ -1772,7 +1914,7 @@
                 "Choice": "`2` `text(hours)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This approximation assumes that the `tttext(Analysis)` procedure is called only `text(twice)`.",
                     "Percent": 0
                 }
             },
@@ -1780,7 +1922,7 @@
                 "Choice": "`4` `text(hours)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This approximation assumes that the `tttext(Analysis)` procedure is called only `text(four)` times.",
                     "Percent": 0
                 }
             },
@@ -1788,7 +1930,7 @@
                 "Choice": "`5` `text(hours)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "`text(Each call)` to the `tttext(Analysis)` procedure requires `text(one hour)` of program execution time. The procedure is called `text(once)` before the loop, and then `text(four)` times inside the loop (`text(once)` for each of the `text(four)` entries in `tttext(genreList)`). Therefore, the program will take approximately `text(5 hours)` to execute.",
                     "Percent": 0
                 }
             }
@@ -1800,10 +1942,18 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.4.1E",
+            "5.4.1F",
+            "5.4.1G",
+            "5.4.1I",
+            "5.4.1K"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1822,7 +1972,7 @@
                 "Choice": "Program `text(I)` correctly moves the robot to the gray square, but program `text(II)` does not.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Program `text(II)` also correctly moves the robot to the gray square by moving the robot forward to the upper-right corner of the grid, rotating left, and moving forward to the upper-left corner of the grid.",
                     "Percent": 0
                 }
             },
@@ -1830,7 +1980,7 @@
                 "Choice": "Program `text(II)` correctly moves the robot to the gray square, but program `text(I)` does not.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Program `text(I)` also correctly moves the robot to the gray square by repeatedly moving the robot forward, rotating left, moving forward, and rotating right.",
                     "Percent": 0
                 }
             },
@@ -1838,7 +1988,7 @@
                 "Choice": "Both program `text(I)` and program `text(II)` correctly move the robot to the gray square.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Program `text(I)` correctly moves the robot to the gray square by repeatedly moving the robot forward, rotating left, moving forward, and rotating right. Program `text(II)` correctly moves the robot to the gray square by moving the robot forward to the upper-right corner of the grid, rotating left, and moving forward to the upper-left corner of the grid.",
                     "Percent": 0
                 }
             },
@@ -1846,7 +1996,7 @@
                 "Choice": "Neither program `text(I)` nor program `text(II)` correctly moves the robot to the gray square.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Both programs correctly move the robot to the gray square. ",
                     "Percent": 0
                 }
             }
@@ -1858,10 +2008,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.1B",
+            "2.1.1C",
+            "2.1.1D",
+            "2.1.1F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1875,7 +2031,7 @@
                 "Choice": "`text(0099A1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Of the `text(four)` numbers listed, `text(0099A1)` has the `text(second)` greatest amount of blue in it.",
                     "Percent": 0
                 }
             },
@@ -1883,7 +2039,7 @@
                 "Choice": "`text(A10099)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Of the `text(four)` numbers listed, `text(A10099)` has the `text(third)` greatest amount of blue in it.",
                     "Percent": 0
                 }
             },
@@ -1891,7 +2047,7 @@
                 "Choice": "`text(A100B0)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The amount of blue in a color is determined by the `text(last two)` digits in the hexadecimal number. Of the `text(four)` numbers listed, `text(A100B0)` represents the color with the greatest amount of blue because in hexadecimal, `text(B0)` is greater than `text(A1)`, `text(99)`, and `text(00)`.",
                     "Percent": 0
                 }
             },
@@ -1899,7 +2055,7 @@
                 "Choice": "`text(FFA100)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Of the `text(four)` numbers listed, `text(FFA100)` has the least amount of blue in it.",
                     "Percent": 0
                 }
             }
@@ -1911,10 +2067,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.1.1D",
+            "3.1.1E"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1931,7 +2089,7 @@
                 "Choice": "Participants who read more were generally more likely to say they are interested in the application.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The `xxtext(s)`, indicating participants who are interested in the application, are clustered toward the top of the graph. This indicates that participants who read more were generally more likely to say they are interested in the application.",
                     "Percent": 0
                 }
             },
@@ -1939,7 +2097,7 @@
                 "Choice": "Participants who read more were generally less likely to say they are interested in the application.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Participants who read more are more likely, not less likely, to say they are interested in the application.",
                     "Percent": 0
                 }
             },
@@ -1947,7 +2105,7 @@
                 "Choice": "Participants who use a smartphone more were generally more likely to say they read more.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There does not appear to be any correlation between number of `text(hours)` spent using a smartphone and number of `text(hours)` spent reading.",
                     "Percent": 0
                 }
             },
@@ -1955,7 +2113,7 @@
                 "Choice": "Participants who use a smartphone more were generally less likely to say they read more.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There does not appear to be any correlation between number of `text(hours)` spent using a smartphone and number of `text(hours)` spent reading.",
                     "Percent": 0
                 }
             }
@@ -1967,10 +2125,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.1A",
+            "4.1.1B",
+            "4.1.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1987,7 +2149,7 @@
                 "Choice": "`tt(text(include)larrtext((floor > 10))tttext( OR (bedrooms = 3)))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The flowchart sets `tttext(include)` to `tttext(true)` whenever `tttext(floor)` is greater than `tt(10)` or `tttext(bedrooms)` equals `tt(3)`, and sets `tttext(include)` to `tttext(false)` otherwise. Therefore, the algorithm is equivalent to `tt(text(include)larr(text(floor)>10)text( OR )(text(bedrooms)=3)))`.",
                     "Percent": 0
                 }
             },
@@ -1995,7 +2157,7 @@
                 "Choice": "`tt(text(include)larrtext((floor > 10))tttext( AND (bedrooms = 3)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression would be used for a flowchart to set `tttext(include)` to `tttext(true)` whenever `tttext(floor)` is greater than `tt(10)` and `tttext(bedrooms)` equals `tt(3)`. This does not correctly set `tttext(include)` to `tttext(true)` in cases where only one of the `text(two)` conditions is `tttext(true)`.",
                     "Percent": 0
                 }
             },
@@ -2003,7 +2165,7 @@
                 "Choice": "`tt(text(include)larrtext((floor)<=text(10))tttext( OR (bedrooms = 3)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression would be used for a flowchart to set `tttext(include)` to `tttext(true)` whenever `tttext(floor)` is less than or equal to `tt(10)` or `tttext(bedrooms)` equals `tt(3)`.",
                     "Percent": 0
                 }
             },
@@ -2011,7 +2173,7 @@
                 "Choice": "`tt(text(include)larrtext((floor)<=text(10))tttext( AND (bedrooms = 3)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression would be used for a flowchart to set `tttext(include)` to `tttext(true)` whenever `tttext(floor)` is less than or equal to `tt(10)` and `tttext(bedrooms)` equals `tt(3)`.",
                     "Percent": 0
                 }
             }
@@ -2026,7 +2188,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3.2E"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2044,7 +2206,7 @@
                 "Choice": "The number of mice increases by `1` `text(each day)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of mice changes `text(each day)` as determined by the `tttext(NextDayPopulation)` procedure.",
                     "Percent": 0
                 }
             },
@@ -2052,7 +2214,7 @@
                 "Choice": "The number of mice does not change from `text(day)` to `text(day)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of mice changes `text(each day)` as determined by the `tttext(NextDayPopulation)` procedure.",
                     "Percent": 0
                 }
             },
@@ -2060,7 +2222,7 @@
                 "Choice": "The number of predators increases by `1` `text(each day)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of predators is initialized at the beginning of the program but is never updated.",
                     "Percent": 0
                 }
             },
@@ -2068,7 +2230,7 @@
                 "Choice": "The number of predators does not change from `text(day)` to `text(day)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The number of predators is initialized at the beginning of the program but is never updated.",
                     "Percent": 0
                 }
             }
@@ -2083,7 +2245,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "6.2.2K"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2097,7 +2259,7 @@
                 "Choice": "`text(Bits per byte)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`text(Bits per byte)` is not a measure of time.",
                     "Percent": 0
                 }
             },
@@ -2105,7 +2267,7 @@
                 "Choice": "`text(Bits per second)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`text(Bits per second)` is not a measure of time.",
                     "Percent": 0
                 }
             },
@@ -2113,7 +2275,7 @@
                 "Choice": "`text(Bytes)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`text(Bytes)` are not a measure of time.",
                     "Percent": 0
                 }
             },
@@ -2121,7 +2283,7 @@
                 "Choice": "`text(Milliseconds)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Latency is a measure of the time elapsed between the transmission and the receipt of a request. `text(Milliseconds)` are a unit of time that can be used to measure latency.",
                     "Percent": 0
                 }
             }
@@ -2136,7 +2298,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "7.2.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2150,7 +2312,7 @@
                 "Choice": "Using samples found on popular music-streaming sites",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using samples from a music-streaming Web site could put the musician at risk of violating copyright laws.",
                     "Percent": 0
                 }
             },
@@ -2158,7 +2320,7 @@
                 "Choice": "Using samples found on peer-to-peer networks",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using samples found on a peer-to-peer network could put the musician at risk of violating copyright laws.",
                     "Percent": 0
                 }
             },
@@ -2166,7 +2328,7 @@
                 "Choice": "Using samples from nondigital sound sources (vinyl records, tapes, etc.)",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using samples from nondigital sound sources could put the musician at risk of violating copyright laws.",
                     "Percent": 0
                 }
             },
@@ -2174,7 +2336,7 @@
                 "Choice": "Using samples published with a no-rights-reserved Creative Commons license",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Creative Commons licenses can be used by creators of digital music to specify how the samples can be used by others. A no-rights-reserved license allows others to freely make use of the samples.",
                     "Percent": 0
                 }
             }
@@ -2186,10 +2348,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.2A",
+            "2.1.2C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2203,7 +2367,7 @@
                 "Choice": "An overflow error occurred.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Overflow errors occur when an arithmetic operation results in a value outside the range of numbers that can be represented by a certain number of `text(bits)`.",
                     "Percent": 0
                 }
             },
@@ -2211,7 +2375,7 @@
                 "Choice": "The precision of the result is limited due to the constraints of using a floating-point representation.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The fixed number of `text(bits)` used to represent real numbers (as floating-point numbers) limits the range of floating-point values.",
                     "Percent": 0
                 }
             },
@@ -2219,7 +2383,7 @@
                 "Choice": "The program attempted to execute the operation with the arguments in reverse order.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the operation was performed with the arguments in reverse order, the result would be `1.5`.",
                     "Percent": 0
                 }
             },
@@ -2227,7 +2391,7 @@
                 "Choice": "The program attempted to represent a floating-point number as an integer.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the fraction `tttext(2 / 3 )`were to be represented as an integer, it would be rounded or truncated to an integer value.",
                     "Percent": 0
                 }
             }
@@ -2239,10 +2403,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.4A",
+            "4.2.4C",
+            "4.2.4D",
+            "4.2.4G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2259,7 +2429,7 @@
                 "Choice": "Code segment `text(I)` displays the correct average, but code segment `text(II)` does not.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Code segment `text(II)` also displays the correct average.",
                     "Percent": 0
                 }
             },
@@ -2267,7 +2437,7 @@
                 "Choice": "Code segment `text(II)` displays the correct average, but code segment `text(I)` does not.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Code segment `text(II)` also displays the correct average.",
                     "Percent": 0
                 }
             },
@@ -2275,7 +2445,7 @@
                 "Choice": "Both code segments display the correct average, but code segment `text(I)` requires more arithmetic operations than code segment `text(II)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Both code segments display the correct average. Code segment `text(I)` requires more arithmetic operations because it performs the operation `tttext(sum / LENGTH (numList))` within the loop, while code segment `text(II)` performs the same operation only `text(once)`.",
                     "Percent": 0
                 }
             },
@@ -2283,7 +2453,7 @@
                 "Choice": "Both code segments display the correct average, but code segment `text(II)` requires more arithmetic operations than code segment `text(I)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Both code segments display the correct average. Code segment `text(I)` requires more arithmetic operations because it performs the operation `tttext(sum / LENGTH (numList))` within the loop, while code segment `text(II)` performs the same operation only `text(once)`.",
                     "Percent": 0
                 }
             }
@@ -2295,10 +2465,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.5.1A",
+            "5.5.1B",
+            "5.5.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2313,7 +2487,7 @@
                 "Choice": ":ibox:`tt(text(count)larrtext(GetCount (customerID)))`\n`tttext(IF (count / 10 = 0))`\n`tt({`\n\t`tt(text(cost)larrtext(0))`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext(count / 10 = 0)` does not evaluate to `tttext(true)` when `tttext(count)` is a multiple of `tt(10)`, so this code segment does not set `tttext(cost)` to `tt(0)` appropriately.",
                     "Percent": 0
                 }
             },
@@ -2321,7 +2495,7 @@
                 "Choice": ":ibox:`tt(text(count)larrtext(GetCount (customerID)))`\n`tttext(IF (NOT (count / 10 = 0)))`\n`tt({`\n\t`tt(text(cost)larrtext(0))`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext(NOT (count / 10 = 0))` does not evaluate to `tttext(true)` when `tttext(count)` is a multiple of `tt(10)`, so this code segment does not set `tttext(cost)` to `tt(0)` appropriately.",
                     "Percent": 0
                 }
             },
@@ -2329,7 +2503,7 @@
                 "Choice": ":ibox:`tt(text(count)larrtext(GetCount (customerID)))`\n`tttext(IF (count MOD 10 = 0))`\n`tt({`\n\t`tt(text(cost)larrtext(0))`\n`tt}`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The expression count `tttext(MOD 10 = 0)` evaluates to `tttext(true)` when `tttext(count)` is a multiple of `tt(10)`, and so this code segment sets `tttext(cost)` to `tt(0)` under the appropriate conditions.",
                     "Percent": 0
                 }
             },
@@ -2337,7 +2511,7 @@
                 "Choice": ":ibox:`tt(text(count)larrtext(GetCount (customerID)))`\n`tttext(IF (NOT (count MOD 10 = 0)))`\n`tt({`\n\t`tt(text(cost)larrtext(0))`\n`tt}`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext(NOT (count MOD 10 = 0))` does not evaluate to `tttext(true)` when `tttext(count)` is a multiple of `tt(10)`, so this code segment does not set `tttext(cost)` to `tt(0)` appropriately.",
                     "Percent": 0
                 }
             }
@@ -2349,10 +2523,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.2.2D",
+            "6.2.2E"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2366,7 +2542,7 @@
                 "Choice": "Open standards and protocols allow different manufacturers and developers to build hardware and software that can communicate with hardware and software on the rest of the network.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Open standards and protocols are used to prescribe the format of data sent over the Internet. This allows all connected hardware and software to communicate in a standard way.",
                     "Percent": 0
                 }
             },
@@ -2374,7 +2550,7 @@
                 "Choice": "Open standards and protocols provide ways for users to eliminate the latency of messages they send on the Internet.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Standards and protocols cannot be used to completely eliminate the latency of messages sent on the Internet.",
                     "Percent": 0
                 }
             },
@@ -2382,7 +2558,7 @@
                 "Choice": "Open standards and protocols allow users to freely share or reuse material found on the Internet for noncommercial purposes.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Open standards and protocols cannot be used to allow copyrighted materials to be shared freely.",
                     "Percent": 0
                 }
             },
@@ -2390,7 +2566,7 @@
                 "Choice": "Open standards and protocols prevent developers from releasing software that contains errors.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Open standards and protocols cannot prevent the release of software containing errors.",
                     "Percent": 0
                 }
             }
@@ -2402,10 +2578,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2.1A",
+            "3.2.1B"
         ],
         "SuppContent": [
             "problems/AP18CSP/supps/AP18CSP-S3.json"
@@ -2422,7 +2600,7 @@
                 "Choice": "`text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The average total points earned `text(per student)` can also be determined using the result of the total points calculation for `text(each student)`. The average increase in total points `text(per student)` as a result of the score replacement policy can also be determined by calculating the differences between `text(each student score)` before and after the replacement policy was applied.",
                     "Percent": 0
                 }
             },
@@ -2430,7 +2608,7 @@
                 "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The proportion of students who improved their total points as a result of the score replacement policy can also be determined by comparing the midterm and final scores for `text(each student)` with the result of the total points calculation.",
                     "Percent": 0
                 }
             },
@@ -2438,7 +2616,7 @@
                 "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The average increase in total points `text(per student)` as a result of the score replacement policy can also be determined by calculating the differences between `text(each student score)` before and after the replacement policy was applied.",
                     "Percent": 0
                 }
             },
@@ -2446,7 +2624,7 @@
                 "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The average total points earned `text(per student)` can be determined using the result of the total points calculation for `text(each student)`. The average increase in total points `text(per student)` as a result of the score replacement policy can be determined by calculating the differences between `text(each student score)` before and after the replacement policy was applied. The proportion of students who improved their total points as a result of the score replacement policy can be determined by comparing the midterm and final scores for `text(each student)` with the result of the total points calculation.",
                     "Percent": 0
                 }
             }
@@ -2458,10 +2636,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.5.1A",
+            "5.5.1D"
         ],
         "SuppContent": [
             "problems/AP18CSP/supps/AP18CSP-S3.json"
@@ -2478,7 +2658,7 @@
                 "Choice": "`tt(text(adjustedTotal)larrtext(Max (midtermExam, finalExam)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression assigns only `text(one)` score to `text(adjustedTotal)`.",
                     "Percent": 0
                 }
             },
@@ -2486,7 +2666,7 @@
                 "Choice": "`tt(text(adjustedTotal)larrtext(Max (midtermExam, finalExam)))tttext( + finalExam)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This expression uses the `text(Max)` procedure to replace the midterm score with the higher of the `text(two)` scores. The selected value is then added to the final exam score and assigned to `text(adjustedTotal)`.",
                     "Percent": 0
                 }
             },
@@ -2494,7 +2674,7 @@
                 "Choice": "`tt(text(adjustedTotal)larrtext(Max (midtermExam, finalExam)))tttext( + midtermExam)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression replaces the final exam score (rather than the midterm exam score) with the higher of the `text(two)` scores.",
                     "Percent": 0
                 }
             },
@@ -2502,7 +2682,7 @@
                 "Choice": "`tt(text(adjustedTotal)larrtext(2 * Max (midtermExam, finalExam)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression `text(doubles)` the higher of the `text(two)` scores. This produces the same `text(adjustedTotal)` value for Josefina's scores, but not for Khalil's scores.",
                     "Percent": 0
                 }
             }
@@ -2514,10 +2694,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.1A",
+            "2.1.1B",
+            "2.1.1E"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2531,7 +2715,7 @@
                 "Choice": "`4` times as many addresses are available.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "IPv6 has `2^96` times as many possible addresses as IPv4.",
                     "Percent": 0
                 }
             },
@@ -2539,7 +2723,7 @@
                 "Choice": "`96` times as many addresses are available.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "IPv6 has `2^96` times as many possible addresses as IPv4.",
                     "Percent": 0
                 }
             },
@@ -2547,7 +2731,7 @@
                 "Choice": "`2^4` times as many addresses are available.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "IPv6 has `2^96` times as many possible addresses as IPv4.",
                     "Percent": 0
                 }
             },
@@ -2555,7 +2739,7 @@
                 "Choice": "`2^96` times as many addresses are available.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "With `text(32-bit)` addressing, IPv4 has `2^32` possible addresses. With `text(128-bit)` addressing, IPv6 has `2^128` possible addresses. Since `2^32xx2^96=2^128`, IPv6 has `2^96` times as many possible addresses as IPv4.",
                     "Percent": 0
                 }
             }
@@ -2567,10 +2751,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.1A",
+            "4.2.1B",
+            "4.2.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2586,7 +2774,7 @@
                 "Choice": "The algorithm runs in reasonable time.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The pattern in the table appears to indicate that there are `n^2` steps for a list containing `n` items. This number of steps is a polynomial and therefore the algorithm runs in reasonable time.",
                     "Percent": 0
                 }
             },
@@ -2594,7 +2782,7 @@
                 "Choice": "The algorithm runs, but not in reasonable time.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The number of steps of the algorithm is a polynomial, so the algorithm runs in reasonable time.",
                     "Percent": 0
                 }
             },
@@ -2602,7 +2790,7 @@
                 "Choice": "The algorithm attempts to solve an undecidable problem.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Sorting a list is not considered an undecidable problem.",
                     "Percent": 0
                 }
             },
@@ -2610,7 +2798,7 @@
                 "Choice": "The algorithm attempts to find an approximate solution whenever it fails to find an exact solution.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There is no indication that the algorithm is finding approximate solutions.",
                     "Percent": 0
                 }
             }
@@ -2622,10 +2810,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.2A",
+            "2.1.2B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2640,7 +2830,7 @@
                 "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The operation `tttext(4 + 8)` does not produce a result large enough to cause an overflow error.",
                     "Percent": 0
                 }
             },
@@ -2648,7 +2838,7 @@
                 "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "With a `text(4-bit)` integer representation, `2^4` values can be represented, which allows for the values between `tt(0)` to `tt(15)`, inclusive. If an operation results in a value greater than `tt(15)`, an overflow error will occur. Of the operations given in the options, only `tttext(10 + 7)` gives a result larger than `tt(15)`.",
                     "Percent": 0
                 }
             },
@@ -2656,7 +2846,7 @@
                 "Choice": "`text(II)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The operation `tttext(10 + 7)` causes an overflow error, but `tttext(12 + 3)` does not produce a result large enough to cause an overflow error.",
                     "Percent": 0
                 }
             },
@@ -2664,7 +2854,7 @@
                 "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The operation `tttext(10 + 7)` causes an overflow error, but the operations `tttext(4 + 8)` and `tttext(12 + 3)` do not produce results large enough to cause an overflow error.",
                     "Percent": 0
                 }
             }
@@ -2676,10 +2866,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2.1A",
+            "2.2.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2693,7 +2885,7 @@
                 "Choice": "`tttext((NOT P))tttext( AND (NOT Q))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext((NOT P))tttext( AND (NOT Q))` evaluates to `tttext(false)` when `tt(P)` and `tt(Q)` differ in value. A `tttext(NAND)` gate should only evaluate to `tttext(false)` when both inputs are `tttext(true)`.",
                     "Percent": 0
                 }
             },
@@ -2701,7 +2893,7 @@
                 "Choice": "`tttext((NOT P))tttext( AND Q)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext((NOT P))tttext( AND Q)` evaluates to `tttext(false)` when `tt(P)` is `tttext(false)` and `tt(Q)` is `tttext(true)`. A `tttext(NAND)` gate should only evaluate to `tttext(false)` when both inputs are `tttext(true)`.",
                     "Percent": 0
                 }
             },
@@ -2709,7 +2901,7 @@
                 "Choice": "`tttext(NOT (P AND Q))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext(P AND Q)` evaluates to `tttext(true)` when both `tt(P)` and `tt(Q)` are `tttext(true)`, and evaluates to `tttext(false)` otherwise. Therefore, the expression `tttext(NOT (P AND Q))` evaluates to `tttext(false)` when both `tt(P)` and `tt(Q)` are `tttext(true)`, and evaluates to `tttext(true)` otherwise.",
                     "Percent": 0
                 }
             },
@@ -2717,7 +2909,7 @@
                 "Choice": "`tttext(NOT (P OR Q))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext(NOT (P OR Q))` evaluates to `tttext(false)` when `tt(P)` and `tt(Q)` differ in value. A `tttext(NAND)` gate should only evaluate to `tttext(false)` when both inputs are `tttext(true)`.",
                     "Percent": 0
                 }
             }
@@ -2729,10 +2921,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.3A",
+            "4.2.3C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2747,7 +2941,7 @@
                 "Choice": "It is possible to create an algorithm that will solve the problem for all programs and inputs, but the algorithm can only be implemented in a low-level programming language.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It is not possible to create an algorithm to solve an undecidable problem for all programs and inputs.",
                     "Percent": 0
                 }
             },
@@ -2755,7 +2949,7 @@
                 "Choice": "It is possible to create an algorithm that will solve the problem for all programs and inputs, but the algorithm requires simultaneous execution on multiple CPUs.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It is not possible to create an algorithm to solve an undecidable problem for all programs and inputs.",
                     "Percent": 0
                 }
             },
@@ -2763,7 +2957,7 @@
                 "Choice": "It is possible to create an algorithm that will solve the problem for all programs and inputs, but the algorithm will not run in reasonable time.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It is not possible to create an algorithm to solve an undecidable problem for all programs and inputs.",
                     "Percent": 0
                 }
             },
@@ -2771,7 +2965,7 @@
                 "Choice": "It is not possible to create an algorithm that will solve the problem for all programs and inputs.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "An undecidable problem is `text(one)` in which no algorithm can be constructed that always leads to a correct yes-or-no answer.",
                     "Percent": 0
                 }
             }
@@ -2783,10 +2977,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.3.1H",
+            "6.3.1I",
+            "6.3.1L"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2800,7 +2998,7 @@
                 "Choice": "The sender's public key",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The sender's public key cannot be used to decrypt the message.",
                     "Percent": 0
                 }
             },
@@ -2808,7 +3006,7 @@
                 "Choice": "The sender's private key",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The sender's private key cannot be used to decrypt the message.",
                     "Percent": 0
                 }
             },
@@ -2816,7 +3014,7 @@
                 "Choice": "The recipient's public key",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The recipient's public key cannot be used to decrypt the message.",
                     "Percent": 0
                 }
             },
@@ -2824,7 +3022,7 @@
                 "Choice": "The recipient's private key",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "In public cryptography, a message is encrypted with a recipient's public key and decrypted with the recipient's private key.",
                     "Percent": 0
                 }
             }
@@ -2836,10 +3034,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3.1A",
+            "2.3.1B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2855,7 +3055,7 @@
                 "Choice": "`tttext(RANDOM (1, 100) = 25)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option causes the experiment to be successful when `tttext(RANDOM (1, 100))` results in exactly `25`, or `1%` of the time.",
                     "Percent": 0
                 }
             },
@@ -2863,7 +3063,7 @@
                 "Choice": "`tt(text(RANDOM (1, 100))<=text(25))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option causes the experiment to be successful when `tttext(RANDOM (1, 100))` produces a result from `1` to `25`, or `25%` of the time.",
                     "Percent": 0
                 }
             },
@@ -2871,7 +3071,7 @@
                 "Choice": "`tttext(RANDOM (1, 100) = 75)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option causes the experiment to be successful when `tttext(RANDOM (1, 100))` results in exactly `75`, or `1%` of the time.",
                     "Percent": 0
                 }
             },
@@ -2879,7 +3079,7 @@
                 "Choice": "`tt(text(RANDOM (1, 100))<=text(75))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This option causes the experiment to be successful when `tttext(RANDOM (1, 100))` produces a result from `1` to `75`, or `75%` of the time.",
                     "Percent": 0
                 }
             }
@@ -2891,10 +3091,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.1A",
+            "4.1.1B",
+            "4.1.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2910,7 +3114,7 @@
                 "Choice": "`tttext(end - start + 1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For the example given, `tttext(end - start + 1)` evaluates to `tt(16)`. The loop should iterate `4` times, not `16` times.",
                     "Percent": 0
                 }
             },
@@ -2918,7 +3122,7 @@
                 "Choice": "`tttext(end - start + 6)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For the example given, `tttext(end - start + 6)` evaluates to `tt(21)`. The loop should iterate `4` times, not `21` times.",
                     "Percent": 0
                 }
             },
@@ -2926,7 +3130,7 @@
                 "Choice": "`tttext(((end - start))tttext( / 5))tttext( + 1)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The loop should iterate once for `text(each multiple)` of `5` from `tttext(start)` to `tttext(end)`. The number of multiples of `5` from start to end is given by `tttext(((end - start))tttext( / 5))tttext( + 1)`. For the example given, `tttext(((end - start))tttext( / 5))tttext( + 1)` evaluates to `tt(4)`.",
                     "Percent": 0
                 }
             },
@@ -2934,7 +3138,7 @@
                 "Choice": "`tttext(5 * (end - start) + 1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For the example given, `tttext(5 * (end - start) + 1)` evaluates to `tt(76)`. The loop should iterate `4` times, not `76` times.",
                     "Percent": 0
                 }
             }
@@ -2949,7 +3153,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.4H"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2966,7 +3170,7 @@
                 "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The procedure does not implement a binary search.",
                     "Percent": 0
                 }
             },
@@ -2974,7 +3178,7 @@
                 "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The procedure implements a linear search, which sequentially compares `text(each element)` of the list with the target value. The list does not need to be sorted because the procedure checks list elements until either the target is found or it reaches the end of the list.",
                     "Percent": 0
                 }
             },
@@ -2982,7 +3186,7 @@
                 "Choice": "`text(I)` and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The procedure does not implement a binary search and does not need to be in sorted order to implement a linear search.",
                     "Percent": 0
                 }
             },
@@ -2990,7 +3194,7 @@
                 "Choice": "`text(II)` and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The procedure implements a linear search, but the list does not need to be sorted.",
                     "Percent": 0
                 }
             }
@@ -3005,7 +3209,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "6.3.1K"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3019,7 +3223,7 @@
                 "Choice": "Evy buys a locked box that operates using `text(two)` different codes. When the `text(first)` code is entered, a slot opens that allows a message to be put in the box. When the `text(second)` code is entered, the door to the box opens. Evy gives the `text(first)` code to her friends so they can leave messages for her and keeps the `text(second)` code to herself so that she is the only `text(one)` who can retrieve the messages.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is an example of an asymmetric system because different codes are used to send and receive messages.",
                     "Percent": 0
                 }
             },
@@ -3027,7 +3231,7 @@
                 "Choice": "Finn and Gwen develop a system that maps `text(each letter)` of the alphabet to a unique symbol using a secret key. Finn uses the key to write a message to Gwen where `text(each letter)` is replaced with the corresponding symbol. Gwen uses the key to map `text(each symbol)` back to the original letter.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This is an example of symmetric encryption because the secret key is used for both encryption and decryption of messages.",
                     "Percent": 0
                 }
             },
@@ -3035,7 +3239,7 @@
                 "Choice": "Hannah writes a message to send to Isabel and hides the message under a rock behind the soccer field. Hannah gives Isabel the exact location of the rock so that only Isabel can find the message.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This system does not encrypt messages, it only hides them in a secret location.",
                     "Percent": 0
                 }
             },
@@ -3043,7 +3247,7 @@
                 "Choice": "Juan writes a message to send to Kelly and slides the message through a slot in the front of Kelly's locker. Juan knows that Kelly has not shared her locker combination with anyone, so no one other than Kelly will be able to read the message.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is an example of an asymmetric system because only Kelly knows the key used to receive messages.",
                     "Percent": 0
                 }
             }
@@ -3055,10 +3259,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1.1A",
+            "4.1.1B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3076,7 +3282,7 @@
                 "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Option `text(I)` does not work because it performs the “shorten” step before the “keep palindromes” step.",
                     "Percent": 0
                 }
             },
@@ -3084,7 +3290,7 @@
                 "Choice": "`text(II)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Option `text(II)` works correctly, but option `text(III)` works as well.",
                     "Percent": 0
                 }
             },
@@ -3092,7 +3298,7 @@
                 "Choice": "`text(I)` and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Option `text(III)` works correctly, but option `text(I)` does not. Option `text(I)` does not work because it performs the “shorten” step before the “keep palindromes” step.",
                     "Percent": 0
                 }
             },
@@ -3100,7 +3306,7 @@
                 "Choice": "`text(II)` and `text(III)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Options `text(II)` and `text(III)` perform the steps in a correct order. In order to generate the desired list, the algorithm must perform the “shorten” step after the “keep palindromes” step, otherwise the “keep palindromes” step would not be able to determine whether the original word was a palindrome.",
                     "Percent": 0
                 }
             }
@@ -3115,7 +3321,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "7.2.1A"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3129,7 +3335,7 @@
                 "Choice": "To analyze large data sets, recognize patterns, and make predictions based on data",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Machine learning is the process of a computer analyzing data in order to make predictions and decisions based on trends in the data.",
                     "Percent": 0
                 }
             },
@@ -3137,7 +3343,7 @@
                 "Choice": "To automatically translate algorithms from natural language to machine language",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option describes the process of using a computer to translate an algorithm to machine code.",
                     "Percent": 0
                 }
             },
@@ -3145,7 +3351,7 @@
                 "Choice": "To determine whether an algorithm can be constructed to answer “yes” or “no” for all possible inputs",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option describes the process of determining whether an algorithm is decidable.",
                     "Percent": 0
                 }
             },
@@ -3153,7 +3359,7 @@
                 "Choice": "To find approximate solutions to problems that would otherwise require an unreasonably long amount of time to solve",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This option describes the process of using a heuristic to find approximate solutions to a problem.",
                     "Percent": 0
                 }
             }
@@ -3165,10 +3371,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2.1A",
+            "2.2.1B",
+            "2.2.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3184,7 +3394,7 @@
                 "Choice": "Procedure `tttext(Add (n, m))`, which returns the value `n+m`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The `tttext(Add)` procedure does not generalize the `tttext(Square)` and `tttext(Cube)` procedures, which are used to calculate a power of `tt(n)`.",
                     "Percent": 0
                 }
             },
@@ -3192,7 +3402,7 @@
                 "Choice": "Procedure `tttext(Fourth (n))`, which returns the value `n^4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The `tttext(Fourth)` procedure calculates a power of `tt(n)` (similar to the `tttext(square)` and `tttext(cube)` procedures), but it does not generalize this functionality to calculate any power of `tt(n)`.",
                     "Percent": 0
                 }
             },
@@ -3200,7 +3410,7 @@
                 "Choice": "Procedure `tttext(Polynomial(n))`, which returns the value `n^3+n^2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The `tttext(Polynomial)` procedure calculates the sum of the `tttext(Square)` and `tttext(Cube)` procedures, but does not generalize their functionality to calculate any power of `tt(n)`.",
                     "Percent": 0
                 }
             },
@@ -3208,7 +3418,7 @@
                 "Choice": "Procedure `tttext(Power (n, m))`, which returns the value `n^m`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The procedures square and cube are each used to determine a power of `tt(n)`. A generalization of this procedure is `tttext(Power (n, m))`, which calculates `tt(n)` raised to the `tt(m)` power.",
                     "Percent": 0
                 }
             }
@@ -3223,7 +3433,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.4C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3239,7 +3449,7 @@
                 "Choice": "The procedure returns `tttext(true)` when the user inputs the value `tttext(“y”)` and returns `tttext(false)` otherwise.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The procedure always returns `tttext(false)`.",
                     "Percent": 0
                 }
             },
@@ -3247,7 +3457,7 @@
                 "Choice": "The procedure returns `tttext(true)` when the user inputs the value `tttext(“n”)` and returns `tttext(false)` otherwise.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The procedure always returns `tttext(false)`.",
                     "Percent": 0
                 }
             },
@@ -3255,7 +3465,7 @@
                 "Choice": "The procedure returns `tttext(true)` no matter what the input value is.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The procedure always returns `tttext(false)`.",
                     "Percent": 0
                 }
             },
@@ -3263,7 +3473,7 @@
                 "Choice": "The procedure returns `tttext(false)` no matter what the input value is.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The expression `tttext(((response = “y”))tttext( AND (response = “yes”)))` always evaluates to `tttext(false)` because it is not possible for the variable `tttext(response)` to be equal to both `tttext(“y”)` and `tttext(“yes”)`. Therefore, the procedure will always return `tttext(false)`.",
                     "Percent": 0
                 }
             }
@@ -3275,10 +3485,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1.1D",
+            "2.1.1F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3292,7 +3504,7 @@
                 "Choice": "Hexadecimal can be used to represent fractional values, but binary can only represent integers.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Both binary and hexadecimal numbers can be used to represent fractional values.",
                     "Percent": 0
                 }
             },
@@ -3300,7 +3512,7 @@
                 "Choice": "Hexadecimal can be used to represent a wider variety of data types than binary can, including color and geolocation data.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Both binary and hexadecimal numbers can be used to represent any type of digital data.",
                     "Percent": 0
                 }
             },
@@ -3308,7 +3520,7 @@
                 "Choice": "Hexadecimal is easier for a computer to understand than binary is.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "At the lowest level of abstraction, computers use binary numbers to represent digital data.",
                     "Percent": 0
                 }
             },
@@ -3316,7 +3528,7 @@
                 "Choice": "A hexadecimal representation of a value generally requires fewer digits than a binary representation of the same value.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "`text(Each hexadecimal digit)` can be used to represent up to `text(four bits)` of data, so hexadecimal representations generally require fewer digits than binary representations.",
                     "Percent": 0
                 }
             }
@@ -3328,10 +3540,16 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.2.1A",
+            "5.2.1B",
+            "5.2.1C",
+            "5.2.1D"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3347,7 +3565,7 @@
                 "Choice": "The program displays the sum of the even integers from `0` to `10`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The program counts odd integers, not even integers.",
                     "Percent": 0
                 }
             },
@@ -3355,7 +3573,7 @@
                 "Choice": "The program displays the sum of the even integers from `0` to `20`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The program counts odd integers, not even integers.",
                     "Percent": 0
                 }
             },
@@ -3363,7 +3581,7 @@
                 "Choice": "The program displays the sum of the odd integers from `1` to `9`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The program counts up to `19`, not `9`.",
                     "Percent": 0
                 }
             },
@@ -3371,7 +3589,7 @@
                 "Choice": "The program displays the sum of the odd integers from `1` to `19`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The value of `tttext(count)` starts at `1` and increases by `text(twos)`, so it counts odd integers. The loop iterates `10` times, adding `text(each intermediate value)` of count `text(each time)`. Therefore, the program displays the sum of the odd integers starting at `1` and ending at `19`.",
                     "Percent": 0
                 }
             }
@@ -3383,10 +3601,14 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.3.1A",
+            "6.3.1C",
+            "6.3.1E"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3400,7 +3622,7 @@
                 "Choice": "By causing incorrect information about services to be displayed",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A successful DDoS attack would make the online store unavailable to users, but wouldn't cause the content of the online store to change.",
                     "Percent": 0
                 }
             },
@@ -3408,7 +3630,7 @@
                 "Choice": "By making it difficult for the site to safeguard customer login information",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A successful DDoS attack would make the online store unavailable to users, but wouldn't allow the attacker access to customer login information.",
                     "Percent": 0
                 }
             },
@@ -3416,7 +3638,7 @@
                 "Choice": "By preventing customers from placing orders",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "DDoS attacks compromise a target by flooding it with requests from multiple systems. A likely result of a DDoS attack on an online store would be that the online store would be unavailable to customers, preventing them from placing orders.",
                     "Percent": 0
                 }
             },
@@ -3424,7 +3646,7 @@
                 "Choice": "By preventing the store from filling previously placed orders",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A successful DDoS attack would make the online store unavailable to users, but the online store could still fill previous orders while the site was down.",
                     "Percent": 0
                 }
             }
@@ -3439,7 +3661,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "5.3.1I"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3455,7 +3677,7 @@
                 "Choice": "`tttext(Concat (Substring (“Harp”, 1, 1))tttext(, Substring (“Puppy”, 2, 4)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression returns the string `tttext(“Huppy”)`.",
                     "Percent": 0
                 }
             },
@@ -3463,7 +3685,7 @@
                 "Choice": "`tttext(Concat (Substring (“Harp”, 1, 2))tttext(, Substring (“Puppy”, 3, 3)))`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This expression concatenates the `text(first two)` letters of `tttext(“Harp”)` with the `text(last three)` letters of `tttext(“puppy”)`, resulting in `tttext(“Happy”)`.",
                     "Percent": 0
                 }
             },
@@ -3471,7 +3693,7 @@
                 "Choice": "`tttext(Concat (Substring (“Harp”, 1, 2))tttext(, Substring (“Puppy”, 4, 2)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression returns the string `tttext(“Hapy”)`.",
                     "Percent": 0
                 }
             },
@@ -3479,7 +3701,7 @@
                 "Choice": "`tttext(Concat (Substring (“Harp”, 2, 2))tttext(, Substring (“Puppy”, 4, 2)))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This expression returns the string `tttext(“arpy”)`.",
                     "Percent": 0
                 }
             }
@@ -3491,10 +3713,18 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "7.1.2A",
+            "7.1.2C",
+            "7.1.2D",
+            "7.1.2E",
+            "7.1.2F"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3509,7 +3739,7 @@
                 "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The Internet can provide tools, information, and knowledge to crowdsourcing participants and can lower geographic barriers to potential participants. However, there exist problems that cannot be solved in reasonable time, even with a distributed approach.",
                     "Percent": 0
                 }
             },
@@ -3517,7 +3747,7 @@
                 "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The Internet can provide tools, information, and knowledge to crowdsourcing participants. However, there exist problems that cannot be solved in reasonable time, even with a distributed approach.",
                     "Percent": 0
                 }
             },
@@ -3525,7 +3755,7 @@
                 "Choice": "`text(II)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The Internet can lower geographic barriers to potential participants. However, there exist problems that cannot be solved in reasonable time, even with a distributed approach.",
                     "Percent": 0
                 }
             },
@@ -3533,7 +3763,7 @@
                 "Choice": "`text(I)`, `text(II)`, and `text(III)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Only statements `text(I)` and `text(II)` are correct. Option `text(III)` is incorrect because there are some problems that cannot be solved in reasonable time.",
                     "Percent": 0
                 }
             }
@@ -3545,10 +3775,18 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3.1A",
+            "3.3.1C",
+            "3.3.1G",
+            "3.3.1E",
+            "3.3.1H"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3562,7 +3800,7 @@
                 "Choice": "Using video file formats that conform to published standards and are supported across many different devices",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using standard video formats would help ensure that the videos are accessible in the future.",
                     "Percent": 0
                 }
             },
@@ -3570,7 +3808,7 @@
                 "Choice": "Using lossy compression software to reduce the size requirements of the data being stored",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Using lossy compression will provide only an approximation of the original video data. The full-quality original versions of the videos will be lost if lossy compression is used.",
                     "Percent": 0
                 }
             },
@@ -3578,7 +3816,7 @@
                 "Choice": "Using storage media that can be expanded for additional data capacity",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using media that allows for additional storage capacity will help ensure that all of the full-quality videos can be archived.",
                     "Percent": 0
                 }
             },
@@ -3586,7 +3824,7 @@
                 "Choice": "Using a system that incorporates redundancy to handle disk failure",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using redundancy will help ensure that video files are not lost if a storage device fails.",
                     "Percent": 0
                 }
             }
@@ -3598,10 +3836,12 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "6.2.1A",
+            "6.2.1B"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3616,7 +3856,7 @@
                 "Choice": "The Web page `tttext(about.example.org)` is a subdomain of `tttext(about.org)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In the domain name hierarchy, `tttext(about.example.org)` is not related to `tttext(about.org)`.",
                     "Percent": 0
                 }
             },
@@ -3624,7 +3864,7 @@
                 "Choice": "The Web page `tttext(about.example.org)` is a subdomain of `tttext(example.org)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "In the domain name hierarchy, `tttext(about.example.org)` is a subdomain of `tttext(example.org)`.",
                     "Percent": 0
                 }
             },
@@ -3632,7 +3872,7 @@
                 "Choice": "The Web page `tttext(example.org)` is a domain under the top-level domain `tttext(.org)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "In the domain name hierarchy, `tttext(example.org)` is under the top-level domain `tttext(.org)`.",
                     "Percent": 0
                 }
             },
@@ -3640,7 +3880,7 @@
                 "Choice": "The Web page `tttext(example.org)` is a domain under the top-level domain `tttext(example)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The top-level domain associated with `tttext(example.org)` is `tttext(.org)`.",
                     "Percent": 0
                 }
             }
@@ -3652,10 +3892,14 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.3.1C",
+            "5.3.1E",
+            "5.3.1L"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3670,7 +3914,7 @@
                 "Choice": "Replacing `text(each instance)` of repeated code with a call to a procedure",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Placing repeated code with procedure calls is an example of a procedural abstraction that may make it easier for a programmer to manage the complexity of a program.",
                     "Percent": 0
                 }
             },
@@ -3678,7 +3922,7 @@
                 "Choice": "Replacing longer variable names with shorter variable names to reduce typing errors",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using shorter variable names would not help a programmer to manage the complexity of a program. In general, meaningful variable names help programmers better understand programs.",
                     "Percent": 0
                 }
             },
@@ -3686,7 +3930,7 @@
                 "Choice": "Replacing several lines of documentation with a `text(single)` line of documentation",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Placing all documentation in a `text(single)` line does not help a programmer to manage the complexity of a program.",
                     "Percent": 0
                 }
             },
@@ -3694,7 +3938,7 @@
                 "Choice": "Replacing the string variables `tttext(name1)`, `tttext(name2)`, `tttext(name3)`, and `tttext(name4)` with a list of strings called `tttext(names)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Creating a list of names is an example of a data abstraction that may make it easier for a programmer to manage the complexity of a program.",
                     "Percent": 0
                 }
             }
@@ -3706,10 +3950,14 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2.1A",
+            "3.2.1B",
+            "3.2.1C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3729,7 +3977,7 @@
                 "Choice": "The schools can create a `text(single)` list of student names, sorted by last name.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "It is possible to create a `text(single)` list of student names, sorted by `text(last)` name. Both data formats provide the `text(first)` and `text(last)` names of `text(each student)`.",
                     "Percent": 0
                 }
             },
@@ -3737,7 +3985,7 @@
                 "Choice": "The schools can determine the average number of `text(days)` students are absent.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "It is possible to determine the average number of `text(days)` students are absent. Both data formats provide the number of absences for `text(each student)`.",
                     "Percent": 0
                 }
             },
@@ -3745,7 +3993,7 @@
                 "Choice": "The schools can determine which ZIP code is represented by the most students.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "East High School provides the ZIP code of `text(each student)`, but West High School does not.",
                     "Percent": 0
                 }
             },
@@ -3753,7 +4001,7 @@
                 "Choice": "The schools can determine the student ID of the student with the greatest number of absences.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "West High School provides a student ID for `text(each student)`, but East High School does not.",
                     "Percent": 0
                 }
             }
@@ -3765,10 +4013,12 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "7.1.2D",
+            "7.1.2E"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3783,7 +4033,7 @@
                 "Choice": "The ability to easily check that the encyclopedia is free of copyrighted content",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "As users from around the world add content to the online encyclopedia, it may become difficult to determine whether any of the new content is copyrighted.",
                     "Percent": 0
                 }
             },
@@ -3791,7 +4041,7 @@
                 "Choice": "The ability to ensure that encyclopedia content is the same every time it is accessed",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "As articles can be edited by any user, an article may contain different content when it is accessed at different times.",
                     "Percent": 0
                 }
             },
@@ -3799,7 +4049,7 @@
                 "Choice": "The ability to have a larger number of perspectives reflected in the encyclopedia content",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "As any user has the ability to edit articles, there will be many opportunities for people with different perspectives to contribute.",
                     "Percent": 0
                 }
             },
@@ -3807,7 +4057,7 @@
                 "Choice": "The ability to quickly update encyclopedia content as new information becomes available",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The online encyclopedia can be edited at any time, so it is easy to create or update articles as new information becomes available.",
                     "Percent": 0
                 }
             }
@@ -3819,10 +4069,14 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.4.1E",
+            "5.4.1F",
+            "5.4.1G"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3840,7 +4094,7 @@
                 "Choice": "Line `1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The variable `tttext(count)` should be set to `tt(0)` before the loop so that it starts counting at `tt(1)`.",
                     "Percent": 0
                 }
             },
@@ -3848,7 +4102,7 @@
                 "Choice": "Line `4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If `tttext(count)` is set to `tt(0)` repeatedly inside the loop, it will not provide an accurate count of the number of prime numbers in the list.",
                     "Percent": 0
                 }
             },
@@ -3856,7 +4110,7 @@
                 "Choice": "Line `7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The variable `tttext(count)` should be incremented within the `tttext(IF)` statement so that it only increases whenever `tttext(value)` is prime.",
                     "Percent": 0
                 }
             },
@@ -3864,7 +4118,7 @@
                 "Choice": "Line `9`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If `tttext(count)` is incremented outside the `tttext(IF)` statement, it will increase for all entries in the list instead of just the prime entries.",
                     "Percent": 0
                 }
             }
@@ -3876,10 +4130,14 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "7.3.1A",
+            "7.3.1G",
+            "7.3.1N"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3894,7 +4152,7 @@
                 "Choice": "Cloud computing has eliminated the need to provide redundancy in Internet routing.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Redundant routing provides fault tolerance, which enables a cloud storage site to continue to operate if some part of a network fails.",
                     "Percent": 0
                 }
             },
@@ -3902,7 +4160,7 @@
                 "Choice": "Cloud computing has helped enhance collaboration.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Cloud computing fosters new ways to communicate and collaborate, allowing users to share files and tools easily.",
                     "Percent": 0
                 }
             },
@@ -3910,7 +4168,7 @@
                 "Choice": "Cloud computing has introduced new data-security concerns.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Cloud computing sites must consider security concerns in order to protect their users' private data.",
                     "Percent": 0
                 }
             },
@@ -3918,7 +4176,7 @@
                 "Choice": "Cloud computing has reduced concerns about intellectual property rights.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Cloud storage sites allow users to share files easily, which could lead to increased concerns about copyrighted materials being illegally distributed online.",
                     "Percent": 0
                 }
             }
@@ -3930,10 +4188,12 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "5.4.1G",
+            "5.4.1I"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -3950,7 +4210,7 @@
                 "Choice": "When the values of `ttx` and `tty` are both positive.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If `tt(x)` and `tt(y)` are both positive, the procedure will correctly calculate the product by adding `tt(x)` to itself `tt(y)` times.",
                     "Percent": 0
                 }
             },
@@ -3958,7 +4218,7 @@
                 "Choice": "When the value of `ttx` is positive and the value of `tty` is negative.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If `tt(y)` is negative, then the condition `tttext(count = y)` will never be met since `tttext(count)` begins at `tt(0)` and repeatedly increases.",
                     "Percent": 0
                 }
             },
@@ -3966,7 +4226,7 @@
                 "Choice": "When the value of `ttx` is negative and the value of `tty` is positive.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If `tt(x)` is negative and `tt(y)` is positive, the procedure will correctly calculate the product by adding `tt(x)` to itself `tt(y)` times.",
                     "Percent": 0
                 }
             },
@@ -3974,7 +4234,7 @@
                 "Choice": "When the values of `ttx` and `tty` are both negative.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If `tt(y)` is negative, then the condition `tttext(count = y)` will never be met since `tttext(count)` begins at `tt(0)` and repeatedly increases.",
                     "Percent": 0
                 }
             }
@@ -3986,10 +4246,12 @@
         "Type": "MS",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2.4B",
+            "4.2.4C"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -4003,34 +4265,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`tt(text(theList)larrtext([10, 20, 30, 40]))`",
+                "Choice": "`tt(text(theList)larr[10,20,30,40])`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For the list `tttext([10,20,30,40])`, there are no values less than the `text(first)` number in the list, so the procedure returns the correct value `tt(10)`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "`tt(text(theList)larrtext([20, 10, 30, 40]))`",
+                "Choice": "`tt(text(theList)larr[20,10,30,40])`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For the list `tttext([20,10,30,40])`, `tt(10)` is the `text(first)` value smaller than the `text(first)` number in the list, so the procedure returns the correct value `tt(10)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`tt(text(theList)larrtext([30, 40, 20, 10]))`",
+                "Choice": "`tt(text(theList)larr[30,40,20,10])`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The procedure returns the `text(first)` number it encounters that is less than the `text(first)` number in the list. For the list `tttext([30,40,20,10])`, the procedure returns `tt(20)`, which is not the least value in the list.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "`tt(text(theList)larrtext([40, 30, 20, 10]))`",
+                "Choice": "`tt(text(theList)larr[40,30,20,10])`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The procedure returns the `text(first)` number it encounters that is less than the `text(first)` number in the list. For the list `tttext([40,30,20,10])`, the procedure returns `tt(30)`, which is not the least value in the list.",
                     "Percent": 0
                 }
             }
