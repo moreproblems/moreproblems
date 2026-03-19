@@ -21,7 +21,7 @@
                 "Choice": "`x/2+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the derivative of `x^2/4` not the antiderivative.",
                     "Percent": 0
                 }
             },
@@ -29,7 +29,7 @@
                 "Choice": "`x^3/12+C`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "By the power rule for antiderivatives, the antiderivative of `x^n` is `x^(n+1)/(n+1)` for `n!=-1`. Therefore, `intx^2/4dx=1/4intx^2dx=1/4*x^3/3+C=x^3/12+C`.",
                     "Percent": 88
                 }
             },
@@ -37,7 +37,7 @@
                 "Choice": "`x^3/4+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the power rule for antiderivatives was not applied correctly. The antiderivative of `x^2` was taken to be `x^3` rather than `x^3/3`.",
                     "Percent": 0
                 }
             },
@@ -45,7 +45,7 @@
                 "Choice": "`(3x^3)/4+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the power rule for antiderivatives was not applied correctly. The antiderivative of `x^2` was taken to be `3x^3` rather than `x^3/3`.",
                     "Percent": 0
                 }
             }
@@ -74,7 +74,7 @@
                 "Choice": "`y=x+pi/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative of `cosx` was taken to be `sinx` rather than `-sinx`. The slope at the point `(pi/2,0)` was therefore taken to be `1`. In addition, an equation of a line through the point `(x_0,y_0)` was written as `y=m(x-x_0)+y_0` instead of `y=m(x-x_0)+y_0` leading to the response `y=+1(x+pi/2)+0=x+pi/2`.",
                     "Percent": 0
                 }
             },
@@ -82,7 +82,7 @@
                 "Choice": "`y=x-pi/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative of `cosx` was taken to be `sinx` rather than `-sinx`. The slope at the point `(pi/2,0)` was therefore taken to be `1`, giving an equation of the tangent line as `y=+1(x-pi/2)+0=x-pi/2`.",
                     "Percent": 0
                 }
             },
@@ -90,7 +90,7 @@
                 "Choice": "`y=-x+pi/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The slope of the tangent line is the value of the derivative at `x=pi/2`.\n`dy/dx=-sinxrArrdy/dx|_(x=pi/2)=-sin(pi/2)=-1`\nAt `x=pi/2`, `y=cos(pi/2)=0`.\nAn equation of the tangent line at the point `(pi/2,0)` is therefore `y=-1(x-pi/2)+0=x+pi/2`.",
                     "Percent": 65
                 }
             },
@@ -98,7 +98,7 @@
                 "Choice": "`y=-x-pi/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from writing an equation of a line through the point `(x_0,y_0)` as `y=m(x-x_0)+y_0` instead of `y=m(x-x_0)+y_0` leading to `y=-1(x+pi/2)+0=-x-pi/2`.\nAlternately, an error might have been made in simplifying an equation of the tangent line. The slope of the tangent line at `x=pi/2` was correctly found.\n`dy/dx=-sinxrArrdy/dx|_(x=pi/2)=-sin(pi/2)=-1`\nAn equation of the tangent line at the point `(pi/2,0)` was written, as follows.\n``",
                     "Percent": 0
                 }
             }
@@ -127,7 +127,7 @@
                 "Choice": "`4cos(1/(2sqrtx))`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from incorrectly applying the chain rule `text(twice)` as `d/dx(f(g(x)))=f'(g'(x))`, as follows\n`d/dx(2(sinsqrtx)^2)=2*(2*d/dx(sinsqrtx))=2*2*cos(d/dx(sqrtx))=4cos(1/(2sqrtx))`",
                     "Percent": 0
                 }
             },
@@ -135,7 +135,7 @@
                 "Choice": "`4sinsqrtxcossqrtx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from correctly applying the chain rule the `text(first)` time but not the `text(second)`, as follows.\n`d/dx(2(sinsqrtx)^2)=2*2*(sinsqrtx)*d/dx((sinsqrtx))=2*2*(sinsqrtx)*cossqrtx`",
                     "Percent": 0
                 }
             },
@@ -143,7 +143,7 @@
                 "Choice": "`(2sinsqrtx)/sqrtx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from using the chain rule only `text(once)`, with the innermost “inside” function, `sqrtx`, as follows.\n`d/dx(2(sinsqrtx)^2)=2*2*(sinsqrtx)*d/dx((sqrtx))=2*2*(sinsqrtx)*1/(2sqrtx)`",
                     "Percent": 0
                 }
             },
@@ -151,7 +151,7 @@
                 "Choice": "`(2sinsqrtxcossqrtx)/sqrtx`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The chain rule must be used `text(twice)` for this composition of `text(three)` functions.\n`d/dx(2(sinsqrtx)^2)=2*2(sinsqrtx)*(d/dx(sinsqrtx))=2*2(sinsqrtx)*(cossqrtx*d/dxsqrtx)=2*2(sinsqrtx)*cossqrtx*1/(2sqrtx)=(2sinsqrtcossqrtx)/sqrtx`",
                     "Percent": 66
                 }
             }
@@ -180,7 +180,7 @@
                 "Choice": "`-3/2*1/(3x^2+3)^2+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the factor `3` was mishandled during the substitution using `u=x^3+3x-5` and the expression `3x^2+3` from the derivative was substituted back for `u` rather than the expression `x^3+3x-5` as follows.\n`u=x^3+3x-5rArrdu/dx=3x^2+3=3(x^2+1)rArrdx=(3du)/(x^2+1)`\n`int(x^2+1)/(x^3+3x-5)dx=int1/u^3*3du=3*(-1/(2u^2))+C=-3/2*1/(3x^2+3)^2+C`",
                     "Percent": 0
                 }
             },
@@ -188,7 +188,7 @@
                 "Choice": "`-1/6*1/(3x^2+3)^2+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Starting with the substitution `u=x^3+3x-5`, `u=x^3+3x-5rArrdu/dx=3x^2+3=3(x^2+1)rArrdx=du/(3(x^2+1))`.\n Substituting for `x^3+3x-5` and for `dx` gives `int(x^2+1)/(x^3+3x-5)^3dx=int1/u^3*1/3du=1/3*(-1/(2u^2))+C`.\nThe expression `3x^2+3` from the derivative might have been substituted back for `u`, however, rather than the expression `x^3+3x-5`.",
                     "Percent": 0
                 }
             },
@@ -196,7 +196,7 @@
                 "Choice": "`-3/2*1/(x^3+3x-5)^2+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the factor `3` was mishandled during the substitution using `u=x^3+3x-5`, as follows.\n`u=x^3+3x-5rArrdu/dx=3x^2+3=3(x^2+1)rArrdx=(3du)/(x^2+1)`\n`int(x^2+1)/(x^3+3x-5)^3dx=int1/u^3*1/3du=1/3*(-1/(2u^2))+C=-3/2*1/(x^3+3x-5)^2+C`",
                     "Percent": 0
                 }
             },
@@ -204,7 +204,7 @@
                 "Choice": "`-1/6*1/(x^3+3x-5)^2+C`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Starting with the substitution `u=x^3+3x-5`, `u=x^3+3x-5rArrdu/dx=3x^2+3=3(x^2+1)rArrdx=du/(3(x^2+1))`.\nSubstituting for `x^3+3x-5` and for `dx` gives `int(x^2+1)/(x^3+3x-5)^3dx=int1/u^3*1/3du=1/3*(-1/(2u^2))+C=-1/6*1/(x^3+3x-5)^2+C`.",
                     "Percent": 54
                 }
             }
@@ -233,7 +233,7 @@
                 "Choice": "`(-oo,0)` and `(2,oo)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "These are the intervals for which `f''(x)<0`, that is, those on which the graph of `f` is concave down, not concave up.\n`f'(x)=12x^2-4x^3`\n`f''(x)=24x-12x^2=12x(2-x)`\nThe graph of `f''` is a parabola opening downward and with `text(zeros)` at `x=0` and `x=2`. Therefore, `f''(x)<0` on the intervals `(-oo,0)` and `(2,oo)`.",
                     "Percent": 0
                 }
             },
@@ -241,7 +241,7 @@
                 "Choice": "`(-oo,3)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of `f` will be concave up on intervals where `f''(x)>0`. This response comes from determining where `f'(x)>0`, however, rather than where `f''(x)>0`.\n`f'(x)=12x^2-4x^3=4x^2(3-x)` when `3-x>0`, so when `x<3`.",
                     "Percent": 0
                 }
             },
@@ -249,7 +249,7 @@
                 "Choice": "`(0,2)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The graph of `f` will be concave up on intervals where `f''(x)>0`.\n`f'(x)=12x^2-4x^3`\n`f''(x)=24x-12x^2=12x(2-x)`\nThe graph of `f''` is a parabola opening downward and with `text(zeros)` at `x=0` and `x=2`. Therefore, `f''(x)>0` on the interval between the `text(two zeros)`, or `0<x<2`.",
                     "Percent": 70
                 }
             },
@@ -257,7 +257,7 @@
                 "Choice": "`(0,3)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response comes from determining where `f(x)>0` and `f'(x)>0` rather than just where `f''(x)>0`.\n`f(x)=4x^3-4x^4=x^3(4-x)>0` when `0<x<4`. `f'(x)=12x^2-4x^3=4x^2(3-x)>0` when `x<3`. Therefore, `f(x)>0` and `f'(x)>0` only when `0<x<3`.",
                     "Percent": 0
                 }
             }
@@ -286,7 +286,7 @@
                 "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if there was an error in the power rule when differentiating `3y^(1/3)` and when solving for `dy/dx`, as follows.\n`1+y^(1/3)dy/dx=dy/dx`\nAt the point, `(2,8)`, `1+2dy/dx=dy/dxrArr1=3dy/dxrArrdy/dx=1/3`.",
                     "Percent": 0
                 }
             },
@@ -294,7 +294,7 @@
                 "Choice": "`3/4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the chain rule was not used and a sign error was made during the differentiation of the left side, as follows.\n`1-y^(-2/3)=dy/dx`\nAt the point, `(2,8)`, `1-1/4=dy /dxrArrdy/dx=3/4`.",
                     "Percent": 0
                 }
             },
@@ -302,7 +302,7 @@
                 "Choice": "`5/4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the chain rule was not used during the differentiation of the left side, as follows.\n`1+y^(-2/3)=dy/dx`\nAt the point, `(2,8)`, `1+1/4=dy/dxrArrdy/dx=5/4`.",
                     "Percent": 0
                 }
             },
@@ -310,7 +310,7 @@
                 "Choice": "`4/3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The chain rule is the basis for implicit differentiation.\n`1+y^(2/3)dy/dx=dy/dx`\nThe point `(2,8)` is on the curve since `x=2` and `y=8` satisfy the equation. At this point, `1+1/4dy/dx=dy/dxrArr3/4dy/dx=1rArrdy/dx=4/3`.",
                     "Percent": 41
                 }
             }
@@ -339,7 +339,7 @@
                 "Choice": "`x^6/6-5^x/ln5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is an antiderivative of `x^5-5^x` not the derivative.",
                     "Percent": 0
                 }
             },
@@ -347,7 +347,7 @@
                 "Choice": "`5x^4-5^x`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative of `a^x` was taken to be just `a^x` rather than `(lna)a^x`.",
                     "Percent": 0
                 }
             },
@@ -355,7 +355,7 @@
                 "Choice": "`5x^4-x*5^(x-1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the power rule was applied to the exponential function `5^x`, resulting in the response `x*5^(x-1)` rather than using the exponential rule `d/dxa^x=(lna)a^x`.",
                     "Percent": 0
                 }
             },
@@ -363,7 +363,7 @@
                 "Choice": "`5x^4-(ln5)5^x`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The derivative of `x^5` is `5x^4` by the power rule, and the derivative of the exponential function `5^x` is `(ln5)5^x`. Therefore `d/dx(x^5-5^x)=5x^4-(ln5)5^x`.",
                     "Percent": 62
                 }
             }
@@ -392,7 +392,7 @@
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from treating the problem like the limit of a rational function as `x` goes to `text(infinity)` when the numerator and denominator are polynomials of the same degree. If only the coefficients of the `x^2` term and the `e^x` term are considered, it might be thought that the limit would be `-6/3=-2`.",
                     "Percent": 0
                 }
             },
@@ -400,7 +400,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The numerator of `(10-6x^2)/(5+3e^x)` is a translated power function and the denominator is a translated exponential function. Since the exponential function `e^x` grows faster than the power function `x^2`, the relative magnitude of the denominator compared to the numerator will result in this expression converging to `0` as `x` goes to `text(infinity)`.",
                     "Percent": 50
                 }
             },
@@ -408,7 +408,7 @@
                 "Choice": "`2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from treating the problem like the limit of a rational function as `x` goes to `0`. If only the constant terms are considered, it might be thought that the limit would be `10/5=2`.",
                     "Percent": 0
                 }
             },
@@ -416,7 +416,7 @@
                 "Choice": "`text(nonexistent)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It might be thought that the limit is nonexistent since the numerator goes to `-oo` and the denominator goes to `+oo` as `x` goes to `text(infinity)`, but this does not take into account the relative magnitude of the exponential function in the denominator compared to the quadratic term in the numerator as `x` gets larger.",
                     "Percent": 0
                 }
             }
@@ -445,7 +445,7 @@
                 "Choice": "`2/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from several errors in the antidifferentiation and evaluation. If the term `2x` is differentiated rather than antidifferentiated, and if in the resulting evaluation the `2` is not included in the evaluation at the endpoints, the result would be as follows.\n`int_0^2(4x-x^2-2x)dx=int_0^2(2x-x^2)dx=2-1/3x^3|_0^2=2-(8/3-0)=-2/3`\nThen either the negative is ignored or the absolute value is taken, since area must be positive.",
                     "Percent": 0
                 }
             },
@@ -453,7 +453,7 @@
                 "Choice": "`4/3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The graphs of `y=2x` and `y=4x-x^2` intersect when `x=0` and `x=2`. The graph of `y=4-x^2` lies above the graph of `y=2x` on the interval `0<=x<=2`.(`text(One)` way to see this is to sketch a graph of the parabola and the line, observing that the graph of `y=4x-x^2` has a slope of `4` at `x=0`, while the graph of `y=2x` has a slope of `2`.) The area of the region bounded by the `text(two)` graphs is therefore\n`int_0^2(4x-x^2-2x)dx=int_0^2(2x=x^2)dx=(x^2-x^3/3)|_0^2=4-8/3=4/3`.",
                     "Percent": 64
                 }
             },
@@ -461,7 +461,7 @@
                 "Choice": "`16/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from two different errors. This `text(first)` is not finding where the `text(two)` graphs intersect but looking only at the `text(zeros)` of `y=4x-x^2` at `x=0` and `x=4`, using those as the limits of integration to get\n`int_0^4(4x-x^2-2x)dx=int_0^4(2x-x^2)dx=(x^2-x^3/3)|_0^4=16-64/3=-16/3`,\nand then ignoring the negative (or taking the absolute value, since area must be positive).\nThe response might also come from integrating only `y=4x-x^2` over the interval `0<=x<=2`, as follows:\n`int_0^2(4x-x^2)dx=(2x^2-x^3/3)|_0^2=8-8/3=16/3`",
                     "Percent": 0
                 }
             },
@@ -469,7 +469,7 @@
                 "Choice": "`28/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from adding the `text(two)` functions rather than taking the difference between them, as follows.\n`int_0^2(4x-x^2+2x)dx=int_0^2(6x-x^2)dx=(3x^2-x^3/3)|_0^2=12-8/3=28/3`",
                     "Percent": 0
                 }
             }
@@ -499,7 +499,7 @@
                 "Choice": "`-8/9`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The derivative of `g` is found using the quotient rule.\n`g'(x)=(2xf(x)-f'(x)(x^2+1))/(f(x))^2`\nThe graph of `f` is used to determine that `f(2)=3` and `f'(2)=(7-3)/(3-2)=4`. Then `g'(2)=(4f(2)-f'(2)(5))/(f(2))^2=((4)(3)-(4)(5))/9=-8/9`",
                     "Percent": 64
                 }
             },
@@ -507,7 +507,7 @@
                 "Choice": "`1/9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the numerator of the derivative of the quotient was taken to be the product of the derivatives minus the product of the functions, as follows.\n`g'(x)=(2xf'(x)-f(x)(x^2+1))/(f(x))^2rArrg'(2)=(4f'(2)-f(2)(5))/(f(2))^2=((4)(4)-(3)(5))/9=1/9`",
                     "Percent": 0
                 }
             },
@@ -515,7 +515,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative of a quotient was taken to be the quotient of the derivatives, as follows.\n`g'(x)=(2x)/(f'(x))rArrg'(2)=4/(f'(2))=4/4=1`",
                     "Percent": 0
                 }
             },
@@ -523,7 +523,7 @@
                 "Choice": "`32/9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the terms in the numerator were added rather than subtracted in the quotient rule, as follows.\n`g'(x)=(2xf(x)+f'(x)(x^2+1))/(f(x))^2rArrg'(2)=(4f(2)+f'(2)(5))/(f(2))^2=((4)(3)+(4)(5))/9=32/9`",
                     "Percent": 0
                 }
             }
@@ -552,7 +552,7 @@
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The function `f(x)=(x^2-x)/x` has a removable discontinuity at `x=0`, since `f(0)` is undefined but `lim_(x->0)(x^2-x)/x=lim_(x->0)(x-1)=-1`. The definition of the definite integral can be extended to functions with removable discontinuities. If `g(x)=x-1`, then `g(x)=f(x)` for all `x` except `x=0`, and therefore `int_-1^1f(x)dx=int_-1^1g(x)dx=int_-1^1(x-1)dx=(1/2x^2-x)|_-1^1=(1/2-1)-(1/2+1)=-2`.",
                     "Percent": 53
                 }
             },
@@ -560,7 +560,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might arise from an assumption that the value of the definite integral is `0` because the integration is over the symmetric interval `[-1,1]`.",
                     "Percent": 0
                 }
             },
@@ -568,7 +568,7 @@
                 "Choice": "`4/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The antiderivative of a quotient might have been taken to be the quotient of antiderivatives, as follows.\n`int_-1^1f(x)dx=(1/3x^3-1/2x^2)/(1/2x^2)|_-1^1=(1/3-1/2)/(1/2)-(-1/3-1/2)/(1/2)=(2/3)/(1/2)=4/3`",
                     "Percent": 0
                 }
             },
@@ -576,7 +576,7 @@
                 "Choice": "`text(nonexistent)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from not recognizing that the definition of the definite integral can be extended to functions with removable discontinuities.",
                     "Percent": 0
                 }
             }
@@ -606,7 +606,7 @@
                 "Choice": "`(0,4)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This interval might be chosen because of an error in computing the average rate of change over  the interval as `(f(0)-f(4))/4=(8-0)/4=2` rather than `(f(0)-f(4))/(0-4)=(8-0)/(-4)=-2`.",
                     "Percent": 0
                 }
             },
@@ -614,7 +614,7 @@
                 "Choice": "`(4,8)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This interval might be chosen because of an error in computing the average rate of change over the interval as `(8-4)/(f(8)-f(4))=4/(2-0)=2` rather than `(f(8)-f(4))/(8-4)=(2-0)/4=1/2`.",
                     "Percent": 0
                 }
             },
@@ -622,7 +622,7 @@
                 "Choice": "`(8,12)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The function `f` is continuous on the closed interval `[8,12]` and differentiable on the open interval `(8,12)`. By the Mean Value Theorem, there is a number `c` in the interval `(8,12)` such that `f'(c)=(f(12)-f(8))/(12-8)=(10-2)/4=2`.",
                     "Percent": 63
                 }
             },
@@ -630,7 +630,7 @@
                 "Choice": "`(12,16)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the Intermediate Value Theorem was used instead of the Mean Value Theorem to select the open interval `(12,16)` where `f(c)=2` for some number `c` in the interval.",
                     "Percent": 0
                 }
             }
@@ -659,7 +659,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since `lim_(x->0)sinx=0` and `lim_(x->0)(e^x-1)=0`, the indeterminate limit can be evaluated using L’Hospital’s Rule, as follows.\n`lim_(x->0)sinx/(e^x-1)=lim_(x->0)cosx/e^x=cos0/e^0=1/1=1`",
                     "Percent": 60
                 }
             },
@@ -667,7 +667,7 @@
                 "Choice": "`1/e`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While using L’Hospital’s Rule, an error might have been made in the differentiation of `e^x`, treating it as if taking the derivative of `ex`, as follows.\n`lim_(x->0)sinx/(e^x-1)=lim_(x->0)cosx/e=cos0/e=1/e`",
                     "Percent": 0
                 }
             },
@@ -675,7 +675,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the limit of the numerator was observed to be `0`, but the denominator was not taken into consideration",
                     "Percent": 0
                 }
             },
@@ -683,7 +683,7 @@
                 "Choice": "`text(nonexistent)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the limit of the denominator was observed to be `0` while the numerator was not taken into consideration, leading to the assumption that the limit does not exist.",
                     "Percent": 0
                 }
             }
@@ -712,7 +712,7 @@
                 "Choice": "`6t^2+5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression `12t` might have been treated as if it was the velocity, not the acceleration. Therefore, the position was taken to be `s(t)=6t^2+C` with `C=5` since `s(0)=5`.",
                     "Percent": 0
                 }
             },
@@ -720,7 +720,7 @@
                 "Choice": "`6t^3+2t+5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from attempting to use the formula `s=1/2at^2+v_0t+s_0` for the position of an object falling with constant acceleration `a`, as follows.\n`s=1/2at^2+v_0t+s_0=1/2(12t)t^2+2t+5=6t^3+2t+5`",
                     "Percent": 0
                 }
             },
@@ -728,7 +728,7 @@
                 "Choice": "`2t^3+5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The initial velocity might not have been considered during the antidifferentiation of the acceleration, as follows.\n`a(t)=12trArrv(t)=6t^2`\n`v(t)=6t^2rArrs(t)=2t^3+C`;\n`s(0)=5rArr5=0+0+CrArrC=5`",
                     "Percent": 0
                 }
             },
@@ -736,7 +736,7 @@
                 "Choice": "`2t^3+2t+5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since the acceleration is given, the position can be found using antidifferentiation and the values of the velocity and position at time `t=0`.\n`a(t)=12trArrv(t)=6t^2+C_1`; `v(0)=2rArr2=0+C_1rArrC_1=2`\n`v(t)=6t^2+2rArrs(t)=2t^3+2t+C_2`;\n`s(0)=5rArr5=0+0+C_2rArrC_2=5`\nThe position of the particle is `s(t)=2t^3+2t+5` for `t>=0`.",
                     "Percent": 75
                 }
             }
@@ -766,7 +766,7 @@
                 "Choice": "`f` is continuous and differentiable at `x=5`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This statement is true.\n`lim_(x->5^(-))f(x)lim_(x->5^(-))(-x^2+3)=-25+3=-22`\n`lim_(x->5^(+))f(x)=lim_(x->5^(+))(-10x+28)=-50+28=-22`\nTherefore, `lim_(x->5)f(x)` exists and `lim_(x->5)f(x)=-22=f(5)`, so `f` is continuous at `x=5`.\n`lim_(x->0^(-))(f(5+h)-f(5))/h=lim_(x->0^(-))(-(5+h)^2+3-(-22))/h=lim_(x->0^(-))(-10h-h^2)/h=-10`\n`lim_(x->0^(+))(f(5+h)-f(5))/h=lim_(x->0^(+))(-10(5+h)+28-(-22))/h=lim_(x->0^(+))(-10h)/h=-10`\nTherefore, `f` is also differentiable at `x=5` and `f'(5)=-10`. An alternative way to see that the piecewise-defined function `f` is differentiable at `x=5` is to observe that `f'(x)={(-2x,text(for )x<5),(-10,text(for )x>5):}`. Since `f` is continuous at `x=5` and the derivatives `-2x` and `-10` are equal at `x=5`, `f` is differentiable at `x=5`.",
                     "Percent": 54
                 }
             },
@@ -774,7 +774,7 @@
                 "Choice": "`f` is continuous but not differentiable at `x=5`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This statement is false. The function `f` is both continuous and differentiable at `x=5` because `lim_(x->5^(-))f(x)=lim_(x->5^(+))f(x)=f(5)=-22` and `lim_(x->0^(-))(f(5+h)-f(5))/h=lim_(x->0^(+))(f(5+h)-f(5))/h=-10`.",
                     "Percent": 0
                 }
             },
@@ -782,7 +782,7 @@
                 "Choice": "`f` is differentiable but not continuous at `x=5`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This statement is false, since if `f` is differentiable at `x=5`, it must also be continuous at `x=5`.",
                     "Percent": 0
                 }
             },
@@ -790,7 +790,7 @@
                 "Choice": "`f` is defined but neither continuous nor differentiable at `x=5`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This statement is false. The function `f` is both continuous an differentiable at `x=5` because `x=5` because `lim_(x->5^(-))f(x)=lim_(x->5^(+))f(x)=f(5)=-22` and `lim_(x->0^(-))(f(5+h)-f(5))/h=lim_(x->0^(+))(f(5+h)-f(5))/h=-10`.",
                     "Percent": 0
                 }
             }
@@ -819,7 +819,7 @@
                 "Choice": "`2-e^(x-1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if a chain rule error was made during the antidifferentiation of the `dy` term.\n`dy/dx=2-yrArrdy/(2-y)=dx`\n`int1/(2-y)dx=intdxrArrlnabs(2-y)=x+C`\n`lnabs(1)=1+CrArrC=-1`\n`lnabs(2-y)=x-1rArrabs(2-y)=e^(x-1)`\nSince `2-y>0` at the initial value `y=1`, the solution would be `2-y=e^(x-1)`, or `y=2-e^(x-1)`.",
                     "Percent": 0
                 }
             },
@@ -827,7 +827,7 @@
                 "Choice": "`2-e^(1-x)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The differential equation can be solved using separation of variables and the initial condition to determine the appropriate value for the arbitrary constant.\n`dy/dx=2-yrArrdy/(2-y)=dx`\n`int1/(2-y)dx=intdxrArrlnabs(2-y)=x+C`\n`-lnabs(1)=1+CrArrC=-1`\n`lnabs(2-y)=x-1rArrlnabs(2-y)=-x+1rArrabs(2-y)=e^(1-x)`\nSince `2-y>0` at the initial value `y=1`, the solution to the differential equation is `2-y=e^(1-x)`, or `y=2-e^(1-x)`.",
                     "Percent": 30
                 }
             },
@@ -835,7 +835,7 @@
                 "Choice": "`2-e^(-x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if an arbitrary constant was not included during the antidifferentiation.\n`dy/dx=2-yrArrdy/(2-y)=dx`\n`int1/(2-y)dy=intdxrArr-lnabs(2-y)=xrArrabs(2-y)=e^(-x)`\nSince `2-y=e^(-x)`, or `y=2-e^(-x)`.",
                     "Percent": 0
                 }
             },
@@ -843,7 +843,7 @@
                 "Choice": "`2+e^(-x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if an arbitrary constant was not included during the antidifferentiation and the incorrect sign was taken for the absolute value when solving for `y`.\n`dy/dx=2-yrArrdy/(2-y)=dx`\n`int1/(2-y)dy=intdxrArr-lnabs(2-y)=xrArrabs(2-y)=e^(-x)`\n`2-y=-e^(-x)rArry=2+e^(-x)`",
                     "Percent": 0
                 }
             }
@@ -872,7 +872,7 @@
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the `xtext(-coordinate)` of a critical point of `g`, not of a point of inflection of the graph of `g`. The equation `g'(x)=x^2-5x-14=(x+2)(x-7)=0` might have been solved for `x` rather than the equation `g''(x)=2x-5=0`.",
                     "Percent": 0
                 }
             },
@@ -880,7 +880,7 @@
                 "Choice": "`5/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "To find the point of inflection of the graph of `g`, determine where `g''` changes sign.\n`g'(x)=x^2-5x-14`\n`g''(x)=2x-5`\nThen `g''(x)=0` at `x=5/2`. Since `g''(x)<0` for `x<5/2` and `g''(x)>0` for `x>5/2`, the graph of `g` changes concavity at `x=5/2` and therefore, the graph of `g` has a point of inflection at `x=5/2`.",
                     "Percent": 65
                 }
             },
@@ -888,7 +888,7 @@
                 "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is a value of `x` where `g(x)=0` not a value where `g''(x)=0`.",
                     "Percent": 0
                 }
             },
@@ -896,7 +896,7 @@
                 "Choice": "`7`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the `xtext(-coordinate)` of a critical point of `g`, not of a point of inflection of the graph of `g`. The equation `g'(x)=x^2-5x-14=(x+2)(x-7)=0` might have been solved for `x` rather than the equation `g''(x)=2x-5=0`.",
                     "Percent": 0
                 }
             }
@@ -925,7 +925,7 @@
                 "Choice": "`6x^2sec(2x)tan(2x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the chain rule was correctly used for the derivative of `sec(2x)` but the product rule was incorrectly applied as `d/dx(f(x)g(x))=f'(x)g'(x)`.\n`3x^2*(2sec(2x)tan(2x))`",
                     "Percent": 0
                 }
             },
@@ -933,7 +933,7 @@
                 "Choice": "`2x^3tan^2(2x)+3x^2sec(2x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the product rule was correctly used but the derivative of `sec(2x)` was taken to be `2tan^2(2x)`.\n`x^3*d/dx(sec(2x))+3x^2*sec(2x)=x^3*(tan^2(2x)*2)+3x^2sec(2x)`",
                     "Percent": 0
                 }
             },
@@ -941,7 +941,7 @@
                 "Choice": "`x^3sec(2x)tan(2x)+3x^2sec(2x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the product rule was correctly used but the chain rule was not used for the derivative of `sec(2x)`.\n`x^3*d/dx(sec(2x))+3x^2*sec(2x)=x^3*(sec(2x)tan(2x))+3x^2sec(2x)`",
                     "Percent": 0
                 }
             },
@@ -949,7 +949,7 @@
                 "Choice": "`2x^3sec(2x)tan(2x)+3x^2sec(2x)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "A combination of the product rule and the chain rule is used to compute the derivative.\n`d/dx(x^3sec(2x))=x^3*d/dx(sec(2x))+3x^2*sec(2x)=x^3*(sec(2x)tan(2x)*2)+3x^2sec(2x)=2x^3sec(2x)tan(2x)+3x^2sec(2x)`",
                     "Percent": 62
                 }
             }
@@ -978,7 +978,7 @@
                 "Choice": "The particle is moving down the `ytext(-axis)` with decreasing velocity.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The velocity of the particle is `v(t)=3t^2-8t+4`. At time `t=1`, `v(1)=-1`. Since the velocity is negative, the particle is moving down the `ytext(-axis)`. The rate of change of the velocity is `v'(t)=6t-8`. At time `t=1`, `v'(1)=-2`. Since this is negative, the particle is moving with decreasing velocity at time `t=1`.",
                     "Percent": 34
                 }
             },
@@ -986,7 +986,7 @@
                 "Choice": "The particle is moving down the `ytext(-axis)` with increasing velocity.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was correctly determined that the particle is moving down the `ytext(-axis)`, but since `v'(t)=6t-8` and `v'(1)=-2`, the particle’s velocity is decreasing, not increasing.",
                     "Percent": 0
                 }
             },
@@ -994,7 +994,7 @@
                 "Choice": "The particle is moving up the `ytext(-axis)` with decreasing velocity.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was correctly determined that the particle is moving with decreasing velocity, but since `v(t)=3t^2-8t+4` and `v(1)=-1`, the particle is moving down the `ytext(-axis)`, not up the axis.",
                     "Percent": 0
                 }
             },
@@ -1002,7 +1002,7 @@
                 "Choice": "The particle is moving up the `ytext(-axis)` with increasing velocity.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Since `v(t)=3t^2-8t+4` and `v(1)=-1`, the particle is moving down the `ytext(-axis)`, not up the axis. Since `v'(t)=6t-8` and `v'(1)=-2`, the particle’s velocity is decreasing, not increasing.",
                     "Percent": 0
                 }
             }
@@ -1031,7 +1031,7 @@
                 "Choice": "`int_1^4g(x)dx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The value of this integral can be determined using the properties of the definite integral, as follows.\n`int_1^4g(x)dx=-int_1^4g(x)dx=-(-2)=2`",
                     "Percent": 0
                 }
             },
@@ -1039,7 +1039,7 @@
                 "Choice": "`int_1^4 3f(x)dx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The value of this integral can be determined using the properties of the definite integral, as follows.\n`int_1^4 3f(x)dx=3*int+1^4f(x)dx=3*8=24`",
                     "Percent": 0
                 }
             },
@@ -1047,7 +1047,7 @@
                 "Choice": "`int_1^4 3f(x)g(x)dx`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "It is not true in general that `int_1^4 ef(x)g(x)dx=int_1^4 3f(x)dx*int_!^4g(x)dx`, so the individual values of `int_1^4f(x)dx` and `int_1^4g(x)dx` cannot be used to determine the value of `int_1^4 ef(x)g(x)dx`. For example, if `f(x)=8/3` and `g(x)=-2/3`, then `int_1^4f(x)dx=8`, `int_1^4g(x)dx=-2`, and `int_1^4 ef(x)g(x)dx=int_1^4 -16/3dx=-16`. However, if `f(x)=16/9(x-1)` and `g(x)=-4/9(x-1)`, then `int_1^4f(x)dx=8` and `int_1^4g(x)dx=-2` as before, but now `int_1^4 ef(x)g(x)dx=int_1^4 -64/27(x-1)^2dx=-64/3`.",
                     "Percent": 57
                 }
             },
@@ -1055,7 +1055,7 @@
                 "Choice": "`int_1^4(3f(x)+g(x))dx`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The value of this integral can be determined using the properties of the definite integral, as follows.\n`int_1^4(3f(x)+g(x))dx=int_1^4 3f(x)dx+int_1^4g(x)dx=3*int_1^4f(x)dx+int_1^4g(x)dx=3*8+(-2)=22`",
                     "Percent": 0
                 }
             }
@@ -1084,7 +1084,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from observing that the numerator is `text(zero)` when `h=0` without consideration of the denominator.",
                     "Percent": 0
                 }
             },
@@ -1092,7 +1092,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from observing that both the numerator and the denominator are `text(zero)` when `h=0` and interpreting `0/0` as equal to `1`.",
                     "Percent": 0
                 }
             },
@@ -1100,7 +1100,7 @@
                 "Choice": "`cos(2x)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the limit of the difference quotient was correctly recognized as the derivative of the function `f(x)=sin(2x)`, but the chain rule was not used in finding the derivative.",
                     "Percent": 0
                 }
             },
@@ -1108,7 +1108,7 @@
                 "Choice": "`2cos(2x)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The limit of this difference quotient is of the form `lim_(h->0)(f(x+h)-f(x))/h` where `f(x)=sin(2x)`. This is `text(one)` way to express the derivative of `f`. By the chain rule, `f'(x)=cos(2x)*2`.",
                     "Percent": 61
                 }
             }
@@ -1138,7 +1138,7 @@
                 "Choice": "`dy/dx=abs(x+y)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might be chosen because the slopes for the differential equation `dy/dx=abs(x+y)` are nonnegative, which matches the behavior shown in the slope field. However, the segments in the slope field where `y=0` all have slope `0` and that would for this differential equation.",
                     "Percent": 0
                 }
             },
@@ -1146,7 +1146,7 @@
                 "Choice": "`dy/dx=x^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might be chosen because the slope segments look like they might match the behavior of the cubic polynomial `f(x)=x^3`. However, the slopes of the segments in the slope field depend only on the variable `y` and that would not be true for the differential equation `dy/dx=x^3`.",
                     "Percent": 0
                 }
             },
@@ -1154,7 +1154,7 @@
                 "Choice": "`dy/dx=y^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might be chosen because the slopes for the differential equation `dy/dx=y^3` depend only on the variable `y` and have the value `0` when `y=0`, which matches the behavior shown in the slope field. However, the segments in the slope field all have nonnegative slopes and that would not be true for this differential equation when `y<0`.",
                     "Percent": 0
                 }
             },
@@ -1162,7 +1162,7 @@
                 "Choice": "`dy/dx=y^2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The segments in the slope field suggest that (`1`) the slopes the variable `y`, (`2`) the slopes are nonnegative, and (`3`) the slopes are `text(zero)` when `y=0`. The differential equation `dy/dx=y^2` satisfies all `text(three)` conditions. The differential equation `dy/dx=abs(x+y)` does not satisfy conditions (`1`) and (`3`). The differential equation `dy/dx=x^3` does not satisfy any of the conditions. The differential equation `dy/dx=y^3` does not satisfy condition (`2`) when `y<0`.",
                     "Percent": 49
                 }
             }
@@ -1191,7 +1191,7 @@
                 "Choice": "`e-1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the area of the region, not the volume of the solid.\n`int_0^1e^xdx=e^x|_0^1=e-1`",
                     "Percent": 0
                 }
             },
@@ -1199,7 +1199,7 @@
                 "Choice": "`1/2e^2-1/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The area of a square of side length s is `s^2`. A typical cross section of the solid is a square with side from the x -axis to the graph of `y=e^x`. The length of the side of the square is therefore `s=e^x`, so the area of the square is `e^x^2=e^(2x)`. The volume of the solid is found using the definite integral of the cross-sectional area.\n`int_0^1e^(2x)dx=1/2e^(2x)|_0^1=1/2e^2-1/2`",
                     "Percent": 36
                 }
             },
@@ -1207,7 +1207,7 @@
                 "Choice": "`e^2-1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the volume was set up correctly as the definite integral of the cross-sectional area `e^(2x)`, but an error was made in the antidifferentiation by not considering the chain rule, as follows.\n`int_0^1e^(2x)dx=e^(2x)|_0^1=e^2-1`",
                     "Percent": 0
                 }
             },
@@ -1215,7 +1215,7 @@
                 "Choice": "`2e^2-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the volume was set up correctly as the definite integral of the cross-sectional area `e^(2x)`, but an error was made with respect to the chain rule in the antidifferentiation of the exponential function (or the integrand was differentiated rather than antidifferentiated), as follows.\n`int_0^1e^(2x)dx=2e^(2x)|_0^1=2e^2-2`",
                     "Percent": 0
                 }
             }
@@ -1238,14 +1238,14 @@
         "Explain": false,
         "Content": [
             "problems/AP19CAB/media/24a.jpg",
-            "The graph of the piecewise linear function f is shown above. What is the value of `int_0^12f'(x)dx`?"
+            "The graph of the piecewise linear function `f` is shown above. What is the value of `int_0^12f'(x)dx`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`-8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "By the Fundamental Theorem of Calculus, `int_0^12f'(x)dx=f(12)-f(0)=(-4)-4=-8`, where the values of `f` at `x=0` and `x=12` are obtained from the graph.",
                     "Percent": 40
                 }
             },
@@ -1253,7 +1253,7 @@
                 "Choice": "`-6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the function `f` was integrated over the interval `[0,12]` rather than `f'`, as follows.\n`int_0^12f(x)dx=1/2(4)(4)-1/2(4)(3)-1/2(4)(4)=-6`",
                     "Percent": 0
                 }
             },
@@ -1261,7 +1261,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the Fundamental Theorem of Calculus was incorrectly applied, as follows.\n`int_0^12f'(x)dx=f'(12)-f'(0)=(-1)-(-1)=0`",
                     "Percent": 0
                 }
             },
@@ -1269,7 +1269,7 @@
                 "Choice": "`22`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the total area bounded by the graph of `f` and the `xtext(-axis)` over the interval `[0,12]`.\n`int_0^12abs(f(x))dx=1/2(4)(4)+1/2(4)(3)+1/2(4)(4)=8+6+8=22`",
                     "Percent": 0
                 }
             }
@@ -1298,7 +1298,7 @@
                 "Choice": "`y'-6y-30=0`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "`text(One)` way to verify that a function is a solution to a differential equation is to check that the function and its derivatives satisfy the differential equation. The differential equation in this option involves `y` and `y'` The correct derivative must be computed and the algebra correctly done to verify that the differential equation is satisfied.\n`y'=12e^(6x)`\n`y'-6y-30=12e^(6x)-6(2e^(6x)-5)-30=12e^(6x)-12e^(6x)+30-30=0`",
                     "Percent": 34
                 }
             },
@@ -1306,7 +1306,7 @@
                 "Choice": "`2y'-12y+5=0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The correct derivative was found, but this differential equation will appear to be satisfied if the `12` in the `text(second)` term is not distributed correctly across the `text(two)` terms in the parentheses, as follows.\n`y'=12e^(6x)`\n`2y'-12y+5=24e^(6x)-12(2e^()6x)-5+5=24e^(6x)-24e^(6x)+5-5=0`",
                     "Percent": 0
                 }
             },
@@ -1314,7 +1314,7 @@
                 "Choice": "`y''-5y'-6y=0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This differential equation has `y=2e^(6x)` as a solution, not `y=2e^(6x)-5`. Both functions have `y'=12e^(6x)` and `y''=72e^(6x)`, but `72e^(6x)-5(12e^(6x))-6(2e^(6x))=0`, whereas `72e^(6x)-5(12e^(6x))-6(2e^(6x)-5)=30`.",
                     "Percent": 0
                 }
             },
@@ -1322,7 +1322,7 @@
                 "Choice": "`y''-2y'+y+5=0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This differential equation will appear to be satisfied if the chain rule is not used in taking the derivative of the exponential, as follows.\n`y'=2e^(6x)`; `y''=2e^(6x)`\n`y''-2y'+y+5=2e^(6x)-2(2e^(6x)-5)+5=2e^(6x)-4e^(6x)+2e^(6x)-5+5=0`",
                     "Percent": 0
                 }
             }
@@ -1351,7 +1351,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the critical point was not found, and the endpoint with the smallest function value was selected.",
                     "Percent": 0
                 }
             },
@@ -1359,7 +1359,7 @@
                 "Choice": "`1/8`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The absolute minimum will occur at a critical point or `text(one)` of the endpoints.\n`y'=4x^(1/3)-2=0rArrx^(1/3)=1/2rArrx=(1/2)^3=1/8`\nThe candidates are `x=0`, `x=1/8`, and `x=1`.\nWhen `x=0`, `y=0`.\nWhen `x=1/8`, `y=3(1/8)^(4/3)-2(1/8)=3/16-1/4=-1/16`.\nThe absolute minimum is therefore at `x=1/8`.\nAlternatively, since `x=1/8` is the only critical point and the `text(Second)` Derivative Test shows that it is the location of a local minimum, it must also be the location of the absolute minimum on the interval `[0,1]`.",
                     "Percent": 53
                 }
             },
@@ -1367,7 +1367,7 @@
                 "Choice": "`1/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if an error in the power rule has the derivative being computed as `y'=4x-2` with a `text(zero)` at `x=1/2`. It was concluded that this was the location of a local minimum from the `text(Second)` Derivative Test and therefore had to be the location of the absolute minimum, since it was the only critical point in the interval `[0,1]`.\n(Note that `y(1/2)=3(1/16)^(1/3)-1` and it is not obvious whether this value is smaller or greater than `y(0)=0`, so it would have been difficult to use the Candidates Test. The `ytext(-value)` at `x=1/2` is actually positive.)",
                     "Percent": 0
                 }
             },
@@ -1375,7 +1375,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the value of `x` at which the maximum value of `y` occurs on the interval `[0,1]`.",
                     "Percent": 0
                 }
             }
@@ -1404,7 +1404,7 @@
                 "Choice": "`text(Two hours)` after the tank begins filling with water, the depth of the water is increasing at a rate greater than `3` `text(feet per hour)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The rate at which the depth of the water is increasing is `W(t)`.Therefore, this sentence is an interpretation of the statement `W(2)>3` not an interpretation about `W'(t)`.",
                     "Percent": 0
                 }
             },
@@ -1412,7 +1412,7 @@
                 "Choice": "Over the `text(first two hours)` after the tank begins filling with water, the depth of the water is always increasing at a rate greater than `3` `text(feet per hour)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The rate at which the depth of the water is increasing is `W(t)`. Therefore, this sentence is an interpretation of the statement `W(t)>3` for all `t` in the interval `0<=t<=2`.",
                     "Percent": 0
                 }
             },
@@ -1420,7 +1420,7 @@
                 "Choice": "`text(Two hours)` after the tank begins filling with water, the rate at which the depth of the water is rising is increasing at a rate greater than `3` `text(feet per hour per hour)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "In the expression `W'(t)`, the `2` represents the value of the independent variable and is therefore the number of `text(hours)` since the tank began filling with water. `W'(2)`, being the value of a derivative, is the rate of change of `W`, that is, the rate of change of the rate at which the depth of the water is rising; in this case, `2` `text(hours)` after the tank begins filling with water. The units for the derivative would be the units of `W` `text(per unit of time)`; thus, `text(feet per hour per hour)`. The statement says that at time `2` `text(hours)` after the tank begins filling with water, the rate at which the depth of the water is rising, `W(t)`, is increasing at a rate that is greater than `3` `text(feet per hour per hour)`.",
                     "Percent": 66
                 }
             },
@@ -1428,7 +1428,7 @@
                 "Choice": "Over the `text(first two hours)` after the tank begins filling with water, the rate at which the depth of the water is rising is always increasing at a rate greater than `3` `text(feet per hour per hour)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This sentence is an interpretation of the statement `W'(t)>3` for all `t` in the interval `0<=t<=2`. `W'(2)`, being the value of a derivative, is the instantaneous rate of change of `W` at the particular instant `t=2`.",
                     "Percent": 0
                 }
             }
@@ -1458,7 +1458,7 @@
                 "Choice": "`3/100`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the relationship `tantheta=h/30` was correctly used, where `h` is the height of the balloon above the point `P` at time `t`, but then the derivative of `tantheta` was taken to be `secthetatantheta` rather than `sec^2theta`.\n`secthetatantheta(d theta)/(dt)=1/30(dh)/(dt)`\nAt the instant when `h=40`, the distance from the person to the balloon is `sqrt(30^2+40^2)=sqrt2500=50`.\n`(50/30)(40/30)(d theta)/(dt)=1/30*2=1/15rArr(d theta)/(dt)=1/15*3/4*3/4=3/100`",
                     "Percent": 0
                 }
             },
@@ -1466,7 +1466,7 @@
                 "Choice": "`3/125`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "If `h(t)` is the height of the balloon above the point `P` at time `t`, then `tantheta=h/30`. Using implicit differentiation with respect to `t` shows that `sec^2theta(d theta)/(dt)=1/30(dh)/(dt)`. At the instant when `h=40`, the distance from the person to the balloon is `sqrt(30^2+40^2)=sqrt2500=50`. At this instant, `sectheta=50/30=5/3` and therefore `(5/3)^2(d theta)/(dt)=1/30*2=1/15rArr(d theta)/(dt)=1/15*9/25=3/125`.",
                     "Percent": 36
                 }
             },
@@ -1474,7 +1474,7 @@
                 "Choice": "`1/12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the relationship `tantheta=h/30` was correctly used, where `h` is the height of the balloon above the point `P` at time `t`, but then the derivative of `tantheta` was taken to be `sintheta` rather than `sec^2theta`.\n`sintheta(d theta)/(dt)=1/30(dh)/(dt)`\nAt the instant when `h=40`, the distance from the person to the balloons is `sqrt(30^2+40^2)=sqrt2500=50`.\n`(40/50)(d theta)/(dt)=1/30*2=1/15rArr(d theta)/(dt)=1/15*5/4=1/12`",
                     "Percent": 0
                 }
             },
@@ -1482,7 +1482,7 @@
                 "Choice": "`5/27`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the relationship `tantheta=h/30` was correctly used, where `h` is the height of the balloon above the point `P` at time `t`, but then the derivative of `tantheta` was taken to be `cos^2theta` rather than `sec^2theta`.\n`cos^2theta(d theta)/(dt)=1/30(dh)/(dt)`\nAt the instant when `h=40`, the distance from the person to the balloon is `sqrt(30^2+40^2)=sqrt2500=50`.\n`(30/50)^2(d theta)/(dt)=1/30*2=1/15rArr(d theta)/(dt)=1/15*25/9=5/27`",
                     "Percent": 0
                 }
             }
@@ -1511,7 +1511,7 @@
                 "Choice": "`text(One)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since `(x-2)/(x^4-16)=(x-2)/((x^2-4)(x^2+4))=(x-2)/((x-2)(x+2)(x^2+4))=1/((x-2)(x^2+4))` for `x!=2`, the graph has only `text(one)` vertical asymptote, which is at `x=-2`. The graph has a removable discontinuity at `x=2`.",
                     "Percent": 34
                 }
             },
@@ -1519,7 +1519,7 @@
                 "Choice": "`text(Two)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The denominator is `s^4-16=(x^2-4)(x^2+4)=(x-2)(x+2)(x^2+4)` which has `text(two zeros)`, which might lead to the conclusion that there are `text(two)` vertical asymptotes.",
                     "Percent": 0
                 }
             },
@@ -1527,7 +1527,7 @@
                 "Choice": "`text(Three)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The expression might have been correctly simplified to `(x-2)/(x^4-16)=(x-2)/((x^2-4)(x^2+4))=(x-2)/((x-2)(x+2)(x^2+4))=1/((x-2)(x^2+4))` for `x!=2`, but then the conclusion was made that there are `text(three)` vertical asymptotes because the denominator is a cubic polynomial.",
                     "Percent": 0
                 }
             },
@@ -1535,7 +1535,7 @@
                 "Choice": "`text(Four)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Since the denominator is a quartic polynomial, the assumption might have been made that there are `text(four zeros)` and therefore `text(four)` vertical asymptotes.",
                     "Percent": 0
                 }
             }
@@ -1564,7 +1564,7 @@
                 "Choice": "`b=2` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The sum can be interpreted as a right Riemann sum in the form `sum_(k=1)^nf(1+kDeltax)Deltax`, where `f(x)=x^2` and `Deltax=2/n`. The value of `Deltax` corresponds to an interval of length `2`, but `b` is not equal to `2` because the interval starts at `x=1`.",
                     "Percent": 0
                 }
             },
@@ -1572,7 +1572,7 @@
                 "Choice": "`b=3` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The sum can be interpreted as a right Riemann sum in the form ``, where `f(x)=x^2` and `Deltax=2/n`. The value of `Deltax` corresponds to an interval of length `2`. The sum starts with the right endpoint `1+Deltax` and ends with the right endpoint `1+nDeltax=1+2+3`, so the Riemann sum is over the interval `[1,3]`. The limit of the Riemann sum is the definite integral `int_1^3f(x)dx`. There could not be another value of `b` for which `int_1^bx^2dx` has the same value as `int_1^3x^2dx` since `I(b)=int_1^bx^2dx` is a strictly increasing function of `b`. Therefore, `b=3` is the only choice.",
                     "Percent": 27
                 }
             },
@@ -1580,7 +1580,7 @@
                 "Choice": "`b` could be any real number.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Suppose the value of the limit is `A`. The equation `A=int_1^bx^2dx=b^3/3-1/3` has only `text(one)` solution `b=(3A+1)^(1/3)`. Therefore, `b` could not be any real number.",
                     "Percent": 0
                 }
             },
@@ -1588,7 +1588,7 @@
                 "Choice": "There is no such value of `b`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from believing that the limit does not exist since it involves an infinite summation.",
                     "Percent": 0
                 }
             }
@@ -1620,7 +1620,7 @@
                 "Choice": "`[0,1]` and `[2,4]`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of `f` is concave up where `f'` is increasing. This response might come from switching the roles of the function and its derivative and thinking that `f` is increasing where the graph of `f'` is concave up. The graph of `f'` is concave up on the intervals `(0,1)` and `(2,4)`.",
                     "Percent": 0
                 }
             },
@@ -1628,7 +1628,7 @@
                 "Choice": "`[0,1]` and `[3,5]`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from treating the given graph as the graph of `f` rather than the graph of `f'`. These are the `text(two)` intervals where `f'` is increasing.",
                     "Percent": 0
                 }
             },
@@ -1636,7 +1636,7 @@
                 "Choice": "`[0,1]` and `[4,5]` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "These are the intervals where both `f` and `f'` are increasing.",
                     "Percent": 0
                 }
             },
@@ -1644,7 +1644,7 @@
                 "Choice": "`[0,2]` and `[4,5]`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The function `f` is increasing on closed intervals where `f'` is positive on the corresponding open intervals. The graph indicates that `f'(x)>0` on the intervals `(0,2)` and `(4,5)`, so `f` is increasing on the intervals `[0,2]` and `[4,5]`.",
                     "Percent": 82
                 }
             }
@@ -1675,7 +1675,7 @@
                 "Choice": "`0.815`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the acceleration of the object at time `t=3`.",
                     "Percent": 0
                 }
             },
@@ -1683,7 +1683,7 @@
                 "Choice": "`7.778`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The velocity is the derivative of the height. Using the calculator, `v(3)=h'(3)=7.778`.",
                     "Percent": 86
                 }
             },
@@ -1691,7 +1691,7 @@
                 "Choice": "`18.667`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the height of the object at time `t=3`.",
                     "Percent": 0
                 }
             },
@@ -1699,7 +1699,7 @@
                 "Choice": "`21.089`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the value of `int_1^3h(t)dt`.",
                     "Percent": 0
                 }
             }
@@ -1730,7 +1730,7 @@
                 "Choice": "`3.6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "An equation of the line tangent to the graph of `g` at `x=a` is `y=g(a)+g'(a)(x-a)`. In this question, `a=-1`. The value of `y` when `x=-1/2` would be an approximation to `g(-1/2)`.\n`g(-1.2)~~g(-1)+g'(-1)(-1.2-(-1))=4+2(-0.2)=3.6`",
                     "Percent": 66
                 }
             },
@@ -1738,7 +1738,7 @@
                 "Choice": "`3.8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative was not used as the slope of the tangent line, as follows.\n`g(-1.2)~~g(-1)+Deltax=4+(-0.2)=3.8`",
                     "Percent": 0
                 }
             },
@@ -1746,7 +1746,7 @@
                 "Choice": "`4.2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative was not used as the slope of the tangent line, and `Deltax` was taken to be `0.2` rather than `-0.2`, as follows:\n`g(-1.2)~~g(-1)+Deltax=4+0.2=4.2`",
                     "Percent": 0
                 }
             },
@@ -1754,7 +1754,7 @@
                 "Choice": "`4.4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "During the evaluation of the change in `y` along the tangent line, the change in `x` was incorrectly taken to be `0.2` rather than `-0.2`, as follows.\n`g(-1.2)~~g(-1)+Deltay=g(-1)+g'(-1)Deltax=4+2(0.2)=4.4`",
                     "Percent": 0
                 }
             }
@@ -1785,7 +1785,7 @@
                 "Choice": "`int_30^60h(t)dt`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The definite integral was not divided by the length of the interval `[30,60]` over which the averaging is done.",
                     "Percent": 0
                 }
             },
@@ -1793,7 +1793,7 @@
                 "Choice": "`1/30int_30^60h(t)dt`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The average value of a function `f` over an interval `[a,b]` is `1/(b-a)int_a^bf(x)dx`. Tara’s average heart rate from `t=30` to `t=60` is the average value of the function `h` over the interval `[30,60]` and would therefore be given by the expression `1/(60-30)int_30^60h(t)dt`.",
                     "Percent": 61
                 }
             },
@@ -1801,7 +1801,7 @@
                 "Choice": "`1/30int_30^60h'(t)dt`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the average rate of change of Tara’s heart rate from `t=30` to `t=60`, not the average of her heart rate over that interval. By the Fundamental Theorem of Calculus, this expression is equal to `(h(60)-h(30))/(60-30)`.",
                     "Percent": 0
                 }
             },
@@ -1809,7 +1809,7 @@
                 "Choice": "`(h'(30)+h'(60))/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the average of the rate of change of Tara’s heart rate at the `text(two)` times `t=30` and `t=60`, not the average of her heart rate over the interval from `t=30` to `t=60`.",
                     "Percent": 0
                 }
             }
@@ -1840,7 +1840,7 @@
                 "Choice": "`4.402`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response comes from taking `g(5)=g(2)+g'(5)=-7+g'(5)=4text(.)402`.",
                     "Percent": 0
                 }
             },
@@ -1848,7 +1848,7 @@
                 "Choice": "`11.402`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the value of `g'(5)`, not the value of `g(5)`.",
                     "Percent": 0
                 }
             },
@@ -1856,7 +1856,7 @@
                 "Choice": "`13.899`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "By the Fundamental Theorem of Calculus, `g(5)-g(2)=int_2^5g'(x)dx`. Therefore, `g(5)=g(2)+int_2^5sqrt(s^3+x)dx=-7+int_2^5sqrt(x^3+x)dx=13.899`, where the evaluation of the definite integral is done with the calculator.",
                     "Percent": 62
                 }
             },
@@ -1864,7 +1864,7 @@
                 "Choice": "`20.899`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the initial condition was not included in the computation, resulting in `g(5)=int_2^5sqrt(x^3+x)dx=20.899`.",
                     "Percent": 0
                 }
             }
@@ -1895,7 +1895,7 @@
                 "Choice": "problems/AP19CAB/media/81a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The function corresponding to this graph has a jump discontinuity at `x=3`,not a removable `text(one)`, because `lim_(x->3^(-))f(x)!=lim_(x->3^(+))f(x)`.",
                     "Percent": 0
                 }
             },
@@ -1903,7 +1903,7 @@
                 "Choice": "problems/AP19CAB/media/81b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The function corresponding to this graph has a jump discontinuity at `x=3`,not a removable `text(one)`, because `lim_(x->3^(-))f(x)!=lim_(x->3^(+))f(x)`.",
                     "Percent": 0
                 }
             },
@@ -1911,7 +1911,7 @@
                 "Choice": "problems/AP19CAB/media/81c.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "A removable discontinuity occurs at `x=c` if `lim_(x->c)f(x)` exists, but `f(c)` does not exist or is not equal to the value of the limit. This graph could be the graph of `lim_(x->3)f(x)` exists but is not equal to `f(3)`.",
                     "Percent": 81
                 }
             },
@@ -1919,7 +1919,7 @@
                 "Choice": "problems/AP19CAB/media/81d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The function corresponding to this graph has a discontinuity at `x=3` due to a vertical asymptote, not a removable discontinuity.",
                     "Percent": 0
                 }
             }
@@ -1950,7 +1950,7 @@
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Using the property of definite integrals over adjacent intervals,\n`int_0^20f(x)dx=int_0^17f(x)dx=int_17^20f(x)dx=8+(-3)=5`\nAnother application of the same property gives\n`int_0^20f(x)dx=int_0^13f(x)dx=int_13^20f(x)dxrArrint_0^13f(x)dx=int_0^20f(x)dx-int_13^20f(x)dx`\nTherefore, `int_0^13f(x)dx=int_0^20f(x)dx-int_13^20f(x)dx=5-7=-2`.",
                     "Percent": 71
                 }
             },
@@ -1958,7 +1958,7 @@
                 "Choice": "`4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using the property of definite integrals over adjacent intervals,\n`int_0^20f(x)dx=int_0^13f(x)dx=int_13^20f(x)dxrArrint_0^13f(x)dx=int_0^20f(x)dx-int_13^20f(x)dx`.\nHowever, if `int_0^20f(x)dx` was incorrectly determined to be `int_0^17f(x)dx-int_17^20f(x)dx=8-(-3)=11` rather than `int_0^17f(x)dx+int_17^20f(x)dx=8+(-3)=5`, the result would be as follows.\n`int_0^13f(x)dx=int_0^20f(x)dx-int_13^20f(x)dx=11-7=4`",
                     "Percent": 0
                 }
             },
@@ -1966,7 +1966,7 @@
                 "Choice": "`12`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the property of definite integrals over adjacent intervals was not used appropriately. The values of the `text(three)` definite integrals might have been added, as follows.\n`int_0^17f(x)dx+int_17^20f(x)dx+int_13^20f(x)dx=8+(-3)+7=12`",
                     "Percent": 0
                 }
             },
@@ -1974,7 +1974,7 @@
                 "Choice": "`18`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The property of definite integrals over adjacent intervals was not used appropriately. The absolute values of the definite integrals were added, as follows.\n`abs(int_0^17f(x)dx)+abs(int_17^20f(x)dx)+abs(int_13^20f(x)dx)=8+3+7=18`",
                     "Percent": 0
                 }
             }
@@ -2006,7 +2006,7 @@
                 "Choice": "`2.081`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The limit at `x=3` exists if the left-hand and right-hand limits are equal.\n`lim_(x->3^(-))f(x)=lim_(x->3^(+))f(x)rArrk^3+3=16/(k^2-3)`\nThe solution to this equation for `k>0` is `k=2.081`. With this value of `k`, `lim_(x->3)f(x)` exists and is equal to `f(3)`. Therefore, `f` is continuous at `x=3`.",
                     "Percent": 53
                 }
             },
@@ -2014,7 +2014,7 @@
                 "Choice": "`2.646`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response comes from trying to make the left-hand and right-hand limits of the derivative equal at `x=3` as follows.\n`f'(x)={(1,text(for )x<3),(16/(k^2-x)^2,text(for )x>3):}`\n`lim_(x->3^(-))f'(x)=lim_(x->3^(+))f'(x)rArr1=16/(k^2-3)^2`\nThe solution to this equation for `k>0` is `k=2.646`.",
                     "Percent": 0
                 }
             },
@@ -2022,7 +2022,7 @@
                 "Choice": "`8.550`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In trying to set the left-hand and right-hand limits of `f` equal at `x=3`, the `3` might have been substituted for the parameter `k` rather than the variable `x`, as follows.\n`27+x=16/(9-x)`\nThe positive solution to this equation is `x-8.550`.",
                     "Percent": 0
                 }
             },
@@ -2030,7 +2030,7 @@
                 "Choice": "There is no such value of `k`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might come from errors that lead to an equation that has no positive solution. For example, it might come from trying to make the left-hand and right-hand limits of the derivative equal at `x=3` but also making a chain rule error in the derivative of the piece for `x>3`, as follows.\n`f'(x)={(1,text(for )x<3),(-16/(k^2-x)^2,text(for )x>3):}`\n`lim_(x->3^(-))f'(x)=lim_(x->3^(+))f'(x)rArr1=-16/(k^2-3)^2`\nThis equation has no solution for `k`.",
                     "Percent": 0
                 }
             }
@@ -2062,7 +2062,7 @@
                 "Choice": "`f` has at most `text(one zero)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "By the Intermediate Value Theorem, the function `f` is guaranteed to have at least `text(one zero)`, but it could have more. For example, the function `f(x)=2/3x^3+2x^2-14/3x+1` satisfies the values in the table, but it has `text(three zeros)`.",
                     "Percent": 0
                 }
             },
@@ -2070,7 +2070,7 @@
                 "Choice": "`f` has a relative maximum at `x=2`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The largest value of `f` in the table occurs at `x=2`, but that does not guarantee that `f` has a relative maximum at `x=2`. For example, the function `f(x)=2/3x^3+2x^2-14/3x+1` satisfies the values in the table, but it does not have a relative maximum at `x=2` because `f'(2)>0`.",
                     "Percent": 0
                 }
             },
@@ -2078,7 +2078,7 @@
                 "Choice": "There exists a value `c`, where `-5<c<2`, such that `f(c)=4`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since `f` is continuous on the closed interval `[-5,2]` and `f(-5)<4<f(2)`, then by the Intermediate Value Theorem there must be a value `c` in the open interval `(-5,2)` such that `f(c)=4`.",
                     "Percent": 48
                 }
             },
@@ -2086,7 +2086,7 @@
                 "Choice": "There exists a value `c`, where `-5<c<2`, such that `f'(c)=2`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While it is true that `(f(2)-f(-5))/(2-(-5))=14/7=2`, the Mean Value Theorem cannot be used to claim that there exists a value `c` in the open interval `(-5,2)` such that `f'(c)=2` because there is no assumption that `f` is differentiable on the open interval `(-5,2)`. Consider the function `f` defined as follows.\n`f(x)={(-9,text(for )x<=-1),(10x+1,text(for )-1<x<=0),(4x+1,text(for )0<x<=1),(5,text(for )x>1):}`\nThe graph of `f` goes through each of the points in the table, but none of the linear pieces of the graph has slope `2`.",
                     "Percent": 0
                 }
             }
@@ -2117,7 +2117,7 @@
                 "Choice": "`-3.961`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is a value of `x` where `f'(x)=g(x)=0`. But since the graph of `y=g(x)` goes from negative to positive at this point, this would be a local minimum for the graph of `y=f(x)`, not a local maximum.",
                     "Percent": 0
                 }
             },
@@ -2125,7 +2125,7 @@
                 "Choice": "`-2.161`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is a value of `x` where `g(x)=0`, not where `f'(x)=g(x)=0`. It is the `xtext(-coordinate)` of a local maximum for the graph of `y=g(x)`, not for the graph of `y=f(x)`.",
                     "Percent": 0
                 }
             },
@@ -2133,7 +2133,7 @@
                 "Choice": "`1.494`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is a value of `x` where `g'(x)=0`, not where `f'(x)=g(x)=0`. It is the `xtext(-coordinate)` of a local minimum for the graph of `y=g(x)`.",
                     "Percent": 0
                 }
             },
@@ -2141,7 +2141,7 @@
                 "Choice": "`3.140`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "A local maximum for the graph of `y=f(x)` occurs at a value of `x` where `f'=g` changes from positive to negative. The graph of `y=g(x)` crosses the `xtext(-axis)` from positive to negative at `x=3.140`.",
                     "Percent": 51
                 }
             }
@@ -2173,7 +2173,7 @@
                 "Choice": "problems/AP19CAB/media/86b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The graph of `f` indicates that `f` is increasing from `x=0` to `x=2`, then decreasing from `x=2` to `x=3`, and then increasing from `x=3` to `x=5`. therefore, the graph of `f'` should be positive from `x=0` to `x=2`, negative from `x=2` to `x=3`, and positive from `x=3` to `x=5`. This graph is the only `text(one)` that has this behavior, so it could be the graph of `f'`. Some other features of the graph of `f` support this conclusion. Since `f` is not differentiable at `x=2`, the graph of `f'` should not be defined at `x=2`. Since `f` has a local minimum at `x=3` and is differentiable there, `f'(3)` should equal `0`. this graph is consistent with those observations.`",
                     "Percent": 76
                 }
             },
@@ -2181,7 +2181,7 @@
                 "Choice": "problems/AP19CAB/media/86c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This graph shows the correct sign for `f'` on the interval from `x=0` to `x=2`. However, the sign of `f'` should be negative from `x=2` to `x=3` and positive from `x=3` to `x=5`, since `f` changes from decreasing to increasing over the interval `(2,5)`. That is the opposite of what is happening between `x=2` and `x=5` in this graph. In addition, the graph of `f` does not support the conclusion that `lim_(x->2^(-))f'(x)=lim_(x->2^(+))f'(x)` as suggested in this graph.`",
                     "Percent": 0
                 }
             },
@@ -2189,7 +2189,7 @@
                 "Choice": "problems/AP19CAB/media/86d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This graph shows the correct sign for `f'` on the interval from `x=2` to `x=5`. However, the sign of `f'` should be positive from `x=0` to `x=2`, not negative, since `f` is increasing from `x=0` to `x=2`. In addition, the graph of `f` does not support the conclusion that `lim_(x->2^(-))f'(x)=lim_(x->2^(+))f'(x)`, as suggested in this graph.",
                     "Percent": 0
                 }
             },
@@ -2197,7 +2197,7 @@
                 "Choice": "problems/AP19CAB/media/86e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This graph shows the correct sign for `f'` on the interval from `x=0` to `x=3`. However, the sign of `f'` should be positive from `x=3` to `x=5`, since `f` is increasing over the interval `(3,5)`. In addition, the graph of `f` does not support the conclusion that `lim_(x->2^(+))f'(x)=0`, as suggested in this graph.",
                     "Percent": 0
                 }
             }
@@ -2228,7 +2228,7 @@
                 "Choice": "`0.212`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was correctly determined that the particle changes direction from moving left to moving right at `t=b=1.84527`. This value might have been stored in the calculator, and the stored value used for the limit of integration in order to ensure accuracy. However, this response is the displacement during the time interval `0<t<b`, not the total distance traveled.\n`int_0^bv(t)dt=int_0^1.84527tsin(t^3)dt=0.212`",
                     "Percent": 0
                 }
             },
@@ -2236,7 +2236,7 @@
                 "Choice": "`0.612`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The `text(zero)` of `v(t)` where the velocity changes from positive to negative was found to be `t=a=1.46459`. This value might have been stored in the calculator, and the stored value used for the limit of integration in order to ensure accuracy. This is the time when the particle changes direction from moving right to moving left, not from left to right. The total distance traveled by the particle during the time interval `0<t<a` is\n`int_0^aabs(v(t))dt=int_0^1.46459abs(tsin(t^3))dt=0.612`.",
                     "Percent": 0
                 }
             },
@@ -2244,7 +2244,7 @@
                 "Choice": "`1.011`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The graph of the velocity over the interval `(0,2)` shows that the velocity changes from positive to negative, then back to positive. The time at which the particle changes direction from moving left to moving right, therefore, is the `text(second zero)` of `v(t)`, where the velocity changes from negative to positive. This `text(zero)` is at `t=b=1.84527`. Store this value in the calculator, and use the stored value for the limit of integration in order to ensure accuracy. The total distance traveled by the particle during the time interval `0<t<b` is `int_0^babs(v(t))dt=int_0^1.84527abs(tsin(t^3))dt=1.011`.",
                     "Percent": 32
                 }
             },
@@ -2252,7 +2252,7 @@
                 "Choice": "`1.208`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is the total distance traveled by the particle during the entire time interval `0<t<2`.\n`int_0^2abs(v(t))dt=int_0^2abs(tsin(t^3))dt=1.208`",
                     "Percent": 0
                 }
             }
@@ -2283,7 +2283,7 @@
                 "Choice": "`text(Zero)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might be chosen if the calculation of the average rate of change resulted in a value that was greater than `0` or less than `-0.5`. It would also be chosen if the average rate of change was correctly found to be `-0.39206`, but the instantaneous rate of change was taken to be the `text(second)` derivative of `f`, not the `text(first)` derivative. In either case, the resulting equation would have no solution in the interval `[0,1.565]`.",
                     "Percent": 0
                 }
             },
@@ -2291,7 +2291,7 @@
                 "Choice": "`text(One)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would be chosen if the average rate of change was correctly found to be `-0.39206`, but the graph of `f`, not `f'`, was drawn to determine the number of intersection points with the horizontal line `y=-0.39206`. It would also be chosen if the instantaneous rate of change was correctly identified as the derivative of `f`, but the average rate of change over the interval `[0,1.565]` was thought to be the average at the endpoints, `(f(0)+f(1.565))/2=-0.30678`, or the average value of the function over the interval, `1/1.565int+0^1f(x)dx=-0.32195`. In all these cases, the resulting equation would have only `text(one)` solution in the interval `[0,1.565]`.",
                     "Percent": 0
                 }
             },
@@ -2299,7 +2299,7 @@
                 "Choice": "`text(Three)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The average rate of change of `f` on the closed interval `[0,1.565]` is `(f(1.565)-f(0))/(1.565-0)=-0.39206`. The instantaneous rate of change of `f` is the derivative, `f'(x)=x^3-2x^2+x-1/2`. The graph of `f'`, produced using the calculator, intersects the horizontal line `y=-0.39206` three times in the open interval `(0,1.565)`.",
                     "Percent": 33
                 }
             },
@@ -2307,7 +2307,7 @@
                 "Choice": "`text(Four)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response might be chosen because the function `f` is a polynomial of degree `4`.",
                     "Percent": 0
                 }
             }
@@ -2338,7 +2338,7 @@
                 "Choice": "`21` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of `g` is increasing because `g'(x)>0` and concave up because `g''(x)>0`. The secant line through the points `(3,12)` and `(5,18)` is `y=3(x-3)+12`. Because the graph of `g` is increasing and concave up, the graph will lie above the secant line for `x>5`. In particular, the value of `g(6)` is strictly greater than the value of `y` on the secant line at `x=6`, that is, `g(6)>3(6-3)+12=21`. Therefore, `g(6)` cannot equal `21`.",
                     "Percent": 0
                 }
             },
@@ -2346,7 +2346,7 @@
                 "Choice": "`22` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The graph of `g` is increasing because `g'(x)>0` and concave up because `g''(x)>0`. The secant line through the points `(3,12)` and `(5,18)` is `y=3(x-3)+12`. Because the graph of `g` is increasing and concave up, the graph will lie above the secant line for `x>5`. In particular, the value of `g(6)` is strictly greater than the value of `y` on the secant line at `x=6`, that is, `g(6)>3(6-3)+12=21`. Therefore, `22` is the only possible value for `g(6).`",
                     "Percent": 33
                 }
             },
@@ -2354,7 +2354,7 @@
                 "Choice": "`20` and `21` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of `g` is increasing because `g'(x)>0` and concave up because `g''(x)>0`. The secant line through the points `(3,12)` and `(5,18)` is `y=3(x-3)+12`. Because the graph of `g` is increasing and concave up, the graph will lie above the secant line for `x>5`. In particular, the value of `g(6)` is strictly greater than the value of `y` on the secant line at `x=6`, that is, `g(6)>3(6-3)+12=21`. Therefore, `g(6)` cannot equal `20` or `21`.",
                     "Percent": 0
                 }
             },
@@ -2362,7 +2362,7 @@
                 "Choice": "`21` and `22` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of `g` is increasing because `g'(x)>0` and concave up because `g''(x)>0`. The secant line through the points `(3,12)` and `(5,18)` is `y=3(x-3)+12`. Because the graph of `g` is increasing and concave up, the graph will lie above the secant line for `x>5`. In particular, the value of `g(6)` is strictly greater than the value of `y` on the secant line at `x=6`, that is, `g(6)>3(6-3)+12=21`. Therefore, `g(6)` could equal `22`, but not `21`.",
                     "Percent": 0
                 }
             }
@@ -2394,7 +2394,7 @@
                 "Choice": "`y=-1/5(x-2)+3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if it was correctly determined that `g(2)=f^(-1)(2)=3`, but a sign error was made in taking `g'(2)=-1/(f'(3))` rather than `g'(2)=1/(f'(3))`, perhaps by combining the calculations of the slope of an inverse function and the slope of a perpendicular line.",
                     "Percent": 0
                 }
             },
@@ -2402,7 +2402,7 @@
                 "Choice": "`y=-1/4(x-2)+1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response would result if the derivative of `g` at `x=2` was taken to be the reciprocal of the derivative of `f` at `x=2`, resulting in `g'(2)=1/(f'(2))=1/4` instead of `g'(2)=1/(f'(g(2)))=1/(f'(3))=1/5`. In addition, the line was computed using the point `(2,1)` on the graph of `f` rather than the point `(2,3)` on the graph of `g`.",
                     "Percent": 0
                 }
             },
@@ -2410,7 +2410,7 @@
                 "Choice": "`y=1/5(x-2)+3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since `f(g(x))=x`, the chain rule can be used to determine that `f'(g(x))g'(x)=1`. Substituting `x=2` gives `1=f'(g(2))g'(2)=f'(3)g'(2)rArrg'(2)=1/(f'(3))=1/5`. Since `g(2)=f^(-1)(2)=3`, an equation of the line tangent to the graph of `g` at `x=2` is therefore `y=1/5(x-2)+3`.",
                     "Percent": 37
                 }
             },
@@ -2418,7 +2418,7 @@
                 "Choice": "`y=4(x-2)+1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This response is an equation of the line tangent to the graph of `f` at the point where `x=2` rather than the line tangent to the graph of `g`, the inverse function of `f`, at `x=2`.",
                     "Percent": 0
                 }
             }

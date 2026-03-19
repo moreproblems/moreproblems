@@ -7,7 +7,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1C4"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -21,7 +21,7 @@
                 "Choice": "`-64`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Both the power rule and the chain rule must be used to compute the derivative, which is then evaluated at `x=1`.\n`f'(x)=4(x^2-3)^3(2x)`\n`f'(1)=4(1-3)^3(2)=4(-2)^3(2)=-64`",
                     "Percent": 0
                 }
             },
@@ -29,7 +29,7 @@
                 "Choice": "`-32`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "An incomplete understanding of the chain rule for composite functions is shown by thinking that `d/dxf(g(x))=f'(g(x))`:\n`f'(x)=4(x^2-3)^3`\n`f'(1)=4(1-3)^3=4(-2)^3=-32`",
                     "Percent": 0
                 }
             },
@@ -37,7 +37,7 @@
                 "Choice": "`-16`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The power rule was not correctly applied with respect to the exponent in the derivative:\n`f'(x)=4(x^2-3)(2x)`\n`f'(1)=4(1-3)(2)=4(-2)(2)=-16`",
                     "Percent": 0
                 }
             },
@@ -45,7 +45,7 @@
                 "Choice": "`32`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A misunderstanding of the chain rule for composite functions is shown by thinking that `d/dxf(g(x))=f'(g'(x))`: \n`f'(x)=4(2x)^3`\n`f'(1)=4(2)^3=32`",
                     "Percent": 0
                 }
             }
@@ -60,7 +60,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3B2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -74,7 +74,7 @@
                 "Choice": "`-561`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "An error was made in antidifferentiation of `x^n` leading to `(n+1)x^(n+1)`: `32x^4-9x^3|_-2^1=(32-9)-(512+72)=-561`.",
                     "Percent": 0
                 }
             },
@@ -82,7 +82,7 @@
                 "Choice": "`-90`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "If the process of antidifferentiation and differentiation are confused in evaluating the definite integral, the result is: `24x^2-6x|_-2^1=(24-6)-(96+12)=-90`.",
                     "Percent": 0
                 }
             },
@@ -90,7 +90,7 @@
                 "Choice": "`-39`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The question involves using the basic power rule for antidifferentiation and then correctly substituting the endpoints and evaluating: `2x^4-x^3|_-2^1=(2-1)-(32+8)=-39`.",
                     "Percent": 0
                 }
             },
@@ -98,7 +98,7 @@
                 "Choice": "`81`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Instead of finding an antiderivative, the integrand was evaluated at the endpoints: `(8(1)^3-3(1)^2)-(8(-2)^3-3(-2)^2)=81`.",
                     "Percent": 0
                 }
             }
@@ -113,7 +113,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1C7"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -127,7 +127,7 @@
                 "Choice": "`1/90`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The calculation of `dy/(dt)` requires use of the chain rule. If this is neglected, the result will be the following:\n`dy/(dt)=1/(2sqrt(t^2+16))rArrdy/(dt)|_(t=3)=1/10`\n`dx/(dt)=3t^2-6trArrdx/(dt)|_(t=3)=9`\n`dy/dx|_(t=3)``=(dy//dt)/(dx//dt)|_(t=3)=(1/10)/9=1/90`",
                     "Percent": 0
                 }
             },
@@ -135,7 +135,7 @@
                 "Choice": "`1/15`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The rate of change of y with respect to x is the derivative `dy/dx`. For curves described by parametric equations in terms of a variable `t`, this rate of change is given by `dy/dx=(dy//dt)/(dx//dt)`.\n`dy/(dt)=t/sqrt(t^2+16)rArrdy/(dt)|_(t=3)=3/5`\n`dx/(dt)=3t^2-6trArrdx/(dt)|_(t=3)=0`\n`dy/dx|(t=3)``=(dy//dt)/(dx//dt)|_(t=3)=(3/5)/9=1/15`",
                     "Percent": 0
                 }
             },
@@ -143,7 +143,7 @@
                 "Choice": "`3/5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Only `dy/(dt)` was found instead of `dy/dx` at `t=3`:\n`dy/(dt)=t/sqrt(t^2+16)rArrdy/(dt)|_(t=3)=3/5`",
                     "Percent": 0
                 }
             },
@@ -151,7 +151,7 @@
                 "Choice": "`5/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`(y(3))/(x(3))=sqrt(9+16)/(27-27+2)=5/2` was calculated instead of `(dy//dt)/(dx//dt)|_(t=3)`.",
                     "Percent": 0
                 }
             }
@@ -166,7 +166,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.4A2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -180,7 +180,7 @@
                 "Choice": "`2e^-0.5-2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Mistakenly integrating `r'(t)` instead of `r(t)` gives the change in the rate of snowfall over the interval `0<=t<=5`:\n`int_0^5r'(t)dt=r(5)-r(0)=2e^(-0.1(5))-2e^(-0.1(0))=2e^-0.5-2`",
                     "Percent": 0
                 }
             },
@@ -188,7 +188,7 @@
                 "Choice": "`0.2-0.2e^-0.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Mistakenly integrating `r''(t)` instead of `r(t)` gives the change in the change of the rate of snowfall over the interval `0<=t<=5`:\n`r'(t)=-0.2e^(-0.1t)`\n`int_0^5r''(t)dt=r'(5)-r'(0)=-0.2e^(-0.1(5))-(-0.2e^(-0.1(0)))=0.2-0.2e^-0.5`",
                     "Percent": 0
                 }
             },
@@ -196,7 +196,7 @@
                 "Choice": "`4-4e^-0.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the average rate of snowfall during the `text(five hours)`:\n`(int_0^5r(t)dt)/(5-0)=(20-20e^-0.5)/5=4-4e^-0.5`",
                     "Percent": 0
                 }
             },
@@ -204,7 +204,7 @@
                 "Choice": "`20-20e^-0.5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The definite integral of the rate of change over an interval gives the net change over that interval. Since `r(t)` is the rate of change of the snowfall, the definite integral of `r(t)` on the interval `0<=t<=5`: gives the change in the amount of snow that falls over that time period.\n`int_0^5r(t)dt=-20e^(-0.1t)|_0^5=-20e^-0.5-(-20e^0)=20-20e^-0.5`",
                     "Percent": 0
                 }
             }
@@ -219,7 +219,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1C5"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -233,7 +233,7 @@
                 "Choice": "`e^2-32`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The chain rule was not used during the application of the product rule to the `xy^3` term on the right side.\n`e^x-(1)*dy/dx=x*(3y^2)+y^3*(1)`\n`dy/dx=-3xy^2-y^3+e^xrArrdy/dex|_((x,y)=(2,2))=e^2-32`",
                     "Percent": 0
                 }
             },
@@ -241,7 +241,7 @@
                 "Choice": "`(e^2-9)/24`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The chain rule was not used during the differentiation of the `y` term on the left side.\n`e^x-1=x*(ey^2dy/dx)+y^3*(1)`\n`dy/dx=(e^x-y^3-1)/(3xy^2)rArrdy/dx|_((x,y)=(2,2))=(e^2-2^3-1)/(3(2)2^2)=(e^2-9)/24`",
                     "Percent": 0
                 }
             },
@@ -249,7 +249,7 @@
                 "Choice": "`(e^2-8)/25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "During the implicit differentiation, both the product rule and the chain rule are needed.\n`e^x-(1)*dy/dx=x*(3y^2dy/dx)+y^3*(1)`\n`dy/dx=(e^x-y^3)/(3xy^2+1)rArrdy/dx|_(( x,y)=(2,2))=(e^2-2^3)/(3(2)2^2+1)=(e^2-8)/25`",
                     "Percent": 0
                 }
             },
@@ -257,7 +257,7 @@
                 "Choice": "`e^2/13`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "An error was made in the use of the product rule where it was believed that the derivative of a product is the product of the derivatives.\n`e^x-(1)*dy/dx=(3y^2dy/dx)`\n`dy/dx=e^x/(3y^2+1)rArrdy/dx|_((x,y)=(2,2))=e^2/(3(2^2)+1)=e^2/13`",
                     "Percent": 0
                 }
             }
@@ -272,7 +272,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2B2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -287,7 +287,7 @@
                 "Choice": "`68`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The trapezoidal sum is the average of the left and right Riemann sums. The `text(three)` intervals are of length `2`, `5`, and `2`, respectively. Taking the average of the left and right endpoint values on `text(each interval)` and multiplying by the length of the interval gives the following trapezoidal sum:\n`2/2(15+9)+5/2(9+5)+2/2(5+4)=68`.",
                     "Percent": 0
                 }
             },
@@ -295,7 +295,7 @@
                 "Choice": "`70.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using the trapezoidal rule is not appropriate because the intervals are of different lengths. Ignoring the values of and believing that `Deltat=(9-0)/3=3` as if the intervals were of equal length in the table would yield the following computation using the trapezoidal rule:\n`3/2[15+2(9)+2(5)+4]=70.5`.",
                     "Percent": 0
                 }
             },
@@ -303,7 +303,7 @@
                 "Choice": "`85`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A trapezoidal sum has been confused with a left Riemann sum:\n`2*15+5*9+2*5=85`.",
                     "Percent": 0
                 }
             },
@@ -311,7 +311,7 @@
                 "Choice": "`136`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error is due to taking just the sum of the left and right Riemann sums rather than the average, thus not dividing each width by `2`:\n`2(15+9)+5(9+5)+2(5+4)=136`.",
                     "Percent": 0
                 }
             }
@@ -326,7 +326,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1C7"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -340,7 +340,7 @@
                 "Choice": "`<<-2sin(2t),3e^(3t)>>`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The components of the acceleration vector are the derivatives of the components of the velocity vector.\n`a(t)=<<d/(dt)cos(2t),d/(dt)e^(3t)>>=<<-2sin(2t),3e^(3t)>>`",
                     "Percent": 0
                 }
             },
@@ -348,7 +348,7 @@
                 "Choice": "`<<-2sin(2t),e^(3t)>>`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The chain rule was not used in the differentiation of the exponential function.",
                     "Percent": 0
                 }
             },
@@ -356,7 +356,7 @@
                 "Choice": "`<<1/2sin(2t),1/3e^(3t)>>`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This vector consists of the antiderivatives of the components of the velocity vector.",
                     "Percent": 0
                 }
             },
@@ -364,7 +364,7 @@
                 "Choice": "`<<2sin(2t),3e^(3t)>>`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The chain rule was applied correctly, but there is a sign error in the differentiation of the `text(cosine)` function.",
                     "Percent": 0
                 }
             }
@@ -379,7 +379,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1B1"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -393,7 +393,7 @@
                 "Choice": "`sum_(n=1)^ooa_n=64`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The indexing was ignored and the `12` treated as the value of the `text(second)` term, not the `text(third)` term. It therefore uses `48r=12` to get `r=1/4` and concludes that the sum of the series is:\n`48/(1-1/4)=64`.",
                     "Percent": 0
                 }
             },
@@ -401,7 +401,7 @@
                 "Choice": "`sum_(n=1)^ooa_n=96`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The geometric series has a common ratio of `r`. The `text(third)` term would be `a_1r^2`, so: `48r^2=12rArrr=1/2`.\nThe positive square root value is taken since all the terms are positive.\nThe sum of the series is: `48/(1-1/2)=96`.",
                     "Percent": 0
                 }
             },
@@ -409,7 +409,7 @@
                 "Choice": "`sum_(n=1)^ooa_n` converges, but the sum cannot be determined from the information given.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The characteristics of a geometric series may have been misunderstood and it wasn’t realized that `text(two)` terms of the series are enough to determine the value of the common ratio.",
                     "Percent": 0
                 }
             },
@@ -417,7 +417,7 @@
                 "Choice": "`sum_(n=1)^ooa_n` diverges. ",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There may have been confusion between the common ratio and the terms of the series. Since the given terms are both greater than `1`, it might have been thought that the sum will diverge. The error might also have come from using the incorrect relationship `48=12r^2` to find the common ratio and concluding that `r=2`.",
                     "Percent": 0
                 }
             }
@@ -432,7 +432,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2C3"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -440,14 +440,14 @@
         "Explain": false,
         "Content": [
             ":ibox:`f(x)={(abs(x)/x,text(for )x!=0),(0,text(for )x=0):}`",
-            "The function f is defined above. The value of `int_-5^3f(x)dx` is"
+            "The function `f` is defined above. The value of `int_-5^3f(x)dx` is"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`-2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This function has a jump discontinuity at `x=0`. `f(x)=-1` for `x<0` and `f(x)=1` for `x>0`. The regions `A` and `B` between the graph of `f` and the `xtext(-axis)` on the intervals `[5,0]` and `[0,3]`, respectively. Computing the definite integral in terms of areas and taking into account which region is below the axis and which is above, we get:\n`int_-5^3f(x)dx=-text(area)(A)+text(area)(B)=-5+3=-2`.\nThe definite integral over the interval `[-5,3]` can also be written as the sum of the definite integrals over `[-5,0]` and `[0,3]`, giving:\n`int_-5^3f(x)dx=int_-5^0-1dx+int_0^31dx=-5+3=2`.",
                     "Percent": 0
                 }
             },
@@ -455,7 +455,7 @@
                 "Choice": "`2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Sign errors were made in the definition of `f` so that the graph of `f` is reflected across the `xtext(-axis)`. This then yields:\n`int_-5^3f(x)dx=text(area)(A)-text(area)(B)=5-3=2` or `int_-5^3f(x)dx=int_-5^01dx+int_0^3-1dx=5-3=2`.",
                     "Percent": 0
                 }
             },
@@ -463,7 +463,7 @@
                 "Choice": "`8`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Rather than taking into account the signed areas, this is the total area:\n`int_-5^3f(x)dx=text(area)(A)+text(area)(B)=5+3=8` or `int_-5^3f(x)dx=abs(int_-5^0-1dx)+abs(int_0^31dx)=5+3=8`.",
                     "Percent": 0
                 }
             },
@@ -471,7 +471,7 @@
                 "Choice": "`text(nonexistent)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The source of the error may be not recognizing that the definition of the definite integral can be extended to functions with removable or jump discontinuities.",
                     "Percent": 0
                 }
             }
@@ -486,7 +486,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1A6"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -500,7 +500,7 @@
                 "Choice": "`sum_(n=1)^oo1/n`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The limit comparison test looks at the limit of the ratio of general terms of the `text(two)` positive series. If this limit is finite and greater than `0`, the `text(two)` series either both converge or both diverge. For this series,\n`lim_(n->oo)(n^2/(n^3+1))/(1/n)=lim_(n->oo)n^3/(n^3+1)=1`.\nSince this limit is finite and `text(nonzero)`, this series is suitable for use with the limit comparison test.\n[Hence the series in the stem diverges because the series in this choice is the divergent harmonic series.]",
                     "Percent": 0
                 }
             },
@@ -508,7 +508,7 @@
                 "Choice": "`sum_(n=1)^oo1/n^3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`lim_(n->oo)(n^2/(n^3+1))/(1/n^3)=lim_(n->oo)n^5/(n^3+1)=oo`,\nso this series cannot be used because the limit is not finite.",
                     "Percent": 0
                 }
             },
@@ -516,7 +516,7 @@
                 "Choice": "`sum_(n=1)^oon/(n+1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`lim_(n->oo)(n^2/(n^3+1))/(n/(n+1))=lim_(n->oo)(n^3+n^2)/(n^4+n)=0`,\nso this series cannot be used because the limit is `0`.",
                     "Percent": 0
                 }
             },
@@ -524,7 +524,7 @@
                 "Choice": "`sum_(n=1)^oo1/(n^2+1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`lim_(n->oo)(n^2/(n^3+1))/(1/(n^2+1))=lim_(n->oo)(n^4+n^2)/(n^3+1)=oo`,\nso this series cannot be used because the limit is not finite.",
                     "Percent": 0
                 }
             }
@@ -539,7 +539,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3B5"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -553,7 +553,7 @@
                 "Choice": "`(6e^5-1)/25`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`u` and `dv` were correctly handled as in the solution for the correct option, but an error was made in the integration by parts, where addition was used instead of subtraction, i.e.\n`intudv=uv+intvdu`:\n`int_1^ex^4lnxdx=x^5/5lnx|_1^e+int_1^e(x^5/5*1/x)dx=e^5/5+int_1^ex^4/5dx=e^5/5+(x^5/25|_1^e)=e^5/5+(e^5/25-1/25)=(6e^5-1)/25`",
                     "Percent": 0
                 }
             },
@@ -561,7 +561,7 @@
                 "Choice": "`(4e^5+1)/25`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Using integration by parts, where `intudv=uv-intvdu`:\n`u=lnxrArrdu=1/xdx` and `dv=x^4dxrArrv=x^5/5`\n`int_1^ex^4lnxdx=x^5/5lnx|_1^e-int_1^e(x^5/5*1/x)dx=e^5/5-int_1^ex^4/5dx=e^5/5-(x^5/25|_1^e)=e^5/5-(e^5/25-1/25)=(4e^5+1)/25`",
                     "Percent": 0
                 }
             },
@@ -569,7 +569,7 @@
                 "Choice": "`(1-e^3)/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Many times the polynomial term is chosen for the `u` term in the integration by parts. This is often not the best choice,however, when the integral involves `lnx`. This choice can lead to an antiderivative error when using `dv=lnx` and mistakenly calculating `v=1/ x`.\n`u=x^4rArrdu=4x^3dx` and `dv=lnxdxrArrv=1/x`\n`int_1^ex^4lnxdx=x^4 1/x|_1^e-int_1^e(4x^3*1/x)dx=(e^3-1)-int_1^e4x^2dx=(e^3-1)-((4x^3)/3|_1^e)=(e^3-1)-((4e^3)/3-4/3)=(1-e^3)/3`",
                     "Percent": 0
                 }
             },
@@ -577,7 +577,7 @@
                 "Choice": "`e^4`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A misunderstanding of the Fundamental Theorem of Calculus might lead to thinking that `int_a^bf(x)dx=f(b)-f(a)`.\nThis would give the answer `(e^4lne)-(1^4ln1)`.",
                     "Percent": 0
                 }
             }
@@ -592,7 +592,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.5A1"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -606,7 +606,7 @@
                 "Choice": "`22`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the velocity at `t=2`, not the position:\n`v(t)=3t^2+10rArrv(2)=22`.\nThe velocity at `t=2` can also be found directly using the Fundamental Theorem of Calculus:\n`v(2)=v(0)+int_0^2v'(t)dt=10+int_0^2a(t)dt=10+int_0^2 6tdt=22`.",
                     "Percent": 0
                 }
             },
@@ -614,7 +614,7 @@
                 "Choice": "`27`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The assumption was made that the velocity is constant and the acceleration was ignored:\n`p(2)=7+2*v(0)=7+2*10=27`.",
                     "Percent": 0
                 }
             },
@@ -622,7 +622,7 @@
                 "Choice": "`28`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the total change in position without accounting for the initial position. The calculation uses the correct velocity function but takes `p(t)=t^3+10t`.",
                     "Percent": 0
                 }
             },
@@ -630,7 +630,7 @@
                 "Choice": "`35`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Velocity is the antiderivative of acceleration and position is the antiderivative of velocity. In `text(each case)`, the object’s velocity and position at `t=0` can be used to find the appropriate “`+C`” after `text(each antidifferentiation)`. The last step is to then evaluate the position function at `t=2`.\n`a(t)=6t`\n`v(t)=3t^2+C_1`\n`v(0)=3(0)^2+C_1=10rArrC_1=10`\n`v(t)=3t^2+10`\n`p(t)=t^3+10t+C_2`\n`p(0)=(0)^3+10(0)+C_2=7rArrC_2=7`\n`p(t)=t^3+10t+7`\n`p(2)=2^3+10(2)+7=35`",
                     "Percent": 0
                 }
             }
@@ -645,7 +645,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.4A1"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -660,7 +660,7 @@
                 "Choice": "`text(Zero)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A belief that the conditions for the Mean Value Theorem are not met would explain this option.",
                     "Percent": 0
                 }
             },
@@ -668,7 +668,7 @@
                 "Choice": "`text(One)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The Mean Value Theorem only guarantees `text(one)` value, which could lead to this option being mistakenly chosen. This is also the number of relative extrema on the interior of the interval, as well as the number of `text(zeros)` on the interval.",
                     "Percent": 0
                 }
             },
@@ -676,7 +676,7 @@
                 "Choice": "`text(Two)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Overlooking `text(one)` of the `text(three)` actual values would lead to this option. It is also the number of points of inflection on the interval.",
                     "Percent": 0
                 }
             },
@@ -684,7 +684,7 @@
                 "Choice": "`text(Three)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since `f` is continuous and differentiable, the conditions of the Mean Value Theorem are satisfied on the interval `[-4,3]`. There are `text(three)` points in the open interval `(-4,3)` where the line tangent to the graph of `f` is parallel to the secant line through the endpoints of the graph on the interval `[-4,3]`. At each of these `text(three)` points the slopes will be the same and will satisfy `f'(c)=(f(3)-f(-4))/(e-(-4))`.",
                     "Percent": 0
                 }
             }
@@ -696,10 +696,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2B5",
+            "4.2B2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -713,7 +715,7 @@
                 "Choice": "`x^2/2-x^4/4+x^6/6-...+((-1)^(n+1)x^(2n))/(2n)+...`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The power series for `text(sine)` was written without the factorials and `t^6` was never substituted.\n`sint=t-t^3+t^5-...+(-1)^(n+1)t^(2n+1)+...`\n`int_0^xsintdt=t^2/2-t^4/4+t^6/6-...+(-1)^(n+1)t^(2n)/(2n)+...|_0^x=x^2/2-x^4/4+x^6/6-...+((-1)^(n+1)x^(2n))/(2n)+...`",
                     "Percent": 0
                 }
             },
@@ -721,7 +723,7 @@
                 "Choice": "`x^2/2-x^4/(4*3!)+x^6/(6*5!)-...+((-1)^(n+1)x^(2n))/(2n*(2n-1)!)+...`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The correct power series for `text(sine)` was used, but there was no substitution before doing the integration.\n`sint=t-t^3/(3!)+t^5/(5!)-...+(-1)^(n+1)t^(2n-1)/((2n-1)!)+...`\n`int_0^xsintdt=t^2/2-t^4/(4*3!)+t^6/(6*5!)-...+(-1)^(n+1)t^(2n)/(2n*(2n-1)!)+...|_0^x=x^2/2-x^4/(4*3!)+x^6/(6*5!)-...+((-1)^(n+1)x^(2n))/(2n*(2n-1)!)+...`",
                     "Percent": 0
                 }
             },
@@ -729,7 +731,7 @@
                 "Choice": "`x^7/7-x^19/19+x^31/31-...+((-1)^(n+1)x^(6(2n-1)+1))/(6(2n-1)+1)+...`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The series here is similar to the correct option, but an error was made in omitting the factorials in the original power series for `text(sine)`.",
                     "Percent": 0
                 }
             },
@@ -737,7 +739,7 @@
                 "Choice": "`x^7/7-x^19/(19*3!)+x^31/(31*5!)-...+((-1)^(n+1)x^(6(2n-1)+1))/((6(2n-1)+1)*(2n-1)!)+...`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Beginning with the Taylor series for `sinx` centered at `x=0`, `x=t^6` is substituted to obtain the Taylor series for `sin(t^6)` centered at `0`. This series can then be antidifferentiated term by term, and the result evaluated at the limits of integration in the definite integral.\n`sinx=x-x^3/(3!)+x^5/(5!)-...+(-1)^(n+1)x^(2n-1)/((2n-1)!)+...`\n`sin(t^6)=(t^6)^3/(3!)+(t^6)^5/(5!)-...+(-1)^(n+1)(t^6)^(2n-1)/((2n-1)!)+...=t^6-t^18/(3!)+t^30/(5!)-...+(-1)^(n+1)t^(6(2n-1))/((2n-1)!)+...`\n`int_0^xsin(t^6)dt=t^7/7-t^19/(19*3!)+t^31/(31*5!)-...+(-1)^(n+1)t^(6(2n-1)+1)/((6(2n-1)+1)(2n-1)!)+...|_0^x=x^7/7-x^19/(19*3!)+x^31/(31*5!)-...+((-1)^(n+1)x^(6(2n-1)+1))/((6(2n-1)+1)*(2n-1)!)+...`",
                     "Percent": 0
                 }
             }
@@ -752,7 +754,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3C3"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -766,7 +768,7 @@
                 "Choice": "`6.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Either only the critical value `m=1` was considered or both critical values were found and the relative minimum was mistakenly picked while not accounting for the endpoints.",
                     "Percent": 0
                 }
             },
@@ -774,7 +776,7 @@
                 "Choice": "`6.6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Either only the critical value `m=2` was considered or both critical values were found and the relative maximum was picked while not accounting for the endpoints.",
                     "Percent": 0
                 }
             },
@@ -782,7 +784,7 @@
                 "Choice": "`7.0`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Because `f` is continuous, the Extreme Value Theorem guarantees the existence of a maximum speed on the closed interval `0<=m<=3`, and that absolute maximum will occur at a critical value or at `text(one)` of the endpoints.\n`f'(m)=1/10(-6m^2+18m-12)=-6/10(m^2-3m+2)=-6/10(m-1)(m-2)`\n`(m-1)(m-2)=0`\nThe critical values are `m=1` and `m=2`. Therefore the candidates are `m=0`, `1`, `2`, and `3`. Evaluate `f` at `text(each candidate)` and select the largest.\n`f(0)=7.0`; `f(1)=6.5`; `f(2)=6.6`; `f(3)=6.1`",
                     "Percent": 0
                 }
             },
@@ -790,7 +792,7 @@
                 "Choice": "`7.5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There are `text(four)` possible choices to select from. This is the largest value, so someone might assume that it is also the maximum speed of the runner.",
                     "Percent": 0
                 }
             }
@@ -805,7 +807,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3F1"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -819,7 +821,7 @@
                 "Choice": "problems/AP16CBC/media/16a.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For this differential equation, the slopes of the line segments in Quadrant `text(II)` must be positive since `y>0` and `x^2>0` in that quadrant. In this slope field that does not happen, as can be observed with the segments near the bottom left of Quadrant `text(II)`. In addition, all line segments along the `xtext(-axis)` should have positive slopes. This is not the case here.\nThis slope field might be chosen if the squared term is not accounted for. [This is the slope field for `dy/dx=x+y`.]",
                     "Percent": 0
                 }
             },
@@ -827,7 +829,7 @@
                 "Choice": "problems/AP16CBC/media/16b.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For this differential equation, the slopes of the line segments in Quadrant `text(I)` must be positive since `y>0` and `x^2>0` in that quadrant. In this slope field, however, all the line segments in Quadrant `text(I)` have negative slopes. In addition, all line segments along the `xtext(-axis)` should have positive slopes. This is not the case here.\nThis slope field might be chosen if one considers `dy/dx=0` and thinks of the differential equation as relating to the parabola `y=-x^2`. [This is the slope field for `dy/dx=-1.8x`.]",
                     "Percent": 0
                 }
             },
@@ -835,7 +837,7 @@
                 "Choice": "problems/AP16CBC/media/16c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "For this differential equation, the slopes of the line segments in Quadrant `text(II)` must be positive since `y>0` and `x^2>0` in that quadrant. In this slope field, however, that does not happen as can be observed with the segments near the bottom left of Quadrant `text(II)`. In addition, all line segments along the `xtext(-axis)` should have positive slopes. This is not the case here.\nThis option might be chosen if the `x` and `y` variables are confused and `text(one)` looks for the slope field for `dy/dx=x+y^2`.",
                     "Percent": 0
                 }
             },
@@ -843,7 +845,7 @@
                 "Choice": "problems/AP16CBC/media/16d.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The line segments in the slope field have slopes given by `dy/dx=x^2+y` at the point `(x,y)`. In Quadrants `text(I)` and `text(II)`, all slopes must be positive or `text(zero)` since `y>0` in those quadrants and `x^2>=0`. This is the only option in which that condition is true.",
                     "Percent": 0
                 }
             }
@@ -858,7 +860,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3B5"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -872,7 +874,7 @@
                 "Choice": "`-4lnabs(2x-1)+6lnabs(x+1)+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Correct algebra split the integrand into the correct partial fractions, but during the antidifferentiation, failure to use the chain rule when integrating `-4/(2x-1)` resulted in `-4lnabs(2x-1)`.",
                     "Percent": 0
                 }
             },
@@ -880,7 +882,7 @@
                 "Choice": "`-2lnabs(2x-1)+6lnabs(x+1)+C`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Evaluating this integral is done using the method of partial fractions.\n`(8x-10)/((2x-1)(x+1))=A/(2x-1)+B/(x+1)=((A+2B)x+(A-B))/((2x-1)(x+1))`\nEquating terms in the numerator, `{:(A+2B=8),(A-B=-10):}rArrA=-4`, `B=6`.\nNow antidifferentiate, remembering to use the chain rule:\n`int(6/(2x-1)+(-4)/(x+1))dx=int(-4/(2x-1)+6/(x+1))dx=-2lnabs(2x-1)+6lnabs(x+1)+C`.",
                     "Percent": 0
                 }
             },
@@ -888,7 +890,7 @@
                 "Choice": "`3lnabs(2x-1)-4lnabs(x+1)+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "In splitting the integrand into the partial fractions, the coefficients `A` and `B` were reversed between the `text(two)` fractions before doing the antidifferentiation:\n`int(6/(2x-1)+(-4)/(x+1))dx=3lnabs(2x-1)-4lnabs(x+1)+C`.",
                     "Percent": 0
                 }
             },
@@ -896,7 +898,7 @@
                 "Choice": "`6lnabs(2x-1)-4lnabs(x+1)+C`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "he coefficients `A` and `B` were reversed between the `text(two)` fractions before doing the antidifferentiation, and the chain rule was also not used when integrating `6/(2x-1)`.",
                     "Percent": 0
                 }
             }
@@ -911,7 +913,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2A4"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -925,7 +927,7 @@
                 "Choice": "`-3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The polar curve was simply evaluated where `theta=pi`, i.e. `r(pi)=2cospi-1=-3`",
                     "Percent": 0
                 }
             },
@@ -933,7 +935,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error is in believing that the slope is given by `(dr)/(d theta)` for `theta=pi`, or using the wrong formula `(dx//d theta)/(dy//d theta)` for the slope and evaluating `dx/dy` for `theta=pi`. See the correct option for details of the calculations.",
                     "Percent": 0
                 }
             },
@@ -941,7 +943,7 @@
                 "Choice": "`3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error is in believing that the slope is given by `dy/(d theta)` for `theta=pi`. See the correct option for details of the calculations.",
                     "Percent": 0
                 }
             },
@@ -949,7 +951,7 @@
                 "Choice": "The slope is `text(undefined)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "For a polar curve given in terms of `theta`, the slope of the tangent line is given by `dy/dx=(dy//d theta)/(dx//d theta)`.\nMethod `1`:\n `r=2costheta-1rArr(dr)/(d theta)=-2sintheta.`\nSince `x=rcostheta` and `y=rsintheta`, use the product rule and the expression for `(dr)/(d theta)` to calculate `(dx)/(d theta)` and `(dy)/(d theta)`:\n`(dx)/(d theta)=-rsintheta+(dr)/(d theta)costheta=-(2costheta-1)sintheta-(2sintheta)costheta` and `(dy)/(d theta)=rcostheta+(dr)/(d theta)sintheta=(2costheta-1)cosstheta+(-2sintheta)sintheta`\nAt `theta=pi`, `dy/dx=((2cospi-1)cospi+sinpi(-2sinpi))/(-(2cospi-1)sinpi+cospi(-2sinpi))=((-3)(-1)+0)/(0+0)=3/0`.\nTherefore, the slope is undefined at `theta=pi`.\nMethod `2`:\n`x=rcostheta=(2costheta-1)costheta=2cos^2theta-costheta`\n`y=rsintheta=(2costheta-1)sintheta=2costhetasintheta-sintheta=sin(2theta)-costheta`\n`dx/(d theta)=-4costhetasintheta+sintheta` and `dy/(d theta)=2cos(2theta)-costheta`\nAt `theta=pi`, `dy/dx=(2cos(2pi)-cospi)/(-4cospisinpi+sinpi)=(2-(-1))/(0+0)=3/0`.\nTherefore, the slope is undefined at `theta=pi`.",
                     "Percent": 0
                 }
             }
@@ -964,7 +966,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1A2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -978,7 +980,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This could have been caused by observing that the numerator is `text(zero)` at `x=e` and then ignoring the denominator.",
                     "Percent": 0
                 }
             },
@@ -986,7 +988,7 @@
                 "Choice": "`20e^19-3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The limit of this difference quotient is of the form `lim_(x->a)(f(x)-f(a))/(x-a)` where `f(x)=x^20` and `a=e`. This is `text(one)` way to express the derivative of f at `x=e`.\n`f'(x)=d/dx(x^20-3x)=20x^19-3rArrf'(e)=20e^19-3rArrf'(e)=20e^19-3`",
                     "Percent": 0
                 }
             },
@@ -994,7 +996,7 @@
                 "Choice": "`e^20-3e`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is just the value of the function `x^20-3x` at `x=e`.",
                     "Percent": 0
                 }
             },
@@ -1002,7 +1004,7 @@
                 "Choice": "`text(nonexistent)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Observing that the denominator was `text(zero)` at `x=e` could have led to the assumption of unbounded behavior while the numerator was ignored. Or it was thought that the indeterminate form `0/0` produced a nonexistent result, without recognizing the limit as involving the definition of the derivative.",
                     "Percent": 0
                 }
             }
@@ -1017,7 +1019,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2C2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1031,7 +1033,7 @@
                 "Choice": "`1/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The limit `1/2abs(x-5)` from the ratio test was correctly calculated, but the constant in the limit was believed to be the radius of convergence rather than setting the limit less than `1`.",
                     "Percent": 0
                 }
             },
@@ -1039,7 +1041,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Several of the common Taylor series encountered in calculus have a radius of convergence of `1`, so this option might come from identifying `1` as a “typical” radius of convergence. Or it may have been thought that this looks like a geometric series, which converges only if the common ratio is less than `1`.",
                     "Percent": 0
                 }
             },
@@ -1047,7 +1049,7 @@
                 "Choice": "`2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The ratio test can be used to determine the radius of convergence:\n`lim_(n->oo)abs(a_(n+1)/a_n)=lim_(n->oo)abs((x-5)^(n+1)/(2^(n+1)(2(n+1)+3)^2)*(2^n(2n+3)^2)/(x-5)^2)=lim_(n->oo)abs(((x-5)^n(x-5)2^n(2n+3)^2)/(2^n*2(2n+5)^2(x-5)^n))=lim_(n->oo)abs(((x-5)(2n+3)^2)/(2(2n+5)^2))=1/2abs(x-5)<1rArrabs(x-5)<2`.",
                     "Percent": 0
                 }
             },
@@ -1055,7 +1057,7 @@
                 "Choice": "`5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The limit from the ratio test was correctly computed, but the center of the interval of convergence was confused with the radius of convergence.",
                     "Percent": 0
                 }
             }
@@ -1070,7 +1072,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2D2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1084,7 +1086,7 @@
                 "Choice": "The integral is equal to `0`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error was in not recognizing that the integral is improper and antidifferentiating `sec^2x` over the entire interval  `[0,pi]` to get: `tanx|_0^pi=tanpi-tan0=0-0=0`.",
                     "Percent": 0
                 }
             },
@@ -1092,7 +1094,7 @@
                 "Choice": "The integral is equal to `2/3`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error was in not recognizing that the integral is improper and believing that the antiderivative of `sec^2x` is `sec^3x/3` to get: `sec^3x/3|_0^pi-sec^3pi/3-sec^3 0/3=-1/3-1/3=-2/3`.\nThe sign is either ignored or an error in evaluation leads to the answer being positive.",
                     "Percent": 0
                 }
             },
@@ -1100,7 +1102,7 @@
                 "Choice": "The integral diverges because `lim_(x->(pi/2)^-)sec^2x` does not exist.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was assumed that if the integrand is unbounded at a point within a given interval, then the improper integral must diverge in that interval.",
                     "Percent": 0
                 }
             },
@@ -1108,7 +1110,7 @@
                 "Choice": "The integral diverges because `lim_(x->(pi/2)^-)tanx` does not exist.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This is an improper integral since the integrand, `sec^2x` , becomes unbounded as `x` approaches `x=pi/2` which is in the middle of the interval over which the function is being integrated. To see if the integral converges or diverges, it must be split into `(two)` parts at `x=pi/2` with the appropriate left- and right-sided limits considered.\n`lim_(b->(pi/2)^(-))int_0^bsec^2xdx+lim_(c->(pi/2)^(+))int_c^pisec^2xdx=lim_(b->(pi/2)^(-))(tanx)|_0^b``+lim_(c->(pi/2)^(+))(tanx)|_c^pi=lim_(b->(pi/2)^(-))(tanb-tan0)+lim_(c->(pi/2)^(+))(tanpi-tanc)=lim_(b->(pi/2)^(-))(tanb)+lim_(c->(pi/2)^(+))(-tanc)`\nBecause `lim_(b->(pi/2)^(-))(tanb)` does not exist, the original improper integral diverges.\nNote that `lim_(c->(pi/2)^(+))(-tanc)` also does not exist.",
                     "Percent": 0
                 }
             }
@@ -1123,7 +1125,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.1A4"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1138,7 +1140,7 @@
                 "Choice": "`text(I)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Series `text(III)` is also conditionally convergent.",
                     "Percent": 0
                 }
             },
@@ -1146,7 +1148,7 @@
                 "Choice": "`text(I)` and `text(II)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Series `text(II)` is not conditionally convergent.",
                     "Percent": 0
                 }
             },
@@ -1154,7 +1156,7 @@
                 "Choice": "`text(I)` and `text(III)` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "A series `suma_n` is conditionally convergent if the series converges but the series of absolute terms `sumabs(a_n)` diverges. Series `text(I)`, an `text(II)`, and `text(III)` all converge by the alternating series test. When the absolute values of the series terms are considered, the series are: (`1`) `sum_(n=1)^oo1/n`; (`2`) `sum_(n=1)^oo1/n^3`; (`3`) `sum_(n=1)^oo1/n^(1//2)`.\nBy the p-series test, series (`1`) and (`3`) are divergent and series (`2`) converges. So series `text(I)` and `text(III)` are conditionally convergent. (Note that series `text(II)` is absolutely convergent.)",
                     "Percent": 0
                 }
             },
@@ -1162,7 +1164,7 @@
                 "Choice": "`text(II)` and `text(III)` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Series `text(II)` is not conditionally convergent.",
                     "Percent": 0
                 }
             }
@@ -1177,7 +1179,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3B5"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1191,7 +1193,7 @@
                 "Choice": "`arctan(ln2)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A common mistake when using substitution of variables with a definite integral is to not change the limits of integration:\n`int_0^ln2 1/(1+u^2)du=tan^-1u|_0^ln2=tan^-1(ln2)-tan^-1(0)=tan^-1(ln2)`.",
                     "Percent": 0
                 }
             },
@@ -1199,7 +1201,7 @@
                 "Choice": "`ln2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A  tempting substitution is `u=e^x` becuase of the numerator.\n`u=e^xrArrdu=e^xdx`\nWhen `x=0`, `u=1`. When `x=ln2`, `u=2`. The substitution would result in:\n`int_1^2 1/(1+(u-1)^2)du`.\nUnfortunately, what might follow next is an attempt to “simplify” the denominator followed by the error of overlooking the chain rule issue when thinking that `int1/f(u)du=lnabs(f(u))`. This would give:\n`int_1^2 1/(1+(u-1)^2)du=int_1^2 1/(u^2-2u+2)du=lnabs(u^2-2u+2)|_1^2=lnabs(4-4+2)-lnabs(1-2+2)=ln2`.",
                     "Percent": 0
                 }
             },
@@ -1207,7 +1209,7 @@
                 "Choice": "`pi/4`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "This integral can be evaluated using substitution of variables. Let `u=e^x-1` since that is the term being squared in the denominator.\n`u=e^x-1rArrdu=e^xdx`\nWhen `x=0`, `u=e^0-1=0`. When `x=ln2`, `u=e^ln2-1=2-1=1`. The definite integral becomes `int_0^1 1/(1+u^2)du`. The integrand should then be recognized as the derivative of the `arctan` function:\n`int_0^1 1/(1+u^2)du=tan^-1u|_0^1=tan^-1(1)-tan^-1(0)=pi/4-0=pi/4`.",
                     "Percent": 0
                 }
             },
@@ -1215,7 +1217,7 @@
                 "Choice": "`pi/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The substitution of variables was correctly applied, but `arcsin` was used instead of `arctan` for the antiderivatives of `1/(1+u^2)`:\n`int_0^1 1/(1+u^2)du=sin^-1u|_0^1=sin^-1(1)-sin^-1(0)=pi/2-0=pi/2`.",
                     "Percent": 0
                 }
             }
@@ -1230,7 +1232,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "1.1C3"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1244,7 +1246,7 @@
                 "Choice": "`0`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It may have been observed that the numerator is `text(zero)` at `x=3` and the denominator was then ignored.",
                     "Percent": 0
                 }
             },
@@ -1252,7 +1254,7 @@
                 "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The indeterminate form `0/0` was recognized and an attempt was made to use L’Hospital’s Rule, but an error was made in the derivative of the denominator:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3))=1/3`.",
                     "Percent": 0
                 }
             },
@@ -1260,7 +1262,7 @@
                 "Choice": "`1/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Substituting `x=3` into the fraction yields the indeterminate form `0/0`. Therefore L’Hospital’s Rule can be used to find the limit:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3)-1)=1/2`.",
                     "Percent": 0
                 }
             },
@@ -1268,7 +1270,7 @@
                 "Choice": "`text(nonexistent)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The observation that the denominator is `text(zero)` at `x=3` led to the assumption of unbounded behavior, while the numerator was ignored.",
                     "Percent": 0
                 }
             }
@@ -1283,7 +1285,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3C2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1297,7 +1299,7 @@
                 "Choice": "`1/3`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Let `D=2r` related rates question to calculate be the diameter of the sphere. This is a `(dD)/(dt)` at the moment when `r=3`. We are given that `(dV)/(dt)=6pi`. Using the chain rule:\n`V=4/3pir^3rArr(dV)/(dt)=4pir^2(dr)/(dt)`\nNow substitute the values for `(dV)/(dt)` and `r` and solve for `(dr)/(dt)`.\n`6pi=4pi(3)^2(dr)/(dt)rArr(dr)/(dt)=1/6`\nSince `D=2r`, `(dD)/(dt)=2(dr)/(dt)=1/3`.",
                     "Percent": 0
                 }
             },
@@ -1305,7 +1307,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "An error in the use of the power rule leads to this.\n`V=4/3pir^3rArr(dV)/(dt)=4pir(dr)/(dt)`\n`6pi=4pi(3)(dr)/(dt)rArr(dr)/(dt)=1/2`\n`(dD)/(dt)=1`",
                     "Percent": 0
                 }
             },
@@ -1313,7 +1315,7 @@
                 "Choice": "`sqrt6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A common mistake in this related rates question is not using the chain rule, thereby having no `(dr)/(dt)` term to solve for. The value for `(dV)/(dt)` might be substituted and then the equation solved for `r`, followed by `text(doubling)` `r` to get a value for `D`.\n`(dV)/(dt)=4pir^2`\n`6pi=4pir^2`\n`r=sqrt6/2rArrD=sqrt6`",
                     "Percent": 0
                 }
             },
@@ -1321,7 +1323,7 @@
                 "Choice": "`6`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A misreading or misunderstanding of the question stem might have led to thinking that the goal was to find the diameter of the sphere at the instant the radius is `3` `text(centimeters)` rather than the rate of change of the diameter. This would just be `text(twice)` the radius. It also turns out in this particular question that this same answer is the ratio of the volume to its derivative when `r=3`, that is, `(36pi)/(6pi)=6`.",
                     "Percent": 0
                 }
             }
@@ -1336,7 +1338,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2A4"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1350,7 +1352,7 @@
                 "Choice": "`0<=t<=3` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Finding the `text(zeros)` of `f(theta)=theta(theta-3)^2` to answer the question rather than the `text(zeros)` of `f'(theta)` would lead to choosing the interval between the `text(ztwo eros)`.",
                     "Percent": 0
                 }
             },
@@ -1358,7 +1360,7 @@
                 "Choice": "`0<=t<=2pi`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The observation that `f(theta)>=0` for all `theta>=0` was misinterpreted as meaning that `r` is always increasing for all `t` in the time interval `0<=t<=2pi`.",
                     "Percent": 0
                 }
             },
@@ -1366,7 +1368,7 @@
                 "Choice": "`1<=t<=3` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The critical values where `f'(theta)=0` were found, but the sign of the derivative was misinterpreted. This is the time interval on which the distance is decreasing.",
                     "Percent": 0
                 }
             },
@@ -1374,7 +1376,7 @@
                 "Choice": "`0<=t<=1` and `3<=t<=2pi` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The distance from the origin to the particle moving along the polar curve is what `r` measures. Since `r=f(theta)`, to find the intervals for which the distance is increasing, determine where `f'(theta)>=0`.\n`f'(theta)=3theta^2-12theta+9=3(theta^2-4theta+3)=3(theta-1)(theta-3)`\n`f'(theta)=0` for `theta=1,3`.\nThe graph of `f'(theta)` as a function of `theta` is a concave up parabola with `text(zeros)` at `1` and `3`. Therefore `f'(theta)>=0` for `theta<=1` and `theta>=3`. So during the time interval `0<=t<=2pi`, the distance between the particle and the origin will be increasing for `0<=t<=1` and `3<=t<=2pi`.",
                     "Percent": 0
                 }
             }
@@ -1389,7 +1391,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3A3"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1404,7 +1406,7 @@
                 "Choice": "`-2<x<0` only",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was recognized that the function `g` is decreasing on the interval `-2<x<1` because `g'=f` is negative on this interval, but it may have been thought that `g(x)=int_0^xf(t)dt=-int_x^0f(t)dt` when `-2<x<0` means that `g(x)` is negative for `-2<x<0`.",
                     "Percent": 0
                 }
             },
@@ -1412,7 +1414,7 @@
                 "Choice": "`-2<x<1`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was recognized that the function `g` is decreasing on the interval `-2<x<1` because `g'=f` is negative on this interval, but where `g` is negative was not considered.",
                     "Percent": 0
                 }
             },
@@ -1420,7 +1422,7 @@
                 "Choice": "`0<x<1` only",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The function `g` is decreasing on the interval `-2<x<1` because `g'=f` is negative on this interval. Because `g(0)=0` and `g` is decreasing for `-2<x<1`, `g(x)` must be positive for `-2<x<0` and negative for `0<x<1`. On the interval `1<x<2`, the function `g` is increasing because `g'=f` is positive on this interval. Therefore, `g` is negative and decreasing only for `0<x<1`.",
                     "Percent": 0
                 }
             },
@@ -1428,7 +1430,7 @@
                 "Choice": "`0<x<2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was recognized where `g` is negative, perhaps by observing that `g(0)=0` and `lim_(x->2)g(x)=0` by symmetry of the regions below and above the `xtext(-axis)` for `0<=x<=2`, but where `g` is decreasing was not considered.",
                     "Percent": 0
                 }
             }
@@ -1443,7 +1445,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.5B2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1457,7 +1459,7 @@
                 "Choice": "`lim_(t->oo)N(t)=850`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The statement is true since `850` is the carrying capacity for `N` and the solution starting at `N(0)=105` will converge to the carrying capacity as `t` increases in value.",
                     "Percent": 0
                 }
             },
@@ -1465,7 +1467,7 @@
                 "Choice": "`(dN)/dt` has a maximum value when `N=105`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The statement is false. The graph of `(dN)/(dt)` as a function of `N` is a concave down parabola with `text(zeros)` at `N=0` and `N=850`. The maximum value of `(dN)/(dt)` will occur at the vertex of the  parabola which is at `N=425`, not `N=105`.",
                     "Percent": 0
                 }
             },
@@ -1473,7 +1475,7 @@
                 "Choice": "`(d^2N)/(dt^2)` when `N=425`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The statement is true. Since the solution curve starts at `N(0)=105` which is less than `text(half)` the carrying capacity of `850`, the point of inflection on the graph of `N` will occur when the graph reaches `N=425`, the midpoint between `N=0` and `N=850` as the graph of `N` changes from concave up to concave down.",
                     "Percent": 0
                 }
             },
@@ -1481,7 +1483,7 @@
                 "Choice": "When `N>425`, `(dN)/dt>0` and `(d^2N)/(dt^2)<0`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The statement is true. Since the solution curve starts at `N(0)=105` which is less than `text(half)` the carrying capacity of `850`, the logistic curve starts out increasing and concave up for `N<425`, then changes to increasing and concave down for `N>425`.",
                     "Percent": 0
                 }
             }
@@ -1493,10 +1495,12 @@
         "Type": "MC",
         "NumChoices": 4,
         "Topics": [
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "3.2A3",
+            "3.4D1"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1511,7 +1515,7 @@
                 "Choice": "`lim_(n->oo)sum_(k=1)^n(1+ln((3k)/n))3/n`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was recognized that the sum begins at `x=1`, but that information was used inappropriately in trying to write an expression for the height of the rectangles at the right endpoints. These endpoints go from `0` to `3` in widths of `Deltax=3/n`, and the height corresponds to the function `1+lnx`.",
                     "Percent": 0
                 }
             },
@@ -1519,7 +1523,7 @@
                 "Choice": "`lim_(n->oo)sum_(k=1)^nln(1+(3k)/n)3/n`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The area of the shaded region is equal to `int_1^4lnxdx`. For this integral, a right Riemann sum with `n` terms is built from rectangles of width `Deltax=(4-1)/n=3/n`. The height of `text(each rectangle)` is determined by the function `lnx` evaluated at the right endpoints of the `n` intervals. These endpoints are the `x` values at `1+kDeltax`, for `k` from `1` to `n`, since the integral starts at `1`. The Riemann sum can be written as `sum_(k=1)^nln(1+kDeltax)Deltax` where `Deltax=3/n`, and its limit as `n->oo` is `int_1^4lnxdx`.",
                     "Percent": 0
                 }
             },
@@ -1527,7 +1531,7 @@
                 "Choice": "`lim_(n->oo)sum_(k=1)^n(4/n)(1+(4k)/n)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The endpoint of `x=4` was used instead of the width of the interval in calculating `Deltax` in the construction of the Riemann sum, and the roles of the right endpoints and `Deltax` were also mixed up in trying to represent the heights and width of the rectangles.",
                     "Percent": 0
                 }
             },
@@ -1535,7 +1539,7 @@
                 "Choice": "`lim_(n->oo)sum_(k=1)^nln(1+(4k)/n)4/n`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The endpoint of `x=4` was used instead of the width of the interval in calculating `Deltax` in the construction of the Riemann sum.",
                     "Percent": 0
                 }
             }
@@ -1550,7 +1554,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2A5"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -1564,7 +1568,7 @@
                 "Choice": "`1/(2^4*5!)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The alternating series error bound is not the last term in the approximation (the `text(second)` term in this case). Evaluating the absolute value of the degree `4` term of the `text(fourth-degree)` Taylor polynomial for `f` results in `1/(5!)(1/2)^4`.",
                     "Percent": 0
                 }
             },
@@ -1572,7 +1576,7 @@
                 "Choice": "`1/(2^5*6!)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using `n=5` to calculate the `text(first)` “omitted term” after `n=4` in the `text(fourth-degree)` Taylor polynomial results in `1/(6!)(1/2)^5`. The error might also come from confusing the alternating series error bound with the Lagrange error bound and selecting an answer that involves `x^(n+1)` with `x=1/2` when `n=4 `from the use of the `text(fourth-degree)` Taylor polynomial.",
                     "Percent": 0
                 }
             },
@@ -1580,7 +1584,7 @@
                 "Choice": "`1/(2^6*7!)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Since `f(x)=1/(3!)x^2-1/(5!)x^4+1/(7!)x^6-1/(9!)x^8+...` the `text(fourth-degree)` Taylor polynomial for `f` is `P(x)=1/(3!)x^2-1/(5!)x^4`.\n`P(1/2)=1/(3!)(1/2)^2-1/(5!)(1/2)^4`\nUsing the Taylor series for `f` about `x=0`, `f(1/2)=1/(3!)(1/2)^2-1/(5!)(1/2)^4+1/(7!)(1/2)^6-1/(9!)(1/2)^8+1/(11!)(1/2)^10-...`.\nThis is an alternating series and converges by the alternating series test. Therefore the alternating series error bound can be used to approximate this value using the `text(first two)` terms of the series, which is the same as `P(1/2)`. The alternating series error bound using the `text(first two)` terms in the series for `f(1/2)`  is the absolute value of the `text(third)` term, `1/(7!)(1/2)^6`, the `text(first)` omitted term of the series, so `abs(f(1/2)-P(1/2))<=1/(7!)(1/2)^6`",
                     "Percent": 0
                 }
             },
@@ -1588,7 +1592,7 @@
                 "Choice": "`1/(2^10*11!)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "“`text(Fourth-degree)`” was misunderstood as asking for `text(four)` terms and thus the Taylor polynomial was used.\n`P(x)=1/(3!)x^2-1/(5!)x^4+1/(71)x^6-1/(9!)x^8` was evaluated at `x=1/2`. The alternating series error bound would then be the `text(first)` omitted term, `1/(11!)(1/2)^10`.",
                     "Percent": 0
                 }
             }
@@ -1603,7 +1607,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.3B2"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1619,7 +1623,7 @@
                 "Choice": "`29.005`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "By the Fundamental Theorem of Calculus, `f(5)-f(2)=int_2^5f'(x)dx`.\nTherefore, `f(5)=f(2)+int_2^5sqrt(1+2x^3)dx=29.005`",
                     "Percent": 0
                 }
             },
@@ -1627,7 +1631,7 @@
                 "Choice": "`28.605`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A common error is to neglect to use the initial condition and just take `f(5)=int_2^5sqrt(1+2x^3)dx`. This may arise from a misunderstanding of the Fundamental Theorem of Calculus or just by forgetting to add the initial condition after computing the definite integral with the calculator.",
                     "Percent": 0
                 }
             },
@@ -1635,7 +1639,7 @@
                 "Choice": "`28.205`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "An error in the setup to the Fundamental Theorem of Calculus by taking `f(5)+f(2)=int_2^5f'(x)dx` An error in the setup to the Fundamental Theorem of Calculus by taking `f(5)=-f(2)+int_2^5sqrt(1+2x^3)dx=-0.4+int_2^5sqrt(1+2x^3)dx`.",
                     "Percent": 0
                 }
             },
@@ -1643,7 +1647,7 @@
                 "Choice": "`-28.205`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "An error in the setup to the Fundamental Theorem of Calculus by taking `f(5)-f(2)=int_2^5f'(x)dx` leads to the computation `f(5)=f(2)+int_2^5sqrt(1+2x^3)dx=0.4-int_2^5sqrt(1+2x^3)dx`.",
                     "Percent": 0
                 }
             }
@@ -1658,7 +1662,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3F2"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1675,7 +1679,7 @@
                 "Choice": "`1.48`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Approximating the value at `x=0.4` using the tangent line to the graph at the point `(-0.2,1)` yields:\n`f(0.4)~~f(-0.2)+f'(0.2)(Deltax)=1+(0.8)(0.6)=1.48`.",
                     "Percent": 0
                 }
             },
@@ -1683,7 +1687,7 @@
                 "Choice": "`1.74`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Euler’s method for the differential equation `dy/dx=f'(x)` can be written as `y_(k+1)=y_k+f'(x_k)Deltax`, where `Deltax` is the step size. Then `y_k` is an approximation for `f(x_k)`. Here the step size is `Deltax=0.2`. To get to `x=0.4` starting at `x=-0.2` will require `text(three)` steps. The values for `f'(x_k)` are obtained from the table.\n`x_0=-0.2`;\t`y_0=1`\n`x_1=0`;\t`y_1=y_0+f'(x_0)Deltax=1+(0.8)(0.2)=1.16`\n`x_2=0.2`;\t`y_2=y_1+f'(x_1)Deltax=1.16+(1.2)(0.2)=1.4`\n`x_3=0.4`;\t`y_3=y_2+f'(x_2)Deltax=1.4+(1.7)(0.2)=1.74`",
                     "Percent": 0
                 }
             },
@@ -1691,7 +1695,7 @@
                 "Choice": "`2.04`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "Using derivatives at the right endpoints of the intervals (i.e. thinking that Euler’s method would be `y_(k+1)=y_k+f'(x_(k+1))Deltax`) yields:\n`y_1=y_0+f'(x_1)Deltax=1+(1.2)(0.2)=1.24`\n`y_2=y_1+f'(x_2)Deltax=1.24+(1.7)(0.2)=1.58`\n`y_3=y_2+f'(x_3)Deltax=1.58+(2.3)(0.2)=2.04`",
                     "Percent": 0
                 }
             },
@@ -1699,7 +1703,7 @@
                 "Choice": "`2.20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "A misunderstanding of Euler’s method might have led to continuing too far by completing `text(four)` steps to use all of the data in the table. The `text(fourth)` step is: `y_4=y_3+f'(x_3)Deltax=1.74+(2.3)(0.2)=2.20`.\nThis might also happen if the approximations are not clearly identified, thus missing that one has already reached `x=0.4` and approximated `f(0.4)` after `text(three)` steps with `y_3`.",
                     "Percent": 0
                 }
             }
@@ -1714,7 +1718,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2A1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1730,7 +1734,7 @@
                 "Choice": "`text(One)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This might be selected if a badly chosen viewing window (i.e. not examining the correct interval) omits the `text(first two)` and `text(last two)` intersections.",
                     "Percent": 0
                 }
             },
@@ -1738,7 +1742,7 @@
                 "Choice": "`text(Three)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This might be selected if the viewing window omits the `text(first two)` intersections or the `text(last two)` intersections, or if the `text(first two)` intersections are overlooked, perhaps because the range on the `ytext(-axis)` is set too large.",
                     "Percent": 0
                 }
             },
@@ -1746,7 +1750,7 @@
                 "Choice": "`text(Four)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the apparent number of points of inflection on the graph of `f''`. It is also the number of critical points of `f''` on the open interval `0<x<3`.",
                     "Percent": 0
                 }
             },
@@ -1754,7 +1758,7 @@
                 "Choice": "`text(Five)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "For the graph `f''(x)` on the interval `0<=x<=3`, a point of inflection occurs where the `text(second)` derivative `f''(x)` changes sign. This happens `text(five)` times on the interval: `text(twice)` between `0` and `1`, once between `1` and `2`, and `text(twice)` between `2` and `3`.",
                     "Percent": 0
                 }
             }
@@ -1769,7 +1773,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.4C1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1786,7 +1790,7 @@
                 "Choice": "`-10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the difference between the displacement and the total distance over the whole interval `0<=t<=5`.",
                     "Percent": 0
                 }
             },
@@ -1794,7 +1798,7 @@
                 "Choice": "`-5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Let the total area above the `t text(-axis)` be `A` and the area below the `t text(-axis)` be `B`. The particle’s total distance on the time interval `0<=t<=5`. is:\n`int_0^5abs(v(t))dt=A+B=13`, and the particle’s displacement is:\n`int_0^5v(t)dt=A-B=3`.\nSolving the system gives `A=8` and `B=5`. Since the graph of `v(t)` is below the axis for `2<t<4`, `int_2^4v(t)dt=-B=-5`.",
                     "Percent": 0
                 }
             },
@@ -1802,7 +1806,7 @@
                 "Choice": "`5`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`int_2^4v(t)dt=B=5`  was concluded by thinking just about area and not that the definite integral corresponds to a region below the axis.",
                     "Percent": 0
                 }
             },
@@ -1810,7 +1814,7 @@
                 "Choice": "`10`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the difference between the total distance and the displacement over the whole interval `0<=t<=5`.",
                     "Percent": 0
                 }
             }
@@ -1825,7 +1829,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.4D1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1841,7 +1845,7 @@
                 "Choice": "`2.000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error comes from using a rectangular form of the area instead of a polar form for area, as if the curves were treated as functions of `y` in terms of `x`:\n`int_0^pi(8sin3theta-5sin3theta)d theta`.",
                     "Percent": 0
                 }
             },
@@ -1849,7 +1853,7 @@
                 "Choice": "`7.069`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "When working with `text(two)` polar curves, a common error is to integrate the square of the difference instead of the difference of squares, i.e. `1/2int_0^pi(r_2(theta)-r_1(theta))^2d theta`. Here this would be\n`1/2int_0^pi(8sin3theta-5sin3theta)^2d theta`",
                     "Percent": 0
                 }
             },
@@ -1857,7 +1861,7 @@
                 "Choice": "`30.631`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The polar curve `r=asin(ntheta)`, where n `is` an integer, describes a rose. If `n` is odd, the rose has `n` petals defined for `0<=theta<=pi`. Because both roses in this problem have `n=3`, the rose with `a=5` lies inside the rose with `a=8`. Graphing the `text(two)` curves on the graphing calculator for `0<=theta<=pi` creates a figure.\nThe area bounded by the `text(two)` polar curves can be found with a definite integral. Let `r_1` be the smaller radius and `r_2` be the larger radius. Then `text(area)=1/2int_0^pi(r_2(theta))^2d theta-1/2int_0^pi(r_1(theta))^2d theta=1/2int_0^pi(8sin3theta)^2d theta-1/2int_0^pi(5sin3theta)^2d theta`.\nThis integration should be done with the calculator.",
                     "Percent": 0
                 }
             },
@@ -1865,7 +1869,7 @@
                 "Choice": "`61.261`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It is important when working with polar curves to determine the appropriate interval for `theta` that will describe the complete curve without tracing over parts a `text(second)` time. One cannot assume that this interval is always from `0` to `2pi`. If those limits are used in the correct integral, the result will be `text(doubling)` the area since the curve is traced `text(twice)`. This answer would also result if the correct interval of `0` to `pi` is used, but the `1/2` is forgotten in the integral.",
                     "Percent": 0
                 }
             }
@@ -1880,7 +1884,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.2A3"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1897,7 +1901,7 @@
                 "Choice": "problems/AP16CBC/media/81b.jpg",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Where the derivative `f'` is positive, the function `f` should be increasing. Where the derivative `f'` is negative, the function `f` should be decreasing. The derivative to the left of `x=0` is always positive. The derivative to the right of `x=0` is positive until `x=1`, then negative. Therefore the graph of `f` should be increasing for `x<0` and `0<x<1`, and should be decreasing for `x>1`. The graph in this option could therefore be the graph of `f`.",
                     "Percent": 0
                 }
             },
@@ -1905,7 +1909,7 @@
                 "Choice": "problems/AP16CBC/media/81c.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The sign of the derivative on the left side and right side of `x=0` was misinterpreted, thus reversing the desired increasing/decreasing behavior that the graph of `f` should display.",
                     "Percent": 0
                 }
             },
@@ -1913,7 +1917,7 @@
                 "Choice": "problems/AP16CBC/media/81d.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The sign of the derivative on the left side of `x=0` was misinterpreted, thus reversing the desired increasing behavior that the graph of `f` should display on the left side of `x=0`.",
                     "Percent": 0
                 }
             },
@@ -1921,7 +1925,7 @@
                 "Choice": "problems/AP16CBC/media/81e.jpg",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The sign of the derivative on the right side of `x=0` was misinterpreted, thus not achieving the desired increasing/decreasing behavior that the graph of `f` should display on the right side of `x=0`.",
                     "Percent": 0
                 }
             }
@@ -1936,7 +1940,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3A2"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -1952,7 +1956,7 @@
                 "Choice": "The factory produces `500` pieces of candy during its `3^text(rd)` `text(hour)` of operation.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "“During its `3^text(rd)text( hour)` of operation” refers to the time interval `2<=t<=3`. Therefore this is the correct interpretation of the statement `C(3)-C(2)=500`. It is the change in `C` during this `text(hour)`, not the rate of change at a specific time.",
                     "Percent": 0
                 }
             },
@@ -1960,7 +1964,7 @@
                 "Choice": "The factory produces `500` pieces of candy in the `text(first)` `3` `text(hours)` after it opens.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "“In the `text(first 3 hours)` after it opens” refers to the time interval `0<=t<=3`. Therefore this is the correct interpretation of the statement `C(3)-C(0)=500`. It is the change in `C` during these `text(three hours)`, not the rate of change at a specific time.",
                     "Percent": 0
                 }
             },
@@ -1968,7 +1972,7 @@
                 "Choice": "The factory is producing candy at a rate of `500` pieces `text(per hour)`, `3` `text(hours)` after it opens.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "In the expression `C'(3)`, the `3` represents the value of the independent variable and is therefore the number of hours since the factory opened. `C'(3)`, being the value of a derivative, is the rate of change of `C` — i.e. the rate at which candy is being produced, in this case `text(three hours)` after the factory opens. The units for the derivative would be the units of `C` `text(per unit of time)`, hence `text(pieces per hour)`.",
                     "Percent": 0
                 }
             },
@@ -1976,7 +1980,7 @@
                 "Choice": "The rate at which the factory is producing candy is increasing at a rate of `500` pieces `text(per hour per hour)`, `3` `text(hours)` after it opens.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "What is increasing is the rate at which the factory is producing candy, that is, the derivative `C'`. The `500` is the rate at which `C'` is increasing. Thus this statement is about the rate of change of the rate of change, i.e. the `text(second)` derivative. This is also indicated by the units of `text(pieces per hour per hour)`. It is a correct interpretation of the statement `C''(3)=500`.",
                     "Percent": 0
                 }
             }
@@ -1991,7 +1995,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "1.2A1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2008,7 +2012,7 @@
                 "Choice": "`f` is discontinuous at `x=0` because `lim_(x->0)f(x)` does not exist.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While it is true that `f` is discontinuous at `x=0`, the reason is because `f` is not defined at `x=0`. Here `lim_(x->0)f(x)` does exist and is equal to `1`.",
                     "Percent": 0
                 }
             },
@@ -2016,7 +2020,7 @@
                 "Choice": "`f` is discontinuous at `x=3` because `lim_(x->3)f(x)!=f(3)`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "A function `f` is continuous at a point `x=a` if `f` is defined at `x=a` and `lim_(x->a)f(x)=f(a)`. Here the function `f` is defined at `x=3` with `f(3)=2`, but `lim_(x->3)f(x)=0!=f(3)` so this statement is true.",
                     "Percent": 0
                 }
             },
@@ -2024,7 +2028,7 @@
                 "Choice": "`f` is discontinuous at `x=5` because `lim_(x->5^-)f(x)` does not exist.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "While it is true that `f` is discontinuous at `x=5`, the reason is because `lim_(x->5)f(x)` does not exist. Here `lim_(x->5^(-))f(x)` does exist and equals `4`.",
                     "Percent": 0
                 }
             },
@@ -2032,7 +2036,7 @@
                 "Choice": "`f` is discontinuous at `x=6` because `lim_(x->6^-)f'(x)!=lim_(x->6^+)f'(x)`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The function `f` is continuous but not differentiable at `x=6`. This answer might be chosen if a non-differentiable point is misinterpreted as a discontinuous point.",
                     "Percent": 0
                 }
             }
@@ -2047,7 +2051,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.4E1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2063,7 +2067,7 @@
                 "Choice": "`13.251`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The interpretation of `E(t)` and `L(t)` was confused and the rate of change of the amount of water was taken to be `L(t)-E(t)`.\n`48+int_0^4(L(t)-E(t))dt=49-34.749`",
                     "Percent": 0
                 }
             },
@@ -2071,7 +2075,7 @@
                 "Choice": "`82.749`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The definite integral of the rate of change over an interval gives the net change over that interval. Since `L(t)-E(t)` is the rate of change of the amount of water in the tank, the definite integral of `L(t)-E(t)` on the interval `0<=t<=4` gives the change in the amount of water over that time period. Adding the net change to the initial amount of water at `t=0` will give the amount of water at `t=4`.\n`48+int_0^4(E(t)-L(t))dt=48+int_0^4(12tsin(pi/4t)-(6t^2)/(t+2))dt=48+24.749=82.749`\nThe integration should be done with the calculator.",
                     "Percent": 0
                 }
             },
@@ -2079,7 +2083,7 @@
                 "Choice": "`87.482`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The interpretation of `E(t)` and `L(t)` was confused and the rate of change of the amount of water was taken to be `L(t)+E(t)`. Or a misunderstanding of the idea of accumulation and net change resulted in trying to find total amount of flow, in and out, over the time interval. The initial condition was ignored.\n`int_0^4(E(t)+L(t))dt=87.482`",
                     "Percent": 0
                 }
             },
@@ -2087,7 +2091,7 @@
                 "Choice": "`135.482`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The interpretation of `E(t)` and `L(t)` was confused and the rate of change of the amount of water was taken to be `L(t)+E(t)`. Or a misunderstanding of the idea of accumulation and net change resulted in trying to find total amount of flow, in and out, over the time interval. The initial condition was then added to the integral.\n`48+int_0^4(L(t)-E(t))dt=49+87.482=135.482`",
                     "Percent": 0
                 }
             }
@@ -2102,7 +2106,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "3.4B1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2118,7 +2122,7 @@
                 "Choice": "`0.116`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The error might come from mixing the `text(two)` ideas of averaging a function using a definite integral with averaging `text(two)` numbers by dividing by `2`:\n`(int_1.25^2tan(x^2/9)dx)/2=0.116`.",
                     "Percent": 0
                 }
             },
@@ -2126,7 +2130,7 @@
                 "Choice": "`0.232`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The calculation neglected to divide by the length of the interval:\n`int_1.25^2tan(x^2/9)dx=0.232`.",
                     "Percent": 0
                 }
             },
@@ -2134,7 +2138,7 @@
                 "Choice": "`0.310`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The average value of a function `f` over the interval `` is ``. Applying that formula to this problem gives the calculation:\n`(int_1.25^2tan(x^2/9)dx)/(2-1.25)=0.310`.",
                     "Percent": 0
                 }
             },
@@ -2142,7 +2146,7 @@
                 "Choice": "`0.326`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The average value of the function `f(x)=tan(x^2/9)` was confused with the arithmetic mean of the value of the function at the endpoints: `(f(1.25)-f(2))/2`.",
                     "Percent": 0
                 }
             }
@@ -2157,7 +2161,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "1.1C1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2174,7 +2178,7 @@
                 "Choice": "`19`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "Calculating this limit uses the basic properties for the limit of the sum of `text(two)` functions, the limit of a product of a function and a constant, and the limit of the reflection of a function across the `ytext(-axis)`:\n`lim_(x->5)(f(-x)+3g(x))=lim_(x->5)f(-x)+lim_(x->5)(3g(x))=lim_(x->-5)f(x)+3lim_(x->5)g(x)=4+3(5)=19`.",
                     "Percent": 0
                 }
             },
@@ -2182,7 +2186,7 @@
                 "Choice": "`17`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There is an error where `lim_(x->5)f(-x)=lim_(x->5)f(x)` was mistakenly thought of as if the function was symmetric with respect to the `ytext(-axis)`:\n`lim_(x->5)(f(-x)+3g)(x))=2+3(5)=17`.",
                     "Percent": 0
                 }
             },
@@ -2190,7 +2194,7 @@
                 "Choice": "`13`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There is an error where `lim_(x->5)f(-x)=lim_(x->5)f(x)` was mistakenly thought of as if the function was symmetric with respect to the origin: `lim_(x->5)(f(-x)+3g(x))=lim_(x->5)f(-x)+lim_(x->5)(3g(x))=-lim_(x->5)f(x)+3lim_(x->5)g(x)=-2+3(5)=13`.",
                     "Percent": 0
                 }
             },
@@ -2198,7 +2202,7 @@
                 "Choice": "`9`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "There is an error with the limit of the product of a function and a constant in which the calculation drops the constant rather than moving it outside the limit:\n`lim_(x->5)(f(-x)=3g(x))=lim_(x->5)f(-x)+lim_(x->5)(3g(x))=lim_(x->-5)f(x)+lim_(x->5)g(x)=4+5=9`.",
                     "Percent": 0
                 }
             }
@@ -2213,7 +2217,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3A1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2229,7 +2233,7 @@
                 "Choice": "`text(hours)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the units of the dependent variable only.",
                     "Percent": 0
                 }
             },
@@ -2237,7 +2241,7 @@
                 "Choice": "`text(psi)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the units of the independent variable only.",
                     "Percent": 0
                 }
             },
@@ -2245,7 +2249,7 @@
                 "Choice": "`text(psi per hour)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The dependent and independent variables were inverted. While in many problems time is often the independent variable, in this model time is specified as a function of the air pressure and hence is the dependent variable. That is why it is important to understand the functional notation  `t=f(p)`.",
                     "Percent": 0
                 }
             },
@@ -2253,7 +2257,7 @@
                 "Choice": "`text(hours per psi)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The derivative of the function `t=f(p)` is the limit of the difference quotient `(Deltat)/(Deltap)`. The units on the dependent variable, `t`, in the numerator is `text(hours)` and the units on the independent variable, `p`, in the denominator is `text(psi)`. The rate of change, therefore, has units in `text(hours per psi)`.",
                     "Percent": 0
                 }
             }
@@ -2268,7 +2272,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "2.3C4"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2284,7 +2288,7 @@
                 "Choice": "`1.000`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This is the magnitude of the position vector rather than the velocity vector: `sqrt((x(2.3))^2+(y(2.3))^2)=1.000`.",
                     "Percent": 0
                 }
             },
@@ -2292,7 +2296,7 @@
                 "Choice": "`2.014`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This error in the calculation of the magnitude sof the velocity vector comes from neglecting to square the velocity vector valuesd: `sqrt(x'(2.3)+y'(2.3))=2.014`.",
                     "Percent": 0
                 }
             },
@@ -2300,7 +2304,7 @@
                 "Choice": "`3.413`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The speed of the particle at time `t` is the magnitude of the velocity vector `<<x'(t),y'(t)>>` at time `t`. When `t=3`, the velocity vector is `<<3.3369,0.7189>>` which has magnitude `sqrt(3.3369^2+0.7189^2)=3.413`",
                     "Percent": 0
                 }
             },
@@ -2308,7 +2312,7 @@
                 "Choice": "`11.652`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "This error in the calculation of the magnitude of the velocity vector comes from neglecting to take the square root: `(x'(2.3))^2+(y'(2.3))^2=11.652`.",
                     "Percent": 0
                 }
             }
@@ -2323,7 +2327,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "1.2B1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2339,7 +2343,7 @@
                 "Choice": "`f` attains both a minimum value and a maximum value on the closed interval `[0,1]`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of the correct function should satisfy the conditions in the stem but attain neither a minimum value nor a maximum value on the closed interval `[0,1]`. Note that the Extreme Value Theorem does not apply here because `f` is not continuous on `[0,1]`.",
                     "Percent": 0
                 }
             },
@@ -2347,7 +2351,7 @@
                 "Choice": "`f` attains a minimum value but not a maximum value on the closed interval `[0,1]`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of the correct function should satisfy the conditions in the stem but which not attain a minimum value on the closed interval `[0,1]`. Note that the Extreme Value Theorem does not apply here because `f` is not continuous on `[0,1]`.",
                     "Percent": 0
                 }
             },
@@ -2355,7 +2359,7 @@
                 "Choice": "`f` attains a maximum value but not a minimum value on the closed interval `[0,1]`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "The graph of the correct function should satisfy the conditions in the stem but which not attain a maximum value on the closed interval `[0,1]`. Note that the Extreme Value Theorem does not apply here because `f` is not continuous on `[0,1]`.",
                     "Percent": 0
                 }
             },
@@ -2363,7 +2367,7 @@
                 "Choice": "`f` attains neither a minimum value nor a maximum value on the closed interval `[0,1]`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "The graph on the open interval `(0,1)` must be strictly increasing and the `text(three)` solid dots must line up horizontally. The solid dots and the open dots at `x=0` and `x=1` cannot coincide. A function with such a graph has neither a minimum value nor a maximum value on the closed interval `[0,1]`. Note that the Extreme Value Theorem does not apply here because `f` is not continuous on `[0,1]`.\nA more detailed explanation is that because f is strictly increasing on the open interval `(0,1)` if it attains a minimum value on the closed interval `[0,1]` then that value must occur at either `x=0` or `x=1`. But that is impossible because it would lead to the contradiction `f(1/2)=f(a)<=f(1/4)<f(1/2)`, where `a` is either `0` or `1`.\nThe `text(first)` inequality comes from `f(a)` being the minimum value, and the `text(second)` inequality comes from f being strictly increasing on `(0,1)`. Similarly, if the function attains a maximum value on the closed interval `[0,1]` that value must also occur at either `x=0` or `x=1`. But that is again impossible because it would lead to the contradiction `f(1/2)<f(3/4)<=f(b)=f(1/2)`, where `b` is either `0` or `1`.\nThe `text(first)` inequality comes from f being strictly increasing on `(0,1)` and the `text(second)` inequality comes from `f(b)` being the maximum value.",
                     "Percent": 0
                 }
             }
@@ -2378,7 +2382,7 @@
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2C1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2394,7 +2398,7 @@
                 "Choice": "The series converges absolutely at `x=-4`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`5` was used as the radius of convergence and it was assumed the series is centered at `x=0` to get the interval of convergence to include `-5<x<5`, an interval that contains `x=-4` in its interior.",
                     "Percent": 0
                 }
             },
@@ -2402,7 +2406,7 @@
                 "Choice": "The series converges conditionally at `x=-4`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "`x=-4` was substituted in the series to get terms of the form `a_n(-5)^n=(-1)^na_n5^n`: it was believed this result produces the same conclusion as when `x=5`.",
                     "Percent": 0
                 }
             },
@@ -2410,7 +2414,7 @@
                 "Choice": "The series diverges at `x=-4`.",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "",
+                    "Rationale": "A series is absolutely convergent on the interior of the interval of convergence since the radius of convergence can be determined by the ratio test. Since this series is conditionally convergent when `x=5`, then `5` must be an endpoint of the interval of convergence. The series is centered at `x=1`, so the radius of convergence is `5-1=4`. Thus, the series is divergent for `x<-3` and `x>5`.",
                     "Percent": 0
                 }
             },
@@ -2418,7 +2422,7 @@
                 "Choice": "There is not enough information given to determine convergence of the series at `x=-4`.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "",
+                    "Rationale": "It was not understood that conditional convergence determines the endpoint of the interval of convergence. It may also have been believed that another piece of information was needed to narrow the interval of convergence.",
                     "Percent": 0
                 }
             }
@@ -2430,10 +2434,20 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1B1",
+            "2.3A1",
+            "2.3A2",
+            "2.3D1",
+            "3.2B2",
+            "3.4B1"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2546,10 +2560,14 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "2.1C7",
+            "2.3C4",
+            "3.4C2"
         ],
         "SuppContent": [],
         "SuppTools": [
@@ -2661,10 +2679,22 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "1.1C3",
+            "2.1C3",
+            "2.2A1",
+            "2.2A3",
+            "3.2C1",
+            "3.3A2",
+            "3.3A3"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2758,10 +2788,20 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "1.1C1",
+            "2.1C3",
+            "2.1C5",
+            "2.1D2",
+            "2.2A1",
+            "3.5A2"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2845,10 +2885,20 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
+            "",
+            "",
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "1.2B1",
+            "2.1C3",
+            "2.1C4",
+            "2.2B2",
+            "2.4A1",
+            "3.3B5"
         ],
         "SuppContent": [],
         "SuppTools": [],
@@ -2951,10 +3001,16 @@
         "Type": "MP",
         "NumChoices": 0,
         "Topics": [
+            "",
+            "",
+            "",
             ""
         ],
         "SubTopics": [
-            ""
+            "4.2A1",
+            "4.2A2",
+            "4.2B2",
+            "4.2B5"
         ],
         "SuppContent": [],
         "SuppTools": [],
