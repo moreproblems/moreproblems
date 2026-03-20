@@ -631,7 +631,7 @@
                 "Choice": "`35`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Velocity is the antiderivative of acceleration and position is the antiderivative of velocity. In `text(each case)`, the object’s velocity and position at `t=0` can be used to find the appropriate “`+C`” after `text(each antidifferentiation)`. The last step is to then evaluate the position function at `t=2`.\n`a(t)=6t`\n`v(t)=3t^2+C_1`\n`v(0)=3(0)^2+C_1=10rArrC_1=10`\n`v(t)=3t^2+10`\n`p(t)=t^3+10t+C_2`\n`p(0)=(0)^3+10(0)+C_2=7rArrC_2=7`\n`p(t)=t^3+10t+7`\n`p(2)=2^3+10(2)+7=35`",
+                    "Rationale": "Velocity is the antiderivative of acceleration and position is the antiderivative of velocity. In `text(each case)`, the object's velocity and position at `t=0` can be used to find the appropriate “`+C`” after `text(each antidifferentiation)`. The last step is to then evaluate the position function at `t=2`.\n`a(t)=6t`\n`v(t)=3t^2+C_1`\n`v(0)=3(0)^2+C_1=10rArrC_1=10`\n`v(t)=3t^2+10`\n`p(t)=t^3+10t+C_2`\n`p(0)=(0)^3+10(0)+C_2=7rArrC_2=7`\n`p(t)=t^3+10t+7`\n`p(2)=2^3+10(2)+7=35`",
                     "Percent": 0
                 }
             }
@@ -1259,7 +1259,7 @@
                 "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The indeterminate form `0/0` was recognized and an attempt was made to use L’Hospital’s Rule, but an error was made in the derivative of the denominator:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3))=1/3`.",
+                    "Rationale": "The indeterminate form `0/0` was recognized and an attempt was made to use L'Hospital's Rule, but an error was made in the derivative of the denominator:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3))=1/3`.",
                     "Percent": 0
                 }
             },
@@ -1267,7 +1267,7 @@
                 "Choice": "`1/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting `x=3` into the fraction yields the indeterminate form `0/0`. Therefore L’Hospital’s Rule can be used to find the limit:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3)-1)=1/2`.",
+                    "Rationale": "Substituting `x=3` into the fraction yields the indeterminate form `0/0`. Therefore L'Hospital's Rule can be used to find the limit:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3)-1)=1/2`.",
                     "Percent": 0
                 }
             },
@@ -1800,7 +1800,7 @@
                 "Choice": "`-5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let the total area above the `t text(-axis)` be `A` and the area below the `t text(-axis)` be `B`. The particle’s total distance on the time interval `0<=t<=5`. is:\n`int_0^5abs(v(t))dt=A+B=13`, and the particle’s displacement is:\n`int_0^5v(t)dt=A-B=3`.\nSolving the system gives `A=8` and `B=5`. Since the graph of `v(t)` is below the axis for `2<t<4`, `int_2^4v(t)dt=-B=-5`.",
+                    "Rationale": "Let the total area above the `t text(-axis)` be `A` and the area below the `t text(-axis)` be `B`. The particle's total distance on the time interval `0<=t<=5`. is:\n`int_0^5abs(v(t))dt=A+B=13`, and the particle's displacement is:\n`int_0^5v(t)dt=A-B=3`.\nSolving the system gives `A=8` and `B=5`. Since the graph of `v(t)` is below the axis for `2<t<4`, `int_2^4v(t)dt=-B=-5`.",
                     "Percent": 0
                 }
             },

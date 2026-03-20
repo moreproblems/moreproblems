@@ -659,7 +659,7 @@
                 "Choice": "`1`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Since `lim_(x->0)sinx=0` and `lim_(x->0)(e^x-1)=0`, the indeterminate limit can be evaluated using L’Hospital’s Rule, as follows.\n`lim_(x->0)sinx/(e^x-1)=lim_(x->0)cosx/e^x=cos0/e^0=1/1=1`",
+                    "Rationale": "Since `lim_(x->0)sinx=0` and `lim_(x->0)(e^x-1)=0`, the indeterminate limit can be evaluated using L'Hospital's Rule, as follows.\n`lim_(x->0)sinx/(e^x-1)=lim_(x->0)cosx/e^x=cos0/e^0=1/1=1`",
                     "Percent": 60
                 }
             },
@@ -667,7 +667,7 @@
                 "Choice": "`1/e`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "While using L’Hospital’s Rule, an error might have been made in the differentiation of `e^x`, treating it as if taking the derivative of `ex`, as follows.\n`lim_(x->0)sinx/(e^x-1)=lim_(x->0)cosx/e=cos0/e=1/e`",
+                    "Rationale": "While using L'Hospital's Rule, an error might have been made in the differentiation of `e^x`, treating it as if taking the derivative of `ex`, as follows.\n`lim_(x->0)sinx/(e^x-1)=lim_(x->0)cosx/e=cos0/e=1/e`",
                     "Percent": 0
                 }
             },
@@ -986,7 +986,7 @@
                 "Choice": "The particle is moving down the `ytext(-axis)` with increasing velocity.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "It was correctly determined that the particle is moving down the `ytext(-axis)`, but since `v'(t)=6t-8` and `v'(1)=-2`, the particle’s velocity is decreasing, not increasing.",
+                    "Rationale": "It was correctly determined that the particle is moving down the `ytext(-axis)`, but since `v'(t)=6t-8` and `v'(1)=-2`, the particle's velocity is decreasing, not increasing.",
                     "Percent": 0
                 }
             },
@@ -1002,7 +1002,7 @@
                 "Choice": "The particle is moving up the `ytext(-axis)` with increasing velocity.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Since `v(t)=3t^2-8t+4` and `v(1)=-1`, the particle is moving down the `ytext(-axis)`, not up the axis. Since `v'(t)=6t-8` and `v'(1)=-2`, the particle’s velocity is decreasing, not increasing.",
+                    "Rationale": "Since `v(t)=3t^2-8t+4` and `v(1)=-1`, the particle is moving down the `ytext(-axis)`, not up the axis. Since `v'(t)=6t-8` and `v'(1)=-2`, the particle's velocity is decreasing, not increasing.",
                     "Percent": 0
                 }
             }
@@ -1793,7 +1793,7 @@
                 "Choice": "`1/30int_30^60h(t)dt`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The average value of a function `f` over an interval `[a,b]` is `1/(b-a)int_a^bf(x)dx`. Tara’s average heart rate from `t=30` to `t=60` is the average value of the function `h` over the interval `[30,60]` and would therefore be given by the expression `1/(60-30)int_30^60h(t)dt`.",
+                    "Rationale": "The average value of a function `f` over an interval `[a,b]` is `1/(b-a)int_a^bf(x)dx`. Tara's average heart rate from `t=30` to `t=60` is the average value of the function `h` over the interval `[30,60]` and would therefore be given by the expression `1/(60-30)int_30^60h(t)dt`.",
                     "Percent": 61
                 }
             },
@@ -1801,7 +1801,7 @@
                 "Choice": "`1/30int_30^60h'(t)dt`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This response is the average rate of change of Tara’s heart rate from `t=30` to `t=60`, not the average of her heart rate over that interval. By the Fundamental Theorem of Calculus, this expression is equal to `(h(60)-h(30))/(60-30)`.",
+                    "Rationale": "This response is the average rate of change of Tara's heart rate from `t=30` to `t=60`, not the average of her heart rate over that interval. By the Fundamental Theorem of Calculus, this expression is equal to `(h(60)-h(30))/(60-30)`.",
                     "Percent": 0
                 }
             },
@@ -1809,7 +1809,7 @@
                 "Choice": "`(h'(30)+h'(60))/2`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "This response is the average of the rate of change of Tara’s heart rate at the `text(two)` times `t=30` and `t=60`, not the average of her heart rate over the interval from `t=30` to `t=60`.",
+                    "Rationale": "This response is the average of the rate of change of Tara's heart rate at the `text(two)` times `t=30` and `t=60`, not the average of her heart rate over the interval from `t=30` to `t=60`.",
                     "Percent": 0
                 }
             }

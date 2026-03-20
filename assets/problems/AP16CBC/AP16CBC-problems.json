@@ -409,7 +409,7 @@
                 "Choice": "`sum_(n=1)^ooa_n` converges, but the sum cannot be determined from the information given.",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The characteristics of a geometric series may have been misunderstood and it wasn’t realized that `text(two)` terms of the series are enough to determine the value of the common ratio.",
+                    "Rationale": "The characteristics of a geometric series may have been misunderstood and it wasn't realized that `text(two)` terms of the series are enough to determine the value of the common ratio.",
                     "Percent": 0
                 }
             },
@@ -630,7 +630,7 @@
                 "Choice": "`35`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Velocity is the antiderivative of acceleration and position is the antiderivative of velocity. In `text(each case)`, the object’s velocity and position at `t=0` can be used to find the appropriate “`+C`” after `text(each antidifferentiation)`. The last step is to then evaluate the position function at `t=2`.\n`a(t)=6t`\n`v(t)=3t^2+C_1`\n`v(0)=3(0)^2+C_1=10rArrC_1=10`\n`v(t)=3t^2+10`\n`p(t)=t^3+10t+C_2`\n`p(0)=(0)^3+10(0)+C_2=7rArrC_2=7`\n`p(t)=t^3+10t+7`\n`p(2)=2^3+10(2)+7=35`",
+                    "Rationale": "Velocity is the antiderivative of acceleration and position is the antiderivative of velocity. In `text(each case)`, the object's velocity and position at `t=0` can be used to find the appropriate “`+C`” after `text(each antidifferentiation)`. The last step is to then evaluate the position function at `t=2`.\n`a(t)=6t`\n`v(t)=3t^2+C_1`\n`v(0)=3(0)^2+C_1=10rArrC_1=10`\n`v(t)=3t^2+10`\n`p(t)=t^3+10t+C_2`\n`p(0)=(0)^3+10(0)+C_2=7rArrC_2=7`\n`p(t)=t^3+10t+7`\n`p(2)=2^3+10(2)+7=35`",
                     "Percent": 0
                 }
             }
@@ -1254,7 +1254,7 @@
                 "Choice": "`1/3`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "The indeterminate form `0/0` was recognized and an attempt was made to use L’Hospital’s Rule, but an error was made in the derivative of the denominator:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3))=1/3`.",
+                    "Rationale": "The indeterminate form `0/0` was recognized and an attempt was made to use L'Hospital's Rule, but an error was made in the derivative of the denominator:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3))=1/3`.",
                     "Percent": 0
                 }
             },
@@ -1262,7 +1262,7 @@
                 "Choice": "`1/2`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Substituting `x=3` into the fraction yields the indeterminate form `0/0`. Therefore L’Hospital’s Rule can be used to find the limit:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3)-1)=1/2`.",
+                    "Rationale": "Substituting `x=3` into the fraction yields the indeterminate form `0/0`. Therefore L'Hospital's Rule can be used to find the limit:\n`lim_(x->3)(tan(x-3))/(3e^(x-3)-x)=lim_(x->3)(sec^2(x-3))/(3e^(x-3)-1)=1/2`.",
                     "Percent": 0
                 }
             },
@@ -1687,7 +1687,7 @@
                 "Choice": "`1.74`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Euler’s method for the differential equation `dy/dx=f'(x)` can be written as `y_(k+1)=y_k+f'(x_k)Deltax`, where `Deltax` is the step size. Then `y_k` is an approximation for `f(x_k)`. Here the step size is `Deltax=0.2`. To get to `x=0.4` starting at `x=-0.2` will require `text(three)` steps. The values for `f'(x_k)` are obtained from the table.\n`x_0=-0.2`;\t`y_0=1`\n`x_1=0`;\t`y_1=y_0+f'(x_0)Deltax=1+(0.8)(0.2)=1.16`\n`x_2=0.2`;\t`y_2=y_1+f'(x_1)Deltax=1.16+(1.2)(0.2)=1.4`\n`x_3=0.4`;\t`y_3=y_2+f'(x_2)Deltax=1.4+(1.7)(0.2)=1.74`",
+                    "Rationale": "Euler's method for the differential equation `dy/dx=f'(x)` can be written as `y_(k+1)=y_k+f'(x_k)Deltax`, where `Deltax` is the step size. Then `y_k` is an approximation for `f(x_k)`. Here the step size is `Deltax=0.2`. To get to `x=0.4` starting at `x=-0.2` will require `text(three)` steps. The values for `f'(x_k)` are obtained from the table.\n`x_0=-0.2`;\t`y_0=1`\n`x_1=0`;\t`y_1=y_0+f'(x_0)Deltax=1+(0.8)(0.2)=1.16`\n`x_2=0.2`;\t`y_2=y_1+f'(x_1)Deltax=1.16+(1.2)(0.2)=1.4`\n`x_3=0.4`;\t`y_3=y_2+f'(x_2)Deltax=1.4+(1.7)(0.2)=1.74`",
                     "Percent": 0
                 }
             },
@@ -1695,7 +1695,7 @@
                 "Choice": "`2.04`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "Using derivatives at the right endpoints of the intervals (i.e. thinking that Euler’s method would be `y_(k+1)=y_k+f'(x_(k+1))Deltax`) yields:\n`y_1=y_0+f'(x_1)Deltax=1+(1.2)(0.2)=1.24`\n`y_2=y_1+f'(x_2)Deltax=1.24+(1.7)(0.2)=1.58`\n`y_3=y_2+f'(x_3)Deltax=1.58+(2.3)(0.2)=2.04`",
+                    "Rationale": "Using derivatives at the right endpoints of the intervals (i.e. thinking that Euler's method would be `y_(k+1)=y_k+f'(x_(k+1))Deltax`) yields:\n`y_1=y_0+f'(x_1)Deltax=1+(1.2)(0.2)=1.24`\n`y_2=y_1+f'(x_2)Deltax=1.24+(1.7)(0.2)=1.58`\n`y_3=y_2+f'(x_3)Deltax=1.58+(2.3)(0.2)=2.04`",
                     "Percent": 0
                 }
             },
@@ -1703,7 +1703,7 @@
                 "Choice": "`2.20`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "A misunderstanding of Euler’s method might have led to continuing too far by completing `text(four)` steps to use all of the data in the table. The `text(fourth)` step is: `y_4=y_3+f'(x_3)Deltax=1.74+(2.3)(0.2)=2.20`.\nThis might also happen if the approximations are not clearly identified, thus missing that one has already reached `x=0.4` and approximated `f(0.4)` after `text(three)` steps with `y_3`.",
+                    "Rationale": "A misunderstanding of Euler's method might have led to continuing too far by completing `text(four)` steps to use all of the data in the table. The `text(fourth)` step is: `y_4=y_3+f'(x_3)Deltax=1.74+(2.3)(0.2)=2.20`.\nThis might also happen if the approximations are not clearly identified, thus missing that one has already reached `x=0.4` and approximated `f(0.4)` after `text(three)` steps with `y_3`.",
                     "Percent": 0
                 }
             }
@@ -1798,7 +1798,7 @@
                 "Choice": "`-5`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "Let the total area above the `t text(-axis)` be `A` and the area below the `t text(-axis)` be `B`. The particle’s total distance on the time interval `0<=t<=5`. is:\n`int_0^5abs(v(t))dt=A+B=13`, and the particle’s displacement is:\n`int_0^5v(t)dt=A-B=3`.\nSolving the system gives `A=8` and `B=5`. Since the graph of `v(t)` is below the axis for `2<t<4`, `int_2^4v(t)dt=-B=-5`.",
+                    "Rationale": "Let the total area above the `t text(-axis)` be `A` and the area below the `t text(-axis)` be `B`. The particle's total distance on the time interval `0<=t<=5`. is:\n`int_0^5abs(v(t))dt=A+B=13`, and the particle's displacement is:\n`int_0^5v(t)dt=A-B=3`.\nSolving the system gives `A=8` and `B=5`. Since the graph of `v(t)` is below the axis for `2<t<4`, `int_2^4v(t)dt=-B=-5`.",
                     "Percent": 0
                 }
             },
