@@ -807,12 +807,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            ":box:`p(t)=90,000(1.06)^t`",
+            ":box:`p(t)=text(90,000)(1.06)^t`",
             "The given function `p` models the population of Lowell `t` `text(years)` after a census. Which of the following functions best models the population of Lowell m months after the census?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`r(m)=(90,000/12)(1.06)^m`",
+                "Choice": "`r(m)=(text(90,000)/12)(1.06)^m`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -820,7 +820,7 @@
                 }
             },
             "B": {
-                "Choice": "`r(m)=90,000(1.06/12)^m`",
+                "Choice": "`r(m)=text(90,000)(1.06/12)^m`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -828,7 +828,7 @@
                 }
             },
             "C": {
-                "Choice": "`r(m)=90,000(1.06/12)^(m/12)`",
+                "Choice": "`r(m)=text(90,000)(1.06/12)^(m/12)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -836,7 +836,7 @@
                 }
             },
             "D": {
-                "Choice": "`r(m)=90,000(1.06)^(m/12)`",
+                "Choice": "`r(m)=text(90,000)(1.06)^(m/12)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that the function `p` models the population of Lowell `t` `text(years)` after a census. Since there are `12` `text(months)` in a year, `m` `text(months)` after the census is equivalent to `m/12` `text(years)` after the census. Substituting `m/12` for `t` in the equation `p(t)=90,000(1.06)^t` yields `p(m/12)=90,000(1.06)^(m/12)`. Therefore, the function `r` that best models the population of Lowell `m` `text(months)` after the census is `r(m)=90,000(1.06)^(m/12)`.",
