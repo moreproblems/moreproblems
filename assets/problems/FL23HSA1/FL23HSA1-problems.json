@@ -1,8 +1,8 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 8,
         "Topics": [
             ""
         ],
@@ -14,38 +14,70 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/FL23HSA1/media/1a.jpg",
-            ""
+            "A band sells `x` premium tickets and `y` regular tickets for a concert.",
+            ":ibox:• A premium ticket costs `$20`.\n\n• A regular ticket costs `$5` less than a premium ticket.\n\n• The band raises `$2145` from selling tickets.",
+            "Select coefficients to complete the equation representing the relationship between `x` and `y`.",
+            ":DD-1: `x+` :DD-2: `y=2145`"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:B": {
+                "Choice": "15",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "1:C": {
+                "Choice": "20",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:D": {
+                "Choice": "25",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "5",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:B": {
+                "Choice": "15",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:C": {
+                "Choice": "20",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:D": {
+                "Choice": "25",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -57,8 +89,8 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -70,13 +102,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23HSA1/media/2a.jpg",
-            ""
+            "A function is shown.",
+            ":ibox:`f(x)=2x+1`",
+            "Select all the effects on the graph of the function when `f(x)` is multiplied by `3`."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "The `xtext(-intercept)` increases.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -84,7 +116,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "The `xtext(-intercept)` decreases.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -92,15 +124,31 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "The `ytext(-intercept)` increases.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student correctly indicated an effect on the graph with the specified value of `k`.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The `ytext(-intercept)` decreases.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "The slope increases.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student correctly indicated an effect on the graph with the specified value of `k`.",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "The slope de creases.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -112,8 +160,8 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -125,39 +173,23 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23HSA1/media/3a.jpg",
-            ""
+            "The expression `15text(,)000(1+0.02)^m` can be used to model the sales, in `text(dollars)`, of a company after `m` `text(months)`.",
+            "The value `12` was substituted for `m` to create the expression `15text(,)000(1+0.02)^12`.",
+            "The expression `(1+0.02)^12` represents the growth factor of the company’s sales for a period of time lasting how long. Include units of time in your answer."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY1": {
+                "Choice": "match:1 year",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "KEY2": {
+                "Choice": "match:12 months",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -167,8 +199,8 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [
             ""
         ],
@@ -180,12 +212,20 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A table of values for a linear function is shown.",
             "problems/FL23HSA1/media/4a.jpg",
-            ""
+            "Match `text(each key feature)` of the graph to its value."
         ],
         "AnswerChoices": {
-            "A": {
+            "A:`-6`": {
+                "Choice": "2:`ytext(-intercept)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:`1/2`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -193,23 +233,23 @@
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "C:`2`": {
+                "Choice": "3:rate of change",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "D:`3`": {
+                "Choice": "1:`xtext(-intercept)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
+            "E:`6`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -222,8 +262,8 @@
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -232,53 +272,91 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
+            "The fuel economy of a car is its average distance traveled `text(per amount)` of fuel consumed. Cars have different fuel economies when they are driven in the city and on the highway. A linear model of the relationship between the city and highway fuel economies of `text(eight)` cars, in `text(miles per gallon)` (`text(mpg)`), is shown.",
             "problems/FL23HSA1/media/5a.jpg",
-            ""
+            ":ibox:`bbtext(This problem has two parts.)`"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which linear equation best models the scatter plot?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`y=2/3x+19`",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student determined the equation of the linear model.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`y=6/8x+25`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "`y=3/2x+19`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "`y=8/6x+25`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Based on the model in Part A, what could be the highway fuel economy, in `text(mpg)`, of a car that has a city fuel economy of `text(43 mpg)`? Round your answer to the nearest `text(hundredth)`."
+                ],
+                "AnswerChoices": {
+                    "KEY1": {
+                        "Choice": "equal:47.66",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY2": {
+                        "Choice": "equal:47.67",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 8,
         "Topics": [
             ""
         ],
@@ -290,37 +368,70 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The table shown represents `text(two)` functions, Function `text(A)` and Function `text(B)`.",
             "problems/FL23HSA1/media/6a.jpg",
-            ""
+            "For `text(each blank)`, select the word or phrase that is correct.",
+            "Function `text(A)` appears to grow :DD-1: . Function `text(B)` appears to grow :DD-2: . As `x` increases, the quantities for :DD-3: will eventually exceed the quantities for :DD-4: ."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "linearly",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:B": {
+                "Choice": "exponentially",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "linearly",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "2:B": {
+                "Choice": "exponentially",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:A": {
+                "Choice": "Function A",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "3:B": {
+                "Choice": "Function B",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "4:A": {
+                "Choice": "Function A",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "4:B": {
+                "Choice": "Function B",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -332,8 +443,8 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MFR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -345,259 +456,24 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23HSA1/media/7a.jpg",
-            ""
+            "In a survey of `text(3,260)` people, `57%` of people said they spend more than `text(2 hours a day)` on their smartphones. The margin of error is `+-2.2%`. The survey is used to estimate the number of people in a town of `text(17,247)` who spend more than `text(2 hours a day)` on their smartphones.",
+            "Based on the survey, what are the estimated minimum and maximum numbers of people in the town who spend more than `text(2 hours a day)` on their smartphones? Round your answers to the nearest whole numbers.",
+            "Minimum: :FR-1:",
+            "Maximum: :FR-2:"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "9451",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "10210",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "8": {
-        "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23HSA1/media/8a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "9": {
-        "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23HSA1/media/9a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "10": {
-        "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23HSA1/media/10a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23HSA1/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }

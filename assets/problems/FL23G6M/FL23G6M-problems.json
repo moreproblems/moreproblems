@@ -1,8 +1,8 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -14,14 +14,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/FL23G6M/media/1a.jpg",
-            ""
+            "Mr. Balboa gives a survey to a sample of students at Wilson Middle School.",
+            "Select all the questions that Mr. Balboa can ask that will generate numerical data with variation."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "How many letters are in the English alphabet?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,7 +27,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "What is the total number of `text(fluid ounces)` in `text(one gallon)`?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -37,7 +35,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "How many classrooms does Wilson Middle School have?",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -45,10 +43,18 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "What is the greatest number of pencils a student at Wilson Middle School has?",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly determined that data with variation needs to be collected to answer this question.",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "What is the average number of books read by each of Ms. Garcia’s classes over the summer?",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student correctly determined that data with variation needs to be collected to answer this question.",
                     "Percent": 0
                 }
             }
@@ -57,8 +63,8 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -70,39 +76,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/2a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`(22.4)(2.65)`",
+            "What is the value of the expression?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:59.36",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -112,8 +94,8 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -122,48 +104,110 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/3a.jpg",
-            ""
+            ":ibox:`bbtext(This problem has two parts.)`",
+            "The temperatures, in `text(degrees Celsius)` (`text(°C)`), above or below the freezing point of water (`text(W)`) for `text(three)` products are shown.",
+            "problems/FL23G6M/media/3a.jpg"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which number line represents the temperatures, in `text(degrees Celsius)`, for the frozen yogurt (`text(Y)`), orange juice (`text(J)`), and slushies (`text(S)`) and the freezing point of water (`text(W)`)?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "problems/FL23G6M/media/3b.jpg",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student correctly plotted the values on the number line.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "problems/FL23G6M/media/3c.jpg",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "problems/FL23G6M/media/3d.jpg",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "problems/FL23G6M/media/3e.jpg",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MS",
+                "NumChoices": 5,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Select all the statements that correctly compare the temperatures for serving frozen yogurt, orange juice, and slushies."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Frozen yogurt is served at a colder temperature than orange juice.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student correctly compared the temperatures for serving frozen yogurt and orange juice.",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Orange juice is served at a colder temperature than frozen yogurt.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "Frozen yogurt is served at a warmer temperature than slushies.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "Orange juice is served at a warmer temperature than slushies.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student correctly compared the temperatures for serving orange juice and slushies.",
+                            "Percent": 0
+                        }
+                    },
+                    "E": {
+                        "Choice": "Slushies are served at a warmer temperature than frozen yogurt.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student correctly compared the temperatures for serving slushies and frozen yogurt.",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "4": {
         "Number": 4,
@@ -180,13 +224,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/4a.jpg",
-            ""
+            "On `text(Monday)`, `5/8` `text(inch)` of rain fell in `2/3` `text(hour)`.",
+            "Which value represents the unit rate, in `text(inches per hour)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`5/12`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -194,15 +237,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`15/16`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly evaluated the unit rate in `text(inches per hour)`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`16/15`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -210,7 +253,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`31/24`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -222,8 +265,8 @@
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -235,39 +278,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/5a.jpg",
-            ""
+            "Evaluate the expression `c+3(c/d)*d`, where `c=-4` and `d=2`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:-16",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -277,8 +294,8 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 9,
         "Topics": [
             ""
         ],
@@ -290,39 +307,82 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/6a.jpg",
-            ""
+            "Ms. Becker records the number of times `text(each student)` in her class has visited the Science Museum. Based on the responses, she calculates the mean, median, and range of the data set.",
+            "Ms. Becker’s entire class then goes on a field trip to the Science Museum. She updates the data set to include the field trip to the Science Museum.",
+            "Select words or phrases to complete the statements to describe the impact of the changes.",
+            "The mean of the data set :DD-1: .",
+            "The median of the data set :DD-2: .",
+            "The range of the data set :DD-3: ."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "increases",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:B": {
+                "Choice": "decreases",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:C": {
+                "Choice": "stays the same",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "increases",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:B": {
+                "Choice": "decreases",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:C": {
+                "Choice": "stays the same",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:A": {
+                "Choice": "increases",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:B": {
+                "Choice": "decreases",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:C": {
+                "Choice": "stays the same",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -332,8 +392,8 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 2,
         "Topics": [
             ""
         ],
@@ -345,12 +405,20 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "`text(Two)` points are shown on the coordinate plane.",
             "problems/FL23G6M/media/7a.jpg",
-            ""
+            "Match `text(each point)` with its coordinates."
         ],
         "AnswerChoices": {
-            "A": {
+            "A:`(2,-4 1/2)`": {
+                "Choice": "2::Point `text(G)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B:`(3 1/2,4)`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -358,23 +426,15 @@
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "C:`(-3 1/2,4)`": {
+                "Choice": "1:Point `text(F)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
+            "D:`(-4 1/2,2)`": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -387,8 +447,8 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -400,37 +460,54 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/8a.jpg",
-            ""
+            "Kate has `3/4` `text(ounce)` of lip balm. She makes `1 1/2` more `text(ounces)` of lip balm.",
+            "She measures `1/2text(-ounce)` portions of lip balm and places the portions in individual containers.",
+            "Complete the statement to describe how many containers Kate will use and whether she will have any lip balm remaining.",
+            "Kate will use :DD-1: containers, each holding `1/2` `text(ounce)` of lip balm. She :DD-2: lip balm remaining."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:B": {
+                "Choice": "4",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:C": {
+                "Choice": "5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "1:D": {
+                "Choice": "9",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "will have",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:B": {
+                "Choice": "will not have any",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -442,8 +519,8 @@
     },
     "9": {
         "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -452,53 +529,59 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
+            "The students in a math class measure their pencils to the nearest `text(centimeter)` (`text(cm)`) and create the box plot shown.",
             "problems/FL23G6M/media/9a.jpg",
-            ""
+            ":ibox:`bbtext(This problem has two parts.)`"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is the length, in `text(centimeters)`, of the shortest pencil in the class?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:11",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is the length, in `text(centimeters)`, of the longest pencil in the class?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:18",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -510,13 +593,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G6M/media/10a.jpg",
-            ""
+            "Select all the values that are equivalent to `4.175`."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`4 1/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -524,15 +605,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`4 7/40`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student determined (or rewrote) a mixed number that is equivalent to `4.175`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`167/4`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -540,65 +621,26 @@
                 }
             },
             "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G6M/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
+                "Choice": "`33/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "E": {
+                "Choice": "`41.75%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "F": {
+                "Choice": "`417.5%`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student divided the percent by `100` to determine an equivalent decimal.",
                     "Percent": 0
                 }
             }

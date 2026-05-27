@@ -1,8 +1,8 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -14,38 +14,54 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/FL23G8M/media/1a.jpg",
-            ""
+            "`text(Four)` numbers are shown.",
+            ":ibox:`pi`\t\t`sqrt8`\t\t`0.bar(23)`\t\t`sqrt49`",
+            "Complete the statement explaining which `text(two)` numbers are rational.",
+            "The `text(two)` rational numbers are :DD-1: because they :DD-2: be expressed as a ratio of `text(two)` integers."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "π and √8",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:B": {
+                "Choice": "π and 0.23",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "1:C": {
+                "Choice": "√8 and √49",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "1:D": {
+                "Choice": "0.23 and √49",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:A": {
+                "Choice": "can",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:B": {
+                "Choice": "cannot",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -57,8 +73,8 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -70,13 +86,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G8M/media/2a.jpg",
-            ""
+            "Gia records the temperature of ocean water at different depths and finds that the relationship between temperature and depth have a negative association.",
+            "Select all the scatter plots that could represent Gia’s data."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/FL23G8M/media/2a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -84,23 +99,39 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/FL23G8M/media/2b.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student recognized that the scatter plot shows a negative relationship since the `ytext(-values)` generally tend to decrease as the `xtext(-values)` increase.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/FL23G8M/media/2c.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student recognized that the scatter plot shows a negative relationship since the `ytext(-values)` generally tend to decrease as the `xtext(-values)` increase.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "problems/FL23G8M/media/2d.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "problems/FL23G8M/media/2e.jpg",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student recognized that the scatter plot shows a negative relationship since the `ytext(-values)` generally tend to decrease as the `xtext(-values)` increase.",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "problems/FL23G8M/media/2f.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -125,21 +156,21 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G8M/media/3a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`(-1/2)^3+sqrt(8^2-15)`",
+            "What is the value of the expression?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`6 7/8`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly determined the value of the expression to be `55/8` or `6 7/8`.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`7 1/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -147,7 +178,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`48 7/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -155,7 +186,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`49 1/8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -167,8 +198,8 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MFR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -180,39 +211,24 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G8M/media/4a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`(2.3xx10^4)xx(4.1xx10^2)`",
+            "Show the value of the expression in scientific notation.",
+            ":FR-1: `xx10text(^)` :FR-2:"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "9.43",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "6",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -222,8 +238,8 @@
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 3,
         "Topics": [
             ""
         ],
@@ -235,39 +251,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G8M/media/5a.jpg",
-            ""
+            "Identify the number of solutions to `text(each equation)`."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`3x-5=3(x-2)+1`": {
+                "Choice": "3:Infinitely Many Solutions",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:`3x-5=-9x+15`": {
+                "Choice": "2:`text(One)` Solution",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`3x-5=3x+10`": {
+                "Choice": "1:No Solutions",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -277,8 +283,8 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -290,37 +296,47 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The transformation of triangle `T` to triangle `T'` is shown.",
             "problems/FL23G8M/media/6a.jpg",
-            ""
+            "problems/FL23G8M/media/6b.jpg",
+            "Select a word and a value to complete the description of the transformation.",
+            "Triangle `T` is :DD-1: to traingle `T'`. Triangle `T` can be transformed to triangle `T'` using a dilation with a scale factor of :DD-2: ."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "congruent",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:B": {
+                "Choice": "similar",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:A": {
+                "Choice": "1/2",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "2:B": {
+                "Choice": "2",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:C": {
+                "Choice": "4",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -332,8 +348,8 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -342,53 +358,85 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
+            "A system of equations is shown.",
+            ":ibox:`y=1/2x`\n\n`y=-1/2x+2`",
+            "Kayla graphs the system to solve it. She marks her solutions with `P` and `R`.",
             "problems/FL23G8M/media/7a.jpg",
-            ""
+            ":ibox:`bbtext(This problem has two parts.)`"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which statement describes Kayla’s solutions?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Her solutions are correct.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "She marked the `ytext(-intercepts)` instead of the `xtext(-intercepts)`.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "She marked the `ytext(-intercepts)` instead of the intersection point of the `text(two)` lines.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student correctly identified that Kayla made a mistake and what her mistake was.",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "She marked only the `ytext(-intercepts)` instead of the `xtext(-)` and `ytext(-intercepts)`.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is a solution to the system of equations?"
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "match:(2,1)",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -400,13 +448,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A figure on a coordinate plane is shown.",
             "problems/FL23G8M/media/8a.jpg",
-            ""
+            "Select all the transformations that will map the figure onto itself."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "translation up `text(4 units)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -414,15 +462,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "reflection across the `ytext(-axis)`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student identified that this reflection will carry the rectangle onto itself.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "dilation by a factor of `3` about the origin",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -430,10 +478,18 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "rotation `text(90 degrees)` clockwise about the origin",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "rotation `text(180 degrees)` counterclockwise about the origin",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student identified that this reflection will carry the rectangle onto itself.",
                     "Percent": 0
                 }
             }
@@ -442,8 +498,8 @@
     },
     "9": {
         "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MFR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -455,149 +511,24 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G8M/media/9a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`(1.3x)(2.6x+4)`",
+            "Complete the product of the expression.",
+            ":FR-1: `x^2+` :FR-2: `x`"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "3.38",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "5.2",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "10": {
-        "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G8M/media/10a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G8M/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }

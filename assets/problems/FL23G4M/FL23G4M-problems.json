@@ -1,8 +1,8 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -14,40 +14,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/FL23G4M/media/1a.jpg",
-            ""
+            "What number is `text(one-hundredth)` more than `732.12`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:732.13",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -57,8 +30,8 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [
             ""
         ],
@@ -70,39 +43,31 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/2a.jpg",
-            ""
+            "A list of numbers is shown.",
+            ":ibox:`text(419,572)`\n`text(431,257)`\n`text(413,725)`",
+            "Select numbers to order them from greatest to least."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`text(419,572)`": {
+                "Choice": "2:",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:`text(431,257)`": {
+                "Choice": "1:Greatest",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`text(413,725)`": {
+                "Choice": "3:Least",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -125,13 +90,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/3a.jpg",
-            ""
+            "Hanson adds `text(cups)` of flour to a bowl to make dough.",
+            ":ibox:• He needs `8 3/5` `text(cups)` of flour.\n\n• He has already added `6 2/5` `text(cups)`.",
+            "How many more `text(cups)` of flour does Hanson need to add?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`1 1/5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,15 +104,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`2 1/5`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly subtracted `6 2/5` from `8 3/5`.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`2 5/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -155,7 +120,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`14 5/10`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -167,8 +132,8 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MFR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -180,39 +145,25 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/4a.jpg",
-            ""
+            "Marcy draws a rectangle.",
+            ":ibox:• The rectangle has an area of `text(12 square inches)` and a perimeter of `text(16 inches)`.\n\n• Marcy wants to draw a `text(second)` rectangle with the same perimeter but an area of `text(15 square inches)`.",
+            "What are possible values, in `text(inches)`, for the length and width of the `text(second)` rectangle?",
+            "Length: :FR-1:",
+            "Width: :FR-2:"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "5",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "3",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -222,8 +173,8 @@
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -235,13 +186,12 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/5a.jpg",
-            ""
+            "Hannah has `3` baseballs. `text(Each baseball)` weighs `5/16` `text(pound)`.",
+            "Select all the expressions that represent the total weight, in `text(pounds)`, of all `3` baseballs."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`5/16+3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -249,26 +199,34 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`5/16xx3`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that `5/16xx3` accurately represents the situation.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`5/16xx3/1`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that `5/16xx3/1` accurately represents the situation.",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`5/16xx3/3`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "`5/16+5/16+5/16`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that the numerator of the expression `5/16` can be added to itself `3` times to find the total weight of `3` baseballs.",
                     "Percent": 0
                 }
             }
@@ -277,8 +235,8 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -290,39 +248,57 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A protractor with labeled points is shown.",
             "problems/FL23G4M/media/6a.jpg",
-            ""
+            "Select `text(two)` points to draw `text(two)` rays to form an angle measuring `text(80 degrees)` starting at `text(10 degrees)`.",
+            "Draw a ray from point `text(A)` to point :DD-1: .",
+            "Draw a `text(second)` ray from point `text(A)` to point :DD-2: ."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "T",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:B": {
+                "Choice": "U",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "W",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "2:B": {
+                "Choice": "X",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:C": {
+                "Choice": "Y",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:D": {
+                "Choice": "Z",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -332,8 +308,8 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 3,
         "Topics": [
             ""
         ],
@@ -345,39 +321,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/7a.jpg",
-            ""
+            "Match `text(each fraction)` with all its equivalent decimal."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`9/10`": {
+                "Choice": "1:`0.9`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:`90/100`": {
+                "Choice": "1:`0.9`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`9/100`": {
+                "Choice": "2:`0.09`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -387,8 +353,8 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MP",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -397,53 +363,89 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/8a.jpg",
-            ""
+            ":ibox:`bbtext(This problem has two parts.)`"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 2,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Select the correct comparison of the `text(two)` decimals."
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`237.1<237.04`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`237.1>237.04`",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which statement explains why the comparison is true?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`text(One-tenth)` is less than `text(four-hundredths)`.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`text(One-tenth)` is greater than `text(four-hundredths)`.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student identified that `text(one-tenth)` is larger than `text(four-hundredths)`.",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "`text(One-hundredth)` is less than `text(four-tenths)`.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "`text(One-hundredth)` is greater than `text(four-tenths)`.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "9": {
         "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -455,39 +457,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/9a.jpg",
-            ""
+            "What is the value of `3 3/8-2 6/8`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:5/8",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -497,8 +473,8 @@
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -510,21 +486,19 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G4M/media/10a.jpg",
-            ""
+            "Select all the shapes that have at least `text(one)` acute angle."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/FL23G4M/media/10a.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student recognized that `text(each angle)` in the triangle is less than `text(90 degrees)` and is therefore acute.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/FL23G4M/media/10b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -532,7 +506,7 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/FL23G4M/media/10c.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -540,62 +514,15 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/FL23G4M/media/10d.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G4M/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student recognized that the angle at `text(each point)` of the star is less than `text(90 degrees)` and is therefore acute.",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "problems/FL23G4M/media/10e.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

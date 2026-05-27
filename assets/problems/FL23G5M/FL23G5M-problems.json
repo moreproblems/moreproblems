@@ -14,14 +14,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
+            "The graph shows the number of `text(cups)` of water Beatrice drinks `text(each day)` for `text(five days)`.",
             "problems/FL23G5M/media/1a.jpg",
-            ""
+            "How many `text(cups)` of water does Beatrice drink on `text(Day 4)`?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`11.8`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -29,15 +28,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`11.2`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student identified that the height of the data point is between `11` and `11.5`, so `11.2` is a reasonable estimation.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`10.5`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -45,7 +44,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`10.2`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -57,8 +56,8 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -70,39 +69,16 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A right rectangular prism is partially filled with `text(unit cubes)`, as shown.",
             "problems/FL23G5M/media/2a.jpg",
-            ""
+            "problems/FL23G5M/media/2b.jpg",
+            "How many more `text(unit cubes)` are needed to completely fill the right rectangular prism?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:103",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -112,8 +88,8 @@
     },
     "3": {
         "Number": 3,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 3,
         "Topics": [
             ""
         ],
@@ -125,39 +101,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/3a.jpg",
-            ""
+            "Match `text(each expression)` with the statement that describes it."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`3+7xx4`": {
+                "Choice": "3:The product of `4` and `7`, added to `3`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:`4+3xx7`": {
+                "Choice": "2:The product of `3` and `7`, added to `4`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`(4+3)xx7`": {
+                "Choice": "1:The sum of `4` and `3`, multiplied by `7`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -177,53 +143,107 @@
         ],
         "SuppContent": [],
         "SuppTools": [],
-        "Points": 1,
+        "Points": 2,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/4a.jpg",
-            ""
+            ":ibox:`bbtext(This problem has two parts.)`",
+            "Jerry incorrectly subtracts `3.6` from `3.966`, as shown.",
+            "problems/FL23G5M/media/4a.jpg"
         ],
-        "AnswerChoices": {
+        "AnswerChoices": {},
+        "Parts": {
             "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which statement `bbtext(best)` describes Jerry’s mistake?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "Jerry should have regrouped.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "Jerry should have subtracted `3.966` from `3.6`.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "The decimal is in the wrong place in Jerry’s answer.",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "When setting up the problem, Jerry did not line up the place values.",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student recognized that the subtraction problem was set up incorrectly because the decimals (and therefore place values) are not in line.",
+                            "Percent": 0
+                        }
+                    }
                 }
             },
             "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "What is the correct answer?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`0.3`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`0.366`",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "The student correctly subtracted `3.6` from `3.966`.",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "`3.606`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "`393.0`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
                 }
             }
-        },
-        "Parts": {}
+        }
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 8,
         "Topics": [
             ""
         ],
@@ -235,39 +255,72 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/5a.jpg",
-            ""
+            "A number is shown.",
+            ":ibox:`35.714`",
+            "Select words to show `text(one)` way to decompose the number.",
+            "`35` :DD-1: `+71` :DD-2: `+4` :DD-3:"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "ones",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:B": {
+                "Choice": "tens",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "tenths",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "2:B": {
+                "Choice": "hundredths",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:C": {
+                "Choice": "thousandths",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "3:A": {
+                "Choice": "tenths",
                 "Key": {
                     "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:B": {
+                "Choice": "hundredths",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "3:C": {
+                "Choice": "thousandths",
+                "Key": {
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -277,8 +330,8 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -290,13 +343,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/6a.jpg",
-            ""
+            "An expression with a missing number is shown.",
+            ":ibox:`7+3xx2xxsquare`",
+            "Select all the expressions that are equivalent to the given expression."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`(7+3)xx2xxsquare`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,23 +357,31 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`7+(3xx2)xxsquare`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that this expression is equivalent to the given expression.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`7+3xx(2xxsquare)`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that this expression is equivalent to the given expression.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`7+(3xx2xxsquare)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that this expression is equivalent to the given expression.",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`(7+3)xx(2xxsquare)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -332,8 +393,8 @@
     },
     "7": {
         "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "O",
+        "NumChoices": 2,
         "Topics": [
             ""
         ],
@@ -345,36 +406,28 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "The table shows the amount of rainwater `text(three)` students gather.",
             "problems/FL23G5M/media/7a.jpg",
-            ""
+            "Who gathers the most rainwater, and who gathers the least rainwater?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:Damien": {
+                "Choice": "2:Least",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:Taylor": {
+                "Choice": "1:Most",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
+            "C:Veronica": {
                 "Choice": "",
                 "Key": {
                     "Correct": false,
@@ -387,8 +440,8 @@
     },
     "8": {
         "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MFR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -400,39 +453,25 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/8a.jpg",
-            ""
+            "Rebekah makes a quilt using red, blue, and purple fabric.",
+            ":ibox:• She uses `3 1/2` total `text(yards)` of fabric.\n\n• She uses exactly `2 3/5` `text(yards)` of purple fabric.",
+            "What are possible lengths, in `text(yards)`, of red and blue fabric that Rebekah could use?",
+            "Red: :FR-1:",
+            "Blue: :FR-2:"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:KEY": {
+                "Choice": "3/10",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "2:KEY": {
+                "Choice": "6/10",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -442,8 +481,8 @@
     },
     "9": {
         "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 6,
         "Topics": [
             ""
         ],
@@ -455,37 +494,54 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/9a.jpg",
-            ""
+            "An expression is shown.",
+            ":ibox:`12xx5/6`",
+            "Complete the sentence about the expression.",
+            "The value of the expression is predicted to be :DD-1: because `12` is being multiplied by a fraction :DD-2: ."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "equal to 12",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:B": {
+                "Choice": "less than 12",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "1:C": {
+                "Choice": "greater than 12",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "2:A": {
+                "Choice": "equal to 12",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:B": {
+                "Choice": "less than 1",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:C": {
+                "Choice": "greater than 1",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -497,8 +553,8 @@
     },
     "10": {
         "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -510,13 +566,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G5M/media/10a.jpg",
-            ""
+            "Select all the figures that have parallel bases."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/FL23G5M/media/10a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -524,7 +578,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/FL23G5M/media/10b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -532,73 +586,26 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/FL23G5M/media/10c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student identified a figure with parallel bases.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/FL23G5M/media/10d.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G5M/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student identified a figure with parallel bases.",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "E": {
+                "Choice": "problems/FL23G5M/media/10e.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student identified a figure with parallel bases.",
                     "Percent": 0
                 }
             }

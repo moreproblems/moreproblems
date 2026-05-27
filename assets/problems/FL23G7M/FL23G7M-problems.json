@@ -1,8 +1,8 @@
 {
     "1": {
         "Number": 1,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -14,40 +14,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "`pi`",
-            "`sum_(i=1)^n i^3=((n(n+1))/2)^2`",
-            "problems/FL23G7M/media/1a.jpg",
-            ""
+            "What is the product of `(-3/4)` and `(3/4)`?"
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "equal:-9/16",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -57,8 +30,8 @@
     },
     "2": {
         "Number": 2,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "IDD",
+        "NumChoices": 8,
         "Topics": [
             ""
         ],
@@ -70,37 +43,70 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G7M/media/2a.jpg",
-            ""
+            "Melanie has a spinner and a deck of cards.",
+            ":ibox:• The probability of spinning an even number on the spinner is `2/5`.\n\n• The probability of drawing an even number from the deck of cards is `5/13`.",
+            "Complete the statement to compare the probabilities.",
+            "P(spinning an even number) is :DD-1: P(drawing an even number card) because :DD-2: ."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "1:A": {
+                "Choice": "equal to",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "1:B": {
+                "Choice": "less than",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "1:C": {
+                "Choice": "greater than",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:A": {
+                "Choice": "2<5",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "D": {
-                "Choice": "",
+            "2:B": {
+                "Choice": "5<13",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:C": {
+                "Choice": "2/5>5/13",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:D": {
+                "Choice": "2/5<5/13",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "2:E": {
+                "Choice": "2/5=5/13",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -125,13 +131,13 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
+            "A school holds an election for class president. The `text(percentage)` of votes received by Taylor, Alex, and Cameron are shown in the circle graph.",
             "problems/FL23G7M/media/3a.jpg",
-            ""
+            "What `text(percentage)` of the votes did Taylor receive?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "`48%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -139,15 +145,15 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "`52%`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student correctly identified that the `text(percentage)` of votes for Taylor is `52%`, which will sum to a total of `100%` (Alex’s `text(percentage)` is `29%`, and Cameron’s `text(percentage)` is `19%`).",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "`71%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -155,7 +161,7 @@
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "`81%`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -167,8 +173,8 @@
     },
     "4": {
         "Number": 4,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "C",
+        "NumChoices": 2,
         "Topics": [
             ""
         ],
@@ -180,39 +186,29 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G7M/media/4a.jpg",
-            ""
+            "Match the equivalent expressions."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "A:`2(m+3)+m-2`": {
+                "Choice": "1:`3m+4`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
+            "B:`5(m+1)-1`": {
+                "Choice": "2:`5m+4`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
             },
-            "C": {
-                "Choice": "",
+            "C:`m+m+m+1+3`": {
+                "Choice": "1:`3m+4`",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -222,8 +218,8 @@
     },
     "5": {
         "Number": 5,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "FR",
+        "NumChoices": 0,
         "Topics": [
             ""
         ],
@@ -235,39 +231,15 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G7M/media/5a.jpg",
-            ""
+            "An inequality is shown.",
+            ":ibox:`-4p> -60`",
+            "Represent the solution to the inequality."
         ],
         "AnswerChoices": {
-            "A": {
-                "Choice": "",
+            "KEY": {
+                "Choice": "match:p<15",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -277,8 +249,8 @@
     },
     "6": {
         "Number": 6,
-        "Type": "MC",
-        "NumChoices": 4,
+        "Type": "MS",
+        "NumChoices": 5,
         "Topics": [
             ""
         ],
@@ -290,13 +262,11 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "",
-            "problems/FL23G7M/media/6a.jpg",
-            ""
+            "Select all the representations that show a proportional relationship between `x` and `y`."
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "",
+                "Choice": "problems/FL23G7M/media/6a.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -304,7 +274,7 @@
                 }
             },
             "B": {
-                "Choice": "",
+                "Choice": "problems/FL23G7M/media/6b.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -312,290 +282,23 @@
                 }
             },
             "C": {
-                "Choice": "",
+                "Choice": "problems/FL23G7M/media/6c.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student recognized that the graph of a proportional relationship starts at the origin and increases linearly.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "",
+                "Choice": "problems/FL23G7M/media/6d.jpg",
                 "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "7": {
-        "Number": 7,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G7M/media/7a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
+                    "Correct": true,
+                    "Rationale": "The student recognized that a proportional relationship is a relationship between `text(two)` variables so all pairs of values make equivalent ratios; in this case, `x:y=1:4`.",
                     "Percent": 0
                 }
             },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "8": {
-        "Number": 8,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G7M/media/8a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "9": {
-        "Number": 9,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G7M/media/9a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "10": {
-        "Number": 10,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G7M/media/10a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            }
-        },
-        "Parts": {}
-    },
-    "11": {
-        "Number": 11,
-        "Type": "MC",
-        "NumChoices": 4,
-        "Topics": [
-            ""
-        ],
-        "SubTopics": [
-            ""
-        ],
-        "SuppContent": [],
-        "SuppTools": [],
-        "Points": 1,
-        "Explain": false,
-        "Content": [
-            "",
-            "problems/FL23G7M/media/11a.jpg",
-            ""
-        ],
-        "AnswerChoices": {
-            "A": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "B": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "C": {
-                "Choice": "",
-                "Key": {
-                    "Correct": false,
-                    "Rationale": "",
-                    "Percent": 0
-                }
-            },
-            "D": {
-                "Choice": "",
+            "E": {
+                "Choice": "problems/FL23G7M/media/6e.jpg",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
