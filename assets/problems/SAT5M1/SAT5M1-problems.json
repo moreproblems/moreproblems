@@ -1170,7 +1170,7 @@
                 }
             },
             "C": {
-                "Choice": "I and II",
+                "Choice": "`text(I)` and `text(II)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1178,7 +1178,7 @@
                 }
             },
             "D": {
-                "Choice": "Neither I nor II",
+                "Choice": "Neither `text(I)` nor `text(II)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "A function of the form `f(x)=a(b)^x+c`, where `alt0andbgt1`, is a decreasing function. Both of the given functions are of this form; therefore, both are decreasing functions. If a function `f` is decreasing, as the value of `x` increases, the corresponding value of `f(x)` decreases; therefore, the function doesn't have a minimum value. Thus, neither of the given functions has a minimum value.",

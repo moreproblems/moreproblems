@@ -1291,7 +1291,7 @@
                 }
             },
             "C": {
-                "Choice": "I and II",
+                "Choice": "`text(I)` and `text(II)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice may result from conceptual or calculation errors.",
@@ -1299,7 +1299,7 @@
                 }
             },
             "D": {
-                "Choice": "Neither I nor II",
+                "Choice": "Neither `text(I)` nor `text(II)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "A `ytext(-intercept)` of a graph in the `xytext(-plane)` is a point where the graph intersects the `ytext(-axis)`, or a point where `x=0`. Substituting `0` for `x` in the equation defining function `f` yields `f(0)=a(2.2^0+2.2^b),orf(0)=a(1+2.2^b)`. So, the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph is `a(1+2.2^b)`, or equivalently, `a+a(2.2^b)`. It's given that function `g` is equivalent to function `f`, where `0ltaltb`. It follows that `k=2.2^b`. Since `a(2.2^b)` can't be equal to `0`, the coefficient `a` can't be equal to `a+a(2.2^b)`. Since `0lta`, the constant `k`, which is equal to `2.2^b`, can't be equal to `a+a(2.2^b)`. Therefore, function `g` doesn't display the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph of `y=f(x)` in the `xytext(-plane)` as a constant or coefficient. It's also given that function `h` is equivalent to function `f`, where `0ltaltb`. The equation defining `f` can be rewritten as `f(x)=a(2.2)^x+a(2.2)^b`. It follows that `m=a(2.2)^b`. Since `a(2.2)^b` can't be equal to `0`, the coefficient `a` can't be equal to `a+a(2.2)^b`. Since `0lta`, the constant `m`, which is equal to `a(2.2)^b`, can't be equal to `a+a(2.2)^b`. Therefore, function `h` doesn't display the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph of `y=f(x)` in the `xytext(-plane)` as a constant or coefficient. Thus, neither function `g` nor function `h` displays the `ytext(-coordinate)` of the `ytext(-intercept)` of the graph of `y=f(x)` in the `xytext(-plane)` as a constant or coefficient.",

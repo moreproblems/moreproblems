@@ -606,6 +606,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
+            "problems/SAT20M1/media/12a.jpg",
+            "problems/SAT20M1/media/12a.jpg",
             "In the figure above, triangle `ABC` is similar to triangle `DEF`. What is the value of `cos(E)`?"
         ],
         "AnswerChoices": {
@@ -734,7 +736,7 @@
                 }
             },
             "C": {
-                "Choice": "I and II",
+                "Choice": "`text(I)` and `text(II)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "`x=1` doesn't satisfy the given equation: `sqrt(4x)` represents the principal square root of `4x`, which can't be negative.",
@@ -742,7 +744,7 @@
                 }
             },
             "D": {
-                "Choice": "Neither I nor II",
+                "Choice": "Neither `text(I)` nor `text(II)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "`x=9` does satisfy the given equation.",

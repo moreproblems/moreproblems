@@ -1278,7 +1278,7 @@
                 }
             },
             "C": {
-                "Choice": "I and II",
+                "Choice": "`text(I)` and `text(II)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This choice is incorrect and may result from conceptual or calculation errors.",
@@ -1286,7 +1286,7 @@
                 }
             },
             "D": {
-                "Choice": "Neither I nor II",
+                "Choice": "Neither `text(I)` nor `text(II)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "It's given that data set `F` consists of `55` integers between `170and290` and data set `G` consists of all the integers in data set `F` as well as the integer `10`. Since the integer `10` is less than all the integers in data set `F`, the mean of data set `G` must be less than the mean of data set `F`. Thus, the mean of data set `F` isn't less than the mean of data set `G`. When a data set is in ascending order, the median is between the two middle values when there is an even number of values and the median is the middle value when there is an odd number of values. It follows that the median of data set `F` is either greater than or equal to the median of data set `G`. Therefore, the median of data set `F` isn't less than the median of data set `G`. Thus, neither the mean nor the median must be less for data set `F` than for data set `G`.",
