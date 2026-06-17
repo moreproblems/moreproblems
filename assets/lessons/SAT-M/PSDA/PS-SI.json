@@ -1,0 +1,34 @@
+{
+    "Content": [
+        "Sampling and inference form the logical bridge that allows statisticians to draw sweeping conclusions on large population without measuring every single individual. In the real world, logistical constraints make it hard conduct a census where everyone is counted. Instead, researchers use sampling to take a snapshot of a smaller group and predict the behavior of the whole based on a representative part. This approach provides a good foundation for tracking global climate trends, testing the safety of a new medicines, and predicting national election outcomes.",
+        "On the SAT exam, we might be tasked with evaluating descriptions studies or experiments to determine whether the researcher's final conclusion is statistically valid. To statistical claim within SAT problems, we must first understand the structural relationship between a population and a sample. The population represents the entirety of a group we want to learn about  (e.g., all high school students in the United States), while the sample is a specific subgroup that is actually measured (e.g., `500` randomly chosen high school students). For a study's findings to be generalized from a small group to the broader population, the sample must be a representative sample - meaning its characteristics mirror the diversity of the larger group.nThe key to achieving representativeness is using random samples, where every single member of the population has an equal chance of being selected. If a sampling method lacks randomness, such as a voluntary online poll or surveying only students at a single local school, bias can likely affect the results. Biased samples are usually considered ineffective, because we cannot make a valid inference about a large population if the sample only involved a particular or similar group.",
+        "Beyond how data is gathered, SAT problems in the Problem Solving and Data Analysis category also test the difference between sampling methods - observational studies and experiments being the two primary methods. In an observational study, researchers simply record data as they see it without intervening. While this type of study can reveal a correlation (two variables move together), they can never prove causation (one variable directly causes the other to change). This limitation results because observational studies cannot account for confounding variables — hidden, unmeasured factors that might be driving the relationship. Proving causation requires researchers to run a controlled experiment, where participants are randomly assigned to either an experimental group (which receives a specific treatment) or a control group (which receives no treatment to serve as a baseline).",
+        "The final major concept related to sampling and inference is interpreting the numeric precision of statistical claims, specifically margins of error and confidence intervals. Because a sample is only a snapshot, it can never perfectly predict the exact measurement of an entire population. The margin of error is a value we can calculate to quantify the uncertainty of a predicted value. This margin on both sides of the estimate creates a confidence interval, which is the range of plausible values where the real population parameter probably lives. For example, if a poll states that `52%` of voters support a measure with a margin of error of `+-3%`, the true percentage of supporters is almost certainly between `49%` and `55%`.",
+        "Certain SAT problems might ask us to interpret the meaning of a particular margin of error. Although we might assume that a larger margin of error means the study was poorly executed, the reality is margins of error are reflections of sample sizes. A smaller sample size leads to a larger margin of error, while a larger sample size yields more precise margin of error since the sample contains a large portion of the population."
+
+    ],
+    "Topics": [
+        "AT.M.PSDA.6.1",
+        "AT.M.PSDA.6.2",
+        "AT.M.PSDA.7.1",
+        "AT.M.PSDA.7.3"
+    ],
+    "Terms": [
+        "Population",
+        "Sample",
+        "Random Sample",
+        "Representative Sample",
+        "Data Inference",
+        "Bias",
+        "Correlation",
+        "Causation",
+        "Confounding Variable",
+        "Statistical Claim",
+        "Margin Of Error",
+        "Confidence Interval",
+        "Sampling Method",
+        "Observational Study",
+        "Experiment",
+        "Control Group"
+    ]
+}

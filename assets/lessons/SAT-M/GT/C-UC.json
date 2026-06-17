@@ -1,0 +1,19 @@
+{
+    "Content": [
+        "The unit circle is an elegant trigonometric tool that maps the behavior of angles onto a standard coordinate grid. By definition, a unit circle is just a circle with a radius of exactly `1` that is centered at the origin `(0,0)` of the Cartesian plane. While basic right triangle trigonometry is limited to acute angles between `0°` and `90°`, the unit circle expands this math to accommodate angles of any rotation - even negative angles and rotations beyond `360°`. In the real world, this rotational model applies to fields with cyclical patterns like alternating current voltage waves or sound frequencies and acoustics.",
+        "On the SAT exam, understanding the unit circle is a crucial for solving advanced problems in the Geometry and Trigonometry category. The unit circle determines trigonometric behaviors on a graph and SAT problems challenge us to apply the concept to a variety of tasks. This could be converting between different angular units, determining whether a trigonometric value is positive or negative in a specific quadrant, or evaluating a trigonometric function at a specific angle using coordinate values. Understanding the geometric layout of the unit circle lets us find solutions to situations where circles are graphed in the coordinate plane without complex algebra.",
+        "Navigating the unit circle depends on two systems used to measure an angle's rotation - degrees and radians. While degrees divide a full circular rotation into `360` equal parts, radians measure angles based on the length of the circle's radius. One radian represents a central angle that creates an arc just as long as the radius of the circle. Because the distance around a circle is its circumference (`C=2pir`), a complete `360°` rotation is equal to `2pi` radians. The SAT exam often requires converting an angle from one unit to the other using the relationship `180°=pi` `text(radians)`. We can simply convert any angle using balanced conversion fractions of the form `text(Radians)=text(Degrees)*pi/180°` and `text(Degrees)=text(Radians)*180°/pi`.",
+        "When an angle `theta` is placed on the unit circle in standard position — starting at the positive x-axis and rotating counterclockwise — the ending side of the angle intersects the circle at some specific coordinate point `(x,y)`. Because the hypotenuse formed by the radius is exactly `1`, the standard SOH CAH TOA definitions result in simple coordinate identities - `cos(theta)=text(Adjacent)/text(Hypotenuse)=x/1=x`, `sin(theta)=text(Opposite)/text(Hypotenuse)=y/1=y`, and `tan(theta)=text(Opposite)/text(Adjacent)=y/x`. This means that the x-coordinate of the any point on the unit circle equals the cosine of the angle while the y-coordinate equals to the sine of the angle.",
+        "These coordinate identities are useful tools for SAT problems that involve quadrants of the unit circle. For example, we might be given an angle located outside the first quadrant — such as `(5pi)/6` radians or `210°` — and asked to determine whether its sine or cosine is positive or negative. The sign of any trigonometric function can be easily identified by remembering which coordinates are positive in the different quadrant of the plane. This pattern can be tracked using the acronym ASTC. In Quadrant I (All), both `x` and `y` are positive meaning that sine, cosine, and tangent are all positive as well. In Quadrant II (Sine), only `y` is positive meaning that sine is positive while cosine and tangent are negative. In Quadrant III (Tangent), both `x` and `y` are negative meaning that sine and cosine negative while their fraction (`y/x`) makes tangent positive. In Quadrant IV (Cosine), only `x` is positive meaning that cosine is positive while sine and tangent are negative."
+
+    ],
+    "Topics": [
+        "SAT.M.GT.4.2",
+        "SAT.M.GT.4.5",
+        "SAT.M.GT.4.6"
+    ],
+    "Terms": [
+        "Degree",
+        "Radian"
+    ]
+}
