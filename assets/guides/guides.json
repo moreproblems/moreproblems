@@ -1,0 +1,95 @@
+{
+    "SAT-M": {
+        "Name": "SAT Math",
+        "Lessons": 44,
+        "Standards": "M-SAT",
+        "Glossary": "assets/glossary/SAT/M.json",
+        "Topics": "assets/standards/SAT/M.json",
+        "Modules": {
+            "Algebra": {
+                "Algebra Fundamentals": {
+                    "Algebra Definitions": "assets/guides/SAT-M/A/AF-AD.json",
+                    "One-Variable Equations": "assets/guides/SAT-M/A/AF-OVE.json",
+                    "Order Of Operations": "assets/guides/SAT-M/A/AF-OO.json"
+                },
+                "Linear Functions": {
+                    "Inputs & Outputs": "assets/guides/SAT-M/A/LF-IO.json",
+                    "Real-World Functions": "assets/guides/SAT-M/A/LF-RWF.json",
+                    "Tables & Graphs": "assets/guides/SAT-M/A/LF-TG.json"
+                },
+                "Linear Equations": {
+                    "Two-Variable Equations": "assets/guides/SAT-M/A/LE-TVE.json",
+                    "Forms Of Equations": "assets/guides/SAT-M/A/LE-FE.json"
+                },
+                "Systems & Inequalities": {
+                    "Real-World Systems": "assets/guides/SAT-M/A/SI-RWS.json",
+                    "System Solving Methods": "assets/guides/SAT-M/A/SI-SSM.json",
+                    "Real-World Inequalities": "assets/guides/SAT-M/A/SI-RWI.json"
+                }
+            },
+            "Advanced Math": {
+                "Expressions": {
+                    "Factoring & Expanding": "assets/guides/SAT-M/AM/E-FE.json",
+                    "Variable Of Interest": "assets/guides/SAT-M/AM/E-VI.json",
+                    "Exponent Rules": "assets/guides/SAT-M/AM/E-ER.json"
+                },
+                "Nonlinear Parent Functions": {
+                    "Quadratic Functions": "assets/guides/SAT-M/AM/NPF-QF.json",
+                    "Exponential Functions": "assets/guides/SAT-M/AM/NPF-EF.json",
+                    "Miscellaneous Functions": "assets/guides/SAT-M/AM/NPF-MF.json"
+                },
+                "Quadratic Equations": {
+                    "Forms Of Quadratics": "assets/guides/SAT-M/AM/QE-FQ.json",
+                    "Graphing Quadratics": "assets/guides/SAT-M/AM/QE-GQ.json",
+                    "Solving Quadratics": "assets/guides/SAT-M/AM/QE-SQ.json"
+                },
+                "Exponential Equations": {
+                    "Graphing Exponentials": "assets/guides/SAT-M/AM/EE-GE.json",
+                    "Solving Exponentials": "assets/guides/SAT-M/AM/EE-SE.json",
+                    "Real-World Exponentials": "assets/guides/SAT-M/AM/EE-RWE.json"
+                }
+            },
+            "Problem-Solving & Data Analysis": {
+                "Percentages": {
+                    "Percent Of & Percent Change": "assets/guides/SAT-M/PSDA/P-PPC.json",
+                    "Real-World Percentages": "assets/guides/SAT-M/PSDA/P-RWP.json"
+                },
+                "Proportional Relationships": {
+                    "Ratios, Rates & Scaling": "assets/guides/SAT-M/PSDA/PR-RRS.json",
+                    "Units & Conversion": "assets/guides/SAT-M/PSDA/PR-UC.json"
+                },
+                "One-Variable Data": {
+                    "Distributions": "assets/guides/SAT-M/PSDA/OVD-D.json",
+                    "Measures Of Center": "assets/guides/SAT-M/PSDA/OVD-MC.json",
+                    "Measures Of Spread": "assets/guides/SAT-M/PSDA/OVD-MS.json"
+                },
+                "Two-Variable Data": {
+                    "Scatterplots & Best Fit": "assets/guides/SAT-M/PSDA/TVD-SBF.json",
+                    "Linear & Exponential Growth": "assets/guides/SAT-M/PSDA/TVD-LEG.json"
+                },
+                "Probability & Statistics": {
+                    "Tables, Frequency & Probability": "assets/guides/SAT-M/PSDA/PS-TFP.json",
+                    "Sampling & Inference": "assets/guides/SAT-M/PSDA/PS-SI.json"
+                }
+            },
+            "Geometry & Trigonometry": {
+                "Two- & Three-Dimensional Figures": {
+                    "Perimeter & Area": "assets/guides/SAT-M/GT/TTDF-PA.json",
+                    "Surface Area & Volume": "assets/guides/SAT-M/GT/TTDF-SAV.json",
+                    "Scale Factor": "assets/guides/SAT-M/GT/TTDF-SF.json"
+                },
+                "Lines, Angles & Triangles": {
+                    "Transversals & Angle Theorems": "assets/guides/SAT-M/GT/LAT-TAT.json",
+                    "Triangle Theorems": "assets/guides/SAT-M/GT/LAT-TT.json",
+                    "Congruence & Similarity": "assets/guides/SAT-M/GT/LAT-CS.json",
+                    "Right Triangle Trigonometry": "assets/guides/SAT-M/GT/LAT-RTT.json"
+                },
+                "Circles": {
+                    "Circle Definitions": "assets/guides/SAT-M/GT/C-CD.json",
+                    "Unit Circle": "assets/guides/SAT-M/GT/C-UC.json",
+                    "Circle Equations": "assets/guides/SAT-M/GT/C-CE.json"
+                }
+            }
+        }
+    }
+}

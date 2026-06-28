@@ -1,0 +1,20 @@
+{
+    "Content": [
+        "Percentages are a pivotal concept in the Problem-Solving & Data Analysis category of the SAT exam, serving as a tool to describe the scale of a part in relation to the whole. Fundamentally, a `ultext(Percentage)` represents a fraction with a denominator of `100`. The word itself comes from the Latin phrase “per centum”, which means “by the hundred”. Writing values as percentages allows us to make fair comparisons with non-standardized or real-world data points – such as sales tax, credit card interest rates, or polling data.",
+        "When working through SAT problems, it's important to learn the difference between various percentage related scenarios. The main distinction to be aware of is the subtle difference between finding the “percent of” a number versus calculating a “percent change” from one number to another. When the wording of percentage problems is decoded incorrectly and this distinction is confused, we will likely apply the wrong operation and choose the wrong answer choice to an otherwise simple calculation.",
+        "Successfully navigating these questions requires an understanding of the mechanics of “percent of” problems. These scenarios ask us to calculate a specific portion of a baseline value. The algebraic golden rule for these problems is to convert the percentage into a decimal (divide by `100`, which moves the decimal point two places left) then multiply it by the base amount. For example, if a problem asks for `35%` of `80`, the respective calculation would be `0.35*80` which yields `28`.",
+        "“Percent change”, on the other hand, describes the relative difference when a baseline value grows or shrinks to a new value. To find a percent change between an old value and a new value, we can apply the  formula `text(Percent Change)=(text(New Value)-text(Old Value))/text(Old Value)*100`. Percent change is closely related to the growth rate and the growth factor. `ultext(Growth Rate)` is the fractional percentage by which the initial value changes. `ultext(Growth Factor)` is the multiple which the initial value is multiplied by.",
+        "Instead of always relying on the formula to calculate a percent change, the growth factor is a useful shortcut for solving this type of problem. When a percent increase occurs, we can multiply the original value by `(1+r/100)`, where `r` is the growth rate as a percentage. When a percent decrease is described, we can instead multiply by `(1-r/100)`. For example, increasing an initial price of `$60` by `15%` means multiplying `60*1.15`, while a `15%` discount would mean multiplying `60*0.85`.",
+        "The concept of percentages, and its various applications, plays a vital role in both data analysis tasks and advanced word problems. By mastering growth factors and paying attention to whether a problem demands a “percent of” or a “percent change” calculation, we become well-equipped to approach percentages. The SAT exam includes multi-step percentage problems designed to test our understanding of percentages – such as a value increasing by `20%` then decreasing by that same percentage. We might mistakenly assume this situation returns a number to its original value but the two percent changes are operating on entirely different totals. By using growth factors, we can chain the percent changes together fluidly – multiplying the original price `x` by `1.20` and then by `0.80` (`x*1.20*0.80=0.96x`) – revealing a net `4%` decrease."
+
+    ],
+    "Topics": [
+        "SAT.M.PSDA.2.2",
+        "SAT.M.PSDA.2.3"
+    ],
+    "Terms": [
+        "Percentage",
+        "Growth Rate",
+        "Growth Factor"
+    ]
+}

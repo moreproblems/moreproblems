@@ -1,0 +1,15 @@
+{
+    "Content": [
+        "Circle equations provide a powerful algebraic framework for translating the visual shape into a precise relationship between `x` and `y` coordinates. In the real world, this concept allows computer programmers define boundaries for digital maps and satellite networks to determine our exact GPS location on Earth.",
+        "On the SAT exam, mastering circle equations is a useful skill for success in the Geometry and Trigonometry section. These SAT problems challenge us to extract features of a circle from a scrambled quadratic expression, determine if a specific coordinate point lies inside a circular boundary, or find the new equation of a circle after it has been transformed in the coordinate plane. Understanding the mechanics of the equation for a circle helps translate a visual graph into solvable algebra.",
+        "The structural foundation for every graphed circle is the standard form of the equation for a circle. This structure is derived directly from the Pythagorean theorem and is written as `(x-h)^2+(y-k)^2=r^2`. Within this template, every constant plays an important role in the structure of the circle. The coordinate point `(h,k)` represents the exact center of the circle on the grid. Notice the subtraction signs in the equation, which means the coordinates of the center will always have the opposite sign of what appears in the equation. For example, in the equation `(x-3)^2+(y+4)^2=25`, the center is the coordinate point `(3,-4)`. The constant `r` represents the radius of the circle. Remember that the constant on the right side of the equal sign is squared (`r^2`), so finding the actual radius requires applying a square root. In the example `(x-3)^2+(y+4)^2=25`, the `25` appears on the right side so the radius of the circle is `sqrt25=5`.",
+        "In more complicated situations, the SAT exam might hide these dimensions by presenting the circle in general form – an expanded quadratic expression that looks like `x^2+y^2+Cx+Dy+E=0`. In this form, it's much harder to determine the center or radius at a glance. Getting back to standard form requires an algebraic process called completing the square.",
+        "When completing the square, group the `x` terms together and the `y` terms together then move the constant to the right side of the equation. Next, take half of the linear coefficients (`C` and `D`), square them, and add them to both sides of the equation. For example, if the expanded equation is `x^2-6x+y^2+8y=0`, we take half of `-6` (which is `-3`) and square it to get `9` and take half of `8` (which is `4`) and square it to get `16`. Adding both `9` and `16` to both sides of the equation keeps it balanced and transforms the equation into standard form as `(x-3)^2+(y+4)^2=25`, where the circle's features are clear."
+
+    ],
+    "Topics": [
+        "SAT.M.GT.4.3",
+        "SAT.M.GT.4.4"
+    ],
+    "Terms": []
+}

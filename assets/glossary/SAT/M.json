@@ -1,4 +1,32 @@
 {
+    "30-60-90 Triangle": {
+        "Category": "glossary",
+        "Definition": [
+            "A right triangle where the angle measures are `30°,60°,and90°`. It's sides always have a ratio of `1:sqrt(3):2` for the sides opposite of the `30°,60°,and90°` angles respectively."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding `30-60-90` triangles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "45-45-90 Triangle": {
+        "Category": "glossary",
+        "Definition": [
+            "A right triangle where the angle measures are `45°,45°,and90°`. It's sides always have a ratio of `1:1:sqrt(2)` for the sides opposite of the `45°,45°,and90°` angles respectively."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding `45-45-90` triangles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
     "Absolute Value": {
         "Category": "glossary",
         "Definition": [
@@ -8,7 +36,81 @@
             "For example, `abs(-1)|=17` and `abs(42)=42`.`"
         ],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Absolute Value Function": {
+        "Category": "glossary",
+        "Definition": [
+            "An absolute value function is a function that contains a variable inside the absolute value symbol (`abs(x)`). The absolute value function describes the distance that a number is from zero on the number line and its graph will typically produce a V-shaped curve.",
+            "Equations for absolute value functions are usually written as `f(x)=aabs(x-h)+k` (general form), where the point `(h,k)` is the vertex and `a` determines the slope and direction which the graph opens. The parent absolute value function `f(x)=abs(x)` is defined by two linear functions: `abs(x)={(x,text(if )x>=0),(-x,text(if )x<0):}`"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding absolute value functions is helpful for solving many types of problems - including interpreting or identifying key features of graphs of absolute value equations and modeling real-world situations such as distance or error tolerance."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Acute Angle": {
+        "Category": "glossary",
+        "Definition": [
+            "An angle that is less than `90°`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding acute angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Adjacent Side": {
+        "Category": "glossary",
+        "Definition": [
+            "The non-hypotenuse side next to an acute angle in a right triangle"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding adjacent sides is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Alternate Exterior Angles": {
+        "Category": "glossary",
+        "Definition": [
+            "Angles that are on opposite sides of the transversal and outside the two lines when a transversal intersects parallel lines. These angles are equal."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding alternate exterior angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Alternate Interior Angles": {
+        "Category": "glossary",
+        "Definition": [
+            "Angles that are on opposite sides of the transversal and inside the two lines when a transversal intersects parallel lines. These angles are equal."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding alternate interior angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Altitude": {
         "Category": "glossary",
@@ -17,25 +119,65 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Angle": {
         "Category": "glossary",
         "Definition": [
-            "The space between two intersecting lines, measured in degrees or radians."
+            "The space formed between two intersecting lines, measured in degrees or radians."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Arc": {
         "Category": "glossary",
         "Definition": [
-            "A portion of the circumference of a circle. If the circle was a pizza, your slice would be a sector, and the crust on your slice would be an arc."
+            "A portion of the circumference of a circle.",
+            "A symmetrical slice of a circle's boundary."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding arcs is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Area": {
+        "Category": "glossary",
+        "Definition": [
+            "The amount of surface a two-dimensional shape covers. It's units are square."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding area is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "ASTC": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Asymptote": {
         "Category": "glossary",
@@ -44,7 +186,22 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Axis Of Symmetry": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Base": {
         "Category": "glossary",
@@ -55,7 +212,26 @@
             "For example, the base of a cylinder is a circle."
         ],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Bias": {
+        "Category": "glossary",
+        "Definition": [
+            "A systematic error in data collection, analysis, or interpretation that leads to misleading results."
+        ],
+        "Examples": [
+            "selection bias or response bias"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding biases is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Binomial": {
         "Category": "glossary",
@@ -65,7 +241,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Bisect": {
         "Category": "glossary",
@@ -74,7 +253,22 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Box Plot": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Causation": {
         "Category": "glossary",
@@ -83,7 +277,12 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding causation is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Center of a circle": {
         "Category": "glossary",
@@ -92,34 +291,52 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Chord": {
         "Category": "glossary",
         "Definition": [
-            "A straight line connecting two points on a curve."
+            "A line segments connecting two points on the boundary of a circle."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding chords is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Circle": {
         "Category": "glossary",
         "Definition": [
-            "The set of all points in a plane that are equidistant from a given point (aka, the center). A point is on the circle if it is on the circumference. A point is in the circle if it is in the area enclosed by the circumference."
+            "The shape defined by the set of all points in a plane that are equidistant from a central point."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding circles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Circumference": {
         "Category": "glossary",
         "Definition": [
-            "The total linear distance around the outside of a circle."
+            "The total linear distance, or perimeter, around the outside of a circle."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding circumferences is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Coefficient": {
         "Category": "glossary",
@@ -128,7 +345,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Complement": {
         "Category": "glossary",
@@ -137,7 +357,50 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Complementary Angle": {
+        "Category": "glossary",
+        "Definition": [
+            "Two angles whose sum is `90°`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding complementary angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Complementary Angle Theorem": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Completing The Square": {
+        "Category": "glossary",
+        "Definition": [
+            "A technique for converting a quadratic polynomial in standard form to vertex form."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding completing the square is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Complex Number": {
         "Category": "glossary",
@@ -146,7 +409,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Compounded interest": {
         "Category": "glossary",
@@ -155,7 +421,24 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Conditional Probability": {
+        "Category": "glossary",
+        "Definition": [
+            "The probability of event B occurring, given that event A has already occurred. It can be written `P(B|A)`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding conditional probability is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Cone": {
         "Category": "glossary",
@@ -164,27 +447,53 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Confidence Interval": {
         "Category": "glossary",
         "Definition": [
-            "A way to describe the level of uncertainty when a statistic about a population is being estimated by a sampling from that population. The confidence interval gives an upper and lower boundary between which you are a certain percent sure the true value falls."
+            "A range of values that describe that is likely to contain the true population parameter with a certain level of confidence when a statistic is being estimated by a sampling from that population.",
+            "It gives an upper and lower boundary between which we are confident the true value falls and is defined by a sample statistic and a margin of error"
         ],
         "Examples": [
             "For example, Amy polled `100` people and asked them how they would vote in next week's election. `52%` of them said they would vote for her. As a result, she is `90%` sure that she will get between `47%` and `57%` of the vote on election day."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding confidence intervals is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
-    "Congruent": {
+    "Confounding Variable": {
+        "Category": "glossary",
+        "Definition": [
+            "An unmeasured third variable that influences both the supposed cause and effect, leading to a spurious association."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding confounding variables is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Congruence": {
         "Category": "glossary",
         "Definition": [
             "When two geometric figures are identical in shape and size, having equal corresponding sides and angles."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Conjugates": {
         "Category": "glossary",
@@ -193,7 +502,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Consecutive": {
         "Category": "glossary",
@@ -204,47 +516,124 @@
             "For example, `14`, `15`, and `16` are consecutive integers; `19`, `21`, and `23` are consecutive odd integers, and `/_A` and `/_B` would be consecutive angles in hexagon `ABCDEF`."
         ],
         "Related": [],
-        "Standards": [""]
+        "Relevance": [],
+        "Standards": []
     },
     "Constant": {
         "Category": "glossary",
         "Definition": [
-            "(1) The term of a polynomial that doesn't have a variable at all.",
-            "(2) A parameter in a function that will always hold the same value, even for different points on the function."
+            "A value that is fixed and does not change within an expression. Can be represented as a stand-alone number added or subtracted to other terms, a coefficient multiplied or divided with variables, or a letter that is unknown but remain the same"
         ],
         "Examples": [
-            "(1) For example, in the polynomial `15x^2-19x+7` the constant is `7`.",
-            "(2) For example, in the function `y=5x-9`, the variables are `x` and `y` while the constants are `5` and `-9`. If the function is written as `y=mx+b`, the constants are `m` and `b`."
+            "For example, in the polynomial `15x^2-19x+7` the constant is `7`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding variables is essential for solving many types of problems - including solving equations for an unknown quantity and describing relationships between two related quantities."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Control Group": {
+        "Category": "glossary",
+        "Definition": [
+            "A group within an experiment that receives no treatment or a placebo, providing a baseline for comparison."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding control groups is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Conversion Factor": {
+        "Category": "glossary",
+        "Definition": [
+            "A ratio equal to `1`, used to convert units."
+        ],
+        "Examples": [
+            "`1` `text(foot):12` `text(inches)`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding conversion factors is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Coordinate": {
         "Category": "glossary",
         "Definition": [
-            "Ordered pairs or sets of numbers, usually written as  `(x,y)`, that define the exact position of a point on a 2D plane or in space."
+            "Ordered pairs or sets of numbers, usually written as  `(x,y)`, that define the exact position of a point on a two-dimensional plane or in space."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Correlation": {
         "Category": "glossary",
         "Definition": [
-            "A way to describe the trend in bivariate data. In other words, if the line of best fit has a positive slope, there is a positive correlation, and if the line of best fit has a negative slope, there is a negative correlation. Correlation does not always suggest causation."
+            "A trend in two-variable (bivariate) data where two variables tend to vary together. It does not always imply causation.",
+            "It is positive if the line of best fit slopes upward, is negative if the line of best fit slopes downward, or does not exist if there is not trend in the dataset."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding correlation is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Correlation Coefficient": {
+        "Category": "glossary",
+        "Definition": [
+            "A measure that describes the strength and direction of a linear relationship between two variables in a data set."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding correlation coefficients is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Corresponding Angles": {
+        "Category": "glossary",
+        "Definition": [
+            "Angles that have the same relative position at each intersection when a transversal intersects parallel lines. These angles are equal."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding corresponding angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Cosine": {
         "Category": "glossary",
         "Definition": [
-            "In a right triangle, the ratio between the side adjacent to a given angle and the hypotenuse. Usually abbreviated to “cos”, but please pronounce this as “cosine” not “cos”. `cosx=text(adjacent)/text(hypoteuse)`"
+            "In a right triangle, the ratio between the side adjacent to a given angle and the hypotenuse. Usually abbreviated to “cos”, where `cosx=text(adjacent)/text(hypoteuse)`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding cosine is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Cube": {
         "Category": "glossary",
@@ -253,7 +642,25 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Cubic Function": {
+        "Category": "glossary",
+        "Definition": [
+            "A cubic function is a polynomial function where the highest power, or degree, of the variable is `3`. The graph of a quadratic function will typically produce an S-shaped curve with either one or three real roots.",
+            "Equations for cubic functions are usually written as `f(x)=ax^3+bx^2+cx+d` (standard form), where `a,b,c,andd` are constants and `a!=0`. Cubic functions can also be described in factored form (`f(x)=a(x-p)(x-q)(x-r)`) to highlight the roots `x=p`, `x=q`, and `x=r`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding cubic functions is helpful for solving many types of problems - including interpreting the graphs of equations in various forms, finding the roots of equations by factoring, identifying the number of solutions for functions, and modeling real-world situations with varying rates of change."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Cylinder": {
         "Category": "glossary",
@@ -262,7 +669,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Data": {
         "Category": "glossary",
@@ -271,7 +681,38 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Data Distribution": {
+        "Category": "glossary",
+        "Definition": [
+            "Describes how data points are spread or clustered."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding data distributions is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Data Inference": {
+        "Category": "glossary",
+        "Definition": [
+            "Drawing conclusions about a population based on data from a sample."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding data inferences is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Decreasing": {
         "Category": "glossary",
@@ -280,19 +721,56 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Degree": {
         "Category": "glossary",
         "Definition": [
-            "(1) A way to describe a polynomial by giving the highest exponent.",
-            "(2) A unit used to measure an angle. A right angle has `90°`, a straight angle has `180°`, and a full circle has `360°`."
+            "A way to describe a polynomial by giving the highest exponent."
         ],
         "Examples": [
-            "(1) For example `15x^7-12x^4+3x-1` is a `7^text(th)` degree polynomial."
+            "For example `15x^7-12x^4+3x-1` is a `7^text(th)` degree polynomial."
         ],
         "Related": [],
-        "Standards": ["SAT.M.AM", "SAT.M.GT"]
+        "Relevance": [
+            "Understanding degrees is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Degrees": {
+        "Category": "glossary",
+        "Definition": [
+            "(1) A way to describe a polynomial by giving the highest exponent.",
+            "(A unit used to measure an angle, represented as `°`. A right angle is `90` units, a straight angle is `180` units, and a full circle is `360` units."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding degrees is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Dependent Events": {
+        "Category": "glossary",
+        "Definition": [
+            "Events where the occurrence of one event does affect the probability of the other."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding dependent events is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Deposit": {
         "Category": "glossary",
@@ -303,7 +781,24 @@
             "For exmaple, Jack opens up a new bank account and makes an initial deposit of `$100`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Desired Outcomes": {
+        "Category": "glossary",
+        "Definition": [
+            "The specific results aimed for in a probability scenario."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding desired outcomes is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Diagonal": {
         "Category": "glossary",
@@ -312,16 +807,78 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Diameter": {
         "Category": "glossary",
         "Definition": [
-            "The longest distance from one side of a circle to another. The diameter is twice the radius and will always go through the center of its circle."
+            "The longest distance across a circle. It will always go through the center of its circle and is twice the length of the radius."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding diameters is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Dilation": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Dimensional Analysis": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Discriminant": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding discriminants is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Distance Formula": {
+        "Category": "glossary",
+        "Definition": [
+            "The equation that defines the distances between pairs of points in terms of their coordinates."
+        ],
+        "Examples": [],
+        "Related": [
+            "Pythagorean Theorem"
+        ],
+        "Relevance": [
+            "Understanding distance formula is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Distribution": {
         "Category": "glossary",
@@ -330,18 +887,57 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Domain": {
         "Category": "glossary",
         "Definition": [
-            "All the values of `x` you can use in a function. Most functions have an infinite domain; the exceptions are rational functions, where you have to make sure the denominator will not be zero, and radical functions, where you have to make sure the value under the square root is `>=0`."
+            "The set of all possible input values (`xtext(-values)`) for which the function is defined and produces a real output.",
+            "This is usually all real numbers for straight lines that extend infinitely in both direction, but some functions exclude certain values because they would produce undefined or imaginary output."
         ],
         "Examples": [
             "For example, The domain of `f(x)=-7x^2-4` is infinite because you can plug in any `x` value at all and get an answer. However, the domain of `g(x)=(x-7)/(x+2)` is all real numbers except `x=-2` because if you try to plug in `-2` for `x`, you will get a zero in a denominator."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding domain restrictions is useful for solving many types of problems - including evaluating a function for undefined outputs and interpreting a function to understand asymptotes or holes of its graph."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Dot Plot": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Double Inequality": {
+        "Category": "glossary",
+        "Definition": [
+            "A double inequality is the combination of two inequalities into one. A double inequality typically places an expression between two boundary values, meaning that the expression in the middle satisfies both of the inequalities at the same time."
+        ],
+        "Examples": [
+            "`3<x<7`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding double inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'between'."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Elements": {
         "Category": "glossary",
@@ -352,16 +948,55 @@
             "For example, the set `{-7,7}` has two elements."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Elimination": {
+        "Category": "glossary",
+        "Definition": [
+            "Elimination refers to combing equations - with addition, subtraction, and/or multiplication - to cancel one of the variables and create a simpler equation which can be more easily solved. The key is to manipulate two equations so that the coefficients of one variable in both equations are opposite.",
+            "Elimination can be applied for solving a system of equations, especially when both equations are in standard form (`Ax+By=C`)."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding elimination is helpful for solving many types of problems - including finding solutions to a systems of equations and identifying whether a system has zero or infinite solutions."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Equation": {
         "Category": "glossary",
         "Definition": [
-            "A mathematical statement that includes an equal sign."
+            "A mathematical statement that compares two expressions with an equal sign `(=)`, meaning they have the same value.."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding and manipulating equations is essential for solving many types of problems - including solving equations for an unknown value or defining an equation that describes a real-world situation.",
+            "When manipulated, both sides must be kept balanced by performing every operation on both sides at the same time."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Equidistance": {
+        "Category": "glossary",
+        "Definition": [
+            "Describes when two points are equal distances from another point."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding equidistance is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Equivalent": {
         "Category": "glossary",
@@ -370,47 +1005,234 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Equivalent Equations": {
+        "Category": "glossary",
+        "Definition": [
+            "Algebraic statements that share the same solution set with each other.",
+            "They may look different in form, but can be transformed into one another using algebraic operations."
+        ],
+        "Examples": [
+            "`x+1=2and2x+2=4`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding equivalent equations is essential for solving many types of problems - including rearranging formulas to solve for a different variable and identifying systems of equations with zero or infinite solutions."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Equivalent Expressions": {
+        "Category": "glossary",
+        "Definition": [
+            "An algebraic phrases that are different in form but have the exact same value as one another for every possible value of their variables.",
+            "They can be transformed into one another by using algebraic manipulation."
+        ],
+        "Examples": [
+            "`2(x+1)=2x+2`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding equivalent expressions is essential for solving many types of problems - including simplifying complex expression and converting from one form of a function into another."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Event": {
+        "Category": "glossary",
+        "Definition": [
+            "A specific outcome or set of desired outcomes."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding events is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Expanding": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Experiment": {
+        "Category": "glossary",
+        "Definition": [
+            "A study where researchers deliberately impose treatments on subjects and observe responses. Well-designed experiments with random assignment and a control group can establish causation."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding experiments is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Exponent": {
         "Category": "glossary",
         "Definition": [
-            "A superscript number indicating how many times to multiply a base number by itself."
+            "An operation, written as a superscript, that describes repeated multiplication of the same expression with itself. Also known as a power.",
+            "In an expression of the form `a^n`, 'n' represents how many times to multiply the base (`a`) by itself."
+        ],
+        "Examples": [
+            "`2^3=2xx2xx2=8`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding exponents is essential for solving many types of problems - including simplifying or expanding expressions to find other expressions that are equivalent and understanding the rate of growth or decay for functions that represent real-life situations."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Exponent Rules": {
+        "Category": "glossary",
+        "Definition": [
+            "Rules that help simplify expressions that involve exponents. Includes the Product Rule, the Quotient rule, the Power Rule, the Zero Exponent Rule, the Negative Exponent Rule, and the Fractional Exponent Rule."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [
+            "Understanding exponents is essential for solving many types of problems - including simplifying or expanding expressions to find other expressions that are equivalent and understanding the rate of growth or decay for functions that represent real-life situations."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Exponential Decay": {
         "Category": "glossary",
         "Definition": [
-            "Something that is getting smaller at an ever decreasing-rate. This is represented by a curve that starts off with a steep drop, but eventually levels off."
+            "Describes a quantity that decreases over time by being repeatedly multiplied by a constant factor, resulting in rapid shrinking proportional to the current amount.",
+            "Represented by a curve that starts off with a steep drop before leveling off and an exponential function where `0<b<1`."
         ],
         "Examples": [
             "For example, starting with a value such as `300` and cutting it in half over and over which is modeled by the function `f(x)=300(1/2)^x`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding exponential decay is helpful for solving many types of problems - including interpreting or identifying key features of graphs of exponential equations, converting decay rates between different time units, and modeling real-world situations such as half-life of radioactive substances."
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Exponential Function": {
+        "Category": "glossary",
+        "Definition": [
+            "An exponential function is a function where the variable appears in the exponent. An exponential function describes a situation of rapid growth or decay, where a change in the input value multiplies the output value by a constant factor.",
+            "Equations for exponential functions are usually written as `f(x)=ab^x` (general form), where `a` is the initial value and `b` (the base) is the growth factor if `b>1` or decay factor if `0<b<1`. Since exponential functions model growth or decay, it is common for `x` to represent an amount of time or number of intervals."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding exponential functions is helpful for solving many types of problems - including distinguishing between linear and exponential relationships, interpreting or identifying key features of graphs of exponential equations, solving exponential equations by finding a common base, and modeling real-world situations such as population growth or compound interest."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Exponential Growth": {
         "Category": "glossary",
         "Definition": [
-            "Something that is growing at an ever-increasing rate. This is represented by a curved line that starts off almost flat, but eventually gets very steep."
+            "Exponential growth describes a quantity that increases over time by being repeatedly multiplied by a constant factor, resulting in rapid change that is proportional to the current amount.",
+            "Represented by a curve that grows slowly before increasing steeply and an exponential function where `b>1`."
         ],
         "Examples": [
             "For example, starting with the number `5` and doubling it over and over which is modeled by the function `f(x)=5(2)^x`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding exponential growth is helpful for solving many types of problems - including interpreting or identifying key features of graphs of exponential equations, converting growth rates between different time units, and modeling real-world situations such as population growth or compound interest."
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Exponential Property Of Equality": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Expression": {
         "Category": "glossary",
         "Definition": [
-            "A mathematical statement consisting of numbers, variables, and/or operations that does not have an equal sign or inequality. Expressions cannot be solved; they can only be simplified."
+            "A mathematical statement that combines variables, constants, and operations (such as `+,-,xx,and-:`) to represent a single value.",
+            "Does not contain an equal sign (`=`) or any type of comparison (such as `<,>,<=,and>=`) - meaning it can only be simplified but not solved."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [
+            "Manipulating expressions is essential for solving many types of problems - including simplifying or expanding expressions to find other expressions that are equivalent."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Exterior Angle Theorem": {
+        "Category": "glossary",
+        "Definition": [
+            "The theorem that states that the measure of an exterior angle of a triangle is equal to the sum of the measures of its two non-adjacent interior angles."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding Exterior Angle Theorem is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Exterior Angles": {
+        "Category": "glossary",
+        "Definition": [
+            "Angles that are outside the two lines when a transversal intersects parallel lines. These angles are equal."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding exterior angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Extrapolation": {
+        "Category": "glossary",
+        "Definition": [
+            "Making a prediction using the line of best fit for an `xtext(-value)` outside the range of the original data set. It's not always reliable since the trend may not continue beyond the range of the original data set."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding extrapolation is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Factor": {
         "Category": "glossary",
@@ -419,7 +1241,34 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Factored Form": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Factoring": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "FOIL": {
         "Category": "glossary",
@@ -430,7 +1279,10 @@
             "For example, `(x^2+3)(2x-5)=2x^3-5x^2+6x-15`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Frequency": {
         "Category": "glossary",
@@ -439,18 +1291,55 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Frequency Table": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Function": {
         "Category": "glossary",
         "Definition": [
-            "A mathematical description of the relationship between two variables. Typically, `x` is the input, and `f(x)` is the output. For a relation to be a function, there must be exactly one value of `f(x)` for each value of `x`."
+            "A mathematical description of the relationship between two variables that performs a set of operations on each input value in order to assign exactly one output value. The input value is usually represented by `x`, while the resulting output is often represented as `y`.",
+            "Can be represented in a variety of forms: equations are written descriptions, graphs are visualizations of points solution coordinates in the `xytext(-plane)`, and tables are lists of input-output solution pairs."
         ],
         "Examples": [
             "For example, `f(x)=2x-1` is an example of a linear function; `f(x)=x^2-8x+7` is an example of a quadratic function, and the equation of a circle such as `(x-2)^2+y^2=81` isn't a function at all because it fails the vertical line test."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding functions is essential for solving many types of problems - including evaluating a function given an input or output, interpreting a function to understand key features and behaviors of its graph, and determining a function's rule based on a table of value."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Function Notation": {
+        "Category": "glossary",
+        "Definition": [
+            "A way to formally represent mathematical equations where the output is written as a function of the input, or `f(x)` (reads as “`f` of `x`”)."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding functions is essential for solving many types of problems - including evaluating a function given an input or output, interpreting a function to understand key features and behaviors of its graph, and determining a function's rule based on a table of value."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Graph": {
         "Category": "glossary",
@@ -459,7 +1348,37 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Growth Factor": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Growth Rate": {
+        "Category": "glossary",
+        "Definition": [
+            "A percent increase over a specific time period."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding growth rates is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Height": {
         "Category": "glossary",
@@ -468,25 +1387,48 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Histogram": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Hypotenuse": {
         "Category": "glossary",
         "Definition": [
-            "The side of a right triangle that is opposite the right angle. It will always be the longest side of the right triangle."
+            "The side of a right triangle that is opposite the right angle and will always be the longest side of a right triangle."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding hypotenuses is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
-    "Imaginary number": {
+    "Imaginary Number": {
         "Category": "glossary",
         "Definition": [
-            "A value that includes `i`, which is equal to `sqrt(-1)` (meaning `i^2=-1`). Imaginary numbers can't be graphed on a number line or coordinate plane, but often result as solutions when using the quadratic formular"
+            "A value that includes `i`, which is equal to `sqrt(-1)` (meaning `i^2=-1`). Imaginary numbers can't be graphed on a number line or coordinate plane, but often result as solutions when using the quadratic formula."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Increasing": {
         "Category": "glossary",
@@ -495,16 +1437,41 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Independent Events": {
+        "Category": "glossary",
+        "Definition": [
+            "Events where the occurrence of one does not affect the probability of the other."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding independent events is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Inequality": {
         "Category": "glossary",
         "Definition": [
-            "A statement describing the relationship between two expressions. There are 5 inequalities in math: `<`, `<=`, `>`, `>=`, and `!=`."
+            "An inequality is a statement that compares two expressions that are not always equal - such as less than `(<)`, greater than `(>)`, less than or equal to (`<=`), greater than or equal to (`>=`), and not equal to (`!=`).",
+            "The solution is a range of values, rather than a single value."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding inequalities is essential for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'at least' or 'no more than'."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Inference": {
         "Category": "glossary",
@@ -513,7 +1480,25 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Infinitely Many Solutions": {
+        "Category": "glossary",
+        "Definition": [
+            "Infinitely many solutions means there are countless values that satisfy an equation or system of equationsWhen solving a system of linear equations, the lines overlap everywhere. When solving a system of equations, infinitely many solutions means that the graphs are identical."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding when there are infinitely many solutions is helpful for solving many types of problems - including finding solutions for equations or systems of equations."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Integers": {
         "Category": "glossary",
@@ -524,7 +1509,8 @@
             "For example, `0`, `5`, and `-15` are integers but `1/2`, `5.6, and `sqrt(2)` are not."
         ],
         "Related": [],
-        "Standards": [""]
+        "Relevance": [],
+        "Standards": []
     },
     "Intercepts": {
         "Category": "glossary",
@@ -533,7 +1519,11 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Interest": {
         "Category": "glossary",
@@ -542,16 +1532,53 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Interior Angles": {
+        "Category": "glossary",
+        "Definition": [
+            "Angles that are inside the two lines when a transversal intersects parallel lines. These angles are equal."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding interior angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Interpolation": {
+        "Category": "glossary",
+        "Definition": [
+            "Making a prediction using the line of best fit for an `xtext(-value)` within the range of the original data set."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding interpolation is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Intersection": {
         "Category": "glossary",
         "Definition": [
-            "The point(s), values, or elements common to two or more sets, lines, or graphs."
+            "A value that two or mathematical objects share in common. For graphs, it is the coordinates where multiple functions are equal or cross over each other. For equations, it is the solution where multiple equations are satisfied simultaneously."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding intersections is helpful for solving many types of problems - including finding solutions to systems of equations algebraically or graphically."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.PSDA"
+        ]
     },
     "Interval": {
         "Category": "glossary",
@@ -560,7 +1587,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Irrational": {
         "Category": "glossary",
@@ -569,7 +1599,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Isosceles trapezoid": {
         "Category": "glossary",
@@ -578,25 +1611,50 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
-    "Isosceles triangle": {
+    "Isosceles Triangle": {
         "Category": "glossary",
         "Definition": [
             "A triangle with two equal sides. Isosceles triangles will have two congruent base angles and one different vertex angle. Isosceles right triangles will be `45-45-90` triangles."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Leg": {
+        "Category": "glossary",
+        "Definition": [
+            "The sides forming the right angle of a right triangle."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding legs is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Line": {
         "Category": "glossary",
         "Definition": [
-            "A geometric figure that extends infinitely in two directions and does not change direction."
+            "An infinite, straight path extending in two opposite directions with a constant slope. It is the visual representation of a linear equation in the `xy`-plane, showing all the points that satisfy a relationship between the variables `xandy`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [
+            "Understanding lines is essential for solving many types of problems - including identifying the equation for a line from its graph or a set of coordinates, identifying the line that describes a real-world situation, and solving for the point(s) of intersection between multiple lines."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Line of Best Fit": {
         "Category": "glossary",
@@ -605,16 +1663,94 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Line Of Best Fit": {
+        "Category": "glossary",
+        "Definition": [
+            "A straight line that best represents the trend in a scatterplot. Also known as a regression line."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding lines of best fit is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Line Segment": {
+        "Category": "glossary",
+        "Definition": [
+            "A part of a line with two distinct endpoints."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding line segments is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Linear": {
         "Category": "glossary",
         "Definition": [
-            "Aa relationship that has a constant slope. Equations in the form `y=mx+b` are linear."
+            "A relationship that has a constant slope. Equations in the form `y=mx+b` are linear."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Linear Function": {
+        "Category": "glossary",
+        "Definition": [
+            "A linear function is a relationship between two variables - usually `x` and `y` - with a constant rate of change, or slope. The graph of a linear function will always produce a straight line.",
+            "Equations for linear functions are commonly written as `y=mx+b` (slope-intercept form), where `m` represents the slope and `b` represents the `ytext(-intercept)`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding and manipulating linear functions is essential for solving many types of problems - including identifying what variables represent, determining the rate of change or initial value, modeling relationships based on real-world situations, and interpreting information from graphs or tables."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Linear Pair": {
+        "Category": "glossary",
+        "Definition": [
+            "Two adjacent angles that are supplementary. When combined, the pair form a straight line."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding linear pairs is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Literal Inequality": {
+        "Category": "glossary",
+        "Definition": [
+            "A literal inequality is an inequality that includes variables. Literal inequalities can be solved or simplified using the same algebraic process used when working with equations."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding literal inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Logarithm": {
         "Category": "glossary",
@@ -623,18 +1759,25 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
-    "Margin of error": {
+    "Margin Of Error": {
         "Category": "glossary",
         "Definition": [
-            "A way to describe the level of uncertainty when a statistic about a population is being estimated by a sample from that population. The margin of error can be easily converted to a confidence interval, and vice versa."
+            "A way to describe the level of uncertainty when a statistic about a population is being estimated by a sample from that population.",
+            "It can be easily converted to a confidence interval and it becomes smaller with a larger samples size and more certainty."
         ],
         "Examples": [
             "For example, Amy polled 100 people and asked them how they would vote in next week's election. `52%` of them said they would vote for her. So, she estimates she will get `52%` of the vote with a margin of error of `+-5%`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Maximum": {
         "Category": "glossary",
@@ -644,25 +1787,85 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM", "SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM",
+            "SAT.M.PSDA"
+        ]
     },
     "Mean": {
         "Category": "glossary",
         "Definition": [
-            "A statistic calculated by adding up all the numbers in a set and dividing by how many values were in that set. The mean is also called the average and describes the center of the data. As compared to the median, the mean is more sensitive to outliers."
+            "A statistic describing the average of a dataset - calculated as the sum of all values divided by the total number of values.",
+            "This measure is sensitive to outliers as compared to other measures of center."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding means is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Measures Of Center": {
+        "Category": "glossary",
+        "Definition": [
+            "Metrics that describe the typical or central value of a data set. The most common are mean, median, and mode."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding measures of center is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Measures Of Spread": {
+        "Category": "glossary",
+        "Definition": [
+            "Metrics that describe how much the values are varied or dispersed. The most common are range and standard deviation."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding measures of spread is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Median": {
         "Category": "glossary",
         "Definition": [
-            "A statistic arrived at by putting the data in ascending order and selecting the middle number. If there are an even number of data points, the mean is calculated by adding the two numbers in the center and then dividing by zero. As compared to the mean, the median is less sensitive to outliers."
+            "A statistic describing the middle value of a dataset. Calculated by ordering the data from low to high and selecting the middle number or the average of the two middle numbers (if the dataset has an even number of values).",
+            "Compared to the mean, this measure of center is less sensitive to outliers."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding medians is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Midpoint Formula": {
+        "Category": "glossary",
+        "Definition": [
+            "The equation that defines the halfway point between pairs of points in terms of their coordinates."
+        ],
+        "Examples": [],
+        "Related": [
+            "Pythagorean Theorem"
+        ],
+        "Relevance": [
+            "Understanding midpoint formula is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Minimum": {
         "Category": "glossary",
@@ -672,7 +1875,25 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM", "SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM",
+            "SAT.M.PSDA"
+        ]
+    },
+    "Mode": {
+        "Category": "glossary",
+        "Definition": [
+            "The value(s) that appear most frequently. A data set can have no mode, one mode, or multiple modes."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding modes is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Model": {
         "Category": "glossary",
@@ -683,7 +1904,125 @@
             "The model `H=1.88L+32.02` can be used by archeologists to estimate a person's total height (`H`) from the length of the femur (`L`), where `H` and `L` are both in inches."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Mutually Exclusive Events": {
+        "Category": "glossary",
+        "Definition": [
+            "Events that cannot occur at the same time."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding mutually exclusive events is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Negative Exponent Rule": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "No Solution": {
+        "Category": "glossary",
+        "Definition": [
+            "No solution means that there is no value or set of values that exists that could ever satisfy an equation or system of equations. When solving a system of equations, no solution means that the graphs never intersect."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding when there is no solution is helpful for solving many types of problems - including finding solutions for equations or systems of equations."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Observational Study": {
+        "Category": "glossary",
+        "Definition": [
+            "A study where researchers observe subjects and measure variables without assigning treatments. It can show correlation but not causation."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding observational studies is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Obtuse Angle": {
+        "Category": "glossary",
+        "Definition": [
+            "An angle that is greater than `90°`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding obtuse angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "One-Variable Data": {
+        "Category": "glossary",
+        "Definition": [
+            "Describes a single characteristic measured for each item."
+        ],
+        "Examples": [
+            "test score of students"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding one-variable data is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Opposite Side": {
+        "Category": "glossary",
+        "Definition": [
+            "The side across from an acute angle in a right triangle."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding opposite sides is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Order Of Operations": {
+        "Category": "glossary",
+        "Definition": [
+            "The order of operations describes the correct sequence for calculations within an expression. This set of rules ensures that every calculation produces the a consistent and correct result.",
+            "The acronym PEMDAS describes this correct order of operations - Parentheses, then Exponents, then Multiplication and Division, then Addition and Subtraction"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding order of operations is essentials for solving many types of problems - including simplifying complex expressions, identifying equivalent expressions, evaluating expressions given variable values, and solving equations for an unknown variable."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Outcome": {
         "Category": "glossary",
@@ -692,27 +2031,43 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Outlier": {
         "Category": "glossary",
         "Definition": [
-            "A number or numbers in a set that just don't seem to belong with all the other numbers because they are much larger or much smaller than the rest of the group."
+            "A data point significantly different (much smaller or much larger) from other points in a dataset.",
+            " It can heavily skew the mean and the range, but has less effect on the median and the mode."
         ],
         "Examples": [
             "For example, in the set `{5,52,58,59,62,71,80}, `5` is an outlier."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding outliers is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Parabola": {
         "Category": "glossary",
         "Definition": [
-            "The “U” shaped curve that results from graphing a quadratic function."
+            "The “U” shaped curve that results from graphing a quadratic function.",
+            "It can either open upward or downward and will always have a vertical axis of symmetry that passes through the vertex.",
+            "It can have either zero, one, or two real roots that pass through the x-axis."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [
+            "Understanding parabolas is useful for solving many types of problems - including interpreting or identifying key features of graphs of quadratic equations and modeling real-world situations such as projectile motion."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Parallel": {
         "Category": "glossary",
@@ -721,18 +2076,84 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Parent Function": {
+        "Category": "glossary",
+        "Definition": [
+            "The simplest function that still satisfies the definition of a certain type of function."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding parent functions is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Part-To-Part Ratio": {
+        "Category": "glossary",
+        "Definition": [
+            "A ratio that compares two distinct pieces of a total."
+        ],
+        "Examples": [
+            "The ratio of apples to oranges is `3:2`."
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding part-to-part rations is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Part-To-Whole Ratio": {
+        "Category": "glossary",
+        "Definition": [
+            "A ratio that compares a part to the total."
+        ],
+        "Examples": [
+            "A ratio of apples to total fruit is `3:5`."
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding part-to-whole rations is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "PEMDAS": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Percentage": {
         "Category": "glossary",
         "Definition": [
-            "The expression of a decimal or fraction as a number out of `100`."
+            "The expression of a part of a whole as a fraction with a denominator of `100`."
         ],
         "Examples": [
             "For example, the decimal `0.5` and the fraction `1/2` can be represented as the percentage `50%`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding percentages is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Perimeter": {
         "Category": "glossary",
@@ -741,7 +2162,12 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding perimeter is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Perpendicular": {
         "Category": "glossary",
@@ -750,7 +2176,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Pi": {
         "Category": "glossary",
@@ -759,7 +2188,41 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Point": {
+        "Category": "glossary",
+        "Definition": [
+            "A point is a specific location in a coordinate system, which is represented by an ordered pair of numbers such as `(x,y)`. Although points can exist within any number of dimension, they are typically graphed in the xy-plane (2-D).",
+            "A point `(x,y)` is composed of an `x`-coordinate and `y`-coordinate, which describe its distance from `(0,0)` (the origin) along the horizontal axis and vertical axis respectively.",
+            "Any pair of two points will always form a straight line - where the distance between them, their midpoint, and the slope of their line can be calculated with formulas."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding points is essential for solving many types of problems - including identifying coordinates that satisfy an equation, understanding the relationship between variables when points are graphed, and understanding how transformation like reflections or translations affect coordinates."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Point-Slope Form": {
+        "Category": "glossary",
+        "Definition": [
+            "A common format to describe the equation for a line written as `y-y_1=m(x-x_1)`, where `(x_1,y_1)` is a point on the line and `m` is the slope."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding lines is essential for solving many types of problems - including identifying the equation for a line from its graph or a set of coordinates, identifying the line that describes a real-world situation, and solving for the point(s) of intersection between multiple lines."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Polynomial": {
         "Category": "glossary",
@@ -768,34 +2231,94 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Polynomial Function": {
+        "Category": "glossary",
+        "Definition": [
+            "A polynomial function is a mathematical expression that consists of variables with non-negative integer exponents and their coefficients, combined by addition, subtraction, and multiplication.",
+            "Equations for polynomial functions are usually written as `f(x)=a_nx^n+a_(n-1)x^(n-1)+...+a_1x+a_0` (general form), where `n` represents the highest exponent, or degree, and `a`'s represent coefficients.",
+            "Common examples of polynomial functions include linear functions (where the degree is `n=1`), quadratic functions (where the degree is `n=2`), and cubic functions (where the degree is `n=3`)."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding and manipulating polynomial functions is useful for solving many types of problems - including factoring or expanding expressions to find equivalent forms, finding unknown solutions to equations, and interpreting graphical features such as zeros (roots) or end behavior."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Population": {
         "Category": "glossary",
         "Definition": [
-            "All of the elements in a group."
+            "The entire group of individuals, items, or elements being studied."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding populations is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Possible Outcomes": {
+        "Category": "glossary",
+        "Definition": [
+            "All of the distinct results that occur in a probability scenario."
+        ],
+        "Examples": [],
+        "Related": [
+            "Sample Space"
+        ],
+        "Relevance": [
+            "Understanding possible outcomes is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Power Of A Power Rule": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Prism": {
         "Category": "glossary",
         "Definition": [
-            "A 3D solid with two identical, parallel polygonal bases connected by rectangular or parallelogram side faces."
+            "A three-dimensional solid with two identical, parallel polygonal bases connected by rectangular or parallelogram side faces."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Probability": {
         "Category": "glossary",
         "Definition": [
-            "Measures the likelihood of an event occurring, expressed as a number between `0` (impossible) and `1` (certain)."
+            "A measure of the likelihood of an event occurring, expressed as a number between `0` (impossible) and `1` (certain)."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding probability is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Product": {
         "Category": "glossary",
@@ -806,7 +2329,20 @@
             "For example, the product of `5` and `6` is `30`."
         ],
         "Related": [],
-        "Standards": [""]
+        "Relevance": [],
+        "Standards": []
+    },
+    "Product Rule": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Proportion": {
         "Category": "glossary",
@@ -815,7 +2351,26 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding proportions is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Proportional Relationship": {
+        "Category": "glossary",
+        "Definition": [
+            "A relationship between two quantities if their ratio is constant. Graphically, this is a straight line through the origin (`y=kx`, where `k` is the constant of proportionality, or unit rate)."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding proportional relationships is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Pyramid": {
         "Category": "glossary",
@@ -824,16 +2379,27 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Pythagorean Theorem": {
         "Category": "glossary",
         "Definition": [
-            "An equation relating the three sides of a right triangle. Specifically, it is `a^2+b^2=c^2` where `a` and `b` are the legs and `c` is the hypotenuse."
+            "An equation relating the three sides of a right triangle, stating that the square of the hypotenuse of a right triangle is equal to the sum of the squares of the other two sides.",
+            "The formula is `a^2+b^2=c^2` where `a` and `b` are the legs and `c` is the hypotenuse."
         ],
         "Examples": [],
-        "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Related": [
+            "Distance Formula"
+        ],
+        "Relevance": [
+            "Understanding Pythagorean Theorem is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Pythagorean Triples": {
         "Category": "glossary",
@@ -844,7 +2410,10 @@
             "For example, `3-4-5` and `5-12-13`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Quadrant": {
         "Category": "glossary",
@@ -853,7 +2422,39 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Quadratic Formula": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Quadratic Function": {
+        "Category": "glossary",
+        "Definition": [
+            "A quadratic function is a polynomial function where the highest power, or degree, of the variable is `2`. The graph of a quadratic function will produce a U-shaped curve, which is called a parabola.",
+            "Equations for quadratic functions are usually written as `f(x)=ax^2+bx+c` (standard form), where `a,b,andc` are constants and `a!=0`. Quadratic functions can also be described in factored form (`f(x)=a(x-p)(x-q)`) to highlight the roots or vertex form (`f(x)=a(x-h)^2+k`) to highlight the vertex."
+        ],
+        "Examples": [],
+        "Related": [
+            "Parabola"
+        ],
+        "Relevance": [
+            "Understanding quadratic functions is essential for solving many types of problems - including interpreting the graphs of equations in various forms, finding the roots of equations by factoring or using the quadratic formula, identifying the number of solutions for functions, and modeling real-world situations such as projectile motion."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Quotient": {
         "Category": "glossary",
@@ -864,57 +2465,169 @@
             "The quotient of `20` and `5` is `4`."
         ],
         "Related": [],
-        "Standards": [""]
+        "Relevance": [],
+        "Standards": []
     },
-    "Radian": {
+    "Quotient Rule": {
         "Category": "glossary",
         "Definition": [
-            "A unit of measurement for angles. A right angle is `pi/2` radians, a straight angle is `pi` radians, and a whole circle is `2pi` radians."
+            "HOLD"
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Radians": {
+        "Category": "glossary",
+        "Definition": [
+            "A common unit of measurement for angles. A right angle is `pi/2` units, a straight angle is `pi` units, and a whole circle is `2pi` units."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding radians is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Radical Function": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Radical/Rational Exponent Rule": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Radius": {
         "Category": "glossary",
         "Definition": [
-            "The distance between the center of any circle and any point on that circle. The radius is half of the diameter."
+            "The distance between the center of any circle and any point on that circle. It is half of the diameter of a circle."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding radii is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
-    "Range": {
+    "Random Sample": {
         "Category": "glossary",
         "Definition": [
-            "(1) A statistic calculated by subtracting the smallest value from the largest value. It is a very simple way to describe the amount of spread in a set of data. Finding the standard deviation would be a more involved and more accurate method of describing the spread.",
-            "(2) All possible y-values for a given function."
+            "A sample where every member of the population has an equal chance of being selected. It helps avoid biased results."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding random samples is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Range (Data)": {
+        "Category": "glossary",
+        "Definition": [
+            "A statistic calculated by subtracting the smallest value from the largest value. It is a very simple way to describe the amount of spread in a set of data. Finding the standard deviation would be a more involved and more accurate method of describing the spread."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding ranges is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Range (Function)": {
+        "Category": "glossary",
+        "Definition": [
+            "The range of a function is the set of all possible output values (`f(x)orytext(-values)`) for which the function is defined for valid input values. If you think of a function as a machine, then the range represents everything that could come out of the machine.",
+            "When looking at a function's graph, the range is represented by the span of values across the `ytext(-axis)`. For example, the range of the graph of `y=x` extends to infinity on both the positive and negative direction while more complex graphs might have ranges that end at a certain value or skip over a set of values."
         ],
         "Examples": [
-            "(2) For example, the range of `f(x)=x^2+7` is from `7` to positive infinity."
+            "For example, the range of `f(x)=x^2+7` is from `7` to positive infinity."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM", "SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding range restrictions is useful for solving many types of problems - including evaluating a function for undefined outputs and interpreting a function to understand asymptotes or holes of its graph."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Rate": {
         "Category": "glossary",
         "Definition": [
-            "A way to describe the comparison of two separate measurements, such as in miles per hour. If you are working in the context of a `D=RT` question, `R` is the rate. If you are working in the context of a coordinate geometry, rate will be the slope of the line expressed as a positive number preceded by the word “increasing” or “decreasing.”"
+            "A ratio that compares two separate quantities with different units."
+        ],
+        "Examples": [
+            "miles per hour or dollars per pound"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding rates is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Rate Of Change": {
+        "Category": "glossary",
+        "Definition": [
+            "The rate of change describes how one quantity (the output) changes in relation to another (the input) for a function. It is a ratio that compares how much the dependent variable changes in relation to the independent variable.",
+            "A positive rate of change indicates that the output increases as the input increases, resulting in an uphill graph. A negative rate of change indicates that the output decreases as the input increases, resulting in a downhill graph. A zero rate of change indicates that the output does not change as the input increases, resulting in a flat or horizontal graph. An undefined rate of change indicates that the input does not change as the output increases, resulting in a infinitely steep or vertical graph.",
+            "For linear functions, the rate of change is constant across all values and is referred to as the slope. For other functions with a variable rate of change, the average rate of change or steepness can be calculated over a specific interval."
         ],
         "Examples": [],
-        "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Related": [
+            "Slope"
+        ],
+        "Relevance": [
+            "Understanding the rate of change is essential for solving many types of problems - including interpreting a trend in a function or data presented graphically, completing a table of input-output pairs, and understanding relationships based on real-world situation involving speed, growth, or cost."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
     "Ratio": {
         "Category": "glossary",
         "Definition": [
-            "A comparison of two numbers, usually written as a fraction or in the form `a:b`."
+            "A comparison of two numbers showing how much larger or smaller one amount is in relation the other.",
+            "Usually written as a fraction or in the form `a:b`."
         ],
         "Examples": [
             "For example, If there are `2` watermelons and `15` pumpkins in a field, then the ratio of watermelons to pumpkins is `2:15`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding ratios is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Rational": {
         "Category": "glossary",
@@ -923,16 +2636,48 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
-    "Real number": {
+    "Rational Function": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Ray": {
+        "Category": "glossary",
+        "Definition": [
+            "A part of a line with one endpoint, extending infinitely in one direction."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding rays is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Real Number": {
         "Category": "glossary",
         "Definition": [
             "Any number that can be located on a number line. All positives, negatives, decimals, and zero are real numbers. The only numbers that aren't real are imaginary numbers."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Rectangle": {
         "Category": "glossary",
@@ -941,16 +2686,34 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
-    "Rectangular Prism (Box)": {
+    "Rectangular Prism": {
         "Category": "glossary",
         "Definition": [
             "A 3-D figure with a length, width, and height, and where all the angles are right. If the three dimensions are all equal, it is a cube. The formula for volume of a rectangular prism is `V=lwh`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Reflection": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Regular": {
         "Category": "glossary",
@@ -959,7 +2722,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Remainder": {
         "Category": "glossary",
@@ -970,66 +2736,151 @@
             "For example, dividing `13` by `5` equal `2` with a remainder of `3`. (`(5xx2=10)+3=13`)"
         ],
         "Related": [],
-        "Standards": [""]
+        "Relevance": [],
+        "Standards": []
     },
-    "Right": {
+    "Representative Sample": {
         "Category": "glossary",
         "Definition": [
-            "(1) An angle of exactly `90°`, or a shape that includes an angle of `90°`."
+            "A sample that accurately reflects the characteristics of the population. It's the goal of taking a random sample."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding representative samples is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
-    "Right circular cone": {
+    "Right Angle": {
+        "Category": "glossary",
+        "Definition": [
+            "An angle that is exactly `90°`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding right angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Right Circular Cone": {
         "Category": "glossary",
         "Definition": [
             "A cone where the point is directly above (or directly below) the center of the circular base. The formula for volume of a right circular cone is `V=1/3pir^2h`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
-    "Right trapezoid": {
+    "Right Trapezoid": {
         "Category": "glossary",
         "Definition": [
             "A trapezoid where one of the sizes is perpendicular to the bases."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Right Triangle": {
+        "Category": "glossary",
+        "Definition": [
+            "A triangle that has one `90°` angle."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding right triangles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Square Root": {
+        "Category": "glossary",
+        "Definition": [
+            "A number that when multiplied by itself results in the given value."
+        ],
+        "Examples": [
+            "For example, the square root of `100` is `10`."
+        ],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Root": {
         "Category": "glossary",
         "Definition": [
-            "(1) A number that when multiplied by itself a certain number of times results in the given value.",
-            "(2) Another word for the zeros or x-intercepts of a polynomial function. Find the roots by setting the equation equal to zero and solving."
+            "The value of a variable that makes a function equal to zero. Also known as a zero or x-intercept of a polynomial function.",
+            "It represents the solution to an equation of the form `f(x)=0` and the `xtext(-coordinate)` of the point where a graph crosses or touches the `xtext(-axis)`."
         ],
-        "Examples": [
-            "(1) For example, the square root of `100` is `10` and the `5^text(th)` root of `32` is `2`."
-        ],
+        "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [
+            "Understanding and finding roots is useful for solving many types of problems - including interpreting graphs of various polynomial functions, solving real-world situations where a quantity becomes zero, and determining the number of solutions to an equation."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Sample": {
         "Category": "glossary",
         "Definition": [
-            "A subset of a population."
+            "A subset of the population from which data is collected."
         ],
         "Examples": [
             "For example, Makenzie wants to know how the kids in her school feel about wearing uniforms, so she talks to a sample of `20` students randomly selected from the student body."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding samples is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
-    "Sampling Method": {
+    "Sample Space": {
         "Category": "glossary",
         "Definition": [
-            "The process a researcher uses to collect data from a portion of a population. This could be accomplished by making observations, running an experiment, or conducting a survey. A good sampling method is one where the participants (or data points) are randomly selected and where every member of the population has a chance of being selected."
+            "The set of all possible outcomes of an experiment."
         ],
         "Examples": [],
+        "Related": [
+            "Possible Outcomes"
+        ],
+        "Relevance": [
+            "Understanding sample spaces is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Sampling Methods": {
+        "Category": "glossary",
+        "Definition": [
+            "Processes used by researchers to collect data from a portion of a population. This could be accomplished by making observations, running an experiment, or conducting a survey. A good sampling method is one where the participants (or data points) are randomly selected and where every member of the population has a chance of being selected."
+        ],
+        "Examples": [
+            "simple, random, or stratified"
+        ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding sampling methods is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Satisfies": {
         "Category": "glossary",
@@ -1038,25 +2889,67 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Scale Factor": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM",
+            "SAT.M.GT"
+        ]
     },
     "Scatterplot": {
         "Category": "glossary",
         "Definition": [
-            "A method of displaying bivariate data by graphing each pair of numbers as a point with an `x` and `y` coordinate."
+            "A method of displaying two-variable (bivariate) data by graphing each point in the dataset as a number pair with an `x` and `y` coordinate."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding scatterplots is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Secant": {
+        "Category": "glossary",
+        "Definition": [
+            "A line that intersects a circle at two points."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding secants is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Sector": {
         "Category": "glossary",
         "Definition": [
-            "A portion of the area of a circle. If the circle was a pizza, your slice would be a sector, and the crust on your slice would be an arc."
+            "A portion of the area of a circle bounded by two radii and their intercepted arc.",
+            "A symmetrical slice of a circle."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding sectors is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Sequence": {
         "Category": "glossary",
@@ -1065,16 +2958,22 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
-    "Similar": {
+    "Shift": {
         "Category": "glossary",
         "Definition": [
-            "When two shapes have the exact same shape but differ in size, or one is a mirror image of the other."
+            "HOLD"
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Similar Triangles": {
         "Category": "glossary",
@@ -1083,7 +2982,22 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Similarity": {
+        "Category": "glossary",
+        "Definition": [
+            "When two shapes have the exact same shape but differ in size, or one is a mirror image of the other."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Simple interest": {
         "Category": "glossary",
@@ -1092,7 +3006,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Simplify": {
         "Category": "glossary",
@@ -1101,57 +3018,116 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Sine": {
         "Category": "glossary",
         "Definition": [
-            "In a right triangle, the ratio between the side opposite a given angle and the hypotenuse. Usually abbreviated to “sin”, but please, for the sake of math teacher's everywhere, pronounce this as “sine” not “sin”. `sinx=text(oppositie)/text(hypotenuse)`"
+            "In a right triangle, the ratio between the side opposite a given angle and the hypotenuse. Usually abbreviated to “sin”, where `sinx=text(oppositie)/text(hypotenuse)`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding sine is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Slack Inequality": {
+        "Category": "glossary",
+        "Definition": [
+            "An inequality that compares two expression including the possibility of them being equal - such as less than or equal to (`<=`) and greater than or equal to (`>=`).",
+            "On a number line, it is represented by an closed circle at the boundary point."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding slack inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'at least' or 'at most'."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Slope": {
         "Category": "glossary",
         "Definition": [
-            "The ratio of vertical change (“rise”) to horizontal change (“run”) between two points."
+            "Describes the steepness and direction of change for one quantity (the output) in relation to another (the input) for a linear function. It is a ratio that compares how much the dependent variable changes in relation to the independent variable. You can think of it as how many steps up or down the graph of a linear function takes for every step to the right.",
+            "The ratio of vertical change (“rise”) to horizontal change (“run”) between two points. If positive, the output increases as the input increases resulting in an uphill graph. If negative, the output decreases as the input increases resulting in a downhill graph. If zero, the output does not change as the input increases resulting in a flat horizontal graph. If undefined, the input does not change as the output increases resulting in a steep vertical graph."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A"]
+        "Relevance": [
+            "Understanding the slope is essential for solving many types of problems - including interpreting a trend in a linear function or data presented graphically, completing a table of input-output pairs, and understanding relationships based on real-world situation involving speed, growth, or cost."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
     },
-    "SOHCATOA": {
+    "Slope-Intercept Form": {
+        "Category": "glossary",
+        "Definition": [
+            "A common format to describe the equation for a line written as `y-mx+b`, where `m` is the slope and `b` is the y-intercept."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding lines is essential for solving many types of problems - including identifying the equation for a line from its graph or a set of coordinates, identifying the line that describes a real-world situation, and solving for the point(s) of intersection between multiple lines."
+        ],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "SOH-CAH-TOA": {
         "Category": "glossary",
         "Definition": [
             "a mnemonic to help you remember three important formulas in trigonometry: `sinx=text(oppositie)/text(hypotenuse)`, `cosx=text(adjacent)/text(hypoteuse)`, and `tanx=text(opposite)/text(adjacent)`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Solution": {
         "Category": "glossary",
         "Definition": [
-            "(1) The value of a variable that makes an equation true.",
+            "(1) The value (or set of values) for a variable that makes an equation, inequality, or system true. For an equation, this is a specific value that satisfies the equality; for an inequality, this is a range of values that satisfies the comparison; and for a system, this is a set of specific values that satisfies all equations at the same time",
             "(2) The point(s) at which the graphs of two or more functions cross."
         ],
         "Examples": [
             "(1) For example, the solution of `5x-7=-2` is `x=1`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding and finding solutions is essential for solving many types of problems - including solving equations that represent real-world situations, interpreting graphs for points of intersections, and identifying special cases where equations, inequalities, or systems might have no solutions or infinitely many solutions."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Solution Set": {
         "Category": "glossary",
         "Definition": [
-            "All possible values of the variable."
+            "The collection of all values that make an equation, inequality, or system of equations true. Depending on what is being solved, the solutions set could be a single number (for an equation), a range (for an inequality), an ordered pair (for a system), or empty if no solution exists."
         ],
         "Examples": [
             "For example, if `abs(x)=7`, then `x` can equal `7` or `-7`, and the solution set is `{-7,7}`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding solution sets is essential for solving many types of problems - including solving equations that represent real-world situations, interpreting graphs for points of intersections, and identifying special cases where equations, inequalities, or systems might have no solutions or infinitely many solutions."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Special Right Triangles": {
         "Category": "glossary",
@@ -1160,7 +3136,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Sphere": {
         "Category": "glossary",
@@ -1169,16 +3148,63 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
-    "Standard deviation": {
+    "Standard Deviation": {
         "Category": "glossary",
         "Definition": [
-            "A statistic that describes how spread out the data is. If low then the data are gathered (or “clumped”) close to the mean; if high then there are data points pretty far to the left and the right of the center."
+            "A statistic that describes the average amount that values deviate from the mean.",
+            "If low then the data are gathered (or “clumped”) close to the mean; if high then there are data points pretty far to the left and the right of the center."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [
+            "Understanding standard deviations is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Standard Form (Linear)": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A"
+        ]
+    },
+    "Standard Form (Quadratic)": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Statistical Claim": {
+        "Category": "glossary",
+        "Definition": [
+            "A conclusion about a population parameter based on sample data."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding statistical claims is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Statistics": {
         "Category": "glossary",
@@ -1187,7 +3213,41 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Strict Inequality": {
+        "Category": "glossary",
+        "Definition": [
+            "An inequality that compares two expression excluding the possibility of them being equal - such as less than (`<`) and greater than (`>`).",
+            "On a number line, a strict inequality is represented by an open circle at the boundary point."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding strict inequalities is helpful for solving many types of problems - including finding ranges of solutions for inequalities or systems and describing real-world situations that include phrases such as 'less than' or 'more than'."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Substitution": {
+        "Category": "glossary",
+        "Definition": [
+            "Substitution refers to replacing a variable or expression within an expression or equation with a specific value or a different, equivalent expression. Once you know that two quantities are equal, you can swap one for the other without changing the outcome."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding substitution is helpful for solving many types of problems - including finding solutions to a systems of equations and evaluating expressions given the value of a variable."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Sum": {
         "Category": "glossary",
@@ -1196,16 +3256,52 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": [""]
+        "Relevance": [],
+        "Standards": []
     },
-    "System of equations": {
+    "Supplementary Angle": {
         "Category": "glossary",
         "Definition": [
-            "Multiple equations for which there are multiple unknown variables. If `x` and `y` are both unknowns, you need to have two equations to solve for them. Solutions can be found using elimination or substitution methods."
+            "Two angles whose sum is `180°`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [
+            "Understanding supplementary angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Surface Area": {
+        "Category": "glossary",
+        "Definition": [
+            "The total area of all the surfaces (faces) of a three-dimensional object. It's units are square."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding surface area is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "System Of Equations": {
+        "Category": "glossary",
+        "Definition": [
+            "A set of two or more equations with the same set of variables. The solution is the value or set of values for variables where the equations intersect, or where all equations are true simultaneously.",
+            "Most of these will have the same number of equations as variables with exactly one unique solution. Fewer equations than variables typically means infinitely many solutions. More equations than variables typically means no solutions."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding systems of equations is essential for solving many types of problems - including determining the number of solutions for a system of equations, finding solutions to systems of equations with substitution, elimination, or graphing, and translating real-world situations into systems or interpreting real-world solutions in context."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Table": {
         "Category": "glossary",
@@ -1214,17 +3310,68 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM", "SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM",
+            "SAT.M.PSDA"
+        ]
     },
-    "Tangent": {
+    "Tangent (Circle)": {
         "Category": "glossary",
         "Definition": [
-            "(1) In a right triangle, the ratio between the side opposite a given angle and side adjacent to that angle. Keep in mind the adjacent side will never be the hypotenuse. `tanx=text(opposite)/text(adjacent)`",
-            "(2) A line that touches a circle but doesn't go inside the circle, meaning that it is perpendicular to the radius of the circle."
+            "A line that intersects a circle at exactly one point (the point of tangency) without going inside of it. It's perpendicular to the radius at the point of tangency."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding tangents is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Tangent (Trigonometry)": {
+        "Category": "glossary",
+        "Definition": [
+            "A trigonometric function that is defined by the ratio of the side opposite of an acute angle to the side adjacent in a right triangle."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding tangent is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Transformation": {
+        "Category": "glossary",
+        "Definition": [
+            "A process that changes the position, orientation, or shape of an object or function."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding transformations is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Transversal": {
+        "Category": "glossary",
+        "Definition": [
+            "A line that intersects two or more other lines (usually parallel)."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding transversals is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Trapezoid": {
         "Category": "glossary",
@@ -1233,7 +3380,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Trend": {
         "Category": "glossary",
@@ -1242,16 +3392,68 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Triangle": {
         "Category": "glossary",
         "Definition": [
-            "A 2-D shape with three sides and three angles. The three angles will always add up to `180°`."
+            "A two-dimensional polygon with three sides and three angles. The three angles will always add up to `180°`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding triangles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Triangle Sum Theorem": {
+        "Category": "glossary",
+        "Definition": [
+            "The theorem that states that the sum of the interior angles of any triangle is always `180°`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding Triangle Sum Theorem is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Trigonometric Ratios": {
+        "Category": "glossary",
+        "Definition": [
+            "The ratios of the side of a right triangle. The acronym SOH-CAH-TOA describes these ratios - `Sin(x)=text(Opposite)/text(Hypotenuse),Cos(x)=text(Adjacent)/text(Hypotenuse),andTan(x)=text(Opposite)/text(Adjacent)`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding trigonometric ratios is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Two-Variable Data": {
+        "Category": "glossary",
+        "Definition": [
+            "Describes two characteristics measured for each item."
+        ],
+        "Examples": [
+            "height and weight of students"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding two-variable data is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Undefined": {
         "Category": "glossary",
@@ -1260,7 +3462,11 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Union of Two Sets": {
         "Category": "glossary",
@@ -1271,9 +3477,87 @@
             "For example, the union of `{1,2,3}` and `{3,4,5}` is `{1,2,3,4,5}`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
-    "Values of a variable": {
+    "Unique Solution": {
+        "Category": "glossary",
+        "Definition": [
+            "A unique solution is a single value or set of values that satisfies an equation or a system of equations. When solving a system of equations, a unique solution means that the graphs intersect at exactly one point."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding when there is a unique solution is helpful for solving many types of problems - including finding solutions for equations or systems of equations."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Unit": {
+        "Category": "glossary",
+        "Definition": [
+            "A standard quantity of measurement."
+        ],
+        "Examples": [
+            "`text(meter),text(gram),ortext(second)`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding units is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Unit Circle": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.GT"
+        ]
+    },
+    "Unit Conversion": {
+        "Category": "glossary",
+        "Definition": [
+            "Changing a measurement from one unit to another."
+        ],
+        "Examples": [
+            "`1` `text(foot)` converts to `12` `text(inches)`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding unit conversions is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Unit Rate": {
+        "Category": "glossary",
+        "Definition": [
+            "A rate where the second quantity is`1` `text(unit)`."
+        ],
+        "Examples": [
+            "`(60text( miles))/(1text( hour))or($3)/text(pound)`"
+        ],
+        "Related": [],
+        "Relevance": [
+            "Understanding unit rates is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
+    },
+    "Values Of A Variable": {
         "Category": "glossary",
         "Definition": [
             "Numbers that the variable is able to represent."
@@ -1282,25 +3566,78 @@
             "For example, the values of `x` that satisfy `x^2=9` are `3` and `-3`."
         ],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "Variable": {
         "Category": "glossary",
         "Definition": [
-            "A symbol or letter (commonly `x`, `y`, or `f`) used as a placeholder to represent an unknown number or a quantity that can change."
+            "A symbol or placeholder, usually a letter like `x`, `y`, or `f`, used to represent an unknown number or a quantity whose value can change. The value a variable takes on determines the value of the expression that contains the variable."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [
+            "Understanding variables is essential for solving many types of problems - including solving equations for an unknown quantity and describing relationships between two related quantities."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Variance": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "Vertex": {
         "Category": "glossary",
         "Definition": [
-            "A corner point where two or more lines, sides, or edges meet."
+            "The vertex is the turning point of a parabola, which is formed by graphing a quadratic equation. If a parabola opens upward, the vertex will be the lowest point or minimum value; if a parabola opens downward, the vertex will be the highest point or maximum value.",
+            "When a quadratic function is described in vertex form (`y=a(x-h)^2+k`), then the vertex can be identified simply as the point `(h,k)`."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding and finding vertices is useful for solving many types of problems - including finding the minimum or maximum value for graphs of quadratic functions or real-world situations described by quadratic functions such as projectile motion or profit."
+        ],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Vertex Form": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
+    },
+    "Vertical Angles": {
+        "Category": "glossary",
+        "Definition": [
+            "Opposite angles formed by two intersecting lines. These angles are equal."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding vertical angles is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Vertical Line Test": {
         "Category": "glossary",
@@ -1309,16 +3646,24 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Volume": {
         "Category": "glossary",
         "Definition": [
-            "A measurement of how much space is inside a 3-D figure. The units that describe volume will be cubic (`text(in)^3`, `text(ft)^3`, text(cm)^3`) or volume specific (`text(gallon)`, `text(liter)`)."
+            "A measurement of how much space is occupied by a three-dimensional figure. The units that describe volume will be cubic (`text(in)^3`, `text(ft)^3`, `text(cm)^3`) or volume specific (`text(gallon)`, `text(liter)`)."
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.GT"]
+        "Relevance": [
+            "Understanding volume is helpful for solving many types of problems - including"
+        ],
+        "Standards": [
+            "SAT.M.GT"
+        ]
     },
     "Weight": {
         "Category": "glossary",
@@ -1327,7 +3672,10 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.PSDA"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.PSDA"
+        ]
     },
     "x-axis": {
         "Category": "glossary",
@@ -1336,7 +3684,11 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "xy-plane": {
         "Category": "glossary",
@@ -1345,7 +3697,11 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
     },
     "y-axis": {
         "Category": "glossary",
@@ -1354,7 +3710,39 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.A", "SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Y-Intercept": {
+        "Category": "glossary",
+        "Definition": [
+            "The `ytext(-intercept)` is the point where the line crosses the `ytext(-axis)`, or the the coordinate `(0,y)` of the function with input `x=0`. You can think of the `ytext(-intercept)` as the starting value or initial condition of a function.",
+            "It is common to describe linear equations in slope-intercept form `y-mx+b`, where the constant `b` represents the `ytext(-value)` of the `ytext(-intercept)`."
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [
+            "Understanding the `ytext(-intercept)` is essential for solving many types of problems - including interpreting the starting point of a function presented graphically and understanding relationships based on real-world situation involving time or cost."
+        ],
+        "Standards": [
+            "SAT.M.A",
+            "SAT.M.AM"
+        ]
+    },
+    "Zero Exponent Rule": {
+        "Category": "glossary",
+        "Definition": [
+            "HOLD"
+        ],
+        "Examples": [],
+        "Related": [],
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     },
     "Zeros": {
         "Category": "glossary",
@@ -1363,6 +3751,9 @@
         ],
         "Examples": [],
         "Related": [],
-        "Standards": ["SAT.M.AM"]
+        "Relevance": [],
+        "Standards": [
+            "SAT.M.AM"
+        ]
     }
 }

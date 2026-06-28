@@ -1,0 +1,24 @@
+{
+    "Content": [
+        "Probability and statistics serve as the mathematical framework for quantifying uncertainty and making data-driven decisions. While values in algebra and geometry take on fixed amounts, a `ultext(Probability)` measure the likelihood that unpredictable events occur given a limited set of possible outcomes. In the real world, this is the math of risk assessment, predictive analytics, and strategic planning. Insurance companies use probability to set policy premiums based on health risks and tech companies deploy probabilistic algorithms to filter spam emails or suggest the next video recommendation.",
+        "On the SAT exam, understanding the connection between data tables, frequency, and probability is helpful for success in the Problem Solving and Data Analysis category. By including two-way frequency tables, which organize categorical data across two different variables simultaneously, some SAT problems challenge us translate frequencies of specific events into experimental probabilities. Learning the vocabulary of probability lets us sort through dense word problems to quickly identify a target fraction.",
+        "To successfully find solutions that involve probability, it's important to comprehend the foundational concepts of outcomes. An `ultext(Event)` is any specific outcome or collection of outcomes resulting from a statistical experiment, while the `ultext(Sample Space)` is the complete set of all possible outcomes that could occur. The SAT exam will challenge us to identify `ultext(Possible Outcomes)` (like the total size of a population or number of data points) versus `ultext(Desired Outcomes)` (the specific individuals or items that satisfy some criteria). The fundamental formula for the probability of an event occurring is written as a simple fraction – `P(text(Event))=text(Number of Desired Outcomes)/text{Total Number of Possible Outcomes)`.",
+        "Calculating probabilities for more complex scenarios often requires evaluating how distinct events interact with one another. `ultext(Mutually Exclusive Events)` cannot happen at the exact same time. For example, it would be impossible to draw a card from a standard deck that is simultaneously a King and a Queen. Even further, when looking at a sequence of events that together form a joint probability, we must determine whether they are independent or dependent. `ultext(Independent Events)` have no influence on one another; rolling a `6` on a die doesn't change the chances of rolling a `6` on the next roll. `ultext(Dependent Events)`, however, directly alter each other's likelihoods. If we draw from a bag of marbles without replacing it, then the sample space for the next choice is fundamentally altered because the selected marble is no longer an option.",
+        "The most advanced concept under the statistics topic is `ultext(Conditional Probability)`, which is the likelihood of an event occurring given that another event has already occurred or some condition is true. Conditional probability is different because it isn't necessarily calculated with the total sum of all events in a frequency table. Phrases like “given that” or “of the population who” serve to place limits on the total used in the denominator when calculating a conditional probability. This type of constraint forces us to ignore part of a frequency table and isolate a single row or column as the restricted sample space."
+
+    ],
+    "Topics": [
+        "SAT.M.PSDA.5.1"
+    ],
+    "Terms": [
+        "Event",
+        "Sample Space",
+        "Possible Outcomes",
+        "Desired Outcomes",
+        "Probability",
+        "Mutually Exclusive Events",
+        "Independent Events",
+        "Dependent Events",
+        "Conditional Probability"
+    ]
+}
