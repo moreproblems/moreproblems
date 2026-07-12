@@ -1,0 +1,432 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A high-capacity electronics manufacturing facility runs a diagnostic safety scan on a batch of newly produced microprocessors. The quality control database records the following frequencies of surface anomalies across the sample.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T1.json",
+            "If `text(one)` microprocessor is selected at random from this batch, what is the probability that the selected microprocessor has no anomalies detected?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:0.62",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A municipal library tracks the `text(daily)` circulation logs of morning book drop-offs to optimize structural shelf sorting. On a `text(Tuesday)` morning, the head librarian records the following categorical sorting frequencies.",
+            ":ibox:Biographies / Memoirs: `14`\n\n• Science Fiction / Fantasy: `22`\n\n• Historical Fiction: `9`\n\n• Children's Picture Books: `5`",
+            "If a volunteer reaches into the morning drop-off bin and selects a book completely at random, what is the probability that the selected book is categorized as Science Fiction / Fantasy?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:0.44",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A city's department of transportation monitors arrival schedules at a major downtown light-rail transit platform during the morning rush hour. Over a `text(two-week)` tracking window, inspectors log the following arrival frequency metrics for individual trains.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T2.json",
+            "Based on these tracking logs, what is the probability that the next train to arrive at the platform will be exactly on schedule?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:0.64",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "4": {
+        "Number": 4,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An academic advisor tracks demographic registration metrics across a university's foundational chemistry lecture block. The registrar's database outputs the following student population breakdown by academic class standing:",
+            ":ibox:`text(First-year)` students (Freshmen): `112`\n\n• `text(Second-year)` students (Sophomores): `54`\n\n• `text(Third-year)` students (Juniors): `21`\n\n• `text(Fourth-year)` students (Seniors): `13`",
+            "If the professor calls on one student at random to demonstrate a lab simulation, what is the probability that the chosen student is a `text(first-year)` student?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:0.56",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A commercial agricultural greenhouse implants organic heirloom tomato seeds into specialized incubation trays to monitor seed germination viability rates. After a fixed growth window, a horticulturist records the following development statuses across the batch.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T3.json",
+            "If one seed position is chosen completely at random from the incubation trays for a nutrient soil test, what is the probability that the selected position holds an unviable seed?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:0.06",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A high school guidance counselor summarizes the enrollment data for twelfth-grade students registered in either a studio art elective or a computer science elective. The two-way frequency table below shows the distribution of these students by their preferred post-graduation track.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T4.json",
+            "If a twelfth-grade student who is entering a career technical program is selected at random, what is the probability that the student is enrolled in the studio art elective?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`0.1`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`0.25`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`0.3`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`0.33`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An IT supervisor at a technology firm audits a week of hardware support tickets. The table below displays the breakdown of tickets based on the device type and whether the issue was resolved remotely or required an on-site technician.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T5.json",
+            "An audited support ticket is selected at random. Given that the chosen ticket was for a laptop computer, what is the probability that the issue required an on-site technician?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`0.08`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`0.5`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`0.4`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`0.2`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A municipal health department gathers data from a local wellness expo. Participants are categorized by their primary choice of `text(daily)` physical activity and whether they reported sleeping at least `text(7 hours per night)`.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T6.json",
+            "If a participant who reported getting less than `text(7 hours)` of sleep is selected at random, what is the probability that their primary physical activity is walking or jogging?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`0.15`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`0.3`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`0.45`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`0.55`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "An online marketplace catalog manager evaluates customer return rates during a holiday promotion window. The table organizes returned clothing items by category and whether they were reported as defective.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T7.json",
+            "A returned item is selected at random from this database tracking pool. Given that the selected item is a top/shirt, what is the probability that it has a manufacturing defect?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`0.2`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`0.8`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`0.7`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`0.14`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            ""
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A community botanical nursery evaluates the success rates of organic vegetable starters. The horticulturist cross-references seedling varieties with their verified survival outcomes after a minor seasonal frost window.",
+            ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T8.json",
+            "A seedling from this testing block is selected at random. Given that the seedling is a sweet pepper plant, what is the probability that it survived the frost window?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": " `0.25`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`0.1`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "0.9",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "0.025",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}
