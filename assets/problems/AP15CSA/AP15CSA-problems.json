@@ -219,7 +219,7 @@
                 }
             },
             "B": {
-                "Choice": "The largest value in `tttext(arr)` occurs only `text(once)` and is in `tttext(arr[arr.length - 1])`.",
+                "Choice": "The largest value in `tttext(arr)` occurs only `text(once)` and is in `tttext(arr[arr.length — 1])`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -649,7 +649,7 @@
         "Explain": false,
         "Content": [
             "Consider the following method.",
-            ":ibox:`tttext(public static boolean mystery(String str))`\n`tt({`\n\t`tttext(String temp = “”;)`\n\n\t`tttext(for (int k = str.length())tttext(; k > 0; k--))`\n\t`tt({`\n\t\t`tttext(temp = temp + str.substring(k - 1, k))tttext(;)`\n\t`tt}`\n\n\t`tttext(return temp.equals(str))tttext(;)`\n`tt}`",
+            ":ibox:`tttext(public static boolean mystery(String str))`\n`tt({`\n\t`tttext(String temp = “”;)`\n\n\t`tttext(for (int k = str.length())tttext(; k > 0; k--))`\n\t`tt({`\n\t\t`tttext(temp = temp + str.substring(k — 1, k))tttext(;)`\n\t`tt}`\n\n\t`tttext(return temp.equals(str))tttext(;)`\n`tt}`",
             "Which of the following calls to `tttext(mystery)` will return `tttext(true)`?"
         ],
         "AnswerChoices": {
@@ -775,7 +775,7 @@
         "Explain": false,
         "Content": [
             "Consider the following instance variable and method.",
-            ":ibox:`tttext(private int[] numbers;)`\n\n`tttext(public void mystery(int x))`\n`tt({`\n\t`tttext(for (int k = 1; k < numbers.length; k = k + x))`\n\t`tt({`\n\t\t`tttext(numbers[k] = numbers[k - 1] + x;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(private int[] numbers;)`\n\n`tttext(public void mystery(int x))`\n`tt({`\n\t`tttext(for (int k = 1; k < numbers.length; k = k + x))`\n\t`tt({`\n\t\t`tttext(numbers[k] = numbers[k — 1] + x;)`\n\t`tt}`\n`tt}`",
             "Assume that `tttext(numbers)` has been initialized with the following values.",
             ":ibox:`tttext({17, 34, 21, 42, 15, 69, 48, 25, 39})`",
             "Which of the following represents the order of the values in `tttext(numbers)` as a result of the call `tttext(mystery(3))`?"
@@ -1282,7 +1282,7 @@
         "Explain": false,
         "Content": [
             "Consider the following recursive method.",
-            ":ibox:`tttext(public static void whatsItDo(String str))`\n`tt({`\n\t`tttext(int len = str.length())tttext(;)`\n\t`tttext(if (len > 1))`\n\t`tt({`\n\t\t`tttext(String temp = str.substring(0, len - 1))tttext(;)`\n\t\t`tttext(System.out.println(temp))tttext(;)`\n\t\t`tttext(whatsItDo(temp))tttext(;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(public static void whatsItDo(String str))`\n`tt({`\n\t`tttext(int len = str.length())tttext(;)`\n\t`tttext(if (len > 1))`\n\t`tt({`\n\t\t`tttext(String temp = str.substring(0, len — 1))tttext(;)`\n\t\t`tttext(System.out.println(temp))tttext(;)`\n\t\t`tttext(whatsItDo(temp))tttext(;)`\n\t`tt}`\n`tt}`",
             "What is printed as a result of the call `tttext(whatsItDo(“WATCH”))`?"
         ],
         "AnswerChoices": {
@@ -1408,7 +1408,7 @@
         "Explain": false,
         "Content": [
             "Consider the following code segment from an insertion sort program.",
-            ":ibox:`tttext(for (int j = 1; j < arr.length; j++))`\n`tt({`\n\t`tttext(int insertItem = arr[j];)`\n\t`tttext(int k = j - 1;)`\n\n\t`tttext(while (k >= 0 && insertItem < arr[k]))`\n\t`tt({`\n\t\t`tttext(arr[k + 1] = arr[k];)`\n\t\t`tttext(k--;)`\n\t`tt}`\n\n\t`tttext(arr[k + 1] = insertItem;)`\n\n\t`tttext(/* end of for loop */)`\n`tt}`",
+            ":ibox:`tttext(for (int j = 1; j < arr.length; j++))`\n`tt({`\n\t`tttext(int insertItem = arr[j];)`\n\t`tttext(int k = j — 1;)`\n\n\t`tttext(while (k >= 0 && insertItem < arr[k]))`\n\t`tt({`\n\t\t`tttext(arr[k + 1] = arr[k];)`\n\t\t`tttext(k--;)`\n\t`tt}`\n\n\t`tttext(arr[k + 1] = insertItem;)`\n\n\t`tttext(/* end of for loop */)`\n`tt}`",
             "Assume that array `tttext(arr)` has been defined and initialized with the values `tttext({5, 4, 3, 2, 1})`. What are the values in array `tttext(arr)` after `text(two)` passes of the `tttext(for)` loop (i.e., when `tttext(j = 2)` at the point indicated by `tttext(/* end of for loop */)`)?"
         ],
         "AnswerChoices": {
@@ -2174,7 +2174,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size() - 1 )`\n`ultttext(/* condition */)`: `tttext(k != 0)`",
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size() — 1 )`\n`ultttext(/* condition */)`: `tttext(k != 0)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2190,7 +2190,7 @@
                 }
             },
             "C": {
-                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size() - 1 )`\n`ultttext(/* condition */)`: `tttext(k != sizeOfList - 1)`",
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size() — 1 )`\n`ultttext(/* condition */)`: `tttext(k != sizeOfList — 1)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -2198,7 +2198,7 @@
                 }
             },
             "D": {
-                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size())`\n`ultttext(/* condition */)`: `tttext(k != sizeOfList - 1)`",
+                "Choice": "`ultttext(/* expression */)`: `tttext(listOfWords.size())`\n`ultttext(/* condition */)`: `tttext(k != sizeOfList — 1)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -2365,7 +2365,7 @@
             ":ibox:`tttext(String[] things = {“Bear”, “Apple”, “Gorilla”, “House”, “Car”};)`\n`tttext(System.out.println(concatWords(things, 2)))tttext(;)`",
             "When the code segment is executed, the string `tttext(“CarHouseGorilla”)` is printed.",
             "The following `text(three)` code segments have been proposed as replacements for `tttext(/* missing code */)`.",
-            ":ibox:`text(I)`. `tttext(for (int k = startIndex; k < words.length; k++))`\n`tt({`\n\t`tttext(result += words[k] + words[words.length - k - 1];)`\n`tt}`\n\n`text(II)`. `tttext(int k = words.length - 1;)`\n`tttext(while (k >= startIndex))`\n`tt({`\n\t`tttext(result += words[k];)`\n\t`tttext(k--;)`\n`tt}`\n\n`text(III)`. `tttext(String[] temp = new String[words.length];)`\n`tttext(for (int k = 0; k <= words.length / 2; k++))`\n`tt({`\n\t`tttext(temp[k] = words[words.length - k - 1];)`\n\t`tttext(temp[words.length - k - 1] = words[k];)`\n`tt}`\n`tttext(for (int k = 0; k < temp.length - startIndex; k++))`\n`tt({`\n\t`tttext(result += temp[k];)`\n`tt}`",
+            ":ibox:`text(I)`. `tttext(for (int k = startIndex; k < words.length; k++))`\n`tt({`\n\t`tttext(result += words[k] + words[words.length — k — 1];)`\n`tt}`\n\n`text(II)`. `tttext(int k = words.length — 1;)`\n`tttext(while (k >= startIndex))`\n`tt({`\n\t`tttext(result += words[k];)`\n\t`tttext(k--;)`\n`tt}`\n\n`text(III)`. `tttext(String[] temp = new String[words.length];)`\n`tttext(for (int k = 0; k <= words.length / 2; k++))`\n`tt({`\n\t`tttext(temp[k] = words[words.length — k — 1];)`\n\t`tttext(temp[words.length — k — 1] = words[k];)`\n`tt}`\n`tttext(for (int k = 0; k < temp.length — startIndex; k++))`\n`tt({`\n\t`tttext(result += temp[k];)`\n`tt}`",
             "Which of these code segments can be used to replace `tttext(/* missing code */)` so that `tttext(concatWords)` will work as intended?"
         ],
         "AnswerChoices": {
@@ -2428,7 +2428,7 @@
         "Explain": false,
         "Content": [
             "Consider the following method.",
-            ":ibox:`tttext(/**)` Precondition: `tttext(0 < numVals <= nums.length */)`\n`tttext(public static int mystery(int[] nums, int v, int numVals))`\n`tt({`\n\t`tttext(int k = 0;)`\n\n\t`tttext(if (v == nums[numVals - 1]))`\n\t`tt({`\n\t\t`tttext(k = 1;)`\n\t`tt}`\n\n\t`tttext(if (numVals == 1))`\n\t`tt({`\n\t\t`tttext(return k;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(return k + mystery(nums, v, numVals - 1))tttext(;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(/**)` Precondition: `tttext(0 < numVals <= nums.length */)`\n`tttext(public static int mystery(int[] nums, int v, int numVals))`\n`tt({`\n\t`tttext(int k = 0;)`\n\n\t`tttext(if (v == nums[numVals — 1]))`\n\t`tt({`\n\t\t`tttext(k = 1;)`\n\t`tt}`\n\n\t`tttext(if (numVals == 1))`\n\t`tt({`\n\t\t`tttext(return k;)`\n\t`tt}`\n\t`tttext(else)`\n\t`tt({`\n\t\t`tttext(return k + mystery(nums, v, numVals — 1))tttext(;)`\n\t`tt}`\n`tt}`",
             "Which of the following best describes what the call `tttext(mystery(numbers, val, numbers.length))` does? You may assume that variables `tttext(numbers)` and `tttext(val)` have been declared and initialized."
         ],
         "AnswerChoices": {

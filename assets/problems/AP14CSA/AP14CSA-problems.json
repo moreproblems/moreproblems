@@ -340,7 +340,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`tttext(return (d1 - d2))tttext( <= tolerance;)`",
+                "Choice": "`tttext(return (d1 — d2))tttext( <= tolerance;)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -356,7 +356,7 @@
                 }
             },
             "C": {
-                "Choice": "`tttext(return (d1 - d2))tttext( >= tolerance;)`",
+                "Choice": "`tttext(return (d1 — d2))tttext( >= tolerance;)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -372,7 +372,7 @@
                 }
             },
             "E": {
-                "Choice": "`tttext(return Math.abs(d1 - d2))tttext( <= tolerance;)`",
+                "Choice": "`tttext(return Math.abs(d1 — d2))tttext( <= tolerance;)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -540,7 +540,7 @@
                 }
             },
             "B": {
-                "Choice": "`tttext(sum += key[i - 1];)`",
+                "Choice": "`tttext(sum += key[i — 1];)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -556,7 +556,7 @@
                 }
             },
             "D": {
-                "Choice": "`tttext(sum += sum + key[i - 1];)`",
+                "Choice": "`tttext(sum += sum + key[i — 1];)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -780,7 +780,7 @@
         "Explain": false,
         "Content": [
             "Consider the following code segment.",
-            ":ibox:`tttext(int[] arr = {7, 2, 5, 3, 0, 10};)`\n`tttext(for (int k = 0; k < arr.length - 1; k++))`\n`tt({`\n\t`tttext(if (arr[k] > arr[k + 1]))`\n\t\t`tttext(System.out.print(k + “ ” + arr[k] + “ ”))tttext(;)`\n`tt}`",
+            ":ibox:`tttext(int[] arr = {7, 2, 5, 3, 0, 10};)`\n`tttext(for (int k = 0; k < arr.length — 1; k++))`\n`tt({`\n\t`tttext(if (arr[k] > arr[k + 1]))`\n\t\t`tttext(System.out.print(k + “ ” + arr[k] + “ ”))tttext(;)`\n`tt}`",
             "What will be printed as a result of executing the code segment?"
         ],
         "AnswerChoices": {
@@ -908,7 +908,7 @@
             "Consider the following method, `tttext(isSorted)`, which is intended to return `tttext(true)` if an array of integers is sorted in nondecreasing order and to return `tttext(false)` otherwise.",
             ":ibox:`tttext(/** @param data)` an array of integers\n `tttext(* @return true)` if the values in the array appear in sorted (nondecreasing) order\n `tttext(*/)`\n`tttext(public static boolean isSorted(int[] data))`\n`tt({`\n\t`tttext(/* missing code */)`\n`tt}`",
             "Which of the following can be used to replace `tttext(/* missing code */)` so that `tttext(isSorted)` will work as intended?",
-            ":ibox:`text(I)`. `tttext(for (int k = 1; k < data.length; k++))`\n\t`tt({`\n\t\t`tttext(if (data[k - 1] > data[k]))`\n\t\t\t`tttext(return false;)`\n\t`tt}`\n\t`tttext(return true;)`\n\n`text(II)`. `tttext(for (int k = 0; k < data.length; k++))`\n\t`tt({`\n\t\t`tttext(if (data[k] > data[k + 1]))`\n\t\t\t`tttext(return false;)`\n\t`tt}`\n\t`tttext(return true;)`\n\n`text(III)`. `tttext(for (int k = 0; k < data.length - 1; k++))`\n\t`tt({`\n\t\t`tttext(if (data[k] > data[k + 1]))`\n\t\t\t`tttext(return false;)`\n\t\t`tttext(else)`\n\t\t\t`tttext(return true;)`\n\t`tt}`\n\t`tttext(return true;)`"
+            ":ibox:`text(I)`. `tttext(for (int k = 1; k < data.length; k++))`\n\t`tt({`\n\t\t`tttext(if (data[k — 1] > data[k]))`\n\t\t\t`tttext(return false;)`\n\t`tt}`\n\t`tttext(return true;)`\n\n`text(II)`. `tttext(for (int k = 0; k < data.length; k++))`\n\t`tt({`\n\t\t`tttext(if (data[k] > data[k + 1]))`\n\t\t\t`tttext(return false;)`\n\t`tt}`\n\t`tttext(return true;)`\n\n`text(III)`. `tttext(for (int k = 0; k < data.length — 1; k++))`\n\t`tt({`\n\t\t`tttext(if (data[k] > data[k + 1]))`\n\t\t\t`tttext(return false;)`\n\t\t`tttext(else)`\n\t\t\t`tttext(return true;)`\n\t`tt}`\n\t`tttext(return true;)`"
         ],
         "AnswerChoices": {
             "A": {
@@ -991,7 +991,7 @@
                 }
             },
             "C": {
-                "Choice": "`tttext(k + a1.length - 1)`",
+                "Choice": "`tttext(k + a1.length — 1)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1033,7 +1033,7 @@
         "Explain": false,
         "Content": [
             "Consider the following code segment.",
-            ":ibox:`tttext(int[] arr = {1, 2, 3, 4, 5, 6, 7};)`\n\n`tttext(for (int k = 3; k < arr.length - 1; k++))`\n\t`tttext(arr[k] = arr[k + 1];)`",
+            ":ibox:`tttext(int[] arr = {1, 2, 3, 4, 5, 6, 7};)`\n\n`tttext(for (int k = 3; k < arr.length — 1; k++))`\n\t`tttext(arr[k] = arr[k + 1];)`",
             "Which of the following represents the contents of `tttext(arr)` as a result of executing the code segment?"
         ],
         "AnswerChoices": {
@@ -1099,7 +1099,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`tttext((int))tttext(( Math.random())tttext( * myList.size() ))tttext( - 1)`",
+                "Choice": "`tttext((int))tttext(( Math.random())tttext( * myList.size() ))tttext( — 1)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1220,7 +1220,7 @@
         "Explain": false,
         "Content": [
             "Consider the following method.",
-            ":ibox:`tttext(public static void arrayMethod(int nums[]))`\n`tt({`\n\t`tttext(int j = 0;)`\n\t`tttext(int k = nums.length - 1;)`\n\n\t`tttext(while (j < k))`\n\t`tt({`\n\t\t`tttext(int x = nums[j];)`\n\t\t`tttext(nums[j] = nums[k];)`\n\t\t`tttext(nums[k] = x;)`\n\t\t`tttext(j++;)`\n\t\t`tttext(k--;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(public static void arrayMethod(int nums[]))`\n`tt({`\n\t`tttext(int j = 0;)`\n\t`tttext(int k = nums.length — 1;)`\n\n\t`tttext(while (j < k))`\n\t`tt({`\n\t\t`tttext(int x = nums[j];)`\n\t\t`tttext(nums[j] = nums[k];)`\n\t\t`tttext(nums[k] = x;)`\n\t\t`tttext(j++;)`\n\t\t`tttext(k--;)`\n\t`tt}`\n`tt}`",
             "Which of the following describes what the method `tttext(arrayMethod())` does to the array `tttext(nums)`?"
         ],
         "AnswerChoices": {
@@ -1283,12 +1283,12 @@
         "Explain": false,
         "Content": [
             "Consider the following method, which is intended to return the element of a `text(2-dimensional)` array that is closest in value to a specified number, `tttext(val)`.",
-            ":ibox:`tttext(/** @return)` the element of 2-dimensional array `tttext(mat)` whose value is closest to `tttext(val */)`\n`tttext(public double findClosest(double[][] mat, double val))`\n`tt({`\n\t`tttext(double answer = mat[0][0];)`\n\t`tttext(double minDiff = Math.abs(answer - val))tttext(;)`\n\t`tttext(for (double[] row : mat))`\n\t`tt({`\n\t\t`tttext(for (double num : row))`\n\t\t`tt({`\n\t\t\t`tttext(if ( /* missing code */ ))`\n\t\t\t`tt({`\n\t\t\t\t`tttext(answer = num;)`\n\t\t\t\t`tttext(minDiff = Math.abs(num - val))tttext(;)`\n\t\t\t`tt}`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(return answer;)`\n`tt}`",
+            ":ibox:`tttext(/** @return)` the element of 2-dimensional array `tttext(mat)` whose value is closest to `tttext(val */)`\n`tttext(public double findClosest(double[][] mat, double val))`\n`tt({`\n\t`tttext(double answer = mat[0][0];)`\n\t`tttext(double minDiff = Math.abs(answer — val))tttext(;)`\n\t`tttext(for (double[] row : mat))`\n\t`tt({`\n\t\t`tttext(for (double num : row))`\n\t\t`tt({`\n\t\t\t`tttext(if ( /* missing code */ ))`\n\t\t\t`tt({`\n\t\t\t\t`tttext(answer = num;)`\n\t\t\t\t`tttext(minDiff = Math.abs(num — val))tttext(;)`\n\t\t\t`tt}`\n\t\t`tt}`\n\t`tt}`\n\t`tttext(return answer;)`\n`tt}`",
             "Which of the following could be used to replace `tttext(/* missing code */)` so that `tttext(findClosest)` will work as intended?"
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`tttext(val - row[num] < minDiff)`",
+                "Choice": "`tttext(val — row[num] < minDiff)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1296,7 +1296,7 @@
                 }
             },
             "B": {
-                "Choice": "`tttext(Math.abs(num - minDiff))tttext( < minDiff)`",
+                "Choice": "`tttext(Math.abs(num — minDiff))tttext( < minDiff)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1304,7 +1304,7 @@
                 }
             },
             "C": {
-                "Choice": "`tttext(val - num < 0.0)`",
+                "Choice": "`tttext(val — num < 0.0)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1312,7 +1312,7 @@
                 }
             },
             "D": {
-                "Choice": "`tttext(Math.abs(num - val))tttext( < minDiff)`",
+                "Choice": "`tttext(Math.abs(num — val))tttext( < minDiff)`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1320,7 +1320,7 @@
                 }
             },
             "E": {
-                "Choice": "`tttext(Math.abs(row[num] - val))tttext( < minDiff)`",
+                "Choice": "`tttext(Math.abs(row[num] — val))tttext( < minDiff)`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -1412,7 +1412,7 @@
         "Explain": false,
         "Content": [
             "Consider the following instance variable and method.",
-            ":ibox:`tttext(private List<String> animals;)`\n\n`tttext(public void manipulate())`\n`tt({`\n\t`tttext(for (int k = animals.size())tttext( - 1; k > 0; k--))`\n\t`tt({`\n\t\t`tttext(if (animals.get(k))tttext(.substring(0, 1))tttext(.equals(“b”)))`\n\t\t`tt({`\n\t\t\t`tttext(animals.add(animals.size())tttext( - k, animals.remove(k)))tttext(;)`\n\t\t`tt}`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(private List<String> animals;)`\n\n`tttext(public void manipulate())`\n`tt({`\n\t`tttext(for (int k = animals.size())tttext( — 1; k > 0; k--))`\n\t`tt({`\n\t\t`tttext(if (animals.get(k))tttext(.substring(0, 1))tttext(.equals(“b”)))`\n\t\t`tt({`\n\t\t\t`tttext(animals.add(animals.size())tttext( — k, animals.remove(k)))tttext(;)`\n\t\t`tt}`\n\t`tt}`\n`tt}`",
             "Assume that `tttext(animals)` has been instantiated and initialized with the following contents.",
             ":ibox:`tttext([“bear”, “zebra”, “bass”, “cat”, “koala”, “baboon”])`",
             "What will the contents of `tttext(animals)` be as a result of calling `tttext(manipulate)`?"
@@ -1918,7 +1918,7 @@
         "Explain": false,
         "Content": [
             "Consider the following method.",
-            ":ibox:`tttext(public void mystery(int[] data))`\n`tt({`\n\t`tttext(for (int k = 0; k < data.length - 1; k++))`\n\t\t`tttext(data[k + 1] = data[k] + data[k + 1];)`\n`tt}`",
+            ":ibox:`tttext(public void mystery(int[] data))`\n`tt({`\n\t`tttext(for (int k = 0; k < data.length — 1; k++))`\n\t\t`tttext(data[k + 1] = data[k] + data[k + 1];)`\n`tt}`",
             "The following code segment appears in another method in the same class.",
             ":ibox:`tttext(int[] values = {5, 2, 1, 3, 8};)`\n`tttext(mystery(values))tttext(;)`\n`tttext(for (int v : values))`\n\t`tttext(System.out.print(v + “ ”))tttext(;)`\n`tttext(System.out.println())tttext(;)`",
             "What is printed as a result of executing the code segment?"
@@ -2491,7 +2491,7 @@
         "Explain": false,
         "Content": [
             "Consider the following recursive method.",
-            ":ibox:`tttext(public static void whatsItDo(String str))`\n`tt({`\n\t`tttext(int len = str.length())tttext(;)`\n\t`tttext(if (len > 1))`\n\t`tt({`\n\t\t`tttext(String temp = str.substring(0, len - 1))tttext(;)`\n\t\t`tttext(whatsItDo(temp))tttext(;)`\n\t\t`tttext(System.out.println(temp))tttext(;)`\n\t`tt}`\n`tt}`",
+            ":ibox:`tttext(public static void whatsItDo(String str))`\n`tt({`\n\t`tttext(int len = str.length())tttext(;)`\n\t`tttext(if (len > 1))`\n\t`tt({`\n\t\t`tttext(String temp = str.substring(0, len — 1))tttext(;)`\n\t\t`tttext(whatsItDo(temp))tttext(;)`\n\t\t`tttext(System.out.println(temp))tttext(;)`\n\t`tt}`\n`tt}`",
             "What is printed as a result of the call `tttext(whatsItDo(“WATCH”))`?"
         ],
         "AnswerChoices": {
@@ -2608,7 +2608,7 @@
         "Explain": false,
         "Content": [
             "An array of positive integer values has the mountain property if the elements are ordered such that successive values increase until a maximum value (the peak of the mountain) is reached and then the successive values decrease. The `tttext(Mountain)` class declaration shown below contains methods that can be used to determine if an array has the mountain property. You will implement `text(two)` methods in the `tttext(Mountain)` class.",
-            ":ibox:`tttext(public class Mountain)`\n`tt({`\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)`\t`tttext(@param stop)` the last index to check\n\t `tttext(*)`\t\tPrecondition: `tttext(0 ≤ stop < array.length)`\n\t `tttext(*)`\t`tttext(@return true)` if for each `tttext(j)` such that `tttext(0 ≤ j < stop)`, `tttext(array[j] < array[j + 1])` ;\n\t `tttext(*)`\t\t`tttext(false)` otherwise\n\t `tttext(*/)`\n\t`tttext(public static boolean isIncreasing(int[] array, int stop))`\n\t`tttext({ /* implementation not shown */ })`\n\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)`\t`tttext(@param )`start the `text(first)` index to check\n\t `tttext(*)`\t\tPrecondition: `tttext(0 ≤ start < array.length - 1)`\n\t `tttext(*)`\t`tttext(@return true)` if for each `tttext(j)` such that `tttext(start ≤ j < array.length - 1)`,\n\t `tttext(*)`\t\t\t`tttext(array[j] > array[j + 1];)`\n\t `tttext(*)`\t\t`tttext(false)` otherwise\n\t `tttext(*/)`\n\t`tttext(public static boolean isDecreasing(int[] array, int start))`\n\t`tttext({ /* implementation not shown */ })`\n\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)` \t\tPrecondition: `tttext(array.length > 0)`\n\t `tttext(*)`\t`tttext(@return)` the index of the `text(first)` peak (local maximum) in the array, if it exists;\n\t `tttext(*)`\t\t`-1` otherwise\n\t `tttext(*/)`\n\t`tttext(public static int getPeakIndex(int[] array))`\n\t`tttext({ /* to be implemented in part (a))tttext( */ })`\n\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)`\t\tPrecondition: `tttext(array.length > 0)`\n\t `tttext(*)`\t`tttext(@return true)` if `tttext(array)` contains values ordered as a mountain;\n\t `tttext(*)`\t\t`tttext(false)` otherwise\n\t `tttext(*/)`\n\t`tttext(public static boolean isMountain(int[] array))`\n\t`tttext({ /* to be implemented in part (b))tttext( */ })`\n\n\t`tttext(//)` There may be instance variables, constructors, and methods that are not shown.\n`tt}`"
+            ":ibox:`tttext(public class Mountain)`\n`tt({`\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)`\t`tttext(@param stop)` the last index to check\n\t `tttext(*)`\t\tPrecondition: `tttext(0 ≤ stop < array.length)`\n\t `tttext(*)`\t`tttext(@return true)` if for each `tttext(j)` such that `tttext(0 ≤ j < stop)`, `tttext(array[j] < array[j + 1])` ;\n\t `tttext(*)`\t\t`tttext(false)` otherwise\n\t `tttext(*/)`\n\t`tttext(public static boolean isIncreasing(int[] array, int stop))`\n\t`tttext({ /* implementation not shown */ })`\n\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)`\t`tttext(@param )`start the `text(first)` index to check\n\t `tttext(*)`\t\tPrecondition: `tttext(0 ≤ start < array.length — 1)`\n\t `tttext(*)`\t`tttext(@return true)` if for each `tttext(j)` such that `tttext(start ≤ j < array.length — 1)`,\n\t `tttext(*)`\t\t\t`tttext(array[j] > array[j + 1];)`\n\t `tttext(*)`\t\t`tttext(false)` otherwise\n\t `tttext(*/)`\n\t`tttext(public static boolean isDecreasing(int[] array, int start))`\n\t`tttext({ /* implementation not shown */ })`\n\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)` \t\tPrecondition: `tttext(array.length > 0)`\n\t `tttext(*)`\t`tttext(@return)` the index of the `text(first)` peak (local maximum) in the array, if it exists;\n\t `tttext(*)`\t\t`-1` otherwise\n\t `tttext(*/)`\n\t`tttext(public static int getPeakIndex(int[] array))`\n\t`tttext({ /* to be implemented in part (a))tttext( */ })`\n\n\t`tttext(/** @param array)` an array of positive integer values\n\t `tttext(*)`\t\tPrecondition: `tttext(array.length > 0)`\n\t `tttext(*)`\t`tttext(@return true)` if `tttext(array)` contains values ordered as a mountain;\n\t `tttext(*)`\t\t`tttext(false)` otherwise\n\t `tttext(*/)`\n\t`tttext(public static boolean isMountain(int[] array))`\n\t`tttext({ /* to be implemented in part (b))tttext( */ })`\n\n\t`tttext(//)` There may be instance variables, constructors, and methods that are not shown.\n`tt}`"
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -2691,7 +2691,7 @@
                     "If `tttext(temps)` contains the values shown in the `text(first)` table below, then the call `tttext(updateAllTemps(0.01))` should update `tttext(temps)` as shown in the `text(second)` table.",
                     "problems/AP14CSA/media/43c.jpg",
                     "problems/AP14CSA/media/43d.jpg",
-                    "In the example shown, the call `tttext(updateAllTemps(0.01))` should return `tttext(false)` because there are several new temperatures that are not within the given tolerance of the corresponding old temperature. For example, the updated value in `tttext(temps[2][3])` is `tt37.5`, the original value in `tttext(temps[2][3])` was `tt40.0`, and the absolute value of `tttext((37.5 - 40.0))` is greater than the value of `tttext(tolerance (0.01))`.",
+                    "In the example shown, the call `tttext(updateAllTemps(0.01))` should return `tttext(false)` because there are several new temperatures that are not within the given tolerance of the corresponding old temperature. For example, the updated value in `tttext(temps[2][3])` is `tt37.5`, the original value in `tttext(temps[2][3])` was `tt40.0`, and the absolute value of `tttext((37.5 — 40.0))` is greater than the value of `tttext(tolerance (0.01))`.",
                     "Assume that `tttext(computeTemp)` works as specified, regardless of what you wrote in part (A).",
                     "Complete method `tttext(updateAllTemps)` below.",
                     ":ibox:`tttext(/**)` Updates all values in `tttext(temps)` and returns a `tttext(boolean)` that indicates whether or not all the\n `tttext(*)`\tnew values were within `tttext(tolerance)` of the original values.\n `tttext(*)`\t`tttext(@param tolerance)` a `tttext(double)` value `tttext(>= 0)`\n `tttext(*)`\t`tttext(@return true)` if all updated temperatures are within `tttext(tolerance)` of the original values;\n `tttext(*)`\t\t`tttext(false)` otherwise.\n `tttext(*)`\tPostcondition: `text(Each value)` in `tttext(temps)` has been updated with a new value based on the\n `tttext(*)`\t\tcorresponding call to `tttext(computeTemp)`.\n `tttext(*/)`\n`tttext(public boolean updateAllTemps(double tolerance))`"

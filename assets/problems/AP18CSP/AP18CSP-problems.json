@@ -606,7 +606,7 @@
                 }
             },
             "B": {
-                "Choice": ":ibox:`tt(text(xPos)larrtext(3))`\n`tt(text(yPos)larrtext(6))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos - 2))`\n`tt}`",
+                "Choice": ":ibox:`tt(text(xPos)larrtext(3))`\n`tt(text(yPos)larrtext(6))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos — 2))`\n`tt}`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The code segment draws a circle centered at the coordinates `(3,6)`, then moves to the right and down, drawing circles centered at `(5,4)` and `(7,2)`.",
@@ -622,7 +622,7 @@
                 }
             },
             "D": {
-                "Choice": ":ibox:`tt(text(xPos)larrtext(7))`\n`tt(text(yPos)larrtext(2))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos - 2))`\n`tt}`",
+                "Choice": ":ibox:`tt(text(xPos)larrtext(7))`\n`tt(text(yPos)larrtext(2))`\n`tttext(REPEAT 3 TIMES)`\n`tt({`\n\t`tttext(DrawCircle (xPos, yPos, 2))`\n\t`tt(text(xPos)larrtext(xPos + 2))`\n\t`tt(text(yPos)larrtext(yPos — 2))`\n`tt}`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "The code segment draws a circle centered at the coordinates `(7,2)`, then moves to the right and down, drawing circles centered at `(9,0)` and `(11,-2)`.",
@@ -1193,7 +1193,7 @@
                 }
             },
             "B": {
-                "Choice": "`tttext(Max (a, b))tttext( - Max (b, c))`",
+                "Choice": "`tttext(Max (a, b))tttext( — Max (b, c))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This expression produces the difference between the maximum of `tt(a)` and `tt(b)` and the maximum of `tt(b)` and `tt(c)`.",
@@ -1201,7 +1201,7 @@
                 }
             },
             "C": {
-                "Choice": "`tttext(Max (a, b))tttext( + Max (b, c))tttext( - Max (a, c))`",
+                "Choice": "`tttext(Max (a, b))tttext( + Max (b, c))tttext( — Max (a, c))`",
                 "Key": {
                     "Correct": false,
                     "Rationale": "This expression produces the maximum of `tt(a)` and `tt(c)` subtracted from the sum of the maximum of `tt(a)` and `tt(b)` and the maximum of `tt(b)` and `tt(c)`.",
@@ -3111,34 +3111,34 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "`tttext(end - start + 1)`",
+                "Choice": "`tttext(end — start + 1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the example given, `tttext(end - start + 1)` evaluates to `tt(16)`. The loop should iterate `4` times, not `16` times.",
+                    "Rationale": "For the example given, `tttext(end — start + 1)` evaluates to `tt(16)`. The loop should iterate `4` times, not `16` times.",
                     "Percent": 0
                 }
             },
             "B": {
-                "Choice": "`tttext(end - start + 6)`",
+                "Choice": "`tttext(end — start + 6)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the example given, `tttext(end - start + 6)` evaluates to `tt(21)`. The loop should iterate `4` times, not `21` times.",
+                    "Rationale": "For the example given, `tttext(end — start + 6)` evaluates to `tt(21)`. The loop should iterate `4` times, not `21` times.",
                     "Percent": 0
                 }
             },
             "C": {
-                "Choice": "`tttext(((end - start))tttext( / 5))tttext( + 1)`",
+                "Choice": "`tttext(((end — start))tttext( / 5))tttext( + 1)`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "The loop should iterate once for `text(each multiple)` of `5` from `tttext(start)` to `tttext(end)`. The number of multiples of `5` from start to end is given by `tttext(((end - start))tttext( / 5))tttext( + 1)`. For the example given, `tttext(((end - start))tttext( / 5))tttext( + 1)` evaluates to `tt(4)`.",
+                    "Rationale": "The loop should iterate once for `text(each multiple)` of `5` from `tttext(start)` to `tttext(end)`. The number of multiples of `5` from start to end is given by `tttext(((end — start))tttext( / 5))tttext( + 1)`. For the example given, `tttext(((end — start))tttext( / 5))tttext( + 1)` evaluates to `tt(4)`.",
                     "Percent": 0
                 }
             },
             "D": {
-                "Choice": "`tttext(5 * (end - start) + 1)`",
+                "Choice": "`tttext(5 * (end — start) + 1)`",
                 "Key": {
                     "Correct": false,
-                    "Rationale": "For the example given, `tttext(5 * (end - start) + 1)` evaluates to `tt(76)`. The loop should iterate `4` times, not `76` times.",
+                    "Rationale": "For the example given, `tttext(5 * (end — start) + 1)` evaluates to `tt(76)`. The loop should iterate `4` times, not `76` times.",
                     "Percent": 0
                 }
             }

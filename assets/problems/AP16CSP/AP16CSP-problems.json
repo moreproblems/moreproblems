@@ -3078,7 +3078,7 @@
         "Explain": false,
         "Content": [
             "In the procedure `tttext(Mystery)` below, the parameter number is a positive integer.",
-            ":ibox:`tttext(PROCEDURE Mystery (number))`\n`tt({`\n\t\t`tt(text(REPEAT UNTIL (number)<=text(0)))`\n\t\t`tt({`\n\t\t\t`tt(text(number)larrtext(number - 2))`\n\t\t`tt}`\n\t\t`tttext(IF (number = 0))`\n\t\t`tt({`\n\t\t\t`tttext(RETURN (true))`\n\t\t`tt}`\n\t\t`tttext(ELSE)`\n\t\t`tt({`\n\t\t\t`tttext(RETURN (false))`\n\t\t`tt}`\n`tt}`",
+            ":ibox:`tttext(PROCEDURE Mystery (number))`\n`tt({`\n\t\t`tt(text(REPEAT UNTIL (number)<=text(0)))`\n\t\t`tt({`\n\t\t\t`tt(text(number)larrtext(number — 2))`\n\t\t`tt}`\n\t\t`tttext(IF (number = 0))`\n\t\t`tt({`\n\t\t\t`tttext(RETURN (true))`\n\t\t`tt}`\n\t\t`tttext(ELSE)`\n\t\t`tt({`\n\t\t\t`tttext(RETURN (false))`\n\t\t`tt}`\n`tt}`",
             "Which of the following best describes the result of running the procedure `tttext(Mystery)`?"
         ],
         "AnswerChoices": {

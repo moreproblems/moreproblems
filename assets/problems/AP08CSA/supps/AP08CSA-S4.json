@@ -6,7 +6,7 @@
     "Author": "",
     "LabelType": "P",
     "Content": [
-        [" ", ":ibox:`tttext(public static int mystery(int n))`\n`tt({`\n\t`tttext(int x = 1;)`\n\t`tttext(int y = 1;)`\n\n\t`tttext(// Point A)`\n\n\t`tttext(while (n > 2))`\n\t`tt({`\n\t\t`tttext(x = x + y;)`\n\n\t\t`tttext(// Point B)`\n\n\t\t`tttext(y = x - y;)`\n\t\t`tttext(n--;)`\n\t`tt}`\n\n\t`tttext(// Point C)`\n\n\t`tttext(return x;)`\n`tt}`"]
+        [" ", ":ibox:`tttext(public static int mystery(int n))`\n`tt({`\n\t`tttext(int x = 1;)`\n\t`tttext(int y = 1;)`\n\n\t`tttext(// Point A)`\n\n\t`tttext(while (n > 2))`\n\t`tt({`\n\t\t`tttext(x = x + y;)`\n\n\t\t`tttext(// Point B)`\n\n\t\t`tttext(y = x — y;)`\n\t\t`tttext(n--;)`\n\t`tt}`\n\n\t`tttext(// Point C)`\n\n\t`tttext(return x;)`\n`tt}`"]
     ],
     "Copyright": "",
     "References": []

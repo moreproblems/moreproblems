@@ -612,48 +612,48 @@
                                 },
                                 {
                                     "Key": "AP.CSA.2.7.A.7",
-                                    "Label": "The following `tttext(String)` methods and constructors - including what they do and when they are used-are part of the Java Quick Reference:",
+                                    "Label": "The following `tttext(String)` methods and constructors — including what they do and when they are used-are part of the Java Quick Reference:",
                                     "Examples": [],
                                     "Subs": [
                                         {
                                             "Key": "AP.CSA.2.7.A.7.a",
-                                            "Label": "`tt(text(String)(text(String str)))` - Constructs a new `tttext(String)` object that represents the same sequence of characters as `tttext(str)`.",
+                                            "Label": "`tt(text(String)(text(String str)))` — Constructs a new `tttext(String)` object that represents the same sequence of characters as `tttext(str)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.7.A.7.b",
-                                            "Label": "`tt(text(int length)())` - Returns the number of characters in a `tttext(String)` object.",
+                                            "Label": "`tt(text(int length)())` — Returns the number of characters in a `tttext(String)` object.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.7.A.7.c",
-                                            "Label": "`tt(text(String substring)(text(int from),text(int to)))` - Returns the substring beginning at index `tttext(from)` and ending at index `tt(text(to)-1)`.",
+                                            "Label": "`tt(text(String substring)(text(int from),text(int to)))` — Returns the substring beginning at index `tttext(from)` and ending at index `tt(text(to)-1)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.7.A.7.d",
-                                            "Label": "`tt(text(String substring)(text(int from)))` - Returns `tt(text(substring)(text(from),text(length)()))`.",
+                                            "Label": "`tt(text(String substring)(text(int from)))` — Returns `tt(text(substring)(text(from),text(length)()))`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.7.A.7.e",
-                                            "Label": "`tt(text(int indexOf)(text(String str)))` - Returns the index of the first occurrence of `tttext(str)`; returns `tt(-1)` if not found.",
+                                            "Label": "`tt(text(int indexOf)(text(String str)))` — Returns the index of the first occurrence of `tttext(str)`; returns `tt(-1)` if not found.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.7.A.7.f",
-                                            "Label": "`tt(text(boolean equals)(text(String other)))` - Returns `tttext(true)` if `tttext(this)` is equal to other; returns `tttext(false)` otherwise.",
+                                            "Label": "`tt(text(boolean equals)(text(String other)))` — Returns `tttext(true)` if `tttext(this)` is equal to other; returns `tttext(false)` otherwise.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.7.A.7.g",
-                                            "Label": "`tt(text(int compareTo)(text(String other)))` - Returns a value `tt(<0)` if `tttext(this)` is less than `tttext(other)`; returns zero if `tttext(this)` is equal to `tttext(other)`; returns a value `tt(>0)` if `tttext(this)` is greater than `tttext(other)`.",
+                                            "Label": "`tt(text(int compareTo)(text(String other)))` — Returns a value `tt(<0)` if `tttext(this)` is less than `tttext(other)`; returns zero if `tttext(this)` is equal to `tttext(other)`; returns a value `tt(>0)` if `tttext(this)` is greater than `tttext(other)`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -692,25 +692,25 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.CSA.2.8.A.2.a",
-                                            "Label": "`tt(text(Integer)(text(int value)))` - Constructs a new `tttext(Integer)` object that represents the specified `tttext(int)` value.",
+                                            "Label": "`tt(text(Integer)(text(int value)))` — Constructs a new `tttext(Integer)` object that represents the specified `tttext(int)` value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.8.A.2.b",
-                                            "Label": "`tttext(Integer.MIN_VALUE)` - The minimum value represented by an `tttext(int)` or `tttext(Integer)`.",
+                                            "Label": "`tttext(Integer.MIN_VALUE)` — The minimum value represented by an `tttext(int)` or `tttext(Integer)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.8.A.2.c",
-                                            "Label": "`tttext(Integer.MAX_VALUE)` - The maximum value represented by an `tttext(int)` or `tttext(Integer)`.",
+                                            "Label": "`tttext(Integer.MAX_VALUE)` — The maximum value represented by an `tttext(int)` or `tttext(Integer)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.8.A.2.d",
-                                            "Label": "`tt(text(int intValue)())` - Returns the value of this `tttext(Integer)` as an `tttext(int)`.",
+                                            "Label": "`tt(text(int intValue)())` — Returns the value of this `tttext(Integer)` as an `tttext(int)`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -718,18 +718,18 @@
                                 },
                                 {
                                     "Key": "AP.CSA.2.8.A.3",
-                                    "Label": "The following `tttext(Double)` methods and constructors-including what they do and when they are used - are part of the Java Quick Reference:",
+                                    "Label": "The following `tttext(Double)` methods and constructors-including what they do and when they are used — are part of the Java Quick Reference:",
                                     "Examples": [],
                                     "Subs": [
                                         {
                                             "Key": "AP.CSA.2.8.A.3.a",
-                                            "Label": "`tt(text(Double)(text(double value)))` - Constructs a new `tttext(Double)` object that represents the specified `tttext(double)` value.",
+                                            "Label": "`tt(text(Double)(text(double value)))` — Constructs a new `tttext(Double)` object that represents the specified `tttext(double)` value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.8.A.3.b",
-                                            "Label": "`tt(text(double doubleValue)())` - Returns the value of this `tttext(Double)` as a `tttext(double)`.",
+                                            "Label": "`tt(text(double doubleValue)())` — Returns the value of this `tttext(Double)` as a `tttext(double)`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -805,31 +805,31 @@
                                     "Subs": [
                                         {
                                             "Key": "AP.CSA.2.9.B.3.a",
-                                            "Label": "`tt(text(int abs)(text(int x)))` - Returns the absolute value of an `tttext(int)` value.",
+                                            "Label": "`tt(text(int abs)(text(int x)))` — Returns the absolute value of an `tttext(int)` value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.9.B.3.b",
-                                            "Label": "`tt(text(double abs)(text(double x)))` - Returns the absolute value of a `tttext(double)` value.",
+                                            "Label": "`tt(text(double abs)(text(double x)))` — Returns the absolute value of a `tttext(double)` value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.9.B.3.c",
-                                            "Label": "`tt(text(double pow)(text(double base),text(double exponent)))` - Returns the value of the first parameter raised to the power of the second parameter.",
+                                            "Label": "`tt(text(double pow)(text(double base),text(double exponent)))` — Returns the value of the first parameter raised to the power of the second parameter.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.9.B.3.d",
-                                            "Label": "`tt(text(double sqrt)(text(double x)))` - Returns the positive square root of a `tttext(double)` value.",
+                                            "Label": "`tt(text(double sqrt)(text(double x)))` — Returns the positive square root of a `tttext(double)` value.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.2.9.B.3.e",
-                                            "Label": "`tt(text(double random)())` - Returns a `tttext(double)` value greater than or equal to `0.0` and less than `1.0`.",
+                                            "Label": "`tt(text(double random)())` — Returns a `tttext(double)` value greater than or equal to `0.0` and less than `1.0`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -1678,7 +1678,7 @@
                             "Subs": [
                                 {
                                     "Key": "AP.CSA.5.9.A.1",
-                                    "Label": "Within a non-static method or a constructor, the keyword `tttext(this)` is a reference to the current object - the object whose method or constructor is being called.",
+                                    "Label": "Within a non-static method or a constructor, the keyword `tttext(this)` is a reference to the current object — the object whose method or constructor is being called.",
                                     "Examples": [],
                                     "Subs": []
                                 },
@@ -1952,42 +1952,42 @@
                                 },
                                 {
                                     "Key": "AP.CSA.7.2.A.2",
-                                    "Label": "The following `tttext(ArrayList)` methods - including what they do and when they are used - are part of the Java Quick Reference:",
+                                    "Label": "The following `tttext(ArrayList)` methods — including what they do and when they are used — are part of the Java Quick Reference:",
                                     "Examples": [],
                                     "Subs": [
                                         {
                                             "Key": "AP.CSA.7.2.A.2.a",
-                                            "Label": "`tt(text(int size)())` - Returns the number of elements in the list.",
+                                            "Label": "`tt(text(int size)())` — Returns the number of elements in the list.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.7.2.A.2.b",
-                                            "Label": "`tt(text(boolean add)(text(E obj)))` - Appends `tttext(obj)` to end of list; returns `tttext(true)`.",
+                                            "Label": "`tt(text(boolean add)(text(E obj)))` — Appends `tttext(obj)` to end of list; returns `tttext(true)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.7.2.A.2.c",
-                                            "Label": "`tt(text(void add)(text(int index),text(E obj)))` - Inserts `tttext(obj)` at position `tttext(index)` (`tt(0< =text(index)< =text(size))`), moving elements at position `tttext(index)` and higher to the right (adds `1` to their indices) and adds `1` to size.",
+                                            "Label": "`tt(text(void add)(text(int index),text(E obj)))` — Inserts `tttext(obj)` at position `tttext(index)` (`tt(0< =text(index)< =text(size))`), moving elements at position `tttext(index)` and higher to the right (adds `1` to their indices) and adds `1` to size.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.7.2.A.2.d",
-                                            "Label": "`tt(text(E get)(text(int index)))` - Returns the element at position `tttext(index)` in the list.",
+                                            "Label": "`tt(text(E get)(text(int index)))` — Returns the element at position `tttext(index)` in the list.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.7.2.A.2.e",
-                                            "Label": "`tt(text(E set)(text(int index),text(E obj)))` - Replaces the element at position `tttext(index)` with `tttext(obj)`; returns the element formerly at position `tttext(index)`.",
+                                            "Label": "`tt(text(E set)(text(int index),text(E obj)))` — Replaces the element at position `tttext(index)` with `tttext(obj)`; returns the element formerly at position `tttext(index)`.",
                                             "Examples": [],
                                             "Subs": []
                                         },
                                         {
                                             "Key": "AP.CSA.7.2.A.2.f",
-                                            "Label": "`tt(text(E remove)(text(int index)))` - Removes element from position `tttext(index)`, moving elements at position `tt(text(index)+1)` and higher to the left (subtracts `1` from their indices) and subtracts `1` from size; returns the element formerly at position `tttext(index)`.",
+                                            "Label": "`tt(text(E remove)(text(int index)))` — Removes element from position `tttext(index)`, moving elements at position `tt(text(index)+1)` and higher to the left (subtracts `1` from their indices) and subtracts `1` from size; returns the element formerly at position `tttext(index)`.",
                                             "Examples": [],
                                             "Subs": []
                                         }
@@ -2431,7 +2431,7 @@
                                 },
                                 {
                                     "Key": "AP.CSA.9.5.A.4",
-                                    "Label": "Declaring references of type `tt(T)`, when `tt(S)` is a subclass of `tt(T)`, is useful in the following declarations: formal method parameters and arrays - `tt(T[] text(var ArrayList)<T> text(var))`.",
+                                    "Label": "Declaring references of type `tt(T)`, when `tt(S)` is a subclass of `tt(T)`, is useful in the following declarations: formal method parameters and arrays — `tt(T[] text(var ArrayList)<T> text(var))`.",
                                     "Examples": [],
                                     "Subs": []
                                 }
@@ -2495,7 +2495,7 @@
                                 },
                                 {
                                     "Key": "AP.CSA.9.7.A.3",
-                                    "Label": "The following `tttext(Object)` class methods and constructors - including what they do and when they are used - are part of the Java Quick Reference:",
+                                    "Label": "The following `tttext(Object)` class methods and constructors — including what they do and when they are used — are part of the Java Quick Reference:",
                                     "Examples": [],
                                     "Subs": [
                                         {
