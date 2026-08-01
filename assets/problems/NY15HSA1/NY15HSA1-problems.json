@@ -282,7 +282,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Mo’s farm stand sold a total of `text(165 pounds)` of apples and peaches. She sold apples for `text($1.75 per pound)` and peaches for `text($2.50 per pound)`. If she made `$337.50`, how many pounds of peaches did she sell?"
+            "Mo’s farm stand sold a total of `text(165 pounds)` of apples and peaches. She sold apples for `text($1.75 per pound)` and peaches for `text($2.50 per pound)`. If she made `$337.50`, how many `text(pounds)` of peaches did she sell?"
         ],
         "AnswerChoices": {
             "1": {
@@ -335,7 +335,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "Morgan can start wrestling at age `5` in Division 1`. He remains in that division until his next odd birthday when he is required to move up to the next division level. Which graph correctly represents this information?"
+            "Morgan can start wrestling at age `5` in Division `1`. He remains in that division until his next odd birthday when he is required to move up to the next division level. Which graph correctly represents this information?"
         ],
         "AnswerChoices": {
             "1": {
@@ -604,7 +604,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "",
+            "Which equation(s) represent the graph below?",
             ":ibox:`text(I)`: `y=(x+2)(x^2-4x-12)`\n\n`text(II)`: `y=(x-3)(x^2+x-2)`\n\n`text(III)`: `y=(x-1)(x^2-5x-6)`",
             "problems/NY15HSA1/media/12a.jpg"
         ],
@@ -734,7 +734,7 @@
                 }
             },
             "3": {
-                "Choice": "`kx(x)=-5x^2-12x+4`",
+                "Choice": "`k(x)=-5x^2-12x+4`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1035,7 +1035,7 @@
         "Points": 2,
         "Explain": false,
         "Content": [
-            "The table below shows the annual salaries for the `24` members of a professional sports team in terms of `text(millions of dollars)`.",
+            "The table below shows the `text(annual)` salaries for the `24` members of a professional sports team in terms of `text(millions of dollars)`.",
             "problems/NY15HSA1/media/20a.jpg",
             "The team signs an additional player to a contract worth `text(10 million dollars per year)`. Which statement about the median and mean is true?"
         ],
@@ -1360,11 +1360,11 @@
         "Points": 2,
         "Explain": true,
         "Content": [
-            "John and Sarah are each saving money for a car. The total amount of money John will save is given by the function `f(x)=60+5x`. The total amount of money Sarah will save is given by the function `g(x)=x^2+46`. After how many `text(weeks)`, x, will they have the same amount of money saved? Explain how you arrived at your answer."
+            "John and Sarah are each saving money for a car. The total amount of money John will save is given by the function `f(x)=60+5x`. The total amount of money Sarah will save is given by the function `g(x)=x^2+46`. After how many `text(weeks)`, `x`, will they have the same amount of money saved? Explain how you arrived at your answer."
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "equal7",
+                "Choice": "equal:7",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1393,7 +1393,7 @@
         ],
         "AnswerChoices": {
             "KEY": {
-                "Choice": "equal:x^4-5x^3/2+7x^2/2",
+                "Choice": "match:x^4-5x^3/2+7x^2/2",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -1418,7 +1418,7 @@
         "Points": 2,
         "Explain": true,
         "Content": [
-            "Dylan invested `$600` in a savings account at a `text(1.6% annual)` interest rate. He made no deposits or withdrawals on the account for `text(2 years)`. The interest was compounded `text(annually)`. Find, to the nearest `text(cent)`, the balance in the account after 2 years."
+            "Dylan invested `$600` in a savings account at a `text(1.6% annual)` interest rate. He made no deposits or withdrawals on the account for `text(2 years)`. The interest was compounded `text(annually)`. Find, to the nearest `text(cent)`, the balance in the account after `text(2 years)`."
         ],
         "AnswerChoices": {
             "KEY": {
@@ -1478,14 +1478,14 @@
         "Content": [
             "The residual plots from `text(two)` different sets of bivariate data are graphed below.",
             "problems/NY15HSA1/media/31a.jpg",
-            "problems/NY15HSA1/media/31a.jpg",
+            "problems/NY15HSA1/media/31b.jpg",
             "Explain, using evidence from graph `text(A)` and graph `text(B)`, which graph indicates that the model for the data is a good fit."
         ],
         "AnswerChoices": {
             "1": {
                 "Choice": "Graph `text(A)`",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -1654,7 +1654,7 @@
         "Points": 4,
         "Explain": false,
         "Content": [
-            "An on-line electronics store must sell at least `$2500` worth of printers and computers `text(per day)`. `text(Each printer)` costs `$50` and `text(each computer)` costs `$500`. The store can ship a maximum of `15` items `text(per day)`."
+            "An on-line electronics store must sell at least `$2500` worth of printers (`p`) and computers (`c`) `text(per day)`. `text(Each printer)` costs `$50` and `text(each computer)` costs `$500`. The store can ship a maximum of `15` items `text(per day)`."
         ],
         "AnswerChoices": {},
         "Parts": {
@@ -1684,14 +1684,14 @@
                 "Explain": true,
                 "Content": [
                     "Determine a combination of printers and computers that would allow the electronics store to meet all of the constraints. Explain how you obtained your answer.",
-                    "Printers: :FR-1:",
-                    "Computers: :FR-2:"
+                    "`p=` :FR-1:",
+                    "`c=` :FR-2:"
                 ],
                 "AnswerChoices": {
                     "1:KEY": {
                         "Choice": "",
                         "Key": {
-                            "Correct": true,
+                            "Correct": false,
                             "Rationale": "",
                             "Percent": 0
                         }
@@ -1699,7 +1699,7 @@
                     "2:KEY": {
                         "Choice": "",
                         "Key": {
-                            "Correct": true,
+                            "Correct": false,
                             "Rationale": "",
                             "Percent": 0
                         }
@@ -1772,7 +1772,7 @@
                 "Points": 2,
                 "Explain": true,
                 "Content": [
-                    "Would it be reasonable to use this model to predict the number of downloads past one year? Explain your reasoning."
+                    "Would it be reasonable to use this model to predict the number of downloads past `text(one year)`? Explain your reasoning."
                 ],
                 "AnswerChoices": {
                     "1": {
@@ -1822,16 +1822,7 @@
                 "Content": [
                     "On the set of axes below, graph the function `y=h(x)` over the interval `0<=x<=150`."
                 ],
-                "AnswerChoices": {
-                    "KEY": {
-                        "Choice": "",
-                        "Key": {
-                            "Correct": true,
-                            "Rationale": "",
-                            "Percent": 0
-                        }
-                    }
-                }
+                "AnswerChoices": {}
             },
             "B": {
                 "Type": "FR",
