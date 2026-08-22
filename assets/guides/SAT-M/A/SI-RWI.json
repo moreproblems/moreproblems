@@ -7,7 +7,6 @@
         "As we encounter more advanced SAT problems in this category, they might include literal inequalities and double inequalities. A `ultext(Literal Inequality)` is an inequality that contains mostly letters (variables or constants) instead of concrete numbers, such as `ax+b>c`. The SAT uses these to see if we can manipulate the structure of an inequality without relying on basic arithmetic. A `ultext(Double Inequality)` (or compound inequality) sandwiches an expression between two values, such as `4<=2x+2<=10`. This represents a real-world scenario with both a floor and a ceiling — like a manufacturing process where a part must be a minimum `10` millimeters wide and a maximum `20` millimeters wide.",
         "guides/SAT-M/A/media/SI-RWI2.jpg",
         "Solving an inequality relies on the exact same balancing act and order of operations as solving an equation. However, this is one key exception to keep in mind: whenever multiplying or dividing an inequality by a negative number, we must flip the direction of the inequality sign."
-
     ],
     "Key": "A-SI-RWI",
     "KnowledgeCheck": "guides/SAT-M/A/checks/SI-RWI-check.json",
