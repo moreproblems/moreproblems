@@ -9,7 +9,7 @@
         ":ibox:Once a line of best fit is established, it can be used to make predictions for values that weren't originally measured using two distinct methods.\n\n• `ultext(Interpolation)`: Making a prediction inside the range of observed data points from the distribution. If a scatterplot tracks students' study time between `1` and `10` hours, using the trendline to estimate the score of a student who studied for `5` hours is interpolation. This method is highly reliable because it falls within the context of the real data set.\n• `ultext(Extrapolation)`: Making a prediction outside the boundaries of actual data points from the observed distribution. Using the trendline from the scatterplot tracking student study time is extrapolation when used to predict a score for someone who studied for `30` hours. The SAT exam tests our understanding of this distinction, because trends that hold true in a small range of values often fall apart or flatten out over larger scales."
     ],
     "Key": "PSDA-TVD-SBF",
-    "KnowledgeCheck": "guides/SAT-M/PSDA/checks/TVD-SBF-check.json",
+    "Check": "guides/SAT-M/PSDA/checks/TVD-SBF-check.json",
     "Topics": [
         "SAT.M.PSDA.4.1",
         "SAT.M.PSDA.4.2",
