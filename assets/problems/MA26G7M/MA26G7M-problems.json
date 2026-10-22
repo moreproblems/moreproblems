@@ -1,0 +1,1380 @@
+{
+    "1": {
+        "Number": 1,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.NS.A.1"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider this expression.",
+            ":ibox:`4.6-4.9`",
+            "Which of the following is equivalent to the expression?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`4.9-4.6`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`4.6+4.9`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`4.6+(-4.9)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`4.9-(-4.6)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "2": {
+        "Number": 2,
+        "Type": "FR",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.G.B.4"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A circle that has its center at point `A` is shown.",
+            "problems/MA26G7M/media/2a.jpg",
+            "In the circle, point `B` and point `C` lie on the circle.",
+            "Line segment `AB` has a distance of `text(6 inches)`. What is the distance, in `text(inches)`, of line segment `AC`?"
+        ],
+        "AnswerChoices": {
+            "KEY": {
+                "Choice": "equal:6",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "3": {
+        "Number": 3,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.EE.B.4"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 4,
+        "Explain": false,
+        "Content": [
+            "An online company prints and ships photos.",
+            ":ibox:• The company charges `text($0.10 per photo)` to print `text(each order)` of photos.\n• The company charges a flat rate of `$4.95` to ship `text(each order)`.",
+            ":ibox:`bbtext(This problem has four parts.)`"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": true,
+                "Content": [
+                    "What is the total amount of money, in `text(dollars)`, the company charges to print and ship an order of `50` photos? Show or explain how you got your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:9.95",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Write an equation that can be used to find `c`, the total amount of money, in `text(dollars)`, the company charges to print and ship an order of `p` photos."
+                ],
+                "AnswerChoices": {
+                    "KEY1": {
+                        "Choice": "match:c=0.10p+4.95",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY2": {
+                        "Choice": "match:c=0.1p+4.95",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "KEY3": {
+                        "Choice": "match:c=p/10+4.95",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": true,
+                "Content": [
+                    "The company charged a total of `$13.35` to print and ship an order of photos. What was the number of photos in the order? Show or explain how you got your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:84",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "D": {
+                "Type": "MFR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": true,
+                "Content": [
+                    "A customer will order some photos from the online company. The customer wants to spend less than `$17.45`.",
+                    "Write and solve an inequality that can be used to find `p`, the possible numbers of photos the customer can order from the online company and spend less than a total of `$17.45`. Show or explain how you got your answer .",
+                    "Equation: :FR-1:",
+                    "`p=` :FR-2:"
+                ],
+                "AnswerChoices": {
+                    "1:KEY": {
+                        "Choice": "0.10p+4.95<17.45",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "2:KEY": {
+                        "Choice": "125",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "4": {
+        "Number": 4,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.NS.A.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following expressions have a negative value?",
+            "Select the `bbtext(two)` correct answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`8(0.4)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`-4/5(0.8)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`(-3)(-7)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`-4.5(-3/8)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`3(2/-5)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "5": {
+        "Number": 5,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.EE.A.1"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 2,
+        "Explain": false,
+        "Content": [
+            "`text(Two)` students are writing expressions in their notebooks.",
+            ":ibox:`bbtext(This problem has two parts.)`"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "The `text(first)` student wrote this expression in her notebook.",
+                    ":ibox:`(12x-15)-(9x+7)`",
+                    "Which of the following is equivalent to the `text(first)` student’s expression?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`3x-8`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`3x-22`",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "`21x-8`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "`21x-22`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "The `text(second)` student wrote this expression in his notebook.",
+                    ":ibox:`5x+3(6x-9)`",
+                    "Which of the following is equivalent to the `text(second)` student’s expression?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`23x-(-27)`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`23x-27`",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "`9x-18`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "`9x-(-18)`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "6": {
+        "Number": 6,
+        "Type": "MS",
+        "NumChoices": 6,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.RP.A.1"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "`text(Three)` students each walked `3/4` of a `text(mile)`.",
+            "This table shows the time, in `text(hours)`, they each spent walking.",
+            ":table:problems/MA26G7M/supps/MA26G7M-T1.json",
+            "Based on the table, at what rate, in `text(miles per hour)` (`text(mph)`), did each student walk `3/4` of a `text(mile)`?",
+            "Select the `bbtext(three)` correct sentences."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "Hazel walked at a rate of `1 1/8` `text(mph)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "Hazel walked at a rate of `1 1/4` `text(mph)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "Michel walked at a rate of `9/10` `text(mph)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "Michel walked at a rate of `1 1/4` `text(mph)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "Anita walked at a rate of `9/10` `text(mph)`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "Anita walked at a rate of `1 1/8` `text(mph)`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "7": {
+        "Number": 7,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.NS.A.1"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A student wrote this subtraction expression.",
+            ":ibox:`9-(-5)`",
+            "Which of the following is the student’s expression rewritten as an addition expression?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`-9+(-5)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`-9+5`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`9+(-5)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`9+5`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "8": {
+        "Number": 8,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.SP.C.8"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Austin has a spinner that is divided into `text(three)` congruent sections. The sections are labeled `1`, `2`, and `3`. Austin will spin the arrow on the spinner `text(two)` times. This tree diagram shows all the possible outcomes that can result when Austin spins the arrow `text(two)` times.",
+            "problems/MA26G7M/media/8a.jpg",
+            "What is the probability that the arrow will stop on the same number both times that Austin spins it?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`1/27`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`1/9`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`1/6`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`1/3`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "9": {
+        "Number": 9,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.NS.A.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Consider this expression.",
+            ":ibox:`-9.6-:0.12`",
+            "Which of the following is equivalent to the expression?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`-80`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`-8`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`8`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`80`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "10": {
+        "Number": 10,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.EE.A.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A student made a picture frame in the shape of a rectangle.",
+            ":ibox:• The length of the frame is `k` `text(inches)`.\n• The width of the frame is `0.8k` `text(inches)`.",
+            "Which of the following expressions represent the perimeter, in `text(inches)`, of the picture frame?",
+            "Select the `bbtext(two)` correct answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`2(0.8k)+2(k)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`2+(0.8k)(2k)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`(2)(0.8)(2k)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`2(0.8k+k)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`2(2k)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "11": {
+        "Number": 11,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.G.B.5"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Line `q` intersects a rectangle. The angles formed by the intersections are represented by numbers, as shown in this diagram.",
+            "problems/MA26G7M/media/11a.jpg",
+            "Based on the diagram, which of the following pairs of angles are vertical angles?",
+            "Select the `bbtext(two)` correct answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "angle `1` and angle `2`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "angle `2` and angle `3`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "angle `4` and angle `8`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "angle `5` and angle `7`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "angle `5` and angle `8`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "12": {
+        "Number": 12,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.SP.C.6"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "At a carnival, visitors can spin the arrow on a spinner to try to win a prize.",
+            ":ibox:• The probability that the arrow on the spinner will stop in a section that does not result in a prize is `0.85`.\n\n• On `text(Saturday)`, visitors spun the arrow on the spinner a total of `60` times.",
+            "Which of the following is `bbtext(closest)` to the expected number of times visitors did `bbtext(not)` win a prize when spinning the arrow on the spinner on `text(Saturday)`?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`9`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`15`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`51`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`85`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "13": {
+        "Number": 13,
+        "Type": "MP",
+        "NumChoices": 0,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.RP.A.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 4,
+        "Explain": false,
+        "Content": [
+            "A chef uses a recipe that requires `2/3` `text(cup)` of rice to make `4` servings of soup.",
+            ":ibox:`bbtext(This problem has four parts.)`"
+        ],
+        "AnswerChoices": {},
+        "Parts": {
+            "A": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": true,
+                "Content": [
+                    "The chef will make `12` servings of soup for a small dinner party.",
+                    "Based on the recipe, how many `text(cups)` of rice does the chef need to make `12` servings of soup? Show or explain how you got your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:2",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "B": {
+                "Type": "MC",
+                "NumChoices": 4,
+                "Points": 1,
+                "Explain": false,
+                "Content": [
+                    "Which of the following equations can be used to find `c`, the number of cups of rice the chef needs to make `x` servings of soup?"
+                ],
+                "AnswerChoices": {
+                    "A": {
+                        "Choice": "`c=6x`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "B": {
+                        "Choice": "`c=1/6x`",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "C": {
+                        "Choice": "`x=1/6c`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    },
+                    "D": {
+                        "Choice": "`cx=6`",
+                        "Key": {
+                            "Correct": false,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "C": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": true,
+                "Content": [
+                    "Based on the recipe, how many servings of soup can the chef make with `text(16 cups)` of rice? Show or explain how you got your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:96",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            },
+            "D": {
+                "Type": "FR",
+                "NumChoices": 0,
+                "Points": 1,
+                "Explain": true,
+                "Content": [
+                    "The chef needs to buy some bags of rice in order to make `48` servings of soup for a large dinner party.",
+                    ":ibox:• `text(Each bag)` contains `text(4 cups)` of rice.\n• `text(Each bag)` of rice costs `$3.50`.",
+                    "Based on the recipe, what is the cost, in `text(dollars)`, of the bags of rice the chef needs to buy to make `48` servings of soup? Show or explain how you got your answer."
+                ],
+                "AnswerChoices": {
+                    "KEY": {
+                        "Choice": "equal:7.00",
+                        "Key": {
+                            "Correct": true,
+                            "Rationale": "",
+                            "Percent": 0
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "14": {
+        "Number": 14,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.NS.A.3"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A school offered pizza with different toppings as an option for lunch `text(one day)`. `text(Half)` of the `360` students in the school ate pizza for their lunch that `text(day)`.",
+            ":ibox:• Of the students who ate pizza, `3/5` chose mushrooms as a topping.\n\n• Of the students who ate pizza with mushrooms as a topping, `25%` also ate a salad.\n\n• None of the other students in the school ate a salad.",
+            "How many students in the school ate a salad with their lunch?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`27`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`54`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`108`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`133`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "15": {
+        "Number": 15,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.SP .A.1"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A pretzel company wants to survey people at a grocery store to collect their opinions about a new flavor of pretzel. Which of the following sampling methods is `bbtext(most likely)` to produce a representative sample?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "surveying `text(every child)` who enters the grocery store",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "surveying `text(every adult)` who enters the grocery store",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "surveying `text(every tenth person)` who enters the grocery store",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "surveying the `text(first twenty)` people who enter the grocery store",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "16": {
+        "Number": 16,
+        "Type": "MS",
+        "NumChoices": 6,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.SP.C.7"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A student has a bag that contains an unknown number of strips of paper. `text(Each strip)` of paper is the same size and shape, and is labeled with a number from `1` to `6`.",
+            "The student randomly selected a strip of paper from the bag, recorded the number that was on it, and then returned the strip of paper to the bag. The student repeated this a total of `100` times. This table shows the student’s results.",
+            ":table:problems/MA26G7M/supps/MA26G7M-T2.json",
+            "Based on the observed frequencies in the table, which of the following statements are true?",
+            "Select the `bbtext(two)` correct answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "The probability of selecting a strip of paper that has a `1` on it is `0.19`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "The probability of selecting a strip of paper that has a `1` on it is `0.38`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "The probability of selecting a strip of paper that has a `1` on it is `0.50`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "The probability of selecting a strip of paper that has an even number on it is `0.50`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "The probability of selecting a strip of paper that has an even number on it is `0.57`.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "The probability of selecting a strip of paper that has an even number on it is `0.76`.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "17": {
+        "Number": 17,
+        "Type": "MS",
+        "NumChoices": 5,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.G.A.2"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Which of the following sets of measurements could be used to represent the side lengths of a triangle?",
+            "Select the `bbtext(two)` correct answers."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`text(3 feet)`, `text(4 feet)`, `text(4 feet)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`text(3 feet)`, `text(8 feet)`, `text(4 feet)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`text(4 feet)`, `text(3 feet)`, `text(5 feet)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`text(4 feet)`, `text(3 feet)`, `text(7 feet)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "`text(4 feet)`, `text(4 feet)`, `text(9 feet)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "18": {
+        "Number": 18,
+        "Type": "MS",
+        "NumChoices": 6,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.G.A.3"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A cylinder and its base, `B`, are shown in this diagram.",
+            "problems/MA26G7M/media/18a.jpg",
+            "The cylinder will be sliced either parallel to its base or perpendicular to its base.",
+            "Which of the following statements correctly describe the `text(two-dimensional)` shape that could result from either slice?",
+            "Select the `bbtext(three)` correct statements."
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "A rectangle will result from slicing the cylinder parallel to its base.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "A rectangle will result from slicing the cylinder perpendicular to its base.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "A hexagon will result from slicing the cylinder perpendicular to its base.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "A hexagon will not result from slicing the cylinder parallel or perpendicular to its base.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "E": {
+                "Choice": "A circle will result from slicing the cylinder parallel to its base.",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "F": {
+                "Choice": "A circle will not result from slicing the cylinder parallel or perpendicular to its base.",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "19": {
+        "Number": 19,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.SP.C.5"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "A student has `4` bags of marbles.",
+            ":ibox:• Bag `text(A)` contains a total of `3` marbles and `2` are red.\n• Bag `text(B)` contains a total of `7` marbles and `5` are red.\n• Bag `text(C)` contains a total of `25` marbles and `13` are red.\n• Bag `text(D)` contains a total of `50` marbles and `13` are red.",
+            "The student will pick one marble from a bag without looking. From which bag is the student most likely to pick a red marble?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "bag `text(A)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "bag `text(B)`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "bag `text(C)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "bag `text(D)`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    },
+    "20": {
+        "Number": 20,
+        "Type": "MC",
+        "NumChoices": 4,
+        "Topics": [
+            ""
+        ],
+        "SubTopics": [
+            "7.RP.A.3"
+        ],
+        "SuppContent": [],
+        "SuppTools": [
+            "Calculator-S"
+        ],
+        "Points": 1,
+        "Explain": false,
+        "Content": [
+            "Before a pay increase, a cashier’s `text(hourly)` wage was `$14.55`. After the pay increase, the cashier’s `text(hourly)` wage was `$15.42`.",
+            "What was the `text(percent)` increase in the cashier’s `text(hourly)` wage?"
+        ],
+        "AnswerChoices": {
+            "A": {
+                "Choice": "`0.06%`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "B": {
+                "Choice": "`0.87%`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "C": {
+                "Choice": "`6%`",
+                "Key": {
+                    "Correct": true,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            },
+            "D": {
+                "Choice": "`94%`",
+                "Key": {
+                    "Correct": false,
+                    "Rationale": "",
+                    "Percent": 0
+                }
+            }
+        },
+        "Parts": {}
+    }
+}
