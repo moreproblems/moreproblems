@@ -104,8 +104,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A company launched a health program and initially had `50` employees sign up for gym memberships. By the end of the year, human resources reported that the number of participating employees had dramatically increased to `310%` of the initial signup count.",
-            "How many employees were participating in the program at the end of the year?"
+            "A company launched a health program and initially had `50` employees sign up for gym memberships. By the end of the `text(year)`, human resources reported that the number of participating employees had dramatically increased to `310%` of the initial signup count.",
+            "How many employees were participating in the program at the end of the `text(year)`?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -134,9 +134,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An artisan bakery tracks its `text(daily)` output of baked goods. On a standard weekday, the bakery produces `200` loaves of sourdough bread.",
-            "Due to lower historical demand, the number of sweet pastry braids baked per day is fixed at `64%` of the sourdough production baseline.",
-            "To prepare for a weekend morning market, the number of croissants baked is scaled up to `250%` of the weekday sourdough production baseline.",
+            "An artisan bakery tracks its `text(daily)` output of baked goods. On a standard `text(weekday)`, the bakery produces `200` loaves of sourdough bread.",
+            "Due to lower historical demand, the number of sweet pastry braids baked `text(per day)` is fixed at `64%` of the sourdough production baseline.",
+            "To prepare for a weekend morning market, the number of croissants baked is scaled up to `250%` of the `text(weekday)` sourdough production baseline.",
             "What is the total number of sweet pastry braids and croissants baked during this preparation cycle?"
         ],
         "AnswerChoices": {
@@ -196,7 +196,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A high school chess club has `60` active members at the beginning of the academic year. After several weeks, scheduling conflicts with winter sports cause the active student membership to decrease by `25%`.",
+            "A high school chess club has `60` active members at the beginning of the academic `text(year)`. After several `text(weeks)`, scheduling conflicts with winter sports cause the active student membership to decrease by `25%`.",
             "What is the new number of active members remaining in the chess club?"
         ],
         "AnswerChoices": {
@@ -256,7 +256,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A commercial agricultural farm historically required `text(800 hours)` of manual tractor labor per harvest cycle. After upgrading to an automated, GPS-guided fleet tracking system, the farm managers successfully decrease the required manual labor `text(hours)` by `15%`.",
+            "A commercial agricultural farm historically required `text(800 hours)` of manual tractor labor `text(per harvest cycle)`. After upgrading to an automated, GPS-guided fleet tracking system, the farm managers successfully decrease the required manual labor `text(hours)` by `15%`.",
             "How many manual labor `text(hours)` are required under the new automated system?"
         ],
         "AnswerChoices": {

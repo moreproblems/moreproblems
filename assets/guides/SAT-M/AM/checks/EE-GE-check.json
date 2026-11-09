@@ -19,7 +19,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The antibiotic is completely cleared from the bloodstream after 250 hours.",
+                "Choice": "The antibiotic is completely cleared from the bloodstream after `text(250 hours)`.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",
@@ -135,7 +135,7 @@
                 }
             },
             "B": {
-                "Choice": "It takes `text(3 hours)` for the bacterial concentration to double from its initial amount to `text(1,000)` bacteria `text(per milliliter)`.",
+                "Choice": "It takes `text(3 hours)` for the bacterial concentration to `text(double)` from its initial amount to `text(1,000)` bacteria `text(per milliliter)`.",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -183,7 +183,7 @@
             "A": {
                 "Choice": "`text(6 weeks)` after treatment begins, the area covered by algae is `text(125 square meters)`.",
                 "Key": {
-                    "Correct": false,
+                    "Correct": true,
                     "Rationale": "",
                     "Percent": 0
                 }
@@ -235,7 +235,7 @@
         ],
         "AnswerChoices": {
             "A": {
-                "Choice": "The van loses a total of `text($16,384)` in value over its first `text(5 years)` of use.",
+                "Choice": "The van loses a total of `text($16,384)` in value over its `text(first 5 years)` of use.",
                 "Key": {
                     "Correct": false,
                     "Rationale": "",

@@ -994,7 +994,7 @@
                 "Choice": "equal:410",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that t minutes after an initial observation, the number of bacteria in a population is `60,000(2)^(t/410)`. This expression consists of the initial number of bacteria, `60,000`, multiplied by the expression `2^(t/410)`. The time it takes for the number of bacteria to double is the increase in the value of `t` that causes the expression `2^(t/410)` to double. Since the base of the expression `2^(t/410)` is `2`, the expression `2^(t/410)` will double when the exponent increases by `1`. Since the exponent of the expression `2^(t/410)` is `t/410`, the exponent will increase by `1` when t increases by `410`. Therefore the time, in `text(minutes)`, it takes for the number of bacteria in the population to double is `410`.",
+                    "Rationale": "It's given that `t` `text(minutes)` after an initial observation, the number of bacteria in a population is `60,000(2)^(t/410)`. This expression consists of the initial number of bacteria, `60,000`, multiplied by the expression `2^(t/410)`. The time it takes for the number of bacteria to double is the increase in the value of `t` that causes the expression `2^(t/410)` to double. Since the base of the expression `2^(t/410)` is `2`, the expression `2^(t/410)` will double when the exponent increases by `1`. Since the exponent of the expression `2^(t/410)` is `t/410`, the exponent will increase by `1` when t increases by `410`. Therefore the time, in `text(minutes)`, it takes for the number of bacteria in the population to double is `410`.",
                     "Percent": 0
                 }
             }

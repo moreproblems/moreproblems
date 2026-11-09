@@ -140,7 +140,7 @@
         "Content": [
             "A commercial agricultural greenhouse implants organic heirloom tomato seeds into specialized incubation trays to monitor seed germination viability rates. After a fixed growth window, a horticulturist records the following development statuses across the batch.",
             ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T3.json",
-            "If one seed position is chosen completely at random from the incubation trays for a nutrient soil test, what is the probability that the selected position holds an unviable seed?"
+            "If `text(one)` seed position is chosen completely at random from the incubation trays for a nutrient soil test, what is the probability that the selected position holds an unviable seed?"
         ],
         "AnswerChoices": {
             "KEY": {
@@ -169,9 +169,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A high school guidance counselor summarizes the enrollment data for twelfth-grade students registered in either a studio art elective or a computer science elective. The two-way frequency table below shows the distribution of these students by their preferred post-graduation track.",
+            "A high school guidance counselor summarizes the enrollment data for `text(twelfth-grade)` students registered in either a studio art elective or a computer science elective. The `text(two-way)` frequency table below shows the distribution of these students by their preferred post-graduation track.",
             ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T4.json",
-            "If a twelfth-grade student who is entering a career technical program is selected at random, what is the probability that the student is enrolled in the studio art elective?"
+            "If a `text(twelfth-grade)` student who is entering a career technical program is selected at random, what is the probability that the student is enrolled in the studio art elective?"
         ],
         "AnswerChoices": {
             "A": {
@@ -224,7 +224,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An IT supervisor at a technology firm audits a week of hardware support tickets. The table below displays the breakdown of tickets based on the device type and whether the issue was resolved remotely or required an on-site technician.",
+            "An IT supervisor at a technology firm audits a `text(week)` of hardware support tickets. The table below displays the breakdown of tickets based on the device type and whether the issue was resolved remotely or required an on-site technician.",
             ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T5.json",
             "An audited support ticket is selected at random. Given that the chosen ticket was for a laptop computer, what is the probability that the issue required an on-site technician?"
         ],
@@ -391,7 +391,7 @@
         "Content": [
             "A community botanical nursery evaluates the success rates of organic vegetable starters. The horticulturist cross-references seedling varieties with their verified survival outcomes after a minor seasonal frost window.",
             ":table:guides/SAT-M/PSDA/checks/supps/PS-TFP-T8.json",
-            "A seedling from this testing block is selected at random. Given that the seedling is a sweet pepper plant, what is the probability that it survived the frost window?"
+            "A seedling from this testing block is selected at random. Given that the seedling is a sweet pepper plant, what is the probability that it did not survive the frost window?"
         ],
         "AnswerChoices": {
             "A": {

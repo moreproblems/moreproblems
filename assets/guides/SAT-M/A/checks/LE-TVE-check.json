@@ -53,11 +53,11 @@
         "Explain": false,
         "Content": [
             "A gourmet food truck vendor pays a flat fee of `text($75 each day)` to park at a city festival. The vendor sells artisan grilled cheese sandwiches for `$12` each.",
-            "If the vendor's net profit at the end of a single day is represented by `y` and the number of sandwiches sold is represented by `x`, create an equation that models this situation."
+            "If the vendor's net profit at the end of a `text(single day)` is represented by `y` and the number of sandwiches sold is represented by `x`, create an equation that models this situation."
         ],
         "AnswerChoices": {
             "KEY1": {
-                "Choice": "match:y=12x+75",
+                "Choice": "match:y=12x-75",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -65,7 +65,7 @@
                 }
             },
             "KEY2": {
-                "Choice": "match:y=75+12x",
+                "Choice": "match:y=75-12x",
                 "Key": {
                     "Correct": true,
                     "Rationale": "",
@@ -204,7 +204,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A bakery sells large custom event cakes for `$85` each. If a customer wants the cakes delivered directly to their venue, the bakery charges a single flat delivery and handling fee of `$30` for the trip.",
+            "A bakery sells large custom event cakes for `$85` each. If a customer wants the cakes delivered directly to their venue, the bakery charges a `text(single)` flat delivery and handling fee of `$30` for the trip.",
             "Create an equation that represents the total cost, `y`, in `text(dollars)`, for a customer who orders `x` custom cakes and has them delivered together."
         ],
         "AnswerChoices": {
@@ -242,8 +242,8 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A gourmet food truck operator pays a flat fee of `text($120 per day)` to park their vehicle at a local food festival. The truck sells its signature brisket plates for `$16` each.",
-            "Create an equation that models the food truck's net profit, `y` in `text(dollars)`, on a single festival day from selling `x` brisket plates."
+            "A family-owned food cart operator pays a flat fee of `text($120 per day)` to park their vehicle at a local street fair. The cart sells its signature brisket plates for `$16` each.",
+            "Create an equation that models the food cart's net profit, `y` in `text(dollars)`, on a `text(single)` day from selling `x` brisket plates at the street fair."
         ],
         "AnswerChoices": {
             "KEY1": {
@@ -356,7 +356,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A coffee shop chain rolls out a new loyalty app to encourage morning orders. On the first day of the campaign, the app launches with `300` active profiles created during beta testing. Over the next several weeks, new users create profiles at a constant rate of `text(45 people per day)`.",
+            "A coffee shop chain rolls out a new loyalty app to encourage morning orders. On the `text(first day)` of the campaign, the app launches with `300` active profiles created during beta testing. Over the next several `text(weeks)`, new users create profiles at a constant rate of `text(45 people per day)`.",
             "Create an equation that models the total number of active user profiles, `y`, exactly `x` `text(days)` after the app's official launch."
         ],
         "AnswerChoices": {

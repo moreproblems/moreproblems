@@ -719,7 +719,7 @@
                 }
             },
             "C": {
-                "Choice": "`762pi`",
+                "Choice": "`726pi`",
                 "Key": {
                     "Correct": true,
                     "Rationale": "The volume, `V`, of a right circular cylinder is given by the formula `V=pir^2h`, where `r` is the radius of the base of the cylinder and `h` is the height of the cylinder. It's given that a right circular cylinder has a height of `6` `text(centimeters)`. Therefore, `h=6`. It's also given that the cylinder has a base diameter of `22` `text(centimeters)`. The radius of a circle is half the diameter of the circle. Since the base of a right circular cylinder is a circle, it follows that the radius of the base of the right circular cylinder is `22/2,or11,text(centimeters)`. Therefore, `r=11`. Substituting `11` for `rand6` for `h` in the formula `V=pir^2h` yields `V=pi(11)^2(6)`, which is equivalent to `V=pi(121)(6),orV=762pi`. Therefore, the volume, in `text(cubic centimeters)`, of the cylinder is `762pi`.",
@@ -1260,14 +1260,14 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "The function `f` is defined by `f(x)=ax^2+bx+c` where `a,b,andc` are constants. The graph of `y=f(x)` in the `xytext(-plane)` passes through the points `(7,0)and(-3,0)`. If a is an integer greater than `1` , which of the following could be the value of `a+b`?"
+            "The function `f` is defined by `f(x)=ax^2+bx+c` where `a,b,andc` are constants. The graph of `y=f(x)` in the `xytext(-plane)` passes through the points `(7,0)and(-3,0)`. If `a` is an integer greater than `1` , which of the following could be the value of `a+b`?"
         ],
         "AnswerChoices": {
             "A": {
                 "Choice": "`-6`",
                 "Key": {
                     "Correct": true,
-                    "Rationale": "It's given that the graph of `y=f(x)` in the `xytext(-plane)` passes through the points `(7,0)and(-3,0)`. It follows that when the value of `x` is either `7or-3`, the value of `f(x)` is `0.` It's also given that the function `f` is defined by `f(x)=ax^2+bx+c`, where `a,b,andc` are constants. It follows that the function `f` is a quadratic function and, therefore, may be written in factored form as `f(x)=a(x-u)(x-v)`, where the value of `f(x)` is `0` when `x` is either `uorv`. Since the value of `f(x)` is `0` when the value of `x` is either `7or-3`, and the value of `f(x)` is `0` when the value of `x` is either `uorv`, it follows that `uandv` are equal to `7and-3`. Substituting `7` for `uand-3` for `v` in the equation `f(x)=a(x-u)(x-v)` yields `f(x)=a(x-7)(x-(-3)),orf(x)=a(x-7)(x+3)`. Distributing the right-hand side of this equation yields `f(x)=a(x^2-7x+3x-21),orf(x)=ax^2-4ax-21a`. Since it's given that `f(x)=ax^2`, it follows that `b=-4a`. Adding a to each side of this equation yields `a+b=-3a`. Since `a+b=-3a`, if `a` is an integer, the value of `a+b` must be a multiple of `3`. If a is an integer greater than `1` , it follows that `age2`. Therefore, `-3ale-3(2)`. It follows that the value of `a+b` is less than or equal to `-3(2),or-6`. Of the given choices, only `-6` is a multiple of `3` that's less than or equal to `-6`.",
+                    "Rationale": "It's given that the graph of `y=f(x)` in the `xytext(-plane)` passes through the points `(7,0)and(-3,0)`. It follows that when the value of `x` is either `7or-3`, the value of `f(x)` is `0.` It's also given that the function `f` is defined by `f(x)=ax^2+bx+c`, where `a,b,andc` are constants. It follows that the function `f` is a quadratic function and, therefore, may be written in factored form as `f(x)=a(x-u)(x-v)`, where the value of `f(x)` is `0` when `x` is either `uorv`. Since the value of `f(x)` is `0` when the value of `x` is either `7or-3`, and the value of `f(x)` is `0` when the value of `x` is either `uorv`, it follows that `uandv` are equal to `7and-3`. Substituting `7` for `uand-3` for `v` in the equation `f(x)=a(x-u)(x-v)` yields `f(x)=a(x-7)(x-(-3)),orf(x)=a(x-7)(x+3)`. Distributing the right-hand side of this equation yields `f(x)=a(x^2-7x+3x-21),orf(x)=ax^2-4ax-21a`. Since it's given that `f(x)=ax^2`, it follows that `b=-4a`. Adding a to each side of this equation yields `a+b=-3a`. Since `a+b=-3a`, if `a` is an integer, the value of `a+b` must be a multiple of `3`. If `a` is an integer greater than `1` , it follows that `age2`. Therefore, `-3ale-3(2)`. It follows that the value of `a+b` is less than or equal to `-3(2),or-6`. Of the given choices, only `-6` is a multiple of `3` that's less than or equal to `-6`.",
                     "Percent": 0
                 }
             },

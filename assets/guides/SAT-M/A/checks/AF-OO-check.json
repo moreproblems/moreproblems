@@ -124,7 +124,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A data science laboratory tracks the daily energy usage of a high-performance computer server cluster. The total power consumed during a heavy processing cycle, measured in watt-hours, is represented by the expression below.",
+            "A data science laboratory tracks the `text(daily)` energy usage of a high-performance computer server cluster. The total power consumed during a heavy processing cycle, measured in `text(watt-hours)`, is represented by the expression below.",
             ":ibox:`150+2*[8+4*(12-7)]`",
             "What is the total power consumed by the server cluster?"
         ],
@@ -179,7 +179,7 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "A logistics supervisor coordinates delivery routes. The total distance traveled by a fleet of delivery trucks over a weekend holiday shift, in miles, is calculated by the expression below.",
+            "A logistics supervisor coordinates delivery routes. The total distance traveled by a fleet of delivery trucks over a weekend holiday shift, in `text(miles)`, is calculated by the expression below.",
             ":ibox:`(120+6*5)/3+45`",
             "What is the total distance traveled by the fleet, in `text(miles)`?"
         ],
@@ -351,9 +351,9 @@
         "Points": 1,
         "Explain": false,
         "Content": [
-            "An automotive parts factory determines its weekly production cost, `C`, in `text(dollars)`, using the following formula based on the number of currently active automated assembly lines, `n`.",
+            "An automotive parts factory determines its `text(weekly)` production cost, `C`, in `text(dollars)`, using the following formula based on the number of currently active automated assembly lines, `n`.",
             ":ibox:`C=12text(,)000+500[(3n-6)^3/4+18]`",
-            "If the factory's production cost for last week was `text($48,000)`, how many automated assembly lines (`n`) were active?"
+            "If the factory's production cost for `text(last week)` was `text($48,000)`, how many automated assembly lines (`n`) were active?"
         ],
         "AnswerChoices": {
             "KEY": {
